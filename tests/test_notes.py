@@ -13,6 +13,12 @@ def test_fb_note_with_no_caption_is_empty():
     assert clean_note("FB page x; post text: Eisteddfod Mimosa Porth Madryn · 5 7 Comments No comments yet Be the first to comment. Comment as A B", "a/fb_1.jpg") == ""
 
 
-def test_non_fb_note_kept_and_truncated():
-    assert clean_note("9 pp. official program", "a/b.pdf") == "9 pp. official program"
-    assert len(clean_note("x" * 1000, "a/b.pdf")) <= 300
+def test_non_fb_note_is_not_published():
+    assert clean_note("9 pp. official program", "a/b.pdf") == ""
+    assert clean_note("from kpc.local backup; year inferred", "a/b.jpg") == ""
+    assert clean_note("", "a/b.pdf") == ""
+
+
+def test_fb_note_truncated():
+    raw = "FB page x; post text: Eisteddfod Mimosa · " + "palabra " * 200
+    assert 0 < len(clean_note(raw, "a/fb_1.jpg")) <= 300

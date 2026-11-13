@@ -1,6 +1,7 @@
 """Build low-res derivatives (WebP) and text excerpts for catalog items."""
 import csv
 import html
+from html.parser import HTMLParser
 import re
 import shutil
 import subprocess
@@ -38,12 +39,125 @@ def _excerpt(text: str) -> str:
     return re.sub(r"\s+", " ", text).strip()[:EXCERPT_LEN]
 
 
+# Elements whose whole subtree is boilerplate (navigation, widgets, comments).
+_SKIP_TAGS = {"script", "style", "head", "noscript", "nav", "header", "footer",
+              "aside", "form", "iframe", "svg", "button", "select", "textarea"}
+_VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link",
+         "meta", "param", "source", "track", "wbr"}
+_SKIP_ATTR = re.compile(
+    r"(?i)^(?:.*comment.*|.*respond.*|.*reply.*|menu.*|.*-menu|sub-?menu|"
+    r"widget.*|sidebar.*|.*breadcrumb.*|subheader|header.*|footer.*|top_bar.*|"
+    r"share.*|social.*|navigation|nav|.*-nav|.*-nav-.*|nav-.*|.*related.*|"
+    r".*searchform.*)$")
+_BLOCK = {"p", "div", "li", "tr", "td", "th", "h1", "h2", "h3", "h4", "h5", "h6",
+          "br", "section", "article", "table", "ul", "ol", "dd", "dt", "blockquote"}
+# Text-level comment-section markers: cut the excerpt at the first one
+# (with any comment count right before it, e.g. "2 Comentarios").
+_COMMENT_MARK = re.compile(
+    r"(?i)(?:\d+\s+)?(?:comentarios|deja(?:r)? un comentario|leave a reply|"
+    r"responder|commented on|comments)|\s(?:dice|says):")
+
+
+_BR = "\x00"  # block boundary marker
+_NAME_SPAN = 60  # a marker this close to its block start: drop the whole block
+
+
+class _TextOnly(HTMLParser):
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.out: list[str] = []
+        self.skip_tag: str | None = None
+        self.skip_depth = 0
+
+    def _skippable(self, tag, attrs) -> bool:
+        if tag in _SKIP_TAGS:
+            return True
+        if tag in ("html", "body"):
+            return False
+        for k, v in attrs:
+            if k in ("class", "id") and v and any(_SKIP_ATTR.match(t) for t in v.split()):
+                return True
+        return False
+
+    def handle_starttag(self, tag, attrs):
+        if self.skip_tag:
+            if tag == self.skip_tag:
+                self.skip_depth += 1
+            return
+        if tag not in _VOID and self._skippable(tag, attrs):
+            self.skip_tag, self.skip_depth = tag, 1
+            return
+        if tag in _BLOCK:
+            self.out.append(_BR)
+
+    def handle_endtag(self, tag):
+        if self.skip_tag:
+            if tag == self.skip_tag:
+                self.skip_depth -= 1
+                if self.skip_depth == 0:
+                    self.skip_tag = None
+            return
+        if tag in _BLOCK:
+            self.out.append(_BR)
+
+    def handle_data(self, data):
+        if not self.skip_tag:
+            self.out.append(data)
+
+
+def _decode(b: bytes) -> str:
+    try:
+        return b.decode("utf-8")
+    except UnicodeDecodeError:
+        return b.decode("cp1252", errors="replace")
+
+
 def _html_text(path: Path) -> str:
-    raw = path.read_bytes().decode("utf-8", errors="replace")
-    raw = re.sub(r"(?is)<(script|style|head|noscript)\b.*?</\1>", " ", raw)
-    raw = re.sub(r"(?s)<!--.*?-->", " ", raw)
-    raw = re.sub(r"(?s)<[^>]*>", " ", raw)
-    return html.unescape(raw)
+    p = _TextOnly()
+    p.feed(_decode(path.read_bytes()))
+    p.close()
+    text = re.sub(r"[ \t\r\n\f\v]+", " ", "".join(p.out).replace("\u00a0", " "))
+    m = _COMMENT_MARK.search(text)
+    if m:
+        cut = m.start()
+        start = text.rfind(_BR, 0, cut)
+        if start >= 0 and cut - start <= _NAME_SPAN:  # e.g. "<p>María López dice: …"
+            cut = start
+        text = text[:cut]
+    return re.sub(r"\s+", " ", text.replace(_BR, " ")).strip()
+
+
+# Line breaks lost in the SQL->CSV export of the competition tables survive as
+# literal "\r\n"/"\n" or as bare "rn"/"n" glued to the neighbouring words.
+_L = r"[^\W\d_]"  # a letter
+_CELL_FIXES = [
+    (re.compile(r"\\r\\n|\\n|\r\n|\r"), "\n"),
+    (re.compile(r"(?:rn){2,}"), "\n"),                       # "artesrnrnvisuales"
+    (re.compile(rf"(?<!{_L})rn"), "\n"),                     # word-initial: " rn", ":rnNivel", "rna)"
+    (re.compile(rf"(?<={_L})rn(?=[A-ZÁÉÍÓÚÑ0-9¿¡]|[\"“]+[¿¡]?[A-ZÁÉÍÓÚÑ])"), "\n"),  # "EisteddfodrnTrabajo"
+    (re.compile(rf"(?<={_L})rn$"), ""),                       # trailing "Freyerrn"
+    (re.compile(rf"(?:(?<=\s)|(?<=[.…:;]))n(?=\s|$|[a-z]\))"), "\n"),  # lone "n" from "\n"
+]
+
+
+def _demojibake(s: str) -> str:
+    if "Ã" not in s and "Â" not in s:
+        return s
+    try:
+        return s.encode("cp1252").decode("utf-8")
+    except (UnicodeEncodeError, UnicodeDecodeError):
+        return s
+
+
+def clean_cell(v):
+    if not isinstance(v, str):
+        return v
+    s = _demojibake(v)
+    for rx, rep in _CELL_FIXES:
+        s = rx.sub(rep, s)
+    s = re.sub(r"[ \t]*\n\s*", "\n", s)
+    s = re.sub(r"[ \t]{2,}", " ", s)
+    return s.strip()
 
 
 def _office_text(path: Path) -> str:
@@ -82,6 +196,9 @@ def derive(item: Item, archive: Path, out_root: Path) -> Item:
 
     def rel(p: Path) -> str:
         return p.relative_to(out_root).as_posix()
+
+    if item.restricted:  # captions of restricted items may name participants
+        item.note_public = ""
 
     if item.kind == "image":
         thumb, page = out / "thumb.webp", out / "p01.webp"
@@ -133,7 +250,8 @@ def derive(item: Item, archive: Path, out_root: Path) -> Item:
             item.text_excerpt = _excerpt(_html_text(src)) or None
         elif item.kind == "table":
             with open(src, newline="", encoding="utf-8-sig", errors="replace") as f:
-                item.table = list(csv.DictReader(f))
+                item.table = [{clean_cell(k): clean_cell(v) for k, v in row.items()}
+                              for row in csv.DictReader(f)]
         if item.restricted:  # extracted text must never reach the public catalog
             item.text_excerpt, item.table = None, None
         return item

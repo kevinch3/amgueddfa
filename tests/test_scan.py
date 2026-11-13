@@ -30,6 +30,7 @@ def test_slugs_and_years(items):
     g = by_title(items, "Reglas web wayback 20060430")
     assert (g.festival, g.year, g.undated, g.category, g.kind) == ("mimosa", None, False, "otros", "web")
     assert g.year_inferred is True
+    assert g.note_public == ""  # internal note "year inferred" is not published
     fb = by_title(items, "fechas-importantes")
     assert fb.category == "bases" and fb.year_inferred is True
     assert fb.note_public == "Atención FECHAS IMPORTANTES"
@@ -98,3 +99,9 @@ def test_restricted_if_any_duplicate_path_is_resultados(tmp_path):
     assert len(items) == 1
     assert items[0].category == "bases"
     assert items[0].restricted is True
+
+
+def test_only_facebook_items_publish_notes(items):
+    for i in items:
+        if i.source_label != "Facebook":
+            assert i.note_public == "", i.src_path

@@ -17,13 +17,18 @@ def _truncate(s: str) -> str:
 
 
 def clean_note(raw: str, src_path: str) -> str:
-    s = (raw or "").strip()
-    m = _FB.match(s)
-    if m:
-        s = m.group(1)
-        if " · " in s:
-            s = s.split(" · ", 1)[1]
-        m2 = _CUT.search(" " + s)
-        if m2:
-            s = (" " + s)[: m2.start()]
+    """Public note: only the cleaned caption of a Facebook post.
+
+    Every other note in SOURCES.tsv is an internal (English) working note and
+    is never published.
+    """
+    m = _FB.match((raw or "").strip())
+    if not m:
+        return ""
+    s = m.group(1)
+    if " · " in s:
+        s = s.split(" · ", 1)[1]
+    m2 = _CUT.search(" " + s)
+    if m2:
+        s = (" " + s)[: m2.start()]
     return _truncate(s.strip())

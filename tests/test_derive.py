@@ -108,3 +108,101 @@ def test_failed_pdf_render_leaves_nothing_fresh(tmp_path):
     pages = [Image.new("RGB", (850, 1100), c) for c in ("white", "gray")]
     pages[0].save(arch / "ok.pdf", save_all=True, append_images=pages[1:])
     assert derive(mk("ok.pdf", "pdf"), arch, out).pages == 2
+
+
+WP_PAGE = """<html><head><title>Reglamento</title></head>
+<body class="page header-classic sticky-header menu-highlight">
+<div id="Wrapper"><div id="Header_wrapper"><header id="Header">
+<div class="widget widget_mfn_recent_comments"><h3>Últimos comentarios</h3>
+<div class="Recent_comments"><ul><li><span class="date">3 July, 2017</span>
+<p><i class="icon-user"></i> <strong>Lucia DAddona</strong> commented on
+<a href="#">Programa Eisteddfod del Chubut 2017</a></p></li></ul></div></div>
+<nav id="menu"><ul class="menu"><li class="menu-item"><a>Inicio</a></li>
+<li class="menu-item"><a>Institucional</a></li></ul></nav></header></div>
+<div id="Subheader"><h1 class="title">Reglamento</h1><ul class="breadcrumbs"><li>Inicio</li></ul></div>
+<div id="Content"><div class="section section-post-header"><div class="column one post-nav">
+<ul class="next-prev-nav"><li><a class="fixed-nav fixed-nav-prev">Competencias de Danzas 22 junio, 2017</a></li></ul>
+<a class="list-nav">Show all</a></div></div><div class="entry-content"><p>Artículo 1: El Eisteddfod del Chubut es un certamen.</p>
+<p>Artículo 2: Las obras serán inéditas.<br>Fin.</p></div>
+<div class="section section-post-related"><div class="column one-third post-related">
+Related posts 13 enero, 2017</div></div><div id="comments"><h3 id="reply-title">Deja un comentario</h3><ol class="commentlist">
+<li class="comment"><cite>Juan Pérez</cite> dice: ¡Qué lindo!</li></ol></div></div>
+<footer id="Footer"><p>© 2017 secretaria@eisteddfodpatagonia.com</p></footer></div></body></html>"""
+
+
+def test_web_excerpt_drops_comment_widgets_nav_and_footer(tmp_path):
+    arch = tmp_path / "arch"
+    arch.mkdir()
+    (arch / "w.html").write_text(WP_PAGE, encoding="utf-8")
+    it = derive(mk("w.html", "web"), arch, tmp_path / "out")
+    ex = it.text_excerpt
+    assert ex.startswith("Artículo 1: El Eisteddfod del Chubut es un certamen.")
+    assert "Las obras serán inéditas." in ex
+    for bad in ("Lucia", "DAddona", "commented", "comentario", "Juan", "dice:",
+                "Institucional", "secretaria@", "Inicio", "Danzas", "Show all",
+                "Related"):
+        assert bad not in ex, bad
+
+
+def test_web_excerpt_cut_at_text_comment_marker(tmp_path):
+    arch = tmp_path / "arch"
+    arch.mkdir()
+    (arch / "w.html").write_text(
+        "<html><body><p>Bases del concurso de poesía.</p>"
+        "<p>2 Comentarios</p><p>María López dice: 12 marzo, 2015 at 10:00 Responder</p>"
+        "</body></html>", encoding="utf-8")
+    it = derive(mk("w.html", "web"), arch, tmp_path / "out")
+    assert it.text_excerpt == "Bases del concurso de poesía."
+    for leave in ("Leave a Reply", "John says: hi"):
+        (arch / "e.html").write_text(f"<p>Rules here.</p><p>{leave}</p><p>Bob Smith</p>")
+        assert derive(mk("e.html", "web"), arch, tmp_path / "out").text_excerpt == "Rules here."
+
+
+def test_web_latin1_page_decoded(tmp_path):
+    arch = tmp_path / "arch"
+    arch.mkdir()
+    (arch / "w.html").write_bytes("<p>La Asociación del Eisteddfod</p>".encode("latin-1"))
+    it = derive(mk("w.html", "web"), arch, tmp_path / "out")
+    assert it.text_excerpt == "La Asociación del Eisteddfod"
+
+
+def test_table_cells_lose_sql_escape_artifacts(tmp_path):
+    from scripts.catalog.derive import clean_cell
+    cases = {
+        'Corona del EisteddfodrnTrabajo en verso, inédito': "Corona del Eisteddfod\nTrabajo en verso, inédito",
+        'Memoriasrn"De un banco de la plaza"': 'Memorias\n"De un banco de la plaza"',
+        'Coro Mixto:rn1) "Cyfoda" - Syr George J. Elveyrn2) Can werin': 'Coro Mixto:\n1) "Cyfoda" - Syr George J. Elvey\n2) Can werin',
+        'integrantes).rn rn rna) “Anfonaf Angel”': 'integrantes).\na) “Anfonaf Angel”',
+        'artes rnrnvisuales, teatro': 'artes\nvisuales, teatro',
+        'Pintura sobre porcelana: rnNivel 1: posa-pava': 'Pintura sobre porcelana:\nNivel 1: posa-pava',
+        'Técnica, rnmateriales y soporte': 'Técnica,\nmateriales y soporte',
+        'de Carlos Freyerrn': 'de Carlos Freyer',
+        'Limrig: n a)“Beth rof yn fy ngês?” holodd Sandra.n n nb)Wrth drefnu  n':
+            'Limrig:\na)“Beth rof yn fy ngês?” holodd Sandra.\nb)Wrth drefnu',
+        'uno\\r\\ndos\\nTres': 'uno\ndos\nTres',
+        'Poema inÃ©dito, ExtensiÃ³n mÃ¡xima': 'Poema inédito, Extensión máxima',
+        # real words containing "rn" are untouched
+        'Adrodd darn o ryddiaith Codi`n Hwyr': 'Adrodd darn o ryddiaith Codi`n Hwyr',
+        '"Byw Fyddi Nant Gwrtheyrn", R. LL. Owain': '"Byw Fyddi Nant Gwrtheyrn", R. LL. Owain',
+        'Caperucita encarnada, Jornada, Pengwern, Hernán Bernárdez, barniz': 'Caperucita encarnada, Jornada, Pengwern, Hernán Bernárdez, barniz',
+        'yn bwysig yn eich barn chi': 'yn bwysig yn eich barn chi',
+    }
+    for raw, want in cases.items():
+        assert clean_cell(raw) == want, raw
+
+
+def test_table_derive_cleans_cells(tmp_path):
+    arch = tmp_path / "arch"
+    arch.mkdir()
+    (arch / "t.csv").write_text('a,b\r\n"Ensayorn""¿Hemos perdido?""",x\r\n', encoding="utf-8")
+    it = derive(mk("t.csv", "table"), arch, tmp_path / "out")
+    assert it.table == [{"a": 'Ensayo\n"¿Hemos perdido?"', "b": "x"}]
+
+
+def test_restricted_item_note_cleared(tmp_path):
+    arch = tmp_path / "arch"
+    arch.mkdir()
+    (arch / "w.html").write_text("<p>Ganadores: Ana Gómez</p>")
+    it = derive(mk("w.html", "web", restricted=True, note_public="Ganadores: Ana Gómez"),
+                arch, tmp_path / "o")
+    assert it.note_public == ""

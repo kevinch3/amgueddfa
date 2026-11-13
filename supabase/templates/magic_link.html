@@ -2,9 +2,11 @@
 <html lang="es-AR">
   <body style="font-family: Georgia, serif; color: #1f2230; background: #f8f2e4; padding: 24px;">
     <h2 style="color: #9e1b22;">Amgueddfa Eisteddfod y Wladfa</h2>
-    <p>Tu código para ingresar es:</p>
+    <p>Para ingresar, tocá el botón:</p>
+    <p><a href="{{ .ConfirmationURL }}" style="display: inline-block; background: #9e1b22; color: #ffffff; padding: 12px 20px; border-radius: 6px; text-decoration: none; font-weight: bold;">Entrar al museo</a></p>
+    <p style="font-size: 14px;">El botón funciona en el mismo navegador donde pediste el correo. Si estás en otro dispositivo, escribí este código en la página de ingreso:</p>
     <p style="font-size: 32px; font-weight: bold; letter-spacing: 6px; font-family: monospace;">{{ .Token }}</p>
-    <p>Escribilo en la página de ingreso. Vence en una hora.</p>
-    <p style="color: #4a4a52; font-size: 14px;">Si no pediste este código, ignorá este correo: nadie puede entrar sin él.</p>
+    <p>Vence en una hora.</p>
+    <p style="color: #4a4a52; font-size: 14px;">Si no pediste este correo, ignoralo: nadie puede entrar sin él.</p>
   </body>
 </html>

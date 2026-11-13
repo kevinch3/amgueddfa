@@ -194,7 +194,8 @@
     "un_punto": "1 punto",
     "sin_nombre": "Elegí tu nombre",
     "sin_conexion": "Sin conexión",
-    "perfil": "Tu perfil: {nombre}, {puntos}"
+    "perfil": "Tu perfil: {nombre}, {puntos}",
+    "admin": "Administrar"
   },
   "contrib": {
     "titulo": "Contribuí",

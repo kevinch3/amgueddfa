@@ -40,7 +40,9 @@ export function renderSession(el: HTMLElement, profile: Profile | null, offline:
     pts.className = 'sesion-puntos';
     pts.textContent = points(profile.points);
     a.append(' ', pts);
-    el.append(a, ' ', salir());
+    el.append(a);
+    if (profile.role === 'admin') el.append(' ', link(url('admin'), t('sesion.admin'), 'sesion-link sesion-admin'));
+    el.append(' ', salir());
   } else if (profile) {
     el.append(link(url('ingresar'), t('sesion.sin_nombre')), ' ', salir());
   } else {

@@ -303,6 +303,17 @@ describe('releaseItem (text-only items)', () => {
     expect(rpcs[0].args).toEqual({ item_id: 'abc123def456' });
   });
 
+  it('copying again (an item already released without its text) re-uploads text.txt with upsert', async () => {
+    const { client, log, uploads } = fakeClient();
+    expect(await releaseItem(doc, client)).toEqual({ ok: true });
+    expect(await releaseItem(doc, client)).toEqual({ ok: true });
+    expect(log.filter((l) => l.startsWith('upload:'))).toEqual([
+      'upload:media/released/abc123def456/text.txt',
+      'upload:media/released/abc123def456/text.txt',
+    ]);
+    expect(uploads.every((u) => u.o.upsert === true)).toBe(true);
+  });
+
   it('image items still upload as webp', async () => {
     const { client, uploads } = fakeClient();
     await releaseItem({ id: 'abc123def456', thumb: 'abc123def456/thumb.webp', page_paths: ['abc123def456/p01.webp'] }, client);

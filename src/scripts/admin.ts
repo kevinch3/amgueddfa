@@ -13,6 +13,7 @@ import {
   restrictedPreview,
   searchUsers,
   signedUrl,
+  textOnly,
   type ApprovedLike,
   type GapChoice,
   type GapCtx,
@@ -242,6 +243,18 @@ async function renderRestricted(): Promise<void> {
       const p = el('p');
       p.append(el('span', { class: 'badge' }, t('admin.ya_liberado')));
       li.append(p);
+      if (textOnly(it)) {
+        // Items released before text.txt was copied have no media/released/<id>/text.txt,
+        // so their page keeps the locked placeholder. Copying again is safe: the upload
+        // upserts and release_item ignores an item already released.
+        const again = el('button', { type: 'button', class: 'btn btn-quiet' }, t('admin.copiar_de_nuevo'));
+        again.addEventListener('click', async () => {
+          if (await run([again], m, () => releaseItem(it))) again.replaceWith(el('p', { class: 'contrib-ok', role: 'status' }, t('admin.copiado')));
+        });
+        const row = el('div', { class: 'acciones' });
+        row.append(again);
+        li.append(row);
+      }
     } else {
       // Look before releasing: signed URLs of the restricted derivatives (admins only, 10 min).
       const pv = el('div', { class: 'admin-preview' });

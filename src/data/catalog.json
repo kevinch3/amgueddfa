@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-13T18:11:52+00:00",
+ "generated": "2026-11-13T18:15:33+00:00",
  "items": [
   {
    "id": "73afebadf114",
@@ -3420,11 +3420,11 @@
    "retrieved": "2026-11-13",
    "note_public": "",
    "year_inferred": true,
-   "restricted": false,
+   "restricted": true,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
-   "text_excerpt": "\"Competencia\",\"orden\",\"Fecha\",\"Inscribió\",\"Nombre del grupo\" \"27\",\"1\",\"10-07-14\",\"Gladys Thomas\",,,\"Competencia 28. Adrodd: “Cyd-fyw”\",, \"27\",\"2\",\"10-10-14\",\"Sion \" ,,,,,,\"Adriana Roberts\",,,,\"28\",\"1\",\"10-06-14\" ,,,,,,\"Alwen Green\",,,,\"28\",\"8\",\"10-07-14\" ,,,,,,\"Gladys Thomas\",,,,\"28\",\"2\",\"10-07-14\" ,,,,,,\"Guto\",,,,\"28\",\"7\",\"10-10-14\" ,,,,,,\"Hana\",,,,\"28\",\"5\",\"10-10-14\" ,,,,,,\"Judith Jones\",,,,\"28\",\"6\",\"10-06-14\" ,,,,,,\"Kate \",,,,\"28\",\"3\",\"10-10-14\" ,,,,,,\"Nanny Davies\",,,,\"28\",\"4\",\"10-06-14\" \"29\",\"2\",\"10-10-14\",\"Hana/Meirian/Holly/Guto/Elgan/Kate/Anwen eleri/Ffion Jones/Catrin Jones\" \"29\",\"1\",",
+   "text_excerpt": null,
    "table": null
   },
   {

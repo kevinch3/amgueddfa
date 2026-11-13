@@ -77,3 +77,27 @@ def test_tables_have_no_escape_artifacts(items):
                 v = str(v or "")
                 assert "\\r\\n" not in v and "\\n" not in v, i["id"]
                 assert not re.search(r"(?:rn){2}|(?<![^\W\d_])rn(?![^\W\d_])", v), (i["id"], v)
+
+
+# Registration sheets (sign-up lists naming registrants and group members)
+# must be restricted; their excerpt would publish personal data.
+REGISTRATION_MARKERS = ('"inscribió"', '"inscripto"', '"inscriptos"', '"inscripta"',
+                        '"participante"', '"participantes"', '"integrantes"')
+
+
+def test_registration_sheets_are_restricted(items):
+    for i in items:
+        if i["restricted"]:
+            continue
+        low = (i["text_excerpt"] or "").lower()
+        for m in REGISTRATION_MARKERS:
+            assert m not in low, (i["id"], m)
+        for row in i["table"] or []:
+            for k in row:
+                assert f'"{str(k).lower()}"' not in REGISTRATION_MARKERS, (i["id"], k)
+            break
+
+
+def test_known_registration_sheet_restricted(items):
+    by_id = {i["id"]: i for i in items}
+    assert by_id["ccd3e759b0a1"]["restricted"]

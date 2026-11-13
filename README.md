@@ -9,7 +9,7 @@ programa que falta, sumar un dato (jurados, ganadores, sede), transcribir, corre
 etiquetas o dejar un recuerdo. Cada aporte pasa por revisión antes de publicarse.
 
 - Sitio estático hecho con [Astro](https://astro.build), publicado en GitHub Pages en
-  `https://kevinch3.github.io/amgueddfa-eisteddfod/`.
+  `https://amgueddfa.kevinroberts.ar/`.
 - Datos en vivo (sesión, aportes, puntos, insignias) en [Supabase](https://supabase.com).
   Si Supabase no responde, las páginas siguen mostrando el contenido estático.
 
@@ -32,7 +32,7 @@ opcional: si está, los documentos de Office se convierten a páginas.
 
 ```sh
 npm ci
-npm run dev                         # http://localhost:4321/amgueddfa-eisteddfod/
+npm run dev                         # http://localhost:4321/
 npx vitest run                      # tests JS (incluye el build estático y la base con PGlite)
 python3 -m pytest tests -q          # tests del catálogo
 ```

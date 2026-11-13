@@ -84,7 +84,7 @@ describe('static build', () => {
     for (const c of cards) {
       const i = byId.get(c.id)!;
       expect(i.restricted || !i.year_inferred || i.kind !== 'image', c.id).toBe(false);
-      expect(c.img.startsWith('/amgueddfa-eisteddfod/media/')).toBe(true);
+      expect(c.img.startsWith('/media/')).toBe(true);
     }
     for (const i of catalog.filter((x) => x.restricted)) expect(html).not.toContain(i.id);
     expect(read('index.html')).toContain('id="recientes-data"');
@@ -92,7 +92,7 @@ describe('static build', () => {
 
   it('no internal link escapes the base path', () => {
     const html = read('index.html');
-    const bad = [...html.matchAll(/href="(\/[^"]*)"/g)].map((m) => m[1]).filter((h) => !h.startsWith('/amgueddfa-eisteddfod/'));
+    const bad = [...html.matchAll(/href="(\/[^"]*)"/g)].map((m) => m[1]).filter((h) => !h.startsWith('/') || h.startsWith('//'));
     expect(bad).toEqual([]);
   });
 
@@ -104,7 +104,7 @@ describe('static build', () => {
       });
     const files = walk(DIST);
     expect(files.length).toBeGreaterThan(100);
-    const hits = files.filter((f) => /info@|kevinroberts\.ar/i.test(readFileSync(f, 'utf8')));
+    const hits = files.filter((f) => /info@|info\s*(\(at\)|\[at\])/i.test(readFileSync(f, 'utf8')));
     expect(hits).toEqual([]);
     expect(existsSync(join(DIST, 'contacto.png'))).toBe(true);
     const home = read('index.html');

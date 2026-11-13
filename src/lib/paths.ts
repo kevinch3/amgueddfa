@@ -1,4 +1,4 @@
-/** Prefix an internal path with the site base (e.g. /amgueddfa-eisteddfod/). */
+/** Prefix an internal path with the site base (e.g. / on amgueddfa.kevinroberts.ar). */
 export function url(path: string): string {
   const base = (import.meta.env.BASE_URL ?? '/').replace(/\/+$/, '');
   return `${base}/${path.replace(/^\/+/, '')}`;

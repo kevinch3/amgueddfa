@@ -1,0 +1,343 @@
+import { beforeEach, describe, expect, it } from 'vitest';
+import { makeDb, type TestDb, type Who } from './harness';
+
+let t: TestDb;
+
+beforeEach(async () => {
+  t = await makeDb();
+});
+
+interface NewContribution {
+  user_id: string;
+  type?: string;
+  festival?: string;
+  year?: number | null;
+  item_id?: string | null;
+  payload?: Record<string, unknown>;
+  status?: string;
+}
+
+async function contribute(who: Who, c: NewContribution): Promise<string> {
+  const rows = await t.q<{ id: string }>(
+    who,
+    `insert into public.contributions (user_id, type, festival, year, item_id, payload, status)
+     values ($1, $2, $3, $4, $5, $6, $7) returning id`,
+    [
+      c.user_id,
+      c.type ?? 'memory',
+      c.festival ?? 'chubut',
+      c.year === undefined ? 2024 : c.year,
+      c.item_id ?? null,
+      JSON.stringify(c.payload ?? { text: 'Me acuerdo' }),
+      c.status ?? 'pending',
+    ],
+  );
+  return rows[0].id;
+}
+
+async function approve(admin: string, cid: string, fillsGap = false, override: unknown = null) {
+  const rows = await t.q<{ pts: number }>(
+    admin,
+    'select public.approve_contribution($1, $2, $3) as pts',
+    [cid, fillsGap, override === null ? null : JSON.stringify(override)],
+  );
+  return rows[0].pts;
+}
+
+async function points(uid: string): Promise<number> {
+  const rows = await t.q<{ points: number }>('postgres', 'select points from public.profiles where id = $1', [uid]);
+  return rows[0].points;
+}
+
+async function badges(uid: string): Promise<string[]> {
+  const rows = await t.q<{ badge: string }>(
+    'postgres',
+    'select badge from public.user_badges where user_id = $1 order by badge',
+    [uid],
+  );
+  return rows.map((r) => r.badge);
+}
+
+describe('contributions RLS', () => {
+  it('user can insert own pending contribution', async () => {
+    const u = await t.createUser();
+    const id = await contribute(u, { user_id: u });
+    const own = await t.q(u, 'select id, status from public.contributions');
+    expect(own).toEqual([{ id, status: 'pending' }]);
+  });
+
+  it('user cannot insert as approved or for another user', async () => {
+    const u = await t.createUser();
+    const other = await t.createUser();
+    await expect(contribute(u, { user_id: u, status: 'approved' })).rejects.toThrow();
+    await expect(contribute(u, { user_id: other })).rejects.toThrow();
+    await expect(contribute('anon', { user_id: u })).rejects.toThrow();
+    const all = await t.q('postgres', 'select id from public.contributions');
+    expect(all).toHaveLength(0);
+  });
+
+  it('user cannot update or delete contributions directly', async () => {
+    const u = await t.createUser();
+    const id = await contribute(u, { user_id: u });
+    await t.q(u, `update public.contributions set status = 'approved' where id = $1`, [id]).catch(() => null);
+    await t.q(u, 'delete from public.contributions where id = $1', [id]).catch(() => null);
+    const rows = await t.q('postgres', 'select status from public.contributions where id = $1', [id]);
+    expect(rows).toEqual([{ status: 'pending' }]);
+  });
+
+  it('anon sees only approved via public_contributions, no user_id column', async () => {
+    const admin = await t.createAdmin();
+    const u = await t.createUser();
+    await t.q(u, `select public.set_display_name('Gwenllian')`);
+    const a = await contribute(u, { user_id: u, payload: { text: 'aprobada' } });
+    await contribute(u, { user_id: u, payload: { text: 'pendiente' } });
+    await approve(admin, a);
+
+    const rows = await t.q<Record<string, unknown>>('anon', 'select * from public.public_contributions');
+    expect(rows).toHaveLength(1);
+    expect(rows[0].id).toBe(a);
+    expect(rows[0].display_name).toBe('Gwenllian');
+    expect(rows[0]).not.toHaveProperty('user_id');
+
+    const cols = await t.q<{ column_name: string }>(
+      'postgres',
+      `select column_name from information_schema.columns
+       where table_schema = 'public' and table_name = 'public_contributions'`,
+    );
+    expect(cols.map((c) => c.column_name)).not.toContain('user_id');
+
+    // anon cannot read the base tables at all
+    await expect(t.q('anon', 'select * from public.contributions')).rejects.toThrow();
+    await expect(t.q('anon', 'select * from public.profiles')).rejects.toThrow();
+    // ...but can read the public profile view
+    const pp = await t.q('anon', 'select * from public.public_profiles');
+    expect(pp).toEqual([{ display_name: 'Gwenllian', points: 5 }]);
+  });
+});
+
+describe('approval and scoring', () => {
+  it('non-admin approve raises', async () => {
+    const u = await t.createUser();
+    const id = await contribute(u, { user_id: u });
+    await expect(approve(u, id)).rejects.toThrow(/not_admin/);
+    await expect(
+      t.q(u, 'select public.reject_contribution($1, $2)', [id, 'no']),
+    ).rejects.toThrow(/not_admin/);
+    expect(await points(u)).toBe(0);
+  });
+
+  it('approve upload fills_gap gives 50 and primer-aporte badge', async () => {
+    const admin = await t.createAdmin();
+    const u = await t.createUser();
+    const id = await contribute(u, {
+      user_id: u,
+      type: 'upload',
+      payload: { storage_path: `${u}/prog.pdf`, category: 'programa', description: 'Programa' },
+    });
+    const pts = await approve(admin, id, true);
+    expect(pts).toBe(50);
+    expect(await points(u)).toBe(50);
+    expect(await badges(u)).toEqual(['cazador-de-programas', 'primer-aporte']);
+    const row = await t.q('postgres', 'select status, reviewer_id from public.contributions where id = $1', [id]);
+    expect(row).toEqual([{ status: 'approved', reviewer_id: admin }]);
+  });
+
+  it('scores each type per the global constraints', async () => {
+    const admin = await t.createAdmin();
+    const u = await t.createUser();
+    const cases: [string, boolean, number][] = [
+      ['upload', false, 20],
+      ['fact', false, 10],
+      ['transcription', false, 15],
+      ['tag', false, 2],
+      ['memory', false, 5],
+    ];
+    for (const [type, gap, expected] of cases) {
+      const id = await contribute(u, { user_id: u, type, payload: { field: 'venue', value: 'Trelew' } });
+      expect(await approve(admin, id, gap)).toBe(expected);
+    }
+    expect(await points(u)).toBe(52);
+  });
+
+  it('approve twice raises not_pending and points unchanged', async () => {
+    const admin = await t.createAdmin();
+    const admin2 = await t.createAdmin();
+    const u = await t.createUser();
+    const id = await contribute(u, { user_id: u, type: 'fact', payload: { field: 'venue', value: 'Gaiman' } });
+    expect(await approve(admin, id)).toBe(10);
+    await expect(approve(admin, id)).rejects.toThrow(/not_pending/);
+    await expect(approve(admin2, id, true)).rejects.toThrow(/not_pending/);
+    await expect(
+      t.q(admin2, 'select public.reject_contribution($1, $2)', [id, 'tarde']),
+    ).rejects.toThrow(/not_pending/);
+    expect(await points(u)).toBe(10);
+    const row = await t.q('postgres', 'select status, reviewer_id from public.contributions where id = $1', [id]);
+    expect(row).toEqual([{ status: 'approved', reviewer_id: admin }]);
+  });
+
+  it('reject sets status and note, awards nothing', async () => {
+    const admin = await t.createAdmin();
+    const u = await t.createUser();
+    const id = await contribute(u, { user_id: u });
+    await t.q(admin, 'select public.reject_contribution($1, $2)', [id, 'Duplicado']);
+    const row = await t.q('postgres', 'select status, review_note from public.contributions where id = $1', [id]);
+    expect(row).toEqual([{ status: 'rejected', review_note: 'Duplicado' }]);
+    expect(await points(u)).toBe(0);
+    await expect(approve(admin, id)).rejects.toThrow(/not_pending/);
+  });
+
+  it('payload_override is merged into payload', async () => {
+    const admin = await t.createAdmin();
+    const u = await t.createUser();
+    const id = await contribute(u, { user_id: u, type: 'fact', payload: { field: 'venue', value: 'Trelw' } });
+    await approve(admin, id, false, { value: 'Trelew' });
+    const row = await t.q('postgres', 'select payload from public.contributions where id = $1', [id]);
+    expect(row).toEqual([{ payload: { field: 'venue', value: 'Trelew' } }]);
+  });
+
+  it('edicion_realizada fact sets editions.status', async () => {
+    const admin = await t.createAdmin();
+    const u = await t.createUser();
+    const yes = await contribute(u, {
+      user_id: u, type: 'fact', festival: 'mimosa', year: 1999,
+      payload: { field: 'edicion_realizada', value: 'si' },
+    });
+    const no = await contribute(u, {
+      user_id: u, type: 'fact', festival: 'trevelin', year: 1985,
+      payload: { field: 'edicion_realizada', value: 'no' },
+    });
+    await approve(admin, yes);
+    await approve(admin, no);
+    const rows = await t.q('anon', 'select festival, year, status from public.editions order by festival');
+    expect(rows).toEqual([
+      { festival: 'mimosa', year: 1999, status: 'held' },
+      { festival: 'trevelin', year: 1985, status: 'not_held' },
+    ]);
+    // a later correction updates the same row
+    const fix = await contribute(u, {
+      user_id: u, type: 'fact', festival: 'trevelin', year: 1985,
+      payload: { field: 'edicion_realizada', value: true },
+    });
+    await approve(admin, fix);
+    const after = await t.q('postgres', `select status from public.editions where festival = 'trevelin' and year = 1985`);
+    expect(after).toEqual([{ status: 'held' }]);
+  });
+
+  it('10 approved chubut gives archivista-chubut', async () => {
+    const admin = await t.createAdmin();
+    const u = await t.createUser();
+    for (let i = 0; i < 9; i++) {
+      await approve(admin, await contribute(u, { user_id: u, festival: 'chubut', year: 2000 + i }));
+    }
+    await approve(admin, await contribute(u, { user_id: u, festival: 'juventud' }));
+    expect(await badges(u)).not.toContain('archivista-chubut');
+    await approve(admin, await contribute(u, { user_id: u, festival: 'chubut' }));
+    expect(await badges(u)).toContain('archivista-chubut');
+    expect(await badges(u)).toContain('bardo');
+    expect(await badges(u)).not.toContain('archivista-juventud');
+
+    await t.q(u, `select public.set_display_name('Archivera')`);
+    const lb = await t.q('anon', 'select display_name, points, festival_points from public.leaderboard');
+    expect(lb).toEqual([{ display_name: 'Archivera', points: 55, festival_points: { chubut: 50, juventud: 5 } }]);
+  });
+});
+
+describe('limits and profiles', () => {
+  it('31st contribution in 24h raises daily_limit', async () => {
+    const u = await t.createUser();
+    for (let i = 0; i < 30; i++) await contribute(u, { user_id: u });
+    await expect(contribute(u, { user_id: u })).rejects.toThrow(/daily_limit/);
+    // old contributions do not count
+    await t.q('postgres', `update public.contributions set created_at = now() - interval '25 hours'`);
+    await expect(contribute(u, { user_id: u })).resolves.toBeTypeOf('string');
+  });
+
+  it('display name uniqueness is case-insensitive', async () => {
+    const a = await t.createUser();
+    const b = await t.createUser();
+    await t.q(a, `select public.set_display_name('Eluned')`);
+    await expect(t.q(b, `select public.set_display_name('ELUNED')`)).rejects.toThrow(/display_name_taken/);
+    await expect(t.q(b, `select public.set_display_name('ab')`)).rejects.toThrow(/invalid_display_name/);
+    await expect(t.q(b, `select public.set_display_name($1)`, ['x'.repeat(31)])).rejects.toThrow(
+      /invalid_display_name/,
+    );
+    await t.q(a, `select public.set_display_name('eluned')`); // own rename keeps working
+    await t.q(b, `select public.set_display_name('Dafydd')`);
+    const own = await t.q(b, 'select display_name, role, points from public.profiles');
+    expect(own).toEqual([{ display_name: 'Dafydd', role: 'user', points: 0 }]);
+    // a user cannot change their role or points directly
+    await t.q(b, `update public.profiles set role = 'admin', points = 999`).catch(() => null);
+    expect(await t.q('postgres', 'select role, points from public.profiles where id = $1', [b])).toEqual([
+      { role: 'user', points: 0 },
+    ]);
+  });
+
+  it('set_display_name creates the profile row if missing', async () => {
+    const u = await t.createUser();
+    await t.q('postgres', 'delete from public.profiles where id = $1', [u]);
+    await t.q(u, `select public.set_display_name('Morgan')`);
+    expect(await t.q('postgres', 'select display_name from public.profiles where id = $1', [u])).toEqual([
+      { display_name: 'Morgan' },
+    ]);
+  });
+
+  it('only admins set roles and release items', async () => {
+    const admin = await t.createAdmin();
+    const u = await t.createUser();
+    await expect(t.q(u, `select public.set_role($1, 'admin')`, [u])).rejects.toThrow(/not_admin/);
+    await expect(t.q(u, `select public.release_item('abc123abc123')`)).rejects.toThrow(/not_admin/);
+    await t.q(admin, `select public.set_role($1, 'admin')`, [u]);
+    await t.q(admin, `select public.release_item('abc123abc123')`);
+    const rel = await t.q('anon', 'select item_id, released_by from public.released_items');
+    expect(rel).toEqual([{ item_id: 'abc123abc123', released_by: admin }]);
+    expect(await t.q('postgres', 'select role from public.profiles where id = $1', [u])).toEqual([{ role: 'admin' }]);
+  });
+});
+
+describe('storage policies', () => {
+  const put = (who: Who, bucket: string, name: string) =>
+    t.q(who, 'insert into storage.objects (bucket_id, name) values ($1, $2)', [bucket, name]);
+
+  it('buckets exist with the right settings', async () => {
+    const rows = await t.q(
+      'postgres',
+      'select id, public, file_size_limit, allowed_mime_types from storage.buckets order by id',
+    );
+    expect(rows).toEqual([
+      { id: 'media', public: true, file_size_limit: null, allowed_mime_types: null },
+      { id: 'restricted', public: false, file_size_limit: null, allowed_mime_types: null },
+      {
+        id: 'uploads',
+        public: false,
+        file_size_limit: 20971520,
+        allowed_mime_types: ['image/jpeg', 'image/png', 'image/webp', 'application/pdf'],
+      },
+    ]);
+  });
+
+  it('uploads: own folder only, admins read', async () => {
+    const admin = await t.createAdmin();
+    const u = await t.createUser();
+    const other = await t.createUser();
+    await put(u, 'uploads', `${u}/scan.jpg`);
+    await expect(put(u, 'uploads', `${other}/scan.jpg`)).rejects.toThrow();
+    await expect(put('anon', 'uploads', `${u}/x.jpg`)).rejects.toThrow();
+    expect(await t.q(other, `select name from storage.objects where bucket_id = 'uploads'`)).toEqual([]);
+    expect(await t.q(admin, `select name from storage.objects where bucket_id = 'uploads'`)).toEqual([
+      { name: `${u}/scan.jpg` },
+    ]);
+  });
+
+  it('restricted is admin only; media is public read, admin write', async () => {
+    const admin = await t.createAdmin();
+    const u = await t.createUser();
+    await expect(put(u, 'restricted', 'abc/p01.webp')).rejects.toThrow();
+    await put(admin, 'restricted', 'abc/p01.webp');
+    expect(await t.q(u, `select name from storage.objects where bucket_id = 'restricted'`)).toEqual([]);
+    await expect(put(u, 'media', 'abc/thumb.webp')).rejects.toThrow();
+    await put(admin, 'media', 'abc/thumb.webp');
+    expect(await t.q('anon', `select name from storage.objects where bucket_id = 'media'`)).toEqual([
+      { name: 'abc/thumb.webp' },
+    ]);
+  });
+});

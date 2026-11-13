@@ -86,32 +86,45 @@ def derive(item: Item, archive: Path, out_root: Path) -> Item:
     if item.kind == "image":
         thumb, page = out / "thumb.webp", out / "p01.webp"
         if not _fresh([thumb, page], src):
-            out.mkdir(parents=True, exist_ok=True)
-            with Image.open(src) as im:
-                _save(im, page, PAGE_LONG, PAGE_Q)
-                _save(im, thumb, THUMB_LONG, THUMB_Q)
+            tmp = out_root / f".tmp-{item.id}"
+            shutil.rmtree(tmp, ignore_errors=True)
+            tmp.mkdir(parents=True)
+            try:
+                with Image.open(src) as im:
+                    _save(im, tmp / "p01.webp", PAGE_LONG, PAGE_Q)
+                    _save(im, tmp / "thumb.webp", THUMB_LONG, THUMB_Q)
+                shutil.rmtree(out, ignore_errors=True)
+                tmp.rename(out)
+            finally:
+                shutil.rmtree(tmp, ignore_errors=True)
         pages = [page]
     elif item.kind == "pdf":
         thumb = out / "thumb.webp"
         pages = _pages_on_disk(out)
         if not _fresh([thumb, *pages], src):
-            out.mkdir(parents=True, exist_ok=True)
-            for old in _pages_on_disk(out):
-                old.unlink()
-            with tempfile.TemporaryDirectory() as tmp:
-                subprocess.run(["pdftoppm", "-r", str(PDF_DPI), "-png", str(src),
-                                str(Path(tmp) / "pg")], check=True, capture_output=True)
-                rendered = sorted(Path(tmp).glob("pg-*.png"))
+            tmp = out_root / f".tmp-{item.id}"
+            shutil.rmtree(tmp, ignore_errors=True)
+            tmp.mkdir(parents=True)
+            try:
+                r = subprocess.run(["pdftoppm", "-r", str(PDF_DPI), "-png", str(src),
+                                    str(tmp / "pg")], capture_output=True, text=True,
+                                   errors="replace")
+                if r.returncode != 0:
+                    raise RuntimeError(f"pdftoppm failed (exit {r.returncode}): {r.stderr.strip()}")
+                rendered = sorted(tmp.glob("pg-*.png"))
                 if not rendered:
-                    raise RuntimeError(f"pdftoppm produced no pages for {item.src_path}")
-                pages = []
+                    raise RuntimeError("pdftoppm produced no pages")
                 for n, png in enumerate(rendered, 1):
-                    dest = out / f"p{n:02d}.webp"
                     with Image.open(png) as im:
-                        _save(im, dest, PAGE_LONG, PAGE_Q)
+                        _save(im, tmp / f"p{n:02d}.webp", PAGE_LONG, PAGE_Q)
                         if n == 1:
-                            _save(im, thumb, THUMB_LONG, THUMB_Q)
-                    pages.append(dest)
+                            _save(im, tmp / "thumb.webp", THUMB_LONG, THUMB_Q)
+                    png.unlink()
+                shutil.rmtree(out, ignore_errors=True)
+                tmp.rename(out)
+            finally:
+                shutil.rmtree(tmp, ignore_errors=True)
+            pages = _pages_on_disk(out)
     else:
         item.pages, item.thumb, item.page_paths = 0, None, []
         if item.kind == "doc":
@@ -121,6 +134,8 @@ def derive(item: Item, archive: Path, out_root: Path) -> Item:
         elif item.kind == "table":
             with open(src, newline="", encoding="utf-8-sig", errors="replace") as f:
                 item.table = list(csv.DictReader(f))
+        if item.restricted:  # extracted text must never reach the public catalog
+            item.text_excerpt, item.table = None, None
         return item
 
     item.pages = len(pages)

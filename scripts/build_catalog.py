@@ -64,12 +64,22 @@ def main(argv=None) -> int:
     if a.only and not todo:
         print(f"no item with id {a.only}", file=sys.stderr)
         return 1
+    failures: list[tuple[str, str, str]] = []
     for n, it in enumerate(todo, 1):
         root, other = (restricted, public) if it.restricted else (public, restricted)
         shutil.rmtree(other / it.id, ignore_errors=True)  # never leave a stale copy
-        derive(it, archive, root)
+        try:
+            derive(it, archive, root)
+        except Exception as e:  # noqa: BLE001 - collect, report, fail at the end
+            failures.append((it.id, it.src_path, f"{type(e).__name__}: {e}"))
         if n % 50 == 0:
             print(f"  {n}/{len(todo)}", flush=True)
+
+    if failures:
+        print(f"ERROR: {len(failures)} item(s) failed:", file=sys.stderr)
+        for iid, path, msg in failures:
+            print(f"  {iid} {path}: {msg}", file=sys.stderr)
+        return 1
 
     if not a.only:
         ids = {i.id for i in items}

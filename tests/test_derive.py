@@ -79,3 +79,32 @@ def test_skip_when_fresh(tmp_path):
     os.utime(arch / "a.png", (newer, newer))
     derive(mk("a.png", "image"), arch, out)
     assert page.stat().st_mtime != old
+
+
+def test_restricted_text_not_extracted(tmp_path):
+    arch = tmp_path / "arch"
+    arch.mkdir()
+    (arch / "t.csv").write_text("a\n1\n")
+    (arch / "w.html").write_text("<p>secret</p>")
+    t = derive(mk("t.csv", "table", restricted=True), arch, tmp_path / "o")
+    w = derive(mk("w.html", "web", restricted=True), arch, tmp_path / "o")
+    assert t.table is None and t.text_excerpt is None
+    assert w.text_excerpt is None and w.table is None
+
+
+def test_failed_pdf_render_leaves_nothing_fresh(tmp_path):
+    import pytest
+    arch, out = tmp_path / "arch", tmp_path / "out"
+    arch.mkdir()
+    (arch / "bad.pdf").write_bytes(b"not a pdf")
+    with pytest.raises(RuntimeError, match="pdftoppm"):
+        derive(mk("bad.pdf", "pdf"), arch, out)
+    assert not (out / "abc123def456").exists()
+    assert not list(out.glob(".tmp-*"))
+    # a leftover thumb without pages is not "fresh"
+    d = out / "abc123def456"
+    d.mkdir()
+    Image.new("RGB", (10, 10)).save(d / "thumb.webp")
+    pages = [Image.new("RGB", (850, 1100), c) for c in ("white", "gray")]
+    pages[0].save(arch / "ok.pdf", save_all=True, append_images=pages[1:])
+    assert derive(mk("ok.pdf", "pdf"), arch, out).pages == 2

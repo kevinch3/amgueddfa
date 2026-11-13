@@ -36,3 +36,9 @@ def test_restricted_not_in_public_media(items):
 
 def test_every_item_has_source_label(items):
     assert all(i["source_label"] for i in items)
+
+
+def test_restricted_items_have_no_extracted_text(items):
+    for i in items:
+        if i["restricted"]:
+            assert i["text_excerpt"] is None and i["table"] is None, i["id"]

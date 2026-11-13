@@ -1,4 +1,4 @@
-import { currentProfile, type Profile } from '../lib/auth';
+import { currentProfile, signOut, type Profile } from '../lib/auth';
 import { t } from '../lib/i18n';
 import { liveQuery } from '../lib/live';
 import { url } from '../lib/paths';
@@ -16,7 +16,21 @@ function points(n: number): string {
   return n === 1 ? t('sesion.un_punto') : t('sesion.puntos', { n });
 }
 
-/** Render #sesion: the signed-in user's name and points, or an "Ingresar" link. */
+/** A "Salir" button: ends the session on this device and goes back to the home page. */
+function salir(): HTMLButtonElement {
+  const b = document.createElement('button');
+  b.type = 'button';
+  b.className = 'sesion-salir';
+  b.textContent = t('auth.salir');
+  b.addEventListener('click', async () => {
+    b.disabled = true;
+    await signOut(); // local scope: always clears this browser's session
+    window.location.href = url('/');
+  });
+  return b;
+}
+
+/** Render #sesion: the signed-in user's name, points and a "Salir" button, or an "Ingresar" link. */
 export function renderSession(el: HTMLElement, profile: Profile | null, offline: boolean): void {
   el.replaceChildren();
   if (profile?.display_name) {
@@ -26,9 +40,9 @@ export function renderSession(el: HTMLElement, profile: Profile | null, offline:
     pts.className = 'sesion-puntos';
     pts.textContent = points(profile.points);
     a.append(' ', pts);
-    el.append(a);
+    el.append(a, ' ', salir());
   } else if (profile) {
-    el.append(link(url('ingresar'), t('sesion.sin_nombre')));
+    el.append(link(url('ingresar'), t('sesion.sin_nombre')), ' ', salir());
   } else {
     el.append(link(url('ingresar'), t('sesion.ingresar')));
     if (offline) {

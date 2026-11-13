@@ -1,0 +1,284 @@
+---
+import Base from '../layouts/Base.astro';
+import { CATEGORIES, FACT_FIELDS, FESTIVALS, MIME_EXT, TEXT_MAX } from '../lib/contrib';
+import { t } from '../lib/i18n';
+
+const TABS = ['subir', 'datos', 'recuerdo'] as const;
+const thisYear = new Date().getFullYear();
+---
+<Base title={t('contrib.titulo')}>
+  <section class="contrib">
+    <h1>{t('contrib.titulo')}</h1>
+    <p class="lead measure">{t('contrib.intro')}</p>
+    <noscript><p class="contrib-msg">{t('contrib.sin_js')}</p></noscript>
+
+    <div id="contrib-gate" aria-live="polite"><p class="muted">{t('contrib.cargando')}</p></div>
+
+    <div id="contrib-body" hidden>
+      <fieldset class="contrib-edicion">
+        <legend>{t('contrib.elegir_edicion')}</legend>
+        <div class="campo">
+          <label for="c-festival">{t('contrib.festival_label')}</label>
+          <select id="c-festival" name="festival" required>
+            <option value="">{t('contrib.elegir')}</option>
+            {FESTIVALS.map((f) => <option value={f}>{t(`festivales.${f}`)}</option>)}
+          </select>
+        </div>
+        <div class="campo">
+          <label for="c-year">{t('contrib.ano_label')}</label>
+          <input id="c-year" name="year" type="number" inputmode="numeric" min="1865" max={thisYear} step="1" required />
+        </div>
+        <p class="muted small"><a id="c-volver" href="#" hidden>{t('contrib.volver_edicion')}</a></p>
+      </fieldset>
+
+      <div class="tabs" role="tablist" aria-label={t('contrib.pestanas')}>
+        {TABS.map((k, i) => (
+          <button type="button" role="tab" id={`tab-${k}`} aria-controls={`panel-${k}`} aria-selected={i === 0 ? 'true' : 'false'} tabindex={i === 0 ? '0' : '-1'} data-tab={k}>
+            {t(`contrib.tabs.${k}`)}
+          </button>
+        ))}
+      </div>
+
+      <p class="contrib-msg" id="c-msg" role="alert" hidden></p>
+      <div class="contrib-ok" id="c-ok" role="status" hidden>
+        <p><span class="badge">{t('contrib.pendiente')}</span> {t('contrib.gracias')}</p>
+        <p><button type="button" class="btn btn-quiet" id="c-otro">{t('contrib.otro')}</button></p>
+      </div>
+
+      <form id="panel-subir" role="tabpanel" aria-labelledby="tab-subir" data-kind="upload" class="contrib-form" novalidate>
+        <p class="measure">{t('contrib.subir_ayuda')}</p>
+        <div class="campo">
+          <label for="c-file">{t('contrib.archivo_label')}</label>
+          <input id="c-file" name="file" type="file" accept={Object.keys(MIME_EXT).join(',')} required />
+        </div>
+        <div class="campo">
+          <label for="c-category">{t('contrib.categoria_label')}</label>
+          <select id="c-category" name="category" required>
+            <option value="">{t('contrib.elegir')}</option>
+            {CATEGORIES.map((c) => <option value={c}>{t(`categorias.${c}`)}</option>)}
+          </select>
+        </div>
+        <div class="campo">
+          <label for="c-description">{t('contrib.descripcion_label')}</label>
+          <textarea id="c-description" name="description" rows="3" maxlength="500"></textarea>
+        </div>
+        <button class="btn" type="submit">{t('contrib.enviar')}</button>
+      </form>
+
+      <form id="panel-datos" role="tabpanel" aria-labelledby="tab-datos" data-kind="fact" class="contrib-form" novalidate hidden>
+        <p class="measure">{t('contrib.datos_ayuda')}</p>
+        <div class="campo">
+          <label for="c-field">{t('contrib.campo_label')}</label>
+          <select id="c-field" name="field" required>
+            <option value="">{t('contrib.elegir')}</option>
+            {FACT_FIELDS.map((f) => <option value={f}>{t(`contrib.campos.${f}`)}</option>)}
+          </select>
+        </div>
+        <div class="campo" data-for="text">
+          <label for="c-value">{t('contrib.valor_label')}</label>
+          <input id="c-value" name="value" type="text" maxlength="500" />
+        </div>
+        <div class="campo" data-for="date" hidden>
+          <label for="c-date">{t('contrib.fecha_label')}</label>
+          <input id="c-date" name="date" type="date" min="1865-01-01" max={`${thisYear}-12-31`} />
+        </div>
+        <fieldset class="campo" data-for="yesno" hidden>
+          <legend>{t('contrib.realizada_label')}</legend>
+          <label class="opt"><input type="radio" name="held" value="si" /> {t('contrib.si')}</label>
+          <label class="opt"><input type="radio" name="held" value="no" /> {t('contrib.no')}</label>
+        </fieldset>
+        <div data-for="competencia" hidden>
+          <div class="campo">
+            <label for="c-numero">{t('contrib.numero_label')}</label>
+            <input id="c-numero" name="numero" type="text" maxlength="20" />
+          </div>
+          <div class="campo">
+            <label for="c-desc-comp">{t('contrib.descripcion_comp_label')}</label>
+            <input id="c-desc-comp" name="descripcion" type="text" maxlength="500" />
+          </div>
+          <div class="campo">
+            <label for="c-cat-comp">{t('contrib.categoria_comp_label')}</label>
+            <input id="c-cat-comp" name="categoria" type="text" maxlength="100" />
+          </div>
+          <div class="campo">
+            <label for="c-idioma">{t('contrib.idioma_label')}</label>
+            <input id="c-idioma" name="idioma" type="text" maxlength="100" />
+          </div>
+        </div>
+        <button class="btn" type="submit">{t('contrib.enviar')}</button>
+      </form>
+
+      <form id="panel-recuerdo" role="tabpanel" aria-labelledby="tab-recuerdo" data-kind="memory" class="contrib-form" novalidate hidden>
+        <p class="measure">{t('contrib.recuerdo_ayuda')}</p>
+        <div class="campo">
+          <label for="c-text">{t('contrib.recuerdo_label')}</label>
+          <textarea id="c-text" name="text" rows="8" maxlength={TEXT_MAX} aria-describedby="c-text-ayuda"></textarea>
+          <p class="muted small" id="c-text-ayuda">{t('contrib.caracteres')}</p>
+        </div>
+        <button class="btn" type="submit">{t('contrib.enviar')}</button>
+      </form>
+    </div>
+  </section>
+</Base>
+
+<script>
+  import { submit, type Kind } from '../lib/contrib';
+  import { t } from '../lib/i18n';
+  import { url } from '../lib/paths';
+  import type { FestivalSlug } from '../lib/types';
+  import { gate, gateMessage } from '../scripts/ui';
+
+  const TABS = ['subir', 'datos', 'recuerdo'];
+  const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
+  const params = new URLSearchParams(location.search);
+  const itemId = /^[0-9a-f]{12}$/.test(params.get('item') ?? '') ? params.get('item') : null;
+  const fest = $<HTMLSelectElement>('c-festival');
+  const year = $<HTMLInputElement>('c-year');
+  const msg = $<HTMLParagraphElement>('c-msg');
+  const ok = $<HTMLDivElement>('c-ok');
+
+  if ([...fest.options].some((o) => o.value === params.get('f'))) fest.value = params.get('f')!;
+  if (/^\d{4}$/.test(params.get('y') ?? '')) year.value = params.get('y')!;
+
+  function syncBack() {
+    const a = $<HTMLAnchorElement>('c-volver');
+    a.hidden = !(fest.value && year.value);
+    if (!a.hidden) a.href = url(`${fest.value}/${year.value}/`);
+  }
+  fest.addEventListener('change', syncBack);
+  year.addEventListener('input', syncBack);
+  syncBack();
+
+  function say(key: string | null) {
+    msg.hidden = !key;
+    msg.textContent = key ? t(key) : '';
+  }
+
+  function select(tab: string, focus = false) {
+    if (!TABS.includes(tab)) tab = 'subir';
+    for (const k of TABS) {
+      const b = $<HTMLButtonElement>(`tab-${k}`);
+      const on = k === tab;
+      b.setAttribute('aria-selected', String(on));
+      b.tabIndex = on ? 0 : -1;
+      $(`panel-${k}`).hidden = !on || !ok.hidden;
+      if (on && focus) b.focus();
+    }
+    say(null);
+  }
+  const current = () => TABS.find((k) => $(`tab-${k}`).getAttribute('aria-selected') === 'true') ?? 'subir';
+
+  for (const k of TABS) {
+    const b = $<HTMLButtonElement>(`tab-${k}`);
+    b.addEventListener('click', () => select(k));
+    b.addEventListener('keydown', (ev) => {
+      const i = TABS.indexOf(k);
+      const next = ev.key === 'ArrowRight' ? TABS[(i + 1) % TABS.length]
+        : ev.key === 'ArrowLeft' ? TABS[(i + TABS.length - 1) % TABS.length]
+        : ev.key === 'Home' ? TABS[0] : ev.key === 'End' ? TABS[TABS.length - 1] : null;
+      if (next) { ev.preventDefault(); select(next, true); }
+    });
+  }
+
+  // Datos: show the inputs that fit the chosen field.
+  const fieldSel = $<HTMLSelectElement>('c-field');
+  function syncField() {
+    const f = fieldSel.value;
+    const mode = f === 'start_date' || f === 'end_date' ? 'date'
+      : f === 'edicion_realizada' ? 'yesno' : f === 'competencia' ? 'competencia' : 'text';
+    for (const el of document.querySelectorAll<HTMLElement>('#panel-datos [data-for]')) el.hidden = el.dataset.for !== mode;
+  }
+  fieldSel.addEventListener('change', syncField);
+  syncField();
+
+  function inputFor(kind: Kind, form: HTMLFormElement): Record<string, unknown> {
+    const fd = new FormData(form);
+    const s = (k: string) => String(fd.get(k) ?? '');
+    if (kind === 'upload') {
+      const f = $<HTMLInputElement>('c-file').files?.[0];
+      return { file: f, category: s('category'), description: s('description') };
+    }
+    if (kind === 'fact') {
+      const field = s('field');
+      const value = field === 'start_date' || field === 'end_date' ? s('date')
+        : field === 'edicion_realizada' ? s('held') : s('value');
+      return { field, value, numero: s('numero'), descripcion: s('descripcion'), categoria: s('categoria'), idioma: s('idioma') };
+    }
+    return { text: s('text') };
+  }
+
+  for (const k of TABS) {
+    const form = $<HTMLFormElement>(`panel-${k}`);
+    form.addEventListener('submit', async (ev) => {
+      ev.preventDefault();
+      const btn = form.querySelector<HTMLButtonElement>('button[type=submit]')!;
+      if (btn.disabled) return;
+      say(null);
+      const y = Number(year.value);
+      if (!fest.value || !Number.isInteger(y) || y < 1865 || y > new Date().getFullYear()) {
+        say('contrib.error.edicion');
+        (fest.value ? year : fest).focus();
+        return;
+      }
+      btn.disabled = true;
+      btn.textContent = t('contrib.enviando');
+      const kind = form.dataset.kind as Kind;
+      const r = await submit(kind, fest.value as FestivalSlug, y, itemId, inputFor(kind, form));
+      btn.disabled = false;
+      btn.textContent = t('contrib.enviar');
+      if (!r.ok) {
+        say(r.key);
+        if (r.key === 'contrib.error.sesion') void start();
+        return;
+      }
+      form.reset();
+      syncField();
+      ok.hidden = false;
+      for (const k2 of TABS) $(`panel-${k2}`).hidden = true;
+      $<HTMLButtonElement>('c-otro').focus();
+    });
+  }
+
+  $('c-otro').addEventListener('click', () => {
+    ok.hidden = true;
+    select(current(), true);
+  });
+
+  async function start() {
+    const g = await gate();
+    const box = $('contrib-gate');
+    if (!g.profile) {
+      box.replaceChildren(gateMessage(g.reason, 'contrib.ingresar'));
+      if (g.reason === 'signed_out') {
+        const p = document.createElement('p');
+        p.className = 'measure';
+        p.textContent = t('contrib.ingresar_ayuda');
+        box.prepend(p);
+      }
+      $('contrib-body').hidden = true;
+      return;
+    }
+    box.replaceChildren();
+    $('contrib-body').hidden = false;
+    select(params.get('tab') ?? 'subir');
+  }
+  void start();
+  document.addEventListener('amg:sesion', () => void start());
+</script>
+
+<style>
+  .contrib { max-width: 40rem; }
+  .contrib-edicion { border: 1px solid var(--rule); padding: 0.75rem 1rem 0.25rem; margin: 1rem 0 1.25rem; display: flex; flex-wrap: wrap; gap: 0 1.5rem; }
+  .contrib-edicion legend { font: 600 1rem/1.3 var(--sans); padding: 0 0.3rem; }
+  .contrib-edicion p { flex-basis: 100%; }
+  .tabs { display: flex; gap: 0.25rem; border-bottom: 2px solid var(--red); margin-bottom: 1rem; flex-wrap: wrap; }
+  .tabs [role='tab'] {
+    font: 600 1.05rem/1.2 var(--sans); padding: 0.65rem 1.1rem; min-height: 44px; border: 1px solid var(--rule); border-bottom: 0;
+    border-radius: 4px 4px 0 0; background: var(--paper); color: var(--ink); cursor: pointer;
+  }
+  .tabs [role='tab'][aria-selected='true'] { background: var(--red); border-color: var(--red); color: var(--paper-hi); }
+  .tabs [role='tab']:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+  .contrib-form[hidden], #contrib-body[hidden] { display: none; }
+  .contrib-form .btn:disabled { opacity: 0.55; cursor: not-allowed; }
+  .opt { display: inline-flex; align-items: center; gap: 0.4rem; margin-right: 1.25rem; min-height: 44px; font-family: var(--sans); }
+</style>

@@ -137,3 +137,14 @@ export async function signOut(client: SupabaseClient | null = getClient()): Prom
     return OFFLINE;
   }
 }
+
+/**
+ * The page to go back to after signing in (`/ingresar?volver=…`): only a path on
+ * this site under `base`, never another origin or a protocol-relative URL.
+ */
+export function returnPath(raw: string | null | undefined, base: string): string | null {
+  const v = (raw ?? '').trim();
+  const b = base.endsWith('/') ? base : `${base}/`;
+  if (!v.startsWith(b) || v.startsWith('//') || /[\\\s]/.test(v) || v.includes('://')) return null;
+  return v;
+}

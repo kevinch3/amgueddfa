@@ -8,6 +8,8 @@ import { t } from '../../lib/i18n';
 import { url } from '../../lib/paths';
 import { byTitle, CATEGORY_ORDER, docCount } from '../../lib/site';
 import type { FestivalSlug } from '../../lib/types';
+import approvedRaw from '../../../data/approved/contributions.json';
+import { byLine, factDisplay, forEdition, jsonForScript, sortFacts, type Contribution } from '../../lib/contrib';
 
 export function getStaticPaths() {
   return festivals().flatMap((f) => {
@@ -26,6 +28,15 @@ const sections = CATEGORY_ORDER.map((c) => ({ c, items: list.filter((i) => i.cat
 // Programa always shows (with its slot when incomplete); other empty sections are named in one slot.
 const shown = sections.filter((s) => s.c === 'programa' || s.items.length > 0);
 const missing = sections.filter((s) => s.c !== 'programa' && s.items.length === 0).map((s) => t(`categorias.${s.c}`));
+// Approved facts and memories from the last export, baked in for search engines; edicion.ts merges live rows.
+const approved = (approvedRaw as Contribution[]).filter((c) => c.festival === slug && c.year === year && ['fact', 'memory', 'upload'].includes(c.type))
+  .map((c) => {
+    const { storage_path: _private, ...payload } = c.payload ?? {}; // never publish upload paths
+    return { ...c, payload };
+  });
+const facts = sortFacts(forEdition(approved, slug, year, 'fact')).map((c) => ({ ...factDisplay(c), by: byLine(c) }));
+const memories = forEdition(approved, slug, year, 'memory').map((c) => ({ text: String(c.payload?.text ?? ''), by: byLine(c) }));
+const contribUrl = (tab: string) => url(`contribuir?f=${slug}&y=${year}&tab=${tab}`);
 const missingList = new Intl.ListFormat('es', { type: 'conjunction' }).format(missing.map((m) => m.toLowerCase()));
 ---
 <Base title={`${fest.name} ${year}`} festival={slug} year={year}>
@@ -50,7 +61,11 @@ const missingList = new Intl.ListFormat('es', { type: 'conjunction' }).format(mi
 
   <section class="section island-section" aria-labelledby="hechos-t">
     <h2 id="hechos-t">{t('edicion.hechos_titulo')}</h2>
-    <Mount id="hechos" festival={slug} year={year} />
+    <Mount id="hechos" festival={slug} year={year}>{facts.length > 0 && (
+      <dl class="hechos">
+        {facts.map((f) => <div><dt>{f.label}</dt><dd>{f.value}{f.by && <> <span class="muted small">{f.by}</span></>}</dd></div>)}
+      </dl>
+    )}</Mount>
   </section>
 
   {shown.map(({ c, items }) => (
@@ -73,13 +88,23 @@ const missingList = new Intl.ListFormat('es', { type: 'conjunction' }).format(mi
 
   <section class="section island-section" aria-labelledby="recuerdos-t">
     <h2 id="recuerdos-t">{t('edicion.recuerdos_titulo')}</h2>
-    <Mount id="recuerdos" festival={slug} year={year} />
+    <Mount id="recuerdos" festival={slug} year={year}>{memories.length > 0 && (
+      <ul class="recuerdos">
+        {memories.map((m) => <li><blockquote>{m.text}</blockquote>{m.by && <p class="muted small">{m.by}</p>}</li>)}
+      </ul>
+    )}</Mount>
   </section>
 
   <section class="section" id="aportar" aria-labelledby="aportes-t">
     <h2 id="aportes-t">{t('edicion.aportes_titulo')}</h2>
     <p class="measure">{t('edicion.aportes_ayuda')}</p>
+    <p class="aportes-acciones">
+      <a class="btn" href={contribUrl('subir')}>{t('edicion.subir')}</a>
+      <a class="btn btn-quiet" href={contribUrl('datos')}>{t('edicion.datos')}</a>
+      <a class="btn btn-quiet" href={contribUrl('recuerdo')}>{t('edicion.recuerdo')}</a>
+    </p>
     <Mount id="aportes" festival={slug} year={year} />
+    <script type="application/json" id="aprobados-data" set:html={jsonForScript(approved)}></script>
   </section>
 
   <nav class="pager" aria-label={t('edicion.todas')}>
@@ -88,3 +113,7 @@ const missingList = new Intl.ListFormat('es', { type: 'conjunction' }).format(mi
     {year < last ? <a href={url(`${slug}/${year + 1}/`)}>{t('edicion.siguiente', { year: year + 1 })}</a> : <span></span>}
   </nav>
 </Base>
+
+<script>
+  import '../../scripts/edicion.ts';
+</script>

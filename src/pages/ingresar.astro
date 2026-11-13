@@ -169,8 +169,9 @@ import { url } from '../lib/paths';
   });
 
   $('auth-salir').addEventListener('click', async () => {
-    await signOut();
+    const r = await signOut();
     document.dispatchEvent(new CustomEvent('amg:sesion'));
+    if (!r.ok) return say(r.key);
     say(null);
     show('paso-email');
   });

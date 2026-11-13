@@ -115,10 +115,25 @@ export async function currentProfile(client: SupabaseClient | null = getClient()
   return data;
 }
 
-export async function signOut(client: SupabaseClient | null = getClient()): Promise<void> {
+/**
+ * Sign this device out. Uses scope 'local' so auth-js removes the stored
+ * session before any network request: a shared computer must not stay signed
+ * in just because the revoke request failed offline. If auth-js still reports
+ * an error (or throws), we check whether a session is left on the device and
+ * only report failure when it is.
+ */
+export async function signOut(client: SupabaseClient | null = getClient()): Promise<Result> {
+  if (!client) return { ok: true };
   try {
-    await client?.auth.signOut();
+    const { error } = await client.auth.signOut({ scope: 'local' });
+    if (!error) return { ok: true };
   } catch {
-    /* offline: the local session is cleared anyway on next load */
+    /* fall through to the session check */
+  }
+  try {
+    const { data } = await client.auth.getSession();
+    return data?.session ? OFFLINE : { ok: true };
+  } catch {
+    return OFFLINE;
   }
 }

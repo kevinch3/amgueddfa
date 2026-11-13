@@ -1,16 +1,17 @@
 import { beforeEach, describe, expect, it } from 'vitest';
-import { canResend, currentProfile, sendCode, setDisplayName, verifyCode, _resetInflight } from '../src/lib/auth';
+import { canResend, currentProfile, sendCode, setDisplayName, signOut, verifyCode, _resetInflight } from '../src/lib/auth';
 
 function apiErr(code: string | undefined, status: number, name = 'AuthApiError') {
   return Object.assign(new Error(code ?? 'err'), { __isAuthError: true, name, code, status });
 }
 
 function fakeClient(overrides: Record<string, any> = {}) {
-  const calls: Record<string, any[]> = { signInWithOtp: [], verifyOtp: [], rpc: [] };
+  const calls: Record<string, any[]> = { signInWithOtp: [], verifyOtp: [], rpc: [], signOut: [] };
   const auth = {
     signInWithOtp: async (a: any) => { calls.signInWithOtp.push(a); return overrides.signInWithOtp?.(a) ?? { data: {}, error: null }; },
     verifyOtp: async (a: any) => { calls.verifyOtp.push(a); return overrides.verifyOtp?.(a) ?? { data: {}, error: null }; },
     getSession: async () => overrides.getSession?.() ?? { data: { session: null }, error: null },
+    signOut: async (a: any) => { calls.signOut.push(a); return overrides.signOut?.(a) ?? { error: null }; },
   };
   const client: any = {
     auth,
@@ -136,5 +137,36 @@ describe('currentProfile', () => {
     const { client } = fakeClient({ getSession: () => ({ data: { session: { user: { id: 'u1' } } }, error: null }), from });
     expect(await currentProfile(client)).toEqual(row);
     expect(filter).toEqual(['profiles', 'id', 'u1']);
+  });
+});
+
+describe('signOut (shared computers must not stay signed in)', () => {
+  const offlineErr = () => apiErr(undefined, 0, 'AuthRetryableFetchError');
+
+  it('signs out this device only (scope local), never depending on a global revoke', async () => {
+    const { client, calls } = fakeClient();
+    expect(await signOut(client)).toEqual({ ok: true });
+    expect(calls.signOut).toEqual([{ scope: 'local' }]);
+  });
+
+  it('reports success when signOut resolves {error} but the local session is gone', async () => {
+    const { client } = fakeClient({ signOut: () => ({ error: offlineErr() }) });
+    expect(await signOut(client)).toEqual({ ok: true });
+  });
+
+  it('reports sin_conexion when signOut resolves {error} and a session is still stored', async () => {
+    const { client } = fakeClient({
+      signOut: () => ({ error: offlineErr() }),
+      getSession: () => ({ data: { session: { user: { id: 'u1' } } }, error: null }),
+    });
+    expect(await signOut(client)).toEqual({ ok: false, key: 'estado.sin_conexion' });
+  });
+
+  it('reports sin_conexion when signOut throws and a session is still stored', async () => {
+    const { client } = fakeClient({
+      signOut: () => { throw new TypeError('Failed to fetch'); },
+      getSession: () => ({ data: { session: { user: { id: 'u1' } } }, error: null }),
+    });
+    expect(await signOut(client)).toEqual({ ok: false, key: 'estado.sin_conexion' });
   });
 });

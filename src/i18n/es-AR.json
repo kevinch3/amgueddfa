@@ -6,7 +6,7 @@
   },
   "nav": {
     "inicio": "Inicio",
-    "festivales": "Festivales",
+    "festivales": "Eisteddfodau",
     "faltantes": "Programas que buscamos",
     "aportar": "Aportá",
     "perfil": "Mi perfil",
@@ -31,7 +31,7 @@
     "trevelin": "Eisteddfod de Trevelin"
   },
   "festivales_cy": {
-    "chubut": "Eisteddfod y Chubut",
+    "chubut": "Eisteddfod y Wladfa",
     "juventud": "Eisteddfod yr Ieuenctid",
     "mimosa": "Eisteddfod Mimosa Porth Madryn",
     "trevelin": "Eisteddfod Trevelin"
@@ -56,7 +56,7 @@
   },
   "inicio": {
     "lema": "Programas, bases y papeles de los Eisteddfodau de la Patagonia, guardados para que los vea cualquiera.",
-    "contador": "Hasta hoy juntamos {docs} documentos de {festivales} festivales, desde {desde}.",
+    "contador": "Hasta hoy juntamos {docs} documentos de {festivales} eisteddfodau, desde {desde}.",
     "contador_completos": "De {n} ediciones ya tenemos el programa completo.",
     "mapa_titulo": "Qué tenemos de cada año",
     "mapa_ayuda": "Tocá un año para ver lo que hay.",
@@ -145,7 +145,6 @@
   },
   "pie": {
     "retiro": "Si sos de una de las asociaciones y querés que corrijamos o retiremos algún documento, avisanos y lo resolvemos.",
-    "baja_resolucion": "Mostramos copias en baja resolución. Cada documento dice de dónde viene.",
     "lema_cy": "Y gwir yn erbyn y byd",
     "contacto_alt": "Correo de contacto del archivo",
     "contacto_escribinos": "Escribinos"
@@ -200,7 +199,7 @@
     "intro": "Todo lo que mandes lo revisamos antes de publicarlo. Gracias por ayudar a completar el archivo.",
     "para": "Estás aportando a: {festival} {year}",
     "elegir_edicion": "¿A qué edición querés aportar?",
-    "festival_label": "Festival",
+    "festival_label": "Eisteddfod",
     "ano_label": "Año",
     "elegir": "Elegí una opción",
     "pestanas": "Tipo de aporte",
@@ -259,12 +258,12 @@
       "valor": "Completá el dato (hasta 500 caracteres).",
       "fecha": "Revisá la fecha: tiene que ser un día que exista.",
       "competencia": "Para una competencia necesitamos el número y la descripción.",
-      "etiqueta": "Elegí al menos un año, una categoría o un festival.",
+      "etiqueta": "Elegí al menos un año, una categoría o un eisteddfod.",
       "ano": "El año tiene que estar entre 1865 y 2026.",
       "texto": "El texto tiene que tener entre 10 y 5000 caracteres.",
       "limite": "Llegaste al máximo de 30 aportes en 24 horas. ¡Gracias! Seguí mañana.",
       "sesion": "Tu sesión se cerró. Ingresá de nuevo para mandar el aporte.",
-      "edicion": "Elegí el festival y el año."
+      "edicion": "Elegí el eisteddfod y el año."
     }
   },
   "tarea": {
@@ -275,7 +274,7 @@
     "corregir_ayuda": "Decinos lo que sepas. Con un dato alcanza.",
     "ano_label": "Año",
     "categoria_label": "Categoría",
-    "festival_label": "Festival",
+    "festival_label": "Eisteddfod",
     "sin_cambio": "Sin cambios",
     "transcribir": "Transcribir",
     "transcribir_ayuda": "Copiá el texto del documento tal como está, en el idioma original.",
@@ -435,7 +434,7 @@
   },
   "tareas": {
     "titulo": "Tareas rápidas",
-    "intro": "Mirá cada documento y decinos si el año, el tipo y el festival están bien. Lo calculamos por el contexto y puede estar mal.",
+    "intro": "Mirá cada documento y decinos si el año, el tipo y el eisteddfod están bien. Lo calculamos por el contexto y puede estar mal.",
     "cargando": "Cargando…",
     "ingresar": "Ingresá para hacer tareas",
     "ingresar_ayuda": "Para mandar respuestas tenés que ingresar con tu correo. Es rápido y no necesitás contraseña.",

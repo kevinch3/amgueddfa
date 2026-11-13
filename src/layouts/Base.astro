@@ -1,0 +1,61 @@
+---
+import '../styles/global.css';
+import Chair from '../components/Chair.astro';
+import Mount from '../components/Mount.astro';
+import { t } from '../lib/i18n';
+import { url } from '../lib/paths';
+
+interface Props {
+  title?: string;
+  description?: string;
+  festival?: string;
+  year?: number | null;
+  item?: string;
+  current?: 'inicio' | 'faltantes';
+}
+const { title, description = t('sitio.descripcion'), festival, year, item, current } = Astro.props;
+const fullTitle = title ? `${title} | ${t('sitio.nombre')}` : t('sitio.nombre');
+---
+<!doctype html>
+<html lang="es-AR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#9e1b22" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" href={url('favicon.svg')} type="image/svg+xml" />
+    <title>{fullTitle}</title>
+  </head>
+  <body>
+    <a class="skip" href="#contenido">{t('nav.saltar')}</a>
+    <header class="site-head">
+      <div class="wrap">
+        <a class="brand" href={url('/')}>
+          <Chair size={30} />
+          <span class="brand-name">{t('sitio.nombre')}<span>{t('sitio.subtitulo')}</span></span>
+        </a>
+        <nav class="site-nav" aria-label={t('nav.principal')}>
+          <ul>
+            <li><a href={url('/')} aria-current={current === 'inicio' ? 'page' : undefined}>{t('nav.inicio')}</a></li>
+            <li><a href={url('/#buscados')}>{t('nav.faltantes')}</a></li>
+          </ul>
+        </nav>
+        <Mount id="sesion" festival={festival} year={year} item={item} />
+      </div>
+    </header>
+    <div class="scales" aria-hidden="true"></div>
+    <main id="contenido" tabindex="-1">
+      <div class="wrap">
+        <slot />
+      </div>
+    </main>
+    <footer class="site-foot">
+      <div class="wrap">
+        <p>{t('pie.retiro')}</p>
+        <p class="muted">{t('pie.baja_resolucion')}</p>
+        <p class="motto" lang="cy">{t('pie.lema_cy')}</p>
+      </div>
+    </footer>
+  </body>
+</html>

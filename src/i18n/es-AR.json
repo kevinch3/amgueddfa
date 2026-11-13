@@ -1,14 +1,17 @@
 {
   "sitio": {
     "nombre": "Amgueddfa Eisteddfod y Wladfa",
-    "descripcion": "Museo digital de programas y documentos de los Eisteddfodau de la Patagonia."
+    "descripcion": "Museo digital de programas y documentos de los Eisteddfodau de la Patagonia.",
+    "subtitulo": "Museo de los Eisteddfodau de la Patagonia"
   },
   "nav": {
     "inicio": "Inicio",
     "festivales": "Festivales",
     "faltantes": "Programas que buscamos",
     "aportar": "Aportá",
-    "perfil": "Mi perfil"
+    "perfil": "Mi perfil",
+    "saltar": "Saltar al contenido",
+    "principal": "Navegación principal"
   },
   "categorias": {
     "programa": "Programa",
@@ -31,9 +34,106 @@
     "trevelin": "Eisteddfod Trevelin"
   },
   "comun": {
-    "n_documentos": "{n} documentos"
+    "n_documentos": "{n} documentos",
+    "un_documento": "1 documento",
+    "ano_estimado": "año estimado",
+    "ano_estimado_ayuda": "Calculamos el año por el contexto; puede no ser exacto.",
+    "restringido_corto": "En revisión",
+    "volver_inicio": "Volver al inicio",
+    "miga": "Estás en"
   },
   "estado": {
     "sin_conexion": "No pudimos conectarnos. Probá de nuevo en un rato."
+  },
+  "estados": {
+    "full": "Programa completo",
+    "some": "Algo de material",
+    "none": "¿Se realizó?",
+    "not_held": "No se realizó"
+  },
+  "inicio": {
+    "lema": "Programas, bases y papeles de los Eisteddfodau de la Patagonia, guardados para que los vea cualquiera.",
+    "contador": "Hasta hoy juntamos {docs} documentos de {festivales} festivales, desde {desde}.",
+    "contador_completos": "De {n} ediciones ya tenemos el programa completo.",
+    "mapa_titulo": "Qué tenemos de cada año",
+    "mapa_ayuda": "Tocá un año para ver lo que hay.",
+    "mapa_leyenda": "Referencias",
+    "celda": "{festival}, {year}: {estado}",
+    "ver_festival": "Ver {festival} año por año",
+    "buscados_titulo": "Programas que buscamos",
+    "buscados_ayuda": "De estas ediciones tenemos algo, pero no el programa completo. Si guardás uno, nos ayudás muchísimo.",
+    "recientes_titulo": "Aportes recientes"
+  },
+  "festival": {
+    "linea_tiempo": "Año por año",
+    "desde": "Material desde {year}.",
+    "general_titulo": "Documentos sin año",
+    "ver_general": "Ver los documentos sin año"
+  },
+  "edicion": {
+    "falta_programa": "Todavía no tenemos el programa completo — ¿lo tenés?",
+    "contribuir": "Contribuir",
+    "hechos_titulo": "Datos de la edición",
+    "recuerdos_titulo": "Recuerdos",
+    "aportes_titulo": "Aportá a esta edición",
+    "aportes_ayuda": "Si tenés el programa, fotos o datos de este año, podés sumarlos acá.",
+    "anterior": "Año anterior: {year}",
+    "siguiente": "Año siguiente: {year}",
+    "todas": "Todas las ediciones",
+    "faltan_secciones": "De este año todavía no tenemos {lista}. ¿Tenés algo?",
+    "otras_secciones": "Otras secciones"
+  },
+  "item": {
+    "restringido": "Disponible tras revisión",
+    "restringido_ayuda": "Este documento puede tener datos personales, por eso todavía no lo mostramos. Lo publicamos cuando lo revisemos.",
+    "fuente": "De dónde viene",
+    "fuente_ver": "Ver el original",
+    "consultado": "Consultado el {fecha}",
+    "nota": "Nota",
+    "paginas": "{n} páginas",
+    "pagina": "Página {n} de {total}",
+    "ampliar": "Ampliar la página {n}",
+    "cerrar": "Cerrar",
+    "pag_anterior": "Página anterior",
+    "pag_siguiente": "Página siguiente",
+    "visor": "Visor de páginas",
+    "imagen_alt": "{titulo}, página {n}",
+    "miniatura_alt": "Miniatura de {titulo}",
+    "texto_titulo": "Texto del documento",
+    "texto_ayuda": "Texto sacado del archivo original; puede tener errores.",
+    "tabla_titulo": "Lista de competencias",
+    "tabla_ayuda": "{n} competencias.",
+    "sin_vista": "Este documento no tiene vista previa.",
+    "sin_fecha": "Año sin determinar",
+    "general": "Sin año",
+    "tarea_titulo": "¿Nos das una mano?",
+    "tipos": {
+      "image": "Imagen",
+      "pdf": "PDF",
+      "doc": "Documento",
+      "web": "Página web",
+      "table": "Tabla"
+    },
+    "ver_grande": "Ver más grande",
+    "ver_entera": "Ver la página entera"
+  },
+  "tabla": {
+    "numero": "N.º",
+    "categoria": "Categoría",
+    "idioma": "Idioma",
+    "descripcion": "Descripción"
+  },
+  "general": {
+    "titulo": "{festival}: documentos sin año",
+    "generales": "Generales",
+    "generales_ayuda": "Reglamentos, notas y papeles que no son de un año en particular.",
+    "sin_fecha": "Año sin determinar",
+    "sin_fecha_ayuda": "No sabemos de qué año son. ¿Los reconocés?",
+    "vacio": "Por ahora no hay documentos acá."
+  },
+  "pie": {
+    "retiro": "Si sos de una de las asociaciones y querés que corrijamos o retiremos algún documento, avisanos y lo resolvemos.",
+    "baja_resolucion": "Mostramos copias en baja resolución. Cada documento dice de dónde viene.",
+    "lema_cy": "Y gwir yn erbyn y byd"
   }
 }

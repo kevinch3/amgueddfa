@@ -1,0 +1,12 @@
+---
+/** Empty mount point that later tasks hydrate with live (Supabase) islands. */
+interface Props {
+  id: 'recientes' | 'hechos' | 'recuerdos' | 'aportes' | 'tarea' | 'liberado' | 'sesion';
+  festival?: string;
+  year?: number | null;
+  item?: string;
+  class?: string;
+}
+const { id, festival = '', year = null, item = '', class: cls } = Astro.props;
+---
+<div id={id} class={cls} data-island={id} data-festival={festival} data-year={year ?? ''} data-item={item} aria-live="polite"><slot /></div>

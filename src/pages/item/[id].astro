@@ -1,0 +1,106 @@
+---
+import Base from '../../layouts/Base.astro';
+import Mount from '../../components/Mount.astro';
+import Viewer from '../../components/Viewer.astro';
+import { items, pageUrls } from '../../lib/catalog';
+import { t } from '../../lib/i18n';
+import { url } from '../../lib/paths';
+import { festivalName } from '../../lib/site';
+import type { Item } from '../../lib/types';
+
+export function getStaticPaths() {
+  return items().map((item) => ({ params: { id: item.id }, props: { item } }));
+}
+
+const { item } = Astro.props as { item: Item };
+const fest = festivalName(item.festival);
+const hasPages = pageUrls(item).length > 0;
+const TABLE_COLS = ['numero', 'categoria', 'idioma', 'descripcion'];
+const yearLabel = item.year ?? (item.undated ? t('item.sin_fecha') : t('item.general'));
+const yearHref = item.year ? url(`${item.festival}/${item.year}/`) : url(`general/${item.festival}/`);
+const retrieved = item.retrieved
+  ? new Date(`${item.retrieved}T12:00:00`).toLocaleDateString('es-AR', { day: 'numeric', month: 'long', year: 'numeric' })
+  : '';
+---
+<Base title={item.title} festival={item.festival} year={item.year} item={item.id}>
+  <nav class="crumbs" aria-label={t('comun.miga')}>
+    <ol>
+      <li><a href={url('/')}>{t('nav.inicio')}</a></li>
+      <li><a href={url(`${item.festival}/`)}>{fest}</a></li>
+      <li><a href={yearHref}>{yearLabel}</a></li>
+      <li>{t(`categorias.${item.category}`)}</li>
+    </ol>
+  </nav>
+
+  <header class="item-head">
+    <h1>{item.title}</h1>
+    <p class="badges">
+      <span class="badge">{t(`categorias.${item.category}`)}</span>
+      <span class="badge">{t(`item.tipos.${item.kind}`)}</span>
+      {item.pages > 1 && !item.restricted && <span class="badge">{t('item.paginas', { n: item.pages })}</span>}
+      {item.year_inferred && <span class="badge" title={t('comun.ano_estimado_ayuda')}>{t('comun.ano_estimado')}</span>}
+    </p>
+  </header>
+
+  <div class="item-layout">
+    <div class="item-main">
+      {item.restricted ? (
+        <div class="restricted">
+          <h2>
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 11V8a5 5 0 0 1 10 0v3M5 11h14v10H5z" /></svg>
+            {t('item.restringido')}
+          </h2>
+          <p>{t('item.restringido_ayuda')}</p>
+          <Mount id="liberado" festival={item.festival} year={item.year} item={item.id} />
+        </div>
+      ) : hasPages ? (
+        <Viewer item={item} />
+      ) : item.kind === 'table' && item.table ? (
+        <section aria-labelledby="tabla-t">
+          <h2 id="tabla-t">{t('item.tabla_titulo')}</h2>
+          <p class="muted">{t('item.tabla_ayuda', { n: item.table.length })}</p>
+          <div class="tablewrap" tabindex="0" role="region" aria-labelledby="tabla-t">
+            <table>
+              <thead><tr>{TABLE_COLS.map((c) => <th scope="col">{t(`tabla.${c}`)}</th>)}</tr></thead>
+              <tbody>
+                {item.table.map((row) => <tr>{TABLE_COLS.map((c) => <td>{String(row[c] ?? '')}</td>)}</tr>)}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      ) : item.text_excerpt ? (
+        <section aria-labelledby="texto-t">
+          <h2 id="texto-t">{t('item.texto_titulo')}</h2>
+          <p class="muted small">{t('item.texto_ayuda')}</p>
+          <div class="textcard">{item.text_excerpt}</div>
+        </section>
+      ) : (
+        <p class="textcard">{t('item.sin_vista')}</p>
+      )}
+    </div>
+
+    <aside class="side">
+      <section class="sourcecard" aria-labelledby="fuente-t">
+        <h2 id="fuente-t">{t('item.fuente')}</h2>
+        <p>
+          {item.source_url
+            ? <a href={item.source_url} rel="noopener noreferrer nofollow">{item.source_label}</a>
+            : item.source_label}
+        </p>
+        {retrieved && <p class="muted small">{t('item.consultado', { fecha: retrieved })}</p>}
+        {item.note_public && (
+          <>
+            <h3 class="small">{t('item.nota')}</h3>
+            <p class="small">{item.note_public}</p>
+          </>
+        )}
+      </section>
+      {!item.restricted && (
+        <section class="island-section" aria-labelledby="tarea-t">
+          <h2 id="tarea-t" class="small">{t('item.tarea_titulo')}</h2>
+          <Mount id="tarea" festival={item.festival} year={item.year} item={item.id} />
+        </section>
+      )}
+    </aside>
+  </div>
+</Base>

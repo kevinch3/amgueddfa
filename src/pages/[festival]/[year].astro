@@ -1,0 +1,90 @@
+---
+import Base from '../../layouts/Base.astro';
+import EmptySlot from '../../components/EmptySlot.astro';
+import ItemCard from '../../components/ItemCard.astro';
+import Mount from '../../components/Mount.astro';
+import { editionItems, editionState, festivals, yearRange } from '../../lib/catalog';
+import { t } from '../../lib/i18n';
+import { url } from '../../lib/paths';
+import { byTitle, CATEGORY_ORDER, docCount } from '../../lib/site';
+import type { FestivalSlug } from '../../lib/types';
+
+export function getStaticPaths() {
+  return festivals().flatMap((f) => {
+    const [a, b] = yearRange(f.slug);
+    return Array.from({ length: b - a + 1 }, (_, k) => ({ params: { festival: f.slug, year: String(a + k) } }));
+  });
+}
+
+const slug = Astro.params.festival as FestivalSlug;
+const year = Number(Astro.params.year);
+const fest = festivals().find((f) => f.slug === slug)!;
+const [first, last] = yearRange(slug);
+const list = editionItems(slug, year);
+const state = editionState(slug, year);
+const sections = CATEGORY_ORDER.map((c) => ({ c, items: list.filter((i) => i.category === c).sort(byTitle) }));
+// Programa always shows (with its slot when incomplete); other empty sections are named in one slot.
+const shown = sections.filter((s) => s.c === 'programa' || s.items.length > 0);
+const missing = sections.filter((s) => s.c !== 'programa' && s.items.length === 0).map((s) => t(`categorias.${s.c}`));
+const missingList = new Intl.ListFormat('es', { type: 'conjunction' }).format(missing.map((m) => m.toLowerCase()));
+---
+<Base title={`${fest.name} ${year}`} festival={slug} year={year}>
+  <nav class="crumbs" aria-label={t('comun.miga')}>
+    <ol>
+      <li><a href={url('/')}>{t('nav.inicio')}</a></li>
+      <li><a href={url(`${slug}/`)}>{fest.name}</a></li>
+      <li aria-current="page">{year}</li>
+    </ol>
+  </nav>
+
+  <header class="cover">
+    <h1><span class="fest">{fest.name}</span> <span class="year">{year}</span></h1>
+    <p class="state">
+      <span class={`badge-state st-${state}`} data-festival={slug} data-year={year} data-state={state}>{t(`estados.${state}`)}</span>
+      {list.length > 0 && <span class="muted"> {docCount(list.length)}</span>}
+    </p>
+    <div class="cover-actions">
+      <a class="btn" href="#aportar" data-contribuir data-festival={slug} data-year={year}>{t('edicion.contribuir')}</a>
+    </div>
+  </header>
+
+  <section class="section island-section" aria-labelledby="hechos-t">
+    <h2 id="hechos-t">{t('edicion.hechos_titulo')}</h2>
+    <Mount id="hechos" festival={slug} year={year} />
+  </section>
+
+  {shown.map(({ c, items }) => (
+    <section class="section" aria-labelledby={`cat-${c}`}>
+      <h2 id={`cat-${c}`}>{t(`categorias.${c}`)}</h2>
+      {items.length > 0 && (
+        <ul class="cards">
+          {items.map((item) => <ItemCard item={item} />)}
+        </ul>
+      )}
+      {c === 'programa' && state !== 'full' && <EmptySlot message={t('edicion.falta_programa')} />}
+    </section>
+  ))}
+
+  {missing.length > 0 && (
+    <section class="section" aria-label={t('edicion.otras_secciones')}>
+      <EmptySlot message={t('edicion.faltan_secciones', { lista: missingList })} />
+    </section>
+  )}
+
+  <section class="section island-section" aria-labelledby="recuerdos-t">
+    <h2 id="recuerdos-t">{t('edicion.recuerdos_titulo')}</h2>
+    <Mount id="recuerdos" festival={slug} year={year} />
+  </section>
+
+  <section class="section" id="aportar" aria-labelledby="aportes-t">
+    <h2 id="aportes-t">{t('edicion.aportes_titulo')}</h2>
+    <p class="measure">{t('edicion.aportes_ayuda')}</p>
+    <Mount id="aportes" festival={slug} year={year} />
+  </section>
+
+  <nav class="pager" aria-label={t('edicion.todas')}>
+    {year > first ? <a href={url(`${slug}/${year - 1}/`)}>{t('edicion.anterior', { year: year - 1 })}</a> : <span></span>}
+    <a href={url(`${slug}/`)}>{t('edicion.todas')}</a>
+    {year < last ? <a href={url(`${slug}/${year + 1}/`)}>{t('edicion.siguiente', { year: year + 1 })}</a> : <span></span>}
+  </nav>
+</Base>

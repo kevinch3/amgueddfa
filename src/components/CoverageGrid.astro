@@ -1,0 +1,44 @@
+---
+import { editionItems, editionState, festivals, yearRange } from '../lib/catalog';
+import { t } from '../lib/i18n';
+import { url } from '../lib/paths';
+import type { FestivalSlug } from '../lib/types';
+
+interface Props { only?: FestivalSlug }
+const { only } = Astro.props;
+const list = festivals().filter((f) => !only || f.slug === only);
+const blocks = list.map((f) => {
+  const [first, last] = yearRange(f.slug);
+  const years = [];
+  for (let y = first; y <= last; y++) years.push({ y, state: editionState(f.slug, y), n: editionItems(f.slug, y).length });
+  return { ...f, first, years };
+});
+---
+<ul class="legend" aria-label={t('inicio.mapa_leyenda')}>
+  <li><span class="swatch st-full"></span>{t('estados.full')}</li>
+  <li><span class="swatch st-some"></span>{t('estados.some')}</li>
+  <li><span class="swatch st-none"></span>{t('estados.none')}</li>
+</ul>
+{blocks.map((f) => (
+  <section class="fest-block" aria-labelledby={`fest-${f.slug}`}>
+    {!only && <h3 id={`fest-${f.slug}`}><a href={url(`${f.slug}/`)}>{f.name}</a></h3>}
+    {!only && <p class="cy" lang="cy">{f.nameCy}</p>}
+    {only && <h3 id={`fest-${f.slug}`} class="sr-only">{f.name}</h3>}
+    <ul class="cells" style={`--start:${(f.first % 10) + 1}`}>
+      {f.years.map(({ y, state, n }) => (
+        <li>
+          <a
+            class={`cell st-${state}`}
+            href={url(`${f.slug}/${y}/`)}
+            data-cell
+            data-festival={f.slug}
+            data-year={y}
+            data-state={state}
+            aria-label={t('inicio.celda', { festival: f.name, year: y, estado: t(`estados.${state}`) })}
+            title={`${t(`estados.${state}`)}${n ? ` (${n === 1 ? t('comun.un_documento') : t('comun.n_documentos', { n })})` : ''}`}
+          >{y}</a>
+        </li>
+      ))}
+    </ul>
+  </section>
+))}

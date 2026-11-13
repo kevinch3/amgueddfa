@@ -1,0 +1,12 @@
+---
+import { t } from '../lib/i18n';
+
+interface Props { message: string; action?: string }
+const { message, action = '#aportar' } = Astro.props;
+---
+<div class="empty">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+    <path d="M6 3h9l4 4v14H6zM14 3v5h5M12 11v6M9 14h6" />
+  </svg>
+  <p>{message} <a href={action}>{t('edicion.contribuir')}</a></p>
+</div>

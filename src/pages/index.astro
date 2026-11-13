@@ -1,17 +1,55 @@
 ---
+import Base from '../layouts/Base.astro';
+import CoverageGrid from '../components/CoverageGrid.astro';
+import Mount from '../components/Mount.astro';
+import { editionState, festivals, items, mostWanted, yearRange } from '../lib/catalog';
 import { t } from '../lib/i18n';
 import { url } from '../lib/paths';
----
+import { festivalName } from '../lib/site';
 
-<html lang="es-AR">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{t('sitio.nombre')}</title>
-	</head>
-	<body>
-		<h1>{t('sitio.nombre')}</h1>
-		<p><a href={url('/')}>{t('nav.inicio')}</a></p>
-	</body>
-</html>
+const all = items();
+const fests = festivals();
+const since = Math.min(...fests.map((f) => yearRange(f.slug)[0]));
+let complete = 0;
+for (const f of fests) {
+  const [a, b] = yearRange(f.slug);
+  for (let y = a; y <= b; y++) if (editionState(f.slug, y) === 'full') complete++;
+}
+const wanted = mostWanted(12);
+---
+<Base current="inicio">
+  <section class="intro measure">
+    <h1>{t('sitio.nombre')}</h1>
+    <p class="lead">{t('inicio.lema')}</p>
+    <p class="muted">
+      {t('inicio.contador', { docs: all.length, festivales: fests.length, desde: since })}
+      {' '}{t('inicio.contador_completos', { n: complete })}
+    </p>
+  </section>
+
+  <section class="section" aria-labelledby="mapa">
+    <h2 id="mapa">{t('inicio.mapa_titulo')}</h2>
+    <p class="muted">{t('inicio.mapa_ayuda')}</p>
+    <CoverageGrid />
+  </section>
+
+  <section class="section" id="buscados" aria-labelledby="buscados-t">
+    <h2 id="buscados-t">{t('inicio.buscados_titulo')}</h2>
+    <p class="measure">{t('inicio.buscados_ayuda')}</p>
+    <ul class="wanted">
+      {wanted.map((w) => (
+        <li>
+          <a href={url(`${w.festival}/${w.year}/`)}>
+            <span>{festivalName(w.festival)}</span>
+            <span class="yr">{w.year}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="section island-section" aria-labelledby="recientes-t">
+    <h2 id="recientes-t">{t('inicio.recientes_titulo')}</h2>
+    <Mount id="recientes" />
+  </section>
+</Base>

@@ -139,7 +139,11 @@ const codeFirst = import.meta.env.PUBLIC_AUTH_CODE === '1';
     email = $<HTMLInputElement>('auth-email').value;
     say(null);
     const r = await send(form);
-    if (!r.ok) return say(r.key);
+    // Rate-limited: an earlier email (or an admin-issued code) may still be valid, so
+    // move on to the link/code step instead of trapping the person on this form.
+    const limited = !r.ok && r.key === 'auth.error.demasiados';
+    if (!r.ok && !limited) return say(r.key);
+    if (limited) say('auth.error.demasiados_usa_anterior');
     const help = $<HTMLParagraphElement>('auth-codigo-ayuda');
     help.textContent = (help.dataset.tpl ?? '').replace('{email}', email.trim());
     $<HTMLInputElement>('auth-codigo').value = '';

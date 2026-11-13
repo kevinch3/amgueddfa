@@ -181,7 +181,8 @@
       "demasiados": "Hiciste muchos intentos seguidos. Esperá unos minutos y probá de nuevo.",
       "email": "Revisá el correo: parece que no está bien escrito.",
       "nombre_usado": "Ese nombre ya lo usa otra persona. Probá con otro.",
-      "nombre_largo": "El nombre tiene que tener entre 3 y 30 caracteres."
+      "nombre_largo": "El nombre tiene que tener entre 3 y 30 caracteres.",
+      "demasiados_usa_anterior": "Ya te mandamos un correo hace poco y por ahora no podemos mandar otro. Usá el enlace o el código del último correo que te llegó."
     },
     "volver": "Seguir donde estabas",
     "solo_enlace": "Abrí el enlace del correo desde este mismo navegador y vas a volver acá con la sesión iniciada.",

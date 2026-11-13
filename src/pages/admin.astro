@@ -1,0 +1,94 @@
+---
+import Base from '../layouts/Base.astro';
+import approvedStatic from '../../data/approved/contributions.json';
+import { editionKeys } from '../lib/admin';
+import { items } from '../lib/catalog';
+import { jsonForScript } from '../lib/contrib';
+import { t } from '../lib/i18n';
+
+const TABS = ['cola', 'restringidos', 'usuarios'] as const;
+const KINDS = ['upload', 'fact', 'tag', 'transcription', 'memory'] as const;
+
+// Precomputed at build time so the admin bundle does not carry the whole catalog.
+const data = {
+  catalog: editionKeys(items()),
+  approved: (approvedStatic as { type: string; festival: string | null; year: number | null; payload: Record<string, unknown> }[])
+    .filter((c) => c.type === 'upload')
+    .map((c) => ({ type: c.type, festival: c.festival, year: c.year, payload: { category: c.payload?.category ?? null } })),
+  restricted: items()
+    .filter((i) => i.restricted)
+    .map((i) => ({ id: i.id, title: i.title, festival: i.festival, year: i.year, category: i.category, thumb: i.thumb, page_paths: i.page_paths })),
+  titles: Object.fromEntries(items().map((i) => [i.id, i.title])),
+};
+---
+<Base title={t('admin.titulo')}>
+  <section class="admin">
+    <h1>{t('admin.titulo')}</h1>
+    <div id="admin-gate" aria-live="polite"><p class="muted">{t('admin.cargando')}</p></div>
+
+    <div id="admin-body" hidden>
+      <div class="tabs" role="tablist" aria-label={t('admin.pestanas')}>
+        {TABS.map((k, i) => (
+          <button type="button" role="tab" id={`atab-${k}`} aria-controls={`apanel-${k}`} aria-selected={i === 0 ? 'true' : 'false'} tabindex={i === 0 ? '0' : '-1'} data-tab={k}>
+            {t(`admin.tabs.${k}`)}
+          </button>
+        ))}
+      </div>
+
+      <section id="apanel-cola" role="tabpanel" aria-labelledby="atab-cola">
+        <div class="campo">
+          <label for="a-tipo">{t('admin.filtro_tipo')}</label>
+          <select id="a-tipo">
+            <option value="">{t('admin.todos')}</option>
+            {KINDS.map((k) => <option value={k}>{t(`admin.tipos.${k}`)}</option>)}
+          </select>
+        </div>
+        <p class="contrib-msg" id="a-cola-msg" role="alert" hidden></p>
+        <ol id="a-cola" class="admin-list"></ol>
+      </section>
+
+      <section id="apanel-restringidos" role="tabpanel" aria-labelledby="atab-restringidos" hidden>
+        <p class="contrib-msg" id="a-restr-msg" role="alert" hidden></p>
+        <ul id="a-restr" class="admin-list"></ul>
+      </section>
+
+      <section id="apanel-usuarios" role="tabpanel" aria-labelledby="atab-usuarios" hidden>
+        <form id="a-buscar" class="admin-search" novalidate>
+          <div class="campo">
+            <label for="a-q">{t('admin.buscar_label')}</label>
+            <input id="a-q" type="search" maxlength="30" autocomplete="off" />
+          </div>
+          <button class="btn" type="submit">{t('admin.buscar')}</button>
+        </form>
+        <p class="contrib-msg" id="a-users-msg" role="alert" hidden></p>
+        <ul id="a-users" class="admin-list"></ul>
+      </section>
+    </div>
+  </section>
+  <script type="application/json" id="admin-data" set:html={jsonForScript(data)} />
+</Base>
+
+<script>
+  import '../scripts/admin.ts';
+</script>
+
+<style is:global>
+  .admin .tabs { display: flex; gap: 0.25rem; border-bottom: 2px solid var(--red); margin-bottom: 1rem; flex-wrap: wrap; }
+  .admin .tabs [role='tab'] {
+    font: 600 1.05rem/1.2 var(--sans); padding: 0.65rem 1.1rem; min-height: 44px; border: 1px solid var(--rule); border-bottom: 0;
+    border-radius: 4px 4px 0 0; background: var(--paper); color: var(--ink); cursor: pointer;
+  }
+  .admin .tabs [role='tab'][aria-selected='true'] { background: var(--red); border-color: var(--red); color: var(--paper-hi); }
+  .admin .tabs [role='tab']:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+  .admin [role='tabpanel'][hidden], #admin-body[hidden] { display: none; }
+  .admin-list { list-style: none; padding: 0; margin: 1rem 0; display: grid; gap: 1rem; }
+  .admin-card { background: var(--paper-hi); border: 1px solid var(--rule); padding: 1rem 1.1rem; }
+  .admin-card h2 { font-size: 1.1rem; margin: 0 0 0.4rem; display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; }
+  .admin-card pre { white-space: pre-wrap; word-break: break-word; font-size: 0.9rem; background: var(--paper); padding: 0.6rem; border: 1px solid var(--rule); }
+  .admin-card textarea { width: 100%; font-family: ui-monospace, monospace; }
+  .admin-card .acciones { display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; }
+  .admin-card .btn:disabled { opacity: 0.55; cursor: not-allowed; }
+  .admin-preview img { max-width: 100%; max-height: 28rem; border: 1px solid var(--rule); }
+  .admin-search { display: flex; gap: 0.75rem; align-items: end; flex-wrap: wrap; }
+  .admin-thumb { width: 64px; height: auto; border: 1px solid var(--rule); }
+</style>

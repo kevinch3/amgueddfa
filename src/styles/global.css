@@ -297,3 +297,8 @@ fieldset.campo { border: 0; padding: 0; }
 .recuerdos p { margin: 0.3rem 0 0 1rem; }
 .aportes-acciones { display: flex; flex-wrap: wrap; gap: 0.6rem; }
 .aportes-lista { padding-left: 1.2rem; }
+
+/* released restricted item (scripts/liberado.ts) */
+.restricted.is-liberado { border-top-color: var(--red); max-width: none; }
+.restricted.is-liberado > h2, .restricted.is-liberado > p { display: none; }
+.liberado-pages img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); }

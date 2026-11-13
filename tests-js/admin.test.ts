@@ -1,0 +1,206 @@
+import { describe, expect, it } from 'vitest';
+import {
+  approve,
+  approveUpload,
+  editionKeys,
+  fillsGap,
+  reject,
+  releaseItem,
+  type Pending,
+} from '../src/lib/admin';
+
+const catalog = editionKeys([
+  { festival: 'chubut', year: 1990, category: 'programa' },
+  { festival: 'chubut', year: 1991, category: 'resultados' },
+  { festival: 'chubut', year: null, category: 'programa' },
+]);
+
+function fakeClient(opts: { rpcError?: unknown; uploadError?: unknown; downloadError?: unknown } = {}) {
+  const log: string[] = [];
+  const uploads: { bucket: string; path: string; body: unknown; o: any }[] = [];
+  const rpcs: { fn: string; args: any }[] = [];
+  const client: any = {
+    storage: {
+      from: (bucket: string) => ({
+        createSignedUrl: async (path: string, ttl: number) => {
+          log.push(`sign:${bucket}/${path}`);
+          return { data: { signedUrl: `https://x.test/${bucket}/${path}?ttl=${ttl}` }, error: null };
+        },
+        download: async (path: string) => {
+          log.push(`download:${bucket}/${path}`);
+          if (opts.downloadError) return { data: null, error: opts.downloadError };
+          return { data: new Blob([path], { type: 'image/webp' }), error: null };
+        },
+        upload: async (path: string, body: unknown, o: unknown) => {
+          log.push(`upload:${bucket}/${path}`);
+          uploads.push({ bucket, path, body, o });
+          return opts.uploadError ? { data: null, error: opts.uploadError } : { data: { path }, error: null };
+        },
+      }),
+    },
+    rpc: async (fn: string, args: unknown) => {
+      log.push(`rpc:${fn}`);
+      rpcs.push({ fn, args });
+      return { data: 20, error: opts.rpcError ?? null };
+    },
+  };
+  return { client, log, uploads, rpcs };
+}
+
+const upload: Pending = {
+  id: 'c1',
+  user_id: 'u1',
+  type: 'upload',
+  festival: 'chubut',
+  year: 1992,
+  item_id: null,
+  payload: { category: 'programa', storage_path: 'u1/abc.pdf' },
+  created_at: '2026-11-13T10:00:00Z',
+};
+
+describe('fillsGap', () => {
+  it('fillsGap true for empty category, false when static has item, false when live approved upload exists', () => {
+    expect(fillsGap('chubut', 1992, 'programa', { catalog, approved: [] })).toBe(true);
+    expect(fillsGap('chubut', 1991, 'programa', { catalog, approved: [] })).toBe(true);
+    expect(fillsGap('chubut', 1990, 'programa', { catalog, approved: [] })).toBe(false);
+    const live = [{ type: 'upload', festival: 'chubut', year: 1992, payload: { category: 'programa' } }];
+    expect(fillsGap('chubut', 1992, 'programa', { catalog, approved: live })).toBe(false);
+    expect(fillsGap('chubut', 1992, 'bases', { catalog, approved: live })).toBe(true);
+    // a fact for the edition is not an upload in that category
+    const fact = [{ type: 'fact', festival: 'chubut', year: 1992, payload: { category: 'programa' } }];
+    expect(fillsGap('chubut', 1992, 'programa', { catalog, approved: fact })).toBe(true);
+  });
+
+  it('no edition (year null) never fills a gap', () => {
+    expect(fillsGap('mimosa', null, 'programa', { catalog, approved: [] })).toBe(false);
+  });
+});
+
+describe('approveUpload', () => {
+  it('approveUpload calls storage then rpc with media payload', async () => {
+    const { client, log, uploads, rpcs } = fakeClient();
+    const fetched: string[] = [];
+    const fetchFn = async (u: string) => {
+      fetched.push(u);
+      log.push('fetch');
+      return { ok: true, blob: async () => new Blob(['%PDF'], { type: 'application/pdf' }) } as any;
+    };
+    const make = async (_f: Blob, mime: string) => {
+      log.push(`make:${mime}`);
+      return { pages: [new Blob(['p1']), new Blob(['p2'])], thumb: new Blob(['t']) };
+    };
+    const r = await approveUpload(upload, { client, fetchFn, make, gap: { catalog, approved: [] } });
+    expect(r).toEqual({ ok: true });
+    expect(fetched[0]).toContain('uploads/u1/abc.pdf');
+    expect(log).toEqual([
+      'sign:uploads/u1/abc.pdf',
+      'fetch',
+      'make:application/pdf',
+      'upload:media/uploads/c1/thumb.webp',
+      'upload:media/uploads/c1/p01.webp',
+      'upload:media/uploads/c1/p02.webp',
+      'rpc:approve_contribution',
+    ]);
+    expect(uploads.every((u) => u.o.contentType === 'image/webp' && u.o.upsert === true)).toBe(true);
+    expect(rpcs[0].args).toEqual({
+      cid: 'c1',
+      fills_gap: true,
+      payload_override: { media: { thumb: 'uploads/c1/thumb.webp', pages: ['uploads/c1/p01.webp', 'uploads/c1/p02.webp'] } },
+    });
+  });
+
+  it('an explicit gap choice wins over the computed one', async () => {
+    const { client, rpcs } = fakeClient();
+    const fetchFn = async () => ({ ok: true, blob: async () => new Blob(['x'], { type: 'image/jpeg' }) }) as any;
+    const make = async () => ({ pages: [new Blob(['p'])], thumb: new Blob(['t']) });
+    await approveUpload(upload, { client, fetchFn, make, gap: { catalog, approved: [] }, fillsGap: false });
+    expect(rpcs[0].args.fills_gap).toBe(false);
+  });
+
+  it('a failed media upload never calls the rpc', async () => {
+    const { client, rpcs } = fakeClient({ uploadError: { message: 'boom' } });
+    const fetchFn = async () => ({ ok: true, blob: async () => new Blob(['x'], { type: 'image/jpeg' }) }) as any;
+    const make = async () => ({ pages: [new Blob(['p'])], thumb: new Blob(['t']) });
+    const r = await approveUpload(upload, { client, fetchFn, make, gap: { catalog, approved: [] } });
+    expect(r.ok).toBe(false);
+    expect(rpcs).toEqual([]);
+  });
+
+  it('a derivative failure is reported, nothing uploaded', async () => {
+    const { client, uploads, rpcs } = fakeClient();
+    const fetchFn = async () => ({ ok: true, blob: async () => new Blob(['x'], { type: 'image/jpeg' }) }) as any;
+    const make = async () => {
+      throw new Error('webp_unsupported');
+    };
+    const r = await approveUpload(upload, { client, fetchFn, make, gap: { catalog, approved: [] } });
+    expect(r).toEqual({ ok: false, key: 'admin.error.derivados' });
+    expect(uploads).toEqual([]);
+    expect(rpcs).toEqual([]);
+  });
+
+  it('approving an already reviewed row maps not_pending', async () => {
+    const { client } = fakeClient({ rpcError: { message: 'not_pending' } });
+    const fetchFn = async () => ({ ok: true, blob: async () => new Blob(['x'], { type: 'image/jpeg' }) }) as any;
+    const make = async () => ({ pages: [new Blob(['p'])], thumb: new Blob(['t']) });
+    const r = await approveUpload(upload, { client, fetchFn, make, gap: { catalog, approved: [] } });
+    expect(r).toEqual({ ok: false, key: 'admin.error.ya_revisado' });
+  });
+});
+
+describe('approve / reject', () => {
+  const fact: Pending = { ...upload, id: 'c2', type: 'fact', payload: { field: 'venue', value: 'Salón' } };
+
+  it('approve sends fills_gap false and the validated override', async () => {
+    const { client, rpcs } = fakeClient();
+    expect(await approve(fact, { field: 'venue', value: ' Salón San David ' }, client)).toEqual({ ok: true });
+    expect(rpcs[0]).toEqual({
+      fn: 'approve_contribution',
+      args: { cid: 'c2', fills_gap: false, payload_override: { field: 'venue', value: 'Salón San David' } },
+    });
+  });
+
+  it('approve rejects an invalid edited payload without calling the rpc', async () => {
+    const { client, rpcs } = fakeClient();
+    const r = await approve(fact, { field: 'email', value: 'x' }, client);
+    expect(r).toEqual({ ok: false, key: 'contrib.error.campo' });
+    expect(rpcs).toEqual([]);
+  });
+
+  it('non-admin approve maps not_admin', async () => {
+    const { client } = fakeClient({ rpcError: { message: 'not_admin' } });
+    expect(await approve(fact, null, client)).toEqual({ ok: false, key: 'admin.error.no_admin' });
+  });
+
+  it('reject needs a reason', async () => {
+    const { client, rpcs } = fakeClient();
+    expect(await reject(fact, '   ', client)).toEqual({ ok: false, key: 'admin.error.motivo' });
+    expect(rpcs).toEqual([]);
+    expect(await reject(fact, ' Duplicado ', client)).toEqual({ ok: true });
+    expect(rpcs[0]).toEqual({ fn: 'reject_contribution', args: { cid: 'c2', note: 'Duplicado' } });
+  });
+});
+
+describe('releaseItem', () => {
+  it('copies restricted/<id>/* to media/released/<id>/* then calls release_item', async () => {
+    const { client, log, rpcs } = fakeClient();
+    const r = await releaseItem({ id: 'abc123def456', thumb: 'abc123def456/thumb.webp', page_paths: ['abc123def456/p01.webp', 'abc123def456/p02.webp'] }, client);
+    expect(r).toEqual({ ok: true });
+    expect(log).toEqual([
+      'download:restricted/abc123def456/thumb.webp',
+      'upload:media/released/abc123def456/thumb.webp',
+      'download:restricted/abc123def456/p01.webp',
+      'upload:media/released/abc123def456/p01.webp',
+      'download:restricted/abc123def456/p02.webp',
+      'upload:media/released/abc123def456/p02.webp',
+      'rpc:release_item',
+    ]);
+    expect(rpcs[0].args).toEqual({ item_id: 'abc123def456' });
+  });
+
+  it('a missing restricted file stops before release_item', async () => {
+    const { client, rpcs } = fakeClient({ downloadError: { message: 'Object not found' } });
+    const r = await releaseItem({ id: 'abc123def456', thumb: 'abc123def456/thumb.webp', page_paths: ['abc123def456/p01.webp'] }, client);
+    expect(r).toEqual({ ok: false, key: 'admin.error.sin_archivos' });
+    expect(rpcs).toEqual([]);
+  });
+});

@@ -5,8 +5,10 @@ interface Props {
   festival?: string;
   year?: number | null;
   item?: string;
+  /** Space-separated file names (e.g. "p01.webp p02.webp"); never a media path. */
+  pages?: string;
   class?: string;
 }
-const { id, festival = '', year = null, item = '', class: cls } = Astro.props;
+const { id, festival = '', year = null, item = '', pages, class: cls } = Astro.props;
 ---
-<div id={id} class={cls} data-island={id} data-festival={festival} data-year={year ?? ''} data-item={item} aria-live="polite"><slot /></div>
+<div id={id} class={cls} data-island={id} data-festival={festival} data-year={year ?? ''} data-item={item} data-pages={pages} aria-live="polite"><slot /></div>

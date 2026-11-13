@@ -51,7 +51,7 @@ const retrieved = item.retrieved
             {t('item.restringido')}
           </h2>
           <p>{t('item.restringido_ayuda')}</p>
-          <Mount id="liberado" festival={item.festival} year={item.year} item={item.id} />
+          <Mount id="liberado" festival={item.festival} year={item.year} item={item.id} pages={item.page_paths.map((p) => p.split('/').pop()).join(' ')} />
         </div>
       ) : hasPages ? (
         <Viewer item={item} />
@@ -107,4 +107,5 @@ const retrieved = item.retrieved
 
 <script>
   import '../../scripts/tarea.ts';
+  import '../../scripts/liberado.ts';
 </script>

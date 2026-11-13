@@ -87,6 +87,8 @@ main { display: block; padding: 1.5rem 0 3rem; }
 .site-foot { border-top: 1px solid var(--rule); background: var(--paper-hi); padding: 1.5rem 0 2rem; font-size: 1rem; }
 .site-foot p { max-width: var(--measure); }
 .motto { font-style: italic; color: var(--gold-ink); }
+.contacto { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem; }
+.contacto img { display: block; height: 24px; width: auto; }
 
 /* Buttons --------------------------------------------------------------- */
 .btn {
@@ -302,3 +304,11 @@ fieldset.campo { border: 0; padding: 0; }
 .restricted.is-liberado { border-top-color: var(--red); max-width: none; }
 .restricted.is-liberado > h2, .restricted.is-liberado > p { display: none; }
 .liberado-pages img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); }
+
+/* approved uploads with their derivatives (edicion.ts / [year].astro) */
+.aportes-lista:has(.aporte) { list-style: none; padding-left: 0; display: grid; gap: 0.9rem; }
+.aporte { display: flex; gap: 0.8rem; align-items: flex-start; }
+.aporte-thumb { flex: none; }
+.aporte-thumb img { display: block; width: 96px; height: auto; max-height: 128px; object-fit: cover; border: 1px solid var(--rule); background: var(--paper-hi); }
+.aporte-texto { min-width: 0; }
+.aporte-paginas { margin: 0.3rem 0 0; }

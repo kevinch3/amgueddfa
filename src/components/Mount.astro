@@ -1,5 +1,9 @@
 ---
-/** Empty mount point that later tasks hydrate with live (Supabase) islands. */
+/**
+ * Mount point that a live (Supabase) island hydrates on load. Not a live
+ * region: hydration is not news, so screen readers are not made to read it.
+ * Messages that follow a user action carry their own role="status"/"alert".
+ */
 interface Props {
   id: 'recientes' | 'hechos' | 'recuerdos' | 'aportes' | 'tarea' | 'liberado' | 'sesion';
   festival?: string;
@@ -11,4 +15,4 @@ interface Props {
 }
 const { id, festival = '', year = null, item = '', pages, class: cls } = Astro.props;
 ---
-<div id={id} class={cls} data-island={id} data-festival={festival} data-year={year ?? ''} data-item={item} data-pages={pages} aria-live="polite"><slot /></div>
+<div id={id} class={cls} data-island={id} data-festival={festival} data-year={year ?? ''} data-item={item} data-pages={pages}><slot /></div>

@@ -1,5 +1,5 @@
 import { execSync } from 'node:child_process';
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import { beforeAll, describe, expect, it } from 'vitest';
 import raw from '../src/data/catalog.json';
@@ -94,5 +94,27 @@ describe('static build', () => {
     const html = read('index.html');
     const bad = [...html.matchAll(/href="(\/[^"]*)"/g)].map((m) => m[1]).filter((h) => !h.startsWith('/amgueddfa-eisteddfod/'));
     expect(bad).toEqual([]);
+  });
+
+  it('the contact address never appears as text anywhere in dist (only as contacto.png)', () => {
+    const walk = (d: string): string[] =>
+      readdirSync(d).flatMap((n) => {
+        const p = join(d, n);
+        return statSync(p).isDirectory() ? (n === 'media' ? [] : walk(p)) : /\.(html|js|css|json|txt|xml)$/.test(n) ? [p] : [];
+      });
+    const files = walk(DIST);
+    expect(files.length).toBeGreaterThan(100);
+    const hits = files.filter((f) => /info@|kevinroberts\.ar/i.test(readFileSync(f, 'utf8')));
+    expect(hits).toEqual([]);
+    expect(existsSync(join(DIST, 'contacto.png'))).toBe(true);
+    const home = read('index.html');
+    expect(home).toMatch(/<img[^>]*contacto\.png[^>]*alt="Correo de contacto del archivo"/);
+    expect(home).not.toContain('mailto:');
+    expect(home).toContain('id="contacto-mail"');
+  });
+
+  it('mount points are not live regions', () => {
+    const html = read('chubut/2024/index.html');
+    expect(html).not.toMatch(/id="(sesion|hechos|recuerdos|aportes|recientes)"[^>]*aria-live/);
   });
 });

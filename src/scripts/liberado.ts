@@ -1,3 +1,5 @@
+import { restrictedPreview } from '../lib/admin';
+import { currentProfile } from '../lib/auth';
 import { t } from '../lib/i18n';
 import { liveQuery } from '../lib/live';
 import { releasedPath } from '../lib/paths';
@@ -12,16 +14,20 @@ export function pageFiles(raw: string | undefined): string[] {
 export function renderReleased(root: HTMLElement, id: string, files: string[], publicUrl: (path: string) => string, title: string): void {
   const box = root.closest('.restricted');
   box?.classList.add('is-liberado');
+  renderPages(root, files.map((f) => publicUrl(releasedPath(id, f))), title, t('item.liberado'));
+}
+
+/** Page images with a note above them (released pages, or an admin's signed preview). */
+function renderPages(root: HTMLElement, srcs: string[], title: string, noteText: string): void {
   const note = document.createElement('p');
   note.className = 'muted small';
-  note.textContent = t('item.liberado');
+  note.textContent = noteText;
   const ol = document.createElement('ol');
   ol.className = 'pages liberado-pages';
   ol.setAttribute('aria-label', t('item.visor'));
-  files.forEach((f, i) => {
+  srcs.forEach((src, i) => {
     const li = document.createElement('li');
     const a = document.createElement('a');
-    const src = publicUrl(releasedPath(id, f));
     a.href = src;
     const img = document.createElement('img');
     img.src = src;
@@ -55,8 +61,15 @@ async function hydrate(): Promise<void> {
     root.replaceChildren(p);
     return;
   }
-  if (!r.data) return;
   const title = document.querySelector('h1')?.textContent?.trim() ?? '';
+  if (!r.data) {
+    // Not released yet: an admin sees it (signed URLs) to decide; everyone else keeps the placeholder.
+    const profile = await currentProfile(client).catch(() => null);
+    if (profile?.role !== 'admin') return;
+    const pv = await restrictedPreview({ id, thumb: null, page_paths: files }, client);
+    if (pv?.pages.length) renderPages(root, pv.pages, title, t('item.vista_admin'));
+    return;
+  }
   renderReleased(root, id, files, (p) => client.storage.from('media').getPublicUrl(p).data.publicUrl, title);
 }
 

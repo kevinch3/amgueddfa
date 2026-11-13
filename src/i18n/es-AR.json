@@ -126,7 +126,8 @@
     },
     "ver_grande": "Ver más grande",
     "ver_entera": "Ver la página entera",
-    "liberado": "Revisado y publicado por el equipo del archivo."
+    "liberado": "Revisado y publicado por el equipo del archivo.",
+    "vista_admin": "Todavía no es público. Lo ves porque sos admin; revisalo antes de liberarlo."
   },
   "tabla": {
     "numero": "N.º",
@@ -145,7 +146,9 @@
   "pie": {
     "retiro": "Si sos de una de las asociaciones y querés que corrijamos o retiremos algún documento, avisanos y lo resolvemos.",
     "baja_resolucion": "Mostramos copias en baja resolución. Cada documento dice de dónde viene.",
-    "lema_cy": "Y gwir yn erbyn y byd"
+    "lema_cy": "Y gwir yn erbyn y byd",
+    "contacto_alt": "Correo de contacto del archivo",
+    "contacto_escribinos": "Escribinos"
   },
   "auth": {
     "titulo": "Ingresá",
@@ -342,7 +345,9 @@
       "sin_archivo": "No pudimos bajar el archivo original.",
       "derivados": "No pudimos generar las imágenes en este navegador. Probá con Chrome o Firefox actualizados.",
       "sin_archivos": "Faltan las imágenes en el depósito restringido. Corré scripts/push_restricted.py y probá de nuevo."
-    }
+    },
+    "ver_restringido": "Ver el documento antes de liberarlo",
+    "restringido_alt": "{titulo}, página {n} (vista para admins)"
   },
   "insignias": {
     "primer-aporte": {

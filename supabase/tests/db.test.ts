@@ -315,7 +315,7 @@ describe('storage policies', () => {
     ]);
   });
 
-  it('uploads: own folder only, admins read', async () => {
+  it('uploads: own folder only, owner and admins read', async () => {
     const admin = await t.createAdmin();
     const u = await t.createUser();
     const other = await t.createUser();
@@ -323,9 +323,46 @@ describe('storage policies', () => {
     await expect(put(u, 'uploads', `${other}/scan.jpg`)).rejects.toThrow();
     await expect(put('anon', 'uploads', `${u}/x.jpg`)).rejects.toThrow();
     expect(await t.q(other, `select name from storage.objects where bucket_id = 'uploads'`)).toEqual([]);
+    expect(await t.q('anon', `select name from storage.objects where bucket_id = 'uploads'`)).toEqual([]);
+    expect(await t.q(u, `select name from storage.objects where bucket_id = 'uploads'`)).toEqual([{ name: `${u}/scan.jpg` }]);
     expect(await t.q(admin, `select name from storage.objects where bucket_id = 'uploads'`)).toEqual([
       { name: `${u}/scan.jpg` },
     ]);
+  });
+
+  it('uploads: at most 30 objects per user in 24 h, older ones do not count', async () => {
+    const u = await t.createUser();
+    const other = await t.createUser();
+    await t.q(
+      'postgres',
+      `insert into storage.objects (bucket_id, name, created_at)
+       select 'uploads', $1 || '/old' || g || '.jpg', now() - interval '25 hours' from generate_series(1, 5) g`,
+      [u],
+    );
+    for (let i = 0; i < 30; i++) await put(u, 'uploads', `${u}/f${i}.jpg`);
+    await expect(put(u, 'uploads', `${u}/f30.jpg`)).rejects.toThrow();
+    // another user's quota is untouched
+    await put(other, 'uploads', `${other}/a.jpg`);
+  });
+
+  it('uploads: a user deletes only their own originals', async () => {
+    const u = await t.createUser();
+    const other = await t.createUser();
+    await put(u, 'uploads', `${u}/scan.jpg`);
+    await put(other, 'uploads', `${other}/scan.jpg`);
+    await t.q(other, `delete from storage.objects where bucket_id = 'uploads' and name = $1`, [`${u}/scan.jpg`]);
+    await t.q(u, `delete from storage.objects where bucket_id = 'uploads' and name = $1`, [`${u}/scan.jpg`]);
+    expect(await t.q('postgres', `select name from storage.objects where bucket_id = 'uploads' order by name`)).toEqual([
+      { name: `${other}/scan.jpg` },
+    ]);
+  });
+
+  it('uploads: admins can delete any original', async () => {
+    const admin = await t.createAdmin();
+    const u = await t.createUser();
+    await put(u, 'uploads', `${u}/scan.jpg`);
+    await t.q(admin, `delete from storage.objects where bucket_id = 'uploads' and name = $1`, [`${u}/scan.jpg`]);
+    expect(await t.q('postgres', `select name from storage.objects where bucket_id = 'uploads'`)).toEqual([]);
   });
 
   it('restricted is admin only; media is public read, admin write', async () => {

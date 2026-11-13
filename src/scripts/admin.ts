@@ -10,6 +10,7 @@ import {
   recordApprovedUpload,
   reject,
   releaseItem,
+  restrictedPreview,
   searchUsers,
   signedUrl,
   type ApprovedLike,
@@ -242,6 +243,32 @@ async function renderRestricted(): Promise<void> {
       p.append(el('span', { class: 'badge' }, t('admin.ya_liberado')));
       li.append(p);
     } else {
+      // Look before releasing: signed URLs of the restricted derivatives (admins only, 10 min).
+      const pv = el('div', { class: 'admin-preview' });
+      const look = el('button', { type: 'button', class: 'btn btn-quiet' }, t('admin.ver_restringido'));
+      look.addEventListener('click', async () => {
+        look.disabled = true;
+        const r = await restrictedPreview(it);
+        if (!r) {
+          look.disabled = false;
+          m.hidden = false;
+          m.textContent = t('admin.error.sin_archivos');
+          return;
+        }
+        const ol = el('ol', { class: 'pages' });
+        const urls = r.pages.length ? r.pages : [r.thumb as string];
+        urls.forEach((u, i) => {
+          const li2 = el('li');
+          const a = el('a', { href: u, target: '_blank', rel: 'noopener' });
+          a.append(el('img', { src: u, alt: t('admin.restringido_alt', { titulo: it.title, n: i + 1 }), loading: 'lazy' }));
+          li2.append(a);
+          ol.append(li2);
+        });
+        pv.replaceChildren(ol);
+        look.remove();
+      });
+      pv.append(look);
+      li.append(pv);
       const btn = el('button', { type: 'button', class: 'btn' }, t('admin.liberar'));
       btn.addEventListener('click', async () => {
         if (await run([btn], m, () => releaseItem(it))) btn.replaceWith(el('p', { class: 'contrib-ok', role: 'status' }, t('admin.liberado')));

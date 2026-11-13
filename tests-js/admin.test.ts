@@ -9,6 +9,7 @@ import {
   recordApprovedUpload,
   reject,
   releaseItem,
+  restrictedPreview,
   type Pending,
 } from '../src/lib/admin';
 
@@ -18,8 +19,9 @@ const catalog = editionKeys([
   { festival: 'chubut', year: null, category: 'programa' },
 ]);
 
-function fakeClient(opts: { rpcError?: unknown; uploadError?: unknown; downloadError?: unknown } = {}) {
+function fakeClient(opts: { rpcError?: unknown; uploadError?: unknown; downloadError?: unknown; status?: string } = {}) {
   const log: string[] = [];
+  const removed: { bucket: string; paths: string[] }[] = [];
   const uploads: { bucket: string; path: string; body: unknown; o: any }[] = [];
   const rpcs: { fn: string; args: any }[] = [];
   const client: any = {
@@ -39,15 +41,30 @@ function fakeClient(opts: { rpcError?: unknown; uploadError?: unknown; downloadE
           uploads.push({ bucket, path, body, o });
           return opts.uploadError ? { data: null, error: opts.uploadError } : { data: { path }, error: null };
         },
+        remove: async (paths: string[]) => {
+          log.push(`remove:${bucket}`);
+          removed.push({ bucket, paths });
+          return { data: [], error: null };
+        },
       }),
     },
+    from: (table: string) => ({
+      select: (_cols: string) => ({
+        eq: (_col: string, id: string) => ({
+          maybeSingle: async () => {
+            log.push(`status:${table}/${id}`);
+            return { data: { status: opts.status ?? 'pending' }, error: null };
+          },
+        }),
+      }),
+    }),
     rpc: async (fn: string, args: unknown) => {
       log.push(`rpc:${fn}`);
       rpcs.push({ fn, args });
       return { data: 20, error: opts.rpcError ?? null };
     },
   };
-  return { client, log, uploads, rpcs };
+  return { client, log, uploads, rpcs, removed };
 }
 
 const upload: Pending = {
@@ -96,6 +113,7 @@ describe('approveUpload', () => {
     expect(r).toEqual({ ok: true });
     expect(fetched[0]).toContain('uploads/u1/abc.pdf');
     expect(log).toEqual([
+      'status:contributions/c1',
       'sign:uploads/u1/abc.pdf',
       'fetch',
       'make:application/pdf',
@@ -171,12 +189,39 @@ describe('approveUpload', () => {
     expect(rpcs).toEqual([]);
   });
 
-  it('approving an already reviewed row maps not_pending', async () => {
-    const { client } = fakeClient({ rpcError: { message: 'not_pending' } });
+  it('approving an already reviewed row maps not_pending and removes the public derivatives', async () => {
+    const { client, removed } = fakeClient({ rpcError: { message: 'not_pending' } });
     const fetchFn = async () => ({ ok: true, blob: async () => new Blob(['x'], { type: 'image/jpeg' }) }) as any;
     const make = async () => ({ pages: [new Blob(['p'])], thumb: new Blob(['t']) });
     const r = await approveUpload(upload, { client, fetchFn, make, gap: { catalog, approved: [] } });
     expect(r).toEqual({ ok: false, key: 'admin.error.ya_revisado' });
+    expect(removed).toEqual([{ bucket: 'media', paths: ['uploads/c1/thumb.webp', 'uploads/c1/p01.webp'] }]);
+  });
+
+  it('a row another admin already reviewed is never derived or published', async () => {
+    const { client, uploads, rpcs, log } = fakeClient({ status: 'rejected' });
+    const fetchFn = async () => ({ ok: true, blob: async () => new Blob(['x'], { type: 'image/jpeg' }) }) as any;
+    const make = async () => ({ pages: [new Blob(['p'])], thumb: new Blob(['t']) });
+    const r = await approveUpload(upload, { client, fetchFn, make, gap: { catalog, approved: [] } });
+    expect(r).toEqual({ ok: false, key: 'admin.error.ya_revisado' });
+    expect(uploads).toEqual([]);
+    expect(rpcs).toEqual([]);
+    expect(log).toEqual(['status:contributions/c1']);
+  });
+
+  it('a media upload failing midway removes what was already published', async () => {
+    let n = 0;
+    const { client, removed } = fakeClient();
+    const up = client.storage.from;
+    client.storage.from = (b: string) => {
+      const o = up(b);
+      return { ...o, upload: async (p: string, body: unknown, x: unknown) => (++n === 2 ? { data: null, error: { message: 'boom' } } : o.upload(p, body, x)) };
+    };
+    const fetchFn = async () => ({ ok: true, blob: async () => new Blob(['x'], { type: 'image/jpeg' }) }) as any;
+    const make = async () => ({ pages: [new Blob(['p'])], thumb: new Blob(['t']) });
+    const r = await approveUpload(upload, { client, fetchFn, make, gap: { catalog, approved: [] } });
+    expect(r.ok).toBe(false);
+    expect(removed).toEqual([{ bucket: 'media', paths: ['uploads/c1/thumb.webp', 'uploads/c1/p01.webp'] }]);
   });
 });
 
@@ -211,6 +256,15 @@ describe('approve / reject', () => {
     expect(await reject(fact, ' Duplicado ', client)).toEqual({ ok: true });
     expect(rpcs[0]).toEqual({ fn: 'reject_contribution', args: { cid: 'c2', note: 'Duplicado' } });
   });
+
+  it('rejecting an upload deletes its original; a failed reject keeps it', async () => {
+    const ok = fakeClient();
+    expect(await reject(upload, 'Datos personales', ok.client)).toEqual({ ok: true });
+    expect(ok.removed).toEqual([{ bucket: 'uploads', paths: ['u1/abc.pdf'] }]);
+    const bad = fakeClient({ rpcError: { message: 'not_pending' } });
+    expect(await reject(upload, 'Datos personales', bad.client)).toEqual({ ok: false, key: 'admin.error.ya_revisado' });
+    expect(bad.removed).toEqual([]);
+  });
 });
 
 describe('releaseItem', () => {
@@ -235,5 +289,27 @@ describe('releaseItem', () => {
     const r = await releaseItem({ id: 'abc123def456', thumb: 'abc123def456/thumb.webp', page_paths: ['abc123def456/p01.webp'] }, client);
     expect(r).toEqual({ ok: false, key: 'admin.error.sin_archivos' });
     expect(rpcs).toEqual([]);
+  });
+});
+
+describe('restrictedPreview', () => {
+  it('signs restricted/<id>/thumb and every page for 10 minutes', async () => {
+    const { client, log } = fakeClient();
+    const r = await restrictedPreview({ id: 'abc123abc123', thumb: 'abc123abc123/thumb.webp', page_paths: ['abc123abc123/p01.webp', 'abc123abc123/p02.webp'] }, client);
+    expect(log).toEqual([
+      'sign:restricted/abc123abc123/thumb.webp',
+      'sign:restricted/abc123abc123/p01.webp',
+      'sign:restricted/abc123abc123/p02.webp',
+    ]);
+    expect(r).toEqual({
+      thumb: 'https://x.test/restricted/abc123abc123/thumb.webp?ttl=600',
+      pages: ['https://x.test/restricted/abc123abc123/p01.webp?ttl=600', 'https://x.test/restricted/abc123abc123/p02.webp?ttl=600'],
+    });
+  });
+
+  it('null offline or when nothing could be signed', async () => {
+    expect(await restrictedPreview({ id: 'a', thumb: null, page_paths: [] }, null)).toBeNull();
+    const client: any = { storage: { from: () => ({ createSignedUrl: async () => ({ data: null, error: { message: 'Object not found' } }) }) } };
+    expect(await restrictedPreview({ id: 'a', thumb: 'a/thumb.webp', page_paths: ['a/p01.webp'] }, client)).toBeNull();
   });
 });

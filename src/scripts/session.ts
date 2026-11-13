@@ -41,6 +41,23 @@ export function renderSession(el: HTMLElement, profile: Profile | null, offline:
   }
 }
 
+/**
+ * The archive's contact address, assembled here so it never appears as text in
+ * the built HTML (public pages show it only as public/contacto.png).
+ */
+function contactAddress(): string {
+  const parts = ['ar', 'kevinroberts', 'info'];
+  return `${parts[2]}${String.fromCharCode(64)}${parts[1]}.${parts[0]}`;
+}
+
+/** Footer: signed-in people also get a mailto link next to the address image. */
+export function renderContact(el: HTMLElement | null, profile: Profile | null): void {
+  if (!el) return;
+  el.replaceChildren();
+  if (!profile) return;
+  el.append(link(`mailto:${contactAddress()}`, t('pie.contacto_escribinos'), 'contacto-link'));
+}
+
 async function hydrate(): Promise<void> {
   const el = document.getElementById('sesion');
   if (!el) return;
@@ -61,6 +78,7 @@ async function hydrate(): Promise<void> {
     offline = s.offline || s.data;
   }
   renderSession(el, profile, offline);
+  renderContact(document.getElementById('contacto-mail'), profile);
 }
 
 hydrate();

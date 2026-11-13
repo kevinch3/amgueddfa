@@ -1,7 +1,12 @@
 import raw from '../data/catalog.json';
+import approvedRaw from '../../data/approved/contributions.json';
 import { t } from './i18n';
 import { url } from './paths';
 import type { EditionState, FestivalSlug, Item } from './types';
+import { maxState, uploadState, type UploadLike } from './uploads';
+
+/** Approved uploads from the last export (data/approved/contributions.json). */
+const APPROVED_UPLOADS: UploadLike[] = (approvedRaw as UploadLike[]).filter((c) => c?.type === 'upload');
 
 const FESTIVAL_SLUGS: FestivalSlug[] = ['chubut', 'juventud', 'mimosa', 'trevelin'];
 
@@ -29,10 +34,16 @@ export function editionItems(f: FestivalSlug, year: number): Item[] {
   return current.filter((i) => i.festival === f && i.year === year);
 }
 
-export function editionState(f: FestivalSlug, year: number): EditionState {
+/**
+ * Coverage of one edition: the static catalog (a programa PDF is full) raised
+ * by approved uploads (a programa with pages is full, anything else some).
+ */
+export function editionState(f: FestivalSlug, year: number, uploads: UploadLike[] = APPROVED_UPLOADS): EditionState {
   const list = editionItems(f, year);
-  if (list.some((i) => i.category === 'programa' && i.kind === 'pdf')) return 'full';
-  return list.length > 0 ? 'some' : 'none';
+  const fromCatalog: EditionState = list.some((i) => i.category === 'programa' && i.kind === 'pdf')
+    ? 'full'
+    : list.length > 0 ? 'some' : 'none';
+  return maxState(fromCatalog, uploadState(uploads, f, year));
 }
 
 /** [earliest year with material, current year]. */
@@ -45,12 +56,12 @@ export function yearRange(f: FestivalSlug): [number, number] {
 }
 
 /** Editions with some material but no programa PDF, newest first. */
-export function mostWanted(limit: number): { festival: FestivalSlug; year: number }[] {
+export function mostWanted(limit: number, uploads: UploadLike[] = APPROVED_UPLOADS): { festival: FestivalSlug; year: number }[] {
   const out: { festival: FestivalSlug; year: number }[] = [];
   for (const festival of FESTIVAL_SLUGS) {
     const [first, last] = yearRange(festival);
     for (let year = first; year <= last; year++) {
-      if (editionState(festival, year) === 'some') out.push({ festival, year });
+      if (editionState(festival, year, uploads) === 'some') out.push({ festival, year });
     }
   }
   out.sort(

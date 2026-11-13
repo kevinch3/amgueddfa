@@ -2,6 +2,9 @@ import staticEditions from '../../data/approved/editions.json';
 import { byLine, factDisplay, forEdition, mergeApproved, sortFacts, type Contribution } from '../lib/contrib';
 import { t } from '../lib/i18n';
 import { liveQuery } from '../lib/live';
+import { getClient } from '../lib/supabase';
+import type { EditionState } from '../lib/types';
+import { maxState, mediaUrl, uploadMedia, uploadStates, type UploadLike } from '../lib/uploads';
 
 type EditionRow = { festival: string; year: number; status: 'unknown' | 'held' | 'not_held'; note?: string | null };
 
@@ -44,22 +47,66 @@ export function renderMemories(mount: HTMLElement, memories: Contribution[]): vo
   mount.append(ul);
 }
 
-/** Approved uploads, listed under the contribution links in #aportes. */
+/** Public URL of a `media` bucket object: from the client when there is one, else from PUBLIC_SUPABASE_URL. */
+function publicMedia(path: string): string | null {
+  const client = getClient();
+  if (client) {
+    try {
+      return client.storage.from('media').getPublicUrl(path).data.publicUrl;
+    } catch {
+      /* fall through */
+    }
+  }
+  return mediaUrl(import.meta.env.PUBLIC_SUPABASE_URL, path);
+}
+
+/** One approved upload: thumbnail (linking to page 1), page links, category, description, byline. */
+function uploadRow(c: Contribution): HTMLLIElement {
+  const li = el('li', 'aporte');
+  const cat = String(c.payload?.category ?? '');
+  const desc = String(c.payload?.description ?? '') || t('edicion.aporte_sin_descripcion');
+  const media = uploadMedia(c);
+  const pages = (media?.pages ?? []).map(publicMedia).filter((u): u is string => Boolean(u));
+  const thumb = media?.thumb ? publicMedia(media.thumb) : null;
+  if (thumb || pages.length) {
+    const a = el('a', 'aporte-thumb');
+    a.href = pages[0] ?? thumb!;
+    const img = el('img');
+    img.src = thumb ?? pages[0];
+    img.alt = t('item.miniatura_alt', { titulo: desc });
+    img.loading = 'lazy';
+    img.decoding = 'async';
+    a.append(img);
+    li.append(a);
+  }
+  const text = el('div', 'aporte-texto');
+  if (cat) text.append(el('span', 'badge', t(`categorias.${cat}`)), ' ');
+  text.append(desc);
+  const by = byLine(c);
+  if (by) text.append(' ', el('span', 'muted small', by));
+  if (pages.length > 1) {
+    const p = el('p', 'aporte-paginas small');
+    p.append(t('item.paginas', { n: pages.length }), ':');
+    pages.forEach((u, i) => {
+      const a = el('a', undefined, String(i + 1));
+      a.href = u;
+      a.setAttribute('aria-label', t('item.ampliar', { n: i + 1 }));
+      p.append(' ', a);
+    });
+    text.append(p);
+  }
+  li.append(text);
+  return li;
+}
+
+/** Approved uploads, listed under the contribution links in #aportes (same markup as the static build). */
 function renderUploads(mount: HTMLElement, uploads: Contribution[], offline: boolean): void {
   mount.querySelector('.aportes-live')?.remove();
   const box = el('div', 'aportes-live');
   if (uploads.length) {
     box.append(el('h3', 'small', t('edicion.aportes_aprobados')));
     const ul = el('ul', 'aportes-lista');
-    for (const c of uploads) {
-      const li = el('li');
-      const cat = String(c.payload?.category ?? '');
-      if (cat) li.append(el('span', 'badge', t(`categorias.${cat}`)), ' ');
-      li.append(String(c.payload?.description ?? '') || t('edicion.aporte_sin_descripcion'));
-      const by = byLine(c);
-      if (by) li.append(' ', el('span', 'muted small', by));
-      ul.append(li);
-    }
+    for (const c of uploads) ul.append(uploadRow(c));
     box.append(ul);
   }
   if (offline) box.append(el('p', 'muted small', t('estado.sin_conexion')));
@@ -107,6 +154,38 @@ async function hydrateEdition(): Promise<void> {
   if (hechos) renderFacts(hechos, forEdition(all, festival, year, 'fact'));
   if (recuerdos) renderMemories(recuerdos, forEdition(all, festival, year, 'memory'));
   if (aportes) renderUploads(aportes, forEdition(all, festival, year, 'upload'), false);
+  applyUploadStates(document, uploadStates(forEdition(all, festival, year, 'upload')));
+}
+
+/**
+ * Raise grid cells, timeline rows, the edition badge and the "falta el
+ * programa" slot to what approved uploads say (never downgrades).
+ */
+export function applyUploadStates(root: ParentNode, states: Map<string, EditionState>): void {
+  if (!states.size) return;
+  for (const node of root.querySelectorAll<HTMLElement>('[data-festival][data-year][data-state]')) {
+    const { festival = '', year = '' } = node.dataset;
+    const old = (node.dataset.state ?? 'none') as EditionState;
+    const next = maxState(old, states.get(`${festival}:${year}`) ?? 'none');
+    if (next === old || node.dataset.status === 'not_held') continue;
+    node.dataset.state = next;
+    const label = t(`estados.${next}`);
+    if (node.matches('[data-cell]')) {
+      node.classList.replace(`st-${old}`, `st-${next}`);
+      node.setAttribute('aria-label', t('inicio.celda', { festival: t(`festivales.${festival}`), year, estado: label }));
+      node.title = label;
+    } else if (node.classList.contains('badge-state')) {
+      node.classList.replace(`st-${old}`, `st-${next}`);
+      node.textContent = label;
+    } else {
+      node.classList.replace(`tl-${old}`, `tl-${next}`);
+      const first = node.querySelector('.st')?.firstChild;
+      if (first?.nodeType === 3) first.textContent = label;
+    }
+    if (next === 'full') {
+      for (const slot of root.querySelectorAll<HTMLElement>(`[data-falta-programa][data-festival="${festival}"][data-year="${year}"]`)) slot.hidden = true;
+    }
+  }
 }
 
 /** Mark editions that never happened (editions.status = not_held) on grids, timelines and the edition badge. */
@@ -132,6 +211,16 @@ export function applyEditionStatus(root: ParentNode, rows: EditionRow[]): void {
   }
 }
 
+/** Home and festival pages: live approved uploads raise the coverage the build baked from the export. */
+async function overlayUploads(): Promise<void> {
+  if (!document.querySelector('[data-cell], .timeline [data-state]')) return;
+  const live = await liveQuery<UploadLike[]>(
+    (c) => c.from('public_contributions').select('id, type, festival, year, payload').eq('type', 'upload').limit(5000),
+    [],
+  );
+  applyUploadStates(document, uploadStates(live.data));
+}
+
 async function overlayEditions(): Promise<void> {
   if (!document.querySelector('[data-festival][data-year][data-state]')) return;
   const live = await liveQuery<EditionRow[]>((c) => c.from('editions').select('festival, year, status'), []);
@@ -144,4 +233,5 @@ async function overlayEditions(): Promise<void> {
 if (typeof document !== 'undefined') {
   void hydrateEdition();
   void overlayEditions();
+  void overlayUploads();
 }

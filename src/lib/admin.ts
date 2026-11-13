@@ -105,6 +105,32 @@ export async function signedUrl(path: string, client: SupabaseClient | null = ge
   }
 }
 
+/**
+ * Signed URLs (10 min) of a restricted item's thumbnail and pages, so an
+ * admin sees what they are about to release. Null offline or if none sign.
+ */
+export async function restrictedPreview(
+  item: { id: string; thumb: string | null; page_paths: string[] },
+  client: SupabaseClient | null = getClient(),
+): Promise<{ thumb: string | null; pages: string[] } | null> {
+  if (!client) return null;
+  const sign = async (name: string): Promise<string | null> => {
+    try {
+      const { data, error } = await client.storage.from('restricted').createSignedUrl(`${item.id}/${name}`, SIGNED_TTL);
+      return error ? null : (data?.signedUrl ?? null);
+    } catch {
+      return null;
+    }
+  };
+  const thumb = item.thumb ? await sign(base(item.thumb)) : null;
+  const pages: string[] = [];
+  for (const p of item.page_paths) {
+    const u = await sign(base(p));
+    if (u) pages.push(u);
+  }
+  return thumb || pages.length ? { thumb, pages } : null;
+}
+
 /** MIME type of an upload from its stored extension (set by contrib.submit), else the blob's. */
 export function mimeOf(path: string, blobType = ''): string {
   return MIME_BY_EXT[(path.split('.').pop() ?? '').toLowerCase()] ?? blobType;
@@ -122,6 +148,7 @@ export interface UploadOpts {
   make?: Make;
 }
 
+const base = (p: string) => p.split('/').pop() ?? p;
 const pageName = (i: number) => `p${String(i + 1).padStart(2, '0')}.webp`;
 
 /**
@@ -137,6 +164,12 @@ export async function approveUpload(c: Pending, opts: UploadOpts): Promise<Resul
   if (!client) return OFFLINE;
   const path = String(c.payload?.storage_path ?? '');
   if (!path) return { ok: false, key: 'admin.error.sin_archivo' };
+
+  // Another admin may have reviewed it since the queue loaded: publish nothing then.
+  const status = await currentStatus(client, c.id);
+  if (status === null) return OFFLINE;
+  if (status === 'missing') return { ok: false, key: 'admin.error.no_encontrado' };
+  if (status !== 'pending') return { ok: false, key: 'admin.error.ya_revisado' };
 
   const signed = await signedUrl(path, client);
   if (!signed) return { ok: false, key: 'admin.error.sin_archivo' };
@@ -158,21 +191,49 @@ export async function approveUpload(c: Pending, opts: UploadOpts): Promise<Resul
 
   const dir = `uploads/${c.id}`;
   const files: [string, Blob][] = [[`${dir}/thumb.webp`, made.thumb], ...made.pages.map((b, i): [string, Blob] => [`${dir}/${pageName(i)}`, b])];
+  const paths = files.map(([p]) => p);
   for (const [p, body] of files) {
+    let failed = false;
     try {
       const { error } = await client.storage.from('media').upload(p, body, { contentType: 'image/webp', upsert: true });
-      if (error) return OFFLINE;
+      failed = Boolean(error);
     } catch {
+      failed = true;
+    }
+    if (failed) {
+      await removeQuietly(client, 'media', paths);
       return OFFLINE;
     }
   }
 
   const gap = opts.fillsGap ?? fillsGap(c.festival, c.year, String(c.payload?.category ?? ''), opts.gap);
-  return rpc(client, 'approve_contribution', {
+  const res = await rpc(client, 'approve_contribution', {
     cid: c.id,
     fills_gap: gap,
-    payload_override: { media: { thumb: files[0][0], pages: files.slice(1).map(([p]) => p) } },
+    payload_override: { media: { thumb: paths[0], pages: paths.slice(1) } },
   });
+  // Not approved (rejected meanwhile, network, validation): take the derivatives down again.
+  if (!res.ok) await removeQuietly(client, 'media', paths);
+  return res;
+}
+
+/** The row's review status right now, or null when it cannot be read. */
+async function currentStatus(client: SupabaseClient, id: string): Promise<string | null> {
+  try {
+    const { data, error } = await client.from('contributions').select('status').eq('id', id).maybeSingle();
+    if (error) return null;
+    return data ? String((data as { status?: string }).status ?? '') : 'missing';
+  } catch {
+    return null;
+  }
+}
+
+async function removeQuietly(client: SupabaseClient, bucket: string, paths: string[]): Promise<void> {
+  try {
+    await client.storage.from(bucket).remove(paths);
+  } catch {
+    /* best effort */
+  }
 }
 
 /**
@@ -195,10 +256,12 @@ export async function reject(c: Pending, reason: string, client: SupabaseClient 
   const note = (reason ?? '').trim();
   if (!note) return { ok: false, key: 'admin.error.motivo' };
   if (!client) return OFFLINE;
-  return rpc(client, 'reject_contribution', { cid: c.id, note });
+  const res = await rpc(client, 'reject_contribution', { cid: c.id, note });
+  // A rejected original is never published or synced: do not keep it.
+  const original = c.type === 'upload' ? String(c.payload?.storage_path ?? '') : '';
+  if (res.ok && original) await removeQuietly(client, 'uploads', [original]);
+  return res;
 }
-
-const base = (p: string) => p.split('/').pop() ?? p;
 
 /**
  * Release a restricted item: copy `restricted/<id>/*` to `media/released/<id>/*`

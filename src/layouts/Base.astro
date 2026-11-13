@@ -57,6 +57,10 @@ const fullTitle = title ? `${title} | ${t('sitio.nombre')}` : t('sitio.nombre');
     <footer class="site-foot">
       <div class="wrap">
         <p>{t('pie.retiro')}</p>
+        <p class="contacto">
+          <img src={url('contacto.png')} alt={t('pie.contacto_alt')} width="182" height="24" decoding="async" />
+          <span id="contacto-mail"></span>
+        </p>
         <p class="muted">{t('pie.baja_resolucion')}</p>
         <p class="motto" lang="cy">{t('pie.lema_cy')}</p>
       </div>

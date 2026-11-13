@@ -44,6 +44,8 @@ def _source(url: str) -> tuple[str | None, str]:
         return None, "Colección inicial (origen no registrado)"
     if url.startswith("kpc.local:"):
         return None, "Archivo personal (kpc)"
+    if url.startswith("Aporte de "):  # scripts/sync_uploads.py: a community upload
+        return None, url
     host = (urlparse(url).hostname or "").lower()
     if host.endswith("facebook.com"):
         return url, "Facebook"

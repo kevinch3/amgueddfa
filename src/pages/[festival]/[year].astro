@@ -10,6 +10,7 @@ import { byTitle, CATEGORY_ORDER, docCount } from '../../lib/site';
 import type { FestivalSlug } from '../../lib/types';
 import approvedRaw from '../../../data/approved/contributions.json';
 import { byLine, factDisplay, forEdition, jsonForScript, sortFacts, type Contribution } from '../../lib/contrib';
+import { mediaUrl, uploadMedia } from '../../lib/uploads';
 
 export function getStaticPaths() {
   return festivals().flatMap((f) => {
@@ -36,6 +37,22 @@ const approved = (approvedRaw as Contribution[]).filter((c) => c.festival === sl
   });
 const facts = sortFacts(forEdition(approved, slug, year, 'fact')).map((c) => ({ ...factDisplay(c), by: byLine(c) }));
 const memories = forEdition(approved, slug, year, 'memory').map((c) => ({ text: String(c.payload?.text ?? ''), by: byLine(c) }));
+// Approved uploads with their low-res derivatives (media bucket); same markup edicion.ts renders live.
+const mediaBase = import.meta.env.PUBLIC_SUPABASE_URL;
+const uploads = forEdition(approved, slug, year, 'upload').map((c) => {
+  const m = uploadMedia(c);
+  const pages = (m?.pages ?? []).map((p) => mediaUrl(mediaBase, p)).filter((u): u is string => Boolean(u));
+  const thumb = m?.thumb ? mediaUrl(mediaBase, m.thumb) : null;
+  const category = String(c.payload?.category ?? '');
+  return {
+    category,
+    desc: String(c.payload?.description ?? '') || t('edicion.aporte_sin_descripcion'),
+    by: byLine(c),
+    thumb: thumb ?? pages[0] ?? null,
+    href: pages[0] ?? thumb,
+    pages,
+  };
+});
 const contribUrl = (tab: string) => url(`contribuir?f=${slug}&y=${year}&tab=${tab}`);
 const missingList = new Intl.ListFormat('es', { type: 'conjunction' }).format(missing.map((m) => m.toLowerCase()));
 ---
@@ -76,7 +93,7 @@ const missingList = new Intl.ListFormat('es', { type: 'conjunction' }).format(mi
           {items.map((item) => <ItemCard item={item} />)}
         </ul>
       )}
-      {c === 'programa' && state !== 'full' && <EmptySlot message={t('edicion.falta_programa')} />}
+      {c === 'programa' && state !== 'full' && <div data-falta-programa data-festival={slug} data-year={year}><EmptySlot message={t('edicion.falta_programa')} /></div>}
     </section>
   ))}
 
@@ -103,7 +120,24 @@ const missingList = new Intl.ListFormat('es', { type: 'conjunction' }).format(mi
       <a class="btn btn-quiet" href={contribUrl('datos')}>{t('edicion.datos')}</a>
       <a class="btn btn-quiet" href={contribUrl('recuerdo')}>{t('edicion.recuerdo')}</a>
     </p>
-    <Mount id="aportes" festival={slug} year={year} />
+    <Mount id="aportes" festival={slug} year={year}>{uploads.length > 0 && (
+      <div class="aportes-live">
+        <h3 class="small">{t('edicion.aportes_aprobados')}</h3>
+        <ul class="aportes-lista">
+          {uploads.map((u) => (
+            <li class="aporte">
+              {u.thumb && <a class="aporte-thumb" href={u.href}><img src={u.thumb} alt={t('item.miniatura_alt', { titulo: u.desc })} loading="lazy" decoding="async" /></a>}
+              <div class="aporte-texto">
+                {u.category && <><span class="badge">{t(`categorias.${u.category}`)}</span> </>}{u.desc}{u.by && <> <span class="muted small">{u.by}</span></>}
+                {u.pages.length > 1 && (
+                  <p class="aporte-paginas small">{t('item.paginas', { n: u.pages.length })}:{u.pages.map((p, i) => <> <a href={p} aria-label={t('item.ampliar', { n: i + 1 })}>{i + 1}</a></>)}</p>
+                )}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}</Mount>
     <script type="application/json" id="aprobados-data" set:html={jsonForScript(approved)}></script>
   </section>
 

@@ -67,10 +67,26 @@ liberar desde `/admin`.
 ### Cuarentena
 
 El archivo tiene una carpeta `../.cuarentena/` con imágenes que se descargaron mal
-(todas iguales a un mismo flyer). Como empieza con punto, el escaneo la ignora. La lista
-de las 98 que hay que volver a bajar desde su `source_url` está en
-`../.cuarentena/LEEME_refetch_list.txt`. Cuando las recuperes, ponelas en su carpeta de
-festival y año y reconstruí el catálogo.
+(todas iguales a un mismo flyer). Como empieza con punto, el escaneo la ignora. Las 98
+ya se volvieron a bajar desde su `source_url` y están en su carpeta; la cuarentena
+queda solo como registro (`../.cuarentena/LEEME_refetch_list.txt`).
+
+## Respaldar los aportes en el archivo
+
+Los originales que sube la gente quedan solo en el bucket privado `uploads` de
+Supabase. Para que no se pierdan si el proyecto gratuito se pausa o se borra, y para
+que entren al catálogo como cualquier otro documento, bajalos al archivo de vez en
+cuando:
+
+```sh
+python3 -m scripts.sync_uploads --dry-run   # muestra qué agregaría
+python3 -m scripts.sync_uploads             # baja los aportes aprobados a ../ (usa .env)
+python3 -m scripts.build_catalog            # y reconstruí el catálogo
+```
+
+Cada aporte aprobado va a `../<Festival>/<Año>/<Categoría>/Aporte_<id>.<ext>` con una
+fila en `SOURCES.tsv` cuyo origen es «Aporte de <nombre>, <fecha>». Es idempotente: si
+los mismos bytes ya están en el archivo (mismo id), no lo vuelve a bajar.
 
 ## Hacer admin a una cuenta
 
@@ -110,6 +126,17 @@ el nombre público de quien aportó.
 - **Keepalive:** `keepalive.yml` hace una lectura diaria para que el proyecto gratuito
   de Supabase no se pause. GitHub desactiva los cron de repos sin actividad por 60
   días; si pasa, reactivalos desde la pestaña Actions.
+
+- **Plantillas de correo (obligatorio):** el ingreso es con un código de 6 dígitos y el
+  enlace del correo no inicia sesión. Las plantillas que trae Supabase mandan solo un
+  enlace, así que sin este paso nadie puede ingresar. En Supabase → Authentication →
+  Email Templates, pegá el contenido de `supabase/templates/magic_link.html` en
+  «Magic Link» y el de `supabase/templates/confirmation.html` en «Confirm signup», con
+  el asunto «Tu código para ingresar al Amgueddfa». Las dos usan `{{ .Token }}`.
+  (`supabase/config.toml` ya las declara para el entorno local.)
+- **Contacto del pie:** la dirección se muestra como imagen (`public/contacto.png`) y,
+  a quien inició sesión, como enlace. No la escribas como texto en las páginas ni en
+  `es-AR.json`; el test de build lo chequea.
 
 ### SMTP propio
 

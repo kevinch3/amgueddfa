@@ -1,16 +1,19 @@
 import {
   approve,
   approveUpload,
-  fillsGap,
+  gapChoice,
+  gapOverride,
   loadApprovedUploads,
   loadQueue,
   loadReleased,
   makeAdmin,
+  recordApprovedUpload,
   reject,
   releaseItem,
   searchUsers,
   signedUrl,
   type ApprovedLike,
+  type GapChoice,
   type GapCtx,
   type Pending,
   type Result,
@@ -37,6 +40,12 @@ function readData(): Data {
 
 const data = readData();
 const gap: GapCtx = { catalog: new Set(data.catalog), approved: [...data.approved] };
+/** Gap choices of the upload cards on screen, kept in sync with their checkboxes. */
+let choices: { g: GapChoice; box: HTMLInputElement }[] = [];
+
+function syncBoxes(): void {
+  for (const { g, box } of choices) box.checked = g.checked;
+}
 
 function show(msg: HTMLElement, text: string): void {
   msg.textContent = text;
@@ -101,7 +110,7 @@ function card(c: Pending, done: (key: string) => void): HTMLLIElement {
   const ok = el('button', { type: 'button', class: 'btn' }, t('admin.aprobar'));
   const no = el('button', { type: 'button', class: 'btn btn-quiet' }, t('admin.rechazar'));
   const btns = [ok, no];
-  let gapBox: HTMLInputElement | null = null;
+  let choice: GapChoice | null = null;
 
   if (c.type === 'upload') {
     const pv = el('div', { class: 'admin-preview' });
@@ -109,8 +118,15 @@ function card(c: Pending, done: (key: string) => void): HTMLLIElement {
     li.append(pv);
     void preview(c, pv);
     const id = `gap-${c.id}`;
-    gapBox = el('input', { type: 'checkbox', id });
-    gapBox.checked = fillsGap(c.festival, c.year, String(c.payload?.category ?? ''), gap);
+    const gapBox = el('input', { type: 'checkbox', id });
+    const g = gapChoice(c, gap);
+    choice = g;
+    gapBox.checked = g.checked;
+    gapBox.addEventListener('change', () => {
+      g.checked = gapBox.checked;
+      g.touched = true;
+    });
+    choices.push({ g, box: gapBox });
     const lab = el('label', { for: id, class: 'opt' });
     lab.prepend(gapBox);
     lab.append(t('admin.llena_hueco'));
@@ -154,10 +170,14 @@ function card(c: Pending, done: (key: string) => void): HTMLLIElement {
 
   ok.addEventListener('click', async () => {
     const fn = c.type === 'upload'
-      ? () => approveUpload(c, { gap, fillsGap: gapBox?.checked })
+      ? () => approveUpload(c, { gap, fillsGap: choice ? gapOverride(choice) : undefined })
       : () => approve(c, null);
     if (await run(btns, msg, fn)) {
-      if (c.type === 'upload') gap.approved.push({ type: 'upload', festival: c.festival, year: c.year, payload: c.payload });
+      if (c.type === 'upload') {
+        choices = choices.filter((x) => x.g !== choice);
+        recordApprovedUpload(c, gap, choices.map((x) => x.g));
+        syncBoxes();
+      }
       done('admin.aprobado');
     }
   });
@@ -191,6 +211,7 @@ async function renderQueue(): Promise<void> {
   const type = ($('a-tipo') as HTMLSelectElement).value as Kind | '';
   const r = await loadQueue(type);
   list.replaceChildren();
+  choices = [];
   if (r.offline) return show(msg, t('estado.sin_conexion'));
   show(msg, r.data.length ? '' : t('admin.vacia'));
   for (const c of r.data) {

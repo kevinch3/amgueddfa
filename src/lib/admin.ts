@@ -52,6 +52,29 @@ export function fillsGap(festival: string | null, year: number | null, category:
   );
 }
 
+/**
+ * The "Llena un hueco" choice for one pending upload. `touched` is set once
+ * the admin changes the checkbox; until then the value follows fillsGap and
+ * is recomputed whenever another upload is approved.
+ */
+export type GapChoice = { festival: string | null; year: number | null; category: string; checked: boolean; touched: boolean };
+
+export function gapChoice(c: Pending, ctx: GapCtx): GapChoice {
+  const category = String(c.payload?.category ?? '');
+  return { festival: c.festival, year: c.year, category, checked: fillsGap(c.festival, c.year, category, ctx), touched: false };
+}
+
+/** The override to pass to approveUpload: only an explicit admin choice. */
+export function gapOverride(g: GapChoice): boolean | undefined {
+  return g.touched ? g.checked : undefined;
+}
+
+/** After an upload is approved: count it, then recompute every untouched choice. */
+export function recordApprovedUpload(c: Pending, ctx: GapCtx, choices: GapChoice[]): void {
+  ctx.approved.push({ type: 'upload', festival: c.festival, year: c.year, payload: c.payload });
+  for (const g of choices) if (!g.touched) g.checked = fillsGap(g.festival, g.year, g.category, ctx);
+}
+
 /** rpc error → es-AR message key. */
 export function mapRpcError(e: { message?: string } | null | undefined): Result {
   const m = e?.message ?? '';

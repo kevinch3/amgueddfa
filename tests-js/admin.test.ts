@@ -4,6 +4,9 @@ import {
   approveUpload,
   editionKeys,
   fillsGap,
+  gapChoice,
+  gapOverride,
+  recordApprovedUpload,
   reject,
   releaseItem,
   type Pending,
@@ -115,6 +118,36 @@ describe('approveUpload', () => {
     const make = async () => ({ pages: [new Blob(['p'])], thumb: new Blob(['t']) });
     await approveUpload(upload, { client, fetchFn, make, gap: { catalog, approved: [] }, fillsGap: false });
     expect(rpcs[0].args.fills_gap).toBe(false);
+  });
+
+  it('a second upload for the same gap is recomputed after the first is approved', async () => {
+    const { client, rpcs } = fakeClient();
+    const fetchFn = async () => ({ ok: true, blob: async () => new Blob(['x'], { type: 'image/jpeg' }) }) as any;
+    const make = async () => ({ pages: [new Blob(['p'])], thumb: new Blob(['t']) });
+    const gap = { catalog, approved: [] as any[] };
+    const second: Pending = { ...upload, id: 'c2', user_id: 'u2', payload: { category: 'programa', storage_path: 'u2/x.jpg' } };
+    const other: Pending = { ...upload, id: 'c3', payload: { category: 'bases', storage_path: 'u1/b.jpg' } };
+    const a = gapChoice(upload, gap);
+    const b = gapChoice(second, gap);
+    const o = gapChoice(other, gap);
+    expect([a.checked, b.checked, o.checked]).toEqual([true, true, true]);
+
+    await approveUpload(upload, { client, fetchFn, make, gap, fillsGap: gapOverride(a) });
+    recordApprovedUpload(upload, gap, [b, o]);
+    expect(b.checked).toBe(false);
+    expect(o.checked).toBe(true);
+    await approveUpload(second, { client, fetchFn, make, gap, fillsGap: gapOverride(b) });
+    expect(rpcs.map((r) => r.args.fills_gap)).toEqual([true, false]);
+  });
+
+  it('an untouched choice is no override; a touched one survives recomputation', () => {
+    const gap = { catalog, approved: [] as any[] };
+    const b = gapChoice(upload, gap);
+    expect(gapOverride(b)).toBeUndefined();
+    b.touched = true;
+    recordApprovedUpload(upload, gap, [b]);
+    expect(b.checked).toBe(true);
+    expect(gapOverride(b)).toBe(true);
   });
 
   it('a failed media upload never calls the rpc', async () => {

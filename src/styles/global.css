@@ -306,6 +306,7 @@ fieldset.campo { border: 0; padding: 0; }
 .restricted.is-liberado { border-top-color: var(--red); max-width: none; }
 .restricted.is-liberado > h2, .restricted.is-liberado > p { display: none; }
 .liberado-pages img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); }
+.texto-restringido { margin: 0; max-height: 32rem; overflow: auto; padding: 0.75rem 1rem; background: var(--paper-hi); border-left: 4px solid var(--gold); font: 1rem/1.5 var(--serif); white-space: pre-wrap; overflow-wrap: anywhere; max-width: var(--measure); }
 
 /* approved uploads with their derivatives (edicion.ts / [year].astro) */
 .aportes-lista:has(.aporte) { list-style: none; padding-left: 0; display: grid; gap: 0.9rem; }

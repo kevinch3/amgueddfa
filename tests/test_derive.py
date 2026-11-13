@@ -206,3 +206,64 @@ def test_restricted_item_note_cleared(tmp_path):
     it = derive(mk("w.html", "web", restricted=True, note_public="Ganadores: Ana Gómez"),
                 arch, tmp_path / "o")
     assert it.note_public == ""
+
+
+def test_restricted_web_text_written_privately(tmp_path):
+    arch, res = tmp_path / "arch", tmp_path / "res"
+    arch.mkdir()
+    (arch / "w.html").write_text(
+        "<html><body><nav>Inicio</nav><h1>Resultados</h1><p>Primer premio: Ana</p>"
+        "<p>Segundo premio: Juan</p><div class='comments'>Pepe dice: hola</div>"
+        "<p>2 Comentarios</p><p>Pepe dice: felicitaciones</p></body></html>")
+    it = derive(mk("w.html", "web", restricted=True), arch, res)
+    assert it.text_excerpt is None and it.table is None
+    text = (res / "abc123def456" / "text.txt").read_text(encoding="utf-8")
+    assert text == "Resultados\nPrimer premio: Ana\nSegundo premio: Juan\n"
+
+
+def test_restricted_text_is_long_but_capped(tmp_path):
+    from scripts.catalog.derive import EXCERPT_LEN, TEXT_LEN
+    arch, res = tmp_path / "arch", tmp_path / "res"
+    arch.mkdir()
+    (arch / "w.html").write_text("<p>" + "palabra " * 5000 + "</p>")
+    derive(mk("w.html", "web", restricted=True), arch, res)
+    text = (res / "abc123def456" / "text.txt").read_text(encoding="utf-8")
+    assert EXCERPT_LEN < len(text.strip()) <= TEXT_LEN
+
+
+def test_restricted_table_text_rendering(tmp_path):
+    arch, res = tmp_path / "arch", tmp_path / "res"
+    arch.mkdir()
+    (arch / "t.csv").write_text("nombre,premio\nAna,1\nJuan,2\n")
+    it = derive(mk("t.csv", "table", restricted=True), arch, res)
+    assert it.table is None
+    assert (res / "abc123def456" / "text.txt").read_text(encoding="utf-8") == \
+        "nombre | premio\nAna | 1\nJuan | 2\n"
+
+
+def test_restricted_doc_text_written(tmp_path, monkeypatch):
+    import scripts.catalog.derive as d
+    arch, res = tmp_path / "arch", tmp_path / "res"
+    arch.mkdir()
+    (arch / "a.doc").write_bytes(b"x")
+    monkeypatch.setattr(d, "_office_text", lambda p: "Acta  del jurado\r\n\r\n\r\nGanó   Ana\n")
+    it = derive(mk("a.doc", "doc", restricted=True), arch, res)
+    assert it.text_excerpt is None
+    assert (res / "abc123def456" / "text.txt").read_text(encoding="utf-8") == "Acta del jurado\n\nGanó Ana\n"
+
+
+def test_public_text_items_write_no_text_file(tmp_path):
+    arch, out = tmp_path / "arch", tmp_path / "out"
+    arch.mkdir()
+    (arch / "w.html").write_text("<p>Hola</p>")
+    it = derive(mk("w.html", "web"), arch, out)
+    assert it.text_excerpt == "Hola"
+    assert not (out / "abc123def456").exists()
+
+
+def test_empty_restricted_text_writes_nothing(tmp_path):
+    arch, res = tmp_path / "arch", tmp_path / "res"
+    arch.mkdir()
+    (arch / "w.html").write_text("<script>x</script>")
+    derive(mk("w.html", "web", restricted=True), arch, res)
+    assert not (res / "abc123def456" / "text.txt").exists()

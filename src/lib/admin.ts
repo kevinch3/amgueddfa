@@ -105,15 +105,33 @@ export async function signedUrl(path: string, client: SupabaseClient | null = ge
   }
 }
 
+/** The private text of a restricted doc/web/table item (no page images): `restricted/<id>/text.txt`. */
+export const TEXT_FILE = 'text.txt';
+const TEXT_TYPE = 'text/plain; charset=utf-8';
+
+type RestrictedRef = { id: string; thumb: string | null; page_paths: string[] };
+export type RestrictedView = { thumb: string | null; pages: string[]; text: string | null };
+
+/** True when the item has no page images, so its only derivative is text.txt. */
+export const textOnly = (item: RestrictedRef): boolean => !item.thumb && item.page_paths.length === 0;
+
 /**
- * Signed URLs (10 min) of a restricted item's thumbnail and pages, so an
- * admin sees what they are about to release. Null offline or if none sign.
+ * What an admin sees before releasing a restricted item: signed URLs (10 min)
+ * of its thumbnail and pages, or, for an item without images, its text.txt.
+ * Null offline or if nothing could be read.
  */
-export async function restrictedPreview(
-  item: { id: string; thumb: string | null; page_paths: string[] },
-  client: SupabaseClient | null = getClient(),
-): Promise<{ thumb: string | null; pages: string[] } | null> {
+export async function restrictedPreview(item: RestrictedRef, client: SupabaseClient | null = getClient()): Promise<RestrictedView | null> {
   if (!client) return null;
+  if (textOnly(item)) {
+    try {
+      const { data, error } = await client.storage.from('restricted').download(`${item.id}/${TEXT_FILE}`);
+      if (error || !data) return null;
+      const text = (await data.text()).trim();
+      return text ? { thumb: null, pages: [], text } : null;
+    } catch {
+      return null;
+    }
+  }
   const sign = async (name: string): Promise<string | null> => {
     try {
       const { data, error } = await client.storage.from('restricted').createSignedUrl(`${item.id}/${name}`, SIGNED_TTL);
@@ -128,7 +146,7 @@ export async function restrictedPreview(
     const u = await sign(base(p));
     if (u) pages.push(u);
   }
-  return thumb || pages.length ? { thumb, pages } : null;
+  return thumb || pages.length ? { thumb, pages, text: null } : null;
 }
 
 /** MIME type of an upload from its stored extension (set by contrib.submit), else the blob's. */
@@ -265,14 +283,13 @@ export async function reject(c: Pending, reason: string, client: SupabaseClient 
 
 /**
  * Release a restricted item: copy `restricted/<id>/*` to `media/released/<id>/*`
- * (the thumbnail and every page the catalog lists), then mark it released.
+ * (the thumbnail and every page the catalog lists or, for an item without
+ * images, its text.txt), then mark it released.
  */
-export async function releaseItem(
-  item: { id: string; thumb: string | null; page_paths: string[] },
-  client: SupabaseClient | null = getClient(),
-): Promise<Result> {
+export async function releaseItem(item: RestrictedRef, client: SupabaseClient | null = getClient()): Promise<Result> {
   if (!client) return OFFLINE;
-  const names = [...(item.thumb ? [base(item.thumb)] : []), ...item.page_paths.map(base)];
+  const text = textOnly(item);
+  const names = text ? [TEXT_FILE] : [...(item.thumb ? [base(item.thumb)] : []), ...item.page_paths.map(base)];
   for (const name of names) {
     let blob: Blob;
     try {
@@ -285,7 +302,7 @@ export async function releaseItem(
     try {
       const { error } = await client.storage
         .from('media')
-        .upload(`released/${item.id}/${name}`, blob, { contentType: 'image/webp', upsert: true });
+        .upload(`released/${item.id}/${name}`, blob, { contentType: text ? TEXT_TYPE : 'image/webp', upsert: true });
       if (error) return OFFLINE;
     } catch {
       return OFFLINE;

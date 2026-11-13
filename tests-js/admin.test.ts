@@ -292,6 +292,42 @@ describe('releaseItem', () => {
   });
 });
 
+describe('releaseItem (text-only items)', () => {
+  const doc = { id: 'abc123def456', thumb: null, page_paths: [] as string[] };
+
+  it('copies restricted/<id>/text.txt to media/released/<id>/text.txt then calls release_item', async () => {
+    const { client, log, rpcs, uploads } = fakeClient();
+    expect(await releaseItem(doc, client)).toEqual({ ok: true });
+    expect(log).toEqual(['download:restricted/abc123def456/text.txt', 'upload:media/released/abc123def456/text.txt', 'rpc:release_item']);
+    expect(uploads[0].o).toEqual({ contentType: 'text/plain; charset=utf-8', upsert: true });
+    expect(rpcs[0].args).toEqual({ item_id: 'abc123def456' });
+  });
+
+  it('image items still upload as webp', async () => {
+    const { client, uploads } = fakeClient();
+    await releaseItem({ id: 'abc123def456', thumb: 'abc123def456/thumb.webp', page_paths: ['abc123def456/p01.webp'] }, client);
+    expect(uploads.map((u) => [u.path, u.o.contentType])).toEqual([
+      ['released/abc123def456/thumb.webp', 'image/webp'],
+      ['released/abc123def456/p01.webp', 'image/webp'],
+    ]);
+  });
+
+  it('neither images nor text: sin_archivos, nothing released', async () => {
+    const { client, rpcs, uploads } = fakeClient({ downloadError: { message: 'Object not found' } });
+    expect(await releaseItem(doc, client)).toEqual({ ok: false, key: 'admin.error.sin_archivos' });
+    expect(uploads).toEqual([]);
+    expect(rpcs).toEqual([]);
+  });
+
+  it('preview reads text.txt (no signed images) for an item without pages', async () => {
+    const { client, log } = fakeClient();
+    expect(await restrictedPreview(doc, client)).toEqual({ thumb: null, pages: [], text: 'abc123def456/text.txt' });
+    expect(log).toEqual(['download:restricted/abc123def456/text.txt']);
+    const missing = fakeClient({ downloadError: { message: 'Object not found' } });
+    expect(await restrictedPreview(doc, missing.client)).toBeNull();
+  });
+});
+
 describe('restrictedPreview', () => {
   it('signs restricted/<id>/thumb and every page for 10 minutes', async () => {
     const { client, log } = fakeClient();
@@ -304,6 +340,7 @@ describe('restrictedPreview', () => {
     expect(r).toEqual({
       thumb: 'https://x.test/restricted/abc123abc123/thumb.webp?ttl=600',
       pages: ['https://x.test/restricted/abc123abc123/p01.webp?ttl=600', 'https://x.test/restricted/abc123abc123/p02.webp?ttl=600'],
+      text: null,
     });
   });
 

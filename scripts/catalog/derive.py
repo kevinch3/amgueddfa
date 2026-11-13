@@ -17,6 +17,7 @@ PAGE_LONG, PAGE_Q = 1200, 70
 THUMB_LONG, THUMB_Q = 320, 60
 PDF_DPI = 110
 EXCERPT_LEN = 600
+TEXT_LEN = 20000  # private text.txt of restricted doc/web/table items
 
 Image.MAX_IMAGE_PIXELS = None
 
@@ -37,6 +38,23 @@ def _save(im: Image.Image, dest: Path, long_side: int, quality: int) -> None:
 
 def _excerpt(text: str) -> str:
     return re.sub(r"\s+", " ", text).strip()[:EXCERPT_LEN]
+
+
+def _long_text(text: str) -> str:
+    """Readable text for text.txt: spaces collapsed, paragraph breaks kept."""
+    lines = (re.sub(r"[ \t\f\v\u00a0]+", " ", ln).strip() for ln in text.replace("\r", "\n").split("\n"))
+    out = re.sub(r"\n{3,}", "\n\n", "\n".join(lines)).strip()
+    return out[:TEXT_LEN].rstrip()
+
+
+def _table_text(rows: list[dict]) -> str:
+    if not rows:
+        return ""
+    cols = list(rows[0].keys())
+    lines = [" | ".join(str(c or "") for c in cols)]
+    for r in rows:
+        lines.append(" | ".join(str(r.get(c) or "").replace("\n", " / ") for c in cols))
+    return "\n".join(lines)
 
 
 # Elements whose whole subtree is boilerplate (navigation, widgets, comments).
@@ -112,7 +130,7 @@ def _decode(b: bytes) -> str:
         return b.decode("cp1252", errors="replace")
 
 
-def _html_text(path: Path) -> str:
+def _html_text(path: Path, keep_breaks: bool = False) -> str:
     p = _TextOnly()
     p.feed(_decode(path.read_bytes()))
     p.close()
@@ -124,6 +142,8 @@ def _html_text(path: Path) -> str:
         if start >= 0 and cut - start <= _NAME_SPAN:  # e.g. "<p>María López dice: …"
             cut = start
         text = text[:cut]
+    if keep_breaks:  # block boundaries become line breaks (for text.txt)
+        return re.sub(r"\s*\n\s*", "\n", text.replace(_BR, "\n")).strip()
     return re.sub(r"\s+", " ", text.replace(_BR, " ")).strip()
 
 
@@ -244,16 +264,35 @@ def derive(item: Item, archive: Path, out_root: Path) -> Item:
             pages = _pages_on_disk(out)
     else:
         item.pages, item.thumb, item.page_paths = 0, None, []
+        text_file = out / "text.txt"
+        if item.restricted and _fresh([text_file], src):
+            item.text_excerpt, item.table = None, None
+            return item
+        full = ""
         if item.kind == "doc":
-            item.text_excerpt = _excerpt(_office_text(src)) or None
+            raw = _office_text(src)
+            item.text_excerpt = _excerpt(raw) or None
+            full = _long_text(raw)
         elif item.kind == "web":
             item.text_excerpt = _excerpt(_html_text(src)) or None
+            if item.restricted:
+                full = _long_text(_html_text(src, keep_breaks=True))
         elif item.kind == "table":
             with open(src, newline="", encoding="utf-8-sig", errors="replace") as f:
                 item.table = [{clean_cell(k): clean_cell(v) for k, v in row.items()}
                               for row in csv.DictReader(f)]
-        if item.restricted:  # extracted text must never reach the public catalog
+            full = _long_text(_table_text(item.table))
+        if item.restricted:
+            # Extracted text must never reach the public catalog; admins read it
+            # privately from text.txt (restricted bucket) before releasing it.
             item.text_excerpt, item.table = None, None
+            if full:
+                out.mkdir(parents=True, exist_ok=True)
+                tmp = out / ".text.txt.tmp"
+                tmp.write_text(full + "\n", encoding="utf-8")
+                tmp.replace(text_file)
+            else:
+                text_file.unlink(missing_ok=True)
         return item
 
     item.pages = len(pages)

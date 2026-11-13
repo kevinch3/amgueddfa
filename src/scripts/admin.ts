@@ -255,6 +255,12 @@ async function renderRestricted(): Promise<void> {
           m.textContent = t('admin.error.sin_archivos');
           return;
         }
+        if (r.text !== null) {
+          // Text-only item (Word doc, archived web page): plain text, never parsed as HTML.
+          pv.replaceChildren(el('pre', { class: 'texto-restringido', tabindex: '0', 'aria-label': t('admin.restringido_texto', { titulo: it.title }) }, r.text));
+          look.remove();
+          return;
+        }
         const ol = el('ol', { class: 'pages' });
         const urls = r.pages.length ? r.pages : [r.thumb as string];
         urls.forEach((u, i) => {

@@ -127,7 +127,8 @@
     "ver_grande": "Ver más grande",
     "ver_entera": "Ver la página entera",
     "liberado": "Revisado y publicado por el equipo del archivo.",
-    "vista_admin": "Todavía no es público. Lo ves porque sos admin; revisalo antes de liberarlo."
+    "vista_admin": "Todavía no es público. Lo ves porque sos admin; revisalo antes de liberarlo.",
+    "texto": "Texto del documento"
   },
   "tabla": {
     "numero": "N.º",
@@ -349,10 +350,11 @@
       "valor": "El valor no es válido para este aporte.",
       "sin_archivo": "No pudimos bajar el archivo original.",
       "derivados": "No pudimos generar las imágenes en este navegador. Probá con Chrome o Firefox actualizados.",
-      "sin_archivos": "Faltan las imágenes en el depósito restringido. Corré scripts/push_restricted.py y probá de nuevo."
+      "sin_archivos": "Faltan las imágenes o el texto en el depósito restringido. Corré scripts/push_restricted.py y probá de nuevo."
     },
     "ver_restringido": "Ver el documento antes de liberarlo",
-    "restringido_alt": "{titulo}, página {n} (vista para admins)"
+    "restringido_alt": "{titulo}, página {n} (vista para admins)",
+    "restringido_texto": "Texto de {titulo} (vista para admins)"
   },
   "insignias": {
     "primer-aporte": {

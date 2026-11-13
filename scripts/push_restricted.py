@@ -18,7 +18,12 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 BUCKET = "restricted"
 ID_RE = re.compile(r"^[0-9a-f]{12}$")
-CONTENT_TYPES = {".webp": "image/webp", ".png": "image/png", ".jpg": "image/jpeg"}
+CONTENT_TYPES = {".webp": "image/webp", ".png": "image/png", ".jpg": "image/jpeg",
+                 ".txt": "text/plain; charset=utf-8"}
+
+
+def content_type(f: Path) -> str:
+    return CONTENT_TYPES.get(f.suffix.lower(), "application/octet-stream")
 
 
 def read_env(path: Path) -> dict[str, str]:
@@ -85,7 +90,7 @@ def push(root: Path, base: str, key: str) -> tuple[int, int]:
             key,
             "POST",
             f.read_bytes(),
-            {"Content-Type": CONTENT_TYPES.get(f.suffix, "application/octet-stream"), "x-upsert": "true"},
+            {"Content-Type": content_type(f), "x-upsert": "true"},
         )
         sent += 1
     return sent, skipped

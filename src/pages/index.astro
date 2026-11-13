@@ -2,7 +2,10 @@
 import Base from '../layouts/Base.astro';
 import CoverageGrid from '../components/CoverageGrid.astro';
 import Mount from '../components/Mount.astro';
+import approvedStatic from '../../data/approved/contributions.json';
 import { editionState, festivals, items, mostWanted, yearRange } from '../lib/catalog';
+import { jsonForScript, type Contribution } from '../lib/contrib';
+import { latestApproved } from '../lib/game';
 import { t } from '../lib/i18n';
 import { url } from '../lib/paths';
 import { festivalName } from '../lib/site';
@@ -16,6 +19,9 @@ for (const f of fests) {
   for (let y = a; y <= b; y++) if (editionState(f.slug, y) === 'full') complete++;
 }
 const wanted = mostWanted(12);
+// Last export, so the island still has something to show when Supabase is unreachable.
+// The feed never shows payload text, so none is embedded.
+const recent = latestApproved(approvedStatic as Contribution[], [], 10).map((c) => ({ ...c, payload: {} }));
 ---
 <Base current="inicio">
   <section class="intro measure">
@@ -51,9 +57,11 @@ const wanted = mostWanted(12);
   <section class="section island-section" aria-labelledby="recientes-t">
     <h2 id="recientes-t">{t('inicio.recientes_titulo')}</h2>
     <Mount id="recientes" />
+    <script type="application/json" id="recientes-data" set:html={jsonForScript(recent)} />
   </section>
 </Base>
 
 <script>
   import '../scripts/edicion.ts';
+  import '../scripts/recientes.ts';
 </script>

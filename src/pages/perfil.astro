@@ -1,0 +1,191 @@
+---
+import Base from '../layouts/Base.astro';
+import { t } from '../lib/i18n';
+---
+<Base title={t('perfil.titulo_corto')}>
+  <section class="perfil measure">
+    <div id="perfil" aria-live="polite"><p class="muted">{t('perfil.cargando')}</p></div>
+  </section>
+</Base>
+
+<script>
+  import { currentProfile, type Profile } from '../lib/auth';
+  import type { Kind } from '../lib/contrib';
+  import { BADGES, pendingPoints, statusOf, type Status } from '../lib/game';
+  import { t } from '../lib/i18n';
+  import { liveQuery } from '../lib/live';
+  import { url } from '../lib/paths';
+  import { getClient } from '../lib/supabase';
+  import { el } from '../scripts/ui';
+
+  type Row = {
+    id: string; type: Kind; festival: string | null; year: number | null; item_id: string | null;
+    status: Status; points_awarded?: number; created_at: string; reviewed_at: string | null; review_note?: string | null;
+  };
+  type BadgeRow = { badge: string; awarded_at: string };
+
+  const mount = document.getElementById('perfil')!;
+  const siteName = t('sitio.nombre');
+
+  function fecha(iso: string | null | undefined): string {
+    const d = iso ? new Date(iso) : null;
+    return d && !Number.isNaN(d.getTime()) ? d.toLocaleDateString('es-AR', { day: 'numeric', month: 'long', year: 'numeric' }) : '';
+  }
+
+  function message(text: string, link?: [string, string]): void {
+    mount.replaceChildren(el('p', { class: 'contrib-msg' }, text));
+    if (link) {
+      const p = el('p');
+      p.append(el('a', { href: link[0], class: 'btn btn-quiet' }, link[1]));
+      mount.append(p);
+    }
+  }
+
+  function badges(earned: BadgeRow[]): HTMLElement {
+    const got = new Map(earned.map((b) => [b.badge, b.awarded_at]));
+    const ul = el('ul', { class: 'insignias' });
+    for (const slug of BADGES) {
+      const when = got.get(slug);
+      const li = el('li', { class: when ? 'insignia ganada' : 'insignia bloqueada' });
+      li.append(
+        el('span', { class: 'medalla', 'aria-hidden': 'true' }),
+        el('strong', {}, t(`insignias.${slug}.nombre`)),
+        el('span', { class: 'small' }, t(`insignias.${slug}.descripcion`)),
+        el('span', { class: 'muted small' }, when ? t('insignias.ganada', { fecha: fecha(when) }) : t('insignias.bloqueada')),
+      );
+      ul.append(li);
+    }
+    return ul;
+  }
+
+  function contributions(rows: Row[], own: boolean): HTMLElement {
+    if (!rows.length) {
+      const p = el('p', { class: 'muted' }, own ? t('perfil.sin_aportes_propio') : t('perfil.sin_aportes'));
+      if (!own) return p;
+      const box = el('div');
+      box.append(p, el('a', { href: url('tareas'), class: 'btn' }, t('perfil.empezar')));
+      return box;
+    }
+    const ul = el('ul', { class: 'perfil-aportes' });
+    for (const r of rows) {
+      const li = el('li');
+      li.append(el('span', { class: `pill pill-${r.status}` }, t(statusOf(r.status))), ' ', el('strong', {}, t(`perfil.tipos.${r.type}`)), ' ');
+      if (r.festival && r.year) li.append(el('a', { href: url(`${r.festival}/${r.year}/`) }, `${t(`festivales.${r.festival}`)} ${r.year}`));
+      else li.append(el('span', { class: 'muted' }, t('perfil.sin_edicion')));
+      if (r.item_id && /^[0-9a-f]{12}$/.test(r.item_id)) li.append(' · ', el('a', { href: url(`item/${r.item_id}/`) }, t('perfil.documento')));
+      const f = fecha(r.reviewed_at ?? r.created_at);
+      if (f) li.append(' ', el('time', { class: 'muted small', datetime: r.reviewed_at ?? r.created_at }, f));
+      if (own && r.status === 'approved' && r.points_awarded) li.append(' ', el('span', { class: 'small puntos-ok' }, t('perfil.ganados', { n: r.points_awarded })));
+      if (own && r.status === 'rejected' && r.review_note) li.append(el('p', { class: 'muted small motivo' }, t('perfil.motivo', { motivo: r.review_note })));
+      ul.append(li);
+    }
+    return ul;
+  }
+
+  async function render(): Promise<void> {
+    const client = getClient();
+    let me: Profile | null = null;
+    try {
+      me = await currentProfile(client);
+    } catch {
+      me = null;
+    }
+    const asked = (new URLSearchParams(location.search).get('u') ?? '').trim();
+    const name = asked || me?.display_name || '';
+    if (!name) {
+      message(t('perfil.sin_nombre'), [url('ranking'), t('perfil.ver_ranking')]);
+      return;
+    }
+
+    const prof = await liveQuery<{ display_name: string; points: number } | null>(
+      (c) => c.from('public_profiles').select('display_name, points').eq('display_name', name).maybeSingle(),
+      null,
+    );
+    if (prof.offline) {
+      message(t('estado.sin_conexion'));
+      return;
+    }
+    if (!prof.data) {
+      message(t('perfil.no_encontrado'), [url('ranking'), t('perfil.ver_ranking')]);
+      return;
+    }
+    const display = prof.data.display_name;
+    const own = Boolean(me?.display_name && me.display_name === display);
+
+    const [badgeRes, rowsRes] = await Promise.all([
+      liveQuery<BadgeRow[]>((c) => c.from('public_user_badges').select('badge, awarded_at').eq('display_name', display), []),
+      own
+        ? liveQuery<Row[]>(
+            (c) => c.from('contributions')
+              .select('id, type, festival, year, item_id, status, points_awarded, created_at, reviewed_at, review_note')
+              .eq('user_id', me!.id)
+              .order('created_at', { ascending: false })
+              .limit(500),
+            [],
+          )
+        : liveQuery<Row[]>(
+            (c) => c.from('public_contributions')
+              .select('id, type, festival, year, item_id, created_at, reviewed_at')
+              .eq('display_name', display)
+              .order('reviewed_at', { ascending: false, nullsFirst: false })
+              .limit(500),
+            [],
+          ),
+    ]);
+    const rows = own ? rowsRes.data : rowsRes.data.map((r) => ({ ...r, status: 'approved' as Status }));
+
+    document.title = `${t('perfil.titulo', { nombre: display })} | ${siteName}`;
+    const frag = document.createDocumentFragment();
+    frag.append(el('h1', {}, t('perfil.titulo', { nombre: display })));
+    if (own) frag.append(el('p', { class: 'muted small' }, t('perfil.propio')));
+
+    const pts = el('section', { class: 'perfil-puntos', 'aria-labelledby': 'p-puntos' });
+    pts.append(el('h2', { id: 'p-puntos' }, t('perfil.puntos_titulo')));
+    const big = el('p', { class: 'puntos-grande' }, prof.data.points === 1 ? t('sesion.un_punto') : t('sesion.puntos', { n: prof.data.points.toLocaleString('es-AR') }));
+    pts.append(big);
+    const pend = own ? pendingPoints(rows) : 0;
+    if (pend > 0) {
+      pts.append(el('p', { class: 'puntos-pendientes' }, t('perfil.pendientes', { n: pend })));
+      pts.append(el('p', { class: 'muted small' }, t('perfil.pendientes_ayuda')));
+    }
+    frag.append(pts);
+
+    const ins = el('section', { 'aria-labelledby': 'p-insignias' });
+    ins.append(el('h2', { id: 'p-insignias' }, t('perfil.insignias_titulo')), badges(badgeRes.data));
+    frag.append(ins);
+
+    const ap = el('section', { 'aria-labelledby': 'p-aportes' });
+    ap.append(el('h2', { id: 'p-aportes' }, t('perfil.aportes_titulo')));
+    if (rowsRes.offline || badgeRes.offline) ap.append(el('p', { class: 'muted small' }, t('estado.sin_conexion')));
+    ap.append(contributions(rows, own));
+    frag.append(ap);
+
+    mount.replaceChildren(frag);
+  }
+
+  void render();
+  document.addEventListener('amg:sesion', () => void render());
+</script>
+
+<style is:global>
+  .perfil h2 { margin-top: 1.75rem; }
+  .puntos-grande { font: 700 2.2rem/1.1 var(--sans); font-variant-numeric: tabular-nums; color: var(--red-deep); margin-bottom: 0.3rem; }
+  .puntos-pendientes { font: 600 1.05rem/1.3 var(--sans); color: var(--ink-soft); opacity: 0.7; margin-bottom: 0.2rem; }
+  .insignias { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.6rem; grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr)); }
+  .insignia { display: grid; grid-template-columns: 2.4rem 1fr; column-gap: 0.7rem; align-items: start; padding: 0.7rem 0.8rem; background: var(--paper-hi); border: 1px solid var(--rule); }
+  .insignia > :not(.medalla) { grid-column: 2; }
+  .insignia .medalla {
+    grid-row: 1 / span 3; width: 2.4rem; height: 2.4rem; border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, #f3dc9c, var(--gold) 55%, var(--gold-ink)); border: 2px solid var(--gold-ink);
+  }
+  .insignia.bloqueada { opacity: 0.6; }
+  .insignia.bloqueada .medalla { background: var(--none); border: 2px dashed #a39a85; }
+  .perfil-aportes { list-style: none; padding: 0; margin: 0; font-family: var(--sans); font-size: 1rem; }
+  .perfil-aportes li { padding: 0.55rem 0; border-bottom: 1px solid var(--rule); }
+  .perfil-aportes .motivo { margin: 0.2rem 0 0; }
+  .pill { display: inline-block; font: 600 0.8rem/1.3 var(--sans); padding: 0.1rem 0.55rem; border-radius: 999px; border: 1px solid; }
+  .pill-pending { color: var(--ink-soft); border-color: var(--ink-soft); background: var(--paper); }
+  .pill-approved { color: #f8f2e4; background: var(--green); border-color: var(--green); }
+  .pill-rejected { color: var(--red-deep); border-color: var(--red); background: var(--paper-hi); }
+  .puntos-ok { color: var(--green); font-weight: 600; }
+</style>

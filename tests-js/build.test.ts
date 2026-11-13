@@ -73,6 +73,23 @@ describe('static build', () => {
     expect(read(`item/${item.id}/index.html`)).toContain('id="tarea"');
   });
 
+  it('game pages exist and the tasks feed carries only public year_inferred images', () => {
+    for (const p of ['perfil', 'ranking', 'tareas']) expect(existsSync(join(DIST, p, 'index.html')), p).toBe(true);
+    const html = read('tareas/index.html');
+    const m = html.match(/<script type="application\/json" id="tareas-data">([\s\S]*?)<\/script>/);
+    expect(m).not.toBeNull();
+    const cards = JSON.parse(m![1]) as { id: string; img: string }[];
+    const byId = new Map(catalog.map((i) => [i.id, i]));
+    expect(cards.length).toBeGreaterThan(0);
+    for (const c of cards) {
+      const i = byId.get(c.id)!;
+      expect(i.restricted || !i.year_inferred || i.kind !== 'image', c.id).toBe(false);
+      expect(c.img.startsWith('/amgueddfa-eisteddfod/media/')).toBe(true);
+    }
+    for (const i of catalog.filter((x) => x.restricted)) expect(html).not.toContain(i.id);
+    expect(read('index.html')).toContain('id="recientes-data"');
+  });
+
   it('no internal link escapes the base path', () => {
     const html = read('index.html');
     const bad = [...html.matchAll(/href="(\/[^"]*)"/g)].map((m) => m[1]).filter((h) => !h.startsWith('/amgueddfa-eisteddfod/'));

@@ -12,7 +12,9 @@
     "perfil": "Mi perfil",
     "saltar": "Saltar al contenido",
     "principal": "Navegación principal",
-    "ingresar": "Ingresar"
+    "ingresar": "Ingresar",
+    "ranking": "Ranking",
+    "tareas": "Tareas rápidas"
   },
   "categorias": {
     "programa": "Programa",
@@ -341,5 +343,121 @@
       "derivados": "No pudimos generar las imágenes en este navegador. Probá con Chrome o Firefox actualizados.",
       "sin_archivos": "Faltan las imágenes en el depósito restringido. Corré scripts/push_restricted.py y probá de nuevo."
     }
+  },
+  "insignias": {
+    "primer-aporte": {
+      "nombre": "Primer aporte",
+      "descripcion": "Le aprobaron su primer aporte."
+    },
+    "archivista-chubut": {
+      "nombre": "Archivista del Chubut",
+      "descripcion": "10 aportes aprobados del Eisteddfod del Chubut."
+    },
+    "archivista-juventud": {
+      "nombre": "Archivista de la Juventud",
+      "descripcion": "10 aportes aprobados del Eisteddfod de la Juventud."
+    },
+    "archivista-mimosa": {
+      "nombre": "Archivista de la Mimosa",
+      "descripcion": "10 aportes aprobados del Eisteddfod Mimosa."
+    },
+    "archivista-trevelin": {
+      "nombre": "Archivista de Trevelin",
+      "descripcion": "10 aportes aprobados del Eisteddfod de Trevelin."
+    },
+    "cazador-de-programas": {
+      "nombre": "Cazador de programas",
+      "descripcion": "Sumó el programa de una edición que no lo tenía."
+    },
+    "bardo": {
+      "nombre": "Bardo",
+      "descripcion": "5 recuerdos aprobados."
+    },
+    "ojo-de-lince": {
+      "nombre": "Ojo de lince",
+      "descripcion": "50 etiquetas aprobadas."
+    },
+    "ganada": "Ganada el {fecha}",
+    "bloqueada": "Todavía no la tiene"
+  },
+  "perfil": {
+    "titulo": "Perfil de {nombre}",
+    "titulo_corto": "Perfil",
+    "cargando": "Cargando…",
+    "sin_nombre": "¿De quién es el perfil? Buscalo en el ranking.",
+    "ver_ranking": "Ver el ranking",
+    "no_encontrado": "No encontramos a nadie con ese nombre.",
+    "puntos_titulo": "Puntos",
+    "pendientes": "+{n} pendientes de revisión",
+    "pendientes_ayuda": "Se suman cuando aprobemos tus aportes. Un archivo que llena un hueco vale 50 en vez de 20.",
+    "insignias_titulo": "Insignias",
+    "aportes_titulo": "Aportes",
+    "sin_aportes": "Todavía no hay aportes aprobados.",
+    "sin_aportes_propio": "Todavía no mandaste aportes. ¿Arrancás con una tarea rápida?",
+    "empezar": "Empezar con las tareas",
+    "propio": "Este es tu perfil. Solo vos ves los aportes pendientes y rechazados.",
+    "motivo": "Motivo: {motivo}",
+    "ganados": "+{n}",
+    "sin_edicion": "Sin edición",
+    "documento": "Ver el documento",
+    "estados": {
+      "pending": "Pendiente",
+      "approved": "Aprobado",
+      "rejected": "Rechazado"
+    },
+    "tipos": {
+      "upload": "Archivo",
+      "fact": "Dato",
+      "tag": "Etiqueta",
+      "transcription": "Transcripción",
+      "memory": "Recuerdo"
+    }
+  },
+  "ranking": {
+    "titulo": "Ranking",
+    "intro": "Quiénes más ayudaron a completar el archivo. Los puntos se suman cuando aprobamos cada aporte.",
+    "filtro": "Mostrar",
+    "general": "General",
+    "cargando": "Cargando…",
+    "vacio": "Todavía nadie sumó puntos acá. ¡Podés ser la primera persona!",
+    "puesto": "Puesto",
+    "nombre": "Nombre",
+    "puntos": "Puntos",
+    "tabla": "Ranking: {filtro}"
+  },
+  "tareas": {
+    "titulo": "Tareas rápidas",
+    "intro": "Mirá cada documento y decinos si el año, el tipo y el festival están bien. Lo calculamos por el contexto y puede estar mal.",
+    "cargando": "Cargando…",
+    "ingresar": "Ingresá para hacer tareas",
+    "ingresar_ayuda": "Para mandar respuestas tenés que ingresar con tu correo. Es rápido y no necesitás contraseña.",
+    "progreso": "Tarea {n} de {total}",
+    "hechas": "Hiciste {n} en esta visita.",
+    "pregunta": "¿Es {categoria} del {festival}, {year}?",
+    "pregunta_sin": "¿Sabés de qué año es este documento del {festival}?",
+    "si": "Sí (S)",
+    "no": "No (N)",
+    "saltar": "Saltar",
+    "atajos": "Atajos de teclado: S para sí, N para no.",
+    "corregir_ayuda": "Decinos lo que sepas. Con un dato alcanza.",
+    "enviar": "Enviar",
+    "cancelar": "Cancelar",
+    "ver_ficha": "Ver la ficha completa",
+    "imagen_alt": "{titulo}",
+    "listo": "¡Terminaste todas las tareas! Gracias por la ayuda.",
+    "ver_perfil": "Ver mi perfil"
+  },
+  "recientes": {
+    "vacio": "Todavía no hay aportes aprobados. ¡Podés ser la primera persona!",
+    "alguien": "Alguien",
+    "acciones": {
+      "upload": "subió un documento",
+      "fact": "cargó un dato",
+      "tag": "revisó la etiqueta de un documento",
+      "transcription": "transcribió un documento",
+      "memory": "contó un recuerdo"
+    },
+    "ver_ranking": "Ver el ranking",
+    "del": "del"
   }
 }

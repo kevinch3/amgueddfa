@@ -1,0 +1,218 @@
+---
+import Base from '../layouts/Base.astro';
+import { items } from '../lib/catalog';
+import { jsonForScript } from '../lib/contrib';
+import { t } from '../lib/i18n';
+import { url } from '../lib/paths';
+import { isTaskCandidate } from '../lib/tasks';
+
+// Only what a task card needs, so the page does not carry the whole catalog.
+const cards = items()
+  .filter(isTaskCandidate)
+  .map((i) => ({
+    id: i.id,
+    kind: i.kind,
+    restricted: i.restricted,
+    year_inferred: i.year_inferred,
+    festival: i.festival,
+    year: i.year,
+    category: i.category,
+    title: i.title,
+    img: url(`media/${i.page_paths[0] ?? i.thumb}`),
+  }));
+---
+<Base title={t('tareas.titulo')} current="tareas">
+  <section class="tareas measure">
+    <h1>{t('tareas.titulo')}</h1>
+    <p class="lead">{t('tareas.intro')}</p>
+    <noscript><p class="contrib-msg">{t('contrib.sin_js')}</p></noscript>
+    <div id="tareas" aria-live="polite"><p class="muted">{t('tareas.cargando')}</p></div>
+  </section>
+  <script type="application/json" id="tareas-data" set:html={jsonForScript(cards)} />
+</Base>
+
+<script>
+  import { submit, YEAR_MAX, YEAR_MIN, type Result } from '../lib/contrib';
+  import { t } from '../lib/i18n';
+  import { liveQuery } from '../lib/live';
+  import { url } from '../lib/paths';
+  import { taskQueue, type TaskCandidate } from '../lib/tasks';
+  import type { CategorySlug, FestivalSlug } from '../lib/types';
+  import { busy, categoryOptions, el, festivalOptions, field, gate, gateMessage, select } from '../scripts/ui';
+
+  type Card = TaskCandidate & { festival: FestivalSlug; year: number | null; category: CategorySlug; title: string; img: string };
+
+  const mount = document.getElementById('tareas')!;
+  let queue: Card[] = [];
+  let at = 0;
+  let done = 0;
+  let sending = false;
+  let keys: { yes?: () => void; no?: () => void } = {};
+
+  function readCards(): Card[] {
+    try {
+      const v = JSON.parse(document.getElementById('tareas-data')?.textContent ?? '[]');
+      return Array.isArray(v) ? v : [];
+    } catch {
+      return [];
+    }
+  }
+
+  async function send(btn: HTMLButtonElement, idle: string, msg: HTMLElement, card: Card, input: Record<string, unknown>): Promise<void> {
+    if (sending) return;
+    sending = true;
+    msg.textContent = '';
+    let r: Result;
+    try {
+      r = await busy(btn, idle, () => submit('tag', card.festival, card.year, card.id, input));
+    } finally {
+      sending = false;
+    }
+    if (!r.ok) {
+      msg.textContent = t(r.key);
+      return;
+    }
+    done++;
+    next();
+  }
+
+  function next(): void {
+    at++;
+    show();
+  }
+
+  function correction(card: Card, actions: HTMLElement, msg: HTMLElement): void {
+    keys = {};
+    const form = el('form', { class: 'tarea-form', novalidate: '' });
+    const yr = el('input', { id: 't-ano', type: 'number', inputmode: 'numeric', min: String(YEAR_MIN), max: String(YEAR_MAX), step: '1' });
+    const cat = select('t-cat', categoryOptions(), t('tarea.sin_cambio'));
+    const fest = select('t-fest', festivalOptions(), t('tarea.sin_cambio'));
+    const go = el('button', { type: 'submit', class: 'btn' }, t('tareas.enviar'));
+    const cancel = el('button', { type: 'button', class: 'btn btn-quiet' }, t('tareas.cancelar'));
+    const row = el('p', { class: 'tarea-acciones' });
+    row.append(go, ' ', cancel);
+    form.append(
+      el('p', { class: 'muted small' }, t('tareas.corregir_ayuda')),
+      field(t('tarea.ano_label'), yr),
+      field(t('tarea.categoria_label'), cat),
+      field(t('tarea.festival_label'), fest),
+      row,
+    );
+    form.addEventListener('submit', (ev) => {
+      ev.preventDefault();
+      if (go.disabled) return;
+      void send(go, t('tareas.enviar'), msg, card, { year: yr.value, category: cat.value, festival: fest.value });
+    });
+    cancel.addEventListener('click', () => show());
+    actions.replaceWith(form);
+    yr.focus();
+  }
+
+  function show(): void {
+    keys = {};
+    const card = queue[at];
+    if (!card) {
+      const box = el('div', { class: 'tarea-fin' });
+      box.append(el('p', { class: 'contrib-ok', role: 'status' }, t('tareas.listo')));
+      if (done) box.append(el('p', { class: 'muted' }, t('tareas.hechas', { n: done })));
+      const p = el('p');
+      p.append(el('a', { href: url('perfil'), class: 'btn btn-quiet' }, t('tareas.ver_perfil')));
+      box.append(p);
+      mount.replaceChildren(box);
+      return;
+    }
+
+    const head = el('p', { class: 'tarea-progreso muted small' }, t('tareas.progreso', { n: at + 1, total: queue.length }));
+    if (done) head.append(' ', t('tareas.hechas', { n: done }));
+
+    const fig = el('figure', { class: 'tarea-img' });
+    fig.append(el('img', { src: card.img, alt: t('tareas.imagen_alt', { titulo: card.title }), decoding: 'async' }));
+    const cap = el('figcaption', { class: 'small' });
+    cap.append(el('a', { href: url(`item/${card.id}/`), target: '_blank', rel: 'noopener' }, t('tareas.ver_ficha')));
+    fig.append(cap);
+
+    const festival = t(`festivales.${card.festival}`);
+    const q = el('h2', { class: 'tarea-q', tabindex: '-1' },
+      card.year
+        ? t('tareas.pregunta', { categoria: t(`categorias.${card.category}`), festival, year: card.year })
+        : t('tareas.pregunta_sin', { festival }));
+    const msg = el('p', { class: 'contrib-msg', role: 'alert' });
+    const actions = el('p', { class: 'tarea-acciones' });
+
+    const no = el('button', { type: 'button', class: card.year ? 'btn btn-quiet' : 'btn' }, t('tareas.no'));
+    no.addEventListener('click', () => correction(card, actions, msg));
+    if (card.year) {
+      const yes = el('button', { type: 'button', class: 'btn' }, t('tareas.si'));
+      yes.addEventListener('click', () => {
+        if (yes.disabled) return;
+        void send(yes, t('tareas.si'), msg, card, { year: card.year, category: card.category, festival: card.festival });
+      });
+      actions.append(yes, ' ');
+      keys.yes = () => yes.click();
+    }
+    const skip = el('button', { type: 'button', class: 'btn btn-quiet' }, t('tareas.saltar'));
+    skip.addEventListener('click', () => { if (!sending) next(); });
+    actions.append(no, ' ', skip);
+    keys.no = () => no.click();
+
+    const article = el('article', { class: 'tarea-card' });
+    article.append(head, fig, q, actions, msg, el('p', { class: 'muted small' }, t('tareas.atajos')));
+    mount.replaceChildren(article);
+    q.focus({ preventScroll: true });
+
+    const after = queue[at + 1];
+    if (after) new Image().src = after.img; // warm the next card's image
+  }
+
+  document.addEventListener('keydown', (ev) => {
+    if (ev.ctrlKey || ev.metaKey || ev.altKey || ev.repeat || sending) return;
+    const tgt = ev.target as HTMLElement | null;
+    if (tgt && (tgt.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(tgt.tagName))) return;
+    const k = ev.key.toLowerCase();
+    const fn = k === 's' ? keys.yes : k === 'n' ? keys.no : undefined;
+    if (fn) {
+      ev.preventDefault();
+      fn();
+    }
+  });
+
+  async function start(): Promise<void> {
+    keys = {};
+    const g = await gate();
+    if (!g.profile) {
+      mount.replaceChildren(gateMessage(g.reason, 'tareas.ingresar'));
+      if (g.reason === 'signed_out') mount.prepend(el('p', {}, t('tareas.ingresar_ayuda')));
+      return;
+    }
+    const uid = g.profile.id;
+    // Items this person already answered (tags or transcriptions, any status).
+    const prev = await liveQuery<{ item_id: string | null }[]>(
+      (c) => c.from('contributions').select('item_id').eq('user_id', uid).in('type', ['tag', 'transcription']).not('item_id', 'is', null).limit(10000),
+      [],
+    );
+    if (prev.offline) {
+      mount.replaceChildren(el('p', { class: 'contrib-msg' }, t('estado.sin_conexion')));
+      return;
+    }
+    const answered = new Set(prev.data.map((r) => r.item_id).filter((x): x is string => Boolean(x)));
+    queue = taskQueue(readCards(), answered, uid);
+    at = 0;
+    done = 0;
+    show();
+  }
+
+  void start();
+  document.addEventListener('amg:sesion', () => void start());
+</script>
+
+<style is:global>
+  .tarea-card { background: var(--paper-hi); border: 1px solid var(--rule); padding: 1rem 1.1rem; }
+  .tarea-progreso { margin-bottom: 0.6rem; font-family: var(--sans); }
+  .tarea-img { margin: 0 0 0.8rem; }
+  .tarea-img img { max-height: 60vh; width: auto; margin: 0 auto; border: 1px solid var(--rule); background: var(--paper); }
+  .tarea-img figcaption { text-align: center; margin-top: 0.35rem; }
+  .tarea-q { font-size: 1.3rem; }
+  .tarea-q:focus { outline: none; }
+  .tarea-acciones { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+  .tarea-card .btn:disabled { opacity: 0.55; cursor: not-allowed; }
+</style>

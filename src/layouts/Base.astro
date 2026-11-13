@@ -12,7 +12,7 @@ interface Props {
   festival?: string;
   year?: number | null;
   item?: string;
-  current?: 'inicio' | 'faltantes';
+  current?: 'inicio' | 'faltantes' | 'tareas' | 'ranking';
 }
 const { title, description = t('sitio.descripcion'), festival, year, item, current } = Astro.props;
 const fullTitle = title ? `${title} | ${t('sitio.nombre')}` : t('sitio.nombre');
@@ -40,6 +40,8 @@ const fullTitle = title ? `${title} | ${t('sitio.nombre')}` : t('sitio.nombre');
           <ul>
             <li><a href={url('/')} aria-current={current === 'inicio' ? 'page' : undefined}>{t('nav.inicio')}</a></li>
             <li><a href={url('/#buscados')}>{t('nav.faltantes')}</a></li>
+            <li><a href={url('tareas')} aria-current={current === 'tareas' ? 'page' : undefined}>{t('nav.tareas')}</a></li>
+            <li><a href={url('ranking')} aria-current={current === 'ranking' ? 'page' : undefined}>{t('nav.ranking')}</a></li>
           </ul>
         </nav>
         <Mount id="sesion" festival={festival} year={year} item={item} />

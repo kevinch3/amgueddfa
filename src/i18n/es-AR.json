@@ -1,0 +1,39 @@
+{
+  "sitio": {
+    "nombre": "Amgueddfa Eisteddfod y Wladfa",
+    "descripcion": "Museo digital de programas y documentos de los Eisteddfodau de la Patagonia."
+  },
+  "nav": {
+    "inicio": "Inicio",
+    "festivales": "Festivales",
+    "faltantes": "Programas que buscamos",
+    "aportar": "Aportá",
+    "perfil": "Mi perfil"
+  },
+  "categorias": {
+    "programa": "Programa",
+    "programa-del-dia": "Programa del día",
+    "preliminares": "Preliminares",
+    "bases": "Bases y avisos",
+    "resultados": "Resultados",
+    "otros": "Otros documentos"
+  },
+  "festivales": {
+    "chubut": "Eisteddfod del Chubut",
+    "juventud": "Eisteddfod de la Juventud",
+    "mimosa": "Eisteddfod Mimosa Porth Madryn",
+    "trevelin": "Eisteddfod de Trevelin"
+  },
+  "festivales_cy": {
+    "chubut": "Eisteddfod y Chubut",
+    "juventud": "Eisteddfod yr Ieuenctid",
+    "mimosa": "Eisteddfod Mimosa Porth Madryn",
+    "trevelin": "Eisteddfod Trevelin"
+  },
+  "comun": {
+    "n_documentos": "{n} documentos"
+  },
+  "estado": {
+    "sin_conexion": "No pudimos conectarnos. Probá de nuevo en un rato."
+  }
+}

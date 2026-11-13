@@ -1,0 +1,17 @@
+---
+import { t } from '../lib/i18n';
+import { url } from '../lib/paths';
+---
+
+<html lang="es-AR">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{t('sitio.nombre')}</title>
+	</head>
+	<body>
+		<h1>{t('sitio.nombre')}</h1>
+		<p><a href={url('/')}>{t('nav.inicio')}</a></p>
+	</body>
+</html>

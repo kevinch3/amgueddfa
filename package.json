@@ -1,0 +1,19 @@
+{
+  "name": "amgueddfa-eisteddfod",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "2.119.0",
+    "astro": "7.0.0",
+    "pdfjs-dist": "6.5.438",
+    "vitest": "5.1.0"
+  }
+}

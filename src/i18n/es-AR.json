@@ -11,7 +11,8 @@
     "aportar": "Aportá",
     "perfil": "Mi perfil",
     "saltar": "Saltar al contenido",
-    "principal": "Navegación principal"
+    "principal": "Navegación principal",
+    "ingresar": "Ingresar"
   },
   "categorias": {
     "programa": "Programa",
@@ -135,5 +136,46 @@
     "retiro": "Si sos de una de las asociaciones y querés que corrijamos o retiremos algún documento, avisanos y lo resolvemos.",
     "baja_resolucion": "Mostramos copias en baja resolución. Cada documento dice de dónde viene.",
     "lema_cy": "Y gwir yn erbyn y byd"
+  },
+  "auth": {
+    "titulo": "Ingresá",
+    "intro": "Te mandamos un código de 6 números a tu correo. No hace falta contraseña.",
+    "email_label": "Tu correo electrónico",
+    "enviar": "Mandame el código",
+    "enviando": "Enviando…",
+    "codigo_label": "Código de 6 números",
+    "codigo_ayuda": "Te lo mandamos a {email}. Si no lo ves, revisá la carpeta de spam.",
+    "verificar": "Confirmá el código",
+    "verificando": "Revisando…",
+    "reenviar": "Mandame otro código",
+    "reenviar_en": "Vas a poder pedir otro código en {s} segundos.",
+    "reenviado": "Te mandamos un código nuevo. Usá el último que te llegó.",
+    "cambiar_email": "Usar otro correo",
+    "nombre_titulo": "Elegí cómo te vamos a mostrar",
+    "nombre_ayuda": "Es el nombre que van a ver los demás junto a tus aportes. Entre 3 y 30 caracteres.",
+    "nombre_label": "Nombre para mostrar",
+    "guardar": "Guardar",
+    "guardando": "Guardando…",
+    "listo": "¡Listo, {nombre}! Ya estás adentro.",
+    "ya_adentro": "Ya ingresaste como {nombre}.",
+    "ir_inicio": "Ir al inicio",
+    "salir": "Salir",
+    "sin_js": "Para ingresar necesitás tener JavaScript activado.",
+    "error": {
+      "codigo_invalido": "Ese código no es correcto. Revisalo y probá de nuevo.",
+      "codigo_vencido": "El código venció o ya no sirve. Pedí uno nuevo.",
+      "demasiados": "Hiciste muchos intentos seguidos. Esperá unos minutos y probá de nuevo.",
+      "email": "Revisá el correo: parece que no está bien escrito.",
+      "nombre_usado": "Ese nombre ya lo usa otra persona. Probá con otro.",
+      "nombre_largo": "El nombre tiene que tener entre 3 y 30 caracteres."
+    }
+  },
+  "sesion": {
+    "ingresar": "Ingresar",
+    "puntos": "{n} puntos",
+    "un_punto": "1 punto",
+    "sin_nombre": "Elegí tu nombre",
+    "sin_conexion": "Sin conexión",
+    "perfil": "Tu perfil: {nombre}, {puntos}"
   }
 }

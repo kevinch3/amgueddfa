@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import Chair from '../components/Chair.astro';
 import Mount from '../components/Mount.astro';
+import SessionBadge from '../components/SessionBadge.astro';
 import { t } from '../lib/i18n';
 import { url } from '../lib/paths';
 
@@ -42,6 +43,7 @@ const fullTitle = title ? `${title} | ${t('sitio.nombre')}` : t('sitio.nombre');
           </ul>
         </nav>
         <Mount id="sesion" festival={festival} year={year} item={item} />
+        <SessionBadge />
       </div>
     </header>
     <div class="scales" aria-hidden="true"></div>

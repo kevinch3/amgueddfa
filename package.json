@@ -13,7 +13,9 @@
   "dependencies": {
     "@supabase/supabase-js": "2.119.0",
     "astro": "7.0.0",
-    "pdfjs-dist": "6.5.438",
+    "pdfjs-dist": "6.5.438"
+  },
+  "devDependencies": {
     "vitest": "5.1.0"
   }
 }

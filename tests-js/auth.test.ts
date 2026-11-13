@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest';
-import { canResend, currentProfile, sendCode, setDisplayName, signOut, verifyCode, _resetInflight } from '../src/lib/auth';
+import { canResend, currentProfile, handleLinkCallback, linkCallback, sendCode, setDisplayName, signOut, verifyCode, _resetInflight } from '../src/lib/auth';
 
 function apiErr(code: string | undefined, status: number, name = 'AuthApiError') {
   return Object.assign(new Error(code ?? 'err'), { __isAuthError: true, name, code, status });
@@ -10,8 +10,10 @@ function fakeClient(overrides: Record<string, any> = {}) {
   const auth = {
     signInWithOtp: async (a: any) => { calls.signInWithOtp.push(a); return overrides.signInWithOtp?.(a) ?? { data: {}, error: null }; },
     verifyOtp: async (a: any) => { calls.verifyOtp.push(a); return overrides.verifyOtp?.(a) ?? { data: {}, error: null }; },
+    initialize: async () => overrides.initialize?.() ?? { error: null },
     getSession: async () => overrides.getSession?.() ?? { data: { session: null }, error: null },
     signOut: async (a: any) => { calls.signOut.push(a); return overrides.signOut?.(a) ?? { error: null }; },
+    exchangeCodeForSession: async (c: string) => { (calls.exchange ??= []).push(c); return overrides.exchangeCodeForSession?.(c) ?? { data: {}, error: null }; },
   };
   const client: any = {
     auth,
@@ -106,6 +108,105 @@ describe('sendCode', () => {
     r = await sendCode('a@b.com', fakeClient({ signInWithOtp: () => { throw new TypeError('Failed to fetch'); } }).client);
     expect(r).toEqual({ ok: false, key: 'estado.sin_conexion' });
     expect(await sendCode('a@b.com', null)).toEqual({ ok: false, key: 'estado.sin_conexion' });
+  });
+
+  it('asks for the email link to come back to /ingresar/ on this origin, keeping a safe volver', async () => {
+    const { client, calls } = fakeClient();
+    const loc = { origin: 'https://amgueddfa.kevinroberts.ar', search: '?volver=%2Fcontribuir%2F%3Ff%3Dchubut%26y%3D1975' };
+    expect(await sendCode('ana@example.com', client, loc)).toEqual({ ok: true });
+    const to = new URL(calls.signInWithOtp[0].options.emailRedirectTo);
+    expect(calls.signInWithOtp[0].options.shouldCreateUser).toBe(true);
+    expect(to.origin).toBe('https://amgueddfa.kevinroberts.ar');
+    expect(to.pathname).toBe('/ingresar/');
+    expect(to.searchParams.get('volver')).toBe('/contribuir/?f=chubut&y=1975');
+  });
+
+  it('drops a volver that points off the site', async () => {
+    for (const bad of ['//evil.example/', 'http://evil.example/', 'https://evil.example/x', '/\\evil.example']) {
+      _resetInflight();
+      const { client, calls } = fakeClient();
+      await sendCode('ana@example.com', client, { origin: 'http://localhost:4321', search: `?volver=${encodeURIComponent(bad)}` });
+      expect(calls.signInWithOtp[0].options.emailRedirectTo).toBe('http://localhost:4321/ingresar/');
+    }
+  });
+});
+
+describe('linkCallback / handleLinkCallback (email link sign-in)', () => {
+  const O = 'https://amgueddfa.kevinroberts.ar/ingresar/';
+
+  it('ignores a plain page load', () => {
+    expect(linkCallback(O)).toEqual({ code: null, key: null, clean: null });
+    expect(linkCallback(`${O}?volver=%2F`)).toEqual({ code: null, key: null, clean: null });
+  });
+
+  it('maps error_description values to i18n keys and strips them, keeping volver', () => {
+    const cases: [string, string][] = [
+      [`${O}?volver=%2Fx%2F#error=access_denied&error_code=otp_expired&error_description=Email+link+is+invalid+or+has+expired`, 'auth.error.codigo_vencido'],
+      [`${O}?error=access_denied&error_description=Email+link+is+invalid+or+has+expired`, 'auth.error.codigo_vencido'],
+      [`${O}?error_description=Token+has+expired`, 'auth.error.codigo_vencido'],
+      [`${O}?error=over_email_send_rate_limit&error_description=Email+rate+limit+exceeded`, 'auth.error.demasiados'],
+      [`${O}?error=server_error&error_description=Something`, 'auth.error.codigo_vencido'],
+    ];
+    for (const [href, key] of cases) {
+      const r = linkCallback(href);
+      expect(r.key).toBe(key);
+      expect(r.code).toBeNull();
+      expect(r.clean).not.toMatch(/error|code=/);
+    }
+    expect(linkCallback(cases[0][0]).clean).toBe('/ingresar/?volver=%2Fx%2F');
+  });
+
+  it('returns the PKCE code and a clean URL', () => {
+    expect(linkCallback(`${O}?volver=%2Fx%2F&code=abc-123&sb_flow_id=f1`)).toEqual({ code: 'abc-123', key: null, clean: '/ingresar/?volver=%2Fx%2F' });
+  });
+
+  it('signs in from the code (session already exchanged by the client) and strips the query', async () => {
+    const replaced: string[] = [];
+    const hist = { state: null, replaceState: (_s: any, _t: string, u: string) => replaced.push(u) };
+    const { client, calls } = fakeClient({ getSession: () => ({ data: { session: { user: { id: 'u' } } }, error: null }) });
+    expect(await handleLinkCallback(`${O}?code=abc`, hist, client)).toEqual({ handled: true, result: { ok: true } });
+    expect(calls.exchange).toBeUndefined();
+    expect(replaced).toEqual(['/ingresar/']);
+  });
+
+  it('exchanges the code itself when the client did not', async () => {
+    const hist = { state: null, replaceState: () => {} };
+    const { client, calls } = fakeClient();
+    expect(await handleLinkCallback(`${O}?code=abc`, hist, client)).toEqual({ handled: true, result: { ok: true } });
+    expect(calls.exchange).toEqual(['abc']);
+  });
+
+  it('explains a link opened in another browser (no PKCE verifier)', async () => {
+    const hist = { state: null, replaceState: () => {} };
+    const { client } = fakeClient({
+      exchangeCodeForSession: () => ({ data: {}, error: Object.assign(new Error('x'), { name: 'AuthPKCECodeVerifierMissingError', code: 'pkce_code_verifier_not_found', status: 400 }) }),
+    });
+    expect(await handleLinkCallback(`${O}?code=abc`, hist, client)).toEqual({ handled: true, result: { ok: false, key: 'auth.error.otro_navegador' } });
+  });
+
+  it('reports the client\'s own failed exchange (expired link) without a second try', async () => {
+    const order: string[] = [];
+    const hist = { state: null, replaceState: () => order.push('strip') };
+    const { client, calls } = fakeClient({
+      initialize: () => { order.push('init'); return { error: Object.assign(new Error('x'), { name: 'AuthApiError', code: 'flow_state_expired', status: 400 }) }; },
+    });
+    expect(await handleLinkCallback(`${O}?code=abc&sb_flow_id=f1`, hist, client)).toEqual({ handled: true, result: { ok: false, key: 'auth.error.codigo_vencido' } });
+    expect(calls.exchange).toBeUndefined();
+    expect(order).toEqual(['init', 'strip']);
+  });
+
+  it('reports a URL error and strips it', async () => {
+    const replaced: string[] = [];
+    const hist = { state: null, replaceState: (_s: any, _t: string, u: string) => replaced.push(u) };
+    const { client } = fakeClient();
+    const r = await handleLinkCallback(`${O}#error=access_denied&error_code=otp_expired&error_description=Email+link+is+invalid+or+has+expired`, hist, client);
+    expect(r).toEqual({ handled: true, result: { ok: false, key: 'auth.error.codigo_vencido' } });
+    expect(replaced).toEqual(['/ingresar/']);
+  });
+
+  it('does nothing on a plain load', async () => {
+    const { client } = fakeClient();
+    expect(await handleLinkCallback(O, { state: null, replaceState: () => { throw new Error('no'); } }, client)).toEqual({ handled: false });
   });
 });
 

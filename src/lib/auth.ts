@@ -1,5 +1,6 @@
 import type { SupabaseClient } from '@supabase/supabase-js';
 import { liveQuery } from './live';
+import { url } from './paths';
 import { getClient } from './supabase';
 
 export type Result = { ok: true } | { ok: false; key: string };
@@ -34,8 +35,27 @@ export function _resetInflight(): void {
   inflight.clear();
 }
 
-/** Email a 6-digit code. Concurrent calls for the same address share one request. */
-export function sendCode(email: string, client: SupabaseClient | null = getClient()): Promise<Result> {
+type Loc = { origin: string; search: string };
+
+/**
+ * Absolute /ingresar/ URL on this origin for the email link to come back to,
+ * carrying `volver` only when it is a safe path on this site.
+ */
+export function linkRedirect(loc: Loc): string {
+  const volver = returnPath(new URLSearchParams(loc.search).get('volver'), url('/'));
+  const to = `${loc.origin}${url('ingresar/')}`;
+  return volver ? `${to}?volver=${encodeURIComponent(volver)}` : to;
+}
+
+/**
+ * Email a sign-in code (and, with Supabase's default templates, a link back to
+ * /ingresar/). Concurrent calls for the same address share one request.
+ */
+export function sendCode(
+  email: string,
+  client: SupabaseClient | null = getClient(),
+  loc: Loc | undefined = (globalThis as { location?: Loc }).location,
+): Promise<Result> {
   const addr = normaliseEmail(email);
   if (!EMAIL_RE.test(addr)) return Promise.resolve({ ok: false, key: 'auth.error.email' });
   if (!client) return Promise.resolve(OFFLINE);
@@ -43,7 +63,9 @@ export function sendCode(email: string, client: SupabaseClient | null = getClien
   if (running) return running;
   const p = (async (): Promise<Result> => {
     try {
-      const { error } = await client.auth.signInWithOtp({ email: addr, options: { shouldCreateUser: true } });
+      const options: { shouldCreateUser: boolean; emailRedirectTo?: string } = { shouldCreateUser: true };
+      if (loc?.origin) options.emailRedirectTo = linkRedirect(loc);
+      const { error } = await client.auth.signInWithOtp({ email: addr, options });
       if (!error) return { ok: true };
       const e = error as ErrLike;
       if (isRateLimit(e)) return { ok: false, key: 'auth.error.demasiados' };
@@ -147,4 +169,92 @@ export function returnPath(raw: string | null | undefined, base: string): string
   const b = base.endsWith('/') ? base : `${base}/`;
   if (!v.startsWith(b) || v.startsWith('//') || /[\\\s]/.test(v) || v.includes('://')) return null;
   return v;
+}
+
+const CALLBACK_PARAMS = ['code', 'sb_flow_id', 'error', 'error_code', 'error_description'];
+
+function linkErrorKey(error: string, code: string, description: string): string {
+  if (/^over_.*_limit$/.test(code) || /^over_.*_limit$/.test(error) || /rate limit/i.test(description)) return 'auth.error.demasiados';
+  // otp_expired, access_denied, "Email link is invalid or has expired" and anything else: ask for a new one.
+  return 'auth.error.codigo_vencido';
+}
+
+/**
+ * Read an email-link return URL: the PKCE `code`, or Supabase's error
+ * (`error`, `error_code`, `error_description`, in the query or the hash).
+ * `clean` is the same page without those parameters, or null when nothing
+ * needs stripping.
+ */
+export function linkCallback(href: string): { code: string | null; key: string | null; clean: string | null } {
+  const u = new URL(href);
+  const hash = new URLSearchParams(u.hash.replace(/^#/, ''));
+  const get = (k: string) => u.searchParams.get(k) ?? hash.get(k) ?? '';
+  const error = get('error');
+  const errorCode = get('error_code');
+  const description = get('error_description');
+  const code = u.searchParams.get('code');
+  const hasError = Boolean(error || errorCode || description);
+  if (!hasError && !code) return { code: null, key: null, clean: null };
+  for (const k of CALLBACK_PARAMS) u.searchParams.delete(k);
+  if (['error', 'error_code', 'error_description', 'access_token'].some((k) => hash.has(k))) u.hash = '';
+  const clean = `${u.pathname}${u.search}${u.hash}`;
+  if (hasError) return { code: null, key: linkErrorKey(error, errorCode, description), clean };
+  return { code, key: null, clean };
+}
+
+type Hist = { state: unknown; replaceState: (state: unknown, unused: string, url: string) => void };
+
+/**
+ * On /ingresar/, finish an email-link sign-in. The client (detectSessionInUrl,
+ * PKCE) normally exchanges `?code=` itself while it starts; if it has not, we
+ * exchange it here. The link only works in the browser that asked for it,
+ * because the PKCE code verifier lives in that browser's storage.
+ */
+export async function handleLinkCallback(
+  href: string,
+  hist: Hist,
+  client: SupabaseClient | null = getClient(),
+): Promise<{ handled: false } | { handled: true; result: Result }> {
+  const cb = linkCallback(href);
+  if (!cb.clean) return { handled: false };
+  const strip = () => {
+    try {
+      hist.replaceState(hist.state, '', cb.clean as string);
+    } catch {
+      /* keep going: the sign-in matters more than a tidy URL */
+    }
+  };
+  if (cb.key || !client) {
+    strip();
+    return { handled: true, result: cb.key ? { ok: false, key: cb.key } : OFFLINE };
+  }
+  // Strip only after the exchange: auth-js reads sb_flow_id from the live URL.
+  const result = await exchangeLinkCode(cb.code as string, client);
+  strip();
+  return { handled: true, result };
+}
+
+function exchangeErrorKey(e: ErrLike): Result {
+  if (e?.name === 'AuthPKCECodeVerifierMissingError' || e?.code === 'pkce_code_verifier_not_found') {
+    return { ok: false, key: 'auth.error.otro_navegador' };
+  }
+  if (isRateLimit(e)) return { ok: false, key: 'auth.error.demasiados' };
+  if (isNetwork(e) || (e?.status ?? 0) >= 500) return OFFLINE;
+  return { ok: false, key: 'auth.error.codigo_vencido' };
+}
+
+async function exchangeLinkCode(code: string, client: SupabaseClient): Promise<Result> {
+  try {
+    // The client's own start-up exchange (it removes the verifier even when it
+    // fails, so a second try would wrongly look like "another browser").
+    const init = await client.auth.initialize();
+    if (init?.error) return exchangeErrorKey(init.error as ErrLike);
+    const { data } = await client.auth.getSession();
+    if (data?.session) return { ok: true };
+    // The client skipped the code: no verifier here (another browser) or no detection.
+    const { error } = await client.auth.exchangeCodeForSession(code);
+    return error ? exchangeErrorKey(error as ErrLike) : { ok: true };
+  } catch {
+    return OFFLINE;
+  }
 }

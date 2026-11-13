@@ -18,6 +18,7 @@ import { url } from '../lib/paths';
     </form>
 
     <form id="paso-codigo" class="auth-step" novalidate hidden>
+      <p>{t('auth.codigo_o_enlace')}</p>
       <p id="auth-codigo-ayuda" data-tpl={t('auth.codigo_ayuda')}></p>
       <label for="auth-codigo">{t('auth.codigo_label')}</label>
       <input id="auth-codigo" name="codigo" type="text" inputmode="numeric" autocomplete="one-time-code"
@@ -51,7 +52,7 @@ import { url } from '../lib/paths';
 </Base>
 
 <script>
-  import { canResend, currentProfile, returnPath, sendCode, setDisplayName, signOut, verifyCode, type Result } from '../lib/auth';
+  import { canResend, currentProfile, handleLinkCallback, returnPath, sendCode, setDisplayName, signOut, verifyCode, type Result } from '../lib/auth';
   import { url } from '../lib/paths';
   import { t } from '../lib/i18n';
   import { getClient } from '../lib/supabase';
@@ -186,8 +187,26 @@ import { url } from '../lib/paths';
     show('paso-email');
   });
 
-  if (!getClient()) say('estado.sin_conexion');
-  else afterSignIn(true);
+  async function start() {
+    if (!getClient()) {
+      // Still strip a code or error from the URL so it is not left behind.
+      const r = await handleLinkCallback(location.href, history, null);
+      return say(r.handled && !r.result.ok ? r.result.key : 'estado.sin_conexion');
+    }
+    if (/[?&#](code|error|error_code|error_description)=/.test(location.search + location.hash)) {
+      msg.hidden = false;
+      msg.textContent = t('auth.enlace_entrando');
+    }
+    const r = await handleLinkCallback(location.href, history);
+    if (!r.handled) return afterSignIn(true);
+    if (!r.result.ok) {
+      say(r.result.key);
+      return show('paso-email');
+    }
+    say(null);
+    await afterSignIn(false);
+  }
+  start();
 </script>
 
 <style>

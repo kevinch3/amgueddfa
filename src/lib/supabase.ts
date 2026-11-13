@@ -9,7 +9,9 @@ export function clientFromEnv(env: Env): SupabaseClient | null {
   if (!url || !key) return null;
   try {
     return createClient(url, key, {
-      auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: false },
+      // PKCE + detectSessionInUrl: the email link (Supabase's default templates)
+      // returns to /ingresar/?code=… and the client exchanges it on start.
+      auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true, flowType: 'pkce' },
     });
   } catch {
     return null; // malformed URL: behave as offline rather than break the page

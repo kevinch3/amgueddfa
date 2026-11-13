@@ -52,4 +52,10 @@ describe('getClient', () => {
     expect(c).not.toBeNull();
     expect(typeof c!.from).toBe('function');
   });
+
+  it('uses the PKCE flow and reads the email link callback from the URL', () => {
+    const c: any = clientFromEnv({ PUBLIC_SUPABASE_URL: 'https://x.supabase.co', PUBLIC_SUPABASE_ANON_KEY: 'k' });
+    expect(c.auth.flowType).toBe('pkce');
+    expect(c.auth.detectSessionInUrl).toBe(true);
+  });
 });

@@ -11,7 +11,15 @@ export function clientFromEnv(env: Env): SupabaseClient | null {
     return createClient(url, key, {
       // PKCE + detectSessionInUrl: the email link (Supabase's default templates)
       // returns to /ingresar/?code=… and the client exchanges it on start.
-      auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true, flowType: 'pkce' },
+      // appendPkceFlowIdToRedirects: each email's link carries its own sb_flow_id,
+      // so asking for a second email doesn't overwrite the first one's verifier.
+      auth: {
+        persistSession: true,
+        autoRefreshToken: true,
+        detectSessionInUrl: true,
+        flowType: 'pkce',
+        experimental: { appendPkceFlowIdToRedirects: true },
+      },
     });
   } catch {
     return null; // malformed URL: behave as offline rather than break the page

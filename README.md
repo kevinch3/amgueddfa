@@ -127,8 +127,8 @@ el nombre público de quien aportó.
   de Supabase no se pause. GitHub desactiva los cron de repos sin actividad por 60
   días; si pasa, reactivalos desde la pestaña Actions.
 
-- **Ingreso por correo:** se puede entrar con un código de 6 dígitos o con el enlace
-  del correo. Sin SMTP propio, Supabase manda sus plantillas por defecto («Confirm
+- **Ingreso por correo:** se entra con el enlace del correo (o con un código de 6
+  números, si la plantilla lo trae). Sin SMTP propio, Supabase manda sus plantillas por defecto («Confirm
   signup» y «Magic Link»), que traen solo un enlace: ese enlace ahora inicia sesión
   (flujo PKCE, vuelve a `/ingresar/`). Solo funciona en el mismo navegador donde se
   pidió el correo. En Supabase → Authentication → URL Configuration poné
@@ -139,7 +139,7 @@ el nombre público de quien aportó.
   Authentication → Email Templates pegá `supabase/templates/magic_link.html` en
   «Magic Link» y `supabase/templates/confirmation.html` en «Confirm signup», con el
   asunto «Tu código para ingresar al Amgueddfa». Las dos usan `{{ .Token }}` y así
-  llega el código de 6 dígitos. (`supabase/config.toml` ya las declara para el entorno
+  llega el código de 6 números. (`supabase/config.toml` ya las declara para el entorno
   local.)
 - **Contacto del pie:** la dirección se muestra como imagen (`public/contacto.png`) y,
   a quien inició sesión, como enlace. No la escribas como texto en las páginas ni en

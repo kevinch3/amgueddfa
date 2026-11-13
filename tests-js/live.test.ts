@@ -57,5 +57,7 @@ describe('getClient', () => {
     const c: any = clientFromEnv({ PUBLIC_SUPABASE_URL: 'https://x.supabase.co', PUBLIC_SUPABASE_ANON_KEY: 'k' });
     expect(c.auth.flowType).toBe('pkce');
     expect(c.auth.detectSessionInUrl).toBe(true);
+    // Each email link carries its own sb_flow_id, so a resend doesn't break the first link.
+    expect(c.auth.experimental?.appendPkceFlowIdToRedirects).toBe(true);
   });
 });

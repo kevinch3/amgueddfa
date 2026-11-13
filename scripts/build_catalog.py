@@ -1,0 +1,102 @@
+#!/usr/bin/env python3
+"""Scan the archive, write derivatives and src/data/catalog.json."""
+import argparse
+import json
+import shutil
+import sys
+from dataclasses import asdict
+from datetime import datetime, timezone
+from pathlib import Path
+
+REPO = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO))
+
+from scripts.catalog.derive import derive  # noqa: E402
+from scripts.catalog.scan import scan  # noqa: E402
+
+MAX_BYTES = 100 * 1024 * 1024
+TAG_FIELDS = ("year", "category", "festival")
+
+
+def load_extra(repo: Path) -> set[str]:
+    p = repo / "data" / "restricted_extra.txt"
+    if not p.exists():
+        return set()
+    return {ln.strip() for ln in p.read_text().splitlines()
+            if ln.strip() and not ln.lstrip().startswith("#")}
+
+
+def apply_tags(items, repo: Path) -> None:
+    p = repo / "data" / "approved" / "contributions.json"
+    if not p.exists():
+        return
+    by_id = {i.id: i for i in items}
+    for c in json.loads(p.read_text() or "[]"):
+        if c.get("type") != "tag" or c.get("item_id") not in by_id:
+            continue
+        it, payload = by_id[c["item_id"]], c.get("payload") or {}
+        for f in TAG_FIELDS:
+            if payload.get(f) not in (None, ""):
+                setattr(it, f, payload[f])
+        if payload.get("year") not in (None, ""):
+            it.undated = False
+            it.year_inferred = False
+        if it.category == "resultados":  # never un-restrict, only restrict
+            it.restricted = True
+
+
+def dir_size(root: Path) -> int:
+    return sum(f.stat().st_size for f in root.rglob("*") if f.is_file()) if root.exists() else 0
+
+
+def main(argv=None) -> int:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--archive", default=str(REPO.parent))
+    ap.add_argument("--only", help="derive only this item id; do not write catalog.json")
+    ap.add_argument("--repo", default=str(REPO), help=argparse.SUPPRESS)
+    a = ap.parse_args(argv)
+    repo, archive = Path(a.repo), Path(a.archive).resolve()
+    public, restricted = repo / "public" / "media", repo / ".restricted"
+
+    items = scan(archive, load_extra(repo))
+    apply_tags(items, repo)
+    todo = [i for i in items if a.only in (None, i.id)]
+    if a.only and not todo:
+        print(f"no item with id {a.only}", file=sys.stderr)
+        return 1
+    for n, it in enumerate(todo, 1):
+        root, other = (restricted, public) if it.restricted else (public, restricted)
+        shutil.rmtree(other / it.id, ignore_errors=True)  # never leave a stale copy
+        derive(it, archive, root)
+        if n % 50 == 0:
+            print(f"  {n}/{len(todo)}", flush=True)
+
+    if not a.only:
+        ids = {i.id for i in items}
+        for root in (public, restricted):
+            if root.exists():
+                for d in root.iterdir():
+                    if d.is_dir() and d.name not in ids:
+                        shutil.rmtree(d)
+        out = repo / "src" / "data" / "catalog.json"
+        out.parent.mkdir(parents=True, exist_ok=True)
+        rows = []
+        for it in items:
+            d = asdict(it)
+            d.pop("notes", None)
+            rows.append(d)
+        out.write_text(json.dumps(
+            {"generated": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+             "items": rows}, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+        print(f"items {len(items)} (restricted {sum(i.restricted for i in items)})")
+
+    size = dir_size(public)
+    print(f"public/media {size / 1024 / 1024:.1f} MB; .restricted {dir_size(restricted) / 1024 / 1024:.1f} MB")
+    if size > MAX_BYTES:
+        print("ERROR: public/media exceeds 100 MB", file=sys.stderr)
+        return 1
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

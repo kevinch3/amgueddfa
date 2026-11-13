@@ -79,3 +79,22 @@ def test_file_missing_from_sources_raises(tmp_path):
     (tmp_path / "a/Eisteddfod_Mimosa/2016/Nuevo.jpg").write_bytes(b"new")
     with pytest.raises(ValueError, match="Nuevo.jpg"):
         scan(tmp_path / "a", set())
+
+
+def test_restricted_if_any_duplicate_path_is_resultados(tmp_path):
+    a = tmp_path / "a"
+    (a / "Eisteddfod_Mimosa/2016/Bases_y_avisos").mkdir(parents=True)
+    (a / "Eisteddfod_Mimosa/2016/Resultados").mkdir(parents=True)
+    first = a / "Eisteddfod_Mimosa/2016/Bases_y_avisos/a.jpg"
+    second = a / "Eisteddfod_Mimosa/2016/Resultados/b.jpg"
+    first.write_bytes(b"same-bytes")
+    second.write_bytes(b"same-bytes")
+    (a / "SOURCES.tsv").write_text(
+        "path\tsource_url\tretrieved\tmime\tnotes\n"
+        "Eisteddfod_Mimosa/2016/Bases_y_avisos/a.jpg\thttp://x/a\t2026-11-13\timage/jpeg\t\n"
+        "Eisteddfod_Mimosa/2016/Resultados/b.jpg\thttp://x/b\t2026-11-13\timage/jpeg\t\n"
+    )
+    items = scan(a, set())
+    assert len(items) == 1
+    assert items[0].category == "bases"
+    assert items[0].restricted is True

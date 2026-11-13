@@ -1,0 +1,1 @@
+# One item id (12 hex chars) per line; these items get restricted derivatives only.

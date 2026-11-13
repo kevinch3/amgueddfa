@@ -83,6 +83,8 @@ def scan(archive: Path, restricted_extra: set[str]) -> list[Item]:
         iid = hashlib.sha256(p.read_bytes()).hexdigest()[:12]
         if iid in by_id:
             by_id[iid].alt_paths.append(relstr)
+            if len(rel.parts) > 3 and CATEGORIES.get(rel.parts[2]) == "resultados":
+                by_id[iid].restricted = True
             continue
         parts = rel.parts
         festival = FESTIVALS.get(parts[0])

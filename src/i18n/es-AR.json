@@ -183,7 +183,9 @@
       "nombre_usado": "Ese nombre ya lo usa otra persona. Probá con otro.",
       "nombre_largo": "El nombre tiene que tener entre 3 y 30 caracteres."
     },
-    "volver": "Seguir donde estabas"
+    "volver": "Seguir donde estabas",
+    "solo_enlace": "Abrí el enlace del correo desde este mismo navegador y vas a volver acá con la sesión iniciada.",
+    "tengo_codigo": "¿Te llegó un código de 6 números?"
   },
   "sesion": {
     "ingresar": "Ingresar",

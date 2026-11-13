@@ -152,3 +152,7 @@ los códigos de ingreso dejarían de llegar apenas haya movimiento. Antes del
 lanzamiento configurá un SMTP propio (por ejemplo, el plan gratuito de Resend) en
 Supabase → Authentication → SMTP Settings, con un remitente del dominio del proyecto,
 y ajustá el límite de correos en Authentication → Rate Limits.
+
+### Código de 6 números
+
+Mientras no haya SMTP propio (Resend), Supabase manda sus correos por defecto, que sólo traen un enlace; la página de ingreso esconde el campo del código detrás de “¿Te llegó un código de 6 números?”. Cuando el SMTP esté configurado y pegues `supabase/templates/*.html` en Supabase, agregá la variable de repositorio `PUBLIC_AUTH_CODE=1` para mostrar el campo del código de entrada.

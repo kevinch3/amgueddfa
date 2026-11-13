@@ -22,6 +22,7 @@ jobs:
     env:
       PUBLIC_SUPABASE_URL: ${{ vars.PUBLIC_SUPABASE_URL }}
       PUBLIC_SUPABASE_ANON_KEY: ${{ vars.PUBLIC_SUPABASE_ANON_KEY }}
+      PUBLIC_AUTH_CODE: ${{ vars.PUBLIC_AUTH_CODE }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4

@@ -2,6 +2,11 @@
 import Base from '../layouts/Base.astro';
 import { t } from '../lib/i18n';
 import { url } from '../lib/paths';
+
+// Until custom SMTP (Resend) is configured, Supabase's default emails carry only a link,
+// so the code field stays tucked away. Set PUBLIC_AUTH_CODE=1 once our templates with
+// {{ .Token }} are live to show the code field up front.
+const codeFirst = import.meta.env.PUBLIC_AUTH_CODE === '1';
 ---
 <Base title={t('auth.titulo')}>
   <section class="auth" data-home={url('/')}>
@@ -18,12 +23,15 @@ import { url } from '../lib/paths';
     </form>
 
     <form id="paso-codigo" class="auth-step" novalidate hidden>
-      <p>{t('auth.codigo_o_enlace')}</p>
+      <p>{codeFirst ? t('auth.codigo_o_enlace') : t('auth.solo_enlace')}</p>
       <p id="auth-codigo-ayuda" data-tpl={t('auth.codigo_ayuda')}></p>
-      <label for="auth-codigo">{t('auth.codigo_label')}</label>
-      <input id="auth-codigo" name="codigo" type="text" inputmode="numeric" autocomplete="one-time-code"
-        pattern="[0-9 ]*" maxlength="7" required aria-describedby="auth-codigo-ayuda" />
-      <button class="btn" type="submit" data-idle={t('auth.verificar')} data-busy={t('auth.verificando')}>{t('auth.verificar')}</button>
+      <details class="auth-codigo-extra" open={codeFirst}>
+        {!codeFirst && <summary>{t('auth.tengo_codigo')}</summary>}
+        <label for="auth-codigo">{t('auth.codigo_label')}</label>
+        <input id="auth-codigo" name="codigo" type="text" inputmode="numeric" autocomplete="one-time-code"
+          pattern="[0-9 ]*" maxlength="7" required aria-describedby="auth-codigo-ayuda" />
+        <button class="btn" type="submit" data-idle={t('auth.verificar')} data-busy={t('auth.verificando')}>{t('auth.verificar')}</button>
+      </details>
       <p class="auth-extra">
         <button class="btn btn-quiet" type="button" id="auth-reenviar">{t('auth.reenviar')}</button>
         <button class="btn btn-quiet" type="button" id="auth-cambiar">{t('auth.cambiar_email')}</button>
@@ -220,6 +228,9 @@ import { url } from '../lib/paths';
   }
   .auth input:focus-visible { outline: 3px solid var(--focus); outline-offset: 1px; }
   #auth-codigo { letter-spacing: 0.3em; max-width: 12rem; }
+  .auth-codigo-extra { display: grid; gap: 0.6rem; }
+  .auth-codigo-extra[open] { margin-top: 0.4rem; }
+  .auth-codigo-extra summary { cursor: pointer; color: var(--ink-soft, inherit); font-size: 0.95rem; }
   .auth .btn { justify-self: start; }
   .auth .btn:disabled { opacity: 0.55; cursor: not-allowed; }
   .auth-extra { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.5rem 0 0; }

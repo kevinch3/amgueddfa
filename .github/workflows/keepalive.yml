@@ -1,0 +1,24 @@
+name: keepalive
+
+# Free-tier Supabase projects pause after a week without traffic; one tiny anon read a day avoids it.
+on:
+  schedule:
+    - cron: '17 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    env:
+      PUBLIC_SUPABASE_URL: ${{ vars.PUBLIC_SUPABASE_URL }}
+      PUBLIC_SUPABASE_ANON_KEY: ${{ vars.PUBLIC_SUPABASE_ANON_KEY }}
+    steps:
+      - name: Ping Supabase
+        run: |
+          curl -fsS --retry 3 --retry-delay 10 \
+            "$PUBLIC_SUPABASE_URL/rest/v1/badges?select=slug&limit=1" \
+            -H "apikey: $PUBLIC_SUPABASE_ANON_KEY" \
+            -H "Authorization: Bearer $PUBLIC_SUPABASE_ANON_KEY"

@@ -518,3 +518,58 @@ describe('admin_add_facts with auto-approval', () => {
     expect(st).toEqual([{ status: 'approved' }]);
   });
 });
+
+describe('sign-in stats', () => {
+  const signIn = (uid: string, at: string | null) =>
+    t.q('postgres', 'update auth.users set last_sign_in_at = $2 where id = $1', [uid, at]);
+  const hours = () =>
+    t.q<{ hour: Date; n: number }>('postgres', 'select hour, n from public.signin_hours order by hour');
+
+  it('a sign-in bumps its hour; repeats in the same hour add up', async () => {
+    const a = await t.createUser();
+    const b = await t.createUser();
+    await signIn(a, '2026-11-14T10:05:00Z');
+    await signIn(b, '2026-11-14T10:40:00Z');
+    const rows = await hours();
+    expect(rows).toHaveLength(1);
+    expect(new Date(rows[0].hour).toISOString()).toBe('2026-11-14T10:00:00.000Z');
+    expect(rows[0].n).toBe(2);
+  });
+
+  it('an unchanged or null last_sign_in_at counts nothing', async () => {
+    const a = await t.createUser();
+    await signIn(a, '2026-11-14T10:05:00Z');
+    await signIn(a, '2026-11-14T10:05:00Z');
+    await signIn(a, null);
+    const rows = await hours();
+    expect(rows.map((r) => r.n)).toEqual([1]);
+  });
+
+  it('signin_hours stores no user id', async () => {
+    const cols = await t.q<{ column_name: string }>(
+      'postgres',
+      `select column_name from information_schema.columns
+       where table_schema = 'public' and table_name = 'signin_hours' order by ordinal_position`,
+    );
+    expect(cols.map((c) => c.column_name)).toEqual(['hour', 'n']);
+  });
+
+  it('only admins read the stats', async () => {
+    const u = await t.createUser();
+    const admin = await t.createAdmin();
+    await signIn(u, new Date().toISOString());
+    for (const who of ['anon', u]) {
+      await expect(t.q(who, 'select * from public.signin_hours')).rejects.toThrow();
+      await expect(t.q(who, 'select * from public.admin_signin_stats(90)')).rejects.toThrow();
+    }
+    const rows = await t.q<{ hour: Date; n: number }>(admin, 'select * from public.admin_signin_stats(90)');
+    expect(rows).toHaveLength(1);
+    expect(rows[0].n).toBe(1);
+  });
+
+  it('days is clamped', async () => {
+    const admin = await t.createAdmin();
+    await expect(t.q(admin, 'select * from public.admin_signin_stats(0)')).resolves.toEqual([]);
+    await expect(t.q(admin, 'select * from public.admin_signin_stats(10000)')).resolves.toEqual([]);
+  });
+});

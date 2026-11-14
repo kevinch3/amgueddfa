@@ -109,7 +109,10 @@
     "datos": "Cargá un dato",
     "recuerdo": "Contá un recuerdo",
     "aportes_aprobados": "Documentos que sumó la comunidad",
-    "aporte_sin_descripcion": "Sin descripción"
+    "aporte_sin_descripcion": "Sin descripción",
+    "transcripcion_ver": "Transcripción: {titulo}",
+    "transcripcion_aporte": "Transcripción de colaborador: {titulo}",
+    "transcripcion_documento": "Ver el documento"
   },
   "item": {
     "restringido": "Disponible tras revisión",
@@ -146,7 +149,10 @@
     "ver_entera": "Ver la página entera",
     "liberado": "Revisado y publicado por el equipo del archivo.",
     "vista_admin": "Todavía no es público. Lo ves porque sos admin; revisalo antes de liberarlo.",
-    "texto": "Texto del documento"
+    "texto": "Texto del documento",
+    "transcripcion_titulo": "Transcripción",
+    "transcripcion_ayuda": "Competencias y jurados del programa, en el idioma original. Se dejaron afuera los reglamentos y las aclaraciones.",
+    "transcripciones_aportes": "Transcripciones de colaboradores"
   },
   "tabla": {
     "numero": "N.º",

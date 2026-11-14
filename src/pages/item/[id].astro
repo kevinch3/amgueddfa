@@ -2,6 +2,10 @@
 import Base from '../../layouts/Base.astro';
 import Mount from '../../components/Mount.astro';
 import Viewer from '../../components/Viewer.astro';
+import Transcripcion from '../../components/Transcripcion.astro';
+import approvedRaw from '../../../data/approved/contributions.json';
+import { byLine, jsonForScript, type Contribution } from '../../lib/contrib';
+import { transcriptionFor } from '../../lib/transcripciones';
 import { items, pageUrls, thumbUrl } from '../../lib/catalog';
 import { absUrl, itemJsonLd } from '../../lib/seo';
 import { t } from '../../lib/i18n';
@@ -28,6 +32,9 @@ const jsonLd = item.restricted ? null : itemJsonLd({
   editionUrl: item.year ? absUrl(`${item.festival}/${item.year}/`) : null,
   editionName: item.year ? `${fest} ${item.year}` : null, year: item.year,
 });
+// Standardized transcription (committed) and approved contributor transcriptions (last export; transcripciones.ts merges live rows).
+const transcription = item.restricted ? null : transcriptionFor(item.id);
+const contributed = item.restricted ? [] : (approvedRaw as Contribution[]).filter((c) => c.type === 'transcription' && c.item_id === item.id);
 const retrieved = item.retrieved
   ? new Date(`${item.retrieved}T12:00:00`).toLocaleDateString('es-AR', { day: 'numeric', month: 'long', year: 'numeric' })
   : '';
@@ -78,14 +85,32 @@ const retrieved = item.retrieved
             </table>
           </div>
         </section>
-      ) : item.text_excerpt ? (
+      ) : item.text_excerpt && !transcription ? (
         <section aria-labelledby="texto-t">
           <h2 id="texto-t">{t('item.texto_titulo')}</h2>
           <p class="muted small">{t('item.texto_ayuda')}</p>
           <div class="textcard">{item.text_excerpt}</div>
         </section>
-      ) : (
+      ) : transcription ? null : (
         <p class="textcard">{t('item.sin_vista')}</p>
+      )}
+      {transcription && (
+        <section class="section" aria-labelledby="transcripcion-t">
+          <h2 id="transcripcion-t">{t('item.transcripcion_titulo')}</h2>
+          <p class="muted small">{t('item.transcripcion_ayuda')}</p>
+          <Transcripcion text={transcription} />
+        </section>
+      )}
+      {!item.restricted && (
+        <section class="section island-section" aria-labelledby="transcripciones-t" data-transcripciones hidden={contributed.length === 0}>
+          <h2 id="transcripciones-t">{t('item.transcripciones_aportes')}</h2>
+          <Mount id="transcripciones" festival={item.festival} year={item.year} item={item.id}>{contributed.length > 0 && (
+            <ul class="recuerdos">
+              {contributed.map((c) => <li><blockquote>{String(c.payload?.text ?? '')}</blockquote>{byLine(c) && <p class="muted small">{byLine(c)}</p>}</li>)}
+            </ul>
+          )}</Mount>
+          <script type="application/json" id="transcripciones-data" set:html={jsonForScript(contributed)}></script>
+        </section>
       )}
     </div>
 
@@ -118,4 +143,5 @@ const retrieved = item.retrieved
 <script>
   import '../../scripts/tarea.ts';
   import '../../scripts/liberado.ts';
+  import '../../scripts/transcripciones.ts';
 </script>

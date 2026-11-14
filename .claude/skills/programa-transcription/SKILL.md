@@ -1,0 +1,75 @@
+---
+name: programa-transcription
+description: Use when transcribing an Eisteddfod programa (list of competitions) or a Ganadores / resultados list from the archive, when adding or fixing files in src/data/transcripciones/, or when a transcription does not show on an item or edition page.
+---
+
+# Programa and Ganadores transcriptions
+
+## Where they go
+
+| What | File | Public? |
+|---|---|---|
+| Programa (category `programa`) | `src/data/transcripciones/<item id>.md` (committed) | yes: item page in full, edition page folded under Programa |
+| Ganadores / resultados | `../.transcripciones/ganadores/<item id>.md` (archive, never committed) | **no**, private until the user says otherwise |
+| Visitors' "Transcribir" task | `contributions` (type `transcription`, max 5000 chars) | shown live with the contributor's name next to ours |
+
+`<item id>` is the catalog id (`src/data/catalog.json`), never a file name. Never transcribe a
+restricted item into the committed folder (the build test fails).
+
+## The standard (what goes in, what stays out)
+
+Keep only what identifies each competition, plus the jurados:
+
+- **In:** discipline, age group / category, form (solo, coro, cuento…), the title of the
+  work, author / composer / arranger, named prizes and trophies (Premio «Mimosa», Gwobr
+  «Telyn», Sillón / Corona), the list of jurados with their discipline.
+- **Out:** submission rules (sizes, copies, seudónimo, sobres, deadlines, durations,
+  partituras), eligibility notes, disclaimers and clarifications, footnote markers like
+  `(x)`, schedules and session order, sponsors, greetings, ads, committee lists, prices.
+- **Language:** as printed. Never translate (Welsh stays Welsh, "English to Spanish" stays).
+  When a heading is bilingual, join both with ` · ` (`## Música · Cerddoriaeth`).
+  When the same competition is printed in both languages, keep both on one line, Spanish
+  first, joined with ` · ` (`3. Solo soprano: «…» · Unawd soprano: «…»`); the shared work
+  title and author appear once if identical.
+- **Order:** competitions and headings in printed order; never regroup or renumber.
+- **Normalise:** titles in «», `N.` numbering exactly as printed (`12a.` allowed), sentence
+  case for headings, fix obvious typos and OCR errors, names spelled as the site unifies
+  them (Owen Tudur Jones, Geraldine Mac Burney, Lois Medi Wiliam).
+- **Illegible:** `[ilegible]`; a page that is missing: `[falta la página N]` as a text line.
+
+## Format (parsed by `src/lib/transcripciones.ts`)
+
+```
+## Literatura · Llenyddiaeth          discipline (first line must be one)
+### Adultos                           optional age group / sub-discipline
+1. Penillion syml: «Ar lan y môr».    numbered competition
+12a. Cuento: tema libre.
+- Poesía en castellano: tema libre.   unnumbered competition
+## Jurados · Beirniaid
+- Música: Clydwyn Jones, Nombre Apellido.
+```
+
+Anything else is shown as a plain paragraph — avoid it.
+
+Ganadores lists use the same headings, one line per competition:
+`12. Solo soprano: 1.º Nombre Apellido (Trelew); 2.º …; 3.º …` and `- Sillón: …`.
+
+## How to get the text
+
+| Source | Method |
+|---|---|
+| Web page (`kind: web`) | `_html_text(Path(src), keep_breaks=True)` from `scripts/catalog/derive.py` |
+| PDF with text layer | `pdftotext -layout file.pdf -` (check per page: some PDFs mix scans) |
+| Scanned PDF / image | read the page images (`media/<id>/pNN.webp` or `pdftoppm -r 150`) with the Read tool; `tesseract` here has only `eng`, so don't rely on it for Welsh/Spanish |
+
+Two captures of the same page (identical extracted text) get one file, under the older capture's
+id, so the edition page doesn't list it twice.
+
+Several catalog items can be parts of one programa (Literatura, Música… as separate PDFs):
+transcribe each item into its own file. A PDF that holds Chubut + Juventud goes under its
+own item id with both festivals' competitions in it.
+
+## Check and publish
+
+`npx vitest run tests-js/transcripciones.test.ts` (format), then the full suite (the build test
+checks every file shows on its item and edition page), commit, push `main`.

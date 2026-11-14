@@ -2,6 +2,7 @@ import staticEditions from '../../data/approved/editions.json';
 import { approvedForEdition, byLine, factDisplay, forEdition, mergeApproved, ownPending, pendingView, sortFacts, sourceLine, type Contribution } from '../lib/contrib';
 import { t } from '../lib/i18n';
 import { liveQuery } from '../lib/live';
+import { url } from '../lib/paths';
 import { getClient } from '../lib/supabase';
 import type { EditionState } from '../lib/types';
 import { revealDecade } from '../lib/timeline';
@@ -48,6 +49,34 @@ export function renderMemories(mount: HTMLElement, memories: Contribution[]): vo
     ul.append(li);
   }
   mount.append(ul);
+}
+
+/** Same markup as the static build renders into #transcripciones: one folded block per approved transcription. */
+export function renderEditionTranscriptions(mount: HTMLElement, list: Contribution[], titles: Record<string, string>): void {
+  mount.replaceChildren();
+  for (const c of list) {
+    const title = c.item_id ? titles[c.item_id] : undefined;
+    if (!title) continue; // restricted or unknown item: never link it
+    const d = el('details', 'tr-detalle');
+    const s = el('summary', undefined, t('edicion.transcripcion_aporte', { titulo: title }));
+    const by = byLine(c);
+    if (by) s.append(' ', el('span', 'muted small', by));
+    const p = el('p', 'small');
+    const a = el('a', undefined, t('edicion.transcripcion_documento'));
+    a.href = url(`item/${c.item_id}/`);
+    p.append(a);
+    d.append(s, p, el('blockquote', 'tr-aporte', String(c.payload?.text ?? '')));
+    mount.append(d);
+  }
+}
+
+function readTitles(mount: HTMLElement): Record<string, string> {
+  try {
+    const v = JSON.parse(mount.dataset.titles ?? '{}');
+    return v && typeof v === 'object' ? v : {};
+  } catch {
+    return {};
+  }
 }
 
 /** Public URL of a `media` bucket object: from the client when there is one, else from PUBLIC_SUPABASE_URL. */
@@ -197,6 +226,8 @@ async function hydrateEdition(): Promise<void> {
   if (hechos) renderFacts(hechos, forEdition(all, festival, year, 'fact'));
   if (recuerdos) renderMemories(recuerdos, forEdition(all, festival, year, 'memory'));
   if (aportes) renderUploads(aportes, forEdition(all, festival, year, 'upload'), false);
+  const trMount = document.getElementById('transcripciones');
+  if (trMount) renderEditionTranscriptions(trMount, forEdition(all, festival, year, 'transcription'), readTitles(trMount));
   applyUploadStates(document, uploadStates(forEdition(all, festival, year, 'upload')));
   await renderDrafts(festival, year, { hechos, recuerdos, aportes });
 }

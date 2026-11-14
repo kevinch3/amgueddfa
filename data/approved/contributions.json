@@ -14,6 +14,238 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "02578b56-14fe-450e-8fbd-ce8b3006cb3c",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2018,
+    "item_id": null,
+    "payload": {
+      "field": "end_date",
+      "fuente": "Diario Jornada, 20/10/2018: https://www.diariojornada.com.ar/222243/magazine/el_lunes_comienza_la_semana_del_eisteddfod",
+      "lote": "6c90eb78-fa95-4a03-b96a-f0c5a2ee3680",
+      "value": "2018-10-27"
+    },
+    "created_at": "2026-11-14T14:09:15.728485+00:00",
+    "reviewed_at": "2026-11-14T14:09:15.728485+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "0313d7ae-7937-4abc-bd95-fb6fcaea1c50",
+    "type": "tag",
+    "festival": "juventud",
+    "year": 2025,
+    "item_id": "56789aa41764",
+    "payload": {
+      "category": "bases",
+      "festival": "juventud",
+      "year": 2025
+    },
+    "created_at": "2026-11-14T10:44:32.891388+00:00",
+    "reviewed_at": "2026-11-14T11:02:47.824811+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "03696648-964b-48ba-8410-865cee384ff4",
+    "type": "fact",
+    "festival": "juventud",
+    "year": 2017,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "fuente": "Diario Jornada, 09/09/2017: https://www.diariojornada.com.ar/195821/magazine/se_realizo_el__eisteddfod_de_la_juventud_2017",
+      "value": "Gimnasio Municipal de Gaiman"
+    },
+    "created_at": "2026-11-14T14:09:33.210927+00:00",
+    "reviewed_at": "2026-11-14T14:09:33.210927+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "042ee3c5-9213-4941-921b-29a8be5261bc",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2025,
+    "item_id": "f08b97c983cf",
+    "payload": {
+      "category": "bases",
+      "festival": "chubut",
+      "year": 2025
+    },
+    "created_at": "2026-11-14T13:19:03.427053+00:00",
+    "reviewed_at": "2026-11-14T13:20:47.194865+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "0980cab0-5128-48c1-91b2-91309f9da6af",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2024,
+    "item_id": "797fb3a8aa6d",
+    "payload": {
+      "category": "bases",
+      "festival": "chubut",
+      "year": 2024
+    },
+    "created_at": "2026-11-14T13:19:56.87413+00:00",
+    "reviewed_at": "2026-11-14T13:20:53.581281+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "0a68d85f-c65f-4cf8-87e5-d8a04cefcf90",
+    "type": "fact",
+    "festival": "trevelin",
+    "year": 2022,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_silla",
+      "fuente": "Diario Jornada, 20/11/2022: https://www.diariojornada.com.ar/337583/magazine/nantlais_evans_y_vilma_jones__ganadores_del_eisteddfod",
+      "lote": "161904b2-ed71-451e-98a8-f0fa8f6e2d20",
+      "value": "Vilma Nanci Jones"
+    },
+    "created_at": "2026-11-14T14:09:30.248472+00:00",
+    "reviewed_at": "2026-11-14T14:09:30.248472+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "0c4b2644-507a-476c-ba24-7ca3d5b1d712",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2008,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_silla",
+      "fuente": "Vistas del Valle (Wayback): https://web.archive.org/web/20100223000750/http://www.vistasdelvalle.com.ar/eisteddfod/eisteddfod-2008/ganadores.htm",
+      "lote": "573c4ca3-f1c2-43d2-a4a1-d9128cc0a3ba",
+      "value": "Graham Williams, de Gales (seudónimo «Glanrhyd»)"
+    },
+    "created_at": "2026-11-14T14:09:03.556317+00:00",
+    "reviewed_at": "2026-11-14T14:09:03.556317+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "0f83a34c-384b-4a89-b97b-5dbf24c6c747",
+    "type": "fact",
+    "festival": "trevelin",
+    "year": 2026,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "fuente": "El Chubut, 03/05/2026: elchubut.com.ar/regionales/2026-5-3-21-11-0-alejandra-vilela-y-sara-borda-green-las-grandes-ganadoras-de-la-corona-de-plata-y-del-sillon-bardico-en-el-eisteddfod-de-trevelin",
+      "lote": "4654dc9f-db81-4398-8d73-98c39fc533c5",
+      "value": "SUM de la Escuela N.º 57, Trevelin"
+    },
+    "created_at": "2026-11-14T14:09:50.695454+00:00",
+    "reviewed_at": "2026-11-14T14:09:50.695454+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "13798c4a-ce5c-4bb4-bfdf-24a8e84507fc",
+    "type": "fact",
+    "festival": "mimosa",
+    "year": 2025,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "fuente": "El Chubut, 01/07/2025: https://www.elchubut.com.ar/puerto-madryn/2025-7-1-20-52-0-una-multitud-disfruto-del-eisteddfod-mimosa-porth-madryn",
+      "lote": "eaaee53f-12a4-4fc7-afc3-320b7f67b313",
+      "value": "Escuela N.º 789, Puerto Madryn"
+    },
+    "created_at": "2026-11-14T14:09:57.283747+00:00",
+    "reviewed_at": "2026-11-14T14:09:57.283747+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "16eaf3d2-2780-4627-927c-d543dcc8db68",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2026,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "El Chubut, 24/10/2026: https://www.elchubut.com.ar/regionales/2026-10-24-22-10-0-el-sillon-bardico-fue-para-lois-medi-y-la-corona-del-eisteddfod-para-waldo-griffiths",
+      "value": "Medalla de Plata (Asociación San David): Alejandro Jones, de Trevelin («Manifiesto»)"
+    },
+    "created_at": "2026-11-14T14:09:40.455697+00:00",
+    "reviewed_at": "2026-11-14T14:09:40.455697+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "17e86bef-0ffe-4bff-b17b-b7d1e7e0adbc",
+    "type": "fact",
+    "festival": "juventud",
+    "year": 2024,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "fuente": "El Chubut, 15/09/2024: https://www.elchubut.com.ar/regionales/2024-9-15-21-13-0-santiago-pires-gano-la-medalla-de-plata-en-el-eisteddfod-de-la-juventud-2024",
+      "lote": "b93c7e45-9b00-4992-aa57-b9432c431cd3",
+      "value": "Gimnasio Municipal de Gaiman"
+    },
+    "created_at": "2026-11-14T14:09:55.906737+00:00",
+    "reviewed_at": "2026-11-14T14:09:55.906737+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "196fd88a-1710-4f3b-a5b4-f38ee14e7ec2",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2022,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "fuente": "El Chubut, 22/10/2022: https://www.elchubut.com.ar/regionales/2022-10-22-22-30-0-el-sillon-bardico-fue-para-ana-chiabrando-rees-y-la-corona-del-poeta-para-liliana-elizabeth-perez",
+      "value": "Salón San David, Trelew"
+    },
+    "created_at": "2026-11-14T14:09:39.32505+00:00",
+    "reviewed_at": "2026-11-14T14:09:39.32505+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "198c9db9-2821-46b5-adf1-10d767b6aba1",
+    "type": "fact",
+    "festival": "trevelin",
+    "year": 2025,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_corona",
+      "fuente": "Diario Jornada, 06/05/2025: https://www.diariojornada.com.ar/393953/espectaculos/lois_medi_wiliam_y_noelia_sanchez_jenkins_ganaron_en_el_eisteddfod_2025",
+      "lote": "5e6a0bca-18ed-46cf-bdc9-b9a38e50ada3",
+      "value": "Noelia Sánchez Jenkins"
+    },
+    "created_at": "2026-11-14T14:09:32.072233+00:00",
+    "reviewed_at": "2026-11-14T14:09:32.072233+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "1a79bebd-5926-4ab9-92bf-7103e08dc6a1",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2018,
+    "item_id": "4e87bd74fa35",
+    "payload": {
+      "category": "bases",
+      "festival": "chubut",
+      "year": 2018
+    },
+    "created_at": "2026-11-14T10:44:16.333053+00:00",
+    "reviewed_at": "2026-11-14T11:02:42.726967+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "1b89a114-8ab4-44aa-b823-5ecb38e8eaf2",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2026,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_silla",
+      "fuente": "Diario Jornada, 24/10/2026: https://www.diariojornada.com.ar/425829/magazine/una_maestra_galesa_gano_el_sillon_bardico_del_eisteddfod",
+      "value": "Lois Medi Wiliam («Y Tymhorau», seudónimo «Gaia»)"
+    },
+    "created_at": "2026-11-14T14:09:28.653632+00:00",
+    "reviewed_at": "2026-11-14T14:09:28.653632+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "1e6305d9-b260-40bc-a2ef-26aeeb74338f",
     "type": "fact",
     "festival": "chubut",
@@ -43,6 +275,38 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "243622a9-6f6f-4b5c-a504-323990543ece",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2017,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_silla",
+      "fuente": "Diario Jornada, 30/10/2017: https://www.diariojornada.com.ar/199348/magazine/el_eisteddfod_del_chubut_y_una_nueva_coronacion",
+      "lote": "f2700058-d8e2-4a97-90fa-014d5633263b",
+      "value": "Sara Borda Green"
+    },
+    "created_at": "2026-11-14T14:09:14.140694+00:00",
+    "reviewed_at": "2026-11-14T14:09:14.140694+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "25cd72cd-5b6a-4b91-a06e-74d9d2ba2c07",
+    "type": "fact",
+    "festival": "trevelin",
+    "year": 2022,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "fuente": "Diario Jornada, 20/11/2022: https://www.diariojornada.com.ar/337583/magazine/nantlais_evans_y_vilma_jones__ganadores_del_eisteddfod",
+      "lote": "161904b2-ed71-451e-98a8-f0fa8f6e2d20",
+      "value": "SUM de la Escuela N.º 57, Trevelin"
+    },
+    "created_at": "2026-11-14T14:09:30.248472+00:00",
+    "reviewed_at": "2026-11-14T14:09:30.248472+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "2674150d-5fd8-4500-86e2-f5fd027bb8d4",
     "type": "fact",
     "festival": "chubut",
@@ -55,6 +319,98 @@
     "created_at": "2026-11-14T10:39:41.032394+00:00",
     "reviewed_at": "2026-11-14T10:41:23.326552+00:00",
     "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "2c15ab21-8015-4ea8-ab0c-4dee855cdd5c",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2021,
+    "item_id": "c35ebcee921b",
+    "payload": {
+      "category": "bases",
+      "festival": "chubut",
+      "year": 2021
+    },
+    "created_at": "2026-11-14T13:19:17.589273+00:00",
+    "reviewed_at": "2026-11-14T13:20:49.020409+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "2ca38dd5-9c06-4125-9feb-e79f54972f8b",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2024,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_silla",
+      "fuente": "Diario Jornada, 19/10/2024: https://www.diariojornada.com.ar/380575/magazine/graciela_fernandez_coronel_gano_la_corona_del_poeta",
+      "lote": "e6acfb90-7f8c-4b7a-a6a9-08aae5c35412",
+      "value": "Terwyn Tomos"
+    },
+    "created_at": "2026-11-14T14:09:23.673272+00:00",
+    "reviewed_at": "2026-11-14T14:09:23.673272+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "2cc57c0b-6813-46be-ab58-f4073703d447",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2023,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Diario Jornada, 23/10/2023: https://www.diariojornada.com.ar/356885/espectaculos/maderna_presidio_la_presentacion_de_los_atributos_del_eisteddfod_del_chubut_2023",
+      "value": "Sillón Bárdico (poesía en galés) exclusivo para residentes en la Argentina, como en los años impares"
+    },
+    "created_at": "2026-11-14T14:25:31.722918+00:00",
+    "reviewed_at": "2026-11-14T14:25:31.722918+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "2e3d2fca-81bd-4e4c-8ba2-b026f236a91b",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2022,
+    "item_id": "486c5fd51089",
+    "payload": {
+      "category": "bases",
+      "festival": "chubut",
+      "year": 2022
+    },
+    "created_at": "2026-11-14T10:44:30.618356+00:00",
+    "reviewed_at": "2026-11-14T11:02:44.841222+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "2fb67df9-6d2e-4404-8104-2fa9d38d9806",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2026,
+    "item_id": "f0445c901f9f",
+    "payload": {
+      "category": "bases",
+      "festival": "chubut",
+      "year": 2026
+    },
+    "created_at": "2026-11-14T10:44:18.426281+00:00",
+    "reviewed_at": "2026-11-14T11:02:46.77271+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "3191fa24-3473-46a5-96de-0718def92743",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2025,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Diario Jornada, 17/10/2025: https://www.diariojornada.com.ar/404442/espectaculos/alejandro_jones_de_trevelin_gano_la_medalla_de_plata",
+      "lote": "7b7437da-8989-4a62-b9ed-57e8a8108534",
+      "value": "Medalla de Plata (Asociación San David): Alejandro Jones, de Trevelin"
+    },
+    "created_at": "2026-11-14T14:09:27.52225+00:00",
+    "reviewed_at": "2026-11-14T14:09:27.52225+00:00",
+    "display_name": "Kevin Roberts"
   },
   {
     "id": "39e01401-68ef-4061-9b24-dc48afa07f14",
@@ -72,6 +428,129 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "3b9c4b3c-09a1-4a4e-b193-45fbe29b127a",
+    "type": "tag",
+    "festival": "juventud",
+    "year": 2019,
+    "item_id": "8c9fdb63913c",
+    "payload": {
+      "category": "programa-del-dia",
+      "festival": "juventud",
+      "year": 2019
+    },
+    "created_at": "2026-11-14T13:19:54.436523+00:00",
+    "reviewed_at": "2026-11-14T13:20:52.202165+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "3bbc9a88-5581-40dd-ae1c-0d283347cc03",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2014,
+    "item_id": "bce9ad6ff669",
+    "payload": {
+      "category": "bases",
+      "festival": "chubut",
+      "year": 2014
+    },
+    "created_at": "2026-11-14T13:19:59.852147+00:00",
+    "reviewed_at": "2026-11-14T13:20:54.639722+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "3f952f17-e5e0-4290-a3e0-8e0947f120ec",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2015,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Diario Jornada, 06/11/2015: https://www.diariojornada.com.ar/144242/magazine/owen_tydur_jones_gano_el_sillon_bardico_a_la_mejor_poesia",
+      "value": "Sillón Bárdico (poesía en galés) de carácter internacional: abierto a poetas de cualquier país"
+    },
+    "created_at": "2026-11-14T14:25:30.390205+00:00",
+    "reviewed_at": "2026-11-14T14:25:30.390205+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "413cfe0b-a710-4ab2-8f36-f695bb9c59ef",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2013,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Diario Jornada, 01/11/2013: https://www.diariojornada.com.ar/82895/magazine/eisteddfod_del_chubut_2013_griselda_otra_vez",
+      "value": "Medalla de Plata (Asociación San David): Griselda Jones de Redondo («Arpegios de luz»), por sexta vez"
+    },
+    "created_at": "2026-11-14T14:09:07.912183+00:00",
+    "reviewed_at": "2026-11-14T14:09:07.912183+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "4709d0fb-2598-4a4e-aa09-fb1cd800ac71",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2023,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_corona",
+      "fuente": "Diario Jornada, 30/10/2023: https://www.diariojornada.com.ar/357276/espectaculos/omar_davies_gano_la_corona_del_poeta_en_el_eisteddfod_del_chubut",
+      "lote": "5cfd5f4e-6584-4cae-b118-6bcf165fc750",
+      "value": "Omar Davies, de Puerto Madryn"
+    },
+    "created_at": "2026-11-14T14:09:20.944203+00:00",
+    "reviewed_at": "2026-11-14T14:09:20.944203+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "4be2befb-3b7b-4a06-8e4f-9634f3c82499",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2024,
+    "item_id": "1449c71e050b",
+    "payload": {
+      "category": "preliminares",
+      "festival": "chubut",
+      "year": 2024
+    },
+    "created_at": "2026-11-14T11:01:58.536559+00:00",
+    "reviewed_at": "2026-11-14T11:02:51.476225+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "5434558e-64ac-4443-82c0-57280a2cbfd6",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2006,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_corona",
+      "fuente": "Vistas del Valle (Wayback): https://web.archive.org/web/20070715005844/http://www.vistasdelvalle.com.ar/eisteddfod/eisteddfod-2006/ganadores.htm",
+      "lote": "956d57dc-e75a-41c6-a24b-b21e17f1a98c",
+      "value": "Carlos Juárez Aldazábal («Requiem»)"
+    },
+    "created_at": "2026-11-14T14:08:59.601738+00:00",
+    "reviewed_at": "2026-11-14T14:08:59.601738+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "5730bfd9-34a7-43bb-970b-3c383ab14133",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2025,
+    "item_id": null,
+    "payload": {
+      "field": "end_date",
+      "fuente": "Diario Jornada, 14/10/2025: https://www.diariojornada.com.ar/404254/espectaculos/la_semana_del_eisteddfod_2025_esta_en_marcha",
+      "lote": "ad50f514-f5a2-4ed3-8ffd-bde82f9f3c00",
+      "value": "2025-10-18"
+    },
+    "created_at": "2026-11-14T14:13:10.350596+00:00",
+    "reviewed_at": "2026-11-14T14:13:10.350596+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "5884bff8-e148-4847-8639-c64cbb26ef72",
     "type": "fact",
     "festival": "chubut",
@@ -86,6 +565,255 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "5b1b98d5-8cd8-498b-a82f-51bc2c620ca2",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2024,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Diario Jornada, 14/10/2024: https://www.diariojornada.com.ar/380164/magazine/presentan_los_atributos_del_eisteddfod_del_chubut_edicion_2024",
+      "value": "Sillón Bárdico (poesía en galés) de carácter internacional: abierto a poetas de cualquier país"
+    },
+    "created_at": "2026-11-14T14:25:32.362027+00:00",
+    "reviewed_at": "2026-11-14T14:25:32.362027+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "5d3ca87e-00fa-44c6-b471-2ede96f1f8c2",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2023,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_silla",
+      "fuente": "Diario Jornada, 28/10/2023: https://www.diariojornada.com.ar/357180/espectaculos/ana_chiabrando_rees_volvio_a_ganar_el_sillon_bardico",
+      "value": "Ana Chiabrando Rees, de Gaiman"
+    },
+    "created_at": "2026-11-14T14:09:19.347766+00:00",
+    "reviewed_at": "2026-11-14T14:09:19.347766+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "5ed7e811-a6be-469f-aea8-495b964409e0",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2017,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "fuente": "Diario Jornada, 28/10/2017: https://www.diariojornada.com.ar/199223/magazine/la_corona_del_poeta_del_eisteddfod_chubut_fue_para_carolina_zamudio",
+      "lote": "a00686d5-dcb0-4ca6-a761-252db4c453f8",
+      "value": "Salón San David, Trelew"
+    },
+    "created_at": "2026-11-14T14:09:12.77561+00:00",
+    "reviewed_at": "2026-11-14T14:09:12.77561+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "6069e73b-b7df-4340-8e14-7c92500803e9",
+    "type": "fact",
+    "festival": "trevelin",
+    "year": 2018,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_silla",
+      "fuente": "El Chubut, 29/04/2018: https://www.elchubut.com.ar/esquel/2018-4-29-0-23-0-con-gran-exito-se-llevo-acabo-el-eisteddfod-de-trevelin",
+      "lote": "898e125a-1311-4195-897b-8dbdf246dafe",
+      "value": "Sara Borda Green, de Trevelin"
+    },
+    "created_at": "2026-11-14T14:09:45.016313+00:00",
+    "reviewed_at": "2026-11-14T14:09:45.016313+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "60a0ea81-9f9f-437c-bb8c-9df1c7e005bd",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2023,
+    "item_id": null,
+    "payload": {
+      "field": "end_date",
+      "fuente": "Diario Jornada, 30/10/2023: https://www.diariojornada.com.ar/357276/espectaculos/omar_davies_gano_la_corona_del_poeta_en_el_eisteddfod_del_chubut",
+      "lote": "5cfd5f4e-6584-4cae-b118-6bcf165fc750",
+      "value": "2023-10-28"
+    },
+    "created_at": "2026-11-14T14:09:20.944203+00:00",
+    "reviewed_at": "2026-11-14T14:09:20.944203+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "61269352-b231-4e59-8909-86fc7df32753",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2025,
+    "item_id": "2e9bb931548b",
+    "payload": {
+      "category": "bases",
+      "festival": "chubut",
+      "year": 2025
+    },
+    "created_at": "2026-11-14T13:19:23.605443+00:00",
+    "reviewed_at": "2026-11-14T13:20:50.839324+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "64b79c5e-613a-4e3a-9999-83d503657291",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2008,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Vistas del Valle (Wayback): https://web.archive.org/web/20100223000750/http://www.vistasdelvalle.com.ar/eisteddfod/eisteddfod-2008/ganadores.htm",
+      "lote": "573c4ca3-f1c2-43d2-a4a1-d9128cc0a3ba",
+      "value": "Medalla de Plata (Asociación San David): Nancy E. Wright, de Nueva York (seudónimo «Luz González»)"
+    },
+    "created_at": "2026-11-14T14:09:03.556317+00:00",
+    "reviewed_at": "2026-11-14T14:09:03.556317+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "6609d0bb-3962-410c-815f-1e5280c4b760",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2015,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_silla",
+      "fuente": "Diario Jornada, 06/11/2015: https://www.diariojornada.com.ar/144242/magazine/owen_tydur_jones_gano_el_sillon_bardico_a_la_mejor_poesia",
+      "value": "Owen Tudur Jones («A la tierra prometida», seudónimo «Derek 1»)"
+    },
+    "created_at": "2026-11-14T14:09:11.221854+00:00",
+    "reviewed_at": "2026-11-14T14:09:11.221854+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "66451c92-e7e2-434c-9c09-5ed5d7436fae",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2025,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_corona",
+      "fuente": "Diario Jornada, 18/10/2025: https://www.diariojornada.com.ar/404482/magazine/arie_lloyd_de_lewis_gano_la_corona_del_poeta",
+      "lote": "370bf007-afc7-4427-aafa-961407afaede",
+      "value": "Arié Lloyd de Lewis («Brújula de sueño», seudónimo «Ayeres»)"
+    },
+    "created_at": "2026-11-14T14:09:26.161063+00:00",
+    "reviewed_at": "2026-11-14T14:09:26.161063+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "67182d88-be9d-43e9-b879-7c2afd466c52",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2018,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "fuente": "Diario Jornada, 20/10/2018: https://www.diariojornada.com.ar/222243/magazine/el_lunes_comienza_la_semana_del_eisteddfod",
+      "lote": "6c90eb78-fa95-4a03-b96a-f0c5a2ee3680",
+      "value": "Gimnasio del Racing Club, Trelew"
+    },
+    "created_at": "2026-11-14T14:09:15.728485+00:00",
+    "reviewed_at": "2026-11-14T14:09:15.728485+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "67e65c7a-5c37-4a82-86bc-836eb858be44",
+    "type": "fact",
+    "festival": "trevelin",
+    "year": 2021,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "fuente": "El Chubut, 22/11/2021: https://www.elchubut.com.ar/regionales/2021-11-22-18-4-0-se-desarrollo-durante-el-fin-de-semana-el-tradicional-eistedffod-de-trevelin",
+      "value": "Escuela N.º 57, Trevelin"
+    },
+    "created_at": "2026-11-14T14:09:49.092483+00:00",
+    "reviewed_at": "2026-11-14T14:09:49.092483+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "68aff454-20c9-4666-a87e-3ef6d2899b5c",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2026,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "fuente": "Diario Jornada, 10/10/2026: https://www.diariojornada.com.ar/425021/magazine/cierran_las_inscripciones_del_eisteddfod_2026",
+      "lote": "246ddf56-ec42-437c-910a-13d300045897",
+      "value": "Asociación San David, Trelew"
+    },
+    "created_at": "2026-11-14T14:13:11.449352+00:00",
+    "reviewed_at": "2026-11-14T14:13:11.449352+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "6d26e557-dd70-4265-8d37-003ddad812cd",
+    "type": "fact",
+    "festival": "trevelin",
+    "year": 2014,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "fuente": "El Chubut, 06/05/2014: https://www.elchubut.com.ar/esquel/2014-5-6-poetas-de-gaiman-y-trelew-ganadores-del-eisteddfod-trevelin",
+      "lote": "c78c8907-bcee-47f4-8512-36c10a23217b",
+      "value": "Salón Central municipal, Trevelin"
+    },
+    "created_at": "2026-11-14T14:09:42.05194+00:00",
+    "reviewed_at": "2026-11-14T14:09:42.05194+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "6e43a8d5-0ac1-4b36-843a-e8ca15b26388",
+    "type": "tag",
+    "festival": "juventud",
+    "year": 2026,
+    "item_id": "e3157bc5f05c",
+    "payload": {
+      "category": "programa-del-dia",
+      "festival": "juventud",
+      "year": 2026
+    },
+    "created_at": "2026-11-14T11:02:21.601077+00:00",
+    "reviewed_at": "2026-11-14T11:02:53.380313+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "6e6279f7-ab44-409e-a449-58b1ef52929e",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2013,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_corona",
+      "fuente": "Diario Jornada, 02/11/2013: https://www.diariojornada.com.ar/82976/magazine/culmino_el_eisteddfod_2013_corona_para_julia_chaktoura",
+      "value": "Julia Chaktoura («Gorsedd», seudónimo «Beltrán»)"
+    },
+    "created_at": "2026-11-14T14:09:06.77916+00:00",
+    "reviewed_at": "2026-11-14T14:09:06.77916+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "6fb23455-cfd0-40df-b50a-dce338727a83",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2016,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_silla",
+      "fuente": "El Chubut, 30/10/2016: https://www.elchubut.com.ar/regionales/2016-10-30-cecilia-glanzmann-gano-la-corona-del-poeta-en-el-cierre-del-eisteddfod-del-chubut",
+      "lote": "8eb74435-b83b-468d-8dff-a022bf8c10fc",
+      "value": "Terwyn Tomos, de Gales (Sillón Bárdico Internacional)"
+    },
+    "created_at": "2026-11-14T14:09:34.571181+00:00",
+    "reviewed_at": "2026-11-14T14:09:34.571181+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "6fcbcbdf-6820-4b7c-adc4-b874b81a6347",
     "type": "tag",
     "festival": "chubut",
@@ -96,6 +824,196 @@
     },
     "created_at": "2026-11-13T21:05:31.894515+00:00",
     "reviewed_at": "2026-11-13T21:08:14.65141+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "71583373-224e-4f5b-b24f-14a0f1da6579",
+    "type": "fact",
+    "festival": "trevelin",
+    "year": 2025,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_silla",
+      "fuente": "Diario Jornada, 06/05/2025: https://www.diariojornada.com.ar/393953/espectaculos/lois_medi_wiliam_y_noelia_sanchez_jenkins_ganaron_en_el_eisteddfod_2025",
+      "lote": "5e6a0bca-18ed-46cf-bdc9-b9a38e50ada3",
+      "value": "Lois Medi Wiliam"
+    },
+    "created_at": "2026-11-14T14:09:32.072233+00:00",
+    "reviewed_at": "2026-11-14T14:09:32.072233+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "723d95d2-bc63-4bae-8928-b111fc39b420",
+    "type": "fact",
+    "festival": "trevelin",
+    "year": 2014,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_silla",
+      "fuente": "El Chubut, 06/05/2014: https://www.elchubut.com.ar/esquel/2014-5-6-poetas-de-gaiman-y-trelew-ganadores-del-eisteddfod-trevelin",
+      "lote": "c78c8907-bcee-47f4-8512-36c10a23217b",
+      "value": "David Williams, de Trelew («Clymau»)"
+    },
+    "created_at": "2026-11-14T14:09:42.05194+00:00",
+    "reviewed_at": "2026-11-14T14:09:42.05194+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "7273da4a-e4a3-4994-ad31-d2ad173c3dd4",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2025,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "fuente": "Diario Jornada, 17/10/2025: https://www.diariojornada.com.ar/404442/espectaculos/alejandro_jones_de_trevelin_gano_la_medalla_de_plata",
+      "lote": "7b7437da-8989-4a62-b9ed-57e8a8108534",
+      "value": "Salón San David, Trelew"
+    },
+    "created_at": "2026-11-14T14:09:27.52225+00:00",
+    "reviewed_at": "2026-11-14T14:09:27.52225+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "72a0baca-7d08-4f57-be90-deea2b32ff0e",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2024,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_corona",
+      "fuente": "Diario Jornada, 19/10/2024: https://www.diariojornada.com.ar/380575/magazine/graciela_fernandez_coronel_gano_la_corona_del_poeta",
+      "lote": "e6acfb90-7f8c-4b7a-a6a9-08aae5c35412",
+      "value": "Graciela Fernández Coronel, de Trelew («Pago Chico»)"
+    },
+    "created_at": "2026-11-14T14:09:23.673272+00:00",
+    "reviewed_at": "2026-11-14T14:09:23.673272+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "74954d98-c537-49d0-8f69-05b980fe8f09",
+    "type": "fact",
+    "festival": "juventud",
+    "year": 2023,
+    "item_id": null,
+    "payload": {
+      "field": "end_date",
+      "fuente": "El Chubut, 31/08/2023: https://www.elchubut.com.ar/regionales/2023-8-31-13-42-0-gaiman-presento-la-edicion-2023-del-eisteddfod-de-la-juventud",
+      "lote": "f4bc3b38-5d95-4fb8-91d5-962618d3657a",
+      "value": "2023-09-09"
+    },
+    "created_at": "2026-11-14T14:09:53.417+00:00",
+    "reviewed_at": "2026-11-14T14:09:53.417+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "774f7e16-a996-4ce8-8ad7-ff2ccef9e054",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2009,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Vistas del Valle (Wayback): https://web.archive.org/web/20100223001433/http://www.vistasdelvalle.com.ar/eisteddfod/eisteddfod-2009/ganadores.htm",
+      "lote": "d0374a34-40bf-4f53-b3ab-85b8c21aa0eb",
+      "value": "Medalla de Plata (Asociación San David): Griselda Jones de Redondo («Chubut», seudónimo «Gaspar»)"
+    },
+    "created_at": "2026-11-14T14:09:05.475305+00:00",
+    "reviewed_at": "2026-11-14T14:09:05.475305+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "77c5bb87-4480-4f52-809f-ac2650723a7f",
+    "type": "fact",
+    "festival": "trevelin",
+    "year": 2021,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_silla",
+      "fuente": "El Chubut, 23/11/2021: https://www.elchubut.com.ar/esquel/2021-11-23-0-48-0-eisteddfod-2021-el-sillon-del-bardo-fue-para-ana-chiabrando-rees",
+      "lote": "a6892bfc-f904-4ffb-a389-776d2321e724",
+      "value": "Ana Chiabrando Rees"
+    },
+    "created_at": "2026-11-14T14:09:47.962255+00:00",
+    "reviewed_at": "2026-11-14T14:09:47.962255+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "78c76151-49a1-482f-bcec-b38dd573645d",
+    "type": "fact",
+    "festival": "trevelin",
+    "year": 2026,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_corona",
+      "fuente": "El Chubut, 03/05/2026: elchubut.com.ar/regionales/2026-5-3-21-11-0-alejandra-vilela-y-sara-borda-green-las-grandes-ganadoras-de-la-corona-de-plata-y-del-sillon-bardico-en-el-eisteddfod-de-trevelin",
+      "lote": "4654dc9f-db81-4398-8d73-98c39fc533c5",
+      "value": "Alejandra Vilela"
+    },
+    "created_at": "2026-11-14T14:09:50.695454+00:00",
+    "reviewed_at": "2026-11-14T14:09:50.695454+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "7a85e964-f027-402d-ac80-02ec8c78abad",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2024,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Diario Jornada, 18/10/2024: https://www.diariojornada.com.ar/380523/magazine/arie_lloyd_de_lewis_gano_la_medalla_de_plata",
+      "value": "Medalla de Plata (Asociación San David): Arié Lloyd de Lewis («La escuela borrada», seudónimo «Sur»)"
+    },
+    "created_at": "2026-11-14T14:09:24.801818+00:00",
+    "reviewed_at": "2026-11-14T14:09:24.801818+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "7c1d5ce4-6e9b-461d-a512-002235b1605b",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2008,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_corona",
+      "fuente": "Vistas del Valle (Wayback): https://web.archive.org/web/20100223000750/http://www.vistasdelvalle.com.ar/eisteddfod/eisteddfod-2008/ganadores.htm",
+      "lote": "573c4ca3-f1c2-43d2-a4a1-d9128cc0a3ba",
+      "value": "Víctor Daniel Lizama, de Gaiman (seudónimo «Tehuel»)"
+    },
+    "created_at": "2026-11-14T14:09:03.556317+00:00",
+    "reviewed_at": "2026-11-14T14:09:03.556317+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "7c897a65-fa68-4832-9504-bac3a1b649cb",
+    "type": "fact",
+    "festival": "trevelin",
+    "year": 2019,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_silla",
+      "fuente": "El Chubut, 29/04/2019: https://www.elchubut.com.ar/esquel/2019-4-29-1-50-0-poetas-de-gaiman-y-playa-union-fueron-las-ganadoras-del-eisteddfod-trevelin-2019",
+      "lote": "b2ae9622-afe3-4ca4-9329-dc40fb870759",
+      "value": "Ana Chiabrando, de Gaiman"
+    },
+    "created_at": "2026-11-14T14:09:46.600195+00:00",
+    "reviewed_at": "2026-11-14T14:09:46.600195+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "7f706274-643f-45ac-83ec-e7189832fcdb",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2018,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_silla",
+      "fuente": "El Chubut, 27/10/2018: https://www.elchubut.com.ar/regionales/2018-10-27-17-51-0-eisteddfod-terwyn-tomos-gano-el-sillon-bardico",
+      "value": "Terwyn Tomos (lo representó Dai Jones)"
+    },
+    "created_at": "2026-11-14T14:09:35.704297+00:00",
+    "reviewed_at": "2026-11-14T14:09:35.704297+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -113,6 +1031,21 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "8be26600-6012-48c9-8a26-222fbfd4905c",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2024,
+    "item_id": "fa7edc79fb2f",
+    "payload": {
+      "category": "bases",
+      "festival": "chubut",
+      "year": 2024
+    },
+    "created_at": "2026-11-14T10:44:13.797036+00:00",
+    "reviewed_at": "2026-11-14T11:02:41.205923+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "8f1484ff-75dd-4a7b-a262-9e0d3b6ce9ca",
     "type": "tag",
     "festival": "chubut",
@@ -123,6 +1056,350 @@
     },
     "created_at": "2026-11-13T21:17:23.37003+00:00",
     "reviewed_at": "2026-11-13T21:17:35.270539+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "8f27f204-b0a1-488f-b3f0-8810c5756207",
+    "type": "fact",
+    "festival": "trevelin",
+    "year": 2017,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_corona",
+      "fuente": "El Chubut, 01/05/2017: https://www.elchubut.com.ar/esquel/2017-5-1-22-48-0-las-poetas-sara-borda-green-y-graciela-fernandez-de-jones-fueron-coronadas-en-el-40-eisteddfod-de-trevelin",
+      "lote": "bd244f00-5d62-4aec-a732-b149fc05a677",
+      "value": "Graciela Fernández de Jones"
+    },
+    "created_at": "2026-11-14T14:09:43.410289+00:00",
+    "reviewed_at": "2026-11-14T14:09:43.410289+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "900327ed-dc7b-4f59-b982-7f9eae6d6c52",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2014,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Diario Jornada, 24/10/2014: https://www.diariojornada.com.ar/109871/magazine/eisteddfod_la_medalla_de_plata_para_edith_albaini__",
+      "lote": "1f5e8771-03f6-4260-8144-688a5f629083",
+      "value": "Medalla de Plata (Asociación San David): Edith Esther Albaini, de Puerto Madryn («Patio de lilas»)"
+    },
+    "created_at": "2026-11-14T14:09:09.603838+00:00",
+    "reviewed_at": "2026-11-14T14:09:09.603838+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "90ff7c7f-fdb1-4505-a1df-83ff36fa49ed",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2016,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_corona",
+      "fuente": "El Chubut, 30/10/2016: https://www.elchubut.com.ar/regionales/2016-10-30-cecilia-glanzmann-gano-la-corona-del-poeta-en-el-cierre-del-eisteddfod-del-chubut",
+      "lote": "8eb74435-b83b-468d-8dff-a022bf8c10fc",
+      "value": "Cecilia Glanzmann"
+    },
+    "created_at": "2026-11-14T14:09:34.571181+00:00",
+    "reviewed_at": "2026-11-14T14:09:34.571181+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "921f48a3-ad11-4c6e-96b8-15c5f863bf8d",
+    "type": "fact",
+    "festival": "juventud",
+    "year": 2023,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "El Chubut, 15/09/2024: https://www.elchubut.com.ar/regionales/2024-9-15-21-13-0-santiago-pires-gano-la-medalla-de-plata-en-el-eisteddfod-de-la-juventud-2024",
+      "value": "Medalla de Plata (Municipalidad de Gaiman): Valentina Martínez Evans"
+    },
+    "created_at": "2026-11-14T14:09:54.54715+00:00",
+    "reviewed_at": "2026-11-14T14:09:54.54715+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "9287201c-8e98-4438-8855-379ce5b9e29b",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2008,
+    "item_id": null,
+    "payload": {
+      "field": "start_date",
+      "fuente": "Vistas del Valle (Wayback): https://web.archive.org/web/20100223000750/http://www.vistasdelvalle.com.ar/eisteddfod/eisteddfod-2008/ganadores.htm",
+      "lote": "573c4ca3-f1c2-43d2-a4a1-d9128cc0a3ba",
+      "value": "2008-10-24"
+    },
+    "created_at": "2026-11-14T14:09:03.556317+00:00",
+    "reviewed_at": "2026-11-14T14:09:03.556317+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "953fc9eb-194d-4986-87a6-1bb4cc694945",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2022,
+    "item_id": "e49c26c600a8",
+    "payload": {
+      "category": "programa",
+      "festival": "chubut",
+      "year": 2022
+    },
+    "created_at": "2026-11-14T10:44:34.801678+00:00",
+    "reviewed_at": "2026-11-14T11:02:48.584495+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "955722a4-d23e-4b3d-b0e7-be6e26c557e7",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2007,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Vistas del Valle (Wayback): https://web.archive.org/web/20080906093630/http://www.vistasdelvalle.com.ar/eisteddfod/eistedfod-2007/ganadores.htm",
+      "lote": "86421ae6-74f4-49a2-bd3f-a077421f6cda",
+      "value": "Corona del Poeta declarada desierta (2.º Ricardo Chiesa, 3.º Laureano Huayquilaf); Medalla de Plata desierta"
+    },
+    "created_at": "2026-11-14T14:09:01.351788+00:00",
+    "reviewed_at": "2026-11-14T14:09:01.351788+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "96797fa1-6583-407f-bd8b-cb1c39874ed8",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2018,
+    "item_id": null,
+    "payload": {
+      "field": "start_date",
+      "fuente": "Diario Jornada, 20/10/2018: https://www.diariojornada.com.ar/222243/magazine/el_lunes_comienza_la_semana_del_eisteddfod",
+      "lote": "6c90eb78-fa95-4a03-b96a-f0c5a2ee3680",
+      "value": "2018-10-26"
+    },
+    "created_at": "2026-11-14T14:09:15.728485+00:00",
+    "reviewed_at": "2026-11-14T14:09:15.728485+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "98011ac5-18f0-4276-a35d-012aa8d4cdc2",
+    "type": "fact",
+    "festival": "trevelin",
+    "year": 2017,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_silla",
+      "fuente": "El Chubut, 01/05/2017: https://www.elchubut.com.ar/esquel/2017-5-1-22-48-0-las-poetas-sara-borda-green-y-graciela-fernandez-de-jones-fueron-coronadas-en-el-40-eisteddfod-de-trevelin",
+      "lote": "bd244f00-5d62-4aec-a732-b149fc05a677",
+      "value": "Sara Borda Green, de Trevelin"
+    },
+    "created_at": "2026-11-14T14:09:43.410289+00:00",
+    "reviewed_at": "2026-11-14T14:09:43.410289+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "9a8805b6-9c4c-4879-9499-7ed2f289c442",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2006,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_silla",
+      "fuente": "Vistas del Valle (Wayback): https://web.archive.org/web/20070715005844/http://www.vistasdelvalle.com.ar/eisteddfod/eisteddfod-2006/ganadores.htm",
+      "lote": "956d57dc-e75a-41c6-a24b-b21e17f1a98c",
+      "value": "Roberts John Griffiths («Cylchoed»)"
+    },
+    "created_at": "2026-11-14T14:08:59.601738+00:00",
+    "reviewed_at": "2026-11-14T14:08:59.601738+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "9cbc9307-4cc3-425e-a253-819133b369d9",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2017,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Diario Jornada, 30/10/2017: https://www.diariojornada.com.ar/199348/magazine/el_eisteddfod_del_chubut_y_una_nueva_coronacion",
+      "lote": "f2700058-d8e2-4a97-90fa-014d5633263b",
+      "value": "Medalla de Plata (Asociación San David): Arié Lloyd de Lewis"
+    },
+    "created_at": "2026-11-14T14:09:14.140694+00:00",
+    "reviewed_at": "2026-11-14T14:09:14.140694+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "9cc6a745-fb4a-4839-acfc-a9f42a8208f4",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2025,
+    "item_id": "dc37d75fa143",
+    "payload": {
+      "category": "bases",
+      "festival": "chubut",
+      "year": 2025
+    },
+    "created_at": "2026-11-14T10:44:49.007193+00:00",
+    "reviewed_at": "2026-11-14T11:02:50.265326+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "9ce27db2-9fcc-4555-b6e9-b89dd8012618",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2020,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Diario Jornada, 10/10/2020: https://www.diariojornada.com.ar/285135/magazine/el_20_de_octubre_comienza_el_eisteddadre",
+      "value": "No se realizó en forma presencial; en octubre se hizo «EisteddAdre», un festival virtual y no competitivo transmitido por Facebook"
+    },
+    "created_at": "2026-11-14T14:09:16.877267+00:00",
+    "reviewed_at": "2026-11-14T14:09:16.877267+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "9e27044b-ea15-4a5e-99e1-714e308f319f",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2024,
+    "item_id": null,
+    "payload": {
+      "field": "start_date",
+      "fuente": "Diario Jornada, 14/10/2024: https://www.diariojornada.com.ar/380164/magazine/presentan_los_atributos_del_eisteddfod_del_chubut_edicion_2024",
+      "lote": "f7b82d38-359d-4569-a86c-82032fc1ceab",
+      "value": "2024-10-18"
+    },
+    "created_at": "2026-11-14T14:13:09.505018+00:00",
+    "reviewed_at": "2026-11-14T14:13:09.505018+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "9ebb3a1f-c0f6-40b3-b1dd-e16341bdb76a",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2006,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Vistas del Valle (Wayback): https://web.archive.org/web/20070715005844/http://www.vistasdelvalle.com.ar/eisteddfod/eisteddfod-2006/ganadores.htm",
+      "lote": "956d57dc-e75a-41c6-a24b-b21e17f1a98c",
+      "value": "Medalla de Plata (Asociación San David): Arié Lloyd de Lewis"
+    },
+    "created_at": "2026-11-14T14:08:59.601738+00:00",
+    "reviewed_at": "2026-11-14T14:08:59.601738+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "9f479715-74d5-4af9-a173-ed21979e5c56",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2016,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "El Chubut, 30/10/2016: https://www.elchubut.com.ar/regionales/2016-10-30-cecilia-glanzmann-gano-la-corona-del-poeta-en-el-cierre-del-eisteddfod-del-chubut",
+      "value": "Sillón Bárdico (poesía en galés) de carácter internacional: abierto a poetas de cualquier país"
+    },
+    "created_at": "2026-11-14T14:25:31.097806+00:00",
+    "reviewed_at": "2026-11-14T14:25:31.097806+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "a068cd30-d7bb-4a93-8386-e521f912380d",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2024,
+    "item_id": "3514511ae939",
+    "payload": {
+      "category": "bases",
+      "festival": "chubut",
+      "year": 2024
+    },
+    "created_at": "2026-11-14T13:18:54.177979+00:00",
+    "reviewed_at": "2026-11-14T13:20:45.767279+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "a1d22c15-d39f-401e-b3cf-77bfaeddb074",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2024,
+    "item_id": "5ac9767d9adf",
+    "payload": {
+      "category": "bases",
+      "festival": "chubut",
+      "year": 2024
+    },
+    "created_at": "2026-11-14T13:19:19.711476+00:00",
+    "reviewed_at": "2026-11-14T13:20:59.028483+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "a4470a1e-e25f-41d3-84ef-0c76fd397a46",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2023,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "fuente": "Diario Jornada, 30/10/2023: https://www.diariojornada.com.ar/357276/espectaculos/omar_davies_gano_la_corona_del_poeta_en_el_eisteddfod_del_chubut",
+      "lote": "5cfd5f4e-6584-4cae-b118-6bcf165fc750",
+      "value": "Salón de la Asociación San David, Trelew"
+    },
+    "created_at": "2026-11-14T14:09:20.944203+00:00",
+    "reviewed_at": "2026-11-14T14:09:20.944203+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "a54c0ed5-aaaf-4140-8884-1fe2d7299c63",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2019,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_corona",
+      "fuente": "El Chubut, 19/10/2019: https://www.elchubut.com.ar/regionales/2019-10-19-20-41-0-eisteddfod-chubut-entregaron-el-sillon-bardico-y-la-corona-del-poeta",
+      "lote": "1e6e3f65-3b22-41c0-ae82-2908e161af13",
+      "value": "Owen Tudur Jones («Jalando repasos», seudónimo «Maxel»)"
+    },
+    "created_at": "2026-11-14T14:09:37.06148+00:00",
+    "reviewed_at": "2026-11-14T14:09:37.06148+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "a67f77bb-1580-4965-a49d-2449802f2906",
+    "type": "fact",
+    "festival": "juventud",
+    "year": 2019,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "fuente": "El Chubut, 07/09/2019: https://www.elchubut.com.ar/nota/2019-9-7-0-1-0-se-realizo-la-apertura-del-eisteddfod-de-la-juventud-en-el-gimnasio-municipal-de-gaiman",
+      "value": "Gimnasio Municipal de Gaiman"
+    },
+    "created_at": "2026-11-14T14:09:51.824539+00:00",
+    "reviewed_at": "2026-11-14T14:09:51.824539+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "a857cccc-b85a-410a-a815-e036fcad5fce",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2025,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_silla",
+      "fuente": "Diario Jornada, 18/10/2025: https://www.diariojornada.com.ar/404482/magazine/arie_lloyd_de_lewis_gano_la_corona_del_poeta",
+      "lote": "370bf007-afc7-4427-aafa-961407afaede",
+      "value": "Sara Borda Green"
+    },
+    "created_at": "2026-11-14T14:09:26.161063+00:00",
+    "reviewed_at": "2026-11-14T14:09:26.161063+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -141,6 +1418,37 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "acfb47a2-bea1-43c8-8ce1-8eb9b008a8d7",
+    "type": "tag",
+    "festival": "juventud",
+    "year": 2025,
+    "item_id": "ba9d13d8540e",
+    "payload": {
+      "category": "bases",
+      "festival": "juventud",
+      "year": 2025
+    },
+    "created_at": "2026-11-14T10:44:09.702798+00:00",
+    "reviewed_at": "2026-11-14T11:02:39.612976+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "ae5b18ff-e20b-43ea-8a15-24fdd986c783",
+    "type": "fact",
+    "festival": "juventud",
+    "year": 2023,
+    "item_id": null,
+    "payload": {
+      "field": "start_date",
+      "fuente": "El Chubut, 31/08/2023: https://www.elchubut.com.ar/regionales/2023-8-31-13-42-0-gaiman-presento-la-edicion-2023-del-eisteddfod-de-la-juventud",
+      "lote": "f4bc3b38-5d95-4fb8-91d5-962618d3657a",
+      "value": "2023-09-08"
+    },
+    "created_at": "2026-11-14T14:09:53.417+00:00",
+    "reviewed_at": "2026-11-14T14:09:53.417+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "af45abd5-a9b0-407d-8452-6017a00168a4",
     "type": "tag",
     "festival": "juventud",
@@ -153,6 +1461,38 @@
     },
     "created_at": "2026-11-13T22:38:59.464454+00:00",
     "reviewed_at": "2026-11-13T22:52:06.391664+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "b49c6b8b-7fa5-4408-ac71-1abe9e128eb4",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2025,
+    "item_id": null,
+    "payload": {
+      "field": "start_date",
+      "fuente": "Diario Jornada, 14/10/2025: https://www.diariojornada.com.ar/404254/espectaculos/la_semana_del_eisteddfod_2025_esta_en_marcha",
+      "lote": "ad50f514-f5a2-4ed3-8ffd-bde82f9f3c00",
+      "value": "2025-10-17"
+    },
+    "created_at": "2026-11-14T14:13:10.350596+00:00",
+    "reviewed_at": "2026-11-14T14:13:10.350596+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "ba478501-8348-42d2-8d83-8040b5495554",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2008,
+    "item_id": null,
+    "payload": {
+      "field": "end_date",
+      "fuente": "Vistas del Valle (Wayback): https://web.archive.org/web/20100223000750/http://www.vistasdelvalle.com.ar/eisteddfod/eisteddfod-2008/ganadores.htm",
+      "lote": "573c4ca3-f1c2-43d2-a4a1-d9128cc0a3ba",
+      "value": "2008-10-25"
+    },
+    "created_at": "2026-11-14T14:09:03.556317+00:00",
+    "reviewed_at": "2026-11-14T14:09:03.556317+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -171,6 +1511,37 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "bb35a772-ddc4-4315-bcea-27f5d9ec36a9",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2021,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_corona",
+      "fuente": "El Chubut, 23/10/2021: https://www.elchubut.com.ar/regionales/2021-10-23-20-32-0-nanci-jones-gano-la-corona-del-poeta",
+      "value": "Nanci Jones, de Rawson («Oblivion», seudónimo «Adar Las»)"
+    },
+    "created_at": "2026-11-14T14:09:38.194455+00:00",
+    "reviewed_at": "2026-11-14T14:09:38.194455+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "bc7dcc74-7424-4148-b4d5-43fcda1b4b6c",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2024,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "fuente": "Diario Jornada, 19/10/2024: https://www.diariojornada.com.ar/380575/magazine/graciela_fernandez_coronel_gano_la_corona_del_poeta",
+      "lote": "e6acfb90-7f8c-4b7a-a6a9-08aae5c35412",
+      "value": "Salón San David, Trelew"
+    },
+    "created_at": "2026-11-14T14:09:23.673272+00:00",
+    "reviewed_at": "2026-11-14T14:09:23.673272+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "bcaf4152-32f8-4979-ab53-276d1db63c57",
     "type": "fact",
     "festival": "chubut",
@@ -185,6 +1556,54 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "bd02d419-d74e-4a53-82f1-b0a6014a982f",
+    "type": "fact",
+    "festival": "trevelin",
+    "year": 2022,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_corona",
+      "fuente": "Diario Jornada, 20/11/2022: https://www.diariojornada.com.ar/337583/magazine/nantlais_evans_y_vilma_jones__ganadores_del_eisteddfod",
+      "lote": "161904b2-ed71-451e-98a8-f0fa8f6e2d20",
+      "value": "Nantlais Evans"
+    },
+    "created_at": "2026-11-14T14:09:30.248472+00:00",
+    "reviewed_at": "2026-11-14T14:09:30.248472+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "befa21f0-f5e4-413b-b53c-e11255b409ce",
+    "type": "fact",
+    "festival": "trevelin",
+    "year": 2026,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_silla",
+      "fuente": "El Chubut, 03/05/2026: elchubut.com.ar/regionales/2026-5-3-21-11-0-alejandra-vilela-y-sara-borda-green-las-grandes-ganadoras-de-la-corona-de-plata-y-del-sillon-bardico-en-el-eisteddfod-de-trevelin",
+      "lote": "4654dc9f-db81-4398-8d73-98c39fc533c5",
+      "value": "Sara Borda Green"
+    },
+    "created_at": "2026-11-14T14:09:50.695454+00:00",
+    "reviewed_at": "2026-11-14T14:09:50.695454+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "bfc7f382-ac16-4e16-8121-53162e81a9c3",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2026,
+    "item_id": null,
+    "payload": {
+      "field": "end_date",
+      "fuente": "Diario Jornada, 10/10/2026: https://www.diariojornada.com.ar/425021/magazine/cierran_las_inscripciones_del_eisteddfod_2026",
+      "lote": "246ddf56-ec42-437c-910a-13d300045897",
+      "value": "2026-10-24"
+    },
+    "created_at": "2026-11-14T14:13:11.449352+00:00",
+    "reviewed_at": "2026-11-14T14:13:11.449352+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "c028b0dc-7dc5-4998-ad8d-3ed89b80c019",
     "type": "tag",
     "festival": "chubut",
@@ -195,6 +1614,22 @@
     },
     "created_at": "2026-11-13T22:53:19.449556+00:00",
     "reviewed_at": "2026-11-13T23:47:15.234541+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "c0dde317-a0cb-4fc1-8871-40c7ed1454e6",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2026,
+    "item_id": null,
+    "payload": {
+      "field": "start_date",
+      "fuente": "Diario Jornada, 10/10/2026: https://www.diariojornada.com.ar/425021/magazine/cierran_las_inscripciones_del_eisteddfod_2026",
+      "lote": "246ddf56-ec42-437c-910a-13d300045897",
+      "value": "2026-10-23"
+    },
+    "created_at": "2026-11-14T14:13:11.449352+00:00",
+    "reviewed_at": "2026-11-14T14:13:11.449352+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -218,6 +1653,37 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "c3a4a35a-9d3f-4e74-9986-b24c44f9f310",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2026,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_corona",
+      "fuente": "El Chubut, 24/10/2026: https://www.elchubut.com.ar/trelew/2026-10-24-20-40-0-waldo-griffiths-gano-la-corona-del-poeta-en-el-eisteddfod-del-chubut",
+      "value": "Waldo Griffiths, de Trelew («1899», seudónimo «Gelert»)"
+    },
+    "created_at": "2026-11-14T14:07:27.752471+00:00",
+    "reviewed_at": "2026-11-14T14:07:27.752471+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "c4d878dc-d021-4162-90a5-7defc27d88d9",
+    "type": "fact",
+    "festival": "trevelin",
+    "year": 2019,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_corona",
+      "fuente": "El Chubut, 29/04/2019: https://www.elchubut.com.ar/esquel/2019-4-29-1-50-0-poetas-de-gaiman-y-playa-union-fueron-las-ganadoras-del-eisteddfod-trevelin-2019",
+      "lote": "b2ae9622-afe3-4ca4-9329-dc40fb870759",
+      "value": "Alicia Cristina de Volpi, de Playa Unión"
+    },
+    "created_at": "2026-11-14T14:09:46.600195+00:00",
+    "reviewed_at": "2026-11-14T14:09:46.600195+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "c57e230f-10b5-4b87-a5b7-e228dc23cb84",
     "type": "upload",
     "festival": "chubut",
@@ -238,6 +1704,54 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "c5c37fc8-bfe7-4293-b550-830bfcb5f3a6",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2022,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_corona",
+      "fuente": "Diario Jornada, 22/10/2022: https://www.diariojornada.com.ar/335769/magazine/ana_chiabrando_rees_gano_el_sillon_bardico_por_tercera_vez_",
+      "lote": "a2588139-2e1a-46a8-b402-b317c64f9603",
+      "value": "Liliana Pérez, de Trelew («Puro sueño»)"
+    },
+    "created_at": "2026-11-14T14:09:18.215996+00:00",
+    "reviewed_at": "2026-11-14T14:09:18.215996+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "c967d253-c895-4ee4-8ed9-b3263e610c56",
+    "type": "fact",
+    "festival": "trevelin",
+    "year": 2014,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_corona",
+      "fuente": "El Chubut, 06/05/2014: https://www.elchubut.com.ar/esquel/2014-5-6-poetas-de-gaiman-y-trelew-ganadores-del-eisteddfod-trevelin",
+      "lote": "c78c8907-bcee-47f4-8512-36c10a23217b",
+      "value": "Geraldine Mac Burney, de Gaiman («Taid»)"
+    },
+    "created_at": "2026-11-14T14:09:42.05194+00:00",
+    "reviewed_at": "2026-11-14T14:09:42.05194+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "ccf128db-c17c-4fe4-a3bd-9a6809ea5923",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2009,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_corona",
+      "fuente": "Vistas del Valle (Wayback): https://web.archive.org/web/20100223001433/http://www.vistasdelvalle.com.ar/eisteddfod/eisteddfod-2009/ganadores.htm",
+      "lote": "d0374a34-40bf-4f53-b3ab-85b8c21aa0eb",
+      "value": "Geraldine Mac Burney («Inventario», seudónimo «Edenizo»)"
+    },
+    "created_at": "2026-11-14T14:09:05.475305+00:00",
+    "reviewed_at": "2026-11-14T14:09:05.475305+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "ce6e200f-52c9-428e-b99d-32a2adc2dcb3",
     "type": "tag",
     "festival": "juventud",
@@ -250,6 +1764,130 @@
     },
     "created_at": "2026-11-13T22:38:51.72125+00:00",
     "reviewed_at": "2026-11-13T23:47:16.827352+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "ce868293-64d1-472a-89d2-fc20bf73c515",
+    "type": "fact",
+    "festival": "trevelin",
+    "year": 2025,
+    "item_id": null,
+    "payload": {
+      "field": "end_date",
+      "fuente": "Diario Jornada, 06/05/2025: https://www.diariojornada.com.ar/393953/espectaculos/lois_medi_wiliam_y_noelia_sanchez_jenkins_ganaron_en_el_eisteddfod_2025",
+      "lote": "5e6a0bca-18ed-46cf-bdc9-b9a38e50ada3",
+      "value": "2025-05-04"
+    },
+    "created_at": "2026-11-14T14:09:32.072233+00:00",
+    "reviewed_at": "2026-11-14T14:09:32.072233+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "d57d4c3e-8346-410e-9fbb-1b1128ad64d2",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2022,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_silla",
+      "fuente": "Diario Jornada, 22/10/2022: https://www.diariojornada.com.ar/335769/magazine/ana_chiabrando_rees_gano_el_sillon_bardico_por_tercera_vez_",
+      "lote": "a2588139-2e1a-46a8-b402-b317c64f9603",
+      "value": "Ana Chiabrando Rees, de Gaiman («Myfyrio»), por tercera vez"
+    },
+    "created_at": "2026-11-14T14:09:18.215996+00:00",
+    "reviewed_at": "2026-11-14T14:09:18.215996+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "d6bf63a2-d571-4dc9-aecd-8d189f1ce3bc",
+    "type": "transcription",
+    "festival": "mimosa",
+    "year": 2006,
+    "item_id": "b64a2b4db146",
+    "payload": {
+      "text": "Literatura - Llenyddiaeth\nForma de presentación de los trabajos: hoja tamaño A4, por duplicado, tipeados en computadora y con seudónimo y número de competencia al pie. Si se trata de niños, indicar también la edad.\nDatos personales: nombre y apellido, DNI, dirección y teléfono en sobre cerrado, con seudónimo y número de competencia en su cara anterior.\nNo se aceptarán más de tres (3) trabajos por autor.\n1.- Penillion syml: \"Ar lan y môr\".\n2.- Adroddiad addas i ddysgwyr dan 8 oed.\n3.- Adroddiad addas i ddysgwyr dan 18 oed.\n\nRhyddiaith\n4.- Ysgrif: Diwrnod Ysgol.\n5.- Hanesyn: Croesi'r Paith.\n6.- Hunangofiant: \"Yr Hen Gapel\".\n\nCyfansoddi ar gyfer dysgwyr\n7.- Stori amdana i. Fy Nheulu / Fy Ardal.\n8.- Sgwrs ag un o drigolion y wladfa wedi recordio ar gaset.\n9.- E-bost i ffrind yng Nghymru.\n\nBarddoniaeth\n10.- Agored. Gwobr \"Telyn\". Tlws yr Eisteddfod (y gystadleuaeth hon yn agored i bawb). Cyfres o gerddi rhwng 48 a 100 o linellau ar y testun \"Glanio\".\n\nProsa\n11.- Hasta 12 años: historieta: \"Una historia de amor\".\n12.- Para 13 y 14 años: cuento de ciencia ficción.\n13.- Para 15 y 16 años: relato: \"Una fiesta de cumpleaños\".\n14.- Para 17 y 18 años: ensayo: \"Qué pienso de esta época que me toca vivir\".\n15.- Para 19 y 20 años: entrevista a una banda de música local.\n\nAdultos\n16.- Nota de opinión para un diario sobre un problema importante de la ciudad.\n17.- Cuento policial.\n18.- Historia de vida de un pescador de la zona (extensión máxima 3 páginas).\n19.- Informe final con las conclusiones de un trabajo de investigación sobre alguna de las corrientes migratorias que poblaron la ciudad (extensión máxima 3 páginas).\n\nPoesía\n20.- Hasta 20 años. Trabajo inédito, tema y métrica libre, no premiado en otro concurso. Extensión máxima 30 versos. No se aceptarán mas de tres poesías por inscripto.\n21.- Adultos. Premio \"Mimosa\". Trabajo inédito, tema y métrica libre, no premiado en otro concurso. Extensión máxima 30 versos. No se aceptarán mas de tres trabajos por inscripto.\n\nTraducciones - Cyfieithu\nForma de presentación de los trabajos: hoja tamaño A4, por duplicado, tipeados en computadora y con seudónimo y número de competencia al pie. Si se trata de niños, indicar también la edad.\nDatos personales: nombre y apellido, DNI, dirección y teléfono en sobre cerrado, con seudónimo y número de competencia en su cara anterior.\nNo se aceptarán más de tres (3) trabajos por autor.\n22.- O'r gymraeg i'r sbaeneg: \"Atgofion o Batagonia\".\n23.- O'r sbaeneg i'r gymraeg: \"Michael D. Jones\".\n24.- English to Spanish: \"A linguistic and cultural revival?\".\n25.- Spanish to English: \"La salida de Bahía Nueva\".\n26.- Du francais à l'espagnol: \"L'exclusion par intolérance\".\n27.- De l'espagnol au francais: \"Llegada del Vesta\".\n28.- Do spanhol ao portugueis: \"Cenhinen bedr\".\n\nRecitaciÓn - Adrodd\nCymraeg\n29.- Hyd 8 oed: \"Pengwin\".\n30.- Hyd 12 oed: \"Ond dwi'n sâl!\".\n31.- Hyd 16 oed: \"Lliwiau\".\n32.- Agored. Parti adrodd dysgwyr: \"Sŵn\".\n\nCastellano\n33.- Hasta 6 años: \"Nanaluna\", de Cecilia Pisos.\n34.- De 7 a 9 años: \"Me gusta el chico de 4to\", de Edith Albaini.\n35.- De 10 a 12 años: \"Pastorcito patagónico\", de Owen Tydur Jones.\n36.- De 13 a 15 años: \"¡Ay, señora mi vecina!\", de Nicolás Guillén.\n37.- De 16 a 20 años: \"La guitarra\", de Federico García Lorca.\n\nAdultos\n38.- Femenina: \"Solo memorias\", de Irma Cuña.\n39.- Masculina: \"Anda al pueblo, hermano\", de Sergio Mansilla.\n40.- Libre: \"Soneto de amor\", de Antonio Requeni.\n41.- PRINCIPAL: \"Solo así\", de Lidia Esther Romero. (poesía ganadora en el Eisteddfod Mimosa 2004).\n\nMÚsica - Cerddoriaeth\nCymraeg\n42.- Hyd 7 oed: Unawd: \"Mi welais Jac y Do\", alaw werin Gymreig (allan o \"Cadi Ha\").\n43.- Hyd 12 oed: Unawd: \"Iesu Tirion\", emyn allan o Caniedydd Newydd yr Ysgol Sul.\n44.- Hyd 14 oed: Parti Unsain i blant: \"Lwli Lwle\" gan Euros Rhys Evans, geiriau W. Rhys Nicholas.\n\nAgored\n45.- Unawd Emyn: hunanddewisiad. (x)\n46.- Parti Gwerin: hunanddewisiad. (x)\n47.- Parti Meibion neu Parti Merched: \"Gwin Beajolais\", gan Robat Arwyn.\n48.- Côr Cymysg: \"Tra Bo Dau\", trefn. J. Lloyd Williams.\n\nCastellano\n49.- De 4 a 6 años: conjunto hasta 8 integrantes: \"Canción de tomar el té\", de María Elena Walsh.\n50.- Para 7 y 8 años: solo: \"El árbol\", de Carlos Guastavino.\n51.- Canción dramatizada: \"Que se vengan los chicos\", de Eugenio Inchausti.\n52.- Coro escolar: \"La luna y el carnaval\", de Luis Ángel Derman.\n\nAdultos y jóvenes\n53.- Solo Mezzosoprano: \"Huella y distancia\", Julio Zas Núñez - Clydwyn Jones.\n54.- Solo Tenor: \"Quiñemapu\", Lidia Romero - Clydwyn Jones.\n55.- Conjunto masculino: \"El último café\", H.Stamponi-C. Castillo, Arr. Emilio Dublanc, Adaptación: Víctor Armendáriz.\n56.- Conjunto hasta 20 integrantes: \"La Estrella Azul\", P.Carabajal, Arr. Eduardo Ferraudi.\n57.- Conjunto familiar. Obra a elección. (x).\n58.- Violín y piano. Obra a elección. Duración no mayor a cinco (5) minutos. (x)\n59.- Flauta traversa y piano. Obra a elección. Duración no mayor a cinco minutos. (x)\n60.- Conjunto instrumental.Formación y obra a elección. (x)"
+    },
+    "created_at": "2026-11-14T14:33:16.285473+00:00",
+    "reviewed_at": "2026-11-14T14:33:27.668455+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "d990fbde-6bd2-4dc2-81a1-d7910ec92052",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2017,
+    "item_id": "cf4d6221c645",
+    "payload": {
+      "category": "bases",
+      "festival": "chubut",
+      "year": 2017
+    },
+    "created_at": "2026-11-14T10:44:21.153913+00:00",
+    "reviewed_at": "2026-11-14T11:02:45.727162+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "da1dd0c4-018c-4ae9-a674-18c759361df5",
+    "type": "fact",
+    "festival": "trevelin",
+    "year": 2025,
+    "item_id": null,
+    "payload": {
+      "field": "start_date",
+      "fuente": "Diario Jornada, 06/05/2025: https://www.diariojornada.com.ar/393953/espectaculos/lois_medi_wiliam_y_noelia_sanchez_jenkins_ganaron_en_el_eisteddfod_2025",
+      "lote": "5e6a0bca-18ed-46cf-bdc9-b9a38e50ada3",
+      "value": "2025-05-03"
+    },
+    "created_at": "2026-11-14T14:09:32.072233+00:00",
+    "reviewed_at": "2026-11-14T14:09:32.072233+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "dc892ed3-1982-482f-9f84-95b9c53e7496",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2024,
+    "item_id": null,
+    "payload": {
+      "field": "end_date",
+      "fuente": "Diario Jornada, 14/10/2024: https://www.diariojornada.com.ar/380164/magazine/presentan_los_atributos_del_eisteddfod_del_chubut_edicion_2024",
+      "lote": "f7b82d38-359d-4569-a86c-82032fc1ceab",
+      "value": "2024-10-19"
+    },
+    "created_at": "2026-11-14T14:13:09.505018+00:00",
+    "reviewed_at": "2026-11-14T14:13:09.505018+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "dc983f1c-265b-404c-9762-e26165f7a823",
+    "type": "fact",
+    "festival": "mimosa",
+    "year": 2025,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "El Chubut, 01/07/2025: https://www.elchubut.com.ar/puerto-madryn/2025-7-1-20-52-0-una-multitud-disfruto-del-eisteddfod-mimosa-porth-madryn",
+      "lote": "eaaee53f-12a4-4fc7-afc3-320b7f67b313",
+      "value": "Premio Telyn (poesía en galés): Lois Medi Wiliam, de Gales; Premio Mimosa (poesía en castellano): Martin Federico Rowland"
+    },
+    "created_at": "2026-11-14T14:09:57.283747+00:00",
+    "reviewed_at": "2026-11-14T14:09:57.283747+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "de3cd928-f4da-4caf-a0c7-f81b442fb53d",
+    "type": "fact",
+    "festival": "trevelin",
+    "year": 2019,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "fuente": "El Chubut, 29/04/2019: https://www.elchubut.com.ar/esquel/2019-4-29-1-50-0-poetas-de-gaiman-y-playa-union-fueron-las-ganadoras-del-eisteddfod-trevelin-2019",
+      "lote": "b2ae9622-afe3-4ca4-9329-dc40fb870759",
+      "value": "SUM de la Escuela N.º 57, Trevelin"
+    },
+    "created_at": "2026-11-14T14:09:46.600195+00:00",
+    "reviewed_at": "2026-11-14T14:09:46.600195+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -267,6 +1905,174 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "e0018614-302a-48a9-9a3a-6be5b1fbffec",
+    "type": "fact",
+    "festival": "trevelin",
+    "year": 2018,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_corona",
+      "fuente": "El Chubut, 29/04/2018: https://www.elchubut.com.ar/esquel/2018-4-29-0-23-0-con-gran-exito-se-llevo-acabo-el-eisteddfod-de-trevelin",
+      "lote": "898e125a-1311-4195-897b-8dbdf246dafe",
+      "value": "Mónica Jones, de Gaiman («A la hora del Ángelus»)"
+    },
+    "created_at": "2026-11-14T14:09:45.016313+00:00",
+    "reviewed_at": "2026-11-14T14:09:45.016313+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "e1841e1e-c35c-489f-b49c-bf387cc9a338",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2014,
+    "item_id": "bcfeee05fbcb",
+    "payload": {
+      "category": "bases",
+      "festival": "chubut",
+      "year": 2014
+    },
+    "created_at": "2026-11-14T13:18:43.523944+00:00",
+    "reviewed_at": "2026-11-14T13:20:44.791628+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "e419ab2a-99a4-4119-b075-3b88d8b7a313",
+    "type": "fact",
+    "festival": "juventud",
+    "year": 2023,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "fuente": "El Chubut, 31/08/2023: https://www.elchubut.com.ar/regionales/2023-8-31-13-42-0-gaiman-presento-la-edicion-2023-del-eisteddfod-de-la-juventud",
+      "lote": "f4bc3b38-5d95-4fb8-91d5-962618d3657a",
+      "value": "Gimnasio Municipal de Gaiman"
+    },
+    "created_at": "2026-11-14T14:09:53.417+00:00",
+    "reviewed_at": "2026-11-14T14:09:53.417+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "e66e4589-9313-4918-8e93-bc0ea219342a",
+    "type": "fact",
+    "festival": "trevelin",
+    "year": 2018,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "fuente": "El Chubut, 29/04/2018: https://www.elchubut.com.ar/esquel/2018-4-29-0-23-0-con-gran-exito-se-llevo-acabo-el-eisteddfod-de-trevelin",
+      "lote": "898e125a-1311-4195-897b-8dbdf246dafe",
+      "value": "SUM de la Escuela N.º 57, Trevelin"
+    },
+    "created_at": "2026-11-14T14:09:45.016313+00:00",
+    "reviewed_at": "2026-11-14T14:09:45.016313+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "e6ba91df-68fb-4047-8d47-6abe9d430720",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2017,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_corona",
+      "fuente": "Diario Jornada, 28/10/2017: https://www.diariojornada.com.ar/199223/magazine/la_corona_del_poeta_del_eisteddfod_chubut_fue_para_carolina_zamudio",
+      "lote": "a00686d5-dcb0-4ca6-a761-252db4c453f8",
+      "value": "Carolina Zamudio, de Curuzú Cuatiá (seudónimo «Bretón»)"
+    },
+    "created_at": "2026-11-14T14:09:12.77561+00:00",
+    "reviewed_at": "2026-11-14T14:09:12.77561+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "e85f222b-3d9e-490b-b944-cca2c4dc3871",
+    "type": "fact",
+    "festival": "trevelin",
+    "year": 2021,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_corona",
+      "fuente": "El Chubut, 23/11/2021: https://www.elchubut.com.ar/esquel/2021-11-23-0-48-0-eisteddfod-2021-el-sillon-del-bardo-fue-para-ana-chiabrando-rees",
+      "lote": "a6892bfc-f904-4ffb-a389-776d2321e724",
+      "value": "Arié Lloyd de Lewis, de Gaiman («El bosque en llamas»)"
+    },
+    "created_at": "2026-11-14T14:09:47.962255+00:00",
+    "reviewed_at": "2026-11-14T14:09:47.962255+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "eaad1058-7857-4ce6-965c-07fe44010acc",
+    "type": "tag",
+    "festival": "juventud",
+    "year": 2026,
+    "item_id": "23c4ed51c27c",
+    "payload": {
+      "year": 2026
+    },
+    "created_at": "2026-11-14T13:20:32.366529+00:00",
+    "reviewed_at": "2026-11-14T13:20:56.271096+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "ebfbf25e-9f16-4f3c-9565-069d61b45f28",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2023,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Diario Jornada, 27/10/2023: https://www.diariojornada.com.ar/357159/espectaculos/alejandro_jones_gano_la_medalla_de_plata_del_eisteddfod",
+      "value": "Medalla de Plata (Asociación San David): Alejandro Jones, de Trevelin («Espera», seudónimo «Cádis»)"
+    },
+    "created_at": "2026-11-14T14:09:22.091981+00:00",
+    "reviewed_at": "2026-11-14T14:09:22.091981+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "f5a454c1-7f1e-4ba1-ad36-c7fbdaa57c68",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2002,
+    "item_id": "96aedd46f47d",
+    "payload": {
+      "year": 2002
+    },
+    "created_at": "2026-11-14T14:31:44.958927+00:00",
+    "reviewed_at": "2026-11-14T14:33:21.397101+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "f5ecea41-9661-405d-872f-68478c71ac33",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2007,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_silla",
+      "fuente": "Vistas del Valle (Wayback): https://web.archive.org/web/20080906093630/http://www.vistasdelvalle.com.ar/eisteddfod/eistedfod-2007/ganadores.htm",
+      "lote": "86421ae6-74f4-49a2-bd3f-a077421f6cda",
+      "value": "Mónica Jones (seudónimo «Mara»)"
+    },
+    "created_at": "2026-11-14T14:09:01.351788+00:00",
+    "reviewed_at": "2026-11-14T14:09:01.351788+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "f6c32899-1bdb-42cf-9c0c-ba1dc0df2622",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2009,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_silla",
+      "fuente": "Vistas del Valle (Wayback): https://web.archive.org/web/20100223001433/http://www.vistasdelvalle.com.ar/eisteddfod/eisteddfod-2009/ganadores.htm",
+      "lote": "d0374a34-40bf-4f53-b3ab-85b8c21aa0eb",
+      "value": "Mary Green de Borda («Dychwelyd», seudónimo «Hydref»)"
+    },
+    "created_at": "2026-11-14T14:09:05.475305+00:00",
+    "reviewed_at": "2026-11-14T14:09:05.475305+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "f7307608-8fc2-4626-8a0b-89d886c039c7",
     "type": "tag",
     "festival": "chubut",
@@ -279,6 +2085,22 @@
     },
     "created_at": "2026-11-13T22:38:47.792876+00:00",
     "reviewed_at": "2026-11-13T22:52:08.779053+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "f7d55eec-f6a3-453f-82c1-516eec44ac97",
+    "type": "fact",
+    "festival": "juventud",
+    "year": 2024,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "El Chubut, 15/09/2024: https://www.elchubut.com.ar/regionales/2024-9-15-21-13-0-santiago-pires-gano-la-medalla-de-plata-en-el-eisteddfod-de-la-juventud-2024",
+      "lote": "b93c7e45-9b00-4992-aa57-b9432c431cd3",
+      "value": "Medalla de Plata (Municipalidad de Gaiman): Santiago Pires («Ya no más», seudónimo «Antis»)"
+    },
+    "created_at": "2026-11-14T14:09:55.906737+00:00",
+    "reviewed_at": "2026-11-14T14:09:55.906737+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -299,6 +2121,38 @@
     },
     "created_at": "2026-11-13T21:06:04.044518+00:00",
     "reviewed_at": "2026-11-13T21:07:57.690846+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "fc7d6933-b7f7-4dda-ba5d-25c9ae733dd6",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2014,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "fuente": "Diario Jornada, 24/10/2014: https://www.diariojornada.com.ar/109871/magazine/eisteddfod_la_medalla_de_plata_para_edith_albaini__",
+      "lote": "1f5e8771-03f6-4260-8144-688a5f629083",
+      "value": "Gimnasio Municipal N.º 1, Trelew"
+    },
+    "created_at": "2026-11-14T14:09:09.603838+00:00",
+    "reviewed_at": "2026-11-14T14:09:09.603838+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "ff82222f-bf63-465e-a6f8-d65360997d41",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2019,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_silla",
+      "fuente": "El Chubut, 19/10/2019: https://www.elchubut.com.ar/regionales/2019-10-19-20-41-0-eisteddfod-chubut-entregaron-el-sillon-bardico-y-la-corona-del-poeta",
+      "lote": "1e6e3f65-3b22-41c0-ae82-2908e161af13",
+      "value": "Geraldine Mac Burney"
+    },
+    "created_at": "2026-11-14T14:09:37.06148+00:00",
+    "reviewed_at": "2026-11-14T14:09:37.06148+00:00",
     "display_name": "Kevin Roberts"
   }
 ]

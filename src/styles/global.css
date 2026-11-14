@@ -375,3 +375,17 @@ fieldset.campo { border: 0; padding: 0; }
 .lista-datos li { padding: 0.2rem 0; overflow-wrap: anywhere; }
 .btn-link { background: none; border: 0; padding: 0.25rem; min-height: 44px; color: var(--red-deep); text-decoration: underline; cursor: pointer; font: inherit; }
 
+
+/* Programa transcriptions: disciplines, age groups, numbered competitions. */
+.transcripcion { max-width: var(--measure); }
+.transcripcion h3 { margin: 1.4rem 0 0.4rem; font-size: 1.1rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.2rem; }
+.transcripcion h4 { margin: 0.9rem 0 0.3rem; font-size: 1rem; }
+.transcripcion p { margin: 0.4rem 0; }
+.tr-lista { list-style: none; margin: 0; padding: 0; }
+.tr-lista li { padding: 0.15rem 0 0.15rem 2.6rem; text-indent: -2.6rem; }
+.tr-n { display: inline-block; width: 2.4rem; text-indent: 0; text-align: right; margin-right: 0.2rem; font-variant-numeric: tabular-nums; color: var(--ink-soft); }
+.transcripciones { margin-top: 1rem; display: grid; gap: 0.5rem; max-width: var(--measure); }
+.tr-detalle { border: 1px solid var(--rule); background: var(--paper-hi); padding: 0.6rem 1rem; }
+.tr-detalle summary { cursor: pointer; font-weight: 600; display: list-item; }
+.tr-detalle[open] summary { margin-bottom: 0.5rem; }
+.tr-aporte { margin: 0.5rem 0 0; padding: 0.5rem 0.9rem; border-left: 4px solid var(--gold); white-space: pre-line; }

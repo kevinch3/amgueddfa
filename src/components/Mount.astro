@@ -5,14 +5,16 @@
  * Messages that follow a user action carry their own role="status"/"alert".
  */
 interface Props {
-  id: 'recientes' | 'hechos' | 'recuerdos' | 'aportes' | 'tarea' | 'liberado' | 'sesion';
+  id: 'recientes' | 'hechos' | 'recuerdos' | 'aportes' | 'tarea' | 'liberado' | 'sesion' | 'transcripciones';
   festival?: string;
   year?: number | null;
   item?: string;
   /** Space-separated file names (e.g. "p01.webp p02.webp"); never a media path. */
   pages?: string;
+  /** JSON map of item id → title, for islands that link items. */
+  titles?: string;
   class?: string;
 }
-const { id, festival = '', year = null, item = '', pages, class: cls } = Astro.props;
+const { id, festival = '', year = null, item = '', pages, titles, class: cls } = Astro.props;
 ---
-<div id={id} class={cls} data-island={id} data-festival={festival} data-year={year ?? ''} data-item={item} data-pages={pages}><slot /></div>
+<div id={id} class={cls} data-island={id} data-festival={festival} data-year={year ?? ''} data-item={item} data-pages={pages} data-titles={titles}><slot /></div>

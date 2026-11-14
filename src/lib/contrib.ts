@@ -407,9 +407,25 @@ export function approvedForEdition(festival: string, year: number, client: Supab
         .select('id, type, festival, year, item_id, payload, created_at, reviewed_at, display_name')
         .eq('festival', festival)
         .eq('year', year)
-        .in('type', ['fact', 'memory', 'upload'])
+        .in('type', ['fact', 'memory', 'upload', 'transcription'])
         .order('created_at', { ascending: true })
         .limit(500),
+    [],
+    6000,
+    client,
+  );
+}
+
+/** Approved transcriptions of one catalog item, oldest first. */
+export function approvedTranscriptions(itemId: string, client: SupabaseClient | null = getClient()) {
+  return liveQuery<Contribution[]>(
+    (c) =>
+      c.from('public_contributions')
+        .select('id, type, festival, year, item_id, payload, created_at, reviewed_at, display_name')
+        .eq('type', 'transcription')
+        .eq('item_id', itemId)
+        .order('created_at', { ascending: true })
+        .limit(50),
     [],
     6000,
     client,

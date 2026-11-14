@@ -9,6 +9,7 @@ import { editionCover, undocumented, yearRange } from '../src/lib/catalog';
 import { decades } from '../src/lib/timeline';
 import { editionVideos } from '../src/lib/videos';
 import videosData from '../src/data/videos.json';
+import { transcribedIds } from '../src/lib/transcripciones';
 import type { FestivalSlug, Item } from '../src/lib/types';
 
 const DIST = join(__dirname, '..', 'dist');
@@ -278,5 +279,34 @@ describe('static build', () => {
     }
     // Every exported video lands on a page that exists.
     for (const v of videos) expect(existsSync(join(DIST, v.festival, String(v.year), 'index.html')), `${v.festival} ${v.year}`).toBe(true);
+  });
+
+  it('standardized transcriptions show on their item page and, folded, on their edition page', () => {
+    const ids = transcribedIds();
+    expect(ids.length).toBeGreaterThan(0);
+    for (const id of ids) {
+      const item = catalog.find((i) => i.id === id);
+      expect(item, id).toBeDefined();
+      expect(item!.restricted, id).toBe(false);
+      const page = read(`item/${id}/index.html`);
+      expect(page).toContain('id="transcripcion-t"');
+      expect(page).toContain('class="tr-lista"');
+      if (item!.year) expect(read(`${item!.festival}/${item!.year}/index.html`)).toContain(`href="/item/${id}/"`);
+      if (item!.year) expect(read(`${item!.festival}/${item!.year}/index.html`)).toContain('class="tr-detalle"');
+    }
+    // A web programa with a transcription drops the 600-character excerpt for it.
+    expect(read('item/b64a2b4db146/index.html')).not.toContain('id="texto-t"');
+  });
+
+  it('approved contributor transcriptions are baked into item and edition pages', () => {
+    const rows = (approved as { type: string; item_id: string | null; festival: string; year: number | null; payload: { text?: string } }[])
+      .filter((c) => c.type === 'transcription' && c.item_id);
+    for (const c of rows) {
+      const item = catalog.find((i) => i.id === c.item_id);
+      if (!item || item.restricted) continue;
+      const snippet = String(c.payload.text ?? '').split('\n')[0].slice(0, 25);
+      expect(read(`item/${c.item_id}/index.html`)).toContain(snippet);
+      if (c.year) expect(read(`${c.festival}/${c.year}/index.html`)).toContain(snippet);
+    }
   });
 });

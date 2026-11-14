@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { approvedForEdition, isoFromParts, longDate, mergeApproved, ownPending, pendingView, sourceLine, submit, validate, type Contribution } from '../src/lib/contrib';
+import { approvedForEdition, isoFromParts, longDate, mergeApproved, ownPending, pendingView, sourceLine, submit, submitFacts, validate, type Contribution } from '../src/lib/contrib';
 import { t } from '../src/lib/i18n';
 
 const MB = 1024 * 1024;
@@ -283,6 +283,36 @@ describe('fuente', () => {
     expect(sourceLine(mk({ field: 'venue', value: 'X', fuente: 'Libro' }))).toBe('Fuente: Libro');
     expect(sourceLine(mk({ field: 'venue', value: 'X' }))).toBeNull();
     expect(sourceLine(mk({ field: 'venue', value: 'X', fuente: '  ' }))).toBeNull();
+  });
+});
+
+describe('submitFacts', () => {
+  it('inserts all facts at once with a shared lote and fuente', async () => {
+    const { client, inserts } = fakeClient();
+    const r = await submitFacts('chubut', 1937, [{ field: 'venue', value: 'Salón San David' }, { field: 'ganador_silla', value: 'E. M. Roberts' }], 'Libro', client);
+    expect(r).toEqual({ ok: true });
+    expect(inserts).toHaveLength(1);
+    const rows = inserts[0].row as any[];
+    expect(rows).toHaveLength(2);
+    expect(rows[0].payload.lote).toMatch(/^[0-9a-f-]{36}$/);
+    expect(rows[1].payload.lote).toBe(rows[0].payload.lote);
+    expect(rows.every((x) => x.payload.fuente === 'Libro' && x.status === 'pending' && x.type === 'fact' && x.user_id === 'user-1')).toBe(true);
+    expect(rows.map((x) => [x.festival, x.year])).toEqual([['chubut', 1937], ['chubut', 1937]]);
+  });
+
+  it('a single fact has no lote; errors carry the index', async () => {
+    const one = fakeClient();
+    await submitFacts('chubut', 1937, [{ field: 'venue', value: 'X' }], '', one.client);
+    expect((one.inserts[0].row as any[])[0].payload).toEqual({ field: 'venue', value: 'X' });
+    expect(await submitFacts('chubut', 1937, [{ field: 'venue', value: 'X' }, { field: 'start_date', value: '1937-02-30' }], '', fakeClient().client))
+      .toEqual({ ok: false, key: 'contrib.error.fecha', index: 1 });
+    expect(await submitFacts('chubut', 1937, [], '', fakeClient().client)).toEqual({ ok: false, key: 'contrib.error.campo' });
+    expect(await submitFacts('chubut', 1937, Array(16).fill({ field: 'venue', value: 'X' }), '', fakeClient().client))
+      .toEqual({ ok: false, key: 'contrib.error.demasiados' });
+    expect(await submitFacts('chubut', 1937, [{ field: 'venue', value: 'X' }], '', fakeClient({ insertError: { message: 'daily_limit' } }).client))
+      .toEqual({ ok: false, key: 'contrib.error.limite' });
+    expect(await submitFacts('chubut', 1937, [{ field: 'venue', value: 'X' }], '', fakeClient({ uid: null }).client))
+      .toEqual({ ok: false, key: 'contrib.error.sesion' });
   });
 });
 

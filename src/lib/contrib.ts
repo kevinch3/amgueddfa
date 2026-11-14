@@ -173,6 +173,56 @@ function mapInsertError(e: { message?: string; code?: string } | null | undefine
   return OFFLINE;
 }
 
+/** The signed-in user's id (null signed out), via liveQuery so it never throws. */
+function signedInUid(client: SupabaseClient) {
+  return liveQuery(async (c) => {
+    const { data, error } = await c.auth.getSession();
+    return { data: data?.session?.user?.id ?? null, error };
+  }, null as string | null, 6000, client);
+}
+
+/** Most facts one submission may carry. */
+export const MAX_FACTS = 15;
+
+/**
+ * Send several facts of one edition as pending rows in a single insert (all or
+ * nothing, e.g. at the daily limit). They share the optional fuente and, when
+ * more than one, a `lote` id so the admin queue can review them together.
+ * A failing fact is reported with its position (`index`).
+ */
+export async function submitFacts(
+  festival: FestivalSlug,
+  year: number,
+  facts: Record<string, unknown>[],
+  fuente: string,
+  client: SupabaseClient | null = getClient(),
+): Promise<Result & { index?: number }> {
+  if (!facts.length) return fail('campo');
+  if (facts.length > MAX_FACTS) return fail('demasiados');
+  const payloads: Record<string, unknown>[] = [];
+  for (const [index, f] of facts.entries()) {
+    const v = validate('fact', { ...f, fuente });
+    if (!v.ok) return { ...v, index };
+    payloads.push(v.payload);
+  }
+  if (!client) return OFFLINE;
+  const s = await signedInUid(client);
+  if (s.offline) return OFFLINE;
+  const uid = s.data;
+  if (!uid) return { ok: false, key: 'contrib.error.sesion' };
+  const lote = payloads.length > 1 ? uuid() : null;
+  const rows = payloads.map((payload) => ({
+    user_id: uid, type: 'fact', festival, year, item_id: null, status: 'pending',
+    payload: lote ? { ...payload, lote } : payload,
+  }));
+  try {
+    const { error } = await client.from('contributions').insert(rows);
+    return error ? mapInsertError(error as any) : { ok: true };
+  } catch {
+    return OFFLINE;
+  }
+}
+
 /**
  * Send a contribution as a pending row. Uploads go to `uploads/<uid>/<uuid>.<ext>`
  * first and the row carries `payload.storage_path`. Never throws.
@@ -188,10 +238,7 @@ export async function submit(
   const v = validate(kind, input);
   if (!v.ok) return v;
   if (!client) return OFFLINE;
-  const s = await liveQuery(async (c) => {
-    const { data, error } = await c.auth.getSession();
-    return { data: data?.session?.user?.id ?? null, error };
-  }, null as string | null, 6000, client);
+  const s = await signedInUid(client);
   if (s.offline) return OFFLINE;
   const uid = s.data;
   if (!uid) return { ok: false, key: 'contrib.error.sesion' };

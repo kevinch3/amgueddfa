@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { approvedForEdition, mergeApproved, ownPending, pendingView, submit, validate, type Contribution } from '../src/lib/contrib';
+import { approvedForEdition, isoFromParts, longDate, mergeApproved, ownPending, pendingView, submit, validate, type Contribution } from '../src/lib/contrib';
 import { t } from '../src/lib/i18n';
 
 const MB = 1024 * 1024;
@@ -240,6 +240,29 @@ describe('approvedForEdition', () => {
   it('is offline without a client or on error', async () => {
     expect(await approvedForEdition('chubut', 1937, null)).toEqual({ offline: true, data: [] });
     expect(await approvedForEdition('chubut', 1937, fakeClient({ selectError: { message: 'x' } }).client)).toEqual({ offline: true, data: [] });
+  });
+});
+
+describe('date from explicit day / month / year', () => {
+  it('builds the ISO date with no day/month ambiguity', () => {
+    expect(isoFromParts('8', '12', '1937')).toBe('1937-12-08');
+    expect(isoFromParts('08', '12', '1937')).toBe('1937-12-08');
+    expect(isoFromParts('12', '8', '1937')).toBe('1937-08-12');
+  });
+
+  it('rejects days that do not exist or missing parts', () => {
+    expect(isoFromParts('31', '2', '1937')).toBeNull();
+    expect(isoFromParts('29', '2', '1937')).toBeNull();
+    expect(isoFromParts('29', '2', '1936')).toBe('1936-02-29');
+    expect(isoFromParts('', '12', '1937')).toBeNull();
+    expect(isoFromParts('8', '', '1937')).toBeNull();
+    expect(isoFromParts('8', '12', '37')).toBeNull();
+    expect(isoFromParts('0', '12', '1937')).toBeNull();
+    expect(isoFromParts('8', '13', '1937')).toBeNull();
+  });
+
+  it('reads the date back in words for the confirmation line', () => {
+    expect(longDate('1937-12-08')).toBe('8 de diciembre de 1937');
   });
 });
 

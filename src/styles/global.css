@@ -348,3 +348,9 @@ fieldset.campo { border: 0; padding: 0; }
 .borrador .borrador-texto { flex: 1; min-width: 0; overflow-wrap: anywhere; }
 .borrador .pill { margin-right: 0.4rem; }
 
+/* Date as day / month name / year: unambiguous whatever the browser's language. */
+.fecha-partes { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.fecha-partes label { display: flex; flex-direction: column; gap: 0.25rem; font-family: var(--sans); }
+.fecha-partes input { width: 5.5rem; }
+.fecha-partes select { min-width: 9rem; }
+

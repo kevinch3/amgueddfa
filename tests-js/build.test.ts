@@ -115,6 +115,15 @@ describe('static build', () => {
     expect(checked).toBeGreaterThan(0);
   });
 
+  it('dates are typed as day, month by name, and year (no locale-dependent date picker)', () => {
+    const html = read('contribuir/index.html');
+    expect(html).not.toContain('type="date"');
+    expect(html).toContain('name="date_day"');
+    expect(html).toContain('name="date_month"');
+    expect(html).toContain('name="date_year"');
+    expect(html).toContain('>diciembre</option>');
+  });
+
   it('upload form asks what part of the programa is uploaded', () => {
     const html = read('contribuir/index.html');
     for (const v of ['completo', 'tapa', 'parcial']) expect(html).toContain(`name="alcance" value="${v}"`);

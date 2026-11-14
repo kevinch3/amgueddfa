@@ -240,7 +240,19 @@ export function forEdition(list: Contribution[], festival: string, year: number,
 }
 
 
-function longDate(iso: string): string {
+/**
+ * ISO date from separate day, month (1-12) and four-digit year fields, or null
+ * when a part is missing or the day does not exist. The form uses this instead
+ * of <input type="date">, whose day/month order follows the browser's language.
+ */
+export function isoFromParts(day: string, month: string, year: string): string | null {
+  if (!/^\d{1,2}$/.test(day) || !/^\d{1,2}$/.test(month) || !/^\d{4}$/.test(year)) return null;
+  const iso = `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`;
+  return isoDate(iso) ? iso : null;
+}
+
+/** "8 de diciembre de 1937" for an ISO date; anything else is returned unchanged. */
+export function longDate(iso: string): string {
   if (!isoDate(iso)) return iso;
   return new Date(`${iso}T12:00:00Z`).toLocaleDateString('es-AR', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
 }

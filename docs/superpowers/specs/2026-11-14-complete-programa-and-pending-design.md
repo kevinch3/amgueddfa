@@ -1,4 +1,4 @@
-# "Complete" programa needs a human yes; contributors see their pending work
+# "Complete" programa needs a human yes; covers identify editions; contributors see pending work
 
 ## Why
 
@@ -10,6 +10,7 @@
 
 ## Goals / non-goals
 
+- An edition shows its cover ("tapa") as its identifier.
 - Green only when the contributor says the programa is complete **and** an
   admin confirms it (approach A + B, chosen).
 - Contributors see their own pending contributions on the edition page,
@@ -30,15 +31,18 @@
 ### Part 1: completeness
 
 - **Form** (`contribuir.astro`, Subir tab): when category is `programa`, a
-  required question "¿Es el programa completo?" with two radios:
-  "Sí, todas las páginas" / "No, solo la tapa o algunas páginas". Stored as
-  `payload.alcance: 'completo' | 'parcial'`. `validate('upload', …)` requires
-  it for `programa` and drops it for other categories.
+  required question "¿Qué estás subiendo?" with three radios:
+  "El programa completo" / "Solo la tapa" / "Algunas páginas". Stored as
+  `payload.alcance: 'completo' | 'tapa' | 'parcial'`. `validate('upload', …)`
+  requires it for `programa` and drops it for other categories.
 - **Admin review** (`admin.ts`): uploads of category `programa` show the
-  contributor's answer and a checkbox "Programa completo (todas las páginas,
-  legibles)", pre-checked only when `alcance === 'completo'`. The admin can
-  change it. `approveUpload` writes `complete: <checkbox>` through the existing
-  `payload_override` (no migration needed for this).
+  contributor's answer and two checkboxes:
+  - "Programa completo (todas las páginas, legibles)", pre-checked only when
+    `alcance === 'completo'`;
+  - "Es la tapa (identifica la edición)", pre-checked only when
+    `alcance === 'tapa'`.
+  The admin can change either. `approveUpload` writes `complete: <bool>` and
+  `tapa: <bool>` through the existing `payload_override` (no migration needed).
 - **Coverage rule** (`stateOf`): `full` only when category is `programa`, it has
   pages, and `payload.complete === true`; otherwise `some`.
 - **Existing approved uploads** have no `complete` flag and turn yellow
@@ -47,6 +51,28 @@
   a one-off SQL update by id; no admin "edit after approval" UI is built.
 - The catalog rule (a scanned `programa` PDF = full) is unchanged; that
   material is curated.
+- A cover alone (`tapa: true`, `complete` false) is `some` (yellow).
+
+### Part 1b: the cover ("tapa") identifies the edition
+
+The cover is what identifies each year's eisteddfod (its artwork), so an
+edition gets one cover image, chosen in this order:
+
+1. The most recently approved upload with `tapa: true` *(our call for when
+   there are several)*; its first page image (or thumb).
+2. Otherwise, page 1 of the edition's programa: the catalog `programa` PDF's
+   first page, or the first page of an approved upload with `complete: true`.
+3. Otherwise none.
+
+Used in two places (chosen):
+- **Year page header** (`[festival]/[year].astro`): the cover shows large at
+  the top, as the edition's face.
+- **Festival timeline** (`[festival]/index.astro`): the cover is the first of
+  that year's thumbnails (no duplicate if it is also a catalog thumb).
+
+Not used on the home grid (rejected: busier, heavier on phones). The choice is
+made at build time from the catalog and the export; restricted catalog items
+never supply a cover (their files are not published).
 
 ### Part 2: pending drafts on the edition page
 

@@ -34,6 +34,7 @@ import { currentProfile } from '../lib/auth';
 import type { Kind } from '../lib/contrib';
 import { fecha, fechaHora, relativa } from '../lib/dates';
 import type { FestivalSlug } from '../lib/types';
+import { renderStats } from './admin-stats';
 import { mountFactEditor } from './fact-editor';
 import { t } from '../lib/i18n';
 import { url } from '../lib/paths';
@@ -515,6 +516,10 @@ function selectTab(k: string): void {
   if (k === 'cargar' && !loaded.has(k)) {
     loaded.add(k);
     void setupCargar();
+  }
+  if (k === 'estadisticas' && !loaded.has(k)) {
+    loaded.add(k);
+    void renderStats($('a-stats'));
   }
 }
 

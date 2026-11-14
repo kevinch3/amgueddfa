@@ -371,7 +371,8 @@
       "cola": "Para revisar",
       "cargar": "Cargar datos",
       "restringidos": "Restringidos",
-      "usuarios": "Usuarios"
+      "usuarios": "Usuarios",
+      "estadisticas": "Estadísticas"
     },
     "filtro_tipo": "Tipo de aporte",
     "todos": "Todos",
@@ -443,7 +444,17 @@
     },
     "ver_restringido": "Ver el documento antes de liberarlo",
     "restringido_alt": "{titulo}, página {n} (vista para admins)",
-    "restringido_texto": "Texto de {titulo} (vista para admins)"
+    "restringido_texto": "Texto de {titulo} (vista para admins)",
+    "stats": {
+      "titulo_dias": "Ingresos por día (últimos 90 días)",
+      "titulo_semana": "Ingresos por día de la semana y hora",
+      "desde": "Datos desde el {fecha}.",
+      "sin_datos": "Todavía no hay ingresos contados.",
+      "visitas": "Las visitas, los países y los sitios desde los que llega la gente se ven en el panel de Cloudflare Web Analytics.",
+      "visitas_enlace": "Abrir Cloudflare Web Analytics",
+      "dias_semana": "lun,mar,mié,jue,vie,sáb,dom",
+      "error": "No pudimos cargar las estadísticas. Probá de nuevo en un rato."
+    }
   },
   "insignias": {
     "primer-aporte": {

@@ -7,7 +7,7 @@ import { items } from '../lib/catalog';
 import { FESTIVALS, jsonForScript } from '../lib/contrib';
 import { t } from '../lib/i18n';
 
-const TABS = ['cola', 'cargar', 'restringidos', 'usuarios'] as const;
+const TABS = ['cola', 'cargar', 'restringidos', 'usuarios', 'estadisticas'] as const;
 const KINDS = ['upload', 'fact', 'tag', 'transcription', 'memory'] as const;
 
 // Precomputed at build time so the admin bundle does not carry the whole catalog.
@@ -90,6 +90,10 @@ const data = {
         <p class="contrib-msg" id="a-users-msg" role="alert" hidden></p>
         <ul id="a-users" class="admin-list"></ul>
       </section>
+
+      <section id="apanel-estadisticas" role="tabpanel" aria-labelledby="atab-estadisticas" hidden>
+        <div id="a-stats" aria-live="polite"></div>
+      </section>
     </div>
   </section>
   <script type="application/json" id="admin-data" set:html={jsonForScript(data)} />
@@ -108,6 +112,12 @@ const data = {
   .admin .tabs [role='tab'][aria-selected='true'] { background: var(--red); border-color: var(--red); color: var(--paper-hi); }
   .admin .tabs [role='tab']:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
   .admin [role='tabpanel'][hidden], #admin-body[hidden] { display: none; }
+  .admin .stats-bars { display: flex; align-items: flex-end; gap: 1px; height: 6rem; border-bottom: 1px solid var(--ink-soft); margin: 0.5rem 0 1rem; }
+  .admin .stats-bar { flex: 1 1 0; min-width: 1px; height: max(var(--h), 1px); background: var(--red); }
+  .admin .stats-grid-wrap { overflow-x: auto; max-width: 100%; }
+  .admin .stats-grid { border-collapse: collapse; font-size: 0.75rem; font-variant-numeric: tabular-nums; }
+  .admin .stats-grid th, .admin .stats-grid td { padding: 0.15rem 0.25rem; text-align: center; min-width: 1.4rem; }
+  .admin .stats-grid td { background: color-mix(in srgb, var(--red) var(--a), transparent); border: 1px solid color-mix(in srgb, var(--red) 15%, transparent); }
   .admin-list { list-style: none; padding: 0; margin: 1rem 0; display: grid; gap: 1rem; }
   .admin-card { background: var(--paper-hi); border: 1px solid var(--rule); padding: 1rem 1.1rem; }
   .admin-card h2 { font-size: 1.1rem; margin: 0 0 0.4rem; display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; }

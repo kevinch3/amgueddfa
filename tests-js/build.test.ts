@@ -124,6 +124,14 @@ describe('static build', () => {
     expect(html).toContain('>diciembre</option>');
   });
 
+  it('the Datos tab collects several facts with a shared Fuente', () => {
+    const html = read('contribuir/index.html');
+    expect(html).toContain('+ Agregar otro dato');
+    expect(html).toContain('name="fuente"');
+    expect(html).toContain('id="c-lista"');
+    expect(html).toContain('name="date_month"');
+  });
+
   it('upload form asks what part of the programa is uploaded', () => {
     const html = read('contribuir/index.html');
     for (const v of ['completo', 'tapa', 'parcial']) expect(html).toContain(`name="alcance" value="${v}"`);

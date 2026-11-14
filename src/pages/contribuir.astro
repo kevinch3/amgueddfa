@@ -1,13 +1,12 @@
 ---
 import Base from '../layouts/Base.astro';
-import { ALCANCES, CATEGORIES, FACT_FIELDS, FESTIVALS, MIME_EXT, TEXT_MAX } from '../lib/contrib';
+import FactEditor from '../components/FactEditor.astro';
+import { ALCANCES, CATEGORIES, FESTIVALS, MIME_EXT, TEXT_MAX } from '../lib/contrib';
 import { festivals, yearRange } from '../lib/catalog';
 import { t } from '../lib/i18n';
 
 const TABS = ['subir', 'datos', 'recuerdo'] as const;
 const thisYear = new Date().getFullYear();
-// Month names spelled out, so the date never depends on the browser's day/month order.
-const MONTHS = Array.from({ length: 12 }, (_, i) => new Date(Date.UTC(2000, i, 15)).toLocaleDateString('es-AR', { month: 'long', timeZone: 'UTC' }));
 // First year with a built edition page, per festival: the back link hides for earlier years.
 const firsts = Object.fromEntries(festivals().map((f) => [f.slug, yearRange(f.slug)[0]]));
 ---
@@ -78,52 +77,7 @@ const firsts = Object.fromEntries(festivals().map((f) => [f.slug, yearRange(f.sl
 
       <form id="panel-datos" role="tabpanel" aria-labelledby="tab-datos" data-kind="fact" class="contrib-form" novalidate hidden>
         <p class="measure">{t('contrib.datos_ayuda')}</p>
-        <div class="campo">
-          <label for="c-field">{t('contrib.campo_label')}</label>
-          <select id="c-field" name="field" required>
-            <option value="">{t('contrib.elegir')}</option>
-            {FACT_FIELDS.map((f) => <option value={f}>{t(`contrib.campos.${f}`)}</option>)}
-          </select>
-        </div>
-        <div class="campo" data-for="text">
-          <label for="c-value">{t('contrib.valor_label')}</label>
-          <input id="c-value" name="value" type="text" maxlength="500" />
-        </div>
-        <fieldset class="campo fecha" data-for="date" hidden>
-          <legend>{t('contrib.fecha_label')}</legend>
-          <div class="fecha-partes">
-            <label>{t('contrib.fecha_dia')}<input id="c-date-day" name="date_day" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="2" autocomplete="off" /></label>
-            <label>{t('contrib.fecha_mes')}<select id="c-date-month" name="date_month">
-              <option value="">{t('contrib.elegir')}</option>
-              {MONTHS.map((m, i) => <option value={String(i + 1)}>{m}</option>)}
-            </select></label>
-            <label>{t('contrib.fecha_ano')}<input id="c-date-year" name="date_year" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="4" autocomplete="off" /></label>
-          </div>
-          <p id="c-date-leida" class="muted small" aria-live="polite"></p>
-        </fieldset>
-        <fieldset class="campo" data-for="yesno" hidden>
-          <legend>{t('contrib.realizada_label')}</legend>
-          <label class="opt"><input type="radio" name="held" value="si" /> {t('contrib.si')}</label>
-          <label class="opt"><input type="radio" name="held" value="no" /> {t('contrib.no')}</label>
-        </fieldset>
-        <div data-for="competencia" hidden>
-          <div class="campo">
-            <label for="c-numero">{t('contrib.numero_label')}</label>
-            <input id="c-numero" name="numero" type="text" maxlength="20" />
-          </div>
-          <div class="campo">
-            <label for="c-desc-comp">{t('contrib.descripcion_comp_label')}</label>
-            <input id="c-desc-comp" name="descripcion" type="text" maxlength="500" />
-          </div>
-          <div class="campo">
-            <label for="c-cat-comp">{t('contrib.categoria_comp_label')}</label>
-            <input id="c-cat-comp" name="categoria" type="text" maxlength="100" />
-          </div>
-          <div class="campo">
-            <label for="c-idioma">{t('contrib.idioma_label')}</label>
-            <input id="c-idioma" name="idioma" type="text" maxlength="100" />
-          </div>
-        </div>
+        <FactEditor prefix="c" />
         <button class="btn" type="submit">{t('contrib.enviar')}</button>
       </form>
 
@@ -141,11 +95,11 @@ const firsts = Object.fromEntries(festivals().map((f) => [f.slug, yearRange(f.sl
 </Base>
 
 <script>
-  import { submit, type Kind } from '../lib/contrib';
+  import { submit, submitFacts, type Kind } from '../lib/contrib';
   import { t } from '../lib/i18n';
   import { url } from '../lib/paths';
   import { hasEditionPage } from '../lib/timeline';
-  import { isoFromParts, longDate } from '../lib/contrib';
+  import { mountFactEditor } from '../scripts/fact-editor';
   import type { FestivalSlug } from '../lib/types';
   import { gate, gateMessage } from '../scripts/ui';
 
@@ -212,32 +166,8 @@ const firsts = Object.fromEntries(festivals().map((f) => [f.slug, yearRange(f.sl
   catSel.addEventListener('change', syncAlcance);
   syncAlcance();
 
-  // Datos: show the inputs that fit the chosen field.
-  const fieldSel = $<HTMLSelectElement>('c-field');
-  function syncField() {
-    const f = fieldSel.value;
-    const mode = f === 'start_date' || f === 'end_date' ? 'date'
-      : f === 'edicion_realizada' ? 'yesno' : f === 'competencia' ? 'competencia' : 'text';
-    for (const el of document.querySelectorAll<HTMLElement>('#panel-datos [data-for]')) el.hidden = el.dataset.for !== mode;
-  }
-  fieldSel.addEventListener('change', syncField);
-  syncField();
-
-  // Fecha: read the date back in words before sending ("8 de diciembre de 1937").
-  const dDay = $<HTMLInputElement>('c-date-day');
-  const dMonth = $<HTMLSelectElement>('c-date-month');
-  const dYear = $<HTMLInputElement>('c-date-year');
-  const leida = $<HTMLParagraphElement>('c-date-leida');
-  function syncDate() {
-    if (!dYear.value && /^\d{4}$/.test(year.value)) dYear.value = year.value; // usually the edition's year
-    const iso = isoFromParts(dDay.value.trim(), dMonth.value, dYear.value.trim());
-    leida.textContent = iso ? t('contrib.fecha_leida', { fecha: longDate(iso) })
-      : dDay.value || dMonth.value ? t('contrib.error.fecha') : '';
-  }
-  for (const x of [dDay, dMonth, dYear]) x.addEventListener('input', syncDate);
-  fieldSel.addEventListener('change', syncDate);
-  year.addEventListener('input', () => { if (!dDay.value && !dMonth.value) dYear.value = ''; syncDate(); });
-  syncDate();
+  // Datos: one fact at a time in the editor, several sent together from its list.
+  const facts = mountFactEditor($('panel-datos'), { prefix: 'c', yearInput: year, say });
 
   function inputFor(kind: Kind, form: HTMLFormElement): Record<string, unknown> {
     const fd = new FormData(form);
@@ -245,12 +175,6 @@ const firsts = Object.fromEntries(festivals().map((f) => [f.slug, yearRange(f.sl
     if (kind === 'upload') {
       const f = $<HTMLInputElement>('c-file').files?.[0];
       return { file: f, category: s('category'), alcance: s('alcance'), description: s('description') };
-    }
-    if (kind === 'fact') {
-      const field = s('field');
-      const value = field === 'start_date' || field === 'end_date' ? (isoFromParts(s('date_day'), s('date_month'), s('date_year')) ?? '')
-        : field === 'edicion_realizada' ? s('held') : s('value');
-      return { field, value, numero: s('numero'), descripcion: s('descripcion'), categoria: s('categoria'), idioma: s('idioma') };
     }
     return { text: s('text') };
   }
@@ -268,21 +192,31 @@ const firsts = Object.fromEntries(festivals().map((f) => [f.slug, yearRange(f.sl
         (fest.value ? year : fest).focus();
         return;
       }
+      const kind = form.dataset.kind as Kind;
+      let collected: ReturnType<typeof facts.collect> | null = null;
+      if (kind === 'fact') {
+        collected = facts.collect();
+        if ('error' in collected) return say(collected.error);
+      }
       btn.disabled = true;
       btn.textContent = t('contrib.enviando');
-      const kind = form.dataset.kind as Kind;
-      const r = await submit(kind, fest.value as FestivalSlug, y, itemId, inputFor(kind, form));
+      const r: { ok: boolean; key?: string; index?: number } = collected && !('error' in collected)
+        ? await submitFacts(fest.value as FestivalSlug, y, collected.facts, collected.fuente)
+        : await submit(kind, fest.value as FestivalSlug, y, itemId, inputFor(kind, form));
       btn.disabled = false;
       btn.textContent = t('contrib.enviar');
       if (!r.ok) {
-        say(r.key);
+        // A fact from the list: say which one ("Dato 3: …").
+        if (r.index !== undefined) {
+          msg.hidden = false;
+          msg.textContent = t('contrib.dato_n', { n: r.index + 1, error: t(r.key!) });
+        } else say(r.key!);
         if (r.key === 'contrib.error.sesion') void start();
         return;
       }
       form.reset();
-      syncField();
+      facts.reset();
       syncAlcance();
-      syncDate();
       ok.hidden = false;
       for (const k2 of TABS) $(`panel-${k2}`).hidden = true;
       $<HTMLButtonElement>('c-otro').focus();

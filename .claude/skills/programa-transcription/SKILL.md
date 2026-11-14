@@ -60,10 +60,14 @@ Ganadores lists use the same headings, one line per competition:
 |---|---|
 | Web page (`kind: web`) | `_html_text(Path(src), keep_breaks=True)` from `scripts/catalog/derive.py` |
 | PDF with text layer | `pdftotext -layout file.pdf -` (check per page: some PDFs mix scans) |
-| Scanned PDF / image | read the page images (`media/<id>/pNN.webp` or `pdftoppm -r 150`) with the Read tool; `tesseract` here has only `eng`, so don't rely on it for Welsh/Spanish |
+| Scanned PDF / image | find the competition pages with a contact sheet (`python3 .claude/skills/programa-transcription/sheet.py public/media/<id> out.jpg 7 1-21`), then read the page images (`media/<id>/pNN.webp` or `pdftoppm -r 150`) with the Read tool; `tesseract` here has only `eng`, so don't rely on it for Welsh/Spanish |
 
 Two captures of the same page (identical extracted text) get one file, under the older capture's
 id, so the edition page doesn't list it twice.
+
+When a scanned programa and a competition-list table (`kind: table`) hold the same list,
+the transcription goes on the scan (it has no text of its own; the table item shows its table).
+Non-competition images (covers, posters, schedules, session announcements, rules slides) get no file.
 
 Several catalog items can be parts of one programa (Literatura, Música… as separate PDFs):
 transcribe each item into its own file. A PDF that holds Chubut + Juventud goes under its

@@ -3,6 +3,7 @@ import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import { beforeAll, describe, expect, it } from 'vitest';
 import raw from '../src/data/catalog.json';
+import approved from '../data/approved/contributions.json';
 import { editionCover, undocumented, yearRange } from '../src/lib/catalog';
 import { decades } from '../src/lib/timeline';
 import type { FestivalSlug, Item } from '../src/lib/types';
@@ -155,6 +156,44 @@ describe('static build', () => {
     expect(read('404.html')).toContain('<meta name="robots" content="noindex"');
     expect(year).not.toContain('content="noindex"');
     for (const i of catalog.filter((x) => x.restricted)) expect(read(`item/${i.id}/index.html`)).not.toContain('og:image" content="https://amgueddfa.kevinroberts.ar/media/');
+  });
+
+  it('robots.txt, sitemap, open data and llms.txt expose public content only', () => {
+    const robots = read('robots.txt');
+    expect(robots).toContain('User-agent: *');
+    expect(robots).toContain('Allow: /');
+    expect(robots).toContain('Sitemap: https://amgueddfa.kevinroberts.ar/sitemap.xml');
+    expect(robots).toContain('Disallow: /admin/');
+
+    const sitemap = read('sitemap.xml');
+    expect(sitemap).toContain('<loc>https://amgueddfa.kevinroberts.ar/chubut/1937/</loc>');
+    const pub = catalog.find((i) => !i.restricted)!;
+    expect(sitemap).toContain(`<loc>https://amgueddfa.kevinroberts.ar/item/${pub.id}/</loc>`);
+    expect(sitemap).not.toContain('/admin/');
+    expect(sitemap).not.toContain('/contribuir/');
+
+    const eds = JSON.parse(read('datos/ediciones.json'));
+    const docs = JSON.parse(read('datos/documentos.json'));
+    const e1937 = eds.ediciones.find((e: any) => e.eisteddfod === 'chubut' && e.ano === 1937);
+    expect(e1937.url).toBe('https://amgueddfa.kevinroberts.ar/chubut/1937/');
+    // Documents count catalog items plus approved community uploads of that year.
+    for (const e of eds.ediciones) {
+      const ups = (approved as any[]).filter((c) => c.type === 'upload' && c.festival === e.eisteddfod && c.year === e.ano).length;
+      const cat = catalog.filter((i) => !i.restricted && i.festival === e.eisteddfod && i.year === e.ano).length;
+      expect(e.documentos, `${e.eisteddfod} ${e.ano}`).toBe(cat + ups);
+    }
+    // Every approved fact with a fuente keeps it in the data file (zero or many, whatever the data is).
+    const withFuente = (approved as any[]).filter((c) => c.type === 'fact' && c.payload?.fuente).length;
+    expect(eds.ediciones.flatMap((e: any) => e.datos).filter((d: any) => d.fuente).length).toBe(withFuente);
+    expect(docs.documentos.length).toBe(catalog.filter((i) => !i.restricted).length);
+    for (const i of catalog.filter((x) => x.restricted)) {
+      expect(sitemap, i.id).not.toContain(`/item/${i.id}/`);
+      expect(read('datos/documentos.json'), i.id).not.toContain(i.id);
+    }
+
+    const llms = read('llms.txt');
+    expect(llms).toContain('https://amgueddfa.kevinroberts.ar/datos/ediciones.json');
+    expect(llms).toContain('https://amgueddfa.kevinroberts.ar/datos/documentos.json');
   });
 
   it('upload form asks what part of the programa is uploaded', () => {

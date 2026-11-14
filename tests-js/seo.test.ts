@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import {
-  absUrl, editionDescription, editionFacts, editionJsonLd, itemJsonLd, siteJsonLd, sitemapXml, xmlEscape,
+  absUrl, editionDescription, editionFacts, editionJsonLd, factRecord, itemJsonLd, siteJsonLd, sitemapXml, xmlEscape,
 } from '../src/lib/seo';
 
 const fact = (field: string, value: string, extra: Record<string, unknown> = {}) =>
@@ -63,4 +63,11 @@ describe('seo builders', () => {
     expect(JSON.stringify(site)).toContain('ArchiveOrganization');
     expect(JSON.stringify(site)).toContain('WebSite');
   });
+
+  it('factRecord: readable field, value, fuente and who contributed', () => {
+    expect(factRecord({ ...fact('start_date', '1937-12-08', { fuente: 'Libro' }), display_name: 'Meirion Griffiths' }))
+      .toEqual({ campo: 'start_date', etiqueta: 'Fecha de inicio', valor: '8 de diciembre de 1937', fecha: '1937-12-08', fuente: 'Libro', aporto: 'Meirion Griffiths' });
+    expect(factRecord(fact('venue', 'Salón San David'))).toEqual({ campo: 'venue', etiqueta: 'Lugar', valor: 'Salón San David' });
+  });
 });
+

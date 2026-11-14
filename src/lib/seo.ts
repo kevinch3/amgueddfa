@@ -2,7 +2,7 @@
  * What search engines and bots read: absolute URLs, page descriptions,
  * schema.org JSON-LD and the sitemap. Pure functions, used at build time.
  */
-import { forEdition, longDate, type Contribution } from './contrib';
+import { factDisplay, forEdition, longDate, type Contribution } from './contrib';
 import { t } from './i18n';
 import { docCount } from './site';
 import type { EditionState } from './types';
@@ -100,3 +100,17 @@ export function siteJsonLd(): Ld {
     ],
   };
 }
+
+/** One approved fact as open data: field id, its label, readable value, fuente, contributor. */
+export function factRecord(c: Contribution): Record<string, string> {
+  const { label, value } = factDisplay(c);
+  const field = String(c.payload?.field ?? 'other');
+  const out: Record<string, string> = { campo: field, etiqueta: label, valor: value };
+  // Dates also as ISO 8601, for machines.
+  if ((field === 'start_date' || field === 'end_date') && /^\d{4}-\d{2}-\d{2}$/.test(String(c.payload?.value ?? ''))) out.fecha = String(c.payload?.value);
+  const fuente = String(c.payload?.fuente ?? '').trim();
+  if (fuente) out.fuente = fuente;
+  if (c.display_name) out.aporto = c.display_name;
+  return out;
+}
+

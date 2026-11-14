@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import Analytics from '../components/Analytics.astro';
 import Chair from '../components/Chair.astro';
 import Mount from '../components/Mount.astro';
 import SessionBadge from '../components/SessionBadge.astro';
@@ -22,8 +23,11 @@ interface Props {
   noindex?: boolean;
   /** schema.org data describing the page. */
   jsonLd?: Record<string, unknown> | null;
+  /** Count visits with Cloudflare Web Analytics (off on /admin). */
+  analytics?: boolean;
 }
-const { title, description = t('sitio.descripcion'), festival, year, item, current, image = null, noindex = false, jsonLd = null } = Astro.props;
+const { title, description = t('sitio.descripcion'), festival, year, item, current, image = null, noindex = false, jsonLd = null, analytics = true } = Astro.props;
+const analyticsToken = (import.meta.env.PUBLIC_CF_ANALYTICS_TOKEN ?? '').trim();
 const fullTitle = title ? `${title} | ${t('sitio.nombre')}` : t('sitio.nombre');
 const canonical = absUrl(Astro.url.pathname);
 const ogImage = image ? absUrl(image) : null;
@@ -50,6 +54,7 @@ const ogImage = image ? absUrl(image) : null;
     <meta name="generator" content={Astro.generator} />
     <link rel="icon" href={url('favicon.svg')} type="image/svg+xml" />
     <title>{fullTitle}</title>
+    {analytics && analyticsToken && <Analytics token={analyticsToken} />}
   </head>
   <body>
     <a class="skip" href="#contenido">{t('nav.saltar')}</a>

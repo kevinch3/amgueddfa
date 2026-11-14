@@ -1,0 +1,13 @@
+---
+// Cloudflare Web Analytics. Base.astro renders this only when a token is set, so
+// tokenless builds carry neither the token nor the beacon loader. The beacon itself
+// is injected in the browser, after the consent check (src/lib/consent.ts).
+interface Props {
+  token: string;
+}
+const { token } = Astro.props;
+---
+<meta name="amg-analytics" content={token} />
+<script>
+  import '../scripts/analytics.ts';
+</script>

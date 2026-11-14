@@ -14,6 +14,7 @@ import { PUBLIC_WINNERS, winnerIds } from '../src/lib/ganadores';
 import { applyTags } from '../src/lib/tags';
 import type { FestivalSlug, Item } from '../src/lib/types';
 import { MEDIA_BASE } from '../src/lib/paths';
+import { loadEnv } from 'vite';
 
 const DIST = join(__dirname, '..', 'dist');
 const catalog = (raw as { items: Item[] }).items;
@@ -22,6 +23,12 @@ const placed = applyTags(catalog, approved as any[]);
 const FESTIVALS: FestivalSlug[] = ['chubut', 'juventud', 'mimosa', 'trevelin'];
 const festivalName: Record<FestivalSlug, string> = { chubut: 'Eisteddfod del Chubut', juventud: 'Eisteddfod de la Juventud', mimosa: 'Eisteddfod Mimosa Porth Madryn', trevelin: 'Eisteddfod de Trevelin' };
 const read = (p: string) => readFileSync(join(DIST, p), 'utf8');
+/** Every built HTML page (media excluded). */
+const htmlFiles = (d = DIST): string[] =>
+  readdirSync(d).flatMap((n) => {
+    const p = join(d, n);
+    return statSync(p).isDirectory() ? (n === 'media' ? [] : htmlFiles(p)) : n.endsWith('.html') ? [p] : [];
+  });
 
 // Same rule the pages use (catalog + approved material), tested on its own in catalog.test.ts.
 const range = (f: FestivalSlug): [number, number] => yearRange(f);
@@ -343,6 +350,21 @@ describe('static build', () => {
       const snippet = String(c.payload.text ?? '').split('\n')[0].slice(0, 25);
       expect(read(`item/${c.item_id}/index.html`)).toContain(snippet);
       if (c.year) expect(read(`${c.festival}/${c.year}/index.html`)).toContain(snippet);
+    }
+  });
+
+  it('the analytics beacon is rendered only with a token, never on admin', () => {
+    const root = join(__dirname, '..');
+    const token = loadEnv('production', root, 'PUBLIC_').PUBLIC_CF_ANALYTICS_TOKEN || process.env.PUBLIC_CF_ANALYTICS_TOKEN;
+    const admin = read('admin/index.html');
+    expect(admin).not.toContain('cloudflareinsights');
+    expect(admin).not.toContain('amg-analytics');
+    if (token) {
+      expect(read('index.html')).toContain('name="amg-analytics"');
+      expect(read('chubut/2024/index.html')).toContain('name="amg-analytics"');
+    } else {
+      const hits = htmlFiles().filter((f) => /amg-analytics|cloudflareinsights/.test(readFileSync(f, 'utf8')));
+      expect(hits).toEqual([]);
     }
   });
 });

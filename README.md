@@ -160,3 +160,12 @@ y ajustá el límite de correos en Authentication → Rate Limits.
 ### Código de 6 números
 
 Mientras no haya SMTP propio (Resend), Supabase manda sus correos por defecto, que sólo traen un enlace; la página de ingreso esconde el campo del código detrás de “¿Te llegó un código de 6 números?”. Cuando el SMTP esté configurado y pegues `supabase/templates/*.html` en Supabase, agregá la variable de repositorio `PUBLIC_AUTH_CODE=1` para mostrar el campo del código de entrada.
+
+### Analítica (Cloudflare Web Analytics)
+
+El sitio cuenta visitas con Cloudflare Web Analytics, que no usa cookies ni guarda nada en el navegador. Para activarla:
+
+1. En el panel de Cloudflare → **Analytics & Logs → Web Analytics**, agregá el sitio `amgueddfa.kevinroberts.ar` (como sitio sin proxy: el dominio apunta a GitHub Pages) y copiá el *token* del fragmento de JavaScript.
+2. Guardalo como variable de repositorio `PUBLIC_CF_ANALYTICS_TOKEN` (`gh variable set PUBLIC_CF_ANALYTICS_TOKEN`) y, para probar en local, en `.env`.
+
+Sin la variable, el build no incluye ni el token ni el script. Con ella, el script se carga en el navegador sólo si la persona no desactivó el conteo en `/cookies` y su navegador no envía *Do Not Track* ni *Global Privacy Control*. `/admin` nunca lo carga. Las visitas, países y sitios de origen se ven en el panel de Cloudflare; los ingresos por hora, en `/admin` → Estadísticas.

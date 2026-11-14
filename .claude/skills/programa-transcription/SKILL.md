@@ -51,8 +51,15 @@ Keep only what identifies each competition, plus the jurados:
 
 Anything else is shown as a plain paragraph — avoid it.
 
-Ganadores lists use the same headings, one line per competition:
-`12. Solo soprano: 1.º Nombre Apellido (Trelew); 2.º …; 3.º …` and `- Sillón: …`.
+Ganadores lists use the same headings, one line per competition, sorted by competition number
+when the source isn't in order (web listings follow the session order):
+`12. Solo soprano: 1.º Nombre Apellido (Trelew); 2.º (compartido) …; 1.ª mención …` — pseudonyms as
+`(seud. «X»)`, `desierto` when void. A `## Premios especiales` block first (Gorsedd, ADICORA,
+Excelencia musical, Cinta Azul). Use the edition's programa transcription for competition titles
+when the source only gives numbers. Never copy what a source obviously repeats by mistake (the
+Juventud 2014 page repeats comp. 20's winners under other competitions): write
+`[la fuente repite …; resultados no disponibles]`. Photos without results get no file;
+`.transcripciones/ganadores/README.md` lists what has a file and why the rest doesn't.
 
 ## How to get the text
 

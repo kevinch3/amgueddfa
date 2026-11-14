@@ -139,6 +139,24 @@ describe('static build', () => {
     expect(html).toContain('id="a-agregar"');
   });
 
+  it('pages carry canonical, social tags and structured data; private pages are noindex', () => {
+    const year = read('chubut/1937/index.html');
+    expect(year).toContain('<link rel="canonical" href="https://amgueddfa.kevinroberts.ar/chubut/1937/"');
+    expect(year).toContain('<meta property="og:title"');
+    expect(year).toContain('"@type":"Event"');
+    expect(year).toContain('"startDate":"1937-12-08"');
+    expect(year).toMatch(/<meta name="description" content="Eisteddfod del Chubut 1937\./);
+    const prog = catalog.find((i) => i.category === 'programa' && !i.restricted && i.year !== null && i.thumb)!;
+    const itemPage = read(`item/${prog.id}/index.html`);
+    expect(itemPage).toContain('"@type":"ArchiveComponent"');
+    expect(itemPage).toContain(`<meta property="og:image" content="https://amgueddfa.kevinroberts.ar/media/${prog.thumb}"`);
+    expect(read('index.html')).toContain('ArchiveOrganization');
+    for (const p of ['admin', 'perfil', 'ingresar', 'contribuir']) expect(read(`${p}/index.html`), p).toContain('<meta name="robots" content="noindex"');
+    expect(read('404.html')).toContain('<meta name="robots" content="noindex"');
+    expect(year).not.toContain('content="noindex"');
+    for (const i of catalog.filter((x) => x.restricted)) expect(read(`item/${i.id}/index.html`)).not.toContain('og:image" content="https://amgueddfa.kevinroberts.ar/media/');
+  });
+
   it('upload form asks what part of the programa is uploaded', () => {
     const html = read('contribuir/index.html');
     for (const v of ['completo', 'tapa', 'parcial']) expect(html).toContain(`name="alcance" value="${v}"`);

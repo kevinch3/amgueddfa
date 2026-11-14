@@ -2,7 +2,8 @@
 import Base from '../../layouts/Base.astro';
 import Mount from '../../components/Mount.astro';
 import Viewer from '../../components/Viewer.astro';
-import { items, pageUrls } from '../../lib/catalog';
+import { items, pageUrls, thumbUrl } from '../../lib/catalog';
+import { absUrl, itemJsonLd } from '../../lib/seo';
 import { t } from '../../lib/i18n';
 import { url } from '../../lib/paths';
 import { festivalName } from '../../lib/site';
@@ -18,11 +19,19 @@ const hasPages = pageUrls(item).length > 0;
 const TABLE_COLS = ['numero', 'categoria', 'idioma', 'descripcion'];
 const yearLabel = item.year ?? (item.undated ? t('item.sin_fecha') : t('item.general'));
 const yearHref = item.year ? url(`${item.festival}/${item.year}/`) : url(`general/${item.festival}/`);
+// For search engines: restricted items never expose an image (thumbUrl is null for them).
+const image = thumbUrl(item);
+const description = [item.title, `${fest}${item.year ? ` ${item.year}` : ''}.`, t(`categorias.${item.category}`) + '.'].join(' · ');
+const jsonLd = itemJsonLd({
+  name: item.title, url: absUrl(`item/${item.id}/`), image: image ? absUrl(image) : null,
+  editionUrl: item.year ? absUrl(`${item.festival}/${item.year}/`) : null,
+  editionName: item.year ? `${fest} ${item.year}` : null, year: item.year,
+});
 const retrieved = item.retrieved
   ? new Date(`${item.retrieved}T12:00:00`).toLocaleDateString('es-AR', { day: 'numeric', month: 'long', year: 'numeric' })
   : '';
 ---
-<Base title={item.title} festival={item.festival} year={item.year} item={item.id}>
+<Base title={item.title} festival={item.festival} year={item.year} item={item.id} description={description} image={image} jsonLd={jsonLd}>
   <nav class="crumbs" aria-label={t('comun.miga')}>
     <ol>
       <li><a href={url('/')}>{t('nav.inicio')}</a></li>

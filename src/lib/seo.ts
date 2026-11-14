@@ -4,6 +4,7 @@
  */
 import { forEdition, longDate, type Contribution } from './contrib';
 import { t } from './i18n';
+import { docCount } from './site';
 import type { EditionState } from './types';
 
 export const SITE = 'https://amgueddfa.kevinroberts.ar';
@@ -49,7 +50,7 @@ export function editionDescription(name: string, year: number, state: EditionSta
   if (f.venue) parts.push(t('seo.lugar', { lugar: f.venue }));
   if (f.silla) parts.push(t('seo.silla', { nombre: f.silla }));
   if (f.corona) parts.push(t('seo.corona', { nombre: f.corona }));
-  parts.push(docs > 0 ? t('seo.documentos', { n: docs, estado: t(`estados.${state}`).toLowerCase() }) : t('seo.sin_documentos'));
+  parts.push(docs > 0 ? t('seo.documentos', { docs: docCount(docs), estado: t(`estados.${state}`).toLowerCase() }) : t('seo.sin_documentos'));
   return parts.join(' ');
 }
 

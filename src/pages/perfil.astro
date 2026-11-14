@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import { t } from '../lib/i18n';
 ---
-<Base title={t('perfil.titulo_corto')}>
+<Base title={t('perfil.titulo_corto')} noindex>
   <section class="perfil measure">
     <div id="perfil" aria-live="polite"><p class="muted">{t('perfil.cargando')}</p></div>
   </section>

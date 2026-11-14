@@ -22,7 +22,7 @@ const data = {
   titles: Object.fromEntries(items().map((i) => [i.id, i.title])),
 };
 ---
-<Base title={t('admin.titulo')}>
+<Base title={t('admin.titulo')} noindex>
   <section class="admin">
     <h1>{t('admin.titulo')}</h1>
     <div id="admin-gate" aria-live="polite"><p class="muted">{t('admin.cargando')}</p></div>

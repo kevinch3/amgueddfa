@@ -10,7 +10,7 @@ const thisYear = new Date().getFullYear();
 // First year with a built edition page, per festival: the back link hides for earlier years.
 const firsts = Object.fromEntries(festivals().map((f) => [f.slug, yearRange(f.slug)[0]]));
 ---
-<Base title={t('contrib.titulo')}>
+<Base title={t('contrib.titulo')} noindex>
   <section class="contrib">
     <h1>{t('contrib.titulo')}</h1>
     <p class="lead measure">{t('contrib.intro')}</p>

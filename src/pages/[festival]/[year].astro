@@ -11,6 +11,7 @@ import type { FestivalSlug } from '../../lib/types';
 import approvedRaw from '../../../data/approved/contributions.json';
 import { byLine, factDisplay, forEdition, jsonForScript, sortFacts, sourceLine, type Contribution } from '../../lib/contrib';
 import { mediaUrl, uploadMedia } from '../../lib/uploads';
+import { absUrl, editionDescription, editionFacts, editionJsonLd } from '../../lib/seo';
 
 export function getStaticPaths() {
   return festivals().flatMap((f) => {
@@ -54,10 +55,14 @@ const uploads = forEdition(approved, slug, year, 'upload').map((c) => {
     pages,
   };
 });
+// For search engines and bots: what this edition is, from the catalog and approved facts.
+const known = editionFacts(approved as Contribution[], slug, year);
+const seoDescription = editionDescription(fest.name, year, state, known, list.length + uploads.length);
+const seoLd = editionJsonLd({ name: fest.name, year, url: absUrl(`${slug}/${year}/`), image: cover ? absUrl(cover.page) : null, facts: known });
 const contribUrl = (tab: string) => url(`contribuir?f=${slug}&y=${year}&tab=${tab}`);
 const missingList = new Intl.ListFormat('es', { type: 'conjunction' }).format(missing.map((m) => m.toLowerCase()));
 ---
-<Base title={`${fest.name} ${year}`} festival={slug} year={year}>
+<Base title={`${fest.name} ${year}`} festival={slug} year={year} description={seoDescription} image={cover?.page ?? null} jsonLd={seoLd}>
   <nav class="crumbs" aria-label={t('comun.miga')}>
     <ol>
       <li><a href={url('/')}>{t('nav.inicio')}</a></li>

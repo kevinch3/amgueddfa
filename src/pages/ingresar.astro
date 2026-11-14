@@ -8,7 +8,7 @@ import { url } from '../lib/paths';
 // {{ .Token }} are live to show the code field up front.
 const codeFirst = import.meta.env.PUBLIC_AUTH_CODE === '1';
 ---
-<Base title={t('auth.titulo')}>
+<Base title={t('auth.titulo')} noindex>
   <section class="auth" data-home={url('/')}>
     <h1>{t('auth.titulo')}</h1>
     <noscript><p class="auth-msg">{t('auth.sin_js')}</p></noscript>

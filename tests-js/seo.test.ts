@@ -53,6 +53,7 @@ describe('seo builders', () => {
     expect(d).toContain('Salón San David');
     expect(d).toContain('E. M. Roberts');
     expect(editionDescription('Eisteddfod de Trevelin', 2016, 'none', { notHeld: false }, 0).length).toBeGreaterThan(40);
+    expect(d).toContain('1 documento en el archivo');
   });
 
   it('itemJsonLd and siteJsonLd', () => {

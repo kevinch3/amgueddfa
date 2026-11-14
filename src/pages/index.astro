@@ -8,6 +8,7 @@ import { jsonForScript, type Contribution } from '../lib/contrib';
 import { latestApproved } from '../lib/game';
 import { t } from '../lib/i18n';
 import { url } from '../lib/paths';
+import { siteJsonLd } from '../lib/seo';
 import { festivalName } from '../lib/site';
 
 const all = items();
@@ -23,7 +24,7 @@ const wanted = mostWanted(12);
 // The feed never shows payload text, so none is embedded.
 const recent = latestApproved(approvedStatic as Contribution[], [], 10).map((c) => ({ ...c, payload: {} }));
 ---
-<Base current="inicio">
+<Base current="inicio" jsonLd={siteJsonLd()}>
   <section class="intro measure">
     <h1>{t('sitio.nombre')}</h1>
     <p class="lead">{t('inicio.lema')}</p>

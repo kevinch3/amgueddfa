@@ -5,7 +5,7 @@
     "lugar": "Lugar: {lugar}.",
     "silla": "Silla: {nombre}.",
     "corona": "Corona: {nombre}.",
-    "documentos": "{n} documentos en el archivo ({estado}).",
+    "documentos": "{docs} en el archivo ({estado}).",
     "sin_documentos": "Todavía no hay documentos de este año en el archivo: si tenés el programa, fotos o datos, podés sumarlos."
   },
   "sitio": {

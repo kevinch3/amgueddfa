@@ -1,0 +1,140 @@
+## Poesía · Barddoniaeth
+### Yn Gymraeg
+1. Cadair yr Eisteddfod: cerdd neu gyfres o gerddi ar y testun «Cynefin» neu «Gwreiddiau».
+2. Soned: «Taith» neu «Teithio».
+3. Telyneg: «Machlud».
+4. Cerdd ysgafn: «Siopa».
+5. Cerdd i blant: «Ffrindiau».
+
+### En castellano
+6. Corona del Eisteddfod, «Premio Municipalidad de Trelew»: tema y métrica libres.
+7. Medalla de plata «Asociación San David»: poesía de estilo tradicional (rima y ritmo), tema libre.
+
+## Prosa · Rhyddiaith
+### Yn Gymraeg
+8. Hunangofiant: «Cadair esmwyth».
+9. Ysgrif: «Bwyd a choginio» neu «Gwyliau».
+10. Stori i blant: «Fy arwr».
+11. Adolygiad o lyfr: «Hyd Eithaf y Ddaear: Mair Davies», golygydd Gwen Emyr.
+12. Traethawd: «Atgofion».
+13. I ddysgwyr yn unig. Myfyrwyr Wlpan: sgwrs ar y ffôn.
+14. I ddysgwyr yn unig. Myfyrwyr Pellach: llythyr cwyno.
+15. I ddysgwyr yn unig. Myfyrwyr Uwch / Meistroli.
+
+### En castellano
+16. Reseña crítica del libro «Papeles», de Hernán Bergara.
+17. Un personaje de la novela «Sobre héroes y tumbas».
+18. Tres crónicas de un periodista sobre catástrofes climáticas de 2011.
+19. Dos cuentos con rescate de viejas costumbres.
+20. Historia de una radio importante de cada lugar y sus programas.
+21. Monólogo de un colono que reflexiona sobre la vida en el nuevo lugar elegido.
+
+## Recitación · Adrodd
+### Yn Gymraeg
+22. Prif adroddiad: «Gofuned», R. Williams Parry.
+23. Adrodd: «Gwlith», Dai Rees Davies.
+24. Cyd-adrodd: «Gwenoliaid», T. Gwynn Jones.
+25. I ddysgwyr yn unig: «Yr Hen Lwybrau», Irma Hughes de Jones.
+26. Cyd-adrodd darn o ryddiaith: «Olwen», rhan o'r Mabinogion.
+
+### En castellano
+27. Libre: «Tejedora», de Irma Cuña.
+28. Libre: «Cazador», de José Pedroni.
+29. Voz masculina: «Desnudo», de Santiago Kovadloff.
+30. Principal: «Persistir», de Cecilia Glanzmann.
+31. Voz masculina: «Al desamparo», de Julio Leite.
+32. Voz femenina: «Poesía cotidiana», de Isabel Puncel de Dumery.
+33. Voz femenina: «Sin lágrimas», de Silvia Castellón.
+
+## Traducción · Cyfieithu
+34. Del castellano al galés · O'r Sbaeneg i'r Gymraeg: «Leyenda de la Loma del Castillo», de Arié Lloyd de Lewis.
+35. Del galés al castellano · O'r Gymraeg i'r Sbaeneg: «Yr Wyddfa, Gwynedd», allan o «Chwedlau Gwerin Cymru».
+36. Del castellano al inglés: fragmento de «Hacia los Andes», de Eluned Morgan (trad. de Irma Hughes de Jones).
+37. Del inglés al castellano: fragmento de «The Appeal», de John Grisham.
+38. Del italiano al castellano: fragmento de «Viaggio in Italia», de Guido Piovene.
+39. Del francés al castellano: «À celle qui voyage trop vite», de Colette.
+
+## Música · Cerddoriaeth
+### Solos · Yn Gymraeg
+40. Unawd agored: «Sul y Blodau», Owen Williams – Eifion Wyn.
+41. Unawd agored: emyn hunanddewisiad.
+42. Unawd agored, cân werin: hunanddewisiad.
+43. Unawd agored, cân ysgafn: hunanddewisiad.
+
+### Solos · En castellano y otros idiomas
+44. Solo libre: «Tuyo es mi corazón», F. Lehár.
+45. Solo libre: tema del folklore argentino a elección.
+46. Solo libre: música ciudadana (tango, milonga) a elección.
+
+### Dúos a octetos
+47. Deuawd agored, merched / dynion / cymysg: hunanddewisiad.
+48. Pedwarawd: «Heb Amynedd Doeth Ni Fydd».
+49. Trío: «Adventi ének», Z. Kodály.
+50. Octeto: «El grillo», Josquin des Prez.
+
+### Conjuntos · Yn Gymraeg
+51. Parti neu gôr merched: «Rhyddid», Olwen Jones.
+52. Parti neu gôr meibion: «Myrddin», Robat Arwyn – Robin Llwyd ab Owain.
+53. Parti neu gôr teulu: hunanddewisiad.
+54. Parti neu gôr capel: hunanddewisiad.
+55. Parti neu gôr cân ysgafn: «Cofio dy Wyneb», Emyr Huws Jones.
+56. Parti neu gôr cân actol: hunanddewisiad.
+
+### Conjuntos · En castellano
+57. Conjunto vocal de formación libre hasta 15 integrantes: «Chaya del vidalero», R. Navarro, v. c. E. Ferraudi.
+58. Conjunto hasta 20 integrantes: «Jacinto Chiclana», A. Piazzolla – J. L. Borges, v. c. N. Zadoff.
+59. Conjunto masculino: «Puentecito del río», A. Tormo – D. Benítez, v. c. H. MacDonald.
+60. Conjunto familiar: obra o arreglo coral a elección.
+61. Conjunto de capilla: obra a elección.
+
+### Coros · Yn Gymraeg
+62. Prif gystadleuaeth (más de 20 integrantes). Anthem: «Eiddot Ti, O Dduw, yw y Mawredd»; darn gwrthgyferbyniol hunanddewisiad.
+63. Ail gystadleuaeth (más de 20 integrantes): «Dal hi'n Dynn», Robat Arwyn; darn gwrthgyferbyniol hunanddewisiad.
+64. Côr cymysg: «Ewch Allan i'r Holl Fyd mewn Hedd», John Rutter.
+
+### Coros · En castellano y otros idiomas
+65. Competencia principal. Coro mixto: «For unto us a child is born» («El Mesías»), G. F. Händel; obra contrastante a elección.
+66. Segunda competencia principal. Coro mixto: «Marcha triunfal» («Aida»), G. Verdi; obra contrastante a elección.
+67. Coro femenino: «Alfonsina y el mar», A. Ramírez – F. Luna, v. c. C. Jones.
+68. Coro de formación libre con ensamble instrumental: obra del repertorio académico a elección.
+69. Coro de formación libre: obra contemporánea a elección.
+
+### Instrumental
+70. Solo: instrumento y obra del repertorio académico a elección.
+71. Dúo instrumental: obra folklórica a elección.
+72. Conjunto instrumental de formación libre: obra a elección.
+
+## Danzas
+### Dawns werin
+73. «Cyfri Saith», para grupos que bailan ocasionalmente.
+74. «Rali Twm Siôn».
+75. Agored · Libre: crear una danza sobre una melodía tradicional u original.
+76. Libre: danza a elección para grupos de niños, jóvenes y adultos.
+
+### Danza folklórica extranjera
+77. Libre: danza folklórica de otros países.
+
+### Danza folklórica y popular argentina
+78. Pareja de danza tradicional: zamba.
+79. Danzas estilizadas: «El cuando» o «El escondido».
+80. Tango salón.
+
+## Artesanías
+81. Madera: juego de cubiertos para ensalada tallados.
+82. Telar mapuche: camino con guarda central.
+83. Cerámica: juego de té de seis tazas con sus platos.
+84. Orfebrería: juego de seis cucharitas para té.
+85. Bordado en punto cruz: camino para mesa rectangular.
+86. Tejido a dos agujas: chaleco para niño/a de 3 años con diseño canelón.
+87. Pintura sobre tela: cortina.
+88. Crochet: dos diseños de agarraderas.
+
+## Artes visuales
+89. Noveles. Dibujo: «Nuestro paisaje en perspectiva».
+90. Noveles. Pintura: «Paisajes interiores».
+91. Noveles. Fotografía: «Raíces».
+92. Experimentados. Dibujo: tema y técnica a elección.
+93. Experimentados. Pintura: tema y técnica a elección.
+94. Diseño gráfico: tapa, contratapa y afiche del programa del Eisteddfod 2013.
+95. Fotografía: tema y técnica a elección.
+96. Video: documental, ficción o animación, tema libre.

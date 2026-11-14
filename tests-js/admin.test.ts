@@ -2,6 +2,8 @@ import { describe, expect, it } from 'vitest';
 import {
   adminAddFacts,
   approve,
+  creditOptions,
+  groupState,
   approveAll,
   approveUpload,
   editionKeys,
@@ -274,7 +276,7 @@ describe('approve / reject', () => {
     expect(await approve(fact, { field: 'venue', value: ' Salón San David ' }, client)).toEqual({ ok: true });
     expect(rpcs[0]).toEqual({
       fn: 'approve_contribution',
-      args: { cid: 'c2', fills_gap: false, payload_override: { field: 'venue', value: 'Salón San David' } },
+      args: { cid: 'c2', fills_gap: false, payload_override: { field: 'venue', value: 'Salón San David', fuente: null } },
     });
   });
 
@@ -496,6 +498,42 @@ describe('adminAddFacts', () => {
     expect(await adminAddFacts(U, 'chubut', 1937, [{ field: 'venue', value: 'X' }], '', rpcClient({ message: 'not_admin' }).client))
       .toEqual({ ok: false, key: 'admin.error.no_admin' });
     expect(await adminAddFacts('', 'chubut', 1937, [{ field: 'venue', value: 'X' }], '', client)).toEqual({ ok: false, key: 'admin.error.acreditar' });
+  });
+});
+
+describe('review fixes', () => {
+  const fact = (id: string, payload: any = {}): Pending => ({
+    id, user_id: 'u1', type: 'fact', festival: 'chubut', year: 1937, item_id: null, created_at: '',
+    payload: { field: 'venue', value: id, lote: 'L', ...payload },
+  } as Pending);
+
+  it('groupState only offers rows not yet approved or rejected', () => {
+    const g = groupState([fact('a'), fact('b'), fact('c')]);
+    expect(g.pending().map((c) => c.id)).toEqual(['a', 'b', 'c']);
+    g.settle('a');
+    g.settle('c');
+    expect(g.pending().map((c) => c.id)).toEqual(['b']);
+    expect(g.finished()).toBe(false);
+    g.settle('b');
+    expect(g.finished()).toBe(true);
+  });
+
+  it('creditOptions starts empty unless the admin is in the list', () => {
+    const users = [{ id: 'a', display_name: 'Aaron', role: 'user', points: 0 }, { id: 'k', display_name: 'Kevin', role: 'admin', points: 0 }] as any;
+    expect(creditOptions(users, 'k')).toEqual([{ value: 'a', label: 'Aaron', selected: false }, { value: 'k', label: 'Kevin', selected: true }]);
+    const none = creditOptions(users, null);
+    expect(none[0]).toEqual({ value: '', label: expect.any(String), selected: true });
+    expect(none.slice(1).every((o) => !o.selected)).toBe(true);
+    expect(creditOptions(users, 'zz')[0].value).toBe('');
+  });
+
+  it('editing away a fuente before approving removes it', async () => {
+    const calls: any[] = [];
+    const client: any = { rpc: async (fn: string, args: any) => (calls.push(args), { data: 10, error: null }) };
+    await approve(fact('a', { fuente: 'llamame 555-1234' }), { field: 'venue', value: 'a' }, client);
+    expect(calls[0].payload_override).toEqual({ field: 'venue', value: 'a', fuente: null });
+    await approve(fact('b', { fuente: 'Libro' }), { field: 'venue', value: 'b', fuente: 'Libro corregido' }, client);
+    expect(calls[1].payload_override.fuente).toBe('Libro corregido');
   });
 });
 

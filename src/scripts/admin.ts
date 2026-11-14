@@ -4,9 +4,11 @@ import {
   approve,
   approveAll,
   approveUpload,
+  creditOptions,
   gapChoice,
   gapOverride,
   groupQueue,
+  groupState,
   loadApprovedUploads,
   loadQueue,
   loadReleased,
@@ -247,20 +249,29 @@ async function renderQueue(): Promise<void> {
   show(msg, r.data.length ? '' : t('admin.vacia'));
   for (const g of groupQueue(r.data)) {
     const cards = new Map<string, HTMLLIElement>();
+    const state = groupState(g.items);
+    let onSettle = () => {};
     for (const c of g.items) {
-      const li = card(c, (key) => li.replaceChildren(el('p', { class: 'contrib-ok', role: 'status' }, t(key))));
+      const li = card(c, (key) => {
+        li.replaceChildren(el('p', { class: 'contrib-ok', role: 'status' }, t(key)));
+        state.settle(c.id); // handled on its own: the group buttons skip it from now on
+        onSettle();
+      });
       cards.set(c.id, li);
     }
     if (!g.lote) {
       list.append(...cards.values());
       continue;
     }
-    list.append(groupCard(g.items, cards));
+    const { box, refresh } = groupCard(state, cards);
+    onSettle = refresh;
+    list.append(box);
   }
 }
 
 /** Facts sent together: one header with "Aprobar todos" / "Rechazar todos" above their cards. */
-function groupCard(items: Pending[], cards: Map<string, HTMLLIElement>): HTMLLIElement {
+function groupCard(state: ReturnType<typeof groupState>, cards: Map<string, HTMLLIElement>): { box: HTMLLIElement; refresh: () => void } {
+  const items = state.pending();
   const box = el('li', { class: 'admin-grupo' });
   const head = el('div', { class: 'admin-grupo-head' });
   head.append(el('h2', { class: 'small' }, t('admin.grupo', { n: items.length })));
@@ -277,21 +288,33 @@ function groupCard(items: Pending[], cards: Map<string, HTMLLIElement>): HTMLLIE
   inner.append(...cards.values());
   box.append(head, inner);
 
+  // The buttons count and act on the rows still waiting; once none are, they go.
+  const refresh = () => {
+    if (state.finished()) {
+      row.remove();
+      return;
+    }
+    okAll.textContent = t('admin.aprobar_todos', { n: state.pending().length });
+  };
+
   // Mark each card approved/rejected; failed cards keep their own error.
   const settle = (res: BulkResult, okKey: string) => {
-    for (const id of res.done) cards.get(id)?.replaceChildren(el('p', { class: 'contrib-ok', role: 'status' }, t(okKey)));
+    for (const id of res.done) {
+      state.settle(id);
+      cards.get(id)?.replaceChildren(el('p', { class: 'contrib-ok', role: 'status' }, t(okKey)));
+    }
     for (const f of res.failed) {
       const m = cards.get(f.id)?.querySelector<HTMLElement>('.contrib-msg');
       if (m) show(m, t(f.key));
     }
     show(msg, res.failed.length ? t('admin.error.algunos', { n: res.failed.length }) : '');
-    if (!res.failed.length) row.remove();
+    refresh();
   };
 
   okAll.addEventListener('click', async () => {
     okAll.disabled = noAll.disabled = true;
     show(msg, t('admin.procesando'));
-    settle(await approveAll(items), 'admin.aprobado');
+    settle(await approveAll(state.pending()), 'admin.aprobado');
     okAll.disabled = noAll.disabled = false;
   });
 
@@ -310,14 +333,14 @@ function groupCard(items: Pending[], cards: Map<string, HTMLLIElement>): HTMLLIE
       if (!inp.value.trim()) return show(msg, t('admin.error.motivo'));
       go.disabled = cancel.disabled = true;
       show(msg, t('admin.procesando'));
-      const res = await rejectAll(items, inp.value);
+      const res = await rejectAll(state.pending(), inp.value);
       form.replaceWith(row);
       settle(res, 'admin.rechazado');
     });
     row.replaceWith(form);
     inp.focus();
   });
-  return box;
+  return { box, refresh };
 }
 
 async function renderRestricted(): Promise<void> {
@@ -436,10 +459,10 @@ async function setupCargar(): Promise<void> {
   const editor = mountFactEditor($('apanel-cargar'), { prefix: 'a', yearInput: year, say, max: ADMIN_MAX_FACTS });
 
   const [me, users] = await Promise.all([currentProfile().catch(() => null), searchUsers('')]);
-  who.replaceChildren(...users.data.map((u) => {
-    const o = el('option', { value: u.id }, u.display_name || t('admin.sin_nombre'));
-    if (u.id === me?.id) o.selected = true;
-    return o;
+  who.replaceChildren(...creditOptions(users.data, me?.id ?? null).map((o) => {
+    const opt = el('option', { value: o.value }, o.label);
+    opt.selected = o.selected;
+    return opt;
   }));
   if (users.offline) say('estado.sin_conexion');
 

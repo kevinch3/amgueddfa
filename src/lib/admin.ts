@@ -2,6 +2,7 @@ import type { SupabaseClient } from '@supabase/supabase-js';
 import { uuid, validate, type Kind } from './contrib';
 import { makePages } from './derive';
 import { liveQuery } from './live';
+import { t } from './i18n';
 import { getClient } from './supabase';
 import type { FestivalSlug } from './types';
 
@@ -280,6 +281,9 @@ export async function approve(c: Pending, edited: Record<string, unknown> | null
     const v = validate(c.type, edited);
     if (!v.ok) return v;
     override = v.payload;
+    // The override is merged into the stored payload, so a fuente the admin
+    // deleted must be cleared explicitly or the original would be published.
+    if (c.type === 'fact' && !('fuente' in override)) override = { ...override, fuente: null };
   }
   if (!client) return OFFLINE;
   return rpc(client, 'approve_contribution', { cid: c.id, fills_gap: false, payload_override: override });
@@ -323,6 +327,29 @@ export function groupQueue(list: Pending[]): QueueGroup[] {
     g.items.push(c);
   }
   return out;
+}
+
+/** Which rows of a group are still waiting, so group buttons never resend handled rows. */
+export function groupState(items: Pending[]) {
+  const settled = new Set<string>();
+  return {
+    settle(id: string): void { settled.add(id); },
+    pending(): Pending[] { return items.filter((c) => !settled.has(c.id)); },
+    finished(): boolean { return items.every((c) => settled.has(c.id)); },
+  };
+}
+
+export type CreditOption = { value: string; label: string; selected: boolean };
+
+/**
+ * Options for "Acreditar a": the admin preselected; if the admin is not in the
+ * list (profile not loaded, beyond the first 200), a leading empty choice so
+ * nobody is credited by accident.
+ */
+export function creditOptions(users: UserRow[], meId: string | null): CreditOption[] {
+  const found = users.some((u) => u.id === meId);
+  const opts = users.map((u) => ({ value: u.id, label: u.display_name || t('admin.sin_nombre'), selected: found && u.id === meId }));
+  return found ? opts : [{ value: '', label: t('contrib.elegir'), selected: true }, ...opts];
 }
 
 export type BulkResult = { done: string[]; failed: { id: string; key: string }[] };

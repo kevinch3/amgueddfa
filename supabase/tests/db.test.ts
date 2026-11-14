@@ -430,3 +430,20 @@ describe('admin_add_facts and the admin exemption', () => {
   });
 });
 
+describe('credited facts and the credited person\'s daily limit', () => {
+  it('facts an admin credits to someone do not use up that person\'s 30 per day', async () => {
+    const admin = await t.createAdmin();
+    const u = await t.createUser();
+    const facts = JSON.stringify(Array.from({ length: 30 }, (_, i) => ({ field: 'other', value: `Dato ${i}` })));
+    await t.q(admin, 'select public.admin_add_facts($1, $2, $3, $4::jsonb)', [u, 'chubut', 1937, facts]);
+    await expect(contribute(u, { user_id: u })).resolves.toBeTypeOf('string');
+  });
+
+  it('contributors cannot set who created a row', async () => {
+    const u = await t.createUser();
+    const other = await t.createUser();
+    await expect(t.q(u, `insert into public.contributions (user_id, type, festival, year, payload, status, created_by)
+      values ($1, 'memory', 'chubut', 2024, '{"text":"x"}', 'pending', $2)`, [u, other])).rejects.toThrow();
+  });
+});
+

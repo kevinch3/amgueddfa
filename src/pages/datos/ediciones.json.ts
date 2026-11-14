@@ -7,21 +7,22 @@ import { absUrl, editionFacts, factRecord } from '../../lib/seo';
 /** Open data: every edition in range with its state, cover and approved facts. */
 export function GET(): Response {
   const approved = approvedRaw as Contribution[];
-  const notHeld = new Set((editionsRaw as { festival: string; year: number; status: string }[])
-    .filter((e) => e.status === 'not_held').map((e) => `${e.festival}:${e.year}`));
+  const status = new Map((editionsRaw as { festival: string; year: number; status: 'held' | 'not_held' | 'unknown' }[])
+    .map((e) => [`${e.festival}:${e.year}`, e.status]));
   const ediciones = festivals().flatMap((f) => {
     const [first, last] = yearRange(f.slug);
     return Array.from({ length: last - first + 1 }, (_, k) => {
       const year = first + k;
       const cover = editionCover(f.slug, year);
-      const facts = editionFacts(approved, f.slug, year);
+      const facts = editionFacts(approved, f.slug, year, status.get(`${f.slug}:${year}`) ?? null);
       return {
         eisteddfod: f.slug,
         nombre: f.name,
         ano: year,
         url: absUrl(`${f.slug}/${year}/`),
         estado: editionState(f.slug, year),
-        realizada: !(facts.notHeld || notHeld.has(`${f.slug}:${year}`)),
+        // true / false when known; null when nobody has said (not a guess).
+        realizada: facts.held ?? null,
         tapa: cover ? absUrl(cover.page) : null,
         documentos: editionItems(f.slug, year).filter((i) => !i.restricted).length + forEdition(approved, f.slug, year, 'upload').length,
         datos: sortFacts(forEdition(approved, f.slug, year, 'fact')).map(factRecord),

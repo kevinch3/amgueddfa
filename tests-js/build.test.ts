@@ -4,6 +4,7 @@ import { join } from 'node:path';
 import { beforeAll, describe, expect, it } from 'vitest';
 import raw from '../src/data/catalog.json';
 import approved from '../data/approved/contributions.json';
+import editionsData from '../data/approved/editions.json';
 import { editionCover, undocumented, yearRange } from '../src/lib/catalog';
 import { decades } from '../src/lib/timeline';
 import type { FestivalSlug, Item } from '../src/lib/types';
@@ -145,8 +146,11 @@ describe('static build', () => {
     expect(year).toContain('<link rel="canonical" href="https://amgueddfa.kevinroberts.ar/chubut/1937/"');
     expect(year).toContain('<meta property="og:title"');
     expect(year).toContain('"@type":"Event"');
-    expect(year).toContain('"startDate":"1937-12-08"');
     expect(year).toMatch(/<meta name="description" content="Eisteddfod del Chubut 1937\./);
+    // Every approved start date shows up in its edition's Event (zero or many, whatever the data is).
+    for (const c of (approved as any[]).filter((x) => x.type === 'fact' && x.payload?.field === 'start_date')) {
+      expect(read(`${c.festival}/${c.year}/index.html`)).toContain(`"startDate":"${c.payload.value}"`);
+    }
     const prog = catalog.find((i) => i.category === 'programa' && !i.restricted && i.year !== null && i.thumb)!;
     const itemPage = read(`item/${prog.id}/index.html`);
     expect(itemPage).toContain('"@type":"ArchiveComponent"');
@@ -155,7 +159,11 @@ describe('static build', () => {
     for (const p of ['admin', 'perfil', 'ingresar', 'contribuir']) expect(read(`${p}/index.html`), p).toContain('<meta name="robots" content="noindex"');
     expect(read('404.html')).toContain('<meta name="robots" content="noindex"');
     expect(year).not.toContain('content="noindex"');
-    for (const i of catalog.filter((x) => x.restricted)) expect(read(`item/${i.id}/index.html`)).not.toContain('og:image" content="https://amgueddfa.kevinroberts.ar/media/');
+    for (const i of catalog.filter((x) => x.restricted)) {
+      const page = read(`item/${i.id}/index.html`);
+      expect(page, i.id).not.toContain('og:image" content="https://amgueddfa.kevinroberts.ar/media/');
+      expect(page, i.id).not.toContain('application/ld+json');
+    }
   });
 
   it('robots.txt, sitemap, open data and llms.txt expose public content only', () => {
@@ -181,6 +189,15 @@ describe('static build', () => {
       const ups = (approved as any[]).filter((c) => c.type === 'upload' && c.festival === e.eisteddfod && c.year === e.ano).length;
       const cat = catalog.filter((i) => !i.restricted && i.festival === e.eisteddfod && i.year === e.ano).length;
       expect(e.documentos, `${e.eisteddfod} ${e.ano}`).toBe(cat + ups);
+    }
+    // "realizada" is only true/false when known; unknown editions say null.
+    const status = new Map((editionsData as any[]).map((e) => [`${e.festival}:${e.year}`, e.status]));
+    for (const e of eds.ediciones) {
+      const known = status.get(`${e.eisteddfod}:${e.ano}`);
+      const hasFact = (approved as any[]).some((c) => c.type === 'fact' && c.festival === e.eisteddfod && c.year === e.ano && c.payload?.field === 'edicion_realizada');
+      if (!known && !hasFact) expect(e.realizada, `${e.eisteddfod} ${e.ano}`).toBeNull();
+      if (known === 'held') expect(e.realizada).toBe(true);
+      if (known === 'not_held') expect(e.realizada).toBe(false);
     }
     // Every approved fact with a fuente keeps it in the data file (zero or many, whatever the data is).
     const withFuente = (approved as any[]).filter((c) => c.type === 'fact' && c.payload?.fuente).length;

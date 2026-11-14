@@ -24,12 +24,25 @@ export function sitemapXml(urls: string[]): string {
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${body}\n</urlset>\n`;
 }
 
-/** What approved facts say about one edition (the latest value wins per field). */
-export type EditionFacts = { startDate?: string; endDate?: string; venue?: string; silla?: string; corona?: string; notHeld: boolean };
+/**
+ * What approved facts say about one edition. Per field, the most recently
+ * approved fact wins (not file order: the export is sorted by random id).
+ * `held` is true/false only when known: the editions table (what
+ * approve_contribution keeps up to date) first, else the latest
+ * "¿Se realizó?" fact; otherwise null.
+ */
+export type EditionFacts = { startDate?: string; endDate?: string; venue?: string; silla?: string; corona?: string; notHeld: boolean; held?: boolean | null };
 
-export function editionFacts(approved: Contribution[], festival: string, year: number): EditionFacts {
-  const out: EditionFacts = { notHeld: false };
-  for (const c of forEdition(approved, festival, year, 'fact')) {
+export function editionFacts(
+  approved: Contribution[],
+  festival: string,
+  year: number,
+  status: 'held' | 'not_held' | 'unknown' | null = null,
+): EditionFacts {
+  const out: EditionFacts = { notHeld: false, held: null };
+  const when = (c: Contribution) => String(c.reviewed_at ?? c.created_at ?? '');
+  const facts = [...forEdition(approved, festival, year, 'fact')].sort((a, b) => when(a).localeCompare(when(b)));
+  for (const c of facts) {
     const p = c.payload ?? {};
     const v = String(p.value ?? '').trim();
     if (p.field === 'start_date' && v) out.startDate = v;
@@ -37,8 +50,11 @@ export function editionFacts(approved: Contribution[], festival: string, year: n
     else if (p.field === 'venue' && v) out.venue = v;
     else if (p.field === 'ganador_silla' && v) out.silla = v;
     else if (p.field === 'ganador_corona' && v) out.corona = v;
-    else if (p.field === 'edicion_realizada') out.notHeld = v === 'no';
+    else if (p.field === 'edicion_realizada' && (v === 'si' || v === 'no')) out.held = v === 'si';
   }
+  if (status === 'held') out.held = true;
+  else if (status === 'not_held') out.held = false;
+  out.notHeld = out.held === false;
   return out;
 }
 

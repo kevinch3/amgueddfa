@@ -22,7 +22,8 @@ const yearHref = item.year ? url(`${item.festival}/${item.year}/`) : url(`genera
 // For search engines: restricted items never expose an image (thumbUrl is null for them).
 const image = thumbUrl(item);
 const description = [item.title, `${fest}${item.year ? ` ${item.year}` : ''}.`, t(`categorias.${item.category}`) + '.'].join(' · ');
-const jsonLd = itemJsonLd({
+// Restricted documents get no structured data (they are not freely available here).
+const jsonLd = item.restricted ? null : itemJsonLd({
   name: item.title, url: absUrl(`item/${item.id}/`), image: image ? absUrl(image) : null,
   editionUrl: item.year ? absUrl(`${item.festival}/${item.year}/`) : null,
   editionName: item.year ? `${fest} ${item.year}` : null, year: item.year,

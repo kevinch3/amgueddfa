@@ -9,6 +9,7 @@ import { url } from '../../lib/paths';
 import { byTitle, CATEGORY_ORDER, docCount } from '../../lib/site';
 import type { FestivalSlug } from '../../lib/types';
 import approvedRaw from '../../../data/approved/contributions.json';
+import editionsStatic from '../../../data/approved/editions.json';
 import { byLine, factDisplay, forEdition, jsonForScript, sortFacts, sourceLine, type Contribution } from '../../lib/contrib';
 import { mediaUrl, uploadMedia } from '../../lib/uploads';
 import { absUrl, editionDescription, editionFacts, editionJsonLd } from '../../lib/seo';
@@ -56,7 +57,9 @@ const uploads = forEdition(approved, slug, year, 'upload').map((c) => {
   };
 });
 // For search engines and bots: what this edition is, from the catalog and approved facts.
-const known = editionFacts(approved as Contribution[], slug, year);
+const editionStatus = (editionsStatic as { festival: string; year: number; status: 'held' | 'not_held' | 'unknown' }[])
+  .find((e) => e.festival === slug && e.year === year)?.status ?? null;
+const known = editionFacts(approved as Contribution[], slug, year, editionStatus);
 const seoDescription = editionDescription(fest.name, year, state, known, list.length + uploads.length);
 const seoLd = editionJsonLd({ name: fest.name, year, url: absUrl(`${slug}/${year}/`), image: cover ? absUrl(cover.page) : null, facts: known });
 const contribUrl = (tab: string) => url(`contribuir?f=${slug}&y=${year}&tab=${tab}`);

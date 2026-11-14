@@ -25,8 +25,23 @@ describe('seo builders', () => {
       fact('start_date', '1937-12-08'), fact('venue', 'Salón San David de Trelew'),
       fact('ganador_silla', 'Edward Morgan Roberts'), { ...fact('venue', 'Otro'), year: 1938 },
     ], 'chubut', 1937);
-    expect(f).toEqual({ startDate: '1937-12-08', venue: 'Salón San David de Trelew', silla: 'Edward Morgan Roberts', notHeld: false });
-    expect(editionFacts([fact('edicion_realizada', 'no')], 'chubut', 1937).notHeld).toBe(true);
+    expect(f).toEqual({ startDate: '1937-12-08', venue: 'Salón San David de Trelew', silla: 'Edward Morgan Roberts', notHeld: false, held: null });
+    expect(editionFacts([fact('edicion_realizada', 'no')], 'chubut', 1937)).toMatchObject({ notHeld: true, held: false });
+  });
+
+  it('editionFacts: the most recently approved fact wins, whatever the ids', () => {
+    const older = { ...fact('edicion_realizada', 'no'), id: 'ffff', reviewed_at: '2026-11-01T10:00:00Z' };
+    const newer = { ...fact('edicion_realizada', 'si'), id: 'aaaa', reviewed_at: '2026-11-02T10:00:00Z' };
+    expect(editionFacts([newer, older], 'chubut', 1937)).toMatchObject({ held: true, notHeld: false });
+    const v1 = { ...fact('venue', 'Viejo'), id: 'ffff', reviewed_at: '2026-11-01T10:00:00Z' };
+    const v2 = { ...fact('venue', 'Corregido'), id: 'aaaa', reviewed_at: '2026-11-03T10:00:00Z' };
+    expect(editionFacts([v2, v1], 'chubut', 1937).venue).toBe('Corregido');
+  });
+
+  it('editionFacts: the edition status table wins over facts; unknown stays null', () => {
+    expect(editionFacts([fact('edicion_realizada', 'si')], 'chubut', 1937, 'not_held')).toMatchObject({ held: false, notHeld: true });
+    expect(editionFacts([], 'chubut', 1937, 'held')).toMatchObject({ held: true, notHeld: false });
+    expect(editionFacts([], 'chubut', 1937)).toMatchObject({ held: null, notHeld: false });
   });
 
   it('editionJsonLd: a full Event, and a minimal valid one without facts', () => {

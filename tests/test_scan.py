@@ -118,3 +118,9 @@ def test_videos_tree_is_not_scanned(tmp_path):
     (v / "yt_coro_AbCdEfGhIjK.jpg").write_bytes(b"thumb")
     (a / "VIDEOS.tsv").write_text("video_id\turl\n", encoding="utf-8")
     assert {i.id for i in scan(a, set())} == before
+
+
+def test_named_source_without_url():
+    from scripts.catalog.scan import _source
+    assert _source("Asociación Eisteddfod del Chubut") == (None, "Asociación Eisteddfod del Chubut")
+    assert _source("https://drive.google.com/file/d/x/view") == ("https://drive.google.com/file/d/x/view", "Google Drive")

@@ -23,7 +23,7 @@ CATEGORIES = {
 KINDS = {
     "jpg": "image", "jpeg": "image", "png": "image", "webp": "image",
     "pdf": "pdf",
-    "doc": "doc", "docx": "doc", "pptx": "doc", "xls": "doc",
+    "doc": "doc", "docx": "doc", "pptx": "doc", "xls": "doc", "xlsx": "doc",
     "html": "web", "htm": "web",
     "csv": "table",
 }
@@ -46,6 +46,8 @@ def _source(url: str) -> tuple[str | None, str]:
     if url.startswith("kpc.local:"):
         return None, "Archivo personal (kpc)"
     if url.startswith("Aporte de "):  # scripts/sync_uploads.py: a community upload
+        return None, url
+    if not url.startswith(("http://", "https://")):  # a named source, e.g. an association's files
         return None, url
     host = (urlparse(url).hostname or "").lower()
     if host.endswith("facebook.com"):

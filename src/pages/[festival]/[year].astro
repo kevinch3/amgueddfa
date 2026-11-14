@@ -3,6 +3,7 @@ import Base from '../../layouts/Base.astro';
 import EmptySlot from '../../components/EmptySlot.astro';
 import ItemCard from '../../components/ItemCard.astro';
 import Mount from '../../components/Mount.astro';
+import VideoList from '../../components/VideoList.astro';
 import { editionCover, editionItems, editionState, festivals, yearRange } from '../../lib/catalog';
 import { t } from '../../lib/i18n';
 import { url } from '../../lib/paths';
@@ -13,6 +14,7 @@ import editionsStatic from '../../../data/approved/editions.json';
 import { byLine, factDisplay, forEdition, jsonForScript, sortFacts, sourceLine, type Contribution } from '../../lib/contrib';
 import { mediaUrl, uploadMedia } from '../../lib/uploads';
 import { absUrl, editionDescription, editionFacts, editionJsonLd } from '../../lib/seo';
+import { editionVideos } from '../../lib/videos';
 
 export function getStaticPaths() {
   return festivals().flatMap((f) => {
@@ -28,6 +30,7 @@ const [first, last] = yearRange(slug);
 const list = editionItems(slug, year);
 const state = editionState(slug, year);
 const cover = editionCover(slug, year);
+const videos = editionVideos(slug, year);
 const sections = CATEGORY_ORDER.map((c) => ({ c, items: list.filter((i) => i.category === c).sort(byTitle) }));
 // Programa always shows (with its slot when incomplete); other empty sections are named in one slot.
 const shown = sections.filter((s) => s.c === 'programa' || s.items.length > 0);
@@ -116,6 +119,8 @@ const missingList = new Intl.ListFormat('es', { type: 'conjunction' }).format(mi
       <EmptySlot message={t('edicion.faltan_secciones', { lista: missingList })} />
     </section>
   )}
+
+  <VideoList videos={videos} />
 
   <section class="section island-section" aria-labelledby="recuerdos-t">
     <h2 id="recuerdos-t">{t('edicion.recuerdos_titulo')}</h2>

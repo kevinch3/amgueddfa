@@ -7,6 +7,8 @@ import approved from '../data/approved/contributions.json';
 import editionsData from '../data/approved/editions.json';
 import { editionCover, undocumented, yearRange } from '../src/lib/catalog';
 import { decades } from '../src/lib/timeline';
+import { editionVideos } from '../src/lib/videos';
+import videosData from '../src/data/videos.json';
 import type { FestivalSlug, Item } from '../src/lib/types';
 
 const DIST = join(__dirname, '..', 'dist');
@@ -261,5 +263,20 @@ describe('static build', () => {
   it('mount points are not live regions', () => {
     const html = read('chubut/2024/index.html');
     expect(html).not.toMatch(/id="(sesion|hechos|recuerdos|aportes|recientes)"[^>]*aria-live/);
+  });
+
+  it('edition pages link every video of their edition, and no page shows an empty videos block', () => {
+    const videos = (videosData as { videos: { festival: FestivalSlug; year: number }[] }).videos;
+    for (const f of FESTIVALS) {
+      const [a, b] = range(f);
+      for (let y = a; y <= b; y++) {
+        const html = read(`${f}/${y}/index.html`);
+        const own = editionVideos(f, y);
+        expect(html.includes('id="videos-t"'), `${f} ${y}`).toBe(own.length > 0);
+        for (const v of own) expect(html).toContain(`watch?v=${v.id}`);
+      }
+    }
+    // Every exported video lands on a page that exists.
+    for (const v of videos) expect(existsSync(join(DIST, v.festival, String(v.year), 'index.html')), `${v.festival} ${v.year}`).toBe(true);
   });
 });

@@ -1,0 +1,43 @@
+---
+import { t } from '../lib/i18n';
+import { splitVideos, videoThumb, videoUrl, type Video } from '../lib/videos';
+
+interface Props { videos: Video[] }
+const { highlights, performances } = splitVideos(Astro.props.videos);
+---
+{(highlights.length > 0 || performances.length > 0) && (
+  <section class="section" aria-labelledby="videos-t">
+    <h2 id="videos-t">{t('videos.titulo')} <span class="muted small">({highlights.length + performances.length})</span></h2>
+    <p class="measure muted small">{t('videos.ayuda')}</p>
+    {highlights.length > 0 && (
+      <ul class="videos">
+        {highlights.map((v) => (
+          <li class="video">
+            <a href={videoUrl(v.id)} rel="noopener" target="_blank">
+              <span class="vframe"><img src={videoThumb(v.id)} alt="" loading="lazy" decoding="async" width="320" height="180" /></span>
+              <span class="badge">{t(`videos.tipos.${v.kind}`)}</span>
+              <span class="t">{v.title}</span>
+              <span class="muted small">{v.channel}{v.year_inferred && <> · {t('comun.ano_estimado')}</>}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    )}
+    {performances.length > 0 && (
+      <details class="videos-mas">
+        <summary>{t('videos.actuaciones', { n: performances.length })}</summary>
+        <ul class="videos">
+          {performances.map((v) => (
+            <li class="video">
+              <a href={videoUrl(v.id)} rel="noopener" target="_blank">
+                <span class="vframe"><img src={videoThumb(v.id)} alt="" loading="lazy" decoding="async" width="320" height="180" /></span>
+                <span class="t">{v.title}</span>
+                <span class="muted small">{v.channel}{v.year_inferred && <> · {t('comun.ano_estimado')}</>}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </details>
+    )}
+  </section>
+)}

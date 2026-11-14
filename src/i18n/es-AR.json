@@ -534,5 +534,16 @@
     },
     "ver_ranking": "Ver el ranking",
     "del": "del"
+  },
+  "videos": {
+    "titulo": "Videos",
+    "ayuda": "Videos de esta edición publicados en YouTube por sus autores. Se abren en YouTube.",
+    "actuaciones": "Ver {n} actuaciones",
+    "tipos": {
+      "ceremonia": "Ceremonia",
+      "sesion": "Sesión completa",
+      "noticia": "Noticia",
+      "actuacion": "Actuación"
+    }
   }
 }

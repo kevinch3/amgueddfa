@@ -177,6 +177,18 @@ main { display: block; padding: 1.5rem 0 3rem; }
 .card a:hover .frame { border-color: var(--gold-ink); }
 .card .badges { display: flex; flex-wrap: wrap; gap: 0.25rem; margin-top: 0.3rem; }
 
+/* Videos (YouTube links) ------------------------------------------------------ */
+.videos { list-style: none; margin: 0.75rem 0 0; padding: 0; display: grid; gap: 1rem 0.75rem; grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr)); }
+.video a { display: flex; flex-direction: column; gap: 0.25rem; color: var(--ink); text-decoration: none; }
+.video .vframe { aspect-ratio: 16 / 9; background: var(--paper-hi); border: 1px solid var(--rule); overflow: hidden; }
+.video .vframe img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.video .badge { align-self: flex-start; }
+.video .t { font-size: 1rem; line-height: 1.3; overflow-wrap: anywhere; }
+.video a:hover .t { text-decoration: underline; }
+.video a:hover .vframe { border-color: var(--gold-ink); }
+.videos-mas { margin-top: 1rem; }
+.videos-mas summary { cursor: pointer; font-family: var(--sans); padding: 0.7rem 0; } /* stays list-item: keeps the ▸ marker */
+
 /* Empty slot ------------------------------------------------------------------- */
 .empty {
   border: 2px dashed var(--gold-ink); background: #f8f2e499; padding: 1rem 1.1rem; border-radius: 4px;

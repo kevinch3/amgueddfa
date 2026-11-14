@@ -4,6 +4,7 @@ import {
   firstMaterialYear, YEAR_FLOOR, undocumented, editionCover,
 } from '../src/lib/catalog';
 import type { Item } from '../src/lib/types';
+import { MEDIA_BASE, siteMedia } from '../src/lib/paths';
 
 function mk(over: Partial<Item>): Item {
   return {
@@ -88,8 +89,15 @@ describe('catalog', () => {
     expect(thumbUrl(r)).toBeNull();
     expect(pageUrls(r)).toEqual([]);
     const ok = mk({});
-    expect(thumbUrl(ok)).toBe('/media/aaaaaaaaaaaa/thumb.webp');
-    expect(pageUrls(ok)).toEqual(['/media/aaaaaaaaaaaa/p01.webp']);
+    expect(thumbUrl(ok)).toBe(`${MEDIA_BASE}/media/aaaaaaaaaaaa/thumb.webp`);
+    expect(pageUrls(ok)).toEqual([`${MEDIA_BASE}/media/aaaaaaaaaaaa/p01.webp`]);
+  });
+
+  it('serves catalog media from the bucket domain, or from the site when the base is empty', () => {
+    expect(MEDIA_BASE).toBe('https://amgueddfa-media.kevinroberts.ar');
+    expect(siteMedia('x/thumb.webp', undefined)).toBe('https://amgueddfa-media.kevinroberts.ar/media/x/thumb.webp');
+    expect(siteMedia('/x/p01.webp', 'https://cdn.example/')).toBe('https://cdn.example/media/x/p01.webp');
+    expect(siteMedia('x/p01.webp', '')).toBe('/media/x/p01.webp');
   });
 
   describe('editionCover', () => {

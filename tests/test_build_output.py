@@ -31,6 +31,7 @@ def test_no_notes_key(items):
 def test_restricted_not_in_public_media(items):
     for i in items:
         if i["restricted"]:
+            assert not (REPO / "media" / i["id"]).exists()
             assert not (REPO / "public" / "media" / i["id"]).exists()
 
 

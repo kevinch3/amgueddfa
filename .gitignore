@@ -1,4 +1,5 @@
 /.restricted/
+/media/
 /.superpowers/
 .env
 node_modules/

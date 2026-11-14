@@ -13,6 +13,7 @@ import { transcribedIds } from '../src/lib/transcripciones';
 import { PUBLIC_WINNERS, winnerIds } from '../src/lib/ganadores';
 import { applyTags } from '../src/lib/tags';
 import type { FestivalSlug, Item } from '../src/lib/types';
+import { MEDIA_BASE } from '../src/lib/paths';
 
 const DIST = join(__dirname, '..', 'dist');
 const catalog = (raw as { items: Item[] }).items;
@@ -161,14 +162,14 @@ describe('static build', () => {
     const prog = catalog.find((i) => i.category === 'programa' && !i.restricted && i.year !== null && i.thumb)!;
     const itemPage = read(`item/${prog.id}/index.html`);
     expect(itemPage).toContain('"@type":"ArchiveComponent"');
-    expect(itemPage).toContain(`<meta property="og:image" content="https://amgueddfa.kevinroberts.ar/media/${prog.thumb}"`);
+    expect(itemPage).toContain(`<meta property="og:image" content="${MEDIA_BASE}/media/${prog.thumb}"`);
     expect(read('index.html')).toContain('ArchiveOrganization');
     for (const p of ['admin', 'perfil', 'ingresar', 'contribuir']) expect(read(`${p}/index.html`), p).toContain('<meta name="robots" content="noindex"');
     expect(read('404.html')).toContain('<meta name="robots" content="noindex"');
     expect(year).not.toContain('content="noindex"');
     for (const i of catalog.filter((x) => x.restricted)) {
       const page = read(`item/${i.id}/index.html`);
-      expect(page, i.id).not.toContain('og:image" content="https://amgueddfa.kevinroberts.ar/media/');
+      expect(page, i.id).not.toMatch(/og:image" content="[^"]*\/media\//);
       expect(page, i.id).not.toContain('application/ld+json');
     }
   });
@@ -236,7 +237,7 @@ describe('static build', () => {
     for (const c of cards) {
       const i = byId.get(c.id)!;
       expect(i.restricted || !i.year_inferred || i.kind !== 'image', c.id).toBe(false);
-      expect(c.img.startsWith('/media/')).toBe(true);
+      expect(c.img.startsWith(`${MEDIA_BASE}/media/`)).toBe(true);
     }
     for (const i of catalog.filter((x) => x.restricted)) expect(html).not.toContain(i.id);
     expect(read('index.html')).toContain('id="recientes-data"');

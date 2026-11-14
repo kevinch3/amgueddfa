@@ -1,7 +1,7 @@
 import raw from '../data/catalog.json';
 import approvedRaw from '../../data/approved/contributions.json';
 import { t } from './i18n';
-import { url } from './paths';
+import { siteMedia } from './paths';
 import type { EditionState, FestivalSlug, Item } from './types';
 import { maxState, mediaUrl, uploadMedia, uploadState, type UploadLike } from './uploads';
 import { applyTags, catalogState, latestTagAt, type TagLike } from './tags';
@@ -160,11 +160,11 @@ export function mostWanted(limit: number, uploads: UploadLike[] = APPROVED_UPLOA
 /** Public thumbnail URL; null for restricted items (their files are not published). */
 export function thumbUrl(item: Item): string | null {
   if (item.restricted || !item.thumb) return null;
-  return url(`media/${item.thumb}`);
+  return siteMedia(item.thumb);
 }
 
 /** Public page image URLs; empty for restricted items. */
 export function pageUrls(item: Item): string[] {
   if (item.restricted) return [];
-  return item.page_paths.map((p) => url(`media/${p}`));
+  return item.page_paths.map((p) => siteMedia(p));
 }

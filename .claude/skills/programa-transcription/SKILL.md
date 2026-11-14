@@ -95,7 +95,7 @@ session order *is* the content, so it is kept:
 |---|---|
 | Web page (`kind: web`) | `_html_text(Path(src), keep_breaks=True)` from `scripts/catalog/derive.py` |
 | PDF with text layer | `pdftotext -layout file.pdf -` (check per page: some PDFs mix scans) |
-| Scanned PDF / image | find the competition pages with a contact sheet (`python3 .claude/skills/programa-transcription/sheet.py public/media/<id> out.jpg 7 1-21`), then read the page images (`media/<id>/pNN.webp` or `pdftoppm -r 150`) with the Read tool; `tesseract` here has only `eng`, so don't rely on it for Welsh/Spanish |
+| Scanned PDF / image | find the competition pages with a contact sheet (`python3 .claude/skills/programa-transcription/sheet.py media/<id> out.jpg 7 1-21`), then read the page images (`media/<id>/pNN.webp` or `pdftoppm -r 150`) with the Read tool; `tesseract` here has only `eng`, so don't rely on it for Welsh/Spanish |
 
 Two captures of the same page (identical extracted text) get one file, under the older capture's
 id, so the edition page doesn't list it twice.

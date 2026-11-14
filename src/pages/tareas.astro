@@ -3,7 +3,7 @@ import Base from '../layouts/Base.astro';
 import { items } from '../lib/catalog';
 import { jsonForScript } from '../lib/contrib';
 import { t } from '../lib/i18n';
-import { url } from '../lib/paths';
+import { siteMedia } from '../lib/paths';
 import { isTaskCandidate } from '../lib/tasks';
 
 // Only what a task card needs, so the page does not carry the whole catalog.
@@ -18,7 +18,7 @@ const cards = items()
     year: i.year,
     category: i.category,
     title: i.title,
-    img: url(`media/${i.page_paths[0] ?? i.thumb}`),
+    img: siteMedia(i.page_paths[0] ?? i.thumb),
   }));
 ---
 <Base title={t('tareas.titulo')} current="tareas">

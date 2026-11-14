@@ -19,7 +19,7 @@ etiquetas o dejar un recuerdo. Cada aporte pasa por revisión antes de publicars
 | --- | --- |
 | `scripts/build_catalog.py` | Arma el catálogo desde el archivo (corre solo en tu máquina). |
 | `src/data/catalog.json` | Catálogo generado, versionado en git. |
-| `public/media/<id>/` | Miniaturas y páginas en WebP (nunca de ítems restringidos). |
+| `media/<id>/` | Miniaturas y páginas en WebP (nunca de ítems restringidos). No va a git: se sube al bucket R2 que sirve `amgueddfa-media.kevinroberts.ar`. |
 | `data/approved/*.json` | Copia de los aportes aprobados y del estado de las ediciones. |
 | `data/restricted_extra.txt` | Ids que se restringen además de `resultados`. |
 | `supabase/migrations/` | Esquema, RLS y funciones de la base. |
@@ -52,13 +52,17 @@ máquina lo tiene, así que el catálogo se arma acá y se commitea; CI solo con
 publica el sitio.
 
 ```sh
-python3 -m scripts.build_catalog              # escanea ../, escribe src/data/catalog.json y public/media/
-python3 -m scripts.build_catalog --only <id>  # regenera las derivadas de un ítem
+python3 -m scripts.build_catalog              # escanea ../, escribe src/data/catalog.json y media/, y sube media/ a R2
+python3 -m scripts.build_catalog --only <id>  # regenera las derivadas de un ítem (y solo sube ese ítem)
 python3 -m scripts.push_restricted            # sube .restricted/ al bucket privado (usa .env)
 npx vitest run tests-js/build.test.ts         # chequea el build y que no se filtren datos personales
 ```
 
-Después revisá que `public/media/` siga por debajo de 100 MB y commiteá el resultado.
+La subida usa `rclone` con el remoto `r2` de `~/.config/rclone/rclone.conf` (otro destino:
+`MEDIA_REMOTE=remoto:bucket/media`); solo manda lo que cambió, y una corrida completa
+borra del bucket lo que ya no es público. `--no-upload` la saltea. Después commiteá
+`src/data/catalog.json`. El sitio arma las URLs con `siteMedia()` (`src/lib/paths.ts`);
+`PUBLIC_MEDIA_BASE=""` las vuelve a servir desde `/media/` del propio sitio.
 
 Los ítems restringidos (categoría `resultados` y los ids de `data/restricted_extra.txt`)
 dejan sus derivadas en `.restricted/`, que está en `.gitignore`. Un admin los puede

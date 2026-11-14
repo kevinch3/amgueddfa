@@ -37,3 +37,10 @@ export function setOptOut(on: boolean, storage?: Storage): boolean {
     return false;
   }
 }
+
+/** What /cookies shows: counted or not, and whether the browser (DNT/GPC) or the visitor decided. */
+export function counterState(s: Signals): { counted: boolean; reason: 'optout' | 'browser' | null } {
+  if (s.dnt || s.gpc) return { counted: false, reason: 'browser' };
+  if (s.optOut) return { counted: false, reason: 'optout' };
+  return { counted: true, reason: null };
+}

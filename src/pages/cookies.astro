@@ -1,0 +1,61 @@
+---
+import Base from '../layouts/Base.astro';
+import { OPT_OUT_KEY } from '../lib/consent';
+import { t } from '../lib/i18n';
+import { url } from '../lib/paths';
+
+// Keep in step with what the code stores: tests-js/build.test.ts checks that every
+// amg:* key in src/ is listed here.
+const rows = [
+  { key: 'sb-<proyecto>-auth-token', para: 'sesion_para', tipo: 'tipo_necesaria', dura: 'dura_sesion' },
+  { key: 'sb-<proyecto>-auth-token-code-verifier', para: 'verificador_para', tipo: 'tipo_necesaria', dura: 'dura_verificador' },
+  { key: 'amg:tz', para: 'tz_para', tipo: 'tipo_preferencia', dura: 'dura_tz' },
+  { key: OPT_OUT_KEY, para: 'nocontar_para', tipo: 'tipo_preferencia', dura: 'dura_nocontar' },
+];
+const c = (k: string) => t(`legal.cookies.${k}`);
+---
+<Base title={t('legal.titulos.cookies')} description={c('intro')}>
+  <article class="legal measure">
+    <h1>{t('legal.titulos.cookies')}</h1>
+    <p class="lead">{c('intro')}</p>
+
+    <h2>{c('tabla_titulo')}</h2>
+    <div class="legal-tabla">
+      <table>
+        <thead>
+          <tr><th scope="col">{c('col_clave')}</th><th scope="col">{c('col_para')}</th><th scope="col">{c('col_tipo')}</th><th scope="col">{c('col_dura')}</th></tr>
+        </thead>
+        <tbody>
+          {rows.map((r) => (
+            <tr><th scope="row"><code>{r.key}</code></th><td>{c(r.para)}</td><td>{c(r.tipo)}</td><td>{c(r.dura)}</td></tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p>{c('necesarias')}</p>
+
+    <h2>{c('analitica_titulo')}</h2>
+    <p>{c('analitica_1')}</p>
+    <p>{c('analitica_2')}</p>
+    <ul>
+      <li><a href="https://www.cloudflare.com/web-analytics/" rel="noopener">{c('analitica_cf')}</a></li>
+      <li><a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">{c('analitica_privacidad')}</a></li>
+    </ul>
+    <p class="muted small">{c('admin')}</p>
+
+    <h2 id="no-contar-titulo">{c('control_titulo')}</h2>
+    <div class="legal-control">
+      <label><input type="checkbox" id="no-contar" disabled /> {c('control_label')}</label>
+      <p class="muted small">{c('control_ayuda')}</p>
+      <p id="no-contar-estado" aria-live="polite"></p>
+      <noscript><p>{c('sin_js')}</p></noscript>
+    </div>
+
+    <p>{c('cambios')}</p>
+    <p><a href={url('privacidad')}>{c('ver_privacidad')}</a></p>
+  </article>
+</Base>
+
+<script>
+  import '../scripts/cookies.ts';
+</script>

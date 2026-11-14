@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { OPT_OUT_KEY, readSignals, setOptOut, shouldCount } from '../src/lib/consent';
+import { OPT_OUT_KEY, counterState, readSignals, setOptOut, shouldCount } from '../src/lib/consent';
 
 /** A Map-backed Storage, or one whose every call throws (Safari private mode, blocked site data). */
 function storage(init: Record<string, string> = {}, broken = false): Storage {
@@ -49,5 +49,12 @@ describe('consent', () => {
     expect(setOptOut(false, s)).toBe(true);
     expect(s.getItem('amg:no-contar')).toBeNull();
     expect(setOptOut(true, storage({}, true))).toBe(false);
+  });
+
+  it('counterState reasons', () => {
+    expect(counterState({ optOut: false, dnt: false, gpc: false })).toEqual({ counted: true, reason: null });
+    expect(counterState({ optOut: true, dnt: false, gpc: false })).toEqual({ counted: false, reason: 'optout' });
+    expect(counterState({ optOut: true, dnt: false, gpc: true })).toEqual({ counted: false, reason: 'browser' });
+    expect(counterState({ optOut: false, dnt: true, gpc: false })).toEqual({ counted: false, reason: 'browser' });
   });
 });

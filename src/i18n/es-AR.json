@@ -596,5 +596,46 @@
     "GB-ENG": "Inglaterra",
     "GB-SCT": "Escocia",
     "GB-NIR": "Irlanda del Norte"
+  },
+  "legal": {
+    "titulos": {
+      "cookies": "Cookies y almacenamiento"
+    },
+    "actualizado": "Última actualización: {fecha}.",
+    "cookies": {
+      "intro": "Este sitio no usa cookies. Tampoco usa publicidad ni herramientas de seguimiento entre sitios. Lo único que guarda está en el almacenamiento local de tu navegador (localStorage), y te contamos qué es.",
+      "tabla_titulo": "Qué guardamos en tu navegador",
+      "col_clave": "Clave",
+      "col_para": "Para qué",
+      "col_tipo": "Tipo",
+      "col_dura": "Cuánto dura",
+      "sesion_para": "Mantener tu sesión iniciada (la guarda Supabase, nuestro servicio de cuentas).",
+      "verificador_para": "Completar el ingreso con el enlace del correo.",
+      "tz_para": "Mostrar las fechas en la zona horaria de tu perfil.",
+      "nocontar_para": "Recordar que no querés que contemos tus visitas.",
+      "tipo_necesaria": "Necesaria",
+      "tipo_preferencia": "Preferencia",
+      "dura_sesion": "Hasta que salgas de tu cuenta.",
+      "dura_verificador": "Se borra al terminar de ingresar.",
+      "dura_tz": "Hasta que salgas de tu cuenta.",
+      "dura_nocontar": "Hasta que vuelvas a activar el conteo.",
+      "necesarias": "Como son necesarias para que el sitio funcione, o son una elección tuya, no hace falta pedirte permiso para guardarlas. Podés borrarlas cuando quieras desde la configuración de tu navegador; si borrás la sesión, vas a tener que volver a ingresar.",
+      "analitica_titulo": "Conteo de visitas",
+      "analitica_1": "Para saber qué ediciones se consultan y desde dónde llega la gente, usamos Cloudflare Web Analytics. No usa cookies ni guarda nada en tu navegador, y no te identifica ni te sigue entre sitios.",
+      "analitica_2": "Cuando abrís una página, envía a Cloudflare la dirección de la página, el sitio desde el que llegaste, el tipo de navegador y de dispositivo, y tiempos de carga. Cloudflare deduce el país a partir de la dirección IP, pero no la guarda.",
+      "analitica_cf": "Cómo funciona Cloudflare Web Analytics",
+      "analitica_privacidad": "Política de privacidad de Cloudflare",
+      "admin": "Las páginas de administración nunca cuentan visitas.",
+      "control_titulo": "No contar mis visitas",
+      "control_label": "No contar mis visitas en este navegador",
+      "control_ayuda": "El cambio vale desde la próxima página que abras.",
+      "estado_contado": "Tus visitas se cuentan.",
+      "estado_optout": "Tus visitas no se cuentan en este navegador.",
+      "estado_navegador": "Tu navegador pide no ser seguido (Do Not Track o Global Privacy Control), así que tus visitas no se cuentan aunque cambies esta opción.",
+      "estado_error": "Tu navegador no nos deja guardar esta opción (por ejemplo, en una ventana privada). Activá Do Not Track o Global Privacy Control en tu navegador para que no contemos tus visitas.",
+      "sin_js": "Esta opción necesita JavaScript. Sin JavaScript, el conteo tampoco se carga, así que no contamos tu visita.",
+      "cambios": "Si algún día cambia lo que guardamos o agregamos otra herramienta, actualizamos esta página antes de activarla.",
+      "ver_privacidad": "Qué datos personales guardamos: Privacidad."
+    }
   }
 }

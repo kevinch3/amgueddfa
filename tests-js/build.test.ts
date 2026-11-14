@@ -367,4 +367,21 @@ describe('static build', () => {
       expect(hits).toEqual([]);
     }
   });
+
+  it('the cookies page lists every key the site stores in the browser', () => {
+    const src = join(__dirname, '..', 'src');
+    const files = (d: string): string[] =>
+      readdirSync(d).flatMap((n) => {
+        const p = join(d, n);
+        return statSync(p).isDirectory() ? files(p) : /\.(ts|astro)$/.test(n) ? [p] : [];
+      });
+    const keys = new Set<string>();
+    for (const f of files(src)) for (const m of readFileSync(f, 'utf8').matchAll(/['"`](amg:[a-z-]+)['"`]/g)) keys.add(m[1]);
+    keys.delete('amg:sesion'); // a DOM event name, not storage
+    expect([...keys]).toEqual(expect.arrayContaining(['amg:tz', 'amg:no-contar']));
+    const page = read('cookies/index.html');
+    for (const k of keys) expect(page, k).toContain(k);
+    expect(page).toContain('auth-token');
+    expect(page).toContain('id="no-contar"');
+  });
 });

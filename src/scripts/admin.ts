@@ -1,14 +1,17 @@
 import {
   approve,
+  approveAll,
   approveUpload,
   gapChoice,
   gapOverride,
+  groupQueue,
   loadApprovedUploads,
   loadQueue,
   loadReleased,
   makeAdmin,
   recordApprovedUpload,
   reject,
+  rejectAll,
   releaseItem,
   restrictedPreview,
   reviewFlags,
@@ -18,6 +21,7 @@ import {
   type ApprovedLike,
   type GapChoice,
   type GapCtx,
+  type BulkResult,
   type Pending,
   type Result,
   type ReviewFlags,
@@ -237,10 +241,79 @@ async function renderQueue(): Promise<void> {
   choices = [];
   if (r.offline) return show(msg, t('estado.sin_conexion'));
   show(msg, r.data.length ? '' : t('admin.vacia'));
-  for (const c of r.data) {
-    const li = card(c, (key) => li.replaceChildren(el('p', { class: 'contrib-ok', role: 'status' }, t(key))));
-    list.append(li);
+  for (const g of groupQueue(r.data)) {
+    const cards = new Map<string, HTMLLIElement>();
+    for (const c of g.items) {
+      const li = card(c, (key) => li.replaceChildren(el('p', { class: 'contrib-ok', role: 'status' }, t(key))));
+      cards.set(c.id, li);
+    }
+    if (!g.lote) {
+      list.append(...cards.values());
+      continue;
+    }
+    list.append(groupCard(g.items, cards));
   }
+}
+
+/** Facts sent together: one header with "Aprobar todos" / "Rechazar todos" above their cards. */
+function groupCard(items: Pending[], cards: Map<string, HTMLLIElement>): HTMLLIElement {
+  const box = el('li', { class: 'admin-grupo' });
+  const head = el('div', { class: 'admin-grupo-head' });
+  head.append(el('h2', { class: 'small' }, t('admin.grupo', { n: items.length })));
+  const fuente = String(items[0].payload?.fuente ?? '');
+  if (fuente) head.append(el('p', { class: 'muted small' }, t('edicion.fuente', { fuente })));
+  const okAll = el('button', { type: 'button', class: 'btn' }, t('admin.aprobar_todos', { n: items.length }));
+  const noAll = el('button', { type: 'button', class: 'btn btn-quiet' }, t('admin.rechazar_todos'));
+  const msg = el('p', { class: 'contrib-msg', role: 'alert' });
+  msg.hidden = true;
+  const row = el('div', { class: 'acciones' });
+  row.append(okAll, noAll);
+  head.append(row, msg);
+  const inner = el('ol', { class: 'admin-list' });
+  inner.append(...cards.values());
+  box.append(head, inner);
+
+  // Mark each card approved/rejected; failed cards keep their own error.
+  const settle = (res: BulkResult, okKey: string) => {
+    for (const id of res.done) cards.get(id)?.replaceChildren(el('p', { class: 'contrib-ok', role: 'status' }, t(okKey)));
+    for (const f of res.failed) {
+      const m = cards.get(f.id)?.querySelector<HTMLElement>('.contrib-msg');
+      if (m) show(m, t(f.key));
+    }
+    show(msg, res.failed.length ? t('admin.error.algunos', { n: res.failed.length }) : '');
+    if (!res.failed.length) row.remove();
+  };
+
+  okAll.addEventListener('click', async () => {
+    okAll.disabled = noAll.disabled = true;
+    show(msg, t('admin.procesando'));
+    settle(await approveAll(items), 'admin.aprobado');
+    okAll.disabled = noAll.disabled = false;
+  });
+
+  noAll.addEventListener('click', () => {
+    const form = el('form', { class: 'tarea-form', novalidate: '' });
+    const id = `motivo-grupo-${items[0].id}`;
+    const inp = el('input', { id, type: 'text', maxlength: '500', required: '' });
+    const go = el('button', { type: 'submit', class: 'btn' }, t('admin.confirmar_rechazo'));
+    const cancel = el('button', { type: 'button', class: 'btn btn-quiet' }, t('admin.cancelar'));
+    const r2 = el('div', { class: 'acciones' });
+    r2.append(go, cancel);
+    form.append(el('label', { for: id }, t('admin.motivo_label')), inp, r2);
+    cancel.addEventListener('click', () => form.replaceWith(row));
+    form.addEventListener('submit', async (ev) => {
+      ev.preventDefault();
+      if (!inp.value.trim()) return show(msg, t('admin.error.motivo'));
+      go.disabled = cancel.disabled = true;
+      show(msg, t('admin.procesando'));
+      const res = await rejectAll(items, inp.value);
+      form.replaceWith(row);
+      settle(res, 'admin.rechazado');
+    });
+    row.replaceWith(form);
+    inp.focus();
+  });
+  return box;
 }
 
 async function renderRestricted(): Promise<void> {

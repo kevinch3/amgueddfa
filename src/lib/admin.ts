@@ -295,6 +295,59 @@ export async function reject(c: Pending, reason: string, client: SupabaseClient 
   return res;
 }
 
+/** Pending rows sent together (same payload.lote) shown as one group; others alone. */
+export type QueueGroup = { lote: string | null; items: Pending[] };
+
+/** Group the queue by `lote`, in queue order (a group sits where its first row was). */
+export function groupQueue(list: Pending[]): QueueGroup[] {
+  const count = new Map<string, number>();
+  for (const c of list) {
+    const l = typeof c.payload?.lote === 'string' ? c.payload.lote : '';
+    if (l) count.set(l, (count.get(l) ?? 0) + 1);
+  }
+  const out: QueueGroup[] = [];
+  const byLote = new Map<string, QueueGroup>();
+  for (const c of list) {
+    const l = typeof c.payload?.lote === 'string' ? c.payload.lote : '';
+    if (!l || (count.get(l) ?? 0) < 2) {
+      out.push({ lote: null, items: [c] });
+      continue;
+    }
+    let g = byLote.get(l);
+    if (!g) {
+      g = { lote: l, items: [] };
+      byLote.set(l, g);
+      out.push(g);
+    }
+    g.items.push(c);
+  }
+  return out;
+}
+
+export type BulkResult = { done: string[]; failed: { id: string; key: string }[] };
+
+/** Approve each row in turn (points and badges per row); one failure does not stop the rest. */
+export async function approveAll(items: Pending[], client: SupabaseClient | null = getClient()): Promise<BulkResult> {
+  const out: BulkResult = { done: [], failed: [] };
+  for (const c of items) {
+    const r = await approve(c, null, client);
+    if (r.ok) out.done.push(c.id);
+    else out.failed.push({ id: c.id, key: r.key });
+  }
+  return out;
+}
+
+/** Reject each row with the same reason; without a reason nothing is sent. */
+export async function rejectAll(items: Pending[], reason: string, client: SupabaseClient | null = getClient()): Promise<BulkResult> {
+  const out: BulkResult = { done: [], failed: [] };
+  for (const c of items) {
+    const r = await reject(c, reason, client);
+    if (r.ok) out.done.push(c.id);
+    else out.failed.push({ id: c.id, key: r.key });
+  }
+  return out;
+}
+
 /**
  * Release a restricted item: copy `restricted/<id>/*` to `media/released/<id>/*`
  * (the thumbnail and every page the catalog lists or, for an item without

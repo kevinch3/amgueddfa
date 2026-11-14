@@ -1,13 +1,16 @@
 import { describe, expect, it } from 'vitest';
 import {
   approve,
+  approveAll,
   approveUpload,
   editionKeys,
   fillsGap,
   gapChoice,
   gapOverride,
+  groupQueue,
   recordApprovedUpload,
   reject,
+  rejectAll,
   releaseItem,
   restrictedPreview,
   reviewFlags,
@@ -422,6 +425,42 @@ describe('searchUsers', () => {
     const { calls, client } = usersClient();
     await searchUsers('  meir ', client);
     expect(calls).toContain('ilike:display_name:%meir%');
+  });
+});
+
+describe('fact groups in the queue', () => {
+  const fact = (id: string, lote?: string): Pending => ({
+    id, user_id: 'u1', type: 'fact', festival: 'chubut', year: 1937, item_id: null, created_at: '',
+    payload: { field: 'venue', value: id, ...(lote ? { lote } : {}) },
+  } as Pending);
+
+  it('groupQueue keeps queue order and groups facts sent together', () => {
+    const [a, b, c, d] = [fact('a', 'L'), fact('b'), fact('c', 'L'), fact('d', 'M')];
+    expect(groupQueue([a, b, c, d])).toEqual([
+      { lote: 'L', items: [a, c] },
+      { lote: null, items: [b] },
+      { lote: null, items: [d] },
+    ]);
+  });
+
+  it('approveAll approves each and keeps going after a failure', async () => {
+    let n = 0;
+    const calls: any[] = [];
+    const client: any = { rpc: async (fn: string, args: any) => (calls.push([fn, args.cid]), ++n === 2 ? { data: null, error: { message: 'invalid_value' } } : { data: 10, error: null }) };
+    const r = await approveAll([fact('a', 'L'), fact('b', 'L'), fact('c', 'L')], client);
+    expect(r.done).toEqual(['a', 'c']);
+    expect(r.failed).toEqual([{ id: 'b', key: expect.stringMatching(/^admin\.error\./) }]);
+    expect(calls.map((c) => c[1])).toEqual(['a', 'b', 'c']);
+  });
+
+  it('rejectAll needs a reason before calling anything', async () => {
+    const calls: any[] = [];
+    const client: any = { rpc: async (...a: any[]) => (calls.push(a), { data: null, error: null }) };
+    const r = await rejectAll([fact('a', 'L'), fact('b', 'L')], '  ', client);
+    expect(r.done).toEqual([]);
+    expect(r.failed.map((f) => f.key)).toEqual(['admin.error.motivo', 'admin.error.motivo']);
+    expect(calls).toHaveLength(0);
+    expect((await rejectAll([fact('a', 'L')], 'Duplicado', client)).done).toEqual(['a']);
   });
 });
 

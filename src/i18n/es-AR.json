@@ -369,6 +369,9 @@
     "guardar_aprobar": "Guardar y aprobar",
     "cancelar": "Cancelar",
     "procesando": "Procesando…",
+    "grupo": "{n} datos enviados juntos",
+    "aprobar_todos": "Aprobar todos ({n})",
+    "rechazar_todos": "Rechazar todos",
     "aprobado": "Aprobado.",
     "rechazado": "Rechazado.",
     "liberar": "Liberar",
@@ -387,6 +390,7 @@
     "hecho_admin": "Ahora es admin.",
     "error": {
       "motivo": "Escribí el motivo del rechazo.",
+      "algunos": "{n} no se pudieron procesar; revisá el mensaje de cada uno.",
       "json": "El contenido no es un JSON válido.",
       "ya_revisado": "Este aporte ya fue revisado por otra persona.",
       "no_admin": "Tu cuenta no tiene permiso de administración.",

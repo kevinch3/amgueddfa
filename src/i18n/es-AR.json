@@ -111,6 +111,8 @@
     "aportes_aprobados": "Documentos que sumó la comunidad",
     "aporte_sin_descripcion": "Sin descripción",
     "transcripcion_ver": "Transcripción: {titulo}",
+    "ganadores_ver": "Ganadores: {titulo}",
+    "ganadores_ayuda": "Transcripción de la lista de ganadores. El documento original todavía no es público.",
     "transcripcion_aporte": "Transcripción de colaborador: {titulo}",
     "transcripcion_documento": "Ver el documento"
   },

@@ -6,6 +6,7 @@ import Mount from '../../components/Mount.astro';
 import VideoList from '../../components/VideoList.astro';
 import Transcripcion from '../../components/Transcripcion.astro';
 import { transcriptionFor } from '../../lib/transcripciones';
+import { PUBLIC_WINNERS, winnersFor } from '../../lib/ganadores';
 import { editionCatalogState, editionCover, editionItems, editionState, festivals, yearRange } from '../../lib/catalog';
 import { t } from '../../lib/i18n';
 import { url } from '../../lib/paths';
@@ -70,6 +71,9 @@ const seoLd = editionJsonLd({ name: fest.name, year, url: absUrl(`${slug}/${year
 // and approved contributor transcriptions under Programa (edicion.ts merges live rows).
 const transcribedIn = (c: string) => list.filter((i) => i.category === c && !i.restricted).sort(byTitle)
   .map((i) => ({ item: i, text: transcriptionFor(i.id) })).filter((x): x is { item: typeof x.item; text: string } => x.text !== null);
+// Published winners (Chubut, Trevelin): folded under Resultados; the documents stay restricted.
+const winners = PUBLIC_WINNERS.includes(slug) ? list.filter((i) => i.category === 'resultados').sort(byTitle)
+  .map((i) => ({ item: i, text: winnersFor(i.id) })).filter((x): x is { item: typeof x.item; text: string } => x.text !== null) : [];
 const itemTitles = Object.fromEntries(list.filter((i) => !i.restricted).map((i) => [i.id, i.title]));
 const contributedTr = forEdition(approved, slug, year, 'transcription').filter((c) => c.item_id && itemTitles[c.item_id]);
 const contribUrl = (tab: string) => url(`contribuir?f=${slug}&y=${year}&tab=${tab}`);
@@ -121,6 +125,17 @@ const missingList = new Intl.ListFormat('es', { type: 'conjunction' }).format(mi
             <details class="tr-detalle">
               <summary>{t('edicion.transcripcion_ver', { titulo: item.title })}</summary>
               <p class="muted small">{t('item.transcripcion_ayuda')} <a href={url(`item/${item.id}/`)}>{t('edicion.transcripcion_documento')}</a></p>
+              <Transcripcion text={text} />
+            </details>
+          ))}
+        </div>
+      )}
+      {c === 'resultados' && winners.length > 0 && (
+        <div class="transcripciones ganadores">
+          {winners.map(({ item, text }) => (
+            <details class="tr-detalle">
+              <summary>{t('edicion.ganadores_ver', { titulo: item.title })}</summary>
+              <p class="muted small">{t('edicion.ganadores_ayuda')}</p>
               <Transcripcion text={text} />
             </details>
           ))}

@@ -10,6 +10,7 @@ import { decades } from '../src/lib/timeline';
 import { editionVideos } from '../src/lib/videos';
 import videosData from '../src/data/videos.json';
 import { transcribedIds } from '../src/lib/transcripciones';
+import { PUBLIC_WINNERS, winnerIds } from '../src/lib/ganadores';
 import { applyTags } from '../src/lib/tags';
 import type { FestivalSlug, Item } from '../src/lib/types';
 
@@ -299,6 +300,22 @@ describe('static build', () => {
     }
     // A web programa with a transcription drops the 600-character excerpt for it.
     expect(read('item/b64a2b4db146/index.html')).not.toContain('id="texto-t"');
+  });
+
+  it('published winners are Chubut / Trevelin result documents, folded on their edition page', () => {
+    const ids = winnerIds();
+    expect(ids.length).toBeGreaterThan(0);
+    for (const id of ids) {
+      const item = catalog.find((i) => i.id === id);
+      expect(item, id).toBeDefined();
+      expect(item!.category, id).toBe('resultados');
+      expect(PUBLIC_WINNERS, id).toContain(item!.festival);
+      const page = read(`${item!.festival}/${item!.year}/index.html`);
+      expect(page, id).toContain('class="transcripciones ganadores"');
+      expect(page, id).toContain(`Ganadores: ${item!.title}`);
+      // The document itself stays restricted.
+      expect(read(`item/${id}/index.html`), id).not.toContain(`media/${id}`);
+    }
   });
 
   it('approved contributor transcriptions are baked into item and edition pages', () => {

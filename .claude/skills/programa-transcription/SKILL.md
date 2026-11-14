@@ -10,7 +10,8 @@ description: Use when transcribing an Eisteddfod programa (list of competitions)
 | What | File | Public? |
 |---|---|---|
 | Programa (category `programa`) | `src/data/transcripciones/<item id>.md` (committed) | yes: item page in full, edition page folded under Programa |
-| Ganadores / resultados | `../.transcripciones/ganadores/<item id>.md` (archive, never committed) | **no**, private until the user says otherwise |
+| Ganadores / resultados | `../.transcripciones/ganadores/<item id>.md` (archive, never committed) | **no**: the master copy of every winners list |
+| Ganadores of Chubut and Trevelin | also copied to `src/data/ganadores/<item id>.md` (committed) | yes: folded under Resultados on the edition page; the result document stays restricted. Mimosa and Juventud stay private (user decision 2026-11-14: whole festivals only) |
 | Visitors' "Transcribir" task | `contributions` (type `transcription`, max 5000 chars) | shown live with the contributor's name next to ours |
 
 `<item id>` is the catalog id (`src/data/catalog.json`), never a file name. Never transcribe a

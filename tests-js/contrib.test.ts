@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { mergeApproved, ownPending, pendingView, submit, validate, type Contribution } from '../src/lib/contrib';
+import { approvedForEdition, mergeApproved, ownPending, pendingView, submit, validate, type Contribution } from '../src/lib/contrib';
 import { t } from '../src/lib/i18n';
 
 const MB = 1024 * 1024;
@@ -225,6 +225,21 @@ describe('pending drafts', () => {
     expect(pendingView(mk('memory', { text: 'Un recuerdo' }))).toEqual({ section: 'recuerdos', text: 'Un recuerdo', preview: null, path: null, label: null });
     expect(pendingView(mk('fact', { field: 'venue', value: 'Trelew' }))).toMatchObject({ section: 'hechos', preview: null });
     expect(pendingView(mk('fact', { field: 'venue', value: 'Trelew' })).text).toContain('Trelew');
+  });
+});
+
+describe('approvedForEdition', () => {
+  it('reads the public view for one edition', async () => {
+    const a = fakeClient({ rows: [{ id: 'f1', type: 'fact', festival: 'chubut', year: 1937, payload: { field: 'venue', value: 'Salón San David' } }] });
+    const r = await approvedForEdition('chubut', 1937, a.client);
+    expect(r).toEqual({ offline: false, data: [expect.objectContaining({ id: 'f1' })] });
+    expect(a.log).toContain('select:public_contributions');
+    expect(a.eqs).toEqual(expect.arrayContaining([['festival', 'chubut'], ['year', 1937]]));
+  });
+
+  it('is offline without a client or on error', async () => {
+    expect(await approvedForEdition('chubut', 1937, null)).toEqual({ offline: true, data: [] });
+    expect(await approvedForEdition('chubut', 1937, fakeClient({ selectError: { message: 'x' } }).client)).toEqual({ offline: true, data: [] });
   });
 });
 

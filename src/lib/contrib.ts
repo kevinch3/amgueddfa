@@ -327,3 +327,20 @@ export function pendingView(c: Contribution): PendingView {
   // The stored name is a random id, so a PDF gets a plain label instead.
   return { section: 'aportes', text, preview, path, label: preview === 'pdf' ? t('edicion.archivo_pdf') : null };
 }
+
+/** Approved facts, memories and uploads of one edition, live from the public view. */
+export function approvedForEdition(festival: string, year: number, client: SupabaseClient | null = getClient()) {
+  return liveQuery<Contribution[]>(
+    (c) =>
+      c.from('public_contributions')
+        .select('id, type, festival, year, item_id, payload, created_at, reviewed_at, display_name')
+        .eq('festival', festival)
+        .eq('year', year)
+        .in('type', ['fact', 'memory', 'upload'])
+        .order('created_at', { ascending: true })
+        .limit(500),
+    [],
+    6000,
+    client,
+  );
+}

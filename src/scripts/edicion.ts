@@ -1,5 +1,5 @@
 import staticEditions from '../../data/approved/editions.json';
-import { byLine, factDisplay, forEdition, mergeApproved, ownPending, pendingView, sortFacts, type Contribution } from '../lib/contrib';
+import { approvedForEdition, byLine, factDisplay, forEdition, mergeApproved, ownPending, pendingView, sortFacts, type Contribution } from '../lib/contrib';
 import { t } from '../lib/i18n';
 import { liveQuery } from '../lib/live';
 import { getClient } from '../lib/supabase';
@@ -101,7 +101,7 @@ function uploadRow(c: Contribution): HTMLLIElement {
 }
 
 /** Approved uploads, listed under the contribution links in #aportes (same markup as the static build). */
-function renderUploads(mount: HTMLElement, uploads: Contribution[], offline: boolean): void {
+export function renderUploads(mount: HTMLElement, uploads: Contribution[], offline: boolean): void {
   mount.querySelector('.aportes-live')?.remove();
   const box = el('div', 'aportes-live');
   if (uploads.length) {
@@ -184,17 +184,7 @@ async function hydrateEdition(): Promise<void> {
   const year = Number(ref.dataset.year);
   if (!festival || !Number.isInteger(year)) return;
 
-  const live = await liveQuery<Contribution[]>(
-    (c) =>
-      c.from('public_contributions')
-        .select('id, type, festival, year, item_id, payload, created_at, reviewed_at, display_name')
-        .eq('festival', festival)
-        .eq('year', year)
-        .in('type', ['fact', 'memory', 'upload'])
-        .order('created_at', { ascending: true })
-        .limit(500),
-    [],
-  );
+  const live = await approvedForEdition(festival, year);
   if (live.offline) {
     // Keep what the static build rendered; only say we could not check for news.
     if (aportes) renderUploads(aportes, forEdition(readStatic(), festival, year, 'upload'), true);

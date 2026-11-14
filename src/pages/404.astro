@@ -14,9 +14,11 @@ import { url } from '../lib/paths';
 <script>
   // An early year whose page is built only after its first approved contribution
   // (links from the contribute form, the profile or the recent feed).
+  import { approvedForEdition, forEdition } from '../lib/contrib';
   import { t } from '../lib/i18n';
   import { url } from '../lib/paths';
   import { editionFromPath } from '../lib/timeline';
+  import { renderFacts, renderMemories, renderUploads } from '../scripts/edicion';
 
   const box = document.getElementById('no-encontrada')!;
   const ed = editionFromPath(location.pathname, box.dataset.base ?? '/');
@@ -31,5 +33,32 @@ import { url } from '../lib/paths';
     const a2 = Object.assign(document.createElement('a'), { href: url(`contribuir?f=${ed.festival}&y=${ed.year}`), textContent: t('no_encontrada.contribuir', { year: ed.year }), className: 'btn' });
     links.append(a2, ' ', a1);
     box.replaceChildren(h, p, links);
+
+    // Already approved but not yet built into a page (that waits for the next
+    // export): show what is approved now, straight from the public view.
+    void approvedForEdition(ed.festival, ed.year).then(({ data }) => {
+      if (!data.length) return;
+      h.textContent = t('no_encontrada.aprobado_titulo', { festival, year: ed.year });
+      p.textContent = t('no_encontrada.aprobado_texto');
+      const sections: [string, (m: HTMLElement) => void][] = [
+        ['edicion.hechos_titulo', (m) => renderFacts(m, forEdition(data, ed.festival, ed.year, 'fact'))],
+        ['edicion.recuerdos_titulo', (m) => renderMemories(m, forEdition(data, ed.festival, ed.year, 'memory'))],
+        ['edicion.aportes_aprobados', (m) => {
+          renderUploads(m, forEdition(data, ed.festival, ed.year, 'upload'), false);
+          m.querySelector('h3')?.remove(); // the section's h2 already says it
+        }],
+      ];
+      for (const [title, render] of sections) {
+        const mount = document.createElement('div');
+        render(mount);
+        if (!mount.childNodes.length) continue;
+        const sec = document.createElement('section');
+        sec.className = 'section';
+        const h2 = document.createElement('h2');
+        h2.textContent = t(title);
+        sec.append(h2, mount);
+        box.append(sec);
+      }
+    });
   }
 </script>

@@ -213,7 +213,9 @@
     "edicion_titulo": "Todavía no hay página para {festival} {year}",
     "edicion_texto": "La página de un año aparece cuando se aprueba el primer aporte de ese año. Si mandaste algo, lo estamos revisando.",
     "ver_festival": "Ver {festival} año por año",
-    "contribuir": "Contribuir para {year}"
+    "contribuir": "Contribuir para {year}",
+    "aprobado_titulo": "{festival} {year}",
+    "aprobado_texto": "Estos aportes ya están aprobados. La página completa de este año se arma con la próxima actualización del sitio."
   },
   "contrib": {
     "alcance_label": "¿Qué estás subiendo?",

@@ -1,10 +1,13 @@
 ---
 import Base from '../layouts/Base.astro';
 import { CATEGORIES, FACT_FIELDS, FESTIVALS, MIME_EXT, TEXT_MAX } from '../lib/contrib';
+import { festivals, yearRange } from '../lib/catalog';
 import { t } from '../lib/i18n';
 
 const TABS = ['subir', 'datos', 'recuerdo'] as const;
 const thisYear = new Date().getFullYear();
+// First year with a built edition page, per festival: the back link hides for earlier years.
+const firsts = Object.fromEntries(festivals().map((f) => [f.slug, yearRange(f.slug)[0]]));
 ---
 <Base title={t('contrib.titulo')}>
   <section class="contrib">
@@ -28,7 +31,7 @@ const thisYear = new Date().getFullYear();
           <label for="c-year">{t('contrib.ano_label')}</label>
           <input id="c-year" name="year" type="number" inputmode="numeric" min="1865" max={thisYear} step="1" required />
         </div>
-        <p class="muted small"><a id="c-volver" href="#" hidden>{t('contrib.volver_edicion')}</a></p>
+        <p class="muted small"><a id="c-volver" href="#" hidden data-firsts={JSON.stringify(firsts)}>{t('contrib.volver_edicion')}</a></p>
       </fieldset>
 
       <div class="tabs" role="tablist" aria-label={t('contrib.pestanas')}>
@@ -125,6 +128,7 @@ const thisYear = new Date().getFullYear();
   import { submit, type Kind } from '../lib/contrib';
   import { t } from '../lib/i18n';
   import { url } from '../lib/paths';
+  import { hasEditionPage } from '../lib/timeline';
   import type { FestivalSlug } from '../lib/types';
   import { gate, gateMessage } from '../scripts/ui';
 
@@ -142,7 +146,8 @@ const thisYear = new Date().getFullYear();
 
   function syncBack() {
     const a = $<HTMLAnchorElement>('c-volver');
-    a.hidden = !(fest.value && year.value);
+    const firsts = JSON.parse(a.dataset.firsts ?? '{}') as Record<string, number>;
+    a.hidden = !(fest.value && year.value && hasEditionPage(fest.value, Number(year.value), firsts));
     if (!a.hidden) a.href = url(`${fest.value}/${year.value}/`);
   }
   fest.addEventListener('change', syncBack);

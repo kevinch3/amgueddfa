@@ -1,5 +1,5 @@
 ---
-import { editionItems, editionState, festivals, yearRange } from '../lib/catalog';
+import { editionItems, editionState, festivals, undocumented, yearRange } from '../lib/catalog';
 import { t } from '../lib/i18n';
 import { url } from '../lib/paths';
 import { decades } from '../lib/timeline';
@@ -12,7 +12,7 @@ const list = festivals().filter((f) => !only || f.slug === only);
 const blocks = list.map((f) => {
   const [first, last] = yearRange(f.slug);
   const cell = (y: number) => ({ y, state: editionState(f.slug, y), n: editionItems(f.slug, y).length });
-  const groups = decades(first, last, (y) => editionState(f.slug, y) === 'none')
+  const groups = decades(first, last, (y) => undocumented(f.slug, y))
     .map((d) => ({ ...d, cells: d.years.map(cell) }));
   return { ...f, first, groups };
 });

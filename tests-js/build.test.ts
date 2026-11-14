@@ -80,6 +80,9 @@ describe('static build', () => {
       expect(page).toContain(`contribuir?f=${f}"`);
     }
     expect(read('juventud/index.html')).toContain('data-decada-vacia');
+    // Early years without a built page land on a 404 that explains why.
+    expect(read('404.html')).toContain('id="no-encontrada"');
+    expect(read('contribuir/index.html')).toContain('data-firsts=');
     const ed = read('chubut/2024/index.html');
     for (const id of ['hechos', 'recuerdos', 'aportes', 'sesion']) expect(ed).toContain(`id="${id}"`);
     const item = catalog.find((i) => !i.restricted && i.kind === 'pdf')!;

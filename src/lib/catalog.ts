@@ -69,6 +69,15 @@ export function yearRange(f: FestivalSlug, approved: DatedLike[] = APPROVED_DATE
   return [firstMaterialYear(f, approved) ?? end, end];
 }
 
+/**
+ * Nothing at all for this edition: no catalog item and no approved contribution
+ * of any type (upload, fact or memory). Empty decades collapse on this, not on
+ * editionState, so a decade with only a memory stays open.
+ */
+export function undocumented(f: FestivalSlug, year: number, approved: DatedLike[] = APPROVED_DATED): boolean {
+  return editionState(f, year) === 'none' && !approved.some((c) => c.festival === f && c.year === year);
+}
+
 /** Editions with some material but no programa PDF, newest first. */
 export function mostWanted(limit: number, uploads: UploadLike[] = APPROVED_UPLOADS): { festival: FestivalSlug; year: number }[] {
   const out: { festival: FestivalSlug; year: number }[] = [];

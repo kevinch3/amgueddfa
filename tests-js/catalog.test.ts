@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, it } from 'vitest';
 import {
   editionState, mostWanted, pageUrls, setItems, thumbUrl, yearRange, editionItems, festivals,
-  firstMaterialYear, YEAR_FLOOR,
+  firstMaterialYear, YEAR_FLOOR, undocumented,
 } from '../src/lib/catalog';
 import type { Item } from '../src/lib/types';
 
@@ -47,6 +47,13 @@ describe('catalog', () => {
     expect(firstMaterialYear('mimosa', noise)).toBe(1950);
     expect(firstMaterialYear('trevelin', [])).toBeNull();
     expect(YEAR_FLOOR).toBe(1865);
+  });
+
+  it('undocumented: no catalog item and no approved contribution of any type', () => {
+    expect(undocumented('chubut', 1993, [])).toBe(true);
+    expect(undocumented('chubut', 1990, [])).toBe(false);
+    expect(undocumented('chubut', 1993, [{ festival: 'chubut', year: 1993 }])).toBe(false);
+    expect(undocumented('chubut', 1993, [{ festival: 'mimosa', year: 1993 }])).toBe(true);
   });
 
   it('mostWanted excludes full editions', () => {

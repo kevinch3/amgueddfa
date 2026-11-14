@@ -201,6 +201,15 @@
     "perfil": "Tu perfil: {nombre}, {puntos}",
     "admin": "Administrar"
   },
+  "no_encontrada": {
+    "titulo": "No encontramos esta página",
+    "texto": "Puede que la dirección esté mal escrita o que la página ya no exista.",
+    "inicio": "Volver al inicio",
+    "edicion_titulo": "Todavía no hay página para {festival} {year}",
+    "edicion_texto": "La página de un año aparece cuando se aprueba el primer aporte de ese año. Si mandaste algo, lo estamos revisando.",
+    "ver_festival": "Ver {festival} año por año",
+    "contribuir": "Contribuir para {year}"
+  },
   "contrib": {
     "titulo": "Contribuí",
     "intro": "Todo lo que mandes lo revisamos antes de publicarlo. Gracias por ayudar a completar el archivo.",

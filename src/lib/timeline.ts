@@ -1,4 +1,5 @@
-import type { EditionState } from './types';
+import type { EditionState, FestivalSlug } from './types';
+import { FESTIVALS } from './contrib';
 
 /** One decade of a festival's timeline, clipped to the range. */
 export type Decade = { from: number; to: number; years: number[]; empty: boolean };
@@ -25,4 +26,19 @@ export function revealDecade(node: { closest(sel: string): { open: boolean } | n
   if (state === 'none') return;
   const d = node.closest('details[data-decada-vacia]');
   if (d) d.open = true;
+}
+
+/** Whether the build made a page for this edition: years from the festival's start to now. */
+export function hasEditionPage(festival: string, year: number, firsts: Record<string, number>, now = new Date().getFullYear()): boolean {
+  const first = firsts[festival];
+  return first !== undefined && year >= first && year <= now;
+}
+
+/** The edition a "/<base>/<festival>/<year>/" path points to, or null for any other path. */
+export function editionFromPath(path: string, base: string): { festival: FestivalSlug; year: number } | null {
+  const b = base.replace(/\/+$/, '');
+  if (!path.startsWith(`${b}/`)) return null;
+  const m = /^([a-z]+)\/(\d{4})\/?$/.exec(path.slice(b.length + 1));
+  if (!m || !(FESTIVALS as readonly string[]).includes(m[1])) return null;
+  return { festival: m[1] as FestivalSlug, year: Number(m[2]) };
 }

@@ -71,7 +71,10 @@
     "linea_tiempo": "Año por año",
     "desde": "Material desde {year}.",
     "general_titulo": "Documentos sin año",
-    "ver_general": "Ver los documentos sin año"
+    "ver_general": "Ver los documentos sin año",
+    "decada_vacia": "{from}–{to} · sin material",
+    "antes": "¿Tenés material de antes de {year}?",
+    "antes_link": "Contribuí"
   },
   "edicion": {
     "falta_programa": "Todavía no tenemos el programa completo — ¿lo tenés?",

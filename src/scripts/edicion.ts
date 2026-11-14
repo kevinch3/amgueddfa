@@ -4,6 +4,7 @@ import { t } from '../lib/i18n';
 import { liveQuery } from '../lib/live';
 import { getClient } from '../lib/supabase';
 import type { EditionState } from '../lib/types';
+import { revealDecade } from '../lib/timeline';
 import { maxState, mediaUrl, uploadMedia, uploadStates, type UploadLike } from '../lib/uploads';
 
 type EditionRow = { festival: string; year: number; status: 'unknown' | 'held' | 'not_held'; note?: string | null };
@@ -169,6 +170,7 @@ export function applyUploadStates(root: ParentNode, states: Map<string, EditionS
     const next = maxState(old, states.get(`${festival}:${year}`) ?? 'none');
     if (next === old || node.dataset.status === 'not_held') continue;
     node.dataset.state = next;
+    revealDecade(node, next);
     const label = t(`estados.${next}`);
     if (node.matches('[data-cell]')) {
       node.classList.replace(`st-${old}`, `st-${next}`);

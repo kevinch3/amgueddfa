@@ -63,6 +63,8 @@ describe('static build', () => {
       const [a, b] = range(f);
       const cells = html.match(new RegExp(`data-cell[^>]*data-festival="${f}"`, 'g')) ?? [];
       expect(cells.length, f).toBe(b - a + 1);
+      expect(html).toContain(`contribuir?f=${f}"`);
+      expect(html).toContain(`¿Tenés material de antes de ${a}?`);
     }
     expect(html).toContain('id="recientes"');
   });

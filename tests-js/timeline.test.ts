@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { decades } from '../src/lib/timeline';
+import { decades, revealDecade } from '../src/lib/timeline';
 
 const none = (ys: number[]) => (y: number) => !ys.includes(y);
 
@@ -23,5 +23,30 @@ describe('decades', () => {
 
   it('single-year range', () => {
     expect(decades(2026, 2026, () => true)).toEqual([{ from: 2026, to: 2026, years: [2026], empty: false }]);
+  });
+});
+
+describe('revealDecade', () => {
+  const stub = () => {
+    const details = { open: false };
+    const calls: string[] = [];
+    return { details, calls, node: { closest: (sel: string) => (calls.push(sel), details) } };
+  };
+
+  it('opens the collapsed decade holding a cell that gained material', () => {
+    const s = stub();
+    revealDecade(s.node, 'some');
+    expect(s.details.open).toBe(true);
+    expect(s.calls).toEqual(['details[data-decada-vacia]']);
+  });
+
+  it('leaves it closed when the cell is still empty', () => {
+    const s = stub();
+    revealDecade(s.node, 'none');
+    expect(s.details.open).toBe(false);
+  });
+
+  it('does nothing outside a collapsed decade', () => {
+    expect(() => revealDecade({ closest: () => null }, 'full')).not.toThrow();
   });
 });

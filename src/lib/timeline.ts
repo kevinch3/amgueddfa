@@ -1,3 +1,5 @@
+import type { EditionState } from './types';
+
 /** One decade of a festival's timeline, clipped to the range. */
 export type Decade = { from: number; to: number; years: number[]; empty: boolean };
 
@@ -16,4 +18,11 @@ export function decades(first: number, last: number, isEmpty: (y: number) => boo
     out.push({ from, to, years, empty: !edge && years.every(isEmpty) });
   }
   return out;
+}
+
+/** A collapsed decade opens by itself once one of its years gains material live. */
+export function revealDecade(node: { closest(sel: string): { open: boolean } | null }, state: EditionState): void {
+  if (state === 'none') return;
+  const d = node.closest('details[data-decada-vacia]');
+  if (d) d.open = true;
 }

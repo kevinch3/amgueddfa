@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, it } from 'vitest';
 import {
   editionState, mostWanted, pageUrls, setItems, thumbUrl, yearRange, editionItems, festivals,
-  firstMaterialYear, YEAR_FLOOR, undocumented,
+  firstMaterialYear, YEAR_FLOOR, undocumented, editionCover,
 } from '../src/lib/catalog';
 import type { Item } from '../src/lib/types';
 
@@ -84,5 +84,36 @@ describe('catalog', () => {
     const ok = mk({});
     expect(thumbUrl(ok)).toBe('/media/aaaaaaaaaaaa/thumb.webp');
     expect(pageUrls(ok)).toEqual(['/media/aaaaaaaaaaaa/p01.webp']);
+  });
+
+  describe('editionCover', () => {
+    const B = 'https://x.supabase.co';
+    const U1 = '11111111-1111-1111-1111-111111111111';
+    const U2 = '22222222-2222-2222-2222-222222222222';
+    const upl = (id: string, payload: any, reviewed_at = '2026-01-01', year = 1990) => ({
+      id, type: 'upload', festival: 'chubut', year, reviewed_at,
+      payload: { category: 'programa', media: { thumb: `uploads/${id}/thumb.webp`, pages: [`uploads/${id}/p01.webp`] }, ...payload },
+    });
+
+    it('the latest approved tapa wins over the catalog programa', () => {
+      const c = editionCover('chubut', 1990, [upl(U1, { tapa: true }, '2026-01-01'), upl(U2, { tapa: true }, '2026-03-01')], B);
+      expect(c).toEqual({
+        page: `${B}/storage/v1/object/public/media/uploads/${U2}/p01.webp`,
+        thumb: `${B}/storage/v1/object/public/media/uploads/${U2}/thumb.webp`,
+      });
+    });
+
+    it('falls back to page 1 of the catalog programa, then a complete upload', () => {
+      const c = editionCover('chubut', 1990, [], B);
+      expect(c?.page).toMatch(/\/media\/aaaaaaaaaaaa\/p01\.webp$/);
+      expect(c?.thumb).toMatch(/\/media\/aaaaaaaaaaaa\/thumb\.webp$/);
+      expect(editionCover('chubut', 1993, [upl(U1, { complete: true }, '2026-01-01', 1993)], B)?.page).toContain(`uploads/${U1}/p01.webp`);
+      expect(editionCover('chubut', 1993, [upl(U1, {}, '2026-01-01', 1993)], B)).toBeNull();
+    });
+
+    it('a restricted catalog programa never supplies a cover', () => {
+      setItems([mk({ id: '000000000009', year: 1990, category: 'programa', kind: 'pdf', restricted: true })]);
+      expect(editionCover('chubut', 1990, [], B)).toBeNull();
+    });
   });
 });

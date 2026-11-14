@@ -7,6 +7,7 @@ export type UploadLike = {
   festival: string | null;
   year: number | null;
   payload: Record<string, any> | null;
+  reviewed_at?: string | null;
 };
 
 /** Derivative object names approveUpload writes in the `media` bucket. */

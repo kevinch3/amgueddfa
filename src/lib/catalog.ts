@@ -3,7 +3,7 @@ import approvedRaw from '../../data/approved/contributions.json';
 import { t } from './i18n';
 import { url } from './paths';
 import type { EditionState, FestivalSlug, Item } from './types';
-import { maxState, uploadState, type UploadLike } from './uploads';
+import { maxState, mediaUrl, uploadMedia, uploadState, type UploadLike } from './uploads';
 
 /** Approved uploads from the last export (data/approved/contributions.json). */
 const APPROVED_UPLOADS: UploadLike[] = (approvedRaw as UploadLike[]).filter((c) => c?.type === 'upload');
@@ -81,6 +81,46 @@ export function yearRange(f: FestivalSlug, approved: DatedLike[] = APPROVED_DATE
  */
 export function undocumented(f: FestivalSlug, year: number, approved: DatedLike[] = APPROVED_DATED): boolean {
   return editionState(f, year) === 'none' && !approved.some((c) => c.festival === f && c.year === year && isMaterial(c));
+}
+
+/** An edition's cover: a large page image (year header) and a thumbnail (timeline). */
+export type Cover = { page: string; thumb: string };
+
+/** Cover from an approved upload's derivatives in the media bucket; null without page images. */
+function uploadCover(c: UploadLike, base: string | undefined): Cover | null {
+  const m = uploadMedia(c);
+  const page = m?.pages[0] ? mediaUrl(base, m.pages[0]) : null;
+  if (!page) return null;
+  return { page, thumb: (m?.thumb ? mediaUrl(base, m.thumb) : null) ?? page };
+}
+
+/**
+ * The cover that identifies an edition: the latest approved upload an admin
+ * marked as tapa; else page 1 of the catalog programa PDF (never a restricted
+ * one); else page 1 of an approved upload confirmed complete; else null.
+ */
+export function editionCover(
+  f: FestivalSlug,
+  year: number,
+  uploads: UploadLike[] = APPROVED_UPLOADS,
+  mediaBase: string | undefined = import.meta.env.PUBLIC_SUPABASE_URL,
+): Cover | null {
+  const mine = uploads.filter((c) => c.type === 'upload' && c.festival === f && c.year === year && c.payload?.category === 'programa');
+  const tapas = mine
+    .filter((c) => c.payload?.tapa === true)
+    .sort((a, b) => String(b.reviewed_at ?? '').localeCompare(String(a.reviewed_at ?? '')));
+  for (const c of tapas) {
+    const cover = uploadCover(c, mediaBase);
+    if (cover) return cover;
+  }
+  const programa = editionItems(f, year).find((i) => i.category === 'programa' && i.kind === 'pdf' && !i.restricted);
+  const page = programa ? pageUrls(programa)[0] : undefined;
+  if (programa && page) return { page, thumb: thumbUrl(programa) ?? page };
+  for (const c of mine.filter((x) => x.payload?.complete === true)) {
+    const cover = uploadCover(c, mediaBase);
+    if (cover) return cover;
+  }
+  return null;
 }
 
 /** Editions with some material but no programa PDF, newest first. */

@@ -45,7 +45,7 @@ const firsts = Object.fromEntries(festivals().map((f) => [f.slug, yearRange(f.sl
 
       <p class="contrib-msg" id="c-msg" role="alert" hidden></p>
       <div class="contrib-ok" id="c-ok" role="status" hidden>
-        <p><span class="badge">{t('contrib.pendiente')}</span> {t('contrib.gracias')}</p>
+        <p><span class="badge" id="c-ok-badge">{t('contrib.pendiente')}</span> <span id="c-ok-text">{t('contrib.gracias')}</span> <a id="c-ok-ver" hidden>{t('contrib.ver_edicion')}</a></p>
         <p><button type="button" class="btn btn-quiet" id="c-otro">{t('contrib.otro')}</button></p>
       </div>
 
@@ -95,6 +95,7 @@ const firsts = Object.fromEntries(festivals().map((f) => [f.slug, yearRange(f.sl
 </Base>
 
 <script>
+  import { currentProfile } from '../lib/auth';
   import { submit, submitFacts, type Kind } from '../lib/contrib';
   import { t } from '../lib/i18n';
   import { url } from '../lib/paths';
@@ -217,6 +218,14 @@ const firsts = Object.fromEntries(festivals().map((f) => [f.slug, yearRange(f.sl
       form.reset();
       facts.reset();
       syncAlcance();
+      // Admins' contributions are approved on insert: say so, and link to where it shows.
+      const admin = (await currentProfile())?.role === 'admin';
+      $('c-ok-badge').textContent = t(admin ? 'contrib.publicado' : 'contrib.pendiente');
+      $('c-ok-text').textContent = t(admin ? 'contrib.gracias_admin' : 'contrib.gracias');
+      const ver = $<HTMLAnchorElement>('c-ok-ver');
+      const firsts = JSON.parse($('c-volver').dataset.firsts ?? '{}') as Record<string, number>;
+      ver.hidden = !admin || !hasEditionPage(fest.value, y, firsts);
+      if (!ver.hidden) ver.href = url(`${fest.value}/${y}/`);
       ok.hidden = false;
       for (const k2 of TABS) $(`panel-${k2}`).hidden = true;
       $<HTMLButtonElement>('c-otro').focus();

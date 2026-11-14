@@ -1,3 +1,4 @@
+import { currentProfile } from '../lib/auth';
 import { submit, TRANSCRIPTION_MAX, YEAR_MAX, YEAR_MIN } from '../lib/contrib';
 import { t } from '../lib/i18n';
 import type { FestivalSlug } from '../lib/types';
@@ -6,7 +7,9 @@ import { busy, categoryOptions, el, festivalOptions, field, gate, gateMessage, s
 type Ctx = { festival: FestivalSlug; year: number | null; item: string };
 
 const status = (): HTMLParagraphElement => el('p', { class: 'contrib-msg', role: 'alert' });
-const thanks = (): HTMLParagraphElement => el('p', { class: 'contrib-ok', role: 'status' }, t('tarea.gracias'));
+/** Thank-you line; admins' contributions are approved on insert, so they read "published". */
+const thanks = async (): Promise<HTMLParagraphElement> =>
+  el('p', { class: 'contrib-ok', role: 'status' }, t((await currentProfile())?.role === 'admin' ? 'tarea.gracias_admin' : 'tarea.gracias'));
 
 /** "¿El año es correcto?": Sí sends a confirming tag; No opens year / category / festival. */
 function yearTask(ctx: Ctx): HTMLElement {
@@ -19,7 +22,7 @@ function yearTask(ctx: Ctx): HTMLElement {
   const send = async (btn: HTMLButtonElement, idle: string, input: Record<string, unknown>) => {
     msg.textContent = '';
     const r = await busy(btn, idle, () => submit('tag', ctx.festival, ctx.year, ctx.item, input));
-    if (r.ok) box.replaceChildren(thanks());
+    if (r.ok) box.replaceChildren(await thanks());
     else msg.textContent = t(r.key);
   };
 
@@ -85,7 +88,7 @@ function transcribeTask(ctx: Ctx): HTMLElement {
       if (go.disabled) return;
       msg.textContent = '';
       const r = await busy(go, t('tarea.enviar'), () => submit('transcription', ctx.festival, ctx.year, ctx.item, { text: ta.value }));
-      if (r.ok) form.replaceWith(thanks());
+      if (r.ok) form.replaceWith(await thanks());
       else msg.textContent = t(r.key);
     });
     open.replaceWith(form);

@@ -296,6 +296,9 @@
     "enviar": "Enviar",
     "enviando": "Enviando…",
     "gracias": "¡Gracias! Tu aporte quedó pendiente de revisión. Cuando lo aprobemos va a aparecer en el sitio.",
+    "publicado": "Publicado",
+    "gracias_admin": "Como sos admin, tu aporte se aprobó al enviarlo y ya se ve en el sitio.",
+    "ver_edicion": "Ver la edición",
     "pendiente": "Pendiente",
     "otro": "Mandar otro",
     "ingresar_ayuda": "Para contribuir tenés que ingresar con tu correo. Es rápido y no necesitás contraseña.",
@@ -342,6 +345,7 @@
     "enviar": "Enviar",
     "cancelar": "Cancelar",
     "gracias": "¡Gracias! Quedó pendiente de revisión.",
+    "gracias_admin": "¡Listo! Ya está publicado.",
     "ingresar": "Ingresá para ayudar con este documento"
   },
   "admin": {

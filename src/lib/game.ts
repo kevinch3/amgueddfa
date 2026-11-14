@@ -6,8 +6,10 @@ export interface LeaderRow {
   display_name: string;
   points: number;
   festival_points: Partial<Record<FestivalSlug, number>> | null;
+  /** Public country code, when the contributor set one. */
+  country?: string | null;
 }
-export type Ranked = { rank: number; display_name: string; points: number };
+export type Ranked = { rank: number; display_name: string; points: number; country?: string | null };
 export type Status = 'pending' | 'approved' | 'rejected';
 
 /** Badge slugs in display order (mirrors public.badges.sort). */
@@ -44,7 +46,11 @@ export function statusOf(s: Status): string {
  */
 export function rankBy(rows: LeaderRow[], festival: FestivalSlug | null): Ranked[] {
   const scored = rows
-    .map((r) => ({ display_name: r.display_name, points: festival ? Number(r.festival_points?.[festival] ?? 0) : Number(r.points ?? 0) }))
+    .map((r) => ({
+      display_name: r.display_name,
+      points: festival ? Number(r.festival_points?.[festival] ?? 0) : Number(r.points ?? 0),
+      country: r.country ?? null,
+    }))
     .filter((r) => r.display_name && r.points > 0)
     .sort((a, b) => b.points - a.points || a.display_name.localeCompare(b.display_name, 'es'));
   const out: Ranked[] = [];

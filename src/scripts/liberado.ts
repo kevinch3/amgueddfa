@@ -44,11 +44,14 @@ function renderPages(root: HTMLElement, srcs: string[], title: string, noteText:
   note.textContent = noteText;
   const ol = document.createElement('ol');
   ol.className = 'pages liberado-pages';
+  ol.dataset.lbHash = '';
   ol.setAttribute('aria-label', t('item.visor'));
   srcs.forEach((src, i) => {
     const li = document.createElement('li');
     const a = document.createElement('a');
     a.href = src;
+    a.dataset.lb = 'liberado';
+    a.setAttribute('aria-label', t('item.ampliar', { n: i + 1 }));
     const img = document.createElement('img');
     img.src = src;
     img.alt = t('item.imagen_alt', { titulo: title, n: i + 1 });

@@ -1,4 +1,5 @@
 import { currentProfile, signOut, type Profile } from '../lib/auth';
+import { setUserTimeZone } from '../lib/dates';
 import { t } from '../lib/i18n';
 import { liveQuery } from '../lib/live';
 import { url } from '../lib/paths';
@@ -93,6 +94,9 @@ async function hydrate(): Promise<void> {
     }, false, 6000, client);
     offline = s.offline || s.data;
   }
+  // Dates on every page follow the saved timezone; signing out forgets it.
+  if (profile) setUserTimeZone(profile.timezone ?? null);
+  else if (!offline) setUserTimeZone(null);
   renderSession(el, profile, offline);
   renderContact(document.getElementById('contacto-mail'), profile);
 }

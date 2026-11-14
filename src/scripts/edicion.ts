@@ -103,6 +103,7 @@ function uploadRow(c: Contribution): HTMLLIElement {
   if (thumb || pages.length) {
     const a = el('a', 'aporte-thumb');
     a.href = pages[0] ?? thumb!;
+    a.dataset.lb = `aporte-${c.id}`;
     const img = el('img');
     img.src = thumb ?? pages[0];
     img.alt = t('item.miniatura_alt', { titulo: desc });
@@ -122,6 +123,7 @@ function uploadRow(c: Contribution): HTMLLIElement {
     pages.forEach((u, i) => {
       const a = el('a', undefined, String(i + 1));
       a.href = u;
+      a.dataset.lb = `aporte-${c.id}`;
       a.setAttribute('aria-label', t('item.ampliar', { n: i + 1 }));
       p.append(' ', a);
     });
@@ -168,11 +170,16 @@ function draftCard(c: Contribution): HTMLDivElement {
   if (v.preview === 'image' && v.path) {
     void ownOriginal(v.path).then((src) => {
       if (!src) return;
+      const a = el('a');
+      a.href = src;
+      a.dataset.lb = `borrador-${c.id}`;
+      a.setAttribute('aria-label', t('item.ampliar_imagen'));
       const img = el('img');
       img.src = src;
       img.alt = v.text;
       img.loading = 'lazy';
-      card.prepend(img);
+      a.append(img);
+      card.prepend(a);
     });
   }
   return card;

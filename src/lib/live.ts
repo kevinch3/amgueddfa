@@ -30,3 +30,17 @@ export async function liveQuery<T>(
     clearTimeout(timer);
   }
 }
+
+/**
+ * Select `base` plus `extra` columns; if the database does not have the extra
+ * ones yet (PostgREST 42703, undefined column), select `base` alone. Lets the
+ * site ship before a migration that adds columns reaches production.
+ */
+export async function withOptionalCols<T>(
+  run: (cols: string) => PromiseLike<{ data: T | null; error: unknown }>,
+  base: string,
+  extra: string,
+): Promise<{ data: T | null; error: unknown }> {
+  const res = await run(`${base}, ${extra}`);
+  return (res.error as { code?: string } | null)?.code === '42703' ? run(base) : res;
+}

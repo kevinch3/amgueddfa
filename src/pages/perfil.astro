@@ -9,11 +9,14 @@ import { t } from '../lib/i18n';
 </Base>
 
 <script>
-  import { currentProfile, type Profile } from '../lib/auth';
+  import { currentProfile, setDisplayName, setProfilePlace, type Profile, type Result } from '../lib/auth';
   import type { Kind } from '../lib/contrib';
+  import { fecha, relativa, setUserTimeZone } from '../lib/dates';
   import { BADGES, pendingPoints, statusOf, type Status } from '../lib/game';
   import { t } from '../lib/i18n';
-  import { liveQuery } from '../lib/live';
+  import { liveQuery, withOptionalCols } from '../lib/live';
+  import { countryName } from '../lib/places';
+  import { countryLabel, nameField, placeFields } from '../scripts/profile-form';
   import { url } from '../lib/paths';
   import { getClient } from '../lib/supabase';
   import { el } from '../scripts/ui';
@@ -25,12 +28,9 @@ import { t } from '../lib/i18n';
   type BadgeRow = { badge: string; awarded_at: string };
 
   const mount = document.getElementById('perfil')!;
+  // Set after a save, so the re-rendered settings box opens with the confirmation.
+  let flash: string | null = null;
   const siteName = t('sitio.nombre');
-
-  function fecha(iso: string | null | undefined): string {
-    const d = iso ? new Date(iso) : null;
-    return d && !Number.isNaN(d.getTime()) ? d.toLocaleDateString('es-AR', { day: 'numeric', month: 'long', year: 'numeric' }) : '';
-  }
 
   function message(text: string, link?: [string, string]): void {
     mount.replaceChildren(el('p', { class: 'contrib-msg' }, text));
@@ -73,13 +73,70 @@ import { t } from '../lib/i18n';
       if (r.festival && r.year) li.append(el('a', { href: url(`${r.festival}/${r.year}/`) }, `${t(`festivales.${r.festival}`)} ${r.year}`));
       else li.append(el('span', { class: 'muted' }, t('perfil.sin_edicion')));
       if (r.item_id && /^[0-9a-f]{12}$/.test(r.item_id)) li.append(' · ', el('a', { href: url(`item/${r.item_id}/`) }, t('perfil.documento')));
-      const f = fecha(r.reviewed_at ?? r.created_at);
-      if (f) li.append(' ', el('time', { class: 'muted small', datetime: r.reviewed_at ?? r.created_at }, f));
+      const when = r.reviewed_at ?? r.created_at;
+      const f = relativa(when);
+      if (f) li.append(' ', el('time', { class: 'muted small', datetime: when, title: fecha(when) }, f));
       if (own && r.status === 'approved' && r.points_awarded) li.append(' ', el('span', { class: 'small puntos-ok' }, t('perfil.ganados', { n: r.points_awarded })));
       if (own && r.status === 'rejected' && r.review_note) li.append(el('p', { class: 'muted small motivo' }, t('perfil.motivo', { motivo: r.review_note })));
       ul.append(li);
     }
     return ul;
+  }
+
+  /** "Editar perfil": display name, public country, private timezone. */
+  function settings(me: Profile): HTMLElement {
+    const box = el('details', { class: 'perfil-ajustes' });
+    box.append(el('summary', {}, t('perfil.ajustes.titulo')));
+    const form = el('form', { novalidate: '' });
+    const name = nameField('ajustes-nombre', me.display_name ?? '');
+    const place = placeFields('ajustes', me);
+    const msg = el('p', { class: 'contrib-msg', role: 'alert' });
+    msg.hidden = true;
+    const ok = el('p', { class: 'contrib-ok', role: 'status' });
+    ok.hidden = !flash;
+    ok.textContent = flash ?? '';
+    box.open = Boolean(flash);
+    flash = null;
+    const btn = el('button', { type: 'submit', class: 'btn' }, t('perfil.ajustes.guardar'));
+    form.append(name.root, place.root, msg, ok, btn);
+    box.append(form);
+
+    form.addEventListener('submit', async (ev) => {
+      ev.preventDefault();
+      if (btn.disabled) return;
+      msg.hidden = ok.hidden = true;
+      const newName = name.input.value.trim();
+      const where = place.value();
+      const nameChanged = newName !== me.display_name;
+      const placeChanged = where.country !== (me.country ?? null) || where.timezone !== (me.timezone ?? null);
+      if (!nameChanged && !placeChanged) {
+        ok.textContent = t('perfil.ajustes.sin_cambios');
+        ok.hidden = false;
+        return;
+      }
+      btn.disabled = true;
+      btn.textContent = t('perfil.ajustes.guardando');
+      let r: Result = { ok: true };
+      if (nameChanged) r = await setDisplayName(newName);
+      if (r.ok && placeChanged) r = await setProfilePlace(where.country, where.timezone);
+      btn.disabled = false;
+      btn.textContent = t('perfil.ajustes.guardar');
+      if (!r.ok) {
+        msg.textContent = t(r.key);
+        msg.hidden = false;
+        return;
+      }
+      setUserTimeZone(where.timezone);
+      if (nameChanged) {
+        const u = new URL(location.href);
+        u.searchParams.set('u', newName);
+        history.replaceState(null, '', u);
+      }
+      flash = t('perfil.ajustes.guardado');
+      // Refreshes the header badge (session.ts) and this page (render below).
+      document.dispatchEvent(new CustomEvent('amg:sesion'));
+    });
+    return box;
   }
 
   async function render(): Promise<void> {
@@ -97,8 +154,12 @@ import { t } from '../lib/i18n';
       return;
     }
 
-    const prof = await liveQuery<{ display_name: string; points: number } | null>(
-      (c) => c.from('public_profiles').select('display_name, points').eq('display_name', name).maybeSingle(),
+    const prof = await liveQuery<{ display_name: string; points: number; country?: string | null } | null>(
+      (c) => withOptionalCols(
+        (cols) => c.from('public_profiles').select(cols).eq('display_name', name).maybeSingle(),
+        'display_name, points',
+        'country',
+      ),
       null,
     );
     if (prof.offline) {
@@ -137,7 +198,10 @@ import { t } from '../lib/i18n';
     document.title = `${t('perfil.titulo', { nombre: display })} | ${siteName}`;
     const frag = document.createDocumentFragment();
     frag.append(el('h1', {}, t('perfil.titulo', { nombre: display })));
+    const cc = prof.data.country;
+    if (countryName(cc)) frag.append(el('p', { class: 'perfil-pais' }, t('perfil.desde', { pais: countryLabel(cc!) })));
     if (own) frag.append(el('p', { class: 'muted small' }, t('perfil.propio')));
+    if (own && me) frag.append(settings(me));
 
     const pts = el('section', { class: 'perfil-puntos', 'aria-labelledby': 'p-puntos' });
     pts.append(el('h2', { id: 'p-puntos' }, t('perfil.puntos_titulo')));
@@ -169,6 +233,11 @@ import { t } from '../lib/i18n';
 
 <style is:global>
   .perfil h2 { margin-top: 1.75rem; }
+  .perfil-pais { font: 600 1.05rem/1.3 var(--sans); margin: -0.4rem 0 0.6rem; }
+  .perfil-ajustes { margin: 1rem 0; padding: 0.7rem 0.9rem; background: var(--paper-hi); border: 1px solid var(--rule); }
+  .perfil-ajustes summary { cursor: pointer; font: 600 1rem/1.3 var(--sans); min-height: 44px; display: flex; align-items: center; }
+  .perfil-ajustes form { margin-top: 0.75rem; }
+  .perfil-ajustes .campo input, .lugar-campos select { width: 100%; box-sizing: border-box; }
   .puntos-grande { font: 700 2.2rem/1.1 var(--sans); font-variant-numeric: tabular-nums; color: var(--red-deep); margin-bottom: 0.3rem; }
   .puntos-pendientes { font: 600 1.05rem/1.3 var(--sans); color: var(--ink-soft); opacity: 0.7; margin-bottom: 0.2rem; }
   .insignias { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.6rem; grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr)); }

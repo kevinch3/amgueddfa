@@ -1,10 +1,20 @@
 import type { SupabaseClient } from '@supabase/supabase-js';
-import { liveQuery } from './live';
+import { liveQuery, withOptionalCols } from './live';
 import { url } from './paths';
+import { isCountry, isTimeZone } from './places';
 import { getClient } from './supabase';
 
 export type Result = { ok: true } | { ok: false; key: string };
-export type Profile = { id: string; display_name: string | null; role: 'user' | 'admin'; points: number };
+export type Profile = {
+  id: string;
+  display_name: string | null;
+  role: 'user' | 'admin';
+  points: number;
+  /** Public: ISO 3166-1 alpha-2 or a GB nation ("GB-WLS"). */
+  country?: string | null;
+  /** Private: IANA timezone used to show dates and times. */
+  timezone?: string | null;
+};
 
 export const RESEND_MS = 60_000;
 const OFFLINE: Result = { ok: false, key: 'estado.sin_conexion' };
@@ -119,6 +129,31 @@ export async function setDisplayName(name: string, client: SupabaseClient | null
   }
 }
 
+/** Set (or clear, with null / '') the caller's public country and private timezone. */
+export async function setProfilePlace(
+  country: string | null,
+  timezone: string | null,
+  client: SupabaseClient | null = getClient(),
+): Promise<Result> {
+  const c = (country ?? '').trim().toUpperCase() || null;
+  const tz = (timezone ?? '').trim() || null;
+  if (c && !isCountry(c)) return { ok: false, key: 'auth.error.pais' };
+  if (tz && !isTimeZone(tz)) return { ok: false, key: 'auth.error.zona' };
+  if (!client) return OFFLINE;
+  try {
+    const { error } = await client.rpc('set_profile_place', { country: c, timezone: tz });
+    if (!error) return { ok: true };
+    const msg = (error as ErrLike)?.message ?? '';
+    if (msg.includes('invalid_country')) return { ok: false, key: 'auth.error.pais' };
+    if (msg.includes('invalid_timezone')) return { ok: false, key: 'auth.error.zona' };
+    return OFFLINE;
+  } catch {
+    return OFFLINE;
+  }
+}
+
+const PROFILE_COLS = 'id, display_name, role, points';
+
 /** The signed-in user's own profile row, or null (signed out, offline or no row). */
 export async function currentProfile(client: SupabaseClient | null = getClient()): Promise<Profile | null> {
   if (!client) return null;
@@ -129,7 +164,8 @@ export async function currentProfile(client: SupabaseClient | null = getClient()
   const uid = session.data;
   if (!uid) return null;
   const { data } = await liveQuery<Profile | null>(
-    (c) => c.from('profiles').select('id, display_name, role, points').eq('id', uid).maybeSingle(),
+    // A database without the place columns yet must not sign people out.
+    (c) => withOptionalCols((cols) => c.from('profiles').select(cols).eq('id', uid).maybeSingle(), PROFILE_COLS, 'country, timezone'),
     null,
     6000,
     client,

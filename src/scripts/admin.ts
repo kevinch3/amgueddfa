@@ -32,6 +32,7 @@ import {
 } from '../lib/admin';
 import { currentProfile } from '../lib/auth';
 import type { Kind } from '../lib/contrib';
+import { fecha, fechaHora, relativa } from '../lib/dates';
 import type { FestivalSlug } from '../lib/types';
 import { mountFactEditor } from './fact-editor';
 import { t } from '../lib/i18n';
@@ -80,7 +81,12 @@ async function run(btns: HTMLButtonElement[], msg: HTMLElement, fn: () => Promis
   return r.ok;
 }
 
-const fmtDate = (iso: string) => new Date(iso).toLocaleString('es-AR', { dateStyle: 'medium', timeStyle: 'short' });
+/** "14 nov 2026, 10:32 (hace 2 horas)" in the admin's timezone; the relative part only within a week. */
+function fmtDate(iso: string): string {
+  const abs = fechaHora(iso);
+  const rel = relativa(iso);
+  return rel && rel !== fecha(iso) ? `${abs} (${rel})` : abs;
+}
 
 /** What the admin may edit in "Editar y aprobar": the payload without internal keys. */
 function editable(c: Pending): Record<string, unknown> {
@@ -96,7 +102,9 @@ async function preview(c: Pending, box: HTMLElement): Promise<void> {
     return;
   }
   if (/\.(jpe?g|png|webp)$/i.test(path)) {
-    box.append(el('img', { src: signed, alt: t('admin.vista_previa'), loading: 'lazy' }));
+    const a = el('a', { href: signed, 'data-lb': `admin-${c.id}`, 'aria-label': t('item.ampliar_imagen') });
+    a.append(el('img', { src: signed, alt: t('admin.vista_previa'), loading: 'lazy' }));
+    box.append(a);
   }
   const p = el('p');
   p.append(el('a', { href: signed, target: '_blank', rel: 'noopener noreferrer' }, t('admin.abrir_original')));
@@ -399,7 +407,7 @@ async function renderRestricted(): Promise<void> {
         const urls = r.pages.length ? r.pages : [r.thumb as string];
         urls.forEach((u, i) => {
           const li2 = el('li');
-          const a = el('a', { href: u, target: '_blank', rel: 'noopener' });
+          const a = el('a', { href: u, 'data-lb': `restringido-${it.id}`, 'aria-label': t('item.ampliar', { n: i + 1 }) });
           a.append(el('img', { src: u, alt: t('admin.restringido_alt', { titulo: it.title, n: i + 1 }), loading: 'lazy' }));
           li2.append(a);
           ol.append(li2);

@@ -45,6 +45,7 @@ const codeFirst = import.meta.env.PUBLIC_AUTH_CODE === '1';
       <label for="auth-nombre">{t('auth.nombre_label')}</label>
       <input id="auth-nombre" name="nombre" type="text" autocomplete="nickname" minlength="3" maxlength="30" required
         aria-describedby="auth-nombre-ayuda" />
+      <div id="auth-lugar"></div>
       <button class="btn" type="submit" data-idle={t('auth.guardar')} data-busy={t('auth.guardando')}>{t('auth.guardar')}</button>
     </form>
 
@@ -60,7 +61,9 @@ const codeFirst = import.meta.env.PUBLIC_AUTH_CODE === '1';
 </Base>
 
 <script>
-  import { canResend, currentProfile, handleLinkCallback, returnPath, sendCode, setDisplayName, signOut, verifyCode, type Result } from '../lib/auth';
+  import { canResend, currentProfile, handleLinkCallback, returnPath, sendCode, setDisplayName, setProfilePlace, signOut, verifyCode, type Result } from '../lib/auth';
+  import { setUserTimeZone } from '../lib/dates';
+  import { placeFields } from '../scripts/profile-form';
   import { url } from '../lib/paths';
   import { t } from '../lib/i18n';
   import { getClient } from '../lib/supabase';
@@ -69,6 +72,7 @@ const codeFirst = import.meta.env.PUBLIC_AUTH_CODE === '1';
   const steps = ['paso-email', 'paso-codigo', 'paso-nombre', 'paso-listo'];
   const msg = $<HTMLParagraphElement>('auth-msg');
   let email = '';
+  let place: ReturnType<typeof placeFields> | null = null;
   let lastSentAt = 0;
   let tick: ReturnType<typeof setInterval> | undefined;
   // Where to go back to after signing in (only a page on this site).
@@ -118,7 +122,12 @@ const codeFirst = import.meta.env.PUBLIC_AUTH_CODE === '1';
   async function afterSignIn(already: boolean) {
     const p = await currentProfile();
     if (p?.display_name) done(p.display_name, already);
-    else if (p) show('paso-nombre');
+    else if (p) {
+      // Country and timezone: optional, prefilled from this browser.
+      place ??= placeFields('auth', p, true);
+      $('auth-lugar').replaceChildren(place.root);
+      show('paso-nombre');
+    }
     else if (!already) { say('estado.sin_conexion'); show('paso-codigo'); }
   }
   async function send(form: HTMLElement): Promise<Result> {
@@ -185,9 +194,12 @@ const codeFirst = import.meta.env.PUBLIC_AUTH_CODE === '1';
     say(null);
     const name = $<HTMLInputElement>('auth-nombre').value.trim();
     busy(form, true);
-    const r = await setDisplayName(name);
+    let r = await setDisplayName(name);
+    const where = place?.value() ?? { country: null, timezone: null };
+    if (r.ok && (where.country || where.timezone)) r = await setProfilePlace(where.country, where.timezone);
     busy(form, false);
     if (!r.ok) return say(r.key);
+    setUserTimeZone(where.timezone);
     done(name, false);
   });
 

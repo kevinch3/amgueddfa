@@ -227,7 +227,7 @@ main { display: block; padding: 1.5rem 0 3rem; }
 @media (min-width: 60rem) { .item-layout { grid-template-columns: minmax(0, 1fr) 20rem; align-items: start; } }
 
 .pages { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; }
-.page-btn { display: block; width: 100%; padding: 0; border: 1px solid var(--rule); background: var(--paper-hi); cursor: zoom-in; position: relative; }
+.page-btn { display: block; box-sizing: border-box; width: 100%; padding: 0; border: 1px solid var(--rule); background: var(--paper-hi); cursor: zoom-in; position: relative; }
 .page-btn img { width: 100%; }
 .page-btn .pn { position: absolute; right: 0.4rem; bottom: 0.4rem; font: 600 0.85rem/1 var(--sans); background: var(--ink); color: var(--paper-hi); padding: 0.3rem 0.5rem; border-radius: 3px; }
 
@@ -313,6 +313,8 @@ fieldset.campo { border: 0; padding: 0; }
   border: 2px solid var(--rule); border-radius: 4px; background: var(--paper-hi); color: var(--ink);
 }
 .campo textarea { width: 100%; resize: vertical; }
+.lugar-campos select { width: 100%; box-sizing: border-box; }
+.bandera { font-size: 1.05em; }
 .campo input:focus-visible, .campo select:focus-visible, .campo textarea:focus-visible { outline: 3px solid var(--focus); outline-offset: 1px; }
 .contrib-msg { border-left: 4px solid var(--red); background: var(--paper-hi); padding: 0.6rem 0.9rem; font-family: var(--sans); }
 .contrib-msg:empty, .contrib-msg[hidden] { display: none; }

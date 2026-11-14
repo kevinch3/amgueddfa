@@ -154,7 +154,9 @@
     "texto": "Texto del documento",
     "transcripcion_titulo": "Transcripción",
     "transcripcion_ayuda": "Competencias y jurados del programa, en el idioma original. Se dejaron afuera los reglamentos y las aclaraciones.",
-    "transcripciones_aportes": "Transcripciones de colaboradores"
+    "transcripciones_aportes": "Transcripciones de colaboradores",
+    "ampliar_imagen": "Ampliar la imagen",
+    "imagen": "Imagen {n} de {total}"
   },
   "tabla": {
     "numero": "N.º",
@@ -209,11 +211,21 @@
       "email": "Revisá el correo: parece que no está bien escrito.",
       "nombre_usado": "Ese nombre ya lo usa otra persona. Probá con otro.",
       "nombre_largo": "El nombre tiene que tener entre 3 y 30 caracteres.",
-      "demasiados_usa_anterior": "Ya te mandamos un correo hace poco y por ahora no podemos mandar otro. Usá el enlace o el código del último correo que te llegó."
+      "demasiados_usa_anterior": "Ya te mandamos un correo hace poco y por ahora no podemos mandar otro. Usá el enlace o el código del último correo que te llegó.",
+      "pais": "Elegí un país de la lista.",
+      "zona": "Elegí una zona horaria de la lista."
     },
     "volver": "Seguir donde estabas",
     "solo_enlace": "Abrí el enlace del correo desde este mismo navegador y vas a volver acá con la sesión iniciada.",
-    "tengo_codigo": "¿Te llegó un código de 6 números?"
+    "tengo_codigo": "¿Te llegó un código de 6 números?",
+    "pais_label": "País donde vivís",
+    "pais_ayuda": "Se muestra en tu perfil y en el ranking. Es opcional.",
+    "pais_ninguno": "Prefiero no decirlo",
+    "pais_comunes": "Más comunes",
+    "pais_todos": "Todos los países",
+    "zona_label": "Zona horaria",
+    "zona_ayuda": "Solo la usamos para mostrarte las fechas y horas. Nadie más la ve.",
+    "zona_ninguna": "La de este dispositivo"
   },
   "sesion": {
     "ingresar": "Ingresar",
@@ -500,6 +512,14 @@
       "tag": "Etiqueta",
       "transcription": "Transcripción",
       "memory": "Recuerdo"
+    },
+    "desde": "Desde {pais}",
+    "ajustes": {
+      "titulo": "Editar perfil",
+      "guardar": "Guardar los cambios",
+      "guardando": "Guardando…",
+      "guardado": "Listo, guardamos los cambios.",
+      "sin_cambios": "No hay cambios para guardar."
     }
   },
   "ranking": {
@@ -559,5 +579,11 @@
       "noticia": "Noticia",
       "actuacion": "Actuación"
     }
+  },
+  "paises": {
+    "GB-WLS": "Gales",
+    "GB-ENG": "Inglaterra",
+    "GB-SCT": "Escocia",
+    "GB-NIR": "Irlanda del Norte"
   }
 }

@@ -59,6 +59,7 @@ const uploads = forEdition(approved, slug, year, 'upload').map((c) => {
     thumb: thumb ?? pages[0] ?? null,
     href: pages[0] ?? thumb,
     pages,
+    group: `aporte-${c.id}`,
   };
 });
 // For search engines and bots: what this edition is, from the catalog and approved facts.
@@ -90,7 +91,7 @@ const missingList = new Intl.ListFormat('es', { type: 'conjunction' }).format(mi
 
   <header class={cover ? 'cover con-tapa' : 'cover'}>
     {cover && (
-      <a class="tapa-link" href={cover.page}>
+      <a class="tapa-link" href={cover.page} data-lb="tapa">
         <img class="tapa" src={cover.page} alt={t('edicion.tapa_alt', { festival: fest.name, year })} decoding="async" />
       </a>
     )}
@@ -185,11 +186,11 @@ const missingList = new Intl.ListFormat('es', { type: 'conjunction' }).format(mi
         <ul class="aportes-lista">
           {uploads.map((u) => (
             <li class="aporte">
-              {u.thumb && <a class="aporte-thumb" href={u.href}><img src={u.thumb} alt={t('item.miniatura_alt', { titulo: u.desc })} loading="lazy" decoding="async" /></a>}
+              {u.thumb && <a class="aporte-thumb" href={u.href} data-lb={u.group}><img src={u.thumb} alt={t('item.miniatura_alt', { titulo: u.desc })} loading="lazy" decoding="async" /></a>}
               <div class="aporte-texto">
                 {u.category && <><span class="badge">{t(`categorias.${u.category}`)}</span> </>}{u.desc}{u.by && <> <span class="muted small">{u.by}</span></>}
                 {u.pages.length > 1 && (
-                  <p class="aporte-paginas small">{t('item.paginas', { n: u.pages.length })}:{u.pages.map((p, i) => <> <a href={p} aria-label={t('item.ampliar', { n: i + 1 })}>{i + 1}</a></>)}</p>
+                  <p class="aporte-paginas small">{t('item.paginas', { n: u.pages.length })}:{u.pages.map((p, i) => <> <a href={p} data-lb={u.group} aria-label={t('item.ampliar', { n: i + 1 })}>{i + 1}</a></>)}</p>
                 )}
               </div>
             </li>

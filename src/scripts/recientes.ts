@@ -1,4 +1,5 @@
 import type { Contribution } from '../lib/contrib';
+import { fecha, relativa } from '../lib/dates';
 import { latestApproved } from '../lib/game';
 import { t } from '../lib/i18n';
 import { liveQuery } from '../lib/live';
@@ -17,11 +18,6 @@ function readStatic(): Contribution[] {
   } catch {
     return [];
   }
-}
-
-function fecha(iso: string | null): string {
-  const d = iso ? new Date(iso) : null;
-  return d && !Number.isNaN(d.getTime()) ? d.toLocaleDateString('es-AR', { day: 'numeric', month: 'long', year: 'numeric' }) : '';
 }
 
 /**
@@ -45,8 +41,8 @@ export function renderRecent(mount: HTMLElement, list: Contribution[], offline: 
         li.append(' (', el('a', { href: url(`item/${c.item_id}/`) }, t('perfil.documento')), ')');
       }
       const when = c.reviewed_at ?? c.created_at;
-      const f = fecha(when);
-      if (f) li.append(' ', el('time', { class: 'muted small', datetime: when! }, f));
+      const f = relativa(when);
+      if (f) li.append(' ', el('time', { class: 'muted small', datetime: when!, title: fecha(when) }, f));
       ul.append(li);
     }
     const more = el('p', { class: 'small' });

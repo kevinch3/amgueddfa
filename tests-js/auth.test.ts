@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest';
-import { canResend, currentProfile, handleLinkCallback, linkCallback, sendCode, setDisplayName, signOut, verifyCode, _resetInflight } from '../src/lib/auth';
+import { canResend, currentProfile, handleLinkCallback, linkCallback, sendCode, setDisplayName, setProfilePlace, signOut, verifyCode, _resetInflight } from '../src/lib/auth';
 
 function apiErr(code: string | undefined, status: number, name = 'AuthApiError') {
   return Object.assign(new Error(code ?? 'err'), { __isAuthError: true, name, code, status });
@@ -221,6 +221,27 @@ describe('setDisplayName', () => {
   });
 });
 
+describe('setProfilePlace', () => {
+  it('validates locally, normalises, and clears with null', async () => {
+    const { client, calls } = fakeClient();
+    expect(await setProfilePlace('XX', null, client)).toEqual({ ok: false, key: 'auth.error.pais' });
+    expect(await setProfilePlace(null, 'Patagonia/Gaiman', client)).toEqual({ ok: false, key: 'auth.error.zona' });
+    expect(calls.rpc).toHaveLength(0);
+    expect(await setProfilePlace(' gb-wls ', 'Europe/London', client)).toEqual({ ok: true });
+    expect(await setProfilePlace('', '', client)).toEqual({ ok: true });
+    expect(calls.rpc).toEqual([
+      ['set_profile_place', { country: 'GB-WLS', timezone: 'Europe/London' }],
+      ['set_profile_place', { country: null, timezone: null }],
+    ]);
+  });
+
+  it('maps server errors and is offline without a client', async () => {
+    const { client } = fakeClient({ rpc: () => ({ data: null, error: { message: 'invalid_timezone', code: 'P0001' } }) });
+    expect(await setProfilePlace('AR', 'UTC', client)).toEqual({ ok: false, key: 'auth.error.zona' });
+    expect(await setProfilePlace('AR', null, null)).toEqual({ ok: false, key: 'estado.sin_conexion' });
+  });
+});
+
 describe('currentProfile', () => {
   it('is null without a client or session', async () => {
     expect(await currentProfile(null)).toBeNull();
@@ -238,6 +259,21 @@ describe('currentProfile', () => {
     const { client } = fakeClient({ getSession: () => ({ data: { session: { user: { id: 'u1' } } }, error: null }), from });
     expect(await currentProfile(client)).toEqual(row);
     expect(filter).toEqual(['profiles', 'id', 'u1']);
+  });
+
+  it('still reads the profile from a database without the place columns', async () => {
+    const row = { id: 'u1', display_name: 'Ana', role: 'user', points: 30 };
+    const asked: string[] = [];
+    const from = () => ({
+      select: (cols: string) => {
+        asked.push(cols);
+        const res = cols.includes('country') ? { data: null, error: { code: '42703', message: 'column does not exist' } } : { data: row, error: null };
+        return { eq: () => ({ maybeSingle: async () => res }) };
+      },
+    });
+    const { client } = fakeClient({ getSession: () => ({ data: { session: { user: { id: 'u1' } } }, error: null }), from });
+    expect(await currentProfile(client)).toEqual(row);
+    expect(asked).toEqual(['id, display_name, role, points, country, timezone', 'id, display_name, role, points']);
   });
 });
 

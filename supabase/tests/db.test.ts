@@ -111,7 +111,7 @@ describe('contributions RLS', () => {
     await expect(t.q('anon', 'select * from public.profiles')).rejects.toThrow();
     // ...but can read the public profile view
     const pp = await t.q('anon', 'select * from public.public_profiles');
-    expect(pp).toEqual([{ display_name: 'Gwenllian', points: 5 }]);
+    expect(pp).toEqual([{ display_name: 'Gwenllian', points: 5, country: null }]);
   });
 });
 
@@ -279,6 +279,37 @@ describe('limits and profiles', () => {
     expect(await t.q('postgres', 'select display_name from public.profiles where id = $1', [u])).toEqual([
       { display_name: 'Morgan' },
     ]);
+  });
+
+  it('set_profile_place sets, validates and clears country and timezone', async () => {
+    const u = await t.createUser();
+    await t.q(u, `select public.set_display_name('Gwenllian')`);
+    await t.q(u, `select public.set_profile_place('gb-wls', 'Europe/London')`);
+    expect(await t.q(u, 'select country, timezone from public.profiles')).toEqual([
+      { country: 'GB-WLS', timezone: 'Europe/London' },
+    ]);
+    await expect(t.q(u, `select public.set_profile_place('Gales', null)`)).rejects.toThrow(/invalid_country/);
+    await expect(t.q(u, `select public.set_profile_place('AR', 'Patagonia/Gaiman')`)).rejects.toThrow(
+      /invalid_timezone/,
+    );
+    await t.q(u, `select public.set_profile_place('AR', 'America/Argentina/Catamarca')`);
+    await t.q(u, `select public.set_profile_place('', null)`);
+    expect(await t.q(u, 'select country, timezone from public.profiles')).toEqual([{ country: null, timezone: null }]);
+    await expect(t.q('anon', `select public.set_profile_place('AR', null)`)).rejects.toThrow(/permission denied/);
+    // only through the function: a direct update is still refused
+    await t.q(u, `update public.profiles set country = 'AR'`).catch(() => null);
+    expect(await t.q('postgres', 'select country from public.profiles where id = $1', [u])).toEqual([{ country: null }]);
+  });
+
+  it('the country is public, the timezone is not', async () => {
+    const u = await t.createUser();
+    await t.q(u, `select public.set_display_name('Iolo')`);
+    await t.q(u, `select public.set_profile_place('AR', 'America/Argentina/Buenos_Aires')`);
+    await t.q('postgres', 'update public.profiles set points = 5 where id = $1', [u]);
+    const pub = await t.q('anon', `select * from public.public_profiles where display_name = 'Iolo'`);
+    expect(pub).toEqual([{ display_name: 'Iolo', points: 5, country: 'AR' }]);
+    const lb = await t.q('anon', `select * from public.leaderboard where display_name = 'Iolo'`);
+    expect(lb).toEqual([{ display_name: 'Iolo', points: 5, festival_points: {}, country: 'AR' }]);
   });
 
   it('only admins set roles and release items', async () => {

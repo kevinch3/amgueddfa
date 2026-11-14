@@ -42,6 +42,20 @@ describe('static build', () => {
     expect(html).toContain('media/');
   });
 
+  it('page images open in the shared lightbox, falling back to the image link', () => {
+    const item = catalog.find((i) => !i.restricted && (i.pages ?? 0) > 1);
+    expect(item).toBeDefined();
+    const html = read(`item/${item!.id}/index.html`);
+    expect(html).toContain('data-lb-hash');
+    const links = html.match(/<a[^>]*class="page-btn"[^>]*>/g) ?? [];
+    expect(links.length).toBe(item!.pages);
+    for (const a of links) {
+      expect(a).toContain('data-lb="item"');
+      expect(a).toMatch(/href="https?:\/\/[^"]+\.webp"/);
+    }
+    expect(html).not.toContain('<dialog'); // built on first use by lightbox.ts
+  });
+
   it('trevelin 2011 edition exists', () => {
     expect(existsSync(join(DIST, 'trevelin/2011/index.html'))).toBe(true);
   });
@@ -118,6 +132,7 @@ describe('static build', () => {
       }
       checked++;
       expect(year, e).toContain(`class="tapa" src="${cover.page}"`);
+      expect(year, e).toContain(`<a class="tapa-link" href="${cover.page}" data-lb="tapa">`);
       const fest = read(`${f}/index.html`);
       const row = fest.slice(fest.indexOf(`data-year="${y}"`));
       expect(row.match(/<img src="([^"]+)"/)?.[1], e).toBe(cover.thumb);

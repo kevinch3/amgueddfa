@@ -1,6 +1,16 @@
 {
 "videos": [
 {
+"id": "vlwe6KnhK7g",
+"festival": "chubut",
+"year": 2001,
+"kind": "ceremonia",
+"title": "Monica Jones de Jones. Bardd Cadeiriol Eisteddfod Y Wladfa 2001/2007 / Patagonia",
+"channel": "Mónica Jones de Jones",
+"date": "2016-12-26",
+"year_inferred": false
+},
+{
 "id": "e3mGXXRUVDs",
 "festival": "chubut",
 "year": 2003,
@@ -21,6 +31,16 @@
 "year_inferred": false
 },
 {
+"id": "wXZrHs7QMr0",
+"festival": "chubut",
+"year": 2006,
+"kind": "ceremonia",
+"title": "eisteddfod del Chubut 2006 - Ceremonia del Sillon bardico parte 03.wmv",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2008-10-09",
+"year_inferred": false
+},
+{
 "id": "-ofB2P-IYvM",
 "festival": "chubut",
 "year": 2008,
@@ -38,6 +58,26 @@
 "title": "[CH2008096] - Pont Caerodor - Gwanwyn I",
 "channel": "Eisteddfod del Chubut",
 "date": "2008-12-04",
+"year_inferred": false
+},
+{
+"id": "0adME0G4B4I",
+"festival": "chubut",
+"year": 2008,
+"kind": "actuacion",
+"title": "Eisteddfod del Chubut 2008",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2008-10-28",
+"year_inferred": false
+},
+{
+"id": "0lwGIf2J3fM",
+"festival": "chubut",
+"year": 2008,
+"kind": "actuacion",
+"title": "Eisteddfod del Chubut 2008",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2008-11-02",
 "year_inferred": false
 },
 {
@@ -81,6 +121,26 @@
 "year_inferred": false
 },
 {
+"id": "3qOXiHKIZvk",
+"festival": "chubut",
+"year": 2008,
+"kind": "actuacion",
+"title": "Eisteddfod del Chubut 2008",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2008-10-28",
+"year_inferred": false
+},
+{
+"id": "3u6cv4eV1IA",
+"festival": "chubut",
+"year": 2008,
+"kind": "actuacion",
+"title": "Eisteddfod del Chubut 2008",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2008-11-01",
+"year_inferred": false
+},
+{
 "id": "4EiWgA5foHQ",
 "festival": "chubut",
 "year": 2008,
@@ -88,6 +148,26 @@
 "title": "[CH2008051] Unawd Cân Ysgafn: Aled Thomas",
 "channel": "Eisteddfod del Chubut",
 "date": "2009-06-13",
+"year_inferred": false
+},
+{
+"id": "4gHVvTyvqkA",
+"festival": "chubut",
+"year": 2008,
+"kind": "actuacion",
+"title": "Eisteddfod del Chubut 2008",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2008-11-01",
+"year_inferred": false
+},
+{
+"id": "6ONcKWqZ570",
+"festival": "chubut",
+"year": 2008,
+"kind": "actuacion",
+"title": "Eisteddfod del Chubut 2008 - Cancion dramatizada",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2008-10-26",
 "year_inferred": false
 },
 {
@@ -108,6 +188,16 @@
 "title": "[CH2008051] Unawd Cân Ysgafn: Alberto Williams",
 "channel": "Eisteddfod del Chubut",
 "date": "2009-06-13",
+"year_inferred": false
+},
+{
+"id": "7ZawVkFb7rU",
+"festival": "chubut",
+"year": 2008,
+"kind": "actuacion",
+"title": "Eisteddfod del Chubut 2008",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2008-10-28",
 "year_inferred": false
 },
 {
@@ -191,6 +281,16 @@
 "year_inferred": false
 },
 {
+"id": "FF748MpbDn8",
+"festival": "chubut",
+"year": 2008,
+"kind": "actuacion",
+"title": "Eisteddfod del Chubut 2008",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2008-10-27",
+"year_inferred": false
+},
+{
 "id": "FkEDde00klw",
 "festival": "chubut",
 "year": 2008,
@@ -208,6 +308,16 @@
 "title": "[CH2008046] Solo Tenor: \"Y Deryn Pur\" - Santiago Palacios",
 "channel": "Eisteddfod del Chubut",
 "date": "2008-12-04",
+"year_inferred": false
+},
+{
+"id": "HzBK-HpUPuk",
+"festival": "chubut",
+"year": 2008,
+"kind": "actuacion",
+"title": "Eisteddfod del Chubut 2008",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2008-10-28",
 "year_inferred": false
 },
 {
@@ -251,6 +361,16 @@
 "year_inferred": false
 },
 {
+"id": "PLZBDAIGxqI",
+"festival": "chubut",
+"year": 2008,
+"kind": "actuacion",
+"title": "Eisteddfod del Chubut 2008",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2008-10-28",
+"year_inferred": false
+},
+{
 "id": "Q83D5ql9MCE",
 "festival": "chubut",
 "year": 2008,
@@ -268,6 +388,16 @@
 "title": "[CH2008035] Recitación Libre: \"San Juan de la Costa\" - Nannie Davies",
 "channel": "Eisteddfod del Chubut",
 "date": "2009-06-13",
+"year_inferred": false
+},
+{
+"id": "Sf3c3II0G8c",
+"festival": "chubut",
+"year": 2008,
+"kind": "actuacion",
+"title": "Eisteddfod del Chubut 2008",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2008-10-27",
 "year_inferred": false
 },
 {
@@ -301,6 +431,16 @@
 "year_inferred": false
 },
 {
+"id": "W7bFcQhMLW0",
+"festival": "chubut",
+"year": 2008,
+"kind": "actuacion",
+"title": "Eisteddfod del Chubut 2008",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2008-11-02",
+"year_inferred": false
+},
+{
 "id": "WYMNLJJ37qQ",
 "festival": "chubut",
 "year": 2008,
@@ -321,6 +461,16 @@
 "year_inferred": false
 },
 {
+"id": "YJjlADmdJEw",
+"festival": "chubut",
+"year": 2008,
+"kind": "actuacion",
+"title": "Eisteddfod del Chubut 2008",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2008-10-28",
+"year_inferred": false
+},
+{
 "id": "YlogRxR5Is0",
 "festival": "chubut",
 "year": 2008,
@@ -338,6 +488,16 @@
 "title": "[CH2008048] Unawd Canu Emyn: Meirion Griffiths",
 "channel": "Eisteddfod del Chubut",
 "date": "2009-06-13",
+"year_inferred": false
+},
+{
+"id": "aZ7fXAjz0Sw",
+"festival": "chubut",
+"year": 2008,
+"kind": "actuacion",
+"title": "Eisteddfod del Chubut 2008",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2008-10-27",
 "year_inferred": false
 },
 {
@@ -431,6 +591,16 @@
 "year_inferred": false
 },
 {
+"id": "dGkO57f4hxk",
+"festival": "chubut",
+"year": 2008,
+"kind": "actuacion",
+"title": "Eisteddfod del Chubut 2008",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2008-10-27",
+"year_inferred": false
+},
+{
 "id": "e3hQ1pdkgrE",
 "festival": "chubut",
 "year": 2008,
@@ -438,6 +608,26 @@
 "title": "[CH2008084] \"La Pastorella si leva per tempo\" - Coro Femenino Club Mendoza Regatas",
 "channel": "Eisteddfod del Chubut",
 "date": "2008-11-30",
+"year_inferred": false
+},
+{
+"id": "e5cRD0ZtQus",
+"festival": "chubut",
+"year": 2008,
+"kind": "actuacion",
+"title": "Eisteddfod del Chubut 2008",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2008-11-02",
+"year_inferred": false
+},
+{
+"id": "eCJViGJYGKA",
+"festival": "chubut",
+"year": 2008,
+"kind": "actuacion",
+"title": "Eisteddfod del Chubut 2008",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2008-10-28",
 "year_inferred": false
 },
 {
@@ -491,6 +681,16 @@
 "year_inferred": false
 },
 {
+"id": "ixyhgZIW6pg",
+"festival": "chubut",
+"year": 2008,
+"kind": "actuacion",
+"title": "Eisteddfod del Chubut 2008",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2008-11-02",
+"year_inferred": false
+},
+{
 "id": "jWlxx61sDkU",
 "festival": "chubut",
 "year": 2008,
@@ -518,6 +718,16 @@
 "title": "[CH2008087] Coro Formacion Libre - Coro Club Mendoza Regatas",
 "channel": "Eisteddfod del Chubut",
 "date": "2008-12-04",
+"year_inferred": false
+},
+{
+"id": "lzI3hm48alo",
+"festival": "chubut",
+"year": 2008,
+"kind": "actuacion",
+"title": "Eisteddfod del Chubut 2008",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2008-10-28",
 "year_inferred": false
 },
 {
@@ -671,6 +881,16 @@
 "year_inferred": false
 },
 {
+"id": "wAAe3Z8I0lE",
+"festival": "chubut",
+"year": 2008,
+"kind": "actuacion",
+"title": "Eisteddfod del Chubut 2008",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2008-10-27",
+"year_inferred": false
+},
+{
 "id": "wQVeO6LDoLo",
 "festival": "chubut",
 "year": 2008,
@@ -751,6 +971,256 @@
 "year_inferred": false
 },
 {
+"id": "-p1gQDU40e8",
+"festival": "chubut",
+"year": 2009,
+"kind": "actuacion",
+"title": "Party Gwanwyn Comp Nº 36",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-04",
+"year_inferred": false
+},
+{
+"id": "0c4dhDA0AmU",
+"festival": "chubut",
+"year": 2009,
+"kind": "sesion",
+"title": "Elba Humphreys de Perrosi preside sesion",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-04",
+"year_inferred": false
+},
+{
+"id": "23zr9032D8U",
+"festival": "chubut",
+"year": 2009,
+"kind": "actuacion",
+"title": "Gwanwyn",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-02",
+"year_inferred": false
+},
+{
+"id": "25iFEzHrniw",
+"festival": "chubut",
+"year": 2009,
+"kind": "actuacion",
+"title": "Cor Caphel Bethel",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-02",
+"year_inferred": false
+},
+{
+"id": "2BMO6s2VT_k",
+"festival": "chubut",
+"year": 2009,
+"kind": "actuacion",
+"title": "Party Cymraeg",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-03",
+"year_inferred": false
+},
+{
+"id": "2v4_AJWjNsQ",
+"festival": "chubut",
+"year": 2009,
+"kind": "ceremonia",
+"title": "Ceremonia de la Coronacion del Poeta 2º parte",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-03",
+"year_inferred": false
+},
+{
+"id": "3rtjahSsF-4",
+"festival": "chubut",
+"year": 2009,
+"kind": "actuacion",
+"title": "Natalia - Recitado",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-02",
+"year_inferred": false
+},
+{
+"id": "3xwfWIxGxTI",
+"festival": "chubut",
+"year": 2009,
+"kind": "actuacion",
+"title": "Vocal Surazul Comp Nº 89",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-04",
+"year_inferred": false
+},
+{
+"id": "5Cr4x-vKX-s",
+"festival": "chubut",
+"year": 2009,
+"kind": "actuacion",
+"title": "Coro Femenino de la Escuela de Musica de Gaiman",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-03",
+"year_inferred": false
+},
+{
+"id": "5_XSy4dtk1w",
+"festival": "chubut",
+"year": 2009,
+"kind": "actuacion",
+"title": "Gaiman - Danzas galesas - Comp. Nº 100",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-02",
+"year_inferred": false
+},
+{
+"id": "6JLURBhpxBk",
+"festival": "chubut",
+"year": 2009,
+"kind": "actuacion",
+"title": "Billy y Alejandro",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-02",
+"year_inferred": false
+},
+{
+"id": "6xkpLmqaoLs",
+"festival": "chubut",
+"year": 2009,
+"kind": "actuacion",
+"title": "Ysgol Gerdd Comp Nº 103",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-04",
+"year_inferred": false
+},
+{
+"id": "7WQpV8GguhM",
+"festival": "chubut",
+"year": 2009,
+"kind": "actuacion",
+"title": "Judith Jones Comp Nº 49",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-04",
+"year_inferred": false
+},
+{
+"id": "8IQJGDgLfBQ",
+"festival": "chubut",
+"year": 2009,
+"kind": "actuacion",
+"title": "Billy Hughes Comp Nº 49",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-04",
+"year_inferred": false
+},
+{
+"id": "8piFmnZQa6I",
+"festival": "chubut",
+"year": 2009,
+"kind": "ceremonia",
+"title": "Ceremonia de la Medalla de Plata Asociacion San David 1º parte",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-03",
+"year_inferred": false
+},
+{
+"id": "99EAxi9ozls",
+"festival": "chubut",
+"year": 2009,
+"kind": "actuacion",
+"title": "Cynthia Zamarreño Comp Nº 95",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-03",
+"year_inferred": false
+},
+{
+"id": "GDOX73U2EEw",
+"festival": "chubut",
+"year": 2009,
+"kind": "actuacion",
+"title": "Cynthia Zamarreño Comp Nº 31",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-03",
+"year_inferred": false
+},
+{
+"id": "HRG106YXyk4",
+"festival": "chubut",
+"year": 2009,
+"kind": "actuacion",
+"title": "Cor Seion - Competencia Nº 58",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-03",
+"year_inferred": false
+},
+{
+"id": "In8Fef_zjtY",
+"festival": "chubut",
+"year": 2009,
+"kind": "actuacion",
+"title": "Nanny Davies",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-03",
+"year_inferred": false
+},
+{
+"id": "Iz1ucJzBdIM",
+"festival": "chubut",
+"year": 2009,
+"kind": "actuacion",
+"title": "Cor Caphel Tabernacl",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-02",
+"year_inferred": false
+},
+{
+"id": "JRs8nJVkAtY",
+"festival": "chubut",
+"year": 2009,
+"kind": "actuacion",
+"title": "Lo que queda",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-02",
+"year_inferred": false
+},
+{
+"id": "JqMfByCscr4",
+"festival": "chubut",
+"year": 2009,
+"kind": "actuacion",
+"title": "Berti - Recitado",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-02",
+"year_inferred": false
+},
+{
+"id": "KTNvEcE5bNs",
+"festival": "chubut",
+"year": 2009,
+"kind": "actuacion",
+"title": "Sonia Baliente Felix Baliente Comp Nº 60",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-05",
+"year_inferred": false
+},
+{
+"id": "KTzdEJEaAi8",
+"festival": "chubut",
+"year": 2009,
+"kind": "actuacion",
+"title": "Grupo vocal la dificil Comp Nº 76",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-03",
+"year_inferred": false
+},
+{
+"id": "KXu5LVVdPaI",
+"festival": "chubut",
+"year": 2009,
+"kind": "actuacion",
+"title": "Johana Cornelio Prachal Comp. Nº 96",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-04",
+"year_inferred": false
+},
+{
 "id": "NX54baoy-IY",
 "festival": "chubut",
 "year": 2009,
@@ -758,6 +1228,36 @@
 "title": "danzas Galesas 31 10 09 eisteddfod mayor 043",
 "channel": "Daniel",
 "date": "2009-11-03",
+"year_inferred": false
+},
+{
+"id": "Ne7-qp5r4ts",
+"festival": "chubut",
+"year": 2009,
+"kind": "actuacion",
+"title": "Adriana Roberts",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-03",
+"year_inferred": false
+},
+{
+"id": "PHIrZiffk2w",
+"festival": "chubut",
+"year": 2009,
+"kind": "actuacion",
+"title": "La Trifulca",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-02",
+"year_inferred": false
+},
+{
+"id": "QqHgBU3AAZo",
+"festival": "chubut",
+"year": 2009,
+"kind": "actuacion",
+"title": "Voces Gwanwyn Comp Nº 36",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-04",
 "year_inferred": false
 },
 {
@@ -771,12 +1271,162 @@
 "year_inferred": false
 },
 {
+"id": "ThC4oGGyWRI",
+"festival": "chubut",
+"year": 2009,
+"kind": "actuacion",
+"title": "Daniel Lizama Comp Nº 52",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-03",
+"year_inferred": false
+},
+{
+"id": "WQD6Df6cr70",
+"festival": "chubut",
+"year": 2009,
+"kind": "actuacion",
+"title": "Marcelo Raimundi Comp Nº 96",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-03",
+"year_inferred": false
+},
+{
+"id": "XBSVKBgIy0I",
+"festival": "chubut",
+"year": 2009,
+"kind": "actuacion",
+"title": "Escuela de Música de Gaiman Comp Nº 76",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-03",
+"year_inferred": false
+},
+{
+"id": "YEKyUY1DH4E",
+"festival": "chubut",
+"year": 2009,
+"kind": "actuacion",
+"title": "Nanny Davies Comp. Nº 32 - Recitado",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-02",
+"year_inferred": false
+},
+{
+"id": "YXeS-djb5uY",
+"festival": "chubut",
+"year": 2009,
+"kind": "actuacion",
+"title": "EISTEDDFOD CHUBUT 2009 ENTREVISTA 2MPEG2 DVD PAL",
+"channel": "gastontracey",
+"date": "2009-11-24",
+"year_inferred": false
+},
+{
+"id": "aKjO1DL4B7g",
+"festival": "chubut",
+"year": 2009,
+"kind": "actuacion",
+"title": "Cassie Wyn Comp Nº 52",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-03",
+"year_inferred": false
+},
+{
 "id": "b8Yy5Ldt_lw",
 "festival": "chubut",
 "year": 2009,
 "kind": "actuacion",
 "title": "danzas Galesas 30 10 09 eisteddfod mayor 073 gwanwyn dim profiadd",
 "channel": "Daniel",
+"date": "2009-11-03",
+"year_inferred": false
+},
+{
+"id": "bYwLD_A8i-A",
+"festival": "chubut",
+"year": 2009,
+"kind": "actuacion",
+"title": "Alejandro Jones Comp Nº 49",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-04",
+"year_inferred": false
+},
+{
+"id": "blR1PvJto_o",
+"festival": "chubut",
+"year": 2009,
+"kind": "ceremonia",
+"title": "Ceremonia del Sillon Bardico video 02",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-02",
+"year_inferred": false
+},
+{
+"id": "cssmafC6tug",
+"festival": "chubut",
+"year": 2009,
+"kind": "actuacion",
+"title": "Alejandro Jones Billy Hughes Comp Nº 60",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-05",
+"year_inferred": false
+},
+{
+"id": "cw6aVshBh6g",
+"festival": "chubut",
+"year": 2009,
+"kind": "actuacion",
+"title": "Instituto Superior Nº 805 Comp 103",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-04",
+"year_inferred": false
+},
+{
+"id": "d1q4gznoUUQ",
+"festival": "chubut",
+"year": 2009,
+"kind": "ceremonia",
+"title": "Ceremonia de la Coronacion del Poeta 3º parte",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-03",
+"year_inferred": false
+},
+{
+"id": "d2xRNEUpNq4",
+"festival": "chubut",
+"year": 2009,
+"kind": "actuacion",
+"title": "Carina Jones",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-03",
+"year_inferred": false
+},
+{
+"id": "dMGVBgr5yC4",
+"festival": "chubut",
+"year": 2009,
+"kind": "actuacion",
+"title": "Judith Jones Comp Nº 52",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-03",
+"year_inferred": false
+},
+{
+"id": "dh8FEYY_w-w",
+"festival": "chubut",
+"year": 2009,
+"kind": "actuacion",
+"title": "Ysgol Yr Hendre Comp Nº 103",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-04",
+"year_inferred": false
+},
+{
+"id": "fOqtClglh4Y",
+"festival": "chubut",
+"year": 2009,
+"kind": "actuacion",
+"title": "Ysgol Gerdd Gaiman",
+"channel": "Raul Horacio Comes Cutillo",
 "date": "2009-11-03",
 "year_inferred": false
 },
@@ -791,6 +1441,26 @@
 "year_inferred": false
 },
 {
+"id": "ib55JFckAWI",
+"festival": "chubut",
+"year": 2009,
+"kind": "actuacion",
+"title": "Billy Hughes",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-03",
+"year_inferred": false
+},
+{
+"id": "lKf70TEdPJk",
+"festival": "chubut",
+"year": 2009,
+"kind": "ceremonia",
+"title": "Ceremonia del Sillon Bardico video 03",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-02",
+"year_inferred": false
+},
+{
 "id": "liz0NkdJjWM",
 "festival": "chubut",
 "year": 2009,
@@ -798,6 +1468,16 @@
 "title": "danzas Galesas 31 10 09 eisteddfod mayor 169",
 "channel": "Daniel",
 "date": "2009-11-03",
+"year_inferred": false
+},
+{
+"id": "matd-ZSlJJU",
+"festival": "chubut",
+"year": 2009,
+"kind": "ceremonia",
+"title": "Ceremonia del Sillon Bardico video 01",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-02",
 "year_inferred": false
 },
 {
@@ -811,6 +1491,116 @@
 "year_inferred": true
 },
 {
+"id": "msK_eRhFK2U",
+"festival": "chubut",
+"year": 2009,
+"kind": "actuacion",
+"title": "Teulu Gwanwyn Comp Nº 103",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-04",
+"year_inferred": false
+},
+{
+"id": "oTxml_McS1M",
+"festival": "chubut",
+"year": 2009,
+"kind": "actuacion",
+"title": "Daniel Lizama Alain Mellado Comp Nº 60",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-05",
+"year_inferred": false
+},
+{
+"id": "pYXBQv_j4wU",
+"festival": "chubut",
+"year": 2009,
+"kind": "actuacion",
+"title": "Meirion Griffiths",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-03",
+"year_inferred": false
+},
+{
+"id": "pipXRI7fvP8",
+"festival": "chubut",
+"year": 2009,
+"kind": "actuacion",
+"title": "Daniel y Alain",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-02",
+"year_inferred": false
+},
+{
+"id": "pzSfRLQBo6A",
+"festival": "chubut",
+"year": 2009,
+"kind": "ceremonia",
+"title": "Ceremonia de la Medalla de Plata Asociacion San David 2º parte",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-03",
+"year_inferred": false
+},
+{
+"id": "qSO6mBi4xrE",
+"festival": "chubut",
+"year": 2009,
+"kind": "actuacion",
+"title": "Meirion Griffiths Comp Nº 49",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-04",
+"year_inferred": false
+},
+{
+"id": "s-eVxB-tOIo",
+"festival": "chubut",
+"year": 2009,
+"kind": "actuacion",
+"title": "Caren Jones Marcelo Griffiths Comp Nº 60",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-04",
+"year_inferred": false
+},
+{
+"id": "tLzVcPhOLSM",
+"festival": "chubut",
+"year": 2009,
+"kind": "actuacion",
+"title": "Mercher Hywell Comp Nº 30",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-04",
+"year_inferred": false
+},
+{
+"id": "th-zMuUSm0M",
+"festival": "chubut",
+"year": 2009,
+"kind": "ceremonia",
+"title": "Ceremonia de la Coronacion del Poeta 1º parte",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-03",
+"year_inferred": false
+},
+{
+"id": "tsVIG-OErCo",
+"festival": "chubut",
+"year": 2009,
+"kind": "actuacion",
+"title": "Astrid Rhys Comp Nº 53",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-04",
+"year_inferred": false
+},
+{
+"id": "uMa4J6sGNHc",
+"festival": "chubut",
+"year": 2009,
+"kind": "actuacion",
+"title": "Cor Seion",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-11-03",
+"year_inferred": false
+},
+{
 "id": "uSazATSJQVM",
 "festival": "chubut",
 "year": 2009,
@@ -821,6 +1611,16 @@
 "year_inferred": false
 },
 {
+"id": "LIuJemGisiw",
+"festival": "chubut",
+"year": 2010,
+"kind": "actuacion",
+"title": "Eisteddfod del Chubut 2010 - Comp. Nº 91 Dawns Lawr y Canol - Gwanwyn Dimp Profiad.wmv",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2010-10-25",
+"year_inferred": false
+},
+{
 "id": "RFc-TJM_W3I",
 "festival": "chubut",
 "year": 2010,
@@ -828,6 +1628,16 @@
 "title": "apertura Eisteddfod del Chubut 2010 - 1º parte.wmv",
 "channel": "Raul Horacio Comes Cutillo",
 "date": "2010-10-25",
+"year_inferred": false
+},
+{
+"id": "bITGVr2x12M",
+"festival": "chubut",
+"year": 2010,
+"kind": "sesion",
+"title": "Eisteddfod Chubut 2010 - APERTURA 1/3 - Gwanwyn & Esporádica Orchestra",
+"channel": "KBZAJAZZ",
+"date": "2010-10-24",
 "year_inferred": false
 },
 {
@@ -971,6 +1781,16 @@
 "year_inferred": false
 },
 {
+"id": "Yu4XUFWbJvY",
+"festival": "chubut",
+"year": 2011,
+"kind": "ceremonia",
+"title": "GORSEDD Y WLADFA 2011, 27 DE OCTUBRE 2.011, GAIMAN-CHUBUT",
+"channel": "PATAGONIALAND7W",
+"date": "2013-04-29",
+"year_inferred": false
+},
+{
 "id": "br8K4166tLY",
 "festival": "chubut",
 "year": 2011,
@@ -1078,6 +1898,16 @@
 "title": "[CH2011047] Solo libre: Andres Evans",
 "channel": "Eisteddfod del Chubut",
 "date": "2012-05-11",
+"year_inferred": false
+},
+{
+"id": "sCKt18-c2us",
+"festival": "chubut",
+"year": 2011,
+"kind": "actuacion",
+"title": "Banríon na sióga - Gwanwyn - Eisteddfod del Chubut 2011",
+"channel": "Astrid Rhys",
+"date": "2011-10-31",
 "year_inferred": false
 },
 {
@@ -2931,6 +3761,16 @@
 "year_inferred": false
 },
 {
+"id": "nNIzQkGQsFg",
+"festival": "chubut",
+"year": 2013,
+"kind": "actuacion",
+"title": "Apertura Eisteddfod del Chubut 2013 Gwanwyn",
+"channel": "Emilio Pinciroli",
+"date": "2013-11-03",
+"year_inferred": false
+},
+{
 "id": "otnRyCC8s10",
 "festival": "chubut",
 "year": 2013,
@@ -2978,6 +3818,16 @@
 "title": "[CH2013047] Solo libre: Rock/Pop - José Ferrer",
 "channel": "Eisteddfod del Chubut",
 "date": "2013-11-14",
+"year_inferred": false
+},
+{
+"id": "sB8U4BPtOOI",
+"festival": "chubut",
+"year": 2013,
+"kind": "ceremonia",
+"title": "Danza - Corona de Plata Poeta Eisteddfod del Chubut 2013",
+"channel": "Emilio Pinciroli",
+"date": "2013-11-05",
 "year_inferred": false
 },
 {
@@ -3981,6 +4831,16 @@
 "year_inferred": false
 },
 {
+"id": "mU3n3wyWRPY",
+"festival": "chubut",
+"year": 2014,
+"kind": "ceremonia",
+"title": "#Gorsedd Y Wladfa 2104 en #Gaiman #Chubut Himno Galés \"Hen Wlad Fy Nhadau\"",
+"channel": "Orlando Vera",
+"date": "2014-10-23",
+"year_inferred": true
+},
+{
 "id": "mVbL8ImGcV4",
 "festival": "chubut",
 "year": 2014,
@@ -4258,6 +5118,16 @@
 "title": "[CH2014046] \"Canción a la Luna\" - Mariana Luna Valverde",
 "channel": "Eisteddfod del Chubut",
 "date": "2015-03-28",
+"year_inferred": false
+},
+{
+"id": "xu1o6iU7Lxo",
+"festival": "chubut",
+"year": 2014,
+"kind": "actuacion",
+"title": "Vox Anima Now is the Month of maying Eisteddfod 2014",
+"channel": "Vox Anima",
+"date": "2014-12-30",
 "year_inferred": false
 },
 {
@@ -4668,6 +5538,16 @@
 "title": "2015 Comp. 91 Segundo premio - Enharmonia",
 "channel": "Eisteddfod del Chubut",
 "date": "2016-12-03",
+"year_inferred": false
+},
+{
+"id": "MKRCg__AXC8",
+"festival": "chubut",
+"year": 2015,
+"kind": "sesion",
+"title": "Patagonia 150 - Lucy Taylor @ Eisteddfod Genedlaethol 2015 (1/2)",
+"channel": "Y Wladfa 150",
+"date": "2015-08-26",
 "year_inferred": false
 },
 {
@@ -5148,6 +6028,16 @@
 "title": "2015 Comp. 88 Primer premio - Ysgol Gerdd Gaiman",
 "channel": "Eisteddfod del Chubut",
 "date": "2016-12-03",
+"year_inferred": false
+},
+{
+"id": "milk52XMm-4",
+"festival": "chubut",
+"year": 2015,
+"kind": "sesion",
+"title": "Patagonia 150 - Lucy Taylor @ Eisteddfod Genedlaethol 2015 (2/2)",
+"channel": "Y Wladfa 150",
+"date": "2015-08-26",
 "year_inferred": false
 },
 {
@@ -6741,6 +7631,16 @@
 "year_inferred": false
 },
 {
+"id": "2BRPVqKln9E",
+"festival": "chubut",
+"year": 2017,
+"kind": "ceremonia",
+"title": "Carolina Zamudio_Corona del Poeta Eisttedbod del Chubut 2017 (Coronación)",
+"channel": "Carolina Zamudio",
+"date": "2017-10-31",
+"year_inferred": false
+},
+{
 "id": "2BSYU_aoif4",
 "festival": "chubut",
 "year": 2017,
@@ -6888,6 +7788,16 @@
 "title": "2017 Comp. 44 Segundo premio - Caren Jones",
 "channel": "Eisteddfod del Chubut",
 "date": "2018-01-07",
+"year_inferred": false
+},
+{
+"id": "BDvxsGhlpeY",
+"festival": "chubut",
+"year": 2017,
+"kind": "ceremonia",
+"title": "Carolina Zamudio_Corona del Poeta Eisttedbod del Chubut 2017 (Veredicto)",
+"channel": "Carolina Zamudio",
+"date": "2017-10-31",
 "year_inferred": false
 },
 {
@@ -7078,6 +7988,16 @@
 "title": "2-2: GORSEDD Y WLADFA 2 017, 26 DE OCTUBRE 2 017, GAIMAN-CHUBUT, ARGENTINA",
 "channel": "PATAGONIALAND7WENHD777",
 "date": "2018-01-08",
+"year_inferred": false
+},
+{
+"id": "P_vqbV5mGsQ",
+"festival": "chubut",
+"year": 2017,
+"kind": "ceremonia",
+"title": "Carolina Zamudio_Corona del Poeta Eisttedbod del Chubut 2017 (Honores al poeta)",
+"channel": "Carolina Zamudio",
+"date": "2017-10-31",
 "year_inferred": false
 },
 {
@@ -7468,6 +8388,16 @@
 "title": "2017 Comp. 74 Segundo premio - Coro Trevelin",
 "channel": "Eisteddfod del Chubut",
 "date": "2017-12-20",
+"year_inferred": false
+},
+{
+"id": "gknoIgDLlSY",
+"festival": "chubut",
+"year": 2017,
+"kind": "actuacion",
+"title": "EISTEDDFOD chubut 2017",
+"channel": "ana lloyd",
+"date": "2017-10-31",
 "year_inferred": false
 },
 {
@@ -10471,6 +11401,16 @@
 "year_inferred": false
 },
 {
+"id": "IJ_yluj2dco",
+"festival": "chubut",
+"year": 2022,
+"kind": "ceremonia",
+"title": "Eisteddfod del Chubut 2022 - Corona del Poeta para Liliana Elizabeth Pérez",
+"channel": "Radio Stream Studio",
+"date": "2022-10-23",
+"year_inferred": false
+},
+{
 "id": "J3-drpsAHnU",
 "festival": "chubut",
 "year": 2022,
@@ -10498,6 +11438,16 @@
 "title": "Eisteddfod del Chubut 2022, segunda sesión día sábado. Competencia Nº 45 - Billy Hughes",
 "channel": "Eisteddfod del Chubut",
 "date": "2023-10-17",
+"year_inferred": false
+},
+{
+"id": "KVWCSLIge9c",
+"festival": "chubut",
+"year": 2022,
+"kind": "actuacion",
+"title": "Ti a dy ddoniau (Tu y tus dones) gan Ryan Davies & Eirene Davies. Eisteddfod Y Wladfa, Trelew 2022.",
+"channel": "Alejandro Jones",
+"date": "2022-10-24",
 "year_inferred": false
 },
 {
@@ -10668,6 +11618,16 @@
 "title": "Eisteddfod del Chubut 2022, segunda sesión día sábado. Competencia Nº 49 - Sandra Collu",
 "channel": "Eisteddfod del Chubut",
 "date": "2023-10-19",
+"year_inferred": false
+},
+{
+"id": "X6Uu2YZ7tRo",
+"festival": "chubut",
+"year": 2022,
+"kind": "actuacion",
+"title": "Grupo \"HerSiriol\" - Eisteddfod del Chubut 2022 - Competencia 80",
+"channel": "Asociación Cultural Galesa de Puerto Madryn",
+"date": "2022-10-23",
 "year_inferred": false
 },
 {
@@ -11211,6 +12171,16 @@
 "year_inferred": false
 },
 {
+"id": "5IRp1i-eA08",
+"festival": "chubut",
+"year": 2023,
+"kind": "noticia",
+"title": "EN VIVO | Santiago Meza, Trelewense en el Eisteddfod en Gales",
+"channel": "Diario Jornada Chubut",
+"date": "2023-08-12",
+"year_inferred": false
+},
+{
 "id": "6Ru8wgA2yaQ",
 "festival": "chubut",
 "year": 2023,
@@ -11411,6 +12381,16 @@
 "year_inferred": false
 },
 {
+"id": "RZ_cp6DP18A",
+"festival": "chubut",
+"year": 2023,
+"kind": "ceremonia",
+"title": "Gorsedd y Wladfa",
+"channel": "Gaiman Turismo OFICIAL",
+"date": "2023-10-31",
+"year_inferred": true
+},
+{
 "id": "UcLYzs5uYQE",
 "festival": "chubut",
 "year": 2023,
@@ -11588,6 +12568,16 @@
 "title": "EISTEDDFOD DEL CHUBUT 2.023. SABADO 28. COMP. 64, 75, 59 Y 89",
 "channel": "PATAGONIALAND7WENHD777",
 "date": "2023-12-18",
+"year_inferred": false
+},
+{
+"id": "gLLI1vfqwGg",
+"festival": "chubut",
+"year": 2023,
+"kind": "noticia",
+"title": "EN VIVO | Omar Davies, ganador de la Corona del Poeta del Eisteddfod- Trelew - Chubut",
+"channel": "Diario Jornada Chubut",
+"date": "2023-10-31",
 "year_inferred": false
 },
 {
@@ -11881,6 +12871,16 @@
 "year_inferred": false
 },
 {
+"id": "dDutlFKaOwM",
+"festival": "chubut",
+"year": 2024,
+"kind": "actuacion",
+"title": "Milton & Fernando - EISTEDDFOD DEL CHUBUT 2024 ft. Pablo Pecorelli",
+"channel": "Fernando Telleria",
+"date": "2024-10-24",
+"year_inferred": false
+},
+{
 "id": "e6oVaxxiC8s",
 "festival": "chubut",
 "year": 2024,
@@ -11909,6 +12909,16 @@
 "channel": "Eisteddfod del Chubut",
 "date": "2024-10-18",
 "year_inferred": false
+},
+{
+"id": "t-BwAO0FVIk",
+"festival": "chubut",
+"year": 2024,
+"kind": "ceremonia",
+"title": "paseando con el pariente de Lewis Jones .Gorsedd y wladfa circulo bardico",
+"channel": "Arturo Taucano",
+"date": "2024-06-20",
+"year_inferred": true
 },
 {
 "id": "vbZPAtoYGgY",
@@ -12241,6 +13251,26 @@
 "year_inferred": false
 },
 {
+"id": "4xzFlHvBpEM",
+"festival": "chubut",
+"year": 2026,
+"kind": "actuacion",
+"title": "Milton & Fernando/Dragones del Viento - EISTEDDFOD DEL CHUBUT 2026",
+"channel": "Fernando Telleria",
+"date": "2026-10-26",
+"year_inferred": false
+},
+{
+"id": "IISocwX3RUQ",
+"festival": "chubut",
+"year": 2026,
+"kind": "noticia",
+"title": "SEREMONI GORSEDD Y WLADFA PATAGONIA 2.026, OCTUBRE 2.026",
+"channel": "CHUBUT7W",
+"date": "2026-11-14",
+"year_inferred": false
+},
+{
 "id": "cDpe89FFjOA",
 "festival": "chubut",
 "year": 2026,
@@ -12358,6 +13388,16 @@
 "title": "eisteddfod de la juventud 2009 441",
 "channel": "Daniel",
 "date": "2009-10-04",
+"year_inferred": false
+},
+{
+"id": "Ej7sfZwoDAo",
+"festival": "juventud",
+"year": 2009,
+"kind": "actuacion",
+"title": "Eisteddfod de la juventud",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2009-09-13",
 "year_inferred": false
 },
 {
@@ -12481,6 +13521,16 @@
 "year_inferred": false
 },
 {
+"id": "-ChtTd8CEjA",
+"festival": "juventud",
+"year": 2010,
+"kind": "actuacion",
+"title": "Guitarra libre Pablo",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2010-09-14",
+"year_inferred": false
+},
+{
 "id": "55cN1yXbQ_w",
 "festival": "juventud",
 "year": 2010,
@@ -12488,6 +13538,46 @@
 "title": "eisteddfod de la juventud 2010 viernes 282",
 "channel": "Daniel",
 "date": "2010-09-13",
+"year_inferred": false
+},
+{
+"id": "6mlOsFnlxQo",
+"festival": "juventud",
+"year": 2010,
+"kind": "actuacion",
+"title": "3 Recitados",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2010-09-14",
+"year_inferred": false
+},
+{
+"id": "9RGEoRRiLgQ",
+"festival": "juventud",
+"year": 2010,
+"kind": "actuacion",
+"title": "2 coro escuela n 139 28 de julio",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2010-09-13",
+"year_inferred": false
+},
+{
+"id": "AgGwVeqKgSs",
+"festival": "juventud",
+"year": 2010,
+"kind": "actuacion",
+"title": "Gwanwyn dos",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2010-09-14",
+"year_inferred": false
+},
+{
+"id": "B2EgxcMqVhA",
+"festival": "juventud",
+"year": 2010,
+"kind": "actuacion",
+"title": "3 solo intrumento de viento",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2010-09-14",
 "year_inferred": false
 },
 {
@@ -12501,6 +13591,96 @@
 "year_inferred": false
 },
 {
+"id": "HSp9svi6nvo",
+"festival": "juventud",
+"year": 2010,
+"kind": "ceremonia",
+"title": "Ceremonia medalla de oro Eisteddfod de la Juventud 2010 01",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2010-09-20",
+"year_inferred": false
+},
+{
+"id": "ISoei9KVNj4",
+"festival": "juventud",
+"year": 2010,
+"kind": "actuacion",
+"title": "5 ",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2010-09-14",
+"year_inferred": false
+},
+{
+"id": "ImqW2wA7jbY",
+"festival": "juventud",
+"year": 2010,
+"kind": "actuacion",
+"title": "Recitacion-Trinidad.wmv",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2010-09-14",
+"year_inferred": false
+},
+{
+"id": "LlSJv-z4HDE",
+"festival": "juventud",
+"year": 2010,
+"kind": "actuacion",
+"title": "3 coro escuela n 182 e roberts tw",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2010-09-13",
+"year_inferred": false
+},
+{
+"id": "MaB0SJcKbs4",
+"festival": "juventud",
+"year": 2010,
+"kind": "actuacion",
+"title": "4-.wmv",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2010-09-13",
+"year_inferred": false
+},
+{
+"id": "OpxIkLTQt24",
+"festival": "juventud",
+"year": 2010,
+"kind": "actuacion",
+"title": "Comp. 256 - Florencia.wmv",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2010-09-14",
+"year_inferred": false
+},
+{
+"id": "OtOlXtpBvaE",
+"festival": "juventud",
+"year": 2010,
+"kind": "actuacion",
+"title": "solo intrumento de viento - Cinthia Zamarreño .wmv",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2010-09-14",
+"year_inferred": false
+},
+{
+"id": "PW94rZPsHNE",
+"festival": "juventud",
+"year": 2010,
+"kind": "actuacion",
+"title": "comp. Nº 256-02.wmv",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2010-09-14",
+"year_inferred": false
+},
+{
+"id": "PmB5gOiIAL0",
+"festival": "juventud",
+"year": 2010,
+"kind": "actuacion",
+"title": "Escuela Nº 100 de Gaiman.wmv",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2010-09-14",
+"year_inferred": false
+},
+{
 "id": "RHY47slwGIg",
 "festival": "juventud",
 "year": 2010,
@@ -12511,6 +13691,36 @@
 "year_inferred": false
 },
 {
+"id": "Rvo22daI5hk",
+"festival": "juventud",
+"year": 2010,
+"kind": "actuacion",
+"title": "Guitarra libre Cyntia",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2010-09-14",
+"year_inferred": false
+},
+{
+"id": "T1UQC6_YWB4",
+"festival": "juventud",
+"year": 2010,
+"kind": "actuacion",
+"title": "4-Recitados.wmv",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2010-09-14",
+"year_inferred": false
+},
+{
+"id": "T1wTFIHZaGI",
+"festival": "juventud",
+"year": 2010,
+"kind": "actuacion",
+"title": "grupo hasta 6 integrantes - 01.wmv",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2010-09-14",
+"year_inferred": false
+},
+{
 "id": "TIPIg4Kpj5U",
 "festival": "juventud",
 "year": 2010,
@@ -12518,6 +13728,46 @@
 "title": "eisteddfod de la juventud 2010 viernes 297",
 "channel": "Daniel",
 "date": "2010-09-13",
+"year_inferred": false
+},
+{
+"id": "TbNCvO9DJZE",
+"festival": "juventud",
+"year": 2010,
+"kind": "actuacion",
+"title": "4 solo intrumento de viento",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2010-09-14",
+"year_inferred": false
+},
+{
+"id": "UR1TAfZxE80",
+"festival": "juventud",
+"year": 2010,
+"kind": "actuacion",
+"title": "grupo hasta 6 integrantes - 04.wmv",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2010-09-14",
+"year_inferred": false
+},
+{
+"id": "Uxpnw275lsw",
+"festival": "juventud",
+"year": 2010,
+"kind": "actuacion",
+"title": "1 Recitados",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2010-09-14",
+"year_inferred": false
+},
+{
+"id": "UytAfZKF-ZI",
+"festival": "juventud",
+"year": 2010,
+"kind": "actuacion",
+"title": "solo intrumento de viento - Gonzalo Lizama.wmv",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2010-09-14",
 "year_inferred": false
 },
 {
@@ -12541,6 +13791,36 @@
 "year_inferred": false
 },
 {
+"id": "YwYoCgziEBM",
+"festival": "juventud",
+"year": 2010,
+"kind": "actuacion",
+"title": "Ysgol Gerdd Gaiman 02",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2010-09-14",
+"year_inferred": false
+},
+{
+"id": "_ow5GYAoenI",
+"festival": "juventud",
+"year": 2010,
+"kind": "actuacion",
+"title": "Recitacion-01.wmv",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2010-09-14",
+"year_inferred": false
+},
+{
+"id": "bdocLc3AKZc",
+"festival": "juventud",
+"year": 2010,
+"kind": "actuacion",
+"title": "5 Recitados",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2010-09-14",
+"year_inferred": false
+},
+{
 "id": "cvOTZJUb9Ss",
 "festival": "juventud",
 "year": 2010,
@@ -12548,6 +13828,16 @@
 "title": "eisteddfod de la juventud 2010 viernes 298",
 "channel": "Daniel",
 "date": "2010-09-13",
+"year_inferred": false
+},
+{
+"id": "dSADnFGQIx0",
+"festival": "juventud",
+"year": 2010,
+"kind": "actuacion",
+"title": "comp. Nº 256.wmv",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2010-09-14",
 "year_inferred": false
 },
 {
@@ -12581,6 +13871,66 @@
 "year_inferred": false
 },
 {
+"id": "iuvMVbPirrc",
+"festival": "juventud",
+"year": 2010,
+"kind": "ceremonia",
+"title": "Ceremonia medalla de oro Eisteddfod de la Juventud 2010 - 02.wmv",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2010-09-20",
+"year_inferred": false
+},
+{
+"id": "ixNLMj65V2I",
+"festival": "juventud",
+"year": 2010,
+"kind": "ceremonia",
+"title": "Ceremonia medalla de oro Eisteddfod de la Juventud 2010 - 03.wmv",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2010-09-20",
+"year_inferred": false
+},
+{
+"id": "jNXFE-562HU",
+"festival": "juventud",
+"year": 2010,
+"kind": "ceremonia",
+"title": "Ceremonia medalla de oro Eisteddfod de la Juventud 2010 - 04.wmv",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2010-09-20",
+"year_inferred": false
+},
+{
+"id": "kVhdvlsFKXo",
+"festival": "juventud",
+"year": 2010,
+"kind": "actuacion",
+"title": "Ysgol Gerdd Gaiman.wmv",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2010-09-14",
+"year_inferred": false
+},
+{
+"id": "kj866Yphb0M",
+"festival": "juventud",
+"year": 2010,
+"kind": "actuacion",
+"title": "solistas-02.wmv",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2010-09-14",
+"year_inferred": false
+},
+{
+"id": "kzOjRy0iFW8",
+"festival": "juventud",
+"year": 2010,
+"kind": "actuacion",
+"title": "grupo hasta 6 integrantes - 03.wmv",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2010-09-14",
+"year_inferred": false
+},
+{
 "id": "n51SMC1wtkA",
 "festival": "juventud",
 "year": 2010,
@@ -12598,6 +13948,66 @@
 "title": "eisteddfod de la juventud 2010 viernes 295",
 "channel": "Daniel",
 "date": "2010-09-13",
+"year_inferred": false
+},
+{
+"id": "rsf_BKSvBTg",
+"festival": "juventud",
+"year": 2010,
+"kind": "actuacion",
+"title": "1-competencia-ysgol yr hendre.wmv",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2010-09-13",
+"year_inferred": false
+},
+{
+"id": "wSbHmcrdYpQ",
+"festival": "juventud",
+"year": 2010,
+"kind": "actuacion",
+"title": "Guitarra libre",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2010-09-14",
+"year_inferred": false
+},
+{
+"id": "xElsvi9TGTU",
+"festival": "juventud",
+"year": 2010,
+"kind": "actuacion",
+"title": "2 Recitados",
+"channel": "Raul Horacio Comes Cutillo",
+"date": "2010-09-14",
+"year_inferred": false
+},
+{
+"id": "F-K-QxEXavU",
+"festival": "juventud",
+"year": 2011,
+"kind": "actuacion",
+"title": "Eisteddfod juventud 2011 Otro Cielo Sin Señal de Adios",
+"channel": "polochec",
+"date": "2011-09-22",
+"year_inferred": false
+},
+{
+"id": "Uwl7oj96CXs",
+"festival": "juventud",
+"year": 2011,
+"kind": "actuacion",
+"title": "Eisteddfod juventud 2011 Braf i'w bwyta Yr Ifanc.mpg",
+"channel": "polochec",
+"date": "2011-09-18",
+"year_inferred": false
+},
+{
+"id": "qIEPmkx_qqE",
+"festival": "juventud",
+"year": 2011,
+"kind": "actuacion",
+"title": "Eisteddfod juventud 2011 Otro Cielo Baguala de Juan Poquito",
+"channel": "polochec",
+"date": "2011-09-20",
 "year_inferred": false
 },
 {
@@ -13051,6 +14461,36 @@
 "year_inferred": false
 },
 {
+"id": "1rLqENi5t4A",
+"festival": "juventud",
+"year": 2014,
+"kind": "actuacion",
+"title": "Nos da nawr Coro Esc Musica Gaiman (Eisteddfod de la juventud 2014)",
+"channel": "Emilio Pinciroli",
+"date": "2014-09-13",
+"year_inferred": false
+},
+{
+"id": "6SaYW5ZAV58",
+"festival": "juventud",
+"year": 2014,
+"kind": "actuacion",
+"title": "Dawns Ffaniglen Ysgol Cerdd Gaiman (Eisteddfod de la juventud 2014)",
+"channel": "Emilio Pinciroli",
+"date": "2014-09-14",
+"year_inferred": false
+},
+{
+"id": "96kVVDicgtg",
+"festival": "juventud",
+"year": 2014,
+"kind": "actuacion",
+"title": "Coro Esc Musica de Gaiman AKIWOWO (Eisteddfod de la juventud 2014)",
+"channel": "Emilio Pinciroli",
+"date": "2014-09-14",
+"year_inferred": false
+},
+{
 "id": "9taXhUL2IsU",
 "festival": "juventud",
 "year": 2014,
@@ -13081,6 +14521,16 @@
 "year_inferred": false
 },
 {
+"id": "Sh-McUaea9E",
+"festival": "juventud",
+"year": 2014,
+"kind": "actuacion",
+"title": "Coro Esc Musica Gaiman Cuando (Eisteddfod de la juventud 2014)",
+"channel": "Emilio Pinciroli",
+"date": "2014-09-14",
+"year_inferred": false
+},
+{
 "id": "XyxO5xaId4I",
 "festival": "juventud",
 "year": 2014,
@@ -13088,6 +14538,16 @@
 "title": "Esc Musica de Gaiman EL CARAMBA (Eisteddfod de la juventud 2014)",
 "channel": "Emilio Pinciroli",
 "date": "2014-09-14",
+"year_inferred": false
+},
+{
+"id": "ZaK-EFMecww",
+"festival": "juventud",
+"year": 2014,
+"kind": "actuacion",
+"title": "Rey mago de las nubes Colegio Camwy (Eisteddfod de la juventud 2014)",
+"channel": "Emilio Pinciroli",
+"date": "2014-09-13",
 "year_inferred": false
 },
 {
@@ -13121,6 +14581,26 @@
 "year_inferred": false
 },
 {
+"id": "lJg5VPL1vbk",
+"festival": "juventud",
+"year": 2014,
+"kind": "actuacion",
+"title": "Zamba para bailar- Dúo. Eisteddfod de la Juventud 2014",
+"channel": "Miky Jarme",
+"date": "2014-09-21",
+"year_inferred": false
+},
+{
+"id": "m_FfgGqm4G8",
+"festival": "juventud",
+"year": 2014,
+"kind": "actuacion",
+"title": "Coro Esc Musica de Gaiman (Eisteddfod de la juventud 2014)",
+"channel": "Emilio Pinciroli",
+"date": "2014-09-14",
+"year_inferred": false
+},
+{
 "id": "nuVGgDrb84I",
 "festival": "juventud",
 "year": 2014,
@@ -13131,11 +14611,41 @@
 "year_inferred": false
 },
 {
+"id": "sc5kW85HcTs",
+"festival": "juventud",
+"year": 2014,
+"kind": "actuacion",
+"title": "Esc Musica Trelew EL CARAMBA (Eisteddfod de la juventud 2014)",
+"channel": "Emilio Pinciroli",
+"date": "2014-09-14",
+"year_inferred": false
+},
+{
+"id": "srwCNVD_SyQ",
+"festival": "juventud",
+"year": 2014,
+"kind": "actuacion",
+"title": "Esc Musica de Gaiman EL ARAGAN (Eisteddfod de la juventud 2014)",
+"channel": "Emilio Pinciroli",
+"date": "2014-09-14",
+"year_inferred": false
+},
+{
 "id": "up2Gz90XiTc",
 "festival": "juventud",
 "year": 2014,
 "kind": "actuacion",
 "title": "Coro Esc Musica de Gaiman Shh (Eisteddfod de la juventud 2014)",
+"channel": "Emilio Pinciroli",
+"date": "2014-09-14",
+"year_inferred": false
+},
+{
+"id": "yN6Ya_wNwaw",
+"festival": "juventud",
+"year": 2014,
+"kind": "actuacion",
+"title": "Dawns Ffaniglen Hendre (Eisteddfod de la juventud 2014)",
 "channel": "Emilio Pinciroli",
 "date": "2014-09-14",
 "year_inferred": false
@@ -13188,6 +14698,16 @@
 "title": "Eisteddfod de la Juventud 2015 - Canción - \"En Alta Mar\"",
 "channel": "Daniel",
 "date": "2015-10-01",
+"year_inferred": false
+},
+{
+"id": "4TUuxcp6xnY",
+"festival": "juventud",
+"year": 2015,
+"kind": "ceremonia",
+"title": "Eisteddfod de la Juventud 2015 - Ceremonia del Poeta (Eisteddfod Ieuenctid Y Wladfa Patagonia 2015)",
+"channel": "MTJ",
+"date": "2016-12-23",
 "year_inferred": false
 },
 {
@@ -14141,6 +15661,16 @@
 "year_inferred": false
 },
 {
+"id": "BficmPNOxlc",
+"festival": "juventud",
+"year": 2017,
+"kind": "actuacion",
+"title": "Eisteddfod de la Juventud - Nueva imágen",
+"channel": "Eisteddfod de la Juventud",
+"date": "2017-01-09",
+"year_inferred": true
+},
+{
 "id": "G6iS-ikLE-A",
 "festival": "juventud",
 "year": 2017,
@@ -14158,6 +15688,16 @@
 "title": "Eisteddfod de la Juventud 2017 - Ysgol yr Hendre - Adrodd",
 "channel": "Daniel",
 "date": "2017-09-12",
+"year_inferred": false
+},
+{
+"id": "N0zi8XT0v7E",
+"festival": "juventud",
+"year": 2017,
+"kind": "actuacion",
+"title": "Eisteddfod de la Juventud 2017 Sonia Baliente en HiperConectados",
+"channel": "Canal 7 - Chubut",
+"date": "2017-08-29",
 "year_inferred": false
 },
 {
@@ -14671,6 +16211,16 @@
 "year_inferred": false
 },
 {
+"id": "YVh9mshDrlU",
+"festival": "juventud",
+"year": 2019,
+"kind": "actuacion",
+"title": "Coro en galés. Eisteddfod de la juventud, Gaiman 2019.",
+"channel": "brenda lens",
+"date": "2019-09-07",
+"year_inferred": false
+},
+{
 "id": "_dbTqq0ISWc",
 "festival": "juventud",
 "year": 2019,
@@ -14821,6 +16371,16 @@
 "year_inferred": false
 },
 {
+"id": "pFDb8znxa-M",
+"festival": "juventud",
+"year": 2019,
+"kind": "actuacion",
+"title": "Coro en galés. Eisteddfod de la juventud, Gaiman.",
+"channel": "brenda lens",
+"date": "2019-09-07",
+"year_inferred": true
+},
+{
 "id": "rOm2zlAc1Eo",
 "festival": "juventud",
 "year": 2019,
@@ -14881,6 +16441,16 @@
 "year_inferred": false
 },
 {
+"id": "LukOgq_6FUw",
+"festival": "juventud",
+"year": 2021,
+"kind": "ceremonia",
+"title": "La plaza de las piedras de Gorsedd - R. Moscoloni",
+"channel": "Roberto Moscoloni",
+"date": "2021-08-19",
+"year_inferred": true
+},
+{
 "id": "jcMm5v_I0hI",
 "festival": "juventud",
 "year": 2021,
@@ -14888,6 +16458,16 @@
 "title": "CEREMONIA EISTEDDFOD DE LA JUVENTUD 2021",
 "channel": "Comisión Eisteddfod de la Juventud",
 "date": "2021-10-03",
+"year_inferred": false
+},
+{
+"id": "vJcIaj55ppE",
+"festival": "juventud",
+"year": 2021,
+"kind": "actuacion",
+"title": "APERTURA EISTEDDFOD DE LA JUVENTUD 2021",
+"channel": "Eisteddfod de la Juventud",
+"date": "2021-10-02",
 "year_inferred": false
 },
 {
@@ -14971,6 +16551,46 @@
 "year_inferred": false
 },
 {
+"id": "6-iLi-3sc6Y",
+"festival": "juventud",
+"year": 2023,
+"kind": "noticia",
+"title": "GAIMAN | Fue presentado el \"Eisteddfod de la Juventud\" que se realizará los días 8 y 9 de septiembre",
+"channel": "Canal 12 Chubut",
+"date": "2023-08-31",
+"year_inferred": false
+},
+{
+"id": "L_UzRZlEV24",
+"festival": "juventud",
+"year": 2023,
+"kind": "noticia",
+"title": "Comenzó el \"Eisteddfod de la juventud\" en Gaiman",
+"channel": "Canal 12 CH",
+"date": "2023-09-09",
+"year_inferred": false
+},
+{
+"id": "UiV8ExWsbbw",
+"festival": "juventud",
+"year": 2023,
+"kind": "noticia",
+"title": "EN VIVO | Preliminares del Eisteddfod de la Juventud - Móvil María Laura Barcia -Chubut",
+"channel": "Diario Jornada Chubut",
+"date": "2023-09-06",
+"year_inferred": false
+},
+{
+"id": "VOaFWugWLl0",
+"festival": "juventud",
+"year": 2023,
+"kind": "noticia",
+"title": "Presentación del Eisteddfod de la juventud en Gaiman",
+"channel": "Canal 12 CH",
+"date": "2023-09-01",
+"year_inferred": false
+},
+{
 "id": "d2tShRtgrNQ",
 "festival": "juventud",
 "year": 2023,
@@ -14978,6 +16598,16 @@
 "title": "Eisteddfod de la Juventud 2023",
 "channel": "Comisión Eisteddfod de la Juventud",
 "date": "2023-09-09",
+"year_inferred": false
+},
+{
+"id": "itWcBiCJz_Q",
+"festival": "juventud",
+"year": 2023,
+"kind": "actuacion",
+"title": "EISTEDDFOD DE LA JUVENTUD 2023",
+"channel": "onda fm",
+"date": "2023-09-11",
 "year_inferred": false
 },
 {
@@ -15191,6 +16821,16 @@
 "year_inferred": false
 },
 {
+"id": "0nFETxhFMww",
+"festival": "mimosa",
+"year": 2010,
+"kind": "actuacion",
+"title": "Virginia en el Eisteddfod Mimosa Porth Madryn - 2010",
+"channel": "Carlos Alberto Servín",
+"date": "2010-08-08",
+"year_inferred": false
+},
+{
 "id": "1d7tV50pE1E",
 "festival": "mimosa",
 "year": 2010,
@@ -15208,6 +16848,16 @@
 "title": "Eisteddfod Puerto Madryn 2010 327",
 "channel": "Daniel",
 "date": "2010-08-20",
+"year_inferred": false
+},
+{
+"id": "83HJ4jMYjH4",
+"festival": "mimosa",
+"year": 2010,
+"kind": "actuacion",
+"title": "Eisteddfod MImosa 2010 3",
+"channel": "musicosdelchubut",
+"date": "2010-08-13",
 "year_inferred": false
 },
 {
@@ -16521,6 +18171,16 @@
 "year_inferred": false
 },
 {
+"id": "7hCqqioEb04",
+"festival": "mimosa",
+"year": 2014,
+"kind": "actuacion",
+"title": "Eisteddfod Mimosa - Comp. 58 (Técnica vocal ISDFA 805 Pt.Madryn)",
+"channel": "Ezequiel Ramírez",
+"date": "2014-08-12",
+"year_inferred": true
+},
+{
 "id": "8mS_Z6j0YJE",
 "festival": "mimosa",
 "year": 2014,
@@ -16638,6 +18298,16 @@
 "title": "Eisteddfod Mimosa 2014 - Maria",
 "channel": "Daniel",
 "date": "",
+"year_inferred": false
+},
+{
+"id": "zAY-qXDJhUE",
+"festival": "mimosa",
+"year": 2014,
+"kind": "actuacion",
+"title": "Jere Bega eisteddfod mimosa 2014",
+"channel": "JORGE BEGA",
+"date": "2014-08-11",
 "year_inferred": false
 },
 {
@@ -16771,6 +18441,26 @@
 "year_inferred": false
 },
 {
+"id": "yRbuuolCuuc",
+"festival": "mimosa",
+"year": 2016,
+"kind": "actuacion",
+"title": "EISTEDDFOD MIMOSA",
+"channel": "Siete Noticias",
+"date": "2016-08-02",
+"year_inferred": true
+},
+{
+"id": "hXZn-q2gDCI",
+"festival": "mimosa",
+"year": 2017,
+"kind": "noticia",
+"title": "Nueva edición del Eisteddfod​, por el aniversario de Puerto Madryn",
+"channel": "Canal 12 Chubut",
+"date": "2017-06-07",
+"year_inferred": false
+},
+{
 "id": "GSq9dLa5ZnE",
 "festival": "mimosa",
 "year": 2018,
@@ -16781,6 +18471,26 @@
 "year_inferred": false
 },
 {
+"id": "icDTQ4QNNq0",
+"festival": "mimosa",
+"year": 2018,
+"kind": "actuacion",
+"title": "Her Siriol en el Eisteddfod MImosa Porth Madryn 2018",
+"channel": "Danza Galesa Her Siriol",
+"date": "2023-09-11",
+"year_inferred": false
+},
+{
+"id": "tNhU-nF_aFg",
+"festival": "mimosa",
+"year": 2018,
+"kind": "actuacion",
+"title": "Nueva edición del Eisteddfod Mimosa Porth Madryn",
+"channel": "Canal 7 - Chubut",
+"date": "2018-08-02",
+"year_inferred": true
+},
+{
 "id": "xbbcuV2m-as",
 "festival": "mimosa",
 "year": 2018,
@@ -16788,6 +18498,76 @@
 "title": "EISTEDDFOD MIMOSA 2 018, 15TA. EDICIÓN, PARTE 1/3. 4 DE AGOSTO 2.018, PTO. MADRYN-CHUBUT",
 "channel": "PATAGONIALAND7WENHD777",
 "date": "2018-08-15",
+"year_inferred": false
+},
+{
+"id": "y_o77SkQbTo",
+"festival": "mimosa",
+"year": 2018,
+"kind": "noticia",
+"title": "El Coro juvenil participó del Eisteddfod Mimosa.",
+"channel": "Canal 12 Chubut",
+"date": "2018-08-06",
+"year_inferred": false
+},
+{
+"id": "IHnf877_h4M",
+"festival": "mimosa",
+"year": 2019,
+"kind": "actuacion",
+"title": "Grwp Her Siriol - Eisteddfod MImosa Porth Madryn 2019 - Comp 80 - “Clawdd Offa”",
+"channel": "Danza Galesa Her Siriol",
+"date": "2019-08-22",
+"year_inferred": false
+},
+{
+"id": "InmP2J6upeU",
+"festival": "mimosa",
+"year": 2019,
+"kind": "actuacion",
+"title": "Grwp Her Siriol - Eisteddfod MImosa Porth Madryn 2019- Compcia 79 - “Aberdaugleddau”.",
+"channel": "Danza Galesa Her Siriol",
+"date": "2019-08-19",
+"year_inferred": false
+},
+{
+"id": "crKd4TVjdx8",
+"festival": "mimosa",
+"year": 2019,
+"kind": "sesion",
+"title": "Eisteddfod Mimosa Porth Madryn 2019 - Apertura Segunda sesión",
+"channel": "Danza Galesa Her Siriol",
+"date": "2019-08-21",
+"year_inferred": false
+},
+{
+"id": "doTTwcmN5Qc",
+"festival": "mimosa",
+"year": 2019,
+"kind": "actuacion",
+"title": "Grupo Her Siriol - Eisteddfod MImosa Porth Madryn 2019 - Competencia 79 -“Ffaniglen”",
+"channel": "Danza Galesa Her Siriol",
+"date": "2019-08-20",
+"year_inferred": false
+},
+{
+"id": "fXMMt5cyehk",
+"festival": "mimosa",
+"year": 2019,
+"kind": "actuacion",
+"title": "Grwp Her Siriol - Eisteddfod MImosa Porth Madryn 2019- Comp 81 Danza nivel avanzado -“Pont Caerodor”",
+"channel": "Danza Galesa Her Siriol",
+"date": "2019-08-20",
+"year_inferred": false
+},
+{
+"id": "yW3gmpvu79I",
+"festival": "mimosa",
+"year": 2019,
+"kind": "actuacion",
+"title": "Grwp Her Siriol - Eisteddfod MImosa Porth Madryn 2019 - Com 82 - Danza Famiiar -Libre",
+"channel": "Danza Galesa Her Siriol",
+"date": "2019-08-20",
 "year_inferred": false
 },
 {
@@ -16831,6 +18611,16 @@
 "year_inferred": false
 },
 {
+"id": "Vak14i0bXNM",
+"festival": "mimosa",
+"year": 2023,
+"kind": "actuacion",
+"title": "Eisteddfod Mimosa Porth Madryn Comp 88 Ty Coch Caerdydd Grupo Her Siriol (Puerto Madryn)",
+"channel": "Asociación Cultural Galesa de Puerto Madryn",
+"date": "2023-09-09",
+"year_inferred": true
+},
+{
 "id": "b9T4gwL-z6E",
 "festival": "mimosa",
 "year": 2023,
@@ -16868,6 +18658,16 @@
 "title": "MADRYN | Exitosa edición del Eisteddfod Mimosa: música, danza y poesía galesa",
 "channel": "Canal 12 Chubut",
 "date": "2024-08-13",
+"year_inferred": false
+},
+{
+"id": "SXUJQACw0WA",
+"festival": "mimosa",
+"year": 2024,
+"kind": "noticia",
+"title": "MADRYN | Todo listo para una nueva edición del Eisteddfod Mimosa",
+"channel": "Canal 12 Chubut",
+"date": "2024-08-06",
 "year_inferred": false
 },
 {
@@ -16971,6 +18771,26 @@
 "year_inferred": false
 },
 {
+"id": "zfpMCZCQ4xE",
+"festival": "mimosa",
+"year": 2025,
+"kind": "noticia",
+"title": "MADRYN | Se concretó la nueva edición del Eisteddfod Mimosa",
+"channel": "Canal 12 Chubut",
+"date": "2025-06-30",
+"year_inferred": false
+},
+{
+"id": "WoGJghFmuO8",
+"festival": "mimosa",
+"year": 2026,
+"kind": "sesion",
+"title": "DÍA 4 CHARLA SOBRE EL EISTEDDFOD EN LA XI SEMANA DE LA CULTURA GALESA EN PUERTO MADRYN",
+"channel": "Asociación Cultural Galesa de Puerto Madryn",
+"date": "2026-02-17",
+"year_inferred": true
+},
+{
 "id": "_yMxwOJ212A",
 "festival": "mimosa",
 "year": 2026,
@@ -16978,6 +18798,16 @@
 "title": "MADRYN | PRESENTACIÓN DEL EISTEDDFOD MIMOSA: FESTIVAL LITERARIO Y MUSICAL",
 "channel": "Canal 12 Chubut",
 "date": "2026-06-09",
+"year_inferred": false
+},
+{
+"id": "aA7Tz6toNwY",
+"festival": "mimosa",
+"year": 2026,
+"kind": "sesion",
+"title": "Eisteddfod Mimosa Porth Madryn 2026",
+"channel": "RuidoStream",
+"date": "2026-06-14",
 "year_inferred": false
 },
 {
@@ -17008,6 +18838,16 @@
 "title": "eisteddfod trevelin 2011 878",
 "channel": "Daniel",
 "date": "2011-05-02",
+"year_inferred": false
+},
+{
+"id": "v0qnvH9hxiY",
+"festival": "trevelin",
+"year": 2011,
+"kind": "actuacion",
+"title": "«Sillón de Eisteddfod -Trevelin-»",
+"channel": "Gonbal",
+"date": "2011-05-09",
 "year_inferred": false
 },
 {
@@ -17491,6 +19331,26 @@
 "year_inferred": false
 },
 {
+"id": "63w9YaHC9NM",
+"festival": "trevelin",
+"year": 2013,
+"kind": "actuacion",
+"title": "07 Eisteddfod Trevelin Enharmonía 1 \"Cuando\"",
+"channel": "Chaucha Esparza (Chaucha)",
+"date": "2013-11-26",
+"year_inferred": true
+},
+{
+"id": "j047pqn_geI",
+"festival": "trevelin",
+"year": 2013,
+"kind": "actuacion",
+"title": "06 Eisteddfod Trevelin Mariela, Jeremías y Jorge",
+"channel": "Chaucha Esparza (Chaucha)",
+"date": "2013-11-26",
+"year_inferred": false
+},
+{
 "id": "-LzT3CsM86E",
 "festival": "trevelin",
 "year": 2014,
@@ -17558,6 +19418,16 @@
 "title": "Eisteddfod Trevelin 2014 - Version original \"Calon Lan\" a capella.",
 "channel": "Daniel",
 "date": "2014-05-13",
+"year_inferred": false
+},
+{
+"id": "5xg_vCVILJM",
+"festival": "trevelin",
+"year": 2014,
+"kind": "actuacion",
+"title": "Ysgol Gymraeg yr Andes Trevelin - Danzas Eisteddfod Trevelin 2014",
+"channel": "julitoalonxo",
+"date": "2014-05-03",
 "year_inferred": false
 },
 {
@@ -18051,6 +19921,16 @@
 "year_inferred": false
 },
 {
+"id": "P2DPFhDkIx8",
+"festival": "trevelin",
+"year": 2015,
+"kind": "actuacion",
+"title": "Trevelin Celtic Feet - Eisteddfod Trevelin 2015",
+"channel": "TrevelinFilms",
+"date": "2015-05-03",
+"year_inferred": false
+},
+{
 "id": "Qx8gndHdqDs",
 "festival": "trevelin",
 "year": 2015,
@@ -18171,6 +20051,16 @@
 "year_inferred": false
 },
 {
+"id": "lclbBuGz9eA",
+"festival": "trevelin",
+"year": 2015,
+"kind": "actuacion",
+"title": "Eisteddfod Trevelin 2015 Sofia Recitación en castellano Nocturno",
+"channel": "Teodoro Flores Sacaca",
+"date": "2015-07-25",
+"year_inferred": false
+},
+{
 "id": "ltAg5gNVd7I",
 "festival": "trevelin",
 "year": 2015,
@@ -18281,6 +20171,16 @@
 "year_inferred": false
 },
 {
+"id": "obz-1rSLg1A",
+"festival": "trevelin",
+"year": 2016,
+"kind": "actuacion",
+"title": "Eisteddfod Trevelin 2016 - Danzas 2",
+"channel": "pompa",
+"date": "2016-05-09",
+"year_inferred": false
+},
+{
 "id": "xVXQcIPK9hc",
 "festival": "trevelin",
 "year": 2016,
@@ -18348,6 +20248,26 @@
 "title": "Eisteddfod en Trevelin",
 "channel": "Diario Jornada Chubut",
 "date": "2019-04-25",
+"year_inferred": false
+},
+{
+"id": "OIbpPNNQgwE",
+"festival": "trevelin",
+"year": 2020,
+"kind": "actuacion",
+"title": "¡Participá! | Eisteddfod Trevelin 2020 - 1 y 2 de mayo",
+"channel": "Eisteddfod Trevelin",
+"date": "2019-11-27",
+"year_inferred": false
+},
+{
+"id": "xMBjWOo2VBM",
+"festival": "trevelin",
+"year": 2020,
+"kind": "noticia",
+"title": "18 11 20 JUAN CARLOS LEDESMA - NUEVA EDICIÓN DEL EISTEDDFOD DE TREVELIN",
+"channel": "Canal 4 Esquel",
+"date": "2020-11-19",
 "year_inferred": false
 },
 {
@@ -18431,6 +20351,16 @@
 "year_inferred": false
 },
 {
+"id": "juhFkut5eak",
+"festival": "trevelin",
+"year": 2021,
+"kind": "actuacion",
+"title": "Grupo de danzas \"Her Siriol\" - Eisteddfod Trevelin 2021 - \"Clawd offa\" . Competencia 51a - 2° puesto",
+"channel": "Asociación Cultural Galesa de Puerto Madryn",
+"date": "2021-11-21",
+"year_inferred": false
+},
+{
 "id": "s0dh-eG-jzA",
 "festival": "trevelin",
 "year": 2021,
@@ -18471,6 +20401,26 @@
 "year_inferred": false
 },
 {
+"id": "ILMAhPNw7ns",
+"festival": "trevelin",
+"year": 2022,
+"kind": "noticia",
+"title": "JUAN CARLOS LEDESMA - ORGANIZACIÓN - 45ª EISTEDDFOD TREVELIN",
+"channel": "Canal 4 Esquel",
+"date": "2022-11-16",
+"year_inferred": false
+},
+{
+"id": "O1v0lyv-bJg",
+"festival": "trevelin",
+"year": 2022,
+"kind": "noticia",
+"title": "IVANA JONES - JUAN CARLOS LEDESMA - EISTEDDFOD TREVELIN 2022",
+"channel": "Canal 4 Esquel",
+"date": "2022-11-24",
+"year_inferred": false
+},
+{
 "id": "mXvXS4rEcKI",
 "festival": "trevelin",
 "year": 2022,
@@ -18499,6 +20449,36 @@
 "channel": "PATAGONIALAND7WENHD777",
 "date": "2023-01-25",
 "year_inferred": false
+},
+{
+"id": "X3HIS-5_m2k",
+"festival": "trevelin",
+"year": 2023,
+"kind": "actuacion",
+"title": "Sillón Eisteddfod Bro Hydref 2023",
+"channel": "Mariano Contrabajo",
+"date": "2023-05-05",
+"year_inferred": false
+},
+{
+"id": "u_J8gmi7cF4",
+"festival": "trevelin",
+"year": 2023,
+"kind": "ceremonia",
+"title": "Eisteddfod Trevelin 2023 Coronación del poeta idioma castellano.",
+"channel": "Federico Barilá",
+"date": "2023-05-07",
+"year_inferred": false
+},
+{
+"id": "wjkm5a_WbZc",
+"festival": "trevelin",
+"year": 2023,
+"kind": "actuacion",
+"title": "Her Siriol Competencia 60 Eisteddfod Trevelin",
+"channel": "Danza Galesa Her Siriol",
+"date": "2023-09-10",
+"year_inferred": true
 },
 {
 "id": "0-FFP5CeJmw",
@@ -18641,6 +20621,16 @@
 "year_inferred": false
 },
 {
+"id": "9s269A_A6QI",
+"festival": "trevelin",
+"year": 2025,
+"kind": "noticia",
+"title": "KAREN ESTEBAN TREVELIN INVITA A PARTICIPAR DEL EISTEDDFOD",
+"channel": "Canal 4 Esquel",
+"date": "2025-04-30",
+"year_inferred": false
+},
+{
 "id": "Jdyxs631P4w",
 "festival": "trevelin",
 "year": 2025,
@@ -18648,6 +20638,86 @@
 "title": "ALBERTO WILLIAMS. Himno en Galés, Eisteddfod Trevelin 2.025",
 "channel": "PATAGONIALAND7WENHD777",
 "date": "2026-01-09",
+"year_inferred": false
+},
+{
+"id": "wYCDjqnEddk",
+"festival": "trevelin",
+"year": 2025,
+"kind": "actuacion",
+"title": "Dragones del Viento - EISTEDDFOD TREVELIN 2025",
+"channel": "Fernando Telleria",
+"date": "2025-05-09",
+"year_inferred": false
+},
+{
+"id": "6KrnAGw0r1o",
+"festival": "trevelin",
+"year": 2026,
+"kind": "noticia",
+"title": "EISTEDDFOD DE TREVELIN 2.026 CAPÍTULO 4 COMPETENCIAS N° 35, 106, 76, 56 Y 134",
+"channel": "CHUBUT7W",
+"date": "2026-06-07",
+"year_inferred": false
+},
+{
+"id": "HVFrtDVbHEI",
+"festival": "trevelin",
+"year": 2026,
+"kind": "noticia",
+"title": "EISTEDDFOD DE TREVELIN 2.026, EL AMANECER CON VISTA AL TRONO DE LAS NUBES., 2 DE MAYO 2.026",
+"channel": "CHUBUT7W",
+"date": "2026-06-01",
+"year_inferred": false
+},
+{
+"id": "IaNz9fMsg68",
+"festival": "trevelin",
+"year": 2026,
+"kind": "noticia",
+"title": "EISTEDDFOD DE TREVELIN 2.026 CAP. 1, ARCOS DEL SUR, RACHIE, COMP. N° 104, 127, 28 Y 51",
+"channel": "CHUBUT7W",
+"date": "2026-06-02",
+"year_inferred": false
+},
+{
+"id": "_IBM2085MEw",
+"festival": "trevelin",
+"year": 2026,
+"kind": "noticia",
+"title": "EISTEDDFOD DE TREVELIN 2 026 CAPÍTULO 2. COMPETENCIAS N° 64, 60 Y 138",
+"channel": "CHUBUT7W",
+"date": "2026-06-04",
+"year_inferred": false
+},
+{
+"id": "keGA5Rcmgng",
+"festival": "trevelin",
+"year": 2026,
+"kind": "noticia",
+"title": "EISTEDDFOD DE TREVELIN 2.026 CAPÍTULO 5 COMPETENCIAS N° 1 Y 78",
+"channel": "CHUBUT7W",
+"date": "2026-06-12",
+"year_inferred": false
+},
+{
+"id": "vJ9C4KkNZ7E",
+"festival": "trevelin",
+"year": 2026,
+"kind": "noticia",
+"title": "EISTEDDFOD DE TREVELIN 2.026 CAPÍTULO 6 COMPETENCIAS N° 62 Y 67",
+"channel": "CHUBUT7W",
+"date": "2026-06-13",
+"year_inferred": false
+},
+{
+"id": "wsbghtOB9zI",
+"festival": "trevelin",
+"year": 2026,
+"kind": "noticia",
+"title": "EISTEDDFOD DE TREVELIN 2.026 CAPÍTULO 3 COMPETENCIAS N° 75, 55, 105, 138, 29, 52 Y 53",
+"channel": "CHUBUT7W",
+"date": "2026-06-05",
 "year_inferred": false
 }
 ]

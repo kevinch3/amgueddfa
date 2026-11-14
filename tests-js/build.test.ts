@@ -73,7 +73,13 @@ describe('static build', () => {
     for (const f of FESTIVALS) {
       expect(existsSync(join(DIST, f, 'index.html')), f).toBe(true);
       expect(existsSync(join(DIST, 'general', f, 'index.html')), f).toBe(true);
+      const [a, b] = range(f);
+      const page = read(`${f}/index.html`);
+      const rows = page.match(/<li class="tl-[a-z_]+" data-festival=/g) ?? [];
+      expect(rows.length, f).toBe(b - a + 1);
+      expect(page).toContain(`contribuir?f=${f}"`);
     }
+    expect(read('juventud/index.html')).toContain('data-decada-vacia');
     const ed = read('chubut/2024/index.html');
     for (const id of ['hechos', 'recuerdos', 'aportes', 'sesion']) expect(ed).toContain(`id="${id}"`);
     const item = catalog.find((i) => !i.restricted && i.kind === 'pdf')!;

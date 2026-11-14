@@ -189,6 +189,9 @@ main { display: block; padding: 1.5rem 0 3rem; }
 .timeline a { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.25rem 1rem; padding: 0.55rem 0.5rem; color: var(--ink); text-decoration: none; border-radius: 3px; }
 .timeline a:hover { background: var(--paper-hi); }
 .timeline .yr { font-size: 1.5rem; font-weight: 600; min-width: 3.2em; font-variant-numeric: lining-nums tabular-nums; }
+.timeline .tl-decada::before { background: var(--none); border-color: #a39a85; }
+.timeline .decada-vacia > summary { margin: 0.35rem 0; }
+.decada-filas { list-style: none; margin: 0; padding: 0; }
 .timeline .tl-none .yr { font-size: 1.1rem; font-weight: 400; color: var(--ink-soft); }
 .timeline .st { font-family: var(--sans); font-size: 0.95rem; }
 .timeline .thumbs { display: flex; gap: 4px; flex-basis: 100%; }

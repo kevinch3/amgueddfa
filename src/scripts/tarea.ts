@@ -1,4 +1,4 @@
-import { submit, YEAR_MAX, YEAR_MIN } from '../lib/contrib';
+import { submit, TRANSCRIPTION_MAX, YEAR_MAX, YEAR_MIN } from '../lib/contrib';
 import { t } from '../lib/i18n';
 import type { FestivalSlug } from '../lib/types';
 import { busy, categoryOptions, el, festivalOptions, field, gate, gateMessage, select } from './ui';
@@ -65,12 +65,12 @@ function transcribeTask(ctx: Ctx): HTMLElement {
   open.addEventListener('click', () => {
     const form = el('form', { class: 'tarea-form', novalidate: '' });
     const id = `tarea-texto-${ctx.item}`;
-    const ta = el('textarea', { id, rows: '8', maxlength: '5000', 'aria-describedby': `${id}-ayuda` });
+    const ta = el('textarea', { id, rows: '8', maxlength: String(TRANSCRIPTION_MAX), 'aria-describedby': `${id}-ayuda` });
     const msg = status();
     const go = el('button', { type: 'submit', class: 'btn' }, t('tarea.enviar'));
     const cancel = el('button', { type: 'button', class: 'btn btn-quiet' }, t('tarea.cancelar'));
     form.append(
-      el('p', { class: 'muted small', id: `${id}-ayuda` }, `${t('tarea.transcribir_ayuda')} ${t('contrib.caracteres')}`),
+      el('p', { class: 'muted small', id: `${id}-ayuda` }, `${t('tarea.transcribir_ayuda')} ${t('contrib.caracteres_transcripcion')}`),
       field(t('tarea.texto_label'), ta),
       el('p', { class: 'tarea-acciones' }),
       msg,

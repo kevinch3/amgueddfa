@@ -41,6 +41,8 @@ export const YEAR_MIN = 1865;
 export const YEAR_MAX = 2026;
 export const TEXT_MIN = 10;
 export const TEXT_MAX = 5000;
+/** Transcriptions copy whole documents, so they get a longer limit than memories. */
+export const TRANSCRIPTION_MAX = 15000;
 const VALUE_MAX = 500;
 
 const OFFLINE: Result = { ok: false, key: 'estado.sin_conexion' };
@@ -143,7 +145,11 @@ export function validate(kind: Kind, input: Record<string, unknown>): Validation
       return validateFact(input);
     case 'tag':
       return validateTag(input);
-    case 'transcription':
+    case 'transcription': {
+      const text = str(input.text);
+      if (len(text) < TEXT_MIN || len(text) > TRANSCRIPTION_MAX) return fail('texto_transcripcion');
+      return { ok: true, payload: { text } };
+    }
     case 'memory': {
       const text = str(input.text);
       if (len(text) < TEXT_MIN || len(text) > TEXT_MAX) return fail('texto');

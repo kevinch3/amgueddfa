@@ -99,19 +99,21 @@ describe('validate', () => {
     expect(validate('tag', { festival: 'gorsedd' })).toEqual({ ok: false, key: 'contrib.error.etiqueta' });
   });
 
-  it('transcription: 10 to 5000 characters', () => {
-    expect(validate('transcription', { text: 'corto' })).toEqual({ ok: false, key: 'contrib.error.texto' });
-    expect(validate('transcription', { text: 'x'.repeat(5001) })).toEqual({ ok: false, key: 'contrib.error.texto' });
+  it('transcription: 10 to 15000 characters', () => {
+    expect(validate('transcription', { text: 'corto' })).toEqual({ ok: false, key: 'contrib.error.texto_transcripcion' });
+    expect(validate('transcription', { text: 'x'.repeat(15000) }).ok).toBe(true);
+    expect(validate('transcription', { text: 'x'.repeat(15001) })).toEqual({ ok: false, key: 'contrib.error.texto_transcripcion' });
     expect(validate('transcription', { text: '  Cystadleuaeth 1  ' })).toEqual({ ok: true, payload: { text: 'Cystadleuaeth 1' } });
   });
 
   it('memory: 10 to 5000 characters', () => {
     expect(validate('memory', { text: '' })).toEqual({ ok: false, key: 'contrib.error.texto' });
     expect(validate('memory', { text: 'Fui con mi abuela al Eisteddfod' }).ok).toBe(true);
+    expect(validate('memory', { text: 'x'.repeat(5001) })).toEqual({ ok: false, key: 'contrib.error.texto' });
   });
 
   it('every error key exists in es-AR.json', () => {
-    for (const k of ['tipo_archivo', 'muy_grande', 'archivo', 'categoria', 'fecha', 'campo', 'valor', 'competencia', 'etiqueta', 'ano', 'texto', 'limite', 'sesion', 'alcance']) {
+    for (const k of ['tipo_archivo', 'muy_grande', 'archivo', 'categoria', 'fecha', 'campo', 'valor', 'competencia', 'etiqueta', 'ano', 'texto', 'texto_transcripcion', 'limite', 'sesion', 'alcance']) {
       expect(t(`contrib.error.${k}`)).not.toBe(`contrib.error.${k}`);
     }
   });

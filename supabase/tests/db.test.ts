@@ -378,3 +378,55 @@ describe('storage policies', () => {
     ]);
   });
 });
+
+describe('admin_add_facts and the admin exemption', () => {
+  const facts = (n: number, extra: Record<string, unknown> = {}) =>
+    JSON.stringify(Array.from({ length: n }, (_, i) => ({ field: 'other', value: `Dato ${i + 1}`, ...extra })));
+
+  it('publishes facts credited to another user, with points, badges and edition status', async () => {
+    const admin = await t.createAdmin();
+    const u = await t.createUser();
+    const rows = await t.q<{ pts: number }>(admin, 'select public.admin_add_facts($1, $2, $3, $4::jsonb) as pts',
+      [u, 'chubut', 1937, JSON.stringify([
+        { field: 'venue', value: 'Salón San David', fuente: 'Libro' },
+        { field: 'ganador_silla', value: 'E. M. Roberts', fuente: 'Libro' },
+        { field: 'edicion_realizada', value: 'no', fuente: 'Libro' },
+      ])]);
+    expect(rows[0].pts).toBe(30);
+    const mine = await t.q<{ status: string; user_id: string; fuente: string }>('postgres',
+      `select status, user_id, payload->>'fuente' as fuente from public.contributions where festival = 'chubut' and year = 1937`);
+    expect(mine).toHaveLength(3);
+    expect(mine.every((r) => r.status === 'approved' && r.user_id === u && r.fuente === 'Libro')).toBe(true);
+    expect(await points(u)).toBe(30);
+    expect(await badges(u)).toContain('primer-aporte');
+    const ed = await t.q<{ status: string }>('postgres', `select status from public.editions where festival = 'chubut' and year = 1937`);
+    expect(ed[0].status).toBe('not_held');
+  });
+
+  it('non-admins cannot call it', async () => {
+    const u = await t.createUser();
+    await expect(t.q(u, 'select public.admin_add_facts($1, $2, $3, $4::jsonb)', [u, 'chubut', 1937, facts(2)])).rejects.toThrow(/not_admin/);
+    expect(await t.q('postgres', 'select id from public.contributions')).toEqual([]);
+  });
+
+  it('rejects an empty list, a missing edition, or a non-fact payload', async () => {
+    const admin = await t.createAdmin();
+    const u = await t.createUser();
+    await expect(t.q(admin, 'select public.admin_add_facts($1, $2, $3, $4::jsonb)', [u, 'chubut', 1937, '[]'])).rejects.toThrow(/invalid_value/);
+    await expect(t.q(admin, 'select public.admin_add_facts($1, $2, $3, $4::jsonb)', [u, null, 1937, facts(1)])).rejects.toThrow(/edition_required/);
+    await expect(t.q(admin, 'select public.admin_add_facts($1, $2, $3, $4::jsonb)', [u, 'chubut', 1937, JSON.stringify([{ value: 'x' }])])).rejects.toThrow(/invalid_value/);
+    expect(await t.q('postgres', 'select id from public.contributions')).toEqual([]);
+  });
+
+  it('admins are not held to the daily limit; others are, all or nothing', async () => {
+    const admin = await t.createAdmin();
+    for (let i = 0; i < 31; i++) await contribute(admin, { user_id: admin });
+    const u = await t.createUser();
+    for (let i = 0; i < 25; i++) await contribute(u, { user_id: u });
+    const values = Array.from({ length: 10 }, (_, i) => `($1, 'fact', 'chubut', 1937, null, '{"field":"other","value":"v${i}"}', 'pending')`).join(', ');
+    await expect(t.q(u, `insert into public.contributions (user_id, type, festival, year, item_id, payload, status) values ${values}`, [u])).rejects.toThrow(/daily_limit/);
+    const left = await t.q<{ n: number }>('postgres', 'select count(*)::int as n from public.contributions where user_id = $1', [u]);
+    expect(left[0].n).toBe(25);
+  });
+});
+

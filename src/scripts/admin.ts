@@ -11,6 +11,7 @@ import {
   reject,
   releaseItem,
   restrictedPreview,
+  reviewFlags,
   searchUsers,
   signedUrl,
   textOnly,
@@ -19,6 +20,7 @@ import {
   type GapCtx,
   type Pending,
   type Result,
+  type ReviewFlags,
 } from '../lib/admin';
 import { currentProfile } from '../lib/auth';
 import type { Kind } from '../lib/contrib';
@@ -113,6 +115,7 @@ function card(c: Pending, done: (key: string) => void): HTMLLIElement {
   const no = el('button', { type: 'button', class: 'btn btn-quiet' }, t('admin.rechazar'));
   const btns = [ok, no];
   let choice: GapChoice | null = null;
+  let flags: ReviewFlags | null = null;
 
   if (c.type === 'upload') {
     const pv = el('div', { class: 'admin-preview' });
@@ -133,6 +136,24 @@ function card(c: Pending, done: (key: string) => void): HTMLLIElement {
     lab.prepend(gapBox);
     lab.append(t('admin.llena_hueco'));
     li.append(lab);
+
+    // Programa: the admin confirms what the contributor said (complete / cover).
+    flags = reviewFlags(c);
+    if (flags) {
+      const said = String(c.payload?.alcance ?? '');
+      if (said) li.append(el('p', { class: 'muted small' }, t('admin.dijo', { alcance: t(`contrib.alcances.${said}`) })));
+      const f = flags;
+      for (const [key, label] of [['complete', 'admin.completo'], ['tapa', 'admin.es_tapa']] as const) {
+        const fid = `${key}-${c.id}`;
+        const box = el('input', { type: 'checkbox', id: fid });
+        box.checked = f[key];
+        box.addEventListener('change', () => { f[key] = box.checked; });
+        const l = el('label', { for: fid, class: 'opt' });
+        l.prepend(box);
+        l.append(t(label));
+        li.append(l);
+      }
+    }
   }
   actions.append(ok, no);
 
@@ -172,7 +193,7 @@ function card(c: Pending, done: (key: string) => void): HTMLLIElement {
 
   ok.addEventListener('click', async () => {
     const fn = c.type === 'upload'
-      ? () => approveUpload(c, { gap, fillsGap: choice ? gapOverride(choice) : undefined })
+      ? () => approveUpload(c, { gap, fillsGap: choice ? gapOverride(choice) : undefined, flags: flags ?? undefined })
       : () => approve(c, null);
     if (await run(btns, msg, fn)) {
       if (c.type === 'upload') {

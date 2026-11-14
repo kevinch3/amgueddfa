@@ -157,10 +157,22 @@ export function mimeOf(path: string, blobType = ''): string {
 type Make = (file: Blob, mime: string) => Promise<{ pages: Blob[]; thumb: Blob }>;
 type FetchLike = (url: string) => Promise<{ ok: boolean; blob(): Promise<Blob> }>;
 
+/** What the admin confirms when approving a programa: it is complete, and/or it is the cover. */
+export type ReviewFlags = { complete: boolean; tapa: boolean };
+
+/** Checkbox defaults for a programa upload, from what the contributor said; null for other categories. */
+export function reviewFlags(c: Pending): ReviewFlags | null {
+  if (c.payload?.category !== 'programa') return null;
+  const alcance = c.payload?.alcance;
+  return { complete: alcance === 'completo', tapa: alcance === 'tapa' };
+}
+
 export interface UploadOpts {
   gap: GapCtx;
   /** The admin's explicit choice; when absent, fillsGap(…) decides. */
   fillsGap?: boolean;
+  /** The admin's confirmation for a programa (complete / cover), merged into the payload. */
+  flags?: ReviewFlags;
   client?: SupabaseClient | null;
   fetchFn?: FetchLike;
   make?: Make;
@@ -228,7 +240,7 @@ export async function approveUpload(c: Pending, opts: UploadOpts): Promise<Resul
   const res = await rpc(client, 'approve_contribution', {
     cid: c.id,
     fills_gap: gap,
-    payload_override: { media: { thumb: paths[0], pages: paths.slice(1) } },
+    payload_override: { media: { thumb: paths[0], pages: paths.slice(1) }, ...(opts.flags ?? {}) },
   });
   // Not approved (rejected meanwhile, network, validation): take the derivatives down again.
   if (!res.ok) await removeQuietly(client, 'media', paths);

@@ -10,6 +10,7 @@ import {
   reject,
   releaseItem,
   restrictedPreview,
+  reviewFlags,
   type Pending,
 } from '../src/lib/admin';
 
@@ -96,6 +97,17 @@ describe('fillsGap', () => {
   });
 });
 
+describe('reviewFlags', () => {
+  const p = (payload: any): Pending => ({ ...upload, payload: { storage_path: 'u1/x.jpg', ...payload } });
+  it('defaults from what the contributor said', () => {
+    expect(reviewFlags(p({ category: 'programa', alcance: 'completo' }))).toEqual({ complete: true, tapa: false });
+    expect(reviewFlags(p({ category: 'programa', alcance: 'tapa' }))).toEqual({ complete: false, tapa: true });
+    expect(reviewFlags(p({ category: 'programa', alcance: 'parcial' }))).toEqual({ complete: false, tapa: false });
+    expect(reviewFlags(p({ category: 'programa' }))).toEqual({ complete: false, tapa: false });
+    expect(reviewFlags(p({ category: 'bases' }))).toBeNull();
+  });
+});
+
 describe('approveUpload', () => {
   it('approveUpload calls storage then rpc with media payload', async () => {
     const { client, log, uploads, rpcs } = fakeClient();
@@ -127,6 +139,18 @@ describe('approveUpload', () => {
       cid: 'c1',
       fills_gap: true,
       payload_override: { media: { thumb: 'uploads/c1/thumb.webp', pages: ['uploads/c1/p01.webp', 'uploads/c1/p02.webp'] } },
+    });
+  });
+
+  it('approveUpload merges the admin flags into the payload', async () => {
+    const { client, rpcs } = fakeClient();
+    const fetchFn = async () => ({ ok: true, blob: async () => new Blob(['x'], { type: 'image/jpeg' }) }) as any;
+    const make = async () => ({ pages: [new Blob(['p1']), new Blob(['p2'])], thumb: new Blob(['t']) });
+    await approveUpload(upload, { client, fetchFn, make, gap: { catalog, approved: [] }, flags: { complete: true, tapa: false } });
+    expect(rpcs[0].args.payload_override).toEqual({
+      media: { thumb: 'uploads/c1/thumb.webp', pages: ['uploads/c1/p01.webp', 'uploads/c1/p02.webp'] },
+      complete: true,
+      tapa: false,
     });
   });
 

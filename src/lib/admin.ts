@@ -365,15 +365,15 @@ export async function loadReleased(client: SupabaseClient | null = getClient()) 
 export type UserRow = { id: string; display_name: string | null; role: 'user' | 'admin'; points: number };
 
 /** Profiles whose display name contains `q` (case-insensitive). LIKE wildcards in `q` match literally. */
+/** Users by name; an empty search lists everyone (also people who have not chosen a name yet). */
 export async function searchUsers(q: string, client: SupabaseClient | null = getClient()) {
   const term = (q ?? '').trim().replace(/[\\%_]/g, (m) => `\\${m}`);
   return liveQuery<UserRow[]>(
-    (c) =>
-      c.from('profiles')
-        .select('id, display_name, role, points')
-        .ilike('display_name', `%${term}%`)
-        .order('display_name', { ascending: true })
-        .limit(25),
+    (c) => {
+      const base = c.from('profiles').select('id, display_name, role, points');
+      const q2 = term ? base.ilike('display_name', `%${term}%`) : base;
+      return q2.order('display_name', { ascending: true }).limit(term ? 25 : 200);
+    },
     [],
     8000,
     client,

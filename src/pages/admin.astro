@@ -90,5 +90,8 @@ const data = {
   .admin-card .btn:disabled { opacity: 0.55; cursor: not-allowed; }
   .admin-preview img { max-width: 100%; max-height: 28rem; border: 1px solid var(--rule); }
   .admin-search { display: flex; gap: 0.75rem; align-items: end; flex-wrap: wrap; }
+  /* The search box matches the button's height (.btn is 48px). */
+  .admin-search .campo input[type='search'] { min-height: 48px; box-sizing: border-box; }
+  .admin-search .campo { margin: 0; }
   .admin-thumb { width: 64px; height: auto; border: 1px solid var(--rule); }
 </style>

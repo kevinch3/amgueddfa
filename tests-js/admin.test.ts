@@ -11,6 +11,7 @@ import {
   releaseItem,
   restrictedPreview,
   reviewFlags,
+  searchUsers,
   type Pending,
 } from '../src/lib/admin';
 
@@ -397,3 +398,30 @@ describe('restrictedPreview', () => {
     expect(await restrictedPreview({ id: 'a', thumb: 'a/thumb.webp', page_paths: ['a/p01.webp'] }, client)).toBeNull();
   });
 });
+
+describe('searchUsers', () => {
+  function usersClient() {
+    const calls: string[] = [];
+    const q: any = {
+      ilike: (col: string, v: string) => (calls.push(`ilike:${col}:${v}`), q),
+      order: (col: string) => (calls.push(`order:${col}`), q),
+      limit: (n: number) => (calls.push(`limit:${n}`), q),
+      then: (ok: (v: unknown) => unknown) => Promise.resolve({ data: [{ id: 'a', display_name: null, role: 'user', points: 0 }], error: null }).then(ok),
+    };
+    return { calls, client: { from: () => ({ select: () => q }) } as any };
+  }
+
+  it('an empty search lists everyone, including people without a name yet', async () => {
+    const { calls, client } = usersClient();
+    const r = await searchUsers('', client);
+    expect(r.data).toHaveLength(1);
+    expect(calls.some((c) => c.startsWith('ilike'))).toBe(false);
+  });
+
+  it('a search term filters by name', async () => {
+    const { calls, client } = usersClient();
+    await searchUsers('  meir ', client);
+    expect(calls).toContain('ilike:display_name:%meir%');
+  });
+});
+

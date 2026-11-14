@@ -361,6 +361,11 @@ function selectTab(k: string): void {
     loaded.add(k);
     void renderRestricted();
   }
+  // Usuarios: everyone listed straight away; the search narrows it down.
+  if (k === 'usuarios' && !loaded.has(k)) {
+    loaded.add(k);
+    void renderUsers('');
+  }
 }
 
 let wired = false;

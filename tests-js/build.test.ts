@@ -10,9 +10,9 @@ const catalog = (raw as { items: Item[] }).items;
 const FESTIVALS: FestivalSlug[] = ['chubut', 'juventud', 'mimosa', 'trevelin'];
 const read = (p: string) => readFileSync(join(DIST, p), 'utf8');
 
-function range(f: FestivalSlug): [number, number] {
-  const ys = catalog.filter((i) => i.festival === f && i.year !== null).map((i) => i.year as number);
-  return [Math.min(...ys), new Date().getFullYear()];
+// Every festival's timeline runs from the project floor, with or without material.
+function range(_f: FestivalSlug): [number, number] {
+  return [1865, new Date().getFullYear()];
 }
 
 describe('static build', () => {

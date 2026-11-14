@@ -46,13 +46,23 @@ export function editionState(f: FestivalSlug, year: number, uploads: UploadLike[
   return maxState(fromCatalog, uploadState(uploads, f, year));
 }
 
-/** [earliest year with material, current year]. */
-export function yearRange(f: FestivalSlug): [number, number] {
+/** Earliest year anyone may document; the contribution form uses the same floor. */
+export const YEAR_FLOOR = 1865;
+
+/**
+ * [YEAR_FLOOR, current year]: every edition gets a page, so people can
+ * contribute material for years the catalog has nothing for yet.
+ */
+export function yearRange(_f: FestivalSlug): [number, number] {
+  return [YEAR_FLOOR, new Date().getFullYear()];
+}
+
+/** Earliest dated item of a festival, or null when it has none. */
+export function firstMaterialYear(f: FestivalSlug): number | null {
   const years = current
     .filter((i) => i.festival === f && i.year !== null)
     .map((i) => i.year as number);
-  const end = new Date().getFullYear();
-  return [years.length ? Math.min(...years) : end, end];
+  return years.length ? Math.min(...years) : null;
 }
 
 /** Editions with some material but no programa PDF, newest first. */

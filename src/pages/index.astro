@@ -3,7 +3,7 @@ import Base from '../layouts/Base.astro';
 import CoverageGrid from '../components/CoverageGrid.astro';
 import Mount from '../components/Mount.astro';
 import approvedStatic from '../../data/approved/contributions.json';
-import { editionState, festivals, items, mostWanted, yearRange } from '../lib/catalog';
+import { editionState, festivals, firstMaterialYear, items, mostWanted, yearRange } from '../lib/catalog';
 import { jsonForScript, type Contribution } from '../lib/contrib';
 import { latestApproved } from '../lib/game';
 import { t } from '../lib/i18n';
@@ -12,7 +12,7 @@ import { festivalName } from '../lib/site';
 
 const all = items();
 const fests = festivals();
-const since = Math.min(...fests.map((f) => yearRange(f.slug)[0]));
+const since = Math.min(...fests.map((f) => firstMaterialYear(f.slug) ?? Infinity));
 let complete = 0;
 for (const f of fests) {
   const [a, b] = yearRange(f.slug);

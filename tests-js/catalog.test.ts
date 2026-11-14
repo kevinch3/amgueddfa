@@ -1,6 +1,7 @@
 import { beforeEach, describe, expect, it } from 'vitest';
 import {
   editionState, mostWanted, pageUrls, setItems, thumbUrl, yearRange, editionItems, festivals,
+  firstMaterialYear, YEAR_FLOOR,
 } from '../src/lib/catalog';
 import type { Item } from '../src/lib/types';
 
@@ -33,9 +34,16 @@ describe('catalog', () => {
     expect(editionItems('chubut', 1990)).toHaveLength(1);
   });
 
-  it('yearRange starts at earliest material', () => {
-    expect(yearRange('chubut')).toEqual([1990, new Date().getFullYear()]);
-    expect(yearRange('mimosa')[0]).toBe(1980);
+  it('yearRange spans from the project floor so earlier editions can be contributed', () => {
+    expect(yearRange('chubut')).toEqual([YEAR_FLOOR, new Date().getFullYear()]);
+    expect(yearRange('trevelin')).toEqual([YEAR_FLOOR, new Date().getFullYear()]);
+    expect(YEAR_FLOOR).toBe(1865);
+  });
+
+  it('firstMaterialYear is the earliest dated item, null when none', () => {
+    expect(firstMaterialYear('chubut')).toBe(1990);
+    expect(firstMaterialYear('mimosa')).toBe(1980);
+    expect(firstMaterialYear('trevelin')).toBeNull();
   });
 
   it('mostWanted excludes full editions', () => {

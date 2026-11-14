@@ -132,6 +132,13 @@ describe('static build', () => {
     expect(html).toContain('name="date_month"');
   });
 
+  it('admin has a tab to load facts directly, credited to someone', () => {
+    const html = read('admin/index.html');
+    expect(html).toContain('Cargar datos');
+    expect(html).toContain('id="a-acreditar"');
+    expect(html).toContain('id="a-agregar"');
+  });
+
   it('upload form asks what part of the programa is uploaded', () => {
     const html = read('contribuir/index.html');
     for (const v of ['completo', 'tapa', 'parcial']) expect(html).toContain(`name="alcance" value="${v}"`);

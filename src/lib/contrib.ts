@@ -154,7 +154,7 @@ export function validate(kind: Kind, input: Record<string, unknown>): Validation
   }
 }
 
-function uuid(): string {
+export function uuid(): string {
   const c = globalThis.crypto as Crypto | undefined;
   if (c?.randomUUID) return c.randomUUID();
   const b = new Uint8Array(16);

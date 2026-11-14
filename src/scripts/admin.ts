@@ -1,4 +1,6 @@
 import {
+  ADMIN_MAX_FACTS,
+  adminAddFacts,
   approve,
   approveAll,
   approveUpload,
@@ -28,6 +30,8 @@ import {
 } from '../lib/admin';
 import { currentProfile } from '../lib/auth';
 import type { Kind } from '../lib/contrib';
+import type { FestivalSlug } from '../lib/types';
+import { mountFactEditor } from './fact-editor';
 import { t } from '../lib/i18n';
 import { url } from '../lib/paths';
 import { getClient } from '../lib/supabase';
@@ -422,6 +426,44 @@ async function renderUsers(q: string): Promise<void> {
   }
 }
 
+/** "Cargar datos": facts published straight away, credited to the chosen person. */
+async function setupCargar(): Promise<void> {
+  const msg = $('a-cargar-msg');
+  const who = $('a-acreditar') as HTMLSelectElement;
+  const fest = $('a-festival') as HTMLSelectElement;
+  const year = $('a-year') as HTMLInputElement;
+  const say = (key: string | null) => show(msg, key ? t(key) : '');
+  const editor = mountFactEditor($('apanel-cargar'), { prefix: 'a', yearInput: year, say, max: ADMIN_MAX_FACTS });
+
+  const [me, users] = await Promise.all([currentProfile().catch(() => null), searchUsers('')]);
+  who.replaceChildren(...users.data.map((u) => {
+    const o = el('option', { value: u.id }, u.display_name || t('admin.sin_nombre'));
+    if (u.id === me?.id) o.selected = true;
+    return o;
+  }));
+  if (users.offline) say('estado.sin_conexion');
+
+  $('a-cargar').addEventListener('submit', async (ev) => {
+    ev.preventDefault();
+    const btn = $('a-publicar') as HTMLButtonElement;
+    if (btn.disabled) return;
+    const y = Number(year.value);
+    if (!fest.value || !Number.isInteger(y) || y < 1865 || y > new Date().getFullYear()) return say('contrib.error.edicion');
+    const c = editor.collect();
+    if ('error' in c) return say(c.error);
+    btn.disabled = true;
+    show(msg, t('admin.procesando'));
+    const r = await adminAddFacts(who.value, fest.value as FestivalSlug, y, c.facts, c.fuente);
+    btn.disabled = false;
+    if (!r.ok) {
+      return show(msg, r.index !== undefined ? t('contrib.dato_n', { n: r.index + 1, error: t(r.key) }) : t(r.key));
+    }
+    editor.reset();
+    msg.hidden = false;
+    msg.textContent = t('admin.publicados', { n: c.facts.length });
+  });
+}
+
 const loaded = new Set<string>();
 function selectTab(k: string): void {
   for (const b of document.querySelectorAll<HTMLButtonElement>('.admin [role="tab"]')) {
@@ -438,6 +480,10 @@ function selectTab(k: string): void {
   if (k === 'usuarios' && !loaded.has(k)) {
     loaded.add(k);
     void renderUsers('');
+  }
+  if (k === 'cargar' && !loaded.has(k)) {
+    loaded.add(k);
+    void setupCargar();
   }
 }
 

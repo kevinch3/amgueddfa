@@ -334,6 +334,7 @@
     "pestanas": "Secciones de administración",
     "tabs": {
       "cola": "Para revisar",
+      "cargar": "Cargar datos",
       "restringidos": "Restringidos",
       "usuarios": "Usuarios"
     },
@@ -369,6 +370,10 @@
     "guardar_aprobar": "Guardar y aprobar",
     "cancelar": "Cancelar",
     "procesando": "Procesando…",
+    "cargar_ayuda": "Datos que se publican sin revisión, por ejemplo al transcribir un libro. Los puntos van a la persona a la que se los acreditás.",
+    "acreditar": "Acreditar a",
+    "publicar": "Publicar",
+    "publicados": "Listo: se publicaron {n} datos.",
     "grupo": "{n} datos enviados juntos",
     "aprobar_todos": "Aprobar todos ({n})",
     "rechazar_todos": "Rechazar todos",
@@ -391,6 +396,7 @@
     "error": {
       "motivo": "Escribí el motivo del rechazo.",
       "algunos": "{n} no se pudieron procesar; revisá el mensaje de cada uno.",
+      "acreditar": "Elegí a quién acreditar los datos.",
       "json": "El contenido no es un JSON válido.",
       "ya_revisado": "Este aporte ya fue revisado por otra persona.",
       "no_admin": "Tu cuenta no tiene permiso de administración.",

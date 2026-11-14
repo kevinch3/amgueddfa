@@ -1,8 +1,9 @@
 import type { SupabaseClient } from '@supabase/supabase-js';
-import { validate, type Kind } from './contrib';
+import { uuid, validate, type Kind } from './contrib';
 import { makePages } from './derive';
 import { liveQuery } from './live';
 import { getClient } from './supabase';
+import type { FestivalSlug } from './types';
 
 export type Result = { ok: true } | { ok: false; key: string };
 
@@ -432,3 +433,43 @@ export async function searchUsers(q: string, client: SupabaseClient | null = get
     client,
   );
 }
+
+/** Most facts an admin may publish in one go. */
+export const ADMIN_MAX_FACTS = 50;
+
+/**
+ * Publish facts straight away (no review), credited to `target`, who gets the
+ * points and badges. Validated like a contribution; a failing fact is reported
+ * with its position (`index`).
+ */
+export async function adminAddFacts(
+  target: string,
+  festival: FestivalSlug,
+  year: number,
+  facts: Record<string, unknown>[],
+  fuente: string,
+  client: SupabaseClient | null = getClient(),
+): Promise<Result & { index?: number; points?: number }> {
+  if (!target) return { ok: false, key: 'admin.error.acreditar' };
+  if (!facts.length) return { ok: false, key: 'contrib.error.campo' };
+  if (facts.length > ADMIN_MAX_FACTS) return { ok: false, key: 'contrib.error.demasiados' };
+  const payloads: Record<string, unknown>[] = [];
+  for (const [index, f] of facts.entries()) {
+    const v = validate('fact', { ...f, fuente });
+    if (!v.ok) return { ...v, index };
+    payloads.push(v.payload);
+  }
+  const lote = payloads.length > 1 ? uuid() : null;
+  if (!client) return OFFLINE;
+  try {
+    const { data, error } = await client.rpc('admin_add_facts', {
+      target, p_festival: festival, p_year: year,
+      facts: lote ? payloads.map((p) => ({ ...p, lote })) : payloads,
+    });
+    if (error) return mapRpcError(error as any);
+    return { ok: true, points: Number(data ?? 0) };
+  } catch {
+    return OFFLINE;
+  }
+}
+

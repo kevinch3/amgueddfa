@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import {
+  adminAddFacts,
   approve,
   approveAll,
   approveUpload,
@@ -461,6 +462,40 @@ describe('fact groups in the queue', () => {
     expect(r.failed.map((f) => f.key)).toEqual(['admin.error.motivo', 'admin.error.motivo']);
     expect(calls).toHaveLength(0);
     expect((await rejectAll([fact('a', 'L')], 'Duplicado', client)).done).toEqual(['a']);
+  });
+});
+
+describe('adminAddFacts', () => {
+  const rpcClient = (error: unknown = null) => {
+    const calls: any[] = [];
+    return { calls, client: { rpc: async (fn: string, args: any) => (calls.push({ fn, args }), { data: 20, error }) } as any };
+  };
+  const U = 'aea0d3f8-855c-41dc-82bf-b43f84696f82';
+
+  it('sends validated facts with a shared lote and fuente, credited to the target', async () => {
+    const { calls, client } = rpcClient();
+    const r = await adminAddFacts(U, 'chubut', 1937, [{ field: 'venue', value: 'Salón San David' }, { field: 'ganador_silla', value: 'E. M. Roberts' }], 'Libro', client);
+    expect(r).toEqual({ ok: true, points: 20 });
+    expect(calls).toHaveLength(1);
+    expect(calls[0].fn).toBe('admin_add_facts');
+    const a = calls[0].args;
+    expect([a.target, a.p_festival, a.p_year]).toEqual([U, 'chubut', 1937]);
+    expect(a.facts).toHaveLength(2);
+    expect(a.facts[0].lote).toMatch(/^[0-9a-f-]{36}$/);
+    expect(a.facts[1].lote).toBe(a.facts[0].lote);
+    expect(a.facts.every((f: any) => f.fuente === 'Libro')).toBe(true);
+  });
+
+  it('reports the failing fact, refuses 0 or more than 50, and maps rpc errors', async () => {
+    const { calls, client } = rpcClient();
+    expect(await adminAddFacts(U, 'chubut', 1937, [{ field: 'venue', value: 'X' }, { field: 'start_date', value: '1937-02-30' }], '', client))
+      .toEqual({ ok: false, key: 'contrib.error.fecha', index: 1 });
+    expect(await adminAddFacts(U, 'chubut', 1937, [], '', client)).toEqual({ ok: false, key: 'contrib.error.campo' });
+    expect(await adminAddFacts(U, 'chubut', 1937, Array(51).fill({ field: 'venue', value: 'X' }), '', client)).toEqual({ ok: false, key: 'contrib.error.demasiados' });
+    expect(calls).toHaveLength(0);
+    expect(await adminAddFacts(U, 'chubut', 1937, [{ field: 'venue', value: 'X' }], '', rpcClient({ message: 'not_admin' }).client))
+      .toEqual({ ok: false, key: 'admin.error.no_admin' });
+    expect(await adminAddFacts('', 'chubut', 1937, [{ field: 'venue', value: 'X' }], '', client)).toEqual({ ok: false, key: 'admin.error.acreditar' });
   });
 });
 

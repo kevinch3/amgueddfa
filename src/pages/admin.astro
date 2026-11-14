@@ -1,12 +1,13 @@
 ---
 import Base from '../layouts/Base.astro';
+import FactEditor from '../components/FactEditor.astro';
 import approvedStatic from '../../data/approved/contributions.json';
 import { editionKeys } from '../lib/admin';
 import { items } from '../lib/catalog';
-import { jsonForScript } from '../lib/contrib';
+import { FESTIVALS, jsonForScript } from '../lib/contrib';
 import { t } from '../lib/i18n';
 
-const TABS = ['cola', 'restringidos', 'usuarios'] as const;
+const TABS = ['cola', 'cargar', 'restringidos', 'usuarios'] as const;
 const KINDS = ['upload', 'fact', 'tag', 'transcription', 'memory'] as const;
 
 // Precomputed at build time so the admin bundle does not carry the whole catalog.
@@ -45,6 +46,32 @@ const data = {
         </div>
         <p class="contrib-msg" id="a-cola-msg" role="alert" hidden></p>
         <ol id="a-cola" class="admin-list"></ol>
+      </section>
+
+      <section id="apanel-cargar" role="tabpanel" aria-labelledby="atab-cargar" hidden>
+        <p class="measure">{t('admin.cargar_ayuda')}</p>
+        <form id="a-cargar" class="contrib-form" novalidate>
+          <div class="cargar-edicion">
+            <div class="campo">
+              <label for="a-festival">{t('contrib.festival_label')}</label>
+              <select id="a-festival">
+                <option value="">{t('contrib.elegir')}</option>
+                {FESTIVALS.map((f) => <option value={f}>{t(`festivales.${f}`)}</option>)}
+              </select>
+            </div>
+            <div class="campo">
+              <label for="a-year">{t('contrib.ano_label')}</label>
+              <input id="a-year" type="number" inputmode="numeric" min="1865" max={new Date().getFullYear()} step="1" />
+            </div>
+            <div class="campo">
+              <label for="a-acreditar">{t('admin.acreditar')}</label>
+              <select id="a-acreditar"></select>
+            </div>
+          </div>
+          <p class="contrib-msg" id="a-cargar-msg" role="alert" hidden></p>
+          <FactEditor prefix="a" />
+          <button class="btn" type="submit" id="a-publicar">{t('admin.publicar')}</button>
+        </form>
       </section>
 
       <section id="apanel-restringidos" role="tabpanel" aria-labelledby="atab-restringidos" hidden>
@@ -94,6 +121,8 @@ const data = {
   .admin-search .campo input[type='search'] { min-height: 48px; box-sizing: border-box; }
   .admin-search .campo { margin: 0; }
   .admin-thumb { width: 64px; height: auto; border: 1px solid var(--rule); }
+  .cargar-edicion { display: flex; flex-wrap: wrap; gap: 0 1rem; }
+  #a-acreditar { min-width: 14rem; }
   .admin-grupo { list-style: none; border: 2px solid var(--gold); border-radius: 6px; padding: 0.75rem; margin-bottom: 1rem; }
   .admin-grupo-head { margin-bottom: 0.5rem; }
   .admin-grupo .admin-list { padding: 0; }

@@ -55,7 +55,19 @@ function isoDate(s: string): boolean {
   return d.getUTCFullYear() === +m[1] && d.getUTCMonth() === +m[2] - 1 && d.getUTCDate() === +m[3];
 }
 
+/** Longest accepted "Fuente" (where a fact comes from: a book, a newspaper, a person). */
+export const FUENTE_MAX = 200;
+
+/** A fact plus its optional public source, shared by every fact of a submission. */
 function validateFact(input: Record<string, unknown>): Validation {
+  const v = validateFactBody(input);
+  if (!v.ok) return v;
+  const fuente = str(input.fuente);
+  if (len(fuente) > FUENTE_MAX) return fail('fuente');
+  return fuente ? { ok: true, payload: { ...v.payload, fuente } } : v;
+}
+
+function validateFactBody(input: Record<string, unknown>): Validation {
   const field = str(input.field);
   if (!(FACT_FIELDS as readonly string[]).includes(field)) return fail('campo');
   if (field === 'competencia') {
@@ -356,3 +368,10 @@ export function approvedForEdition(festival: string, year: number, client: Supab
     client,
   );
 }
+
+/** "Fuente: …" for a fact that names where it comes from; null otherwise. */
+export function sourceLine(c: Contribution): string | null {
+  const f = String(c.payload?.fuente ?? '').trim();
+  return f ? t('edicion.fuente', { fuente: f }) : null;
+}
+

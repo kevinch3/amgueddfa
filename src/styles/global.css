@@ -354,3 +354,5 @@ fieldset.campo { border: 0; padding: 0; }
 .fecha-partes input { width: 5.5rem; }
 .fecha-partes select { min-width: 9rem; }
 
+/* Where a fact comes from, on its own line under it. */
+.hechos .fuente { display: block; font-style: italic; }

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { approvedForEdition, isoFromParts, longDate, mergeApproved, ownPending, pendingView, submit, validate, type Contribution } from '../src/lib/contrib';
+import { approvedForEdition, isoFromParts, longDate, mergeApproved, ownPending, pendingView, sourceLine, submit, validate, type Contribution } from '../src/lib/contrib';
 import { t } from '../src/lib/i18n';
 
 const MB = 1024 * 1024;
@@ -263,6 +263,26 @@ describe('date from explicit day / month / year', () => {
 
   it('reads the date back in words for the confirmation line', () => {
     expect(longDate('1937-12-08')).toBe('8 de diciembre de 1937');
+  });
+});
+
+describe('fuente', () => {
+  it('fact: optional fuente is kept trimmed, dropped when blank, capped at 200', () => {
+    expect(validate('fact', { field: 'venue', value: 'Salón San David', fuente: '  Libro de M. H. Jones ' }))
+      .toEqual({ ok: true, payload: { field: 'venue', value: 'Salón San David', fuente: 'Libro de M. H. Jones' } });
+    expect(validate('fact', { field: 'venue', value: 'X', fuente: '   ' })).toEqual({ ok: true, payload: { field: 'venue', value: 'X' } });
+    expect(validate('fact', { field: 'venue', value: 'X', fuente: 'a'.repeat(201) })).toEqual({ ok: false, key: 'contrib.error.fuente' });
+    expect(validate('fact', { field: 'competencia', numero: '1', descripcion: 'Coro', fuente: 'Libro' }))
+      .toEqual({ ok: true, payload: { field: 'competencia', numero: '1', descripcion: 'Coro', fuente: 'Libro' } });
+    expect(validate('fact', { field: 'start_date', value: '1937-12-08', fuente: 'Libro' }))
+      .toEqual({ ok: true, payload: { field: 'start_date', value: '1937-12-08', fuente: 'Libro' } });
+  });
+
+  it('sourceLine shows the fuente of a fact', () => {
+    const mk = (payload: any) => ({ id: 'x', type: 'fact', festival: 'chubut', year: 1937, item_id: null, payload, created_at: '', reviewed_at: null, display_name: null }) as Contribution;
+    expect(sourceLine(mk({ field: 'venue', value: 'X', fuente: 'Libro' }))).toBe('Fuente: Libro');
+    expect(sourceLine(mk({ field: 'venue', value: 'X' }))).toBeNull();
+    expect(sourceLine(mk({ field: 'venue', value: 'X', fuente: '  ' }))).toBeNull();
   });
 });
 

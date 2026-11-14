@@ -1,5 +1,5 @@
 import staticEditions from '../../data/approved/editions.json';
-import { approvedForEdition, byLine, factDisplay, forEdition, mergeApproved, ownPending, pendingView, sortFacts, type Contribution } from '../lib/contrib';
+import { approvedForEdition, byLine, factDisplay, forEdition, mergeApproved, ownPending, pendingView, sortFacts, sourceLine, type Contribution } from '../lib/contrib';
 import { t } from '../lib/i18n';
 import { liveQuery } from '../lib/live';
 import { getClient } from '../lib/supabase';
@@ -27,6 +27,8 @@ export function renderFacts(mount: HTMLElement, facts: Contribution[]): void {
     const dd = el('dd', undefined, value);
     const by = byLine(c);
     if (by) dd.append(' ', el('span', 'muted small', by));
+    const fuente = sourceLine(c);
+    if (fuente) dd.append(el('span', 'muted small fuente', fuente));
     row.append(el('dt', undefined, label), dd);
     dl.append(row);
   }

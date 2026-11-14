@@ -9,7 +9,7 @@ import { url } from '../../lib/paths';
 import { byTitle, CATEGORY_ORDER, docCount } from '../../lib/site';
 import type { FestivalSlug } from '../../lib/types';
 import approvedRaw from '../../../data/approved/contributions.json';
-import { byLine, factDisplay, forEdition, jsonForScript, sortFacts, type Contribution } from '../../lib/contrib';
+import { byLine, factDisplay, forEdition, jsonForScript, sortFacts, sourceLine, type Contribution } from '../../lib/contrib';
 import { mediaUrl, uploadMedia } from '../../lib/uploads';
 
 export function getStaticPaths() {
@@ -36,7 +36,7 @@ const approved = (approvedRaw as Contribution[]).filter((c) => c.festival === sl
     const { storage_path: _private, ...payload } = c.payload ?? {}; // never publish upload paths
     return { ...c, payload };
   });
-const facts = sortFacts(forEdition(approved, slug, year, 'fact')).map((c) => ({ ...factDisplay(c), by: byLine(c) }));
+const facts = sortFacts(forEdition(approved, slug, year, 'fact')).map((c) => ({ ...factDisplay(c), by: byLine(c), fuente: sourceLine(c) }));
 const memories = forEdition(approved, slug, year, 'memory').map((c) => ({ text: String(c.payload?.text ?? ''), by: byLine(c) }));
 // Approved uploads with their low-res derivatives (media bucket); same markup edicion.ts renders live.
 const mediaBase = import.meta.env.PUBLIC_SUPABASE_URL;
@@ -86,7 +86,7 @@ const missingList = new Intl.ListFormat('es', { type: 'conjunction' }).format(mi
     <h2 id="hechos-t">{t('edicion.hechos_titulo')}</h2>
     <Mount id="hechos" festival={slug} year={year}>{facts.length > 0 && (
       <dl class="hechos">
-        {facts.map((f) => <div><dt>{f.label}</dt><dd>{f.value}{f.by && <> <span class="muted small">{f.by}</span></>}</dd></div>)}
+        {facts.map((f) => <div><dt>{f.label}</dt><dd>{f.value}{f.by && <> <span class="muted small">{f.by}</span></>}{f.fuente && <span class="muted small fuente">{f.fuente}</span>}</dd></div>)}
       </dl>
     )}</Mount>
   </section>

@@ -79,6 +79,7 @@
   },
   "edicion": {
     "tapa_alt": "Tapa del programa de {festival} {year}",
+    "fuente": "Fuente: {fuente}",
     "pendiente": "Pendiente de revisión",
     "pendientes_titulo": "Tus aportes en revisión",
     "archivo_pdf": "Archivo PDF",
@@ -285,6 +286,8 @@
     "error": {
       "archivo": "Elegí un archivo para subir.",
       "alcance": "Contanos qué parte del programa estás subiendo.",
+      "fuente": "La fuente puede tener hasta 200 caracteres.",
+      "demasiados": "Podés mandar hasta 15 datos por vez.",
       "tipo_archivo": "Ese tipo de archivo no lo aceptamos. Subí una foto (JPG, PNG o WebP) o un PDF.",
       "muy_grande": "El archivo pesa más de 20 MB. Probá con una foto más liviana o un PDF comprimido.",
       "categoria": "Elegí qué tipo de documento es.",

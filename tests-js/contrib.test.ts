@@ -41,8 +41,8 @@ function fakeClient(opts: { uid?: string | null; insertError?: unknown; uploadEr
 
 describe('validate', () => {
   it('upload: accepts images and PDF up to 20 MB, rejects other types and larger files', () => {
-    const ok = validate('upload', { file: file('application/pdf', 20 * MB), category: 'programa', description: 'Programa 1975' });
-    expect(ok).toEqual({ ok: true, payload: { category: 'programa', description: 'Programa 1975' } });
+    const ok = validate('upload', { file: file('application/pdf', 20 * MB), category: 'programa', alcance: 'completo', description: 'Programa 1975' });
+    expect(ok).toEqual({ ok: true, payload: { category: 'programa', alcance: 'completo', description: 'Programa 1975' } });
     expect(validate('upload', { file: file('image/webp', 1000), category: 'otros' }).ok).toBe(true);
     expect(validate('upload', { file: file('image/gif', 1000), category: 'programa' })).toEqual({ ok: false, key: 'contrib.error.tipo_archivo' });
     expect(validate('upload', { file: file('image/jpeg', 20 * MB + 1), category: 'programa' })).toEqual({ ok: false, key: 'contrib.error.muy_grande' });
@@ -66,6 +66,16 @@ describe('validate', () => {
     expect(validate('fact', { field: 'edicion_realizada', value: 'quizás' })).toEqual({ ok: false, key: 'contrib.error.valor' });
   });
 
+  it('upload: programa needs alcance; other categories drop it', () => {
+    const f = file('image/jpeg', 10);
+    expect(validate('upload', { file: f, category: 'programa' })).toEqual({ ok: false, key: 'contrib.error.alcance' });
+    expect(validate('upload', { file: f, category: 'programa', alcance: 'quizás' })).toEqual({ ok: false, key: 'contrib.error.alcance' });
+    expect(validate('upload', { file: f, category: 'programa', alcance: 'tapa' })).toEqual({ ok: true, payload: { category: 'programa', alcance: 'tapa' } });
+    expect(validate('upload', { file: f, category: 'programa', alcance: 'completo', description: 'Tapa y 12 páginas' }))
+      .toEqual({ ok: true, payload: { category: 'programa', alcance: 'completo', description: 'Tapa y 12 páginas' } });
+    expect(validate('upload', { file: f, category: 'bases', alcance: 'tapa' })).toEqual({ ok: true, payload: { category: 'bases' } });
+  });
+
   it('tag: needs at least one of year (1865-2026), category or festival', () => {
     expect(validate('tag', {})).toEqual({ ok: false, key: 'contrib.error.etiqueta' });
     expect(validate('tag', { year: 1864 })).toEqual({ ok: false, key: 'contrib.error.ano' });
@@ -87,7 +97,7 @@ describe('validate', () => {
   });
 
   it('every error key exists in es-AR.json', () => {
-    for (const k of ['tipo_archivo', 'muy_grande', 'archivo', 'categoria', 'fecha', 'campo', 'valor', 'competencia', 'etiqueta', 'ano', 'texto', 'limite', 'sesion']) {
+    for (const k of ['tipo_archivo', 'muy_grande', 'archivo', 'categoria', 'fecha', 'campo', 'valor', 'competencia', 'etiqueta', 'ano', 'texto', 'limite', 'sesion', 'alcance']) {
       expect(t(`contrib.error.${k}`)).not.toBe(`contrib.error.${k}`);
     }
   });
@@ -97,7 +107,7 @@ describe('submit', () => {
   it('submit upload stores then inserts', async () => {
     const { client, log, uploads, inserts } = fakeClient();
     const f = file('image/jpeg', 2 * MB);
-    const r = await submit('upload', 'chubut', 1975, null, { file: f, category: 'programa', description: 'Tapa' }, client);
+    const r = await submit('upload', 'chubut', 1975, null, { file: f, category: 'programa', alcance: 'tapa', description: 'Tapa' }, client);
     expect(r).toEqual({ ok: true });
     expect(log).toEqual(['upload', 'insert']);
     expect(uploads[0].bucket).toBe('uploads');
@@ -107,7 +117,7 @@ describe('submit', () => {
       table: 'contributions',
       row: {
         user_id: 'user-1', type: 'upload', festival: 'chubut', year: 1975, item_id: null, status: 'pending',
-        payload: { category: 'programa', description: 'Tapa', storage_path: uploads[0].path },
+        payload: { category: 'programa', alcance: 'tapa', description: 'Tapa', storage_path: uploads[0].path },
       },
     });
   });

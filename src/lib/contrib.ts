@@ -33,6 +33,9 @@ export const FACT_FIELDS = [
   'edicion_realizada', 'competencia', 'other',
 ] as const;
 export const CATEGORIES: CategorySlug[] = ['programa', 'programa-del-dia', 'preliminares', 'bases', 'resultados', 'otros'];
+/** What part of a programa an upload is, as the contributor says (an admin confirms on approval). */
+export const ALCANCES = ['completo', 'tapa', 'parcial'] as const;
+export type Alcance = (typeof ALCANCES)[number];
 export const FESTIVALS: FestivalSlug[] = ['chubut', 'juventud', 'mimosa', 'trevelin'];
 export const YEAR_MIN = 1865;
 export const YEAR_MAX = 2026;
@@ -115,7 +118,14 @@ export function validate(kind: Kind, input: Record<string, unknown>): Validation
       if (!CATEGORIES.includes(category as CategorySlug)) return fail('categoria');
       const description = str(input.description);
       if (len(description) > VALUE_MAX) return fail('valor');
-      return { ok: true, payload: description ? { category, description } : { category } };
+      const payload: Record<string, unknown> = { category };
+      if (category === 'programa') {
+        const alcance = str(input.alcance);
+        if (!(ALCANCES as readonly string[]).includes(alcance)) return fail('alcance');
+        payload.alcance = alcance;
+      }
+      if (description) payload.description = description;
+      return { ok: true, payload };
     }
     case 'fact':
       return validateFact(input);

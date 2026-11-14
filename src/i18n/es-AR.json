@@ -212,6 +212,12 @@
     "contribuir": "Contribuir para {year}"
   },
   "contrib": {
+    "alcance_label": "¿Qué estás subiendo?",
+    "alcances": {
+      "completo": "El programa completo",
+      "tapa": "Solo la tapa",
+      "parcial": "Algunas páginas"
+    },
     "titulo": "Contribuí",
     "intro": "Todo lo que mandes lo revisamos antes de publicarlo. Gracias por ayudar a completar el archivo.",
     "para": "Estás aportando a: {festival} {year}",
@@ -268,6 +274,7 @@
     "volver_edicion": "Volver a la edición",
     "error": {
       "archivo": "Elegí un archivo para subir.",
+      "alcance": "Contanos qué parte del programa estás subiendo.",
       "tipo_archivo": "Ese tipo de archivo no lo aceptamos. Subí una foto (JPG, PNG o WebP) o un PDF.",
       "muy_grande": "El archivo pesa más de 20 MB. Probá con una foto más liviana o un PDF comprimido.",
       "categoria": "Elegí qué tipo de documento es.",

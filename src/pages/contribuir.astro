@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import { CATEGORIES, FACT_FIELDS, FESTIVALS, MIME_EXT, TEXT_MAX } from '../lib/contrib';
+import { ALCANCES, CATEGORIES, FACT_FIELDS, FESTIVALS, MIME_EXT, TEXT_MAX } from '../lib/contrib';
 import { festivals, yearRange } from '../lib/catalog';
 import { t } from '../lib/i18n';
 
@@ -61,6 +61,12 @@ const firsts = Object.fromEntries(festivals().map((f) => [f.slug, yearRange(f.sl
             {CATEGORIES.map((c) => <option value={c}>{t(`categorias.${c}`)}</option>)}
           </select>
         </div>
+        <fieldset id="c-alcance" class="campo" hidden>
+          <legend>{t('contrib.alcance_label')}</legend>
+          {ALCANCES.map((a) => (
+            <label class="opt"><input type="radio" name="alcance" value={a} /> {t(`contrib.alcances.${a}`)}</label>
+          ))}
+        </fieldset>
         <div class="campo">
           <label for="c-description">{t('contrib.descripcion_label')}</label>
           <textarea id="c-description" name="description" rows="3" maxlength="500"></textarea>
@@ -185,6 +191,16 @@ const firsts = Object.fromEntries(festivals().map((f) => [f.slug, yearRange(f.sl
     });
   }
 
+  // Subir: a programa needs "¿Qué estás subiendo?" answered; other categories hide it.
+  const catSel = $<HTMLSelectElement>('c-category');
+  function syncAlcance() {
+    const on = catSel.value === 'programa';
+    $('c-alcance').hidden = !on;
+    for (const r of document.querySelectorAll<HTMLInputElement>('input[name="alcance"]')) r.required = on;
+  }
+  catSel.addEventListener('change', syncAlcance);
+  syncAlcance();
+
   // Datos: show the inputs that fit the chosen field.
   const fieldSel = $<HTMLSelectElement>('c-field');
   function syncField() {
@@ -201,7 +217,7 @@ const firsts = Object.fromEntries(festivals().map((f) => [f.slug, yearRange(f.sl
     const s = (k: string) => String(fd.get(k) ?? '');
     if (kind === 'upload') {
       const f = $<HTMLInputElement>('c-file').files?.[0];
-      return { file: f, category: s('category'), description: s('description') };
+      return { file: f, category: s('category'), alcance: s('alcance'), description: s('description') };
     }
     if (kind === 'fact') {
       const field = s('field');
@@ -238,6 +254,7 @@ const firsts = Object.fromEntries(festivals().map((f) => [f.slug, yearRange(f.sl
       }
       form.reset();
       syncField();
+      syncAlcance();
       ok.hidden = false;
       for (const k2 of TABS) $(`panel-${k2}`).hidden = true;
       $<HTMLButtonElement>('c-otro').focus();

@@ -94,6 +94,11 @@ describe('static build', () => {
     expect(read(`item/${item.id}/index.html`)).toContain('id="tarea"');
   });
 
+  it('upload form asks what part of the programa is uploaded', () => {
+    const html = read('contribuir/index.html');
+    for (const v of ['completo', 'tapa', 'parcial']) expect(html).toContain(`name="alcance" value="${v}"`);
+  });
+
   it('game pages exist and the tasks feed carries only public year_inferred images', () => {
     for (const p of ['perfil', 'ranking', 'tareas']) expect(existsSync(join(DIST, p, 'index.html')), p).toBe(true);
     const html = read('tareas/index.html');

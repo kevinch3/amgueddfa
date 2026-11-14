@@ -48,11 +48,12 @@ export function maxState(a: EditionState, b: EditionState): EditionState {
 
 function stateOf(c: UploadLike): EditionState {
   if (c.type !== 'upload') return 'none';
-  if (c.payload?.category === 'programa' && (uploadMedia(c)?.pages.length ?? 0) > 0) return 'full';
+  // Full only when an admin confirmed the programa is complete (a cover alone is not).
+  if (c.payload?.category === 'programa' && c.payload?.complete === true && (uploadMedia(c)?.pages.length ?? 0) > 0) return 'full';
   return 'some';
 }
 
-/** What approved uploads say about one edition: a programa with pages is full, anything else some. */
+/** What approved uploads say about one edition: a confirmed-complete programa with pages is full, anything else some. */
 export function uploadState(list: UploadLike[], festival: string, year: number): EditionState {
   let s: EditionState = 'none';
   for (const c of list ?? []) if (c.festival === festival && c.year === year) s = maxState(s, stateOf(c));

@@ -6,7 +6,7 @@ import { maxState, mediaUrl, uploadMedia, uploadState, uploadStates, type Upload
 const CID = '0b6f1c1e-2a3b-4c5d-8e9f-0123456789ab';
 const media = (id = CID) => ({ thumb: `uploads/${id}/thumb.webp`, pages: [`uploads/${id}/p01.webp`, `uploads/${id}/p02.webp`] });
 const up = (over: Partial<UploadLike> = {}): UploadLike => ({
-  id: CID, type: 'upload', festival: 'chubut', year: 1995, payload: { category: 'programa', media: media() }, ...over,
+  id: CID, type: 'upload', festival: 'chubut', year: 1995, payload: { category: 'programa', media: media(), complete: true }, ...over,
 });
 
 describe('uploadMedia', () => {
@@ -50,6 +50,13 @@ describe('upload coverage', () => {
     expect(uploadState([up({ payload: { category: 'programa' } })], 'chubut', 1995)).toBe('some');
     expect(uploadState([up()], 'chubut', 1996)).toBe('none');
     expect(uploadState([up({ type: 'memory' })], 'chubut', 1995)).toBe('none');
+  });
+
+  it('a programa upload is full only when an admin confirmed complete', () => {
+    expect(uploadState([up({ payload: { category: 'programa', media: media() } })], 'chubut', 1995)).toBe('some');
+    expect(uploadState([up({ payload: { category: 'programa', media: media(), complete: true } })], 'chubut', 1995)).toBe('full');
+    expect(uploadState([up({ payload: { category: 'programa', media: media(), tapa: true } })], 'chubut', 1995)).toBe('some');
+    expect(uploadState([up({ payload: { category: 'programa', media: media(), complete: 'true' } })], 'chubut', 1995)).toBe('some');
   });
 
   it('uploadStates keys by festival:year with the best state', () => {

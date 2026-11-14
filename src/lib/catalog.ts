@@ -137,7 +137,8 @@ export function editionCover(
 export function mostWanted(limit: number, uploads: UploadLike[] = APPROVED_UPLOADS): { festival: FestivalSlug; year: number }[] {
   const out: { festival: FestivalSlug; year: number }[] = [];
   for (const festival of FESTIVAL_SLUGS) {
-    const [first, last] = yearRange(festival);
+    // Same uploads for the range as for the state: only uploads (or catalog items) can make an edition "some".
+    const [first, last] = yearRange(festival, uploads);
     for (let year = first; year <= last; year++) {
       if (editionState(festival, year, uploads) === 'some') out.push({ festival, year });
     }

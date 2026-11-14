@@ -27,10 +27,10 @@ beforeEach(() => setItems(fixture));
 
 describe('catalog', () => {
   it('editionState full only with programa pdf', () => {
-    expect(editionState('chubut', 1990)).toBe('full');
-    expect(editionState('chubut', 1991)).toBe('some');
-    expect(editionState('chubut', 1992)).toBe('some');
-    expect(editionState('chubut', 1993)).toBe('none');
+    expect(editionState('chubut', 1990, [])).toBe('full');
+    expect(editionState('chubut', 1991, [])).toBe('some');
+    expect(editionState('chubut', 1992, [])).toBe('some');
+    expect(editionState('chubut', 1993, [])).toBe('none');
     expect(editionItems('chubut', 1990)).toHaveLength(1);
   });
 
@@ -66,11 +66,17 @@ describe('catalog', () => {
   });
 
   it('mostWanted excludes full editions', () => {
-    const w = mostWanted(10);
+    // Explicit data: the real export (data/approved) must never leak into unit tests.
+    const w = mostWanted(10, []);
     expect(w.map((e) => [e.festival, e.year])).toEqual([
       ['chubut', 1992], ['chubut', 1991], ['mimosa', 1980],
     ]);
-    expect(mostWanted(1)).toHaveLength(1);
+    expect(mostWanted(1, [])).toHaveLength(1);
+  });
+
+  it('mostWanted takes its year range from the uploads it is given', () => {
+    const early = { type: 'upload', festival: 'chubut', year: 1920, payload: { category: 'otros' } };
+    expect(mostWanted(10, [early]).map((e) => [e.festival, e.year])).toContainEqual(['chubut', 1920]);
   });
 
   it('festivals are ordered', () => {

@@ -3,24 +3,18 @@ import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import { beforeAll, describe, expect, it } from 'vitest';
 import raw from '../src/data/catalog.json';
-import approved from '../data/approved/contributions.json';
-import { undocumented } from '../src/lib/catalog';
+import { undocumented, yearRange } from '../src/lib/catalog';
 import { decades } from '../src/lib/timeline';
 import type { FestivalSlug, Item } from '../src/lib/types';
 
 const DIST = join(__dirname, '..', 'dist');
 const catalog = (raw as { items: Item[] }).items;
 const FESTIVALS: FestivalSlug[] = ['chubut', 'juventud', 'mimosa', 'trevelin'];
+const festivalName: Record<FestivalSlug, string> = { chubut: 'Eisteddfod del Chubut', juventud: 'Eisteddfod de la Juventud', mimosa: 'Eisteddfod Mimosa Porth Madryn', trevelin: 'Eisteddfod de Trevelin' };
 const read = (p: string) => readFileSync(join(DIST, p), 'utf8');
 
-// A timeline starts at the earliest dated catalog item or approved contribution.
-function range(f: FestivalSlug): [number, number] {
-  const ys = [...catalog, ...(approved as { festival: string | null; year: number | null }[])]
-    .filter((i) => i.festival === f && i.year !== null)
-    .map((i) => i.year as number);
-  const now = new Date().getFullYear();
-  return [ys.length ? Math.min(...ys) : now, now];
-}
+// Same rule the pages use (catalog + approved material), tested on its own in catalog.test.ts.
+const range = (f: FestivalSlug): [number, number] => yearRange(f);
 
 describe('static build', () => {
   beforeAll(() => {
@@ -67,6 +61,7 @@ describe('static build', () => {
       expect(cells.length, f).toBe(b - a + 1);
       expect(html).toContain(`contribuir?f=${f}"`);
       expect(html).toContain(`¿Tenés material de antes de ${a}?`);
+      expect(html).toContain(`aria-label="Contribuí al ${festivalName[f]}"`);
     }
     expect(html).toContain('id="recientes"');
   });

@@ -56,6 +56,15 @@ describe('catalog', () => {
     expect(undocumented('chubut', 1993, [{ festival: 'mimosa', year: 1993 }])).toBe(true);
   });
 
+  it('a "no se realizó" fact is not material: no start year, decade stays empty', () => {
+    const notHeld = { type: 'fact', festival: 'chubut', year: 1930, payload: { field: 'edicion_realizada', value: 'no' } };
+    const held = { type: 'fact', festival: 'chubut', year: 1931, payload: { field: 'edicion_realizada', value: 'si' } };
+    expect(firstMaterialYear('chubut', [notHeld])).toBe(1990);
+    expect(undocumented('chubut', 1930, [notHeld])).toBe(true);
+    expect(firstMaterialYear('chubut', [notHeld, held])).toBe(1931);
+    expect(undocumented('chubut', 1931, [held])).toBe(false);
+  });
+
   it('mostWanted excludes full editions', () => {
     const w = mostWanted(10);
     expect(w.map((e) => [e.festival, e.year])).toEqual([

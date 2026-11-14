@@ -39,6 +39,6 @@ const blocks = list.map((f) => {
         </li>
       ) : g.cells.map((c) => <GridCell slug={f.slug} name={f.name} {...c} />))}
     </ul>
-    <p class="antes small">{t('festival.antes', { year: f.first })} <a href={url(`contribuir?f=${f.slug}`)}>{t('festival.antes_link')}</a></p>
+    <p class="antes small">{t('festival.antes', { year: f.first })} <a href={url(`contribuir?f=${f.slug}`)} aria-label={t('festival.antes_link_aria', { festival: f.name })}>{t('festival.antes_link')}</a></p>
   </section>
 ))}

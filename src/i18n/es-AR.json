@@ -74,7 +74,8 @@
     "ver_general": "Ver los documentos sin año",
     "decada_vacia": "{from}–{to} · sin material",
     "antes": "¿Tenés material de antes de {year}?",
-    "antes_link": "Contribuí"
+    "antes_link": "Contribuí",
+    "antes_link_aria": "Contribuí al {festival}"
   },
   "edicion": {
     "falta_programa": "Todavía no tenemos el programa completo — ¿lo tenés?",

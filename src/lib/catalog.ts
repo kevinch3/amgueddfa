@@ -50,14 +50,19 @@ export function editionState(f: FestivalSlug, year: number, uploads: UploadLike[
 export const YEAR_FLOOR = 1865;
 
 /** Anything with an edition, as far as the start of a timeline needs it. */
-export type DatedLike = { festival: string | null; year: number | null };
+export type DatedLike = { festival: string | null; year: number | null; type?: string; payload?: Record<string, any> | null };
 
 /** Every approved contribution from the last export, any type. */
 const APPROVED_DATED: DatedLike[] = approvedRaw as DatedLike[];
 
+/** A "no se realizó" fact records an edition that never happened: it is not material. */
+function isMaterial(c: DatedLike): boolean {
+  return !(c.type === 'fact' && c.payload?.field === 'edicion_realizada' && c.payload?.value === 'no');
+}
+
 /** Earliest year with a dated catalog item or an approved contribution; null when none. */
 export function firstMaterialYear(f: FestivalSlug, approved: DatedLike[] = APPROVED_DATED): number | null {
-  const years = [...current, ...approved]
+  const years = [...current, ...approved.filter(isMaterial)]
     .filter((i) => i.festival === f && i.year !== null)
     .map((i) => i.year as number);
   return years.length ? Math.min(...years) : null;
@@ -71,11 +76,11 @@ export function yearRange(f: FestivalSlug, approved: DatedLike[] = APPROVED_DATE
 
 /**
  * Nothing at all for this edition: no catalog item and no approved contribution
- * of any type (upload, fact or memory). Empty decades collapse on this, not on
+ * of any type (upload, fact or memory) other than a "no se realizó" fact. Empty decades collapse on this, not on
  * editionState, so a decade with only a memory stays open.
  */
 export function undocumented(f: FestivalSlug, year: number, approved: DatedLike[] = APPROVED_DATED): boolean {
-  return editionState(f, year) === 'none' && !approved.some((c) => c.festival === f && c.year === year);
+  return editionState(f, year) === 'none' && !approved.some((c) => c.festival === f && c.year === year && isMaterial(c));
 }
 
 /** Editions with some material but no programa PDF, newest first. */

@@ -1,7 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import TimelineRow from '../../components/TimelineRow.astro';
-import { editionItems, editionState, festivals, firstMaterialYear, items, thumbUrl, undocumented, yearRange } from '../../lib/catalog';
+import { editionCover, editionItems, editionState, festivals, firstMaterialYear, items, thumbUrl, undocumented, yearRange } from '../../lib/catalog';
 import { t } from '../../lib/i18n';
 import { url } from '../../lib/paths';
 import { CATEGORY_ORDER, docCount } from '../../lib/site';
@@ -20,8 +20,14 @@ function row(y: number) {
   const thumbs = [...list]
     .sort((a, b) => CATEGORY_ORDER.indexOf(a.category) - CATEGORY_ORDER.indexOf(b.category))
     .map((i) => ({ src: thumbUrl(i), title: i.title }))
-    .filter((x) => x.src)
-    .slice(0, 4);
+    .filter((x) => x.src);
+  // The cover identifies the edition, so it leads (once) the year's thumbnails.
+  const cover = editionCover(slug, y);
+  if (cover) {
+    const rest = thumbs.filter((x) => x.src !== cover.thumb);
+    thumbs.splice(0, thumbs.length, { src: cover.thumb, title: t('edicion.tapa_alt', { festival: fest.name, year: y }) }, ...rest);
+  }
+  thumbs.splice(4);
   return { y, state: editionState(slug, y), n: list.length, thumbs };
 }
 // Newest first; a whole empty decade becomes one collapsed entry.

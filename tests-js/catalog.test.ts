@@ -111,6 +111,16 @@ describe('catalog', () => {
       expect(editionCover('chubut', 1993, [upl(U1, {}, '2026-01-01', 1993)], B)).toBeNull();
     });
 
+    it('a catalog item titled tapa or portada beats page 1 of the programa PDF', () => {
+      setItems([
+        mk({ id: '000000000001', year: 1990, category: 'programa', kind: 'pdf', title: 'Listado competencias', page_paths: ['a/p01.webp'], thumb: 'a/thumb.webp' }),
+        mk({ id: '000000000002', year: 1990, category: 'programa', kind: 'image', title: 'Tapa programa 1990 foto 3', page_paths: ['b/p01.webp'], thumb: 'b/thumb.webp' }),
+        mk({ id: '000000000003', year: 1991, category: 'otros', kind: 'image', title: 'Portada', page_paths: ['c/p01.webp'], thumb: 'c/thumb.webp', restricted: true }),
+      ]);
+      expect(editionCover('chubut', 1990, [], B)?.page).toMatch(/\/media\/b\/p01\.webp$/);
+      expect(editionCover('chubut', 1991, [], B)).toBeNull();
+    });
+
     it('a restricted catalog programa never supplies a cover', () => {
       setItems([mk({ id: '000000000009', year: 1990, category: 'programa', kind: 'pdf', restricted: true })]);
       expect(editionCover('chubut', 1990, [], B)).toBeNull();

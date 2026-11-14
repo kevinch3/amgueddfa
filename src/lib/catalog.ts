@@ -83,6 +83,9 @@ export function undocumented(f: FestivalSlug, year: number, approved: DatedLike[
   return editionState(f, year) === 'none' && !approved.some((c) => c.festival === f && c.year === year && isMaterial(c));
 }
 
+/** Catalog titles that name the cover of a programa. */
+const TAPA_TITLE = /\b(tapa|portada)\b/i;
+
 /** An edition's cover: a large page image (year header) and a thumbnail (timeline). */
 export type Cover = { page: string; thumb: string };
 
@@ -96,8 +99,9 @@ function uploadCover(c: UploadLike, base: string | undefined): Cover | null {
 
 /**
  * The cover that identifies an edition: the latest approved upload an admin
- * marked as tapa; else page 1 of the catalog programa PDF (never a restricted
- * one); else page 1 of an approved upload confirmed complete; else null.
+ * marked as tapa; else a catalog item titled "Tapa…"/"Portada…"; else page 1 of
+ * the catalog programa PDF (never a restricted item); else page 1 of an
+ * approved upload confirmed complete; else null.
  */
 export function editionCover(
   f: FestivalSlug,
@@ -113,9 +117,13 @@ export function editionCover(
     const cover = uploadCover(c, mediaBase);
     if (cover) return cover;
   }
-  const programa = editionItems(f, year).find((i) => i.category === 'programa' && i.kind === 'pdf' && !i.restricted);
-  const page = programa ? pageUrls(programa)[0] : undefined;
-  if (programa && page) return { page, thumb: thumbUrl(programa) ?? page };
+  // Catalog: an item curated as the cover ("Tapa…", "Portada…") first, then page 1 of the programa PDF.
+  const list = editionItems(f, year).filter((i) => !i.restricted && pageUrls(i).length > 0);
+  const fromCatalog = list.find((i) => TAPA_TITLE.test(i.title)) ?? list.find((i) => i.category === 'programa' && i.kind === 'pdf');
+  if (fromCatalog) {
+    const page = pageUrls(fromCatalog)[0];
+    return { page, thumb: thumbUrl(fromCatalog) ?? page };
+  }
   for (const c of mine.filter((x) => x.payload?.complete === true)) {
     const cover = uploadCover(c, mediaBase);
     if (cover) return cover;

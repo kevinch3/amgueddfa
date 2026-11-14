@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 import EmptySlot from '../../components/EmptySlot.astro';
 import ItemCard from '../../components/ItemCard.astro';
 import Mount from '../../components/Mount.astro';
-import { editionItems, editionState, festivals, yearRange } from '../../lib/catalog';
+import { editionCover, editionItems, editionState, festivals, yearRange } from '../../lib/catalog';
 import { t } from '../../lib/i18n';
 import { url } from '../../lib/paths';
 import { byTitle, CATEGORY_ORDER, docCount } from '../../lib/site';
@@ -25,6 +25,7 @@ const fest = festivals().find((f) => f.slug === slug)!;
 const [first, last] = yearRange(slug);
 const list = editionItems(slug, year);
 const state = editionState(slug, year);
+const cover = editionCover(slug, year);
 const sections = CATEGORY_ORDER.map((c) => ({ c, items: list.filter((i) => i.category === c).sort(byTitle) }));
 // Programa always shows (with its slot when incomplete); other empty sections are named in one slot.
 const shown = sections.filter((s) => s.c === 'programa' || s.items.length > 0);
@@ -65,7 +66,12 @@ const missingList = new Intl.ListFormat('es', { type: 'conjunction' }).format(mi
     </ol>
   </nav>
 
-  <header class="cover">
+  <header class={cover ? 'cover con-tapa' : 'cover'}>
+    {cover && (
+      <a class="tapa-link" href={cover.page}>
+        <img class="tapa" src={cover.page} alt={t('edicion.tapa_alt', { festival: fest.name, year })} decoding="async" />
+      </a>
+    )}
     <h1><span class="fest">{fest.name}</span> <span class="year">{year}</span></h1>
     <p class="state">
       <span class={`badge-state st-${state}`} data-festival={slug} data-year={year} data-state={state}>{t(`estados.${state}`)}</span>

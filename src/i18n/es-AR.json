@@ -78,6 +78,7 @@
     "antes_link_aria": "Contribuí al {festival}"
   },
   "edicion": {
+    "tapa_alt": "Tapa del programa de {festival} {year}",
     "falta_programa": "Todavía no tenemos el programa completo — ¿lo tenés?",
     "contribuir": "Contribuir",
     "hechos_titulo": "Datos de la edición",

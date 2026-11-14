@@ -3,7 +3,7 @@ import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import { beforeAll, describe, expect, it } from 'vitest';
 import raw from '../src/data/catalog.json';
-import { undocumented, yearRange } from '../src/lib/catalog';
+import { editionCover, undocumented, yearRange } from '../src/lib/catalog';
 import { decades } from '../src/lib/timeline';
 import type { FestivalSlug, Item } from '../src/lib/types';
 
@@ -92,6 +92,27 @@ describe('static build', () => {
     for (const id of ['hechos', 'recuerdos', 'aportes', 'sesion']) expect(ed).toContain(`id="${id}"`);
     const item = catalog.find((i) => !i.restricted && i.kind === 'pdf')!;
     expect(read(`item/${item.id}/index.html`)).toContain('id="tarea"');
+  });
+
+  it('the cover heads its year page and leads that year in the timeline', () => {
+    // Every edition with a cover (per editionCover, tested in catalog.test.ts) shows it.
+    const editions = [...new Set(catalog.filter((i) => i.year !== null).map((i) => `${i.festival}/${i.year}`))];
+    let checked = 0;
+    for (const e of editions) {
+      const [f, y] = e.split('/') as [FestivalSlug, string];
+      const cover = editionCover(f, Number(y));
+      const year = read(`${e}/index.html`);
+      if (!cover) {
+        expect(year, e).not.toContain('class="tapa"');
+        continue;
+      }
+      checked++;
+      expect(year, e).toContain(`class="tapa" src="${cover.page}"`);
+      const fest = read(`${f}/index.html`);
+      const row = fest.slice(fest.indexOf(`data-year="${y}"`));
+      expect(row.match(/<img src="([^"]+)"/)?.[1], e).toBe(cover.thumb);
+    }
+    expect(checked).toBeGreaterThan(0);
   });
 
   it('upload form asks what part of the programa is uploaded', () => {

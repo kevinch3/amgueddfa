@@ -1,9 +1,12 @@
 """Classify YouTube metadata into the archive's Videos/ tree and VIDEOS.tsv.
 
-  python3 harvest.py review META.jsonl... > review.tsv     # classify only, nothing written
-  python3 harvest.py write  ARCHIVE META.jsonl...          # thumbnails + VIDEOS.tsv (idempotent)
+  python3 harvest.py review [--hints H.json] META.jsonl... > review.tsv   # classify only
+  python3 harvest.py write  [--hints H.json] ARCHIVE META.jsonl...        # thumbnails + VIDEOS.tsv
 
 META.jsonl lines come from fetch.sh (one compact yt-dlp JSON object per video).
+H.json: {"videoId": {"festival": "<folder>", "year": 2009, "found_via": "<url>"}} for videos
+embedded on a page about a known edition (e.g. an archived site's "videos" page): the
+page decides festival and fallback year, and the eisteddfod/Patagonia filter is skipped.
 """
 import csv
 import datetime as dt
@@ -58,7 +61,7 @@ NEWS_CHANNELS = {"@canal12chubut", "@canal12ch", "@DiarioJornadaChubut", "@canal
                  "@CHUBUT7W", "@S4C", "@britishpathe", "@BritishMovietone", "@bbccymruwales"}
 # Not Patagonian: drop unless the text also names a Patagonian place.
 # ("Mendoza" is NOT here: it is a surname and a choir that competes in Trelew.)
-WALES = r"llangollen|eisteddfod yr urdd|urdd gobaith|genedlaethol|national eisteddfod|eisteddfod of wales|eisteddfod cymru"
+WALES = r"llangollen|kernewek|cornish|gorsedh kernow|eisteddfod y dysgwyr|eisteddfod yr urdd|urdd gobaith|genedlaethol|national eisteddfod|eisteddfod of wales|eisteddfod cymru"
 PATAGONIA = r"chubut|trelew|gaiman|trevelin|madryn|dolavon|esquel|rawson|wladfa|patagonia|camwy|[\[(](CH|JU)\d{4}"
 EISTEDDFOD = r"eisteddfod|eistedfod|eisteddvod|gorsedd|silla del bardo|corona del poeta|cadair|coron"
 
@@ -95,7 +98,7 @@ def find_year(text):
     return None, None
 
 
-def classify(d):
+def classify(d, hint=None):
     title, desc = _norm(d.get("title")), _norm(d.get("description"))
     both = f"{title} {desc}"
     ch = d.get("uploader_id") or ""
@@ -105,10 +108,15 @@ def classify(d):
     first = lambda table, text: next((f for f, p in table if re.search(p, text, re.I)), None)
     festival = ({"CH": "Eisteddfod_del_Chubut", "JU": "Eisteddfod_de_la_Juventud"}[code.group(1).upper()] if code
                 else first(EXPLICIT, title) or CHANNEL_DEFAULT.get(ch) or first(FESTIVALS, title))
-    if ch not in CHANNEL_DEFAULT:                      # official channels: keep every upload
+    if hint:
+        festival = hint["festival"]
+    elif ch not in CHANNEL_DEFAULT:                    # official channels: keep every upload
         if not re.search(EISTEDDFOD, both, re.I):
             return None
         place = re.search(PATAGONIA, both, re.I)
+        # A Welsh/Cornish eisteddfod in the title wins over a Patagonia mention deep in the description.
+        if re.search(WALES, title, re.I) and not re.search(PATAGONIA, title, re.I):
+            return None
         if re.search(WALES, both, re.I) and not place:
             return None
         if not (place or festival or ch in LOCAL_CHANNELS):
@@ -117,6 +125,8 @@ def classify(d):
         festival = first(EXPLICIT, desc) or first(FESTIVALS, desc) or "_sin_clasificar"
     year, how = find_year(title)
     how = how or ("titulo" if year else None)
+    if year is None and hint and hint.get("year"):
+        year, how = int(hint["year"]), "pagina"       # the page it was embedded on names the edition
     if year is None:
         year, how = find_year(desc)
         how = how or ("descripcion" if year else None)
@@ -142,11 +152,12 @@ def classify(d):
         "kind": kind, "title": title, "channel": d.get("channel") or "",
         "channel_id": ch, "upload_date": d.get("upload_date") or "",
         "duration": int(dur), "doc_links": " ".join(docs),
+        "found_via": (hint or {}).get("found_via", ""),
     }
 
 
 FIELDS = ["video_id", "url", "festival", "year", "year_source", "kind", "title", "channel",
-          "channel_id", "upload_date", "duration", "doc_links", "thumb_path", "retrieved"]
+          "channel_id", "upload_date", "duration", "doc_links", "found_via", "thumb_path", "retrieved"]
 
 
 def load(paths):
@@ -203,6 +214,7 @@ def write(archive, rows):
             rel = Path("")
         r["thumb_path"] = rel.as_posix() if rel.name else ""
         r["retrieved"] = old.get("retrieved") or today
+        r["found_via"] = r.get("found_via") or old.get("found_via", "")
         existing[r["video_id"]] = r
     out = sorted(existing.values(), key=lambda r: (r["festival"], str(r["year"]), r["kind"], r["title"]))
     with open(tsv, "w", newline="", encoding="utf-8") as f:
@@ -213,15 +225,19 @@ def write(archive, rows):
 
 
 def main(argv):
-    mode = argv[1]
+    mode, args = argv[1], argv[2:]
+    hints = {}
+    if args[:1] == ["--hints"]:
+        hints = json.load(open(args[1], encoding="utf-8"))
+        args = args[2:]
+    classify_all = lambda paths: [r for r in (classify(d, hints.get(d["id"])) for d in load(paths)) if r]
     if mode == "review":
-        rows = [r for r in map(classify, load(argv[2:])) if r]
+        rows = classify_all(args)
         w = csv.DictWriter(sys.stdout, FIELDS[:-2], delimiter="\t", extrasaction="ignore", lineterminator="\n")
         w.writeheader()
         w.writerows(rows)
     elif mode == "write":
-        rows = [r for r in map(classify, load(argv[3:])) if r]
-        print(write(argv[2], rows), "rows in VIDEOS.tsv")
+        print(write(args[0], classify_all(args[1:])), "rows in VIDEOS.tsv")
     else:
         sys.exit(__doc__)
 

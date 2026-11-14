@@ -68,6 +68,14 @@ Work in the session scratchpad (`$W`); `S=` this skill's folder.
 3. **Candidates** = all uploads of official channels + eisteddfod-titled videos of other
    channels + leftover search IDs, deduped, one ID per line.
 
+   **Videos embedded on archived sites** (e.g. vistasdelvalle.com.ar's
+   `eisteddfod-2009/videos.htm` in Wayback) often have titles without "eisteddfod".
+   Old pages use Flash players: extract IDs with
+   `youtube\.com/(?:v/|embed/|watch\?v=)([A-Za-z0-9_-]{11})` (decode the page as latin-1),
+   and write a hints file `{"id": {"festival": "<folder>", "year": 2009, "found_via": "<wayback url>"}}`.
+   Pass it as `harvest.py review|write --hints H.json …`: the page decides festival and
+   fallback year (`year_source=pagina`) and the relevance filter is skipped.
+
 4. **Metadata**: `bash $S/fetch.sh ids.txt meta.jsonl` in the background — one process,
    paced (~4 s/video, ~1 h per 900). Resumable: re-run to retry failures. Expected errors:
    deleted/private videos and "Inicia sesión" (sign-in / bot check) → retry later, then

@@ -10,10 +10,13 @@ import { decades } from '../src/lib/timeline';
 import { editionVideos } from '../src/lib/videos';
 import videosData from '../src/data/videos.json';
 import { transcribedIds } from '../src/lib/transcripciones';
+import { applyTags } from '../src/lib/tags';
 import type { FestivalSlug, Item } from '../src/lib/types';
 
 const DIST = join(__dirname, '..', 'dist');
 const catalog = (raw as { items: Item[] }).items;
+// Where items sit once approved corrections (tags) apply, as the pages see them.
+const placed = applyTags(catalog, approved as any[]);
 const FESTIVALS: FestivalSlug[] = ['chubut', 'juventud', 'mimosa', 'trevelin'];
 const festivalName: Record<FestivalSlug, string> = { chubut: 'Eisteddfod del Chubut', juventud: 'Eisteddfod de la Juventud', mimosa: 'Eisteddfod Mimosa Porth Madryn', trevelin: 'Eisteddfod de Trevelin' };
 const read = (p: string) => readFileSync(join(DIST, p), 'utf8');
@@ -190,7 +193,7 @@ describe('static build', () => {
     // Documents count catalog items plus approved community uploads of that year.
     for (const e of eds.ediciones) {
       const ups = (approved as any[]).filter((c) => c.type === 'upload' && c.festival === e.eisteddfod && c.year === e.ano).length;
-      const cat = catalog.filter((i) => !i.restricted && i.festival === e.eisteddfod && i.year === e.ano).length;
+      const cat = placed.filter((i) => !i.restricted && i.festival === e.eisteddfod && i.year === e.ano).length;
       expect(e.documentos, `${e.eisteddfod} ${e.ano}`).toBe(cat + ups);
     }
     // "realizada" is only true/false when known; unknown editions say null.

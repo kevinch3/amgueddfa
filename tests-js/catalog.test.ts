@@ -34,16 +34,19 @@ describe('catalog', () => {
     expect(editionItems('chubut', 1990)).toHaveLength(1);
   });
 
-  it('yearRange spans from the project floor so earlier editions can be contributed', () => {
-    expect(yearRange('chubut')).toEqual([YEAR_FLOOR, new Date().getFullYear()]);
-    expect(yearRange('trevelin')).toEqual([YEAR_FLOOR, new Date().getFullYear()]);
-    expect(YEAR_FLOOR).toBe(1865);
+  it('yearRange starts at earliest catalog or approved year', () => {
+    const now = new Date().getFullYear();
+    expect(yearRange('chubut', [])).toEqual([1990, now]);
+    expect(yearRange('chubut', [{ festival: 'chubut', year: 1930 }])).toEqual([1930, now]);
+    expect(yearRange('trevelin', [])).toEqual([now, now]);
   });
 
-  it('firstMaterialYear is the earliest dated item, null when none', () => {
-    expect(firstMaterialYear('chubut')).toBe(1990);
-    expect(firstMaterialYear('mimosa')).toBe(1980);
-    expect(firstMaterialYear('trevelin')).toBeNull();
+  it('firstMaterialYear ignores undated or unassigned contributions', () => {
+    const noise = [{ festival: 'chubut', year: null }, { festival: null, year: 1900 }, { festival: 'mimosa', year: 1950 }];
+    expect(firstMaterialYear('chubut', noise)).toBe(1990);
+    expect(firstMaterialYear('mimosa', noise)).toBe(1950);
+    expect(firstMaterialYear('trevelin', [])).toBeNull();
+    expect(YEAR_FLOOR).toBe(1865);
   });
 
   it('mostWanted excludes full editions', () => {

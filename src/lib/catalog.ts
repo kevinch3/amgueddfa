@@ -46,23 +46,27 @@ export function editionState(f: FestivalSlug, year: number, uploads: UploadLike[
   return maxState(fromCatalog, uploadState(uploads, f, year));
 }
 
-/** Earliest year anyone may document; the contribution form uses the same floor. */
+/** Earliest year anyone may document: bounds the contribution form, not the timelines. */
 export const YEAR_FLOOR = 1865;
 
-/**
- * [YEAR_FLOOR, current year]: every edition gets a page, so people can
- * contribute material for years the catalog has nothing for yet.
- */
-export function yearRange(_f: FestivalSlug): [number, number] {
-  return [YEAR_FLOOR, new Date().getFullYear()];
-}
+/** Anything with an edition, as far as the start of a timeline needs it. */
+export type DatedLike = { festival: string | null; year: number | null };
 
-/** Earliest dated item of a festival, or null when it has none. */
-export function firstMaterialYear(f: FestivalSlug): number | null {
-  const years = current
+/** Every approved contribution from the last export, any type. */
+const APPROVED_DATED: DatedLike[] = approvedRaw as DatedLike[];
+
+/** Earliest year with a dated catalog item or an approved contribution; null when none. */
+export function firstMaterialYear(f: FestivalSlug, approved: DatedLike[] = APPROVED_DATED): number | null {
+  const years = [...current, ...approved]
     .filter((i) => i.festival === f && i.year !== null)
     .map((i) => i.year as number);
   return years.length ? Math.min(...years) : null;
+}
+
+/** [earliest documented year, current year]; a festival with nothing yet is just this year. */
+export function yearRange(f: FestivalSlug, approved: DatedLike[] = APPROVED_DATED): [number, number] {
+  const end = new Date().getFullYear();
+  return [firstMaterialYear(f, approved) ?? end, end];
 }
 
 /** Editions with some material but no programa PDF, newest first. */

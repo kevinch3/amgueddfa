@@ -3,6 +3,7 @@ import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import { beforeAll, describe, expect, it } from 'vitest';
 import raw from '../src/data/catalog.json';
+import approved from '../data/approved/contributions.json';
 import type { FestivalSlug, Item } from '../src/lib/types';
 
 const DIST = join(__dirname, '..', 'dist');
@@ -10,9 +11,13 @@ const catalog = (raw as { items: Item[] }).items;
 const FESTIVALS: FestivalSlug[] = ['chubut', 'juventud', 'mimosa', 'trevelin'];
 const read = (p: string) => readFileSync(join(DIST, p), 'utf8');
 
-// Every festival's timeline runs from the project floor, with or without material.
-function range(_f: FestivalSlug): [number, number] {
-  return [1865, new Date().getFullYear()];
+// A timeline starts at the earliest dated catalog item or approved contribution.
+function range(f: FestivalSlug): [number, number] {
+  const ys = [...catalog, ...(approved as { festival: string | null; year: number | null }[])]
+    .filter((i) => i.festival === f && i.year !== null)
+    .map((i) => i.year as number);
+  const now = new Date().getFullYear();
+  return [ys.length ? Math.min(...ys) : now, now];
 }
 
 describe('static build', () => {

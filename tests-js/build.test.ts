@@ -4,6 +4,8 @@ import { join } from 'node:path';
 import { beforeAll, describe, expect, it } from 'vitest';
 import raw from '../src/data/catalog.json';
 import approved from '../data/approved/contributions.json';
+import { undocumented } from '../src/lib/catalog';
+import { decades } from '../src/lib/timeline';
 import type { FestivalSlug, Item } from '../src/lib/types';
 
 const DIST = join(__dirname, '..', 'dist');
@@ -79,7 +81,15 @@ describe('static build', () => {
       expect(rows.length, f).toBe(b - a + 1);
       expect(page).toContain(`contribuir?f=${f}"`);
     }
-    expect(read('juventud/index.html')).toContain('data-decada-vacia');
+    // Collapsed decades follow the data: whatever is empty today, zero or many.
+    let total = 0;
+    for (const f of FESTIVALS) {
+      const [a, b] = range(f);
+      const want = decades(a, b, (y) => undocumented(f, y)).filter((d) => d.empty).length;
+      total += want;
+      expect((read(`${f}/index.html`).match(/data-decada-vacia/g) ?? []).length, f).toBe(want);
+    }
+    expect((read('index.html').match(/data-decada-vacia/g) ?? []).length).toBe(total);
     // Early years without a built page land on a 404 that explains why.
     expect(read('404.html')).toContain('id="no-encontrada"');
     expect(read('contribuir/index.html')).toContain('data-firsts=');

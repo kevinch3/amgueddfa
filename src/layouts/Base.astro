@@ -84,7 +84,14 @@ const ogImage = image ? absUrl(image) : null;
     </main>
     <footer class="site-foot">
       <div class="wrap">
-        <p>{t('pie.retiro')}</p>
+        <p>{t('pie.retiro_1')}<a href={url('derechos')}>{t('pie.retiro_enlace')}</a>{t('pie.retiro_2')}</p>
+        <nav class="pie-legal" aria-label={t('pie.legal')}>
+          <ul>
+            {(['objetivos', 'derechos', 'privacidad', 'cookies'] as const).map((k) => (
+              <li><a href={url(k)}>{t(`pie.enlaces.${k}`)}</a></li>
+            ))}
+          </ul>
+        </nav>
         <p class="contacto">
           <img src={url('contacto.png')} alt={t('pie.contacto_alt')} width="182" height="24" decoding="async" />
           <span id="contacto-mail"></span>

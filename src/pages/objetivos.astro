@@ -1,0 +1,33 @@
+---
+import Base from '../layouts/Base.astro';
+import { t } from '../lib/i18n';
+import { url } from '../lib/paths';
+
+const c = (k: string) => t(`legal.objetivos.${k}`);
+const REPO = 'https://github.com/kevinch3/amgueddfa-eisteddfod';
+---
+<Base title={t('legal.titulos.objetivos')} description={c('descripcion')}>
+  <article class="legal measure">
+    <h1>{t('legal.titulos.objetivos')}</h1>
+    <p class="lead">{c('intro')}</p>
+
+    <h2>{c('preservar_titulo')}</h2>
+    <p>{c('preservar_1')}</p>
+    <p>{c('preservar_2')} <a href={url('contribuir')}>{c('preservar_aportar')}</a>.</p>
+
+    <h2>{c('lucro_titulo')}</h2>
+    <p>{c('lucro_1')}</p>
+    <p>{c('lucro_2')} <a href={url('derechos')}>{c('lucro_derechos')}</a>.</p>
+
+    <h2>{c('abierto_titulo')}</h2>
+    <p>{c('abierto_1')}</p>
+    <p><a href={REPO} rel="noopener">{c('abierto_repo')}</a></p>
+
+    <h2 id="licencias">{c('licencias_titulo')}</h2>
+    <ul>
+      <li>{c('licencia_codigo')} (<a href="https://www.gnu.org/licenses/agpl-3.0.html" rel="noopener">AGPL-3.0</a>)</li>
+      <li>{c('licencia_datos')} (<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es" rel="noopener">CC BY-SA 4.0</a>)</li>
+      <li>{c('licencia_imagenes')}</li>
+    </ul>
+  </article>
+</Base>

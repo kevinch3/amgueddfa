@@ -384,4 +384,29 @@ describe('static build', () => {
     expect(page).toContain('auth-token');
     expect(page).toContain('id="no-contar"');
   });
+
+  it('legal pages exist, are linked from every page footer and the sitemap, and state the licences', () => {
+    const pages = ['objetivos', 'derechos', 'privacidad', 'cookies'];
+    for (const p of pages) expect(existsSync(join(DIST, p, 'index.html')), p).toBe(true);
+    for (const f of ['index.html', 'chubut/2024/index.html']) {
+      const html = read(f);
+      for (const p of pages) expect(html, `${f} → ${p}`).toMatch(new RegExp(`href="[^"]*/${p}/?"`));
+    }
+    const sitemap = read('sitemap.xml');
+    for (const p of pages) expect(sitemap).toContain(`/${p}/`);
+    const obj = read('objetivos/index.html');
+    expect(obj).toContain('AGPL-3.0');
+    expect(obj).toContain('CC BY-SA 4.0');
+    expect(obj).toContain('github.com/kevinch3/amgueddfa-eisteddfod');
+    expect(read('derechos/index.html')).toContain('11.723');
+    expect(read('privacidad/index.html')).toContain('25.326');
+    for (const p of pages) expect(read(`${p}/index.html`)).not.toMatch(/borrador|revisión con las asociaciones/i);
+    const contrib = read('contribuir/index.html');
+    expect(contrib).toContain('CC BY-SA 4.0');
+    expect(contrib).toMatch(/href="[^"]*\/derechos\/?"/);
+    expect(read('index.html')).toMatch(/href="[^"]*\/objetivos\/?"/);
+    const root = join(__dirname, '..');
+    expect(readFileSync(join(root, 'LICENSE'), 'utf8')).toContain('GNU AFFERO GENERAL PUBLIC LICENSE');
+    expect(readFileSync(join(root, 'LICENSE-DATA.md'), 'utf8')).toContain('CC BY-SA 4.0');
+  });
 });

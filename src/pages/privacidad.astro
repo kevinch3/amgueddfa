@@ -1,0 +1,49 @@
+---
+import Base from '../layouts/Base.astro';
+import { t } from '../lib/i18n';
+import { url } from '../lib/paths';
+
+const c = (k: string) => t(`legal.privacidad.${k}`);
+---
+<Base title={t('legal.titulos.privacidad')} description={c('descripcion')}>
+  <article class="legal measure">
+    <h1>{t('legal.titulos.privacidad')}</h1>
+    <p class="lead">{c('intro')}</p>
+
+    <h2>{c('responsable_titulo')}</h2>
+    <p>{c('responsable_1')} {t('legal.correo_pie')}</p>
+
+    <h2>{c('datos_titulo')}</h2>
+    <ul>
+      <li>{c('datos_correo')}</li>
+      <li>{c('datos_nombre')}</li>
+      <li>{c('datos_pais')}</li>
+      <li>{c('datos_zona')}</li>
+      <li>{c('datos_aportes')}</li>
+    </ul>
+
+    <h2>{c('publico_titulo')}</h2>
+    <p>{c('publico_1')}</p>
+
+    <h2>{c('conteo_titulo')}</h2>
+    <p>{c('conteo_1')} <a href={url('cookies')}>{c('conteo_cookies')}</a>.</p>
+
+    <h2>{c('proveedores_titulo')}</h2>
+    <p>{c('proveedores_1')}</p>
+    <ul>
+      <li>{c('prov_supabase')}</li>
+      <li>{c('prov_cloudflare')}</li>
+      <li>{c('prov_github')}</li>
+      <li>{c('prov_correo')}</li>
+    </ul>
+
+    <h2>{c('conservacion_titulo')}</h2>
+    <p>{c('conservacion_1')}</p>
+
+    <h2>{c('derechos_titulo')}</h2>
+    <p>{c('derechos_1')}</p>
+    <p>{c('derechos_plazos')}</p>
+    <p>{c('derechos_aportes')}</p>
+    <p>{c('derechos_aaip')}</p>
+  </article>
+</Base>

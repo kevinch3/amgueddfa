@@ -74,7 +74,8 @@
     "ver_festival": "Ver {festival} año por año",
     "buscados_titulo": "Programas que buscamos",
     "buscados_ayuda": "De estas ediciones tenemos algo, pero no el programa completo. Si guardás uno, nos ayudás muchísimo.",
-    "recientes_titulo": "Aportes recientes"
+    "recientes_titulo": "Aportes recientes",
+    "objetivos": "Para qué existe este archivo"
   },
   "festival": {
     "linea_tiempo": "Año por año",
@@ -173,9 +174,18 @@
     "vacio": "Por ahora no hay documentos acá."
   },
   "pie": {
-    "retiro": "Si sos de una de las asociaciones y querés que corrijamos o retiremos algún documento, avisanos y lo resolvemos.",
     "contacto_alt": "Correo de contacto del archivo",
-    "contacto_escribinos": "Escribinos"
+    "contacto_escribinos": "Escribinos",
+    "retiro_1": "Si sos de una de las asociaciones y querés que corrijamos o retiremos algún documento, ",
+    "retiro_enlace": "avisanos",
+    "retiro_2": " y lo resolvemos.",
+    "legal": "Información del archivo",
+    "enlaces": {
+      "objetivos": "Objetivos",
+      "derechos": "Derechos",
+      "privacidad": "Privacidad",
+      "cookies": "Cookies"
+    }
   },
   "auth": {
     "titulo": "Ingresá",
@@ -341,7 +351,11 @@
       "edicion": "Elegí el eisteddfod y el año.",
       "texto_transcripcion": "La transcripción tiene que tener entre 10 y 15000 caracteres."
     },
-    "caracteres_transcripcion": "Entre 10 y 15000 caracteres."
+    "caracteres_transcripcion": "Entre 10 y 15000 caracteres.",
+    "licencia": "Las transcripciones y los datos que aportás se publican bajo la licencia CC BY-SA 4.0.",
+    "licencia_enlace": "Más sobre las licencias",
+    "declaracion": "Al enviar, declarás que podés compartir este material.",
+    "declaracion_enlace": "Derechos y retiro de contenido"
   },
   "tarea": {
     "ano_pregunta": "¿El año {year} es correcto?",
@@ -599,7 +613,10 @@
   },
   "legal": {
     "titulos": {
-      "cookies": "Cookies y almacenamiento"
+      "cookies": "Cookies y almacenamiento",
+      "objetivos": "Objetivos",
+      "derechos": "Derechos de autor y retiro de contenido",
+      "privacidad": "Privacidad y datos personales"
     },
     "actualizado": "Última actualización: {fecha}.",
     "cookies": {
@@ -636,6 +653,82 @@
       "sin_js": "Esta opción necesita JavaScript. Sin JavaScript, el conteo tampoco se carga, así que no contamos tu visita.",
       "cambios": "Si algún día cambia lo que guardamos o agregamos otra herramienta, actualizamos esta página antes de activarla.",
       "ver_privacidad": "Qué datos personales guardamos: Privacidad."
+    },
+    "correo_pie": "Escribinos al correo que figura al pie de cada página.",
+    "objetivos": {
+      "descripcion": "Para qué existe este archivo: preservar los programas de los Eisteddfodau de la Patagonia galesa, sin fines de lucro y con código abierto.",
+      "intro": "Amgueddfa (museo, en galés) reúne los programas de los Eisteddfodau de la Patagonia galesa para que no se pierdan y para que cualquiera pueda consultarlos.",
+      "preservar_titulo": "Preservar la cultura galesa de la Patagonia",
+      "preservar_1": "Los programas cuentan más de un siglo de competencias, poemas, coros y recitados. Muchos están dispersos en casas, bibliotecas y asociaciones, y algunos ya se perdieron.",
+      "preservar_2": "Por eso juntamos y conservamos los que encontramos, y la comunidad puede completar lo que falta: subir programas, transcribirlos y sumar datos de cada edición.",
+      "preservar_aportar": "Cómo aportar",
+      "lucro_titulo": "Sin fines de lucro",
+      "lucro_1": "El archivo no tiene publicidad, no vende datos y no hace ningún uso comercial de los documentos.",
+      "lucro_2": "Las asociaciones siguen siendo dueñas de su material. Cada documento se atribuye a su asociación, y si una asociación quiere que corrijamos o retiremos algo, lo hacemos.",
+      "lucro_derechos": "Cómo pedir que corrijamos o retiremos un documento",
+      "abierto_titulo": "Código abierto",
+      "abierto_1": "El código del sitio es abierto y cualquiera puede revisarlo, proponer mejoras o usarlo para otro archivo.",
+      "abierto_repo": "Repositorio en GitHub: github.com/kevinch3/amgueddfa-eisteddfod",
+      "licencias_titulo": "Licencias",
+      "licencia_codigo": "El código se publica bajo la licencia AGPL-3.0: podés usarlo y modificarlo, y si publicás una versión modificada tenés que compartir sus cambios con la misma licencia.",
+      "licencia_datos": "Las transcripciones y los datos que aporta la comunidad se publican bajo la licencia CC BY-SA 4.0: se pueden reutilizar citando la fuente y compartiendo lo derivado con la misma licencia.",
+      "licencia_imagenes": "Las imágenes de los programas no están incluidas en esas licencias: siguen siendo de cada asociación."
+    },
+    "derechos": {
+      "descripcion": "Cómo pedir que corrijamos o retiremos un documento del archivo, y bajo qué licencia quedan los aportes.",
+      "intro": "Respetamos los derechos de las asociaciones y de los autores. Si un documento del archivo te pertenece o te involucra y querés que lo corrijamos o lo retiremos, seguí estos pasos.",
+      "alcance_titulo": "Qué publicamos",
+      "alcance_1": "Publicamos imágenes en baja resolución de los programas, con fines de preservación y consulta, y cada documento se atribuye a su asociación. No vendemos ni usamos comercialmente ningún documento.",
+      "quien_titulo": "Quién puede pedirlo",
+      "quien_1": "Las asociaciones que organizan los Eisteddfodau, los autores o sus herederos, quien tenga los derechos sobre un documento, y las personas que aparecen en él.",
+      "pedido_titulo": "Cómo pedirlo",
+      "pedido_1": "Escribinos al correo que figura al pie de cada página con estos datos:",
+      "pedido_doc": "Qué documento es: el enlace a su página en el archivo.",
+      "pedido_caracter": "En carácter de qué lo pedís: por ejemplo, en nombre de una asociación, como autor o como titular de los derechos.",
+      "pedido_motivo": "El motivo, y si querés que lo corrijamos (qué cambiar) o que lo retiremos.",
+      "pedido_contacto": "Cómo contactarte.",
+      "plazos_titulo": "Plazos",
+      "plazos_1": "Respondemos dentro de los 10 días hábiles. Mientras revisamos un pedido, ocultamos el documento en disputa.",
+      "contra_titulo": "Si se retiró algo que aportaste",
+      "contra_1": "Si retiramos material que subiste y creés que fue un error, podés mandarnos una contranotificación al mismo correo, con el documento, por qué creés que puede publicarse y tus datos de contacto. Le pasamos tu respuesta a quien hizo el pedido y, si el pedido no se sostiene, volvemos a publicar el documento.",
+      "ley_titulo": "Marco legal",
+      "ley_1": "Este procedimiento sigue la estructura de aviso y contranotificación de la DMCA (la ley de derechos de autor de Estados Unidos), pero se basa en la ley argentina de propiedad intelectual, la Ley 11.723.",
+      "ley_2": "El sitio se sirve desde GitHub Pages, así que también podés mandarle un aviso DMCA directamente a GitHub.",
+      "ley_github": "Política de retiro de contenido (DMCA) de GitHub",
+      "aportes_titulo": "Lo que aportás",
+      "aportes_1": "Al subir material o enviar un aporte, declarás que podés compartirlo: que es tuyo, que tenés permiso, o que es un documento que se puede difundir.",
+      "aportes_2": "Las transcripciones y los datos que aportás se publican bajo la licencia CC BY-SA 4.0. Las imágenes de los programas siguen siendo de cada asociación.",
+      "aportes_objetivos": "Más sobre las licencias del archivo"
+    },
+    "privacidad": {
+      "descripcion": "Qué datos personales guarda el archivo, para qué, quién los trata y cómo pedir verlos, corregirlos o borrarlos.",
+      "intro": "Guardamos lo mínimo necesario para que puedas ingresar y aportar. Acá te contamos qué guardamos, para qué y cómo ejercer tus derechos.",
+      "responsable_titulo": "Responsable",
+      "responsable_1": "Kevin Roberts, responsable del archivo.",
+      "datos_titulo": "Qué datos guardamos",
+      "datos_correo": "Tu correo electrónico, para mandarte el enlace o el código de ingreso. Nunca se publica.",
+      "datos_nombre": "Tu nombre público, que elegís al ingresar y aparece junto a tus aportes y en el ranking.",
+      "datos_pais": "Tu país, si elegís mostrarlo. Es público y aparece en tu perfil y en el ranking.",
+      "datos_zona": "Tu zona horaria, si la elegís. Es privada y solo sirve para mostrarte las fechas.",
+      "datos_aportes": "Tus aportes (imágenes, transcripciones, datos y recuerdos) y los puntos que ganás con ellos.",
+      "publico_titulo": "Qué se publica",
+      "publico_1": "Tu nombre público, tu país si lo elegiste, tus aportes aprobados y tus puntos. Tu correo y tu zona horaria nunca se publican.",
+      "conteo_titulo": "Conteos anónimos",
+      "conteo_1": "Contamos cuántas personas ingresan por hora, sin guardar quién. También contamos visitas con Cloudflare Web Analytics, sin cookies y sin identificarte.",
+      "conteo_cookies": "Detalles en Cookies y almacenamiento",
+      "proveedores_titulo": "Quién trata los datos",
+      "proveedores_1": "Usamos estos servicios para que el archivo funcione:",
+      "prov_supabase": "Supabase: cuentas, ingreso y base de datos.",
+      "prov_cloudflare": "Cloudflare: guarda las imágenes del archivo (R2) y cuenta las visitas (Web Analytics).",
+      "prov_github": "GitHub Pages: aloja el sitio.",
+      "prov_correo": "El correo de ingreso lo envía Supabase o, cuando el archivo use un proveedor de correo propio, ese proveedor (Resend).",
+      "conservacion_titulo": "Cuánto tiempo",
+      "conservacion_1": "Guardamos tus datos mientras tengas una cuenta. Si nos pedís que la borremos, borramos tu correo, tu nombre y tu perfil.",
+      "derechos_titulo": "Tus derechos",
+      "derechos_1": "Según la Ley 25.326 de Protección de los Datos Personales, podés pedir ver tus datos, corregirlos o borrarlos. Escribinos desde el correo de tu cuenta al correo que figura al pie de cada página.",
+      "derechos_plazos": "Te mostramos tus datos dentro de los 10 días corridos, y los corregimos o borramos dentro de los 5 días hábiles.",
+      "derechos_aportes": "Si pedís borrar tu cuenta, los aportes que ya se publicaron quedan en el archivo bajo la licencia CC BY-SA 4.0, con tu nombre o como anónimos, como prefieras.",
+      "derechos_aaip": "Si no te respondemos, podés reclamar ante la Agencia de Acceso a la Información Pública, que controla el cumplimiento de esa ley."
     }
   }
 }

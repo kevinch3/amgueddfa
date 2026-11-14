@@ -28,6 +28,7 @@ const recent = latestApproved(approvedStatic as Contribution[], [], 10).map((c) 
   <section class="intro measure">
     <h1>{t('sitio.nombre')}</h1>
     <p class="lead">{t('inicio.lema')}</p>
+    <p><a href={url('objetivos')}>{t('inicio.objetivos')}</a></p>
     <p class="muted">
       {t('inicio.contador', { docs: all.length, festivales: fests.length, desde: since })}
       {' '}{t('inicio.contador_completos', { n: complete })}

@@ -231,6 +231,19 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "1ab7a11a-1789-4034-9ae4-dfdd02856c96",
+    "type": "tag",
+    "festival": "juventud",
+    "year": 2025,
+    "item_id": "2561beee4d48",
+    "payload": {
+      "category": "programa"
+    },
+    "created_at": "2026-11-14T16:38:37.91413+00:00",
+    "reviewed_at": "2026-11-14T16:38:37.91413+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "1b89a114-8ab4-44aa-b823-5ecb38e8eaf2",
     "type": "fact",
     "festival": "chubut",
@@ -413,6 +426,19 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "37227883-6e02-4919-8dc1-4591a7139b7d",
+    "type": "tag",
+    "festival": "juventud",
+    "year": 2025,
+    "item_id": "c6b1cfcaef8d",
+    "payload": {
+      "category": "programa"
+    },
+    "created_at": "2026-11-14T16:38:37.91413+00:00",
+    "reviewed_at": "2026-11-14T16:38:37.91413+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "39e01401-68ef-4061-9b24-dc48afa07f14",
     "type": "tag",
     "festival": "chubut",
@@ -485,6 +511,19 @@
     },
     "created_at": "2026-11-14T14:09:07.912183+00:00",
     "reviewed_at": "2026-11-14T14:09:07.912183+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "4204d6d6-3d08-4592-a348-13b1002ffc20",
+    "type": "tag",
+    "festival": "juventud",
+    "year": 2025,
+    "item_id": "4a2f7c44e854",
+    "payload": {
+      "category": "programa"
+    },
+    "created_at": "2026-11-14T16:38:37.91413+00:00",
+    "reviewed_at": "2026-11-14T16:38:37.91413+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -658,6 +697,19 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "6184635b-59c0-40f1-ad6d-15d4ad5126b4",
+    "type": "tag",
+    "festival": "juventud",
+    "year": 2025,
+    "item_id": "9e529560d128",
+    "payload": {
+      "category": "programa"
+    },
+    "created_at": "2026-11-14T16:38:37.91413+00:00",
+    "reviewed_at": "2026-11-14T16:38:37.91413+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "64b79c5e-613a-4e3a-9999-83d503657291",
     "type": "fact",
     "festival": "chubut",
@@ -798,6 +850,21 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "6fb09bf5-3b54-41d6-90cd-0bc03c45d257",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2018,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Programa del Eisteddfod del Chubut 2018",
+      "value": "Sillón Bárdico (Cadair yr Eisteddfod) de carácter internacional (rhyngwladol)"
+    },
+    "created_at": "2026-11-14T16:38:12.716308+00:00",
+    "reviewed_at": "2026-11-14T16:38:12.716308+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "6fb23455-cfd0-40df-b50a-dce338727a83",
     "type": "fact",
     "festival": "chubut",
@@ -824,6 +891,19 @@
     },
     "created_at": "2026-11-13T21:05:31.894515+00:00",
     "reviewed_at": "2026-11-13T21:08:14.65141+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "70d456df-74d2-4e23-aceb-7790c5305c3c",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 1986,
+    "item_id": "ec13aef9e9c9",
+    "payload": {
+      "year": 1986
+    },
+    "created_at": "2026-11-14T16:03:51.12074+00:00",
+    "reviewed_at": "2026-11-14T16:25:12.438674+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -1031,6 +1111,19 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "874e0c68-1963-4fc1-8191-7d86d48e31bf",
+    "type": "tag",
+    "festival": "juventud",
+    "year": 2025,
+    "item_id": "5a3c85886fba",
+    "payload": {
+      "category": "programa"
+    },
+    "created_at": "2026-11-14T16:38:37.91413+00:00",
+    "reviewed_at": "2026-11-14T16:38:37.91413+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "8be26600-6012-48c9-8a26-222fbfd4905c",
     "type": "tag",
     "festival": "chubut",
@@ -1043,6 +1136,19 @@
     },
     "created_at": "2026-11-14T10:44:13.797036+00:00",
     "reviewed_at": "2026-11-14T11:02:41.205923+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "8cade748-07c7-42a0-b1ff-414798ba812e",
+    "type": "tag",
+    "festival": "juventud",
+    "year": 2025,
+    "item_id": "44cd085c77fc",
+    "payload": {
+      "category": "programa"
+    },
+    "created_at": "2026-11-14T16:38:37.91413+00:00",
+    "reviewed_at": "2026-11-14T16:38:37.91413+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -1185,6 +1291,36 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "967a97fe-6a46-475c-b17e-51561d87f00e",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2010,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_corona",
+      "fuente": "Resultados del Eisteddfod del Chubut 2010, Corona (archivo)",
+      "value": "Desierta: solo menciones"
+    },
+    "created_at": "2026-11-14T16:38:12.716308+00:00",
+    "reviewed_at": "2026-11-14T16:38:12.716308+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "969b42e7-c81e-4b07-8529-fcbd33f8fbdb",
+    "type": "fact",
+    "festival": "trevelin",
+    "year": 2011,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_corona",
+      "fuente": "Resultados del Eisteddfod de Trevelin 2011 (archivo)",
+      "value": "Silvia Noemí Vilar de Roca (Gaiman)"
+    },
+    "created_at": "2026-11-14T16:38:12.716308+00:00",
+    "reviewed_at": "2026-11-14T16:38:12.716308+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "98011ac5-18f0-4276-a35d-012aa8d4cdc2",
     "type": "fact",
     "festival": "trevelin",
@@ -1260,6 +1396,19 @@
     },
     "created_at": "2026-11-14T14:09:16.877267+00:00",
     "reviewed_at": "2026-11-14T14:09:16.877267+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "9d196d22-8c99-438a-9d1a-1d4321a2cec6",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 1996,
+    "item_id": "fcb0d30de6eb",
+    "payload": {
+      "year": 1986
+    },
+    "created_at": "2026-11-14T15:49:37.866092+00:00",
+    "reviewed_at": "2026-11-14T16:25:14.107148+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -1480,6 +1629,34 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "b8a66142-aa69-4254-b25c-30985eff960e",
+    "type": "fact",
+    "festival": "trevelin",
+    "year": 2011,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_silla",
+      "fuente": "Resultados del Eisteddfod de Trevelin 2011 (archivo)",
+      "value": "Owen Tudur Jones (Trelew), poesía principal en galés"
+    },
+    "created_at": "2026-11-14T16:38:12.716308+00:00",
+    "reviewed_at": "2026-11-14T16:38:12.716308+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "b95955a4-1743-4560-aee3-b4c6da95ec90",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2020,
+    "item_id": "83f22dfbd65f",
+    "payload": {
+      "year": 2020
+    },
+    "created_at": "2026-11-14T16:22:32.048361+00:00",
+    "reviewed_at": "2026-11-14T16:22:32.048361+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "ba478501-8348-42d2-8d83-8040b5495554",
     "type": "fact",
     "festival": "chubut",
@@ -1668,6 +1845,19 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "c47c2160-2084-4f2e-82f2-c5cd3ed01ed3",
+    "type": "tag",
+    "festival": "juventud",
+    "year": 2015,
+    "item_id": "dcb2e247b966",
+    "payload": {
+      "year": 2015
+    },
+    "created_at": "2026-11-14T15:58:51.696434+00:00",
+    "reviewed_at": "2026-11-14T16:25:13.446385+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "c4d878dc-d021-4162-90a5-7defc27d88d9",
     "type": "fact",
     "festival": "trevelin",
@@ -1812,6 +2002,21 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "d762c3a0-966f-407b-a9af-0998177f8e57",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 1996,
+    "item_id": "fcb0d30de6eb",
+    "payload": {
+      "category": "programa",
+      "festival": "chubut",
+      "year": 1986
+    },
+    "created_at": "2026-11-14T15:48:47.937769+00:00",
+    "reviewed_at": "2026-11-14T15:48:54.761076+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "d990fbde-6bd2-4dc2-81a1-d7910ec92052",
     "type": "tag",
     "festival": "chubut",
@@ -1888,6 +2093,19 @@
     },
     "created_at": "2026-11-14T14:09:46.600195+00:00",
     "reviewed_at": "2026-11-14T14:09:46.600195+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "de8c183c-7faa-4305-aa9f-e63d81c6d426",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2014,
+    "item_id": "a9039380cb2b",
+    "payload": {
+      "year": 2014
+    },
+    "created_at": "2026-11-14T16:25:02.601875+00:00",
+    "reviewed_at": "2026-11-14T16:25:02.601875+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -2025,6 +2243,21 @@
     },
     "created_at": "2026-11-14T14:09:22.091981+00:00",
     "reviewed_at": "2026-11-14T14:09:22.091981+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "f3843024-0d6f-4e1e-8c99-2b39bb008d98",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2010,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_silla",
+      "fuente": "Resultados del Eisteddfod del Chubut 2010, poesía y prosa en galés (archivo)",
+      "value": "Esyllt Nest Roberts de Lewis (seudónimo «Eifionydd»)"
+    },
+    "created_at": "2026-11-14T16:38:12.716308+00:00",
+    "reviewed_at": "2026-11-14T16:38:12.716308+00:00",
     "display_name": "Kevin Roberts"
   },
   {

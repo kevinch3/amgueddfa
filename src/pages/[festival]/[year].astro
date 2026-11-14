@@ -66,8 +66,9 @@ const editionStatus = (editionsStatic as { festival: string; year: number; statu
 const known = editionFacts(approved as Contribution[], slug, year, editionStatus);
 const seoDescription = editionDescription(fest.name, year, state, known, list.length + uploads.length);
 const seoLd = editionJsonLd({ name: fest.name, year, url: absUrl(`${slug}/${year}/`), image: cover ? absUrl(cover.page) : null, facts: known });
-// Standardized transcriptions of this edition's programas, and approved contributor transcriptions (edicion.ts merges live rows).
-const transcribed = list.filter((i) => i.category === 'programa' && !i.restricted).sort(byTitle)
+// Standardized transcriptions, folded under their own section (programa, programa del día),
+// and approved contributor transcriptions under Programa (edicion.ts merges live rows).
+const transcribedIn = (c: string) => list.filter((i) => i.category === c && !i.restricted).sort(byTitle)
   .map((i) => ({ item: i, text: transcriptionFor(i.id) })).filter((x): x is { item: typeof x.item; text: string } => x.text !== null);
 const itemTitles = Object.fromEntries(list.filter((i) => !i.restricted).map((i) => [i.id, i.title]));
 const contributedTr = forEdition(approved, slug, year, 'transcription').filter((c) => c.item_id && itemTitles[c.item_id]);
@@ -114,9 +115,9 @@ const missingList = new Intl.ListFormat('es', { type: 'conjunction' }).format(mi
       <ul class="cards" data-scope-festival={slug} data-scope-year={year} data-scope-category={c} hidden={items.length === 0}>
         {items.map((item) => <ItemCard item={item} />)}
       </ul>
-      {c === 'programa' && transcribed.length > 0 && (
+      {transcribedIn(c).length > 0 && (
         <div class="transcripciones">
-          {transcribed.map(({ item, text }) => (
+          {transcribedIn(c).map(({ item, text }) => (
             <details class="tr-detalle">
               <summary>{t('edicion.transcripcion_ver', { titulo: item.title })}</summary>
               <p class="muted small">{t('item.transcripcion_ayuda')} <a href={url(`item/${item.id}/`)}>{t('edicion.transcripcion_documento')}</a></p>

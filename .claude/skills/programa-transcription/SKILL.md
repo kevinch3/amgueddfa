@@ -61,6 +61,33 @@ Juventud 2014 page repeats comp. 20's winners under other competitions): write
 `[la fuente repite …; resultados no disponibles]`. Photos without results get no file;
 `.transcripciones/ganadores/README.md` lists what has a file and why the rest doesn't.
 
+## Programa del día (category `programa-del-dia`, public)
+
+Same file place and format; it folds under "Programa del día" on the edition page. Here the
+session order *is* the content, so it is kept:
+
+```
+## Viernes 26 de octubre · Dydd Gwener, 18 h        one heading per day / session, as printed
+47. Dúo a elección en galés · Deuawd agored: hunanddewisiad.
+- Veredicto comp. 2: Soned: «Taith» neu «Teithio».   verdicts read in the session
+8. Ceremonia de la Medalla de Plata, «Premio Asociación San David»: poesía de estilo tradicional.
+- Distinción especial a la mejor interpretación coral (ADICORA).
+## Jurados · Beirniaid
+```
+
+- **In:** sessions (day, name, start time), competitions in the order performed, verdicts of
+  competitions that are not performed (literature, translation, art, photography: the verdict
+  line is their only appearance; drop the bare "Veredicto comp. N" after a performance), the
+  ceremony a competition belongs to (on its own line, not as a `###` that would swallow the
+  following items), named prizes and special distinctions, jurados.
+- **Out:** committee, coordinators, locutores, translators, salón, ceremony helpers (escoltas,
+  dama de las flores), prayers, anthems, minute of silence, breaks, tea, asado, Gymanfa Ganu,
+  venue addresses, the anthem lyrics.
+- **Competitors' names never go in** (Juventud lists are minors): if a sheet lists who performs,
+  keep only the competition line.
+- Locutores' scripts and texts read aloud (traducciones de textos, presentaciones) get no file;
+  session-announcement posters without a competition list get no file.
+
 ## How to get the text
 
 | Source | Method |

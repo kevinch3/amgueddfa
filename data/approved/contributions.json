@@ -1,1 +1,304 @@
-[]
+[
+  {
+    "id": "00f2fe0b-b417-4461-b5c0-c1d48e67c05a",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1937,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "value": "Primer Eisteddfod de la Colonia con competencias en tres idiomas: galés, inglés y castellano (hasta entonces, solo galés)."
+    },
+    "created_at": "2026-11-14T10:40:31.420748+00:00",
+    "reviewed_at": "2026-11-14T10:41:26.194815+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "1e6305d9-b260-40bc-a2ef-26aeeb74338f",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1937,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "value": "El ganador de la silla estaba enfermo; en la ceremonia lo reemplazó Dewi Jones, y Rachel Jones cantó las estrofas tradicionales."
+    },
+    "created_at": "2026-11-14T10:40:48.32992+00:00",
+    "reviewed_at": "2026-11-14T10:41:27.299109+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "1fe5b30a-0334-4de6-8a8e-09189917cc0f",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2024,
+    "item_id": "051d5cd88bad",
+    "payload": {
+      "category": "preliminares",
+      "festival": "chubut",
+      "year": 2024
+    },
+    "created_at": "2026-11-13T22:38:11.065475+00:00",
+    "reviewed_at": "2026-11-13T22:52:10.61773+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "2674150d-5fd8-4500-86e2-f5fd027bb8d4",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1937,
+    "item_id": null,
+    "payload": {
+      "field": "start_date",
+      "value": "1937-08-12"
+    },
+    "created_at": "2026-11-14T10:39:41.032394+00:00",
+    "reviewed_at": "2026-11-14T10:41:23.326552+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "39e01401-68ef-4061-9b24-dc48afa07f14",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2021,
+    "item_id": "8fc23391a7f3",
+    "payload": {
+      "category": "bases",
+      "festival": "chubut",
+      "year": 2021
+    },
+    "created_at": "2026-11-13T21:14:17.363453+00:00",
+    "reviewed_at": "2026-11-13T21:14:42.096951+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "5884bff8-e148-4847-8639-c64cbb26ef72",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1937,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "value": "si"
+    },
+    "created_at": "2026-11-14T10:40:20.976516+00:00",
+    "reviewed_at": "2026-11-14T10:41:29.12004+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "6fcbcbdf-6820-4b7c-adc4-b874b81a6347",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 1999,
+    "item_id": "4224e265cba8",
+    "payload": {
+      "year": 1999
+    },
+    "created_at": "2026-11-13T21:05:31.894515+00:00",
+    "reviewed_at": "2026-11-13T21:08:14.65141+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "86a44e26-2c37-41d1-8702-9595d3aef80d",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1937,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_silla",
+      "value": "Edward Morgan Roberts"
+    },
+    "created_at": "2026-11-14T10:40:11.081166+00:00",
+    "reviewed_at": "2026-11-14T10:41:30.524374+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "8f1484ff-75dd-4a7b-a262-9e0d3b6ce9ca",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 1990,
+    "item_id": "7c7c684ff0ec",
+    "payload": {
+      "year": 1990
+    },
+    "created_at": "2026-11-13T21:17:23.37003+00:00",
+    "reviewed_at": "2026-11-13T21:17:35.270539+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "ab0a53b7-1a64-4687-b1da-2761191c02ac",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 1982,
+    "item_id": "7fcd935aaabb",
+    "payload": {
+      "category": "programa",
+      "festival": "chubut",
+      "year": 1982
+    },
+    "created_at": "2026-11-13T21:14:22.25477+00:00",
+    "reviewed_at": "2026-11-13T21:14:43.617255+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "af45abd5-a9b0-407d-8452-6017a00168a4",
+    "type": "tag",
+    "festival": "juventud",
+    "year": 2026,
+    "item_id": "8abd86b74618",
+    "payload": {
+      "category": "preliminares",
+      "festival": "juventud",
+      "year": 2026
+    },
+    "created_at": "2026-11-13T22:38:59.464454+00:00",
+    "reviewed_at": "2026-11-13T22:52:06.391664+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "ba664727-4e63-4b45-a60b-efb9316a9076",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2023,
+    "item_id": "99a72233b0e3",
+    "payload": {
+      "category": "bases",
+      "festival": "chubut",
+      "year": 2023
+    },
+    "created_at": "2026-11-13T21:14:13.827031+00:00",
+    "reviewed_at": "2026-11-13T21:14:41.194531+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "bcaf4152-32f8-4979-ab53-276d1db63c57",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1937,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "value": "Primera vez que se usaron micrófonos en el escenario, con cuatro altoparlantes en el salón."
+    },
+    "created_at": "2026-11-14T10:40:39.363072+00:00",
+    "reviewed_at": "2026-11-14T10:41:28.263258+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "c028b0dc-7dc5-4998-ad8d-3ed89b80c019",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2002,
+    "item_id": "95d1e8fa3a9a",
+    "payload": {
+      "year": 2002
+    },
+    "created_at": "2026-11-13T22:53:19.449556+00:00",
+    "reviewed_at": "2026-11-13T23:47:15.234541+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "c112d353-5aa2-40fb-82b6-977e476f4ed1",
+    "type": "upload",
+    "festival": "chubut",
+    "year": 1937,
+    "item_id": null,
+    "payload": {
+      "category": "otros",
+      "description": "Imagen provista por Meirion Griffiths. \nCita \"Libro de Mathew Henry Jones\". \nTítulo y página no provistas.",
+      "media": {
+        "pages": [
+          "uploads/c112d353-5aa2-40fb-82b6-977e476f4ed1/p01.webp"
+        ],
+        "thumb": "uploads/c112d353-5aa2-40fb-82b6-977e476f4ed1/thumb.webp"
+      }
+    },
+    "created_at": "2026-11-14T10:39:06.571388+00:00",
+    "reviewed_at": "2026-11-14T10:41:24.74184+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "c57e230f-10b5-4b87-a5b7-e228dc23cb84",
+    "type": "upload",
+    "festival": "chubut",
+    "year": 1992,
+    "item_id": null,
+    "payload": {
+      "category": "programa",
+      "description": "Tapa programa",
+      "media": {
+        "pages": [
+          "uploads/c57e230f-10b5-4b87-a5b7-e228dc23cb84/p01.webp"
+        ],
+        "thumb": "uploads/c57e230f-10b5-4b87-a5b7-e228dc23cb84/thumb.webp"
+      }
+    },
+    "created_at": "2026-11-13T21:07:12.608972+00:00",
+    "reviewed_at": "2026-11-13T21:08:02.04215+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "ce6e200f-52c9-428e-b99d-32a2adc2dcb3",
+    "type": "tag",
+    "festival": "juventud",
+    "year": 2022,
+    "item_id": "c2d31a9fc9ab",
+    "payload": {
+      "category": "programa-del-dia",
+      "festival": "juventud",
+      "year": 2022
+    },
+    "created_at": "2026-11-13T22:38:51.72125+00:00",
+    "reviewed_at": "2026-11-13T23:47:16.827352+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "df01b452-b2be-4fa3-a148-084a9cbd6a48",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1937,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "value": "Salón San David de Trelew"
+    },
+    "created_at": "2026-11-14T10:39:59.793214+00:00",
+    "reviewed_at": "2026-11-14T10:41:24.876607+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "f7307608-8fc2-4626-8a0b-89d886c039c7",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2026,
+    "item_id": "0e936fe3a05c",
+    "payload": {
+      "category": "bases",
+      "festival": "chubut",
+      "year": 2026
+    },
+    "created_at": "2026-11-13T22:38:47.792876+00:00",
+    "reviewed_at": "2026-11-13T22:52:08.779053+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "fa04573d-dae5-472b-9a9f-06b2baebac67",
+    "type": "upload",
+    "festival": "chubut",
+    "year": 1991,
+    "item_id": null,
+    "payload": {
+      "category": "programa",
+      "description": "Tapa programa",
+      "media": {
+        "pages": [
+          "uploads/fa04573d-dae5-472b-9a9f-06b2baebac67/p01.webp"
+        ],
+        "thumb": "uploads/fa04573d-dae5-472b-9a9f-06b2baebac67/thumb.webp"
+      }
+    },
+    "created_at": "2026-11-13T21:06:04.044518+00:00",
+    "reviewed_at": "2026-11-13T21:07:57.690846+00:00",
+    "display_name": "Kevin Roberts"
+  }
+]

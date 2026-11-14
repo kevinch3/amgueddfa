@@ -11,7 +11,7 @@
     },
     "created_at": "2026-11-14T10:40:31.420748+00:00",
     "reviewed_at": "2026-11-14T10:41:26.194815+00:00",
-    "display_name": "Kevin Roberts"
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "1e6305d9-b260-40bc-a2ef-26aeeb74338f",
@@ -25,7 +25,7 @@
     },
     "created_at": "2026-11-14T10:40:48.32992+00:00",
     "reviewed_at": "2026-11-14T10:41:27.299109+00:00",
-    "display_name": "Kevin Roberts"
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "1fe5b30a-0334-4de6-8a8e-09189917cc0f",
@@ -54,7 +54,7 @@
     },
     "created_at": "2026-11-14T10:39:41.032394+00:00",
     "reviewed_at": "2026-11-14T10:41:23.326552+00:00",
-    "display_name": "Kevin Roberts"
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "39e01401-68ef-4061-9b24-dc48afa07f14",
@@ -83,7 +83,7 @@
     },
     "created_at": "2026-11-14T10:40:20.976516+00:00",
     "reviewed_at": "2026-11-14T10:41:29.12004+00:00",
-    "display_name": "Kevin Roberts"
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "6fcbcbdf-6820-4b7c-adc4-b874b81a6347",
@@ -110,7 +110,7 @@
     },
     "created_at": "2026-11-14T10:40:11.081166+00:00",
     "reviewed_at": "2026-11-14T10:41:30.524374+00:00",
-    "display_name": "Kevin Roberts"
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "8f1484ff-75dd-4a7b-a262-9e0d3b6ce9ca",
@@ -182,7 +182,7 @@
     },
     "created_at": "2026-11-14T10:40:39.363072+00:00",
     "reviewed_at": "2026-11-14T10:41:28.263258+00:00",
-    "display_name": "Kevin Roberts"
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "c028b0dc-7dc5-4998-ad8d-3ed89b80c019",
@@ -205,7 +205,7 @@
     "item_id": null,
     "payload": {
       "category": "otros",
-      "description": "Imagen provista por Meirion Griffiths. \nCita \"Libro de Mathew Henry Jones\". \nTítulo y página no provistas.",
+      "description": "Cita \"Libro de Mathew Henry Jones\".",
       "media": {
         "pages": [
           "uploads/c112d353-5aa2-40fb-82b6-977e476f4ed1/p01.webp"
@@ -215,7 +215,7 @@
     },
     "created_at": "2026-11-14T10:39:06.571388+00:00",
     "reviewed_at": "2026-11-14T10:41:24.74184+00:00",
-    "display_name": "Kevin Roberts"
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "c57e230f-10b5-4b87-a5b7-e228dc23cb84",
@@ -264,7 +264,7 @@
     },
     "created_at": "2026-11-14T10:39:59.793214+00:00",
     "reviewed_at": "2026-11-14T10:41:24.876607+00:00",
-    "display_name": "Kevin Roberts"
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "f7307608-8fc2-4626-8a0b-89d886c039c7",

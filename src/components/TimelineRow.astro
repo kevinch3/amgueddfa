@@ -1,4 +1,5 @@
 ---
+import { editionCatalogState } from '../lib/catalog';
 import { t } from '../lib/i18n';
 import { url } from '../lib/paths';
 import { docCount } from '../lib/site';
@@ -7,7 +8,7 @@ import type { EditionState, FestivalSlug } from '../lib/types';
 interface Props { slug: FestivalSlug; y: number; state: EditionState; n: number; thumbs: { src: string | null; title: string }[] }
 const { slug, y, state, n, thumbs } = Astro.props;
 ---
-<li class={`tl-${state}`} data-festival={slug} data-year={y} data-state={state}>
+<li class={`tl-${state}`} data-festival={slug} data-year={y} data-state={state} data-cat-state={editionCatalogState(slug, y)}>
   <a href={url(`${slug}/${y}/`)}>
     <span class="yr">{y}</span>
     <span class="st">{t(`estados.${state}`)}{n > 0 && <span class="muted">{` (${docCount(n)})`}</span>}</span>

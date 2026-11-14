@@ -1,4 +1,5 @@
 ---
+import { editionCatalogState } from '../lib/catalog';
 import { t } from '../lib/i18n';
 import { url } from '../lib/paths';
 import type { EditionState, FestivalSlug } from '../lib/types';
@@ -14,6 +15,7 @@ const { slug, name, y, state, n } = Astro.props;
     data-festival={slug}
     data-year={y}
     data-state={state}
+    data-cat-state={editionCatalogState(slug, y)}
     aria-label={t('inicio.celda', { festival: name, year: y, estado: t(`estados.${state}`) })}
     title={`${t(`estados.${state}`)}${n ? ` (${n === 1 ? t('comun.un_documento') : t('comun.n_documentos', { n })})` : ''}`}
   >{y}</a>

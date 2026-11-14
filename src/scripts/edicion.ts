@@ -2,10 +2,10 @@ import staticEditions from '../../data/approved/editions.json';
 import { approvedForEdition, byLine, factDisplay, forEdition, mergeApproved, ownPending, pendingView, sortFacts, sourceLine, type Contribution } from '../lib/contrib';
 import { t } from '../lib/i18n';
 import { liveQuery } from '../lib/live';
+import { raiseStates, refreshStates } from './states';
 import { url } from '../lib/paths';
 import { getClient } from '../lib/supabase';
 import type { EditionState } from '../lib/types';
-import { revealDecade } from '../lib/timeline';
 import { maxState, mediaUrl, uploadMedia, uploadStates, type UploadLike } from '../lib/uploads';
 
 type EditionRow = { festival: string; year: number; status: 'unknown' | 'held' | 'not_held'; note?: string | null };
@@ -232,37 +232,8 @@ async function hydrateEdition(): Promise<void> {
   await renderDrafts(festival, year, { hechos, recuerdos, aportes });
 }
 
-/**
- * Raise grid cells, timeline rows, the edition badge and the "falta el
- * programa" slot to what approved uploads say (never downgrades).
- */
-export function applyUploadStates(root: ParentNode, states: Map<string, EditionState>): void {
-  if (!states.size) return;
-  for (const node of root.querySelectorAll<HTMLElement>('[data-festival][data-year][data-state]')) {
-    const { festival = '', year = '' } = node.dataset;
-    const old = (node.dataset.state ?? 'none') as EditionState;
-    const next = maxState(old, states.get(`${festival}:${year}`) ?? 'none');
-    if (next === old || node.dataset.status === 'not_held') continue;
-    node.dataset.state = next;
-    revealDecade(node, next);
-    const label = t(`estados.${next}`);
-    if (node.matches('[data-cell]')) {
-      node.classList.replace(`st-${old}`, `st-${next}`);
-      node.setAttribute('aria-label', t('inicio.celda', { festival: t(`festivales.${festival}`), year, estado: label }));
-      node.title = label;
-    } else if (node.classList.contains('badge-state')) {
-      node.classList.replace(`st-${old}`, `st-${next}`);
-      node.textContent = label;
-    } else {
-      node.classList.replace(`tl-${old}`, `tl-${next}`);
-      const first = node.querySelector('.st')?.firstChild;
-      if (first?.nodeType === 3) first.textContent = label;
-    }
-    if (next === 'full') {
-      for (const slot of root.querySelectorAll<HTMLElement>(`[data-falta-programa][data-festival="${festival}"][data-year="${year}"]`)) slot.hidden = true;
-    }
-  }
-}
+/** Raise grid cells, timeline rows and the edition badge to what approved uploads say (never lowers). */
+export const applyUploadStates = raiseStates;
 
 /** Mark editions that never happened (editions.status = not_held) on grids, timelines and the edition badge. */
 export function applyEditionStatus(root: ParentNode, rows: EditionRow[]): void {
@@ -287,14 +258,9 @@ export function applyEditionStatus(root: ParentNode, rows: EditionRow[]): void {
   }
 }
 
-/** Home and festival pages: live approved uploads raise the coverage the build baked from the export. */
+/** Grids, timelines and the edition badge: catalog-only state (live corrections included) raised by live uploads. */
 async function overlayUploads(): Promise<void> {
-  if (!document.querySelector('[data-cell], .timeline [data-state]')) return;
-  const live = await liveQuery<UploadLike[]>(
-    (c) => c.from('public_contributions').select('id, type, festival, year, payload').eq('type', 'upload').limit(5000),
-    [],
-  );
-  applyUploadStates(document, uploadStates(live.data));
+  await refreshStates(document);
 }
 
 async function overlayEditions(): Promise<void> {

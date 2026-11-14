@@ -8,7 +8,7 @@ interface Props { item: Item; showYear?: boolean }
 const { item, showYear = false } = Astro.props;
 const thumb = thumbUrl(item);
 ---
-<li class="card">
+<li class="card" data-item={item.id}>
   <a href={url(`item/${item.id}/`)}>
     <span class="frame">
       {thumb ? (

@@ -7,6 +7,7 @@ import { t } from '../lib/i18n';
 import { url } from '../lib/paths';
 import { jsonForScript } from '../lib/contrib';
 import { absUrl } from '../lib/seo';
+import { TAGS_AT } from '../lib/catalog';
 
 interface Props {
   title?: string;
@@ -45,6 +46,7 @@ const ogImage = image ? absUrl(image) : null;
     <meta name="twitter:card" content={ogImage ? 'summary_large_image' : 'summary'} />
     {jsonLd && <script type="application/ld+json" set:html={jsonForScript(jsonLd)} />}
     <meta name="theme-color" content="#9e1b22" />
+    <meta name="amg-tags-at" content={TAGS_AT ?? ''} />
     <meta name="generator" content={Astro.generator} />
     <link rel="icon" href={url('favicon.svg')} type="image/svg+xml" />
     <title>{fullTitle}</title>
@@ -84,5 +86,8 @@ const ogImage = image ? absUrl(image) : null;
         </p>
       </div>
     </footer>
+    <script>
+      import '../scripts/live-catalog.ts';
+    </script>
   </body>
 </html>

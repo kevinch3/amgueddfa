@@ -32,9 +32,8 @@ const groups = [
     <section class="section" aria-labelledby={`g-${g.key}`}>
       <h2 id={`g-${g.key}`}>{t(`general.${g.key}`)}</h2>
       <p class="muted measure">{t(`general.${g.key}_ayuda`)}</p>
-      {g.list.length > 0
-        ? <ul class="cards">{g.list.map((item) => <ItemCard item={item} />)}</ul>
-        : <p class="muted">{t('general.vacio')}</p>}
+      <ul class="cards" data-scope-festival={slug} data-scope-year="none" data-scope-undated={g.key === 'sin_fecha' ? 'true' : 'false'} hidden={g.list.length === 0}>{g.list.map((item) => <ItemCard item={item} />)}</ul>
+      <p class="muted" data-scope-empty hidden={g.list.length > 0}>{t('general.vacio')}</p>
     </section>
   ))}
 </Base>

@@ -447,3 +447,43 @@ describe('credited facts and the credited person\'s daily limit', () => {
   });
 });
 
+
+describe('admin contributions are approved on submit', () => {
+  it("an admin's own contribution is approved at once, with points and the admin as reviewer", async () => {
+    const admin = await t.createAdmin();
+    const id = await contribute(admin, { user_id: admin, type: 'tag', item_id: 'fcb0d30de6eb', year: 1996, payload: { year: 1986 } });
+    const row = await t.q<{ status: string; reviewer_id: string; points_awarded: number; reviewed: boolean }>(
+      'postgres', 'select status, reviewer_id, points_awarded, reviewed_at is not null as reviewed from public.contributions where id = $1', [id]);
+    expect(row).toEqual([{ status: 'approved', reviewer_id: admin, points_awarded: 2, reviewed: true }]);
+    expect(await points(admin)).toBe(2);
+    // and it is public straight away
+    const pub = await t.q('anon', 'select id from public.public_contributions where id = $1', [id]);
+    expect(pub).toHaveLength(1);
+  });
+
+  it("an admin's 'no se realizó' fact updates the edition at once", async () => {
+    const admin = await t.createAdmin();
+    await contribute(admin, { user_id: admin, type: 'fact', festival: 'mimosa', year: 2020, payload: { field: 'edicion_realizada', value: 'no' } });
+    const ed = await t.q('postgres', "select status from public.editions where festival = 'mimosa' and year = 2020");
+    expect(ed).toEqual([{ status: 'not_held' }]);
+  });
+
+  it("a regular user's contribution still waits for review", async () => {
+    const u = await t.createUser();
+    const id = await contribute(u, { user_id: u, type: 'tag', item_id: 'x', payload: { year: 1986 } });
+    const row = await t.q('postgres', 'select status from public.contributions where id = $1', [id]);
+    expect(row).toEqual([{ status: 'pending' }]);
+  });
+});
+
+describe('admin_add_facts with auto-approval', () => {
+  it('an admin crediting themself gets each fact approved once, with its points', async () => {
+    const admin = await t.createAdmin();
+    const rows = await t.q<{ pts: number }>(admin, 'select public.admin_add_facts($1, $2, $3, $4) as pts',
+      [admin, 'chubut', 2010, JSON.stringify([{ field: 'ganador_silla', value: 'Esyllt Nest Roberts de Lewis' }])]);
+    expect(rows[0].pts).toBe(10);
+    expect(await points(admin)).toBe(10);
+    const st = await t.q('postgres', "select status from public.contributions where user_id = $1 and type = 'fact'", [admin]);
+    expect(st).toEqual([{ status: 'approved' }]);
+  });
+});

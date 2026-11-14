@@ -4,13 +4,19 @@ import { t } from './i18n';
 import { url } from './paths';
 import type { EditionState, FestivalSlug, Item } from './types';
 import { maxState, mediaUrl, uploadMedia, uploadState, type UploadLike } from './uploads';
+import { applyTags, catalogState, latestTagAt, type TagLike } from './tags';
 
 /** Approved uploads from the last export (data/approved/contributions.json). */
 const APPROVED_UPLOADS: UploadLike[] = (approvedRaw as UploadLike[]).filter((c) => c?.type === 'upload');
 
 const FESTIVAL_SLUGS: FestivalSlug[] = ['chubut', 'juventud', 'mimosa', 'trevelin'];
 
-let current: Item[] = (raw as { items: Item[] }).items;
+/** Approved tags from the last export: applied here so every build places items where they were corrected to. */
+const APPROVED_TAGS: TagLike[] = (approvedRaw as TagLike[]).filter((c) => c?.type === 'tag');
+/** Newest tag approval this build includes; pages fetch only later ones (scripts/live-catalog.ts). */
+export const TAGS_AT: string | null = latestTagAt(APPROVED_TAGS);
+
+let current: Item[] = applyTags((raw as { items: Item[] }).items, APPROVED_TAGS);
 
 /** Test hook: replace the catalog contents. */
 export function setItems(list: Item[]): void {
@@ -39,11 +45,12 @@ export function editionItems(f: FestivalSlug, year: number): Item[] {
  * by approved uploads (a programa with pages is full, anything else some).
  */
 export function editionState(f: FestivalSlug, year: number, uploads: UploadLike[] = APPROVED_UPLOADS): EditionState {
-  const list = editionItems(f, year);
-  const fromCatalog: EditionState = list.some((i) => i.category === 'programa' && i.kind === 'pdf')
-    ? 'full'
-    : list.length > 0 ? 'some' : 'none';
-  return maxState(fromCatalog, uploadState(uploads, f, year));
+  return maxState(editionCatalogState(f, year), uploadState(uploads, f, year));
+}
+
+/** Coverage from catalog items alone (baked as data-cat-state so live overlays can lower it too). */
+export function editionCatalogState(f: FestivalSlug, year: number): EditionState {
+  return catalogState(editionItems(f, year));
 }
 
 /** Earliest year anyone may document: bounds the contribution form, not the timelines. */

@@ -6,7 +6,7 @@ import Mount from '../../components/Mount.astro';
 import VideoList from '../../components/VideoList.astro';
 import Transcripcion from '../../components/Transcripcion.astro';
 import { transcriptionFor } from '../../lib/transcripciones';
-import { editionCover, editionItems, editionState, festivals, yearRange } from '../../lib/catalog';
+import { editionCatalogState, editionCover, editionItems, editionState, festivals, yearRange } from '../../lib/catalog';
 import { t } from '../../lib/i18n';
 import { url } from '../../lib/paths';
 import { byTitle, CATEGORY_ORDER, docCount } from '../../lib/site';
@@ -34,8 +34,7 @@ const state = editionState(slug, year);
 const cover = editionCover(slug, year);
 const videos = editionVideos(slug, year);
 const sections = CATEGORY_ORDER.map((c) => ({ c, items: list.filter((i) => i.category === c).sort(byTitle) }));
-// Programa always shows (with its slot when incomplete); other empty sections are named in one slot.
-const shown = sections.filter((s) => s.c === 'programa' || s.items.length > 0);
+// Programa always shows (with its slot when incomplete); other empty sections are hidden (live corrections may fill them) and named in one slot.
 const missing = sections.filter((s) => s.c !== 'programa' && s.items.length === 0).map((s) => t(`categorias.${s.c}`));
 // Approved facts and memories from the last export, baked in for search engines; edicion.ts merges live rows.
 const approved = (approvedRaw as Contribution[]).filter((c) => c.festival === slug && c.year === year && ['fact', 'memory', 'upload', 'transcription'].includes(c.type))
@@ -92,7 +91,7 @@ const missingList = new Intl.ListFormat('es', { type: 'conjunction' }).format(mi
     )}
     <h1><span class="fest">{fest.name}</span> <span class="year">{year}</span></h1>
     <p class="state">
-      <span class={`badge-state st-${state}`} data-festival={slug} data-year={year} data-state={state}>{t(`estados.${state}`)}</span>
+      <span class={`badge-state st-${state}`} data-festival={slug} data-year={year} data-state={state} data-cat-state={editionCatalogState(slug, year)}>{t(`estados.${state}`)}</span>
       {list.length > 0 && <span class="muted"> {docCount(list.length)}</span>}
     </p>
     <div class="cover-actions">
@@ -109,14 +108,12 @@ const missingList = new Intl.ListFormat('es', { type: 'conjunction' }).format(mi
     )}</Mount>
   </section>
 
-  {shown.map(({ c, items }) => (
-    <section class="section" aria-labelledby={`cat-${c}`}>
+  {sections.map(({ c, items }) => (
+    <section class="section" aria-labelledby={`cat-${c}`} data-cat-section={c} hidden={c !== 'programa' && items.length === 0}>
       <h2 id={`cat-${c}`}>{t(`categorias.${c}`)}</h2>
-      {items.length > 0 && (
-        <ul class="cards">
-          {items.map((item) => <ItemCard item={item} />)}
-        </ul>
-      )}
+      <ul class="cards" data-scope-festival={slug} data-scope-year={year} data-scope-category={c} hidden={items.length === 0}>
+        {items.map((item) => <ItemCard item={item} />)}
+      </ul>
       {c === 'programa' && transcribed.length > 0 && (
         <div class="transcripciones">
           {transcribed.map(({ item, text }) => (

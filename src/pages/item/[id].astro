@@ -43,19 +43,19 @@ const retrieved = item.retrieved
   <nav class="crumbs" aria-label={t('comun.miga')}>
     <ol>
       <li><a href={url('/')}>{t('nav.inicio')}</a></li>
-      <li><a href={url(`${item.festival}/`)}>{fest}</a></li>
-      <li><a href={yearHref}>{yearLabel}</a></li>
-      <li>{t(`categorias.${item.category}`)}</li>
+      <li><a href={url(`${item.festival}/`)} data-live="festival">{fest}</a></li>
+      <li><a href={yearHref} data-live="year">{yearLabel}</a></li>
+      <li data-live="category">{t(`categorias.${item.category}`)}</li>
     </ol>
   </nav>
 
-  <header class="item-head">
+  <header class="item-head" data-item-page={item.id}>
     <h1>{item.title}</h1>
     <p class="badges">
-      <span class="badge">{t(`categorias.${item.category}`)}</span>
+      <span class="badge" data-live="category">{t(`categorias.${item.category}`)}</span>
       <span class="badge">{t(`item.tipos.${item.kind}`)}</span>
       {item.pages > 1 && !item.restricted && <span class="badge">{t('item.paginas', { n: item.pages })}</span>}
-      {item.year_inferred && <span class="badge" title={t('comun.ano_estimado_ayuda')}>{t('comun.ano_estimado')}</span>}
+      {item.year_inferred && <span class="badge" data-live="inferred" title={t('comun.ano_estimado_ayuda')}>{t('comun.ano_estimado')}</span>}
     </p>
   </header>
 

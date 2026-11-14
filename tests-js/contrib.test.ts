@@ -1,15 +1,16 @@
 import { describe, expect, it } from 'vitest';
-import { mergeApproved, submit, validate, type Contribution } from '../src/lib/contrib';
+import { mergeApproved, ownPending, pendingView, submit, validate, type Contribution } from '../src/lib/contrib';
 import { t } from '../src/lib/i18n';
 
 const MB = 1024 * 1024;
 const file = (type: string, size: number) => ({ name: 'scan', type, size });
 
-function fakeClient(opts: { uid?: string | null; insertError?: unknown; uploadError?: unknown } = {}) {
+function fakeClient(opts: { uid?: string | null; insertError?: unknown; uploadError?: unknown; rows?: any[]; selectError?: unknown } = {}) {
   const log: string[] = [];
   const uploads: any[] = [];
   const inserts: any[] = [];
   const removed: any[] = [];
+  const eqs: [string, unknown][] = [];
   const uid = opts.uid === undefined ? 'user-1' : opts.uid;
   const client: any = {
     auth: {
@@ -34,9 +35,22 @@ function fakeClient(opts: { uid?: string | null; insertError?: unknown; uploadEr
         inserts.push({ table, row });
         return { data: null, error: opts.insertError ?? null };
       },
+      // Read chain: every .eq() is recorded; awaiting it yields opts.rows.
+      select: (_cols: string) => {
+        log.push(`select:${table}`);
+        const q: any = {
+          eq: (col: string, val: unknown) => (eqs.push([col, val]), q),
+          in: () => q,
+          order: () => q,
+          limit: () => q,
+          then: (ok: (v: unknown) => unknown, ko?: (e: unknown) => unknown) =>
+            Promise.resolve({ data: opts.selectError ? null : (opts.rows ?? []), error: opts.selectError ?? null }).then(ok, ko),
+        };
+        return q;
+      },
     }),
   };
-  return { client, log, uploads, inserts, removed };
+  return { client, log, uploads, inserts, removed, eqs };
 }
 
 describe('validate', () => {
@@ -185,3 +199,32 @@ describe('display helpers', () => {
     expect(JSON.parse(jsonForScript([{ text: '</script>' }]))).toEqual([{ text: '</script>' }]);
   });
 });
+
+describe('pending drafts', () => {
+  it('ownPending filters on the signed-in user, pending, and the edition', async () => {
+    const a = fakeClient({ uid: 'user-1', rows: [{ id: 'p1', type: 'memory', festival: 'chubut', year: 1930, payload: { text: 'x' } }] });
+    expect(await ownPending('chubut', 1930, a.client)).toHaveLength(1);
+    expect(a.eqs).toEqual(expect.arrayContaining([['user_id', 'user-1'], ['status', 'pending'], ['festival', 'chubut'], ['year', 1930]]));
+  });
+
+  it('ownPending is empty signed out, offline, or on a query error', async () => {
+    const out = fakeClient({ uid: null });
+    expect(await ownPending('chubut', 1930, out.client)).toEqual([]);
+    expect(out.log).not.toContain('select:contributions');
+    expect(await ownPending('chubut', 1930, null)).toEqual([]);
+    expect(await ownPending('chubut', 1930, fakeClient({ selectError: { message: 'boom' } }).client)).toEqual([]);
+  });
+
+  it('pendingView sorts each kind into its section and previews only images', () => {
+    const mk = (type: string, payload: any) =>
+      ({ id: 'x', type, festival: 'chubut', year: 1930, item_id: null, payload, created_at: '', reviewed_at: null, display_name: null }) as Contribution;
+    expect(pendingView(mk('upload', { category: 'programa', storage_path: 'u/a.JPG' })))
+      .toEqual({ section: 'aportes', text: 'Programa', preview: 'image', path: 'u/a.JPG' });
+    expect(pendingView(mk('upload', { category: 'bases', storage_path: 'u/a.pdf', description: 'Bases' })))
+      .toEqual({ section: 'aportes', text: 'Bases', preview: 'pdf', path: 'u/a.pdf' });
+    expect(pendingView(mk('memory', { text: 'Un recuerdo' }))).toEqual({ section: 'recuerdos', text: 'Un recuerdo', preview: null, path: null });
+    expect(pendingView(mk('fact', { field: 'venue', value: 'Trelew' }))).toMatchObject({ section: 'hechos', preview: null });
+    expect(pendingView(mk('fact', { field: 'venue', value: 'Trelew' })).text).toContain('Trelew');
+  });
+});
+

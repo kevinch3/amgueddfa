@@ -279,3 +279,50 @@ export function sortFacts(list: Contribution[]): Contribution[] {
 export function jsonForScript(v: unknown): string {
   return JSON.stringify(v).replace(/</g, '\\u003c').replace(/\u2028/g, '\\u2028').replace(/\u2029/g, '\\u2029');
 }
+
+/**
+ * The signed-in user's own pending contributions for one edition (also for an
+ * admin, who could read everyone's). [] when signed out, offline or on error.
+ */
+export async function ownPending(festival: string, year: number, client: SupabaseClient | null = getClient()): Promise<Contribution[]> {
+  if (!client) return [];
+  const session = await liveQuery(async (c) => {
+    const { data, error } = await c.auth.getSession();
+    return { data: data?.session?.user?.id ?? null, error };
+  }, null as string | null, 6000, client);
+  const uid = session.data;
+  if (!uid) return [];
+  const rows = await liveQuery<Contribution[]>(
+    (c) =>
+      c.from('contributions')
+        .select('id, type, festival, year, item_id, payload, created_at, reviewed_at')
+        .eq('user_id', uid)
+        .eq('status', 'pending')
+        .eq('festival', festival)
+        .eq('year', year)
+        .in('type', ['fact', 'memory', 'upload'])
+        .order('created_at', { ascending: true })
+        .limit(100),
+    [],
+    6000,
+    client,
+  );
+  return rows.data;
+}
+
+export type PendingView = { section: 'hechos' | 'recuerdos' | 'aportes'; text: string; preview: 'image' | 'pdf' | null; path: string | null };
+
+/** Where a pending contribution shows on the edition page, its text, and whether its original can be previewed. */
+export function pendingView(c: Contribution): PendingView {
+  const p = c.payload ?? {};
+  if (c.type === 'fact') {
+    const { label, value } = factDisplay(c);
+    return { section: 'hechos', text: `${label}: ${value}`, preview: null, path: null };
+  }
+  if (c.type === 'memory') return { section: 'recuerdos', text: String(p.text ?? ''), preview: null, path: null };
+  const path = typeof p.storage_path === 'string' ? p.storage_path : null;
+  const ext = path?.split('.').pop()?.toLowerCase() ?? '';
+  const preview = ['jpg', 'jpeg', 'png', 'webp'].includes(ext) ? 'image' : ext === 'pdf' ? 'pdf' : null;
+  const text = String(p.description ?? '') || (p.category ? t(`categorias.${p.category}`) : '');
+  return { section: 'aportes', text, preview, path };
+}

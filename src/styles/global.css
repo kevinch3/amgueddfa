@@ -336,3 +336,15 @@ fieldset.campo { border: 0; padding: 0; }
 .aporte-thumb img { display: block; width: 96px; height: auto; max-height: 128px; object-fit: cover; border: 1px solid var(--rule); background: var(--paper-hi); }
 .aporte-texto { min-width: 0; }
 .aporte-paginas { margin: 0.3rem 0 0; }
+
+/* Status pills (profile list, pending drafts on edition pages). */
+.pill { display: inline-block; font: 600 0.8rem/1.3 var(--sans); padding: 0.1rem 0.55rem; border-radius: 999px; border: 1px solid; }
+.pill-pending { color: var(--ink-soft); border-color: var(--ink-soft); background: var(--paper); }
+
+/* The contributor's own pending contributions: dashed, clearly not published yet. */
+.borradores { margin-top: 1rem; }
+.borrador { display: flex; gap: 0.75rem; align-items: flex-start; padding: 0.6rem 0.75rem; margin: 0.5rem 0; border: 1px dashed var(--ink-soft); border-radius: 4px; background: var(--paper); font-family: var(--sans); }
+.borrador img { width: 72px; height: auto; border: 1px solid var(--rule); }
+.borrador .borrador-texto { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.borrador .pill { margin-right: 0.4rem; }
+

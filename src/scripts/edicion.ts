@@ -1,5 +1,5 @@
 import staticEditions from '../../data/approved/editions.json';
-import { byLine, factDisplay, forEdition, mergeApproved, sortFacts, type Contribution } from '../lib/contrib';
+import { byLine, factDisplay, forEdition, mergeApproved, ownPending, pendingView, sortFacts, type Contribution } from '../lib/contrib';
 import { t } from '../lib/i18n';
 import { liveQuery } from '../lib/live';
 import { getClient } from '../lib/supabase';
@@ -114,6 +114,55 @@ function renderUploads(mount: HTMLElement, uploads: Contribution[], offline: boo
   if (box.childNodes.length) mount.append(box);
 }
 
+/** A short-lived link to the contributor's own original (allowed by uploads_select_own). */
+async function ownOriginal(path: string): Promise<string | null> {
+  const client = getClient();
+  if (!client) return null;
+  try {
+    const { data, error } = await client.storage.from('uploads').createSignedUrl(path, 600);
+    return error ? null : (data?.signedUrl ?? null);
+  } catch {
+    return null;
+  }
+}
+
+/** One pending contribution as a dashed card: pill, text, and an image preview or the file name. */
+function draftCard(c: Contribution): HTMLDivElement {
+  const v = pendingView(c);
+  const card = el('div', 'borrador');
+  const text = el('div', 'borrador-texto');
+  text.append(el('span', 'pill pill-pending', t('edicion.pendiente')), v.text);
+  if (v.preview === 'pdf' && v.path) text.append(el('p', 'muted small', v.path.split('/').pop() ?? ''));
+  card.append(text);
+  if (v.preview === 'image' && v.path) {
+    void ownOriginal(v.path).then((src) => {
+      if (!src) return;
+      const img = el('img');
+      img.src = src;
+      img.alt = v.text;
+      img.loading = 'lazy';
+      card.prepend(img);
+    });
+  }
+  return card;
+}
+
+/** The signed-in contributor's own pending rows, each in its section, after the published ones. */
+async function renderDrafts(festival: string, year: number, mounts: Record<'hechos' | 'recuerdos' | 'aportes', HTMLElement | null>): Promise<void> {
+  const rows = await ownPending(festival, year);
+  for (const m of Object.values(mounts)) m?.querySelector('.borradores')?.remove();
+  if (!rows.length) return;
+  for (const section of ['hechos', 'recuerdos', 'aportes'] as const) {
+    const mount = mounts[section];
+    const mine = rows.filter((c) => pendingView(c).section === section);
+    if (!mount || !mine.length) continue;
+    const box = el('div', 'borradores');
+    if (section === 'aportes') box.append(el('h3', 'small', t('edicion.pendientes_titulo')));
+    for (const c of mine) box.append(draftCard(c));
+    mount.append(box);
+  }
+}
+
 function readStatic(): Contribution[] {
   const s = document.getElementById('aprobados-data');
   if (!s?.textContent) return [];
@@ -149,6 +198,7 @@ async function hydrateEdition(): Promise<void> {
   if (live.offline) {
     // Keep what the static build rendered; only say we could not check for news.
     if (aportes) renderUploads(aportes, forEdition(readStatic(), festival, year, 'upload'), true);
+    await renderDrafts(festival, year, { hechos, recuerdos, aportes });
     return;
   }
   const all = mergeApproved(readStatic(), live.data);
@@ -156,6 +206,7 @@ async function hydrateEdition(): Promise<void> {
   if (recuerdos) renderMemories(recuerdos, forEdition(all, festival, year, 'memory'));
   if (aportes) renderUploads(aportes, forEdition(all, festival, year, 'upload'), false);
   applyUploadStates(document, uploadStates(forEdition(all, festival, year, 'upload')));
+  await renderDrafts(festival, year, { hechos, recuerdos, aportes });
 }
 
 /**

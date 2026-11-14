@@ -79,6 +79,8 @@
   },
   "edicion": {
     "tapa_alt": "Tapa del programa de {festival} {year}",
+    "pendiente": "Pendiente de revisión",
+    "pendientes_titulo": "Tus aportes en revisión",
     "falta_programa": "Todavía no tenemos el programa completo — ¿lo tenés?",
     "contribuir": "Contribuir",
     "hechos_titulo": "Datos de la edición",

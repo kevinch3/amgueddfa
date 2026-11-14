@@ -198,7 +198,7 @@ function card(c: Pending, done: (key: string) => void): HTMLLIElement {
     if (await run(btns, msg, fn)) {
       if (c.type === 'upload') {
         choices = choices.filter((x) => x.g !== choice);
-        recordApprovedUpload(c, gap, choices.map((x) => x.g));
+        recordApprovedUpload(c, gap, choices.map((x) => x.g), flags ?? undefined);
         syncBoxes();
       }
       done('admin.aprobado');

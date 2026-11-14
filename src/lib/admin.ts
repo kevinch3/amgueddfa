@@ -48,7 +48,9 @@ export function fillsGap(festival: string | null, year: number | null, category:
   const cat = ctx.catalog instanceof Set ? ctx.catalog : new Set(ctx.catalog);
   if (cat.has(k)) return false;
   return !ctx.approved.some(
-    (c) => c.type === 'upload' && c.festival === festival && c.year === year && c.payload?.category === category,
+    (c) => c.type === 'upload' && c.festival === festival && c.year === year && c.payload?.category === category
+      // A programa gap closes only with a confirmed-complete programa, not a cover or a few pages.
+      && (category !== 'programa' || c.payload?.complete === true),
   );
 }
 
@@ -69,9 +71,9 @@ export function gapOverride(g: GapChoice): boolean | undefined {
   return g.touched ? g.checked : undefined;
 }
 
-/** After an upload is approved: count it, then recompute every untouched choice. */
-export function recordApprovedUpload(c: Pending, ctx: GapCtx, choices: GapChoice[]): void {
-  ctx.approved.push({ type: 'upload', festival: c.festival, year: c.year, payload: c.payload });
+/** After an upload is approved: count it (with the admin's flags), then recompute every untouched choice. */
+export function recordApprovedUpload(c: Pending, ctx: GapCtx, choices: GapChoice[], flags?: ReviewFlags): void {
+  ctx.approved.push({ type: 'upload', festival: c.festival, year: c.year, payload: { ...c.payload, ...(flags ?? {}) } });
   for (const g of choices) if (!g.touched) g.checked = fillsGap(g.festival, g.year, g.category, ctx);
 }
 

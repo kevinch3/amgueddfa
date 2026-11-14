@@ -84,12 +84,23 @@ describe('fillsGap', () => {
     expect(fillsGap('chubut', 1992, 'programa', { catalog, approved: [] })).toBe(true);
     expect(fillsGap('chubut', 1991, 'programa', { catalog, approved: [] })).toBe(true);
     expect(fillsGap('chubut', 1990, 'programa', { catalog, approved: [] })).toBe(false);
-    const live = [{ type: 'upload', festival: 'chubut', year: 1992, payload: { category: 'programa' } }];
+    const live = [{ type: 'upload', festival: 'chubut', year: 1992, payload: { category: 'programa', complete: true } }];
     expect(fillsGap('chubut', 1992, 'programa', { catalog, approved: live })).toBe(false);
     expect(fillsGap('chubut', 1992, 'bases', { catalog, approved: live })).toBe(true);
     // a fact for the edition is not an upload in that category
     const fact = [{ type: 'fact', festival: 'chubut', year: 1992, payload: { category: 'programa' } }];
     expect(fillsGap('chubut', 1992, 'programa', { catalog, approved: fact })).toBe(true);
+  });
+
+  it('a programa gap stays open until a confirmed-complete programa is approved', () => {
+    const tapa = [{ type: 'upload', festival: 'chubut', year: 1992, payload: { category: 'programa', tapa: true, complete: false } }];
+    expect(fillsGap('chubut', 1992, 'programa', { catalog, approved: tapa })).toBe(true);
+    const ctx = { catalog, approved: [] as any[] };
+    const pending = (payload: any): Pending => ({ ...upload, year: 1992, payload: { storage_path: 'u1/x.jpg', category: 'programa', ...payload } });
+    recordApprovedUpload(pending({ alcance: 'tapa' }), ctx, [], { complete: false, tapa: true });
+    expect(fillsGap('chubut', 1992, 'programa', ctx)).toBe(true);
+    recordApprovedUpload(pending({ alcance: 'completo' }), ctx, [], { complete: true, tapa: false });
+    expect(fillsGap('chubut', 1992, 'programa', ctx)).toBe(false);
   });
 
   it('no edition (year null) never fills a gap', () => {
@@ -174,8 +185,9 @@ describe('approveUpload', () => {
     const o = gapChoice(other, gap);
     expect([a.checked, b.checked, o.checked]).toEqual([true, true, true]);
 
-    await approveUpload(upload, { client, fetchFn, make, gap, fillsGap: gapOverride(a) });
-    recordApprovedUpload(upload, gap, [b, o]);
+    const confirmed = { complete: true, tapa: false };
+    await approveUpload(upload, { client, fetchFn, make, gap, fillsGap: gapOverride(a), flags: confirmed });
+    recordApprovedUpload(upload, gap, [b, o], confirmed);
     expect(b.checked).toBe(false);
     expect(o.checked).toBe(true);
     await approveUpload(second, { client, fetchFn, make, gap, fillsGap: gapOverride(b) });

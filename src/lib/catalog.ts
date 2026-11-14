@@ -117,9 +117,11 @@ export function editionCover(
     const cover = uploadCover(c, mediaBase);
     if (cover) return cover;
   }
-  // Catalog: an item curated as the cover ("Tapa…", "Portada…") first, then page 1 of the programa PDF.
+  // Catalog: a programa item curated as the cover ("Tapa…", "Portada…") first, then page 1 of the programa PDF.
+  // Only programa: e.g. the rules of a cover-design contest ("concurso-tapa-programa", bases) are not the cover.
   const list = editionItems(f, year).filter((i) => !i.restricted && pageUrls(i).length > 0);
-  const fromCatalog = list.find((i) => TAPA_TITLE.test(i.title)) ?? list.find((i) => i.category === 'programa' && i.kind === 'pdf');
+  const fromCatalog = list.find((i) => i.category === 'programa' && TAPA_TITLE.test(i.title))
+    ?? list.find((i) => i.category === 'programa' && i.kind === 'pdf');
   if (fromCatalog) {
     const page = pageUrls(fromCatalog)[0];
     return { page, thumb: thumbUrl(fromCatalog) ?? page };

@@ -310,19 +310,20 @@ export async function ownPending(festival: string, year: number, client: Supabas
   return rows.data;
 }
 
-export type PendingView = { section: 'hechos' | 'recuerdos' | 'aportes'; text: string; preview: 'image' | 'pdf' | null; path: string | null };
+export type PendingView = { section: 'hechos' | 'recuerdos' | 'aportes'; text: string; preview: 'image' | 'pdf' | null; path: string | null; label: string | null };
 
 /** Where a pending contribution shows on the edition page, its text, and whether its original can be previewed. */
 export function pendingView(c: Contribution): PendingView {
   const p = c.payload ?? {};
   if (c.type === 'fact') {
     const { label, value } = factDisplay(c);
-    return { section: 'hechos', text: `${label}: ${value}`, preview: null, path: null };
+    return { section: 'hechos', text: `${label}: ${value}`, preview: null, path: null, label: null };
   }
-  if (c.type === 'memory') return { section: 'recuerdos', text: String(p.text ?? ''), preview: null, path: null };
+  if (c.type === 'memory') return { section: 'recuerdos', text: String(p.text ?? ''), preview: null, path: null, label: null };
   const path = typeof p.storage_path === 'string' ? p.storage_path : null;
   const ext = path?.split('.').pop()?.toLowerCase() ?? '';
   const preview = ['jpg', 'jpeg', 'png', 'webp'].includes(ext) ? 'image' : ext === 'pdf' ? 'pdf' : null;
   const text = String(p.description ?? '') || (p.category ? t(`categorias.${p.category}`) : '');
-  return { section: 'aportes', text, preview, path };
+  // The stored name is a random id, so a PDF gets a plain label instead.
+  return { section: 'aportes', text, preview, path, label: preview === 'pdf' ? t('edicion.archivo_pdf') : null };
 }

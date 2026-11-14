@@ -121,6 +121,14 @@ describe('catalog', () => {
       expect(editionCover('chubut', 1991, [], B)).toBeNull();
     });
 
+    it('only programa items titled tapa count (not e.g. the cover-design contest rules)', () => {
+      setItems([
+        mk({ id: '000000000004', year: 1990, category: 'bases', kind: 'image', title: 'concurso-tapa-programa', page_paths: ['d/p01.webp'], thumb: 'd/thumb.webp' }),
+        mk({ id: '000000000005', year: 1990, category: 'programa', kind: 'image', title: 'Tapa programa 1990 foto', page_paths: ['e/p01.webp'], thumb: 'e/thumb.webp' }),
+      ]);
+      expect(editionCover('chubut', 1990, [], B)?.page).toMatch(/\/media\/e\/p01\.webp$/);
+    });
+
     it('a restricted catalog programa never supplies a cover', () => {
       setItems([mk({ id: '000000000009', year: 1990, category: 'programa', kind: 'pdf', restricted: true })]);
       expect(editionCover('chubut', 1990, [], B)).toBeNull();

@@ -219,10 +219,10 @@ describe('pending drafts', () => {
     const mk = (type: string, payload: any) =>
       ({ id: 'x', type, festival: 'chubut', year: 1930, item_id: null, payload, created_at: '', reviewed_at: null, display_name: null }) as Contribution;
     expect(pendingView(mk('upload', { category: 'programa', storage_path: 'u/a.JPG' })))
-      .toEqual({ section: 'aportes', text: 'Programa', preview: 'image', path: 'u/a.JPG' });
+      .toEqual({ section: 'aportes', text: 'Programa', preview: 'image', path: 'u/a.JPG', label: null });
     expect(pendingView(mk('upload', { category: 'bases', storage_path: 'u/a.pdf', description: 'Bases' })))
-      .toEqual({ section: 'aportes', text: 'Bases', preview: 'pdf', path: 'u/a.pdf' });
-    expect(pendingView(mk('memory', { text: 'Un recuerdo' }))).toEqual({ section: 'recuerdos', text: 'Un recuerdo', preview: null, path: null });
+      .toEqual({ section: 'aportes', text: 'Bases', preview: 'pdf', path: 'u/a.pdf', label: 'Archivo PDF' });
+    expect(pendingView(mk('memory', { text: 'Un recuerdo' }))).toEqual({ section: 'recuerdos', text: 'Un recuerdo', preview: null, path: null, label: null });
     expect(pendingView(mk('fact', { field: 'venue', value: 'Trelew' }))).toMatchObject({ section: 'hechos', preview: null });
     expect(pendingView(mk('fact', { field: 'venue', value: 'Trelew' })).text).toContain('Trelew');
   });

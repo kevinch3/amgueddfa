@@ -132,7 +132,7 @@ function draftCard(c: Contribution): HTMLDivElement {
   const card = el('div', 'borrador');
   const text = el('div', 'borrador-texto');
   text.append(el('span', 'pill pill-pending', t('edicion.pendiente')), v.text);
-  if (v.preview === 'pdf' && v.path) text.append(el('p', 'muted small', v.path.split('/').pop() ?? ''));
+  if (v.label) text.append(el('p', 'muted small', v.label));
   card.append(text);
   if (v.preview === 'image' && v.path) {
     void ownOriginal(v.path).then((src) => {

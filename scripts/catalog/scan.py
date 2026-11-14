@@ -28,7 +28,8 @@ KINDS = {
     "csv": "table",
 }
 PRE_EXISTING = "(pre-existing in folder; origin not recorded)"
-IGNORED = {"INDEX.md", "SOURCES.tsv", "amgueddfa"}
+# Videos/ + VIDEOS.tsv: YouTube thumbnails and links, catalogued separately (not items yet).
+IGNORED = {"INDEX.md", "SOURCES.tsv", "amgueddfa", "Videos", "VIDEOS.tsv"}
 
 
 def _title(name: str) -> str:

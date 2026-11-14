@@ -105,3 +105,16 @@ def test_only_facebook_items_publish_notes(items):
     for i in items:
         if i.source_label != "Facebook":
             assert i.note_public == "", i.src_path
+
+
+def test_videos_tree_is_not_scanned(tmp_path):
+    # YouTube thumbnails live in a separate Videos/ tree with their own VIDEOS.tsv;
+    # they must not become catalog items nor need SOURCES.tsv rows.
+    a = tmp_path / "a"
+    shutil.copytree(FIX, a)
+    before = {i.id for i in scan(a, set())}
+    v = a / "Videos/Eisteddfod_de_Dolavon/2015"
+    v.mkdir(parents=True)
+    (v / "yt_coro_AbCdEfGhIjK.jpg").write_bytes(b"thumb")
+    (a / "VIDEOS.tsv").write_text("video_id\turl\n", encoding="utf-8")
+    assert {i.id for i in scan(a, set())} == before

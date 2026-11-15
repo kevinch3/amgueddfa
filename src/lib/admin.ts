@@ -21,6 +21,26 @@ export interface Pending {
   display_name?: string | null;
 }
 
+export type ReportAction = { accion: 'ocultar' | 'mover' | 'ninguna'; texto: string; aprobar: string };
+
+/**
+ * What approving a report will do, in words for the queue: hide, move (a fix
+ * without an eisteddfod or year keeps the one it was reported under), or
+ * nothing automatic ("otro": the admin fixes it by hand or edits the payload).
+ */
+export function reportAction(c: Pending): ReportAction {
+  const p = c.payload ?? {};
+  if (p.problema === 'no_corresponde') return { accion: 'ocultar', texto: t('admin.informe.ocultar'), aprobar: t('admin.informe.aprobar_ocultar') };
+  if (p.problema === 'otra_edicion' && p.arreglo) {
+    const a = p.arreglo as Record<string, any>;
+    const fest = a.festival || c.festival;
+    const destino = [fest ? t(`festivales.${fest}`) : '', a.year ?? c.year ?? ''].filter((x) => x !== '').join(' ');
+    const seccion = a.category ? `, ${t(`categorias.${a.category}`)}` : '';
+    return { accion: 'mover', texto: t('admin.informe.mover', { destino: destino + seccion }), aprobar: t('admin.informe.aprobar_mover') };
+  }
+  return { accion: 'ninguna', texto: t('admin.informe.ninguna'), aprobar: t('admin.aprobar') };
+}
+
 /** Approved rows (static export or live) as far as fillsGap needs them. */
 export type ApprovedLike = { type: string; festival: string | null; year: number | null; payload: Record<string, any> | null };
 /** What fillsGap checks: "festival|year|category" keys of the static catalog, plus approved uploads. */

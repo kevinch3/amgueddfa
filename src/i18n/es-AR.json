@@ -476,6 +476,17 @@
       "visitas_enlace": "Abrir Cloudflare Web Analytics",
       "dias_semana": "lun,mar,mié,jue,vie,sáb,dom",
       "error": "No pudimos cargar las estadísticas. Probá de nuevo en un rato."
+    },
+    "informe": {
+      "ocultar": "Ocultar del sitio",
+      "mover": "Mover a {destino}",
+      "ninguna": "Sin cambio automático",
+      "aprobar_ocultar": "Aprobar y ocultar",
+      "aprobar_mover": "Aprobar y mover",
+      "problema": "Problema: {problema}",
+      "que_pasa": "Al aprobar: {accion}",
+      "explicacion": "Explicación (no se publica)",
+      "video": "Video"
     }
   },
   "insignias": {

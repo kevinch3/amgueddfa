@@ -16,6 +16,7 @@ import {
   recordApprovedUpload,
   reject,
   rejectAll,
+  reportAction,
   releaseItem,
   restrictedPreview,
   reviewFlags,
@@ -39,6 +40,7 @@ import { mountFactEditor } from './fact-editor';
 import { t } from '../lib/i18n';
 import { url } from '../lib/paths';
 import { getClient } from '../lib/supabase';
+import { videoThumb, videoUrl } from '../lib/videos';
 import { el, gate, loginHref } from './ui';
 
 type Restricted = { id: string; title: string; festival: string; year: number | null; category: string; thumb: string | null; page_paths: string[] };
@@ -112,6 +114,28 @@ async function preview(c: Pending, box: HTMLElement): Promise<void> {
   box.append(p);
 }
 
+/** A report or note in words: the video, the problem, the private explanation and what approval does. */
+function readable(c: Pending): HTMLElement {
+  const box = el('div', { class: 'admin-informe' });
+  const p = c.payload ?? {};
+  if (c.type === 'note') {
+    box.append(el('blockquote', {}, String(p.text ?? '')));
+    return box;
+  }
+  const v = p.video as { id?: string; title?: string; channel?: string } | undefined;
+  if (p.objetivo === 'video' && v?.id) {
+    const a = el('a', { href: videoUrl(v.id), target: '_blank', rel: 'noopener noreferrer', class: 'admin-video' });
+    a.append(el('img', { src: videoThumb(v.id), alt: '', loading: 'lazy', width: '160', height: '90' }), el('span', {}, `${v.title ?? v.id}${v.channel ? ` · ${v.channel}` : ''}`));
+    box.append(a);
+  }
+  box.append(el('p', {}, t('admin.informe.problema', { problema: t(`informar.${p.problema}`) })));
+  box.append(el('h3', { class: 'small' }, t('admin.informe.explicacion')), el('blockquote', {}, String(p.texto ?? '')));
+  const what = el('p');
+  what.append(el('strong', {}, t('admin.informe.que_pasa', { accion: reportAction(c).texto })));
+  box.append(what);
+  return box;
+}
+
 function card(c: Pending, done: (key: string) => void): HTMLLIElement {
   const li = el('li', { class: 'admin-card' });
   const h = el('h2');
@@ -125,12 +149,12 @@ function card(c: Pending, done: (key: string) => void): HTMLLIElement {
     p.append(el('a', { href: url(`item/${c.item_id}/`) }, data.titles[c.item_id] ?? c.item_id));
     li.append(p);
   }
-  li.append(el('pre', {}, JSON.stringify(editable(c), null, 2)));
+  li.append(c.type === 'report' || c.type === 'note' ? readable(c) : el('pre', {}, JSON.stringify(editable(c), null, 2)));
 
   const msg = el('p', { class: 'contrib-msg', role: 'alert' });
   msg.hidden = true;
   const actions = el('div', { class: 'acciones' });
-  const ok = el('button', { type: 'button', class: 'btn' }, t('admin.aprobar'));
+  const ok = el('button', { type: 'button', class: 'btn' }, c.type === 'report' ? reportAction(c).aprobar : t('admin.aprobar'));
   const no = el('button', { type: 'button', class: 'btn btn-quiet' }, t('admin.rechazar'));
   const btns = [ok, no];
   let choice: GapChoice | null = null;

@@ -16,6 +16,7 @@ import {
   rejectAll,
   releaseItem,
   restrictedPreview,
+  reportAction,
   reviewFlags,
   searchUsers,
   type Pending,
@@ -537,3 +538,21 @@ describe('review fixes', () => {
   });
 });
 
+describe('reportAction', () => {
+  const rep = (payload: Record<string, unknown>, over: Partial<Pending> = {}): Pending => ({
+    id: 'r1', user_id: 'u', type: 'report', festival: 'chubut', year: 2015, item_id: null, created_at: '2026-11-15T10:00:00Z', payload, ...over,
+  });
+
+  it('describes what approving will do', () => {
+    expect(reportAction(rep({ objetivo: 'video', problema: 'no_corresponde' }))).toEqual({ accion: 'ocultar', texto: 'Ocultar del sitio', aprobar: 'Aprobar y ocultar' });
+    expect(reportAction(rep({ objetivo: 'video', problema: 'otro' }))).toEqual({ accion: 'ninguna', texto: 'Sin cambio automático', aprobar: 'Aprobar' });
+    expect(reportAction(rep({ objetivo: 'video', problema: 'otra_edicion', arreglo: { festival: 'juventud', year: 2014 } })))
+      .toEqual({ accion: 'mover', texto: 'Mover a Eisteddfod de la Juventud 2014', aprobar: 'Aprobar y mover' });
+  });
+
+  it('a move with only a year keeps the reported eisteddfod; a document move names its section', () => {
+    expect(reportAction(rep({ objetivo: 'video', problema: 'otra_edicion', arreglo: { year: 2014 } })).texto).toBe('Mover a Eisteddfod del Chubut 2014');
+    expect(reportAction(rep({ objetivo: 'documento', problema: 'otra_edicion', arreglo: { category: 'bases' } }, { item_id: 'abc' })).texto)
+      .toBe('Mover a Eisteddfod del Chubut 2015, Bases y avisos');
+  });
+});

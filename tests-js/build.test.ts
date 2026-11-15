@@ -7,7 +7,8 @@ import approved from '../data/approved/contributions.json';
 import editionsData from '../data/approved/editions.json';
 import { editionCover, undocumented, yearRange } from '../src/lib/catalog';
 import { decades } from '../src/lib/timeline';
-import { applyVideoReports, editionVideos, type Video } from '../src/lib/videos';
+import { applyVideoReports, type Video } from '../src/lib/videos';
+import { editionVideos } from '../src/lib/videos-data';
 import videosData from '../src/data/videos.json';
 import { transcribedIds } from '../src/lib/transcripciones';
 import { PUBLIC_WINNERS, winnerIds } from '../src/lib/ganadores';
@@ -342,6 +343,16 @@ describe('static build', () => {
     expect(read(`item/${pub.id}/index.html`)).toContain(`data-category="${pub.category}"`);
     for (const k of ['titulo', 'pregunta', 'no_corresponde', 'otra_edicion', 'otro', 'texto_label', 'nota', 'nota_label', 'ingresar']) {
       expect(t(`informar.${k}`), k).not.toBe(`informar.${k}`);
+    }
+  });
+
+  it('browser scripts never bundle the video list or the approved export', () => {
+    const vids = (videosData as { videos: Video[] }).videos;
+    const chunks = readdirSync(join(DIST, '_astro')).filter((n) => n.endsWith('.js'));
+    for (const n of chunks) {
+      const js = readFileSync(join(DIST, '_astro', n), 'utf8');
+      expect(vids.slice(0, 50).filter((v) => js.includes(v.id)), n).toEqual([]);
+      expect((approved as { id: string }[]).filter((c) => js.includes(c.id)).map((c) => c.id), n).toEqual([]);
     }
   });
 

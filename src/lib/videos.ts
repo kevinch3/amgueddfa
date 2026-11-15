@@ -1,5 +1,5 @@
-import raw from '../data/videos.json';
-import approvedRaw from '../../data/approved/contributions.json';
+// Pure helpers only: browser scripts import this module, so it must not import the video list
+// or the approved export (those live in videos-data.ts, build time only).
 import { when, type TagLike } from './tags';
 import type { FestivalSlug } from './types';
 
@@ -19,7 +19,7 @@ export type Video = {
 /** Ceremonies first, then whole sessions and news; single performances last. */
 export const KIND_ORDER: Video['kind'][] = ['ceremonia', 'sesion', 'noticia', 'actuacion'];
 
-export function editionVideos(f: FestivalSlug, year: number, list: Video[] = ALL): Video[] {
+export function editionVideos(f: FestivalSlug, year: number, list: Video[]): Video[] {
   return list
     .filter((v) => v.festival === f && v.year === year)
     .sort((a, b) => KIND_ORDER.indexOf(a.kind) - KIND_ORDER.indexOf(b.kind) || a.title.localeCompare(b.title, 'es'));
@@ -117,5 +117,3 @@ export function videoDiff(festival: string, year: number, shownIds: string[], ro
   return { remove, add };
 }
 
-/** Exported videos with the last export's approved reports applied (hidden ones dropped, moved ones moved). */
-const ALL: Video[] = applyVideoReports((raw as { videos: Video[] }).videos, approvedRaw as TagLike[]);

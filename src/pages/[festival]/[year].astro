@@ -17,7 +17,7 @@ import editionsStatic from '../../../data/approved/editions.json';
 import { byLine, factDisplay, forEdition, jsonForScript, sortFacts, sourceLine, type Contribution } from '../../lib/contrib';
 import { mediaUrl, uploadMedia } from '../../lib/uploads';
 import { absUrl, editionDescription, editionFacts, editionJsonLd } from '../../lib/seo';
-import { editionVideos } from '../../lib/videos';
+import { editionVideos } from '../../lib/videos-data';
 
 export function getStaticPaths() {
   return festivals().flatMap((f) => {

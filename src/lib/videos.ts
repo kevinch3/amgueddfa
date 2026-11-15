@@ -88,5 +88,34 @@ export function videoFromReport(r: TagLike): Video | null {
   return v.festival && Number.isInteger(v.year) ? v : null;
 }
 
+/**
+ * What live reports (approved after this page was built) change on one
+ * edition page: shown videos that were hidden or moved away, and videos moved
+ * here (rebuilt from the report's copy, once each). Same rule as the build:
+ * oldest approval first, and nothing un-hides.
+ */
+export function videoDiff(festival: string, year: number, shownIds: string[], rows: TagLike[]): { remove: string[]; add: Video[] } {
+  const mine = rows.filter(isVideoReport).sort((a, b) => when(a).localeCompare(when(b)));
+  if (!mine.length) return { remove: [], add: [] };
+  const here = (v: { festival: string; year: number }) => v.festival === festival && v.year === year;
+  const shown = shownIds.map((id): Video => ({ id, festival: festival as FestivalSlug, year, kind: 'actuacion', title: '', channel: '', date: '', year_inferred: false }));
+  const stay = new Set(applyVideoReports(shown, mine).filter(here).map((v) => v.id));
+  const remove = shownIds.filter((id) => !stay.has(id));
+  const hidden = new Set<string>();
+  const last = new Map<string, TagLike>();
+  for (const r of mine) {
+    const id = String(r.payload!.video.id);
+    if (r.payload!.problema === 'no_corresponde') hidden.add(id);
+    last.set(id, r);
+  }
+  const add: Video[] = [];
+  for (const [id, r] of last) {
+    if (hidden.has(id) || shownIds.includes(id)) continue;
+    const v = videoFromReport(r);
+    if (v && here(v)) add.push(v);
+  }
+  return { remove, add };
+}
+
 /** Exported videos with the last export's approved reports applied (hidden ones dropped, moved ones moved). */
 const ALL: Video[] = applyVideoReports((raw as { videos: Video[] }).videos, approvedRaw as TagLike[]);

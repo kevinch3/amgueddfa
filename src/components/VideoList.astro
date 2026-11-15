@@ -2,42 +2,40 @@
 import { t } from '../lib/i18n';
 import { splitVideos, videoThumb, videoUrl, type Video } from '../lib/videos';
 
-interface Props { videos: Video[] }
+// Always rendered (hidden when empty) so live corrections (scripts/live-videos.ts) can move videos in.
+// Each card carries its data so the live script and "Informar un error" can read it; live-videos.ts builds the same markup.
+interface Props { videos: Video[]; festival: string; year: number }
+const { festival, year } = Astro.props;
 const { highlights, performances } = splitVideos(Astro.props.videos);
+const total = highlights.length + performances.length;
 ---
-{(highlights.length > 0 || performances.length > 0) && (
-  <section class="section" aria-labelledby="videos-t">
-    <h2 id="videos-t">{t('videos.titulo')} <span class="muted small">({highlights.length + performances.length})</span></h2>
-    <p class="measure muted small">{t('videos.ayuda')}</p>
-    {highlights.length > 0 && (
-      <ul class="videos">
-        {highlights.map((v) => (
-          <li class="video">
-            <a href={videoUrl(v.id)} rel="noopener" target="_blank">
-              <span class="vframe"><img src={videoThumb(v.id)} alt="" loading="lazy" decoding="async" width="320" height="180" /></span>
-              <span class="badge">{t(`videos.tipos.${v.kind}`)}</span>
-              <span class="t">{v.title}</span>
-              <span class="muted small">{v.channel}{v.year_inferred && <> · {t('comun.ano_estimado')}</>}</span>
-            </a>
-          </li>
-        ))}
-      </ul>
-    )}
-    {performances.length > 0 && (
-      <details class="videos-mas">
-        <summary>{t('videos.actuaciones', { n: performances.length })}</summary>
-        <ul class="videos">
-          {performances.map((v) => (
-            <li class="video">
-              <a href={videoUrl(v.id)} rel="noopener" target="_blank">
-                <span class="vframe"><img src={videoThumb(v.id)} alt="" loading="lazy" decoding="async" width="320" height="180" /></span>
-                <span class="t">{v.title}</span>
-                <span class="muted small">{v.channel}{v.year_inferred && <> · {t('comun.ano_estimado')}</>}</span>
-              </a>
-            </li>
-          ))}
-        </ul>
-      </details>
-    )}
-  </section>
-)}
+<section class="section" aria-labelledby="videos-t" data-videos data-festival={festival} data-year={year} hidden={total === 0}>
+  <h2 id="videos-t">{t('videos.titulo')} <span class="muted small">(<span data-videos-n>{total}</span>)</span></h2>
+  <p class="measure muted small">{t('videos.ayuda')}</p>
+  <ul class="videos" data-videos-lista="destacados" hidden={highlights.length === 0}>
+    {highlights.map((v) => (
+      <li class="video" data-video={v.id} data-title={v.title} data-channel={v.channel} data-kind={v.kind}>
+        <a href={videoUrl(v.id)} rel="noopener" target="_blank">
+          <span class="vframe"><img src={videoThumb(v.id)} alt="" loading="lazy" decoding="async" width="320" height="180" /></span>
+          <span class="badge">{t(`videos.tipos.${v.kind}`)}</span>
+          <span class="t">{v.title}</span>
+          <span class="muted small">{v.channel}{v.year_inferred && <> · {t('comun.ano_estimado')}</>}</span>
+        </a>
+      </li>
+    ))}
+  </ul>
+  <details class="videos-mas" hidden={performances.length === 0}>
+    <summary data-videos-actuaciones>{t('videos.actuaciones', { n: performances.length })}</summary>
+    <ul class="videos" data-videos-lista="actuaciones">
+      {performances.map((v) => (
+        <li class="video" data-video={v.id} data-title={v.title} data-channel={v.channel} data-kind={v.kind}>
+          <a href={videoUrl(v.id)} rel="noopener" target="_blank">
+            <span class="vframe"><img src={videoThumb(v.id)} alt="" loading="lazy" decoding="async" width="320" height="180" /></span>
+            <span class="t">{v.title}</span>
+            <span class="muted small">{v.channel}{v.year_inferred && <> · {t('comun.ano_estimado')}</>}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </details>
+</section>

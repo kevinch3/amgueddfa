@@ -97,6 +97,8 @@ export function updateItemPage(root: ParentNode, changes: { before: IndexItem; a
     yr.textContent = i.year ? String(i.year) : i.undated ? t('item.sin_fecha') : t('item.general');
   }
   if (!i.year_inferred) root.querySelector('[data-live="inferred"]')?.remove();
+  const gone = root.querySelector<HTMLElement>('[data-retirado]');
+  if (gone && i.hidden) gone.hidden = false;
 }
 
 /** Cards and edition coverage after corrections; returns how many items moved. */
@@ -116,7 +118,7 @@ async function run(): Promise<void> {
   const since = document.querySelector<HTMLMetaElement>('meta[name="amg-tags-at"]')?.content || '';
   const live = await liveQuery<TagLike[]>(
     (c) => {
-      let q = c.from('public_contributions').select('type, item_id, payload, reviewed_at, created_at').eq('type', 'tag');
+      let q = c.from('public_contributions').select('type, item_id, payload, reviewed_at, created_at').in('type', ['tag', 'report']);
       if (since) q = q.gt('reviewed_at', since);
       return q.order('reviewed_at', { ascending: true }).limit(2000);
     },

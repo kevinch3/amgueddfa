@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { applyVideoReports, editionVideos, splitVideos, videoFromReport, videoThumb, videoUrl, type Video } from '../src/lib/videos';
+import { applyVideoReports, editionVideos, splitVideos, videoDiff, videoFromReport, videoThumb, videoUrl, type Video } from '../src/lib/videos';
 
 const v = (over: Partial<Video>): Video => ({
   id: 'AAAAAAAAAAA', festival: 'chubut', year: 2015, kind: 'actuacion', title: 't',
@@ -64,5 +64,25 @@ describe('videos', () => {
       .toMatchObject({ festival: 'chubut', year: 2014 });
     expect(videoFromReport(rep('milk52XMm-4', 'otra_edicion', '2026-11-15T10:00:00Z', { year: 2014 }))).toBeNull();
     expect(videoFromReport(rep('milk52XMm-4', 'no_corresponde', '2026-11-15T10:00:00Z'))).toBeNull();
+  });
+
+  it('videoDiff removes hidden and moved-away videos and adds moved-in ones once', () => {
+    const at = (m: number) => `2026-11-15T10:0${m}:00Z`;
+    const rows = [
+      rep('aaaaaaaaaaa', 'no_corresponde', at(1)),
+      rep('bbbbbbbbbbb', 'otra_edicion', at(2), { festival: 'juventud', year: 2014 }),
+      rep('ccccccccccc', 'otro', at(3)),
+      { ...rep('ddddddddddd', 'otra_edicion', at(4), { festival: 'chubut', year: 2015 }), festival: 'mimosa', year: 2013 },
+      { ...rep('ddddddddddd', 'otra_edicion', at(5), { year: 2015 }), festival: 'chubut', year: 2014 },
+      { ...rep('eeeeeeeeeee', 'otra_edicion', at(6), { year: 2016 }), festival: 'chubut', year: 2015 },
+      // hidden earlier, so a later move cannot bring it back (as at build time)
+      { ...rep('fffffffffff', 'no_corresponde', at(1)), festival: 'chubut', year: 2015 },
+      { ...rep('fffffffffff', 'otra_edicion', at(7), { festival: 'chubut', year: 2015 }), festival: 'mimosa', year: 2013 },
+    ];
+    const d = videoDiff('chubut', 2015, ['aaaaaaaaaaa', 'bbbbbbbbbbb', 'ccccccccccc'], rows);
+    expect(d.remove).toEqual(['aaaaaaaaaaa', 'bbbbbbbbbbb']);
+    expect(d.add.map((x) => x.id)).toEqual(['ddddddddddd']);
+    expect(d.add[0]).toMatchObject({ festival: 'chubut', year: 2015, title: 'Patagonia 150', kind: 'sesion' });
+    expect(videoDiff('chubut', 2015, ['ccccccccccc'], [])).toEqual({ remove: [], add: [] });
   });
 });

@@ -161,7 +161,7 @@ const missingList = new Intl.ListFormat('es', { type: 'conjunction' }).format(mi
     </section>
   )}
 
-  <VideoList videos={videos} />
+  <VideoList videos={videos} festival={slug} year={year} />
 
   <section class="section island-section" aria-labelledby="recuerdos-t">
     <h2 id="recuerdos-t">{t('edicion.recuerdos_titulo')}</h2>
@@ -210,4 +210,5 @@ const missingList = new Intl.ListFormat('es', { type: 'conjunction' }).format(mi
 
 <script>
   import '../../scripts/edicion.ts';
+  import '../../scripts/live-videos.ts';
 </script>

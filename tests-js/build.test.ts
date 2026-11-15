@@ -301,8 +301,16 @@ describe('static build', () => {
       for (let y = a; y <= b; y++) {
         const html = read(`${f}/${y}/index.html`);
         const own = editionVideos(f, y);
-        expect(html.includes('id="videos-t"'), `${f} ${y}`).toBe(own.length > 0);
-        for (const v of own) expect(html).toContain(`watch?v=${v.id}`);
+        // Every edition page has the videos block (live corrections may fill it), hidden when empty.
+        const sec = html.match(/<section[^>]*data-videos[^>]*>/)?.[0];
+        expect(sec, `${f} ${y}`).toBeDefined();
+        expect(/\shidden(\s|>|=)/.test(sec!), `${f} ${y}`).toBe(own.length === 0);
+        expect(sec).toContain(`data-festival="${f}"`);
+        expect(sec).toContain(`data-year="${y}"`);
+        for (const v of own) {
+          expect(html).toContain(`watch?v=${v.id}`);
+          expect(html).toContain(`data-video="${v.id}"`);
+        }
       }
     }
     // Every exported video lands on a page that exists.

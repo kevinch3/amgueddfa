@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { approvedForEdition, isoFromParts, longDate, mergeApproved, ownPending, pendingView, sourceLine, submit, submitFacts, validate, type Contribution } from '../src/lib/contrib';
+import { approvedForEdition, approvedNotes, isoFromParts, longDate, mergeApproved, ownPending, pendingView, sourceLine, submit, submitFacts, validate, type Contribution } from '../src/lib/contrib';
 import { t } from '../src/lib/i18n';
 
 const MB = 1024 * 1024;
@@ -359,3 +359,12 @@ describe('submitFacts', () => {
   });
 });
 
+describe('approvedNotes', () => {
+  it('reads approved notes of one document from the public view', async () => {
+    const a = fakeClient({ rows: [{ id: 'n1', type: 'note', item_id: 'fcb0d30de6eb', payload: { text: 'Faltan las páginas 3 y 4.' } }] });
+    const r = await approvedNotes('fcb0d30de6eb', a.client);
+    expect(r).toEqual({ offline: false, data: [expect.objectContaining({ id: 'n1' })] });
+    expect(a.log).toContain('select:public_contributions');
+    expect(a.eqs).toEqual(expect.arrayContaining([['type', 'note'], ['item_id', 'fcb0d30de6eb']]));
+  });
+});

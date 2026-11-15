@@ -378,6 +378,18 @@ describe('static build', () => {
     }
   });
 
+  it('approved notes are baked into their item page, under "Información aportada"', () => {
+    const rows = (approved as { type: string; item_id: string | null; payload: { text?: string } }[]).filter((c) => c.type === 'note' && c.item_id);
+    for (const c of rows) {
+      const item = catalog.find((i) => i.id === c.item_id);
+      if (!item || item.restricted) continue;
+      expect(read(`item/${c.item_id}/index.html`)).toContain(String(c.payload.text ?? '').slice(0, 25));
+    }
+    // every public item page has the (possibly empty) mount for live notes
+    const pub = placed.find((i) => !i.restricted)!;
+    expect(read(`item/${pub.id}/index.html`)).toContain('id="notas"');
+  });
+
   it('approved contributor transcriptions are baked into item and edition pages', () => {
     const rows = (approved as { type: string; item_id: string | null; festival: string; year: number | null; payload: { text?: string } }[])
       .filter((c) => c.type === 'transcription' && c.item_id);

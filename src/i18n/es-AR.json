@@ -158,7 +158,8 @@
     "transcripciones_aportes": "Transcripciones de colaboradores",
     "ampliar_imagen": "Ampliar la imagen",
     "imagen": "Imagen {n} de {total}",
-    "retirado": "Este documento se retiró del archivo: no corresponde a los eisteddfodau de la Patagonia."
+    "retirado": "Este documento se retiró del archivo: no corresponde a los eisteddfodau de la Patagonia.",
+    "notas_titulo": "Información aportada"
   },
   "tabla": {
     "numero": "N.º",

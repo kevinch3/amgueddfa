@@ -497,6 +497,22 @@ export function approvedTranscriptions(itemId: string, client: SupabaseClient | 
   );
 }
 
+/** Approved notes ("Agregar información") of one catalog item, oldest first. */
+export function approvedNotes(itemId: string, client: SupabaseClient | null = getClient()) {
+  return liveQuery<Contribution[]>(
+    (c) =>
+      c.from('public_contributions')
+        .select('id, type, festival, year, item_id, payload, created_at, reviewed_at, display_name')
+        .eq('type', 'note')
+        .eq('item_id', itemId)
+        .order('created_at', { ascending: true })
+        .limit(50),
+    [],
+    6000,
+    client,
+  );
+}
+
 /** "Fuente: …" for a fact that names where it comes from; null otherwise. */
 export function sourceLine(c: Contribution): string | null {
   const f = String(c.payload?.fuente ?? '').trim();

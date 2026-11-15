@@ -414,3 +414,6 @@ fieldset.campo { border: 0; padding: 0; }
 .informar-form .opt input { margin-top: 0.25rem; flex: none; }
 .informar-arreglo[hidden] { display: none; }
 .informar-btn { align-self: flex-start; font-family: var(--sans); }
+.sourcecard .notas h3 { margin: 0.8rem 0 0.4rem; }
+.sourcecard .notas .recuerdos blockquote { padding: 0.5rem 0.75rem; }
+.sourcecard .notas .recuerdos p { margin-left: 0.75rem; }

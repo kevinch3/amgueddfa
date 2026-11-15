@@ -36,6 +36,8 @@ const jsonLd = item.restricted ? null : itemJsonLd({
 // Standardized transcription (committed) and approved contributor transcriptions (last export; transcripciones.ts merges live rows).
 const transcription = item.restricted ? null : transcriptionFor(item.id);
 const contributed = item.restricted ? [] : (approvedRaw as Contribution[]).filter((c) => c.type === 'transcription' && c.item_id === item.id);
+// Approved notes ("Agregar información") from the last export; transcripciones.ts merges live rows.
+const notes = item.restricted ? [] : (approvedRaw as Contribution[]).filter((c) => c.type === 'note' && c.item_id === item.id);
 const retrieved = item.retrieved
   ? new Date(`${item.retrieved}T12:00:00`).toLocaleDateString('es-AR', { day: 'numeric', month: 'long', year: 'numeric' })
   : '';
@@ -131,6 +133,17 @@ const retrieved = item.retrieved
             <h3 class="small">{t('item.nota')}</h3>
             <p class="small">{item.note_public}</p>
           </>
+        )}
+        {!item.restricted && (
+          <div class="island-section notas">
+            <h3 class="small">{t('item.notas_titulo')}</h3>
+            <Mount id="notas" festival={item.festival} year={item.year} item={item.id}>{notes.length > 0 && (
+              <ul class="recuerdos">
+                {notes.map((c) => <li><blockquote>{String(c.payload?.text ?? '')}</blockquote>{byLine(c) && <p class="muted small">{byLine(c)}</p>}</li>)}
+              </ul>
+            )}</Mount>
+            <script type="application/json" id="notas-data" set:html={jsonForScript(notes)}></script>
+          </div>
         )}
       </section>
       {!item.restricted && (

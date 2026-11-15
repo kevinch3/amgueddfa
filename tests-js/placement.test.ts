@@ -28,4 +28,10 @@ describe('placement', () => {
     expect(s.get('chubut:1996')).toBe('none');
     expect(s.get('chubut:1986')).toBe('full');
   });
+
+  it('hidden items are out of every scope and count as a change', () => {
+    expect(inScope(it0({ hidden: true }), { festival: 'chubut', year: 1996, category: 'programa' })).toBe(false);
+    expect(inScope(it0({ year: null, undated: true, hidden: true }), { festival: 'chubut', year: 'none' })).toBe(false);
+    expect(changedItems([it0({})], [it0({ hidden: true })]).map((c) => c.after.id)).toEqual(['a']);
+  });
 });

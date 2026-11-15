@@ -4,14 +4,14 @@ import type { EditionState } from './types';
 
 export type IndexItem = {
   id: string; title: string; festival: string; year: number | null; undated: boolean; category: string;
-  kind: string; restricted: boolean; year_inferred: boolean; thumb: string | null;
+  kind: string; restricted: boolean; year_inferred: boolean; thumb: string | null; hidden?: boolean;
 };
 
 /** What a card list shows: an edition's category, or a festival's undated / general items. */
 export type Scope = { festival: string; year: number | 'none'; category?: string; undated?: boolean };
 
 export function inScope(i: IndexItem, s: Scope): boolean {
-  if (i.festival !== s.festival) return false;
+  if (i.hidden || i.festival !== s.festival) return false;
   if (s.year === 'none') return i.year === null && (s.undated === undefined || i.undated === s.undated);
   return i.year === s.year && (s.category === undefined || i.category === s.category);
 }
@@ -24,7 +24,7 @@ export function changedItems(before: IndexItem[], after: IndexItem[]): { before:
   const out: { before: IndexItem; after: IndexItem }[] = [];
   for (const a of after) {
     const b = old.get(a.id);
-    if (b && KEYS.some((k) => b[k] !== a[k])) out.push({ before: b, after: a });
+    if (b && (KEYS.some((k) => b[k] !== a[k]) || Boolean(b.hidden) !== Boolean(a.hidden))) out.push({ before: b, after: a });
   }
   return out;
 }

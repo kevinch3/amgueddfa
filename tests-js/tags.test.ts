@@ -50,4 +50,23 @@ describe('tags', () => {
     expect(latestTagAt([{ type: 'tag', reviewed_at: '2026-01-01T00:00:00Z' }, { type: 'tag', reviewed_at: '2026-11-14T15:48:54Z' }, { type: 'fact', reviewed_at: '2027-01-01T00:00:00Z' }])).toBe('2026-11-14T15:48:54Z');
     expect(latestTagAt([])).toBeNull();
   });
+
+  it('a document report moves like a tag, or hides; the latest approval wins', () => {
+    const doc = (problema: string, arreglo: Record<string, unknown> | undefined, at: string) =>
+      ({ type: 'report', item_id: 'a', payload: { objetivo: 'documento', problema, ...(arreglo ? { arreglo } : {}) }, reviewed_at: at });
+    const [moved] = applyTags([item({})], [doc('otra_edicion', { year: 2014 }, '2026-11-15T10:00:00Z'), { type: 'tag', item_id: 'a', payload: { year: 2016 }, reviewed_at: '2026-11-15T11:00:00Z' }]);
+    expect(moved).toMatchObject({ year: 2016, year_inferred: false });
+    const [later] = applyTags([item({})], [{ type: 'tag', item_id: 'a', payload: { year: 2016 }, reviewed_at: '2026-11-15T10:00:00Z' }, doc('otra_edicion', { year: 2014, category: 'bases' }, '2026-11-15T11:00:00Z')]);
+    expect(later).toMatchObject({ year: 2014, category: 'bases' });
+    expect(applyTags([item({})], [doc('no_corresponde', undefined, '2026-11-15T10:00:00Z')])[0].hidden).toBe(true);
+    expect(applyTags([item({})], [doc('otro', { year: 2000 }, '2026-11-15T10:00:00Z')])[0]).toMatchObject({ year: 1996 });
+    expect(applyTags([item({})], [doc('otro', undefined, '2026-11-15T10:00:00Z')])[0].hidden).toBeFalsy();
+    // a video report never touches catalog items, even with the same id
+    const vid = { type: 'report', item_id: 'a', payload: { objetivo: 'video', problema: 'no_corresponde', video: { id: 'a' } }, reviewed_at: '2026-11-15T10:00:00Z' };
+    expect(applyTags([item({})], [vid])[0].hidden).toBeFalsy();
+  });
+
+  it('latestTagAt also counts reports', () => {
+    expect(latestTagAt([{ type: 'tag', reviewed_at: '2026-11-14T15:48:54Z' }, { type: 'report', reviewed_at: '2026-11-15T09:00:00Z' }])).toBe('2026-11-15T09:00:00Z');
+  });
 });

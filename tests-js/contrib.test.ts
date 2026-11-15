@@ -112,8 +112,49 @@ describe('validate', () => {
     expect(validate('memory', { text: 'x'.repeat(5001) })).toEqual({ ok: false, key: 'contrib.error.texto' });
   });
 
+  const video = { id: 'MKRCg__AXC8', title: 'Patagonia 150 - Lucy Taylor @ Eisteddfod Genedlaethol 2015 (1/2)', channel: 'Y Wladfa 150', kind: 'sesion' };
+  const texto = 'Es del Eisteddfod Genedlaethol de Gales';
+
+  it('report: a video that is not from an eisteddfod of the Patagonia keeps a copy of the video, no fix', () => {
+    expect(validate('report', { objetivo: 'video', problema: 'no_corresponde', texto: `  ${texto} `, video, actual: { festival: 'chubut', year: 2015 } }))
+      .toEqual({ ok: true, payload: { objetivo: 'video', problema: 'no_corresponde', texto, video } });
+  });
+
+  it('report: otra_edicion needs a fix that changes something; years become numbers', () => {
+    const base = { objetivo: 'video', problema: 'otra_edicion', texto, video, actual: { festival: 'chubut', year: 2015 } };
+    expect(validate('report', base)).toEqual({ ok: false, key: 'contrib.error.arreglo' });
+    expect(validate('report', { ...base, arreglo: { festival: 'chubut', year: 2015 } })).toEqual({ ok: false, key: 'contrib.error.arreglo' });
+    expect(validate('report', { ...base, arreglo: { year: '15' } })).toEqual({ ok: false, key: 'contrib.error.arreglo' });
+    expect(validate('report', { ...base, arreglo: { festival: 'nada' } })).toEqual({ ok: false, key: 'contrib.error.arreglo' });
+    expect(validate('report', { ...base, arreglo: { year: '2014' } })).toEqual({ ok: true, payload: { objetivo: 'video', problema: 'otra_edicion', texto, video, arreglo: { year: 2014 } } });
+    // a video has no section: a category is dropped
+    expect(validate('report', { ...base, arreglo: { year: 2014, category: 'bases' } })).toMatchObject({ ok: true, payload: { arreglo: { year: 2014 } } });
+  });
+
+  it('report: a document fix may change its section; otro needs no fix', () => {
+    const doc = { objetivo: 'documento', texto, actual: { festival: 'chubut', year: 1996, category: 'programa' } };
+    expect(validate('report', { ...doc, problema: 'otra_edicion', arreglo: { category: 'bases', festival: '' } }))
+      .toEqual({ ok: true, payload: { objetivo: 'documento', problema: 'otra_edicion', texto, arreglo: { category: 'bases' } } });
+    expect(validate('report', { ...doc, problema: 'otra_edicion', arreglo: { category: 'programa' } })).toEqual({ ok: false, key: 'contrib.error.arreglo' });
+    expect(validate('report', { ...doc, problema: 'otro', arreglo: { year: 2000 } })).toEqual({ ok: true, payload: { objetivo: 'documento', problema: 'otro', texto } });
+  });
+
+  it('report: needs a known target and problem, a video id, and 10 to 1000 characters', () => {
+    expect(validate('report', { objetivo: 'video', problema: 'no_corresponde', texto: 'corto', video })).toEqual({ ok: false, key: 'contrib.error.texto_informe' });
+    expect(validate('report', { objetivo: 'video', problema: 'no_corresponde', texto: 'x'.repeat(1001), video })).toEqual({ ok: false, key: 'contrib.error.texto_informe' });
+    expect(validate('report', { objetivo: 'video', problema: 'x', texto, video })).toEqual({ ok: false, key: 'contrib.error.problema' });
+    expect(validate('report', { objetivo: 'x', problema: 'otro', texto })).toEqual({ ok: false, key: 'contrib.error.objetivo' });
+    expect(validate('report', { objetivo: 'video', problema: 'otro', texto, video: { title: 'sin id' } })).toEqual({ ok: false, key: 'contrib.error.objetivo' });
+  });
+
+  it('note: 10 to 1000 characters', () => {
+    expect(validate('note', { text: 'x'.repeat(9) })).toEqual({ ok: false, key: 'contrib.error.texto_informe' });
+    expect(validate('note', { text: 'x'.repeat(1001) })).toEqual({ ok: false, key: 'contrib.error.texto_informe' });
+    expect(validate('note', { text: ' Faltan las páginas 3 y 4. ' })).toEqual({ ok: true, payload: { text: 'Faltan las páginas 3 y 4.' } });
+  });
+
   it('every error key exists in es-AR.json', () => {
-    for (const k of ['tipo_archivo', 'muy_grande', 'archivo', 'categoria', 'fecha', 'campo', 'valor', 'competencia', 'etiqueta', 'ano', 'texto', 'texto_transcripcion', 'limite', 'sesion', 'alcance']) {
+    for (const k of ['tipo_archivo', 'muy_grande', 'archivo', 'categoria', 'fecha', 'campo', 'valor', 'competencia', 'etiqueta', 'ano', 'texto', 'texto_transcripcion', 'limite', 'sesion', 'alcance', 'objetivo', 'problema', 'texto_informe', 'arreglo']) {
       expect(t(`contrib.error.${k}`)).not.toBe(`contrib.error.${k}`);
     }
   });

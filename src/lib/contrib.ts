@@ -4,7 +4,7 @@ import { liveQuery } from './live';
 import { getClient } from './supabase';
 import type { CategorySlug, FestivalSlug } from './types';
 
-export type Kind = 'upload' | 'fact' | 'tag' | 'transcription' | 'memory';
+export type Kind = 'upload' | 'fact' | 'tag' | 'transcription' | 'memory' | 'report' | 'note';
 export type Result = { ok: true } | { ok: false; key: string };
 export type Validation = { ok: true; payload: Record<string, unknown> } | { ok: false; key: string };
 
@@ -44,6 +44,14 @@ export const TEXT_MAX = 5000;
 /** Transcriptions copy whole documents, so they get a longer limit than memories. */
 export const TRANSCRIPTION_MAX = 15000;
 const VALUE_MAX = 500;
+/** What a report is about, and what is wrong with it ("Informar un error"). */
+export const OBJETIVOS = ['documento', 'video'] as const;
+export type Objetivo = (typeof OBJETIVOS)[number];
+export const PROBLEMAS = ['no_corresponde', 'otra_edicion', 'otro'] as const;
+export type Problema = (typeof PROBLEMAS)[number];
+/** Length of a report's explanation and of a note. */
+export const REPORT_MIN = 10;
+export const REPORT_MAX = 1000;
 
 const OFFLINE: Result = { ok: false, key: 'estado.sin_conexion' };
 const fail = (k: string): Validation => ({ ok: false, key: `contrib.error.${k}` });
@@ -118,6 +126,50 @@ function validateTag(input: Record<string, unknown>): Validation {
   return Object.keys(payload).length ? { ok: true, payload } : fail('etiqueta');
 }
 
+/** The copy of a video a report carries, so a page can show it where it was moved to. */
+function videoCopy(v: unknown): Record<string, string> | null {
+  if (!v || typeof v !== 'object') return null;
+  const o = v as Record<string, unknown>;
+  const id = str(o.id);
+  if (!/^[\w-]{6,20}$/.test(id)) return null;
+  const out: Record<string, string> = { id };
+  for (const k of ['title', 'channel', 'kind']) {
+    const x = str(o[k]);
+    if (len(x) > 300) return null;
+    if (x) out[k] = x;
+  }
+  return out;
+}
+
+/**
+ * A report: what it is about, what is wrong, why, and for "otra_edicion" the
+ * fix (a video has no section, so its category is dropped). `actual` (where it
+ * is listed now) only refuses a fix that changes nothing; it is not sent.
+ */
+function validateReport(input: Record<string, unknown>): Validation {
+  const objetivo = str(input.objetivo);
+  if (!(OBJETIVOS as readonly string[]).includes(objetivo)) return fail('objetivo');
+  const video = objetivo === 'video' ? videoCopy(input.video) : null;
+  if (objetivo === 'video' && !video) return fail('objetivo');
+  const problema = str(input.problema);
+  if (!(PROBLEMAS as readonly string[]).includes(problema)) return fail('problema');
+  const texto = str(input.texto);
+  if (len(texto) < REPORT_MIN || len(texto) > REPORT_MAX) return fail('texto_informe');
+  const payload: Record<string, unknown> = { objetivo, problema, texto };
+  if (video) payload.video = video;
+  if (problema === 'otra_edicion') {
+    const raw = { ...((input.arreglo ?? {}) as Record<string, unknown>) };
+    if (objetivo === 'video') delete raw.category;
+    const v = validateTag(raw);
+    if (!v.ok) return fail('arreglo');
+    const actual = (input.actual ?? {}) as Record<string, unknown>;
+    const same = Object.entries(v.payload).every(([k, x]) => String(actual[k] ?? '') === String(x));
+    if (same) return fail('arreglo');
+    payload.arreglo = v.payload;
+  }
+  return { ok: true, payload };
+}
+
 /** Check a contribution before it is sent. The payload is what goes into `contributions.payload`. */
 export function validate(kind: Kind, input: Record<string, unknown>): Validation {
   input = input ?? {};
@@ -153,6 +205,13 @@ export function validate(kind: Kind, input: Record<string, unknown>): Validation
     case 'memory': {
       const text = str(input.text);
       if (len(text) < TEXT_MIN || len(text) > TEXT_MAX) return fail('texto');
+      return { ok: true, payload: { text } };
+    }
+    case 'report':
+      return validateReport(input);
+    case 'note': {
+      const text = str(input.text);
+      if (len(text) < REPORT_MIN || len(text) > REPORT_MAX) return fail('texto_informe');
       return { ok: true, payload: { text } };
     }
     default:

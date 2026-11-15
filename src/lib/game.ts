@@ -28,7 +28,7 @@ export const BADGES = [
  * Points an approved contribution earns. Uploads count the base 20 here: the
  * reviewer decides whether one fills a gap (50), so pending uploads may end up worth more.
  */
-export const POINTS: Record<Kind, number> = { upload: 20, fact: 10, transcription: 15, tag: 2, memory: 5 };
+export const POINTS: Record<Kind, number> = { upload: 20, fact: 10, transcription: 15, tag: 2, memory: 5, report: 10, note: 5 };
 
 /** Points the user would get if every pending contribution were approved. */
 export function pendingPoints(rows: { type: Kind; status: Status }[]): number {

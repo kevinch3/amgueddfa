@@ -349,7 +349,11 @@
       "limite": "Llegaste al máximo de 30 aportes en 24 horas. ¡Gracias! Seguí mañana.",
       "sesion": "Tu sesión se cerró. Ingresá de nuevo para mandar el aporte.",
       "edicion": "Elegí el eisteddfod y el año.",
-      "texto_transcripcion": "La transcripción tiene que tener entre 10 y 15000 caracteres."
+      "texto_transcripcion": "La transcripción tiene que tener entre 10 y 15000 caracteres.",
+      "objetivo": "No sabemos de qué es este aviso. Volvé a abrir el formulario desde el video o el documento.",
+      "problema": "Elegí qué está mal.",
+      "texto_informe": "Escribí entre 10 y 1000 caracteres.",
+      "arreglo": "Decinos a qué eisteddfod, año o sección corresponde (distinto de donde está ahora)."
     },
     "caracteres_transcripcion": "Entre 10 y 15000 caracteres.",
     "licencia": "Las transcripciones y los datos que aportás se publican bajo la licencia CC BY-SA 4.0.",
@@ -395,7 +399,9 @@
       "fact": "Dato",
       "tag": "Etiqueta",
       "transcription": "Transcripción",
-      "memory": "Recuerdo"
+      "memory": "Recuerdo",
+      "report": "Error informado",
+      "note": "Información"
     },
     "vacia": "No hay aportes pendientes.",
     "de": "De {nombre}",
@@ -536,7 +542,9 @@
       "fact": "Dato",
       "tag": "Etiqueta",
       "transcription": "Transcripción",
-      "memory": "Recuerdo"
+      "memory": "Recuerdo",
+      "report": "Error informado",
+      "note": "Información"
     },
     "desde": "Desde {pais}",
     "ajustes": {
@@ -589,7 +597,9 @@
       "fact": "cargó un dato",
       "tag": "revisó la etiqueta de un documento",
       "transcription": "transcribió un documento",
-      "memory": "contó un recuerdo"
+      "memory": "contó un recuerdo",
+      "report": "informó un error",
+      "note": "agregó información a un documento"
     },
     "ver_ranking": "Ver el ranking",
     "del": "del"

@@ -11,8 +11,8 @@ const APPROVED_UPLOADS: UploadLike[] = (approvedRaw as UploadLike[]).filter((c) 
 
 const FESTIVAL_SLUGS: FestivalSlug[] = ['chubut', 'juventud', 'mimosa', 'trevelin'];
 
-/** Approved tags from the last export: applied here so every build places items where they were corrected to. */
-const APPROVED_TAGS: TagLike[] = (approvedRaw as TagLike[]).filter((c) => c?.type === 'tag');
+/** Approved tags and reports from the last export: applied here so every build places (or hides) items as corrected. */
+const APPROVED_TAGS: TagLike[] = (approvedRaw as TagLike[]).filter((c) => c?.type === 'tag' || c?.type === 'report');
 /** Newest tag approval this build includes; pages fetch only later ones (scripts/live-catalog.ts). */
 export const TAGS_AT: string | null = latestTagAt(APPROVED_TAGS);
 
@@ -23,7 +23,13 @@ export function setItems(list: Item[]): void {
   current = list;
 }
 
+/** Items listed on the site: everything but documents an approved report hid. */
 export function items(): Item[] {
+  return current.filter((i) => !i.hidden);
+}
+
+/** Every item, hidden ones included: each keeps its page (with a notice). */
+export function allItems(): Item[] {
   return current;
 }
 
@@ -37,7 +43,7 @@ export function festivals(): { slug: FestivalSlug; name: string; nameCy: string 
 
 /** Items of one edition. Undated items (year null) never belong to an edition. */
 export function editionItems(f: FestivalSlug, year: number): Item[] {
-  return current.filter((i) => i.festival === f && i.year === year);
+  return items().filter((i) => i.festival === f && i.year === year);
 }
 
 /**
@@ -69,7 +75,7 @@ function isMaterial(c: DatedLike): boolean {
 
 /** Earliest year with a dated catalog item or an approved contribution; null when none. */
 export function firstMaterialYear(f: FestivalSlug, approved: DatedLike[] = APPROVED_DATED): number | null {
-  const years = [...current, ...approved.filter(isMaterial)]
+  const years = [...items(), ...approved.filter(isMaterial)]
     .filter((i) => i.festival === f && i.year !== null)
     .map((i) => i.year as number);
   return years.length ? Math.min(...years) : null;

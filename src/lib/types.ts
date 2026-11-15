@@ -25,6 +25,8 @@ export interface Item {
   note_public: string;
   year_inferred: boolean;
   restricted: boolean;
+  /** Set by an approved "no corresponde" report: off every list, page kept with a notice. */
+  hidden?: boolean;
   pages: number;
   thumb: string | null;
   page_paths: string[];

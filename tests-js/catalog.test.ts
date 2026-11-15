@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, it } from 'vitest';
 import {
   editionState, mostWanted, pageUrls, setItems, thumbUrl, yearRange, editionItems, festivals,
-  firstMaterialYear, YEAR_FLOOR, undocumented, editionCover,
+  firstMaterialYear, YEAR_FLOOR, undocumented, editionCover, items, allItems,
 } from '../src/lib/catalog';
 import type { Item } from '../src/lib/types';
 import { MEDIA_BASE, siteMedia } from '../src/lib/paths';
@@ -27,6 +27,15 @@ const fixture: Item[] = [
 beforeEach(() => setItems(fixture));
 
 describe('catalog', () => {
+  it('hidden items are left out of listings but keep their page', () => {
+    setItems([mk({ id: '000000000001', year: 1990, category: 'programa', kind: 'pdf', hidden: true }), mk({ id: '000000000002', year: 1990 })]);
+    expect(items().map((i) => i.id)).toEqual(['000000000002']);
+    expect(allItems().map((i) => i.id)).toEqual(['000000000001', '000000000002']);
+    expect(editionItems('chubut', 1990).map((i) => i.id)).toEqual(['000000000002']);
+    // the hidden programa PDF no longer makes 1990 full
+    expect(editionState('chubut', 1990, [])).toBe('some');
+  });
+
   it('editionState full only with programa pdf', () => {
     expect(editionState('chubut', 1990, [])).toBe('full');
     expect(editionState('chubut', 1991, [])).toBe('some');

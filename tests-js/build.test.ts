@@ -7,7 +7,7 @@ import approved from '../data/approved/contributions.json';
 import editionsData from '../data/approved/editions.json';
 import { editionCover, undocumented, yearRange } from '../src/lib/catalog';
 import { decades } from '../src/lib/timeline';
-import { editionVideos } from '../src/lib/videos';
+import { applyVideoReports, editionVideos, type Video } from '../src/lib/videos';
 import videosData from '../src/data/videos.json';
 import { transcribedIds } from '../src/lib/transcripciones';
 import { PUBLIC_WINNERS, winnerIds } from '../src/lib/ganadores';
@@ -217,7 +217,7 @@ describe('static build', () => {
     // Documents count catalog items plus approved community uploads of that year.
     for (const e of eds.ediciones) {
       const ups = (approved as any[]).filter((c) => c.type === 'upload' && c.festival === e.eisteddfod && c.year === e.ano).length;
-      const cat = placed.filter((i) => !i.restricted && i.festival === e.eisteddfod && i.year === e.ano).length;
+      const cat = placed.filter((i) => !i.restricted && !i.hidden && i.festival === e.eisteddfod && i.year === e.ano).length;
       expect(e.documentos, `${e.eisteddfod} ${e.ano}`).toBe(cat + ups);
     }
     // "realizada" is only true/false when known; unknown editions say null.
@@ -232,7 +232,7 @@ describe('static build', () => {
     // Every approved fact with a fuente keeps it in the data file (zero or many, whatever the data is).
     const withFuente = (approved as any[]).filter((c) => c.type === 'fact' && c.payload?.fuente).length;
     expect(eds.ediciones.flatMap((e: any) => e.datos).filter((d: any) => d.fuente).length).toBe(withFuente);
-    expect(docs.documentos.length).toBe(catalog.filter((i) => !i.restricted).length);
+    expect(docs.documentos.length).toBe(placed.filter((i) => !i.restricted && !i.hidden).length);
     for (const i of catalog.filter((x) => x.restricted)) {
       expect(sitemap, i.id).not.toContain(`/item/${i.id}/`);
       expect(read('datos/documentos.json'), i.id).not.toContain(i.id);
@@ -294,7 +294,8 @@ describe('static build', () => {
   });
 
   it('edition pages link every video of their edition, and no page shows an empty videos block', () => {
-    const videos = (videosData as { videos: { festival: FestivalSlug; year: number }[] }).videos;
+    // Where videos sit once approved reports apply (hidden ones are gone), as the pages see them.
+    const videos = applyVideoReports((videosData as { videos: Video[] }).videos, approved as any[]);
     for (const f of FESTIVALS) {
       const [a, b] = range(f);
       for (let y = a; y <= b; y++) {
@@ -306,6 +307,15 @@ describe('static build', () => {
     }
     // Every exported video lands on a page that exists.
     for (const v of videos) expect(existsSync(join(DIST, v.festival, String(v.year), 'index.html')), `${v.festival} ${v.year}`).toBe(true);
+  });
+
+  it('a hidden document keeps its page, with a notice and noindex, and no edition page links it', () => {
+    for (const i of placed.filter((x) => x.hidden)) {
+      const page = read(`item/${i.id}/index.html`);
+      expect(page, i.id).toContain('data-retirado');
+      expect(page, i.id).toContain('name="robots" content="noindex"');
+      if (i.year) expect(read(`${i.festival}/${i.year}/index.html`), i.id).not.toContain(`href="/item/${i.id}/"`);
+    }
   });
 
   it('standardized transcriptions show on their item page and, folded, on their edition page', () => {

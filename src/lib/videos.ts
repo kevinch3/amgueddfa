@@ -1,4 +1,5 @@
 import raw from '../data/videos.json';
+import approvedRaw from '../../data/approved/contributions.json';
 import { when, type TagLike } from './tags';
 import type { FestivalSlug } from './types';
 
@@ -14,7 +15,6 @@ export type Video = {
   year_inferred: boolean;
 };
 
-const ALL: Video[] = (raw as { videos: Video[] }).videos;
 
 /** Ceremonies first, then whole sessions and news; single performances last. */
 export const KIND_ORDER: Video['kind'][] = ['ceremonia', 'sesion', 'noticia', 'actuacion'];
@@ -87,3 +87,6 @@ export function videoFromReport(r: TagLike): Video | null {
   const v = moved(base, r.payload!.arreglo);
   return v.festival && Number.isInteger(v.year) ? v : null;
 }
+
+/** Exported videos with the last export's approved reports applied (hidden ones dropped, moved ones moved). */
+const ALL: Video[] = applyVideoReports((raw as { videos: Video[] }).videos, approvedRaw as TagLike[]);

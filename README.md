@@ -117,7 +117,13 @@ node --env-file=.env scripts/export_approved.mjs
 ```
 
 La exportación sale ordenada y sin `user_id`, correos ni rutas de almacenamiento; solo
-el nombre público de quien aportó.
+el nombre público de quien aportó. De los errores informados («Informar un error») sale
+solo el arreglo, nunca la explicación.
+
+Un error informado y aprobado oculta o mueve el video o documento al momento (en vivo) y
+en cada build (desde la exportación). Va por id, así que volver a correr
+`python3 -m scripts.export_videos` o `scripts.build_catalog` no lo deshace: no hace falta
+tocar `VIDEOS.tsv` ni el archivo. Un documento oculto conserva su página, con un aviso.
 
 ## Publicación
 

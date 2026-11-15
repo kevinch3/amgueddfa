@@ -151,12 +151,14 @@ describe('approval and scoring', () => {
       ['transcription', false, 15],
       ['tag', false, 2],
       ['memory', false, 5],
+      ['report', false, 10],
+      ['note', false, 5],
     ];
     for (const [type, gap, expected] of cases) {
       const id = await contribute(u, { user_id: u, type, payload: { field: 'venue', value: 'Trelew' } });
       expect(await approve(admin, id, gap)).toBe(expected);
     }
-    expect(await points(u)).toBe(52);
+    expect(await points(u)).toBe(67);
   });
 
   it('approve twice raises not_pending and points unchanged', async () => {
@@ -571,5 +573,52 @@ describe('sign-in stats', () => {
     const admin = await t.createAdmin();
     await expect(t.q(admin, 'select * from public.admin_signin_stats(0)')).resolves.toEqual([]);
     await expect(t.q(admin, 'select * from public.admin_signin_stats(10000)')).resolves.toEqual([]);
+  });
+});
+
+describe('reports and notes', () => {
+  const report = { objetivo: 'video', problema: 'no_corresponde', texto: 'Es del Eisteddfod Genedlaethol de Gales', video: { id: 'MKRCg__AXC8', title: 'Patagonia 150', channel: 'Y Wladfa 150', kind: 'sesion' } };
+
+  it('accepts report and note rows, scoring 10 and 5', async () => {
+    const admin = await t.createAdmin();
+    const u = await t.createUser();
+    const r = await contribute(u, { user_id: u, type: 'report', festival: 'chubut', year: 2015, payload: report });
+    const n = await contribute(u, { user_id: u, type: 'note', item_id: 'fcb0d30de6eb', payload: { text: 'Faltan las páginas 3 y 4.' } });
+    expect(await approve(admin, r)).toBe(10);
+    expect(await approve(admin, n)).toBe(5);
+    expect(await points(u)).toBe(15);
+  });
+
+  it("the public view and so the export drop a report's explanation", async () => {
+    const admin = await t.createAdmin();
+    const u = await t.createUser();
+    const r = await contribute(u, { user_id: u, type: 'report', festival: 'chubut', year: 2015, payload: report });
+    await approve(admin, r);
+    const [row] = await t.q<{ payload: Record<string, unknown> }>('anon', 'select payload from public.public_contributions where id = $1', [r]);
+    expect(row.payload).not.toHaveProperty('texto');
+    expect(row.payload).toMatchObject({ problema: 'no_corresponde', video: { id: 'MKRCg__AXC8' } });
+    // admins still read it from the table
+    const [own] = await t.q<{ payload: Record<string, unknown> }>(admin, 'select payload from public.contributions where id = $1', [r]);
+    expect(own.payload.texto).toBe(report.texto);
+  });
+
+  it('approved reports count toward ojo-de-lince together with tags', async () => {
+    const admin = await t.createAdmin();
+    const u = await t.createUser();
+    // 49 approved rows from earlier days (the daily limit only counts the last 24 h)
+    await t.q('postgres', `insert into public.contributions (user_id, type, festival, year, item_id, payload, status, created_at)
+      select $1, case when g <= 30 then 'tag' else 'report' end, 'chubut', 2015, 'x', '{}'::jsonb, 'approved', now() - interval '3 days'
+      from generate_series(1, 49) g`, [u]);
+    const last = await contribute(u, { user_id: u, type: 'report', festival: 'chubut', year: 2015, payload: report });
+    expect(await badges(u)).not.toContain('ojo-de-lince');
+    await approve(admin, last);
+    expect(await badges(u)).toContain('ojo-de-lince');
+  });
+
+  it("an admin's own report is approved on insert", async () => {
+    const admin = await t.createAdmin();
+    const id = await contribute(admin, { user_id: admin, type: 'report', festival: 'chubut', year: 2015, payload: report });
+    const row = await t.q('postgres', 'select status, points_awarded from public.contributions where id = $1', [id]);
+    expect(row).toEqual([{ status: 'approved', points_awarded: 10 }]);
   });
 });

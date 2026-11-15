@@ -14,6 +14,7 @@ import { PUBLIC_WINNERS, winnerIds } from '../src/lib/ganadores';
 import { applyTags } from '../src/lib/tags';
 import type { FestivalSlug, Item } from '../src/lib/types';
 import { MEDIA_BASE } from '../src/lib/paths';
+import { t } from '../src/lib/i18n';
 import { loadEnv } from 'vite';
 
 const DIST = join(__dirname, '..', 'dist');
@@ -323,6 +324,24 @@ describe('static build', () => {
       expect(page, i.id).toContain('data-retirado');
       expect(page, i.id).toContain('name="robots" content="noindex"');
       if (i.year) expect(read(`${i.festival}/${i.year}/index.html`), i.id).not.toContain(`href="/item/${i.id}/"`);
+    }
+  });
+
+  it('every video can be reported, from one dialog per edition page; document pages carry their section for the report form', () => {
+    for (const f of FESTIVALS) {
+      const [a, b] = range(f);
+      for (let y = a; y <= b; y++) {
+        const html = read(`${f}/${y}/index.html`);
+        expect(html.split('id="informar-dialogo"').length - 1, `${f} ${y}`).toBe(1);
+        const cards = html.split('<li class="video"').length - 1;
+        expect(html.split('data-informar-video="').length - 1, `${f} ${y}`).toBe(cards);
+        for (const v of editionVideos(f, y)) expect(html, `${f} ${y}`).toContain(`data-informar-video="${v.id}"`);
+      }
+    }
+    const pub = placed.find((i) => !i.restricted && !i.hidden)!;
+    expect(read(`item/${pub.id}/index.html`)).toContain(`data-category="${pub.category}"`);
+    for (const k of ['titulo', 'pregunta', 'no_corresponde', 'otra_edicion', 'otro', 'texto_label', 'nota', 'nota_label', 'ingresar']) {
+      expect(t(`informar.${k}`), k).not.toBe(`informar.${k}`);
     }
   });
 

@@ -35,7 +35,10 @@ export function videoCard(v: Video, badge: boolean): HTMLLIElement {
   a.append(frame);
   if (badge) a.append(el('span', 'badge', t(`videos.tipos.${v.kind}`)));
   a.append(el('span', 't', v.title), el('span', 'muted small', v.channel));
-  li.append(a);
+  const report = el('button', 'btn-link small informar-btn', t('informar.titulo'));
+  report.type = 'button';
+  report.dataset.informarVideo = v.id;
+  li.append(a, report);
   return li;
 }
 

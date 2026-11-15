@@ -80,3 +80,9 @@ export async function busy<T>(btn: HTMLButtonElement, idle: string, fn: () => Pr
     btn.textContent = idle;
   }
 }
+
+/** Thank-you line; admins' contributions are approved on insert, so they read "published". */
+export async function thanks(): Promise<HTMLParagraphElement> {
+  const admin = (await currentProfile())?.role === 'admin';
+  return el('p', { class: 'contrib-ok', role: 'status' }, t(admin ? 'tarea.gracias_admin' : 'tarea.gracias'));
+}

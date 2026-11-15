@@ -136,7 +136,7 @@ const retrieved = item.retrieved
       {!item.restricted && (
         <section class="island-section" aria-labelledby="tarea-t">
           <h2 id="tarea-t" class="small">{t('item.tarea_titulo')}</h2>
-          <Mount id="tarea" festival={item.festival} year={item.year} item={item.id} />
+          <Mount id="tarea" festival={item.festival} year={item.year} item={item.id} category={item.category} />
         </section>
       )}
     </aside>

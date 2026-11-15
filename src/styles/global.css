@@ -404,3 +404,13 @@ fieldset.campo { border: 0; padding: 0; }
 .legal-control label { font-weight: 600; display: flex; gap: 0.5rem; align-items: flex-start; }
 .legal-control input { margin-top: 0.3rem; }
 .pie-legal ul { list-style: none; margin: 0.5rem 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; }
+
+/* "Informar un error" / "Agregar información" (scripts/informar.ts) */
+.informar { width: min(36rem, calc(100vw - 32px)); max-width: none; max-height: calc(100dvh - 32px); margin: auto; padding: 1rem 1.1rem; overflow: auto; border: 1px solid var(--rule); border-radius: 6px; background: var(--paper-hi); color: var(--ink); overflow-wrap: anywhere; }
+.informar::backdrop { background: rgb(20 21 28 / 0.6); }
+.informar-head { display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; }
+.informar-head h2 { margin: 0; font-size: 1.25rem; }
+.informar-form .opt { display: flex; gap: 0.5rem; align-items: flex-start; padding: 0.35rem 0; font: 1rem/1.4 var(--sans); }
+.informar-form .opt input { margin-top: 0.25rem; flex: none; }
+.informar-arreglo[hidden] { display: none; }
+.informar-btn { align-self: flex-start; font-family: var(--sans); }

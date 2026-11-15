@@ -1,15 +1,12 @@
-import { currentProfile } from '../lib/auth';
 import { submit, TRANSCRIPTION_MAX, YEAR_MAX, YEAR_MIN } from '../lib/contrib';
 import { t } from '../lib/i18n';
 import type { FestivalSlug } from '../lib/types';
-import { busy, categoryOptions, el, festivalOptions, field, gate, gateMessage, select } from './ui';
+import { noteForm, opener, reportForm } from './informar';
+import { busy, categoryOptions, el, festivalOptions, field, gate, gateMessage, select, thanks } from './ui';
 
-type Ctx = { festival: FestivalSlug; year: number | null; item: string };
+type Ctx = { festival: FestivalSlug; year: number | null; item: string; category: string };
 
 const status = (): HTMLParagraphElement => el('p', { class: 'contrib-msg', role: 'alert' });
-/** Thank-you line; admins' contributions are approved on insert, so they read "published". */
-const thanks = async (): Promise<HTMLParagraphElement> =>
-  el('p', { class: 'contrib-ok', role: 'status' }, t((await currentProfile())?.role === 'admin' ? 'tarea.gracias_admin' : 'tarea.gracias'));
 
 /** "¿El año es correcto?": Sí sends a confirming tag; No opens year / category / festival. */
 function yearTask(ctx: Ctx): HTMLElement {
@@ -104,6 +101,7 @@ async function hydrate(): Promise<void> {
     festival: root.dataset.festival as FestivalSlug,
     year: root.dataset.year ? Number(root.dataset.year) : null,
     item: root.dataset.item ?? '',
+    category: root.dataset.category ?? '',
   };
   if (!ctx.item) return;
   const g = await gate();
@@ -111,7 +109,13 @@ async function hydrate(): Promise<void> {
     root.replaceChildren(gateMessage(g.reason, 'tarea.ingresar'));
     return;
   }
-  root.replaceChildren(yearTask(ctx), transcribeTask(ctx));
+  const doc = { objetivo: 'documento' as const, ...ctx };
+  root.replaceChildren(
+    yearTask(ctx),
+    transcribeTask(ctx),
+    opener(t('informar.titulo'), (done, cancel) => reportForm(doc, done, cancel)),
+    opener(t('informar.nota'), (done, cancel) => noteForm(ctx, done, cancel)),
+  );
 }
 
 void hydrate();

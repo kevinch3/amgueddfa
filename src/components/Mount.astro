@@ -13,8 +13,10 @@ interface Props {
   pages?: string;
   /** JSON map of item id → title, for islands that link items. */
   titles?: string;
+  /** The document's section, for forms that propose moving it. */
+  category?: string;
   class?: string;
 }
-const { id, festival = '', year = null, item = '', pages, titles, class: cls } = Astro.props;
+const { id, festival = '', year = null, item = '', pages, titles, category, class: cls } = Astro.props;
 ---
-<div id={id} class={cls} data-island={id} data-festival={festival} data-year={year ?? ''} data-item={item} data-pages={pages} data-titles={titles}><slot /></div>
+<div id={id} class={cls} data-island={id} data-festival={festival} data-year={year ?? ''} data-item={item} data-pages={pages} data-titles={titles} data-category={category}><slot /></div>

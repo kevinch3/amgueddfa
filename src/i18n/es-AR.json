@@ -741,5 +741,29 @@
       "derechos_aportes": "Si pedís borrar tu cuenta, los aportes que ya se publicaron quedan en el archivo bajo la licencia CC BY-SA 4.0, con tu nombre o como anónimos, como prefieras.",
       "derechos_aaip": "Si no te respondemos, podés reclamar ante la Agencia de Acceso a la Información Pública, que controla el cumplimiento de esa ley."
     }
+  },
+  "informar": {
+    "titulo": "Informar un error",
+    "ayuda": "Si algo está mal, contanos qué y cómo debería ser. Lo revisamos antes de cambiarlo.",
+    "sobre": "Sobre: {titulo}",
+    "pregunta": "¿Qué está mal?",
+    "no_corresponde": "No es de un eisteddfod de la Patagonia (por ejemplo, es del Eisteddfod de Gales)",
+    "otra_edicion": "Es de otro eisteddfod o de otro año",
+    "otra_edicion_documento": "Es de otro eisteddfod, de otro año o de otra sección",
+    "otro": "Otra cosa",
+    "arreglo_ayuda": "Completá solo lo que cambia.",
+    "eisteddfod_label": "Eisteddfod",
+    "ano_label": "Año",
+    "seccion_label": "Sección",
+    "sin_cambio": "Sin cambios",
+    "texto_label": "Contanos qué está mal y cómo debería ser",
+    "texto_ayuda": "Entre 10 y 1000 caracteres. Solo lo leen quienes revisan los aportes.",
+    "nota": "Agregar información",
+    "nota_label": "¿Qué sabés de este documento?",
+    "nota_ayuda": "Por ejemplo, qué es, qué páginas faltan o quiénes aparecen. Entre 10 y 1000 caracteres. Se publica con tu nombre después de revisarlo.",
+    "enviar": "Enviar",
+    "cancelar": "Cancelar",
+    "cerrar": "Cerrar",
+    "ingresar": "Ingresá para informar un error"
   }
 }

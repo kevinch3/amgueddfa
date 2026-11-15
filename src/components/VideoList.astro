@@ -21,6 +21,7 @@ const total = highlights.length + performances.length;
           <span class="t">{v.title}</span>
           <span class="muted small">{v.channel}{v.year_inferred && <> · {t('comun.ano_estimado')}</>}</span>
         </a>
+        <button type="button" class="btn-link small informar-btn" data-informar-video={v.id}>{t('informar.titulo')}</button>
       </li>
     ))}
   </ul>
@@ -34,8 +35,18 @@ const total = highlights.length + performances.length;
             <span class="t">{v.title}</span>
             <span class="muted small">{v.channel}{v.year_inferred && <> · {t('comun.ano_estimado')}</>}</span>
           </a>
+          <button type="button" class="btn-link small informar-btn" data-informar-video={v.id}>{t('informar.titulo')}</button>
         </li>
       ))}
     </ul>
   </details>
 </section>
+{/* One "Informar un error" dialog per page (outside the section, which may be hidden); scripts/informar.ts fills it. */}
+<dialog id="informar-dialogo" class="informar" aria-labelledby="informar-t">
+  <div class="informar-head">
+    <h2 id="informar-t">{t('informar.titulo')}</h2>
+    <button type="button" class="btn-link" data-informar-cerrar>{t('informar.cerrar')}</button>
+  </div>
+  <p class="muted small" data-informar-sobre></p>
+  <div data-informar-cuerpo></div>
+</dialog>

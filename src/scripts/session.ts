@@ -63,7 +63,7 @@ export function renderSession(el: HTMLElement, profile: Profile | null, offline:
  * the built HTML (public pages show it only as public/contacto.png).
  */
 function contactAddress(): string {
-  const parts = ['ar', 'kevinroberts', 'info'];
+  const parts = ['org', 'amgueddfa', 'info'];
   return `${parts[2]}${String.fromCharCode(64)}${parts[1]}.${parts[0]}`;
 }
 

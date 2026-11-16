@@ -470,6 +470,8 @@ fieldset.campo { border: 0; padding: 0; }
 
 /* Legal pages (objetivos, derechos, privacidad, cookies) */
 .legal h2 { margin-top: 2rem; }
+.apoyo a { display: inline-block; border-radius: 6px; }
+.apoyo img { display: block; border-radius: 6px; }
 .legal-tabla { overflow-x: auto; max-width: 100%; }
 .legal-tabla table { border-collapse: collapse; width: 100%; font-size: 0.95rem; }
 .legal-tabla th, .legal-tabla td { text-align: left; vertical-align: top; padding: 0.4rem 0.5rem; border-bottom: 1px solid color-mix(in srgb, var(--ink) 15%, transparent); }

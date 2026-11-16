@@ -6,6 +6,8 @@ import { url } from '../lib/paths';
 
 const c = (k: string) => t(`legal.objetivos.${k}`);
 const REPO = 'https://github.com/kevinch3/amgueddfa-eisteddfod';
+/** Sponsor acknowledged on this page only (the archive itself carries no advertising). */
+const APOYO = { nombre: 'Kevin Roberts', href: 'https://kevinroberts.ar/', logo: 'patrocinio-kr.svg' };
 ---
 <Base title={t('legal.titulos.objetivos')} description={c('descripcion')}>
   <article class="legal measure">
@@ -20,6 +22,13 @@ const REPO = 'https://github.com/kevinch3/amgueddfa-eisteddfod';
     <h2>{c('lucro_titulo')}</h2>
     <p>{c('lucro_1')}</p>
     <p>{c('lucro_2')} <a href={url('derechos')}>{c('lucro_derechos')}</a>{t('comun.punto')}</p>
+
+    <h2 id="apoyo">{c('apoyo_titulo')}</h2>
+    <p class="apoyo">
+      <a href={APOYO.href} rel="sponsored noopener">
+        <img src={url(APOYO.logo)} alt={`${APOYO.nombre} (kevinroberts.ar)`} width="120" height="93" decoding="async" />
+      </a>
+    </p>
 
     <h2>{c('abierto_titulo')}</h2>
     <p>{c('abierto_1')}</p>

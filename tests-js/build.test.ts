@@ -477,6 +477,12 @@ describe('static build', () => {
     expect(obj).toContain('AGPL-3.0');
     expect(obj).toContain('CC BY-SA 4.0');
     expect(obj).toContain('github.com/kevinch3/amgueddfa-eisteddfod');
+    // the sponsor is acknowledged on the Objetivos page only, in every language
+    expect(obj).toMatch(/<a href="https:\/\/kevinroberts\.ar\/" rel="sponsored noopener"><img src="\/patrocinio-kr\.svg" alt="Kevin Roberts \(kevinroberts\.ar\)"/);
+    expect(read('cy/objetivos/index.html')).toContain('Gyda chefnogaeth');
+    expect(read('cy/objetivos/index.html')).toContain('src="/patrocinio-kr.svg"');
+    expect(existsSync(join(DIST, 'patrocinio-kr.svg'))).toBe(true);
+    for (const f of ['index.html', 'chubut/2024/index.html']) expect(read(f)).not.toContain('patrocinio-kr.svg');
     expect(read('derechos/index.html')).toContain('11.723');
     expect(read('privacidad/index.html')).toContain('25.326');
     for (const p of pages) expect(read(`${p}/index.html`)).not.toMatch(/borrador|revisión con las asociaciones/i);

@@ -105,6 +105,22 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "0750f49f-7401-431d-8a0b-4d966ce435da",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1891,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Osian Hughes, «Los poetas del Eisteddfod», p. 14",
+      "lote": "89d250f9-b881-4a05-b9ea-143227bb3ef9",
+      "value": "A la mañana, ceremonia de entronización del bardo, conducida por el archidruida Griffith Griffiths."
+    },
+    "created_at": "2026-11-16T18:39:27.894079+00:00",
+    "reviewed_at": "2026-11-16T18:39:27.894079+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "080c4fc7-c680-4903-9e4f-b6f2b95be375",
     "type": "fact",
     "festival": "chubut",
@@ -179,6 +195,22 @@
     "created_at": "2026-11-14T14:09:30.248472+00:00",
     "reviewed_at": "2026-11-14T14:09:30.248472+00:00",
     "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "0a828b8f-3fb6-45ed-ac67-6c3d488d667d",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1880,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_silla",
+      "fuente": "Osian Hughes, «Los poetas del Eisteddfod», p. 13",
+      "lote": "1fcae565-5017-415d-8cbc-2a390891be1c",
+      "value": "Thomas G. Pritchard (Glan Tywi)"
+    },
+    "created_at": "2026-11-16T18:39:27.894079+00:00",
+    "reviewed_at": "2026-11-16T18:39:27.894079+00:00",
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "0be33027-d7b8-47b5-8a9d-c992b31cfc0a",
@@ -274,6 +306,22 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "1464b31c-df9a-44ce-986d-715fc44a4883",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1881,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_silla",
+      "fuente": "Osian Hughes, «Los poetas del Eisteddfod», pp. 13–14",
+      "lote": "67292bd1-64b7-4336-8654-3b2c464edc1a",
+      "value": "William Casnodyn Rhys"
+    },
+    "created_at": "2026-11-16T18:39:27.894079+00:00",
+    "reviewed_at": "2026-11-16T18:39:27.894079+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "14b7172e-5f71-4509-bc32-5f96ab7caf29",
     "type": "fact",
     "festival": "chubut",
@@ -289,6 +337,22 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "151eb538-1ae4-4449-adf6-dea08190d9e8",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1891,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Osian Hughes, «Los poetas del Eisteddfod», p. 14",
+      "lote": "89d250f9-b881-4a05-b9ea-143227bb3ef9",
+      "value": "Comisión: Huw Huws (Cadfan Gwynedd), presidente; R. J. Berwyn, secretario; Thomas T. Austin, tesorero; con representantes de todas las zonas del valle."
+    },
+    "created_at": "2026-11-16T18:39:27.894079+00:00",
+    "reviewed_at": "2026-11-16T18:39:27.894079+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "1521ee0f-342f-4930-9f40-d3c58f087036",
     "type": "fact",
     "festival": "chubut",
@@ -301,6 +365,22 @@
     },
     "created_at": "2026-11-16T18:31:17.630618+00:00",
     "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "156ab5c7-002e-4251-be59-a7551690b8bb",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1884,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Osian Hughes, «Los poetas del Eisteddfod», p. 14",
+      "lote": "14ac0b87-079b-42d1-98e6-9c67bbe981a7",
+      "value": "Jurado: Griffith Griffiths (Gutyn Ebrill)."
+    },
+    "created_at": "2026-11-16T18:39:27.894079+00:00",
+    "reviewed_at": "2026-11-16T18:39:27.894079+00:00",
     "display_name": "Meirion Griffiths"
   },
   {
@@ -350,6 +430,22 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "18960fdc-5f27-446e-ae6f-6427dcab4780",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1931,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "fuente": "Osian Hughes, «Los poetas del Eisteddfod» (foto «1931 carpa Trelew»)",
+      "lote": "7fe5b2a0-d46c-4ec8-978c-61cef6884a15",
+      "value": "si"
+    },
+    "created_at": "2026-11-16T18:39:27.894079+00:00",
+    "reviewed_at": "2026-11-16T18:39:27.894079+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "19205166-0a7c-4294-a1cf-10f41e890ead",
     "type": "fact",
     "festival": "chubut",
@@ -394,6 +490,22 @@
     "created_at": "2026-11-14T14:09:32.072233+00:00",
     "reviewed_at": "2026-11-14T14:09:32.072233+00:00",
     "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "1a728b83-74bb-4118-b756-6b43b0aef940",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1891,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Osian Hughes, «Los poetas del Eisteddfod», p. 14",
+      "lote": "89d250f9-b881-4a05-b9ea-143227bb3ef9",
+      "value": "El local, un viejo comercio largo y angosto, generó comentarios adversos."
+    },
+    "created_at": "2026-11-16T18:39:27.894079+00:00",
+    "reviewed_at": "2026-11-16T18:39:27.894079+00:00",
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "1a79bebd-5926-4ab9-92bf-7103e08dc6a1",
@@ -811,6 +923,22 @@
     },
     "created_at": "2026-11-16T18:31:17.630618+00:00",
     "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "3966a5ea-9b87-4b0e-b517-c9000618e0db",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1884,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Osian Hughes, «Los poetas del Eisteddfod», p. 14",
+      "lote": "14ac0b87-079b-42d1-98e6-9c67bbe981a7",
+      "value": "Mason incluyó el poema en el volumen de sus poesías que publicó en 1903."
+    },
+    "created_at": "2026-11-16T18:39:27.894079+00:00",
+    "reviewed_at": "2026-11-16T18:39:27.894079+00:00",
     "display_name": "Meirion Griffiths"
   },
   {
@@ -1295,6 +1423,22 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "642f5b3b-6737-4f20-a79f-a8c05517597a",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1883,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Osian Hughes, «Los poetas del Eisteddfod», p. 14",
+      "lote": "b2a816f2-f961-4cef-a0b1-dba87bf511a6",
+      "value": "Fue el primer sillón bárdico de William H. Hughes, que más tarde adoptó el seudónimo «Glan Caeron»."
+    },
+    "created_at": "2026-11-16T18:39:27.894079+00:00",
+    "reviewed_at": "2026-11-16T18:39:27.894079+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "64b79c5e-613a-4e3a-9999-83d503657291",
     "type": "fact",
     "festival": "chubut",
@@ -1417,6 +1561,54 @@
     "created_at": "2026-11-14T14:13:11.449352+00:00",
     "reviewed_at": "2026-11-14T14:13:11.449352+00:00",
     "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "698f27a2-ef0d-4518-9832-80989b85b1b0",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1880,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Osian Hughes, «Los poetas del Eisteddfod», p. 13",
+      "lote": "1fcae565-5017-415d-8cbc-2a390891be1c",
+      "value": "Tema del certamen: «Rhyfyg» (Presunción)."
+    },
+    "created_at": "2026-11-16T18:39:27.894079+00:00",
+    "reviewed_at": "2026-11-16T18:39:27.894079+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "6ab83bf6-2e49-4a39-b616-e3c35743a5e5",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1880,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Osian Hughes, «Los poetas del Eisteddfod», p. 13",
+      "lote": "1fcae565-5017-415d-8cbc-2a390891be1c",
+      "value": "El sillón se conserva en Gaiman, en casa de un familiar, Archie Griffiths."
+    },
+    "created_at": "2026-11-16T18:39:27.894079+00:00",
+    "reviewed_at": "2026-11-16T18:39:27.894079+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "6c7ad982-cc4d-41e3-a928-1bedb07df663",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1881,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Osian Hughes, «Los poetas del Eisteddfod», pp. 13–14",
+      "lote": "67292bd1-64b7-4336-8654-3b2c464edc1a",
+      "value": "Tema del certamen: «Y Fynwent» (El Cementerio)."
+    },
+    "created_at": "2026-11-16T18:39:27.894079+00:00",
+    "reviewed_at": "2026-11-16T18:39:27.894079+00:00",
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "6d26e557-dd70-4265-8d37-003ddad812cd",
@@ -1661,6 +1853,22 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "7306e5b0-c7f5-4114-80f9-07a32e1967de",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1883,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_silla",
+      "fuente": "Osian Hughes, «Los poetas del Eisteddfod», p. 14",
+      "lote": "b2a816f2-f961-4cef-a0b1-dba87bf511a6",
+      "value": "William Hughes (Glan Caeron)"
+    },
+    "created_at": "2026-11-16T18:39:27.894079+00:00",
+    "reviewed_at": "2026-11-16T18:39:27.894079+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "74954d98-c537-49d0-8f69-05b980fe8f09",
     "type": "fact",
     "festival": "juventud",
@@ -1740,6 +1948,22 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "7a52193f-999a-49fb-9fae-a4539389589c",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1880,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Osian Hughes, «Los poetas del Eisteddfod», p. 13",
+      "lote": "1fcae565-5017-415d-8cbc-2a390891be1c",
+      "value": "Se hizo el día Llungwyn, el lunes de Pentecostés, que entonces era feriado."
+    },
+    "created_at": "2026-11-16T18:39:27.894079+00:00",
+    "reviewed_at": "2026-11-16T18:39:27.894079+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "7a85e964-f027-402d-ac80-02ec8c78abad",
     "type": "fact",
     "festival": "chubut",
@@ -1785,6 +2009,22 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "7bfc572b-7166-4b14-a522-776f9730e5c9",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1931,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "fuente": "Osian Hughes, «Los poetas del Eisteddfod» (foto «1931 carpa Trelew»)",
+      "lote": "7fe5b2a0-d46c-4ec8-978c-61cef6884a15",
+      "value": "La carpa, Trelew"
+    },
+    "created_at": "2026-11-16T18:39:27.894079+00:00",
+    "reviewed_at": "2026-11-16T18:39:27.894079+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "7c1d5ce4-6e9b-461d-a512-002235b1605b",
     "type": "fact",
     "festival": "chubut",
@@ -1817,6 +2057,22 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "7cf703da-57de-4159-be17-3ae2aa681853",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1880,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Osian Hughes, «Los poetas del Eisteddfod», p. 13",
+      "lote": "1fcae565-5017-415d-8cbc-2a390891be1c",
+      "value": "Fue el primer sillón bárdico que se adjudicó en la Patagonia."
+    },
+    "created_at": "2026-11-16T18:39:27.894079+00:00",
+    "reviewed_at": "2026-11-16T18:39:27.894079+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "7f706274-643f-45ac-83ec-e7189832fcdb",
     "type": "fact",
     "festival": "chubut",
@@ -1844,6 +2100,22 @@
     },
     "created_at": "2026-11-16T18:31:17.630618+00:00",
     "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "7fa53663-b298-4cae-8c59-0a0193cd649d",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1891,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Osian Hughes, «Los poetas del Eisteddfod», p. 14",
+      "lote": "89d250f9-b881-4a05-b9ea-143227bb3ef9",
+      "value": "La noche anterior hubo un concierto con mucho público."
+    },
+    "created_at": "2026-11-16T18:39:27.894079+00:00",
+    "reviewed_at": "2026-11-16T18:39:27.894079+00:00",
     "display_name": "Meirion Griffiths"
   },
   {
@@ -2419,6 +2691,22 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "a1f873b1-c92b-4015-9858-d3c7b1422db4",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1889,
+    "item_id": null,
+    "payload": {
+      "field": "start_date",
+      "fuente": "Osian Hughes, «Los poetas del Eisteddfod», p. 14",
+      "lote": "781fad37-2e0a-4129-acda-fdba032983d9",
+      "value": "1889-03-01"
+    },
+    "created_at": "2026-11-16T18:39:27.894079+00:00",
+    "reviewed_at": "2026-11-16T18:39:27.894079+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "a1fe3b86-cd12-429f-9275-428a8c180a31",
     "type": "fact",
     "festival": "chubut",
@@ -2431,6 +2719,22 @@
     },
     "created_at": "2026-11-16T18:31:17.630618+00:00",
     "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "a243dc4f-59f3-4582-a2b8-9946d245b5e4",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1889,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Osian Hughes, «Los poetas del Eisteddfod», p. 14",
+      "lote": "781fad37-2e0a-4129-acda-fdba032983d9",
+      "value": "Se hizo en la capilla del obrador del ferrocarril, en Trelew, junto a la laguna hoy llamada Cacique Chiquichano."
+    },
+    "created_at": "2026-11-16T18:39:27.894079+00:00",
+    "reviewed_at": "2026-11-16T18:39:27.894079+00:00",
     "display_name": "Meirion Griffiths"
   },
   {
@@ -2555,6 +2859,22 @@
     "created_at": "2026-11-13T21:14:22.25477+00:00",
     "reviewed_at": "2026-11-13T21:14:43.617255+00:00",
     "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "ab63080f-ef99-4c6e-b1b9-b74d4100ce8e",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1880,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Osian Hughes, «Los poetas del Eisteddfod», p. 13",
+      "lote": "1fcae565-5017-415d-8cbc-2a390891be1c",
+      "value": "Jurado: William Casnodyn Rhys, pastor de la iglesia de Frondeg."
+    },
+    "created_at": "2026-11-16T18:39:27.894079+00:00",
+    "reviewed_at": "2026-11-16T18:39:27.894079+00:00",
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "ac0dec37-9e55-43b4-9925-fb069e35a990",
@@ -2984,6 +3304,22 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "c15c8236-57b9-42ee-9a0d-2bb1ebe0769a",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1881,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Osian Hughes, «Los poetas del Eisteddfod», pp. 13–14",
+      "lote": "67292bd1-64b7-4336-8654-3b2c464edc1a",
+      "value": "Cuando Rhys volvió a Gales, en mayo de 1893, el sillón quedó a Rhys Thomas, de su congregación; hoy está en el Museo Histórico Regional de Gaiman."
+    },
+    "created_at": "2026-11-16T18:39:27.894079+00:00",
+    "reviewed_at": "2026-11-16T18:39:27.894079+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "c1da30e5-1cbd-48dc-aed3-7934bf9eb763",
     "type": "fact",
     "festival": "chubut",
@@ -3352,6 +3688,22 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "da2fb231-a155-4926-b9e3-66392c409dae",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1880,
+    "item_id": null,
+    "payload": {
+      "field": "start_date",
+      "fuente": "Osian Hughes, «Los poetas del Eisteddfod», p. 13",
+      "lote": "1fcae565-5017-415d-8cbc-2a390891be1c",
+      "value": "1880-05-17"
+    },
+    "created_at": "2026-11-16T18:39:27.894079+00:00",
+    "reviewed_at": "2026-11-16T18:39:27.894079+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "dc892ed3-1982-482f-9f84-95b9c53e7496",
     "type": "fact",
     "festival": "chubut",
@@ -3471,6 +3823,22 @@
     "created_at": "2026-11-14T14:09:45.016313+00:00",
     "reviewed_at": "2026-11-14T14:09:45.016313+00:00",
     "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "e07c8c9d-8a46-4a53-aa36-f5c3d48b47ce",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1884,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Osian Hughes, «Los poetas del Eisteddfod», p. 14",
+      "lote": "14ac0b87-079b-42d1-98e6-9c67bbe981a7",
+      "value": "Poema ganador: «Cartref» (El Hogar), de William T. Mason, presentado con el seudónimo «Grugor»."
+    },
+    "created_at": "2026-11-16T18:39:27.894079+00:00",
+    "reviewed_at": "2026-11-16T18:39:27.894079+00:00",
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "e1841e1e-c35c-489f-b49c-bf387cc9a338",
@@ -3667,6 +4035,22 @@
     "created_at": "2026-11-14T21:15:37.253846+00:00",
     "reviewed_at": "2026-11-14T21:15:37.253846+00:00",
     "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "ee994ad2-7f38-41c3-b73e-1705822edb36",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1881,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Osian Hughes, «Los poetas del Eisteddfod», pp. 13–14",
+      "lote": "67292bd1-64b7-4336-8654-3b2c464edc1a",
+      "value": "Rhys era el maestro de ceremonias y había concursado con el seudónimo «Marwol» (Un mortal): como nadie respondió al llamado del ganador, se sentó él mismo en el sillón, para regocijo del público (según R. Bryn Williams en «Awen Ariannin»)."
+    },
+    "created_at": "2026-11-16T18:39:27.894079+00:00",
+    "reviewed_at": "2026-11-16T18:39:27.894079+00:00",
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "f0f42f02-2014-4b71-990f-d8e1f26c6d90",

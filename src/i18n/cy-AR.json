@@ -374,7 +374,15 @@
     "ver_edicion": "Gweld yr eisteddfod",
     "pendiente": "Yn aros",
     "otro": "Gyrru un arall",
-    "ingresar_ayuda": "I gyfrannu, mae angen i chi fewngofnodi efo'ch e-bost. Mae'n sydyn a does dim angen cyfrinair.",
+    "pasos": {
+      "titulo": "Sut mae'n gweithio",
+      "p1_t": "Mewngofnodwch efo'ch e-bost",
+      "p1": "'Dan ni'n gyrru e-bost i chi i fynd i mewn. Mae'n sydyn a does dim angen cyfrinair.",
+      "p2_t": "Cyfrannwch at eisteddfod",
+      "p2": "Dewiswch yr eisteddfod a'r flwyddyn. Uwchlwythwch raglen neu lun, ychwanegwch ffeithiau neu sgwennwch atgof.",
+      "p3_t": "'Dan ni'n ei adolygu a'i gyhoeddi",
+      "p3": "Pan gaiff ei gymeradwyo, mi fydd yn ymddangos yn yr archif ac ar eich proffil. Diolch am helpu!"
+    },
     "ingresar": "Mewngofnodwch i gyfrannu",
     "elegir_nombre": "Cyn cyfrannu, dewiswch yr enw i'w ddangos.",
     "cargando": "Yn llwytho…",

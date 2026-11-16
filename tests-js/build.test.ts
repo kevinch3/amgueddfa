@@ -160,6 +160,25 @@ describe('static build', () => {
     expect(html).toContain('>diciembre</option>');
   });
 
+  it('signed-out visitors get a three-step picture of how contributing works, in every language', () => {
+    const steps = (f: string) => {
+      const html = read(f);
+      const sec = html.slice(html.indexOf('id="contrib-pasos"'), html.indexOf('id="contrib-gate"'));
+      return { sec, items: sec.match(/<li[ >]/g)?.length ?? 0 };
+    };
+    const es = steps('contribuir/index.html');
+    expect(es.items).toBe(3);
+    expect(es.sec).toMatch(/^id="contrib-pasos"[^>]*hidden/); // shown by the script only when signed out
+    expect(es.sec).toContain('Cómo funciona');
+    expect(es.sec.match(/<svg[^>]*aria-hidden="true"/g)).toHaveLength(3); // the drawings are decorative
+    expect(read('contribuir/index.html')).not.toContain('Para contribuir tenés que ingresar');
+    for (const [l, title] of [['cy', "Sut mae'n gweithio"], ['en', 'How it works'], ['zh', '参与方式'], ['it', 'Come funziona'], ['fr', 'Comment ça marche'], ['sv', 'Så fungerar det']]) {
+      const s = steps(`${l}/contribuir/index.html`);
+      expect(s.items, l).toBe(3);
+      expect(s.sec.replace(/&#39;/g, "'"), l).toContain(title);
+    }
+  });
+
   it('the Datos tab collects several facts with a shared Fuente', () => {
     const html = read('contribuir/index.html');
     expect(html).toContain('+ Agregar otro dato');

@@ -374,7 +374,15 @@
     "ver_edicion": "See the eisteddfod",
     "pendiente": "Pending",
     "otro": "Send another",
-    "ingresar_ayuda": "To contribute, you need to sign in with your email. It's quick and you don't need a password.",
+    "pasos": {
+      "titulo": "How it works",
+      "p1_t": "Sign in with your email",
+      "p1": "We send you an email to get in. It's quick and you don't need a password.",
+      "p2_t": "Add to an eisteddfod",
+      "p2": "Choose the eisteddfod and the year. Upload a programme or a photo, add facts or share a memory.",
+      "p3_t": "We review it and publish it",
+      "p3": "Once we approve it, it appears in the archive and on your profile. Thank you for helping!"
+    },
     "ingresar": "Sign in to contribute",
     "elegir_nombre": "Before contributing, choose how we'll show you.",
     "cargando": "Loading…",

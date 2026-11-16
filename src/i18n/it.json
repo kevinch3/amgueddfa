@@ -374,7 +374,15 @@
     "ver_edicion": "Vedi l'edizione",
     "pendiente": "In attesa",
     "otro": "Inviane un altro",
-    "ingresar_ayuda": "Per contribuire devi accedere con la tua email. È veloce e non serve la password.",
+    "pasos": {
+      "titulo": "Come funziona",
+      "p1_t": "Accedi con la tua email",
+      "p1": "Ti mandiamo un'email per entrare. È veloce e non serve la password.",
+      "p2_t": "Contribuisci a un'edizione",
+      "p2": "Scegli l'Eisteddfod e l'anno. Carica un programma o una foto, aggiungi dati o racconta un ricordo.",
+      "p3_t": "Lo esaminiamo e lo pubblichiamo",
+      "p3": "Quando lo approviamo compare nell'archivio e nel tuo profilo. Grazie del tuo aiuto!"
+    },
     "ingresar": "Accedi per contribuire",
     "elegir_nombre": "Prima di contribuire, scegli come ti mostreremo.",
     "cargando": "Caricamento…",

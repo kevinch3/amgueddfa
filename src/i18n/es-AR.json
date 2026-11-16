@@ -374,7 +374,15 @@
     "ver_edicion": "Ver la edición",
     "pendiente": "Pendiente",
     "otro": "Mandar otro",
-    "ingresar_ayuda": "Para contribuir tenés que ingresar con tu correo. Es rápido y no necesitás contraseña.",
+    "pasos": {
+      "titulo": "Cómo funciona",
+      "p1_t": "Ingresá con tu correo",
+      "p1": "Te mandamos un correo para entrar. Es rápido y no necesitás contraseña.",
+      "p2_t": "Aportá a una edición",
+      "p2": "Elegí el Eisteddfod y el año. Subí un programa o una foto, cargá datos o contá un recuerdo.",
+      "p3_t": "Lo revisamos y se publica",
+      "p3": "Cuando lo aprobamos aparece en el archivo y queda en tu perfil. ¡Gracias por sumar!"
+    },
     "ingresar": "Ingresá para contribuir",
     "elegir_nombre": "Antes de contribuir, elegí cómo te vamos a mostrar.",
     "cargando": "Cargando…",

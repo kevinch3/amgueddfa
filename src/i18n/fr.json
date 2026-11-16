@@ -374,7 +374,15 @@
     "ver_edicion": "Voir l'édition",
     "pendiente": "En attente",
     "otro": "En envoyer une autre",
-    "ingresar_ayuda": "Pour contribuer, vous devez vous connecter avec votre adresse e-mail. C'est rapide et sans mot de passe.",
+    "pasos": {
+      "titulo": "Comment ça marche",
+      "p1_t": "Connectez-vous avec votre e-mail",
+      "p1": "Nous vous envoyons un e-mail pour entrer. C'est rapide et sans mot de passe.",
+      "p2_t": "Contribuez à une édition",
+      "p2": "Choisissez l'Eisteddfod et l'année. Déposez un programme ou une photo, ajoutez des informations ou racontez un souvenir.",
+      "p3_t": "Nous l'examinons et le publions",
+      "p3": "Une fois approuvée, votre contribution apparaît dans les archives et sur votre profil. Merci de votre aide !"
+    },
     "ingresar": "Connectez-vous pour contribuer",
     "elegir_nombre": "Avant de contribuer, choisissez comment vous apparaîtrez.",
     "cargando": "Chargement…",

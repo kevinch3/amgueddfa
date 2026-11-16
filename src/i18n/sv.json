@@ -374,7 +374,15 @@
     "ver_edicion": "Se upplagan",
     "pendiente": "Väntar",
     "otro": "Skicka ett till",
-    "ingresar_ayuda": "För att bidra behöver du logga in med din e-post. Det går snabbt och du behöver inget lösenord.",
+    "pasos": {
+      "titulo": "Så fungerar det",
+      "p1_t": "Logga in med din e-post",
+      "p1": "Vi skickar ett mejl så att du kan logga in. Det går snabbt och du behöver inget lösenord.",
+      "p2_t": "Bidra till en upplaga",
+      "p2": "Välj eisteddfod och år. Ladda upp ett program eller ett foto, lägg till uppgifter eller berätta ett minne.",
+      "p3_t": "Vi granskar och publicerar",
+      "p3": "När vi har godkänt bidraget visas det i arkivet och på din profil. Tack för hjälpen!"
+    },
     "ingresar": "Logga in för att bidra",
     "elegir_nombre": "Välj hur vi ska visa dig innan du bidrar.",
     "cargando": "Laddar…",

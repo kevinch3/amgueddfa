@@ -9,7 +9,7 @@ programa que falta, sumar un dato (jurados, ganadores, sede), transcribir, corre
 etiquetas o dejar un recuerdo. Cada aporte pasa por revisión antes de publicarse.
 
 - Sitio estático hecho con [Astro](https://astro.build), publicado en GitHub Pages en
-  `https://amgueddfa.kevinroberts.ar/`.
+  `https://amgueddfa.org/`.
 - Datos en vivo (sesión, aportes, puntos, insignias) en [Supabase](https://supabase.com).
   Si Supabase no responde, las páginas siguen mostrando el contenido estático.
 
@@ -246,8 +246,8 @@ tocar `VIDEOS.tsv` ni el archivo. Un documento oculto conserva su página, con u
   signup» y «Magic Link»), que traen solo un enlace: ese enlace ahora inicia sesión
   (flujo PKCE, vuelve a `/ingresar/`). Solo funciona en el mismo navegador donde se
   pidió el correo. En Supabase → Authentication → URL Configuration poné
-  `https://amgueddfa.kevinroberts.ar` como Site URL y agregá
-  `https://amgueddfa.kevinroberts.ar/ingresar/**` (y `http://localhost:4321/ingresar/**`
+  `https://amgueddfa.org` como Site URL y agregá
+  `https://amgueddfa.org/ingresar/**` (y `http://localhost:4321/ingresar/**`
   para desarrollo) en Redirect URLs; si no, el enlace cae en la portada.
 - **Plantillas con código:** con SMTP propio (Resend, ver abajo), en Supabase →
   Authentication → Email Templates pegá `supabase/templates/magic_link.html` en
@@ -281,7 +281,7 @@ Mientras no haya SMTP propio (Resend), Supabase manda sus correos por defecto, q
 
 El sitio cuenta visitas con Cloudflare Web Analytics, que no usa cookies ni guarda nada en el navegador. Para activarla:
 
-1. En el panel de Cloudflare → **Analytics & Logs → Web Analytics**, agregá el sitio `amgueddfa.kevinroberts.ar` (como sitio sin proxy: el dominio apunta a GitHub Pages) y copiá el *token* del fragmento de JavaScript.
+1. En el panel de Cloudflare → **Analytics & Logs → Web Analytics**, agregá el sitio `amgueddfa.org` (como sitio sin proxy: el dominio apunta a GitHub Pages) y copiá el *token* del fragmento de JavaScript.
 2. Guardalo como variable de repositorio `PUBLIC_CF_ANALYTICS_TOKEN` (`gh variable set PUBLIC_CF_ANALYTICS_TOKEN`) y, para probar en local, en `.env`.
 
 Sin la variable, el build no incluye ni el token ni el script. Con ella, el script se carga en el navegador sólo si la persona no desactivó el conteo en `/cookies` y su navegador no envía *Do Not Track* ni *Global Privacy Control*. `/admin` nunca lo carga. Las visitas, países y sitios de origen se ven en el panel de Cloudflare; los ingresos por hora, en `/admin` → Estadísticas.

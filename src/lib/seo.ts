@@ -8,7 +8,7 @@ import { url } from './paths';
 import { docCount } from './site';
 import type { EditionState } from './types';
 
-export const SITE = 'https://amgueddfa.kevinroberts.ar';
+export const SITE = 'https://amgueddfa.org';
 
 /** Site-absolute URL for a path on this site; absolute URLs pass through. */
 export function absUrl(path: string): string {

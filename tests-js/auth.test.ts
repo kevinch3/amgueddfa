@@ -112,11 +112,11 @@ describe('sendCode', () => {
 
   it('asks for the email link to come back to /ingresar/ on this origin, keeping a safe volver', async () => {
     const { client, calls } = fakeClient();
-    const loc = { origin: 'https://amgueddfa.kevinroberts.ar', search: '?volver=%2Fcontribuir%2F%3Ff%3Dchubut%26y%3D1975' };
+    const loc = { origin: 'https://amgueddfa.org', search: '?volver=%2Fcontribuir%2F%3Ff%3Dchubut%26y%3D1975' };
     expect(await sendCode('ana@example.com', client, loc)).toEqual({ ok: true });
     const to = new URL(calls.signInWithOtp[0].options.emailRedirectTo);
     expect(calls.signInWithOtp[0].options.shouldCreateUser).toBe(true);
-    expect(to.origin).toBe('https://amgueddfa.kevinroberts.ar');
+    expect(to.origin).toBe('https://amgueddfa.org');
     expect(to.pathname).toBe('/ingresar/');
     expect(to.searchParams.get('volver')).toBe('/contribuir/?f=chubut&y=1975');
   });
@@ -132,7 +132,7 @@ describe('sendCode', () => {
 });
 
 describe('linkCallback / handleLinkCallback (email link sign-in)', () => {
-  const O = 'https://amgueddfa.kevinroberts.ar/ingresar/';
+  const O = 'https://amgueddfa.org/ingresar/';
 
   it('ignores a plain page load', () => {
     expect(linkCallback(O)).toEqual({ code: null, key: null, clean: null });

@@ -12,9 +12,9 @@ Esto incluye:
 - `src/data/transcripciones/`: transcripciones de los programas.
 
 Podés copiarlos, adaptarlos y redistribuirlos, también con fines comerciales, siempre que cites la fuente
-(«Amgueddfa Eisteddfod y Wladfa», con un enlace a https://amgueddfa.kevinroberts.ar)
+(«Amgueddfa Eisteddfod y Wladfa», con un enlace a https://amgueddfa.org)
 y compartas lo derivado bajo la misma licencia.
 
 **Quedan fuera** de esta licencia las imágenes de los programas y demás documentos escaneados: siguen siendo
 de cada asociación o de sus titulares. Para pedir que corrijamos o retiremos un documento, ver
-<https://amgueddfa.kevinroberts.ar/derechos/>.
+<https://amgueddfa.org/derechos/>.

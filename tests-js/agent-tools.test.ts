@@ -3,7 +3,7 @@ import { PAGES, fold, getEdition, inLanguage, listEditions, pagePath, searchDocu
 import { agentReply, modelContext } from '../src/lib/webmcp';
 import { FESTIVALS } from '../src/lib/contrib';
 
-const SITE = 'https://amgueddfa.kevinroberts.ar';
+const SITE = 'https://amgueddfa.org';
 const doc = (id: string, titulo: string, eisteddfod: string, ano: number | null, categoria = 'programa'): Documento => ({
   id, titulo, eisteddfod, nombre_eisteddfod: eisteddfod === 'chubut' ? 'Eisteddfod del Chubut' : 'Eisteddfod de Trevelin', ano, categoria, tipo: 'image', url: `${SITE}/item/${id}/`, miniatura: null,
 });

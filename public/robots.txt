@@ -12,4 +12,4 @@ Disallow: /*/perfil/
 Disallow: /*/ingresar/
 Disallow: /*/contribuir/
 
-Sitemap: https://amgueddfa.kevinroberts.ar/sitemap.xml
+Sitemap: https://amgueddfa.org/sitemap.xml

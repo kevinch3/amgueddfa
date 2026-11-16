@@ -177,7 +177,7 @@ describe('static build', () => {
 
   it('pages carry canonical, social tags and structured data; private pages are noindex', () => {
     const year = read('chubut/1937/index.html');
-    expect(year).toContain('<link rel="canonical" href="https://amgueddfa.kevinroberts.ar/chubut/1937/"');
+    expect(year).toContain('<link rel="canonical" href="https://amgueddfa.org/chubut/1937/"');
     expect(year).toContain('<meta property="og:title"');
     expect(year).toContain('"@type":"Event"');
     expect(year).toMatch(/<meta name="description" content="Eisteddfod del Chubut 1937\./);
@@ -204,20 +204,20 @@ describe('static build', () => {
     const robots = read('robots.txt');
     expect(robots).toContain('User-agent: *');
     expect(robots).toContain('Allow: /');
-    expect(robots).toContain('Sitemap: https://amgueddfa.kevinroberts.ar/sitemap.xml');
+    expect(robots).toContain('Sitemap: https://amgueddfa.org/sitemap.xml');
     expect(robots).toContain('Disallow: /admin/');
 
     const sitemap = read('sitemap.xml');
-    expect(sitemap).toContain('<loc>https://amgueddfa.kevinroberts.ar/chubut/1937/</loc>');
+    expect(sitemap).toContain('<loc>https://amgueddfa.org/chubut/1937/</loc>');
     const pub = catalog.find((i) => !i.restricted)!;
-    expect(sitemap).toContain(`<loc>https://amgueddfa.kevinroberts.ar/item/${pub.id}/</loc>`);
+    expect(sitemap).toContain(`<loc>https://amgueddfa.org/item/${pub.id}/</loc>`);
     expect(sitemap).not.toContain('/admin/');
     expect(sitemap).not.toContain('/contribuir/');
 
     const eds = JSON.parse(read('datos/ediciones.json'));
     const docs = JSON.parse(read('datos/documentos.json'));
     const e1937 = eds.ediciones.find((e: any) => e.eisteddfod === 'chubut' && e.ano === 1937);
-    expect(e1937.url).toBe('https://amgueddfa.kevinroberts.ar/chubut/1937/');
+    expect(e1937.url).toBe('https://amgueddfa.org/chubut/1937/');
     // Documents count catalog items plus approved community uploads of that year.
     for (const e of eds.ediciones) {
       const ups = (approved as any[]).filter((c) => c.type === 'upload' && c.festival === e.eisteddfod && c.year === e.ano).length;
@@ -243,8 +243,8 @@ describe('static build', () => {
     }
 
     const llms = read('llms.txt');
-    expect(llms).toContain('https://amgueddfa.kevinroberts.ar/datos/ediciones.json');
-    expect(llms).toContain('https://amgueddfa.kevinroberts.ar/datos/documentos.json');
+    expect(llms).toContain('https://amgueddfa.org/datos/ediciones.json');
+    expect(llms).toContain('https://amgueddfa.org/datos/documentos.json');
   });
 
   it('upload form asks what part of the programa is uploaded', () => {
@@ -491,7 +491,7 @@ describe('static build', () => {
 
   describe('every page in every language', () => {
     const OTHERS = LOCALES.filter((l) => l !== DEFAULT_LOCALE);
-    const SITE = 'https://amgueddfa.kevinroberts.ar';
+    const SITE = 'https://amgueddfa.org';
     /** Spanish pages, as paths relative to dist ("index.html", "chubut/1937/index.html"). */
     const spanishPages = () =>
       htmlFiles()
@@ -782,9 +782,9 @@ describe('static build', () => {
 
     it('automation hints: open data, llms.txt and (only with a token) the WebMCP origin trial', () => {
       const html = read('index.html');
-      expect(html).toContain('<link rel="alternate" type="application/json" href="https://amgueddfa.kevinroberts.ar/datos/ediciones.json"');
-      expect(html).toContain('<link rel="alternate" type="application/json" href="https://amgueddfa.kevinroberts.ar/datos/documentos.json"');
-      expect(html).toContain('<link rel="help" type="text/plain" href="https://amgueddfa.kevinroberts.ar/llms.txt"');
+      expect(html).toContain('<link rel="alternate" type="application/json" href="https://amgueddfa.org/datos/ediciones.json"');
+      expect(html).toContain('<link rel="alternate" type="application/json" href="https://amgueddfa.org/datos/documentos.json"');
+      expect(html).toContain('<link rel="help" type="text/plain" href="https://amgueddfa.org/llms.txt"');
       const root = join(__dirname, '..');
       const token = loadEnv('production', root, 'PUBLIC_').PUBLIC_WEBMCP_OT_TOKEN || process.env.PUBLIC_WEBMCP_OT_TOKEN;
       expect(html.includes('http-equiv="origin-trial"')).toBe(Boolean(token));

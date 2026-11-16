@@ -8,15 +8,15 @@ const fact = (field: string, value: string, extra: Record<string, unknown> = {})
 
 describe('seo builders', () => {
   it('absUrl makes site-absolute URLs', () => {
-    expect(absUrl('chubut/1937/')).toBe('https://amgueddfa.kevinroberts.ar/chubut/1937/');
-    expect(absUrl('/')).toBe('https://amgueddfa.kevinroberts.ar/');
+    expect(absUrl('chubut/1937/')).toBe('https://amgueddfa.org/chubut/1937/');
+    expect(absUrl('/')).toBe('https://amgueddfa.org/');
     expect(absUrl('https://x.supabase.co/a.webp')).toBe('https://x.supabase.co/a.webp');
   });
 
   it('sitemapXml escapes and lists every URL', () => {
     expect(xmlEscape('a & b <c>')).toBe('a &amp; b &lt;c&gt;');
-    const xml = sitemapXml(['https://amgueddfa.kevinroberts.ar/a?x=1&y=2']);
-    expect(xml).toContain('<loc>https://amgueddfa.kevinroberts.ar/a?x=1&amp;y=2</loc>');
+    const xml = sitemapXml(['https://amgueddfa.org/a?x=1&y=2']);
+    expect(xml).toContain('<loc>https://amgueddfa.org/a?x=1&amp;y=2</loc>');
     expect(xml.startsWith('<?xml')).toBe(true);
   });
 
@@ -55,7 +55,7 @@ describe('seo builders', () => {
       isAccessibleForFree: true,
     });
     const bare = editionJsonLd({ name: 'Eisteddfod de Trevelin', year: 2016, url: absUrl('trevelin/2016/'), image: null, facts: { notHeld: false } });
-    expect(bare).toMatchObject({ '@type': 'Event', name: 'Eisteddfod de Trevelin 2016', url: 'https://amgueddfa.kevinroberts.ar/trevelin/2016/' });
+    expect(bare).toMatchObject({ '@type': 'Event', name: 'Eisteddfod de Trevelin 2016', url: 'https://amgueddfa.org/trevelin/2016/' });
     for (const k of ['startDate', 'location', 'image', 'eventStatus']) expect(bare).not.toHaveProperty(k);
     const cancelled = editionJsonLd({ name: 'X', year: 1930, url: 'u', image: null, facts: { notHeld: true } });
     expect(cancelled.eventStatus).toBe('https://schema.org/EventCancelled');
@@ -73,7 +73,7 @@ describe('seo builders', () => {
 
   it('itemJsonLd and siteJsonLd', () => {
     const item = itemJsonLd({ name: 'Programa Rhaglen 2012', url: absUrl('item/abc/'), image: absUrl('media/abc/thumb.webp'), editionUrl: absUrl('chubut/2012/'), editionName: 'Eisteddfod del Chubut 2012', year: 2012 });
-    expect(item).toMatchObject({ '@type': 'ArchiveComponent', name: 'Programa Rhaglen 2012', about: { '@type': 'Event', url: 'https://amgueddfa.kevinroberts.ar/chubut/2012/' } });
+    expect(item).toMatchObject({ '@type': 'ArchiveComponent', name: 'Programa Rhaglen 2012', about: { '@type': 'Event', url: 'https://amgueddfa.org/chubut/2012/' } });
     const site = siteJsonLd();
     expect(JSON.stringify(site)).toContain('ArchiveOrganization');
     expect(JSON.stringify(site)).toContain('WebSite');

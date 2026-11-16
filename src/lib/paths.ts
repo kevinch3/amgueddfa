@@ -10,7 +10,7 @@ function isFile(path: string): boolean {
 }
 
 /**
- * Prefix an internal path with the site base (e.g. / on amgueddfa.kevinroberts.ar)
+ * Prefix an internal path with the site base (e.g. / on amgueddfa.org)
  * and, for a page, the language prefix (/cy/, /en/…; none for Spanish). Files keep
  * one address for every language.
  */

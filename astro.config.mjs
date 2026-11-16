@@ -7,7 +7,7 @@ import { defineConfig } from 'astro/config';
 const OTHER_LOCALES = ['cy', 'en', 'zh', 'it', 'fr', 'sv'];
 
 export default defineConfig({
-  site: 'https://amgueddfa.kevinroberts.ar',
+  site: 'https://amgueddfa.org',
   base: '/',
   i18n: {
     defaultLocale: 'es',

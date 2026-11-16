@@ -97,6 +97,7 @@
     "full": "Programme complet",
     "some": "Un peu de matériel",
     "none": "A-t-elle eu lieu ?",
+    "held_none": "A eu lieu, sans documents",
     "not_held": "N'a pas eu lieu"
   },
   "inicio": {

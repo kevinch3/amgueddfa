@@ -6,6 +6,7 @@
  */
 import { liveQuery } from '../lib/live';
 import { t } from '../lib/i18n';
+import { stateLabel } from '../lib/site';
 import { revealDecade } from '../lib/timeline';
 import type { EditionState } from '../lib/types';
 import { maxState, uploadStates, type UploadLike } from '../lib/uploads';
@@ -28,7 +29,7 @@ export function setNodeState(root: ParentNode, node: HTMLElement, next: EditionS
   if (next === old || node.dataset.status === 'not_held') return;
   node.dataset.state = next;
   revealDecade(node, next);
-  const label = t(`estados.${next}`);
+  const label = stateLabel(next, node.dataset.status);
   if (node.matches('[data-cell]')) {
     node.classList.replace(`st-${old}`, `st-${next}`);
     node.setAttribute('aria-label', t('inicio.celda', { festival: t(`festivales.${festival}`), year, estado: label }));

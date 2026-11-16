@@ -1,5 +1,6 @@
 import raw from '../data/catalog.json';
 import approvedRaw from '../../data/approved/contributions.json';
+import editionsRaw from '../../data/approved/editions.json';
 import { t } from './i18n';
 import { siteMedia } from './paths';
 import type { EditionState, FestivalSlug, Item } from './types';
@@ -173,4 +174,12 @@ export function thumbUrl(item: Item): string | null {
 export function pageUrls(item: Item): string[] {
   if (item.restricted) return [];
   return item.page_paths.map((p) => siteMedia(p));
+}
+
+const EDITION_STATUS = new Map((editionsRaw as { festival: string; year: number; status: string }[]).map((e) => [`${e.festival}:${e.year}`, e.status]));
+
+/** Whether an edition took place, from the last export (live pages refresh it in edicion.ts). */
+export function editionStatus(f: FestivalSlug, year: number): 'held' | 'not_held' | 'unknown' {
+  const s = EDITION_STATUS.get(`${f}:${year}`);
+  return s === 'held' || s === 'not_held' ? s : 'unknown';
 }

@@ -97,6 +97,7 @@
     "full": "Komplett program",
     "some": "En del material",
     "none": "Hölls den?",
+    "held_none": "Hölls, inga dokument än",
     "not_held": "Hölls inte"
   },
   "inicio": {

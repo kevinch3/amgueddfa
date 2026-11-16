@@ -1,6 +1,7 @@
 import staticEditions from '../../data/approved/editions.json';
 import { approvedForEdition, byLine, factDisplay, factInOriginal, forEdition, mergeApproved, ownPending, pendingView, sortFacts, sourceLine, type Contribution } from '../lib/contrib';
 import { contentLang, t, tAround } from '../lib/i18n';
+import { stateLabel } from '../lib/site';
 import { liveQuery } from '../lib/live';
 import { raiseStates, refreshStates } from './states';
 import { url } from '../lib/paths';
@@ -258,14 +259,24 @@ async function hydrateEdition(): Promise<void> {
 /** Raise grid cells, timeline rows and the edition badge to what approved uploads say (never lowers). */
 export const applyUploadStates = raiseStates;
 
-/** Mark editions that never happened (editions.status = not_held) on grids, timelines and the edition badge. */
+/**
+ * Mark editions that never happened (editions.status = not_held) on grids, timelines
+ * and the edition badge; ones known to have happened but with nothing archived say
+ * so instead of asking "¿Se realizó?".
+ */
 export function applyEditionStatus(root: ParentNode, rows: EditionRow[]): void {
   const status = new Map<string, EditionRow['status']>();
   for (const r of rows) status.set(`${r.festival}:${r.year}`, r.status);
   const label = t('edicion.no_realizada');
   for (const node of root.querySelectorAll<HTMLElement>('[data-festival][data-year][data-state]')) {
     const { festival = '', year = '' } = node.dataset;
-    if (status.get(`${festival}:${year}`) !== 'not_held' || node.dataset.status === 'not_held') continue;
+    const s = status.get(`${festival}:${year}`);
+    if (s === 'held' && node.dataset.status !== 'held' && node.dataset.status !== 'not_held') {
+      node.dataset.status = 'held';
+      if (node.dataset.state === 'none') setHeldLabel(node, festival, year);
+      continue;
+    }
+    if (s !== 'not_held' || node.dataset.status === 'not_held') continue;
     node.dataset.status = 'not_held';
     if (node.matches('[data-cell]')) {
       node.setAttribute('aria-label', t('inicio.celda', { festival: t(`festivales.${festival}`), year, estado: label }));
@@ -278,6 +289,19 @@ export function applyEditionStatus(root: ParentNode, rows: EditionRow[]): void {
       const st = node.querySelector('.st');
       if (st) st.textContent = label;
     }
+  }
+}
+
+/** "Se realizó, sin documentos" on a cell, timeline row or badge. */
+function setHeldLabel(node: HTMLElement, festival: string, year: string): void {
+  const label = stateLabel('none', 'held');
+  if (node.matches('[data-cell]')) {
+    node.setAttribute('aria-label', t('inicio.celda', { festival: t(`festivales.${festival}`), year, estado: label }));
+    node.title = label;
+  } else if (node.classList.contains('badge-state')) node.textContent = label;
+  else {
+    const first = node.querySelector('.st')?.firstChild;
+    if (first?.nodeType === 3) first.textContent = label;
   }
 }
 

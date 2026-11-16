@@ -1,11 +1,14 @@
 ---
-import { editionCatalogState } from '../lib/catalog';
+import { editionCatalogState, editionStatus } from '../lib/catalog';
+import { stateLabel } from '../lib/site';
 import { t } from '../lib/i18n';
 import { url } from '../lib/paths';
 import type { EditionState, FestivalSlug } from '../lib/types';
 
 interface Props { slug: FestivalSlug; name: string; y: number; state: EditionState; n: number }
 const { slug, name, y, state, n } = Astro.props;
+const status = editionStatus(slug, y);
+const label = stateLabel(state, status);
 ---
 <li>
   <a
@@ -16,7 +19,8 @@ const { slug, name, y, state, n } = Astro.props;
     data-year={y}
     data-state={state}
     data-cat-state={editionCatalogState(slug, y)}
-    aria-label={t('inicio.celda', { festival: name, year: y, estado: t(`estados.${state}`) })}
-    title={`${t(`estados.${state}`)}${n ? ` (${n === 1 ? t('comun.un_documento') : t('comun.n_documentos', { n })})` : ''}`}
+    data-status={status === 'held' ? 'held' : undefined}
+    aria-label={t('inicio.celda', { festival: name, year: y, estado: label })}
+    title={`${label}${n ? ` (${n === 1 ? t('comun.un_documento') : t('comun.n_documentos', { n })})` : ''}`}
   >{y}</a>
 </li>

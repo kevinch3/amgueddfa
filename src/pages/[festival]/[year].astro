@@ -10,7 +10,7 @@ import { PUBLIC_WINNERS, winnersFor } from '../../lib/ganadores';
 import { editionCatalogState, editionCover, editionItems, editionState, festivals, yearRange } from '../../lib/catalog';
 import { contentLang, formatList, intlLocales, t, tAround } from '../../lib/i18n';
 import { url } from '../../lib/paths';
-import { byTitle, CATEGORY_ORDER, docCount } from '../../lib/site';
+import { byTitle, CATEGORY_ORDER, docCount, stateLabel } from '../../lib/site';
 import type { FestivalSlug } from '../../lib/types';
 import approvedRaw from '../../../data/approved/contributions.json';
 import editionsStatic from '../../../data/approved/editions.json';
@@ -104,7 +104,7 @@ const missingList = formatList(missing.map((m) => m.toLocaleLowerCase(intlLocale
     )}
     <h1><span class="fest">{fest.name}</span> <span class="year">{year}</span></h1>
     <p class="state">
-      <span class={`badge-state st-${state}`} data-festival={slug} data-year={year} data-state={state} data-cat-state={editionCatalogState(slug, year)}>{t(`estados.${state}`)}</span>
+      <span class={`badge-state st-${state}`} data-festival={slug} data-year={year} data-state={state} data-cat-state={editionCatalogState(slug, year)} data-status={editionStatus === 'held' ? 'held' : undefined}>{stateLabel(state, editionStatus)}</span>
       {list.length > 0 && <span class="muted"> {docCount(list.length)}</span>}
     </p>
     <div class="cover-actions">

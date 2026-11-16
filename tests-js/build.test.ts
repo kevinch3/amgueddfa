@@ -292,6 +292,23 @@ describe('static build', () => {
     expect(home).toContain('id="contacto-mail"');
   });
 
+  it('a held edition with nothing archived says so, instead of asking whether it was held', () => {
+    const status = new Map((editionsData as { festival: string; year: number; status: string }[]).map((e) => [`${e.festival}:${e.year}`, e.status]));
+    const heldEmpty = [...status].filter(([k, s]) => s === 'held' && !catalog.some((i) => `${i.festival}:${i.year}` === k) && !(approved as any[]).some((c) => c.type === 'upload' && `${c.festival}:${c.year}` === k));
+    expect(heldEmpty.length).toBeGreaterThan(0);
+    for (const [k] of heldEmpty) {
+      const [f, y] = k.split(':');
+      const html = read(`${f}/${y}/index.html`);
+      expect(html, k).toMatch(/class="badge-state st-none"[^>]*data-status="held"[^>]*>Se realizó, sin documentos</);
+      expect(read(`${f}/index.html`), k).toMatch(new RegExp(`data-year="${y}"[^>]*data-status="held"`));
+    }
+    const [f0, y0] = heldEmpty[0][0].split(':');
+    expect(read(`en/${f0}/${y0}/index.html`)).toContain('>Held, no documents yet<');
+    // Unknown years still ask.
+    const unknown = Array.from({ length: 60 }, (_, i) => 1870 + i).find((y) => !status.has(`chubut:${y}`) && !catalog.some((i) => i.festival === 'chubut' && i.year === y));
+    expect(read(`chubut/${unknown}/index.html`)).toMatch(/class="badge-state st-none"[^>]*>¿Se realizó\?</);
+  });
+
   it('mount points are not live regions', () => {
     const html = read('chubut/2024/index.html');
     expect(html).not.toMatch(/id="(sesion|hechos|recuerdos|aportes|recientes)"[^>]*aria-live/);

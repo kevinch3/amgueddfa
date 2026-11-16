@@ -97,6 +97,7 @@
     "full": "Complete programme",
     "some": "Some material",
     "none": "Was it held?",
+    "held_none": "Held, no documents yet",
     "not_held": "Not held"
   },
   "inicio": {

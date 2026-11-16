@@ -853,21 +853,6 @@
     "display_name": "Meirion Griffiths"
   },
   {
-    "id": "321fef80-424b-40f6-8169-903faf524e4c",
-    "type": "fact",
-    "festival": "chubut",
-    "year": 1881,
-    "item_id": null,
-    "payload": {
-      "field": "other",
-      "lote": "9aaed2b1-775d-42e5-bf55-02b39b62b0b1",
-      "value": "Ganador: William Casnodyn Rhys."
-    },
-    "created_at": "2026-11-16T18:31:17.630618+00:00",
-    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
-    "display_name": "Meirion Griffiths"
-  },
-  {
     "id": "32cdaaec-6693-4022-8cd1-842cda0aa15c",
     "type": "fact",
     "festival": "chubut",
@@ -2088,21 +2073,6 @@
     "display_name": "Kevin Roberts"
   },
   {
-    "id": "7f890c30-c4ee-494b-85ab-8cb3b9690cfd",
-    "type": "fact",
-    "festival": "chubut",
-    "year": 1880,
-    "item_id": null,
-    "payload": {
-      "field": "other",
-      "lote": "913e2713-5315-41bc-b57c-754fb4ae9998",
-      "value": "Ganador: Thomas Pritchard."
-    },
-    "created_at": "2026-11-16T18:31:17.630618+00:00",
-    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
-    "display_name": "Meirion Griffiths"
-  },
-  {
     "id": "7fa53663-b298-4cae-8c59-0a0193cd649d",
     "type": "fact",
     "festival": "chubut",
@@ -2704,21 +2674,6 @@
     },
     "created_at": "2026-11-16T18:39:27.894079+00:00",
     "reviewed_at": "2026-11-16T18:39:27.894079+00:00",
-    "display_name": "Meirion Griffiths"
-  },
-  {
-    "id": "a1fe3b86-cd12-429f-9275-428a8c180a31",
-    "type": "fact",
-    "festival": "chubut",
-    "year": 1883,
-    "item_id": null,
-    "payload": {
-      "field": "other",
-      "lote": "6db2529e-7f4f-4373-9d55-17577f1b882d",
-      "value": "Ganador del eisteddfod: William Hughes (Glan Caeron)."
-    },
-    "created_at": "2026-11-16T18:31:17.630618+00:00",
-    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
     "display_name": "Meirion Griffiths"
   },
   {
@@ -4328,6 +4283,19 @@
     },
     "created_at": "2026-11-14T14:09:37.06148+00:00",
     "reviewed_at": "2026-11-14T14:09:37.06148+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "fff291de-bddb-4b9e-b1ca-d0aa866a1945",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 1931,
+    "item_id": "f2242aa764e9",
+    "payload": {
+      "year": 1931
+    },
+    "created_at": "2026-11-16T19:51:33.008471+00:00",
+    "reviewed_at": "2026-11-16T19:51:33.008471+00:00",
     "display_name": "Kevin Roberts"
   }
 ]

@@ -97,6 +97,7 @@
     "full": "Programa completo",
     "some": "Algo de material",
     "none": "¿Se realizó?",
+    "held_none": "Se realizó, sin documentos",
     "not_held": "No se realizó"
   },
   "inicio": {

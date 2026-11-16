@@ -97,6 +97,7 @@
     "full": "Rhaglen gyflawn",
     "some": "Peth deunydd",
     "none": "A gynhaliwyd hi?",
+    "held_none": "Cynhaliwyd, dim dogfennau",
     "not_held": "Ni chynhaliwyd"
   },
   "inicio": {

@@ -14,6 +14,21 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "024c50c1-ca1c-4b3e-aae7-d3ed3503fce9",
+    "type": "fact",
+    "festival": "trevelin",
+    "year": 1928,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "lote": "bba82dba-0078-41ed-ab14-7dcb4260cb37",
+      "value": "si"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "02578b56-14fe-450e-8fbd-ce8b3006cb3c",
     "type": "fact",
     "festival": "chubut",
@@ -45,6 +60,21 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "0344d259-4903-4b0c-a483-dda857fd255c",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1891,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "lote": "e80ed2c1-5d27-416b-bb39-12cb2f951122",
+      "value": "si"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "03696648-964b-48ba-8410-865cee384ff4",
     "type": "fact",
     "festival": "juventud",
@@ -73,6 +103,51 @@
     "created_at": "2026-11-14T13:19:03.427053+00:00",
     "reviewed_at": "2026-11-14T13:20:47.194865+00:00",
     "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "080c4fc7-c680-4903-9e4f-b6f2b95be375",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1919,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "lote": "7c6f14de-fe21-4809-96dc-23fb70eaa50d",
+      "value": "si"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "080c9e88-b1f3-4a48-8d99-115656b987fd",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1925,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "lote": "c2fa3fb3-1068-4bb0-8f1e-192766784b2b",
+      "value": "si"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "08b912f6-2d20-4b8c-901d-4345233807b4",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1904,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "lote": "41065fe3-49b4-4f1b-b90d-c52a728003fb",
+      "value": "si"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "0980cab0-5128-48c1-91b2-91309f9da6af",
@@ -153,6 +228,36 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "104336ce-951f-46de-be3d-646c2472bd9a",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1918,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "lote": "8aa51696-cf74-4508-818f-2c402e29e3c7",
+      "value": "si"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "13699e72-cb40-40b8-a487-4cba14af3159",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1880,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "lote": "913e2713-5315-41bc-b57c-754fb4ae9998",
+      "value": "si"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "13798c4a-ce5c-4bb4-bfdf-24a8e84507fc",
     "type": "fact",
     "festival": "mimosa",
@@ -167,6 +272,36 @@
     "created_at": "2026-11-14T14:09:57.283747+00:00",
     "reviewed_at": "2026-11-14T14:09:57.283747+00:00",
     "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "14b7172e-5f71-4509-bc32-5f96ab7caf29",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1923,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "lote": "a35fe643-d3fe-44d9-b933-b57914bba7ca",
+      "value": "Ganador: Morgan Philip Jones."
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "1521ee0f-342f-4930-9f40-d3c58f087036",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1918,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "lote": "8aa51696-cf74-4508-818f-2c402e29e3c7",
+      "value": "Trelew"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "16eaf3d2-2780-4627-927c-d543dcc8db68",
@@ -184,6 +319,21 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "16eb5288-05be-41d2-8186-a2529bf3811b",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1925,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "lote": "c2fa3fb3-1068-4bb0-8f1e-192766784b2b",
+      "value": "Gaiman"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "17e86bef-0ffe-4bff-b17b-b7d1e7e0adbc",
     "type": "fact",
     "festival": "juventud",
@@ -198,6 +348,21 @@
     "created_at": "2026-11-14T14:09:55.906737+00:00",
     "reviewed_at": "2026-11-14T14:09:55.906737+00:00",
     "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "19205166-0a7c-4294-a1cf-10f41e890ead",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1910,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "lote": "98be6200-b9c5-4dce-ad70-db14a03aece8",
+      "value": "Ganador: Morgan Philip Jones."
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "196fd88a-1710-4f3b-a5b4-f38ee14e7ec2",
@@ -272,6 +437,36 @@
     "created_at": "2026-11-14T14:09:28.653632+00:00",
     "reviewed_at": "2026-11-14T14:09:28.653632+00:00",
     "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "1cea96d4-d55f-4d82-a11f-f12253049b1b",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1927,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "lote": "fc875b4b-330b-402e-a1bb-c43cf9d5820e",
+      "value": "si"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "1d8ad5b0-4832-407e-b731-36b2b73f6c5b",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1899,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "lote": "8294c10a-c542-4a38-b748-b90d55b3bb57",
+      "value": "no"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "1e6305d9-b260-40bc-a2ef-26aeeb74338f",
@@ -364,6 +559,21 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "29ba9d63-787c-4285-acbc-77bf9ce381d0",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1922,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "lote": "0085939c-7a84-49b9-b897-cbdf9d5b742d",
+      "value": "Gaiman"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "2c15ab21-8015-4ea8-ab0c-4dee855cdd5c",
     "type": "tag",
     "festival": "chubut",
@@ -377,6 +587,21 @@
     "created_at": "2026-11-14T13:19:17.589273+00:00",
     "reviewed_at": "2026-11-14T13:20:49.020409+00:00",
     "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "2c6fc4b5-b066-470f-a213-77c21cca4e36",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1923,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "lote": "a35fe643-d3fe-44d9-b933-b57914bba7ca",
+      "value": "si"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "2ca38dd5-9c06-4125-9feb-e79f54972f8b",
@@ -395,6 +620,21 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "2cbfd294-ad8a-4196-8bb1-67ce0b0c0122",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1898,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "lote": "ffe2b187-3724-4041-8285-35802a8b65ee",
+      "value": "El jurado, formado por Glan Caeron y Lewis Evans (Meudwy), no otorgó el premio."
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "2cc57c0b-6813-46be-ab58-f4073703d447",
     "type": "fact",
     "festival": "chubut",
@@ -408,6 +648,21 @@
     "created_at": "2026-11-14T14:25:31.722918+00:00",
     "reviewed_at": "2026-11-14T14:25:31.722918+00:00",
     "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "2de03bda-2045-40a5-812f-bc579f50f567",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1923,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "lote": "a35fe643-d3fe-44d9-b933-b57914bba7ca",
+      "value": "Dolavon"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "2e3d2fca-81bd-4e4c-8ba2-b026f236a91b",
@@ -440,6 +695,21 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "2ff3c722-3394-4532-80c8-fd104652da9f",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1923,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "lote": "a35fe643-d3fe-44d9-b933-b57914bba7ca",
+      "value": "Primera vez que se hizo en Dolavon."
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "3191fa24-3473-46a5-96de-0718def92743",
     "type": "fact",
     "festival": "chubut",
@@ -456,6 +726,51 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "31b94612-7aa2-45b8-813b-0469e1994650",
+    "type": "fact",
+    "festival": "trevelin",
+    "year": 1928,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_silla",
+      "lote": "bba82dba-0078-41ed-ab14-7dcb4260cb37",
+      "value": "Tudur Evans"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "321fef80-424b-40f6-8169-903faf524e4c",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1881,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "lote": "9aaed2b1-775d-42e5-bf55-02b39b62b0b1",
+      "value": "Ganador: William Casnodyn Rhys."
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "32cdaaec-6693-4022-8cd1-842cda0aa15c",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1921,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "lote": "705834e1-338f-46ea-a16b-71dfea84d972",
+      "value": "si"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "37227883-6e02-4919-8dc1-4591a7139b7d",
     "type": "tag",
     "festival": "juventud",
@@ -467,6 +782,36 @@
     "created_at": "2026-11-14T16:38:37.91413+00:00",
     "reviewed_at": "2026-11-14T16:38:37.91413+00:00",
     "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "379499de-8ecf-4ae9-bd66-bcbc687d9429",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1896,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "lote": "c731f0ae-abb6-499a-ae5f-2980cb11e401",
+      "value": "no"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "37b8e9e7-d121-43f0-8bac-87a474607eba",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1928,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "lote": "cd9b4ee8-b289-4209-9733-cc6b63acedf4",
+      "value": "En esos años se hicieron arwest (mini eisteddfodau) en la chacra de Aeron Jones, padre de Clydwyn y de Dewi Mefin."
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "39e01401-68ef-4061-9b24-dc48afa07f14",
@@ -514,6 +859,36 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "3ca94463-be45-4be3-8dcf-b195951509a9",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1920,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "lote": "d7b35f77-982b-4168-855f-dcdd4a542833",
+      "value": "si"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "3da7c535-7852-4095-9135-712236cd9352",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1918,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "lote": "8aa51696-cf74-4508-818f-2c402e29e3c7",
+      "value": "Por segunda vez hubo corona en vez de silla."
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "3f952f17-e5e0-4290-a3e0-8e0947f120ec",
     "type": "fact",
     "festival": "chubut",
@@ -527,6 +902,21 @@
     "created_at": "2026-11-14T14:25:30.390205+00:00",
     "reviewed_at": "2026-11-14T14:25:30.390205+00:00",
     "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "40495b4b-4eaf-4d55-b0d9-f5f4cff47842",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1922,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "lote": "0085939c-7a84-49b9-b897-cbdf9d5b742d",
+      "value": "Ganador: Richard Bryn Williams, de tan solo 20 años."
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "413cfe0b-a710-4ab2-8f36-f695bb9c59ef",
@@ -544,6 +934,21 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "417352eb-cf19-4f1c-b6a7-ef82538e375c",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1921,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "lote": "705834e1-338f-46ea-a16b-71dfea84d972",
+      "value": "Trelew"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "4204d6d6-3d08-4592-a348-13b1002ffc20",
     "type": "tag",
     "festival": "juventud",
@@ -555,6 +960,36 @@
     "created_at": "2026-11-14T16:38:37.91413+00:00",
     "reviewed_at": "2026-11-14T16:38:37.91413+00:00",
     "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "4384b5a5-d58a-40ce-8eed-9dbbd2f310c2",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1865,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "lote": "3f806b6f-2495-405a-a23a-c9be05c8d981",
+      "value": "Encuentro en Punta Cuevas."
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "46770b9a-f2b1-44f7-9bc4-b02b72aa7079",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1928,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "lote": "cd9b4ee8-b289-4209-9733-cc6b63acedf4",
+      "value": "No se hizo eisteddfod con silla (cadeiriol) en el valle: empezó un período sin sillas ni coronas."
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "4709d0fb-2598-4a4e-aa09-fb1cd800ac71",
@@ -571,6 +1006,21 @@
     "created_at": "2026-11-14T14:09:20.944203+00:00",
     "reviewed_at": "2026-11-14T14:09:20.944203+00:00",
     "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "486c0635-48d0-4dc6-a181-6e3d769addae",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1925,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "lote": "c2fa3fb3-1068-4bb0-8f1e-192766784b2b",
+      "value": "Ganador: Cynan Jones, del Valle 16 de Octubre."
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "4b2c66a0-d2e3-458f-962e-1681bfe31677",
@@ -601,6 +1051,51 @@
     "created_at": "2026-11-14T11:01:58.536559+00:00",
     "reviewed_at": "2026-11-14T11:02:51.476225+00:00",
     "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "4dafca63-3598-4d21-b5d0-03ed987d1262",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1909,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "lote": "d1ffe7de-2f1e-48d0-9dc7-3ad77d048dc8",
+      "value": "si"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "51800afb-100c-4014-b4d4-22c6aba2aff3",
+    "type": "fact",
+    "festival": "trevelin",
+    "year": 1929,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "lote": "3980b665-1456-46a2-952a-97dd921eab86",
+      "value": "si"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "52543603-c0db-4606-af21-6ee3f2a990fb",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1889,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "lote": "240ae77c-aa2e-4882-bde2-d6e22b960098",
+      "value": "si"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "5434558e-64ac-4443-82c0-57280a2cbfd6",
@@ -664,6 +1159,21 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "5ce42601-f9f4-4293-bfdc-5a0817c72a80",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1919,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "lote": "7c6f14de-fe21-4809-96dc-23fb70eaa50d",
+      "value": "Trelew"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "5d3ca87e-00fa-44c6-b471-2ede96f1f8c2",
     "type": "fact",
     "festival": "chubut",
@@ -693,6 +1203,21 @@
     "created_at": "2026-11-14T14:09:12.77561+00:00",
     "reviewed_at": "2026-11-14T14:09:12.77561+00:00",
     "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "5fde90ba-b85e-4dfe-8ac5-97dbd83d7406",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1876,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "lote": "00480680-8cf5-423c-9736-ef77e7681bd4",
+      "value": "si"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "6069e73b-b7df-4340-8e14-7c92500803e9",
@@ -755,6 +1280,21 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "63b67200-d14f-48cf-9634-b6d0a9d57c1d",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1917,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "lote": "38b87a73-0959-48a2-a73b-1bc3531d0329",
+      "value": "Salón San David, Trelew"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "64b79c5e-613a-4e3a-9999-83d503657291",
     "type": "fact",
     "festival": "chubut",
@@ -802,6 +1342,21 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "66612b10-e6c5-4426-ade0-ea56cf2498ac",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1924,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "lote": "522c6b5e-9b3d-497b-8fe4-1ee7dc43914a",
+      "value": "si"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "67182d88-be9d-43e9-b879-7c2afd466c52",
     "type": "fact",
     "festival": "chubut",
@@ -831,6 +1386,21 @@
     "created_at": "2026-11-14T14:09:49.092483+00:00",
     "reviewed_at": "2026-11-14T14:09:49.092483+00:00",
     "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "6828ef5e-95fb-45c1-b65b-e69ae6df641a",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1891,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "lote": "e80ed2c1-5d27-416b-bb39-12cb2f951122",
+      "value": "El premio del bardo quedó desierto."
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "68aff454-20c9-4666-a87e-3ef6d2899b5c",
@@ -865,6 +1435,21 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "6d71fb2c-1d30-45b8-a220-045866a67994",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1895,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "lote": "db3d9d65-34e9-4027-aa21-bbab461094c8",
+      "value": "Bardo ganador: Gwilym Lewis."
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "6e43a8d5-0ac1-4b36-843a-e8ca15b26388",
     "type": "tag",
     "festival": "juventud",
@@ -878,6 +1463,21 @@
     "created_at": "2026-11-14T11:02:21.601077+00:00",
     "reviewed_at": "2026-11-14T11:02:53.380313+00:00",
     "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "6e4c76db-3055-4167-b8b1-74c509460320",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1883,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "lote": "6db2529e-7f4f-4373-9d55-17577f1b882d",
+      "value": "si"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "6e6279f7-ab44-409e-a449-58b1ef52929e",
@@ -952,6 +1552,21 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "7140e058-5a06-4de7-b41c-d95d813b6be0",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1893,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "lote": "e191ee70-82c0-4817-a090-f31de8f9a551",
+      "value": "Ganador: William Hughes (Glan Caeron)."
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "71583373-224e-4f5b-b24f-14a0f1da6579",
     "type": "fact",
     "festival": "trevelin",
@@ -982,6 +1597,21 @@
     "created_at": "2026-11-14T14:09:42.05194+00:00",
     "reviewed_at": "2026-11-14T14:09:42.05194+00:00",
     "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "72634647-9249-460f-acc9-d32b96a88d80",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1908,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_silla",
+      "lote": "7e71ef25-b0b3-4762-81cf-854278fb6f14",
+      "value": "Morgan Philip Jones"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "7273da4a-e4a3-4994-ad31-d2ad173c3dd4",
@@ -1016,6 +1646,21 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "7304b5fd-7c1c-484c-9603-8241a020e021",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1892,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "lote": "82055f01-f716-4827-8d03-dd24852a6f6a",
+      "value": "Gaiman"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "74954d98-c537-49d0-8f69-05b980fe8f09",
     "type": "fact",
     "festival": "juventud",
@@ -1030,6 +1675,21 @@
     "created_at": "2026-11-14T14:09:53.417+00:00",
     "reviewed_at": "2026-11-14T14:09:53.417+00:00",
     "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "7544406c-a5b8-4265-8ddf-2ed8fe1bba56",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1924,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "lote": "522c6b5e-9b3d-497b-8fe4-1ee7dc43914a",
+      "value": "Ganador: Cynan Jones, de la cordillera."
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "774f7e16-a996-4ce8-8ad7-ff2ccef9e054",
@@ -1095,6 +1755,36 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "7b7d5715-2468-491c-80af-02b50795ff9b",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1904,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "lote": "41065fe3-49b4-4f1b-b90d-c52a728003fb",
+      "value": "Ganador: William Hughes (Glan Caeron)."
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "7b89897f-76be-42d7-8b94-d2327f950523",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1876,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "lote": "00480680-8cf5-423c-9736-ef77e7681bd4",
+      "value": "Eisteddfod de competencias, no bárdico."
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "7c1d5ce4-6e9b-461d-a512-002235b1605b",
     "type": "fact",
     "festival": "chubut",
@@ -1142,6 +1832,51 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "7f890c30-c4ee-494b-85ab-8cb3b9690cfd",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1880,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "lote": "913e2713-5315-41bc-b57c-754fb4ae9998",
+      "value": "Ganador: Thomas Pritchard."
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "851e83c5-1d25-4af2-b53d-0fc2d741b5b2",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1917,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "lote": "38b87a73-0959-48a2-a73b-1bc3531d0329",
+      "value": "si"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "86840ea4-11d4-4d56-9ce2-50f230cf378e",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1893,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "lote": "e191ee70-82c0-4817-a090-f31de8f9a551",
+      "value": "Trelew"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "86a44e26-2c37-41d1-8702-9595d3aef80d",
     "type": "fact",
     "festival": "chubut",
@@ -1167,6 +1902,36 @@
     "created_at": "2026-11-14T16:38:37.91413+00:00",
     "reviewed_at": "2026-11-14T16:38:37.91413+00:00",
     "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "887794be-d060-4820-b1cd-4ecd317e79d2",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1884,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "lote": "0e130817-b524-4a34-afed-821c0770379b",
+      "value": "si"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "888c511f-4b50-4f95-803c-f10f5c4aa787",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1917,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_silla",
+      "lote": "38b87a73-0959-48a2-a73b-1bc3531d0329",
+      "value": "Morgan Philip Jones"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "8be26600-6012-48c9-8a26-222fbfd4905c",
@@ -1226,6 +1991,21 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "8fb27ff2-69fd-49b8-9d2c-fb1e94a4a11d",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1920,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "lote": "d7b35f77-982b-4168-855f-dcdd4a542833",
+      "value": "Ganador: William Williams (Prysor)."
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "900327ed-dc7b-4f59-b982-7f9eae6d6c52",
     "type": "fact",
     "festival": "chubut",
@@ -1240,6 +2020,21 @@
     "created_at": "2026-11-14T14:09:09.603838+00:00",
     "reviewed_at": "2026-11-14T14:09:09.603838+00:00",
     "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "90576100-dae8-4808-bca3-9f958b296df1",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1898,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "lote": "ffe2b187-3724-4041-8285-35802a8b65ee",
+      "value": "si"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "90ff7c7f-fdb1-4505-a1df-83ff36fa49ed",
@@ -1287,6 +2082,36 @@
     "created_at": "2026-11-14T14:09:03.556317+00:00",
     "reviewed_at": "2026-11-14T14:09:03.556317+00:00",
     "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "9308ef8d-69bd-4b55-9be1-348f16c5e3c4",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1898,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "lote": "ffe2b187-3724-4041-8285-35802a8b65ee",
+      "value": "El principal candidato, Morgan Philip Jones, apeló la decisión."
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "9381b5f8-0e7f-4ab3-9c3f-14c5c35098bb",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1926,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "lote": "092f8217-ba64-4ca5-aa32-58f70ccc5045",
+      "value": "Dolavon"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "953fc9eb-194d-4986-87a6-1bb4cc694945",
@@ -1382,6 +2207,36 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "98d0b99f-dc9a-4ad3-8244-8072fe0e792e",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1881,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "lote": "9aaed2b1-775d-42e5-bf55-02b39b62b0b1",
+      "value": "si"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "9998bf72-0fe6-4061-90de-dbffaf346239",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1897,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "lote": "48e2aaf0-6275-4224-ad15-d3a12368d375",
+      "value": "no"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "9a8805b6-9c4c-4879-9499-7ed2f289c442",
     "type": "fact",
     "festival": "chubut",
@@ -1396,6 +2251,21 @@
     "created_at": "2026-11-14T14:08:59.601738+00:00",
     "reviewed_at": "2026-11-14T14:08:59.601738+00:00",
     "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "9b023cbe-4127-4f60-b316-57ccfaca2256",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1889,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "lote": "240ae77c-aa2e-4882-bde2-d6e22b960098",
+      "value": "Obrador del ferrocarril, a la vera de la laguna Chiquichano"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "9cbc9307-4cc3-425e-a253-819133b369d9",
@@ -1534,6 +2404,51 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "a1e0de39-587d-446a-b3fe-65409f4dc68e",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1876,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "lote": "00480680-8cf5-423c-9736-ef77e7681bd4",
+      "value": "Rawson"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "a1fe3b86-cd12-429f-9275-428a8c180a31",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1883,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "lote": "6db2529e-7f4f-4373-9d55-17577f1b882d",
+      "value": "Ganador del eisteddfod: William Hughes (Glan Caeron)."
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "a3b893d0-ff7f-4667-a50b-1a9b8c8d1823",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1893,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "lote": "e191ee70-82c0-4817-a090-f31de8f9a551",
+      "value": "si"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "a4470a1e-e25f-41d3-84ef-0c76fd397a46",
     "type": "fact",
     "festival": "chubut",
@@ -1581,6 +2496,21 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "a6a6adff-54ab-4b6e-9978-9cb7e6cfeb86",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1909,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_corona",
+      "lote": "d1ffe7de-2f1e-48d0-9dc7-3ad77d048dc8",
+      "value": "William Hughes (Glan Caeron)"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "a857cccc-b85a-410a-a815-e036fcad5fce",
     "type": "fact",
     "festival": "chubut",
@@ -1595,6 +2525,21 @@
     "created_at": "2026-11-14T14:09:26.161063+00:00",
     "reviewed_at": "2026-11-14T14:09:26.161063+00:00",
     "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "aa6b2971-7c6a-4d00-9141-9261b168a4d5",
+    "type": "fact",
+    "festival": "trevelin",
+    "year": 1928,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "lote": "bba82dba-0078-41ed-ab14-7dcb4260cb37",
+      "value": "Galpón de acopio del Molino Andes, Trevelin"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "ab0a53b7-1a64-4687-b1da-2761191c02ac",
@@ -1612,6 +2557,21 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "ac0dec37-9e55-43b4-9925-fb069e35a990",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1880,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "lote": "913e2713-5315-41bc-b57c-754fb4ae9998",
+      "value": "Capilla bautista Frondeg, Treorci"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "acfb47a2-bea1-43c8-8ce1-8eb9b008a8d7",
     "type": "tag",
     "festival": "juventud",
@@ -1625,6 +2585,36 @@
     "created_at": "2026-11-14T10:44:09.702798+00:00",
     "reviewed_at": "2026-11-14T11:02:39.612976+00:00",
     "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "ad406197-7801-4104-bd89-d8918ca39d50",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1922,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "lote": "0085939c-7a84-49b9-b897-cbdf9d5b742d",
+      "value": "Se inauguró la famosa carpa."
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "add6e33c-7789-40a2-9763-73510b0ba299",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1911,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "lote": "09d3086b-520e-48bc-be1b-aa74374c0796",
+      "value": "Ganador, de nuevo: William Hughes (Glan Caeron), con el poema «Gorlif» (Inundación)."
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "ae5b18ff-e20b-43ea-8a15-24fdd986c783",
@@ -1658,6 +2648,21 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "b1d313fc-b309-4c6f-b1c4-f8242aa67371",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1896,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "lote": "c731f0ae-abb6-499a-ae5f-2980cb11e401",
+      "value": "No se hizo por una epidemia de viruela."
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "b49c6b8b-7fa5-4408-ac71-1abe9e128eb4",
     "type": "fact",
     "festival": "chubut",
@@ -1672,6 +2677,50 @@
     "created_at": "2026-11-14T14:13:10.350596+00:00",
     "reviewed_at": "2026-11-14T14:13:10.350596+00:00",
     "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "b6de5de0-40a8-497f-abe2-33d20b8d9a88",
+    "type": "fact",
+    "festival": "trevelin",
+    "year": 1927,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "value": "si"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "b8180fb2-c8f0-4418-aba7-b494e66a2f60",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1919,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "lote": "7c6f14de-fe21-4809-96dc-23fb70eaa50d",
+      "value": "No se presentó nadie al certamen."
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "b8603fb5-5cf6-48e4-a0ed-43f62a051316",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1908,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "lote": "7e71ef25-b0b3-4762-81cf-854278fb6f14",
+      "value": "si"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "b8a66142-aa69-4254-b25c-30985eff960e",
@@ -1748,6 +2797,21 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "bb8b0d8e-c5f7-4b83-99cc-c947e2a9732e",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1922,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "lote": "0085939c-7a84-49b9-b897-cbdf9d5b742d",
+      "value": "si"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "bc7dcc74-7424-4148-b4d5-43fcda1b4b6c",
     "type": "fact",
     "festival": "chubut",
@@ -1794,6 +2858,21 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "be10e1e6-f5e2-4cc5-a624-e71eaa9be82f",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1924,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "lote": "522c6b5e-9b3d-497b-8fe4-1ee7dc43914a",
+      "value": "Trelew"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "befa21f0-f5e4-413b-b53c-e11255b409ce",
     "type": "fact",
     "festival": "trevelin",
@@ -1808,6 +2887,21 @@
     "created_at": "2026-11-14T14:09:50.695454+00:00",
     "reviewed_at": "2026-11-14T14:09:50.695454+00:00",
     "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "bf7dc30b-74d1-41bf-9303-df8cbe117b30",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1913,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "lote": "8e130d7d-b13f-48f8-9a3a-b973e62a87ba",
+      "value": "si"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "bfc7f382-ac16-4e16-8121-53162e81a9c3",
@@ -1837,6 +2931,21 @@
     "created_at": "2026-11-13T22:53:19.449556+00:00",
     "reviewed_at": "2026-11-13T23:47:15.234541+00:00",
     "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "c0444a66-54bb-4cfc-9907-1855539c257b",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1926,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "lote": "092f8217-ba64-4ca5-aa32-58f70ccc5045",
+      "value": "si"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "c0dde317-a0cb-4fc1-8871-40c7ed1454e6",
@@ -1875,6 +2984,36 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "c1da30e5-1cbd-48dc-aed3-7934bf9eb763",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1891,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "lote": "e80ed2c1-5d27-416b-bb39-12cb2f951122",
+      "value": "Un pasillo largo y angosto de la Compañía Mercantil, Rawson"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "c3777338-d3d3-41b3-a940-af252904b60c",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1927,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "lote": "fc875b4b-330b-402e-a1bb-c43cf9d5820e",
+      "value": "Trelew"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "c3a4a35a-9d3f-4e74-9986-b24c44f9f310",
     "type": "fact",
     "festival": "chubut",
@@ -1890,6 +3029,21 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "c440429f-642f-4947-855d-8db31b45f776",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1897,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "lote": "48e2aaf0-6275-4224-ad15-d3a12368d375",
+      "value": "No se hizo por una epidemia de viruela."
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "c47c2160-2084-4f2e-82f2-c5cd3ed01ed3",
     "type": "tag",
     "festival": "juventud",
@@ -1901,6 +3055,21 @@
     "created_at": "2026-11-14T15:58:51.696434+00:00",
     "reviewed_at": "2026-11-14T16:25:13.446385+00:00",
     "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "c4ab0d79-ccc8-4ba5-8d09-d687247aa21c",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1910,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "lote": "98be6200-b9c5-4dce-ad70-db14a03aece8",
+      "value": "Gaiman"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "c4d878dc-d021-4162-90a5-7defc27d88d9",
@@ -1917,6 +3086,21 @@
     "created_at": "2026-11-14T14:09:46.600195+00:00",
     "reviewed_at": "2026-11-14T14:09:46.600195+00:00",
     "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "c507a663-3fbf-40bf-889d-fd3faa0eefd3",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1926,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "lote": "092f8217-ba64-4ca5-aa32-58f70ccc5045",
+      "value": "Ganador: Owen Hughes, un galés de los Estados Unidos, hermano de Humphrey Hughes, que vivía en Gaiman."
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "c57e230f-10b5-4b87-a5b7-e228dc23cb84",
@@ -1953,6 +3137,21 @@
     "created_at": "2026-11-14T14:09:18.215996+00:00",
     "reviewed_at": "2026-11-14T14:09:18.215996+00:00",
     "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "c8d4e923-fa45-45c8-9825-bb31595509ce",
+    "type": "fact",
+    "festival": "trevelin",
+    "year": 1929,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "lote": "3980b665-1456-46a2-952a-97dd921eab86",
+      "value": "Se hizo en enero."
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "c967d253-c895-4ee4-8ed9-b3263e610c56",
@@ -2033,6 +3232,36 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "d0c99ce9-88e0-4aba-b379-9716a48d8806",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1910,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "lote": "98be6200-b9c5-4dce-ad70-db14a03aece8",
+      "value": "si"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "d42e552e-5c60-4ec0-a9fb-f974a4d6783f",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1884,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "lote": "0e130817-b524-4a34-afed-821c0770379b",
+      "value": "Ganador: William T. Mason."
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "d57d4c3e-8346-410e-9fbb-1b1128ad64d2",
     "type": "fact",
     "festival": "chubut",
@@ -2092,6 +3321,21 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "d9a86e0d-0aaa-4101-93b1-5318758a3c4c",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1899,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "lote": "8294c10a-c542-4a38-b748-b90d55b3bb57",
+      "value": "No se hizo por la inundación."
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "da1dd0c4-018c-4ae9-a674-18c759361df5",
     "type": "fact",
     "festival": "trevelin",
@@ -2140,6 +3384,21 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "ddb91d12-8136-4daa-9535-6639bb9ff0ca",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1911,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "lote": "09d3086b-520e-48bc-be1b-aa74374c0796",
+      "value": "si"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "de3cd928-f4da-4caf-a0c7-f81b442fb53d",
     "type": "fact",
     "festival": "trevelin",
@@ -2167,6 +3426,21 @@
     "created_at": "2026-11-14T16:25:02.601875+00:00",
     "reviewed_at": "2026-11-14T16:25:02.601875+00:00",
     "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "dee9c9da-b089-43ea-bf32-99a8ce173791",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1884,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "lote": "0e130817-b524-4a34-afed-821c0770379b",
+      "value": "Trelew"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "df01b452-b2be-4fa3-a148-084a9cbd6a48",
@@ -2214,6 +3488,21 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "e3559114-bfe0-4571-87cb-6485cd1e2b6d",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1909,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "lote": "d1ffe7de-2f1e-48d0-9dc7-3ad77d048dc8",
+      "value": "Trelew"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "e419ab2a-99a4-4119-b075-3b88d8b7a313",
     "type": "fact",
     "festival": "juventud",
@@ -2228,6 +3517,36 @@
     "created_at": "2026-11-14T14:09:53.417+00:00",
     "reviewed_at": "2026-11-14T14:09:53.417+00:00",
     "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "e4d9f0d3-42dd-4f25-ab37-80f477e146f9",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1865,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "lote": "3f806b6f-2495-405a-a23a-c9be05c8d981",
+      "value": "Punta Cuevas"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "e4ed3eb9-662b-4647-9d43-2a4a0f547e4a",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1927,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "lote": "fc875b4b-330b-402e-a1bb-c43cf9d5820e",
+      "value": "Ganador: Cynan Jones."
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "e66e4589-9313-4918-8e93-bc0ea219342a",
@@ -2278,6 +3597,36 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "ea0be3d0-2011-44b7-b51f-a1c255e5e7f1",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1895,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "lote": "db3d9d65-34e9-4027-aa21-bbab461094c8",
+      "value": "Galpón de Dreyfus, Gaiman"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "ea185b99-ab2c-4e16-afe1-4a55c349c68b",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1892,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "lote": "82055f01-f716-4827-8d03-dd24852a6f6a",
+      "value": "si"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "eaad1058-7857-4ce6-965c-07fe44010acc",
     "type": "tag",
     "festival": "juventud",
@@ -2320,6 +3669,51 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "f0f42f02-2014-4b71-990f-d8e1f26c6d90",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1895,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "lote": "db3d9d65-34e9-4027-aa21-bbab461094c8",
+      "value": "si"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "f160cdf4-0bcd-4756-ab28-836ea12a5e71",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1909,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "lote": "d1ffe7de-2f1e-48d0-9dc7-3ad77d048dc8",
+      "value": "Se entregó una corona en lugar de una silla."
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "f2f18bab-29bf-4193-add8-3f821eb5deda",
+    "type": "fact",
+    "festival": "trevelin",
+    "year": 1928,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "lote": "bba82dba-0078-41ed-ab14-7dcb4260cb37",
+      "value": "Lo organizó John Daniel Evans."
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "f3843024-0d6f-4e1e-8c99-2b39bb008d98",
     "type": "fact",
     "festival": "chubut",
@@ -2333,6 +3727,21 @@
     "created_at": "2026-11-14T16:38:12.716308+00:00",
     "reviewed_at": "2026-11-14T16:38:12.716308+00:00",
     "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "f5830ad8-a5bc-4541-8a94-47b1e8944dfd",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1913,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "lote": "8e130d7d-b13f-48f8-9a3a-b973e62a87ba",
+      "value": "Trelew"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "f5a454c1-7f1e-4ba1-ad36-c7fbdaa57c68",
@@ -2395,6 +3804,21 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "f75c9d23-17bb-40be-80be-ea899342184b",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1921,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "lote": "705834e1-338f-46ea-a16b-71dfea84d972",
+      "value": "Ganador, de nuevo: William Williams (Prysor)."
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "f7d55eec-f6a3-453f-82c1-516eec44ac97",
     "type": "fact",
     "festival": "juventud",
@@ -2446,6 +3870,36 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "faaaa545-f156-4bd8-976a-db853ee81f00",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1892,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "lote": "82055f01-f716-4827-8d03-dd24852a6f6a",
+      "value": "Ganador: William Hughes (Glan Caeron)."
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "fc695fa3-6188-4c82-a0c8-f7b401b12efb",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1918,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_corona",
+      "lote": "8aa51696-cf74-4508-818f-2c402e29e3c7",
+      "value": "William Williams (Prysor)"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "fc7d6933-b7f7-4dda-ba5d-25c9ae733dd6",
     "type": "fact",
     "festival": "chubut",
@@ -2460,6 +3914,21 @@
     "created_at": "2026-11-14T14:09:09.603838+00:00",
     "reviewed_at": "2026-11-14T14:09:09.603838+00:00",
     "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "fd36e12e-c6d5-4050-9f20-7136a28c0e37",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1881,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "lote": "9aaed2b1-775d-42e5-bf55-02b39b62b0b1",
+      "value": "Gaiman"
+    },
+    "created_at": "2026-11-16T18:31:17.630618+00:00",
+    "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "ff82222f-bf63-465e-a6f8-d65360997d41",

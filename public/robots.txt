@@ -6,5 +6,10 @@ Disallow: /admin/
 Disallow: /perfil/
 Disallow: /ingresar/
 Disallow: /contribuir/
+# The same pages in the other languages (/cy/, /en/, /zh/, /it/, /fr/, /sv/).
+Disallow: /*/admin/
+Disallow: /*/perfil/
+Disallow: /*/ingresar/
+Disallow: /*/contribuir/
 
 Sitemap: https://amgueddfa.kevinroberts.ar/sitemap.xml

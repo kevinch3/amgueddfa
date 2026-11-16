@@ -1,14 +1,35 @@
 ---
 import Base from '../layouts/Base.astro';
-import { t } from '../lib/i18n';
+import { DEFAULT_LOCALE, LOCALES, locale, t } from '../lib/i18n';
 import { url } from '../lib/paths';
 
 // Until custom SMTP (Resend) is configured, Supabase's default emails carry only a link,
 // so the code field stays tucked away. Set PUBLIC_AUTH_CODE=1 once our templates with
 // {{ .Token }} are live to show the code field up front.
 const codeFirst = import.meta.env.PUBLIC_AUTH_CODE === '1';
+
+// Supabase only lets the email link come back to /ingresar/ (its Redirect URLs), so
+// other languages ride along as ?lang=cy and this page forwards there, code and all,
+// before any module script can use up the ?code=.
+const forward = locale() === DEFAULT_LOCALE;
+const others = LOCALES.filter((l) => l !== DEFAULT_LOCALE);
+const base = import.meta.env.BASE_URL ?? '/';
 ---
 <Base title={t('auth.titulo')} noindex>
+  {forward && (
+    <Fragment slot="head">
+      <script is:inline define:vars={{ base, others }}>
+        (function () {
+          var q = new URLSearchParams(location.search);
+          var l = q.get('lang');
+          if (others.indexOf(l) < 0) return;
+          q.delete('lang');
+          var s = q.toString();
+          location.replace(base.replace(/\/+$/, '') + '/' + l + '/ingresar/' + (s ? '?' + s : '') + location.hash);
+        })();
+      </script>
+    </Fragment>
+  )}
   <section class="auth" data-home={url('/')}>
     <h1>{t('auth.titulo')}</h1>
     <noscript><p class="auth-msg">{t('auth.sin_js')}</p></noscript>
@@ -65,7 +86,7 @@ const codeFirst = import.meta.env.PUBLIC_AUTH_CODE === '1';
   import { setUserTimeZone } from '../lib/dates';
   import { placeFields } from '../scripts/profile-form';
   import { url } from '../lib/paths';
-  import { t } from '../lib/i18n';
+  import { DEFAULT_LOCALE, t } from '../lib/i18n';
   import { getClient } from '../lib/supabase';
 
   const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
@@ -76,7 +97,7 @@ const codeFirst = import.meta.env.PUBLIC_AUTH_CODE === '1';
   let lastSentAt = 0;
   let tick: ReturnType<typeof setInterval> | undefined;
   // Where to go back to after signing in (only a page on this site).
-  const volver = returnPath(new URLSearchParams(location.search).get('volver'), url('/'));
+  const volver = returnPath(new URLSearchParams(location.search).get('volver'), url('/', DEFAULT_LOCALE));
   if (volver) {
     const a = $<HTMLAnchorElement>('auth-volver');
     a.href = volver;

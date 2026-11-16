@@ -25,6 +25,41 @@
     "ranking": "Ranking",
     "tareas": "Tareas rápidas"
   },
+  "idiomas": {
+    "titulo": "Idioma",
+    "original": "Los documentos, las transcripciones y los aportes de la comunidad se muestran en su idioma original."
+  },
+  "lectura": {
+    "titulo": "Ajustes de lectura",
+    "ayuda": "Se guardan en este navegador.",
+    "mas": "Más sobre accesibilidad",
+    "restablecer": "Restablecer",
+    "sin_js": "Estos ajustes necesitan JavaScript. Sin él, podés agrandar el texto con el zoom del navegador (Ctrl y +, o ⌘ y + en Mac).",
+    "texto": "Tamaño del texto",
+    "texto_100": "Normal",
+    "texto_125": "Grande",
+    "texto_150": "Más grande",
+    "texto_200": "El doble",
+    "contraste": "Contraste",
+    "contraste_auto": "Según el sistema",
+    "contraste_alto": "Alto",
+    "espaciado": "Espacio entre líneas y letras",
+    "espaciado_normal": "Normal",
+    "espaciado_amplio": "Amplio",
+    "letra": "Tipo de letra",
+    "letra_serif": "Con serifa",
+    "letra_sans": "Sin serifa",
+    "movimiento": "Animaciones",
+    "movimiento_auto": "Según el sistema",
+    "movimiento_reducido": "Reducidas",
+    "enlaces": "Enlaces",
+    "enlaces_normal": "Como están",
+    "enlaces_subrayados": "Siempre subrayados"
+  },
+  "abiertos": {
+    "ediciones": "Ediciones (datos abiertos, JSON)",
+    "documentos": "Documentos (datos abiertos, JSON)"
+  },
   "categorias": {
     "programa": "Programa",
     "programa-del-dia": "Programa del día",
@@ -52,7 +87,8 @@
     "ano_estimado_ayuda": "Calculamos el año por el contexto; puede no ser exacto.",
     "restringido_corto": "En revisión",
     "volver_inicio": "Volver al inicio",
-    "miga": "Estás en"
+    "miga": "Estás en",
+    "punto": "."
   },
   "estado": {
     "sin_conexion": "No pudimos conectarnos. Probá de nuevo en un rato."
@@ -182,8 +218,10 @@
     "retiro_enlace": "avisanos",
     "retiro_2": " y lo resolvemos.",
     "legal": "Información del archivo",
+    "normas": "Accesibilidad: buscamos cumplir WCAG 2.2 nivel AA",
     "enlaces": {
       "objetivos": "Objetivos",
+      "accesibilidad": "Accesibilidad",
       "derechos": "Derechos",
       "privacidad": "Privacidad",
       "cookies": "Cookies"
@@ -238,6 +276,14 @@
     "zona_label": "Zona horaria",
     "zona_ayuda": "Solo la usamos para mostrarte las fechas y horas. Nadie más la ve.",
     "zona_ninguna": "La de este dispositivo"
+  },
+  "correo": {
+    "intro_ingreso": "Para ingresar, tocá el botón:",
+    "intro_alta": "¡Bienvenida, bienvenido! Para terminar de crear tu cuenta, tocá el botón:",
+    "boton": "Entrar al museo",
+    "otro_dispositivo": "El botón funciona en el mismo navegador donde pediste el correo. Si estás en otro dispositivo, escribí este código en la página de ingreso:",
+    "vence": "Vence en una hora.",
+    "ignorar": "Si no pediste este correo, ignoralo: nadie puede entrar sin él."
   },
   "sesion": {
     "ingresar": "Ingresar",
@@ -592,6 +638,8 @@
     "pregunta_sin": "¿Sabés de qué año es este documento del {festival}?",
     "si": "Sí (S)",
     "no": "No (N)",
+    "tecla_si": "s",
+    "tecla_no": "n",
     "saltar": "Saltar",
     "atajos": "Atajos de teclado: S para sí, N para no.",
     "corregir_ayuda": "Decinos lo que sepas. Con un dato alcanza.",
@@ -638,10 +686,17 @@
     "titulos": {
       "cookies": "Cookies y almacenamiento",
       "objetivos": "Objetivos",
+      "accesibilidad": "Accesibilidad",
       "derechos": "Derechos de autor y retiro de contenido",
       "privacidad": "Privacidad y datos personales"
     },
     "actualizado": "Última actualización: {fecha}.",
+    "traduccion": "Esta página es una traducción: si hay diferencias, vale el texto en castellano.",
+    "traduccion_enlace": "Leer el original en castellano",
+    "enlaces": {
+      "cc": "https://creativecommons.org/licenses/by-sa/4.0/deed.es",
+      "dmca": "https://docs.github.com/es/site-policy/content-removal-policies/dmca-takedown-policy"
+    },
     "cookies": {
       "intro": "Este sitio no usa cookies. Tampoco usa publicidad ni herramientas de seguimiento entre sitios. Lo único que guarda está en el almacenamiento local de tu navegador (localStorage), y te contamos qué es.",
       "tabla_titulo": "Qué guardamos en tu navegador",
@@ -653,12 +708,14 @@
       "verificador_para": "Completar el ingreso con el enlace del correo.",
       "tz_para": "Mostrar las fechas en la zona horaria de tu perfil.",
       "nocontar_para": "Recordar que no querés que contemos tus visitas.",
+      "lectura_para": "Recordar tus ajustes de lectura (tamaño del texto, contraste, espaciado, tipo de letra, animaciones y enlaces).",
       "tipo_necesaria": "Necesaria",
       "tipo_preferencia": "Preferencia",
       "dura_sesion": "Hasta que salgas de tu cuenta.",
       "dura_verificador": "Se borra al terminar de ingresar.",
       "dura_tz": "Hasta que salgas de tu cuenta.",
       "dura_nocontar": "Hasta que vuelvas a activar el conteo.",
+      "dura_lectura": "Hasta que los restablezcas.",
       "necesarias": "Como son necesarias para que el sitio funcione, o son una elección tuya, no hace falta pedirte permiso para guardarlas. Podés borrarlas cuando quieras desde la configuración de tu navegador; si borrás la sesión, vas a tener que volver a ingresar.",
       "analitica_titulo": "Conteo de visitas",
       "analitica_1": "Para saber qué ediciones se consultan y desde dónde llega la gente, usamos Cloudflare Web Analytics. No usa cookies ni guarda nada en tu navegador, y no te identifica ni te sigue entre sitios.",
@@ -730,6 +787,7 @@
       "responsable_1": "Kevin Roberts, responsable del archivo.",
       "datos_titulo": "Qué datos guardamos",
       "datos_correo": "Tu correo electrónico, para mandarte el enlace o el código de ingreso. Nunca se publica.",
+      "datos_idioma": "El idioma en que usás el sitio, para mandarte en ese idioma los correos de ingreso. No se publica.",
       "datos_nombre": "Tu nombre público, que elegís al ingresar y aparece junto a tus aportes y en el ranking.",
       "datos_pais": "Tu país, si elegís mostrarlo. Es público y aparece en tu perfil y en el ranking.",
       "datos_zona": "Tu zona horaria, si la elegís. Es privada y solo sirve para mostrarte las fechas.",
@@ -753,6 +811,33 @@
       "derechos_aportes": "Si pedís borrar tu cuenta, los aportes que ya se publicaron quedan en el archivo bajo la licencia CC BY-SA 4.0, con tu nombre o como anónimos, como prefieras.",
       "derechos_aaip": "Si no te respondemos, podés reclamar ante la Agencia de Acceso a la Información Pública, que controla el cumplimiento de esa ley."
     }
+  },
+  "accesibilidad": {
+    "descripcion": "Cómo hacemos para que cualquiera pueda usar el archivo: ajustes de lectura, normas que seguimos, lo que todavía falta y cómo avisarnos de una barrera.",
+    "intro": "Queremos que cualquiera pueda consultar el archivo, también las personas ciegas o con baja visión, sordas, con movilidad reducida o con dificultades para leer o para concentrarse.",
+    "ajustes_titulo": "Ajustes de lectura",
+    "ajustes_1": "Cambian cómo se ve el sitio y se guardan en este navegador. También están en el botón con dos letras A de la parte de arriba de cada página.",
+    "ajustes_navegador": "Además, podés usar las herramientas de tu navegador o de tu sistema: el zoom (Ctrl y +, o ⌘ y + en Mac), el modo de alto contraste, un lector de pantalla o la lectura en voz alta. El sitio respeta las preferencias del sistema de más contraste y de menos movimiento.",
+    "normas_titulo": "Normas que seguimos",
+    "normas_1": "Nuestro objetivo es cumplir el nivel AA de las Pautas de Accesibilidad para el Contenido Web 2.2 del W3C, la referencia internacional para la accesibilidad web:",
+    "normas_ley": "Con eso también se cubren las pautas que exige en la Argentina la Ley 26.653 de accesibilidad web (reglamentadas por la Disposición ONTI 6/2019, sobre WCAG 2.0) y la norma europea EN 301 549. Como archivo privado sin fondos públicos, la ley no nos obliga, pero la seguimos igual:",
+    "normas_aria": "Los controles usan HTML nativo y siguen WAI-ARIA 1.2: cada página tiene encabezados, regiones y un enlace para saltar al contenido, y todo se puede usar con el teclado:",
+    "estado_titulo": "Estado de cumplimiento",
+    "estado_1": "El sitio cumple parcialmente con WCAG 2.2 nivel AA: la navegación, los formularios y los textos del sitio cumplen, pero parte del contenido del archivo todavía no. Esto es lo que sabemos que falta:",
+    "estado_conforme": "Al {fecha}, las páginas de este sitio cumplen con WCAG 2.2 nivel AA.",
+    "limite_imagenes": "Los escaneos de los programas son imágenes de documentos históricos. Cada uno tiene una descripción corta, pero muchos todavía no tienen su texto completo. Lo vamos sumando con transcripciones de la comunidad, y podés ayudar desde",
+    "limite_idioma": "Las transcripciones mezclan galés y castellano en la misma línea, y los pasajes en galés no están marcados como tales, así que un lector de pantalla puede leerlos con la pronunciación del castellano.",
+    "limite_traducciones": "En las versiones traducidas del sitio, los títulos y los textos de los documentos y de los aportes se muestran en su idioma original y están marcados como castellano, aunque a veces estén en galés.",
+    "limite_videos": "Los videos están en YouTube y los publicaron otras personas: los subtítulos dependen de ellas.",
+    "evaluacion_titulo": "Cómo lo evaluamos",
+    "evaluacion_1": "El {fecha} hicimos una autoevaluación: pruebas automáticas con axe-core en cada tipo de página y en los siete idiomas, y revisión del contraste, del uso con teclado, del texto ampliado al 200 %, del espaciado del texto y de la adaptación a pantallas de 320 píxeles de ancho.",
+    "evaluacion_2": "Todavía no lo probaron personas que usan lectores de pantalla u otras tecnologías de apoyo. Si usás alguna, tu opinión nos ayuda muchísimo.",
+    "tecnologias": "El sitio usa HTML, CSS, WAI-ARIA y JavaScript. Las páginas se pueden leer sin JavaScript; para ingresar y aportar hace falta.",
+    "contacto_titulo": "Si encontrás una barrera",
+    "contacto_1": "Contanos en qué página y qué pasó. Respondemos dentro de los 10 días hábiles y, si no podemos arreglarlo enseguida, te mandamos el contenido en otro formato.",
+    "agentes_titulo": "Asistentes y navegadores automáticos",
+    "agentes_1": "El sitio ofrece herramientas WebMCP para que los navegadores con asistentes de inteligencia artificial puedan buscar documentos y ediciones, cambiar de idioma o ajustar la lectura sin tener que adivinar la página. Los formularios para aportar los puede completar el asistente, pero el envío lo confirmás siempre vos.",
+    "agentes_datos": "Los mismos datos están abiertos:"
   },
   "informar": {
     "titulo": "Informar un error",

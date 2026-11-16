@@ -169,7 +169,8 @@ const cards = items()
     const tgt = ev.target as HTMLElement | null;
     if (tgt && (tgt.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(tgt.tagName))) return;
     const k = ev.key.toLowerCase();
-    const fn = k === 's' ? keys.yes : k === 'n' ? keys.no : undefined;
+    // The letters follow the language: S/N, Y/N, J/N, O/N…
+    const fn = k === t('tareas.tecla_si') ? keys.yes : k === t('tareas.tecla_no') ? keys.no : undefined;
     if (fn) {
       ev.preventDefault();
       fn();

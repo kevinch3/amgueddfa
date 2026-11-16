@@ -1,12 +1,56 @@
-<!doctype html>
-<html lang="es-AR">
+{{ $l := "es" }}{{ with .Data.lang }}{{ $l = printf "%v" . }}{{ end }}<!doctype html>
+<html lang="{{ if eq $l "cy" }}cy-AR{{ else if eq $l "en" }}en-GB{{ else if eq $l "zh" }}zh-Hans{{ else if eq $l "it" }}it{{ else if eq $l "fr" }}fr{{ else if eq $l "sv" }}sv{{ else }}es-AR{{ end }}">
   <body style="font-family: Georgia, serif; color: #1f2230; background: #f8f2e4; padding: 24px;">
     <h2 style="color: #9e1b22;">Amgueddfa Eisteddfod y Wladfa</h2>
+{{ if eq $l "cy" }}
+    <p>I fewngofnodi, pwyswch y botwm:</p>
+    <p><a href="{{ .ConfirmationURL }}" style="display: inline-block; background: #9e1b22; color: #ffffff; padding: 12px 20px; border-radius: 6px; text-decoration: none; font-weight: bold;">Mynd i mewn i'r amgueddfa</a></p>
+    <p style="font-size: 14px;">Mae'r botwm yn gweithio yn yr un porwr ag y gofynnoch chi am yr e-bost ynddo. Os ydych chi ar ddyfais arall, teipiwch y cod yma ar y dudalen fewngofnodi:</p>
+    <p style="font-size: 32px; font-weight: bold; letter-spacing: 6px; font-family: monospace;">{{ .Token }}</p>
+    <p>Mae'n dod i ben ymhen awr.</p>
+    <p style="color: #4a4a52; font-size: 14px;">Os na wnaethoch chi ofyn am yr e-bost yma, anwybyddwch o: all neb fynd i mewn hebddo.</p>
+{{ else if eq $l "en" }}
+    <p>To sign in, press the button:</p>
+    <p><a href="{{ .ConfirmationURL }}" style="display: inline-block; background: #9e1b22; color: #ffffff; padding: 12px 20px; border-radius: 6px; text-decoration: none; font-weight: bold;">Enter the museum</a></p>
+    <p style="font-size: 14px;">The button works in the same browser where you asked for the email. If you're on another device, type this code on the sign-in page:</p>
+    <p style="font-size: 32px; font-weight: bold; letter-spacing: 6px; font-family: monospace;">{{ .Token }}</p>
+    <p>It expires in one hour.</p>
+    <p style="color: #4a4a52; font-size: 14px;">If you didn't ask for this email, ignore it: nobody can get in without it.</p>
+{{ else if eq $l "zh" }}
+    <p>请点击下面的按钮登录：</p>
+    <p><a href="{{ .ConfirmationURL }}" style="display: inline-block; background: #9e1b22; color: #ffffff; padding: 12px 20px; border-radius: 6px; text-decoration: none; font-weight: bold;">进入博物馆</a></p>
+    <p style="font-size: 14px;">此按钮只在您请求邮件的同一浏览器中有效。如果您在另一台设备上，请在登录页面输入以下验证码：</p>
+    <p style="font-size: 32px; font-weight: bold; letter-spacing: 6px; font-family: monospace;">{{ .Token }}</p>
+    <p>验证码一小时内有效。</p>
+    <p style="color: #4a4a52; font-size: 14px;">如果您没有请求这封邮件，请忽略它：没有它，任何人都无法登录。</p>
+{{ else if eq $l "it" }}
+    <p>Per accedere, premi il pulsante:</p>
+    <p><a href="{{ .ConfirmationURL }}" style="display: inline-block; background: #9e1b22; color: #ffffff; padding: 12px 20px; border-radius: 6px; text-decoration: none; font-weight: bold;">Entra nel museo</a></p>
+    <p style="font-size: 14px;">Il pulsante funziona nello stesso browser in cui hai chiesto l'email. Se sei su un altro dispositivo, scrivi questo codice nella pagina di accesso:</p>
+    <p style="font-size: 32px; font-weight: bold; letter-spacing: 6px; font-family: monospace;">{{ .Token }}</p>
+    <p>Scade tra un'ora.</p>
+    <p style="color: #4a4a52; font-size: 14px;">Se non hai chiesto questa email, ignorala: nessuno può entrare senza.</p>
+{{ else if eq $l "fr" }}
+    <p>Pour vous connecter, appuyez sur le bouton :</p>
+    <p><a href="{{ .ConfirmationURL }}" style="display: inline-block; background: #9e1b22; color: #ffffff; padding: 12px 20px; border-radius: 6px; text-decoration: none; font-weight: bold;">Entrer dans le musée</a></p>
+    <p style="font-size: 14px;">Le bouton fonctionne dans le navigateur où vous avez demandé l'e-mail. Si vous êtes sur un autre appareil, saisissez ce code sur la page de connexion :</p>
+    <p style="font-size: 32px; font-weight: bold; letter-spacing: 6px; font-family: monospace;">{{ .Token }}</p>
+    <p>Il expire dans une heure.</p>
+    <p style="color: #4a4a52; font-size: 14px;">Si vous n'avez pas demandé cet e-mail, ignorez-le : personne ne peut se connecter sans lui.</p>
+{{ else if eq $l "sv" }}
+    <p>Tryck på knappen för att logga in:</p>
+    <p><a href="{{ .ConfirmationURL }}" style="display: inline-block; background: #9e1b22; color: #ffffff; padding: 12px 20px; border-radius: 6px; text-decoration: none; font-weight: bold;">Gå in i museet</a></p>
+    <p style="font-size: 14px;">Knappen fungerar i samma webbläsare som du bad om e-postmeddelandet i. Om du använder en annan enhet, skriv in den här koden på inloggningssidan:</p>
+    <p style="font-size: 32px; font-weight: bold; letter-spacing: 6px; font-family: monospace;">{{ .Token }}</p>
+    <p>Koden gäller i en timme.</p>
+    <p style="color: #4a4a52; font-size: 14px;">Om du inte bad om det här meddelandet kan du strunta i det: ingen kan logga in utan det.</p>
+{{ else }}
     <p>Para ingresar, tocá el botón:</p>
     <p><a href="{{ .ConfirmationURL }}" style="display: inline-block; background: #9e1b22; color: #ffffff; padding: 12px 20px; border-radius: 6px; text-decoration: none; font-weight: bold;">Entrar al museo</a></p>
     <p style="font-size: 14px;">El botón funciona en el mismo navegador donde pediste el correo. Si estás en otro dispositivo, escribí este código en la página de ingreso:</p>
     <p style="font-size: 32px; font-weight: bold; letter-spacing: 6px; font-family: monospace;">{{ .Token }}</p>
     <p>Vence en una hora.</p>
     <p style="color: #4a4a52; font-size: 14px;">Si no pediste este correo, ignoralo: nadie puede entrar sin él.</p>
+{{ end }}
   </body>
 </html>

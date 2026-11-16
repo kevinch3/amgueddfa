@@ -1,0 +1,13 @@
+---
+/** On a translated legal page: the Spanish text is the one that counts, with a link to it. */
+import { DEFAULT_LOCALE, LOCALE_INFO, locale, t } from '../lib/i18n';
+import { alternates } from '../lib/paths';
+
+const show = locale() !== DEFAULT_LOCALE;
+const spanish = alternates(Astro.url.pathname).find((a) => a.locale === DEFAULT_LOCALE)!.href;
+---
+{show && (
+  <p class="aviso-traduccion small muted" data-traduccion>
+    {t('legal.traduccion')} <a href={spanish} hreflang={LOCALE_INFO[DEFAULT_LOCALE].tag}>{t('legal.traduccion_enlace')}</a>{t('comun.punto')}
+  </p>
+)}

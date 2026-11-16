@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest';
-import { canResend, currentProfile, handleLinkCallback, linkCallback, sendCode, setDisplayName, setProfilePlace, signOut, verifyCode, _resetInflight } from '../src/lib/auth';
+import { canResend, currentProfile, handleLinkCallback, linkCallback, rememberLanguage, sendCode, setDisplayName, setProfilePlace, signOut, verifyCode, _resetInflight } from '../src/lib/auth';
 
 function apiErr(code: string | undefined, status: number, name = 'AuthApiError') {
   return Object.assign(new Error(code ?? 'err'), { __isAuthError: true, name, code, status });
@@ -85,7 +85,7 @@ describe('sendCode', () => {
   it('sends a normalised email and creates the user if needed', async () => {
     const { client, calls } = fakeClient();
     expect(await sendCode('  Ana@Example.COM ', client)).toEqual({ ok: true });
-    expect(calls.signInWithOtp[0]).toEqual({ email: 'ana@example.com', options: { shouldCreateUser: true } });
+    expect(calls.signInWithOtp[0]).toEqual({ email: 'ana@example.com', options: { shouldCreateUser: true, data: { lang: 'es' } } });
   });
 
   it('does not send twice while a send is in flight', async () => {
@@ -305,5 +305,30 @@ describe('signOut (shared computers must not stay signed in)', () => {
       getSession: () => ({ data: { session: { user: { id: 'u1' } } }, error: null }),
     });
     expect(await signOut(client)).toEqual({ ok: false, key: 'estado.sin_conexion' });
+  });
+});
+
+describe('the account remembers its language for sign-in emails', () => {
+  const session = (meta: Record<string, unknown> | null) => {
+    const updates: unknown[] = [];
+    const client = {
+      auth: {
+        getSession: async () => ({ data: { session: meta === null ? null : { user: { user_metadata: meta } } }, error: null }),
+        updateUser: async (a: unknown) => { updates.push(a); return { data: {}, error: null }; },
+      },
+    } as any;
+    return { client, updates };
+  };
+
+  it('stores the page language once, and only for a signed-in account', async () => {
+    let s = session({});
+    expect(await rememberLanguage(s.client, 'cy')).toBe(true);
+    expect(s.updates).toEqual([{ data: { lang: 'cy' } }]);
+    s = session({ lang: 'cy' });
+    expect(await rememberLanguage(s.client, 'cy')).toBe(false);
+    expect(s.updates).toEqual([]);
+    s = session(null);
+    expect(await rememberLanguage(s.client, 'fr')).toBe(false);
+    expect(await rememberLanguage(null, 'fr')).toBe(false);
   });
 });

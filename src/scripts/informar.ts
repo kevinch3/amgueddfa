@@ -16,7 +16,7 @@ export type ReportTarget =
 let seq = 0;
 
 function textArea(id: string): HTMLTextAreaElement {
-  return el('textarea', { id, rows: '5', maxlength: String(REPORT_MAX), 'aria-describedby': `${id}-ayuda` });
+  return el('textarea', { id, name: id, rows: '5', maxlength: String(REPORT_MAX), 'aria-describedby': `${id}-ayuda` });
 }
 
 function actions(go: HTMLButtonElement, cancel: HTMLButtonElement | null): HTMLParagraphElement {
@@ -48,7 +48,7 @@ export function reportForm(target: ReportTarget, onDone: (msg: HTMLElement) => v
   const fix = el('div', { class: 'informar-arreglo' });
   fix.hidden = true;
   const fest = select(`informar-${n}-festival`, festivalOptions(), t('informar.sin_cambio'));
-  const yr = el('input', { id: `informar-${n}-ano`, type: 'number', inputmode: 'numeric', min: String(YEAR_MIN), max: String(YEAR_MAX), step: '1' });
+  const yr = el('input', { id: `informar-${n}-ano`, name: `informar-${n}-ano`, type: 'number', inputmode: 'numeric', min: String(YEAR_MIN), max: String(YEAR_MAX), step: '1' });
   const cat = doc ? select(`informar-${n}-seccion`, categoryOptions(), t('informar.sin_cambio')) : null;
   fix.append(el('p', { class: 'muted small' }, t('informar.arreglo_ayuda')), field(t('informar.eisteddfod_label'), fest), field(t('informar.ano_label'), yr));
   if (cat) fix.append(field(t('informar.seccion_label'), cat));

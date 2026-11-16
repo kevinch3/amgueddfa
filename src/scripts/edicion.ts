@@ -1,6 +1,6 @@
 import staticEditions from '../../data/approved/editions.json';
-import { approvedForEdition, byLine, factDisplay, forEdition, mergeApproved, ownPending, pendingView, sortFacts, sourceLine, type Contribution } from '../lib/contrib';
-import { t } from '../lib/i18n';
+import { approvedForEdition, byLine, factDisplay, factInOriginal, forEdition, mergeApproved, ownPending, pendingView, sortFacts, sourceLine, type Contribution } from '../lib/contrib';
+import { contentLang, t } from '../lib/i18n';
 import { liveQuery } from '../lib/live';
 import { raiseStates, refreshStates } from './states';
 import { url } from '../lib/paths';
@@ -9,6 +9,13 @@ import type { EditionState } from '../lib/types';
 import { maxState, mediaUrl, uploadMedia, uploadStates, type UploadLike } from '../lib/uploads';
 
 type EditionRow = { festival: string; year: number; status: 'unknown' | 'held' | 'not_held'; note?: string | null };
+
+/** Mark archive or community text as Spanish on pages in another language (WCAG 3.1.2). */
+function original<E extends HTMLElement>(e: E): E {
+  const l = contentLang();
+  if (l) e.lang = l;
+  return e;
+}
 
 function el<K extends keyof HTMLElementTagNameMap>(tag: K, cls?: string, text?: string): HTMLElementTagNameMap[K] {
   const e = document.createElement(tag);
@@ -25,7 +32,8 @@ export function renderFacts(mount: HTMLElement, facts: Contribution[]): void {
   for (const c of sortFacts(facts)) {
     const { label, value } = factDisplay(c);
     const row = el('div');
-    const dd = el('dd', undefined, value);
+    const dd = el('dd');
+    dd.append(factInOriginal(c) ? original(el('span', undefined, value)) : value);
     const by = byLine(c);
     if (by) dd.append(' ', el('span', 'muted small', by));
     const fuente = sourceLine(c);
@@ -43,7 +51,7 @@ export function renderMemories(mount: HTMLElement, memories: Contribution[]): vo
   const ul = el('ul', 'recuerdos');
   for (const c of memories) {
     const li = el('li');
-    li.append(el('blockquote', undefined, String(c.payload?.text ?? '')));
+    li.append(original(el('blockquote', undefined, String(c.payload?.text ?? ''))));
     const by = byLine(c);
     if (by) li.append(el('p', 'muted small', by));
     ul.append(li);
@@ -65,7 +73,7 @@ export function renderEditionTranscriptions(mount: HTMLElement, list: Contributi
     const a = el('a', undefined, t('edicion.transcripcion_documento'));
     a.href = url(`item/${c.item_id}/`);
     p.append(a);
-    d.append(s, p, el('blockquote', 'tr-aporte', String(c.payload?.text ?? '')));
+    d.append(s, p, original(el('blockquote', 'tr-aporte', String(c.payload?.text ?? ''))));
     mount.append(d);
   }
 }
@@ -114,7 +122,7 @@ function uploadRow(c: Contribution): HTMLLIElement {
   }
   const text = el('div', 'aporte-texto');
   if (cat) text.append(el('span', 'badge', t(`categorias.${cat}`)), ' ');
-  text.append(desc);
+  text.append(c.payload?.description ? original(el('span', undefined, desc)) : desc);
   const by = byLine(c);
   if (by) text.append(' ', el('span', 'muted small', by));
   if (pages.length > 1) {

@@ -1,5 +1,5 @@
-// Countries and timezones for the profile: codes, Spanish names, flags, browser guesses.
-import { t } from './i18n';
+// Countries and timezones for the profile: codes, names in the reader's language, flags, browser guesses.
+import { intlLocales, regionName, t } from './i18n';
 
 /** ISO 3166-1 alpha-2 codes (assigned), in code order. */
 const ISO =
@@ -26,20 +26,11 @@ export function isCountry(code: string | null | undefined): code is string {
   return typeof code === 'string' && CODE_RE.test(code) && COUNTRIES.includes(code);
 }
 
-let regionNames: Intl.DisplayNames | null | undefined;
-
-/** The Spanish name of a country code ("AR" → "Argentina", "GB-WLS" → "Gales"); '' if unknown. */
+/** The name of a country code in the current language ("AR" → "Argentina", "GB-WLS" → "Gales"); '' if unknown. */
 export function countryName(code: string | null | undefined): string {
   if (!isCountry(code)) return '';
   if (code.includes('-')) return t(`paises.${code}`);
-  if (regionNames === undefined) {
-    try {
-      regionNames = new Intl.DisplayNames(['es-AR', 'es'], { type: 'region' });
-    } catch {
-      regionNames = null;
-    }
-  }
-  return regionNames?.of(code) ?? code;
+  return regionName(code) ?? code;
 }
 
 /** Flag emoji: regional indicators, or the tag sequence for Wales, England and Scotland. */
@@ -54,11 +45,11 @@ export function flag(code: string | null | undefined): string {
   return [...cc].map((ch) => String.fromCodePoint(0x1f1e6 + ch.charCodeAt(0) - 65)).join('');
 }
 
-/** Picker entries: the common ones first, then everything else by Spanish name. */
+/** Picker entries: the common ones first, then everything else by name, in the current language. */
 export function countryOptions(): { common: string[]; rest: string[] } {
   const common = [...COMMON] as string[];
   const rest = COUNTRIES.filter((c) => !common.includes(c)).sort((a, b) =>
-    countryName(a).localeCompare(countryName(b), 'es'),
+    countryName(a).localeCompare(countryName(b), intlLocales()),
   );
   return { common, rest };
 }

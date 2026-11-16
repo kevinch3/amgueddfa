@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import TranslationNote from '../components/TranslationNote.astro';
 import { t } from '../lib/i18n';
 import { url } from '../lib/paths';
 
@@ -8,6 +9,7 @@ const c = (k: string) => t(`legal.privacidad.${k}`);
 <Base title={t('legal.titulos.privacidad')} description={c('descripcion')}>
   <article class="legal measure">
     <h1>{t('legal.titulos.privacidad')}</h1>
+    <TranslationNote />
     <p class="lead">{c('intro')}</p>
 
     <h2>{c('responsable_titulo')}</h2>
@@ -16,6 +18,7 @@ const c = (k: string) => t(`legal.privacidad.${k}`);
     <h2>{c('datos_titulo')}</h2>
     <ul>
       <li>{c('datos_correo')}</li>
+      <li>{c('datos_idioma')}</li>
       <li>{c('datos_nombre')}</li>
       <li>{c('datos_pais')}</li>
       <li>{c('datos_zona')}</li>
@@ -26,7 +29,7 @@ const c = (k: string) => t(`legal.privacidad.${k}`);
     <p>{c('publico_1')}</p>
 
     <h2>{c('conteo_titulo')}</h2>
-    <p>{c('conteo_1')} <a href={url('cookies')}>{c('conteo_cookies')}</a>.</p>
+    <p>{c('conteo_1')} <a href={url('cookies')}>{c('conteo_cookies')}</a>{t('comun.punto')}</p>
 
     <h2>{c('proveedores_titulo')}</h2>
     <p>{c('proveedores_1')}</p>

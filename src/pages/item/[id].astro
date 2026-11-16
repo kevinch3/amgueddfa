@@ -8,7 +8,7 @@ import { byLine, jsonForScript, type Contribution } from '../../lib/contrib';
 import { transcriptionFor } from '../../lib/transcripciones';
 import { allItems, pageUrls, thumbUrl } from '../../lib/catalog';
 import { absUrl, itemJsonLd } from '../../lib/seo';
-import { t } from '../../lib/i18n';
+import { contentLang, intlLocales, t } from '../../lib/i18n';
 import { url } from '../../lib/paths';
 import { festivalName } from '../../lib/site';
 import type { Item } from '../../lib/types';
@@ -29,8 +29,8 @@ const image = thumbUrl(item);
 const description = [item.title, `${fest}${item.year ? ` ${item.year}` : ''}.`, t(`categorias.${item.category}`) + '.'].join(' · ');
 // Restricted documents get no structured data (they are not freely available here).
 const jsonLd = item.restricted ? null : itemJsonLd({
-  name: item.title, url: absUrl(`item/${item.id}/`), image: image ? absUrl(image) : null,
-  editionUrl: item.year ? absUrl(`${item.festival}/${item.year}/`) : null,
+  name: item.title, url: absUrl(url(`item/${item.id}/`)), image: image ? absUrl(image) : null,
+  editionUrl: item.year ? absUrl(url(`${item.festival}/${item.year}/`)) : null,
   editionName: item.year ? `${fest} ${item.year}` : null, year: item.year,
 });
 // Standardized transcription (committed) and approved contributor transcriptions (last export; transcripciones.ts merges live rows).
@@ -39,7 +39,7 @@ const contributed = item.restricted ? [] : (approvedRaw as Contribution[]).filte
 // Approved notes ("Agregar información") from the last export; transcripciones.ts merges live rows.
 const notes = item.restricted ? [] : (approvedRaw as Contribution[]).filter((c) => c.type === 'note' && c.item_id === item.id);
 const retrieved = item.retrieved
-  ? new Date(`${item.retrieved}T12:00:00`).toLocaleDateString('es-AR', { day: 'numeric', month: 'long', year: 'numeric' })
+  ? new Date(`${item.retrieved}T12:00:00`).toLocaleDateString(intlLocales(), { day: 'numeric', month: 'long', year: 'numeric' })
   : '';
 ---
 <Base title={item.title} festival={item.festival} year={item.year} item={item.id} description={description} image={image} jsonLd={item.hidden ? null : jsonLd} noindex={Boolean(item.hidden)}>
@@ -53,7 +53,7 @@ const retrieved = item.retrieved
   </nav>
 
   <header class="item-head" data-item-page={item.id}>
-    <h1>{item.title}</h1>
+    <h1 lang={contentLang()}>{item.title}</h1>
     <p class="badges">
       <span class="badge" data-live="category">{t(`categorias.${item.category}`)}</span>
       <span class="badge">{t(`item.tipos.${item.kind}`)}</span>
@@ -85,7 +85,7 @@ const retrieved = item.retrieved
             <table>
               <thead><tr>{TABLE_COLS.map((c) => <th scope="col">{t(`tabla.${c}`)}</th>)}</tr></thead>
               <tbody>
-                {item.table.map((row) => <tr>{TABLE_COLS.map((c) => <td>{String(row[c] ?? '')}</td>)}</tr>)}
+                {item.table.map((row) => <tr lang={contentLang()}>{TABLE_COLS.map((c) => <td>{String(row[c] ?? '')}</td>)}</tr>)}
               </tbody>
             </table>
           </div>
@@ -94,7 +94,7 @@ const retrieved = item.retrieved
         <section aria-labelledby="texto-t">
           <h2 id="texto-t">{t('item.texto_titulo')}</h2>
           <p class="muted small">{t('item.texto_ayuda')}</p>
-          <div class="textcard">{item.text_excerpt}</div>
+          <div class="textcard" lang={contentLang()}>{item.text_excerpt}</div>
         </section>
       ) : transcription ? null : (
         <p class="textcard">{t('item.sin_vista')}</p>
@@ -111,7 +111,7 @@ const retrieved = item.retrieved
           <h2 id="transcripciones-t">{t('item.transcripciones_aportes')}</h2>
           <Mount id="transcripciones" festival={item.festival} year={item.year} item={item.id}>{contributed.length > 0 && (
             <ul class="recuerdos">
-              {contributed.map((c) => <li><blockquote>{String(c.payload?.text ?? '')}</blockquote>{byLine(c) && <p class="muted small">{byLine(c)}</p>}</li>)}
+              {contributed.map((c) => <li><blockquote lang={contentLang()}>{String(c.payload?.text ?? '')}</blockquote>{byLine(c) && <p class="muted small">{byLine(c)}</p>}</li>)}
             </ul>
           )}</Mount>
           <script type="application/json" id="transcripciones-data" set:html={jsonForScript(contributed)}></script>
@@ -131,7 +131,7 @@ const retrieved = item.retrieved
         {item.note_public && (
           <>
             <h3 class="small">{t('item.nota')}</h3>
-            <p class="small">{item.note_public}</p>
+            <p class="small" lang={contentLang()}>{item.note_public}</p>
           </>
         )}
         {!item.restricted && (
@@ -139,7 +139,7 @@ const retrieved = item.retrieved
             <h3 class="small">{t('item.notas_titulo')}</h3>
             <Mount id="notas" festival={item.festival} year={item.year} item={item.id}>{notes.length > 0 && (
               <ul class="recuerdos">
-                {notes.map((c) => <li><blockquote>{String(c.payload?.text ?? '')}</blockquote>{byLine(c) && <p class="muted small">{byLine(c)}</p>}</li>)}
+                {notes.map((c) => <li><blockquote lang={contentLang()}>{String(c.payload?.text ?? '')}</blockquote>{byLine(c) && <p class="muted small">{byLine(c)}</p>}</li>)}
               </ul>
             )}</Mount>
             <script type="application/json" id="notas-data" set:html={jsonForScript(notes)}></script>

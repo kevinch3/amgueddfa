@@ -15,7 +15,9 @@ import { PUBLIC_WINNERS, winnerIds } from '../src/lib/ganadores';
 import { applyTags } from '../src/lib/tags';
 import type { FestivalSlug, Item } from '../src/lib/types';
 import { MEDIA_BASE } from '../src/lib/paths';
-import { t } from '../src/lib/i18n';
+import { DEFAULT_LOCALE, LOCALES, LOCALE_INFO, setLocale, t } from '../src/lib/i18n';
+import { CLAIM, EVALUATED, WCAG } from '../src/lib/accesibilidad';
+import { AJUSTES, OPCIONES } from '../src/lib/lectura';
 import { loadEnv } from 'vite';
 
 const DIST = join(__dirname, '..', 'dist');
@@ -468,5 +470,250 @@ describe('static build', () => {
     const root = join(__dirname, '..');
     expect(readFileSync(join(root, 'LICENSE'), 'utf8')).toContain('GNU AFFERO GENERAL PUBLIC LICENSE');
     expect(readFileSync(join(root, 'LICENSE-DATA.md'), 'utf8')).toContain('CC BY-SA 4.0');
+  });
+
+  describe('every page in every language', () => {
+    const OTHERS = LOCALES.filter((l) => l !== DEFAULT_LOCALE);
+    const SITE = 'https://amgueddfa.kevinroberts.ar';
+    /** Spanish pages, as paths relative to dist ("index.html", "chubut/1937/index.html"). */
+    const spanishPages = () =>
+      htmlFiles()
+        .map((f) => f.slice(DIST.length + 1))
+        .filter((f) => !(OTHERS as readonly string[]).includes(f.split('/')[0]));
+    /** The same text in another language, for assertions. */
+    const tIn = (l: (typeof LOCALES)[number], key: string, vars?: Record<string, string | number>) => {
+      setLocale(l);
+      try {
+        return t(key, vars);
+      } finally {
+        setLocale(DEFAULT_LOCALE);
+      }
+    };
+    const pub = () => placed.find((i) => !i.restricted && !i.hidden)!;
+
+    it('each language has a copy of every Spanish page', () => {
+      const pages = spanishPages();
+      expect(pages.length).toBeGreaterThan(500);
+      for (const l of OTHERS) {
+        const missing = pages.map((p) => (p === '404.html' ? '404/index.html' : p)).filter((p) => !existsSync(join(DIST, l, p)));
+        expect(missing, l).toEqual([]);
+      }
+    });
+
+    it('pages say their language, canonical address and every alternate', () => {
+      for (const l of LOCALES) {
+        const prefix = l === DEFAULT_LOCALE ? '' : `${l}/`;
+        for (const page of ['', 'chubut/1937/', `item/${pub().id}/`, 'privacidad/']) {
+          const html = read(`${prefix}${page}index.html`);
+          expect(html, `${l} ${page}`).toContain(`<html lang="${LOCALE_INFO[l].tag}"`);
+          expect(html, `${l} ${page}`).toContain(`<link rel="canonical" href="${SITE}/${prefix}${page}"`);
+          for (const a of LOCALES) {
+            const ap = a === DEFAULT_LOCALE ? '' : `${a}/`;
+            expect(html, `${l} ${page} → ${a}`).toContain(`<link rel="alternate" hreflang="${LOCALE_INFO[a].tag}" href="${SITE}/${ap}${page}"`);
+          }
+          expect(html).toContain(`<link rel="alternate" hreflang="x-default" href="${SITE}/${page}"`);
+          expect(html).toContain(`<meta property="og:locale" content="${LOCALE_INFO[l].og}"`);
+        }
+      }
+    });
+
+    it('the interface is translated, and Spanish chrome does not leak into other languages', () => {
+      for (const l of OTHERS) {
+        const home = read(`${l}/index.html`);
+        for (const k of ['nav.tareas', 'nav.ranking', 'inicio.mapa_titulo', 'pie.enlaces.privacidad']) expect(home, `${l} ${k}`).toContain(tIn(l, k));
+        expect(home, l).not.toContain('>Tareas rápidas<');
+        expect(home, l).not.toContain('Saltar al contenido');
+        const year = read(`${l}/chubut/1937/index.html`);
+        expect(year, l).toContain(tIn(l, 'edicion.recuerdos_titulo'));
+        expect(year, l).toMatch(new RegExp(`<meta name="description" content="${tIn(l, 'festivales.chubut')} 1937`));
+      }
+      // Welsh pages use the Welsh festival names, without repeating them underneath.
+      const cy = read('cy/chubut/index.html');
+      expect(cy).toContain('<h1>Eisteddfod y Wladfa</h1>');
+      expect(cy).not.toContain('<p class="cy" lang="cy">');
+    });
+
+    it('internal links stay in the page language; files keep one address', () => {
+      for (const l of OTHERS) {
+        for (const page of ['index.html', 'chubut/1937/index.html', `item/${pub().id}/index.html`]) {
+          const html = read(`${l}/${page}`);
+          const tags = [...html.matchAll(/<a\b[^>]*>/g)].map((m) => m[0]);
+          const bad = tags
+            .filter((a) => !/\shreflang=/.test(a)) // the language menu links to the others on purpose
+            .map((a) => a.match(/href="(\/[^"]*)"/)?.[1])
+            .filter((h): h is string => !!h && !h.startsWith(`/${l}/`) && !/\.[a-z0-9]+(?:[?#].*)?$/i.test(h.split('?')[0]));
+          expect(bad, `${l} ${page}`).toEqual([]);
+        }
+        expect(read(`${l}/index.html`)).toContain('src="/contacto.png"');
+      }
+    });
+
+    it('the language menu lists every language, marking the current one', () => {
+      const html = read('sv/chubut/1937/index.html');
+      expect(html).toContain('<details class="menu-cabecera idiomas" data-menu>');
+      for (const l of LOCALES) expect(html).toContain(`hreflang="${LOCALE_INFO[l].tag}" lang="${LOCALE_INFO[l].tag}" data-idioma="${l}"`);
+      expect(html).toMatch(/data-idioma="sv" aria-current="true"/);
+      expect(html).toContain(tIn('sv', 'idiomas.original'));
+      expect(read('chubut/1937/index.html')).not.toContain(t('idiomas.original'));
+    });
+
+    it('structured data points at the page in its language', () => {
+      const year = read('en/chubut/1937/index.html');
+      expect(year).toContain(`"url":"${SITE}/en/chubut/1937/"`);
+      expect(read('fr/index.html')).toContain(`"inLanguage":"fr"`);
+    });
+
+    it('missing addresses in another language hop to that language\'s 404, keeping the address', () => {
+      const root = read('404.html');
+      expect(root).toContain("'/404/?desde='");
+      for (const l of OTHERS) {
+        const html = read(`${l}/404/index.html`);
+        expect(html, l).toContain(`<html lang="${LOCALE_INFO[l].tag}"`);
+        expect(html, l).toContain('history.replaceState');
+        expect(html, l).toContain(tIn(l, 'no_encontrada.titulo'));
+        expect(html, l).not.toContain("'/404/?desde='");
+      }
+    });
+
+    it('the email link always lands on /ingresar/, which forwards other languages', () => {
+      expect(read('ingresar/index.html')).toContain("q.get('lang')");
+      for (const l of OTHERS) expect(read(`${l}/ingresar/index.html`), l).not.toContain("q.get('lang')");
+    });
+
+    it('translated legal pages say the Spanish text prevails and link to it', () => {
+      for (const p of ['objetivos', 'derechos', 'privacidad', 'cookies']) {
+        expect(read(`${p}/index.html`), p).not.toContain('data-traduccion');
+        for (const l of OTHERS) {
+          const html = read(`${l}/${p}/index.html`);
+          expect(html, `${l} ${p}`).toContain('data-traduccion');
+          expect(html, `${l} ${p}`).toContain(`href="/${p}/" hreflang="es-AR"`);
+        }
+      }
+      expect(read('cy/objetivos/index.html')).toContain('deed.cy');
+      expect(read('derechos/index.html')).toContain('docs.github.com/es/');
+    });
+
+    it('the sitemap lists public pages in every language, still not private ones', () => {
+      const sitemap = read('sitemap.xml');
+      for (const l of OTHERS) {
+        expect(sitemap, l).toContain(`<loc>${SITE}/${l}/</loc>`);
+        expect(sitemap, l).toContain(`<loc>${SITE}/${l}/item/${pub().id}/</loc>`);
+        expect(sitemap, l).toContain(`<loc>${SITE}/${l}/chubut/1937/</loc>`);
+      }
+      for (const p of ['admin', 'perfil', 'ingresar', 'contribuir']) expect(sitemap).not.toContain(`/${p}/`);
+      for (const i of catalog.filter((x) => x.restricted)) expect(sitemap, i.id).not.toContain(`/item/${i.id}/`);
+      const robots = read('robots.txt');
+      for (const p of ['admin', 'perfil', 'ingresar', 'contribuir']) expect(robots).toContain(`Disallow: /*/${p}/`);
+      expect(read('llms.txt')).toContain(`${SITE}/cy/`);
+    });
+
+    it('restricted documents stay hidden in every language', () => {
+      for (const l of OTHERS) {
+        for (const i of catalog.filter((x) => x.restricted)) {
+          const html = read(`${l}/item/${i.id}/index.html`);
+          expect(html, `${l} ${i.id}`).not.toContain(`media/${i.id}`);
+          expect(html, `${l} ${i.id}`).toContain(tIn(l, 'item.restringido'));
+        }
+      }
+    });
+
+    it('a browser loads only its page language: each language is its own chunk', () => {
+      const chunks = readdirSync(join(DIST, '_astro')).filter((n) => n.endsWith('.js'));
+      for (const l of OTHERS) expect(chunks.some((n) => n.startsWith(`${LOCALE_INFO[l].tag}.`)), l).toBe(true);
+      const english = tIn('en', 'legal.cookies.analitica_titulo');
+      const holders = chunks.filter((n) => readFileSync(join(DIST, '_astro', n), 'utf8').includes(english));
+      expect(holders.length).toBe(1);
+      expect(holders[0].startsWith('en-GB.')).toBe(true);
+    });
+  });
+
+  describe('accessibility and automation', () => {
+    const OTHERS = LOCALES.filter((l) => l !== DEFAULT_LOCALE);
+    const pages = ['index.html', 'chubut/1937/index.html', 'contribuir/index.html', 'accesibilidad/index.html'];
+
+    it('the accessibility statement exists in every language, is in the sitemap and linked from every footer', () => {
+      expect(existsSync(join(DIST, 'accesibilidad/index.html'))).toBe(true);
+      for (const l of OTHERS) expect(existsSync(join(DIST, l, 'accesibilidad/index.html')), l).toBe(true);
+      expect(read('sitemap.xml')).toContain('/accesibilidad/</loc>');
+      for (const f of ['index.html', 'chubut/1937/index.html', 'cy/index.html', 'zh/item/' + catalog.find((i) => !i.restricted)!.id + '/index.html']) {
+        expect(read(f), f).toMatch(/<p class="pie-normas small">[\s\S]*?href="[^"]*\/accesibilidad"/);
+      }
+      const html = read('accesibilidad/index.html');
+      expect(html).toContain(WCAG.uri);
+      expect(html).toContain('26.653');
+      expect(html).toContain('EN 301 549');
+      expect(html).toContain('16 de noviembre de 2026');
+      expect(EVALUATED).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+    });
+
+    it('no conformance logo while the site is only partially conformant (CLAIM is null); with a claim, the logo file is served', () => {
+      const html = read('accesibilidad/index.html');
+      if (CLAIM) {
+        expect(html).toContain('data-conformidad="total"');
+        expect(existsSync(join(__dirname, '..', 'public', WCAG.logo))).toBe(true);
+        expect(read('index.html')).toContain(`href="${WCAG.explanation}"`);
+      } else {
+        expect(html).toContain('data-conformidad="parcial"');
+        for (const f of htmlFiles().slice(0, 50)) expect(readFileSync(f, 'utf8'), f).not.toContain('wcag-logo');
+      }
+    });
+
+    it('reading settings: applied before paint on every page, offered in the header and on the statement', () => {
+      for (const f of pages) {
+        const html = read(f);
+        const head = html.slice(0, html.indexOf('</head>'));
+        expect(head.indexOf('amg:lectura'), f).toBeGreaterThan(-1);
+        expect(head.indexOf('amg:lectura'), f).toBeLessThan(head.indexOf('stylesheet') === -1 ? Infinity : head.indexOf('stylesheet'));
+        expect(html, f).toContain('<details class="menu-cabecera lectura-menu" data-menu>');
+        for (const k of AJUSTES) for (const v of OPCIONES[k]) expect(html, `${f} ${k}=${v}`).toContain(`value="${v}" data-ajuste="${k}"`);
+      }
+      // Two copies on the statement page, with distinct radio names.
+      const html = read('accesibilidad/index.html');
+      expect(html).toContain('name="lectura-cab-texto"');
+      expect(html).toContain('name="lectura-pag-texto"');
+      expect(read('cookies/index.html')).toContain('amg:lectura');
+    });
+
+    it('the icon-only menu buttons have a text name; scrollable tables can be reached by keyboard', () => {
+      const html = read('index.html');
+      expect(html).toMatch(/<summary title="Ajustes de lectura">[\s\S]*?<span class="sr-only">Ajustes de lectura<\/span>/);
+      expect(read('cookies/index.html')).toContain('class="legal-tabla" tabindex="0" role="region" aria-labelledby="cookies-tabla"');
+    });
+
+    it('archive and community text is marked as Spanish on translated pages only (WCAG 3.1.2)', () => {
+      const item = catalog.find((i) => !i.restricted && !i.hidden)!;
+      expect(read(`en/item/${item.id}/index.html`)).toMatch(/<h1 lang="es">/);
+      expect(read(`item/${item.id}/index.html`)).toMatch(/<h1>/);
+      expect(read('fr/general/chubut/index.html')).toMatch(/<span lang="es">/);
+      for (const f of ['index.html', 'chubut/1937/index.html', `item/${item.id}/index.html`]) expect(read(f), f).not.toContain('lang="es"');
+    });
+
+    it('WebMCP: tools are registered from every page, forms are agent-fillable but never auto-submitted', () => {
+      const chunks = readdirSync(join(DIST, '_astro')).filter((n) => n.endsWith('.js')).map((n) => readFileSync(join(DIST, '_astro', n), 'utf8'));
+      for (const name of ['get_page_info', 'search_documents', 'list_editions', 'get_edition', 'open_page', 'set_language', 'set_reading_settings']) {
+        expect(chunks.some((js) => js.includes(`"${name}"`) || js.includes(`'${name}'`) || js.includes('`' + name + '`')), name).toBe(true);
+      }
+      for (const f of ['contribuir/index.html', 'cy/contribuir/index.html']) {
+        const html = read(f);
+        expect(html, f).toContain('toolname="add_edition_fact"');
+        expect(html, f).toContain('toolname="share_memory"');
+        expect(html, f).not.toContain('toolautosubmit');
+        expect(html, f).toMatch(/name="text"[^>]*toolparamdescription=/);
+        expect(html, f).toMatch(/name="field"[^>]*toolparamdescription=/);
+      }
+      expect(read('contribuir/index.html')).not.toMatch(/<form[^>]*panel-subir[^>]*toolname/); // a file cannot be filled in by an agent
+    });
+
+    it('automation hints: open data, llms.txt and (only with a token) the WebMCP origin trial', () => {
+      const html = read('index.html');
+      expect(html).toContain('<link rel="alternate" type="application/json" href="https://amgueddfa.kevinroberts.ar/datos/ediciones.json"');
+      expect(html).toContain('<link rel="alternate" type="application/json" href="https://amgueddfa.kevinroberts.ar/datos/documentos.json"');
+      expect(html).toContain('<link rel="help" type="text/plain" href="https://amgueddfa.kevinroberts.ar/llms.txt"');
+      const root = join(__dirname, '..');
+      const token = loadEnv('production', root, 'PUBLIC_').PUBLIC_WEBMCP_OT_TOKEN || process.env.PUBLIC_WEBMCP_OT_TOKEN;
+      expect(html.includes('http-equiv="origin-trial"')).toBe(Boolean(token));
+      const llms = read('llms.txt');
+      for (const k of ['WebMCP', 'search_documents', 'add_edition_fact', 'accesibilidad/']) expect(llms).toContain(k);
+    });
   });
 });

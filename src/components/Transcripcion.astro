@@ -1,6 +1,7 @@
 ---
 // A standardized programa transcription: disciplines (h3), age groups (h4), competitions as lists.
 import { parseTranscription, type Block } from '../lib/transcripciones';
+import { contentLang } from '../lib/i18n';
 
 const { text } = Astro.props as { text: string };
 type Run = { kind: 'heading'; block: Block } | { kind: 'list'; items: Extract<Block, { type: 'item' }>[] };
@@ -13,7 +14,7 @@ for (const b of parseTranscription(text)) {
   } else runs.push({ kind: 'heading', block: b });
 }
 ---
-<div class="transcripcion">
+<div class="transcripcion" lang={contentLang()}>
   {runs.map((r) =>
     r.kind === 'list' ? (
       <ul class="tr-lista">

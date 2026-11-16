@@ -1,6 +1,8 @@
 ---
 import Base from '../layouts/Base.astro';
+import TranslationNote from '../components/TranslationNote.astro';
 import { OPT_OUT_KEY } from '../lib/consent';
+import { LECTURA_KEY } from '../lib/lectura';
 import { t } from '../lib/i18n';
 import { url } from '../lib/paths';
 
@@ -11,16 +13,18 @@ const rows = [
   { key: 'sb-<proyecto>-auth-token-code-verifier', para: 'verificador_para', tipo: 'tipo_necesaria', dura: 'dura_verificador' },
   { key: 'amg:tz', para: 'tz_para', tipo: 'tipo_preferencia', dura: 'dura_tz' },
   { key: OPT_OUT_KEY, para: 'nocontar_para', tipo: 'tipo_preferencia', dura: 'dura_nocontar' },
+  { key: LECTURA_KEY, para: 'lectura_para', tipo: 'tipo_preferencia', dura: 'dura_lectura' },
 ];
 const c = (k: string) => t(`legal.cookies.${k}`);
 ---
 <Base title={t('legal.titulos.cookies')} description={c('intro')}>
   <article class="legal measure">
     <h1>{t('legal.titulos.cookies')}</h1>
+    <TranslationNote />
     <p class="lead">{c('intro')}</p>
 
-    <h2>{c('tabla_titulo')}</h2>
-    <div class="legal-tabla">
+    <h2 id="cookies-tabla">{c('tabla_titulo')}</h2>
+    <div class="legal-tabla" tabindex="0" role="region" aria-labelledby="cookies-tabla">
       <table>
         <thead>
           <tr><th scope="col">{c('col_clave')}</th><th scope="col">{c('col_para')}</th><th scope="col">{c('col_tipo')}</th><th scope="col">{c('col_dura')}</th></tr>

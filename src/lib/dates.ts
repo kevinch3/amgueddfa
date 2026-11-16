@@ -1,5 +1,6 @@
 // Dates and times shown to people, in their saved timezone (or the browser's).
 // Historical fact dates are not this: they stay in UTC (contrib.ts longDate).
+import { formatDate, formatRelative } from './i18n';
 import { isTimeZone } from './places';
 
 const KEY = 'amg:tz';
@@ -34,19 +35,19 @@ function parse(iso: string | null | undefined): Date | null {
   return d && !Number.isNaN(d.getTime()) ? d : null;
 }
 
-/** "14 de noviembre de 2026" in the user's timezone; '' for a missing or bad date. */
+/** "14 de noviembre de 2026" (in the current language) in the user's timezone; '' for a missing or bad date. */
 export function fecha(iso: string | null | undefined, timeZone = userTimeZone()): string {
   const d = parse(iso);
-  return d ? d.toLocaleDateString('es-AR', { day: 'numeric', month: 'long', year: 'numeric', timeZone }) : '';
+  return d ? formatDate(d, 'long', timeZone) : '';
 }
 
 /** "14 de nov de 2026, 10:32" (24 h) in the user's timezone; '' for a missing or bad date. */
 export function fechaHora(iso: string | null | undefined, timeZone = userTimeZone()): string {
   const d = parse(iso);
-  return d ? d.toLocaleString('es-AR', { dateStyle: 'medium', timeStyle: 'short', hourCycle: 'h23', timeZone }) : '';
+  return d ? formatDate(d, 'medium', timeZone) : '';
 }
 
-const STEPS: [Intl.RelativeTimeFormatUnit, number][] = [
+const STEPS: ['second' | 'minute' | 'hour' | 'day', number][] = [
   ['second', 60],
   ['minute', 60],
   ['hour', 24],
@@ -62,10 +63,9 @@ export function relativa(iso: string | null | undefined, now = Date.now(), timeZ
   if (!d) return '';
   let diff = (d.getTime() - now) / 1000; // negative = past
   if (diff > 60) return fecha(iso, timeZone);
-  const rtf = new Intl.RelativeTimeFormat('es-AR', { numeric: 'auto' });
-  if (Math.abs(diff) < 45) return rtf.format(0, 'second'); // "ahora"
+  if (Math.abs(diff) < 45) return formatRelative(0, 'second'); // "ahora"
   for (const [unit, size] of STEPS) {
-    if (Math.abs(diff) < size) return rtf.format(Math.round(diff), unit);
+    if (Math.abs(diff) < size) return formatRelative(Math.round(diff), unit);
     diff /= size;
   }
   return fecha(iso, timeZone);

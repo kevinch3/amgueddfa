@@ -40,7 +40,7 @@ const general = items().filter((i) => i.festival === slug && i.year === null).le
 <Base title={fest.name} festival={slug} description={since !== null ? `${fest.name}: ${t('festival.desde', { year: since })} ${t('inicio.lema')}` : t('inicio.lema')}>
   <header class="cover">
     <h1>{fest.name}</h1>
-    <p class="cy" lang="cy"><em>{fest.nameCy}</em></p>
+    {fest.nameCy !== fest.name && <p class="cy" lang="cy"><em>{fest.nameCy}</em></p>}
     {since !== null && <p class="muted">{t('festival.desde', { year: since })}</p>}
     <p class="antes small">{t('festival.antes', { year: first })} <a href={url(`contribuir?f=${slug}`)} aria-label={t('festival.antes_link_aria', { festival: fest.name })}>{t('festival.antes_link')}</a></p>
     {general > 0 && <p><a href={url(`general/${slug}/`)}>{t('festival.ver_general')}</a> ({docCount(general)})</p>}

@@ -1,4 +1,6 @@
 import { festivals, firstMaterialYear } from '../lib/catalog';
+import { DEFAULT_LOCALE, LOCALES, LOCALE_INFO } from '../lib/i18n';
+import { url } from '../lib/paths';
 import { absUrl } from '../lib/seo';
 
 /** A plain-text guide to the site for language models and other bots (llms.txt). */
@@ -7,11 +9,14 @@ export function GET(): Response {
     const since = firstMaterialYear(f.slug);
     return `- [${f.name}](${absUrl(`${f.slug}/`)})${since ? `: material desde ${since}` : ''}`;
   });
+  const versions = LOCALES.filter((l) => l !== DEFAULT_LOCALE)
+    .map((l) => `${LOCALE_INFO[l].name} (${LOCALE_INFO[l].tag}): ${absUrl(url('/', l))}`)
+    .join('; ');
   const text = `# Amgueddfa Eisteddfod y Wladfa
 
 > Museo digital de los Eisteddfodau de la Patagonia (Argentina): programas, bases, resultados, fotos y datos de cada edición, aportados y revisados por la comunidad. Todo el contenido es abierto y se puede leer y reutilizar.
 
-El sitio está en castellano (con títulos en galés). Cada edición tiene una página por año, por ejemplo ${absUrl('chubut/1937/')}, con sus documentos, los datos aprobados (fecha, lugar, ganadores de la silla y la corona, competencias) con su fuente, y recuerdos.
+El sitio está en castellano (con títulos en galés), y cada página también está traducida en ${versions}. Los documentos, las transcripciones y los aportes se muestran siempre en su idioma original. Cada edición tiene una página por año, por ejemplo ${absUrl('chubut/1937/')}, con sus documentos, los datos aprobados (fecha, lugar, ganadores de la silla y la corona, competencias) con su fuente, y recuerdos.
 
 ## Eisteddfodau
 
@@ -22,6 +27,14 @@ ${fests.join('\n')}
 - [Ediciones](${absUrl('datos/ediciones.json')}): todas las ediciones con estado del archivo, tapa y datos aprobados (con fuente y quién los aportó).
 - [Documentos](${absUrl('datos/documentos.json')}): todos los documentos públicos con título, eisteddfod, año, categoría, miniatura e imágenes de cada página.
 - [Mapa del sitio](${absUrl('sitemap.xml')})
+
+## Herramientas para agentes (WebMCP)
+
+Cada página registra herramientas WebMCP (\`document.modelContext\`) en los navegadores que lo soportan: \`get_page_info\`, \`search_documents\`, \`list_editions\`, \`get_edition\`, \`open_page\`, \`set_language\` y \`set_reading_settings\`. Ninguna escribe en el archivo. Los formularios para aportar un dato o un recuerdo (${absUrl('contribuir')}) son herramientas declarativas (\`toolname\` \`add_edition_fact\` y \`share_memory\`): el agente los completa y la persona los envía.
+
+## Accesibilidad
+
+Objetivo: WCAG 2.2 nivel AA. Declaración, estado y ajustes de lectura: ${absUrl('accesibilidad/')}
 
 ## Notas
 

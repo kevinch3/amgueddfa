@@ -1,0 +1,67 @@
+---
+// The accessibility statement: reading settings, the standards we follow, where the
+// site stands against them (honestly: what is still missing), how it was evaluated,
+// and how to report a barrier. CLAIM (lib/accesibilidad.ts) switches the status to a
+// full conformance claim once a human evaluation backs it.
+import Base from '../layouts/Base.astro';
+import ReadingSettings from '../components/ReadingSettings.astro';
+import TranslationNote from '../components/TranslationNote.astro';
+import { CLAIM, EVALUATED, WCAG } from '../lib/accesibilidad';
+import { longDate } from '../lib/contrib';
+import { t } from '../lib/i18n';
+import { url } from '../lib/paths';
+
+const c = (k: string, vars?: Record<string, string | number>) => t(`accesibilidad.${k}`, vars);
+const LEY = 'https://www.argentina.gob.ar/normativa/nacional/ley-26653-175694/texto';
+const ONTI = 'https://www.argentina.gob.ar/normativa/nacional/329284/texto';
+const EN301549 = 'https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf';
+const ARIA = 'https://www.w3.org/TR/wai-aria-1.2/';
+---
+<Base title={t('legal.titulos.accesibilidad')} description={c('descripcion')}>
+  <article class="legal measure">
+    <h1>{t('legal.titulos.accesibilidad')}</h1>
+    <TranslationNote />
+    <p class="lead">{c('intro')}</p>
+
+    <h2 id="ajustes">{c('ajustes_titulo')}</h2>
+    <p>{c('ajustes_1')}</p>
+    <ReadingSettings id="lectura-pag" />
+    <p>{c('ajustes_navegador')}</p>
+
+    <h2 id="normas">{c('normas_titulo')}</h2>
+    <p>{c('normas_1')} <a href={WCAG.uri} hreflang="en">{WCAG.title}</a>{t('comun.punto')}</p>
+    <ul>
+      <li>{c('normas_ley')} <a href={LEY} hreflang="es">Ley 26.653</a> · <a href={ONTI} hreflang="es">Disposición ONTI 6/2019</a> · <a href={EN301549} hreflang="en">EN 301 549</a></li>
+      <li>{c('normas_aria')} <a href={ARIA} hreflang="en">WAI-ARIA 1.2</a></li>
+    </ul>
+
+    <h2 id="estado">{c('estado_titulo')}</h2>
+    {CLAIM ? (
+      <p data-conformidad="total">{c('estado_conforme', { fecha: longDate(CLAIM.date) })}</p>
+    ) : (
+      <>
+        <p data-conformidad="parcial">{c('estado_1')}</p>
+        <ul>
+          <li>{c('limite_imagenes')} <a href={url('tareas')}>{t('nav.tareas')}</a>{t('comun.punto')}</li>
+          <li>{c('limite_idioma')}</li>
+          <li>{c('limite_traducciones')}</li>
+          <li>{c('limite_videos')}</li>
+        </ul>
+      </>
+    )}
+
+    <h2 id="evaluacion">{c('evaluacion_titulo')}</h2>
+    <p>{c('evaluacion_1', { fecha: longDate(EVALUATED) })}</p>
+    <p>{c('evaluacion_2')}</p>
+    <p>{c('tecnologias')}</p>
+
+    <h2 id="contacto">{c('contacto_titulo')}</h2>
+    <p>{c('contacto_1')} {t('legal.correo_pie')}</p>
+
+    <h2 id="agentes">{c('agentes_titulo')}</h2>
+    <p>{c('agentes_1')}</p>
+    <p>{c('agentes_datos')} <a href={url('datos/ediciones.json')}>ediciones.json</a> · <a href={url('datos/documentos.json')}>documentos.json</a> · <a href={url('llms.txt')}>llms.txt</a></p>
+
+    <p class="muted small">{t('legal.actualizado', { fecha: longDate(EVALUATED) })}</p>
+  </article>
+</Base>

@@ -22,7 +22,7 @@ const blocks = list.map((f) => {
 {blocks.map((f) => (
   <section class="fest-block" aria-labelledby={`fest-${f.slug}`}>
     <h3 id={`fest-${f.slug}`}><a href={url(`${f.slug}/`)}>{f.name}</a></h3>
-    <p class="cy" lang="cy">{f.nameCy}</p>
+    {f.nameCy !== f.name && <p class="cy" lang="cy">{f.nameCy}</p>}
     <ul class="cells" style={`--start:${(f.first % 10) + 1}`}>
       {f.groups.map((g) => g.empty ? (
         <li class="decada-li">

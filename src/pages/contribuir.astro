@@ -15,7 +15,7 @@ const firsts = Object.fromEntries(festivals().map((f) => [f.slug, yearRange(f.sl
   <section class="contrib">
     <h1>{t('contrib.titulo')}</h1>
     <p class="lead measure">{t('contrib.intro')}</p>
-    <p class="measure">{t('contrib.licencia')} <a href={url('objetivos#licencias')}>{t('contrib.licencia_enlace')}</a>.</p>
+    <p class="measure">{t('contrib.licencia')} <a href={url('objetivos#licencias')}>{t('contrib.licencia_enlace')}</a>{t('comun.punto')}</p>
     <noscript><p class="contrib-msg">{t('contrib.sin_js')}</p></noscript>
 
     <div id="contrib-gate" aria-live="polite"><p class="muted">{t('contrib.cargando')}</p></div>
@@ -74,25 +74,29 @@ const firsts = Object.fromEntries(festivals().map((f) => [f.slug, yearRange(f.sl
           <label for="c-description">{t('contrib.descripcion_label')}</label>
           <textarea id="c-description" name="description" rows="3" maxlength="500"></textarea>
         </div>
-        <p class="muted small">{t('contrib.declaracion')} <a href={url('derechos#aportes')}>{t('contrib.declaracion_enlace')}</a>.</p>
+        <p class="muted small">{t('contrib.declaracion')} <a href={url('derechos#aportes')}>{t('contrib.declaracion_enlace')}</a>{t('comun.punto')}</p>
         <button class="btn" type="submit">{t('contrib.enviar')}</button>
       </form>
 
-      <form id="panel-datos" role="tabpanel" aria-labelledby="tab-datos" data-kind="fact" class="contrib-form" novalidate hidden>
+      <form id="panel-datos" role="tabpanel" aria-labelledby="tab-datos" data-kind="fact" class="contrib-form" novalidate hidden
+        toolname="add_edition_fact"
+        tooldescription="Fills in one fact about the eisteddfod edition chosen on this page (date, venue, presenters, Chair or Crown winner, whether it was held, or a competition) with its source. The person reviews it and presses Send; it is published after the archive team approves it.">
         <p class="measure">{t('contrib.datos_ayuda')}</p>
         <FactEditor prefix="c" />
-        <p class="muted small">{t('contrib.declaracion')} <a href={url('derechos#aportes')}>{t('contrib.declaracion_enlace')}</a>.</p>
+        <p class="muted small">{t('contrib.declaracion')} <a href={url('derechos#aportes')}>{t('contrib.declaracion_enlace')}</a>{t('comun.punto')}</p>
         <button class="btn" type="submit">{t('contrib.enviar')}</button>
       </form>
 
-      <form id="panel-recuerdo" role="tabpanel" aria-labelledby="tab-recuerdo" data-kind="memory" class="contrib-form" novalidate hidden>
+      <form id="panel-recuerdo" role="tabpanel" aria-labelledby="tab-recuerdo" data-kind="memory" class="contrib-form" novalidate hidden
+        toolname="share_memory"
+        tooldescription="Fills in a personal memory of the eisteddfod edition chosen on this page, in the person's own words. The person reviews it and presses Send; it is published after the archive team approves it.">
         <p class="measure">{t('contrib.recuerdo_ayuda')}</p>
         <div class="campo">
           <label for="c-text">{t('contrib.recuerdo_label')}</label>
-          <textarea id="c-text" name="text" rows="8" maxlength={TEXT_MAX} aria-describedby="c-text-ayuda"></textarea>
+          <textarea id="c-text" name="text" rows="8" maxlength={TEXT_MAX} aria-describedby="c-text-ayuda" toolparamdescription="The memory, in the person's own words (10 to 5000 characters)."></textarea>
           <p class="muted small" id="c-text-ayuda">{t('contrib.caracteres')}</p>
         </div>
-        <p class="muted small">{t('contrib.declaracion')} <a href={url('derechos#aportes')}>{t('contrib.declaracion_enlace')}</a>.</p>
+        <p class="muted small">{t('contrib.declaracion')} <a href={url('derechos#aportes')}>{t('contrib.declaracion_enlace')}</a>{t('comun.punto')}</p>
         <button class="btn" type="submit">{t('contrib.enviar')}</button>
       </form>
     </div>
@@ -108,6 +112,7 @@ const firsts = Object.fromEntries(festivals().map((f) => [f.slug, yearRange(f.sl
   import { mountFactEditor } from '../scripts/fact-editor';
   import type { FestivalSlug } from '../lib/types';
   import { gate, gateMessage } from '../scripts/ui';
+  import { agentReply } from '../lib/webmcp';
 
   const TABS = ['subir', 'datos', 'recuerdo'];
   const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
@@ -187,8 +192,12 @@ const firsts = Object.fromEntries(festivals().map((f) => [f.slug, yearRange(f.sl
 
   for (const k of TABS) {
     const form = $<HTMLFormElement>(`panel-${k}`);
-    form.addEventListener('submit', async (ev) => {
+    form.addEventListener('submit', (ev) => {
       ev.preventDefault();
+      // A form the browser's agent filled (WebMCP): tell it what the page now says.
+      agentReply(ev, send().then(() => (ok.hidden ? msg.textContent ?? '' : $('c-ok-text').textContent ?? '')));
+    });
+    const send = async () => {
       const btn = form.querySelector<HTMLButtonElement>('button[type=submit]')!;
       if (btn.disabled) return;
       say(null);
@@ -234,7 +243,7 @@ const firsts = Object.fromEntries(festivals().map((f) => [f.slug, yearRange(f.sl
       ok.hidden = false;
       for (const k2 of TABS) $(`panel-${k2}`).hidden = true;
       $<HTMLButtonElement>('c-otro').focus();
-    });
+    };
   }
 
   $('c-otro').addEventListener('click', () => {

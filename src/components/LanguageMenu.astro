@@ -1,0 +1,40 @@
+---
+/**
+ * The same page in every language. "menu" is the header's fold-out (a <details>,
+ * so it works without JavaScript); "list" is the footer's plain row of links.
+ * scripts/idiomas.ts carries the query and hash over when the browser can.
+ */
+import { LOCALE_INFO, locale, t } from '../lib/i18n';
+import { alternates } from '../lib/paths';
+
+interface Props {
+  variant: 'menu' | 'list';
+}
+const { variant } = Astro.props;
+const here = locale();
+const links = alternates(Astro.url.pathname).map((a) => ({ ...a, ...LOCALE_INFO[a.locale], current: a.locale === here }));
+---
+{variant === 'menu' ? (
+  <details class="menu-cabecera idiomas" data-menu>
+    <summary>
+      <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <circle cx="12" cy="12" r="9.2" />
+        <path d="M2.8 12h18.4M12 2.8c2.6 2.6 3.8 5.8 3.8 9.2s-1.2 6.6-3.8 9.2c-2.6-2.6-3.8-5.8-3.8-9.2S9.4 5.4 12 2.8z" />
+      </svg>
+      <span class="sr-only">{t('idiomas.titulo')}: </span><span lang={LOCALE_INFO[here].tag}>{LOCALE_INFO[here].name}</span>
+    </summary>
+    <ul>
+      {links.map((l) => (
+        <li><a href={l.href} hreflang={l.tag} lang={l.tag} data-idioma={l.locale} aria-current={l.current ? 'true' : undefined}>{l.name}</a></li>
+      ))}
+    </ul>
+  </details>
+) : (
+  <nav class="pie-idiomas" aria-label={t('idiomas.titulo')}>
+    <ul>
+      {links.map((l) => (
+        <li><a href={l.href} hreflang={l.tag} lang={l.tag} data-idioma={l.locale} aria-current={l.current ? 'true' : undefined}>{l.name}</a></li>
+      ))}
+    </ul>
+  </nav>
+)}

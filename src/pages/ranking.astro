@@ -21,7 +21,7 @@ import { t } from '../lib/i18n';
 <script>
   import { FESTIVALS } from '../lib/contrib';
   import { rankBy, type LeaderRow } from '../lib/game';
-  import { t } from '../lib/i18n';
+  import { formatNumber, t } from '../lib/i18n';
   import { liveQuery, withOptionalCols } from '../lib/live';
   import { countryName, flag } from '../lib/places';
   import { url } from '../lib/paths';
@@ -62,7 +62,7 @@ import { t } from '../lib/i18n';
       name.append(el('a', { href: url(`perfil?u=${encodeURIComponent(r.display_name)}`) }, r.display_name));
       const cc = r.country;
       if (flag(cc)) name.append(' ', el('span', { class: 'bandera', title: countryName(cc), role: 'img', 'aria-label': countryName(cc) }, flag(cc)));
-      tr.append(el('td', { class: 'num' }, String(r.rank)), name, el('td', { class: 'num' }, r.points.toLocaleString('es-AR')));
+      tr.append(el('td', { class: 'num' }, String(r.rank)), name, el('td', { class: 'num' }, formatNumber(r.points)));
       body.append(tr);
     }
     table.append(body);

@@ -1,5 +1,5 @@
 import type { SupabaseClient } from '@supabase/supabase-js';
-import { t } from './i18n';
+import { formatDate, t } from './i18n';
 import { liveQuery } from './live';
 import { getClient } from './supabase';
 import type { CategorySlug, FestivalSlug } from './types';
@@ -375,10 +375,10 @@ export function isoFromParts(day: string, month: string, year: string): string |
   return isoDate(iso) ? iso : null;
 }
 
-/** "8 de diciembre de 1937" for an ISO date; anything else is returned unchanged. */
+/** "8 de diciembre de 1937" (in the current language) for an ISO date; anything else is returned unchanged. */
 export function longDate(iso: string): string {
   if (!isoDate(iso)) return iso;
-  return new Date(`${iso}T12:00:00Z`).toLocaleDateString('es-AR', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+  return formatDate(new Date(`${iso}T12:00:00Z`), 'long', 'UTC');
 }
 
 /** Label and text of an approved fact, as shown on the edition page (static build and live island alike). */
@@ -395,6 +395,16 @@ export function factDisplay(c: Contribution): { label: string; value: string } {
   if (field === 'start_date' || field === 'end_date') return { label, value: longDate(value) };
   if (field === 'edicion_realizada') return { label, value: value === 'no' ? t('contrib.no') : t('contrib.si') };
   return { label, value };
+}
+
+/**
+ * True when a fact's value is the contributor's own text (a venue, names, a
+ * competition), so in its original language; dates and yes/no are written in the
+ * page's language.
+ */
+export function factInOriginal(c: Contribution): boolean {
+  const field = c.payload?.field;
+  return !['start_date', 'end_date', 'edicion_realizada'].includes(field);
 }
 
 /** "Aportó <nombre>", or '' when the contributor has no public name. */

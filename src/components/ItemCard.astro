@@ -1,6 +1,6 @@
 ---
 import { thumbUrl } from '../lib/catalog';
-import { t } from '../lib/i18n';
+import { contentLang, t } from '../lib/i18n';
 import { url } from '../lib/paths';
 import type { Item } from '../lib/types';
 
@@ -24,7 +24,7 @@ const thumb = thumbUrl(item);
         </span>
       )}
     </span>
-    <span class="t">{showYear && item.year ? `${item.year}: ` : ''}{item.title}</span>
+    <span class="t">{showYear && item.year ? `${item.year}: ` : ''}<span lang={contentLang()}>{item.title}</span></span>
   </a>
   {(item.year_inferred || item.restricted) && (
     <span class="badges">

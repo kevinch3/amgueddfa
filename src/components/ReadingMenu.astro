@@ -1,0 +1,20 @@
+---
+/** The header's reading settings button: an icon that folds out the settings form. */
+import ReadingSettings from './ReadingSettings.astro';
+import { t } from '../lib/i18n';
+import { url } from '../lib/paths';
+---
+<details class="menu-cabecera lectura-menu" data-menu>
+  <summary title={t('lectura.titulo')}>
+    <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M2 19 7.5 5h1L14 19M4.2 14h7.6" />
+      <path d="M15 19l3.2-8h.6L22 19M16.2 16.2h4.6" />
+    </svg>
+    <span class="sr-only">{t('lectura.titulo')}</span>
+  </summary>
+  <div class="menu-panel">
+    <p class="menu-panel-titulo">{t('lectura.titulo')}</p>
+    <ReadingSettings id="lectura-cab" />
+    <p class="small"><a href={url('accesibilidad')}>{t('lectura.mas')}</a></p>
+  </div>
+</details>

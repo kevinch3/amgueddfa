@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import TranslationNote from '../components/TranslationNote.astro';
 import { t } from '../lib/i18n';
 import { url } from '../lib/paths';
 
@@ -8,6 +9,7 @@ const c = (k: string) => t(`legal.derechos.${k}`);
 <Base title={t('legal.titulos.derechos')} description={c('descripcion')}>
   <article class="legal measure">
     <h1>{t('legal.titulos.derechos')}</h1>
+    <TranslationNote />
     <p class="lead">{c('intro')}</p>
 
     <h2>{c('alcance_titulo')}</h2>
@@ -33,10 +35,10 @@ const c = (k: string) => t(`legal.derechos.${k}`);
 
     <h2>{c('ley_titulo')}</h2>
     <p>{c('ley_1')}</p>
-    <p>{c('ley_2')} <a href="https://docs.github.com/es/site-policy/content-removal-policies/dmca-takedown-policy" rel="noopener">{c('ley_github')}</a>.</p>
+    <p>{c('ley_2')} <a href={t('legal.enlaces.dmca')} rel="noopener">{c('ley_github')}</a>{t('comun.punto')}</p>
 
     <h2 id="aportes">{c('aportes_titulo')}</h2>
     <p>{c('aportes_1')}</p>
-    <p>{c('aportes_2')} <a href={url('objetivos#licencias')}>{c('aportes_objetivos')}</a>.</p>
+    <p>{c('aportes_2')} <a href={url('objetivos#licencias')}>{c('aportes_objetivos')}</a>{t('comun.punto')}</p>
   </article>
 </Base>

@@ -13,7 +13,7 @@ import { t } from '../lib/i18n';
   import type { Kind } from '../lib/contrib';
   import { fecha, relativa, setUserTimeZone } from '../lib/dates';
   import { BADGES, pendingPoints, statusOf, type Status } from '../lib/game';
-  import { t } from '../lib/i18n';
+  import { formatNumber, t } from '../lib/i18n';
   import { liveQuery, withOptionalCols } from '../lib/live';
   import { countryName } from '../lib/places';
   import { countryLabel, nameField, placeFields } from '../scripts/profile-form';
@@ -205,7 +205,7 @@ import { t } from '../lib/i18n';
 
     const pts = el('section', { class: 'perfil-puntos', 'aria-labelledby': 'p-puntos' });
     pts.append(el('h2', { id: 'p-puntos' }, t('perfil.puntos_titulo')));
-    const big = el('p', { class: 'puntos-grande' }, prof.data.points === 1 ? t('sesion.un_punto') : t('sesion.puntos', { n: prof.data.points.toLocaleString('es-AR') }));
+    const big = el('p', { class: 'puntos-grande' }, prof.data.points === 1 ? t('sesion.un_punto') : t('sesion.puntos', { n: formatNumber(prof.data.points) }));
     pts.append(big);
     const pend = own ? pendingPoints(rows) : 0;
     if (pend > 0) {

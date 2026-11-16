@@ -246,13 +246,15 @@ otp_expiry = 3600
 
 # Sign-in is by 6-digit code (src/lib/auth.ts verifyCode, /ingresar); links do
 # not sign anyone in (detectSessionInUrl = false), so both emails carry {{ .Token }}.
-# The hosted project needs the same templates pasted in (README, Publicación).
+# The hosted project needs the same templates pasted in (README, Publicación). The
+# body follows the account's language (user_metadata.lang); the subject is the same
+# in every language (scripts/email_templates.mjs).
 [auth.email.template.magic_link]
-subject = "Tu código para ingresar al Amgueddfa"
+subject = "Amgueddfa Eisteddfod y Wladfa"
 content_path = "./supabase/templates/magic_link.html"
 
 [auth.email.template.confirmation]
-subject = "Tu código para ingresar al Amgueddfa"
+subject = "Amgueddfa Eisteddfod y Wladfa"
 content_path = "./supabase/templates/confirmation.html"
 
 # Uncomment to customize email template

@@ -1,3 +1,4 @@
+import { contentLang } from '../lib/i18n';
 import { approvedNotes, approvedTranscriptions, byLine, mergeApproved, type Contribution, type Kind } from '../lib/contrib';
 import type { LiveResult } from '../lib/live';
 
@@ -11,6 +12,8 @@ export function renderQuotes(mount: HTMLElement, list: Contribution[]): void {
     const li = document.createElement('li');
     const q = document.createElement('blockquote');
     q.textContent = String(c.payload?.text ?? '');
+    const l = contentLang();
+    if (l) q.lang = l;
     li.append(q);
     const by = byLine(c);
     if (by) {

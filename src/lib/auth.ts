@@ -1,5 +1,6 @@
 import type { SupabaseClient } from '@supabase/supabase-js';
 import { liveQuery, withOptionalCols } from './live';
+import { DEFAULT_LOCALE, locale } from './i18n';
 import { url } from './paths';
 import { isCountry, isTimeZone } from './places';
 import { getClient } from './supabase';
@@ -49,12 +50,15 @@ type Loc = { origin: string; search: string };
 
 /**
  * Absolute /ingresar/ URL on this origin for the email link to come back to,
- * carrying `volver` only when it is a safe path on this site.
+ * carrying `volver` only when it is a safe path on this site. Always the Spanish
+ * /ingresar/ (the one Supabase's Redirect URLs allow); another language goes along
+ * as `lang`, and that page forwards to its own /<lang>/ingresar/.
  */
 export function linkRedirect(loc: Loc): string {
-  const volver = returnPath(new URLSearchParams(loc.search).get('volver'), url('/'));
-  const to = `${loc.origin}${url('ingresar/')}`;
-  return volver ? `${to}?volver=${encodeURIComponent(volver)}` : to;
+  const volver = returnPath(new URLSearchParams(loc.search).get('volver'), url('/', DEFAULT_LOCALE));
+  const to = `${loc.origin}${url('ingresar/', DEFAULT_LOCALE)}`;
+  const q = [volver ? `volver=${encodeURIComponent(volver)}` : '', locale() !== DEFAULT_LOCALE ? `lang=${locale()}` : ''].filter(Boolean);
+  return q.length ? `${to}?${q.join('&')}` : to;
 }
 
 /**
@@ -73,7 +77,8 @@ export function sendCode(
   if (running) return running;
   const p = (async (): Promise<Result> => {
     try {
-      const options: { shouldCreateUser: boolean; emailRedirectTo?: string } = { shouldCreateUser: true };
+      // data.lang: a new account's language, so its emails come in it (supabase/templates).
+      const options: { shouldCreateUser: boolean; data: { lang: string }; emailRedirectTo?: string } = { shouldCreateUser: true, data: { lang: locale() } };
       if (loc?.origin) options.emailRedirectTo = linkRedirect(loc);
       const { error } = await client.auth.signInWithOtp({ email: addr, options });
       if (!error) return { ok: true };
@@ -89,6 +94,24 @@ export function sendCode(
   })();
   inflight.set(addr, p);
   return p;
+}
+
+/**
+ * Keep the account's language (user_metadata.lang) in step with the page it is
+ * used in, so the next sign-in email (supabase/templates) is written in it. Only
+ * new accounts get it from sendCode; existing ones pick it up here.
+ */
+export async function rememberLanguage(client: SupabaseClient | null = getClient(), lang: string = locale()): Promise<boolean> {
+  if (!client) return false;
+  try {
+    const { data } = await client.auth.getSession();
+    const user = data?.session?.user;
+    if (!user || user.user_metadata?.lang === lang) return false;
+    const { error } = await client.auth.updateUser({ data: { lang } });
+    return !error;
+  } catch {
+    return false; // offline: the next visit tries again
+  }
 }
 
 /** Check the code from the email. Signs the user in on success. */

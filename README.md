@@ -45,6 +45,110 @@ PUBLIC_SUPABASE_ANON_KEY=<clave anon>
 SUPABASE_SERVICE_ROLE_KEY=<clave service_role>   # solo para scripts locales
 ```
 
+## Idiomas
+
+El sitio está en siete idiomas. El castellano (`es-AR`) va sin prefijo; los demás
+cuelgan de su propio prefijo, con todas las páginas:
+
+| Prefijo | Idioma | Archivo |
+| --- | --- | --- |
+| `/` | Castellano (Argentina) | `src/i18n/es-AR.json` |
+| `/cy/` | Galés de la Wladfa (`cy-AR`) | `src/i18n/cy-AR.json` |
+| `/en/` | Inglés británico | `src/i18n/en-GB.json` |
+| `/zh/` | Chino simplificado | `src/i18n/zh-Hans.json` |
+| `/it/` | Italiano | `src/i18n/it.json` |
+| `/fr/` | Francés | `src/i18n/fr.json` |
+| `/sv/` | Sueco | `src/i18n/sv.json` |
+
+- **Las páginas fuente son solo las castellanas.** Astro arma `/cy/…`, `/en/…`, etc. a
+  partir de ellas (`i18n.fallback` con `fallbackType: 'rewrite'` en `astro.config.mjs`), y
+  `src/middleware.ts` fija el idioma de cada página antes de dibujarla. Por eso `t()`,
+  `url()` y los formatos de fecha y número no reciben el idioma: lo leen del idioma actual
+  (`src/lib/i18n.ts`). En el navegador sale del `<html lang>`, y cada página baja solo el
+  archivo de su idioma. El build dibuja una página por vez (`build.concurrency: 1`); no lo
+  subas, porque el idioma actual es compartido.
+- **Para cambiar un texto**, editá la misma clave en los siete archivos. Si agregás una
+  clave, tiene que estar en todos: `tests-js/i18n.test.ts` chequea que las claves y los
+  `{marcadores}` coincidan y que ninguna oración quede sin traducir.
+- **Los documentos no se traducen**: títulos, transcripciones, recuerdos y datos aportados
+  se muestran en su idioma original, y el pie lo aclara. Los datos abiertos
+  (`/datos/*.json`), `llms.txt` y el `sitemap.xml` son uno solo para todo el sitio; el
+  sitemap lista cada página en los siete idiomas y cada página nombra sus versiones con
+  `hreflang`.
+- **Páginas legales**: las traducciones avisan que, si difieren, vale el texto en
+  castellano, y enlazan a él.
+- **Galés en el navegador**: Chrome no trae datos de galés, así que las fechas, el «ddoe» y
+  los nombres de países saldrían en inglés. `src/i18n/cldr/cy.json` los trae, sacados del
+  ICU completo de Node, y solo se baja en las páginas en galés de un navegador sin galés.
+  Si actualizás Node, regeneralo con `node scripts/cldr_fallback.mjs` (un test avisa si
+  quedó viejo).
+- **Ingreso por correo**: el enlace del correo siempre vuelve a `/ingresar/` (la única
+  dirección que Supabase permite, ver «Ingreso por correo» abajo) con `?lang=cy` u otro
+  idioma, y esa página reenvía a `/cy/ingresar/` sin perder el código. No hace falta
+  agregar direcciones en Supabase.
+- **404**: GitHub Pages responde toda dirección que falta con `/404.html` (castellano); si
+  la dirección es de otro idioma, salta a `/cy/404/` y vuelve a poner la dirección pedida
+  en la barra.
+
+## Accesibilidad
+
+El objetivo es **WCAG 2.2 nivel AA** (W3C). Con eso también se cubren las pautas de la Ley
+26.653 de la Argentina (Disposición ONTI 6/2019, sobre WCAG 2.0, que obliga solo al Estado y
+a quien recibe fondos públicos) y la norma europea EN 301 549. La declaración está en
+`/accesibilidad/` (en los siete idiomas), enlazada desde el pie de cada página.
+
+- **Estado: parcialmente conforme.** La navegación, los formularios y los textos del sitio
+  cumplen; lo que falta está listado en la declaración (escaneos sin texto completo, pasajes
+  en galés sin marcar dentro de las transcripciones, subtítulos de YouTube).
+- **Cómo se evaluó** (16/11/2026): axe-core 4.10 con las reglas de WCAG 2.0 a 2.2 A y AA
+  en cada tipo de página y en varios idiomas, con el fondo de papel en su tono más oscuro
+  para medir el contraste, y además con alto contraste, texto al 200 %, espaciado amplio,
+  reflujo a 320 px y teclado. Sin errores. Falta que lo prueben personas con lectores de
+  pantalla.
+- **Logo del W3C.** El W3C deja que un sitio muestre el logo de conformidad AA como
+  declaración propia (no lo certifica), pero después de una evaluación a fondo con
+  personas y con la fecha, la versión, el nivel y el alcance a la vista. Por eso
+  `CLAIM` en `src/lib/accesibilidad.ts` está en `null` y el pie muestra solo «Accesibilidad:
+  buscamos cumplir WCAG 2.2 nivel AA». Para declarar conformidad: resolver o dejar fuera
+  del alcance lo que falta, hacer la prueba con personas, copiar
+  `https://www.w3.org/WAI/WCAG22/wcag2.2AA.svg` a `public/wcag2.2AA.svg` (el W3C permite
+  copias locales con su mismo texto alternativo y enlace) y poner la fecha en `CLAIM`. El
+  test de build exige el archivo cuando hay declaración.
+- **Ajustes de lectura**: tamaño del texto, contraste alto, espaciado, letra sin serifa,
+  menos animaciones y enlaces subrayados, en el botón «Aa» de la cabecera y en
+  `/accesibilidad/`. Se guardan en `localStorage` (`amg:lectura`, listado en `/cookies/`) y
+  un script en línea al principio del `<head>` los aplica antes de pintar la página. El
+  sitio también respeta `prefers-contrast`, `prefers-reduced-motion` y `forced-colors`.
+- **Idioma de las partes** (WCAG 3.1.2): en las versiones traducidas, los títulos, textos,
+  transcripciones y aportes llevan `lang="es"`; `contentLang()` en `src/lib/i18n.ts`.
+
+## Navegadores con agentes (WebMCP)
+
+Cada página registra herramientas [WebMCP](https://webmachinelearning.github.io/webmcp/)
+(`document.modelContext`) para el asistente de IA del navegador, en
+`src/scripts/webmcp.ts` (la lógica, sin DOM, en `src/lib/agent-tools.ts`):
+`get_page_info`, `search_documents`, `list_editions`, `get_edition`, `open_page`,
+`set_language` y `set_reading_settings`. Leen los datos abiertos (`/datos/*.json`) y
+ninguna escribe en el archivo.
+
+Los formularios para aportar un dato y un recuerdo (`/contribuir/`) son herramientas
+declarativas (`toolname="add_edition_fact"` y `"share_memory"`, sin `toolautosubmit`): el
+agente los completa y la persona los envía; al enviar, el agente recibe lo que dice la
+página (`agentReply()` en `src/lib/webmcp.ts`). La subida de archivos queda afuera.
+
+WebMCP es un borrador de un Community Group del W3C y en Chrome está en *origin trial*
+(Chrome 149+). Para activarlo en el sitio publicado, registrá el dominio en
+<https://developer.chrome.com/origintrials/#/register_trial/4163014905550602241> y guardá
+el token como variable de repositorio `PUBLIC_WEBMCP_OT_TOKEN` (el build agrega el
+`<meta http-equiv="origin-trial">` solo si existe). Para probar en local: Chrome con
+`chrome://flags/#enable-webmcp-testing` (o `--enable-features=WebMCP`). Sin el token o
+sin soporte, el script no hace nada.
+
+Para otras automatizaciones: cada página enlaza los datos abiertos
+(`<link rel="alternate" type="application/json">`) y `llms.txt` (`rel="help"`), los
+campos de formulario tienen `name`, etiqueta y `autocomplete` donde corresponde, y los
+controles se pueden encontrar por su rol y su nombre accesible.
+
 ## Reconstruir el catálogo
 
 El archivo vive en la carpeta padre del repo (`../`) y no se sube nunca. Solo esta
@@ -148,9 +252,15 @@ tocar `VIDEOS.tsv` ni el archivo. Un documento oculto conserva su página, con u
 - **Plantillas con código:** con SMTP propio (Resend, ver abajo), en Supabase →
   Authentication → Email Templates pegá `supabase/templates/magic_link.html` en
   «Magic Link» y `supabase/templates/confirmation.html` en «Confirm signup», con el
-  asunto «Tu código para ingresar al Amgueddfa». Las dos usan `{{ .Token }}` y así
-  llega el código de 6 números. (`supabase/config.toml` ya las declara para el entorno
-  local.)
+  asunto «Amgueddfa Eisteddfod y Wladfa» (igual en todos los idiomas). Las dos usan
+  `{{ .Token }}` y así llega el código de 6 números. (`supabase/config.toml` ya las
+  declara para el entorno local.) El cuerpo sale en el idioma de la cuenta: el sitio
+  guarda `lang` en los metadatos del usuario (`user_metadata`, que la plantilla lee como
+  `{{ .Data.lang }}`) al crear la cuenta y cada vez que alguien la usa desde otro idioma;
+  sin `lang`, sale en castellano. Los textos son las claves `correo.*` de
+  `src/i18n/*.json`: si los cambiás, corré `node scripts/email_templates.mjs` y volvé a
+  pegar las plantillas (un test avisa si quedaron viejas). Conviene mandarse un correo de
+  prueba en cada idioma después de pegarlas.
 - **Contacto del pie:** la dirección se muestra como imagen (`public/contacto.png`) y,
   a quien inició sesión, como enlace. No la escribas como texto en las páginas ni en
   `es-AR.json`; el test de build lo chequea.

@@ -5,50 +5,50 @@
  * "Cargar datos" tab (prefix "a"); src/scripts/fact-editor.ts drives it.
  */
 import { FACT_FIELDS, FUENTE_MAX } from '../lib/contrib';
-import { t } from '../lib/i18n';
+import { intlLocales, t } from '../lib/i18n';
 
 interface Props { prefix: string }
 const { prefix: p } = Astro.props;
 // Month names spelled out, so the date never depends on the browser's day/month order.
-const MONTHS = Array.from({ length: 12 }, (_, i) => new Date(Date.UTC(2000, i, 15)).toLocaleDateString('es-AR', { month: 'long', timeZone: 'UTC' }));
+const MONTHS = Array.from({ length: 12 }, (_, i) => new Date(Date.UTC(2000, i, 15)).toLocaleDateString(intlLocales(), { month: 'long', timeZone: 'UTC' }));
 ---
 <div class="fact-editor" data-fact-editor={p}>
   <div class="campo">
     <label for={`${p}-field`}>{t('contrib.campo_label')}</label>
-    <select id={`${p}-field`} name="field">
+    <select id={`${p}-field`} name="field" toolparamdescription="Which fact: start_date, end_date, venue, presentadores (presenters), ganador_silla (winner of the Chair), ganador_corona (winner of the Crown), edicion_realizada (whether it was held), competencia (a competition) or other.">
       <option value="">{t('contrib.elegir')}</option>
       {FACT_FIELDS.map((f) => <option value={f}>{t(`contrib.campos.${f}`)}</option>)}
     </select>
   </div>
   <div class="campo" data-for="text">
     <label for={`${p}-value`}>{t('contrib.valor_label')}</label>
-    <input id={`${p}-value`} name="value" type="text" maxlength="500" />
+    <input id={`${p}-value`} name="value" type="text" maxlength="500" toolparamdescription="The fact itself, for venue, presenters, winners and other (up to 500 characters)." />
   </div>
   <fieldset class="campo fecha" data-for="date" hidden>
     <legend>{t('contrib.fecha_label')}</legend>
     <div class="fecha-partes">
-      <label>{t('contrib.fecha_dia')}<input id={`${p}-date-day`} name="date_day" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="2" autocomplete="off" /></label>
-      <label>{t('contrib.fecha_mes')}<select id={`${p}-date-month`} name="date_month">
+      <label>{t('contrib.fecha_dia')}<input id={`${p}-date-day`} name="date_day" toolparamdescription="Day of the month, for start_date or end_date." type="text" inputmode="numeric" pattern="[0-9]*" maxlength="2" autocomplete="off" /></label>
+      <label>{t('contrib.fecha_mes')}<select id={`${p}-date-month`} name="date_month" toolparamdescription="Month number 1-12, for start_date or end_date.">
         <option value="">{t('contrib.elegir')}</option>
         {MONTHS.map((m, i) => <option value={String(i + 1)}>{m}</option>)}
       </select></label>
-      <label>{t('contrib.fecha_ano')}<input id={`${p}-date-year`} name="date_year" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="4" autocomplete="off" /></label>
+      <label>{t('contrib.fecha_ano')}<input id={`${p}-date-year`} name="date_year" toolparamdescription="Four-digit year, for start_date or end_date." type="text" inputmode="numeric" pattern="[0-9]*" maxlength="4" autocomplete="off" /></label>
     </div>
     <p id={`${p}-date-leida`} class="muted small" aria-live="polite"></p>
   </fieldset>
   <fieldset class="campo" data-for="yesno" hidden>
     <legend>{t('contrib.realizada_label')}</legend>
-    <label class="opt"><input type="radio" name="held" value="si" /> {t('contrib.si')}</label>
+    <label class="opt"><input type="radio" name="held" value="si" toolparamdescription="For edicion_realizada: si if the eisteddfod was held that year, no if it was not." /> {t('contrib.si')}</label>
     <label class="opt"><input type="radio" name="held" value="no" /> {t('contrib.no')}</label>
   </fieldset>
   <div data-for="competencia" hidden>
     <div class="campo">
       <label for={`${p}-numero`}>{t('contrib.numero_label')}</label>
-      <input id={`${p}-numero`} name="numero" type="text" maxlength="20" />
+      <input id={`${p}-numero`} name="numero" type="text" maxlength="20" toolparamdescription="For competencia: the competition's number in the programme." />
     </div>
     <div class="campo">
       <label for={`${p}-desc-comp`}>{t('contrib.descripcion_comp_label')}</label>
-      <input id={`${p}-desc-comp`} name="descripcion" type="text" maxlength="500" />
+      <input id={`${p}-desc-comp`} name="descripcion" type="text" maxlength="500" toolparamdescription="For competencia: what the competition is, as the programme says it." />
     </div>
     <div class="campo">
       <label for={`${p}-cat-comp`}>{t('contrib.categoria_comp_label')}</label>
@@ -69,7 +69,7 @@ const MONTHS = Array.from({ length: 12 }, (_, i) => new Date(Date.UTC(2000, i, 1
 
   <div class="campo">
     <label for={`${p}-fuente`}>{t('contrib.fuente_label')}</label>
-    <input id={`${p}-fuente`} name="fuente" type="text" maxlength={FUENTE_MAX} aria-describedby={`${p}-fuente-ayuda`} />
+    <input id={`${p}-fuente`} name="fuente" toolparamdescription="Where the fact comes from: a book, newspaper or person (optional, shown with the fact)." type="text" maxlength={FUENTE_MAX} aria-describedby={`${p}-fuente-ayuda`} />
     <p id={`${p}-fuente-ayuda`} class="muted small">{t('contrib.fuente_ayuda')}</p>
   </div>
 </div>

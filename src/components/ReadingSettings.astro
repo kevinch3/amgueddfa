@@ -1,0 +1,36 @@
+---
+/**
+ * Reading settings (text size, contrast, spacing, typeface, motion, links), as a
+ * set of radio groups. Used in the header's fold-out (ReadingMenu) and on
+ * /accesibilidad/; scripts/lectura.ts saves and applies them and keeps every copy
+ * on the page in step. Without JavaScript the form stays hidden (a note says why).
+ */
+import { t } from '../lib/i18n';
+import { AJUSTES, OPCIONES } from '../lib/lectura';
+
+interface Props {
+  /** Prefix for the radio names, unique per copy on a page. */
+  id: string;
+}
+const { id } = Astro.props;
+---
+<form class="lectura" data-lectura hidden>
+  {AJUSTES.map((k) => (
+    <fieldset class="lectura-grupo">
+      <legend>{t(`lectura.${k}`)}</legend>
+      <div class="lectura-opciones">
+        {OPCIONES[k].map((v, i) => (
+          <label class="lectura-opcion">
+            <input type="radio" name={`${id}-${k}`} value={v} data-ajuste={k} checked={i === 0} />
+            <span>{t(`lectura.${k}_${v}`)}</span>
+          </label>
+        ))}
+      </div>
+    </fieldset>
+  ))}
+  <p class="lectura-pie">
+    <button type="button" class="btn btn-quiet" data-lectura-reset>{t('lectura.restablecer')}</button>
+    <span class="small muted">{t('lectura.ayuda')}</span>
+  </p>
+</form>
+<noscript><p class="small">{t('lectura.sin_js')}</p></noscript>

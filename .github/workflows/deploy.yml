@@ -24,6 +24,7 @@ jobs:
       PUBLIC_SUPABASE_ANON_KEY: ${{ vars.PUBLIC_SUPABASE_ANON_KEY }}
       PUBLIC_AUTH_CODE: ${{ vars.PUBLIC_AUTH_CODE }}
       PUBLIC_CF_ANALYTICS_TOKEN: ${{ vars.PUBLIC_CF_ANALYTICS_TOKEN }}
+      PUBLIC_WEBMCP_OT_TOKEN: ${{ vars.PUBLIC_WEBMCP_OT_TOKEN }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4

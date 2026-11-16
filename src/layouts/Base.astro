@@ -4,8 +4,12 @@ import Analytics from '../components/Analytics.astro';
 import Chair from '../components/Chair.astro';
 import Mount from '../components/Mount.astro';
 import SessionBadge from '../components/SessionBadge.astro';
-import { t } from '../lib/i18n';
-import { url } from '../lib/paths';
+import LanguageMenu from '../components/LanguageMenu.astro';
+import ReadingMenu from '../components/ReadingMenu.astro';
+import { CLAIM, WCAG } from '../lib/accesibilidad';
+import { LECTURA_KEY, OPCIONES } from '../lib/lectura';
+import { DEFAULT_LOCALE, LOCALE_INFO, locale, t } from '../lib/i18n';
+import { alternates, url } from '../lib/paths';
 import { jsonForScript } from '../lib/contrib';
 import { absUrl } from '../lib/seo';
 import { TAGS_AT } from '../lib/catalog';
@@ -29,23 +33,39 @@ interface Props {
 const { title, description = t('sitio.descripcion'), festival, year, item, current, image = null, noindex = false, jsonLd = null, analytics = true } = Astro.props;
 const analyticsToken = (import.meta.env.PUBLIC_CF_ANALYTICS_TOKEN ?? '').trim();
 const fullTitle = title ? `${title} | ${t('sitio.nombre')}` : t('sitio.nombre');
-const canonical = absUrl(Astro.url.pathname);
+// Astro.url is the Spanish page being rendered; the page's own address carries its language.
+const here = locale();
+const info = LOCALE_INFO[here];
+const versions = alternates(Astro.url.pathname);
+const canonical = absUrl(versions.find((v) => v.locale === here)!.href);
 const ogImage = image ? absUrl(image) : null;
+// WebMCP is in a Chrome origin trial: its token (per site) turns the API on for visitors.
+const webmcpToken = (import.meta.env.PUBLIC_WEBMCP_OT_TOKEN ?? '').trim();
 ---
 <!doctype html>
-<html lang="es-AR">
+<html lang={info.tag}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script is:inline define:vars={{ key: LECTURA_KEY, opciones: OPCIONES }}>
+      // Reading settings before the first paint (lib/lectura.ts: first value = default, no attribute).
+      try {
+        var a = JSON.parse(localStorage.getItem(key) || '{}');
+        for (var k in opciones) if (opciones[k].indexOf(a[k]) > 0) document.documentElement.setAttribute('data-' + k, a[k]);
+      } catch (e) { /* storage blocked: defaults */ }
+    </script>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
+    {versions.map((v) => <link rel="alternate" hreflang={LOCALE_INFO[v.locale].tag} href={absUrl(v.href)} />)}
+    <link rel="alternate" hreflang="x-default" href={absUrl(versions.find((v) => v.locale === DEFAULT_LOCALE)!.href)} />
     {noindex && <meta name="robots" content="noindex" />}
     <meta property="og:site_name" content={t('sitio.nombre')} />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:type" content="website" />
-    <meta property="og:locale" content="es_AR" />
+    <meta property="og:locale" content={info.og} />
+    {versions.filter((v) => v.locale !== here).map((v) => <meta property="og:locale:alternate" content={LOCALE_INFO[v.locale].og} />)}
     {ogImage && <meta property="og:image" content={ogImage} />}
     <meta name="twitter:card" content={ogImage ? 'summary_large_image' : 'summary'} />
     {jsonLd && <script type="application/ld+json" set:html={jsonForScript(jsonLd)} />}
@@ -53,8 +73,13 @@ const ogImage = image ? absUrl(image) : null;
     <meta name="amg-tags-at" content={TAGS_AT ?? ''} />
     <meta name="generator" content={Astro.generator} />
     <link rel="icon" href={url('favicon.svg')} type="image/svg+xml" />
+    <link rel="alternate" type="application/json" href={absUrl('datos/ediciones.json')} title={t('abiertos.ediciones')} />
+    <link rel="alternate" type="application/json" href={absUrl('datos/documentos.json')} title={t('abiertos.documentos')} />
+    <link rel="help" type="text/plain" href={absUrl('llms.txt')} title="llms.txt" />
+    {webmcpToken && <meta http-equiv="origin-trial" content={webmcpToken} />}
     <title>{fullTitle}</title>
     {analytics && analyticsToken && <Analytics token={analyticsToken} />}
+    <slot name="head" />
   </head>
   <body>
     <a class="skip" href="#contenido">{t('nav.saltar')}</a>
@@ -74,6 +99,10 @@ const ogImage = image ? absUrl(image) : null;
         </nav>
         <Mount id="sesion" festival={festival} year={year} item={item} />
         <SessionBadge />
+        <div class="cabecera-menus">
+          <ReadingMenu />
+          <LanguageMenu variant="menu" />
+        </div>
       </div>
     </header>
     <div class="scales" aria-hidden="true"></div>
@@ -87,11 +116,21 @@ const ogImage = image ? absUrl(image) : null;
         <p>{t('pie.retiro_1')}<a href={url('derechos')}>{t('pie.retiro_enlace')}</a>{t('pie.retiro_2')}</p>
         <nav class="pie-legal" aria-label={t('pie.legal')}>
           <ul>
-            {(['objetivos', 'derechos', 'privacidad', 'cookies'] as const).map((k) => (
+            {(['objetivos', 'accesibilidad', 'derechos', 'privacidad', 'cookies'] as const).map((k) => (
               <li><a href={url(k)}>{t(`pie.enlaces.${k}`)}</a></li>
             ))}
           </ul>
         </nav>
+        <p class="pie-normas small">
+          {CLAIM ? (
+            <a href={WCAG.explanation} title={WCAG.logoTitle} class="wcag-logo" lang="en">
+              <img height="31" width="88" src={url(WCAG.logo)} alt={WCAG.logoAlt} />
+            </a>
+          ) : null}
+          <a href={url('accesibilidad')}>{t('pie.normas')}</a>
+        </p>
+        <LanguageMenu variant="list" />
+        {here !== DEFAULT_LOCALE && <p class="small muted">{t('idiomas.original')}</p>}
         <p class="contacto">
           <img src={url('contacto.png')} alt={t('pie.contacto_alt')} width="182" height="24" decoding="async" />
           <span id="contacto-mail"></span>
@@ -101,6 +140,9 @@ const ogImage = image ? absUrl(image) : null;
     <script>
       import '../scripts/live-catalog.ts';
       import '../scripts/lightbox.ts';
+      import '../scripts/idiomas.ts';
+      import '../scripts/lectura.ts';
+      import '../scripts/webmcp.ts';
     </script>
   </body>
 </html>

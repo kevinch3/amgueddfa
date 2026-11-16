@@ -8,7 +8,7 @@ import Transcripcion from '../../components/Transcripcion.astro';
 import { transcriptionFor } from '../../lib/transcripciones';
 import { PUBLIC_WINNERS, winnersFor } from '../../lib/ganadores';
 import { editionCatalogState, editionCover, editionItems, editionState, festivals, yearRange } from '../../lib/catalog';
-import { contentLang, formatList, intlLocales, t } from '../../lib/i18n';
+import { contentLang, formatList, intlLocales, t, tAround } from '../../lib/i18n';
 import { url } from '../../lib/paths';
 import { byTitle, CATEGORY_ORDER, docCount } from '../../lib/site';
 import type { FestivalSlug } from '../../lib/types';
@@ -43,7 +43,13 @@ const approved = (approvedRaw as Contribution[]).filter((c) => c.festival === sl
     const { storage_path: _private, ...payload } = c.payload ?? {}; // never publish upload paths
     return { ...c, payload };
   });
-const facts = sortFacts(forEdition(approved, slug, year, 'fact')).map((c) => ({ ...factDisplay(c), lang: factInOriginal(c) ? contentLang() : undefined, by: byLine(c), fuente: sourceLine(c) }));
+// Document titles inside translated sentences keep their own language (WCAG 3.1.2).
+const lang = contentLang();
+const trVer = tAround('edicion.transcripcion_ver', 'titulo');
+const ganVer = tAround('edicion.ganadores_ver', 'titulo');
+const trAporte = tAround('edicion.transcripcion_aporte', 'titulo');
+const fuenteAround = tAround('edicion.fuente', 'fuente');
+const facts = sortFacts(forEdition(approved, slug, year, 'fact')).map((c) => ({ ...factDisplay(c), lang: factInOriginal(c) ? contentLang() : undefined, by: byLine(c), fuente: sourceLine(c), fuenteText: String(c.payload?.fuente ?? '').trim() }));
 const memories = forEdition(approved, slug, year, 'memory').map((c) => ({ text: String(c.payload?.text ?? ''), by: byLine(c) }));
 // Approved uploads with their low-res derivatives (media bucket); same markup edicion.ts renders live.
 const mediaBase = import.meta.env.PUBLIC_SUPABASE_URL;
@@ -110,7 +116,7 @@ const missingList = formatList(missing.map((m) => m.toLocaleLowerCase(intlLocale
     <h2 id="hechos-t">{t('edicion.hechos_titulo')}</h2>
     <Mount id="hechos" festival={slug} year={year}>{facts.length > 0 && (
       <dl class="hechos">
-        {facts.map((f) => <div><dt>{f.label}</dt><dd><span lang={f.lang}>{f.value}</span>{f.by && <> <span class="muted small">{f.by}</span></>}{f.fuente && <span class="muted small fuente">{f.fuente}</span>}</dd></div>)}
+        {facts.map((f) => <div><dt>{f.label}</dt><dd><span lang={f.lang}>{f.value}</span>{f.by && <> <span class="muted small">{f.by}</span></>}{f.fuente && <span class="muted small fuente">{lang ? <>{fuenteAround[0]}<span lang={lang}>{f.fuenteText}</span>{fuenteAround[1]}</> : f.fuente}</span>}</dd></div>)}
       </dl>
     )}</Mount>
   </section>
@@ -125,7 +131,7 @@ const missingList = formatList(missing.map((m) => m.toLocaleLowerCase(intlLocale
         <div class="transcripciones">
           {transcribedIn(c).map(({ item, text }) => (
             <details class="tr-detalle">
-              <summary>{t('edicion.transcripcion_ver', { titulo: item.title })}</summary>
+              <summary>{trVer[0]}{lang ? <span lang={lang}>{item.title}</span> : item.title}{trVer[1]}</summary>
               <p class="muted small">{t('item.transcripcion_ayuda')} <a href={url(`item/${item.id}/`)}>{t('edicion.transcripcion_documento')}</a></p>
               <Transcripcion text={text} />
             </details>
@@ -136,7 +142,7 @@ const missingList = formatList(missing.map((m) => m.toLocaleLowerCase(intlLocale
         <div class="transcripciones ganadores">
           {winners.map(({ item, text }) => (
             <details class="tr-detalle">
-              <summary>{t('edicion.ganadores_ver', { titulo: item.title })}</summary>
+              <summary>{ganVer[0]}{lang ? <span lang={lang}>{item.title}</span> : item.title}{ganVer[1]}</summary>
               <p class="muted small">{t('edicion.ganadores_ayuda')}</p>
               <Transcripcion text={text} />
             </details>
@@ -146,7 +152,7 @@ const missingList = formatList(missing.map((m) => m.toLocaleLowerCase(intlLocale
       {c === 'programa' && (
         <Mount id="transcripciones" festival={slug} year={year} class="transcripciones" titles={JSON.stringify(itemTitles)}>{contributedTr.map((tr) => (
           <details class="tr-detalle">
-            <summary>{t('edicion.transcripcion_aporte', { titulo: itemTitles[tr.item_id!] })}{byLine(tr) && <> <span class="muted small">{byLine(tr)}</span></>}</summary>
+            <summary>{trAporte[0]}{lang ? <span lang={lang}>{itemTitles[tr.item_id!]}</span> : itemTitles[tr.item_id!]}{trAporte[1]}{byLine(tr) && <> <span class="muted small">{byLine(tr)}</span></>}</summary>
             <p class="small"><a href={url(`item/${tr.item_id}/`)}>{t('edicion.transcripcion_documento')}</a></p>
             <blockquote class="tr-aporte" lang={contentLang()}>{String(tr.payload?.text ?? '')}</blockquote>
           </details>

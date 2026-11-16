@@ -80,13 +80,14 @@ describe('translations', () => {
       });
 
       it('translates the interface (not a copy of the Spanish file)', () => {
-        // Proper names stay as they are (the site's name, the Welsh festival names, Mimosa
-        // Porth Madryn, the word Eisteddfod itself), and so do templates that are only
-        // {placeholders}; words and short labels can be shared ("documento", "PDF", "No").
-        const NAMES = /^(sitio\.nombre|festivales_cy\.|festivales\.mimosa$)/;
+        // Proper names may stay as they are (the site's name, festival and archivist badge
+        // names: "Eisteddfod del Chubut" is Italian too), and so may templates that are only
+        // {placeholders} and short labels ("documento", "PDF", "No"). Anything longer than a
+        // couple of words that equals the Spanish is an untranslated string.
+        const NAMES = /^(sitio\.nombre|festivales_cy\.|festivales\.|insignias\.archivista-[a-z]+\.nombre$)/;
         const words = (s: string) => s.replace(/\{\w+\}/g, '').replace(/[^\p{L}]/gu, '');
         const same = [...spanish].filter(([k, es]) => own.get(k) === es && !NAMES.test(k) && !/^https?:/.test(es)).map(([k, es]) => ({ k, n: words(es).length }));
-        expect(same.filter((x) => x.n > 30).map((x) => x.k), 'untranslated sentences').toEqual([]);
+        expect(same.filter((x) => x.n > 12).map((x) => x.k), 'untranslated sentences').toEqual([]);
       });
 
       it('names seven weekdays for the admin chart', () => {

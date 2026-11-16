@@ -204,6 +204,17 @@ export function regionName(code: string): string | undefined {
   return regionNames.get(current)?.of(code);
 }
 
+/**
+ * A text split around one {name}: [before, after], so the caller can put that part
+ * in its own element (a document title with its own lang, inside a translated sentence).
+ */
+export function tAround(key: string, name: string, vars: Record<string, string | number> = {}): [string, string] {
+  const MARK = '\u0000';
+  const s = t(key, { ...vars, [name]: MARK });
+  const i = s.indexOf(MARK);
+  return i < 0 ? [s, ''] : [s.slice(0, i), s.slice(i + MARK.length)];
+}
+
 /** 12.345 / 12,345 / 12 345, as the current language writes numbers. */
 export function formatNumber(n: number): string {
   return n.toLocaleString(intlLocales());

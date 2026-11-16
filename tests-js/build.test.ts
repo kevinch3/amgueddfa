@@ -617,6 +617,65 @@ describe('static build', () => {
       }
     });
 
+    it('no Spanish interface text on any translated page: only archive content, marked with its language', () => {
+      // Visible and attribute text of a page, minus <script>/<style> and any element in
+      // another language than the page's (archive and community text carries lang="es").
+      const VOID = new Set(['area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'source', 'track', 'wbr']);
+      const pageText = (html: string, pageLang: string): string => {
+        const out: string[] = [];
+        const stack: { tag: string; skip: boolean }[] = [];
+        const skipping = () => stack.some((e) => e.skip);
+        const re = /<(\/?)([a-zA-Z][\w-]*)([^>]*)>|([^<]+)/g;
+        let m: RegExpExecArray | null;
+        while ((m = re.exec(html))) {
+          if (m[4] !== undefined) {
+            if (!skipping() && m[4].trim()) out.push(m[4]);
+            continue;
+          }
+          const [, close, rawTag, attrs] = m;
+          const tag = rawTag.toLowerCase();
+          if (close) {
+            const i = stack.map((e) => e.tag).lastIndexOf(tag);
+            if (i >= 0) stack.splice(i);
+            continue;
+          }
+          const lang = /\slang="([^"]*)"/.exec(attrs)?.[1];
+          const skip = tag === 'script' || tag === 'style' || (lang !== undefined && tag !== 'html' && !lang.startsWith(pageLang));
+          if (!skipping() && !skip) {
+            for (const a of attrs.matchAll(/\s(?:alt|title|aria-label|placeholder)="([^"]*)"/g)) out.push(a[1]);
+            if (tag === 'meta' && /\s(?:name="description"|property="og:(?:title|description)")/.test(attrs)) out.push(/\scontent="([^"]*)"/.exec(attrs)?.[1] ?? '');
+          }
+          if (tag === 'script' || tag === 'style') {
+            const end = html.indexOf(`</${tag}>`, re.lastIndex);
+            re.lastIndex = end < 0 ? html.length : end + tag.length + 3;
+          } else if (!VOID.has(tag) && !attrs.endsWith('/')) stack.push({ tag, skip });
+        }
+        return out.join('\n').replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>');
+      };
+      // Archive content in its original words: document titles, YouTube titles and channels.
+      const vids = (videosData as { videos: Video[] }).videos;
+      const content = [...new Set([...catalog.map((i) => i.title), ...vids.map((v) => v.title), ...vids.map((v) => v.channel)])].sort((a, b) => b.length - a.length);
+      const flat = (o: Record<string, unknown>, p = ''): [string, string][] =>
+        Object.entries(o).flatMap(([k, v]) => (typeof v === 'string' ? [[p + k, v] as [string, string]] : flat(v as Record<string, unknown>, `${p}${k}.`)));
+      const es = flat(JSON.parse(readFileSync(join(__dirname, '..', 'src', 'i18n', 'es-AR.json'), 'utf8')));
+      let pages = 0;
+      for (const l of OTHERS) {
+        const own = new Map(flat(JSON.parse(readFileSync(join(__dirname, '..', 'src', 'i18n', `${LOCALE_INFO[l].tag}.json`), 'utf8'))));
+        // Spanish interface strings this language words differently, cut at their {placeholders}.
+        const needles = [...new Set(es.filter(([k, v]) => own.get(k) !== v && !v.startsWith('http')).flatMap(([, v]) => v.split(/\{\w+\}/).map((x) => x.trim())).filter((x) => x.length >= 12))];
+        const leaks: string[] = [];
+        for (const file of htmlFiles(join(DIST, l))) {
+          pages++;
+          let text = pageText(readFileSync(file, 'utf8'), LOCALE_INFO[l].tag.split('-')[0]);
+          for (const c of content) text = text.split(c).join(' ');
+          const hit = needles.find((n) => text.includes(n));
+          if (hit) leaks.push(`${file.slice(DIST.length + 1)}: ${hit}`);
+        }
+        expect(leaks, l).toEqual([]);
+      }
+      expect(pages).toBeGreaterThan(5000);
+    });
+
     it('a browser loads only its page language: each language is its own chunk', () => {
       const chunks = readdirSync(join(DIST, '_astro')).filter((n) => n.endsWith('.js'));
       for (const l of OTHERS) expect(chunks.some((n) => n.startsWith(`${LOCALE_INFO[l].tag}.`)), l).toBe(true);

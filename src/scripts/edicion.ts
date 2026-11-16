@@ -1,6 +1,6 @@
 import staticEditions from '../../data/approved/editions.json';
 import { approvedForEdition, byLine, factDisplay, factInOriginal, forEdition, mergeApproved, ownPending, pendingView, sortFacts, sourceLine, type Contribution } from '../lib/contrib';
-import { contentLang, t } from '../lib/i18n';
+import { contentLang, t, tAround } from '../lib/i18n';
 import { liveQuery } from '../lib/live';
 import { raiseStates, refreshStates } from './states';
 import { url } from '../lib/paths';
@@ -37,7 +37,13 @@ export function renderFacts(mount: HTMLElement, facts: Contribution[]): void {
     const by = byLine(c);
     if (by) dd.append(' ', el('span', 'muted small', by));
     const fuente = sourceLine(c);
-    if (fuente) dd.append(el('span', 'muted small fuente', fuente));
+    if (fuente && contentLang()) {
+      // "Fuente: …" in the page's language; what the contributor wrote, in theirs.
+      const [before, after] = tAround('edicion.fuente', 'fuente');
+      const s = el('span', 'muted small fuente');
+      s.append(before, original(el('span', undefined, String(c.payload?.fuente ?? '').trim())), after);
+      dd.append(s);
+    } else if (fuente) dd.append(el('span', 'muted small fuente', fuente));
     row.append(el('dt', undefined, label), dd);
     dl.append(row);
   }
@@ -66,7 +72,9 @@ export function renderEditionTranscriptions(mount: HTMLElement, list: Contributi
     const title = c.item_id ? titles[c.item_id] : undefined;
     if (!title) continue; // restricted or unknown item: never link it
     const d = el('details', 'tr-detalle');
-    const s = el('summary', undefined, t('edicion.transcripcion_aporte', { titulo: title }));
+    const [before, after] = tAround('edicion.transcripcion_aporte', 'titulo');
+    const s = el('summary');
+    s.append(before, contentLang() ? original(el('span', undefined, title)) : title, after);
     const by = byLine(c);
     if (by) s.append(' ', el('span', 'muted small', by));
     const p = el('p', 'small');

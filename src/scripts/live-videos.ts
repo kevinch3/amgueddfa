@@ -3,7 +3,7 @@
  * page was built (newer than <meta name="amg-tags-at">) hide or move videos at
  * once. One small query; nothing changes when there are none or offline.
  */
-import { t } from '../lib/i18n';
+import { contentLang, t } from '../lib/i18n';
 import { liveQuery } from '../lib/live';
 import type { TagLike } from '../lib/tags';
 import { videoDiff, videoThumb, videoUrl, type Video } from '../lib/videos';
@@ -34,7 +34,14 @@ export function videoCard(v: Video, badge: boolean): HTMLLIElement {
   frame.append(img);
   a.append(frame);
   if (badge) a.append(el('span', 'badge', t(`videos.tipos.${v.kind}`)));
-  a.append(el('span', 't', v.title), el('span', 'muted small', v.channel));
+  // The uploaders' own words: their language, not the page's (WCAG 3.1.2).
+  const title = el('span', 't', v.title);
+  const channel = el('span', 'muted small');
+  const name = el('span', undefined, v.channel);
+  const lang = contentLang();
+  if (lang) title.lang = name.lang = lang;
+  channel.append(lang ? name : v.channel);
+  a.append(title, channel);
   const report = el('button', 'btn-link small informar-btn', t('informar.titulo'));
   report.type = 'button';
   report.dataset.informarVideo = v.id;

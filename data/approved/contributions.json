@@ -183,6 +183,38 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "05f963fc-27b5-4ef7-b16d-40ddc843f1e5",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1939,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Meirion Griffiths (sin confirmar)",
+      "lote": "6947a45d-b41c-4a78-bab0-f89538720230",
+      "value": "Comienza la Segunda Guerra Mundial, que afecta las comunicaciones entre la Patagonia y Gales. Sin datos de sede ni de ganador."
+    },
+    "created_at": "2026-11-17T20:15:16.839149+00:00",
+    "reviewed_at": "2026-11-17T20:15:16.839149+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "06a2805b-8460-4d72-80ea-bbce921dffde",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1937,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Meirion Griffiths (sin confirmar)",
+      "lote": "6947a45d-b41c-4a78-bab0-f89538720230",
+      "value": "El ganador de la silla, Edward Morgan Roberts, estaba enfermo en Buenos Aires y murió a los pocos días."
+    },
+    "created_at": "2026-11-17T20:15:16.839149+00:00",
+    "reviewed_at": "2026-11-17T20:15:16.839149+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "0750f49f-7401-431d-8a0b-4d966ce435da",
     "type": "fact",
     "festival": "chubut",
@@ -907,6 +939,22 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "22d8c1ff-d1f1-4267-b5a8-4060cb0272fc",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1945,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "fuente": "Meirion Griffiths (sin confirmar)",
+      "lote": "6947a45d-b41c-4a78-bab0-f89538720230",
+      "value": "si"
+    },
+    "created_at": "2026-11-17T20:15:16.839149+00:00",
+    "reviewed_at": "2026-11-17T20:15:16.839149+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "22db6af6-f3fe-432b-bf51-70b47d89cac8",
     "type": "tag",
     "festival": "chubut",
@@ -1032,6 +1080,54 @@
     "created_at": "2026-11-17T13:32:44.148707+00:00",
     "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
     "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "27943f89-666a-4e19-b1d1-91bcb0f699a9",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1949,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Meirion Griffiths (sin confirmar)",
+      "lote": "6947a45d-b41c-4a78-bab0-f89538720230",
+      "value": "Ganadora: Irma Hughes de Jones. Sin datos de la sede."
+    },
+    "created_at": "2026-11-17T20:15:16.839149+00:00",
+    "reviewed_at": "2026-11-17T20:15:16.839149+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "27ec683a-6210-495c-9af8-291ffaea70b7",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1950,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "fuente": "Meirion Griffiths (sin confirmar)",
+      "lote": "6947a45d-b41c-4a78-bab0-f89538720230",
+      "value": "si"
+    },
+    "created_at": "2026-11-17T20:15:16.839149+00:00",
+    "reviewed_at": "2026-11-17T20:15:16.839149+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "2834c1ce-4d3c-416d-aae2-6a2ee62363a8",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1944,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "fuente": "Meirion Griffiths (sin confirmar)",
+      "lote": "6947a45d-b41c-4a78-bab0-f89538720230",
+      "value": "si"
+    },
+    "created_at": "2026-11-17T20:15:16.839149+00:00",
+    "reviewed_at": "2026-11-17T20:15:16.839149+00:00",
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "2934b4e8-d722-4d86-b1d6-0fb6ccf7dda2",
@@ -2108,6 +2204,22 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "5944d3e8-d7c8-4e7c-9c3b-47e8aaced6b2",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1946,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Meirion Griffiths (sin confirmar)",
+      "lote": "6947a45d-b41c-4a78-bab0-f89538720230",
+      "value": "Ganadora: Irma Hughes de Jones, la primera mujer patagónica premiada por un jurado de Gales."
+    },
+    "created_at": "2026-11-17T20:15:16.839149+00:00",
+    "reviewed_at": "2026-11-17T20:15:16.839149+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "59827852-0137-49cb-b642-f125bdbb3e24",
     "type": "tag",
     "festival": "chubut",
@@ -2173,6 +2285,22 @@
     "created_at": "2026-11-14T14:25:32.362027+00:00",
     "reviewed_at": "2026-11-14T14:25:32.362027+00:00",
     "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "5bf5cc1c-72f0-4609-9ead-d979e0123221",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1945,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "fuente": "Meirion Griffiths (sin confirmar)",
+      "lote": "6947a45d-b41c-4a78-bab0-f89538720230",
+      "value": "Galpón del ferrocarril, Dolavon"
+    },
+    "created_at": "2026-11-17T20:15:16.839149+00:00",
+    "reviewed_at": "2026-11-17T20:15:16.839149+00:00",
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "5cdbc7b1-c402-4fd6-a1e2-e1dff5ddfb05",
@@ -2333,6 +2461,38 @@
     "created_at": "2026-11-14T16:38:37.91413+00:00",
     "reviewed_at": "2026-11-14T16:38:37.91413+00:00",
     "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "61b5709e-7625-4336-bf02-8b886f0e1da0",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1950,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Meirion Griffiths (sin confirmar)",
+      "lote": "6947a45d-b41c-4a78-bab0-f89538720230",
+      "value": "Evan Thomas viajó a Gales en 1951 para dar conferencias."
+    },
+    "created_at": "2026-11-17T20:15:16.839149+00:00",
+    "reviewed_at": "2026-11-17T20:15:16.839149+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "61f59778-d501-4eb2-aaf0-2e56711b3286",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1947,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "fuente": "Meirion Griffiths (sin confirmar)",
+      "lote": "6947a45d-b41c-4a78-bab0-f89538720230",
+      "value": "si"
+    },
+    "created_at": "2026-11-17T20:15:16.839149+00:00",
+    "reviewed_at": "2026-11-17T20:15:16.839149+00:00",
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "6249c220-a53b-492d-af25-c1ca4b663702",
@@ -2996,6 +3156,22 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "75f6f5b8-a5a0-4bf2-9a8d-d71ada945caa",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1947,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "fuente": "Meirion Griffiths (sin confirmar)",
+      "lote": "6947a45d-b41c-4a78-bab0-f89538720230",
+      "value": "Salón San David de Trelew"
+    },
+    "created_at": "2026-11-17T20:15:16.839149+00:00",
+    "reviewed_at": "2026-11-17T20:15:16.839149+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "76bb59ca-9275-4d6e-8d37-05c0c6f86562",
     "type": "tag",
     "festival": "juventud",
@@ -3235,6 +3411,22 @@
     "created_at": "2026-11-17T13:32:44.148707+00:00",
     "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
     "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "7efd8130-d7cf-4c94-869f-4202f6c29e9f",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1944,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Meirion Griffiths (sin confirmar)",
+      "lote": "6947a45d-b41c-4a78-bab0-f89538720230",
+      "value": "Ganador: Evan Thomas, joven poeta de la nueva generación. Sin datos de la sede."
+    },
+    "created_at": "2026-11-17T20:15:16.839149+00:00",
+    "reviewed_at": "2026-11-17T20:15:16.839149+00:00",
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "7f706274-643f-45ac-83ec-e7189832fcdb",
@@ -4043,6 +4235,22 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "9c8ff5ce-ae8f-4cff-85fd-e96d0b60d55c",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1938,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Meirion Griffiths (sin confirmar)",
+      "lote": "6947a45d-b41c-4a78-bab0-f89538720230",
+      "value": "Sin datos de sede ni de ganador."
+    },
+    "created_at": "2026-11-17T20:15:16.839149+00:00",
+    "reviewed_at": "2026-11-17T20:15:16.839149+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "9cbc9307-4cc3-425e-a253-819133b369d9",
     "type": "fact",
     "festival": "chubut",
@@ -4201,6 +4409,22 @@
     "created_at": "2026-11-17T13:32:44.148707+00:00",
     "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
     "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "a171dd14-a0e8-4408-b168-5e086f4508ef",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1945,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Meirion Griffiths (sin confirmar)",
+      "lote": "6947a45d-b41c-4a78-bab0-f89538720230",
+      "value": "Ganador: Elved Price, joven poeta de la nueva generación."
+    },
+    "created_at": "2026-11-17T20:15:16.839149+00:00",
+    "reviewed_at": "2026-11-17T20:15:16.839149+00:00",
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "a1d22c15-d39f-401e-b3cf-77bfaeddb074",
@@ -4829,6 +5053,22 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "bb54d1b3-0236-49f6-843a-984861adc5ca",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1946,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "fuente": "Meirion Griffiths (sin confirmar)",
+      "lote": "6947a45d-b41c-4a78-bab0-f89538720230",
+      "value": "La carpa, Gaiman"
+    },
+    "created_at": "2026-11-17T20:15:16.839149+00:00",
+    "reviewed_at": "2026-11-17T20:15:16.839149+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "bb8b0d8e-c5f7-4b83-99cc-c947e2a9732e",
     "type": "fact",
     "festival": "chubut",
@@ -5268,6 +5508,22 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "c545ff30-1584-4b7a-8f04-53b084834eb6",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1948,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Meirion Griffiths (sin confirmar)",
+      "lote": "6947a45d-b41c-4a78-bab0-f89538720230",
+      "value": "Sin datos de sede ni de ganador."
+    },
+    "created_at": "2026-11-17T20:15:16.839149+00:00",
+    "reviewed_at": "2026-11-17T20:15:16.839149+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "c57e230f-10b5-4b87-a5b7-e228dc23cb84",
     "type": "upload",
     "festival": "chubut",
@@ -5641,6 +5897,22 @@
     },
     "created_at": "2026-11-16T18:31:17.630618+00:00",
     "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "d42e99f1-c781-4e2c-80d3-9c3c45c45283",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1949,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "fuente": "Meirion Griffiths (sin confirmar)",
+      "lote": "6947a45d-b41c-4a78-bab0-f89538720230",
+      "value": "si"
+    },
+    "created_at": "2026-11-17T20:15:16.839149+00:00",
+    "reviewed_at": "2026-11-17T20:15:16.839149+00:00",
     "display_name": "Meirion Griffiths"
   },
   {
@@ -6235,6 +6507,38 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "e709193c-6b66-4ec0-bda3-9050f226d5f1",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1946,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "fuente": "Meirion Griffiths (sin confirmar)",
+      "lote": "6947a45d-b41c-4a78-bab0-f89538720230",
+      "value": "si"
+    },
+    "created_at": "2026-11-17T20:15:16.839149+00:00",
+    "reviewed_at": "2026-11-17T20:15:16.839149+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "e7b2a145-edce-4894-83cd-6f0ad848344c",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1950,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Meirion Griffiths (sin confirmar)",
+      "lote": "6947a45d-b41c-4a78-bab0-f89538720230",
+      "value": "Último Eisteddfod con silla (cadeiriol) por muchos años: salvo en 1958, la tradición quedó interrumpida hasta reactivarse hacia 1965. En 1963 se reactivó el Colegio Camwy y se creó la Asociación en cuyas reuniones se planificaron las ideas centrales para el Centenario."
+    },
+    "created_at": "2026-11-17T20:15:16.839149+00:00",
+    "reviewed_at": "2026-11-17T20:15:16.839149+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "e831e09b-545e-49c4-b60c-da5863feedd7",
     "type": "tag",
     "festival": "chubut",
@@ -6333,6 +6637,22 @@
     "created_at": "2026-11-14T14:09:22.091981+00:00",
     "reviewed_at": "2026-11-14T14:09:22.091981+00:00",
     "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "ec7b9b4f-17a9-4d48-8d7a-2579ef120f6e",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1945,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Meirion Griffiths (sin confirmar)",
+      "lote": "6947a45d-b41c-4a78-bab0-f89538720230",
+      "value": "Terminada la Segunda Guerra Mundial, los veredictos vuelven a llegar desde Gales."
+    },
+    "created_at": "2026-11-17T20:15:16.839149+00:00",
+    "reviewed_at": "2026-11-17T20:15:16.839149+00:00",
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "ee7adaec-cae3-459d-8dd8-51f937642739",
@@ -6449,6 +6769,22 @@
     "created_at": "2026-11-14T16:38:12.716308+00:00",
     "reviewed_at": "2026-11-14T16:38:12.716308+00:00",
     "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "f4424f63-34f3-4c3e-8bf9-833e7fbdddce",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1950,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Meirion Griffiths (sin confirmar)",
+      "lote": "6947a45d-b41c-4a78-bab0-f89538720230",
+      "value": "Ganador: Evan Thomas. Sin datos de la sede."
+    },
+    "created_at": "2026-11-17T20:15:16.839149+00:00",
+    "reviewed_at": "2026-11-17T20:15:16.839149+00:00",
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "f5830ad8-a5bc-4541-8a94-47b1e8944dfd",
@@ -6745,6 +7081,22 @@
     "created_at": "2026-11-17T13:32:44.148707+00:00",
     "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
     "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "ff1e63b4-d131-4d68-9e70-5efa8a8a229a",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1947,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Meirion Griffiths (sin confirmar)",
+      "lote": "6947a45d-b41c-4a78-bab0-f89538720230",
+      "value": "Ganador: Evan Thomas."
+    },
+    "created_at": "2026-11-17T20:15:16.839149+00:00",
+    "reviewed_at": "2026-11-17T20:15:16.839149+00:00",
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "ff505ed3-73d2-49be-bf64-9c083aeefb22",

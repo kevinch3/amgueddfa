@@ -16,7 +16,7 @@ items: 14d9aac2ac1e 8c9fdb63913c e03b3ddd30f3
 43. Blwyddyn 1, 2 a 3 uwchradd: «Dwi isio bod yn gi».
 31. 6.º de escuela primaria: «Verde pelo», de Didi Grau.
 45. Hyd at 25 oed: «Cwyn y Gwynt», gan John Morris Jones.
-32. Hasta 15 años: «Canción con vos», de Armando Tejada Gomez.
+32. Hasta 15 años: «Canción con vos», de Armando Tejada Gómez.
 35. Recitación para dúo de adulto (padre, madre, familiar o docente) y niño: «Canción a dos voces», de Luis Pescetti.
 
 ## Preliminares, miércoles 4 de septiembre, 17 h: danzas galesas
@@ -58,4 +58,3 @@ items: 14d9aac2ac1e 8c9fdb63913c e03b3ddd30f3
 
 ## Notas · Nodiadau
 - Comp. 45: impreso «John Morris Jones»; habitualmente John Morris-Jones.
-- Comp. 32: impreso «Armando Tejada Gomez»; correctamente Armando Tejada Gómez.

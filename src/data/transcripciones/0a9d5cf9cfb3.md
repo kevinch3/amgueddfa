@@ -107,7 +107,7 @@
 283. Coro escolar para EGB 1 y 2: «El recreo», cancionero popular español.
 284. Coro escolar EGB 3 y Polimodal: «Chaltén», Hugo Giménez Agüero.
 285. Coro mixto: «Bendito Salvador», Annie S. Hawkes / Robert Lowry, letra en español Miguel Ángel Huerta, arreglo Rally DeFord.
-286. Coro mixto a capella: «Fuego en Anymaná», Cesar Isella / Armando Tejada Gomez, versión coral Carmelo Fioritti.
+286. Coro mixto a capella: «Fuego en Anymaná», César Isella / Armando Tejada Gómez, versión coral Carmelo Fioritti.
 287. Competencia principal para coro: «Gloria», Vivaldi.
 288. Coro principal en galés: «Dwylo dros y Môr», Huw Chiswell.
 
@@ -117,7 +117,7 @@
 
 ### Instrumental
 291. Piano hasta 20 años: «Estudio n.º 10, op. 47», Heller.
-292. Guitarra hasta 15 años: «Lágrima», preludio, Tarrega, revisión de Isaías Savio.
+292. Guitarra hasta 15 años: «Lágrima», preludio, Tárrega, revisión de Isaías Savio.
 293. Solo libre para instrumento melódico: obra a elección.
 294. Solo libre para instrumento armónico: obra a elección.
 295. Conjunto instrumental de al menos 4 integrantes: carnavalito a elección.
@@ -166,6 +166,4 @@
 - Comp. 264: impreso «M. del Carmen Aguilar»; nombre completo María del Carmen Aguilar.
 - Comp. 270: impreso «Magdalena Freitas»; probablemente Magdalena Fleitas.
 - Comp. 285: impreso «Annie S. Hawkes»; la autora es Annie S. Hawks.
-- Comp. 286: impreso «Cesar Isella» y «Armando Tejada Gomez»; César Isella y Armando Tejada Gómez.
 - Comp. 289: impreso «Magdalena Freitas»; probablemente Magdalena Fleitas.
-- Comp. 292: impreso «Tarrega»; Tárrega.

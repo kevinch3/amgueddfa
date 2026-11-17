@@ -31,7 +31,7 @@
 21. Unawd hyd 8 oed: «Glan y Môr», Leah Owen – Selwyn Griffith.
 22. Unawd 9 i 11 oed: «Coed y Glyn», Leah Owen – Selwyn Griffith.
 23. Unawd 12 i 14 oed: «Noson Tân Gwyllt», Robat Arwyn.
-24. Unawd hyd 20 oed: «Rhywbeth yn Galw», Bryn Fon – Morfudd Hughes.
+24. Unawd hyd 20 oed: «Rhywbeth yn Galw», Bryn Fôn – Morfudd Hughes.
 25. Parti hyd 6 oed: «Dau Lygad Mawr», Falyri Jenkins.
 26. Parti hyd 9 oed: «Y Baban Bychan», Leah Owen – Selwyn Griffith.
 27. Parti hyd 12 oed: «Y Gwanwyn», Robat Arwyn.
@@ -69,8 +69,8 @@
 53. Solo mayores de 20 años: canción del repertorio popular argentino o latinoamericano a elección.
 54. Cuarteto mixto: himno en castellano a elección.
 55. Coro o conjunto de formación libre (3 o más voces): obra folklórica o popular a elección.
-56. Coro mixto (4 voces): «Huella, la luna», Sebastian Monk, v. c. Bernardo Latini.
-57. Conjunto o coro femenino: «Cantate Domino», Johana Chacin.
+56. Coro mixto (4 voces): «Huella, la luna», Sebastián Monk, v. c. Bernardo Latini.
+57. Conjunto o coro femenino: «Cantate Domino», Johana Chacín.
 58. Conjunto o coro masculino: «Mandarinas», Víctor Heredia, v. c. Paula Artigas.
 59. Competencia principal. Coro mixto: «Alleluia», Ilze Arne; obra popular u original argentina de carácter y tempo contrastante.
 
@@ -91,7 +91,7 @@
 ### Castellano
 69. Hasta 5 años: «La polilla», Nelvy Bustamante.
 70. 6 a 7 años: «Un gato negro», Sandra Siemens.
-71. 8 a 9 años: «Un loro un poco raro», Ana María Shúa.
+71. 8 a 9 años: «Un loro un poco raro», Ana María Shua.
 72. 10 a 11 años: «Las ideas», Mar Benegas.
 73. 12 a 13 años: «Canción del señor que hace los días», Luis María Pescetti.
 74. 14 a 15 años: poema de Edith Vera, de «Con trébol en los ojos».
@@ -144,12 +144,9 @@
 109. «Tarten cennin», tarta de puerros.
 
 ## Notas · Nodiadau
-- Comp. 24: impreso «Bryn Fon»; Bryn Fôn.
 - Comp. 35: impreso «Islwyn Ffowc Ellis»; Islwyn Ffowc Elis.
 - Comp. 36: impreso «Haendel»; Händel.
 - Comp. 46: impreso «L y M Rth Hillar»; Ruth Hillar (letra y música).
 - Comp. 52: impreso «Banko Stark»; Branko Stark.
-- Comp. 56: impreso «Sebastian Monk»; Sebastián Monk.
-- Comp. 57: impreso «Johana Chacin»; Johana Chacín.
 - Comp. 68: impreso «Geraldine Mac Buerney Jones»; en la página de textos, «Geraldine Mac Burney Jones».
 - Comp. 71: impreso «Shúa, Ana María»; Ana María Shua.

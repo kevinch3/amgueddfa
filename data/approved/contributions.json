@@ -478,6 +478,21 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "18f6bf01-3873-4bed-aed8-3ac711195b04",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2022,
+    "item_id": "e49c26c600a8",
+    "payload": {
+      "category": "programa-del-dia",
+      "festival": "chubut",
+      "year": 2022
+    },
+    "created_at": "2026-11-17T13:04:12.273569+00:00",
+    "reviewed_at": "2026-11-17T13:04:12.273569+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "19205166-0a7c-4294-a1cf-10f41e890ead",
     "type": "fact",
     "festival": "chubut",

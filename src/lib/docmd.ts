@@ -45,3 +45,17 @@ export function indexDocs(files: Record<string, string>): { byMember: Map<string
   }
   return { byMember, docs };
 }
+
+/**
+ * 32-bit FNV-1a of a document's text, hex: baked next to a rendered
+ * transcription so the live script (scripts/live-transcripciones.ts) only
+ * re-renders a document whose text changed since the build.
+ */
+export function textHash(s: string): string {
+  let h = 0x811c9dc5;
+  for (let i = 0; i < s.length; i++) {
+    h ^= s.charCodeAt(i);
+    h = Math.imul(h, 0x01000193);
+  }
+  return (h >>> 0).toString(16);
+}

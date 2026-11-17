@@ -32,6 +32,21 @@ export function transcriptionDoc(id: string): DocText | null {
   return BY_ID.get(id) ?? null;
 }
 
+/** Headings and runs of competitions, as components/Transcripcion.astro and scripts/live-transcripciones.ts render them. */
+export type Run = { kind: 'heading'; block: Block } | { kind: 'list'; items: Extract<Block, { type: 'item' }>[] };
+
+export function transcriptionRuns(text: string): Run[] {
+  const runs: Run[] = [];
+  for (const b of parseTranscription(text)) {
+    const last = runs[runs.length - 1];
+    if (b.type === 'item') {
+      if (last?.kind === 'list') last.items.push(b);
+      else runs.push({ kind: 'list', items: [b] });
+    } else runs.push({ kind: 'heading', block: b });
+  }
+  return runs;
+}
+
 /** "## Sección", "### Grupo", "12. Competencia" / "12a. …", "- Sin número", anything else is text. */
 export function parseTranscription(src: string): Block[] {
   const out: Block[] = [];

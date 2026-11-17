@@ -3,6 +3,17 @@ name: programa-transcription
 description: Use when transcribing an Eisteddfod programa (list of competitions) or a Ganadores / resultados list from the archive, when adding or fixing files in src/data/transcripciones/, or when a transcription does not show on an item or edition page.
 ---
 
+> **Since 2026-11-17 (issue #27) the database is the source.** Transcriptions live in the Supabase table
+> `transcriptions` (history in `transcription_history`). Edit them on the item page, signed in as admin,
+> in "Curaduría (administración)" → "Transcripción del documento": kind, the document's images, public flag,
+> text, preview, history and restore. `src/data/transcripciones/` and `src/data/ganadores/` are the
+> export snapshot written by `scripts/export_approved.mjs` (every 15 minutes in CI). Don't edit them by
+> hand: the next export overwrites them. To load many new files at once, write them in the format below and
+> run `node --env-file=.env scripts/seed_transcriptions.mjs` (it never overwrites a document already in the
+> table). Items with nothing to transcribe are marked with the panel's "Sin texto para transcribir"
+> (the old `data/sin_texto.tsv` was loaded as those corrections and removed).
+> Private winners lists (Mimosa, Juventud) are not in the database; they stay in `../.transcripciones/ganadores/`.
+
 # Programa and Ganadores transcriptions
 
 ## Where they go

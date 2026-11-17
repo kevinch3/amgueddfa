@@ -198,7 +198,8 @@
     "ampliar_imagen": "Ampliar la imagen",
     "imagen": "Imagen {n} de {total}",
     "retirado": "Este documento se retiró del archivo: no corresponde a los eisteddfodau de la Patagonia.",
-    "notas_titulo": "Información aportada"
+    "notas_titulo": "Información aportada",
+    "sin_texto": "Este documento no tiene texto para transcribir."
   },
   "tabla": {
     "numero": "N.º",
@@ -545,6 +546,47 @@
       "explicacion": "Explicación (no se publica)",
       "video": "Video"
     }
+  },
+  "admin_item": {
+    "panel": "Curaduría (administración)",
+    "correccion": "Corregir este documento",
+    "correccion_ayuda": "Se ve en el sitio al guardar; las páginas estáticas se actualizan en unos 15 minutos.",
+    "titulo_campo": "Título",
+    "categoria": "Sección",
+    "festival": "Eisteddfod",
+    "ano": "Año",
+    "derechos": "Derechos",
+    "leyenda": "Leyenda pública",
+    "sin_texto": "Sin texto para transcribir (tapa, afiche, reglamento…)",
+    "oculto": "Ocultar de las listas",
+    "guardar": "Guardar",
+    "guardado": "Guardado: ya se ve en el sitio.",
+    "guardado_privado": "Guardado como privado: solo lo ven los administradores.",
+    "sin_cambios": "No hay cambios para guardar.",
+    "transcripcion": "Transcripción del documento",
+    "transcripcion_ayuda": "Una transcripción por documento: si abarca varias imágenes, poné todas.",
+    "tipo": "Tipo",
+    "tipo_programa": "Programa",
+    "tipo_ganadores": "Ganadores",
+    "imagenes": "Imágenes del documento",
+    "imagenes_ayuda": "Identificadores de 12 caracteres, la primera es la que da nombre al documento.",
+    "publica": "Pública",
+    "texto": "Texto",
+    "caracteres": "{n} de {max} caracteres",
+    "caracteres_cortos": "{n} caracteres",
+    "vista_previa": "Vista previa",
+    "historial": "Historial",
+    "op_insert": "creada",
+    "op_update": "editada",
+    "op_delete": "borrada",
+    "importado": "importada del archivo",
+    "restaurar": "Restaurar",
+    "restaurado": "Texto restaurado en el editor; guardá para publicarlo.",
+    "nueva": "Todavía no hay transcripción de este tipo: se creará una nueva.",
+    "error_items": "Hay un identificador de imagen que no es válido.",
+    "error_texto": "El texto está vacío.",
+    "error_otro_documento": "Una de esas imágenes ya está en otro documento del mismo tipo.",
+    "error_ganadores_privados": "Los ganadores de Mimosa y Juventud no se publican."
   },
   "insignias": {
     "primer-aporte": {

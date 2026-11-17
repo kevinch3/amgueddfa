@@ -208,13 +208,45 @@ psql "$DATABASE_URL" -v email=persona@ejemplo.com -f scripts/make_admin.sql
 En el editor SQL, reemplazá `:'email'` por el correo entre comillas simples. No
 commitees correos reales.
 
+## Cómo funcionan las correcciones
+
+Los datos curados viven en Supabase y se ven en el sitio **al guardarlos**, sin
+reconstruir ni commitear nada. El HTML estático es solo una copia para buscadores y
+para quien navega sin JavaScript, y se pone al día sola en unos 15 minutos.
+
+- **Corregir un documento.** Con sesión de admin, en la página del ítem aparece
+  «Curaduría (administración)». Ahí se cambian título, sección, año, eisteddfod,
+  derechos, leyenda pública, «sin texto para transcribir» y «ocultar de las listas».
+  Cada cambio se guarda como un tag aprobado (`admin_correct_item`, sin puntos), y gana
+  el más reciente. La carpeta y el nombre de archivo del archivo son solo los valores
+  iniciales; las columnas `rights` y `caption` de `SOURCES.tsv` también.
+- **Una sola regla.** El build (`src/lib/tags.ts`), el navegador
+  (`scripts/live-catalog.ts`) y el armado del catálogo en Python
+  (`scripts/catalog/overlay.py`) aplican la misma regla. `tests/fixtures/overlay.json`
+  tiene los casos que corren las dos suites de tests, así que no pueden diferir.
+- **Transcripciones.** Están en la tabla `transcriptions`, con historial en
+  `transcription_history` (quién cambió qué y cuándo; se puede restaurar una versión).
+  Se editan en el mismo panel, con vista previa. `src/data/transcripciones/` y
+  `src/data/ganadores/` son ahora la copia que escribe la exportación: no se editan a
+  mano. Los ganadores de Mimosa y Juventud nunca pueden ser públicos (lo impide la base
+  de datos); no se cargaron a Supabase y siguen solo en `../.transcripciones/ganadores/`.
+  Para cargarlos como privados:
+  `node --env-file=.env scripts/seed_transcriptions.mjs --private ../.transcripciones/ganadores`.
+- **Archivos nuevos.** Solo esto sigue necesitando la máquina local
+  (`scripts.build_catalog`): hashear, generar derivadas y subirlas a R2.
+
 ## Exportar aportes aprobados
 
-Las páginas leen los aportes aprobados en vivo. Además, `export.yml` corre cada lunes
-(o a mano desde Actions), escribe `data/approved/contributions.json` y
-`data/approved/editions.json`, commitea si hubo cambios y dispara el deploy, así los
-datos y recuerdos quedan en el HTML estático (y los ven los buscadores). Para correrlo
-local:
+Las páginas leen los aportes aprobados en vivo. `export.yml` revisa cada 15 minutos
+si cambió algo en la base de datos. Compara `node scripts/export_stamp.mjs` con
+`data/approved/stamp.json`, sin instalar nada, así que cuando no hay novedades tarda
+segundos. Si hubo cambios, exporta:
+- `data/approved/contributions.json` y `editions.json`;
+- las transcripciones públicas, a `src/data/transcripciones/` y `src/data/ganadores/`.
+
+Después commitea y dispara el deploy. Los lunes, y cuando se corre a mano desde
+Actions, exporta todo sin mirar el sello: así entran también las ediciones que el sello
+no ve. Para correrlo local:
 
 ```sh
 node --env-file=.env scripts/export_approved.mjs

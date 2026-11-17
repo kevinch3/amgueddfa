@@ -85,7 +85,7 @@ const onePerDoc = (items: typeof list, docOf: (id: string) => DocText | null) =>
     const d = docOf(i.id);
     if (!d || seen.has(d.id)) return [];
     seen.add(d.id);
-    return [{ item: i, text: d.text, images: d.items.length }];
+    return [{ item: i, text: d.text, images: d.items.length, doc: d.id }];
   });
 };
 const transcribedIn = (c: string) => onePerDoc(list.filter((i) => i.category === c && !i.restricted), transcriptionDoc);
@@ -138,22 +138,22 @@ const missingList = formatList(missing.map((m) => m.toLocaleLowerCase(intlLocale
       </ul>
       {transcribedIn(c).length > 0 && (
         <div class="transcripciones">
-          {transcribedIn(c).map(({ item, text }) => (
+          {transcribedIn(c).map(({ item, text, doc }) => (
             <details class="tr-detalle">
               <summary>{trVer[0]}{lang ? <span lang={lang}>{item.title}</span> : item.title}{trVer[1]}</summary>
               <p class="muted small">{t('item.transcripcion_ayuda')} <a href={url(`item/${item.id}/`)}>{t('edicion.transcripcion_documento')}</a></p>
-              <Transcripcion text={text} />
+              <Transcripcion text={text} doc={doc} />
             </details>
           ))}
         </div>
       )}
       {c === 'resultados' && winners.length > 0 && (
         <div class="transcripciones ganadores">
-          {winners.map(({ item, text }) => (
+          {winners.map(({ item, text, doc }) => (
             <details class="tr-detalle">
               <summary>{ganVer[0]}{lang ? <span lang={lang}>{item.title}</span> : item.title}{ganVer[1]}</summary>
               <p class="muted small">{t('edicion.ganadores_ayuda')}</p>
-              <Transcripcion text={text} />
+              <Transcripcion text={text} doc={doc} />
             </details>
           ))}
         </div>
@@ -228,4 +228,5 @@ const missingList = formatList(missing.map((m) => m.toLocaleLowerCase(intlLocale
   import '../../scripts/edicion.ts';
   import '../../scripts/live-videos.ts';
   import '../../scripts/informar.ts';
+  import '../../scripts/live-transcripciones.ts';
 </script>

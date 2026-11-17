@@ -16,9 +16,9 @@ export function inScope(i: IndexItem, s: Scope): boolean {
   return i.year === s.year && (s.category === undefined || i.category === s.category);
 }
 
-const KEYS: (keyof IndexItem)[] = ['festival', 'year', 'undated', 'category', 'restricted', 'year_inferred'];
+const KEYS: (keyof IndexItem)[] = ['title', 'festival', 'year', 'undated', 'category', 'restricted', 'year_inferred'];
 
-/** Items whose placement or badges differ between two versions of the index. */
+/** Items whose title, placement or badges differ between two versions of the index. */
 export function changedItems(before: IndexItem[], after: IndexItem[]): { before: IndexItem; after: IndexItem }[] {
   const old = new Map(before.map((i) => [i.id, i]));
   const out: { before: IndexItem; after: IndexItem }[] = [];

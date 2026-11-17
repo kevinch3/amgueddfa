@@ -198,7 +198,8 @@
     "ampliar_imagen": "Ingrandisci l'immagine",
     "imagen": "Immagine {n} di {total}",
     "retirado": "Questo documento è stato ritirato dall'archivio: non riguarda gli Eisteddfod della Patagonia.",
-    "notas_titulo": "Informazioni aggiunte"
+    "notas_titulo": "Informazioni aggiunte",
+    "sin_texto": "Questo documento non ha testo da trascrivere."
   },
   "tabla": {
     "numero": "N.",
@@ -545,6 +546,47 @@
       "explicacion": "Spiegazione (non viene pubblicata)",
       "video": "Video"
     }
+  },
+  "admin_item": {
+    "panel": "Cura (amministrazione)",
+    "correccion": "Correggi questo documento",
+    "correccion_ayuda": "Visibile sul sito al salvataggio; le pagine statiche si aggiornano entro circa 15 minuti.",
+    "titulo_campo": "Titolo",
+    "categoria": "Sezione",
+    "festival": "Eisteddfod",
+    "ano": "Anno",
+    "derechos": "Diritti",
+    "leyenda": "Didascalia pubblica",
+    "sin_texto": "Nessun testo da trascrivere (copertina, manifesto, regolamento…)",
+    "oculto": "Nascondi dagli elenchi",
+    "guardar": "Salva",
+    "guardado": "Salvato: è visibile sul sito.",
+    "guardado_privado": "Salvato come privato: lo vedono solo gli amministratori.",
+    "sin_cambios": "Nessuna modifica da salvare.",
+    "transcripcion": "Trascrizione del documento",
+    "transcripcion_ayuda": "Una trascrizione per documento: se comprende più immagini, elencale tutte.",
+    "tipo": "Tipo",
+    "tipo_programa": "Programma",
+    "tipo_ganadores": "Vincitori",
+    "imagenes": "Immagini del documento",
+    "imagenes_ayuda": "Identificativi di 12 caratteri; il primo dà il nome al documento.",
+    "publica": "Pubblica",
+    "texto": "Testo",
+    "caracteres": "{n} di {max} caratteri",
+    "caracteres_cortos": "{n} caratteri",
+    "vista_previa": "Anteprima",
+    "historial": "Cronologia",
+    "op_insert": "creata",
+    "op_update": "modificata",
+    "op_delete": "eliminata",
+    "importado": "importata dall'archivio",
+    "restaurar": "Ripristina",
+    "restaurado": "Testo ripristinato nell'editor; salva per pubblicarlo.",
+    "nueva": "Non c'è ancora una trascrizione di questo tipo: ne verrà creata una nuova.",
+    "error_items": "Uno degli identificativi delle immagini non è valido.",
+    "error_texto": "Il testo è vuoto.",
+    "error_otro_documento": "Una di queste immagini è già in un altro documento dello stesso tipo.",
+    "error_ganadores_privados": "I vincitori di Mimosa e Juventud non vengono pubblicati."
   },
   "insignias": {
     "primer-aporte": {

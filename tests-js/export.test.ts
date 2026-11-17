@@ -115,3 +115,50 @@ describe('export_approved', () => {
     expect(() => readFileSync(join(dir, 'contributions.json'))).toThrow();
   });
 });
+
+describe('transcriptions snapshot', () => {
+  it('seed → export reproduces every committed file byte for byte', async () => {
+    const { readdirSync } = await import('node:fs');
+    const { rowsFrom } = await import('../scripts/seed_transcriptions.mjs');
+    const { docFile, docFolder } = await import('../scripts/export_approved.mjs');
+    const { readDoc } = await import('../src/lib/docmd');
+    for (const [folder, kind, festival] of [['transcripciones', 'programa', 'chubut'], ['ganadores', 'ganadores', 'chubut']] as const) {
+      const dir = join('src', 'data', folder);
+      const rows = rowsFrom(dir, kind, true, () => festival);
+      expect(rows.length).toBe(readdirSync(dir).filter((f: string) => f.endsWith('.md')).length);
+      for (const r of rows) {
+        const raw = readFileSync(join(dir, `${r.id}.md`), 'utf8');
+        expect(docFile(r)).toBe(raw);
+        expect(docFolder(r)).toBe(folder);
+        expect(readDoc(r.id, raw)).toEqual({ id: r.id, items: r.items, text: r.text });
+      }
+    }
+  });
+
+  it('never publishes private documents or Mimosa and Juventud winners', async () => {
+    const { docFolder } = await import('../scripts/export_approved.mjs');
+    const r = { id: 'aaaaaaaaaaaa', items: ['aaaaaaaaaaaa'], text: 'x' };
+    expect(docFolder({ ...r, kind: 'programa', public: false })).toBeNull();
+    expect(docFolder({ ...r, kind: 'ganadores', festival: 'juventud', public: true })).toBeNull();
+    expect(docFolder({ ...r, kind: 'ganadores', festival: 'mimosa', public: true })).toBeNull();
+    expect(docFolder({ ...r, kind: 'ganadores', festival: 'trevelin', public: true })).toBe('ganadores');
+    expect(docFolder({ ...r, id: '../x', kind: 'programa', public: true })).toBeNull();
+  });
+
+  it('writes public documents, removes withdrawn ones, and leaves the snapshot alone on an empty read', async () => {
+    const { mkdirSync, writeFileSync, existsSync } = await import('node:fs');
+    const { exportTranscriptions } = await import('../scripts/export_approved.mjs');
+    const dir = mkdtempSync(join(tmpdir(), 'tr-'));
+    mkdirSync(join(dir, 'transcripciones'));
+    writeFileSync(join(dir, 'transcripciones', 'bbbbbbbbbbbb.md'), 'old');
+    expect(await exportTranscriptions(mockClient({ transcriptions: [] }), dir)).toBeNull();
+    expect(existsSync(join(dir, 'transcripciones', 'bbbbbbbbbbbb.md'))).toBe(true);
+    const n = await exportTranscriptions(mockClient({ transcriptions: [
+      { id: 'aaaaaaaaaaaa', items: ['aaaaaaaaaaaa', 'cccccccccccc'], kind: 'programa', festival: 'chubut', text: '## A\n', public: true },
+      { id: 'dddddddddddd', items: ['dddddddddddd'], kind: 'ganadores', festival: 'juventud', text: 'kids', public: false },
+    ] }), dir);
+    expect(n).toMatchObject({ written: 1, removed: 1, transcripciones: 1, ganadores: 0 });
+    expect(readFileSync(join(dir, 'transcripciones', 'aaaaaaaaaaaa.md'), 'utf8')).toBe('---\nitems: aaaaaaaaaaaa cccccccccccc\n---\n## A\n');
+    expect(existsSync(join(dir, 'ganadores', 'dddddddddddd.md'))).toBe(false);
+  });
+});

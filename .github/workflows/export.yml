@@ -1,11 +1,19 @@
 name: export
 
-# Weekly durable copy of approved contributions and edition states in git.
-# A diff is committed to main and the deploy workflow is dispatched so the
-# static pages pick up the new facts and memories.
+# Durable copy of the curated data in git: approved contributions, edition
+# states (data/approved) and the public transcriptions (src/data/transcripciones,
+# src/data/ganadores). A diff is committed to main and the deploy workflow is
+# dispatched, so the static pages catch up with what the live site already
+# shows (issue #27).
+#
+# Every 15 minutes a cheap check (no npm install) compares the database's
+# change stamp with the committed data/approved/stamp.json and stops when
+# nothing changed. Mondays, and runs started by hand, always export in full:
+# that also picks up edits the stamp cannot see.
 on:
   schedule:
     - cron: '23 5 * * 1'
+    - cron: '*/15 * * * *'
   workflow_dispatch:
 
 permissions:
@@ -26,26 +34,45 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: main
+      - name: Anything new?
+        id: gate
+        run: |
+          if [ "${{ github.event.schedule }}" = '*/15 * * * *' ]; then
+            node scripts/export_stamp.mjs --check data/approved/stamp.json >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
       - uses: actions/setup-node@v4
+        if: steps.gate.outputs.changed == 'true'
         with:
           node-version: '22'
           cache: npm
-      - run: npm ci
-      - run: node scripts/export_approved.mjs
+      - if: steps.gate.outputs.changed == 'true'
+        run: npm ci
+      - if: steps.gate.outputs.changed == 'true'
+        run: node scripts/export_approved.mjs
       - name: Commit if changed
         id: commit
+        if: steps.gate.outputs.changed == 'true'
         run: |
-          if git diff --quiet -- data/approved; then
+          PATHS="data/approved src/data/transcripciones src/data/ganadores"
+          git add -A -- $PATHS
+          if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
-            echo "No changes in data/approved."
+            echo "No changes."
             exit 0
+          fi
+          # Only a new stamp: commit it (so the check stops firing) but do not deploy.
+          if git diff --cached --quiet -- . ':!data/approved/stamp.json'; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/approved
-          git commit -m "chore(data): export approved contributions"
+          git commit -m "chore(data): export approved contributions and transcriptions"
+          git pull --rebase origin main
           git push origin HEAD:main
-          echo "changed=true" >> "$GITHUB_OUTPUT"
       - name: Trigger deploy
         if: steps.commit.outputs.changed == 'true'
         env:

@@ -110,9 +110,11 @@ async function hydrate(): Promise<void> {
     return;
   }
   const doc = { objetivo: 'documento' as const, ...ctx };
+  // Nothing to transcribe on a cover or poster (an admin's no_text correction, baked in #item-overlay).
+  const noText = /"no_text":true/.test(document.getElementById('item-overlay')?.textContent ?? '');
   root.replaceChildren(
     yearTask(ctx),
-    transcribeTask(ctx),
+    ...(noText ? [] : [transcribeTask(ctx)]),
     opener(t('informar.titulo'), (done, cancel) => reportForm(doc, done, cancel)),
     opener(t('informar.nota'), (done, cancel) => noteForm(ctx, done, cancel)),
   );

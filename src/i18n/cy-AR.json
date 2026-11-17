@@ -198,7 +198,8 @@
     "ampliar_imagen": "Chwyddo'r ddelwedd",
     "imagen": "Delwedd {n} o {total}",
     "retirado": "Tynnwyd y ddogfen hon o'r archif: dydy hi ddim yn perthyn i eisteddfodau'r Wladfa.",
-    "notas_titulo": "Gwybodaeth gan y gymuned"
+    "notas_titulo": "Gwybodaeth gan y gymuned",
+    "sin_texto": "Does dim testun i'w drawsgrifio yn y ddogfen hon."
   },
   "tabla": {
     "numero": "Rhif",
@@ -545,6 +546,47 @@
       "explicacion": "Esboniad (heb ei gyhoeddi)",
       "video": "Fideo"
     }
+  },
+  "admin_item": {
+    "panel": "Curadu (gweinyddu)",
+    "correccion": "Cywiro'r ddogfen hon",
+    "correccion_ayuda": "Yn fyw ar y wefan wrth gadw; mae'r tudalennau statig yn diweddaru ymhen tua 15 munud.",
+    "titulo_campo": "Teitl",
+    "categoria": "Adran",
+    "festival": "Eisteddfod",
+    "ano": "Blwyddyn",
+    "derechos": "Hawliau",
+    "leyenda": "Capsiwn cyhoeddus",
+    "sin_texto": "Dim testun i'w drawsgrifio (clawr, poster, rheolau…)",
+    "oculto": "Cuddio o'r rhestrau",
+    "guardar": "Cadw",
+    "guardado": "Wedi'i gadw: mae'n fyw ar y wefan.",
+    "guardado_privado": "Wedi'i gadw'n breifat: dim ond gweinyddwyr sy'n ei weld.",
+    "sin_cambios": "Dim newidiadau i'w cadw.",
+    "transcripcion": "Trawsgrifiad y ddogfen",
+    "transcripcion_ayuda": "Un trawsgrifiad i bob dogfen: os yw'n cynnwys sawl delwedd, rhestrwch nhw i gyd.",
+    "tipo": "Math",
+    "tipo_programa": "Rhaglen",
+    "tipo_ganadores": "Enillwyr",
+    "imagenes": "Delweddau'r ddogfen",
+    "imagenes_ayuda": "Dynodwyr 12 nod; y cyntaf sy'n enwi'r ddogfen.",
+    "publica": "Cyhoeddus",
+    "texto": "Testun",
+    "caracteres": "{n} o {max} nod",
+    "caracteres_cortos": "{n} nod",
+    "vista_previa": "Rhagolwg",
+    "historial": "Hanes",
+    "op_insert": "crëwyd",
+    "op_update": "golygwyd",
+    "op_delete": "dilëwyd",
+    "importado": "wedi'i fewnforio o'r archif",
+    "restaurar": "Adfer",
+    "restaurado": "Testun wedi'i adfer yn y golygydd; cadwch i'w gyhoeddi.",
+    "nueva": "Dim trawsgrifiad o'r math hwn eto: caiff un newydd ei greu.",
+    "error_items": "Nid yw un o ddynodwyr y delweddau yn ddilys.",
+    "error_texto": "Mae'r testun yn wag.",
+    "error_otro_documento": "Mae un o'r delweddau hynny eisoes mewn dogfen arall o'r un math.",
+    "error_ganadores_privados": "Ni chyhoeddir enillwyr Mimosa a'r Ieuenctid."
   },
   "insignias": {
     "primer-aporte": {

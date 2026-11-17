@@ -1,20 +1,14 @@
 ---
-// A standardized programa transcription: disciplines (h3), age groups (h4), competitions as lists.
-import { parseTranscription, type Block } from '../lib/transcripciones';
+// A standardized transcription: disciplines (h3), age groups (h4), competitions as lists.
+// `doc` (the document id) lets scripts/live-transcripciones.ts replace it with the live text.
+import { transcriptionRuns } from '../lib/transcripciones';
+import { textHash } from '../lib/docmd';
 import { contentLang } from '../lib/i18n';
 
-const { text } = Astro.props as { text: string };
-type Run = { kind: 'heading'; block: Block } | { kind: 'list'; items: Extract<Block, { type: 'item' }>[] };
-const runs: Run[] = [];
-for (const b of parseTranscription(text)) {
-  const last = runs[runs.length - 1];
-  if (b.type === 'item') {
-    if (last?.kind === 'list') last.items.push(b);
-    else runs.push({ kind: 'list', items: [b] });
-  } else runs.push({ kind: 'heading', block: b });
-}
+const { text, doc } = Astro.props as { text: string; doc?: string };
+const runs = transcriptionRuns(text);
 ---
-<div class="transcripcion" lang={contentLang()}>
+<div class="transcripcion" lang={contentLang()} data-doc={doc} data-doc-hash={doc ? textHash(text) : undefined}>
   {runs.map((r) =>
     r.kind === 'list' ? (
       <ul class="tr-lista">

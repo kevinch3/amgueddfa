@@ -1,11 +1,13 @@
-// Export approved contributions and edition states to data/approved/*.json.
+// Export approved contributions and edition states to data/approved/*.json,
+// and the public transcriptions to src/data/transcripciones and src/data/ganadores
+// (the snapshot the static build renders; the database is the source, issue #27).
 //
 // Run locally:  node --env-file=.env scripts/export_approved.mjs
 // In CI it runs from .github/workflows/export.yml.
 // Reads PUBLIC_SUPABASE_URL (or SUPABASE_URL) and SUPABASE_SERVICE_ROLE_KEY.
 // The output is stable (rows sorted, keys sorted) so a re-run with no news writes
 // identical bytes and the workflow commits nothing.
-import { mkdirSync, writeFileSync } from 'node:fs';
+import { mkdirSync, readdirSync, readFileSync, unlinkSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
@@ -67,6 +69,73 @@ export async function exportApproved(client, outDir) {
   return { contributions: contributions.length, editions: editions.length };
 }
 
+/** Festivals whose winners are public (src/lib/ganadores.ts PUBLIC_WINNERS). */
+export const PUBLIC_WINNERS = ['chubut', 'trevelin'];
+const DOC_ID = /^[0-9a-f]{12}$/;
+
+/** A transcription row as its snapshot file (the format lib/docmd.ts reads). */
+export function docFile(row) {
+  const items = [row.id, ...(row.items ?? []).filter((x) => x !== row.id)];
+  return items.length > 1 ? `---\nitems: ${items.join(' ')}\n---\n${row.text}` : row.text;
+}
+
+/** Folder (under src/data) a row's snapshot goes to; null when it must not be published. */
+export function docFolder(row) {
+  if (!row.public || !DOC_ID.test(row.id ?? '')) return null;
+  if (row.kind === 'programa') return 'transcripciones';
+  if (row.kind === 'ganadores' && PUBLIC_WINNERS.includes(row.festival)) return 'ganadores';
+  return null;
+}
+
+/**
+ * Mirror the transcriptions table into <dataDir>/{transcripciones,ganadores}/<id>.md:
+ * write public documents, delete files of documents no longer public. Nothing
+ * is touched when the table is missing or empty (not seeded yet), so an empty
+ * read can never wipe the snapshot. The service key bypasses RLS: `public` and
+ * PUBLIC_WINNERS are checked here.
+ */
+export async function exportTranscriptions(client, dataDir) {
+  const rows = [];
+  for (let from = 0; ; from += PAGE) {
+    const { data, error } = await client.from('transcriptions').select('id, items, kind, festival, text, public').order('id', { ascending: true }).range(from, from + PAGE - 1);
+    if (error) {
+      if (error.code === '42P01' || error.code === 'PGRST205') return null; // not migrated yet
+      throw new Error(`export: transcriptions: ${error.message ?? error}`);
+    }
+    rows.push(...(data ?? []));
+    if (!data || data.length < PAGE) break;
+  }
+  if (!rows.length) return null;
+  const want = { transcripciones: new Map(), ganadores: new Map() };
+  for (const r of rows) {
+    const folder = docFolder(r);
+    if (folder) want[folder].set(`${r.id}.md`, docFile(r));
+  }
+  const n = { written: 0, removed: 0, transcripciones: want.transcripciones.size, ganadores: want.ganadores.size };
+  for (const [folder, files] of Object.entries(want)) {
+    const dir = join(dataDir, folder);
+    mkdirSync(dir, { recursive: true });
+    for (const f of readdirSync(dir)) {
+      if (f.endsWith('.md') && DOC_ID.test(f.slice(0, -3)) && !files.has(f)) {
+        unlinkSync(join(dir, f));
+        n.removed++;
+      }
+    }
+    for (const [f, body] of files) {
+      const path = join(dir, f);
+      let old = null;
+      try {
+        old = readFileSync(path, 'utf8');
+      } catch {}
+      if (old !== body) {
+        writeFileSync(path, body);
+        n.written++;
+      }
+    }
+  }
+  return n;
+}
+
 async function main() {
   const url = (process.env.PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL || '').trim();
   const key = (process.env.SUPABASE_SERVICE_ROLE_KEY || '').trim();
@@ -74,11 +143,16 @@ async function main() {
     console.error('export: set PUBLIC_SUPABASE_URL (or SUPABASE_URL) and SUPABASE_SERVICE_ROLE_KEY');
     process.exit(2);
   }
+  const { stamp, stampJson } = await import('./export_stamp.mjs');
+  const before = stampJson(await stamp(url.replace(/\/$/, ''), key)); // first: a change during the export shows next time
   const { createClient } = await import('@supabase/supabase-js');
   const client = createClient(url, key, { auth: { persistSession: false, autoRefreshToken: false } });
   const outDir = join(dirname(fileURLToPath(import.meta.url)), '..', 'data', 'approved');
   const n = await exportApproved(client, outDir);
   console.log(`export: ${n.contributions} contributions, ${n.editions} editions -> data/approved/`);
+  const tr = await exportTranscriptions(client, join(dirname(fileURLToPath(import.meta.url)), '..', 'src', 'data'));
+  writeFileSync(join(outDir, 'stamp.json'), before);
+  console.log(tr ? `export: ${tr.transcripciones} transcriptions, ${tr.ganadores} winners lists (${tr.written} written, ${tr.removed} removed)` : 'export: transcriptions table empty or missing; snapshot left as is');
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {

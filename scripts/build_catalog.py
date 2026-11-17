@@ -19,6 +19,7 @@ REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO))
 
 from scripts.catalog.derive import derive  # noqa: E402
+from scripts.catalog.overlay import apply_overlay  # noqa: E402
 from scripts.catalog.scan import scan  # noqa: E402
 
 # rclone remote:path of the public derivatives ("r2" is set up in ~/.config/rclone/rclone.conf).
@@ -26,7 +27,6 @@ MEDIA_REMOTE = os.environ.get("MEDIA_REMOTE", "r2:amgueddfa-media/media")
 # File names are not content-hashed (a re-render keeps p01.webp), so no long-lived cache.
 RCLONE_FLAGS = ["--checksum", "--transfers", "16", "--checkers", "16",
                 "--header-upload", "Cache-Control: public, max-age=86400"]
-TAG_FIELDS = ("year", "category", "festival")
 
 
 def load_extra(repo: Path) -> set[str]:
@@ -38,26 +38,10 @@ def load_extra(repo: Path) -> set[str]:
 
 
 def apply_tags(items, repo: Path) -> None:
+    """The overlay from the last export (data/approved/contributions.json); see scripts/catalog/overlay.py."""
     p = repo / "data" / "approved" / "contributions.json"
-    if not p.exists():
-        return
-    by_id = {i.id: i for i in items}
-    # Oldest first, so the latest approved tag wins (as src/lib/tags.ts does);
-    # the export is sorted by id, not by date.
-    rows = sorted(json.loads(p.read_text() or "[]"),
-                  key=lambda c: c.get("reviewed_at") or c.get("created_at") or "")
-    for c in rows:
-        if c.get("type") != "tag" or c.get("item_id") not in by_id:
-            continue
-        it, payload = by_id[c["item_id"]], c.get("payload") or {}
-        for f in TAG_FIELDS:
-            if payload.get(f) not in (None, ""):
-                setattr(it, f, payload[f])
-        if payload.get("year") not in (None, ""):
-            it.undated = False
-            it.year_inferred = False
-        if it.category == "resultados":  # never un-restrict, only restrict
-            it.restricted = True
+    if p.exists():
+        apply_overlay(items, json.loads(p.read_text() or "[]"))
 
 
 def upload_media(public: Path, items, only: str | None, remote: str = MEDIA_REMOTE) -> int:

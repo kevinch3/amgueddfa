@@ -29,6 +29,8 @@ export interface Item {
   restricted: boolean;
   /** Set by an approved "no corresponde" report: off every list, page kept with a notice. */
   hidden?: boolean;
+  /** Nothing to transcribe (a cover, poster, rules slide…): set by an admin correction. */
+  no_text?: boolean;
   pages: number;
   thumb: string | null;
   page_paths: string[];

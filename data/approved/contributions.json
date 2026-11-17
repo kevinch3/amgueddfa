@@ -1,5 +1,31 @@
 [
   {
+    "id": "003a83f0-f462-46fa-bb06-d340be64a39d",
+    "type": "tag",
+    "festival": "mimosa",
+    "year": 2025,
+    "item_id": "cc1171b6475f",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "00d538c0-e9b8-433a-a4dd-8e79810ceb6e",
+    "type": "tag",
+    "festival": "juventud",
+    "year": 2025,
+    "item_id": "fae5e1f50f75",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "00f2fe0b-b417-4461-b5c0-c1d48e67c05a",
     "type": "fact",
     "festival": "chubut",
@@ -12,6 +38,19 @@
     "created_at": "2026-11-14T10:40:31.420748+00:00",
     "reviewed_at": "2026-11-14T10:41:26.194815+00:00",
     "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "01605339-3842-4190-9751-0518b3f8db72",
+    "type": "tag",
+    "festival": "juventud",
+    "year": 2023,
+    "item_id": "4e783b9716f5",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
   },
   {
     "id": "024c50c1-ca1c-4b3e-aae7-d3ed3503fce9",
@@ -102,6 +141,45 @@
     },
     "created_at": "2026-11-14T13:19:03.427053+00:00",
     "reviewed_at": "2026-11-14T13:20:47.194865+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "048af0b6-c37d-4c13-b6f7-33a1e030dc43",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2022,
+    "item_id": "03b01342a6c3",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "05147349-3e43-46bd-9b12-e82b752fb432",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2025,
+    "item_id": "030e18cbadd5",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "05a9f007-ccc6-43f6-bb4f-333fd15e631b",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2016,
+    "item_id": "d99c51e60604",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -244,6 +322,19 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "0c7b7663-4e91-45e6-97f9-d7a7a511ba60",
+    "type": "tag",
+    "festival": "juventud",
+    "year": 2024,
+    "item_id": "c916ece7444a",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "0f83a34c-384b-4a89-b97b-5dbf24c6c747",
     "type": "fact",
     "festival": "trevelin",
@@ -273,6 +364,58 @@
     "created_at": "2026-11-16T18:31:17.630618+00:00",
     "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
     "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "10a271d9-f99e-4c9c-8a33-c04393bdb7a6",
+    "type": "tag",
+    "festival": "mimosa",
+    "year": 2025,
+    "item_id": "7c4819bda0f9",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "10c8944b-3ee7-4db0-a1fd-467c55837feb",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2021,
+    "item_id": "5023d218e655",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "110f83a1-c934-4999-9405-e15a205c1341",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2022,
+    "item_id": "89634a8605db",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "118a4bd9-7117-4078-ba08-0462c3c9d821",
+    "type": "tag",
+    "festival": "mimosa",
+    "year": 2025,
+    "item_id": "4af46a7a9ebf",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
   },
   {
     "id": "1298fb82-e6f2-4e89-8879-3590cf8f56fb",
@@ -446,6 +589,19 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "176352dd-bf91-48e3-b8ab-87f49d2aa1f7",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2024,
+    "item_id": "5fbed1e62c7a",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "17e86bef-0ffe-4bff-b17b-b7d1e7e0adbc",
     "type": "fact",
     "festival": "juventud",
@@ -539,6 +695,19 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "1a5fc5bc-5720-4972-8d49-34dc47008753",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2021,
+    "item_id": "05fc75d8dd23",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "1a728b83-74bb-4118-b756-6b43b0aef940",
     "type": "fact",
     "festival": "chubut",
@@ -598,6 +767,19 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "1c02321e-f784-4e00-b956-7648c62b13bb",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2013,
+    "item_id": "dbdc07f64644",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "1cea96d4-d55f-4d82-a11f-f12253049b1b",
     "type": "fact",
     "festival": "chubut",
@@ -628,6 +810,19 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "1de28dd1-7794-4b3a-847c-d3179cd681c9",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2022,
+    "item_id": "addf6e12f785",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "1e6305d9-b260-40bc-a2ef-26aeeb74338f",
     "type": "fact",
     "festival": "chubut",
@@ -640,6 +835,32 @@
     "created_at": "2026-11-14T10:40:48.32992+00:00",
     "reviewed_at": "2026-11-14T10:41:27.299109+00:00",
     "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "1eca02dd-2d8b-4503-b9a7-062746b19851",
+    "type": "tag",
+    "festival": "trevelin",
+    "year": 2021,
+    "item_id": "9cba683a0840",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "1f6c92ee-6fa7-40d7-b1d4-516651dd5bcb",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 1989,
+    "item_id": "c30ef6382761",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
   },
   {
     "id": "1fe5b30a-0334-4de6-8a8e-09189917cc0f",
@@ -657,6 +878,19 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "202ab74f-d60e-425f-b698-7640cbfbdb22",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2022,
+    "item_id": "0002b499da6d",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "206f1d59-e71c-442c-8044-8104fb6327fd",
     "type": "fact",
     "festival": "chubut",
@@ -670,6 +904,32 @@
     },
     "created_at": "2026-11-17T11:06:25.263276+00:00",
     "reviewed_at": "2026-11-17T11:06:25.263276+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "22db6af6-f3fe-432b-bf51-70b47d89cac8",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2022,
+    "item_id": "051dcca2abd4",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "2320eafa-03aa-4593-a7ab-6fbce6e8d48b",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2007,
+    "item_id": "c25e647e3048",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -705,6 +965,32 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "2498156a-ff36-4378-a3e9-b179be8e486d",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2008,
+    "item_id": "d659a6f206e9",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "24db9f1a-e8df-4ec9-ade5-c7d0a8f520f1",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2005,
+    "item_id": "b6d56505956e",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "25cd72cd-5b6a-4b91-a06e-74d9d2ba2c07",
     "type": "fact",
     "festival": "trevelin",
@@ -733,6 +1019,32 @@
     "created_at": "2026-11-14T10:39:41.032394+00:00",
     "reviewed_at": "2026-11-14T10:41:23.326552+00:00",
     "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "26dcf1d7-25fe-4c51-8866-ca5f86735f85",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2026,
+    "item_id": "4d6256f94dce",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "2934b4e8-d722-4d86-b1d6-0fb6ccf7dda2",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2018,
+    "item_id": "8c1d95347416",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
   },
   {
     "id": "29464ea1-767f-4623-9245-b4a2ef1124e9",
@@ -765,6 +1077,19 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "2a663e57-afb0-4485-aec0-2624a1628f26",
+    "type": "tag",
+    "festival": "mimosa",
+    "year": 2024,
+    "item_id": "4a3355537d6e",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "2c15ab21-8015-4ea8-ab0c-4dee855cdd5c",
     "type": "tag",
     "festival": "chubut",
@@ -777,6 +1102,19 @@
     },
     "created_at": "2026-11-14T13:19:17.589273+00:00",
     "reviewed_at": "2026-11-14T13:20:49.020409+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "2c2c1c5e-9637-41c0-a050-257db2a59dd3",
+    "type": "tag",
+    "festival": "mimosa",
+    "year": 2023,
+    "item_id": "d09a46925282",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -841,6 +1179,19 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "2da78641-13ba-47ed-8a54-80d2d5aac83b",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2022,
+    "item_id": "d4f6dae10e91",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "2de03bda-2045-40a5-812f-bc579f50f567",
     "type": "fact",
     "festival": "chubut",
@@ -856,6 +1207,19 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "2dffa700-2e68-4272-998a-808210e12365",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2020,
+    "item_id": "fa24bbb6b678",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "2e3d2fca-81bd-4e4c-8ba2-b026f236a91b",
     "type": "tag",
     "festival": "chubut",
@@ -868,6 +1232,32 @@
     },
     "created_at": "2026-11-14T10:44:30.618356+00:00",
     "reviewed_at": "2026-11-14T11:02:44.841222+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "2f3508c3-bb05-4b57-9769-7d1668785265",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2022,
+    "item_id": "0173dc740a4b",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "2f51574e-c5ea-4c13-a3f8-fe454d0e155e",
+    "type": "tag",
+    "festival": "mimosa",
+    "year": 2025,
+    "item_id": "8e4ca1e80fb9",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -947,6 +1337,19 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "34a6a4e0-7b4c-4f8f-a9c1-93573eb692aa",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2017,
+    "item_id": "31b2ea8bbff4",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "37227883-6e02-4919-8dc1-4591a7139b7d",
     "type": "tag",
     "festival": "juventud",
@@ -990,6 +1393,32 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "38885718-c558-4c25-a108-99f41e022c32",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2012,
+    "item_id": "f6aad1cabf29",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "39324fe1-cc2f-4495-b02a-eba76ace8279",
+    "type": "tag",
+    "festival": "juventud",
+    "year": 2025,
+    "item_id": "adaf33976d2a",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "3966a5ea-9b87-4b0e-b517-c9000618e0db",
     "type": "fact",
     "festival": "chubut",
@@ -1004,6 +1433,32 @@
     "created_at": "2026-11-16T18:39:27.894079+00:00",
     "reviewed_at": "2026-11-16T18:39:27.894079+00:00",
     "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "396dda2b-9dd6-4b87-893d-02ec93e0e349",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2017,
+    "item_id": "a39a1d6b247b",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "39cb327b-3e12-4ae5-af31-e864fa734277",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 1987,
+    "item_id": "f5715cded7bc",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
   },
   {
     "id": "39e01401-68ef-4061-9b24-dc48afa07f14",
@@ -1033,6 +1488,19 @@
     },
     "created_at": "2026-11-14T13:19:54.436523+00:00",
     "reviewed_at": "2026-11-14T13:20:52.202165+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "3bbbf7a9-1e66-4fb7-9a59-94ca49197a59",
+    "type": "tag",
+    "festival": "mimosa",
+    "year": 2024,
+    "item_id": "b7d08ef39676",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -1066,6 +1534,19 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "3d2dbf85-f7d6-4512-ae94-c6922ae6489c",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2024,
+    "item_id": "2a55246506fd",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "3da7c535-7852-4095-9135-712236cd9352",
     "type": "fact",
     "festival": "chubut",
@@ -1096,6 +1577,19 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "3fc6c189-9486-4fae-bbcf-3363c70ecbd6",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2025,
+    "item_id": "4ec5bbaf35bc",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "40495b4b-4eaf-4d55-b0d9-f5f4cff47842",
     "type": "fact",
     "festival": "chubut",
@@ -1111,6 +1605,19 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "40e1a052-54fe-4ee6-99a4-84e3a4174ccd",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2004,
+    "item_id": "a9983a758730",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "413cfe0b-a710-4ab2-8f36-f695bb9c59ef",
     "type": "fact",
     "festival": "chubut",
@@ -1123,6 +1630,19 @@
     },
     "created_at": "2026-11-14T14:09:07.912183+00:00",
     "reviewed_at": "2026-11-14T14:09:07.912183+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "41542c16-4f4a-4727-a200-d2ce7850f384",
+    "type": "tag",
+    "festival": "juventud",
+    "year": 2025,
+    "item_id": "cac482e442cb",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -1154,6 +1674,19 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "4242cef3-0a2f-4432-9344-e1610654ff0f",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2015,
+    "item_id": "609e8a1fa869",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "4384b5a5-d58a-40ce-8eed-9dbbd2f310c2",
     "type": "fact",
     "festival": "chubut",
@@ -1167,6 +1700,32 @@
     "created_at": "2026-11-16T18:31:17.630618+00:00",
     "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
     "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "44abc5b8-d6a5-4c95-a5b4-47f9a09d2888",
+    "type": "tag",
+    "festival": "juventud",
+    "year": 2008,
+    "item_id": "c621c9cf343b",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "44dca8bb-3d75-4e29-9dc9-1dc7fba29701",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 1985,
+    "item_id": "450c6b48e2e6",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
   },
   {
     "id": "46770b9a-f2b1-44f7-9bc4-b02b72aa7079",
@@ -1184,6 +1743,32 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "46e767d7-950f-4dbf-8b0a-d71a35ee3417",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2021,
+    "item_id": "d39c5cd8db8b",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "46f366da-895d-40d6-88d7-753be922424c",
+    "type": "tag",
+    "festival": "mimosa",
+    "year": 2023,
+    "item_id": "83e2043ae3a1",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "4709d0fb-2598-4a4e-aa09-fb1cd800ac71",
     "type": "fact",
     "festival": "chubut",
@@ -1197,6 +1782,32 @@
     },
     "created_at": "2026-11-14T14:09:20.944203+00:00",
     "reviewed_at": "2026-11-14T14:09:20.944203+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "47d9f8a4-29cb-4140-8f48-a046dd233ac1",
+    "type": "tag",
+    "festival": "trevelin",
+    "year": 2021,
+    "item_id": "d28522b3d88e",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "485ef019-537b-4de4-a3e1-08972a7f48e0",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2021,
+    "item_id": "b8241835b77f",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -1261,6 +1872,19 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "4ca51404-64f3-4d62-b5eb-1c0a6e0a0abd",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2022,
+    "item_id": "b3f1a5cbaa0f",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "4dafca63-3598-4d21-b5d0-03ed987d1262",
     "type": "fact",
     "festival": "chubut",
@@ -1274,6 +1898,71 @@
     "created_at": "2026-11-16T18:31:17.630618+00:00",
     "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
     "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "4e7aaf5c-aefa-480e-be57-982465867c10",
+    "type": "tag",
+    "festival": "juventud",
+    "year": 2019,
+    "item_id": "4e2d6dd512cf",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "4ea09c3f-b57d-497e-ac5b-e7b5aee11cc2",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2018,
+    "item_id": "0e54fc66f0dc",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "503feb04-eb19-432b-a93b-696d5bea4521",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2008,
+    "item_id": "ab70debc7989",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "50991ab5-ee9e-4abc-9087-15b908b8e762",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2022,
+    "item_id": "43f0b2ca5c47",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "50a4cc57-a54d-4493-b42e-caa0261cab8f",
+    "type": "tag",
+    "festival": "juventud",
+    "year": 2016,
+    "item_id": "28b7d2906038",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
   },
   {
     "id": "51800afb-100c-4014-b4d4-22c6aba2aff3",
@@ -1291,6 +1980,19 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "522c8178-b7a5-403f-861e-eb862c349881",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2011,
+    "item_id": "22f2a0f04e53",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "52543603-c0db-4606-af21-6ee3f2a990fb",
     "type": "fact",
     "festival": "chubut",
@@ -1306,6 +2008,19 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "526b4ce1-6a08-4e97-8c23-a7236e84009e",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 1990,
+    "item_id": "f0bf76bbdf5b",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "5434558e-64ac-4443-82c0-57280a2cbfd6",
     "type": "fact",
     "festival": "chubut",
@@ -1319,6 +2034,32 @@
     },
     "created_at": "2026-11-14T14:08:59.601738+00:00",
     "reviewed_at": "2026-11-14T14:08:59.601738+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "54abdfae-cb61-4fec-99c5-4aa6ffec72b0",
+    "type": "tag",
+    "festival": "juventud",
+    "year": 2022,
+    "item_id": "24fd44914331",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "5509b1bc-5ebc-4650-b2ce-8be146f7d0f6",
+    "type": "tag",
+    "festival": "trevelin",
+    "year": 2025,
+    "item_id": "cf43937ab65b",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -1367,6 +2108,58 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "59827852-0137-49cb-b642-f125bdbb3e24",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2022,
+    "item_id": "7308ac58a0c7",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "59ec12c2-061c-4b38-b4c0-7aaf2b31860a",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2025,
+    "item_id": "ae99af07bc76",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "59f5cba0-2bfb-4422-85af-e0a26b49f75e",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2022,
+    "item_id": "037d55b283ac",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "5a825a6e-c7c5-4fe3-985e-4b932695b94d",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 1987,
+    "item_id": "db92c2ebbe55",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "5b1b98d5-8cd8-498b-a82f-51bc2c620ca2",
     "type": "fact",
     "festival": "chubut",
@@ -1379,6 +2172,19 @@
     },
     "created_at": "2026-11-14T14:25:32.362027+00:00",
     "reviewed_at": "2026-11-14T14:25:32.362027+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "5cdbc7b1-c402-4fd6-a1e2-e1dff5ddfb05",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2022,
+    "item_id": "a0ffc3ab800c",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -1428,6 +2234,19 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "5f4ae6f0-8308-487c-9c04-128ef25d37b5",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2015,
+    "item_id": "a799cf8685ca",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "5fde90ba-b85e-4dfe-8ac5-97dbd83d7406",
     "type": "fact",
     "festival": "chubut",
@@ -1441,6 +2260,19 @@
     "created_at": "2026-11-16T18:31:17.630618+00:00",
     "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
     "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "5fecc5d4-d332-4803-a8e3-8f565ecd0b29",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2023,
+    "item_id": "43a33a7837a9",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
   },
   {
     "id": "6069e73b-b7df-4340-8e14-7c92500803e9",
@@ -1503,6 +2335,19 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "6249c220-a53b-492d-af25-c1ca4b663702",
+    "type": "tag",
+    "festival": "mimosa",
+    "year": 2026,
+    "item_id": "58aca902ec52",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "63b67200-d14f-48cf-9634-b6d0a9d57c1d",
     "type": "fact",
     "festival": "chubut",
@@ -1534,6 +2379,19 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "64595aab-04cd-457a-a724-c40b4d91311e",
+    "type": "tag",
+    "festival": "trevelin",
+    "year": 2025,
+    "item_id": "21fc0ceefa68",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "64b79c5e-613a-4e3a-9999-83d503657291",
     "type": "fact",
     "festival": "chubut",
@@ -1547,6 +2405,32 @@
     },
     "created_at": "2026-11-14T14:09:03.556317+00:00",
     "reviewed_at": "2026-11-14T14:09:03.556317+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "64de7385-0dea-4f91-85ca-eff4638baa97",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2024,
+    "item_id": "ef6841d3417e",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "654a2d2e-b1a3-4cd3-80e6-380222f6a54a",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2022,
+    "item_id": "fff7da80d1d8",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -1642,6 +2526,19 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "6897b649-175a-43aa-93d2-45e68d0f60ef",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2019,
+    "item_id": "ffa0c98c9f94",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "68aff454-20c9-4666-a87e-3ef6d2899b5c",
     "type": "fact",
     "festival": "chubut",
@@ -1655,6 +2552,19 @@
     },
     "created_at": "2026-11-14T14:13:11.449352+00:00",
     "reviewed_at": "2026-11-14T14:13:11.449352+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "68f7b358-333c-4023-a2cc-52378174f291",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2024,
+    "item_id": "6fd18f7c40b1",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -1735,6 +2645,19 @@
     "created_at": "2026-11-16T18:31:17.630618+00:00",
     "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
     "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "6de1a5eb-6c2e-4566-a6b1-dcf4fc1a9604",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2009,
+    "item_id": "c83d074b6770",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
   },
   {
     "id": "6e43a8d5-0ac1-4b36-843a-e8ca15b26388",
@@ -1870,6 +2793,32 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "71b40a30-e929-41f6-ab09-686b7d67ab89",
+    "type": "tag",
+    "festival": "juventud",
+    "year": 2016,
+    "item_id": "8b5ed0f99136",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "720144fc-a771-44ba-a9de-a42dbbe96eb3",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2022,
+    "item_id": "3f3b4a6b1b64",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "723d95d2-bc63-4bae-8928-b111fc39b420",
     "type": "fact",
     "festival": "trevelin",
@@ -1883,6 +2832,19 @@
     },
     "created_at": "2026-11-14T14:09:42.05194+00:00",
     "reviewed_at": "2026-11-14T14:09:42.05194+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "725d58e4-9144-4136-b48a-8a0decc53d97",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2022,
+    "item_id": "5b5249ee9236",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -1914,6 +2876,19 @@
     },
     "created_at": "2026-11-14T14:09:27.52225+00:00",
     "reviewed_at": "2026-11-14T14:09:27.52225+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "727b1f0a-9ce4-40a2-8053-645d11ee084c",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2021,
+    "item_id": "8fc23391a7f3",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -1993,6 +2968,45 @@
     "created_at": "2026-11-16T18:31:17.630618+00:00",
     "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
     "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "7555c589-5be7-42ce-9764-b7c507cfbb27",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 1981,
+    "item_id": "88833f04f52d",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "758d90b6-98f3-4218-81e4-abed6dd31966",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2026,
+    "item_id": "86ae75caba4b",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "76bb59ca-9275-4d6e-8d37-05c0c6f86562",
+    "type": "tag",
+    "festival": "juventud",
+    "year": 2021,
+    "item_id": "649a788c55fd",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
   },
   {
     "id": "774f7e16-a996-4ce8-8ad7-ff2ccef9e054",
@@ -2075,6 +3089,19 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "7a58d37a-397b-47fc-8a72-df04a649a300",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2022,
+    "item_id": "1a3ec7ff439f",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "7a85e964-f027-402d-ac80-02ec8c78abad",
     "type": "fact",
     "festival": "chubut",
@@ -2118,6 +3145,19 @@
     "created_at": "2026-11-16T18:31:17.630618+00:00",
     "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
     "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "7c11bb15-6334-4be6-abf2-848453572d84",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2011,
+    "item_id": "5ccb3acfc092",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
   },
   {
     "id": "7c1d5ce4-6e9b-461d-a512-002235b1605b",
@@ -2184,6 +3224,19 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "7ec27c77-746d-4b53-a971-2d15f49ccb89",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2024,
+    "item_id": "48034b666bd1",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "7f706274-643f-45ac-83ec-e7189832fcdb",
     "type": "fact",
     "festival": "chubut",
@@ -2215,6 +3268,45 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "825670c1-8a47-4abd-b88f-6d386a242e3d",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2026,
+    "item_id": "7c98725ade18",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "82fce5c7-767a-42f2-95d3-281836814526",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 1990,
+    "item_id": "7c7c684ff0ec",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "83148a40-a65a-4238-a3ad-b67fdbf4cc67",
+    "type": "tag",
+    "festival": "juventud",
+    "year": 2025,
+    "item_id": "ac0c159d7e13",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "851e83c5-1d25-4af2-b53d-0fc2d741b5b2",
     "type": "fact",
     "festival": "chubut",
@@ -2228,6 +3320,32 @@
     "created_at": "2026-11-16T18:31:17.630618+00:00",
     "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
     "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "8520f8cf-12c1-4d38-b03e-3c4d10ee4d55",
+    "type": "tag",
+    "festival": "mimosa",
+    "year": 2026,
+    "item_id": "31b995e60646",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "862d9405-ae0c-44eb-91df-c6f5e45a7e91",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2021,
+    "item_id": "feeddf29d484",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
   },
   {
     "id": "86840ea4-11d4-4d56-9ce2-50f230cf378e",
@@ -2257,6 +3375,19 @@
     "created_at": "2026-11-14T10:40:11.081166+00:00",
     "reviewed_at": "2026-11-14T10:41:30.524374+00:00",
     "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "87457c84-6d68-4fe5-9c77-1c730b1778ee",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2022,
+    "item_id": "0f98dad28228",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
   },
   {
     "id": "874e0c68-1963-4fc1-8191-7d86d48e31bf",
@@ -2302,6 +3433,32 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "8a1b417c-25bd-4042-ba91-67178687dc3b",
+    "type": "tag",
+    "festival": "juventud",
+    "year": 2025,
+    "item_id": "051c5bcb342f",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "8acb0819-e906-44d0-a67e-06ddb66c7d77",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 1993,
+    "item_id": "f3fe4a6a82a6",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "8be26600-6012-48c9-8a26-222fbfd4905c",
     "type": "tag",
     "festival": "chubut",
@@ -2330,6 +3487,32 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "8cc72f91-ae82-4f74-a884-3c9c13a182a6",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2007,
+    "item_id": "962781ef2586",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "8e5eb8d0-980f-4a55-9797-fd7e13ded071",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2022,
+    "item_id": "20ef02c7a581",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "8f1484ff-75dd-4a7b-a262-9e0d3b6ce9ca",
     "type": "tag",
     "festival": "chubut",
@@ -2340,6 +3523,19 @@
     },
     "created_at": "2026-11-13T21:17:23.37003+00:00",
     "reviewed_at": "2026-11-13T21:17:35.270539+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "8f23458e-ed8e-42c2-b748-e62d5f6a3b88",
+    "type": "tag",
+    "festival": "juventud",
+    "year": 2008,
+    "item_id": "3dd10fbb9451",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -2359,6 +3555,19 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "8f6c4156-413a-4328-867b-a2d9136c3295",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2022,
+    "item_id": "e49c26c600a8",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "8fb27ff2-69fd-49b8-9d2c-fb1e94a4a11d",
     "type": "fact",
     "festival": "chubut",
@@ -2374,6 +3583,19 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "8fd11535-68c3-4f82-bc63-aca46e78f349",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2023,
+    "item_id": "88266fdf6227",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "900327ed-dc7b-4f59-b982-7f9eae6d6c52",
     "type": "fact",
     "festival": "chubut",
@@ -2387,6 +3609,19 @@
     },
     "created_at": "2026-11-14T14:09:09.603838+00:00",
     "reviewed_at": "2026-11-14T14:09:09.603838+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "90151f46-2788-436a-b697-a713c7cde6f2",
+    "type": "tag",
+    "festival": "juventud",
+    "year": 2021,
+    "item_id": "4682009e7a35",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -2452,6 +3687,19 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "92574ea4-23cc-4286-8e67-56b88c08d8f7",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2021,
+    "item_id": "703ca09286de",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "9287201c-8e98-4438-8855-379ce5b9e29b",
     "type": "fact",
     "festival": "chubut",
@@ -2483,6 +3731,19 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "93172658-9177-4290-9ce9-aa56f5b66d04",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2008,
+    "item_id": "04983e6660f9",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "9381b5f8-0e7f-4ab3-9c3f-14c5c35098bb",
     "type": "fact",
     "festival": "chubut",
@@ -2496,6 +3757,32 @@
     "created_at": "2026-11-16T18:31:17.630618+00:00",
     "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
     "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "944dffa7-5894-4c7a-a2ae-adb17ed2ae79",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2020,
+    "item_id": "721a64b39277",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "9537e777-c7e8-4d68-8628-3132865e7e89",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2026,
+    "item_id": "0198ef7a4043",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
   },
   {
     "id": "953fc9eb-194d-4986-87a6-1bb4cc694945",
@@ -2526,6 +3813,19 @@
     },
     "created_at": "2026-11-14T14:09:01.351788+00:00",
     "reviewed_at": "2026-11-14T14:09:01.351788+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "9618e2c9-0c29-447c-baec-8c0b398fdb35",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2024,
+    "item_id": "bba248ede02a",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -2591,6 +3891,32 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "9878d723-155c-4dd5-a4e5-741aa05c7d3e",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2021,
+    "item_id": "7aebd295db52",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "98c3ecad-0def-4213-bb04-8a6a61e049f9",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2022,
+    "item_id": "ddff653c3d6a",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "98d0b99f-dc9a-4ad3-8244-8072fe0e792e",
     "type": "fact",
     "festival": "chubut",
@@ -2604,6 +3930,19 @@
     "created_at": "2026-11-16T18:31:17.630618+00:00",
     "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
     "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "99473a40-baa6-4594-b725-d1f59b08c6dd",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2020,
+    "item_id": "6e4e9eeff5b0",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
   },
   {
     "id": "9998bf72-0fe6-4061-90de-dbffaf346239",
@@ -2637,6 +3976,32 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "9ad5e62b-f7b0-48ab-a67f-7c9a253d2a1d",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2021,
+    "item_id": "01fa2ffcb9ab",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "9aeb3dbc-82c3-49bb-a700-8647443c21fb",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2025,
+    "item_id": "ab429766e278",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "9b023cbe-4127-4f60-b316-57ccfaca2256",
     "type": "fact",
     "festival": "chubut",
@@ -2650,6 +4015,32 @@
     "created_at": "2026-11-16T18:31:17.630618+00:00",
     "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
     "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "9bbfaf19-b854-44d7-ab7d-2d31788998b4",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2022,
+    "item_id": "381bf21a3b01",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "9c7d673a-a5b4-44dd-9e65-c0c3e7e682ff",
+    "type": "tag",
+    "festival": "trevelin",
+    "year": 2021,
+    "item_id": "781736fad120",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
   },
   {
     "id": "9cbc9307-4cc3-425e-a253-819133b369d9",
@@ -2743,6 +4134,19 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "9ee06714-a316-4917-8328-6dce46a08cd8",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 1995,
+    "item_id": "cff50bb5d037",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "9f479715-74d5-4af9-a173-ed21979e5c56",
     "type": "fact",
     "festival": "chubut",
@@ -2770,6 +4174,32 @@
     },
     "created_at": "2026-11-14T13:18:54.177979+00:00",
     "reviewed_at": "2026-11-14T13:20:45.767279+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "a09548eb-335f-4ae7-bd07-e87818db742d",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2022,
+    "item_id": "7af01248b701",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "a11bd96e-8051-4e27-bf78-70c4f74ade84",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 1986,
+    "item_id": "ec13aef9e9c9",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -2835,6 +4265,32 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "a2c2def9-08db-4f7c-b99b-0e6344334015",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 1982,
+    "item_id": "7fcd935aaabb",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "a382a6db-917c-41fc-bace-958b1bc225ef",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2021,
+    "item_id": "c35ebcee921b",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "a3b893d0-ff7f-4667-a50b-1a9b8c8d1823",
     "type": "fact",
     "festival": "chubut",
@@ -2882,6 +4338,19 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "a5e1cbad-44c4-4c9b-888d-239dad83f9ea",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2012,
+    "item_id": "14addb76bebc",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "a67f77bb-1580-4965-a49d-2449802f2906",
     "type": "fact",
     "festival": "juventud",
@@ -2912,6 +4381,19 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "a6c09bdc-36af-41d0-aa02-6dfc0d04f4ea",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2021,
+    "item_id": "8bfccf9d3659",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "a857cccc-b85a-410a-a815-e036fcad5fce",
     "type": "fact",
     "festival": "chubut",
@@ -2925,6 +4407,32 @@
     },
     "created_at": "2026-11-14T14:09:26.161063+00:00",
     "reviewed_at": "2026-11-14T14:09:26.161063+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "a926c6a7-b50d-4dad-a1f3-6a5f29e29d5b",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2022,
+    "item_id": "f633469e0a50",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "a95a66c2-32ef-41f2-813b-ac2128d11fee",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2022,
+    "item_id": "94ef5fc89c1c",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -3065,6 +4573,19 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "b04c9243-10e1-47a8-927b-8fc409ecef57",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 1975,
+    "item_id": "217f4a984b42",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "b1d313fc-b309-4c6f-b1c4-f8242aa67371",
     "type": "fact",
     "festival": "chubut",
@@ -3078,6 +4599,19 @@
     "created_at": "2026-11-16T18:31:17.630618+00:00",
     "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
     "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "b22e49e2-ee96-4a0a-a209-6ad0b5f567d1",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2008,
+    "item_id": "1261ec8eb5c1",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
   },
   {
     "id": "b49c6b8b-7fa5-4408-ac71-1abe9e128eb4",
@@ -3155,6 +4689,45 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "b8ad70a0-2ec5-4405-9f4f-1169a8a8f92c",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2021,
+    "item_id": "02e889601b55",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "b8b767b4-955d-4106-bc73-24cb667a96b3",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 1984,
+    "item_id": "e8f47bb7e17e",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "b8f87a0f-f229-477d-8a57-903ffc7a8ac3",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2023,
+    "item_id": "4729e23fb541",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "b95955a4-1743-4560-aee3-b4c6da95ec90",
     "type": "tag",
     "festival": "chubut",
@@ -3181,6 +4754,19 @@
     },
     "created_at": "2026-11-17T11:06:25.263276+00:00",
     "reviewed_at": "2026-11-17T11:06:25.263276+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "b9dc38a0-784c-4dd8-b7dc-152395503d87",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2021,
+    "item_id": "2f2da6ec4d69",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -3212,6 +4798,19 @@
     },
     "created_at": "2026-11-13T21:14:13.827031+00:00",
     "reviewed_at": "2026-11-13T21:14:41.194531+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "badb751a-22c0-4ff4-b8ee-360876be0794",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2021,
+    "item_id": "71cee44374a2",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -3275,6 +4874,19 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "bcfa18cb-8d9c-4890-9da7-f914c050fe9c",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2003,
+    "item_id": "70f6aba9613f",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "bd02d419-d74e-4a53-82f1-b0a6014a982f",
     "type": "fact",
     "festival": "trevelin",
@@ -3288,6 +4900,32 @@
     },
     "created_at": "2026-11-14T14:09:30.248472+00:00",
     "reviewed_at": "2026-11-14T14:09:30.248472+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "bd202cfd-e326-4a35-87a0-a9e9b19fe5cb",
+    "type": "tag",
+    "festival": "juventud",
+    "year": 2008,
+    "item_id": "2bfff38ba18f",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "bd2f769e-e6d9-48d7-af8b-9960bf102445",
+    "type": "tag",
+    "festival": "juventud",
+    "year": 1985,
+    "item_id": "121a08444512",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -3381,6 +5019,19 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "c08f2a3e-0782-4ef5-8983-d6f5ae5959b9",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2017,
+    "item_id": "9a5febaab4a6",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "c0dde317-a0cb-4fc1-8871-40c7ed1454e6",
     "type": "fact",
     "festival": "chubut",
@@ -3433,6 +5084,19 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "c15ee2cd-19da-4a0d-a8cf-ac1814ab3d78",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2022,
+    "item_id": "b05a444e1030",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "c1da30e5-1cbd-48dc-aed3-7934bf9eb763",
     "type": "fact",
     "festival": "chubut",
@@ -3446,6 +5110,32 @@
     "created_at": "2026-11-16T18:31:17.630618+00:00",
     "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
     "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "c2f83dd2-5cb4-4ad8-ae30-624c29be7890",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2014,
+    "item_id": "b1c3b8e7f420",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "c30e9626-0b5e-4111-bc71-dda9de4ff5fb",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2021,
+    "item_id": "42212c9aa649",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
   },
   {
     "id": "c3777338-d3d3-41b3-a940-af252904b60c",
@@ -3475,6 +5165,19 @@
     },
     "created_at": "2026-11-14T14:07:27.752471+00:00",
     "reviewed_at": "2026-11-14T14:07:27.752471+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "c3e37f41-a9a6-4b41-9794-5a569dffd62c",
+    "type": "tag",
+    "festival": "juventud",
+    "year": 2024,
+    "item_id": "4ec7c3d4a1f1",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -3552,6 +5255,19 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "c541d59d-f522-494c-8310-fbaf70dcea64",
+    "type": "tag",
+    "festival": "mimosa",
+    "year": 2026,
+    "item_id": "c0192cfd95e8",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "c57e230f-10b5-4b87-a5b7-e228dc23cb84",
     "type": "upload",
     "festival": "chubut",
@@ -3588,6 +5304,71 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "c612ac81-a9d0-41e7-b26f-cee95b6e0e70",
+    "type": "tag",
+    "festival": "mimosa",
+    "year": 2019,
+    "item_id": "6e9489f921d3",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "c65a44fe-ea78-4d35-8248-b08ffe471874",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2021,
+    "item_id": "97301819c768",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "c71f2021-d909-4c4a-8426-d4c902434bbc",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2022,
+    "item_id": "bd890a5a74ed",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "c77c859d-9950-45f3-8305-82d7a0a3e078",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2021,
+    "item_id": "ef8f852d282a",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "c820553e-76cf-49c2-9dfa-f7c234ce9571",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 1886,
+    "item_id": "74ba4c04b85f",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "c8716cb5-27da-41aa-994d-d3b3258722ca",
     "type": "fact",
     "festival": "chubut",
@@ -3617,6 +5398,19 @@
     "created_at": "2026-11-16T18:31:17.630618+00:00",
     "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
     "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "c91112b7-c685-442f-a3e6-f8345a60fd61",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2022,
+    "item_id": "df8352bd3262",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
   },
   {
     "id": "c967d253-c895-4ee4-8ed9-b3263e610c56",
@@ -3663,6 +5457,58 @@
     },
     "created_at": "2026-11-15T09:43:58.977038+00:00",
     "reviewed_at": "2026-11-15T09:43:58.977038+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "cadf1fda-2458-4d2a-bf62-776e4ee98a0d",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2016,
+    "item_id": "4ee8024042c1",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "cb4b90b9-6a38-4fb8-8904-b57e75fcc8d9",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 1986,
+    "item_id": "fcb0d30de6eb",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "cb67ee58-46ca-42d7-8fee-577b59c8b7ed",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2021,
+    "item_id": "d754ef91e4b9",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "cc030887-90c7-4b16-adba-60e9a87e34df",
+    "type": "tag",
+    "festival": "juventud",
+    "year": 2025,
+    "item_id": "c63554e531c7",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -3744,6 +5590,45 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "d16a52e7-143c-4de3-81cc-93ab672c3369",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2001,
+    "item_id": "ee3a9114febe",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "d27d372b-94e9-47ab-a262-3553350f40ee",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2022,
+    "item_id": "bd0e6bb57eaa",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "d2d4eff4-2fa6-48b3-a481-c74ad00d6765",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2013,
+    "item_id": "fcaf70fb9bf4",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "d42e552e-5c60-4ec0-a9fb-f974a4d6783f",
     "type": "fact",
     "festival": "chubut",
@@ -3759,6 +5644,32 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "d46a685b-3300-42e6-87f2-5e17cbfe46e0",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2022,
+    "item_id": "a2226717b4bd",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "d493f0c6-555b-4e0f-b54c-e7cb176baed2",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2026,
+    "item_id": "7c02116f1bda",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "d57d4c3e-8346-410e-9fbb-1b1128ad64d2",
     "type": "fact",
     "festival": "chubut",
@@ -3772,6 +5683,19 @@
     },
     "created_at": "2026-11-14T14:09:18.215996+00:00",
     "reviewed_at": "2026-11-14T14:09:18.215996+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "d64ea2e0-4d2b-4ae0-9471-a22f9536b71e",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2019,
+    "item_id": "1779161a4b2f",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -3803,6 +5727,32 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "d7b6a062-ae88-46e0-85f0-be0cb6b1432d",
+    "type": "tag",
+    "festival": "juventud",
+    "year": 2008,
+    "item_id": "4897d8190b9e",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "d802ec9f-8a23-45e8-b19a-3f06ce5913cc",
+    "type": "tag",
+    "festival": "mimosa",
+    "year": 2024,
+    "item_id": "d32dd8775cf7",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "d82eeeff-59c2-452f-b16b-dc008fb011f5",
     "type": "fact",
     "festival": "chubut",
@@ -3816,6 +5766,19 @@
     },
     "created_at": "2026-11-17T11:06:25.263276+00:00",
     "reviewed_at": "2026-11-17T11:06:25.263276+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "d9797828-2a76-4e03-adb5-e5298c5b2129",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2022,
+    "item_id": "8e149d3edf31",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -3881,6 +5844,19 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "da2f9deb-4583-44c4-9140-0c8b5d5250a8",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2000,
+    "item_id": "5bebd88dc00a",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "da2fb231-a155-4926-b9e3-66392c409dae",
     "type": "fact",
     "festival": "chubut",
@@ -3929,6 +5905,19 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "ddb62d51-69aa-467f-a505-7842ae0cb14d",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2022,
+    "item_id": "c15423e9208c",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "ddb91d12-8136-4daa-9535-6639bb9ff0ca",
     "type": "fact",
     "festival": "chubut",
@@ -3944,6 +5933,19 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "ddbf8ab5-6b74-4af3-b2af-1d36c692522e",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2017,
+    "item_id": "a384f530397b",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "de3cd928-f4da-4caf-a0c7-f81b442fb53d",
     "type": "fact",
     "festival": "trevelin",
@@ -3957,6 +5959,32 @@
     },
     "created_at": "2026-11-14T14:09:46.600195+00:00",
     "reviewed_at": "2026-11-14T14:09:46.600195+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "de68fd65-4f9e-426f-b603-779334b64432",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2025,
+    "item_id": "410b27f407b4",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "de726159-f10d-445e-8d38-432a81b189a8",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2002,
+    "item_id": "95d1e8fa3a9a",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -4002,6 +6030,19 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "df665aa5-7c5b-48f3-af89-fe594597fd03",
+    "type": "tag",
+    "festival": "trevelin",
+    "year": 2011,
+    "item_id": "77145a982e8b",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "e0018614-302a-48a9-9a3a-6be5b1fbffec",
     "type": "fact",
     "festival": "trevelin",
@@ -4034,6 +6075,32 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "e12e2fa9-3667-4712-b964-66b0cd084e59",
+    "type": "tag",
+    "festival": "juventud",
+    "year": 2024,
+    "item_id": "01f5b21c4596",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "e15e99f4-604d-407a-b82b-27fc941756c2",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 1998,
+    "item_id": "3be817d4332a",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "e1841e1e-c35c-489f-b49c-bf387cc9a338",
     "type": "tag",
     "festival": "chubut",
@@ -4062,6 +6129,19 @@
     "created_at": "2026-11-16T18:31:17.630618+00:00",
     "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
     "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "e3bc7b97-b30a-40c5-84f0-6cabefe2206a",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 1988,
+    "item_id": "0a03ba28b534",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
   },
   {
     "id": "e419ab2a-99a4-4119-b075-3b88d8b7a313",
@@ -4110,6 +6190,19 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "e5c430a7-0d0c-416a-b3d6-e150486d855c",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2007,
+    "item_id": "34d35cea1cf4",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "e66e4589-9313-4918-8e93-bc0ea219342a",
     "type": "fact",
     "festival": "trevelin",
@@ -4142,6 +6235,19 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "e831e09b-545e-49c4-b60c-da5863feedd7",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 1999,
+    "item_id": "4224e265cba8",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "e85f222b-3d9e-490b-b944-cca2c4dc3871",
     "type": "fact",
     "festival": "trevelin",
@@ -4155,6 +6261,19 @@
     },
     "created_at": "2026-11-14T14:09:47.962255+00:00",
     "reviewed_at": "2026-11-14T14:09:47.962255+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "e9d49fd6-7016-468d-a535-20445503f196",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2020,
+    "item_id": "4f9af816d8e9",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -4246,6 +6365,19 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "efb733f1-758d-48cd-a21d-90983dff15b9",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2022,
+    "item_id": "ffff27806339",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "f0f42f02-2014-4b71-990f-d8e1f26c6d90",
     "type": "fact",
     "festival": "chubut",
@@ -4274,6 +6406,19 @@
     "created_at": "2026-11-16T18:31:17.630618+00:00",
     "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
     "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "f1c9ba45-8f6e-40b5-81c9-a95370b9a4ab",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2006,
+    "item_id": "6f874755712d",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
   },
   {
     "id": "f2f18bab-29bf-4193-add8-3f821eb5deda",
@@ -4334,6 +6479,19 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "f5c21a56-1828-46f2-a8df-4764912f1b5c",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2010,
+    "item_id": "d98c3c6684a6",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "f5ecea41-9661-405d-872f-68478c71ac33",
     "type": "fact",
     "festival": "chubut",
@@ -4347,6 +6505,32 @@
     },
     "created_at": "2026-11-14T14:09:01.351788+00:00",
     "reviewed_at": "2026-11-14T14:09:01.351788+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "f604fedd-308e-45eb-b6d2-19b5537fb907",
+    "type": "tag",
+    "festival": "mimosa",
+    "year": 2024,
+    "item_id": "3d7ed023d2a6",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "f66d8d63-ad31-489e-a0b6-3593bf1942e6",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2022,
+    "item_id": "d290881d8812",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -4447,6 +6631,19 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "fa9b6031-9d71-479d-bb51-da806376de29",
+    "type": "tag",
+    "festival": "mimosa",
+    "year": 2024,
+    "item_id": "9159f469215d",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "faaaa545-f156-4bd8-976a-db853ee81f00",
     "type": "fact",
     "festival": "chubut",
@@ -4475,6 +6672,19 @@
     },
     "created_at": "2026-11-17T11:06:25.263276+00:00",
     "reviewed_at": "2026-11-17T11:06:25.263276+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "fc476824-d26a-4b84-8461-1763a0f94e7f",
+    "type": "tag",
+    "festival": "juventud",
+    "year": 2025,
+    "item_id": "d733b794fbbd",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -4524,6 +6734,32 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "febc72a8-f55f-440e-ba14-9f735b6609df",
+    "type": "tag",
+    "festival": "mimosa",
+    "year": 2019,
+    "item_id": "5ba8a8bb8bbf",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "ff505ed3-73d2-49be-bf64-9c083aeefb22",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2022,
+    "item_id": "ec5f41cae903",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "ff82222f-bf63-465e-a6f8-d65360997d41",
     "type": "fact",
     "festival": "chubut",
@@ -4550,6 +6786,19 @@
     },
     "created_at": "2026-11-16T19:51:33.008471+00:00",
     "reviewed_at": "2026-11-16T19:51:33.008471+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "fffc5a8c-c3d4-4eb6-92b5-bc96630878d2",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2014,
+    "item_id": "f295abc76ff5",
+    "payload": {
+      "no_text": true
+    },
+    "created_at": "2026-11-17T13:32:44.148707+00:00",
+    "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
     "display_name": "Kevin Roberts"
   }
 ]

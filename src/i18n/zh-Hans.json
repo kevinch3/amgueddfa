@@ -198,7 +198,8 @@
     "ampliar_imagen": "放大图片",
     "imagen": "第 {n} 张图片，共 {total} 张",
     "retirado": "这份文献已从档案中撤下：它不属于巴塔哥尼亚的艺术节。",
-    "notas_titulo": "社区补充的信息"
+    "notas_titulo": "社区补充的信息",
+    "sin_texto": "此文档没有可转录的文字。"
   },
   "tabla": {
     "numero": "编号",
@@ -545,6 +546,47 @@
       "explicacion": "说明（不公开）",
       "video": "视频"
     }
+  },
+  "admin_item": {
+    "panel": "整理（管理员）",
+    "correccion": "更正此文档",
+    "correccion_ayuda": "保存后立即在网站上显示；静态页面约 15 分钟内更新。",
+    "titulo_campo": "标题",
+    "categoria": "栏目",
+    "festival": "艺术节",
+    "ano": "年份",
+    "derechos": "版权",
+    "leyenda": "公开说明",
+    "sin_texto": "无可转录文字（封面、海报、规则……）",
+    "oculto": "从列表中隐藏",
+    "guardar": "保存",
+    "guardado": "已保存：已在网站上显示。",
+    "guardado_privado": "已保存为私密：仅管理员可见。",
+    "sin_cambios": "没有需要保存的更改。",
+    "transcripcion": "文档转录",
+    "transcripcion_ayuda": "每份文档一份转录：如涉及多张图片，请全部列出。",
+    "tipo": "类型",
+    "tipo_programa": "节目单",
+    "tipo_ganadores": "获奖名单",
+    "imagenes": "文档图片",
+    "imagenes_ayuda": "12 个字符的编号；第一个为文档命名。",
+    "publica": "公开",
+    "texto": "文字",
+    "caracteres": "{n} / {max} 个字符",
+    "caracteres_cortos": "{n} 个字符",
+    "vista_previa": "预览",
+    "historial": "历史记录",
+    "op_insert": "创建",
+    "op_update": "编辑",
+    "op_delete": "删除",
+    "importado": "从档案导入",
+    "restaurar": "恢复",
+    "restaurado": "文字已在编辑器中恢复；保存后发布。",
+    "nueva": "尚无此类型的转录：将新建一份。",
+    "error_items": "有一个图片编号无效。",
+    "error_texto": "文字为空。",
+    "error_otro_documento": "其中一张图片已在同类型的另一份文档中。",
+    "error_ganadores_privados": "Mimosa 和青年艺术节的获奖名单不公开。"
   },
   "insignias": {
     "primer-aporte": {

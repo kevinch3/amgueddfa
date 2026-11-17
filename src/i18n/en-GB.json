@@ -198,7 +198,8 @@
     "ampliar_imagen": "Enlarge the image",
     "imagen": "Image {n} of {total}",
     "retirado": "This document has been withdrawn from the archive: it does not belong to the eisteddfodau of Patagonia.",
-    "notas_titulo": "Information from the community"
+    "notas_titulo": "Information from the community",
+    "sin_texto": "This document has no text to transcribe."
   },
   "tabla": {
     "numero": "No.",
@@ -545,6 +546,47 @@
       "explicacion": "Explanation (not published)",
       "video": "Video"
     }
+  },
+  "admin_item": {
+    "panel": "Curation (admin)",
+    "correccion": "Correct this document",
+    "correccion_ayuda": "Live on the site when saved; static pages update within about 15 minutes.",
+    "titulo_campo": "Title",
+    "categoria": "Section",
+    "festival": "Eisteddfod",
+    "ano": "Year",
+    "derechos": "Rights",
+    "leyenda": "Public caption",
+    "sin_texto": "No text to transcribe (cover, poster, rules…)",
+    "oculto": "Hide from lists",
+    "guardar": "Save",
+    "guardado": "Saved: it is live on the site.",
+    "guardado_privado": "Saved as private: only admins can see it.",
+    "sin_cambios": "Nothing to save.",
+    "transcripcion": "Document transcription",
+    "transcripcion_ayuda": "One transcription per document: if it spans several images, list them all.",
+    "tipo": "Kind",
+    "tipo_programa": "Programme",
+    "tipo_ganadores": "Winners",
+    "imagenes": "Images of the document",
+    "imagenes_ayuda": "12-character ids; the first one names the document.",
+    "publica": "Public",
+    "texto": "Text",
+    "caracteres": "{n} of {max} characters",
+    "caracteres_cortos": "{n} characters",
+    "vista_previa": "Preview",
+    "historial": "History",
+    "op_insert": "created",
+    "op_update": "edited",
+    "op_delete": "deleted",
+    "importado": "imported from the archive",
+    "restaurar": "Restore",
+    "restaurado": "Text restored in the editor; save to publish it.",
+    "nueva": "No transcription of this kind yet: a new one will be created.",
+    "error_items": "One of the image ids is not valid.",
+    "error_texto": "The text is empty.",
+    "error_otro_documento": "One of those images is already in another document of the same kind.",
+    "error_ganadores_privados": "Mimosa and Juventud winners are not published."
   },
   "insignias": {
     "primer-aporte": {

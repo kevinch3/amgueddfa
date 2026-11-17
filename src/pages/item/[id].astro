@@ -42,6 +42,12 @@ const trSiblings = (trDoc?.items ?? []).filter((x) => x !== item.id).map((x) => 
 const contributed = item.restricted ? [] : (approvedRaw as Contribution[]).filter((c) => c.type === 'transcription' && c.item_id === item.id);
 // Approved notes ("Agregar información") from the last export; transcripciones.ts merges live rows.
 const notes = item.restricted ? [] : (approvedRaw as Contribution[]).filter((c) => c.type === 'note' && c.item_id === item.id);
+// What an admin correction can change (src/lib/tags.ts): live-catalog.ts and admin-item.ts start from it.
+const overlayBase = {
+  id: item.id, festival: item.festival, year: item.year, undated: item.undated, category: item.category, title: item.title,
+  rights: item.rights ?? '', note_public: item.note_public ?? '', no_text: Boolean(item.no_text), hidden: Boolean(item.hidden),
+  restricted: item.restricted, year_inferred: item.year_inferred,
+};
 const retrieved = item.retrieved
   ? new Date(`${item.retrieved}T12:00:00`).toLocaleDateString(intlLocales(), { day: 'numeric', month: 'long', year: 'numeric' })
   : '';
@@ -67,6 +73,7 @@ const retrieved = item.retrieved
   </header>
 
   <p class="contrib-msg" data-retirado hidden={!item.hidden}>{t('item.retirado')}</p>
+  <script type="application/json" id="item-overlay" set:html={jsonForScript(overlayBase)}></script>
 
   <div class="item-layout">
     <div class="item-main">
@@ -103,16 +110,17 @@ const retrieved = item.retrieved
       ) : transcription ? null : (
         <p class="textcard">{t('item.sin_vista')}</p>
       )}
-      {transcription && (
-        <section class="section" aria-labelledby="transcripcion-t">
+      {!item.restricted && (
+        <section class="section" aria-labelledby="transcripcion-t" data-tr-item={item.id} data-tr-items={trDoc?.items.join(' ')} hidden={!transcription}>
           <h2 id="transcripcion-t">{t('item.transcripcion_titulo')}</h2>
           <p class="muted small">{t('item.transcripcion_ayuda')}</p>
           {trSiblings.length > 0 && (
-            <p class="small">{t('item.transcripcion_conjunta', { n: trSiblings.length + 1 })} {trSiblings.map((s, i) => <>{i > 0 && ', '}<a href={url(`item/${s!.id}/`)} lang={contentLang()}>{s!.title}</a></>)}</p>
+            <p class="small" data-tr-siblings>{t('item.transcripcion_conjunta', { n: trSiblings.length + 1 })} {trSiblings.map((s, i) => <>{i > 0 && ', '}<a href={url(`item/${s!.id}/`)} lang={contentLang()}>{s!.title}</a></>)}</p>
           )}
-          <Transcripcion text={transcription} />
+          {transcription ? <Transcripcion text={transcription} doc={trDoc!.id} /> : <div class="transcripcion" lang={contentLang()} data-doc=""></div>}
         </section>
       )}
+      {!item.restricted && <p class="muted small" data-live="no_text" hidden={!item.no_text}>{t('item.sin_texto')}</p>}
       {!item.restricted && (
         <section class="section island-section" aria-labelledby="transcripciones-t" data-transcripciones hidden={contributed.length === 0}>
           <h2 id="transcripciones-t">{t('item.transcripciones_aportes')}</h2>
@@ -135,18 +143,14 @@ const retrieved = item.retrieved
             : item.source_label}
         </p>
         {retrieved && <p class="muted small">{t('item.consultado', { fecha: retrieved })}</p>}
-        {item.rights && (
-          <>
-            <h3 class="small">{t('item.derechos')}</h3>
-            <p class="small">{item.rights}</p>
-          </>
-        )}
-        {item.note_public && (
-          <>
-            <h3 class="small">{t('item.nota')}</h3>
-            <p class="small" lang={contentLang()}>{item.note_public}</p>
-          </>
-        )}
+        <div data-live="rights" hidden={!item.rights}>
+          <h3 class="small">{t('item.derechos')}</h3>
+          <p class="small">{item.rights}</p>
+        </div>
+        <div data-live="caption" hidden={!item.note_public}>
+          <h3 class="small">{t('item.nota')}</h3>
+          <p class="small" lang={contentLang()}>{item.note_public}</p>
+        </div>
         {!item.restricted && (
           <div class="island-section notas">
             <h3 class="small">{t('item.notas_titulo')}</h3>
@@ -165,6 +169,7 @@ const retrieved = item.retrieved
           <Mount id="tarea" festival={item.festival} year={item.year} item={item.id} category={item.category} />
         </section>
       )}
+      <Mount id="admin-item" festival={item.festival} year={item.year} item={item.id} category={item.category} class="admin-item" />
     </aside>
   </div>
 </Base>
@@ -173,4 +178,6 @@ const retrieved = item.retrieved
   import '../../scripts/tarea.ts';
   import '../../scripts/liberado.ts';
   import '../../scripts/transcripciones.ts';
+  import '../../scripts/live-transcripciones.ts';
+  import '../../scripts/admin-item.ts';
 </script>

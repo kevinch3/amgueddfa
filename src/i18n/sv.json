@@ -198,7 +198,8 @@
     "ampliar_imagen": "Förstora bilden",
     "imagen": "Bild {n} av {total}",
     "retirado": "Det här dokumentet har tagits bort ur arkivet: det hör inte till Patagoniens eisteddfodau.",
-    "notas_titulo": "Uppgifter från gemenskapen"
+    "notas_titulo": "Uppgifter från gemenskapen",
+    "sin_texto": "Det här dokumentet har ingen text att transkribera."
   },
   "tabla": {
     "numero": "Nr",
@@ -545,6 +546,47 @@
       "explicacion": "Förklaring (publiceras inte)",
       "video": "Video"
     }
+  },
+  "admin_item": {
+    "panel": "Kurering (administration)",
+    "correccion": "Rätta det här dokumentet",
+    "correccion_ayuda": "Syns på webbplatsen när du sparar; de statiska sidorna uppdateras inom cirka 15 minuter.",
+    "titulo_campo": "Titel",
+    "categoria": "Avsnitt",
+    "festival": "Eisteddfod",
+    "ano": "År",
+    "derechos": "Rättigheter",
+    "leyenda": "Offentlig bildtext",
+    "sin_texto": "Ingen text att transkribera (omslag, affisch, regler…)",
+    "oculto": "Dölj i listorna",
+    "guardar": "Spara",
+    "guardado": "Sparat: det syns på webbplatsen.",
+    "guardado_privado": "Sparat som privat: bara administratörer ser det.",
+    "sin_cambios": "Inga ändringar att spara.",
+    "transcripcion": "Dokumentets transkription",
+    "transcripcion_ayuda": "En transkription per dokument: om det omfattar flera bilder, ange alla.",
+    "tipo": "Typ",
+    "tipo_programa": "Program",
+    "tipo_ganadores": "Vinnare",
+    "imagenes": "Dokumentets bilder",
+    "imagenes_ayuda": "Id:n på 12 tecken; det första ger dokumentet dess namn.",
+    "publica": "Offentlig",
+    "texto": "Text",
+    "caracteres": "{n} av {max} tecken",
+    "caracteres_cortos": "{n} tecken",
+    "vista_previa": "Förhandsvisning",
+    "historial": "Historik",
+    "op_insert": "skapad",
+    "op_update": "redigerad",
+    "op_delete": "borttagen",
+    "importado": "importerad från arkivet",
+    "restaurar": "Återställ",
+    "restaurado": "Texten är återställd i redigeraren; spara för att publicera den.",
+    "nueva": "Ingen transkription av den här typen ännu: en ny skapas.",
+    "error_items": "Ett av bild-id:na är ogiltigt.",
+    "error_texto": "Texten är tom.",
+    "error_otro_documento": "En av bilderna finns redan i ett annat dokument av samma typ.",
+    "error_ganadores_privados": "Vinnarna i Mimosa och Juventud publiceras inte."
   },
   "insignias": {
     "primer-aporte": {

@@ -193,6 +193,7 @@
     "texto": "文献文本",
     "transcripcion_titulo": "转录",
     "transcripcion_ayuda": "节目单中的比赛项目和评委，保留原语言。规章和说明未收录。",
+    "transcripcion_conjunta": "此转录涵盖该文件的全部 {n} 张图片。其他图片：",
     "transcripciones_aportes": "贡献者转录",
     "ampliar_imagen": "放大图片",
     "imagen": "第 {n} 张图片，共 {total} 张",

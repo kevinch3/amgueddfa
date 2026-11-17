@@ -11,11 +11,12 @@ import type { FestivalSlug } from './types';
 /** Festivals whose winners are public. */
 export const PUBLIC_WINNERS: readonly FestivalSlug[] = ['chubut', 'trevelin'];
 
+import { indexDocs, type DocText } from './docmd';
+
 const FILES = import.meta.glob('../data/ganadores/*.md', { query: '?raw', import: 'default', eager: true }) as Record<string, string>;
 
-const BY_ID = new Map<string, string>(
-  Object.entries(FILES).map(([path, text]) => [path.split('/').pop()!.replace(/\.md$/, ''), text]),
-);
+// One file per document; a list spanning several result images names them in front matter (lib/docmd.ts).
+const { byMember: BY_ID } = indexDocs(FILES);
 
 /** Ids of the result documents that have a published winners list. */
 export function winnerIds(): string[] {
@@ -23,5 +24,9 @@ export function winnerIds(): string[] {
 }
 
 export function winnersFor(id: string): string | null {
+  return BY_ID.get(id)?.text ?? null;
+}
+
+export function winnersDoc(id: string): DocText | null {
   return BY_ID.get(id) ?? null;
 }

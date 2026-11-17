@@ -193,6 +193,7 @@
     "texto": "Testo del documento",
     "transcripcion_titulo": "Trascrizione",
     "transcripcion_ayuda": "Gare e giurati del programma, nella lingua originale. Sono stati esclusi i regolamenti e le note.",
+    "transcripcion_conjunta": "Questa trascrizione copre le {n} immagini del documento. Le altre:",
     "transcripciones_aportes": "Trascrizioni dei collaboratori",
     "ampliar_imagen": "Ingrandisci l'immagine",
     "imagen": "Immagine {n} di {total}",

@@ -5,8 +5,9 @@ import ItemCard from '../../components/ItemCard.astro';
 import Mount from '../../components/Mount.astro';
 import VideoList from '../../components/VideoList.astro';
 import Transcripcion from '../../components/Transcripcion.astro';
-import { transcriptionFor } from '../../lib/transcripciones';
-import { PUBLIC_WINNERS, winnersFor } from '../../lib/ganadores';
+import { transcriptionDoc } from '../../lib/transcripciones';
+import { PUBLIC_WINNERS, winnersDoc } from '../../lib/ganadores';
+import type { DocText } from '../../lib/docmd';
 import { editionCatalogState, editionCover, editionItems, editionState, festivals, yearRange } from '../../lib/catalog';
 import { contentLang, formatList, intlLocales, t, tAround } from '../../lib/i18n';
 import { url } from '../../lib/paths';
@@ -77,11 +78,19 @@ const seoDescription = editionDescription(fest.name, year, state, known, list.le
 const seoLd = editionJsonLd({ name: fest.name, year, url: absUrl(url(`${slug}/${year}/`)), image: cover ? absUrl(cover.page) : null, facts: known });
 // Standardized transcriptions, folded under their own section (programa, programa del día),
 // and approved contributor transcriptions under Programa (edicion.ts merges live rows).
-const transcribedIn = (c: string) => list.filter((i) => i.category === c && !i.restricted).sort(byTitle)
-  .map((i) => ({ item: i, text: transcriptionFor(i.id) })).filter((x): x is { item: typeof x.item; text: string } => x.text !== null);
+// A document spanning several images is listed once, under its first image's title.
+const onePerDoc = (items: typeof list, docOf: (id: string) => DocText | null) => {
+  const seen = new Set<string>();
+  return items.sort(byTitle).flatMap((i) => {
+    const d = docOf(i.id);
+    if (!d || seen.has(d.id)) return [];
+    seen.add(d.id);
+    return [{ item: i, text: d.text, images: d.items.length }];
+  });
+};
+const transcribedIn = (c: string) => onePerDoc(list.filter((i) => i.category === c && !i.restricted), transcriptionDoc);
 // Published winners (Chubut, Trevelin): folded under Resultados; the documents stay restricted.
-const winners = PUBLIC_WINNERS.includes(slug) ? list.filter((i) => i.category === 'resultados').sort(byTitle)
-  .map((i) => ({ item: i, text: winnersFor(i.id) })).filter((x): x is { item: typeof x.item; text: string } => x.text !== null) : [];
+const winners = PUBLIC_WINNERS.includes(slug) ? onePerDoc(list.filter((i) => i.category === 'resultados'), winnersDoc) : [];
 const itemTitles = Object.fromEntries(list.filter((i) => !i.restricted).map((i) => [i.id, i.title]));
 const contributedTr = forEdition(approved, slug, year, 'transcription').filter((c) => c.item_id && itemTitles[c.item_id]);
 const contribUrl = (tab: string) => url(`contribuir?f=${slug}&y=${year}&tab=${tab}`);

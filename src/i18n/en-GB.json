@@ -193,6 +193,7 @@
     "texto": "Text of the document",
     "transcripcion_titulo": "Transcription",
     "transcripcion_ayuda": "Competitions and adjudicators from the programme, in the original language. Rules and notes have been left out.",
+    "transcripcion_conjunta": "This transcription covers all {n} images of the document. The others:",
     "transcripciones_aportes": "Contributors' transcriptions",
     "ampliar_imagen": "Enlarge the image",
     "imagen": "Image {n} of {total}",

@@ -193,6 +193,7 @@
     "texto": "Testun y ddogfen",
     "transcripcion_titulo": "Trawsgrifiad",
     "transcripcion_ayuda": "Cystadlaethau a beirniaid y rhaglen, yn yr iaith wreiddiol. Gadawyd y rheolau a'r esboniadau allan.",
+    "transcripcion_conjunta": "Mae’r trawsgrifiad hwn yn cynnwys {n} delwedd y ddogfen. Y lleill:",
     "transcripciones_aportes": "Trawsgrifiadau gan gyfranwyr",
     "ampliar_imagen": "Chwyddo'r ddelwedd",
     "imagen": "Delwedd {n} o {total}",

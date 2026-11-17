@@ -5,7 +5,7 @@ import Viewer from '../../components/Viewer.astro';
 import Transcripcion from '../../components/Transcripcion.astro';
 import approvedRaw from '../../../data/approved/contributions.json';
 import { byLine, jsonForScript, type Contribution } from '../../lib/contrib';
-import { transcriptionFor } from '../../lib/transcripciones';
+import { transcriptionDoc } from '../../lib/transcripciones';
 import { allItems, pageUrls, thumbUrl } from '../../lib/catalog';
 import { absUrl, itemJsonLd } from '../../lib/seo';
 import { contentLang, intlLocales, t } from '../../lib/i18n';
@@ -34,7 +34,11 @@ const jsonLd = item.restricted ? null : itemJsonLd({
   editionName: item.year ? `${fest} ${item.year}` : null, year: item.year,
 });
 // Standardized transcription (committed) and approved contributor transcriptions (last export; transcripciones.ts merges live rows).
-const transcription = item.restricted ? null : transcriptionFor(item.id);
+const trDoc = item.restricted ? null : transcriptionDoc(item.id);
+const transcription = trDoc?.text ?? null;
+// A transcription shared by several images of one document: link the other images.
+const byIdAll = new Map(allItems().map((i) => [i.id, i] as const));
+const trSiblings = (trDoc?.items ?? []).filter((x) => x !== item.id).map((x) => byIdAll.get(x)).filter((x) => x && !x.restricted);
 const contributed = item.restricted ? [] : (approvedRaw as Contribution[]).filter((c) => c.type === 'transcription' && c.item_id === item.id);
 // Approved notes ("Agregar información") from the last export; transcripciones.ts merges live rows.
 const notes = item.restricted ? [] : (approvedRaw as Contribution[]).filter((c) => c.type === 'note' && c.item_id === item.id);
@@ -103,6 +107,9 @@ const retrieved = item.retrieved
         <section class="section" aria-labelledby="transcripcion-t">
           <h2 id="transcripcion-t">{t('item.transcripcion_titulo')}</h2>
           <p class="muted small">{t('item.transcripcion_ayuda')}</p>
+          {trSiblings.length > 0 && (
+            <p class="small">{t('item.transcripcion_conjunta', { n: trSiblings.length + 1 })} {trSiblings.map((s, i) => <>{i > 0 && ', '}<a href={url(`item/${s!.id}/`)} lang={contentLang()}>{s!.title}</a></>)}</p>
+          )}
           <Transcripcion text={transcription} />
         </section>
       )}

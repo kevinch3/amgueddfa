@@ -193,6 +193,7 @@
     "texto": "Dokumentets text",
     "transcripcion_titulo": "Transkription",
     "transcripcion_ayuda": "Programmets tävlingar och domare, på originalspråket. Reglementen och förklaringar har utelämnats.",
+    "transcripcion_conjunta": "Den här transkriptionen omfattar dokumentets {n} bilder. De andra:",
     "transcripciones_aportes": "Transkriptioner från bidragsgivare",
     "ampliar_imagen": "Förstora bilden",
     "imagen": "Bild {n} av {total}",

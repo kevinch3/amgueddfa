@@ -10,8 +10,8 @@ import { decades } from '../src/lib/timeline';
 import { applyVideoReports, type Video } from '../src/lib/videos';
 import { editionVideos } from '../src/lib/videos-data';
 import videosData from '../src/data/videos.json';
-import { transcribedIds } from '../src/lib/transcripciones';
-import { PUBLIC_WINNERS, winnerIds } from '../src/lib/ganadores';
+import { transcribedIds, transcriptionDoc } from '../src/lib/transcripciones';
+import { PUBLIC_WINNERS, winnerIds, winnersDoc } from '../src/lib/ganadores';
 import { applyTags } from '../src/lib/tags';
 import type { FestivalSlug, Item } from '../src/lib/types';
 import { MEDIA_BASE } from '../src/lib/paths';
@@ -404,6 +404,8 @@ describe('static build', () => {
       const page = read(`item/${id}/index.html`);
       expect(page).toContain('id="transcripcion-t"');
       expect(page).toContain('class="tr-lista"');
+      // Every image of a multi-image document links the others.
+      if (transcriptionDoc(id)!.items.length > 1) expect(page, id).toContain('Esta transcripción abarca');
       if (item!.year) expect(read(`${item!.festival}/${item!.year}/index.html`)).toContain(`href="/item/${id}/"`);
       if (item!.year) expect(read(`${item!.festival}/${item!.year}/index.html`)).toContain('class="tr-detalle"');
     }
@@ -421,7 +423,9 @@ describe('static build', () => {
       expect(PUBLIC_WINNERS, id).toContain(item!.festival);
       const page = read(`${item!.festival}/${item!.year}/index.html`);
       expect(page, id).toContain('class="transcripciones ganadores"');
-      expect(page, id).toContain(`Ganadores: ${item!.title}`);
+      // One list per document, under one of its images' titles.
+      const titles = winnersDoc(id)!.items.map((m) => catalog.find((i) => i.id === m)!.title);
+      expect(titles.some((t) => page.includes(`Ganadores: ${t}`)), id).toBe(true);
       // The document itself stays restricted.
       expect(read(`item/${id}/index.html`), id).not.toContain(`media/${id}`);
     }

@@ -1,15 +1,16 @@
 /**
- * Standardized programa transcriptions, one file per catalog item:
- * src/data/transcripciones/<item id>.md. Only competitions (by discipline and
+ * Standardized programa transcriptions, one file per document:
+ * src/data/transcripciones/<first item id>.md, listing the document's other
+ * images in front matter (lib/docmd.ts). Only competitions (by discipline and
  * age group) and jurados; rules, disclaimers, schedules and sponsors are left
  * out. The format is described in .claude/skills/programa-transcription/SKILL.md.
  */
 
+import { indexDocs, type DocText } from './docmd';
+
 const FILES = import.meta.glob('../data/transcripciones/*.md', { query: '?raw', import: 'default', eager: true }) as Record<string, string>;
 
-const BY_ID = new Map<string, string>(
-  Object.entries(FILES).map(([path, text]) => [path.split('/').pop()!.replace(/\.md$/, ''), text]),
-);
+const { byMember: BY_ID } = indexDocs(FILES);
 
 export type Block =
   | { type: 'section'; text: string }
@@ -17,12 +18,17 @@ export type Block =
   | { type: 'item'; n: string | null; text: string }
   | { type: 'text'; text: string };
 
-/** Ids of the catalog items that have a transcription. */
+/** Ids of the catalog items that have a transcription (every image of a document). */
 export function transcribedIds(): string[] {
   return [...BY_ID.keys()].sort();
 }
 
 export function transcriptionFor(id: string): string | null {
+  return BY_ID.get(id)?.text ?? null;
+}
+
+/** The whole document an item belongs to: its text and every item it covers. */
+export function transcriptionDoc(id: string): DocText | null {
   return BY_ID.get(id) ?? null;
 }
 

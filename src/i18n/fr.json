@@ -193,6 +193,7 @@
     "texto": "Texte du document",
     "transcripcion_titulo": "Transcription",
     "transcripcion_ayuda": "Concours et jurés du programme, dans la langue d'origine. Les règlements et les précisions ont été laissés de côté.",
+    "transcripcion_conjunta": "Cette transcription couvre les {n} images du document. Les autres :",
     "transcripciones_aportes": "Transcriptions des contributeurs",
     "ampliar_imagen": "Agrandir l'image",
     "imagen": "Image {n} sur {total}",

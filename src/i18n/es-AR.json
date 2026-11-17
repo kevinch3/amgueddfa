@@ -193,6 +193,7 @@
     "texto": "Texto del documento",
     "transcripcion_titulo": "Transcripción",
     "transcripcion_ayuda": "Competencias y jurados del programa, en el idioma original. Se dejaron afuera los reglamentos y las aclaraciones.",
+    "transcripcion_conjunta": "Esta transcripción abarca las {n} imágenes del documento. Las otras:",
     "transcripciones_aportes": "Transcripciones de colaboradores",
     "ampliar_imagen": "Ampliar la imagen",
     "imagen": "Imagen {n} de {total}",

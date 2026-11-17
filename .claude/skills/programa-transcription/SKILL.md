@@ -12,9 +12,9 @@ description: Use when transcribing an Eisteddfod programa (list of competitions)
 | Programa (category `programa`) | `src/data/transcripciones/<item id>.md` (committed) | yes: item page in full, edition page folded under Programa |
 | Ganadores / resultados | `../.transcripciones/ganadores/<item id>.md` (archive, never committed) | **no**: the master copy of every winners list |
 | Ganadores of Chubut and Trevelin | also copied to `src/data/ganadores/<item id>.md` (committed) | yes: folded under Resultados on the edition page; the result document stays restricted. Mimosa and Juventud stay private (user decision 2026-11-14: whole festivals only) |
-| Visitors' "Transcribir" task | `contributions` (type `transcription`, max 5000 chars) | shown live with the contributor's name next to ours |
+| Visitors' "Transcribir" task | `contributions` (type `transcription`, max 15000 chars) | shown live with the contributor's name next to ours |
 
-`<item id>` is the catalog id (`src/data/catalog.json`), never a file name. Never transcribe a
+`<item id>` is the catalog id (`src/data/catalog.json`) of the document's first item, never a file name. Never transcribe a
 restricted item into the committed folder (the build test fails).
 
 ## The standard (what goes in, what stays out)
@@ -34,8 +34,16 @@ Keep only what identifies each competition, plus the jurados:
   title and author appear once if identical.
 - **Order:** competitions and headings in printed order; never regroup or renumber.
 - **Normalise:** titles in «», `N.` numbering exactly as printed (`12a.` allowed), sentence
-  case for headings, fix obvious typos and OCR errors, names spelled as the site unifies
-  them (Owen Tudur Jones, Geraldine Mac Burney, Lois Medi Wiliam).
+  case for headings, fix obvious typos and OCR errors in titles and wording.
+- **People's names stay as printed** (authors, composers, arrangers, jurados, winners,
+  seudónimos), even when misspelt or incomplete: "Irma" stays "Irma", "Selwyn Griffiths" stays.
+  A correction or identification goes in a closing notes block, never in the line itself
+  (user decision 2026-11-17):
+
+  ```
+  ## Notas · Nodiadau
+  - Comp. 12: impreso «Selwyn Griffiths»; probablemente Selwyn Griffith.
+  ```
 - **Illegible:** `[ilegible]`; a page that is missing: `[falta la página N]` as a text line.
 
 ## Format (parsed by `src/lib/transcripciones.ts`)
@@ -104,9 +112,22 @@ When a scanned programa and a competition-list table (`kind: table`) hold the sa
 the transcription goes on the scan (it has no text of its own; the table item shows its table).
 Non-competition images (covers, posters, schedules, session announcements, rules slides) get no file.
 
-Several catalog items can be parts of one programa (Literatura, Música… as separate PDFs):
-transcribe each item into its own file. A PDF that holds Chubut + Juventud goes under its
-own item id with both festivals' competitions in it.
+**One file per document.** A programa, programa del día or winners list split over several
+catalog items (pages photographed one by one, Facebook posts of one list, sections as separate
+PDFs of the same printed programa) gets ONE file, named after its first item in reading order,
+with front matter listing every item it covers (`src/lib/docmd.ts`):
+
+```
+---
+items: 58897881813d 74ba4c04b85f
+---
+## Literatura · Llenyddiaeth
+```
+
+Every listed item shows the same text (with links to the others) and the edition page lists the
+document once. An item can belong to only one file (the build fails otherwise). Keep really
+different documents apart (a draft and the final version). A PDF that holds Chubut + Juventud goes
+under its own item id with both festivals' competitions in it.
 
 ## Check and publish
 

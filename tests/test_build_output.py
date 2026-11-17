@@ -64,9 +64,11 @@ def test_web_excerpts_have_no_comment_sections(items):
                 assert m not in low, (i["id"], m)
 
 
-def test_only_facebook_notes_published(items):
+def test_only_source_captions_published(items):
+    # A Facebook post's text, or the holder's own caption on a credited item
+    # (People's Collection Wales); never an internal working note.
     for i in items:
-        if i["source_label"] != "Facebook":
+        if i["source_label"] != "Facebook" and not i.get("rights"):
             assert i["note_public"] == "", i["id"]
 
 

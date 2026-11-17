@@ -23,6 +23,8 @@ export interface Item {
   source_label: string;
   retrieved: string;
   note_public: string;
+  /** Credit and licence line of a third-party holder (e.g. a platform item); empty for most items. */
+  rights?: string;
   year_inferred: boolean;
   restricted: boolean;
   /** Set by an approved "no corresponde" report: off every list, page kept with a notice. */

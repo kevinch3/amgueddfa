@@ -19,6 +19,7 @@ export function GET(): Response {
       paginas: pageUrls(i).map(absUrl),
       fuente: i.source_label || null,
       fuente_url: i.source_url,
+      derechos: i.rights || null,
     };
   });
   const body = { sitio: absUrl('/'), descripcion: 'Documentos públicos del archivo (programas, bases, resultados y otros papeles de los Eisteddfodau de la Patagonia).', generado: new Date().toISOString(), documentos };

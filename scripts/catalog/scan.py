@@ -27,6 +27,11 @@ KINDS = {
     "html": "web", "htm": "web",
     "csv": "table",
 }
+# Collection platforms credited by name, like Facebook: the item keeps its own link.
+PLATFORMS = {
+    "casgliadywerin.cymru": "Casgliad y Werin Cymru",
+    "peoplescollection.wales": "Casgliad y Werin Cymru",
+}
 PRE_EXISTING = "(pre-existing in folder; origin not recorded)"
 # Videos/ + VIDEOS.tsv: YouTube thumbnails and links, catalogued separately (not items yet).
 IGNORED = {"INDEX.md", "SOURCES.tsv", "amgueddfa", "Videos", "VIDEOS.tsv"}
@@ -56,6 +61,8 @@ def _source(url: str) -> tuple[str | None, str]:
         return url, "Wayback Machine"
     if host == "drive.google.com" or host.startswith("drive.usercontent"):
         return url, "Google Drive"
+    if host.removeprefix("www.") in PLATFORMS:
+        return url, PLATFORMS[host.removeprefix("www.")]
     return url, host or url
 
 
@@ -110,7 +117,8 @@ def scan(archive: Path, restricted_extra: set[str]) -> list[Item]:
             category=category, title=_title(p.name), kind=KINDS[ext],
             src_path=relstr, source_url=url, source_label=label,
             retrieved=row.get("retrieved") or "",
-            note_public=clean_note(raw, relstr),
+            note_public=clean_note(raw, relstr, row.get("caption") or ""),
+            rights=(row.get("rights") or "").strip(),
             year_inferred=(p.name.startswith(("fb_", "Tapa_programa_"))
                            or "inferred" in raw),
             restricted=(category == "resultados" or iid in restricted_extra),

@@ -16,6 +16,7 @@ class Item:
     source_label: str = ""
     retrieved: str = ""
     note_public: str = ""
+    rights: str = ""  # public credit and licence line of a third-party holder
     year_inferred: bool = False
     restricted: bool = False
     pages: int = 0

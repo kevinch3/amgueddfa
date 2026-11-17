@@ -16,12 +16,15 @@ def _truncate(s: str) -> str:
     return cut.rstrip() + "…"
 
 
-def clean_note(raw: str, src_path: str) -> str:
-    """Public note: only the cleaned caption of a Facebook post.
+def clean_note(raw: str, src_path: str, caption: str = "") -> str:
+    """Public note: the source's own caption (SOURCES.tsv "caption" column),
+    else the cleaned caption of a Facebook post.
 
     Every other note in SOURCES.tsv is an internal (English) working note and
     is never published.
     """
+    if caption.strip():
+        return _truncate(" ".join(caption.split()))
     m = _FB.match((raw or "").strip())
     if not m:
         return ""

@@ -55,7 +55,7 @@ def test_duplicate_bytes_one_item_with_alt_paths(items):
         "Eisteddfod_del_Chubut/1990/Programa/Programa_1990.pdf",
         "Eisteddfod_del_Chubut/1990/Varios/Copia_programa.pdf",
     }
-    assert len({i.id for i in items}) == len(items) == 6
+    assert len({i.id for i in items}) == len(items) == 7
 
 
 def test_pre_existing_source_label(items):
@@ -101,9 +101,11 @@ def test_restricted_if_any_duplicate_path_is_resultados(tmp_path):
     assert items[0].restricted is True
 
 
-def test_only_facebook_items_publish_notes(items):
+def test_only_source_captions_are_published(items):
+    # Internal working notes never reach the site: only a Facebook post's text
+    # or the caption column (a platform's own description).
     for i in items:
-        if i.source_label != "Facebook":
+        if i.source_label not in ("Facebook", "Casgliad y Werin Cymru"):
             assert i.note_public == "", i.src_path
 
 
@@ -124,3 +126,12 @@ def test_named_source_without_url():
     from scripts.catalog.scan import _source
     assert _source("Asociación Eisteddfod del Chubut") == (None, "Asociación Eisteddfod del Chubut")
     assert _source("https://drive.google.com/file/d/x/view") == ("https://drive.google.com/file/d/x/view", "Google Drive")
+
+
+def test_platform_source_with_rights_and_caption(items):
+    g = by_title(items, "Gorsedd Trelew 1913")
+    assert g.source_label == "Casgliad y Werin Cymru"
+    assert g.source_url == "https://www.casgliadywerin.cymru/items/522464"
+    assert g.rights == "Llyfrgell Genedlaethol Cymru (LLGC) · Creative Archive Licence"
+    assert g.note_public == "Eisteddfod Trelew, 1913, yr Orsedd."  # the platform caption is public
+    assert by_title(items, "Suelto").rights == ""

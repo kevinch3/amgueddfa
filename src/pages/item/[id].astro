@@ -128,6 +128,12 @@ const retrieved = item.retrieved
             : item.source_label}
         </p>
         {retrieved && <p class="muted small">{t('item.consultado', { fecha: retrieved })}</p>}
+        {item.rights && (
+          <>
+            <h3 class="small">{t('item.derechos')}</h3>
+            <p class="small">{item.rights}</p>
+          </>
+        )}
         {item.note_public && (
           <>
             <h3 class="small">{t('item.nota')}</h3>

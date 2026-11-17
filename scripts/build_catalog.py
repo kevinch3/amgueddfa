@@ -42,7 +42,11 @@ def apply_tags(items, repo: Path) -> None:
     if not p.exists():
         return
     by_id = {i.id: i for i in items}
-    for c in json.loads(p.read_text() or "[]"):
+    # Oldest first, so the latest approved tag wins (as src/lib/tags.ts does);
+    # the export is sorted by id, not by date.
+    rows = sorted(json.loads(p.read_text() or "[]"),
+                  key=lambda c: c.get("reviewed_at") or c.get("created_at") or "")
+    for c in rows:
         if c.get("type") != "tag" or c.get("item_id") not in by_id:
             continue
         it, payload = by_id[c["item_id"]], c.get("payload") or {}

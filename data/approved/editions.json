@@ -31,6 +31,12 @@
   },
   {
     "festival": "chubut",
+    "year": 1886,
+    "status": "held",
+    "note": null
+  },
+  {
+    "festival": "chubut",
     "year": 1889,
     "status": "held",
     "note": null
@@ -115,6 +121,12 @@
   },
   {
     "festival": "chubut",
+    "year": 1912,
+    "status": "held",
+    "note": null
+  },
+  {
+    "festival": "chubut",
     "year": 1913,
     "status": "held",
     "note": null
@@ -193,7 +205,25 @@
   },
   {
     "festival": "chubut",
+    "year": 1933,
+    "status": "held",
+    "note": null
+  },
+  {
+    "festival": "chubut",
+    "year": 1934,
+    "status": "held",
+    "note": null
+  },
+  {
+    "festival": "chubut",
     "year": 1937,
+    "status": "held",
+    "note": null
+  },
+  {
+    "festival": "chubut",
+    "year": 1942,
     "status": "held",
     "note": null
   },

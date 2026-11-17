@@ -275,6 +275,22 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "1298fb82-e6f2-4e89-8879-3590cf8f56fb",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1912,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Casgliad y Werin Cymru, «Cor plant Moriah, 1912» (https://www.casgliadywerin.cymru/items/522256)",
+      "lote": "bbd8d0c3-2201-4fa2-9c4e-77946043d160",
+      "value": "Ganador (compartido): Coro de niños de Moriah, dirigido por Morris ap Hughes."
+    },
+    "created_at": "2026-11-17T11:06:25.263276+00:00",
+    "reviewed_at": "2026-11-17T11:06:25.263276+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "13699e72-cb40-40b8-a487-4cba14af3159",
     "type": "fact",
     "festival": "chubut",
@@ -382,6 +398,22 @@
     "created_at": "2026-11-16T18:39:27.894079+00:00",
     "reviewed_at": "2026-11-16T18:39:27.894079+00:00",
     "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "15efb223-c11a-4a43-86b1-4129506eb527",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1942,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_silla",
+      "fuente": "Casgliad y Werin Cymru, «Eisteddfod yn y tent Gaiman 1942. Morris ap Hughes yn y gadair» (https://www.casgliadywerin.cymru/items/522578)",
+      "lote": "bbd8d0c3-2201-4fa2-9c4e-77946043d160",
+      "value": "Morris ap Hughes"
+    },
+    "created_at": "2026-11-17T11:06:25.263276+00:00",
+    "reviewed_at": "2026-11-17T11:06:25.263276+00:00",
+    "display_name": "Kevin Roberts"
   },
   {
     "id": "16eaf3d2-2780-4627-927c-d543dcc8db68",
@@ -607,6 +639,38 @@
     },
     "created_at": "2026-11-13T22:38:11.065475+00:00",
     "reviewed_at": "2026-11-13T22:52:10.61773+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "206f1d59-e71c-442c-8044-8104fb6327fd",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1913,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Casgliad y Werin Cymru, «Eisteddfod Trelew, 1913, yr Orsedd» (https://www.casgliadywerin.cymru/items/522461)",
+      "lote": "bbd8d0c3-2201-4fa2-9c4e-77946043d160",
+      "value": "Gorsedd al aire libre frente a la estación de trenes de Trelew; archidruida William H. Hughes (Glan Caeron), con el Rev. John Caerenig Evans y Richard Jones Berwyn."
+    },
+    "created_at": "2026-11-17T11:06:25.263276+00:00",
+    "reviewed_at": "2026-11-17T11:06:25.263276+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "241b4735-a17b-4a8f-a55a-d78eed71ab1b",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1912,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "fuente": "Casgliad y Werin Cymru, «Cor plant Moriah, 1912» (https://www.casgliadywerin.cymru/items/522256)",
+      "lote": "bbd8d0c3-2201-4fa2-9c4e-77946043d160",
+      "value": "si"
+    },
+    "created_at": "2026-11-17T11:06:25.263276+00:00",
+    "reviewed_at": "2026-11-17T11:06:25.263276+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -1136,6 +1200,22 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "498281ce-4662-488c-ae28-df3db41d2e8b",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1934,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "fuente": "Casgliad y Werin Cymru, «Cor Trefelin. Buddugol yn Yr Eisteddfod 1934» (https://www.casgliadywerin.cymru/items/522198)",
+      "lote": "bbd8d0c3-2201-4fa2-9c4e-77946043d160",
+      "value": "si"
+    },
+    "created_at": "2026-11-17T11:06:25.263276+00:00",
+    "reviewed_at": "2026-11-17T11:06:25.263276+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "4b2c66a0-d2e3-458f-962e-1681bfe31677",
     "type": "tag",
     "festival": "chubut",
@@ -1224,6 +1304,21 @@
     },
     "created_at": "2026-11-14T14:08:59.601738+00:00",
     "reviewed_at": "2026-11-14T14:08:59.601738+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "562ca38f-f12a-4332-b355-5f98359f8eb6",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2026,
+    "item_id": "c631805d27af",
+    "payload": {
+      "category": "bases",
+      "festival": "chubut",
+      "year": 2026
+    },
+    "created_at": "2026-11-16T21:14:37.655156+00:00",
+    "reviewed_at": "2026-11-16T21:14:37.655156+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -1917,6 +2012,22 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "77ddd338-bb33-4578-99c0-06ca257ae24e",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1942,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "fuente": "Casgliad y Werin Cymru, «Eisteddfod yn y tent Gaiman 1942» (https://www.casgliadywerin.cymru/items/522578)",
+      "lote": "bbd8d0c3-2201-4fa2-9c4e-77946043d160",
+      "value": "La carpa, Gaiman"
+    },
+    "created_at": "2026-11-17T11:06:25.263276+00:00",
+    "reviewed_at": "2026-11-17T11:06:25.263276+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "78c76151-49a1-482f-bcec-b38dd573645d",
     "type": "fact",
     "festival": "trevelin",
@@ -1994,22 +2105,6 @@
     "display_name": "Meirion Griffiths"
   },
   {
-    "id": "7bfc572b-7166-4b14-a522-776f9730e5c9",
-    "type": "fact",
-    "festival": "chubut",
-    "year": 1931,
-    "item_id": null,
-    "payload": {
-      "field": "venue",
-      "fuente": "Osian Hughes, «Los poetas del Eisteddfod» (foto «1931 carpa Trelew»)",
-      "lote": "7fe5b2a0-d46c-4ec8-978c-61cef6884a15",
-      "value": "La carpa, Trelew"
-    },
-    "created_at": "2026-11-16T18:39:27.894079+00:00",
-    "reviewed_at": "2026-11-16T18:39:27.894079+00:00",
-    "display_name": "Meirion Griffiths"
-  },
-  {
     "id": "7c1d5ce4-6e9b-461d-a512-002235b1605b",
     "type": "fact",
     "festival": "chubut",
@@ -2039,6 +2134,22 @@
     },
     "created_at": "2026-11-14T14:09:46.600195+00:00",
     "reviewed_at": "2026-11-14T14:09:46.600195+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "7cb01afb-f725-4011-b746-4805788408af",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1933,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "fuente": "Casgliad y Werin Cymru, «Eisteddfod Gaiman 1933, mewn pabell» (https://www.casgliadywerin.cymru/items/522572)",
+      "lote": "bbd8d0c3-2201-4fa2-9c4e-77946043d160",
+      "value": "La carpa, Gaiman"
+    },
+    "created_at": "2026-11-17T11:06:25.263276+00:00",
+    "reviewed_at": "2026-11-17T11:06:25.263276+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -2277,6 +2388,22 @@
     "created_at": "2026-11-16T18:31:17.630618+00:00",
     "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
     "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "90bf83ca-a18a-4dee-b5d0-a1e7eeff1d9a",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1933,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "fuente": "Casgliad y Werin Cymru, «Eisteddfod Gaiman 1933, mewn pabell» (https://www.casgliadywerin.cymru/items/522572)",
+      "lote": "bbd8d0c3-2201-4fa2-9c4e-77946043d160",
+      "value": "si"
+    },
+    "created_at": "2026-11-17T11:06:25.263276+00:00",
+    "reviewed_at": "2026-11-17T11:06:25.263276+00:00",
+    "display_name": "Kevin Roberts"
   },
   {
     "id": "90ff7c7f-fdb1-4505-a1df-83ff36fa49ed",
@@ -3026,6 +3153,22 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "b9a68f7b-1216-42ec-99e6-dd6a4763b102",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1886,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "fuente": "Casgliad y Werin Cymru, «Rhaglen Eisteddvod Nadolig 1886, Trelew» (https://www.casgliadywerin.cymru/items/13516)",
+      "lote": "bbd8d0c3-2201-4fa2-9c4e-77946043d160",
+      "value": "Trelew"
+    },
+    "created_at": "2026-11-17T11:06:25.263276+00:00",
+    "reviewed_at": "2026-11-17T11:06:25.263276+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "ba478501-8348-42d2-8d83-8040b5495554",
     "type": "fact",
     "festival": "chubut",
@@ -3430,6 +3573,22 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "c8716cb5-27da-41aa-994d-d3b3258722ca",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1931,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "fuente": "Casgliad y Werin Cymru, «Eisteddfod Gaiman 1931, mewn pabell» (https://www.casgliadywerin.cymru/items/522575)",
+      "lote": "bbd8d0c3-2201-4fa2-9c4e-77946043d160",
+      "value": "La carpa, Gaiman"
+    },
+    "created_at": "2026-11-17T11:06:25.263276+00:00",
+    "reviewed_at": "2026-11-17T11:06:25.263276+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "c8d4e923-fa45-45c8-9825-bb31595509ce",
     "type": "fact",
     "festival": "trevelin",
@@ -3458,6 +3617,22 @@
     },
     "created_at": "2026-11-14T14:09:42.05194+00:00",
     "reviewed_at": "2026-11-14T14:09:42.05194+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "c96f3633-20be-4616-8231-cb841728312f",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1933,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Casgliad y Werin Cymru, «Eisteddfod Gaiman 1933, mewn pabell. Arweinydd Wili Evans» (https://www.casgliadywerin.cymru/items/522569)",
+      "lote": "bbd8d0c3-2201-4fa2-9c4e-77946043d160",
+      "value": "Conductor: Wili Evans."
+    },
+    "created_at": "2026-11-17T11:06:25.263276+00:00",
+    "reviewed_at": "2026-11-17T11:06:25.263276+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -3520,6 +3695,22 @@
     },
     "created_at": "2026-11-14T14:09:32.072233+00:00",
     "reviewed_at": "2026-11-14T14:09:32.072233+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "cf7b16cc-53c3-4c62-a572-9b5ba42bbb6c",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1942,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "fuente": "Casgliad y Werin Cymru, «Eisteddfod yn y tent Gaiman 1942» (https://www.casgliadywerin.cymru/items/522578)",
+      "lote": "bbd8d0c3-2201-4fa2-9c4e-77946043d160",
+      "value": "si"
+    },
+    "created_at": "2026-11-17T11:06:25.263276+00:00",
+    "reviewed_at": "2026-11-17T11:06:25.263276+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -3597,6 +3788,22 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "d82eeeff-59c2-452f-b16b-dc008fb011f5",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1886,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "fuente": "Casgliad y Werin Cymru, «Rhaglen Eisteddvod Nadolig 1886, Trelew» (https://www.casgliadywerin.cymru/items/13516)",
+      "lote": "bbd8d0c3-2201-4fa2-9c4e-77946043d160",
+      "value": "si"
+    },
+    "created_at": "2026-11-17T11:06:25.263276+00:00",
+    "reviewed_at": "2026-11-17T11:06:25.263276+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "d990fbde-6bd2-4dc2-81a1-d7910ec92052",
     "type": "tag",
     "festival": "chubut",
@@ -3625,6 +3832,22 @@
     "created_at": "2026-11-16T18:31:17.630618+00:00",
     "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
     "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "da03774d-967a-4178-bc10-e5b1985b116f",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1934,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Casgliad y Werin Cymru, «Cor Trefelin. Buddugol yn Yr Eisteddfod 1934» (https://www.casgliadywerin.cymru/items/522198)",
+      "lote": "bbd8d0c3-2201-4fa2-9c4e-77946043d160",
+      "value": "Ganador: Coro mixto de Trevelin."
+    },
+    "created_at": "2026-11-17T11:06:25.263276+00:00",
+    "reviewed_at": "2026-11-17T11:06:25.263276+00:00",
+    "display_name": "Kevin Roberts"
   },
   {
     "id": "da1dd0c4-018c-4ae9-a674-18c759361df5",
@@ -4222,6 +4445,22 @@
     "created_at": "2026-11-16T18:31:17.630618+00:00",
     "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
     "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "fada1e4a-82e1-4269-a82c-23ae6b29c08f",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1886,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Casgliad y Werin Cymru, «Rhaglen Eisteddvod Nadolig 1886, Trelew» (https://www.casgliadywerin.cymru/items/13516)",
+      "lote": "bbd8d0c3-2201-4fa2-9c4e-77946043d160",
+      "value": "Eisteddfod de Navidad (Eisteddvod Nadolig)."
+    },
+    "created_at": "2026-11-17T11:06:25.263276+00:00",
+    "reviewed_at": "2026-11-17T11:06:25.263276+00:00",
+    "display_name": "Kevin Roberts"
   },
   {
     "id": "fc695fa3-6188-4c82-a0c8-f7b401b12efb",

@@ -13,7 +13,7 @@
 7. Niños (1.º a 3.º grado): «Soy una lista», las cosas de mi mundo y cómo me hacen sentir.
 8. Niños (4.º a 6.º grado): «Cuento-autorretrato», me cuento en el cuento.
 9. Adolescentes (1.º a 3.º año de secundaria): «Diario íntimo» de un superhéroe.
-10. Jóvenes (4.º a 6.º año de secundaria): cambio de cuerpo con un animal y relato un día.
+10. Jóvenes (4.º a 6.º año de secundaria): cambio de cuerpo con un animal y relato lo que hago durante un día.
 11. Jóvenes de 18 a 20 años: monólogo sobre el deseo, «¿Soy lo que quiero y quiero lo que soy?».
 12. Jóvenes y adultos: «Sobre tu huella», crónica en el lugar del otro sobre el encuentro entre galeses y tehuelches.
 13. Adultos: «La historia oculta», relato de ficción sobre un hecho entre galeses recién llegados y tehuelches.
@@ -24,14 +24,14 @@
 16. Niños (4.º a 6.º grado): «El día que Ballena llegó a Puerto Madryn».
 17. Adolescentes (1.º a 3.º año de secundaria): «Soy un objeto», la metamorfosis con algo de mi entorno.
 18. Jóvenes hasta 20 años. Premio «Irma Hughes de Jones»: tema y estilo libres.
-19. Adultos. Premio «Mimosa», competencia principal: tema y estilo libres.
+19. Libre (adultos, competencia principal). Premio «Mimosa»: tema y estilo libres.
 
 ## Música en galés · Cerddoriaeth
 20. Unawd hyd 6 oed: «Y Cloc», Leah Owen – Selwyn Griffith.
 21. Unawd hyd 8 oed: «Glan y Môr», Leah Owen – Selwyn Griffith.
 22. Unawd 9 i 11 oed: «Coed y Glyn», Leah Owen – Selwyn Griffith.
 23. Unawd 12 i 14 oed: «Noson Tân Gwyllt», Robat Arwyn.
-24. Unawd hyd 20 oed: «Rhywbeth yn Galw», Bryn Fôn – Morfudd Hughes.
+24. Unawd hyd 20 oed: «Rhywbeth yn Galw», Bryn Fon – Morfudd Hughes.
 25. Parti hyd 6 oed: «Dau Lygad Mawr», Falyri Jenkins.
 26. Parti hyd 9 oed: «Y Baban Bychan», Leah Owen – Selwyn Griffith.
 27. Parti hyd 12 oed: «Y Gwanwyn», Robat Arwyn.
@@ -44,8 +44,8 @@
 32. Unawd academaidd: «Rhosyn yr Haf», Meirion Williams – Ceiriog.
 33. Deuawd agored: «Y Fwyalchen Ddu Bigfelen», cân werin, trefn. J. Lloyd Williams.
 34. Wythawd: «Plygeingan», W. Mathews Williams.
-35. Parti meibion: «Fy Llong Fach Arian i», Islwyn Ffowc Elis.
-36. Parti merched: «O Hyfryd Hedd», Händel – T. G. Jones.
+35. Parti meibion: «Fy Llong Fach Arian i», Islwyn Ffowc Ellis.
+36. Parti merched: «O Hyfryd Hedd», Haendel – T. G. Jones.
 37. Côr cymysg: «Mae'r Neges yn fy Nghân», Gwennant Pyrs – Alwen Derbyshire, Meleri Roberts.
 38. Prif gystadleuaeth gorawl: «Henffych, Iesu», Gounod.
 
@@ -57,20 +57,20 @@
 43. Solo 17 a 20 años: canción pop o de rock nacional a elección.
 44. Conjunto vocal nivel inicial: «Ola loca».
 45. Conjunto vocal-instrumental primer ciclo: «La luna», Dúo Karma.
-46. Conjunto vocal-instrumental segundo ciclo: «La rana Rosita», Canticuénticos.
+46. Conjunto vocal-instrumental segundo ciclo: «La rana Rosita», Rth Hillar (Canticuénticos).
 47. Conjunto vocal-instrumental nivel secundario: canción a elección.
 48. Conjunto familiar: obra en castellano a elección.
 49. Coro hasta 12 años (2 voces a capella): «Paloma y laurel», César Isella – Armando Tejada Gómez, arr. Betty Sainz.
 50. Coro escolar (nivel primario): «Suspiros», Mariana Rewerski.
 51. Conjunto o coro hasta 25 años: obra vocal a elección con movimiento escénico.
-52. Coro juvenil hasta 25 años: «Plaudite manibus», Branko Stark.
+52. Coro juvenil hasta 25 años: «Plaudite manibus», Banko Stark.
 
 ### Adultos
 53. Solo mayores de 20 años: canción del repertorio popular argentino o latinoamericano a elección.
 54. Cuarteto mixto: himno en castellano a elección.
 55. Coro o conjunto de formación libre (3 o más voces): obra folklórica o popular a elección.
-56. Coro mixto (4 voces): «Huella, la luna», Sebastián Monk, v. c. Bernardo Latini.
-57. Conjunto o coro femenino: «Cantate Domino», Johana Chacín.
+56. Coro mixto (4 voces): «Huella, la luna», Sebastian Monk, v. c. Bernardo Latini.
+57. Conjunto o coro femenino: «Cantate Domino», Johana Chacin.
 58. Conjunto o coro masculino: «Mandarinas», Víctor Heredia, v. c. Paula Artigas.
 59. Competencia principal. Coro mixto: «Alleluia», Ilze Arne; obra popular u original argentina de carácter y tempo contrastante.
 
@@ -86,15 +86,15 @@
 65. Hyd at 18 oed: «Distawrwydd».
 66. Oedolion: «Gwreichion», Gwynne Williams.
 67. Cydadrodd: «Y Planedau», Mererid Hopwood.
-68. Agored: «Llanw a Thrai», Geraldine Mac Burney (Gwobr «Telyn», Eisteddfod Mimosa 2023).
+68. Agored: «Llanw a Thrai», Geraldine Mac Buerney Jones (Gwobr «Telyn», Eisteddfod Mimosa 2023).
 
 ### Castellano
 69. Hasta 5 años: «La polilla», Nelvy Bustamante.
 70. 6 a 7 años: «Un gato negro», Sandra Siemens.
-71. 8 a 9 años: «Un loro un poco raro», Ana María Shua.
+71. 8 a 9 años: «Un loro un poco raro», Ana María Shúa.
 72. 10 a 11 años: «Las ideas», Mar Benegas.
 73. 12 a 13 años: «Canción del señor que hace los días», Luis María Pescetti.
-74. 14 a 15 años: poema de Edith Vera («Con trébol en los ojos»).
+74. 14 a 15 años: poema de Edith Vera, de «Con trébol en los ojos».
 75. 16 a 19 años: «Paisaje», María Teresa Andruetto.
 76. Adultos. Libre: «13», Roberto Juarroz.
 77. Voz masculina: «Un poco», María Cristina Ramos.
@@ -142,3 +142,14 @@
 107. Niños hasta 12 años: «Teisen bach ceirch», tortitas de avena.
 108. «Teisen foron», torta de zanahoria.
 109. «Tarten cennin», tarta de puerros.
+
+## Notas · Nodiadau
+- Comp. 24: impreso «Bryn Fon»; Bryn Fôn.
+- Comp. 35: impreso «Islwyn Ffowc Ellis»; Islwyn Ffowc Elis.
+- Comp. 36: impreso «Haendel»; Händel.
+- Comp. 46: impreso «L y M Rth Hillar»; Ruth Hillar (letra y música).
+- Comp. 52: impreso «Banko Stark»; Branko Stark.
+- Comp. 56: impreso «Sebastian Monk»; Sebastián Monk.
+- Comp. 57: impreso «Johana Chacin»; Johana Chacín.
+- Comp. 68: impreso «Geraldine Mac Buerney Jones»; en la página de textos, «Geraldine Mac Burney Jones».
+- Comp. 71: impreso «Shúa, Ana María»; Ana María Shua.

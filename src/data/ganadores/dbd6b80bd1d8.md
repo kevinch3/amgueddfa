@@ -1,2 +1,0 @@
-## Poesía en castellano
-9. Medalla de Plata «Asociación San David»: menciones: Milagros Alonso (seud. «Anúncienme»), «Palabras mías»; Griselda Jones de Redondo (seud. «David»), «Alegoría raigal» y «Distancias azules»; Edith Esther Albaini, Puerto Madryn (seud. «Nereida»), «Vivencias»; María Elena Mitre, Rawson (seud. «Perla»), «Ausencia» y «No lo hagas»; Graciela Elizabeth Jorge, Trelew (seud. «Saudade»), «Reflejos»; Jorge Alberto Baudés, Playa Unión (seud. «Sueños de timonel»), «Soneto a la luz de la luna».

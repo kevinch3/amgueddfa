@@ -21,7 +21,7 @@
 
 ## Recitación · Adrodd
 ### Yn Gymraeg
-215. Hyd 5 oed: «Cangarŵ», Gwyn Morgan.
+215. Hyd 5 oed: «Cangarw», Gwyn Morgan.
 216. 6 a 7 oed: «Morus ac Ifan», Selwyn Griffith.
 217. 8 a 9 oed: «Hen Ŵr», Selwyn Griffith.
 218. 10 ac 11 oed: «Cân Dafydd», Brenda Wyn Jones.
@@ -64,9 +64,9 @@
 248. O 18 i 25 oed, i fechgyn: «Nant y Mynydd».
 
 ### Solos
-249. Solo hasta 4 años: «Tres vueltitas dan», texto de Susana Horovitz.
+249. Solo hasta 4 años: «Tres vueltitas dan», texto de Susana Horovitz («Para divertirnos cantando», Violeta R. de Gainza).
 250. Solo para 5 años: «Los gatitos», cancionero popular infantil español.
-251. Solo para 6 y 7 años: «Soy un coya chiquitito», María Teresa Rezzano.
+251. Solo para 6 y 7 años: «Soy un coya chiquitito», María Teresa Rezzano («Para divertirnos cantando», Violeta R. de Gainza).
 252. Solo para 8 y 9 años: «Luna lunar», Mariana Baggio.
 253. Solo para 10 y 11 años: «¿Quién es ese pajarito?», cueca popular.
 254. Solo para 12 a 14 años: «De colores», folklore español, versión de Francisco J. Núñez.
@@ -81,15 +81,15 @@
 261. Triawd hyd 25 oed: «Y Morwr».
 262. Pedwarawd cymysg hyd 25 oed: «Y Bwthyn ar y Bryn».
 263. Wythawd cymysg hyd 25 oed: «Gyda'r Iesu» (CYS 62).
-264. Trío mixto a capella: «Rin, rin», villancico popular, arreglo María del Carmen Aguilar.
+264. Trío mixto a capella: «Rin, rin», villancico popular, arreglo M. del Carmen Aguilar.
 265. Voces iguales de 2 a 6 integrantes: «When I'm Sixty-Four», John Lennon y Paul McCartney, arreglo John Leavitt.
 266. Octeto: «Sagrado es el amor», John Fawcett / Hans G. Nägeli, arreglo Lowell Mason.
 
 ### Partïon · Conjuntos
-267. Conjunto hasta 5 años: «A mi pingo», Silvia Malbrán.
+267. Conjunto hasta 5 años: «A mi pingo», Silvia Malbrán («Las canciones de Silvia»).
 268. Conjunto hasta 8 años: «Finita la lluvia», Esther S. de Schneider.
 269. Conjunto de 9 a 11 años: «Preguntas» (taquirari), Gabriel Montenegro / Waldo Belloso.
-270. Conjunto hasta 14 años: «Pájaro de mar» (candombe), Magdalena Fleitas.
+270. Conjunto hasta 14 años: «Pájaro de mar» (candombe), Magdalena Freitas.
 271. Conjunto de 15 a 18 años: obra a elección, mínimo 2 voces.
 272. Conjunto mixto a capella: «Duérmete pegado a mí», Gabriela Mistral / Alberto Grau.
 273. Conjunto de voces iguales: «Cánticos de Navidad», villancico y danza, Lope de Vega / Juan Orrego-Salas.
@@ -106,23 +106,23 @@
 282. Coro hasta 14 años: «Canten señores cantores».
 283. Coro escolar para EGB 1 y 2: «El recreo», cancionero popular español.
 284. Coro escolar EGB 3 y Polimodal: «Chaltén», Hugo Giménez Agüero.
-285. Coro mixto: «Bendito Salvador», Annie S. Hawks / Robert Lowry, arreglo Rally DeFord.
-286. Coro mixto a capella: «Fuego en Anymaná», César Isella / Armando Tejada Gómez, versión coral Carmelo Fioritti.
+285. Coro mixto: «Bendito Salvador», Annie S. Hawkes / Robert Lowry, letra en español Miguel Ángel Huerta, arreglo Rally DeFord.
+286. Coro mixto a capella: «Fuego en Anymaná», Cesar Isella / Armando Tejada Gomez, versión coral Carmelo Fioritti.
 287. Competencia principal para coro: «Gloria», Vivaldi.
 288. Coro principal en galés: «Dwylo dros y Môr», Huw Chiswell.
 
 ### Canción dramatizada
-289. Nivel inicial: «Dando la vuelta», Magdalena Fleitas.
+289. Nivel inicial: «Dando la vuelta», Magdalena Freitas.
 290. Hasta 14 años: «Estaba el señor Don Gato» (romance), arreglo Dorothy Ling de Hernando.
 
 ### Instrumental
 291. Piano hasta 20 años: «Estudio n.º 10, op. 47», Heller.
-292. Guitarra hasta 15 años: «Lágrima», preludio, Tárrega.
+292. Guitarra hasta 15 años: «Lágrima», preludio, Tarrega, revisión de Isaías Savio.
 293. Solo libre para instrumento melódico: obra a elección.
 294. Solo libre para instrumento armónico: obra a elección.
 295. Conjunto instrumental de al menos 4 integrantes: carnavalito a elección.
-296. Conjunto instrumental de 4 a 8 integrantes: «Imagine», John Lennon.
-297. Conjunto de instrumentos melódicos hasta 14 años: «On Top of Old Smoky».
+296. Conjunto instrumental de 4 a 8 integrantes: «Imagínate», John Lennon.
+297. Conjunto de instrumentos melódicos hasta 14 años: «On Top of Old Smoky» («Easy Trios for Three Recorders»), Harold Newman y Mieczyslaw Kolinski.
 
 ## Danzas · Dawns
 ### Folklórica argentina
@@ -161,3 +161,11 @@
 
 ## Video
 319. Todo género, tema libre, de 16 a 25 años.
+
+## Notas · Nodiadau
+- Comp. 264: impreso «M. del Carmen Aguilar»; nombre completo María del Carmen Aguilar.
+- Comp. 270: impreso «Magdalena Freitas»; probablemente Magdalena Fleitas.
+- Comp. 285: impreso «Annie S. Hawkes»; la autora es Annie S. Hawks.
+- Comp. 286: impreso «Cesar Isella» y «Armando Tejada Gomez»; César Isella y Armando Tejada Gómez.
+- Comp. 289: impreso «Magdalena Freitas»; probablemente Magdalena Fleitas.
+- Comp. 292: impreso «Tarrega»; Tárrega.

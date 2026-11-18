@@ -34,3 +34,7 @@ def test_eisteddfod_de_gales_dropped():
 
 def test_chubut_with_gales_choir_kept():
     assert fest("Eisteddfod del Chubut 2019 - Coro de Gales") == "Eisteddfod_del_Chubut"
+
+
+def test_galesa_is_not_gales():
+    assert fest("Eisteddfod galesa en Trelew 2019") == "Eisteddfod_del_Chubut"

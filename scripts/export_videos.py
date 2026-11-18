@@ -20,10 +20,13 @@ SLUGS = {
 }
 # Upload date alone is a weak guess for the edition year; the others come from the video itself.
 INFERRED = {"subida"}
-# Trevelin's Infantil/Juvenil sessions ("Eisteddfod Infantil Trevelin…"; not a category
-# such as "Canción infantil" of the main festival): children, kept off the site until the privacy
+# Trevelin's Infantil/Juvenil sessions: children, kept off the site until the privacy
 # periods of issue #29 are decided. They stay in the archive (Eisteddfod_de_Trevelin).
-CHILDREN = re.compile(r"eisteddfod (infantil|juvenil|de (los )?ni[ñn]os)", re.I)
+# Same words as the harvest's Trevelin children pattern (harvest.py FESTIVALS), so any
+# title it files there is held back; except the "Canción infantil" category of the main
+# festival, public before.
+_KID = r"(?<!canci[oó]n )(infantil|juvenil|ni[ñn]os)"
+CHILDREN = re.compile(rf"{_KID}.{{0,25}}trevelin|trevelin.{{0,25}}{_KID}", re.I)
 
 
 def held_back(row: dict) -> bool:

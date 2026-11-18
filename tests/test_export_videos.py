@@ -44,3 +44,12 @@ def test_trevelin_children_held_back_until_29(tmp_path):
     out = tmp_path / "videos.json"
     assert export(tsv, out) == 2
     assert [v["id"] for v in json.loads(out.read_text(encoding="utf-8"))["videos"]] == ["DDDDDDDDDDD", "EEEEEEEEEEE"]
+
+
+def test_any_trevelin_children_title_the_harvest_files_is_held_back(tmp_path):
+    tsv = tmp_path / "VIDEOS.tsv"
+    tsv.write_text(HEADER
+                   + row("AAAAAAAAAAA", "Eisteddfod_de_Trevelin", 2018, title="Eisteddfod para niños Trevelin 2018")
+                   + row("BBBBBBBBBBB", "Eisteddfod_de_Trevelin", 2018, title="Trevelin infantil 2018 - recitado"),
+                   encoding="utf-8")
+    assert export(tsv, tmp_path / "videos.json") == 0

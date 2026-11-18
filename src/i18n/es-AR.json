@@ -223,6 +223,7 @@
     "retiro_2": " y lo resolvemos.",
     "legal": "Información del archivo",
     "normas": "Accesibilidad: objetivo WCAG 2.2 AA",
+    "ultimo_cambio": "Último cambio: {cuando}",
     "enlaces": {
       "objetivos": "Objetivos",
       "accesibilidad": "Accesibilidad",

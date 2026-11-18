@@ -13,6 +13,7 @@ import { alternates, url } from '../lib/paths';
 import { jsonForScript } from '../lib/contrib';
 import { absUrl } from '../lib/seo';
 import { TAGS_AT } from '../lib/catalog';
+import { BUILD_CHANGED_AT } from '../lib/actividad';
 
 interface Props {
   title?: string;
@@ -129,6 +130,7 @@ const webmcpToken = (import.meta.env.PUBLIC_WEBMCP_OT_TOKEN ?? '').trim();
           ) : null}
           <a href={url('accesibilidad')}>{t('pie.normas')}</a>
         </p>
+        <p id="ultimo-cambio" class="small muted" data-at={BUILD_CHANGED_AT} aria-live="off" hidden></p>
         <LanguageMenu variant="list" />
         {here !== DEFAULT_LOCALE && <p class="small muted">{t('idiomas.original')}</p>}
         <p class="contacto">
@@ -143,6 +145,7 @@ const webmcpToken = (import.meta.env.PUBLIC_WEBMCP_OT_TOKEN ?? '').trim();
       import '../scripts/idiomas.ts';
       import '../scripts/lectura.ts';
       import '../scripts/webmcp.ts';
+      import '../scripts/ultimo-cambio.ts';
     </script>
   </body>
 </html>

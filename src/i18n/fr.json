@@ -223,6 +223,7 @@
     "retiro_2": " et nous nous en occuperons.",
     "legal": "Informations sur les archives",
     "normas": "Accessibilité : objectif WCAG 2.2 AA",
+    "ultimo_cambio": "Dernière modification : {cuando}",
     "enlaces": {
       "objetivos": "Objectifs",
       "accesibilidad": "Accessibilité",

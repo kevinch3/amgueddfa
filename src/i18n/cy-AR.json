@@ -223,6 +223,7 @@
     "retiro_2": " ac mi drefnwn ni hynny.",
     "legal": "Gwybodaeth am yr archif",
     "normas": "Hygyrchedd: targed WCAG 2.2 AA",
+    "ultimo_cambio": "Newid diwethaf: {cuando}",
     "enlaces": {
       "objetivos": "Amcanion",
       "accesibilidad": "Hygyrchedd",

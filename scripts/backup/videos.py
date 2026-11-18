@@ -249,6 +249,12 @@ def download(v: Video, dest: Path, log: Log) -> bool:
            '-o', f'{stem}.%(ext)s',
            f'https://www.youtube.com/watch?v={v.id}']
     r = subprocess.run(cmd, capture_output=True, text=True)
+    # YouTube now and then refuses the signed stream URL (HTTP 403) of a video that is
+    # fine: a fresh request gets new URLs and works (seen 2026-11-18, 8 of ~190).
+    # yt-dlp does not retry a 403 itself, so try once more after a pause.
+    if (r.returncode != 0 or not dest.exists()) and '403' in (r.stderr or ''):
+        time.sleep(30)
+        r = subprocess.run(cmd, capture_output=True, text=True)
     if r.returncode != 0 or not dest.exists():
         log(f'error {v.id}: {(r.stderr or r.stdout).strip().splitlines()[-1:] or "no file"}')
         return False

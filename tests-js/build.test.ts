@@ -225,6 +225,10 @@ describe('static build', () => {
     expect(robots).toContain('Allow: /');
     expect(robots).toContain('Sitemap: https://amgueddfa.org/sitemap.xml');
     expect(robots).toContain('Disallow: /admin/');
+    // AI crawlers are welcome, and share the * group (a group of their own would drop the Disallows).
+    expect(robots).toContain('Content-Signal: search=yes, ai-input=yes, ai-train=yes');
+    expect(robots.split('\n\n').filter((g) => g.includes('User-agent:')).length).toBe(1);
+    expect(robots).toContain('User-agent: Google-Extended');
 
     const sitemap = read('sitemap.xml');
     expect(sitemap).toContain('<loc>https://amgueddfa.org/chubut/1937/</loc>');

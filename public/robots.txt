@@ -1,6 +1,23 @@
-# Amgueddfa Eisteddfod y Wladfa: everything here is open. Search engines and
-# AI crawlers are welcome to read and reuse it.
+# Amgueddfa Eisteddfod y Wladfa: everything here is open. Search engines, AI
+# assistants and AI crawlers are welcome to read, cite and reuse it.
+# Start with /llms.txt for a plain-text map of the site.
+#
+# The AI crawlers are named only to say so out loud: they share the one group
+# below, so they follow exactly the same rules as everyone else. (A crawler
+# with a group of its own would ignore the * rules, so don't split them out.)
 User-agent: *
+User-agent: Googlebot
+User-agent: Google-Extended
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Applebot-Extended
+User-agent: CCBot
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 Disallow: /admin/
 Disallow: /perfil/

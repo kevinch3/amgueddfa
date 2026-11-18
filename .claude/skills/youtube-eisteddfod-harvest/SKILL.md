@@ -31,6 +31,25 @@ catalog doesn't know (Dolavon, Camwy…) makes `build_catalog` fail.
   bit.ly) are documents: download them into the normal archive folders with a
   `SOURCES.tsv` row, as in the Facebook pass.
 
+## Festival folders (decided 2026-11-18)
+
+- **Main festivals** (on the site): `Eisteddfod_del_Chubut`, `Eisteddfod_de_la_Juventud`,
+  `Eisteddfod_Mimosa`, `Eisteddfod_de_Trevelin`. Trevelin is **one event**: its
+  Infantil/Juvenil sessions go in `Eisteddfod_de_Trevelin` (titles keep the word).
+- **Otros festivales:** any other folder. Stored in the archive, not exported to the
+  site until issue #29. Today: `Micro_Eisteddfod_de_Camwy` (there is no separate
+  "Eisteddfod de Camwy") and `Eisteddfod_de_Dolavon` (the Mini Eisteddfod William Morris,
+  held at the college in Dolavon). A place alone (Esquel) is not a festival.
+- **Not archived:** eisteddfodau abroad ("Eisteddfod de Gales" with a Patagonian speaker).
+- **`noticia`:** interviews and news about an eisteddfod (a poet on the radio telling
+  how they won). Festival unknown → `_sin_clasificar` with the year.
+- **Children:** Otros (mostly minors from one family's channel) and Trevelin's
+  Infantil/Juvenil sessions stay off the site until #29; `scripts/export_videos.py`
+  `held_back()` keeps the Trevelin ones out.
+
+`harvest.py` (`FESTIVALS`, `EXPLICIT`, `ABROAD`) follows these rules; tests in
+`tests/test_harvest_rules.py`.
+
 ## Pipeline
 
 Work in the session scratchpad (`$W`); `S=` this skill's folder.

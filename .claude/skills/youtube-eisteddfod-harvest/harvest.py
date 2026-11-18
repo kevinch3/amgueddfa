@@ -18,34 +18,33 @@ import urllib.request
 from pathlib import Path
 
 # Festival folder -> patterns (checked in order: the more specific festivals first).
-# Folder names for the four core eisteddfodau match the archive; the others only
-# exist under Videos/ (the catalog does not know them yet).
+# Folder names for the four core eisteddfodau match the archive; any other folder is one
+# of the "Otros festivales" (stored under Videos/, not on the site yet: issue #29).
+# Trevelin holds one event: its Infantil/Juvenil sessions are Eisteddfod_de_Trevelin.
+# There is no separate Eisteddfod de Camwy: it is the Micro Eisteddfod. The Mini
+# Eisteddfod William Morris is the Eisteddfod de Dolavon (held at the college).
 FESTIVALS = [
-    ("Eisteddfod_Infantil_de_Trevelin", r"(infantil|ni[ñn]os).{0,25}trevelin|trevelin.{0,25}(infantil|ni[ñn]os)"),
-    ("Eisteddfod_Juvenil_de_Trevelin", r"juvenil.{0,25}trevelin|trevelin.{0,25}juvenil"),
+    ("Eisteddfod_de_Trevelin", r"(infantil|juvenil|ni[ñn]os).{0,25}trevelin|trevelin.{0,25}(infantil|juvenil|ni[ñn]os)"),
     ("Eisteddfod_de_la_Juventud", r"juventud|ieuenctid|\[JU\d{4}|\bJU ?\d{2}\b"),
     ("Micro_Eisteddfod_de_Camwy", r"micro.?eisteddfod"),
-    ("Eisteddfod_de_Camwy", r"eisteddfod (de )?camwy"),
+    ("Micro_Eisteddfod_de_Camwy", r"eisteddfod (de )?camwy"),
     ("Eisteddfod_Mimosa", r"mimosa|madryn"),
     ("Eisteddfod_de_Trevelin", r"trevelin|cwm hyfryd|16 de octubre"),
-    ("Mini_Eisteddfod_William_Morris", r"william morris"),
+    ("Eisteddfod_de_Dolavon", r"william morris"),
     ("Eisteddfod_de_Dolavon", r"dolavon"),
-    ("Eisteddfod_de_Esquel", r"esquel"),
     ("Eisteddfod_del_Chubut", r"del chubut|eisteddfod chubut|y wladfa|\[?E?CH ?\d{4}|\bCh ?\d{2}\b|trelew|eisteddfod mayor"),
 ]
 # The festival named outright ("Eisteddfod del Chubut 2022 … Coro Municipal Madryn").
 # Checked before the channel default and before loose places (FESTIVALS), because a place
 # in a title is often only where the performers come from.
 EXPLICIT = [
-    ("Eisteddfod_Infantil_de_Trevelin", r"eisteddfod (infantil|de (los )?ni[ñn]os)\W{0,3}(de )?trevelin"),
-    ("Eisteddfod_Juvenil_de_Trevelin", r"eisteddfod juvenil\W{0,3}(de )?trevelin"),
+    ("Eisteddfod_de_Trevelin", r"eisteddfod (infantil|juvenil|de (los )?ni[ñn]os)\W{0,3}(de )?trevelin"),
     ("Micro_Eisteddfod_de_Camwy", r"micro.?eisteddfod"),
-    ("Eisteddfod_de_Camwy", r"eisteddfod (de )?camwy"),
+    ("Micro_Eisteddfod_de_Camwy", r"eisteddfod (de )?camwy"),
     ("Eisteddfod_de_la_Juventud", r"eisteddfod (de la )?juventud|ieuenctid"),
     ("Eisteddfod_Mimosa", r"eisteddfod mimosa|mimosa porth madryn"),
     ("Eisteddfod_de_Trevelin", r"eisteddfod (mayor )?(de )?trevelin"),
     ("Eisteddfod_de_Dolavon", r"eisteddfod (de )?dolavon"),
-    ("Eisteddfod_de_Esquel", r"eisteddfod (de )?esquel"),
     ("Eisteddfod_del_Chubut", r"eisteddfod (del )?chubut|eisteddfod y wladfa"),
 ]
 # Channels whose uploads default to a festival when the text names none.
@@ -62,6 +61,9 @@ NEWS_CHANNELS = {"@canal12chubut", "@canal12ch", "@DiarioJornadaChubut", "@canal
 # Not Patagonian: drop unless the text also names a Patagonian place.
 # ("Mendoza" is NOT here: it is a surname and a choir that competes in Trelew.)
 WALES = r"llangollen|kernewek|cornish|gorsedh kernow|eisteddfod y dysgwyr|eisteddfod yr urdd|urdd gobaith|genedlaethol|national eisteddfod|eisteddfod of wales|eisteddfod cymru"
+# An eisteddfod abroad named in the title: not archived, even with a Patagonian speaker
+# ("Eisteddfod Gales de Carreg Las // Radio Nacional Esquel").
+ABROAD = r"eisteddfod (de )?gales"
 PATAGONIA = r"chubut|trelew|gaiman|trevelin|madryn|dolavon|esquel|rawson|wladfa|patagonia|camwy|[\[(](CH|JU)\d{4}"
 EISTEDDFOD = r"eisteddfod|eistedfod|eisteddvod|gorsedd|silla del bardo|corona del poeta|cadair|coron"
 
@@ -108,6 +110,8 @@ def classify(d, hint=None):
     first = lambda table, text: next((f for f, p in table if re.search(p, text, re.I)), None)
     festival = ({"CH": "Eisteddfod_del_Chubut", "JU": "Eisteddfod_de_la_Juventud"}[code.group(1).upper()] if code
                 else first(EXPLICIT, title) or CHANNEL_DEFAULT.get(ch) or first(FESTIVALS, title))
+    if re.search(ABROAD, title, re.I):
+        return None
     if hint:
         festival = hint["festival"]
     elif ch not in CHANNEL_DEFAULT:                    # official channels: keep every upload

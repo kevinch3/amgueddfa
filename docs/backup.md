@@ -1,0 +1,152 @@
+# Private backup (videos and media)
+
+A copy of the archive's videos at medium quality (360p), kept on a backup disk
+and **never published**. It exists so that a video can be restored, or at least watched by
+an admin, if it disappears from YouTube. Catalog media from R2 join it once
+issue #23 is set up. This file is copied into the backup root as `README.md` on
+every run.
+
+- **Where:** the laptop's second disk, `/run/media/kevinch3/4eff8b2b-61f1-4df2-bb61-5f9ba0faa94d/amgueddfa-backup/`
+  (220 GB ext4, shared with a Steam library). It is a single disk: YouTube keeps
+  the originals, so a lost disk loses the copies of videos YouTube has also lost.
+  The tool runs the same on another machine (e.g. KPC's RAID, `/mnt/raid2/data`).
+- **When:** once a month. The systemd user timer `amgueddfa-backup.timer` fires
+  daily; `monthly.sh` does the work on the first day of the month on which the
+  disk is mounted, and does nothing otherwise (no disk, or this month already
+  done: `logs/done-YYYY-MM`). A run cut short by sleep or shutdown continues the
+  next day where it stopped.
+- **What it downloads:** every video in the site's list
+  (`src/data/videos.json`, fetched from GitHub on each run) plus any list in
+  `lists/` (e.g. the archive's `VIDEOS.tsv`), **only from the channels in
+  `channels.txt`** (permission given). Today that is the Eisteddfod del Chubut
+  association's channel (permission given 2026-11-18). To add a channel, add
+  its name to `channels.txt` once there is permission.
+- **Size:** about 0.2 GB per hour of video (measured on the first files). The
+  association's 1,064 videos (195 h) are ~40 GB; all 2,161 listed videos (~440 h)
+  would be ~90 GB.
+  The disk had 131 GB free on 2026-11-18: enough for the association's videos,
+  not for all of them while the Steam library is there.
+
+## How to find a video
+
+```
+amgueddfa-backup/
+  README.md       this file
+  INDEX.tsv       one row per video, sorted by festival, year, competition code
+  status.json     the last run: counts per state, bytes, errors
+  channels.txt    channels with permission to download
+  removed.tsv     videos deleted on request (never downloaded again)
+  lists/          extra lists (VIDEOS.tsv) and the last copy of the site's list
+  videos/<Festival>/<year>/<year>_<code or kind>_<title>_<id>.mp4
+                  + .info.json (YouTube's metadata) + .es.vtt / .es-orig.vtt (auto captions)
+  logs/YYYY-MM.log
+  bin/            private yt-dlp, updated by every run
+```
+
+The folders follow the archive's `Videos/` tree (`Eisteddfod_del_Chubut/2012/…`).
+In a year, files sort by competition code, so `2012_CH2012006_…` is competition 6
+of Chubut 2012. By id, code or words in the title:
+
+```bash
+cd ~/amgueddfa-eisteddfod
+python3 scripts/backup/videos.py find CH2012006
+python3 scripts/backup/videos.py find vlwe6KnhK7g
+python3 scripts/backup/videos.py find "corona 2012"
+```
+
+Or open `INDEX.tsv` in a spreadsheet and sort or filter by any column.
+
+### States (`INDEX.tsv`, column `status`)
+
+| State | Meaning |
+|---|---|
+| `ok` | saved here and still on YouTube |
+| `missing` | not saved yet (new, or its channel has no permission) |
+| `error` | the last download failed; it is retried next month |
+| `gone_kept` | **gone from YouTube, saved here**: a restore candidate |
+| `gone_lost` | gone from YouTube before it was saved |
+| `removed` | deleted on request; never downloaded again |
+
+Each run checks, cheaply, that every saved video is still on YouTube, so
+`gone_kept` shows up within a month of a video disappearing.
+
+## Restore plan
+
+What to do depends on why a video is needed. These rules were decided on
+2026-11-18.
+
+1. **A video disappeared from YouTube on its own** (state `gone_kept`, or a
+   visitor reports a dead link):
+   - It stays here, admins only. Find it with `find`.
+   - To make it watchable again, the preferred way is to re-upload it to the
+     association's channel (with their OK), then put the new id in
+     `VIDEOS.tsv` and run the video export (`scripts/export_videos.py`). The
+     site links the new upload.
+   - Self-hosting on the site's own storage comes with issue #26 (multimedia).
+     Until then, do not publish the file from here.
+2. **An admin needs to see a video** (to check a report or a fact): copy it
+   from `videos/` (`find` prints the path). Never share it further.
+3. **The person shown, or their parent, asks for it to be removed:** delete it
+   here too, so the backup does not keep what they asked to take down:
+   ```bash
+   python3 scripts/backup/videos.py remove VIDEO_ID --reason "request via Informar, 2026-12-03"
+   ```
+   This deletes the files, adds the id to `removed.tsv` and marks it `removed`.
+   Also hide it on the site (an approved report, as today).
+4. **The backup disk is lost:** the backup is a second copy only. YouTube still
+   holds the originals; a run on another disk rebuilds it (see Install), except
+   videos YouTube has lost in the meantime. `removed.tsv` and `channels.txt` are
+   small: keep a copy of them elsewhere.
+
+Children: videos from Juventud, Mimosa and youth categories follow the privacy
+periods in issue #29. A copy here is never a reason to show one that is hidden
+on the site.
+
+## Running it by hand
+
+```bash
+systemctl --user start amgueddfa-backup.service     # today's run (skipped if this month is done)
+scripts/backup/monthly.sh --force                   # run again even if this month is done
+journalctl --user -u amgueddfa-backup -f            # follow it
+cat "$AMG_BACKUP_ROOT/status.json"                  # the last run
+python3 scripts/backup/videos.py run --max-new 5    # a small test
+systemctl --user list-timers amgueddfa-backup.timer # next try
+```
+
+Settings live in `~/.config/amgueddfa-backup.env` (written by the installer).
+
+## Install (once per machine)
+
+```bash
+AMG_DISK=/run/media/kevinch3/4eff8b2b-61f1-4df2-bb61-5f9ba0faa94d \
+AMG_BACKUP_ROOT=/run/media/kevinch3/4eff8b2b-61f1-4df2-bb61-5f9ba0faa94d/amgueddfa-backup \
+scripts/backup/install.sh --tools
+```
+
+It writes the settings, links the archive's `VIDEOS.tsv` into `lists/` (so the
+master list is always current), creates `channels.txt`, installs the units and
+starts the timer. `--tools` fetches a current `yt-dlp` into `bin/` from its
+official GitHub release. On a machine used only for this (e.g. KPC), clone the
+repository there and add `AMG_PULL=1` so each run pulls first.
+
+The timer runs while you are logged out only with lingering
+(`loginctl show-user $USER -p Linger` says `yes` on this laptop).
+
+**Why a private yt-dlp:** Ubuntu's `yt-dlp` falls months behind, and YouTube
+then refuses the downloads (HTTP 403; seen 2026-11-18 with 2026.03.17, with and
+without a JavaScript runtime). The monthly run updates the private `yt-dlp`
+first. YouTube also needs a JavaScript runtime: `node` (present on this laptop)
+or deno in `bin/`. If 5 downloads fail in a row the run stops instead of
+retrying hundreds of times, and the next day tries again.
+
+## Later: competition and verdict markers
+
+The 28 recordings over 3 hours hold 197 of the ~440 hours. Each run saves
+YouTube's automatic Spanish captions next to the video (`.es-orig.vtt`), with
+timestamps. A later tool can search them for the presenter's cues
+("competencia número…", "veredicto", "beirniadaeth", "primer premio"), match
+the year's numbered programa, and write markers (video, second, competition,
+start | verdict). They are checked by hand before anything is public; verdict
+markers follow issue #29. Whisper on the saved audio can fill gaps.
+
+Related: #23 (R2 → KPC media), #26 (multimedia), #29 (privacy periods).

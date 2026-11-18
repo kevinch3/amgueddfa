@@ -1,0 +1,11 @@
+[Unit]
+Description=Amgueddfa private backup (does the work once a month, when the disk is there)
+
+[Timer]
+# Daily; monthly.sh does nothing unless this month is not done yet and the disk is mounted.
+OnCalendar=daily
+RandomizedDelaySec=2h
+Persistent=true
+
+[Install]
+WantedBy=timers.target

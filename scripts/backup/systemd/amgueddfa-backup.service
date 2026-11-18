@@ -1,0 +1,15 @@
+# Installed by scripts/backup/install.sh, which fills in @MONTHLY@.
+[Unit]
+Description=Amgueddfa private backup (videos at 360p, R2 media)
+Documentation=file://@DOCS@
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=@MONTHLY@
+# The first run downloads many hours of video: let it take as long as it needs.
+# If the laptop sleeps or shuts down, the next day's run continues where it stopped.
+TimeoutStartSec=infinity
+Nice=10
+IOSchedulingClass=idle

@@ -54,7 +54,13 @@ FOLDERS = {
     'trevelin': 'Eisteddfod_de_Trevelin',
 }
 CODE = re.compile(r'\[([A-Z]{2}\d{7})\]')
-INDEX_COLS = ['id', 'festival', 'year', 'kind', 'code', 'title', 'channel', 'file', 'bytes', 'duration', 'status', 'checked']
+INDEX_COLS = ['id', 'festival', 'year', 'kind', 'code', 'title', 'channel', 'file', 'bytes', 'duration', 'captions',
+              'status', 'checked']
+# Captions: YouTube's automatic transcription in the language it detected (es-orig, but
+# also e.g. uk-orig when it mishears Welsh singing), its Spanish version, and subtitles
+# someone uploaded. Short songs often have none at all ('none': a job for Whisper later).
+SUB_LANGS = '.*-orig,es'
+CAPTION_STATES = ('yes', 'none', 'missing')
 MAX_FAILS_IN_A_ROW = 5
 STATUSES = ('ok', 'missing', 'gone_kept', 'gone_lost', 'error', 'removed')
 
@@ -172,11 +178,32 @@ class Log:
 
 
 def read_channels(root: Path) -> set[str] | None:
-    """channels.txt: one YouTube channel name per line (# comments). None = every channel."""
+    """channels.txt: one YouTube channel name per line (# comments). None = every channel
+    (no file, or a line with just '*')."""
     p = root / 'channels.txt'
     if not p.exists():
         return None
-    return {s for line in p.read_text(encoding='utf-8').splitlines() if (s := line.split('#', 1)[0].strip())}
+    names = {s for line in p.read_text(encoding='utf-8').splitlines() if (s := line.split('#', 1)[0].strip())}
+    return None if '*' in names else names
+
+
+def caption_state(dest: Path) -> str:
+    """'yes' = a .vtt is saved; 'none' = YouTube has no transcription of this video
+    (per its .info.json); 'missing' = YouTube has one, not saved yet."""
+    if any(dest.parent.glob(glob_escape(dest.stem) + '.*.vtt')):
+        return 'yes'
+    try:
+        d = json.loads(dest.with_suffix('.info.json').read_text())
+    except (OSError, ValueError):
+        return 'missing'
+    auto = d.get('automatic_captions') or {}
+    if d.get('subtitles') or any(k.endswith('-orig') for k in auto):
+        return 'missing'
+    return 'none'
+
+
+def glob_escape(name: str) -> str:
+    return re.sub(r'([\[\]*?])', r'[\1]', name)
 
 
 def read_removed(root: Path) -> dict[str, str]:
@@ -242,7 +269,7 @@ def download(v: Video, dest: Path, log: Log) -> bool:
            # Captions are a bonus (for markers later): YouTube rate-limits them (429), so pause
            # between them and never lose the video over one (--ignore-errors). Welsh auto
            # captions are only a machine translation of the Spanish ones: not worth a request.
-           '--write-info-json', '--write-auto-subs', '--sub-langs', 'es-orig,es', '--sub-format', 'vtt',
+           '--write-info-json', '--write-auto-subs', '--write-subs', '--sub-langs', SUB_LANGS, '--sub-format', 'vtt',
            '--sleep-subtitles', '3', '--ignore-errors',
            '--sleep-requests', '1', '--sleep-interval', '5', '--max-sleep-interval', '15',
            # One name for the video and its .info.json / .<lang>.vtt companions.
@@ -259,6 +286,16 @@ def download(v: Video, dest: Path, log: Log) -> bool:
         log(f'error {v.id}: {(r.stderr or r.stdout).strip().splitlines()[-1:] or "no file"}')
         return False
     return True
+
+
+def fetch_captions(v: Video, dest: Path) -> bool:
+    """Captions only, for a saved video whose captions were not saved (YouTube's 429)."""
+    cmd = [YTDLP, '--no-update', '--no-progress', '--quiet', '--no-warnings', *JS_RUNTIME,
+           '--skip-download', '--write-auto-subs', '--write-subs', '--sub-langs', SUB_LANGS,
+           '--sub-format', 'vtt', '--sleep-subtitles', '5', '--sleep-requests', '1',
+           '-o', f"{dest.with_suffix('')}.%(ext)s", f'https://www.youtube.com/watch?v={v.id}']
+    subprocess.run(cmd, capture_output=True, text=True)
+    return caption_state(dest) == 'yes'
 
 
 def info_duration(dest: Path) -> str:
@@ -284,6 +321,7 @@ def cmd_run(root: Path, max_new: int | None, check: bool) -> int:
     old = read_index(root)
     log(f'start: {len(videos)} videos listed, {len(removed)} removed on request, check={check}')
     rows, new, failed, streak, stopped = [], 0, 0, 0, False
+    subs_streak, subs_stopped = 0, False
     for v in sorted(videos.values(), key=lambda v: (v.festival, v.year or 9999, v.id)):
         prev = old.get(v.id, {})
         dest = root / 'videos' / (prev.get('file') or rel_path(v))
@@ -310,10 +348,22 @@ def cmd_run(root: Path, max_new: int | None, check: bool) -> int:
         elif check and has:
             upstream = on_youtube(v.id)
             time.sleep(0.5)
+        caps = caption_state(dest) if has else ''
+        if caps == 'missing' and not subs_stopped:
+            if fetch_captions(v, dest):
+                caps = 'yes'
+                subs_streak = 0
+                log(f'captions {v.id}')
+            else:
+                subs_streak += 1
+                if subs_streak >= MAX_FAILS_IN_A_ROW:
+                    # YouTube rate-limits caption requests (429): leave the rest for the next run.
+                    subs_stopped = True
+                    log(f'{subs_streak} caption fetches failed in a row: no more captions this run')
         rows.append({
             'id': v.id, 'festival': v.festival, 'year': v.year or '', 'kind': v.kind, 'code': code_of(v.title),
             'title': v.title, 'channel': v.channel, 'file': str(dest.relative_to(root / 'videos')) if has else '',
-            'bytes': dest.stat().st_size if has else '', 'duration': info_duration(dest) if has else '',
+            'bytes': dest.stat().st_size if has else '', 'duration': info_duration(dest) if has else '', 'captions': caps,
             'status': next_status(has, upstream, is_removed, tried_and_failed, prev.get('status', '')),
             'checked': now() if upstream is not None else prev.get('checked', ''),
         })
@@ -323,6 +373,7 @@ def cmd_run(root: Path, max_new: int | None, check: bool) -> int:
             write_index(root, rows + [r for k, r in old.items() if k not in seen])
     write_index(root, rows)
     counts = {s: sum(r['status'] == s for r in rows) for s in STATUSES}
+    counts |= {f'captions_{s}': sum(r['captions'] == s for r in rows) for s in CAPTION_STATES}
     size = sum(int(r['bytes'] or 0) for r in rows)
     status = {'finished': now(), 'listed': len(rows), 'downloaded_this_run': new - failed, 'failed_this_run': failed,
               'stopped_early': stopped, 'bytes': size, 'counts': counts}

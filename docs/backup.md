@@ -17,15 +17,20 @@ every run.
   next day where it stopped.
 - **What it downloads:** every video in the site's list
   (`src/data/videos.json`, fetched from GitHub on each run) plus any list in
-  `lists/` (e.g. the archive's `VIDEOS.tsv`), **only from the channels in
-  `channels.txt`** (permission given). Today that is the Eisteddfod del Chubut
-  association's channel (permission given 2026-11-18). To add a channel, add
-  its name to `channels.txt` once there is permission.
+  `lists/` (e.g. the archive's `VIDEOS.tsv`), from the channels in
+  `channels.txt`. A line with `*` means every channel; that is the setting since
+  2026-11-18 (every listed video, all uploaders, for this private copy; the
+  Eisteddfod del Chubut association gave permission for its own channel). To
+  limit it again, replace `*` with channel names, one per line.
+- **Transcriptions:** with each video, YouTube's automatic transcription in the
+  language it detected (`.es-orig.vtt`, or e.g. `.uk-orig.vtt` when it mishears
+  Welsh singing), its Spanish version (`.es.vtt`) and any subtitles someone
+  uploaded. Many short songs have none on YouTube (`captions` = `none` in
+  `INDEX.tsv`): those wait for Whisper (see the end). Captions YouTube refused
+  for a while (HTTP 429) are fetched again on the next run.
 - **Size:** about 0.2 GB per hour of video (measured on the first files). The
-  association's 1,064 videos (195 h) are ~40 GB; all 2,161 listed videos (~440 h)
-  would be ~90 GB.
-  The disk had 131 GB free on 2026-11-18: enough for the association's videos,
-  not for all of them while the Steam library is there.
+  association's 1,064 videos (195 h) are ~40 GB; all 2,161 listed videos (~411 h
+  with a known length) ~86 GB. The disk had 129 GB free on 2026-11-18.
 
 ## How to find a video
 
@@ -38,7 +43,7 @@ amgueddfa-backup/
   removed.tsv     videos deleted on request (never downloaded again)
   lists/          extra lists (VIDEOS.tsv) and the last copy of the site's list
   videos/<Festival>/<year>/<year>_<code or kind>_<title>_<id>.mp4
-                  + .info.json (YouTube's metadata) + .es.vtt / .es-orig.vtt (auto captions)
+                  + .info.json (YouTube's metadata) + .<lang>.vtt (transcriptions)
   logs/YYYY-MM.log
   bin/            private yt-dlp, updated by every run
 ```
@@ -66,6 +71,9 @@ Or open `INDEX.tsv` in a spreadsheet and sort or filter by any column.
 | `gone_kept` | **gone from YouTube, saved here**: a restore candidate |
 | `gone_lost` | gone from YouTube before it was saved |
 | `removed` | deleted on request; never downloaded again |
+
+Column `captions`: `yes` (a `.vtt` is saved), `none` (YouTube has no
+transcription), `missing` (YouTube has one, not saved yet; the next run tries).
 
 Each run checks, cheaply, that every saved video is still on YouTube, so
 `gone_kept` shows up within a month of a video disappearing.
@@ -136,8 +144,9 @@ The timer runs while you are logged out only with lingering
 then refuses the downloads (HTTP 403; seen 2026-11-18 with 2026.03.17, with and
 without a JavaScript runtime). The monthly run updates the private `yt-dlp`
 first. YouTube also needs a JavaScript runtime: `node` (present on this laptop)
-or deno in `bin/`. If 5 downloads fail in a row the run stops instead of
-retrying hundreds of times, and the next day tries again.
+or deno in `bin/`. YouTube sometimes refuses the stream of a working video (HTTP 403):
+each download is tried a second time after 30 s. If 5 downloads fail in a row the
+run stops instead of retrying hundreds of times, and the next day tries again.
 
 ## Later: competition and verdict markers
 

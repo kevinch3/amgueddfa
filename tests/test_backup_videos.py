@@ -73,3 +73,22 @@ def test_write_index_sorts_int_and_str_years(tmp_path):
             {**base, 'id': 'c', 'festival': 'F', 'year': '', 'code': ''}]
     write_index(tmp_path, rows)
     assert list(read_index(tmp_path)) == ['a', 'b', 'c']
+
+
+def test_channels_star_means_every_channel(tmp_path):
+    from scripts.backup.videos import read_channels
+    (tmp_path / 'channels.txt').write_text('# all uploaders\n*\n')
+    assert read_channels(tmp_path) is None
+
+
+def test_caption_state(tmp_path):
+    import json
+    from scripts.backup.videos import caption_state
+    dest = tmp_path / '2012_CH2012006_x_abc.mp4'
+    assert caption_state(dest) == 'missing'          # no info yet
+    dest.with_suffix('.info.json').write_text(json.dumps({'automatic_captions': {}, 'subtitles': {}}))
+    assert caption_state(dest) == 'none'             # YouTube has no transcription
+    dest.with_suffix('.info.json').write_text(json.dumps({'automatic_captions': {'uk-orig': [], 'es': []}}))
+    assert caption_state(dest) == 'missing'          # misdetected language still counts
+    (tmp_path / '2012_CH2012006_x_abc.uk-orig.vtt').write_text('WEBVTT')
+    assert caption_state(dest) == 'yes'

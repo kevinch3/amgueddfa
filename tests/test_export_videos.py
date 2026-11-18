@@ -29,3 +29,18 @@ def test_exports_core_festivals_with_year(tmp_path):
     assert data["videos"][2]["year_inferred"] is True
     # Nothing from the local archive leaks: no paths, no retrieval bookkeeping.
     assert "Videos/" not in out.read_text(encoding="utf-8")
+
+
+def test_trevelin_children_held_back_until_29(tmp_path):
+    tsv = tmp_path / "VIDEOS.tsv"
+    tsv.write_text(HEADER
+                   + row("AAAAAAAAAAA", "Eisteddfod_de_Trevelin", 2020, title="Eisteddfod Infantil Trevelin 2020 - x")
+                   + row("BBBBBBBBBBB", "Eisteddfod_de_Trevelin", 2012, title="EISTEDDFOD JUVENIL TREVELIN 2012")
+                   + row("CCCCCCCCCCC", "Eisteddfod_de_Trevelin", 2019, title="Eisteddfod de los niños Trevelin")
+                   + row("DDDDDDDDDDD", "Eisteddfod_de_Trevelin", 2014, title="Eisteddfod de Trevelin 2014 - Coro")
+                   # a competition category of the main festival, public before: stays
+                   + row("EEEEEEEEEEE", "Eisteddfod_de_Trevelin", 2014, title="Eisteddfod Trevelin 2014 - Canción infantil"),
+                   encoding="utf-8")
+    out = tmp_path / "videos.json"
+    assert export(tsv, out) == 2
+    assert [v["id"] for v in json.loads(out.read_text(encoding="utf-8"))["videos"]] == ["DDDDDDDDDDD", "EEEEEEEEEEE"]

@@ -7,6 +7,7 @@ are not committed: the site loads them from YouTube's image server.
 """
 import csv
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -19,6 +20,14 @@ SLUGS = {
 }
 # Upload date alone is a weak guess for the edition year; the others come from the video itself.
 INFERRED = {"subida"}
+# Trevelin's Infantil/Juvenil sessions ("Eisteddfod Infantil Trevelin…"; not a category
+# such as "Canción infantil" of the main festival): children, kept off the site until the privacy
+# periods of issue #29 are decided. They stay in the archive (Eisteddfod_de_Trevelin).
+CHILDREN = re.compile(r"eisteddfod (infantil|juvenil|de (los )?ni[ñn]os)", re.I)
+
+
+def held_back(row: dict) -> bool:
+    return row["festival"] == "Eisteddfod_de_Trevelin" and bool(CHILDREN.search(row["title"]))
 
 
 def export(tsv: Path, out: Path) -> int:
@@ -27,7 +36,7 @@ def export(tsv: Path, out: Path) -> int:
     videos = []
     for r in rows:
         slug = SLUGS.get(r["festival"])
-        if not slug or not r["year"]:
+        if not slug or not r["year"] or held_back(r):
             continue
         d = r.get("upload_date") or ""
         videos.append({

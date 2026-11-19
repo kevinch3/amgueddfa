@@ -100,7 +100,7 @@ const contributedTr = forEdition(approved, slug, year, 'transcription').filter((
 const contribUrl = (tab: string) => url(`contribuir?f=${slug}&y=${year}&tab=${tab}`);
 const missingList = formatList(missing.map((m) => m.toLocaleLowerCase(intlLocales())));
 ---
-<Base title={`${fest.name} ${year}`} festival={slug} year={year} description={seoDescription} image={cover?.page ?? null} jsonLd={seoLd}>
+<Base title={`${fest.name} ${year}`} festival={slug} year={year} description={seoDescription} image={cover?.page ?? null} jsonLd={seoLd} markdown={`${slug}/${year}.md`}>
   <nav class="crumbs" aria-label={t('comun.miga')}>
     <ol>
       <li><a href={url('/')}>{t('nav.inicio')}</a></li>

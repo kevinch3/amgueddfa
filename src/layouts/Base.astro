@@ -28,10 +28,12 @@ interface Props {
   noindex?: boolean;
   /** schema.org data describing the page. */
   jsonLd?: Record<string, unknown> | null;
+  /** Site path of this page's Markdown twin (e.g. 'chubut/1937.md'), when it has one. */
+  markdown?: string | null;
   /** Count visits with Cloudflare Web Analytics (off on /admin). */
   analytics?: boolean;
 }
-const { title, description = t('sitio.descripcion'), festival, year, item, current, image = null, noindex = false, jsonLd = null, analytics = true } = Astro.props;
+const { title, description = t('sitio.descripcion'), festival, year, item, current, image = null, noindex = false, jsonLd = null, markdown = null, analytics = true } = Astro.props;
 const analyticsToken = (import.meta.env.PUBLIC_CF_ANALYTICS_TOKEN ?? '').trim();
 const fullTitle = title ? `${title} | ${t('sitio.nombre')}` : t('sitio.nombre');
 // Astro.url is the Spanish page being rendered; the page's own address carries its language.
@@ -77,6 +79,7 @@ const webmcpToken = (import.meta.env.PUBLIC_WEBMCP_OT_TOKEN ?? '').trim();
     <link rel="alternate" type="application/json" href={absUrl('datos/ediciones.json')} title={t('abiertos.ediciones')} />
     <link rel="alternate" type="application/json" href={absUrl('datos/documentos.json')} title={t('abiertos.documentos')} />
     <link rel="help" type="text/plain" href={absUrl('llms.txt')} title="llms.txt" />
+    {markdown && <link rel="alternate" type="text/markdown" href={absUrl(markdown)} title="Markdown" />}
     {webmcpToken && <meta http-equiv="origin-trial" content={webmcpToken} />}
     <title>{fullTitle}</title>
     {analytics && analyticsToken && <Analytics token={analyticsToken} />}

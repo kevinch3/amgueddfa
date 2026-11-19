@@ -26,6 +26,7 @@ ${fests.join('\n')}
 
 - [Ediciones](${absUrl('datos/ediciones.json')}): todas las ediciones con estado del archivo, tapa y datos aprobados (con fuente y quién los aportó). Dos campos distintos: \`realizada\` dice si la edición se hizo (\`true\`, \`false\`, o \`null\` cuando no se sabe: no es lo mismo que «no se hizo»); \`estado\` dice cuánto material se conserva en el archivo (\`full\` programa completo confirmado, \`some\` algo de material, \`none\` nada todavía). Que falte material no significa que la edición no se haya hecho. \`tiene_transcripcion\` indica si algún documento de la edición está transcrito.
 - [Documentos](${absUrl('datos/documentos.json')}): todos los documentos públicos con título, eisteddfod, año, categoría, miniatura e imágenes de cada página. \`derechos\` es siempre explícito: las imágenes y escaneos siguen siendo de sus titulares; las transcripciones y los datos del sitio son CC BY-SA 4.0 (\`licencia_transcripcion\`).
+- Cada página de año y de documento tiene una versión en Markdown con los mismos datos (y la transcripción, si la hay): ${absUrl('chubut/1937.md')}, ${absUrl('item/')}<id>.md. La página la anuncia con \`<link rel="alternate" type="text/markdown">\`.
 - [Mapa del sitio](${absUrl('sitemap.xml')})
 
 ## Herramientas para agentes (WebMCP)

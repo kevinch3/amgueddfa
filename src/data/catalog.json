@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-19T22:21:49+00:00",
+ "generated": "2026-11-19T22:24:21+00:00",
  "items": [
   {
    "id": "84b01d326cbc",
@@ -26979,10 +26979,10 @@
    "festival": "mimosa",
    "year": 2011,
    "undated": false,
-   "category": "programa",
-   "title": "web chubutcultural programa-2011",
+   "category": "programa-del-dia",
+   "title": "web chubutcultural programa-del-dia-2011",
    "kind": "web",
-   "src_path": "Eisteddfod_Mimosa/2011/Programa/web_chubutcultural_programa-2011.html",
+   "src_path": "Eisteddfod_Mimosa/2011/Programa_del_dia/web_chubutcultural_programa-del-dia-2011.html",
    "alt_paths": [],
    "source_url": "https://chubutcultural.com.ar/2011/06/programa-del-eistedffod/",
    "source_label": "chubutcultural.com.ar",

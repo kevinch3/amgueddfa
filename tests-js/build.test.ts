@@ -199,6 +199,11 @@ describe('static build', () => {
     expect(year).toContain('<link rel="canonical" href="https://amgueddfa.org/chubut/1937/"');
     expect(year).toContain('<meta property="og:title"');
     expect(year).toContain('"@type":"Event"');
+    expect(year).toContain('"@type":"BreadcrumbList"');
+    // An edition with no evidence of having taken place is never asserted as an Event.
+    const early = read('chubut/1865/index.html');
+    expect(early).toContain('"@type":"CollectionPage"');
+    expect(early).not.toContain('"@type":"Event"');
     expect(year).toMatch(/<meta name="description" content="Eisteddfod del Chubut 1937\./);
     // Every approved start date shows up in its edition's Event (zero or many, whatever the data is).
     for (const c of (approved as any[]).filter((x) => x.type === 'fact' && x.payload?.field === 'start_date')) {

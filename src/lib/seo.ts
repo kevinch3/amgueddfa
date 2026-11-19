@@ -73,8 +73,34 @@ export function editionDescription(name: string, year: number, state: EditionSta
 
 type Ld = Record<string, unknown>;
 
-/** schema.org Event for an edition; only the fields we actually know. */
+/**
+ * Whether the archive has evidence about this edition taking place: held or
+ * not held is known, or an approved start date (a reviewed fact with its
+ * fuente). Only then is it described as a schema.org Event; an edition with
+ * no such record (e.g. only a venue, or nothing) is not asserted as an event.
+ */
+export function isConfirmedEdition(f: EditionFacts): boolean {
+  return f.held === true || f.held === false || Boolean(f.startDate);
+}
+
+/**
+ * schema.org for an edition's page; only the fields we actually know.
+ * Confirmed editions are an Event (cancelled when not held); the others are
+ * a CollectionPage: the archive's material for that year, nothing more.
+ */
 export function editionJsonLd(o: { name: string; year: number; url: string; image: string | null; facts: EditionFacts }): Ld {
+  if (!isConfirmedEdition(o.facts)) {
+    const page: Ld = {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: `${o.name} ${o.year}`,
+      url: o.url,
+      isAccessibleForFree: true,
+      temporalCoverage: String(o.year),
+    };
+    if (o.image) page.image = o.image;
+    return page;
+  }
   const ld: Ld = {
     '@context': 'https://schema.org',
     '@type': 'Event',
@@ -91,8 +117,12 @@ export function editionJsonLd(o: { name: string; year: number; url: string; imag
   return ld;
 }
 
-/** schema.org ArchiveComponent for a document, about its edition. */
-export function itemJsonLd(o: { name: string; url: string; image: string | null; editionUrl: string | null; editionName: string | null; year: number | null }): Ld {
+/**
+ * schema.org ArchiveComponent for a document. It is `about` its edition's
+ * Event only when that edition is confirmed; otherwise it is part of the
+ * edition's page.
+ */
+export function itemJsonLd(o: { name: string; url: string; image: string | null; editionUrl: string | null; editionName: string | null; year: number | null; editionConfirmed?: boolean }): Ld {
   const ld: Ld = {
     '@context': 'https://schema.org',
     '@type': 'ArchiveComponent',
@@ -103,8 +133,32 @@ export function itemJsonLd(o: { name: string; url: string; image: string | null;
   };
   if (o.image) ld.image = o.image;
   if (o.year !== null) ld.temporalCoverage = String(o.year);
-  if (o.editionUrl && o.editionName) ld.about = { '@type': 'Event', name: o.editionName, url: o.editionUrl };
+  if (o.editionUrl && o.editionName) {
+    if (o.editionConfirmed) ld.about = { '@type': 'Event', name: o.editionName, url: o.editionUrl };
+    else ld.isPartOf = { '@type': 'CollectionPage', name: o.editionName, url: o.editionUrl };
+  }
   return ld;
+}
+
+/** schema.org BreadcrumbList matching the visible crumbs; the last (current page) has no link. */
+export function breadcrumbJsonLd(crumbs: { name: string; url?: string }[]): Ld & { itemListElement: Ld[] } {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: crumbs.map((c, i) => {
+      const el: Ld = { '@type': 'ListItem', position: i + 1, name: c.name };
+      if (c.url) el.item = c.url;
+      return el;
+    }),
+  };
+}
+
+/** Several JSON-LD blocks as one @graph under a single @context. */
+export function ldGraph(...blocks: (Ld | null)[]): Ld {
+  return {
+    '@context': 'https://schema.org',
+    '@graph': blocks.filter((b): b is Ld => b !== null).map(({ '@context': _c, ...rest }) => rest),
+  };
 }
 
 /** The site itself: a website run by a (digital) archive. */

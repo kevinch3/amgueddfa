@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-17T13:05:56+00:00",
+ "generated": "2026-11-19T02:03:35+00:00",
  "items": [
   {
    "id": "84b01d326cbc",
@@ -18,6 +18,8 @@
    "rights": "© Llyfrgell Genedlaethol Cymru / The National Library of Wales · Creative Archive Licence",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "84b01d326cbc/thumb.webp",
    "page_paths": [
@@ -43,6 +45,8 @@
    "rights": "© Llyfrgell Genedlaethol Cymru / The National Library of Wales · Creative Archive Licence",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "2a8b39bdb8b7/thumb.webp",
    "page_paths": [
@@ -68,6 +72,8 @@
    "rights": "© Amgueddfa Hanes y Wladfa, Gaiman · All Rights Reserved (reproduced by permission)",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "f54a19f2747e/thumb.webp",
    "page_paths": [
@@ -93,6 +99,8 @@
    "rights": "© Llyfrgell Genedlaethol Cymru / The National Library of Wales · Creative Archive Licence",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "53e5826d4409/thumb.webp",
    "page_paths": [
@@ -118,6 +126,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "73afebadf114/thumb.webp",
    "page_paths": [
@@ -143,6 +153,8 @@
    "rights": "© Llyfrgell Genedlaethol Cymru / The National Library of Wales · Creative Archive Licence",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "3c77e79c7698/thumb.webp",
    "page_paths": [
@@ -168,6 +180,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -191,6 +205,8 @@
    "rights": "© Y Llyfrgell Gymreig, Gwasanaethau Gwybodaeth Prifysgol Cymru Bangor 2004 · All Rights Reserved (reproduced by permission)",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "58897881813d/thumb.webp",
    "page_paths": [
@@ -216,6 +232,8 @@
    "rights": "© Y Llyfrgell Gymreig, Gwasanaethau Gwybodaeth Prifysgol Cymru Bangor 2004 · All Rights Reserved (reproduced by permission)",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "74ba4c04b85f/thumb.webp",
    "page_paths": [
@@ -241,6 +259,8 @@
    "rights": "© Llyfrgell Genedlaethol Cymru / The National Library of Wales · Creative Archive Licence",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "ed5ee85318fa/thumb.webp",
    "page_paths": [
@@ -266,6 +286,8 @@
    "rights": "© Amgueddfa Hanes y Wladfa, Gaiman · All Rights Reserved (reproduced by permission)",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "e171d98b5f6a/thumb.webp",
    "page_paths": [
@@ -291,6 +313,8 @@
    "rights": "© Amgueddfa Hanes y Wladfa, Gaiman · All Rights Reserved (reproduced by permission)",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "a50e5a2ae934/thumb.webp",
    "page_paths": [
@@ -316,6 +340,8 @@
    "rights": "Original: Llyfrgell Genedlaethol Cymru / The National Library of Wales (Casgliad y Werin Cymru, ítem 522320) · Creative Archive Licence",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "abc358fd3032/thumb.webp",
    "page_paths": [
@@ -341,10 +367,39 @@
    "rights": "© Llyfrgell Genedlaethol Cymru / The National Library of Wales · Creative Archive Licence",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "dffd64fc1685/thumb.webp",
    "page_paths": [
     "dffd64fc1685/p01.webp"
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "5e19fba9d7c8",
+   "festival": "chubut",
+   "year": 1913,
+   "undated": false,
+   "category": "otros",
+   "title": "Eisteddfod Trelew 1913 Neuadd Goffa",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1913/Fotos/Eisteddfod_Trelew_1913_Neuadd_Goffa.jpg",
+   "alt_paths": [],
+   "source_url": "https://commons.wikimedia.org/wiki/File:Salon_San_David_Trelew.jpg",
+   "source_label": "Wikimedia Commons",
+   "retrieved": "2026-11-19",
+   "note_public": "Eisteddfod Trelew 1913, Neuadd Goffa.",
+   "rights": "Public domain · autor desconocido",
+   "year_inferred": false,
+   "restricted": false,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "5e19fba9d7c8/thumb.webp",
+   "page_paths": [
+    "5e19fba9d7c8/p01.webp"
    ],
    "text_excerpt": null,
    "table": null
@@ -366,6 +421,8 @@
    "rights": "© Llyfrgell Genedlaethol Cymru / The National Library of Wales · Creative Archive Licence",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "3aa1a282168b/thumb.webp",
    "page_paths": [
@@ -391,6 +448,8 @@
    "rights": "© Llyfrgell Genedlaethol Cymru / The National Library of Wales · Creative Archive Licence",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "1795572ab9a2/thumb.webp",
    "page_paths": [
@@ -416,10 +475,444 @@
    "rights": "© Llyfrgell Genedlaethol Cymru / The National Library of Wales · Creative Archive Licence",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "44e973cdd339/thumb.webp",
    "page_paths": [
     "44e973cdd339/p01.webp"
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "eec04658df99",
+   "festival": "chubut",
+   "year": 1913,
+   "undated": false,
+   "category": "resultados",
+   "title": "Y Drafod 1913-11-28 t1",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1913/Resultados/Y_Drafod_1913-11-28_t1.jpg",
+   "alt_paths": [],
+   "source_url": "https://newspapers.library.wales/view/4021959/4021960/1/",
+   "source_label": "Papurau Newydd Cymru",
+   "retrieved": "2026-11-19",
+   "note_public": "",
+   "rights": "Llyfrgell Genedlaethol Cymru, Papurau Newydd Cymru · statws hawlfraint: anhysbys (yn ôl y Llyfrgell)",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "eec04658df99/thumb.webp",
+   "page_paths": [
+    "eec04658df99/p01.webp"
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "631a6c2919f2",
+   "festival": "chubut",
+   "year": 1913,
+   "undated": false,
+   "category": "resultados",
+   "title": "Y Drafod 1913-11-28 t2",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1913/Resultados/Y_Drafod_1913-11-28_t2.jpg",
+   "alt_paths": [],
+   "source_url": "https://newspapers.library.wales/view/4021959/4021961/2/",
+   "source_label": "Papurau Newydd Cymru",
+   "retrieved": "2026-11-19",
+   "note_public": "",
+   "rights": "Llyfrgell Genedlaethol Cymru, Papurau Newydd Cymru · statws hawlfraint: anhysbys (yn ôl y Llyfrgell)",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "631a6c2919f2/thumb.webp",
+   "page_paths": [
+    "631a6c2919f2/p01.webp"
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "fb4a161a9f3b",
+   "festival": "chubut",
+   "year": 1914,
+   "undated": false,
+   "category": "resultados",
+   "title": "Y Drafod 1914-10-16 t2",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1914/Resultados/Y_Drafod_1914-10-16_t2.jpg",
+   "alt_paths": [],
+   "source_url": "https://newspapers.library.wales/view/4022148/4022150/6/",
+   "source_label": "Papurau Newydd Cymru",
+   "retrieved": "2026-11-19",
+   "note_public": "",
+   "rights": "Llyfrgell Genedlaethol Cymru, Papurau Newydd Cymru · statws hawlfraint: anhysbys (yn ôl y Llyfrgell)",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "fb4a161a9f3b/thumb.webp",
+   "page_paths": [
+    "fb4a161a9f3b/p01.webp"
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "49a6d3c5a4e4",
+   "festival": "chubut",
+   "year": 1915,
+   "undated": false,
+   "category": "programa",
+   "title": "Y Drafod 1915-08-06 t2",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1915/Programa/Y_Drafod_1915-08-06_t2.jpg",
+   "alt_paths": [],
+   "source_url": "https://newspapers.library.wales/view/4022396/4022398/7/",
+   "source_label": "Papurau Newydd Cymru",
+   "retrieved": "2026-11-19",
+   "note_public": "Y Drafod, 6 Awst 1915, t. 2: «Eisteddfod Gadeiriol y Wladfa, Trelew, Hydref 21 a 22, 1915: rhestr o'r testynau».",
+   "rights": "Llyfrgell Genedlaethol Cymru, Papurau Newydd Cymru · statws hawlfraint: anhysbys (yn ôl y Llyfrgell)",
+   "year_inferred": false,
+   "restricted": false,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "49a6d3c5a4e4/thumb.webp",
+   "page_paths": [
+    "49a6d3c5a4e4/p01.webp"
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "772326d16a66",
+   "festival": "chubut",
+   "year": 1917,
+   "undated": false,
+   "category": "programa",
+   "title": "Y Drafod 1917-02-23 t1",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1917/Programa/Y_Drafod_1917-02-23_t1.jpg",
+   "alt_paths": [],
+   "source_url": "https://newspapers.library.wales/view/4023095/4023096/2/",
+   "source_label": "Papurau Newydd Cymru",
+   "retrieved": "2026-11-19",
+   "note_public": "Y Drafod, 23 Chwefror 1917, t. 1: «Eisteddfod y Wladfa, Medi 1917: rhestr o'r testynau».",
+   "rights": "Llyfrgell Genedlaethol Cymru, Papurau Newydd Cymru · statws hawlfraint: anhysbys (yn ôl y Llyfrgell)",
+   "year_inferred": false,
+   "restricted": false,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "772326d16a66/thumb.webp",
+   "page_paths": [
+    "772326d16a66/p01.webp"
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "e0bb42d8d45a",
+   "festival": "chubut",
+   "year": 1917,
+   "undated": false,
+   "category": "resultados",
+   "title": "Y Drafod 1917-11-30 t2",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1917/Resultados/Y_Drafod_1917-11-30_t2.jpg",
+   "alt_paths": [],
+   "source_url": "https://newspapers.library.wales/view/4023441/4023443/8/",
+   "source_label": "Papurau Newydd Cymru",
+   "retrieved": "2026-11-19",
+   "note_public": "",
+   "rights": "Llyfrgell Genedlaethol Cymru, Papurau Newydd Cymru · statws hawlfraint: anhysbys (yn ôl y Llyfrgell)",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "e0bb42d8d45a/thumb.webp",
+   "page_paths": [
+    "e0bb42d8d45a/p01.webp"
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "7dbb3c39a52e",
+   "festival": "chubut",
+   "year": 1917,
+   "undated": false,
+   "category": "resultados",
+   "title": "Y Drafod 1917-12-14 t2",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1917/Resultados/Y_Drafod_1917-12-14_t2.jpg",
+   "alt_paths": [],
+   "source_url": "https://newspapers.library.wales/view/4023459/4023461/7/",
+   "source_label": "Papurau Newydd Cymru",
+   "retrieved": "2026-11-19",
+   "note_public": "",
+   "rights": "Llyfrgell Genedlaethol Cymru, Papurau Newydd Cymru · statws hawlfraint: anhysbys (yn ôl y Llyfrgell)",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "7dbb3c39a52e/thumb.webp",
+   "page_paths": [
+    "7dbb3c39a52e/p01.webp"
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "993dc874a2a8",
+   "festival": "chubut",
+   "year": 1917,
+   "undated": false,
+   "category": "resultados",
+   "title": "Y Drafod 1917-12-21 t5",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1917/Resultados/Y_Drafod_1917-12-21_t5.jpg",
+   "alt_paths": [],
+   "source_url": "https://newspapers.library.wales/view/4023468/4023473/11/",
+   "source_label": "Papurau Newydd Cymru",
+   "retrieved": "2026-11-19",
+   "note_public": "",
+   "rights": "Llyfrgell Genedlaethol Cymru, Papurau Newydd Cymru · statws hawlfraint: anhysbys (yn ôl y Llyfrgell)",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "993dc874a2a8/thumb.webp",
+   "page_paths": [
+    "993dc874a2a8/p01.webp"
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "f3d7c7ce425d",
+   "festival": "chubut",
+   "year": 1918,
+   "undated": false,
+   "category": "programa",
+   "title": "Y Drafod 1918-03-15 t6",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1918/Programa/Y_Drafod_1918-03-15_t6.jpg",
+   "alt_paths": [],
+   "source_url": "https://newspapers.library.wales/view/4023567/4023573/31/",
+   "source_label": "Papurau Newydd Cymru",
+   "retrieved": "2026-11-19",
+   "note_public": "Y Drafod, 15 Mawrth 1918, t. 6: «Eisteddfod y Wladfa, 1918: rhestr o'r testynau».",
+   "rights": "Llyfrgell Genedlaethol Cymru, Papurau Newydd Cymru · statws hawlfraint: anhysbys (yn ôl y Llyfrgell)",
+   "year_inferred": false,
+   "restricted": false,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "f3d7c7ce425d/thumb.webp",
+   "page_paths": [
+    "f3d7c7ce425d/p01.webp"
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "584588fbb48c",
+   "festival": "chubut",
+   "year": 1918,
+   "undated": false,
+   "category": "resultados",
+   "title": "Y Drafod 1918-11-01 t3",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1918/Resultados/Y_Drafod_1918-11-01_t3.jpg",
+   "alt_paths": [],
+   "source_url": "https://newspapers.library.wales/view/4023856/4023859/8/",
+   "source_label": "Papurau Newydd Cymru",
+   "retrieved": "2026-11-19",
+   "note_public": "",
+   "rights": "Llyfrgell Genedlaethol Cymru, Papurau Newydd Cymru · statws hawlfraint: anhysbys (yn ôl y Llyfrgell)",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "584588fbb48c/thumb.webp",
+   "page_paths": [
+    "584588fbb48c/p01.webp"
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "b18605528580",
+   "festival": "chubut",
+   "year": 1918,
+   "undated": false,
+   "category": "resultados",
+   "title": "Y Drafod 1919-02-28 t6",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1918/Resultados/Y_Drafod_1919-02-28_t6.jpg",
+   "alt_paths": [],
+   "source_url": "https://newspapers.library.wales/view/4023992/4023998/24/",
+   "source_label": "Papurau Newydd Cymru",
+   "retrieved": "2026-11-19",
+   "note_public": "",
+   "rights": "Llyfrgell Genedlaethol Cymru, Papurau Newydd Cymru · statws hawlfraint: anhysbys (yn ôl y Llyfrgell)",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "b18605528580/thumb.webp",
+   "page_paths": [
+    "b18605528580/p01.webp"
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "a16103764194",
+   "festival": "chubut",
+   "year": 1918,
+   "undated": false,
+   "category": "resultados",
+   "title": "Y Drafod 1919-03-28 t5",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1918/Resultados/Y_Drafod_1919-03-28_t5.jpg",
+   "alt_paths": [],
+   "source_url": "https://newspapers.library.wales/view/4024028/4024033/15/",
+   "source_label": "Papurau Newydd Cymru",
+   "retrieved": "2026-11-19",
+   "note_public": "",
+   "rights": "Llyfrgell Genedlaethol Cymru, Papurau Newydd Cymru · statws hawlfraint: anhysbys (yn ôl y Llyfrgell)",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "a16103764194/thumb.webp",
+   "page_paths": [
+    "a16103764194/p01.webp"
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "cf1eb353108f",
+   "festival": "chubut",
+   "year": 1919,
+   "undated": false,
+   "category": "programa",
+   "title": "Y Drafod 1919-01-31 t5",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1919/Programa/Y_Drafod_1919-01-31_t5.jpg",
+   "alt_paths": [],
+   "source_url": "https://newspapers.library.wales/view/4023956/4023961/20/",
+   "source_label": "Papurau Newydd Cymru",
+   "retrieved": "2026-11-19",
+   "note_public": "Y Drafod, 31 Ionawr 1919, t. 5: «Eisteddfod Gadeiriol y Wladfa, 1919: rhestr o'r testynau».",
+   "rights": "Llyfrgell Genedlaethol Cymru, Papurau Newydd Cymru · statws hawlfraint: anhysbys (yn ôl y Llyfrgell)",
+   "year_inferred": false,
+   "restricted": false,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "cf1eb353108f/thumb.webp",
+   "page_paths": [
+    "cf1eb353108f/p01.webp"
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "d417726a6560",
+   "festival": "chubut",
+   "year": 1919,
+   "undated": false,
+   "category": "resultados",
+   "title": "Y Drafod 1919-11-14 t2",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1919/Resultados/Y_Drafod_1919-11-14_t2.jpg",
+   "alt_paths": [],
+   "source_url": "https://newspapers.library.wales/view/4024315/4024317/5/",
+   "source_label": "Papurau Newydd Cymru",
+   "retrieved": "2026-11-19",
+   "note_public": "",
+   "rights": "Llyfrgell Genedlaethol Cymru, Papurau Newydd Cymru · statws hawlfraint: anhysbys (yn ôl y Llyfrgell)",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "d417726a6560/thumb.webp",
+   "page_paths": [
+    "d417726a6560/p01.webp"
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "53bc2fa281f9",
+   "festival": "chubut",
+   "year": 1920,
+   "undated": false,
+   "category": "otros",
+   "title": "Sillon del Eisteddfod 1920 Museo del Desembarco 1",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1920/Fotos/Sillon_del_Eisteddfod_1920_Museo_del_Desembarco_1.jpg",
+   "alt_paths": [],
+   "source_url": "https://commons.wikimedia.org/wiki/File:Sill%C3%B3n_del_Eisteddfod,_Y_Wladfa_1920_(1).JPG",
+   "source_label": "Wikimedia Commons",
+   "retrieved": "2026-11-19",
+   "note_public": "Sillón bárdico del Eisteddfod de 1920 (Museo del Desembarco, Punta Cuevas).",
+   "rights": "CC BY-SA 4.0 · Gastón Cuello",
+   "year_inferred": false,
+   "restricted": false,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "53bc2fa281f9/thumb.webp",
+   "page_paths": [
+    "53bc2fa281f9/p01.webp"
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "a40a67e2c51a",
+   "festival": "chubut",
+   "year": 1920,
+   "undated": false,
+   "category": "otros",
+   "title": "Sillon del Eisteddfod 1920 Museo del Desembarco 2",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1920/Fotos/Sillon_del_Eisteddfod_1920_Museo_del_Desembarco_2.jpg",
+   "alt_paths": [],
+   "source_url": "https://commons.wikimedia.org/wiki/File:Sill%C3%B3n_del_Eisteddfod,_Y_Wladfa_1920_(2).JPG",
+   "source_label": "Wikimedia Commons",
+   "retrieved": "2026-11-19",
+   "note_public": "Sillón bárdico del Eisteddfod de 1920 (Museo del Desembarco, Punta Cuevas).",
+   "rights": "CC BY-SA 4.0 · Gastón Cuello",
+   "year_inferred": false,
+   "restricted": false,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "a40a67e2c51a/thumb.webp",
+   "page_paths": [
+    "a40a67e2c51a/p01.webp"
    ],
    "text_excerpt": null,
    "table": null
@@ -441,10 +934,39 @@
    "rights": "Original: Llyfrgell Genedlaethol Cymru / The National Library of Wales (Casgliad y Werin Cymru, ítem 522575) · Creative Archive Licence",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "f2242aa764e9/thumb.webp",
    "page_paths": [
     "f2242aa764e9/p01.webp"
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "d42a8b05f213",
+   "festival": "chubut",
+   "year": 1933,
+   "undated": false,
+   "category": "otros",
+   "title": "Eisteddfod Dolavon hacia 1933",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1933/Fotos/Eisteddfod_Dolavon_hacia_1933.jpg",
+   "alt_paths": [],
+   "source_url": "https://commons.wikimedia.org/wiki/File:Eisteddfod_Dolavon_ca.1933.jpg",
+   "source_label": "Wikimedia Commons",
+   "retrieved": "2026-11-19",
+   "note_public": "Eisteddfod en Dolavon, hacia 1933.",
+   "rights": "Public domain · Fortunato Stillitani",
+   "year_inferred": true,
+   "restricted": false,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "d42a8b05f213/thumb.webp",
+   "page_paths": [
+    "d42a8b05f213/p01.webp"
    ],
    "text_excerpt": null,
    "table": null
@@ -466,6 +988,8 @@
    "rights": "© Llyfrgell Genedlaethol Cymru / The National Library of Wales · Creative Archive Licence",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "06ffc54404ab/thumb.webp",
    "page_paths": [
@@ -491,6 +1015,8 @@
    "rights": "© Llyfrgell Genedlaethol Cymru / The National Library of Wales · Creative Archive Licence",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "fbe6339de118/thumb.webp",
    "page_paths": [
@@ -516,10 +1042,39 @@
    "rights": "© Llyfrgell Genedlaethol Cymru / The National Library of Wales · Creative Archive Licence",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "58d5ef55dc35/thumb.webp",
    "page_paths": [
     "58d5ef55dc35/p01.webp"
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "c7405e26517a",
+   "festival": "chubut",
+   "year": 1939,
+   "undated": false,
+   "category": "otros",
+   "title": "Eisteddfod Trelew hacia 1939",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1939/Fotos/Eisteddfod_Trelew_hacia_1939.jpg",
+   "alt_paths": [],
+   "source_url": "https://commons.wikimedia.org/wiki/File:Eisteddfod_Trelew_ca.1939.jpg",
+   "source_label": "Wikimedia Commons",
+   "retrieved": "2026-11-19",
+   "note_public": "Eisteddfod en el Salón San David de Trelew, hacia 1939.",
+   "rights": "Public domain · Fortunato Stillitani",
+   "year_inferred": true,
+   "restricted": false,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "c7405e26517a/thumb.webp",
+   "page_paths": [
+    "c7405e26517a/p01.webp"
    ],
    "text_excerpt": null,
    "table": null
@@ -541,6 +1096,8 @@
    "rights": "© Dwynwen Belsey · Creative Archive Licence",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "1ed746f08126/thumb.webp",
    "page_paths": [
@@ -566,6 +1123,8 @@
    "rights": "© Llyfrgell Genedlaethol Cymru / The National Library of Wales · Creative Archive Licence",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "6a85d2b780ab/thumb.webp",
    "page_paths": [
@@ -591,6 +1150,8 @@
    "rights": "© Llyfrgell Genedlaethol Cymru / The National Library of Wales · Creative Archive Licence",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "05d365c46a2b/thumb.webp",
    "page_paths": [
@@ -616,6 +1177,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "217f4a984b42/thumb.webp",
    "page_paths": [
@@ -641,6 +1204,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "88833f04f52d/thumb.webp",
    "page_paths": [
@@ -666,6 +1231,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "7fcd935aaabb/thumb.webp",
    "page_paths": [
@@ -691,6 +1258,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "e8f47bb7e17e/thumb.webp",
    "page_paths": [
@@ -716,6 +1285,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "450c6b48e2e6/thumb.webp",
    "page_paths": [
@@ -741,6 +1312,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "ec13aef9e9c9/thumb.webp",
    "page_paths": [
@@ -766,6 +1339,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "fcb0d30de6eb/thumb.webp",
    "page_paths": [
@@ -791,6 +1366,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "db92c2ebbe55/thumb.webp",
    "page_paths": [
@@ -816,6 +1393,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "f5715cded7bc/thumb.webp",
    "page_paths": [
@@ -841,6 +1420,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "0a03ba28b534/thumb.webp",
    "page_paths": [
@@ -866,6 +1447,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "c30ef6382761/thumb.webp",
    "page_paths": [
@@ -891,6 +1474,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "f0bf76bbdf5b/thumb.webp",
    "page_paths": [
@@ -916,6 +1501,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "7c7c684ff0ec/thumb.webp",
    "page_paths": [
@@ -941,6 +1528,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "f3fe4a6a82a6/thumb.webp",
    "page_paths": [
@@ -966,6 +1555,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "cff50bb5d037/thumb.webp",
    "page_paths": [
@@ -991,6 +1582,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -1615,6 +2208,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "3be817d4332a/thumb.webp",
    "page_paths": [
@@ -1640,6 +2235,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "4224e265cba8/thumb.webp",
    "page_paths": [
@@ -1665,6 +2262,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -2859,6 +3458,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "5bebd88dc00a/thumb.webp",
    "page_paths": [
@@ -2884,6 +3485,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "ee3a9114febe/thumb.webp",
    "page_paths": [
@@ -2909,6 +3512,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -3513,6 +4118,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "95d1e8fa3a9a/thumb.webp",
    "page_paths": [
@@ -3538,6 +4145,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "70f6aba9613f/thumb.webp",
    "page_paths": [
@@ -3563,6 +4172,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "a9983a758730/thumb.webp",
    "page_paths": [
@@ -3588,6 +4199,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "b6d56505956e/thumb.webp",
    "page_paths": [
@@ -3613,6 +4226,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -3636,6 +4251,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "6f874755712d/thumb.webp",
    "page_paths": [
@@ -3661,6 +4278,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": true,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -3684,6 +4303,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -3707,6 +4328,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "962781ef2586/thumb.webp",
    "page_paths": [
@@ -3732,6 +4355,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -3755,6 +4380,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -3778,6 +4405,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -3801,6 +4430,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": true,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -3824,6 +4455,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": true,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -3847,6 +4480,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -3870,6 +4505,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 14,
    "thumb": "57f64490e163/thumb.webp",
    "page_paths": [
@@ -3908,6 +4545,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 4,
    "thumb": "d659a6f206e9/thumb.webp",
    "page_paths": [
@@ -3936,6 +4575,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 3,
    "thumb": "ab70debc7989/thumb.webp",
    "page_paths": [
@@ -3963,6 +4604,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 6,
    "thumb": "04983e6660f9/thumb.webp",
    "page_paths": [
@@ -3993,6 +4636,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "1261ec8eb5c1/thumb.webp",
    "page_paths": [
@@ -4018,6 +4663,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": true,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -4041,6 +4688,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": true,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -4064,6 +4713,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": true,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -4087,6 +4738,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 3,
    "thumb": "a74f2b4bd0ca/thumb.webp",
    "page_paths": [
@@ -4114,6 +4767,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 4,
    "thumb": "d5e3725b7832/thumb.webp",
    "page_paths": [
@@ -4142,6 +4797,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 6,
    "thumb": "6f56cf082831/thumb.webp",
    "page_paths": [
@@ -4172,6 +4829,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 2,
    "thumb": "ba39fe2a3f18/thumb.webp",
    "page_paths": [
@@ -4198,6 +4857,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "9e2bc07e61d7/thumb.webp",
    "page_paths": [
@@ -4223,6 +4884,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "c83d074b6770/thumb.webp",
    "page_paths": [
@@ -4248,6 +4911,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": true,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -4271,6 +4936,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": true,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -4294,6 +4961,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "c77774dff131/thumb.webp",
    "page_paths": [
@@ -4319,6 +4988,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "9239ddcd359f/thumb.webp",
    "page_paths": [
@@ -4344,6 +5015,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "570e8c025526/thumb.webp",
    "page_paths": [
@@ -4369,6 +5042,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": true,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -4392,6 +5067,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "d98c3c6684a6/thumb.webp",
    "page_paths": [
@@ -4417,6 +5094,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": true,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "8ca587d6de62/thumb.webp",
    "page_paths": [
@@ -4442,6 +5121,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": true,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "1d95bec7e635/thumb.webp",
    "page_paths": [
@@ -4467,6 +5148,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": true,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "cbad991bb105/thumb.webp",
    "page_paths": [
@@ -4492,6 +5175,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": true,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "ebad08a57d62/thumb.webp",
    "page_paths": [
@@ -4517,6 +5202,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": true,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "dbd6b80bd1d8/thumb.webp",
    "page_paths": [
@@ -4542,6 +5229,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": true,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "e5dc8202dec8/thumb.webp",
    "page_paths": [
@@ -4567,6 +5256,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": true,
+   "hidden": false,
+   "no_text": false,
    "pages": 2,
    "thumb": "ff1cac4771d6/thumb.webp",
    "page_paths": [
@@ -4593,6 +5284,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": true,
+   "hidden": false,
+   "no_text": false,
    "pages": 2,
    "thumb": "9400fb787c2c/thumb.webp",
    "page_paths": [
@@ -4619,6 +5312,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "5ccb3acfc092/thumb.webp",
    "page_paths": [
@@ -4644,6 +5339,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -4667,6 +5364,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -4690,6 +5389,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": true,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -4713,6 +5414,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": true,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -4736,6 +5439,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -4759,6 +5464,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -5743,6 +6450,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 39,
    "thumb": "7c2dea604574/thumb.webp",
    "page_paths": [
@@ -5806,6 +6515,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -5829,6 +6540,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": true,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -5852,6 +6565,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": true,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -5875,6 +6590,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "a259e9a77120/thumb.webp",
    "page_paths": [
@@ -5900,6 +6617,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -5923,6 +6642,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "0579cd50afc0/thumb.webp",
    "page_paths": [
@@ -5948,6 +6669,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "2bbcd8bdfb71/thumb.webp",
    "page_paths": [
@@ -5973,6 +6696,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "fcaf70fb9bf4/thumb.webp",
    "page_paths": [
@@ -5998,6 +6723,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -7072,6 +7799,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 42,
    "thumb": "d185ebb7565a/thumb.webp",
    "page_paths": [
@@ -7138,6 +7867,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -7161,6 +7892,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "bce9ad6ff669/thumb.webp",
    "page_paths": [
@@ -7186,6 +7919,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "f5b9e6fafd81/thumb.webp",
    "page_paths": [
@@ -7211,6 +7946,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "95b51e33c5ab/thumb.webp",
    "page_paths": [
@@ -7236,6 +7973,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "84d0622b6687/thumb.webp",
    "page_paths": [
@@ -7261,6 +8000,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "2477fd301166/thumb.webp",
    "page_paths": [
@@ -7286,6 +8027,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "bcfeee05fbcb/thumb.webp",
    "page_paths": [
@@ -7311,6 +8054,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "90b218232d00/thumb.webp",
    "page_paths": [
@@ -7336,6 +8081,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "f320dd118bb2/thumb.webp",
    "page_paths": [
@@ -7361,6 +8108,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "5676e7f13431/thumb.webp",
    "page_paths": [
@@ -7386,6 +8135,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "451ba8394064/thumb.webp",
    "page_paths": [
@@ -7411,6 +8162,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "cf57a6c6a4aa/thumb.webp",
    "page_paths": [
@@ -7436,6 +8189,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "b29935a0deaf/thumb.webp",
    "page_paths": [
@@ -7461,10 +8216,39 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "85f5f6c8b0f7/thumb.webp",
    "page_paths": [
     "85f5f6c8b0f7/p01.webp"
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "b7a8a2845b75",
+   "festival": "chubut",
+   "year": 2014,
+   "undated": false,
+   "category": "otros",
+   "title": "Sede Asociacion Eisteddfod del Chubut 2014",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/2014/Fotos/Sede_Asociacion_Eisteddfod_del_Chubut_2014.jpg",
+   "alt_paths": [],
+   "source_url": "https://commons.wikimedia.org/wiki/File:Eisteddfod_del_Valle_del_Chubut,_Y_Wladfa,_Argentina.JPG",
+   "source_label": "Wikimedia Commons",
+   "retrieved": "2026-11-19",
+   "note_public": "Sede de la Asociación Eisteddfod del Chubut, Trelew (2014).",
+   "rights": "CC BY-SA 3.0 · Gastón Cuello",
+   "year_inferred": false,
+   "restricted": false,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "b7a8a2845b75/thumb.webp",
+   "page_paths": [
+    "b7a8a2845b75/p01.webp"
    ],
    "text_excerpt": null,
    "table": null
@@ -7486,6 +8270,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -7509,6 +8295,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -8553,6 +9341,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -8576,6 +9366,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "b1c3b8e7f420/thumb.webp",
    "page_paths": [
@@ -8601,6 +9393,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": true,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -8624,6 +9418,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "60cecc7b51db/thumb.webp",
    "page_paths": [
@@ -8649,10 +9445,66 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "0d51c8ec3cb6/thumb.webp",
    "page_paths": [
     "0d51c8ec3cb6/p01.webp"
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "7a3867b6e6b0",
+   "festival": "chubut",
+   "year": 2015,
+   "undated": false,
+   "category": "otros",
+   "title": "Sede Asociacion Eisteddfod del Chubut 2015",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/2015/Fotos/Sede_Asociacion_Eisteddfod_del_Chubut_2015.jpg",
+   "alt_paths": [],
+   "source_url": "https://commons.wikimedia.org/wiki/File:Eisteddfod_del_Valle_del_Chubut,_Y_Wladfa,_Argentina_(2015).JPG",
+   "source_label": "Wikimedia Commons",
+   "retrieved": "2026-11-19",
+   "note_public": "Sede de la Asociación Eisteddfod del Chubut, Trelew (2015).",
+   "rights": "CC BY-SA 4.0 · Gastón Cuello",
+   "year_inferred": false,
+   "restricted": false,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "7a3867b6e6b0/thumb.webp",
+   "page_paths": [
+    "7a3867b6e6b0/p01.webp"
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "55f5288e72b3",
+   "festival": "chubut",
+   "year": 2015,
+   "undated": false,
+   "category": "otros",
+   "title": "Sede Asociacion Eisteddfod del Chubut 2015 2",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/2015/Fotos/Sede_Asociacion_Eisteddfod_del_Chubut_2015_2.jpg",
+   "alt_paths": [],
+   "source_url": "https://commons.wikimedia.org/wiki/File:Eisteddfod_del_Valle_del_Chubut,_Y_Wladfa,_Argentina_02_(2015).jpg",
+   "source_label": "Wikimedia Commons",
+   "retrieved": "2026-11-19",
+   "note_public": "Sede del Eisteddfod del Valle del Chubut en el Salón San David, Trelew (2015).",
+   "rights": "CC BY-SA 4.0 · Gastón Cuello",
+   "year_inferred": false,
+   "restricted": false,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "55f5288e72b3/thumb.webp",
+   "page_paths": [
+    "55f5288e72b3/p01.webp"
    ],
    "text_excerpt": null,
    "table": null
@@ -8674,6 +9526,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -8697,6 +9551,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 49,
    "thumb": "b6f264879a62/thumb.webp",
    "page_paths": [
@@ -8770,6 +9626,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 114,
    "thumb": "78ea87ac8632/thumb.webp",
    "page_paths": [
@@ -8908,6 +9766,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -8931,6 +9791,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -8954,6 +9816,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "4ee8024042c1/thumb.webp",
    "page_paths": [
@@ -8979,6 +9843,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "8a5e0ec67196/thumb.webp",
    "page_paths": [
@@ -9004,6 +9870,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -9027,6 +9895,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "cf13346f8db6/thumb.webp",
    "page_paths": [
@@ -9052,6 +9922,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "8415166f5ff1/thumb.webp",
    "page_paths": [
@@ -9077,6 +9949,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "64ae1ed2f931/thumb.webp",
    "page_paths": [
@@ -9102,6 +9976,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "cf4d6221c645/thumb.webp",
    "page_paths": [
@@ -9127,6 +10003,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "c6f234e992bc/thumb.webp",
    "page_paths": [
@@ -9152,6 +10030,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "564f4575737b/thumb.webp",
    "page_paths": [
@@ -9177,6 +10057,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "af3689660c01/thumb.webp",
    "page_paths": [
@@ -9202,6 +10084,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "a641a781fe74/thumb.webp",
    "page_paths": [
@@ -9227,6 +10111,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "a18e3c6f810a/thumb.webp",
    "page_paths": [
@@ -9252,6 +10138,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "50dec406c04c/thumb.webp",
    "page_paths": [
@@ -9277,6 +10165,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "e6ae49f59d00/thumb.webp",
    "page_paths": [
@@ -9302,6 +10192,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -9325,6 +10217,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -9348,6 +10242,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "719bff2f6ea5/thumb.webp",
    "page_paths": [
@@ -9373,6 +10269,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -9396,6 +10294,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "31b2ea8bbff4/thumb.webp",
    "page_paths": [
@@ -9421,6 +10321,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "a384f530397b/thumb.webp",
    "page_paths": [
@@ -9446,6 +10348,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "a39a1d6b247b/thumb.webp",
    "page_paths": [
@@ -9471,6 +10375,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "0cb6d0b5048e/thumb.webp",
    "page_paths": [
@@ -9496,6 +10402,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "d114654aed82/thumb.webp",
    "page_paths": [
@@ -9521,6 +10429,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "cb0b2cb8f238/thumb.webp",
    "page_paths": [
@@ -9546,6 +10456,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "5f1c61d72735/thumb.webp",
    "page_paths": [
@@ -9571,6 +10483,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "4e87bd74fa35/thumb.webp",
    "page_paths": [
@@ -9596,6 +10510,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "37f6f04fb056/thumb.webp",
    "page_paths": [
@@ -9621,6 +10537,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "0d0dbd428dc8/thumb.webp",
    "page_paths": [
@@ -9646,6 +10564,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "e8b4f565f94d/thumb.webp",
    "page_paths": [
@@ -9671,6 +10591,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "935b50e36ef5/thumb.webp",
    "page_paths": [
@@ -9696,6 +10618,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "55aba805baa0/thumb.webp",
    "page_paths": [
@@ -9721,6 +10645,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "8c1d95347416/thumb.webp",
    "page_paths": [
@@ -9746,6 +10672,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "4f2b04eae8c6/thumb.webp",
    "page_paths": [
@@ -9771,6 +10699,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -9794,6 +10724,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -9817,6 +10749,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "78d0472786de/thumb.webp",
    "page_paths": [
@@ -9842,6 +10776,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "6c17e1bbb41a/thumb.webp",
    "page_paths": [
@@ -9867,6 +10803,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -9890,6 +10828,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 56,
    "thumb": "1d933f777d08/thumb.webp",
    "page_paths": [
@@ -9970,6 +10910,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -9993,6 +10935,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "0e54fc66f0dc/thumb.webp",
    "page_paths": [
@@ -10018,6 +10962,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "1a108e0c52ee/thumb.webp",
    "page_paths": [
@@ -10043,6 +10989,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "997c1f146272/thumb.webp",
    "page_paths": [
@@ -10068,6 +11016,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "1779161a4b2f/thumb.webp",
    "page_paths": [
@@ -10093,6 +11043,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "f5be2847899f/thumb.webp",
    "page_paths": [
@@ -10118,6 +11070,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "2818cfcd21bb/thumb.webp",
    "page_paths": [
@@ -10143,6 +11097,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "8790e3532d51/thumb.webp",
    "page_paths": [
@@ -10168,6 +11124,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "46058c4ab9e8/thumb.webp",
    "page_paths": [
@@ -10193,6 +11151,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "b98f782955c6/thumb.webp",
    "page_paths": [
@@ -10218,6 +11178,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "19ede7db6589/thumb.webp",
    "page_paths": [
@@ -10243,6 +11205,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "ffa0c98c9f94/thumb.webp",
    "page_paths": [
@@ -10268,6 +11232,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "721a64b39277/thumb.webp",
    "page_paths": [
@@ -10293,6 +11259,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "4f9af816d8e9/thumb.webp",
    "page_paths": [
@@ -10318,6 +11286,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "fa24bbb6b678/thumb.webp",
    "page_paths": [
@@ -10343,6 +11313,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "6e4e9eeff5b0/thumb.webp",
    "page_paths": [
@@ -10368,6 +11340,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "f37759076bf9/thumb.webp",
    "page_paths": [
@@ -10393,6 +11367,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "83f22dfbd65f/thumb.webp",
    "page_paths": [
@@ -10418,6 +11394,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "4cd7d7ecec26/thumb.webp",
    "page_paths": [
@@ -10443,6 +11421,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "6b1b8228ea5c/thumb.webp",
    "page_paths": [
@@ -10468,6 +11448,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "aa6ad9c76597/thumb.webp",
    "page_paths": [
@@ -10493,6 +11475,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "105d6973885c/thumb.webp",
    "page_paths": [
@@ -10518,6 +11502,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "b6231122dd86/thumb.webp",
    "page_paths": [
@@ -10543,6 +11529,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "69e7f342cbf7/thumb.webp",
    "page_paths": [
@@ -10568,6 +11556,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "5dffdf0c4153/thumb.webp",
    "page_paths": [
@@ -10593,6 +11583,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "38eb7128f618/thumb.webp",
    "page_paths": [
@@ -10618,6 +11610,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "7e149b0df221/thumb.webp",
    "page_paths": [
@@ -10643,6 +11637,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "4f673d48d45b/thumb.webp",
    "page_paths": [
@@ -10668,6 +11664,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "e603912da61f/thumb.webp",
    "page_paths": [
@@ -10693,6 +11691,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "0225a7a6f9ec/thumb.webp",
    "page_paths": [
@@ -10718,6 +11718,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "31937084ea9f/thumb.webp",
    "page_paths": [
@@ -10743,6 +11745,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "cbf5c3603b8c/thumb.webp",
    "page_paths": [
@@ -10768,6 +11772,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "bb891adae284/thumb.webp",
    "page_paths": [
@@ -10793,6 +11799,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "3e34ee935c31/thumb.webp",
    "page_paths": [
@@ -10818,6 +11826,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "ed70c2c09ded/thumb.webp",
    "page_paths": [
@@ -10843,6 +11853,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "63b4c9708524/thumb.webp",
    "page_paths": [
@@ -10868,6 +11880,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "53ecc566901e/thumb.webp",
    "page_paths": [
@@ -10893,6 +11907,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "7363f2c25530/thumb.webp",
    "page_paths": [
@@ -10918,6 +11934,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "8c2e0b336712/thumb.webp",
    "page_paths": [
@@ -10943,6 +11961,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "8fc23391a7f3/thumb.webp",
    "page_paths": [
@@ -10968,6 +11988,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "7aebd295db52/thumb.webp",
    "page_paths": [
@@ -10993,6 +12015,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "02e889601b55/thumb.webp",
    "page_paths": [
@@ -11018,6 +12042,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "4b562389f000/thumb.webp",
    "page_paths": [
@@ -11043,6 +12069,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "655731caa2f3/thumb.webp",
    "page_paths": [
@@ -11068,6 +12096,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "703ca09286de/thumb.webp",
    "page_paths": [
@@ -11093,6 +12123,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "c35ebcee921b/thumb.webp",
    "page_paths": [
@@ -11118,6 +12150,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "8bfccf9d3659/thumb.webp",
    "page_paths": [
@@ -11143,6 +12177,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "71cee44374a2/thumb.webp",
    "page_paths": [
@@ -11168,6 +12204,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "07f920e58229/thumb.webp",
    "page_paths": [
@@ -11193,6 +12231,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "3f787290e00c/thumb.webp",
    "page_paths": [
@@ -11218,6 +12258,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "feeddf29d484/thumb.webp",
    "page_paths": [
@@ -11243,6 +12285,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "05fc75d8dd23/thumb.webp",
    "page_paths": [
@@ -11268,6 +12312,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "01fa2ffcb9ab/thumb.webp",
    "page_paths": [
@@ -11293,6 +12339,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "fe2fa72d68b8/thumb.webp",
    "page_paths": [
@@ -11318,6 +12366,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "97301819c768/thumb.webp",
    "page_paths": [
@@ -11343,6 +12393,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "d39c5cd8db8b/thumb.webp",
    "page_paths": [
@@ -11368,6 +12420,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "42212c9aa649/thumb.webp",
    "page_paths": [
@@ -11393,6 +12447,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "5023d218e655/thumb.webp",
    "page_paths": [
@@ -11418,6 +12474,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "ef8f852d282a/thumb.webp",
    "page_paths": [
@@ -11443,6 +12501,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "b8241835b77f/thumb.webp",
    "page_paths": [
@@ -11468,6 +12528,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "2f2da6ec4d69/thumb.webp",
    "page_paths": [
@@ -11493,6 +12555,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "d754ef91e4b9/thumb.webp",
    "page_paths": [
@@ -11518,6 +12582,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "89634a8605db/thumb.webp",
    "page_paths": [
@@ -11543,6 +12609,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "0002b499da6d/thumb.webp",
    "page_paths": [
@@ -11568,6 +12636,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "17f87b405502/thumb.webp",
    "page_paths": [
@@ -11593,6 +12663,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "b05a444e1030/thumb.webp",
    "page_paths": [
@@ -11618,6 +12690,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "807c29109582/thumb.webp",
    "page_paths": [
@@ -11645,6 +12719,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "03b01342a6c3/thumb.webp",
    "page_paths": [
@@ -11672,6 +12748,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "f936f17fded4/thumb.webp",
    "page_paths": [
@@ -11697,6 +12775,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "ec5f41cae903/thumb.webp",
    "page_paths": [
@@ -11722,6 +12802,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "051dcca2abd4/thumb.webp",
    "page_paths": [
@@ -11747,6 +12829,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "5480796bab8f/thumb.webp",
    "page_paths": [
@@ -11772,6 +12856,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "8ff4f8e0e52b/thumb.webp",
    "page_paths": [
@@ -11797,6 +12883,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "486c5fd51089/thumb.webp",
    "page_paths": [
@@ -11822,6 +12910,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "c97811ec1a27/thumb.webp",
    "page_paths": [
@@ -11847,6 +12937,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "15a53f1421af/thumb.webp",
    "page_paths": [
@@ -11872,6 +12964,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "a9df7cf9ef55/thumb.webp",
    "page_paths": [
@@ -11897,6 +12991,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "f633469e0a50/thumb.webp",
    "page_paths": [
@@ -11922,6 +13018,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "20ef02c7a581/thumb.webp",
    "page_paths": [
@@ -11947,6 +13045,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "381bf21a3b01/thumb.webp",
    "page_paths": [
@@ -11972,6 +13072,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "807263a2cc5c/thumb.webp",
    "page_paths": [
@@ -11997,6 +13099,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "233db782caa2/thumb.webp",
    "page_paths": [
@@ -12022,6 +13126,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "15ecd9491e82/thumb.webp",
    "page_paths": [
@@ -12047,6 +13153,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "46743713396c/thumb.webp",
    "page_paths": [
@@ -12072,6 +13180,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "41c81bd2775a/thumb.webp",
    "page_paths": [
@@ -12097,6 +13207,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "dd852a538ea2/thumb.webp",
    "page_paths": [
@@ -12122,6 +13234,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "27a18f5c9aed/thumb.webp",
    "page_paths": [
@@ -12147,6 +13261,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "52892c2821f4/thumb.webp",
    "page_paths": [
@@ -12174,6 +13290,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "a2226717b4bd/thumb.webp",
    "page_paths": [
@@ -12199,6 +13317,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "53cc6ac368ff/thumb.webp",
    "page_paths": [
@@ -12224,6 +13344,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "f25bbbdd7737/thumb.webp",
    "page_paths": [
@@ -12249,6 +13371,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "ee9770ff12bf/thumb.webp",
    "page_paths": [
@@ -12274,6 +13398,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "c100fd27e1dc/thumb.webp",
    "page_paths": [
@@ -12299,6 +13425,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "e6ed7fe6d2d8/thumb.webp",
    "page_paths": [
@@ -12324,6 +13452,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "b328908ac41d/thumb.webp",
    "page_paths": [
@@ -12349,6 +13479,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "369386a6dc1a/thumb.webp",
    "page_paths": [
@@ -12374,6 +13506,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "8a87c9a062e9/thumb.webp",
    "page_paths": [
@@ -12399,6 +13533,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "7af01248b701/thumb.webp",
    "page_paths": [
@@ -12426,6 +13562,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "d290881d8812/thumb.webp",
    "page_paths": [
@@ -12451,6 +13589,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "988030f9d58e/thumb.webp",
    "page_paths": [
@@ -12476,6 +13616,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "addf6e12f785/thumb.webp",
    "page_paths": [
@@ -12501,6 +13643,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "a84bc25ea945/thumb.webp",
    "page_paths": [
@@ -12526,6 +13670,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "7fdd81a82d5e/thumb.webp",
    "page_paths": [
@@ -12551,6 +13697,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "bed9a17d64e3/thumb.webp",
    "page_paths": [
@@ -12576,6 +13724,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "9b87d044f93d/thumb.webp",
    "page_paths": [
@@ -12601,6 +13751,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "5b5249ee9236/thumb.webp",
    "page_paths": [
@@ -12626,6 +13778,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "1c0e995c03ea/thumb.webp",
    "page_paths": [
@@ -12651,6 +13805,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "54bb203039c4/thumb.webp",
    "page_paths": [
@@ -12676,6 +13832,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "7308ac58a0c7/thumb.webp",
    "page_paths": [
@@ -12701,6 +13859,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "ddff653c3d6a/thumb.webp",
    "page_paths": [
@@ -12726,6 +13886,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "b3f1a5cbaa0f/thumb.webp",
    "page_paths": [
@@ -12753,6 +13915,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "c611d386b92c/thumb.webp",
    "page_paths": [
@@ -12778,6 +13942,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "1ed38ed379ab/thumb.webp",
    "page_paths": [
@@ -12803,6 +13969,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "268538860bf3/thumb.webp",
    "page_paths": [
@@ -12828,6 +13996,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "bd890a5a74ed/thumb.webp",
    "page_paths": [
@@ -12855,6 +14025,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "01fd06d7a729/thumb.webp",
    "page_paths": [
@@ -12882,6 +14054,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "2f9c78d4482b/thumb.webp",
    "page_paths": [
@@ -12909,6 +14083,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "5da0e6aba470/thumb.webp",
    "page_paths": [
@@ -12934,6 +14110,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "d4f6dae10e91/thumb.webp",
    "page_paths": [
@@ -12959,6 +14137,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "1a3ec7ff439f/thumb.webp",
    "page_paths": [
@@ -12984,6 +14164,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "0173dc740a4b/thumb.webp",
    "page_paths": [
@@ -13009,6 +14191,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "a0ffc3ab800c/thumb.webp",
    "page_paths": [
@@ -13034,6 +14218,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "0f695c402139/thumb.webp",
    "page_paths": [
@@ -13059,6 +14245,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "df8352bd3262/thumb.webp",
    "page_paths": [
@@ -13086,6 +14274,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "8c4bdbc7513e/thumb.webp",
    "page_paths": [
@@ -13111,6 +14301,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "ffff27806339/thumb.webp",
    "page_paths": [
@@ -13136,6 +14328,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "94ef5fc89c1c/thumb.webp",
    "page_paths": [
@@ -13161,6 +14355,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "cad927ec8914/thumb.webp",
    "page_paths": [
@@ -13186,6 +14382,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "43f0b2ca5c47/thumb.webp",
    "page_paths": [
@@ -13211,6 +14409,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "fff7da80d1d8/thumb.webp",
    "page_paths": [
@@ -13236,6 +14436,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "385fc8b5c0de/thumb.webp",
    "page_paths": [
@@ -13261,6 +14463,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "463033c1a964/thumb.webp",
    "page_paths": [
@@ -13286,6 +14490,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "8e149d3edf31/thumb.webp",
    "page_paths": [
@@ -13311,6 +14517,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "0f98dad28228/thumb.webp",
    "page_paths": [
@@ -13338,6 +14546,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "668fcfbadcbb/thumb.webp",
    "page_paths": [
@@ -13363,6 +14573,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "9296e2f4b068/thumb.webp",
    "page_paths": [
@@ -13390,6 +14602,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "7882a2bc7e68/thumb.webp",
    "page_paths": [
@@ -13415,6 +14629,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "0053f718e20c/thumb.webp",
    "page_paths": [
@@ -13440,6 +14656,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "c15423e9208c/thumb.webp",
    "page_paths": [
@@ -13465,6 +14683,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "3f3b4a6b1b64/thumb.webp",
    "page_paths": [
@@ -13490,6 +14710,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "037d55b283ac/thumb.webp",
    "page_paths": [
@@ -13515,6 +14737,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "e49c26c600a8/thumb.webp",
    "page_paths": [
@@ -13540,6 +14764,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "bd0e6bb57eaa/thumb.webp",
    "page_paths": [
@@ -13565,6 +14791,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "a960aae9fe68/thumb.webp",
    "page_paths": [
@@ -13590,6 +14818,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "c7b32fe6ca49/thumb.webp",
    "page_paths": [
@@ -13615,6 +14845,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "638fe46c2606/thumb.webp",
    "page_paths": [
@@ -13640,6 +14872,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "31eaf7833b2d/thumb.webp",
    "page_paths": [
@@ -13665,6 +14899,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "a2bc285b7cbd/thumb.webp",
    "page_paths": [
@@ -13690,6 +14926,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "46d1c9b21b69/thumb.webp",
    "page_paths": [
@@ -13715,6 +14953,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "0ae00010cf73/thumb.webp",
    "page_paths": [
@@ -13740,6 +14980,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "1eefa6da76b0/thumb.webp",
    "page_paths": [
@@ -13765,6 +15007,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "a16145246517/thumb.webp",
    "page_paths": [
@@ -13790,6 +15034,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "da4ac7614e3e/thumb.webp",
    "page_paths": [
@@ -13815,6 +15061,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "86477dd42ac8/thumb.webp",
    "page_paths": [
@@ -13840,6 +15088,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "105aa7e797f0/thumb.webp",
    "page_paths": [
@@ -13865,6 +15115,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "b71a68a50b49/thumb.webp",
    "page_paths": [
@@ -13890,6 +15142,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "c7583896cb24/thumb.webp",
    "page_paths": [
@@ -13915,6 +15169,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "8aa11da1ba31/thumb.webp",
    "page_paths": [
@@ -13940,6 +15196,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "e405988c797e/thumb.webp",
    "page_paths": [
@@ -13965,6 +15223,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "9e775561e043/thumb.webp",
    "page_paths": [
@@ -13990,6 +15250,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "a5882e51371e/thumb.webp",
    "page_paths": [
@@ -14015,6 +15277,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "99a72233b0e3/thumb.webp",
    "page_paths": [
@@ -14040,6 +15304,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "a66f5e2cf2cf/thumb.webp",
    "page_paths": [
@@ -14065,6 +15331,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "527dea0c8be8/thumb.webp",
    "page_paths": [
@@ -14090,6 +15358,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "bc5cc5533a50/thumb.webp",
    "page_paths": [
@@ -14115,6 +15385,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "fed9f5bd7e89/thumb.webp",
    "page_paths": [
@@ -14140,6 +15412,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "b4f5fbebdf70/thumb.webp",
    "page_paths": [
@@ -14169,6 +15443,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "d4297c2364ae/thumb.webp",
    "page_paths": [
@@ -14198,6 +15474,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "00a576adde89/thumb.webp",
    "page_paths": [
@@ -14223,6 +15501,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "b3d8e417e201/thumb.webp",
    "page_paths": [
@@ -14248,6 +15528,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "4e5ba96f5218/thumb.webp",
    "page_paths": [
@@ -14273,6 +15555,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "783e2ed18d83/thumb.webp",
    "page_paths": [
@@ -14298,6 +15582,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "ce3a2e4f7b77/thumb.webp",
    "page_paths": [
@@ -14323,6 +15609,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "9525fcdd81d7/thumb.webp",
    "page_paths": [
@@ -14350,6 +15638,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "ca71f6db5958/thumb.webp",
    "page_paths": [
@@ -14375,6 +15665,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "6beefa906242/thumb.webp",
    "page_paths": [
@@ -14400,6 +15692,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 87,
    "thumb": "aed82be96e78/thumb.webp",
    "page_paths": [
@@ -14511,6 +15805,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "88266fdf6227/thumb.webp",
    "page_paths": [
@@ -14536,6 +15832,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "43a33a7837a9/thumb.webp",
    "page_paths": [
@@ -14561,6 +15859,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "4729e23fb541/thumb.webp",
    "page_paths": [
@@ -14586,6 +15886,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "3b5d463295ef/thumb.webp",
    "page_paths": [
@@ -14611,6 +15913,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "a1547a159200/thumb.webp",
    "page_paths": [
@@ -14636,6 +15940,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "68b0e3bf875f/thumb.webp",
    "page_paths": [
@@ -14661,6 +15967,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "08e38f6aef3c/thumb.webp",
    "page_paths": [
@@ -14686,6 +15994,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "4874609ad0b2/thumb.webp",
    "page_paths": [
@@ -14711,6 +16021,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "3514511ae939/thumb.webp",
    "page_paths": [
@@ -14736,6 +16048,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "f5f12ae23b62/thumb.webp",
    "page_paths": [
@@ -14761,6 +16075,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "923532f0ef6b/thumb.webp",
    "page_paths": [
@@ -14786,6 +16102,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "b89c83bca874/thumb.webp",
    "page_paths": [
@@ -14811,6 +16129,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "4e7472cef9d3/thumb.webp",
    "page_paths": [
@@ -14836,6 +16156,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "39ceff1de1da/thumb.webp",
    "page_paths": [
@@ -14861,6 +16183,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "24293be312a3/thumb.webp",
    "page_paths": [
@@ -14886,6 +16210,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "102c8ac1ddf3/thumb.webp",
    "page_paths": [
@@ -14911,6 +16237,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "797fb3a8aa6d/thumb.webp",
    "page_paths": [
@@ -14936,6 +16264,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "fa7edc79fb2f/thumb.webp",
    "page_paths": [
@@ -14961,6 +16291,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "ff20ecaadcca/thumb.webp",
    "page_paths": [
@@ -14986,6 +16318,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "a0cfeb279369/thumb.webp",
    "page_paths": [
@@ -15011,6 +16345,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "c7de314b86fa/thumb.webp",
    "page_paths": [
@@ -15036,6 +16372,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "978fc535f441/thumb.webp",
    "page_paths": [
@@ -15061,6 +16399,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "5ac9767d9adf/thumb.webp",
    "page_paths": [
@@ -15086,6 +16426,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "a16a81bc199e/thumb.webp",
    "page_paths": [
@@ -15111,6 +16453,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "948612f44c81/thumb.webp",
    "page_paths": [
@@ -15136,6 +16480,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "1389e53aff00/thumb.webp",
    "page_paths": [
@@ -15161,6 +16507,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "0fa1b7b0d9ad/thumb.webp",
    "page_paths": [
@@ -15186,6 +16534,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "8e59bf318ee4/thumb.webp",
    "page_paths": [
@@ -15213,6 +16563,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "a8b1158fff15/thumb.webp",
    "page_paths": [
@@ -15240,6 +16592,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "81856d373798/thumb.webp",
    "page_paths": [
@@ -15265,6 +16619,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "6cd5d2df39fb/thumb.webp",
    "page_paths": [
@@ -15290,6 +16646,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "a90c6e4d40ba/thumb.webp",
    "page_paths": [
@@ -15315,6 +16673,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "051d5cd88bad/thumb.webp",
    "page_paths": [
@@ -15342,6 +16702,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "cdbe0f46bfac/thumb.webp",
    "page_paths": [
@@ -15369,6 +16731,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "1449c71e050b/thumb.webp",
    "page_paths": [
@@ -15394,6 +16758,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 44,
    "thumb": "676e06257514/thumb.webp",
    "page_paths": [
@@ -15462,6 +16828,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "2a55246506fd/thumb.webp",
    "page_paths": [
@@ -15487,6 +16855,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "6fd18f7c40b1/thumb.webp",
    "page_paths": [
@@ -15512,6 +16882,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "48034b666bd1/thumb.webp",
    "page_paths": [
@@ -15537,6 +16909,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "bba248ede02a/thumb.webp",
    "page_paths": [
@@ -15562,6 +16936,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "ef6841d3417e/thumb.webp",
    "page_paths": [
@@ -15587,6 +16963,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "5fbed1e62c7a/thumb.webp",
    "page_paths": [
@@ -15612,6 +16990,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "e776f0a2d480/thumb.webp",
    "page_paths": [
@@ -15637,6 +17017,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "dc37d75fa143/thumb.webp",
    "page_paths": [
@@ -15662,6 +17044,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "cda25cb72c98/thumb.webp",
    "page_paths": [
@@ -15687,6 +17071,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "54239285edb3/thumb.webp",
    "page_paths": [
@@ -15714,6 +17100,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "f08b97c983cf/thumb.webp",
    "page_paths": [
@@ -15739,6 +17127,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "93fe7655b877/thumb.webp",
    "page_paths": [
@@ -15764,6 +17154,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "e756ce20b19a/thumb.webp",
    "page_paths": [
@@ -15789,6 +17181,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "a7656e9cbb98/thumb.webp",
    "page_paths": [
@@ -15814,6 +17208,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "8e94a249991b/thumb.webp",
    "page_paths": [
@@ -15839,6 +17235,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "23fc47d354aa/thumb.webp",
    "page_paths": [
@@ -15864,6 +17262,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "9f7393e5097e/thumb.webp",
    "page_paths": [
@@ -15889,6 +17289,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "173b8c8b233a/thumb.webp",
    "page_paths": [
@@ -15914,6 +17316,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "468a633c4fb8/thumb.webp",
    "page_paths": [
@@ -15939,6 +17343,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "0f37555d6bc9/thumb.webp",
    "page_paths": [
@@ -15966,6 +17372,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "529712dc463a/thumb.webp",
    "page_paths": [
@@ -15991,6 +17399,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "870cfe3260d7/thumb.webp",
    "page_paths": [
@@ -16016,6 +17426,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "3bb4578e9a19/thumb.webp",
    "page_paths": [
@@ -16041,6 +17453,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "eff9da73fa2a/thumb.webp",
    "page_paths": [
@@ -16066,6 +17480,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "1624e32af4e6/thumb.webp",
    "page_paths": [
@@ -16091,6 +17507,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "2e9bb931548b/thumb.webp",
    "page_paths": [
@@ -16116,6 +17534,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "1159f9592a7f/thumb.webp",
    "page_paths": [
@@ -16141,6 +17561,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "51dec865951c/thumb.webp",
    "page_paths": [
@@ -16166,6 +17588,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "e97dc8059df9/thumb.webp",
    "page_paths": [
@@ -16191,6 +17615,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "2314e7c07255/thumb.webp",
    "page_paths": [
@@ -16216,6 +17642,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "8d40710c5073/thumb.webp",
    "page_paths": [
@@ -16241,6 +17669,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "05aa5f7ccd86/thumb.webp",
    "page_paths": [
@@ -16266,6 +17696,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "f98430462a8e/thumb.webp",
    "page_paths": [
@@ -16293,6 +17725,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "ae99af07bc76/thumb.webp",
    "page_paths": [
@@ -16318,6 +17752,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "87a9310e53f0/thumb.webp",
    "page_paths": [
@@ -16343,6 +17779,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "fd63ba3c7bdf/thumb.webp",
    "page_paths": [
@@ -16368,6 +17806,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "3b5d7b0de82d/thumb.webp",
    "page_paths": [
@@ -16393,6 +17833,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "961949abc99e/thumb.webp",
    "page_paths": [
@@ -16418,6 +17860,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "ca408b435600/thumb.webp",
    "page_paths": [
@@ -16443,6 +17887,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "fbff4a7f7398/thumb.webp",
    "page_paths": [
@@ -16468,6 +17914,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "91fddab2a177/thumb.webp",
    "page_paths": [
@@ -16493,6 +17941,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "ab429766e278/thumb.webp",
    "page_paths": [
@@ -16518,6 +17968,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "030e18cbadd5/thumb.webp",
    "page_paths": [
@@ -16543,6 +17995,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "410b27f407b4/thumb.webp",
    "page_paths": [
@@ -16568,6 +18022,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "4ec5bbaf35bc/thumb.webp",
    "page_paths": [
@@ -16593,6 +18049,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "b3984d72d16f/thumb.webp",
    "page_paths": [
@@ -16618,6 +18076,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "7283979dec00/thumb.webp",
    "page_paths": [
@@ -16643,6 +18103,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "dae03dbdb021/thumb.webp",
    "page_paths": [
@@ -16668,6 +18130,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "e331b0509176/thumb.webp",
    "page_paths": [
@@ -16693,6 +18157,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "14f2f38e3c98/thumb.webp",
    "page_paths": [
@@ -16718,6 +18184,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "c97a5c42595e/thumb.webp",
    "page_paths": [
@@ -16743,6 +18211,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "82bb89e40292/thumb.webp",
    "page_paths": [
@@ -16768,6 +18238,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "94c65f35b5e7/thumb.webp",
    "page_paths": [
@@ -16793,6 +18265,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "36fdaaf8ceda/thumb.webp",
    "page_paths": [
@@ -16818,6 +18292,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "020126912c5c/thumb.webp",
    "page_paths": [
@@ -16843,6 +18319,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "bd736cbf9da3/thumb.webp",
    "page_paths": [
@@ -16868,6 +18346,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "0e936fe3a05c/thumb.webp",
    "page_paths": [
@@ -16893,6 +18373,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "c38a82cd7364/thumb.webp",
    "page_paths": [
@@ -16918,6 +18400,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "5865ab487f10/thumb.webp",
    "page_paths": [
@@ -16943,6 +18427,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "ebd83bf02fff/thumb.webp",
    "page_paths": [
@@ -16968,6 +18454,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "9653e87338e2/thumb.webp",
    "page_paths": [
@@ -16997,6 +18485,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "cd3f2568006a/thumb.webp",
    "page_paths": [
@@ -17022,6 +18512,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "fd6cb0968f56/thumb.webp",
    "page_paths": [
@@ -17047,6 +18539,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "aa4e7125a32d/thumb.webp",
    "page_paths": [
@@ -17072,6 +18566,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "648fc3879109/thumb.webp",
    "page_paths": [
@@ -17099,6 +18595,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "fe9b850c1cae/thumb.webp",
    "page_paths": [
@@ -17126,6 +18624,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "9ce16cec1ae8/thumb.webp",
    "page_paths": [
@@ -17151,6 +18651,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "ce65e7dbf52f/thumb.webp",
    "page_paths": [
@@ -17176,6 +18678,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "4da89e511fef/thumb.webp",
    "page_paths": [
@@ -17201,6 +18705,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "5acc4b37236f/thumb.webp",
    "page_paths": [
@@ -17226,6 +18732,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "c7cffda2e153/thumb.webp",
    "page_paths": [
@@ -17251,6 +18759,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "888f5df5d410/thumb.webp",
    "page_paths": [
@@ -17276,6 +18786,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "6eb1a2fb5350/thumb.webp",
    "page_paths": [
@@ -17301,6 +18813,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "f0445c901f9f/thumb.webp",
    "page_paths": [
@@ -17326,6 +18840,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "c631805d27af/thumb.webp",
    "page_paths": [
@@ -17353,6 +18869,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "cce2d215d96c/thumb.webp",
    "page_paths": [
@@ -17378,6 +18896,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "db71e01875e4/thumb.webp",
    "page_paths": [
@@ -17403,6 +18923,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "72557467cd02/thumb.webp",
    "page_paths": [
@@ -17428,6 +18950,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "b195a94bc0d9/thumb.webp",
    "page_paths": [
@@ -17453,6 +18977,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "2c80e58412dc/thumb.webp",
    "page_paths": [
@@ -17478,6 +19004,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "400c76a37f6f/thumb.webp",
    "page_paths": [
@@ -17503,6 +19031,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "2d52eafb023f/thumb.webp",
    "page_paths": [
@@ -17528,6 +19058,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "5a24af88dfb9/thumb.webp",
    "page_paths": [
@@ -17553,6 +19085,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "cbc71065217a/thumb.webp",
    "page_paths": [
@@ -17578,6 +19112,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "067a95ecacce/thumb.webp",
    "page_paths": [
@@ -17603,6 +19139,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "ce22b4bbc6c3/thumb.webp",
    "page_paths": [
@@ -17628,6 +19166,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "2b6258eb3912/thumb.webp",
    "page_paths": [
@@ -17653,6 +19193,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "5135ea02eeb5/thumb.webp",
    "page_paths": [
@@ -17678,6 +19220,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "297852a929dc/thumb.webp",
    "page_paths": [
@@ -17703,6 +19247,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "02fa935f3ebf/thumb.webp",
    "page_paths": [
@@ -17728,6 +19274,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "3093b9e8476b/thumb.webp",
    "page_paths": [
@@ -17753,6 +19301,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "2992164a2fc7/thumb.webp",
    "page_paths": [
@@ -17778,6 +19328,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "5c78b5a906cf/thumb.webp",
    "page_paths": [
@@ -17803,6 +19355,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "21d3287739da/thumb.webp",
    "page_paths": [
@@ -17830,6 +19384,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "f3af5e2bb96f/thumb.webp",
    "page_paths": [
@@ -17857,6 +19413,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "ce55fe53c458/thumb.webp",
    "page_paths": [
@@ -17885,6 +19443,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "7bff853d955c/thumb.webp",
    "page_paths": [
@@ -17910,6 +19470,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "7780395cb8f4/thumb.webp",
    "page_paths": [
@@ -17937,6 +19499,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "511060c9ca72/thumb.webp",
    "page_paths": [
@@ -17964,6 +19528,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "752f70bb502a/thumb.webp",
    "page_paths": [
@@ -17989,6 +19555,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "498503009947/thumb.webp",
    "page_paths": [
@@ -18014,6 +19582,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "017a878f7584/thumb.webp",
    "page_paths": [
@@ -18039,6 +19609,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "5a93b0bb1f4b/thumb.webp",
    "page_paths": [
@@ -18064,6 +19636,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "7c02116f1bda/thumb.webp",
    "page_paths": [
@@ -18089,6 +19663,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 6,
    "thumb": "d23889ccdb4f/thumb.webp",
    "page_paths": [
@@ -18119,6 +19695,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "86ae75caba4b/thumb.webp",
    "page_paths": [
@@ -18144,6 +19722,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "7c98725ade18/thumb.webp",
    "page_paths": [
@@ -18169,6 +19749,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "4d6256f94dce/thumb.webp",
    "page_paths": [
@@ -18194,6 +19776,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "0198ef7a4043/thumb.webp",
    "page_paths": [
@@ -18219,6 +19803,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "121a08444512/thumb.webp",
    "page_paths": [
@@ -18246,6 +19832,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 5,
    "thumb": "d7feec8ed002/thumb.webp",
    "page_paths": [
@@ -18275,6 +19863,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 11,
    "thumb": "0a9d5cf9cfb3/thumb.webp",
    "page_paths": [
@@ -18310,6 +19900,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 8,
    "thumb": "c621c9cf343b/thumb.webp",
    "page_paths": [
@@ -18342,6 +19934,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 7,
    "thumb": "4897d8190b9e/thumb.webp",
    "page_paths": [
@@ -18373,6 +19967,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 6,
    "thumb": "2bfff38ba18f/thumb.webp",
    "page_paths": [
@@ -18403,6 +19999,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "3dd10fbb9451/thumb.webp",
    "page_paths": [
@@ -18428,6 +20026,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": true,
+   "hidden": false,
+   "no_text": false,
    "pages": 12,
    "thumb": "109e01776117/thumb.webp",
    "page_paths": [
@@ -18464,6 +20064,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": true,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -18487,6 +20089,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": true,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -18510,6 +20114,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": true,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -18533,6 +20139,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": true,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -18556,6 +20164,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": true,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -18579,6 +20189,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": true,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -18602,6 +20214,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -19386,6 +21000,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -19409,6 +21025,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -20373,6 +21991,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -20396,6 +22016,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -20419,6 +22041,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -20442,6 +22066,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -20465,6 +22091,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -20488,6 +22116,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": true,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -20511,6 +22141,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": true,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -20534,6 +22166,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": true,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -20557,6 +22191,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 47,
    "thumb": "dcb2e247b966/thumb.webp",
    "page_paths": [
@@ -20628,6 +22264,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "8b5ed0f99136/thumb.webp",
    "page_paths": [
@@ -20653,6 +22291,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "28b7d2906038/thumb.webp",
    "page_paths": [
@@ -20678,6 +22318,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "e042f1211307/thumb.webp",
    "page_paths": [
@@ -20703,6 +22345,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "6d4ae2b23e1a/thumb.webp",
    "page_paths": [
@@ -20728,6 +22372,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "0ac4f6c68bed/thumb.webp",
    "page_paths": [
@@ -20753,6 +22399,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "365b1da09a0c/thumb.webp",
    "page_paths": [
@@ -20778,6 +22426,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "0b58d42fac02/thumb.webp",
    "page_paths": [
@@ -20803,6 +22453,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "2f41ac6b0671/thumb.webp",
    "page_paths": [
@@ -20828,6 +22480,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "b195b6f3f6a7/thumb.webp",
    "page_paths": [
@@ -20853,6 +22507,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "7b78a0bbfd34/thumb.webp",
    "page_paths": [
@@ -20878,6 +22534,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "3ce1061f7c2b/thumb.webp",
    "page_paths": [
@@ -20903,6 +22561,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "f8ffdcf6197d/thumb.webp",
    "page_paths": [
@@ -20928,6 +22588,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "b49c2a9ddf45/thumb.webp",
    "page_paths": [
@@ -20953,6 +22615,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "6a0d216e272c/thumb.webp",
    "page_paths": [
@@ -20978,6 +22642,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "020c2176e93f/thumb.webp",
    "page_paths": [
@@ -21003,6 +22669,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "f7d4dc279405/thumb.webp",
    "page_paths": [
@@ -21028,6 +22696,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "a21f400dcd02/thumb.webp",
    "page_paths": [
@@ -21053,6 +22723,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "c94a1be4ece4/thumb.webp",
    "page_paths": [
@@ -21078,6 +22750,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "cfbc38797e4e/thumb.webp",
    "page_paths": [
@@ -21103,6 +22777,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "75b12e3ab809/thumb.webp",
    "page_paths": [
@@ -21128,6 +22804,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "a28c6017364b/thumb.webp",
    "page_paths": [
@@ -21153,6 +22831,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "6ee6974160ab/thumb.webp",
    "page_paths": [
@@ -21178,6 +22858,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "5a8eb3d285c4/thumb.webp",
    "page_paths": [
@@ -21203,6 +22885,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "4e2d6dd512cf/thumb.webp",
    "page_paths": [
@@ -21228,6 +22912,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "14d9aac2ac1e/thumb.webp",
    "page_paths": [
@@ -21253,6 +22939,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "8c9fdb63913c/thumb.webp",
    "page_paths": [
@@ -21278,6 +22966,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "e03b3ddd30f3/thumb.webp",
    "page_paths": [
@@ -21303,6 +22993,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "9e4535f73f13/thumb.webp",
    "page_paths": [
@@ -21328,6 +23020,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "3c22136563b9/thumb.webp",
    "page_paths": [
@@ -21353,6 +23047,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "731cc3b6ea94/thumb.webp",
    "page_paths": [
@@ -21378,6 +23074,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "964d03fac53f/thumb.webp",
    "page_paths": [
@@ -21403,6 +23101,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "b3e012ebecd8/thumb.webp",
    "page_paths": [
@@ -21428,6 +23128,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "c8a1e4d6297d/thumb.webp",
    "page_paths": [
@@ -21453,6 +23155,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "7ed35ad0b04e/thumb.webp",
    "page_paths": [
@@ -21478,6 +23182,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "ca5ce0d61a2c/thumb.webp",
    "page_paths": [
@@ -21503,6 +23209,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "7365be86aa70/thumb.webp",
    "page_paths": [
@@ -21528,6 +23236,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "d4f0405b067a/thumb.webp",
    "page_paths": [
@@ -21553,6 +23263,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "14c0c0cea587/thumb.webp",
    "page_paths": [
@@ -21578,6 +23290,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "44ba26a5485f/thumb.webp",
    "page_paths": [
@@ -21603,6 +23317,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "2fc4cf983311/thumb.webp",
    "page_paths": [
@@ -21628,6 +23344,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "36b40fc08e0c/thumb.webp",
    "page_paths": [
@@ -21653,6 +23371,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "99d3f274d13a/thumb.webp",
    "page_paths": [
@@ -21678,6 +23398,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "cf5c3cc724b3/thumb.webp",
    "page_paths": [
@@ -21703,6 +23425,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "06f0a680900d/thumb.webp",
    "page_paths": [
@@ -21728,6 +23452,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "b35342bb717d/thumb.webp",
    "page_paths": [
@@ -21753,6 +23479,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "157c62baa8be/thumb.webp",
    "page_paths": [
@@ -21778,6 +23506,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "319b834d89e8/thumb.webp",
    "page_paths": [
@@ -21803,6 +23533,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "2d62bb6a9dad/thumb.webp",
    "page_paths": [
@@ -21828,6 +23560,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "0efc22a2c171/thumb.webp",
    "page_paths": [
@@ -21853,6 +23587,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "4682009e7a35/thumb.webp",
    "page_paths": [
@@ -21878,6 +23614,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "649a788c55fd/thumb.webp",
    "page_paths": [
@@ -21903,6 +23641,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "c4c4a929ee13/thumb.webp",
    "page_paths": [
@@ -21928,6 +23668,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "01614a47ed92/thumb.webp",
    "page_paths": [
@@ -21953,6 +23695,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "155f3b3c3bd8/thumb.webp",
    "page_paths": [
@@ -21978,6 +23722,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "dfea74b87ecd/thumb.webp",
    "page_paths": [
@@ -22003,6 +23749,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "de8f9a9b65ee/thumb.webp",
    "page_paths": [
@@ -22028,6 +23776,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "ba6fcb9fe880/thumb.webp",
    "page_paths": [
@@ -22053,6 +23803,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "2a970975c66b/thumb.webp",
    "page_paths": [
@@ -22078,6 +23830,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "77ff002139f4/thumb.webp",
    "page_paths": [
@@ -22103,6 +23857,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "a5ac2d7bbe85/thumb.webp",
    "page_paths": [
@@ -22128,6 +23884,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "cc7d1b0a5795/thumb.webp",
    "page_paths": [
@@ -22153,6 +23911,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "4865aa974d46/thumb.webp",
    "page_paths": [
@@ -22178,6 +23938,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "bf92fcd6da8d/thumb.webp",
    "page_paths": [
@@ -22203,6 +23965,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "30cf7899059b/thumb.webp",
    "page_paths": [
@@ -22228,6 +23992,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "c5df2175ace2/thumb.webp",
    "page_paths": [
@@ -22253,6 +24019,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "793b23d179cd/thumb.webp",
    "page_paths": [
@@ -22278,6 +24046,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "4f3ca2466dbe/thumb.webp",
    "page_paths": [
@@ -22303,6 +24073,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "5948e6205d17/thumb.webp",
    "page_paths": [
@@ -22328,6 +24100,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "0a40c3035300/thumb.webp",
    "page_paths": [
@@ -22353,6 +24127,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "487163f5c1f0/thumb.webp",
    "page_paths": [
@@ -22378,6 +24154,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "7b78973f05ee/thumb.webp",
    "page_paths": [
@@ -22403,6 +24181,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "24fd44914331/thumb.webp",
    "page_paths": [
@@ -22428,6 +24208,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "e535002762cd/thumb.webp",
    "page_paths": [
@@ -22455,6 +24237,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "cc4ed3f1f10c/thumb.webp",
    "page_paths": [
@@ -22480,6 +24264,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "684c5980a5b4/thumb.webp",
    "page_paths": [
@@ -22505,6 +24291,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "555d55f08cda/thumb.webp",
    "page_paths": [
@@ -22530,6 +24318,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "03addc91b772/thumb.webp",
    "page_paths": [
@@ -22555,6 +24345,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "ec16b0edc416/thumb.webp",
    "page_paths": [
@@ -22580,6 +24372,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "0032fe0ad5b9/thumb.webp",
    "page_paths": [
@@ -22605,6 +24399,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "6aef0820a554/thumb.webp",
    "page_paths": [
@@ -22630,6 +24426,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 5,
    "thumb": "efbc7ed88777/thumb.webp",
    "page_paths": [
@@ -22659,6 +24457,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "9de3f6886e51/thumb.webp",
    "page_paths": [
@@ -22684,6 +24484,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "fd8d591bbaa0/thumb.webp",
    "page_paths": [
@@ -22709,6 +24511,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "5d75fe9198c9/thumb.webp",
    "page_paths": [
@@ -22734,6 +24538,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "c2d31a9fc9ab/thumb.webp",
    "page_paths": [
@@ -22759,6 +24565,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "32415ecea5a5/thumb.webp",
    "page_paths": [
@@ -22784,6 +24592,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "3af002accb85/thumb.webp",
    "page_paths": [
@@ -22809,6 +24619,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "4e783b9716f5/thumb.webp",
    "page_paths": [
@@ -22834,6 +24646,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "4402d896989e/thumb.webp",
    "page_paths": [
@@ -22859,6 +24673,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "4b4046b01e76/thumb.webp",
    "page_paths": [
@@ -22884,6 +24700,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "14c563d64462/thumb.webp",
    "page_paths": [
@@ -22909,6 +24727,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "132f8233ea54/thumb.webp",
    "page_paths": [
@@ -22934,6 +24754,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "f44d4f408076/thumb.webp",
    "page_paths": [
@@ -22959,6 +24781,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "e09ebc0b07b2/thumb.webp",
    "page_paths": [
@@ -22984,6 +24808,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "632245e4519b/thumb.webp",
    "page_paths": [
@@ -23009,6 +24835,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "cd58a1274874/thumb.webp",
    "page_paths": [
@@ -23034,6 +24862,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "bb0e209ee393/thumb.webp",
    "page_paths": [
@@ -23059,6 +24889,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "b62537afb425/thumb.webp",
    "page_paths": [
@@ -23084,6 +24916,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "0d54210a4144/thumb.webp",
    "page_paths": [
@@ -23109,6 +24943,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "4579cb0f9ead/thumb.webp",
    "page_paths": [
@@ -23134,6 +24970,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "4ec7c3d4a1f1/thumb.webp",
    "page_paths": [
@@ -23159,6 +24997,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "ea650bd238f0/thumb.webp",
    "page_paths": [
@@ -23184,6 +25024,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "d516669c7b2d/thumb.webp",
    "page_paths": [
@@ -23209,6 +25051,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "56ba47427a7a/thumb.webp",
    "page_paths": [
@@ -23234,6 +25078,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "b281ccdcb875/thumb.webp",
    "page_paths": [
@@ -23259,6 +25105,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "01f5b21c4596/thumb.webp",
    "page_paths": [
@@ -23284,6 +25132,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "79ccdcc47e61/thumb.webp",
    "page_paths": [
@@ -23309,6 +25159,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "eb380637fa6f/thumb.webp",
    "page_paths": [
@@ -23334,6 +25186,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "912c7ca96f01/thumb.webp",
    "page_paths": [
@@ -23359,6 +25213,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "62accecbbe28/thumb.webp",
    "page_paths": [
@@ -23384,6 +25240,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 27,
    "thumb": "c98fb6c657cf/thumb.webp",
    "page_paths": [
@@ -23435,6 +25293,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "c916ece7444a/thumb.webp",
    "page_paths": [
@@ -23460,6 +25320,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "37f26b666d13/thumb.webp",
    "page_paths": [
@@ -23485,6 +25347,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "56789aa41764/thumb.webp",
    "page_paths": [
@@ -23510,6 +25374,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "5bcd2201eda4/thumb.webp",
    "page_paths": [
@@ -23535,6 +25401,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "85b889c5d759/thumb.webp",
    "page_paths": [
@@ -23560,6 +25428,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "16b90031642b/thumb.webp",
    "page_paths": [
@@ -23585,6 +25455,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "ba9d13d8540e/thumb.webp",
    "page_paths": [
@@ -23612,6 +25484,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "23ff0d5ecd07/thumb.webp",
    "page_paths": [
@@ -23637,6 +25511,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "0a8f81360d32/thumb.webp",
    "page_paths": [
@@ -23662,6 +25538,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "1ab14d97b4c5/thumb.webp",
    "page_paths": [
@@ -23687,6 +25565,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "fae5e1f50f75/thumb.webp",
    "page_paths": [
@@ -23712,6 +25592,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "051c5bcb342f/thumb.webp",
    "page_paths": [
@@ -23737,6 +25619,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "c63554e531c7/thumb.webp",
    "page_paths": [
@@ -23762,6 +25646,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "8052bd08bb21/thumb.webp",
    "page_paths": [
@@ -23787,6 +25673,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "adaf33976d2a/thumb.webp",
    "page_paths": [
@@ -23812,6 +25700,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "d733b794fbbd/thumb.webp",
    "page_paths": [
@@ -23837,6 +25727,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "cac482e442cb/thumb.webp",
    "page_paths": [
@@ -23862,6 +25754,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "847252821744/thumb.webp",
    "page_paths": [
@@ -23887,6 +25781,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "6f41d36dd2bf/thumb.webp",
    "page_paths": [
@@ -23912,6 +25808,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "bd83d8acf56d/thumb.webp",
    "page_paths": [
@@ -23937,6 +25835,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "402b1c8235da/thumb.webp",
    "page_paths": [
@@ -23962,6 +25862,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 33,
    "thumb": "9514d3a65b74/thumb.webp",
    "page_paths": [
@@ -24019,6 +25921,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "5a3c85886fba/thumb.webp",
    "page_paths": [
@@ -24044,6 +25948,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "44cd085c77fc/thumb.webp",
    "page_paths": [
@@ -24069,6 +25975,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "4a2f7c44e854/thumb.webp",
    "page_paths": [
@@ -24094,6 +26002,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "2561beee4d48/thumb.webp",
    "page_paths": [
@@ -24119,6 +26029,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "9e529560d128/thumb.webp",
    "page_paths": [
@@ -24144,6 +26056,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "c6b1cfcaef8d/thumb.webp",
    "page_paths": [
@@ -24169,6 +26083,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "ac0c159d7e13/thumb.webp",
    "page_paths": [
@@ -24194,6 +26110,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "b855c10d87c0/thumb.webp",
    "page_paths": [
@@ -24219,6 +26137,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "e2e539191a95/thumb.webp",
    "page_paths": [
@@ -24244,6 +26164,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "173c15873439/thumb.webp",
    "page_paths": [
@@ -24269,6 +26191,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "da32dd2d0bb2/thumb.webp",
    "page_paths": [
@@ -24294,6 +26218,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "05f01a444d17/thumb.webp",
    "page_paths": [
@@ -24319,6 +26245,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "5cc8f7ea763c/thumb.webp",
    "page_paths": [
@@ -24344,6 +26272,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "02d11eeb6919/thumb.webp",
    "page_paths": [
@@ -24369,6 +26299,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "8abd86b74618/thumb.webp",
    "page_paths": [
@@ -24394,6 +26326,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "cb788642fefe/thumb.webp",
    "page_paths": [
@@ -24419,6 +26353,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "f0dfdd29336a/thumb.webp",
    "page_paths": [
@@ -24444,6 +26380,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "a52bdfbc54a3/thumb.webp",
    "page_paths": [
@@ -24469,6 +26407,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "e3157bc5f05c/thumb.webp",
    "page_paths": [
@@ -24494,6 +26434,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "1943fe9d6e45/thumb.webp",
    "page_paths": [
@@ -24519,6 +26461,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "6c0838c8e9c6/thumb.webp",
    "page_paths": [
@@ -24544,6 +26488,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "23c4ed51c27c/thumb.webp",
    "page_paths": [
@@ -24569,6 +26515,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "8cdf0b14eafd/thumb.webp",
    "page_paths": [
@@ -24594,6 +26542,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -24617,6 +26567,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -24640,6 +26592,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -24663,6 +26617,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -24686,6 +26642,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -24709,6 +26667,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -24732,6 +26692,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -24755,6 +26717,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": true,
+   "hidden": false,
+   "no_text": false,
    "pages": 5,
    "thumb": "1171343ca9b2/thumb.webp",
    "page_paths": [
@@ -24784,6 +26748,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -24807,6 +26773,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -24830,6 +26798,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -24853,6 +26823,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 9,
    "thumb": "ff04e7f88f2e/thumb.webp",
    "page_paths": [
@@ -24886,6 +26858,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -24909,6 +26883,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 13,
    "thumb": "c54663a8a84f/thumb.webp",
    "page_paths": [
@@ -24946,6 +26922,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -24969,6 +26947,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "5ba8a8bb8bbf/thumb.webp",
    "page_paths": [
@@ -24994,6 +26974,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 20,
    "thumb": "f0a4611068a8/thumb.webp",
    "page_paths": [
@@ -25038,6 +27020,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": true,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "6e9489f921d3/thumb.webp",
    "page_paths": [
@@ -25063,6 +27047,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "83e2043ae3a1/thumb.webp",
    "page_paths": [
@@ -25088,6 +27074,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "04cb68ce44df/thumb.webp",
    "page_paths": [
@@ -25113,6 +27101,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "f08af856d562/thumb.webp",
    "page_paths": [
@@ -25138,6 +27128,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "c2064ca34973/thumb.webp",
    "page_paths": [
@@ -25163,6 +27155,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 7,
    "thumb": "7a78374d6b64/thumb.webp",
    "page_paths": [
@@ -25194,6 +27188,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "6bb86ee827e8/thumb.webp",
    "page_paths": [
@@ -25219,6 +27215,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "c88be50991ed/thumb.webp",
    "page_paths": [
@@ -25244,6 +27242,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "da258bb1d5a9/thumb.webp",
    "page_paths": [
@@ -25269,6 +27269,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "395b30cffa15/thumb.webp",
    "page_paths": [
@@ -25294,6 +27296,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "c4b400e58cbf/thumb.webp",
    "page_paths": [
@@ -25319,6 +27323,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "6caeec54b4e3/thumb.webp",
    "page_paths": [
@@ -25344,6 +27350,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "62ee57c1d13b/thumb.webp",
    "page_paths": [
@@ -25369,6 +27377,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "d09a46925282/thumb.webp",
    "page_paths": [
@@ -25394,6 +27404,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "9159f469215d/thumb.webp",
    "page_paths": [
@@ -25419,6 +27431,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "b7d08ef39676/thumb.webp",
    "page_paths": [
@@ -25444,6 +27458,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "4a3355537d6e/thumb.webp",
    "page_paths": [
@@ -25469,6 +27485,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "f4c1b871f71c/thumb.webp",
    "page_paths": [
@@ -25494,6 +27512,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "e76b0659d32b/thumb.webp",
    "page_paths": [
@@ -25519,6 +27539,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "c8cbbc4aadcd/thumb.webp",
    "page_paths": [
@@ -25544,6 +27566,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "57a8392f0960/thumb.webp",
    "page_paths": [
@@ -25569,6 +27593,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "faa59ed6e5a7/thumb.webp",
    "page_paths": [
@@ -25594,6 +27620,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "06ed02e8721c/thumb.webp",
    "page_paths": [
@@ -25619,6 +27647,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "a0fc02ac96f7/thumb.webp",
    "page_paths": [
@@ -25644,6 +27674,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "d32dd8775cf7/thumb.webp",
    "page_paths": [
@@ -25669,6 +27701,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 17,
    "thumb": "4d3f1caa92cd/thumb.webp",
    "page_paths": [
@@ -25710,6 +27744,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "3d7ed023d2a6/thumb.webp",
    "page_paths": [
@@ -25735,6 +27771,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "82a50ebe6dc0/thumb.webp",
    "page_paths": [
@@ -25760,6 +27798,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "cfc6d83718f9/thumb.webp",
    "page_paths": [
@@ -25785,6 +27825,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "d902342082c6/thumb.webp",
    "page_paths": [
@@ -25810,6 +27852,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "7c4819bda0f9/thumb.webp",
    "page_paths": [
@@ -25835,6 +27879,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "a0466155a854/thumb.webp",
    "page_paths": [
@@ -25860,6 +27906,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "f7c3ad472190/thumb.webp",
    "page_paths": [
@@ -25885,6 +27933,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "be16691400af/thumb.webp",
    "page_paths": [
@@ -25910,6 +27960,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "d038e36cdbd8/thumb.webp",
    "page_paths": [
@@ -25935,6 +27987,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "79e70ca71ac6/thumb.webp",
    "page_paths": [
@@ -25960,6 +28014,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "77e5a316ed8f/thumb.webp",
    "page_paths": [
@@ -25985,6 +28041,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "889bd82c6cb8/thumb.webp",
    "page_paths": [
@@ -26010,6 +28068,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "df567e52167b/thumb.webp",
    "page_paths": [
@@ -26035,6 +28095,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "163e314aa1c3/thumb.webp",
    "page_paths": [
@@ -26060,6 +28122,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "4af46a7a9ebf/thumb.webp",
    "page_paths": [
@@ -26085,6 +28149,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "cc1171b6475f/thumb.webp",
    "page_paths": [
@@ -26110,6 +28176,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "8e4ca1e80fb9/thumb.webp",
    "page_paths": [
@@ -26135,6 +28203,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "d415c26aae09/thumb.webp",
    "page_paths": [
@@ -26160,6 +28230,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 22,
    "thumb": "9d2131be5cd9/thumb.webp",
    "page_paths": [
@@ -26206,6 +28278,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "4cbdec62c738/thumb.webp",
    "page_paths": [
@@ -26231,6 +28305,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": true,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "3e73069259ca/thumb.webp",
    "page_paths": [
@@ -26256,6 +28332,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": true,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "6e97e272c765/thumb.webp",
    "page_paths": [
@@ -26281,6 +28359,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": true,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "a3c1a9fdd873/thumb.webp",
    "page_paths": [
@@ -26306,6 +28386,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": true,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "747e43ca20b7/thumb.webp",
    "page_paths": [
@@ -26331,6 +28413,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": true,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "049af8f78212/thumb.webp",
    "page_paths": [
@@ -26356,6 +28440,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": true,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "bab3f7adba28/thumb.webp",
    "page_paths": [
@@ -26381,6 +28467,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": true,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "39dc0d74ad57/thumb.webp",
    "page_paths": [
@@ -26406,6 +28494,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": true,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "ae5f23fdd548/thumb.webp",
    "page_paths": [
@@ -26431,6 +28521,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": true,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "792aab940d83/thumb.webp",
    "page_paths": [
@@ -26456,6 +28548,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": true,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "cc4f4877e634/thumb.webp",
    "page_paths": [
@@ -26481,6 +28575,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": true,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "243f0a0ce514/thumb.webp",
    "page_paths": [
@@ -26506,6 +28602,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "31b995e60646/thumb.webp",
    "page_paths": [
@@ -26531,6 +28629,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "58aca902ec52/thumb.webp",
    "page_paths": [
@@ -26556,6 +28656,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "9268ef507794/thumb.webp",
    "page_paths": [
@@ -26581,6 +28683,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "9531364dcddd/thumb.webp",
    "page_paths": [
@@ -26606,6 +28710,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "86a6714467b0/thumb.webp",
    "page_paths": [
@@ -26631,6 +28737,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "1d2478822bc6/thumb.webp",
    "page_paths": [
@@ -26656,6 +28764,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "61f537738420/thumb.webp",
    "page_paths": [
@@ -26681,6 +28791,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 34,
    "thumb": "b89007946f25/thumb.webp",
    "page_paths": [
@@ -26739,6 +28851,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "c0192cfd95e8/thumb.webp",
    "page_paths": [
@@ -26764,6 +28878,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -26787,6 +28903,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 20,
    "thumb": "531a06488812/thumb.webp",
    "page_paths": [
@@ -26831,6 +28949,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": true,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -26854,6 +28974,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": true,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "77145a982e8b/thumb.webp",
    "page_paths": [
@@ -26879,6 +29001,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 38,
    "thumb": "93e32c7f34e9/thumb.webp",
    "page_paths": [
@@ -26941,6 +29065,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -26964,6 +29090,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 0,
    "thumb": null,
    "page_paths": [],
@@ -26987,6 +29115,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 43,
    "thumb": "324b38b9d4d0/thumb.webp",
    "page_paths": [
@@ -27054,6 +29184,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 53,
    "thumb": "3a13ac85dbd5/thumb.webp",
    "page_paths": [
@@ -27131,6 +29263,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "d28522b3d88e/thumb.webp",
    "page_paths": [
@@ -27156,6 +29290,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "781736fad120/thumb.webp",
    "page_paths": [
@@ -27181,6 +29317,8 @@
    "rights": "",
    "year_inferred": true,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "9cba683a0840/thumb.webp",
    "page_paths": [
@@ -27206,6 +29344,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 36,
    "thumb": "2b36b8738541/thumb.webp",
    "page_paths": [
@@ -27266,6 +29406,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": false,
    "pages": 1,
    "thumb": "5a1f5618e2fe/thumb.webp",
    "page_paths": [
@@ -27291,6 +29433,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "21fc0ceefa68/thumb.webp",
    "page_paths": [
@@ -27316,6 +29460,8 @@
    "rights": "",
    "year_inferred": false,
    "restricted": false,
+   "hidden": false,
+   "no_text": true,
    "pages": 1,
    "thumb": "cf43937ab65b/thumb.webp",
    "page_paths": [

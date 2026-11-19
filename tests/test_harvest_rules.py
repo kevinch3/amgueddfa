@@ -38,3 +38,8 @@ def test_chubut_with_gales_choir_kept():
 
 def test_galesa_is_not_gales():
     assert fest("Eisteddfod galesa en Trelew 2019") == "Eisteddfod_del_Chubut"
+
+
+def test_eisteddfod_en_gales_dropped():
+    # A trelewense competing in Wales: news about the eisteddfod there, not here (user 2026-11-19).
+    assert fest("EN VIVO | Santiago Meza, Trelewense en el Eisteddfod en Gales", "@DiarioJornadaChubut") is None

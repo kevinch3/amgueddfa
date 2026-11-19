@@ -721,7 +721,7 @@
   },
   "videos": {
     "titulo": "Videor",
-    "ayuda": "Videor från den här upplagan som deras upphovspersoner har lagt upp på YouTube. De öppnas på YouTube.",
+    "ayuda": "Videor från den här upplagan som upphovspersonerna har lagt upp på YouTube. De spelas här, med transkription när det finns en.",
     "actuaciones": "Se {n} framträdanden",
     "tipos": {
       "ceremonia": "Ceremoni",
@@ -917,5 +917,32 @@
     "cancelar": "Avbryt",
     "cerrar": "Stäng",
     "ingresar": "Logga in för att rapportera ett fel"
+  },
+  "reproductor": {
+    "anterior": "Föregående video",
+    "siguiente": "Nästa video",
+    "cerrar": "Stäng spelaren",
+    "no_disponible": "Den här videon kan inte spelas på webbplatsen.",
+    "ver_youtube": "Titta på YouTube",
+    "transcripcion": "Transkription",
+    "buscar": "Sök i transkriptionen",
+    "seguir": "Följ videon",
+    "sin_transcripcion": "Den här videon har ingen transkription.",
+    "cargando": "Laddar transkriptionen…",
+    "nota_whisper": "Maskingenererad transkription (Whisper), inte granskad: den kan innehålla fel.",
+    "de": "video {n} av {total}",
+    "ir_a": "Gå till {tiempo}",
+    "coincidencias": "Träffar: {n}",
+    "sin_coincidencias": "Inga träffar",
+    "fuente": {
+      "subida": "Upphovspersonens undertexter",
+      "youtube": "YouTube, automatisk",
+      "whisper": "Whisper, inte granskad"
+    },
+    "idiomas": {
+      "es": "spanska",
+      "cy": "kymriska",
+      "en": "engelska"
+    }
   }
 }

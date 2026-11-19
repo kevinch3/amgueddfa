@@ -721,7 +721,7 @@
   },
   "videos": {
     "titulo": "Videos",
-    "ayuda": "Videos of this eisteddfod published on YouTube by the people who made them. They open on YouTube.",
+    "ayuda": "Videos of this edition published on YouTube by their makers. They play here, with their transcript when there is one.",
     "actuaciones": "See {n} performances",
     "tipos": {
       "ceremonia": "Ceremony",
@@ -917,5 +917,32 @@
     "cancelar": "Cancel",
     "cerrar": "Close",
     "ingresar": "Sign in to report an error"
+  },
+  "reproductor": {
+    "anterior": "Previous video",
+    "siguiente": "Next video",
+    "cerrar": "Close the player",
+    "no_disponible": "This video can't be played on this site.",
+    "ver_youtube": "Watch on YouTube",
+    "transcripcion": "Transcript",
+    "buscar": "Search the transcript",
+    "seguir": "Follow the video",
+    "sin_transcripcion": "This video has no transcript.",
+    "cargando": "Loading the transcript…",
+    "nota_whisper": "Machine-generated transcript (Whisper), not checked: it may contain mistakes.",
+    "de": "video {n} of {total}",
+    "ir_a": "Go to {tiempo}",
+    "coincidencias": "Matches: {n}",
+    "sin_coincidencias": "No matches",
+    "fuente": {
+      "subida": "Uploader's subtitles",
+      "youtube": "YouTube, automatic",
+      "whisper": "Whisper, not checked"
+    },
+    "idiomas": {
+      "es": "Spanish",
+      "cy": "Welsh",
+      "en": "English"
+    }
   }
 }

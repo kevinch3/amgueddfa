@@ -721,7 +721,7 @@
   },
   "videos": {
     "titulo": "视频",
-    "ayuda": "由作者发布在 YouTube 上的本届视频。点击后在 YouTube 打开。",
+    "ayuda": "本届赛事的视频,由作者发布在 YouTube 上。可在本站直接观看,如有文字稿会一并显示。",
     "actuaciones": "查看 {n} 段表演",
     "tipos": {
       "ceremonia": "仪式",
@@ -917,5 +917,32 @@
     "cancelar": "取消",
     "cerrar": "关闭",
     "ingresar": "登录后报告错误"
+  },
+  "reproductor": {
+    "anterior": "上一个视频",
+    "siguiente": "下一个视频",
+    "cerrar": "关闭播放器",
+    "no_disponible": "此视频无法在本站内播放。",
+    "ver_youtube": "在 YouTube 上观看",
+    "transcripcion": "文字稿",
+    "buscar": "在文字稿中搜索",
+    "seguir": "跟随视频",
+    "sin_transcripcion": "此视频没有文字稿。",
+    "cargando": "正在加载文字稿…",
+    "nota_whisper": "机器生成的文字稿(Whisper),未经校对,可能有错误。",
+    "de": "第 {n} 个,共 {total} 个",
+    "ir_a": "跳到 {tiempo}",
+    "coincidencias": "匹配:{n} 处",
+    "sin_coincidencias": "没有匹配",
+    "fuente": {
+      "subida": "作者上传的字幕",
+      "youtube": "YouTube 自动生成",
+      "whisper": "Whisper,未经校对"
+    },
+    "idiomas": {
+      "es": "西班牙语",
+      "cy": "威尔士语",
+      "en": "英语"
+    }
   }
 }

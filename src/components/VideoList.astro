@@ -4,6 +4,7 @@ import { contentLang, t } from '../lib/i18n';
 // Titles and channels are the uploaders' own words (WCAG 3.1.2 on translated pages).
 const lang = contentLang();
 import { splitVideos, videoThumb, videoUrl, type Video } from '../lib/videos';
+import VideoPlayer from './VideoPlayer.astro';
 
 // Always rendered (hidden when empty) so live corrections (scripts/live-videos.ts) can move videos in.
 // Each card carries its data so the live script and "Informar un error" can read it; live-videos.ts builds the same markup.
@@ -44,6 +45,7 @@ const total = highlights.length + performances.length;
     </ul>
   </details>
 </section>
+<VideoPlayer />
 {/* One "Informar un error" dialog per page (outside the section, which may be hidden); scripts/informar.ts fills it. */}
 <dialog id="informar-dialogo" class="informar" aria-labelledby="informar-t">
   <div class="informar-head">

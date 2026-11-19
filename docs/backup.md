@@ -180,3 +180,16 @@ start | verdict). They are checked by hand before anything is public; verdict
 markers follow issue #29. Whisper on the saved audio can fill gaps.
 
 Related: #23 (R2 → KPC media), #26 (multimedia), #29 (privacy periods).
+
+## Transcriptions on the site (player)
+
+The edition pages' video player (`src/scripts/reproductor.ts`) shows each video's
+transcription beside it. They are published from this backup, not fetched from YouTube:
+
+```bash
+python3 -m scripts.export_video_transcripts     # backup disk mounted
+```
+
+writes `public/transcripciones-video/<id>.json` (uploaded subtitles, else YouTube's automatic
+ones, else Whisper's; Chubut and Trevelin only, issue #29) and removes files of videos no
+longer listed. Run it after `import-whisper` or a monthly run, then commit the folder.

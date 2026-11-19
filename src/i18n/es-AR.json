@@ -721,7 +721,7 @@
   },
   "videos": {
     "titulo": "Videos",
-    "ayuda": "Videos de esta edición publicados en YouTube por sus autores. Se abren en YouTube.",
+    "ayuda": "Videos de esta edición publicados en YouTube por sus autores. Se ven aquí, con su transcripción cuando la hay.",
     "actuaciones": "Ver {n} actuaciones",
     "tipos": {
       "ceremonia": "Ceremonia",
@@ -917,5 +917,32 @@
     "cancelar": "Cancelar",
     "cerrar": "Cerrar",
     "ingresar": "Ingresá para informar un error"
+  },
+  "reproductor": {
+    "anterior": "Video anterior",
+    "siguiente": "Video siguiente",
+    "cerrar": "Cerrar el reproductor",
+    "no_disponible": "Este video no se puede ver dentro del sitio.",
+    "ver_youtube": "Ver en YouTube",
+    "transcripcion": "Transcripción",
+    "buscar": "Buscar en la transcripción",
+    "seguir": "Seguir el video",
+    "sin_transcripcion": "Este video no tiene transcripción.",
+    "cargando": "Cargando la transcripción…",
+    "nota_whisper": "Transcripción generada por máquina (Whisper), sin revisar: puede tener errores.",
+    "de": "video {n} de {total}",
+    "ir_a": "Ir a {tiempo}",
+    "coincidencias": "Coincidencias: {n}",
+    "sin_coincidencias": "Sin coincidencias",
+    "fuente": {
+      "subida": "Subtítulos del autor",
+      "youtube": "YouTube, automática",
+      "whisper": "Whisper, sin revisar"
+    },
+    "idiomas": {
+      "es": "castellano",
+      "cy": "galés",
+      "en": "inglés"
+    }
   }
 }

@@ -721,7 +721,7 @@
   },
   "videos": {
     "titulo": "Video",
-    "ayuda": "Video di questa edizione pubblicati su YouTube dai loro autori. Si aprono su YouTube.",
+    "ayuda": "Video di questa edizione pubblicati su YouTube dai loro autori. Si guardano qui, con la trascrizione quando c'è.",
     "actuaciones": "Vedi {n} esibizioni",
     "tipos": {
       "ceremonia": "Cerimonia",
@@ -917,5 +917,32 @@
     "cancelar": "Annulla",
     "cerrar": "Chiudi",
     "ingresar": "Accedi per segnalare un errore"
+  },
+  "reproductor": {
+    "anterior": "Video precedente",
+    "siguiente": "Video successivo",
+    "cerrar": "Chiudi il lettore",
+    "no_disponible": "Questo video non si può guardare all'interno del sito.",
+    "ver_youtube": "Guarda su YouTube",
+    "transcripcion": "Trascrizione",
+    "buscar": "Cerca nella trascrizione",
+    "seguir": "Segui il video",
+    "sin_transcripcion": "Questo video non ha una trascrizione.",
+    "cargando": "Caricamento della trascrizione…",
+    "nota_whisper": "Trascrizione generata automaticamente (Whisper), non rivista: può contenere errori.",
+    "de": "video {n} di {total}",
+    "ir_a": "Vai a {tiempo}",
+    "coincidencias": "Risultati: {n}",
+    "sin_coincidencias": "Nessun risultato",
+    "fuente": {
+      "subida": "Sottotitoli dell'autore",
+      "youtube": "YouTube, automatica",
+      "whisper": "Whisper, non rivista"
+    },
+    "idiomas": {
+      "es": "spagnolo",
+      "cy": "gallese",
+      "en": "inglese"
+    }
   }
 }

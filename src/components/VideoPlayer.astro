@@ -1,0 +1,45 @@
+---
+import { t } from '../lib/i18n';
+
+// One player dialog per edition page; scripts/reproductor.ts opens it from any video card
+// (the card's link to YouTube stays for no-JS, middle click and "open in new tab").
+// YouTube's no-cookie player is created only when a visitor opens a video.
+---
+<dialog id="reproductor" class="reproductor" aria-labelledby="rep-titulo">
+  <div class="rep-head">
+    <div class="rep-head-t">
+      <h2 id="rep-titulo" data-rep-titulo></h2>
+      <p class="muted small" data-rep-meta></p>
+    </div>
+    <div class="rep-nav">
+      <button type="button" class="rep-btn" data-rep-anterior aria-label={t('reproductor.anterior')}><span aria-hidden="true">‹</span></button>
+      <button type="button" class="rep-btn" data-rep-siguiente aria-label={t('reproductor.siguiente')}><span aria-hidden="true">›</span></button>
+      <button type="button" class="rep-btn rep-cerrar" data-rep-cerrar aria-label={t('reproductor.cerrar')}><span aria-hidden="true">✕</span></button>
+    </div>
+  </div>
+  <div class="rep-cuerpo">
+    <div class="rep-video">
+      <div class="rep-marco"><div data-rep-player></div></div>
+      <p class="rep-error" data-rep-error hidden>{t('reproductor.no_disponible')} <a data-rep-yt-error rel="noopener" target="_blank">{t('reproductor.ver_youtube')}</a></p>
+      <p class="rep-acciones small">
+        <a data-rep-yt rel="noopener" target="_blank">{t('reproductor.ver_youtube')}</a>
+        <button type="button" class="btn-link small" data-rep-informar>{t('informar.titulo')}</button>
+      </p>
+    </div>
+    <section class="rep-tr" aria-labelledby="rep-tr-t">
+      <div class="rep-tr-head">
+        <h3 id="rep-tr-t">{t('reproductor.transcripcion')}</h3>
+        <span class="badge" data-rep-fuente hidden></span>
+      </div>
+      <div class="rep-buscar" data-rep-buscador hidden>
+        <label for="rep-q">{t('reproductor.buscar')}</label>
+        <input id="rep-q" type="search" autocomplete="off" data-rep-q />
+        <p class="muted small" data-rep-n aria-live="polite"></p>
+        <label class="rep-seguir small"><input type="checkbox" data-rep-seguir checked /> {t('reproductor.seguir')}</label>
+      </div>
+      <p class="muted small" data-rep-vacio>{t('reproductor.sin_transcripcion')}</p>
+      <ol class="rep-lineas" data-rep-lineas></ol>
+      <p class="muted small" data-rep-nota hidden>{t('reproductor.nota_whisper')}</p>
+    </section>
+  </div>
+</dialog>

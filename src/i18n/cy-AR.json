@@ -721,7 +721,7 @@
   },
   "videos": {
     "titulo": "Fideos",
-    "ayuda": "Fideos o'r eisteddfod hon a gyhoeddwyd ar YouTube gan eu hawduron. Maen nhw'n agor yn YouTube.",
+    "ayuda": "Fideos o'r eisteddfod hon a gyhoeddwyd ar YouTube gan eu hawduron. Maen nhw'n chwarae yma, gyda'u trawsgrifiad pan fo un.",
     "actuaciones": "Gweld {n} o berfformiadau",
     "tipos": {
       "ceremonia": "Seremoni",
@@ -917,5 +917,32 @@
     "cancelar": "Canslo",
     "cerrar": "Cau",
     "ingresar": "Mewngofnodwch i adrodd gwall"
+  },
+  "reproductor": {
+    "anterior": "Fideo blaenorol",
+    "siguiente": "Fideo nesaf",
+    "cerrar": "Cau'r chwaraewr",
+    "no_disponible": "Does dim modd gwylio'r fideo hwn o fewn y wefan.",
+    "ver_youtube": "Gwylio ar YouTube",
+    "transcripcion": "Trawsgrifiad",
+    "buscar": "Chwilio yn y trawsgrifiad",
+    "seguir": "Dilyn y fideo",
+    "sin_transcripcion": "Does dim trawsgrifiad i'r fideo hwn.",
+    "cargando": "Wrthi'n llwytho'r trawsgrifiad…",
+    "nota_whisper": "Trawsgrifiad wedi'i greu gan beiriant (Whisper), heb ei wirio: gall fod gwallau ynddo.",
+    "de": "fideo {n} o {total}",
+    "ir_a": "Mynd i {tiempo}",
+    "coincidencias": "Canlyniadau: {n}",
+    "sin_coincidencias": "Dim canlyniadau",
+    "fuente": {
+      "subida": "Isdeitlau'r awdur",
+      "youtube": "YouTube, awtomatig",
+      "whisper": "Whisper, heb ei wirio"
+    },
+    "idiomas": {
+      "es": "Sbaeneg",
+      "cy": "Cymraeg",
+      "en": "Saesneg"
+    }
   }
 }

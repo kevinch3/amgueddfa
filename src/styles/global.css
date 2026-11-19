@@ -493,3 +493,52 @@ fieldset.campo { border: 0; padding: 0; }
 .sourcecard .notas h3 { margin: 0.8rem 0 0.4rem; }
 .sourcecard .notas .recuerdos blockquote { padding: 0.5rem 0.75rem; }
 .sourcecard .notas .recuerdos p { margin-left: 0.75rem; }
+
+/* Video player (components/VideoPlayer.astro, scripts/reproductor.ts) ------------ */
+.reproductor { width: min(80rem, calc(100vw - 16px)); max-width: none; height: min(52rem, calc(100dvh - 16px)); max-height: none; margin: auto; padding: 0; border: 1px solid var(--rule); border-radius: 8px; background: var(--paper-hi); color: var(--ink); overflow: hidden; }
+.reproductor::backdrop { background: rgb(20 21 28 / 0.7); }
+.reproductor[open] { display: grid; grid-template-rows: auto minmax(0, 1fr); }
+.rep-head { display: flex; justify-content: space-between; align-items: center; gap: 0.75rem; padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--rule); }
+.rep-head-t { min-width: 0; }
+.rep-head h2 { margin: 0; font-size: 1.1rem; line-height: 1.25; overflow-wrap: anywhere; }
+.rep-head p { margin: 0.1rem 0 0; }
+.rep-nav { display: flex; gap: 0.35rem; flex: none; }
+.rep-btn { min-width: 44px; min-height: 44px; border: 1px solid var(--rule); border-radius: 6px; background: transparent; color: var(--ink); font: 1.2rem/1 var(--sans); cursor: pointer; }
+.rep-btn:disabled { opacity: 0.4; cursor: default; }
+.rep-cerrar { background: var(--ink); color: var(--paper-hi); border-color: var(--ink); }
+.rep-cuerpo { display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: auto minmax(0, 1fr); min-height: 0; overflow: hidden; }
+.rep-video { padding: 0.5rem 0.75rem; }
+.rep-marco { aspect-ratio: 16 / 9; background: #14151c; }
+.rep-marco[hidden], .rep-error[hidden] { display: none; }
+.rep-marco iframe { width: 100%; height: 100%; border: 0; display: block; }
+.rep-error { aspect-ratio: 16 / 9; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 0.5rem; margin: 0; padding: 1rem; text-align: center; background: #14151c; color: #f8f2e4; font-family: var(--sans); }
+.rep-error a { color: #f1d98f; }
+.rep-acciones { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; align-items: center; margin: 0.35rem 0 0; font-family: var(--sans); }
+.rep-tr { display: flex; flex-direction: column; min-height: 0; border-top: 1px solid var(--rule); background: var(--paper); font-family: var(--sans); }
+.rep-tr-head { display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; padding: 0.5rem 0.75rem 0; }
+.rep-tr-head h3 { margin: 0; font-size: 1rem; }
+.rep-tr .badge[data-fuente="whisper"] { border-color: var(--ink-soft); color: var(--ink-soft); }
+.rep-tr .badge[hidden], .rep-buscar[hidden], [data-rep-nota][hidden], [data-rep-vacio][hidden] { display: none; }
+.rep-buscar { display: grid; gap: 0.2rem; padding: 0.4rem 0.75rem; }
+.rep-buscar label { font-size: 0.9rem; color: var(--ink-soft); }
+.rep-buscar input[type="search"] { font: 1rem var(--sans); padding: 0.5rem 0.6rem; min-height: 44px; box-sizing: border-box; border: 1px solid var(--rule); border-radius: 6px; background: #fff; color: var(--ink); }
+.rep-buscar p { margin: 0; min-height: 1.2em; }
+.rep-seguir { display: flex; gap: 0.4rem; align-items: center; min-height: 32px; }
+.rep-tr > [data-rep-vacio], .rep-tr > [data-rep-nota] { margin: 0; padding: 0.5rem 0.75rem; }
+.rep-lineas { list-style: none; margin: 0; padding: 0.25rem 0.4rem; overflow: auto; flex: 1 1 auto; min-height: 0; overscroll-behavior: contain; }
+.rep-lineas button { display: flex; gap: 0.6rem; width: 100%; text-align: left; padding: 0.45rem 0.4rem; min-height: 44px; border: 0; border-radius: 4px; background: transparent; color: var(--ink); font: 1rem/1.45 var(--sans); cursor: pointer; }
+.rep-lineas button:hover { background: var(--paper-hi); }
+.rep-t { flex: none; min-width: 3.4rem; color: var(--ink-soft); font-size: 0.85rem; font-variant-numeric: tabular-nums; padding-top: 0.12rem; }
+.rep-w { overflow-wrap: anywhere; }
+.rep-lineas .coincide button { background: #f6e7b4; }
+.rep-lineas .actual button { background: #fff; box-shadow: inset 3px 0 0 var(--red); }
+.rep-lineas .actual .rep-t { color: var(--red-deep); font-weight: 600; }
+@media (min-width: 60rem) {
+  .rep-cuerpo { grid-template-columns: minmax(0, 1.6fr) minmax(18rem, 1fr); grid-template-rows: minmax(0, 1fr); }
+  .rep-video { padding: 0.75rem; overflow: auto; }
+  .rep-tr { border-top: 0; border-left: 1px solid var(--rule); }
+}
+@media (forced-colors: active) {
+  .rep-lineas .actual button { outline: 2px solid Highlight; }
+  .rep-lineas .coincide button { outline: 1px dashed CanvasText; }
+}

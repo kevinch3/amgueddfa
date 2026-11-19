@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "INFORMACIÓN IMPOR(IANTE:\n\nEn las competencias a libre elecciôn de las categorías de\n\nmusica y danzas:\n* Tal como consigna cada competencia, es necesario entregar\ncon la inscripción la PARTITURA O LETRA\nCORRESPONDIENTE -para competencias de música- y la\nCOREOGRAFÍA -en competencias de danzas- ya sea\ninventada o elegida.\ne La no presentación de tal requisito da lugar a la baja de la\ninscripción a la competencia.\n\nASOCIACIÓN\n(GB eisteddfod",
+   "conf": 91.9
+  }
+ ]
+}

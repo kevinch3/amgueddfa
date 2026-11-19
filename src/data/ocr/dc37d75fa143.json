@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "SÁBADO 11 DE OCTUBRE DESDE LAS 9 HORAS - EISTEDDFOD DEL CHUBUT 2025\n\nPor primera vez en el Eisteddfod del Chubut, se\ndesarrollará una competencia de arquería el día\nsábado 11 de octubre en el Salon\nCincuentenario de la Asociación San David\n(San Martín 88).\nLos inscriptos oportunamente deberán\npresentarse a las 9 horas para su acreditación y\nsorteo. Las competencias comenzarán a las 10.\n\nASOCIACIÓN\n\neisteddfod\n\nDEL CHUBUT ENTRADA LIBRE Y GRATUITA",
+   "conf": 94.2
+  }
+ ]
+}

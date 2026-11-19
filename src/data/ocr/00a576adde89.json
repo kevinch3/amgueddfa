@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "Inglancia de PRELIMINARES\n\nRecitación en castellano\n\nJueves 26 - 17,30 horas - capilla Tabernacl\nde Trelew (Belgrano N'341)\n\nCompetencia N° 30: Libre. Palaalhombro,\nde Arié Lloyd de Lewis.\nCompetencia N° 34: Libre. Principal. Mar de\nfueguitos, de Eduardo Galeano.",
+   "conf": 94.3
+  }
+ ]
+}

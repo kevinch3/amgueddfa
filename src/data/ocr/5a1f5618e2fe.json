@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "CIERRE DE\n\nINSCRIPCIONES:\nMAÑANA 10 DE\n| ABRIL DE 2025 -",
+   "conf": 82.6
+  }
+ ]
+}

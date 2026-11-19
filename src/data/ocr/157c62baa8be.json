@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "ADRODD YN GYMRAEG\n\nNIVEL INICIAL (MEITHRIN)\n\nSusi Mam a sws Dad\naswsiNain a Tala\nSws I Del a Modryb Nel-\n\nrhoi sws I bawb! Oes raid?\n\nEsyllt Nest Roberts\n\nPRIMARIA (1° Ciclo)\n\n“TYDW Y'N SMART”\nCefais diad\nNewydd sbon\nI gael dod\ni'r Steddfod hon.\n\nTydw i'n smart\nMewn dillad drud!\nYn ôl Mam\n\n\"Rwy'n werth y byd”\n\nSelwyn Griffiths\n\nPRIMARIA (2\" Ciclo)\n\n“RHYFEDDOD”\nMynd am dro\nHanymôr,\na'r gwylanod\n\nfel rhyw gôr.\n\nDod yn ôl\na golchi ngwallt,\ndyna beth rhyfedd.\nroedd o'n hallt\n\nIrma Hughes de Jones.",
+   "conf": 82.5
+  }
+ ]
+}

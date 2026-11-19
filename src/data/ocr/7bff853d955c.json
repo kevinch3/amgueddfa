@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "EISTEDDFOD DEL CHUBUT 2026\n\nJUEVES 22 DE OCTUBRE- 17:45 HORAS- SAN MARTÍN 88\n\nMúsica - Cerddoriaeth\n\nCompetencia N9 55. Solo Libre, música ciudadana: Tango o\nmilonga a elección.\n\nCompetencia N° 56: Solo Libre. Rock Nacional : tema a\nelección de Charly Garcia. etapa solista o cualquiera de las\nbandas gue conformó.\n\nCompetencia N° 6]: Dúo libre: Obra a elección de música\nPopular argentina o latinoamericana.\n\nDEL CHUBUT",
+   "conf": 94.1
+  }
+ ]
+}

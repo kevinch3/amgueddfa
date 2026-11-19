@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "Competencias N91 al 11: idioma galés\nCompetencias N°12 al 28: castellano\n\nLITERATURA\n\nfecha límite: 16 de mayo\n\nEisteddfod Mimosa\n\n27 y 28 de junio de 2025",
+   "conf": 94.3
+  }
+ ]
+}

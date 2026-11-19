@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "PRELIMINARES 2019 DANZAS GALESAS\n\nHorario 19:00 h\nJueves 17 de Octubre\n\nSALÓN HISTÓRICO SAN DAVID\n\nCompetencia N° 84\nDanza Nivel Intermedio.\nCompetencia N° 85\n\nDanza Nivel Avanzado\nDawns werin anodd:Sawld y Fuwch.",
+   "conf": 94.2
+  }
+ ]
+}

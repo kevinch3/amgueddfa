@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "Eisteddfod\n\n¡ATENCIÓN! Fe DE ERRATAS\n\nCompetencia N° 101\n\ndonde dice\n“Downs y teuluoedd - Danza de las familias\n(esta danza deberá estar compuesta por alumnos y familiares\nde los mismos): HUNANDEWISIAD - a elección (presentar nombre y\ncoreografía al momento de la inscripción)”.\n\ndebe decir\n“Dawns y teuluoedd - Danza de las familias\n(esta danza deberá estar compuesta por niños, jóvenes y adultos) :\nHUNANDEWISIAD - a elección (presentar nombre y coreografía al\nmomento de la inscripción)”.",
+   "conf": 94.4
+  }
+ ]
+}

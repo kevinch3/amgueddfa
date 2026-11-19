@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "Eisteddfod Mimosa\n\nPorth Madryn\n18 y 19 de agosto de 2023\n\nCAMPANA DE SOCIOS Y COLABORADORES\n\nTe interesa colaborar y apoyar\nla realización de la 17 edición?\n\nIngresá en nuestra web y completá\nel formulario y nos comunicaremos\nwww. eisteddfodmimosa.org.ar\n\nli eisteddfodpuertomadryn\n\nconsultas@eisteddfodmimosa.org.ar",
+   "conf": 94.2
+  }
+ ]
+}

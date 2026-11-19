@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "Ma? de octubre de 2025 octubre de 2025\n\n| TWN BARDDONIAETH - En Castellano\n7. CORONA DEL EISTEDDFOD: Premio Municipalidad de Trelew. Poema inédito, no\npremiado en otro concurso. Tema y estilo libres. Extensión máxima: 40 (cuarenta) versos.\n8. MEDALLA DE PLATA - Premio de la Asociación San David (otorgado desde 1994) -\nPoema inédito, no premiado en otro concurso. Tema libre. Composición poética cuya\nestructura conserve\nla métrica y la rima.\n9. Nana que exprese en español los sentimientos de un abuelo/a galés/a para su nieto\nque nacería en la Patagonia.\n10. Romance (al estilo español) con tono humorístico. Tema libre.\n\nASOCIACIÓN\n\neisteddfod del 01/09 al 05/09\n\nDEL CHUBUT",
+   "conf": 93.4
+  }
+ ]
+}

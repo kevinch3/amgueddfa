@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "23 al 29 de octubre de 2023\n\nMúsica en galés\n43. Unawd agored: Yn Iach I Ti Gymru Ceiriog — S.\nNorthcote\n44. Unawd: Cerdd dant: Hunanddewisiad*\n45. Unawd: Can ysgafn: Hunanddewisiad*\n46. Unawd: Emyn: Hunanddewisiad*\n47. Unawd: Werin: dewis rhwng: Y March Glas / Ym\nMhontyprydd / Si Hei Lwli Mabi -Caneuon gwerin\ncymraeg\n\nASOCIACIÓN",
+   "conf": 93.5
+  }
+ ]
+}

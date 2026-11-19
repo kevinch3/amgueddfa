@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "EISTEDDFOD DEL CHUBUT 2026\n19 AL 25 DE OCTUBRE\nSALÔN CINCUENTENARIO\nASOCIACION SAN DAVID",
+   "conf": 95.1
+  }
+ ]
+}

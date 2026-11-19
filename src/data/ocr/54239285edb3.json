@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "Ma? de octubre de 2025 octubre de 2025\n\n~~ POESÍA- BARDDONIAETH\n1. CADAIR YR EISTEDDFOD : Cerdd. “Siwrnai / Taith”.\n2. Adroddiad i blant: “Cadw'n iach”.\n3. Cerdd ysgafn: “Tyfu / Tyfu lan (Tyfu fyny)”;.\n4. Telyneg: “Enaid hoff cytún”;\n5. I ddysgwyr - cerdd acrostig “PATAGONIA”\n6. I ddysgwyr - Disgrifiad o “Gaeaf Patagonaidd” >\n\nASOCIACIÓN\n\neisteddfod del 25/09 al 29/09\nDEL CHUBUT",
+   "conf": 88.0
+  }
+ ]
+}

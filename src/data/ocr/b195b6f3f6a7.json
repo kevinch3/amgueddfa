@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "us. Eisteddfod\n> de la cwrw\n\n153 años\n\niGWYL Y GLANIAD\nHAPUS!\n\nEL LEGADO ES NUESTRO,\nLA HISTORIA ESTÁ EN TUS MANOS",
+   "conf": 87.9
+  }
+ ]
+}

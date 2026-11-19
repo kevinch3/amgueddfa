@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "14 al 25 de odubw de 2026\nSalów Cincuentenario de lw Asociación Saw David\n\nPROSA - RHYDDIAITH\nYn Gymraeg\n2. Ysgrif - AGORED\n13. Dyddiadur - Taith\n4. Portread - Gaucho / Luned Gonzalez\n15. Erthygl i'r wasg - AGORED\n16. I Ddysgwyr (Dechreuwyr) Sgwrs mewn siop fara\n17. I Ddysgwyr (Uwch) Her\n\nASOCIACION\n\nrecepción de\nSE tedd fod lunes 31108 al 07/09",
+   "conf": 93.1
+  }
+ ]
+}

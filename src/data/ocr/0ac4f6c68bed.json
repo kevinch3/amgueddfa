@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "& Eisteddfod de la Juventud\n\nCierre de inscripciones de\n//) Música/Recitación/Danzas",
+   "conf": 85.8
+  }
+ ]
+}

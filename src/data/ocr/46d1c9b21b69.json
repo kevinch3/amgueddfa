@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "23 al 24 de octubre de 2023\n\n11. Ysgrif: \"Ymwelwyr \" neu \"Twristiaeth \".\n12. Dyddiadur: \"Gwyliau'r gaeaf\".\n13. Portread: \"Fy hoff ffrind\".\n14. Erthygl i'r wasg: \"Chwyddiant\".\n15. I Ddysgwyr (Dechreuwyr) “Deg cwestiwn dw i eisiau gofyn\ni fy arwr”.\n16. I Ddysgwyr (Uwch): “Adolygiad o'ch hoff ffilm neu lyfr”.\n\nASOCIACIÓN",
+   "conf": 92.5
+  }
+ ]
+}

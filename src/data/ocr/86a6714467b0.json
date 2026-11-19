@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "Artes visuales\nCocina -\n- Artesanías\nDanza\nLiteratura\nMúsica\nRecitación\n\n^e Cisteddfod Mimosa\nPorth Madryn\n\nvigésima edición\n\n12 y 13 de junio de 2026\n\neisteddfodmimosamadryn@gmail.com\n\nwww. eisteddfodmimosa.org.ar\nFieisteddfodpuertomadryn",
+   "conf": 91.1
+  }
+ ]
+}

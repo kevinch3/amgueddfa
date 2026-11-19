@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "día Oy iteratura\n\nen castellano\n23 aL21 de octubre de 2023\n\n7. CORONA DEL EISTEDDFOD: Premio Municipalidad de Trelew.\nPoema inédito, no premiado en otro concurso. Tema y estilo libres.\nExtensión máxima: 40 (cuarenta) versos.\n8. MEDALLA DE PLATA — Premio de la Asociación San David (otorgado\ndesde 1994) — Poema inédito, no premiado en otro concurso. Tema libre.\nComposición poética cuya estructura conserve la métrica y la rima.\n9. Texto para una payada. Extensión máxima 60 versos. Puede ser realizada\npor una o dos personas, deberán incorporar alguno de los siguientes dichos\npopulares: “De tal palo tal astilla”, “ El buey solo bien se lame”, “El que no\ncorre vuela”.\n\nASOCIACIÓN\n\nIngeripcione;: 18 al 22 de septiembre S eisteddfod",
+   "conf": 93.0
+  }
+ ]
+}

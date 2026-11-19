@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "En la Competencia N* 79: o 15 hyd 17 oed:\nDeuawd dwbl: “FFRINDIAU SY'N WERTH Y BYD”\ngan Angharad LLwyd / Leah Owen.\n\nGuedando de la\nsiguiente manera\n\nComp. N° 79: o 14 hyd 17 oed: Deuawd dwbl:\n“FFRINDIAU SY'N WERTH Y BYD” gan Angharad\nLLwyd / Leah Owen.",
+   "conf": 95.4
+  }
+ ]
+}

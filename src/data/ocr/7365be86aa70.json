@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "Comp N*4: Literatura Libre hasta 25 años\n\nLiteratura\n\nTema: Si dentro de 50 años abrieramos un baul con recuerdos de la\ncuarentena, ¿que diría el tuyo?\n\nUna frase, un cuento, una\nhistorieta, una poesía,\nun caligrama.\nElegí el formato y expresate\na través de la palabra.\n\n21/08 Cierre de inscripciones",
+   "conf": 95.5
+  }
+ ]
+}

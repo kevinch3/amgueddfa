@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "Eisteddfod de la Juventud\n\nInscribite hasta el\n\nPoesía/Prosa/Traducción/\nArtes Visuales/Artesanías/Cerâmica\n\n11 de Agosto\n\n18 de Agosto Musica/Recitaciôn/Danzas\n\niNo podês guedarte afuera!",
+   "conf": 90.5
+  }
+ ]
+}

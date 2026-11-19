@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "EISTEDDFOD DEL CHUBUT\n14 al 20 de octubre de 2074\n\nLiteratura en galés - Prosa\n\n10. Ysgrif - Fy hoff le.\n11. Dyddiadur - Symud tŷ.\n12. Portread - Aelod o'r teulu.\n13. Erthygl i'r wasg - Y Gymraeg ym Mhatagonia.\n14. I Ddysgwyr (Dechreuwyr) - Cyfweliad byr gyda\nffrind o Gymru.\n15. I Ddysgwyr (Uwch) - Adolygiad o gyfres deledu.\n\neisteddfod\nInscripciones: ? al € de septiembre 8 a ER",
+   "conf": 91.8
+  }
+ ]
+}

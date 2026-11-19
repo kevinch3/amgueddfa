@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "Octubre 14 - 20 Hydref\n\nSalôn San David. TRELEW. Neuadd Dewi Sant",
+   "conf": 94.9
+  }
+ ]
+}

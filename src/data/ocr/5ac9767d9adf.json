@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "EISTEDDFOD DEL CHUBUT un. A\n14 al 20 de octubre de 2074\n\ndanzas galesas\nDAWNS WERIN GYMREIG\n80. Grwp stepio (Clocsio). Hunanddewisiad. Coreografía de zapateo a libre\nelección. Debe incluir pasos tradicionales como por ejemplo: siswrn, pitter\npatter, además de transmitir una buena sonoridad al oído al combinar el\nritmo de los pasos. Duración máxima 4 minutos.\n81. Dawns. Danza 'Gwyl Ifan' neu 'Hogia'r Foelas'.\n82. Dawns 'llys' hunanddewisiad gyda chyfeiliant y gerddoriaeth yn byw.\nDanza de corte a elecciôn acompafiada con musica en vivo.\n83. Dawns y teuluoedd ( rhieni a'r plant neu ddisgyblion ag athrawon, er\nenghraifft) Dawns Dinbych. Danza de las familias (por ejemplo: padres e\nhijos; maestros y alumnos).\n84. Ar gyfer grwpiau sy'n cyfarfod yn achlysurol Para grupos que se reúnen\nocasionalmente Dawns Ffaniglen neu Dawns per wall",
+   "conf": 92.6
+  }
+ ]
+}

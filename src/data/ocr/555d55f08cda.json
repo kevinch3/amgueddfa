@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "ACLARACIÓN COMPETENCIAS DE MÚSICA\nPARTE 1\n\n- Comp. 82: Unawd Dosbarth 4 oed\n\"HENO, HENO\": 1 estrofa\n\n- Comp. 94: Parti neu gór oedran Ysgol Feithrin:\n2 estrofas [repetirlas con cambio de velocidad)\n\n- Comp. 53: Solo para Sala de 4 años\n\"BAGUALA DEL GRILLO\": 1 estrofa\n\n- Comp. 54: Solo para Sala de 5 años\n\"QUÉ LE DAREMOS AL NIÑO CHIQUITO\": 1 estrofa\n\n- Comp. 67: Coro edad Nivel Inicial\n\"UNA ORQUESTA DIVERTIDA\": 2 estrofas\n\nComp. 74: Conjunto/Coro Nivel inicial\n\"CANCIÓN DE TOMAR EL TÉ\": 4 estrofas",
+   "conf": 95.2
+  }
+ ]
+}

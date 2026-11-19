@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "ISTEDDFO\n\nde lw Í\n\nPRELIMINARES ws\n\nMIERCOLES 7/9 8 HS.\nRECITACIÓN EN CASTELLANO Y GALÉS\nMIÉRCOLES 7/9 14 HS.\nDANZAS FOLKLÓRICAS\n\nJUEVES 8/9 8 HS.\nMUSICA EN CASTELLANO Y GALES\n\nJUEVES 8/9 18 HS. DANZAS GALESAS\n\nGIMNASIO MUNICIPAL DE GAIMAN",
+   "conf": 91.4
+  }
+ ]
+}

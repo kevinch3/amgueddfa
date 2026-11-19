@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "Extendimos el cierre de $\n\nde todas las competencias hasta el\n\ny . La direccion de mail es:\n\n- eisteddfodjuventud@gmail.com\n\n(este año, no hay inscripción previa.\nEnviando tu trabajo en las diferentes competencias, quedas inscripto)",
+   "conf": 90.7
+  }
+ ]
+}

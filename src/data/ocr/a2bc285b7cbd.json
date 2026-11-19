@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "23 al 2 de octubre de 2023\n20. El escritor angloindio Salman Rushdie sufrió un atentado contra su\nvida. Teniendo en cuenta este hecho escribir un breve ensayo acerca\nde la censura.\n21. Escribir un cuento policial a partir de los siguientes datos:\n“Una joven mujer aparece muerta con una carta en la mano”.\n“Un extraño repartidor que lee muchas novelas policiales”.\n“Una niña desaparecida reaparece con un cuchillo ensangrentado en\nla mano”\n22. En homenaje a Quino, que falleció en 2020, escribir tres breves\nrelatos desde la mirada de Mafalda tomando como tema a sus amigos.\n\ntellano\n\nASOCIACIÓN",
+   "conf": 95.4
+  }
+ ]
+}

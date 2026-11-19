@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "EISTEDDFOD—\n\nACLARACIÓN COMPETENCIAS DE MÚSICA\nPARTE 2\n\n- Comp. 41: Adrodd Bl. 3 a 4: \"DARLUNIAU\"\nen la Ira estrofa en lugar de alarch \"bach\"\ndebe decir: ALARCH BALCH\n\n- Comp. 86: Unawd Bl. 5 a 6: \"CWLWM CAN\"\n1 estrofa\n\n- Comp. 87: Unawd hyd 15 oed \"CASTELL CIDWN\"\nEstrofas 1, 3 y 5",
+   "conf": 93.9
+  }
+ ]
+}

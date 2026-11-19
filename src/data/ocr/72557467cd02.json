@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "CONCU RSO\n\n| BASES Y CONDICIONES en vel link adjunto.\n\n|; Inscripciones y recepción de trabajos: lunes 11 a viernes 15 de agosto de i\n2) 2025, en horario de 16:30 a 18:30 horas, en la oficina administrativa\n| (San Martín 90, Trelew).\n\nConsultas vía correo electrónico: eisteddfodchubutegmail.com\n\nASOCIACION\n\n| Kay eisteddfod ;\n\ny DEL CHUBUT",
+   "conf": 85.8
+  }
+ ]
+}

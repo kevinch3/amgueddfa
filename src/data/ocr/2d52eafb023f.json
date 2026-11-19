@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "po DEL CHUBUT 2026\n\nEn la competencia de\nDANZAS GALESAS N” 90\nDawns Stepio, o NX\nse aceptaran inscripciones con opcion:\nDawns Stepio Unigol\nCyflwyniad unigol. Dawns sy'n defnyddio arddull, camau;\npatrymau a gwisg draddodiadol Gymreig, ynghyd ag\nalawon traddodiadol Cymreig.\nDanza de Clocsio para Solista: Presentaciôn individual.\nDanza que utiliza estilo, pasos, patrones y vestimenta\ntradicional galesa, junto con música tradicional galesa.\n\n*INDICAR opción grupal o individual en la inscripción.",
+   "conf": 92.0
+  }
+ ]
+}

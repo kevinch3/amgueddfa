@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "Comp N91: Artes Visuales hasta 1] años.\n\nLa mascota del Eisteddfod\n\nA dn\n\nTema: MIKE.\nTécnica mixta: Dibujo, pintura.\nMateriales a elección.\nSoporte: Hoja de papel tamaño A4.\n\n21/08 Cierre de inscripciones",
+   "conf": 91.6
+  }
+ ]
+}

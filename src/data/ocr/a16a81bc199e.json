@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "EISTEDDFOD DEL CHUBUT HE\n14 al 20 de octubre de 2074\n\nrecitación\n\nEn Castellano\n\nLibre: Romance del molinero, de Jaime Dávalos.\nPara dúo: Café para dos de Cesar Guevara.\nLibre: La Trochita de Arié Lloyd de Lewis.\nPara voz masculina: Libertad, Anónimo. Año 1938.\nPara voz femenina: Puro sueño, de Liliana Pérez.\nPara principiantes: Niña, de Octavio Paz.\nLibre principal: Elogio de la lluvia, de Jorge Spíndola.\nRecitación en conjunto. Poesía libre a elección. Extensión\n\nmáxima 40 versos.\n\nInscripciones: 30/09 al 04 /10 Bee put",
+   "conf": 92.8
+  }
+ ]
+}

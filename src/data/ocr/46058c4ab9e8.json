@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "PRELIMINARES 2019\nMUSICA\nJueves 17 de Octubre\nHorario 17:00 h\nSalon histórico de San David\ny Competencia\nCompetencia N° 49\n\nSolo nacional.Un tema de\nLuis Alberto Spinetta a elección.\n\nCompetencia N° 53\nDúo voces iguales o mixtas:obra a elección del repetorio\nPopular argentino o.",
+   "conf": 91.2
+  }
+ ]
+}

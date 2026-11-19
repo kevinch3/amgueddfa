@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "AVISO\n\nFe de Erratas\n\nPrograma Eisteddfod Mimosa Porth Madryn\nDanza Folklórica galesa - Dawns Werin Gymreig\n\nCompetencia N*97\nAdultos, mayores de 18 años.\na) Aberddaugleddau\nb) Dawns Gwyl Ifan\n\nLa competencia se subdivide en dos.\nCada danza serâ evaluada de forma\nindependiente. Los grupos gue se inscriban\noptarân por participar en una\no en dos danzas.\n\nSaluda cordialmente,\nla comisión organizadora,",
+   "conf": 94.0
+  }
+ ]
+}

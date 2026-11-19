@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "ADRODD\n\nADRODD BLWYDDYN 1 a 2:\nPêl\n\nRoedd gen i bêl,\npêl fawr wen,\nfe'i ciciais yn uchel\ni fyny i'r nen;\na rŵan rwyf bron\na mynd o \"ngho”,\nmae'r bêl wedi aros\nar ben y to!\n\nSelwyn Griffith\n\nADRODD BLWYDDYN 3 A 4 CYNRADD:\nDeinosor Drofa Dulog\n\nMae deinosor mawr yn ein tŷ ni,\nmae'n swnian o hyd ar Mam a fi.\n\nMae'n codi'n fore i fwyta'r llaid,\nac yna'n cysgu yng ngwely Taid.\n\n“Ble rwyt ti'n byw?” gofynnais i,\n“Yn Nrofa Dulog o naw tan dri!”\n\nGareth Roberts",
+   "conf": 95.5
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "LITERATURA EN GALÉS 25/09 AL 29/09\nLITERATURA EN CASTELLANO Y TRADUCCIONES 01/09/ AL 05/09\n\nARTES VISUALES, ARTESANÍAS, FOTOGRAFÍA 15/09 AL 19/09\nMÚSICA 22/09 AL 26/09\nRECITACIÓN Y DANZAS 29/09 AL 03/10\nCOCINA 06/10\nARQUERÍA 02/08 AL 15/09\n\nASOCIACIÓN\nDEL CHUBUT",
+   "conf": 93.5
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "EISTEDDFOD DEL CHUBUT 2026\n\nJUEVES 22 DE OCTUBRE- 17:45 HORAS- SAN MARTÍN 88\n\nRecitación - Adrodd\nCompetencia N° 29: Libre a elección:\n\n- No te salves de Mario Benedetti\n\nCompetencia N° 30: Libre: narración oral de uno de los\nsiguientes cuentos. A elección:\n- La Inbrusa de Pedro Orgambide\n- La inmolación por la belleza de Marco Denevi\n+ El crimen perfecto de Enrique Anderson [mbert.\n\nASOCIACIÓN\nDEL CHUBUT",
+   "conf": 91.8
+  }
+ ]
+}

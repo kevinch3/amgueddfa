@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "eisteddfod del chubut\n\nAGOSTO\n\nRecordamos las fechas límites para la inscripción\ny recepción de trabajos de este mes:\n\nDiseño Gráfico 28/08/2017\nLiteratura en galés 28/08/2017\n\n: SECRETARÍA DEL EISTEDDFOD DEL CHUBUT\n8 eisteddfod E San M lew 3 0186\ndd Chubut secret 2",
+   "conf": 83.9
+  }
+ ]
+}

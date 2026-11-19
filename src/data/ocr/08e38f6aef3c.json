@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "EISTEDDFOD DEL CHUBUT\n14 al 20 de octubre de 2074\n\nLiteratura en castellano - Poesía\n\n7. CORONA DEL EISTEDDFOD: Premio Municipalidad de Trelew.\nPoema inédito, no premiado en otro concurso. Tema y estilo libres.\nExtensión máxima: 40 (cuarenta) versos.\n8. MEDALLA DE PLATA — Premio de la Asociación San David\n(otorgado desde 1994) — Poema inédito, no premiado en otro concurso.\nTema libre. Composición poética cuya estructura conserve la métrica y\nla rima.\n\n9. Hasta cinco poemas breves con rima asonante sobre recuerdos de\nla infancia.\n\neist\n\neddfod\nInscripciones: 9 al 13 de septiembre O) DEL cHUBUT",
+   "conf": 94.2
+  }
+ ]
+}

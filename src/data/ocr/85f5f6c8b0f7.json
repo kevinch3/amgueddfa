@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "DANZAS - DAWNS* ——-\n\nDanza Folclórica Extranjera\n93. Conjunto de danza estilizada de raíz folklórica.\n94, Danza tradicional española a libre elección.\n95. Danza tradicional italiana a libre elección.\nDanza Folclórica y Popular Argentina\n96. Individual: Malambo sureño, duración máxima 3 minutos.\n97. Danza tradicional en pareja: Zamba.\n\n98. Tango salón: Se bailará uno o dos tangos a elección del participante.\nSecretaría Eisteddfod del Chubut\nSan Martín 90 - (9100) Trelew, Chubut\nTel 54 (0280) 4430156\nsecretariaQeisteddfodpatagonia.com\n\nwww.eisteddfodpatagonia.com",
+   "conf": 94.7
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "23 al 29 de octubre de 2023 patagónicos\n\n23. Narrativa. Cuento, leyenda o suceso. Lengua\nautóctona. (Pedir material informativo en Secretaría del\nEisteddfod).\n\nASOCIACIÓN",
+   "conf": 91.9
+  }
+ ]
+}

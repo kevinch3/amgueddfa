@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "eisteddfod del chubut (O)\nSEPTIEMBRE\n\nRecordamos las fechas límites para la inscripción\ny recepción de trabajos de este mes:\n\nLiteratura en castellano y traducción 19/09/2017\nArtes plásticas, artesanías, fotografia 25/09/2017\nMúsica, recitación y danza 25/09/2017\nEstudiante del año 18/09/2017\n\n8 eisteddfod",
+   "conf": 92.5
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "EISTEDDFO\nAl de la J A\nFECHA DE ENTREGA DE TRABAJOS\n\nPOESÍA, PROSA Y TRADUCCIÓN\n\nARTES VISUALES, ARTESANÍAS\nY CERAMICA\n\nSE RECIBEN EN LA ESCUELA DE MUSICA DE GAIMAN,\nDE LUNES A VIERNES DE 15 A 20 HS.",
+   "conf": 91.1
+  }
+ ]
+}

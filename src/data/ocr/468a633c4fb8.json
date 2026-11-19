@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "EISTE00FOO DEL\nCHUOUT — 2025\n\n15 AL 19 DE OCTUBRE\n\nMANDALA ee\n\nPodes participar en la\n\ncompetencia Artesanías con una\nmandala: colgante hexagonal de y\nhilo o lana, colores gqleses.\n\nENTREGAS EN\nSAN MARTÍN 90 i\nDEL 15/9 AL 19/9 |\nDE 16:50 A 18\n\nBases y condiciones en el\nprograma en las redes",
+   "conf": 92.7
+  }
+ ]
+}

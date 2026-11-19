@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "EISTEDDFOD DEL CHUBUT 2025\n\nJUEVES 16 DE OCTUBRE- 17 HORAS- SAN MARTÍN 88\n\nRecitación - Adrodd\n\nCompetencia N9 30. Para voz femenina. Aelección entre:\n* Abuelo inmigrante de María Bolsi de Pino\n*El jabón de Silvina Ocampo\n\nCompetencia N9 3]: Principal: Gwyneth (La pionera) de María Julia\nAleman de Brand\n\nDEL CHUBUT",
+   "conf": 94.2
+  }
+ ]
+}

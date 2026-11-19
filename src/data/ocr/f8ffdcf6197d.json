@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "Ss 20 MANANA\n\nANANE\npr AGOSTO\n\nCIERRE DE INSCRIPCIONES\n\nMUSICA DANZAS\nRECITACIÓN",
+   "conf": 82.0
+  }
+ ]
+}

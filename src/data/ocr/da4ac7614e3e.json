@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "En las competencias de letras en castellano y galés;\ntraducciones; artesanías; artes visuales y fotografía:\ne Acercar personalmente en la Secretaría, en San\nMartín 90: miércoles y viernes de 17,30 a 20 horas.\nCada trabajo debe estar firmado con un\ne Junto con el trabajo, entregar UN SOBRE CERRADO\nque contenga los datos personales y de contacto\npara el caso de resultar ganador de alguna\n\nASOCIACIÓN\n6) eisteddfod\nDEL CHUBUT",
+   "conf": 93.6
+  }
+ ]
+}

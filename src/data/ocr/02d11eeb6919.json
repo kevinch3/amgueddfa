@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "¡ATENCIÓN! FE DE ERRATAS\n\nCompetencia N° 63\ndonde dice “Competencia principal para Coro (formación libre) hasta 25 años:\nDANZA DE LAS CINTAS (I, II, III, IV y V) Folklore argentino,\nadaptación de Clydwyn Ap Aeron Jones.\nDebe decir:\n“Competencia principal para CORO MIXTO (SATB) hasta 25 años:\nDANZA DE LAS CINTAS (I, II, III, IV y V) Folklore argentino,\nadaptación de Clydwyn Ap Aeron Jones.\n\nCompetencia N° 16\ndonde dice “Unawd o 12 hyd 14 oed: TÂN YN LLYN - can werin gymraeg”\ndebe decir:\n“Unowd o 12 hyd 15 oed: TAN YN LLYN - can werin gymraeg”\n\nCompetencia N° 104\ndonde dice “Coreografía con música de cine. Se evaluará la relación entre la música\ny los movimientos coreográficos, el vestuario y el carisma expresado por el grupo.\nDuración maxima: 3 minutos.\nCantidad de participantes: 8 (ocho).\nNiveles:\n- Nivel A (hasta 12 años) -Nivel B (hasta 25 años)\ndebe decir:\n“Coreografía con música de cine. Se evaluará la relación entre la música y los\nmovimientos coreograficos, el vestuario y el carisma expresado por el grupo.\nDuración móxima: 3 minutos.\nCantidad de participantes: MÍNIMO 8 (ocho).\nNiveles:\n- Nivel A (hasta 12 años) - Nivel B (hasta 25 años)",
+   "conf": 94.4
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "EISTEDDFOD DEL CHUBUT wy\n14 al 20 de octubre de 2074\n\nrecitación\n\nYn Gymraeg\n22. Prifadroddiad: “Dau lygad ar un wlad\" ” gan\nMyrddin Ap Dafydd.\n23. Adrodd: “Wyth mil o filltiroedd” gan Tudur Dylan\nJones\n24. Cydadrodd: “Yma o hyd” gan Dafydd Iwan.\n25. I Ddysgwyr (Uwch): “Gadael” gan Tudur Dylan\nJones\n\nInscripciones: 30/09 al 04/10 Bee enue",
+   "conf": 91.5
+  }
+ ]
+}

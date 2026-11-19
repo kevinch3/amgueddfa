@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "EISTEDDFOD\nDE LA JUVENTUD 2025\n\nMartes 9 de septiembre de 2025 - 16:00 Hs.\n\nGimnasio Municipal de Gaiman\n\nMUSICA EN CASTELLANO Y GALÊS\n1)Comp. N° 73 Hyd 13 oed: “AF I LANFAIR” Trad. Cymraeg -\nCasgliad Sarah Jones Mac Donald\n2)Comp. N° 74: o 12 hyd 14 oed: “CYFFERDDAIS YN FY NGHALON”\ngan Susan Williams. Trefn. Margaret Jones.\n3) Comp. N° 77: Hyd 25 oed: CAN WERIN hunanddew isiaid\n4) Comp. N° 78: hyd 13 oed: Deuawd dwbl: “FFRIND UN BACH FEL FI”\ngan H.Ernest Nicholl.\n\n5)Comp. N° 51: Dúo doble hasta 13 años: \"EN LA MONTAÑA” - canción\nsuiza. Recopilación y letra de Kurt Phalen.\n\n6)Comp. N° 52: Dúo doble hasta 25 años: “LUNA LANAR” - Silvia\nShujer/Mariana Baggio Arr. Mauro Ferreira.",
+   "conf": 94.7
+  }
+ ]
+}

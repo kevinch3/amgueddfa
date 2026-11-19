@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "— VIERNES 14 > AGOSTO Zz\n\nsitive DÍA:\n\n> | Jt TRABA, 10s DE Ll TEI RATURAZ, a\n\nComo es feriado por el día de Gaiman,\nrecibiremos los trabajos:\n\nPOR LA MAÑANA _ - = TARDE 3\n\nE EN 4",
+   "conf": 73.8
+  }
+ ]
+}

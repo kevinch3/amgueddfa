@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "RECITACION\n\nJóvenes de 18 a 25 años\n\nEstados de animo\nde Mario Benedetti\n\nUnas veces me siento\ncomo pobre colina\ny otras como montafia\nde cumbres repetidas.\n\nUnas veces me siento\ncomo un acantilado\ny en otra como un cielo\nazul pero lejano.\n\na veces uno es\nmanantial entre rocas\ny otras veces un ârbol\ncon las últimas hojas.\n\npero hoy me siento apenas\ncomo laguna insomne\ncon un embarcadero\nya sin embarcaciones\n\nuna laguna verde\ninmóvil y paciente\nconforme con sus algas\nsus musgos y SUS peces.\n\nsereno en mi confianza\nconfiado en que una tarde\nte acerques y te mires\nte mires al mirarme.",
+   "conf": 95.3
+  }
+ ]
+}

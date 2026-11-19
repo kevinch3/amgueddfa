@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "PRELIMINARES\nEISTEDDFOD DEL CHUBUT\n\n20 Qe dw. 0. 2092 A^\n\nSalón Cincuentenario\nde la Asociaciôn San David\nSan Martín 90 esguina Belgrano\n\n17 HORAS. estación\n\nCOMPETENCIA 22. Prif adroddiad: “Myfyrio” gan\nMererid Hopwood\nCOMPETENCIA 25. Cydadrodd: “Coch” gan Casi\nWyn\nCOMPETENCIA 31. Libre: Homenaje especial a\ny” Owen Tydur Jones (poeta multipremiado en este\ny otros Eisteddfod regionales por su producción\nlírica en galés y español). Poema a elección entre\n/ los siguientes: “Volví” y “Jalando repasos” (Corona\ndel Eisteddfod del Chubut 2019).\n\nDEL CHUBUT",
+   "conf": 91.1
+  }
+ ]
+}

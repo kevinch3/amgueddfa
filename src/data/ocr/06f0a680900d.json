@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "RECITACIÓN EN CASTELLANO\n\nNIVELINICIAL\n\nLos rios van a los mares\nLos perfumes van al cielo\nY yo me voy a lacama,\n\nPorque me muero de sueño\n\nPRIMARIA (1* Ciclo)\n\nRecitación con un adulto\n\n“EL FAMOSO YONOFUÍ”\n¿Quién sacó el dragón\nde mi galera?\n\n¿Quién desenredó\nla enredadera?\n\n¿Quién sirvió mi tê\nenla regadera?\n\n¿Quién lió este lío\npor aqui?\n\nMano invisible,\nToca por mi\nPicaro duende\nque nunca vi\nsólo su apodo\n\nPronto aprendí.\n\nDe cualquier modo\nse esconde aquí.\nTiene la culpa de todo\nElfamoso Yonoful\n\nElsa Bornemann",
+   "conf": 87.8
+  }
+ ]
+}

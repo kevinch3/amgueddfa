@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "INSCRIPCIONES Y RECEPCION DE TRABAJOS pa S\n\nFISTEDDFOD DEL CHUBUT 2024\n\nLiteratura en galés del 02/09 al 06/09\nLiteratura en castellano y traducciones del 09/09 al 13/09\nArtes visuales. artesanías y fotografía del 16/09 al 20/09\nMusica del 23/09 al 27/09\nRecitacion y danzas del 30/09 al 04/10\nCocina 07/10",
+   "conf": 91.3
+  }
+ ]
+}

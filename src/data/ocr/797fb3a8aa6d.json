@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "EISTEDDFOD DEL CHUBUT W^;\n14 al 20 de octubre de 2074 E\n\nMosica- Cerddoriaeth\n\nSOLOS - En Castellano y otros idiomas, excepto galés.\n48. Solo libre, Musica de Camara - A elecciôn entre las\nsiguientes piezas: An Die Musik - Franz Schubert. Canción de\ncuna India - Gilardo Gilardi\n49. Solo, Música Folklórica Argentina. Obra a elección\n(Zamba, Chacarera, Gato, Escondido, etc.)*\n50. Solo Libre, Música Rioplatense - Obra a elección (Tango,\nMilonga, Candombe)*\n51. Solo Libre, Rock Nacional - Obra a elección *\n\nAN eist\n\nInscripciones: 23 al 2] de septiembre S caveats",
+   "conf": 92.1
+  }
+ ]
+}

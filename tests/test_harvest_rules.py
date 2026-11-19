@@ -43,3 +43,8 @@ def test_galesa_is_not_gales():
 def test_eisteddfod_en_gales_dropped():
     # A trelewense competing in Wales: news about the eisteddfod there, not here (user 2026-11-19).
     assert fest("EN VIVO | Santiago Meza, Trelewense en el Eisteddfod en Gales", "@DiarioJornadaChubut") is None
+
+
+def test_eisteddfod_genedlaethol_dropped():
+    # Wales' National Eisteddfod, even when a Patagonian performs there (user 2026-11-19).
+    assert fest("Patagonia 150 - Lucy Taylor @ Eisteddfod Genedlaethol 2015 (1/2)", "@YWladfa150") is None

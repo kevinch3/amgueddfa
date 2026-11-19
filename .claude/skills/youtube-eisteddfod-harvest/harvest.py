@@ -63,7 +63,7 @@ NEWS_CHANNELS = {"@canal12chubut", "@canal12ch", "@DiarioJornadaChubut", "@canal
 WALES = r"llangollen|kernewek|cornish|gorsedh kernow|eisteddfod y dysgwyr|eisteddfod yr urdd|urdd gobaith|genedlaethol|national eisteddfod|eisteddfod of wales|eisteddfod cymru"
 # An eisteddfod abroad named in the title: not archived, even with a Patagonian speaker
 # ("Eisteddfod Gales de Carreg Las // Radio Nacional Esquel").
-ABROAD = r"eisteddfod (de |en )?gales\b"   # not "Eisteddfod galesa en Trelew"
+ABROAD = r"eisteddfod (de |en )?gales\b|eisteddfod genedlaethol"   # not "Eisteddfod galesa en Trelew"
 PATAGONIA = r"chubut|trelew|gaiman|trevelin|madryn|dolavon|esquel|rawson|wladfa|patagonia|camwy|[\[(](CH|JU)\d{4}"
 EISTEDDFOD = r"eisteddfod|eistedfod|eisteddvod|gorsedd|silla del bardo|corona del poeta|cadair|coron"
 

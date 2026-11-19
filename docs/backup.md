@@ -191,5 +191,8 @@ python3 -m scripts.export_video_transcripts     # backup disk mounted
 ```
 
 writes `public/transcripciones-video/<id>.json` (uploaded subtitles, else YouTube's automatic
-ones, else Whisper's; Chubut and Trevelin only, issue #29) and removes files of videos no
+ones, else Whisper's; Chubut and Trevelin only, issue #29). Whisper is published only in
+Spanish, filtered (`clean_whisper`: 30 s filler windows, stock phrases, loops; at least 6 lines
+and 40 words left). Welsh Whisper, mostly singing written phonetically, stays here until
+someone checks it (decision 2026-11-19) and removes files of videos no
 longer listed. Run it after `import-whisper` or a monthly run, then commit the folder.

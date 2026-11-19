@@ -9,7 +9,8 @@ per video of the site's list to public/transcripciones-video/<id>.json:
     {"src": "subida" | "youtube" | "whisper", "lang": "cy", "seg": [[12.3, "line"], ...]}
 
 Which one: subtitles someone uploaded, else YouTube's automatic transcription in
-the detected language (<lang>-orig), else Whisper's. Only Chubut and Trevelin:
+the detected language (<lang>-orig), else Whisper's (Spanish only, filtered:
+clean_whisper). Only Chubut and Trevelin:
 Juventud and Mimosa sessions name children aloud (issue #29), their videos still
 play without a transcription. Files of videos that no longer qualify are removed.
 """
@@ -25,6 +26,15 @@ REPO = Path(__file__).resolve().parent.parent
 OUT = REPO / "public" / "transcripciones-video"
 DEFAULT_BACKUP = Path("/run/media/kevinch3/4eff8b2b-61f1-4df2-bb61-5f9ba0faa94d/amgueddfa-backup")
 FESTIVALS = {"chubut", "trevelin"}
+
+# Whisper over music without words: a whole 30 s window with a word or two, stock phrases
+# from its training subtitles, loops. Real speech comes in lines of a few seconds.
+STOCK = re.compile(r"gracias por ver|suscr[ií]b|subt[ií]tulo|amara\.org|diolch am wylio|thanks for watching|^cymru[.!]?$", re.I)
+LOOP = re.compile(r"\b(\w+)\b(?:\W+\1\b){2,}", re.I | re.U)
+MIN_LINES, MIN_WORDS = 6, 40
+# Whisper's Welsh (mostly singing) is often phonetic nonsense that no score here tells apart from
+# the good ones: held in the backup until someone checks it (user decision 2026-11-19).
+WHISPER_LANGS = {"es"}
 
 TS = re.compile(r"(?:(\d+):)?(\d{1,2}):(\d{2})[.,](\d{3})\s+-->")
 TAG = re.compile(r"<[^>]+>")
@@ -78,9 +88,27 @@ def pick(stem: Path) -> dict | None:
     w = folder / f"{name}.whisper.json"
     if w.exists():
         d = json.loads(w.read_text(encoding="utf-8"))
-        seg = [[round(s[0], 1), s[2]] for s in d.get("segments", []) if s[2].strip()]
+        if d.get("language") not in WHISPER_LANGS:
+            return None
+        seg = clean_whisper(d.get("segments", []))
         return {"src": "whisper", "lang": d.get("language", ""), "seg": seg} if seg else None
     return None
+
+
+def clean_whisper(segments: list) -> list:
+    """Whisper's [start, end, text] segments worth publishing, as [start, text]; [] when too little is left."""
+    out = []
+    for start, end, text in segments:
+        text = text.strip()
+        words = len(text.split())
+        if not words or STOCK.search(text) or LOOP.search(text):
+            continue
+        if end - start >= 25 and words / (end - start) < 0.5:
+            continue
+        out.append([round(float(start), 1), text])
+    if len(out) < MIN_LINES or sum(len(t.split()) for _, t in out) < MIN_WORDS:
+        return []
+    return out
 
 
 def glob_escape(name: str) -> str:

@@ -3,6 +3,7 @@ import editionsRaw from '../../../data/approved/editions.json';
 import { editionCover, editionItems, editionState, festivals, yearRange } from '../../lib/catalog';
 import { forEdition, sortFacts, type Contribution } from '../../lib/contrib';
 import { absUrl, editionFacts, factRecord } from '../../lib/seo';
+import { transcriptionDoc } from '../../lib/transcripciones';
 
 /** Open data: every edition in range with its state, cover and approved facts. */
 export function GET(): Response {
@@ -24,6 +25,8 @@ export function GET(): Response {
         // true / false when known; null when nobody has said (not a guess).
         realizada: facts.held ?? null,
         tapa: cover ? absUrl(cover.page) : null,
+        // Some public document of this edition has a transcription.
+        tiene_transcripcion: editionItems(f.slug, year).some((i) => !i.restricted && transcriptionDoc(i.id) !== null),
         documentos: editionItems(f.slug, year).filter((i) => !i.restricted).length + forEdition(approved, f.slug, year, 'upload').length,
         datos: sortFacts(forEdition(approved, f.slug, year, 'fact')).map(factRecord),
       };

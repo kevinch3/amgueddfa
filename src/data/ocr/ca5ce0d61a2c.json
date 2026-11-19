@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "Comp N925: Tutorial de COCINA\n\nTutorial de cocina.\nReceta a elección.\nEn galés o castellano.\nMáximo 3 minutos de\nduración. Individual o\nfamiliar.\n\nEl video puede ser editado. 21/08 Cierre de inscripciones",
+   "conf": 95.3
+  }
+ ]
+}

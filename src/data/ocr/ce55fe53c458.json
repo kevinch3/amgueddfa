@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "EISTEDDFOD DEL CHUBUT 2026\n\nJUEVES 22 DE OCTUBRE- 17:45 HORAS- SAN MARTÍN 88\n\nMúsica - Cerddoriaeth\n\nCompetencia N9 53: Solo lírico. oz femenina o masculina:\n\n“Ombra mai fu” de Georg Friederich Haendel.\n\nCompetencia N9 54: Solo. Música Folklórica Argentina:\n“Canto versos” de Jorge Fandermole. Canción litoraleña,\n\nDEL CHUBUT",
+   "conf": 92.2
+  }
+ ]
+}

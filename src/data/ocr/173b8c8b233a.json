@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "MADERA\n\nEISTEDDFOD DEL\nCHUBUT\n13 AL 19 DE\nOCTUBRE DE\n\nEntrega en San Martín 90\nde 16:30 a 18 hs.\nConsultá el programa en\nlas redes: Eisteddfod del",
+   "conf": 95.3
+  }
+ ]
+}

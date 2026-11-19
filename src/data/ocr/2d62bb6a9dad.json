@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "Comp. N*30 Recitación de una canción infantil galesa. Elegir opciones a), b) o c)\n\nOpción a) Adeiladu tŷ bach\nAdeiladu tŷ bach,\nun, dau, tr,\ntô ar ei ben ef a dyna ni;\nsbio trwy yffenest,\nUygoden fach yn cysgu,\nust, da chi,\nlygoden fach yn cysgu yn y,\nlygoden fach yn deffrol\n\nOpción c) Tŷ Bach Twt\nMae gen dipyn o dŷ bach twt,\n0.49 bach twt, o dŷ bach twt,\nMae gen i diopyn o dŷ bach twt,\nA'r gwynt i'r drws bob bore.\nHei diho, di hei di dei di ho\nA'r gwynt i'r drws bob bore.\n\nAc yma byddaf yn llon fy myd,\nyn llon fy myd, yn llon fy myd,\n\nAc yma byddaf yn llon fy myd,\n\nA'r gwynti'r drws bob bore.\n\nHei diho, dihei i de di ho\n\nA'r gwynt ir drws bob bore\n\nOpción b) Dau gi bach\nDau gi bach yn myndi'r coed\n\nEsgid newydd am bob troed;\nDau gi bach yn dwad adre\nDau gi bach\n\nDan droi fferau dan droi troed;\nDau gi bach yn rhedeg adre\nBlawd ac eisin hyd eu coese\nDau gi bach\n\nDau gi bach a'u bron yn wyn\nDau gi bach yn dai sbio\nDau gi bach sut ych chi heno\nDau gi bach",
+   "conf": 82.9
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "EISTEDDFOD DEL CHUBUT a\n14 al 20 de octubre de 2074\n\nMsica- Cerddoriaeth\n\nTRÌOS Y CONJUNTOS\n\nTriawd - i ddynion: Cerddwn Ymlaen - Dafydd Iwan\nTriawd - I ferched - Hwiangerdd Mair (Suai'r Gwynt) - Nantlais\nPedwarawd: Luned (Diolch am weddi'r Arglwydd) - Eric Jones; T Elfyn\n\nJones\n\nParti cerdd dant: Hunanddewisiad.*\nParti hyd 16 mewn nifer: Sanctus - Schubert\nParti neu Gôr Meibion: Ysbryd y Nos — Hefin Elis; Cleif Harpwood\nParti neu Gôr Merched: Angor - Tudur Huws Jones\nParti neu Gôr Teulu: Hunanddewisiad.*\nParti neu Gôr Capel: Hunanddewisiad.*\nParti neu Gôr Cân Ysgafn: Os oes gen ti gân (gyda rhyddid i drefnu'r\n\nlleisiau fel sy'n addas i'r ensemble) Owain Llwyd; Mei Mac\n\nASOCIACIÓN\n\neist\n\nInscripciones: 23 al 27 de septiembre DE cwueUT",
+   "conf": 93.7
+  }
+ ]
+}

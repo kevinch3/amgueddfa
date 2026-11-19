@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "Inglancia de PRELIMINARES\n\nMúsica en galés\nJueves 26 - 17,30 horas - Salón Cincuentenario\nAsociación San David (San Martín N' 88)\n\nCompetencia N° 43. Unawd i Ti\newisiad.\n\nCompetencia N° 46. Unawd. Emyn.\nHunanddewisiad.\nCompetencia N° 47. Unawd. Werin: dewis rhwng\nY march glas - Ym Mhontyprydd- Si Hei Lwli\nMabi. Caneuon gwerin Cymraeg.",
+   "conf": 94.0
+  }
+ ]
+}

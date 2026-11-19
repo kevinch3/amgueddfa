@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "EISTEDDFOD DEL CHUBUT 2026\n\nDebe leerse:\n\n116. Pwdin (Budín) De zanahoria y\nnuez. Molde descartable de\naproximadamente 20 cm.\n\nSe aceptarân moldes redondos o\nrectangulares.\n\nASOCIACIÓN\nDEL CHUBUT",
+   "conf": 94.3
+  }
+ ]
+}

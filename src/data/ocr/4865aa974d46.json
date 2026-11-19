@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "RECITACION\n\nSecundaria\n\nVoy a esperarte\nde Griselda Jones de Redondo\n\nTengo un te quiero en la mirada\ny una paloma dentro del alma.\n\nTengo un racimo de flores blancas\ny un trébol rojo que se agiganta.\n\nTengo en los labios miel y nostalgias\nporque tu nombre siempre se marcha.\n\nCon un te quiero y una paloma,\ncon un racimo de flores blancas,\n\nun trébol rojo, miel y nostalgias\nvoy a esperarte, aunque te vayas.",
+   "conf": 94.8
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "eisteddfod\n28 de SEPTIEMBRE\n\nRecordamos que el 28 de septiembre es la\nfecha límite para la inscripción y recepción de\ntrabajos de las siguientes competencias:\n\nArtes plásticas, artesanías, fotografia\nMusica, recitación y danza\n\nPresentar partitura o letra en las competencias de música de\nlibre elección en el momento de la inscripción.\n\neisteddfod\n\n1 Chubut",
+   "conf": 93.8
+  }
+ ]
+}

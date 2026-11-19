@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "RECITACION\n\n3 y 4GRADO\nEl cuando\nde Elsa Bornemann\n\nCuando sea chica...\n-dice una viejita-\njla gran vuelta al mundo\ndaré en calesita!\n\nCuando sea chico...\n-afirma un anciano-\njen redes de hierba\npescaré el verano!\n\nCuando sea chica...\n-dice una jirafa-\njandaré en patines\ndentro de una caja!\n\nCuando sea grande...\n-aseguro yo-\niharê todo aguello...\nque hoy me dicen \"NO\"!",
+   "conf": 93.5
+  }
+ ]
+}

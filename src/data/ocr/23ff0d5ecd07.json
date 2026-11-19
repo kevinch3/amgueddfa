@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "Música, Recitación y Danzas\n\nViernes 29 de agosto\n\niiLlenâ el formulario y listo!!\n\nEn el caso de escuelas, pedimos completar el formulario por competencia,\ny añadir listado de participantes como “archivo adjunto”",
+   "conf": 95.0
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "Entrega de trabajos\n\nArtes Visuales, Arte Digital y Artesanías\n\nSe reciben trabajos hasta el\nmiércoles 13 de Agosto\nde 9 a 11 en la Dirección de Cultura de Gaiman\ny de 15 a 20 hs. en la Escuela de Música de Gaiman",
+   "conf": 96.4
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "eisteddfod\nSEPTIEMBRE\n\nRecordamos las fechas límites para la inscripción\ny recepción de trabajos de este mes:\n\nLiteratura en castellano y traducción 17/09/2018\nArtes plásticas, artesanías, fotografía 28/09/2018\nMusica, recitación y danza 28/09/2018",
+   "conf": 92.5
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "EISTEDDFOD DE LA JUVENTUD 2020 \"DESDE CASA\"\n\nSUBÍ TU FOTO\nCON LA BOLSITA Y/O\nCERTIFICADO\nY ETIQUETANOS!\n\nY o , al",
+   "conf": 87.9
+  }
+ ]
+}

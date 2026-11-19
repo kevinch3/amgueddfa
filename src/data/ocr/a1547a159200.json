@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "EISTEDDFOD DEL CHUBUT\n14 al 20 de octubre de 2074\n\nLiteratura en galés - Poesía\n\n1. CADAIR YR EISTEDDFOD : Cerdd “GWLEDD”.\n2. Adroddiad i blant: “Y PETHAU BYCHAIN”.\n3. Cerdd ysgafn: \"DIANC\".\n4. Telyneg: \"TIR\".\n5. I ddysgwyr - cerdd acrostig “BARA MENYN”\n6. I ddysgwyr- Disgrifiad o “RYWLE TWRISTAIDD”\n\nInscripciones: ? al € de septiembre Setar",
+   "conf": 91.9
+  }
+ ]
+}

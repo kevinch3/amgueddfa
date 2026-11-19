@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "ADRODD BLWYDDYN 5 A 6 CYNRADD:\nArwyr\n\nErs talwm roedd gen i arwr\nmewn dillad coch a glas,\nmwgwd gwe dros ei wyneb\nyn herio gelynion cas.\n\nOnd heddiw mae arwyr eraill\nyn gwibio i achub y byd;\ngwenu drwy fwgwd llawn cariad\nwrth ofalu amdanom i gyd.\n\nCYD-ADRODD CYNRADD:\nDraig Goch\n\nMae yna ddraig\nsy'n gweiddi'n groch:\nFI ydy'r ddraig\npan dwi'n gwisgo'r crys coch.\n\nMi guraf bawb arall\na hynny'n ddi-lol;\nar y cae rygbi\nmae gen i dân yn fy mol.",
+   "conf": 96.3
+  }
+ ]
+}

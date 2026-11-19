@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "y “e. se\ny ote e 3° |\nabe\n\nEISTEDD\n\nde lo J\n\nCIERRE DE INSCRIPCIONES\n\nMÚSICA, RECITACIÓN Y DANZAS 3\n\nCompletar el formulario.\nAdjuntar partitura y/o letra\n\nen las competencias a elección.\n\nEn el caso de escuelas,\nse puede enviar planilla con todos los inscriptos\npara una determinada competencia.\n\nAdjuntar en el formulario de inscripción",
+   "conf": 86.6
+  }
+ ]
+}

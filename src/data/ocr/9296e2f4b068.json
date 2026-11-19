@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "PRELIMINARES\nEISTEDDFOD DEL CHUBUT\n\nSalôn Cincuentenario\nde la Asociaciôn San David\nSan Martín 90 esguina Belgrano\n\n19:30 HORAS. Alwyn\n\nCOMPETENCIA 80. Dawns. “Llangadfan fach.”\n\nCOMPETENCIA 82. Dawns y teuluoedd: Danza\nde las Familias: “Jac y Do”. El grupo deberá estar\nconformado por una o más familias; o alumnos\ny maestros. Se valorará la variación o\nmodificación de las figuras en las repeticiones.\nDawns y teuluoedd, neu myfyrwyr ac athrawon.\n\nas ASOCIACION\nY) DEL CHUBUT",
+   "conf": 91.4
+  }
+ ]
+}

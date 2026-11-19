@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "EISTEDDFOD DEL CHUBUT 2026\n\nEn las competencias de recitación\nen galés N° 24, 25, 26, 27 PODRA\nRECITARSE la versión corta de los\npoemas, según archivo publicado\nen el enlace.\n*Indicar la versión al realizar la inscripción.\n\nYng nghystadlaethau adrodd yn Gymraeg rhif 24,25,26\na 27 gallai'r person adrodd y fersiwn byr o'r cerddi, yn\nôl y rhaglen wedi'i chyhoeddi.\nCofiwch nodi pa fersiwn byddwch chi'n defnyddio wrth\n\ngofrestru.\nASOCIACIÓN\n@ eisteddfod\nDEL CHUBUT",
+   "conf": 95.4
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "eisteddfod\nOCTUBRE\n\nRecordamos las fechas límites para la inscripción\ny recepción de trabajos de este mes:\nAdmisión de coros, solitas y\nconjuntos extraprovinciales 05/10/2018\nCocina i 08/10/2018\n\nRETARÍA DEL EISTEDDFOD DEL CHUBUT",
+   "conf": 93.0
+  }
+ ]
+}

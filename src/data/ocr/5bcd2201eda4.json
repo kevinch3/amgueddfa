@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "Comp. N°20 “Verde Pelo” de Didi Grau\n\nEn la 1ra estrofa en lugar de decir “Él no tiene cabellos, ...”\ndebe decir “El río tiene cabellos, ...”\n\nComp. N°21 “Contame un cuento” de Silvia Schujer\n\nEn la 3ra estrofa en lugar de decir “Contame un cuento Y que flote”\ndebe decir “Contame un cuento que flote”\n\nComp. N°22 “Canción para dormir un dinosaurio”\nde Oche Califa\n\nEn la última estrofa en lugar de decir “Para de cien kilos.”\ndebe decir “Pata de cien kilos.”",
+   "conf": 92.8
+  }
+ ]
+}

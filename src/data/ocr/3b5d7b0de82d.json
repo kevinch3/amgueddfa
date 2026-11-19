@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "EISTEDDFOD DEL CHUBUT 2025\n\nJUEVES 16 DE OCTUBRE- 17 HORAS- SAN MARTÍN 88\nRecitación - Adrodd\n\nCompetencia N° 23 Prifadroddiad: “Cueva de las Manos. Rio\nPinturas” gan Mererid llopwood (allan o lyfr 'Nes\nDraw'. Mererid llopwood).\n\nCompetencia N° 24: Adrodd: “Cwm Alltcafan” gan TLlew Jones\n(allan o 'Cerddi Ceredigion. Gwasg Gomer)\n\nDEL CHUBUT",
+   "conf": 93.0
+  }
+ ]
+}

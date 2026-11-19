@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "ADRODD\n\nADRODD UWCHRADD BLWYDDYN 1, 2 a 3:\nAthro ac Ateb Od\n\n“Pum afal yn fy llaw chwith,\nsaith afal yn fy llaw dde.\nBeth sydd gen 1?” meddai'r athro.\n“Clamp o ddwylo!” atebodd e!\n\n“Enwch bedwar dydd o'r wythnos,”\nmeddai'r athro yn ei wyneb.\n“Heddiw, ddoe, rhaid cofio echdoe\nac yfory!” oedd yr ateb!\n\nPeter Hughes Griffiths",
+   "conf": 93.9
+  }
+ ]
+}

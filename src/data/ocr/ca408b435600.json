@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "EISTEDDFOD DEL CHUBUT 2025\n\nJUEVES 16 DE OCTUBRE- 17 HORAS- SAN MARTÍN 88\nMúsica - Cerddoriaeth\n\nCompetencia N° 45. Unawd Cân Werin: Wrth fynd efo Deio i\nDywyn.\n\nCompetencia N° 4.6: Unawd Cân Ysgafn: Stesion Strata\n\nCompetencia N° 54: Triawd i Ferched: Cwsg (Osian\n\nDEL CHUBUT",
+   "conf": 93.1
+  }
+ ]
+}

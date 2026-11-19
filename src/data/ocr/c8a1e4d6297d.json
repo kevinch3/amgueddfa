@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "Nivel Secundario y joewes hasta % años\n\nComp. N°11: Solo libre\nen castellano.\nObra a elección\n(folklórica, académica,\npopular, etc.)\n\nComp. N912: Solo libre en\ngales.\nObra a eleccion\n\n21/08 Cierre de inscripciones",
+   "conf": 91.0
+  }
+ ]
+}

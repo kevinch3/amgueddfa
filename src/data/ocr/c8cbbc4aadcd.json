@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "Cisteddfod Mimosa\nPorth Madryn\n\n9 y 10 de agosto de 2024\nEscuela Provincial N°789\nVillarino 900\n\nPRESENTACIÓN DE TRABAJOS\nE INSCRIPCIONES\n\nArtes visuales 5\n\nArtesanías\nCocina\n\nlunes a viernes de 18 a 20 horas en\nAsociación Cultural Galesa\nde Puerto Madryn\nDomecq García norte 241\n\nwww. eisteddfodmimosa.org.ar",
+   "conf": 95.1
+  }
+ ]
+}

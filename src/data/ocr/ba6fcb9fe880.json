@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "CYD-ADRODD UWCHRADD:\n\nGwên\n\nMae cynnig gwên yn heintus,\nMae'n debyg iawn i glefyd,\nPan wenodd rhywun arna i —\nFe wenais innau hefyd.\n\nPan es am dro i lawr y stryd\nA gwenu'n llydan cto,\nFe sylweddolais, ar fy llw,\nI'r nesa gael ei heintio.\n\nAc wrth i mi bendroni\nPam i mi wenu'n glên?\n\nFe sylwais nad yw'n costio dim\n\nOnd fod \"na werth i wên.\n\nA petai pawb yn gwenu\nO glust i glust o hyd,\nBuan iawn y gallem wasgar\nHaint o gariad dros y byd.\n\n(addasiad Elin Angharad Davies)",
+   "conf": 95.8
+  }
+ ]
+}

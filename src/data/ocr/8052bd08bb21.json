@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "de la\n\nValor de las entradas\n\nAdultos\nUn solo día $5000\nLos 3 días $I0000\n\nParticipantes menores de 25 años\nNO PAGAN\n\nGimnasio Municipal de Gaiman",
+   "conf": 93.9
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "RECITACION\n\nPreguntas\nde Nelvy Bustamante\n\nEl escarabajo\nque cruza el camino:\n¿sabe que yo\nlo miro?\n\nEsa araña\nque baja por la pared:\n¿ve el mundo\nal revés?\n\nEl agua del río\ndonde me bañé ayer:\n¿es la misma que hoy\nmoja mis pies?",
+   "conf": 95.2
+  }
+ ]
+}

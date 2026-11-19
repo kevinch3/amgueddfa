@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "¡ATENCIÓN!\n\n: \"LLENYDDIAETH YN GYMRAEG”\nDonde dice\nCOMP. N° 10: BL 1A 2 GYNRADD: GORFFEN Y FRAWDDEG\nGYDA DIM MWY NA 3 GAIR: 'FFRIND DA'\nDebe decir\nCOMP. N° 10: BL 1A 2 CYNRADD: 3 BRAWDDEG: 'FFRIND DA’\n\nEisteddfod",
+   "conf": 92.8
+  }
+ ]
+}

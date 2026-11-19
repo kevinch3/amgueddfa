@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "23 aL21 de octubre de 2023\n\nMúsica en galés\n67. Côr Cymysg: GWELED IESU D.C. Williams — Eifion\nWyn\n68. Ail Gystadleuaeth: ER HWYLIO'R HAUL R. Arwyn —\nRobin Llwyd ab Owain\n69. Prif Gystadleuaeth\na) AWR CWSG Einion Dafydd — Dylan Iorwerth\nb) PWY YW HWN T. Dylan Jones — Hector Mac Donald\n70. Can Actol: Thema: TYMHORAU\n\nASOCIACIÓN\n\nIngeripciones: 2 al6 de octubre GB eisteddfod",
+   "conf": 93.0
+  }
+ ]
+}

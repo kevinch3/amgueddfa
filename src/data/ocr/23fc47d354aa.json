@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "EISTEDDFOD DE CHUBUT\n13 AL 19 DE OCTUBRE DE 2025\n\nCOMPETI CON UN\nPOSA SAQUITO DE TE\nCON FORMA DE\nTETERA\n\nENTREGA EN SAN\nMARTÍN 90\nDEL 15/9 AL 19/9\nDE 16:30 A 18 HS\n\nBASES EN EL PROGRAMA\nEN LAS REDES:\nEISTEDDFOD DEL CHUBUT",
+   "conf": 94.4
+  }
+ ]
+}

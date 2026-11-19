@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "ADRODD\n\nADRODD HYD Y DOSBARTH 4 oed:\nDwi'n hoffi...\n\nDwi'n hoffi Sali Mali,\ndwi'n hoffi Smot y Ci,\nond Jac y Jwc a Jini\nydy'r gorau un gen i.\n\nADRODD DOSBARTH DERBYN:\n\nSŵn\n\n“Miaw!” meddai pwsi,\n“Bow wow!” meddai'r ci.\nDyna ichi sŵn\nSy'n ein tŷ ni.",
+   "conf": 95.9
+  }
+ ]
+}

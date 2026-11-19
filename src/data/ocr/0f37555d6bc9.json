@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "EISTEDDFOD DE CHUBUT\n\n13 JL 19 DE OCTUBRE DE 2025\n\nOMPETÍ CON\nFRASCOS AZUCARERO\nY YERBERA CON\nMOTIVOS GALESES\n\nENTREGA EN SAN\nMARTÍN 90\nDEL 15/9 AL 19/9\nDE 16:30 A 18 HS\n\nBASES EN EL PROGRAMA\nEN LAS REDES:\n\nEISTEDDFOD DEL CHUBUT",
+   "conf": 93.9
+  }
+ ]
+}

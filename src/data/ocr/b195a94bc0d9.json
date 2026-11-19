@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "EISTEDDFOD DEL CHUBUT 2026 0\n\nLITERATURA EN GALÉS 31/08 AL 04/09\nLITERATURA EN CASTELLANO Y TRADUCCIONES 07/09/ AL 11/09\nARTES VISUALES, ARTESANÍAS, FOTOGRAFÍA HOY 21 /09 AL 25/09\n\nMUSICA 28/09 AL 02/10\nRECITACION Y DANZAS 05/10 AL 09/10\nCOCINA 12/10\nARQUERÍA HOY 21/09 AL 25/09\n\nASOCIACION\nUs DEL CHUBUT",
+   "conf": 91.5
+  }
+ ]
+}

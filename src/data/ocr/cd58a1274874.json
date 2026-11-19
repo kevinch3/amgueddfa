@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "Preliminares 2023 |\n\nDESDE LAS 8:00 HS\nMÚSICA GALÉS Y CASTELLANO\nDESDE LAS 17:00 HS\nDANZAS FOLKLÓRICAS Y MODERNAS\n\n9 GIMNASIO MUNICIPAL GAIMAN 9",
+   "conf": 92.2
+  }
+ ]
+}

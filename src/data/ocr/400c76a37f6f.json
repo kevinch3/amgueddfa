@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "EISTEDDFOD DEL CHUBUT 2026\n\nEn las competencias de música, danzas y recitaciôn-A LIBRE\nELECCIÓN:\n\ne Tal como consigna cada competencia, es necesario entregar con la\ninscripción la PARTITURA O LETRA CORRESPONDIENTE -para\ncompetencias de música- y la COREOGRAFÍA -en competencias de\ndanzas- ya sea inventada o elegida.\n\ne La no presentación de tal requisito da lugar a la baja de la inscripción\na la competencia.\n\nDEL CHUBUT\n\nLr ASOCIACION\nKa eisteddfod",
+   "conf": 93.7
+  }
+ ]
+}

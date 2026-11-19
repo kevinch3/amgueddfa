@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "Entrega de trabaios\nLiteratura - Llenyddiaeth\n\nSe reciben trabajos hasta el\nMIÉRCOLES 6 de Agosto de 15 a 20 hs.\nen la Escuela de Musica de Gaiman",
+   "conf": 94.2
+  }
+ ]
+}

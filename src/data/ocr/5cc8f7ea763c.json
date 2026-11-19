@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "¡FALTA POCO PARA\n\n> EL EISTEDDFOD <\nDE LA JUVENTUD 2026!\n= ¿YA TE ESTAS PREPARANDO? =\nPOESÍA Y PROSA: Ua\n\nSE RECIBIRÂN TRABAJOS\n\no 4A ARTES VISUALES Y\n\nSE RECIBIRÂN LOS TRABAJOS\nHASTA EL\n\nMUSICA, RECITACIÔN\n¡Participá, expresate ef",
+   "conf": 87.0
+  }
+ ]
+}

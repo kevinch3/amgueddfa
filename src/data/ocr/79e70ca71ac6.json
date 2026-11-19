@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "27 y 28 de junio de 2025\n\nArtes visuales\nArtesanías\nCocina\nDanzas folklóricas\nLiteratura\nMúsica\nRecitación\n\nEisteddfod Mimosa\nPorth Madryn\n\nContacto: +54 9 280 4402549\neisteddfodmimosamadryn@gmail.com\nwww. eisteddfodmimosa.org.ar [jeisteddfodpuertomadryn",
+   "conf": 92.1
+  }
+ ]
+}

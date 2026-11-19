@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "RECITACION\n\nHASTA SALA DE 4 ANOS\nEntre todos\n\nSaco mis manitas,\nlas hago jugar,\nlas cierro, las abro\ny las dejo descansar.\n\nSALA DE 5 ANOS\nde Maria Elena Walsh\n\nHace tiempo que tengo una gran duda:\nhay una vaca que jamás saluda,\nle hablo y no contesta.\nPues bien, la duda es ésta:\n¿será mal educada o será muda?",
+   "conf": 93.8
+  }
+ ]
+}

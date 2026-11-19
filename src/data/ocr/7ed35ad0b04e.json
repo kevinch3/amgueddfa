@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "Comp N92: Diseño de 12 a 25 años\n\nTema: Escribir una frase propia\nen castellano o gales\nrelacionada con la cuarentena.\n\nTecnica: Lettering.\nSoporte: Hoja de papel AS\ntamaño A4\n\n21/08 Cierre de inscripciones",
+   "conf": 92.5
+  }
+ ]
+}

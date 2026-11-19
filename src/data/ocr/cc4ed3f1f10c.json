@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "EISTEDD\n\nCIERRE DE INSCRIPCIONES\n\nMÚSICA, RECITACIÓN Y DANZAS\n\nSE DEBERÁ ENVIAR UN MAIL A\neisteddfodjuventuda gmail.com con los siguientes datos:\n-Número de competencia y descripción\n- nombre y apellido del/de los participante/s\n-Edad y grado/afio que cursa\n- Partitura/letra en caso de comp. a elección\n- Aclarar si necesita acompañante\n\nEn el caso de escuelas, se puede enviar planilla con todos los inscriptos para\nuna determinada competencia. Enviar un mail por competencia.",
+   "conf": 94.8
+  }
+ ]
+}

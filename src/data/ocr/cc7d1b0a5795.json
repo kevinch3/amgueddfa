@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "RECITACION\n\n5 y 6 GRADO\n\nOda a mis amigos\nde Yolanda Reyes\n\nMis amigos\nson malvados\npandilleros\ndespeinados.\nCalaveras\nmalhablados\nmalandrines\ndespiadados.\nMis amigos\nharaganes\nsin principios\nni finales.\nSinverguenzas\ncallejeros\nbuscapleitos\npandilleros.\nMis amigos\nson lunáticos\ndespistados\ny fanâticos.\n\nMis amigos\ncelestinos\nalcahuetas\ny adivinos.\nCon sus cuentos\ny sus mañas\nson feroces\nalimañas.\nMe defienden\nme acompañan\ny me cuidan\nlas espaldas.\nMis amigos\nson primero\nson mis ángeles\ndel cielo.",
+   "conf": 94.4
+  }
+ ]
+}

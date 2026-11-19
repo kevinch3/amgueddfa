@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "Información => Música\n\nComp. N°70 “Dau gi bach” >> 2 estrofas a elección\nComp. N°60 © la obra a elección puede ser en cualquier idioma\n\nComp. N968 “Dwy lygoden” »=> solamente la 1ra estrofa\nComp. N°78 “Ffrind un bach fel fi”. ==> 2 estrofas a elección\nComp. N°79 “Ffrindiau sy'n werth y byd” 2 estrofas a elección\nComp. N°78 “Pwy wnaeth y ser uwchben?” ==> 2 estrofas a elección\n\nComp. N979 “Iesu yw'r lor” => 2 estrofas a elección",
+   "conf": 84.3
+  }
+ ]
+}

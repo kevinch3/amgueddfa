@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "EISTEDDFOD DEL CHUBUT 2026\n\nEn la competencia de\nDANZAS GALESAS N° 86\n\nCompetencia N° 86: Tlws Dawnswyr Penrhyd i'w =e\nam flwyddyn / Premio anual Bailarines de Penrhyd.\nDawns “Y Filltir Sgwâr”.\nEl requerimiento de 20 años de edad mínima de los\nparticipantes se exigirá para el 75% o más del grupo de\nbailarines. El resto, podrá tener entre 16 y 20 años de\n\nedad.\nASOCIACIÓN\nDEL CHUBUT",
+   "conf": 94.3
+  }
+ ]
+}

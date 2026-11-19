@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "ULTIMO DÍA\n| TENEMOS NUEVAS COMPETENCIAS\n\nHasta 13 años: Libre elección de una de las\ncanciones de las películas de Walt Disney\n\nDúo hasta 25 años: Estilo “Tu cara me suena”\ncon caracterización, imitación y puesta en escena\n\nHasta 25 años: Dramatización libre de un\nfragmento de una comedia musical a elección\n\nHasta 25 años. Coreografía de danza jazz-\ncontemporáneo con música a elección",
+   "conf": 95.5
+  }
+ ]
+}

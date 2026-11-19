@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "Cartelera de\nCompetencias\n\neisteddfod\n\ndel Chubut.\nCOMPETENCIAS: “ESCENOGRAFIA”\n\n123. Presentación de proyecto de escenografía para el\nescenario central donde se desarrollarán las competen-\ncias del Eisteddfod de la Juventud 2015.\n124, Presentación de proyecto de escenografía para\n\nel escenario central donde se desarrollarán las com-\npetencias del Eisteddfod del Chubut 2015.",
+   "conf": 94.5
+  }
+ ]
+}

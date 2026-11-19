@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "Eisteddfod del Chubut\neoes\n\nBolso de compras\n\nEntrega en San\nMartín 90\nDel 15/9 al 19/9\nde 16:30 a 18 hs.\n\n. BASES EN EL\nPROGRAMA EN LAS\nREDES:EISTEDDFOD\nDEL CHUBUT",
+   "conf": 94.4
+  }
+ ]
+}

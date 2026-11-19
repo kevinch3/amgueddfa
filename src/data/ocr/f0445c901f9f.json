@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "Debe leerse:\n\n79. Segunda competencia\nprincipal para coro MIXTO.\na) “In stiller Nacht”, de J. Brahms\nb) “EI buen remedio” de C.\nMontbrum Ocampo y H. Videla\nFlores\n\nASOCIACIÓN\n\nDEL CHUBUT",
+   "conf": 94.4
+  }
+ ]
+}

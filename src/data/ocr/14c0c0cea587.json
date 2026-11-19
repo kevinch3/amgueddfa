@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "Cômo enviar el...\n\nSi el video es muy pesado,\n\nte sugerimos...\n- subirlo a una cuenta de YOUTUBE, y enviarnos el mail\ncompartiendo el link (acordate de subirlo como \"no listado\")\n\n- subirlo al DRIVE y enviarnos el mail compartiendo el link\n\nNo te olvides de indicar tanto en el ASUNTO DEL MAIL como en el\nARCHIVO ADJUNTO: el número de la competencia, el nombre y apellido\ndel participante, y la escuela a la que pertenece.\n(sin esta información no se recibirán las participaciones)\n\nLa direccion de mail es:\nepa Tenés tiempo para enviarnos tu Video/Dibujo/escrito\no hasta el 21 de Agosto\n\n(este año, no hay inscripción previa.\nEnviando tu trabajo en las diferentes competencias, quedas inscripto)",
+   "conf": 94.8
+  }
+ ]
+}

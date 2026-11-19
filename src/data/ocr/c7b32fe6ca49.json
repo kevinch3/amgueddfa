@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "23 aL21 de octubre de 2023\n\n1. CADAIR YR EISTEDDFOD : Cerdd \"Y Darlun\".\n2. Adroddiad i blant: \"Ar gefn ceffyl\" neu \"Ar gefn beic\".\n3. Cerdd ysgafn: \"Holi hwn a'r llall\".\n4. Telyneg: \"Ffarwelio”.\n5. I ddysgwyr - cerdd acrostig CRWYDRO.\n6. I ddysgwyr- cerdd ysgafn unrhyw destun.\n\nASOCIACIÔN\n\nInperipciones: 1] al 15 de septiembre S os",
+   "conf": 90.2
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "Inplancia de PRELIMINARES\n\nJueves 17 de octubre - 18 horas - Salón Cincuentenario\nAsoc. San David\n\nACTUALIZADO\n\nDanzas - Dawns\n\nCompetencia N° 85: Da al argentina\nen pareja,\n\na} eisteddfod EISTEDDFOD DEL CHUBUT\nDEL CHUBUT 14 al20 de octubre de 2024",
+   "conf": 92.2
+  }
+ ]
+}

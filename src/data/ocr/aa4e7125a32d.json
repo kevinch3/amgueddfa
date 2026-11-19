@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "En las competencias de literatura (poesía y prosa), traducciones,\nartes visuales, artesanías, diseño gráfico y fotografía:\n\ne Acercar personalmente a la Secretaría. Cada trabajo debe estar\nfirmado con un SEUDÓNIMO.\ne Junto con el trabajo, debe presentarse un sobre cerrado que\ncontenga los datos personales del autor y su contacto, para utilizar\nen caso de resultar ganador en alguna de las categorías.\n\nDEL CHUBUT",
+   "conf": 95.7
+  }
+ ]
+}

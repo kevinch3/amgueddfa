@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "Comp N*26: Un minuto de fama.\nMostrar tu talento en 1 minuto\n\n| minuto\nTu talento en i DEPORTE\nINSTRUMENTO MUSICAL\nMALABARES a,\n\npr BAILE\n\n) MUCHO MASH\n\nSe reciben los videos hasta el 21/08",
+   "conf": 89.1
+  }
+ ]
+}

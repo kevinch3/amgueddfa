@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "Entrega de trabaios\nCompetencias N°16 (llenyddiaeth)\ny N°121 (Arte digital)\nEnviar los trabajos a la siguiente dirección\n\neisteddfodjuventudOgmail.com\nTenés tiempo hasta el 15 de agosto",
+   "conf": 94.2
+  }
+ ]
+}

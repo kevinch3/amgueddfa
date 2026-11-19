@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "Competencias N°71 al 77: idioma galés\nCompetencias N°78 al 88: castellano\n\nRECITACIÓN\n\nfecha inscripcion: 28 al 30 de mayo\n\nCisteddfod Mimosa\n\n27 y 28 de junio de 2025",
+   "conf": 95.4
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "ENTREGA DE TRABAJOS Ub\nPOESÍA Y PROSA gl,\n\nSe reciben trabajos en la Escuela de\nMúsica de Gaiman\nLunes a Viernes - 15 a 19 hs\n\nTENER EN CUENTA:\n- Cada trabajo se entrega por duplicado\n- Se aceptarán hasta 2 trabajos por participante\n- Serán presentados con seudónimo\n- Adjunto a los trabajos y en el interior de un sobre cerrado, se\nconsignará nombre y apellido, dirección,\nDNI, teléfono y mail del participante\n- En el exterior del sobre deberá figurar seudónimo,\nedad y número de competencia",
+   "conf": 93.6
+  }
+ ]
+}

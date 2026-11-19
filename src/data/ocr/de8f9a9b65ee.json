@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "ADRODD\n\nADRODD UWCHRADD BLWYDDYN 4, 5 a 6/ HYD 25 OED\nByw yn Rhydd\n\nCodi llwch mae gwynt Trelew,\nCodi hiraeth am yr haf,\nAm ferched hardd, am flodau'r paith,\nAm drydar adar a thywydd braf;\n\nCodi awydd byw yn rhydd\nA dilyn llwybr hir y môr,\nLle mae'r haul yn codi, a'r wawr\nYn dywod aur, a'r tonnau'n gôr.",
+   "conf": 96.5
+  }
+ ]
+}

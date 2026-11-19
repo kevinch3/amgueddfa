@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "ÚLTIMO DÍA\n\nAGOSTO | de entrega de trabajos\n\nLITERATURA ARTES\nVISUALES\n\nEscuela de Música de Gaiman\n15 a 20 hs.\n\n. Eisteddfod",
+   "conf": 93.1
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "EISTEDDFOD DETA JUVENTUD 2026\n\n“> ENTREGA -\nDE TRABAJOS\n\nnr LITERATURA Y ARTE\n\nDirecciôn de Cultura de Gaiman\n— AV. Eugenio Tello 407 ———\nde 8 a 13 hs a\n\nEscuela de Música de Gaiman\nEugenio Tello 384 ——\n\nde 15 a 20 hs",
+   "conf": 89.2
+  }
+ ]
+}

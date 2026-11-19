@@ -1615,6 +1615,22 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "3c666438-c9c0-421f-b1a2-b7680d0ad717",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1954,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Diario Jornada, Trelew, 24 y 26 de noviembre de 1954 (aportado por Meirion Griffiths)",
+      "lote": "848d549e-31d7-4279-b09c-c1bf568e364c",
+      "value": "Coros: Trelew (David C. Jones), Gaiman (Leonardo Griffiths), Bryn Gwyn (N. Mai Evans de Jones), Dolavon (Johnny Williams) y 28 de Julio (Robert Davies); cuarteto vocal «Armonía»."
+    },
+    "created_at": "2026-11-19T14:15:32.1818+00:00",
+    "reviewed_at": "2026-11-19T14:15:32.1818+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "3ca94463-be45-4be3-8dcf-b195951509a9",
     "type": "fact",
     "festival": "chubut",
@@ -1936,6 +1952,22 @@
     "created_at": "2026-11-17T11:06:25.263276+00:00",
     "reviewed_at": "2026-11-17T11:06:25.263276+00:00",
     "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "4aade99f-40c2-4ca4-b2af-9c6ab66255ce",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1954,
+    "item_id": null,
+    "payload": {
+      "field": "presentadores",
+      "fuente": "Diario Jornada, Trelew, 24 y 26 de noviembre de 1954 (aportado por Meirion Griffiths)",
+      "lote": "848d549e-31d7-4279-b09c-c1bf568e364c",
+      "value": "Euros Hughes (en castellano) y Elved Williams (en galés); explicaciones de Egryn Williams"
+    },
+    "created_at": "2026-11-19T14:15:32.1818+00:00",
+    "reviewed_at": "2026-11-19T14:15:32.1818+00:00",
+    "display_name": "Meirion Griffiths"
   },
   {
     "id": "4b2c66a0-d2e3-458f-962e-1681bfe31677",
@@ -2757,6 +2789,22 @@
     },
     "created_at": "2026-11-16T18:39:27.894079+00:00",
     "reviewed_at": "2026-11-16T18:39:27.894079+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "6c5a9672-c50d-484a-9f68-d6a1b06bbd7b",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1954,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "fuente": "Diario Jornada, Trelew, 24 y 26 de noviembre de 1954 (aportado por Meirion Griffiths)",
+      "lote": "848d549e-31d7-4279-b09c-c1bf568e364c",
+      "value": "Salón San David, Trelew"
+    },
+    "created_at": "2026-11-19T14:15:32.1818+00:00",
+    "reviewed_at": "2026-11-19T14:15:32.1818+00:00",
     "display_name": "Meirion Griffiths"
   },
   {
@@ -3908,6 +3956,22 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "929229d9-0c41-4b02-9134-cfe549cdf83c",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1954,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Diario Jornada, Trelew, 24 y 26 de noviembre de 1954 (aportado por Meirion Griffiths)",
+      "lote": "848d549e-31d7-4279-b09c-c1bf568e364c",
+      "value": "Réplica del Eisteddfod en la Semana de Trelew, dirigida por David C. Jones, ante 2.500 a 3.000 personas; antes, la conferencia «Historia del Eisteddfod» de César Guerreiro Murta. No fue un Eisteddfod regular."
+    },
+    "created_at": "2026-11-19T14:15:32.1818+00:00",
+    "reviewed_at": "2026-11-19T14:15:32.1818+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "9308ef8d-69bd-4b55-9be1-348f16c5e3c4",
     "type": "fact",
     "festival": "chubut",
@@ -4660,6 +4724,22 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "a9f1cb8f-ddb7-4342-b1c8-ed8dbe6e34b4",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1954,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Diario Jornada, Trelew, 24 y 26 de noviembre de 1954 (aportado por Meirion Griffiths)",
+      "lote": "848d549e-31d7-4279-b09c-c1bf568e364c",
+      "value": "Coronación de un poeta por el Gorsedd, con el veredicto del jurado llegado por telegrama desde Gales; la crónica no da el nombre del poeta."
+    },
+    "created_at": "2026-11-19T14:15:32.1818+00:00",
+    "reviewed_at": "2026-11-19T14:15:32.1818+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
     "id": "aa6b2971-7c6a-4d00-9141-9261b168a4d5",
     "type": "fact",
     "festival": "trevelin",
@@ -4718,6 +4798,22 @@
     },
     "created_at": "2026-11-16T18:31:17.630618+00:00",
     "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
+    "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "ac47f6ec-70fe-4813-a6aa-06942759b3eb",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1954,
+    "item_id": null,
+    "payload": {
+      "field": "start_date",
+      "fuente": "Diario Jornada, Trelew, 24 y 26 de noviembre de 1954 (aportado por Meirion Griffiths)",
+      "lote": "848d549e-31d7-4279-b09c-c1bf568e364c",
+      "value": "1954-11-24"
+    },
+    "created_at": "2026-11-19T14:15:32.1818+00:00",
+    "reviewed_at": "2026-11-19T14:15:32.1818+00:00",
     "display_name": "Meirion Griffiths"
   },
   {

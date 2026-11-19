@@ -227,6 +227,31 @@ describe('static build', () => {
     }
   });
 
+  it('Markdown twins: one per year page and public document, never a restricted one', () => {
+    const yearMd = read('chubut/1937.md');
+    expect(yearMd).toMatch(/^---\n/);
+    expect(yearMd).toContain('# Eisteddfod del Chubut 1937');
+    expect(yearMd).toContain('realizada: true');
+    expect(read('chubut/1937/index.html')).toContain('<link rel="alternate" type="text/markdown" href="https://amgueddfa.org/chubut/1937.md"');
+    expect(read('chubut/1865.md')).toContain('realizada: null');
+    for (const f of ['chubut', 'juventud', 'mimosa', 'trevelin']) {
+      for (const y of readdirSync(join(DIST, f)).filter((d) => /^\d{4}$/.test(d))) expect(existsSync(join(DIST, f, `${y}.md`)), `${f} ${y}`).toBe(true);
+    }
+    const pub = catalog.find((i) => !i.restricted && !i.hidden && transcribedIds().includes(i.id))!;
+    const itemMd = read(`item/${pub.id}.md`);
+    expect(itemMd).toContain('## Transcripción');
+    expect(itemMd).toContain('Derechos del documento:');
+    for (const i of catalog.filter((x) => x.restricted || x.hidden)) expect(existsSync(join(DIST, 'item', `${i.id}.md`)), i.id).toBe(false);
+    // No restricted id leaks into any edition twin.
+    const restricted = catalog.filter((x) => x.restricted).map((x) => x.id);
+    for (const f of ['chubut', 'juventud', 'mimosa', 'trevelin']) {
+      for (const md of readdirSync(join(DIST, f)).filter((d) => d.endsWith('.md'))) {
+        const body = readFileSync(join(DIST, f, md), 'utf8');
+        for (const id of restricted) expect(body, `${f}/${md}`).not.toContain(id);
+      }
+    }
+  });
+
   it('robots.txt, sitemap, open data and llms.txt expose public content only', () => {
     const robots = read('robots.txt');
     expect(robots).toContain('User-agent: *');
@@ -267,6 +292,7 @@ describe('static build', () => {
     }
     expect(docs.documentos.some((d: any) => d.tiene_transcripcion)).toBe(true);
     expect(read('llms.txt')).toContain('realizada');
+    expect(read('llms.txt')).toContain('.md');
     expect(e1937.url).toBe('https://amgueddfa.org/chubut/1937/');
     // Documents count catalog items plus approved community uploads of that year.
     for (const e of eds.ediciones) {

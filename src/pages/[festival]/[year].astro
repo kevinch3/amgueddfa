@@ -100,8 +100,10 @@ const contributedTr = forEdition(approved, slug, year, 'transcription').filter((
 const contribUrl = (tab: string) => url(`contribuir?f=${slug}&y=${year}&tab=${tab}`);
 const missingList = formatList(missing.map((m) => m.toLocaleLowerCase(intlLocales())));
 ---
-<Base title={`${fest.name} ${year}`} festival={slug} year={year} description={seoDescription} image={cover?.page ?? null} jsonLd={seoLd} markdown={`${slug}/${year}.md`}>
-  <nav class="crumbs" aria-label={t('comun.miga')}>
+<Base title={`${fest.name} ${year}`} festival={slug} year={year} description={seoDescription} image={cover?.page ?? null} jsonLd={seoLd} markdown={`${slug}/${year}.md`} searchable>
+  <meta data-pagefind-filter="eisteddfod[content]" content={fest.name} />
+  <meta data-pagefind-filter="decada[content]" content={`${Math.floor(year / 10) * 10}`} />
+  <nav class="crumbs" aria-label={t('comun.miga')} data-pagefind-ignore="all">
     <ol>
       <li><a href={url('/')}>{t('nav.inicio')}</a></li>
       <li><a href={url(`${slug}/`)}>{fest.name}</a></li>
@@ -176,7 +178,7 @@ const missingList = formatList(missing.map((m) => m.toLocaleLowerCase(intlLocale
   ))}
 
   {missing.length > 0 && (
-    <section class="section" aria-label={t('edicion.otras_secciones')}>
+    <section class="section" aria-label={t('edicion.otras_secciones')} data-pagefind-ignore="all">
       <EmptySlot message={t('edicion.faltan_secciones', { lista: missingList })} />
     </section>
   )}
@@ -192,7 +194,7 @@ const missingList = formatList(missing.map((m) => m.toLocaleLowerCase(intlLocale
     )}</Mount>
   </section>
 
-  <section class="section" id="aportar" aria-labelledby="aportes-t">
+  <section class="section" id="aportar" aria-labelledby="aportes-t" data-pagefind-ignore="all">
     <h2 id="aportes-t">{t('edicion.aportes_titulo')}</h2>
     <p class="measure">{t('edicion.aportes_ayuda')}</p>
     <p class="aportes-acciones">

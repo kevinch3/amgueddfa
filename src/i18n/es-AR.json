@@ -23,7 +23,8 @@
     "principal": "Navegación principal",
     "ingresar": "Ingresar",
     "ranking": "Ranking",
-    "tareas": "Tareas rápidas"
+    "tareas": "Tareas rápidas",
+    "buscar": "Buscar"
   },
   "idiomas": {
     "titulo": "Idioma",
@@ -947,5 +948,19 @@
       "cy": "galés",
       "en": "inglés"
     }
+  },
+  "buscar": {
+    "titulo": "Buscar en el archivo",
+    "ayuda": "Buscá en los títulos, las transcripciones, los datos de cada edición y el texto automático de los documentos. Los nombres en galés se encuentran también sin acentos.",
+    "placeholder": "Por ejemplo: Cadair, Trelew, 1937, recitación",
+    "borrar": "Borrar",
+    "mas": "Ver más resultados",
+    "etiqueta": "Buscar en el archivo",
+    "filtros": "Filtros",
+    "sin_resultados": "No encontramos nada para «[SEARCH_TERM]»",
+    "resultados": "[COUNT] resultados para «[SEARCH_TERM]»",
+    "un_resultado": "1 resultado para «[SEARCH_TERM]»",
+    "buscando": "Buscando «[SEARCH_TERM]»…",
+    "sin_js": "La búsqueda necesita JavaScript. Podés recorrer el archivo desde cada Eisteddfod y año."
   }
 }

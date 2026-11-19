@@ -23,7 +23,8 @@
     "principal": "主导航",
     "ingresar": "登录",
     "ranking": "排行榜",
-    "tareas": "快速任务"
+    "tareas": "快速任务",
+    "buscar": "搜索"
   },
   "idiomas": {
     "titulo": "语言",
@@ -947,5 +948,19 @@
       "cy": "威尔士语",
       "en": "英语"
     }
+  },
+  "buscar": {
+    "titulo": "搜索档案",
+    "ayuda": "搜索标题、转录、各届的资料以及文献的自动识别文本。威尔士语名称不带重音符号也能找到。",
+    "placeholder": "例如：Cadair、Trelew、1937、朗诵",
+    "borrar": "清除",
+    "mas": "更多结果",
+    "etiqueta": "搜索档案",
+    "filtros": "筛选",
+    "sin_resultados": "没有找到“[SEARCH_TERM]”的结果",
+    "resultados": "“[SEARCH_TERM]”共 [COUNT] 个结果",
+    "un_resultado": "“[SEARCH_TERM]”共 1 个结果",
+    "buscando": "正在搜索“[SEARCH_TERM]”…",
+    "sin_js": "搜索需要 JavaScript。你可以按艺术节和年份浏览档案。"
   }
 }

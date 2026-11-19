@@ -15,7 +15,7 @@ export function GET(): Response {
   const approved = approvedRaw as Contribution[];
   const hasSomething = (f: string, y: number) =>
     editionItems(f, y).some((i) => !i.restricted) || forEdition(approved, f, y, 'upload').length > 0 || forEdition(approved, f, y, 'fact').length > 0;
-  const pages = ['/', 'ranking/', 'tareas/'];
+  const pages = ['/', 'buscar/', 'ranking/', 'tareas/'];
   for (const p of ['objetivos', 'accesibilidad', 'derechos', 'privacidad', 'cookies']) pages.push(`${p}/`);
   for (const f of festivals()) {
     pages.push(`${f.slug}/`, `general/${f.slug}/`);

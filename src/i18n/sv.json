@@ -23,7 +23,8 @@
     "principal": "Huvudmeny",
     "ingresar": "Logga in",
     "ranking": "Topplista",
-    "tareas": "Snabbuppgifter"
+    "tareas": "Snabbuppgifter",
+    "buscar": "Sök"
   },
   "idiomas": {
     "titulo": "Språk",
@@ -947,5 +948,19 @@
       "cy": "kymriska",
       "en": "engelska"
     }
+  },
+  "buscar": {
+    "titulo": "Sök i arkivet",
+    "ayuda": "Sök i titlar, transkriptioner, uppgifter om varje eisteddfod och dokumentens automatiska text. Walesiska namn hittas även utan accenter.",
+    "placeholder": "Till exempel: Cadair, Trelew, 1937, recitation",
+    "borrar": "Rensa",
+    "mas": "Fler resultat",
+    "etiqueta": "Sök i arkivet",
+    "filtros": "Filter",
+    "sin_resultados": "Inga träffar för ”[SEARCH_TERM]”",
+    "resultados": "[COUNT] träffar för ”[SEARCH_TERM]”",
+    "un_resultado": "1 träff för ”[SEARCH_TERM]”",
+    "buscando": "Söker efter ”[SEARCH_TERM]”…",
+    "sin_js": "Sökningen kräver JavaScript. Du kan bläddra i arkivet per eisteddfod och år."
   }
 }

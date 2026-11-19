@@ -21,7 +21,7 @@ interface Props {
   festival?: string;
   year?: number | null;
   item?: string;
-  current?: 'inicio' | 'faltantes' | 'tareas' | 'ranking';
+  current?: 'inicio' | 'faltantes' | 'tareas' | 'ranking' | 'buscar';
   /** Absolute or site path of the page's preview image (cover, thumbnail). */
   image?: string | null;
   /** Keep the page out of search results (private or utility pages). */
@@ -30,10 +30,12 @@ interface Props {
   jsonLd?: Record<string, unknown> | null;
   /** Site path of this page's Markdown twin (e.g. 'chubut/1937.md'), when it has one. */
   markdown?: string | null;
+  /** Index this page's main content for site search (Pagefind; Spanish pages only, one index). */
+  searchable?: boolean;
   /** Count visits with Cloudflare Web Analytics (off on /admin). */
   analytics?: boolean;
 }
-const { title, description = t('sitio.descripcion'), festival, year, item, current, image = null, noindex = false, jsonLd = null, markdown = null, analytics = true } = Astro.props;
+const { title, description = t('sitio.descripcion'), festival, year, item, current, image = null, noindex = false, jsonLd = null, markdown = null, searchable = false, analytics = true } = Astro.props;
 const analyticsToken = (import.meta.env.PUBLIC_CF_ANALYTICS_TOKEN ?? '').trim();
 const fullTitle = title ? `${title} | ${t('sitio.nombre')}` : t('sitio.nombre');
 // Astro.url is the Spanish page being rendered; the page's own address carries its language.
@@ -97,6 +99,7 @@ const webmcpToken = (import.meta.env.PUBLIC_WEBMCP_OT_TOKEN ?? '').trim();
           <ul>
             <li><a href={url('/')} aria-current={current === 'inicio' ? 'page' : undefined}>{t('nav.inicio')}</a></li>
             <li><a href={url('/#buscados')}>{t('nav.faltantes')}</a></li>
+            <li><a href={url('buscar')} aria-current={current === 'buscar' ? 'page' : undefined}>{t('nav.buscar')}</a></li>
             <li><a href={url('tareas')} aria-current={current === 'tareas' ? 'page' : undefined}>{t('nav.tareas')}</a></li>
             <li><a href={url('ranking')} aria-current={current === 'ranking' ? 'page' : undefined}>{t('nav.ranking')}</a></li>
           </ul>
@@ -110,7 +113,7 @@ const webmcpToken = (import.meta.env.PUBLIC_WEBMCP_OT_TOKEN ?? '').trim();
       </div>
     </header>
     <div class="scales" aria-hidden="true"></div>
-    <main id="contenido" tabindex="-1">
+    <main id="contenido" tabindex="-1" data-pagefind-body={searchable && here === DEFAULT_LOCALE ? '' : undefined}>
       <div class="wrap">
         <slot />
       </div>

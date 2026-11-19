@@ -1,0 +1,66 @@
+---
+import Base from '../layouts/Base.astro';
+import { t } from '../lib/i18n';
+import { url } from '../lib/paths';
+
+// Pagefind builds one Spanish index at build time (package.json "build"); every
+// language's /buscar/ reads it and rewrites result links to its own pages.
+const strings = {
+  placeholder: t('buscar.placeholder'),
+  clear_search: t('buscar.borrar'),
+  load_more: t('buscar.mas'),
+  search_label: t('buscar.etiqueta'),
+  filters_label: t('buscar.filtros'),
+  zero_results: t('buscar.sin_resultados'),
+  many_results: t('buscar.resultados'),
+  one_result: t('buscar.un_resultado'),
+  searching: t('buscar.buscando'),
+};
+const prefix = url('/');
+---
+<Base title={t('buscar.titulo')} description={t('buscar.ayuda')} current="buscar">
+  <link slot="head" rel="stylesheet" href={url('pagefind/pagefind-ui.css')} />
+  <article class="measure">
+    <h1>{t('buscar.titulo')}</h1>
+    <p class="lead">{t('buscar.ayuda')}</p>
+    <div id="buscador" data-prefix={prefix} data-strings={JSON.stringify(strings)}></div>
+    <noscript><p class="textcard">{t('buscar.sin_js')}</p></noscript>
+  </article>
+  <script is:inline src={url('pagefind/pagefind-ui.js')}></script>
+  <script is:inline>
+    (function () {
+      var el = document.getElementById('buscador');
+      if (!el || !window.PagefindUI) return;
+      var prefix = el.dataset.prefix || '/';
+      // Results are the Spanish pages; point them at this language's version.
+      var local = function (u) { return prefix === '/' ? u : prefix + u.replace(/^\//, ''); };
+      var q = new URLSearchParams(location.search).get('q');
+      var ui = new PagefindUI({
+        element: '#buscador',
+        showSubResults: true,
+        showImages: false,
+        resetStyles: false,
+        translations: JSON.parse(el.dataset.strings || '{}'),
+        processResult: function (r) {
+          r.url = local(r.url);
+          (r.sub_results || []).forEach(function (s) { s.url = local(s.url); });
+          return r;
+        },
+      });
+      if (q) ui.triggerSearch(q);
+    })();
+  </script>
+</Base>
+
+<style is:global>
+  #buscador {
+    --pagefind-ui-primary: var(--red-deep);
+    --pagefind-ui-text: var(--ink);
+    --pagefind-ui-background: var(--paper-hi);
+    --pagefind-ui-border: var(--rule);
+    --pagefind-ui-tag: var(--paper);
+    --pagefind-ui-font: var(--sans);
+    --pagefind-ui-border-radius: 2px;
+    margin-block: 1.5rem;
+  }
+</style>

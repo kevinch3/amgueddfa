@@ -23,7 +23,8 @@
     "principal": "Prif lywio",
     "ingresar": "Mewngofnodi",
     "ranking": "Tabl cyfranwyr",
-    "tareas": "Tasgau sydyn"
+    "tareas": "Tasgau sydyn",
+    "buscar": "Chwilio"
   },
   "idiomas": {
     "titulo": "Iaith",
@@ -947,5 +948,19 @@
       "cy": "Cymraeg",
       "en": "Saesneg"
     }
+  },
+  "buscar": {
+    "titulo": "Chwilio'r archif",
+    "ayuda": "Chwiliwch yn y teitlau, y trawsgrifiadau, data pob eisteddfod a thestun awtomatig y dogfennau. Mae enwau Cymraeg i'w cael hefyd heb acenion.",
+    "placeholder": "Er enghraifft: Cadair, Trelew, 1937, adrodd",
+    "borrar": "Clirio",
+    "mas": "Rhagor o ganlyniadau",
+    "etiqueta": "Chwilio'r archif",
+    "filtros": "Hidlwyr",
+    "sin_resultados": "Dim byd ar gyfer «[SEARCH_TERM]»",
+    "resultados": "[COUNT] canlyniad ar gyfer «[SEARCH_TERM]»",
+    "un_resultado": "1 canlyniad ar gyfer «[SEARCH_TERM]»",
+    "buscando": "Yn chwilio am «[SEARCH_TERM]»…",
+    "sin_js": "Mae angen JavaScript i chwilio. Gallwch bori'r archif fesul eisteddfod a blwyddyn."
   }
 }

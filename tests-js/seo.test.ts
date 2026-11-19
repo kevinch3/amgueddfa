@@ -108,6 +108,9 @@ describe('seo builders', () => {
     const unsure = itemJsonLd({ name: 'Recorte 1880', url: absUrl('item/def/'), image: null, editionUrl: absUrl('chubut/1880/'), editionName: 'Eisteddfod del Chubut 1880', year: 1880, editionConfirmed: false });
     expect(unsure).toMatchObject({ isPartOf: { '@type': 'CollectionPage', url: 'https://amgueddfa.org/chubut/1880/' } });
     expect(JSON.stringify(unsure)).not.toContain('Event');
+    expect(unsure).not.toHaveProperty('copyrightNotice');
+    const credited = itemJsonLd({ name: 'Foto', url: 'u', image: null, editionUrl: null, editionName: null, year: null, rights: 'CC BY-SA 4.0 · Gastón Cuello' });
+    expect(credited.copyrightNotice).toBe('CC BY-SA 4.0 · Gastón Cuello');
     const site = siteJsonLd();
     expect(JSON.stringify(site)).toContain('ArchiveOrganization');
     expect(JSON.stringify(site)).toContain('WebSite');

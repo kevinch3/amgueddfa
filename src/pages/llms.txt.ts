@@ -24,8 +24,8 @@ ${fests.join('\n')}
 
 ## Datos abiertos
 
-- [Ediciones](${absUrl('datos/ediciones.json')}): todas las ediciones con estado del archivo, tapa y datos aprobados (con fuente y quién los aportó).
-- [Documentos](${absUrl('datos/documentos.json')}): todos los documentos públicos con título, eisteddfod, año, categoría, miniatura e imágenes de cada página.
+- [Ediciones](${absUrl('datos/ediciones.json')}): todas las ediciones con estado del archivo, tapa y datos aprobados (con fuente y quién los aportó). Dos campos distintos: \`realizada\` dice si la edición se hizo (\`true\`, \`false\`, o \`null\` cuando no se sabe: no es lo mismo que «no se hizo»); \`estado\` dice cuánto material se conserva en el archivo (\`full\` programa completo confirmado, \`some\` algo de material, \`none\` nada todavía). Que falte material no significa que la edición no se haya hecho. \`tiene_transcripcion\` indica si algún documento de la edición está transcrito.
+- [Documentos](${absUrl('datos/documentos.json')}): todos los documentos públicos con título, eisteddfod, año, categoría, miniatura e imágenes de cada página. \`derechos\` es siempre explícito: las imágenes y escaneos siguen siendo de sus titulares; las transcripciones y los datos del sitio son CC BY-SA 4.0 (\`licencia_transcripcion\`).
 - [Mapa del sitio](${absUrl('sitemap.xml')})
 
 ## Herramientas para agentes (WebMCP)
@@ -39,7 +39,7 @@ Objetivo: WCAG 2.2 nivel AA. Declaración, estado y ajustes de lectura: ${absUrl
 ## Notas
 
 - Los documentos restringidos por pedido de las asociaciones no se publican ni se listan.
-- Las páginas de cada año también llevan datos estructurados schema.org (Event); las de cada documento, ArchiveComponent.
+- Las páginas de cada año llevan datos estructurados schema.org: Event solo cuando hay constancia de la edición (se realizó o no, o una fecha aprobada); si no, CollectionPage. Las de cada documento, ArchiveComponent; todas con BreadcrumbList.
 `;
   return new Response(text, { headers: { 'Content-Type': 'text/plain; charset=utf-8' } });
 }

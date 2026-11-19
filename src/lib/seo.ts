@@ -8,7 +8,22 @@ import { url } from './paths';
 import { docCount } from './site';
 import type { EditionState } from './types';
 
-export const SITE = 'https://amgueddfa.org';
+/** The site's origin, from `site` in astro.config.mjs (the fallback is for unit tests). */
+export const SITE = String(import.meta.env.SITE ?? 'https://amgueddfa.org').replace(/\/+$/, '');
+
+/**
+ * Who holds the rights of a scanned document, for open data. Items with no
+ * credit line of their own stay with their original holders (the association
+ * or whoever printed them, see LICENSE-DATA.md and /derechos/): said out loud,
+ * never left empty.
+ */
+export function rightsText(rights: string | null | undefined): string {
+  const r = (rights ?? '').trim();
+  return r || `Titulares originales (la asociación organizadora u otros); no incluido en la licencia CC BY-SA 4.0 del sitio. Ver ${SITE}/derechos/`;
+}
+
+/** Licence of the site's transcriptions and community data (LICENSE-DATA.md). */
+export const TRANSCRIPTION_LICENSE = 'CC BY-SA 4.0';
 
 /** Site-absolute URL for a path on this site; absolute URLs pass through. */
 export function absUrl(path: string): string {
@@ -122,7 +137,7 @@ export function editionJsonLd(o: { name: string; year: number; url: string; imag
  * Event only when that edition is confirmed; otherwise it is part of the
  * edition's page.
  */
-export function itemJsonLd(o: { name: string; url: string; image: string | null; editionUrl: string | null; editionName: string | null; year: number | null; editionConfirmed?: boolean }): Ld {
+export function itemJsonLd(o: { name: string; url: string; image: string | null; editionUrl: string | null; editionName: string | null; year: number | null; editionConfirmed?: boolean; rights?: string }): Ld {
   const ld: Ld = {
     '@context': 'https://schema.org',
     '@type': 'ArchiveComponent',
@@ -133,6 +148,8 @@ export function itemJsonLd(o: { name: string; url: string; image: string | null;
   };
   if (o.image) ld.image = o.image;
   if (o.year !== null) ld.temporalCoverage = String(o.year);
+  // Only a credit line the archive actually has; never a guessed author or licence.
+  if (o.rights?.trim()) ld.copyrightNotice = o.rights.trim();
   if (o.editionUrl && o.editionName) {
     if (o.editionConfirmed) ld.about = { '@type': 'Event', name: o.editionName, url: o.editionUrl };
     else ld.isPartOf = { '@type': 'CollectionPage', name: o.editionName, url: o.editionUrl };

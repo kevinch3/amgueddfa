@@ -20,13 +20,8 @@ User-agent: CCBot
 Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 Disallow: /admin/
-Disallow: /perfil/
-Disallow: /ingresar/
-Disallow: /contribuir/
-# The same pages in the other languages (/cy/, /en/, /zh/, /it/, /fr/, /sv/).
 Disallow: /*/admin/
-Disallow: /*/perfil/
-Disallow: /*/ingresar/
-Disallow: /*/contribuir/
+# Perfil, ingresar and contribuir say noindex on the page itself: they are not
+# blocked here, or crawlers could not read that and would index the bare URL.
 
 Sitemap: https://amgueddfa.org/sitemap.xml

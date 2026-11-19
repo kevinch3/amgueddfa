@@ -37,7 +37,7 @@ const jsonLd = item.restricted ? null : ldGraph(
   itemJsonLd({
     name: item.title, url: absUrl(url(`item/${item.id}/`)), image: image ? absUrl(image) : null,
     editionUrl: item.year ? absUrl(url(`${item.festival}/${item.year}/`)) : null,
-    editionName: item.year ? `${fest} ${item.year}` : null, year: item.year, editionConfirmed,
+    editionName: item.year ? `${fest} ${item.year}` : null, year: item.year, editionConfirmed, rights: item.rights,
   }),
   // The same crumbs as the visible <nav class="crumbs"> below.
   breadcrumbJsonLd([

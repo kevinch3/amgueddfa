@@ -216,6 +216,9 @@ describe('static build', () => {
     expect(read('index.html')).toContain('ArchiveOrganization');
     for (const p of ['admin', 'perfil', 'ingresar', 'contribuir']) expect(read(`${p}/index.html`), p).toContain('<meta name="robots" content="noindex"');
     expect(read('404.html')).toContain('<meta name="robots" content="noindex"');
+    // A noindex page names no canonical of its own (the 404 page would point to /404/).
+    expect(read('404.html')).not.toContain('rel="canonical"');
+    expect(read('404.html')).not.toContain('property="og:url"');
     expect(year).not.toContain('content="noindex"');
     for (const i of catalog.filter((x) => x.restricted)) {
       const page = read(`item/${i.id}/index.html`);
@@ -230,6 +233,8 @@ describe('static build', () => {
     expect(robots).toContain('Allow: /');
     expect(robots).toContain('Sitemap: https://amgueddfa.org/sitemap.xml');
     expect(robots).toContain('Disallow: /admin/');
+    // Pages that say noindex themselves are not blocked: a crawler must fetch them to read it.
+    for (const p of ['perfil', 'ingresar', 'contribuir']) expect(robots, p).not.toContain(`/${p}/`);
     // AI crawlers are welcome, and share the * group (a group of their own would drop the Disallows).
     expect(robots).toContain('Content-Signal: search=yes, ai-input=yes, ai-train=yes');
     expect(robots.split('\n\n').filter((g) => g.includes('User-agent:')).length).toBe(1);
@@ -241,10 +246,27 @@ describe('static build', () => {
     expect(sitemap).toContain(`<loc>https://amgueddfa.org/item/${pub.id}/</loc>`);
     expect(sitemap).not.toContain('/admin/');
     expect(sitemap).not.toContain('/contribuir/');
+    // Years with nothing in the archive (no documents, no approved facts) keep their page but stay out of the sitemap.
+    expect(sitemap).toContain('<loc>https://amgueddfa.org/chubut/1865/</loc>');
+    const emptyYear = (eds0: any) => eds0.ediciones.find((e: any) => e.documentos === 0 && e.datos.length === 0);
+    const empty = emptyYear(JSON.parse(read('datos/ediciones.json')));
+    expect(empty).toBeTruthy();
+    expect(sitemap).not.toContain(`<loc>${empty.url}</loc>`);
 
     const eds = JSON.parse(read('datos/ediciones.json'));
     const docs = JSON.parse(read('datos/documentos.json'));
     const e1937 = eds.ediciones.find((e: any) => e.eisteddfod === 'chubut' && e.ano === 1937);
+    for (const e of eds.ediciones) expect(typeof e.tiene_transcripcion).toBe('boolean');
+    // Rights are never silently empty; transcriptions carry their own licence.
+    for (const d of docs.documentos) {
+      expect(typeof d.derechos, d.id).toBe('string');
+      expect(d.derechos.length, d.id).toBeGreaterThan(0);
+      expect(typeof d.tiene_transcripcion, d.id).toBe('boolean');
+      if (d.tiene_transcripcion) expect(d.licencia_transcripcion, d.id).toBe('CC BY-SA 4.0');
+      else expect(d, d.id).not.toHaveProperty('licencia_transcripcion');
+    }
+    expect(docs.documentos.some((d: any) => d.tiene_transcripcion)).toBe(true);
+    expect(read('llms.txt')).toContain('realizada');
     expect(e1937.url).toBe('https://amgueddfa.org/chubut/1937/');
     // Documents count catalog items plus approved community uploads of that year.
     for (const e of eds.ediciones) {
@@ -658,7 +680,7 @@ describe('static build', () => {
       for (const p of ['admin', 'perfil', 'ingresar', 'contribuir']) expect(sitemap).not.toContain(`/${p}/`);
       for (const i of catalog.filter((x) => x.restricted)) expect(sitemap, i.id).not.toContain(`/item/${i.id}/`);
       const robots = read('robots.txt');
-      for (const p of ['admin', 'perfil', 'ingresar', 'contribuir']) expect(robots).toContain(`Disallow: /*/${p}/`);
+      expect(robots).toContain('Disallow: /*/admin/');
       expect(read('llms.txt')).toContain(`${SITE}/cy/`);
     });
 

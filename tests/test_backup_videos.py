@@ -99,3 +99,13 @@ def test_signin_gate_is_not_a_tool_failure():
     assert needs_signin("ERROR: [youtube] ABYirmAXp3M: Please sign in. This helps protect our community.")
     assert not needs_signin("ERROR: unable to download video data: HTTP Error 403: Forbidden")
     assert not needs_signin("[PYI-2124995:ERROR] Failed to extract entry: Cryptodome/Cipher/_ARC4.abi3.so.")
+
+
+def test_live_chat_is_not_a_transcription(tmp_path):
+    import json
+    from scripts.backup.videos import caption_langs, caption_state
+    assert caption_langs({'subtitles': {'live_chat': []}, 'automatic_captions': {'es': []}}) == []
+    assert caption_langs({'subtitles': {'es-419': [], 'live_chat': []}, 'automatic_captions': {'es-orig': [], 'en': []}}) == ['es-419', 'es-orig']
+    dest = tmp_path / 'v_abc.mp4'
+    dest.with_suffix('.info.json').write_text(json.dumps({'subtitles': {'live_chat': []}}))
+    assert caption_state(dest) == 'none'

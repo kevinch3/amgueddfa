@@ -196,10 +196,17 @@ def caption_state(dest: Path) -> str:
         d = json.loads(dest.with_suffix('.info.json').read_text())
     except (OSError, ValueError):
         return 'missing'
-    auto = d.get('automatic_captions') or {}
-    if d.get('subtitles') or any(k.endswith('-orig') for k in auto):
-        return 'missing'
-    return 'none'
+    return 'missing' if caption_langs(d) else 'none'
+
+
+def caption_langs(info: dict) -> list[str]:
+    """The transcriptions YouTube has for a video, as yt-dlp language codes: subtitles
+    someone uploaded (any language, e.g. es-419, en-GB) and the automatic one in the
+    detected language (es-orig, uk-orig…). The chat replay of a live stream
+    ('live_chat') is not a transcription."""
+    uploaded = [k for k in (info.get('subtitles') or {}) if k != 'live_chat']
+    auto = [k for k in (info.get('automatic_captions') or {}) if k.endswith('-orig')]
+    return uploaded + auto
 
 
 def glob_escape(name: str) -> str:
@@ -304,8 +311,13 @@ def needs_signin(stderr: str) -> bool:
 
 def fetch_captions(v: Video, dest: Path) -> bool:
     """Captions only, for a saved video whose captions were not saved (YouTube's 429)."""
+    try:
+        langs = caption_langs(json.loads(dest.with_suffix('.info.json').read_text()))
+    except (OSError, ValueError):
+        langs = []
     cmd = [YTDLP, '--no-update', '--no-progress', '--quiet', '--no-warnings', *JS_RUNTIME,
-           '--skip-download', '--write-auto-subs', '--write-subs', '--sub-langs', SUB_LANGS,
+           '--skip-download', '--write-auto-subs', '--write-subs',
+           '--sub-langs', ','.join(re.escape(x) for x in langs) or SUB_LANGS,
            '--sub-format', 'vtt', '--sleep-subtitles', '5', '--sleep-requests', '1',
            '-o', f"{dest.with_suffix('')}.%(ext)s", f'https://www.youtube.com/watch?v={v.id}']
     subprocess.run(cmd, capture_output=True, text=True)

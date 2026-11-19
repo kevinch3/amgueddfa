@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "eisteddfod\n\ndel Chubut\n\nCOMPETENCIA\n\nSolo libre: Alffanni del Pensier Arietta - George F. Handel\nSolo libre: música folklórica argentina o latinoamericana a elección\nSolo libre: música ciudadana (tango, milonga, vals) a elección\nSolo libre: canción rock o pop a elección\n\nUnawd i ferched: Lle Cerddi Di - G. F. Handel\nUnawd i fechgyn: Aberdaron - Meirion Williams / Cynan\nUnawd cerdd dant: Hunanddewisiad\nUnawd werin: Hunanddewisiad\nUnawd canu emyn: Hunanddewisiad\n\nUnawd can ysgafn: Hunanddewisiad\n\na) eisteddfod 3 So\ndel Chubut es",
+   "conf": 91.3
+  }
+ ]
+}

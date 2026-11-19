@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "PRELIMINARES\nEISTEDDFOD DEL CHUBUT\n\n302. sctibre Ye 9099\n\nSalon Cincuentenario\nde la Asociaciôn San David\nSan Martín 90 esguina Belgrano\n\n18 HORAS.\n\nCOMPETENCIA 48. Solo libre: Musica folklôrica\nargentina. A elección entre los géneros:\nchacarera, gato, escondido, huayno, carnavalito,\nbailecito, cueca, etc.\n\n/ COMPETENCIA 51. Triawd “Ar gyfer heddiw'r\n\nbore” Carol traddodiadol. Eos lal\n\nas ASOCIACION\noy DEL CHUBUT",
+   "conf": 90.5
+  }
+ ]
+}

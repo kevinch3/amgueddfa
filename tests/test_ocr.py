@@ -46,6 +46,11 @@ TSV = "\n".join([
     "5\t1\t1\t1\t2\t1\t0\t0\t10\t10\t60\tRhaglen",
     "5\t1\t2\t1\t1\t1\t0\t0\t10\t10\t-1\t ",
     "5\t1\t2\t1\t1\t2\t0\t0\t10\t10\t100\tTrelew",
+    # A phone status bar: few letters, low confidence.
+    "5\t1\t3\t1\t1\t1\t0\t0\t10\t10\t30\ti",
+    "5\t1\t3\t1\t1\t2\t0\t0\t10\t10\t40\t12:06",
+    # Letters but unreadable.
+    "5\t1\t4\t1\t1\t1\t0\t0\t10\t10\t20\tUraleajog",
 ])
 
 

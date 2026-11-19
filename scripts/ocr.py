@@ -57,14 +57,23 @@ def select(items: list[dict], transcribed: set[str], done: set[str], skip_catego
     ]
 
 
+# A line is kept when its words average at least this confidence and it has a few letters:
+# drops phone status bars ("i © 49 4 2 12:06") and specks read as text.
+MIN_LINE_CONF = 60
+MIN_LINE_LETTERS = 3
+
+
+def _keep(words: list[tuple[str, float]]) -> bool:
+    confs = [c for _, c in words if c >= 0]
+    letters = sum(ch.isalpha() for w, _ in words for ch in w)
+    return letters >= MIN_LINE_LETTERS and bool(confs) and sum(confs) / len(confs) >= MIN_LINE_CONF
+
+
 def parse_tsv(tsv: str) -> tuple[str, float | None]:
-    """Text (one line per OCR line, blank line between blocks) and mean word confidence from `tesseract ... tsv`."""
+    """Text (one line per OCR line, blank line between blocks) and mean word confidence of the kept lines, from `tesseract ... tsv`."""
     rows = [r.split("\t") for r in tsv.splitlines()[1:]]
-    lines: list[str] = []
-    confs: list[float] = []
+    grouped: list[tuple[str, list[tuple[str, float]]]] = []  # (block, words of one line)
     key = None
-    block = None
-    words: list[str] = []
     for r in rows:
         if len(r) < 12 or r[0] != "5":  # level 5 = word
             continue
@@ -73,16 +82,20 @@ def parse_tsv(tsv: str) -> tuple[str, float | None]:
             continue
         k = (r[2], r[3], r[4])  # block, paragraph, line
         if k != key:
-            if words:
-                lines.append(" ".join(words))
-            if block is not None and r[2] != block:
-                lines.append("")
-            key, block, words = k, r[2], []
-        words.append(word)
-        if conf >= 0:
-            confs.append(conf)
-    if words:
-        lines.append(" ".join(words))
+            grouped.append((r[2], []))
+            key = k
+        grouped[-1][1].append((word, conf))
+    lines: list[str] = []
+    confs: list[float] = []
+    block = None
+    for b, words in grouped:
+        if not _keep(words):
+            continue
+        if block is not None and b != block:
+            lines.append("")
+        block = b
+        lines.append(" ".join(w for w, _ in words))
+        confs.extend(c for _, c in words if c >= 0)
     conf = round(sum(confs) / len(confs), 1) if confs else None
     return "\n".join(lines).strip(), conf
 

@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "COMPETENCIA\n\nLITERATURA:\nPOESIA\n\n'CORONA DEL EISTEDDFOD: Premio Municipalidad de Trelew. Poema inédito, no premiado\nen otro concurso. Tema y estilo libres. Extensión máxima: 40 versos.\nMEDALLA DE PLATA — Premio de la Asociación San David, otorgado desde 1994 — Poema\ninédito. Tema libre y forma de estilo tradicional (métrica y rima)\nRomance de un tren sin rieles: texto poético en estilo asimilable al romancero español.\n\nCADARR YR EISTEDDFOD (i gystadleuwyr o'r Wladfa yn unig): Cerdd neu gyfres o gerddi\nar y testun 'Ffiniau'.\nCyfansoddi geiriau fyddai'n addas fel anthem y Wladfa heddîw.\n(i unrhyw alaw o ddewis y bardd).\nCerdd iw hadrodd gan ddysgwyr mewn Eisteddfod yn y Wladfa.\nSoned: “Cysgod”.\nCerdd ysgafn: “Arwr”\nTri neu ragor o limrigau doniol: “Croesir Paith”",
+   "conf": 91.8
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "€isteddfod\nLu del chubut\n\n“EU Fenocaml en\n\nel Desierto”\nde K. Skinner\n\nPresentación a cargo de:\nMarcelo Gavnartti\n\nSandra Jones\nTegai Roberts\nJIIiercoles 20 de Octubre\nMuseo Egidio Feruglio\nTrelew\n\nASOCIACIÓN EISTEDDFOD DEL CHUBUT\n\nU9100BEB - Trelew - Chubut",
+   "conf": 86.3
+  }
+ ]
+}

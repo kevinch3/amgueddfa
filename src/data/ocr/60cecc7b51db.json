@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "eisteddfod 2al8\n\ndel Chubut.\n\nmetencias\n\nCOMPETENCIA ESPECIAL : CYSTADLEUAETH ARBENNIG\n\nComponer lamusica para la letra del himno ganador enla\ncompetencia espedal del Eisteddfod del Chubut 2013.\nCyfansoddi emyn-dôn ar gyfer geiriau'r emyn a ddaeth yn\nfuddugol yng nghystadleuaeth arbennig Eisteddfod y\nWladfa 2013.\n\n*Corsultar letra del himno en el programa,",
+   "conf": 91.0
+  }
+ ]
+}

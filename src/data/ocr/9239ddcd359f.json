@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "€isteddfod\nSW del chubut\n\nTeatro Veidi Trelew\n\nJIIarles 19 de Octubre\n\n\"la Biblioteca de tan y castell:\n\nvalor patrimonial y\nCONtRIBUCIÓN A la historia\nfamiliar y Regional\"\n\nOR. david williams\n\nASOCIACION EISTEDDFOD DEL CHUBUT\n\nU9100BEB - Trelew - Chubut\nArgentina",
+   "conf": 82.8
+  }
+ ]
+}

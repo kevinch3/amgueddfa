@@ -19,7 +19,10 @@ if [ ! -d "$(dirname "$ROOT")" ] || { [ -n "${AMG_DISK:-}" ] && ! mountpoint -q 
   echo "backup disk not mounted ($ROOT): skipped, will try again tomorrow"
   exit 0
 fi
-mkdir -p "$ROOT/logs" "$ROOT/lists"
+mkdir -p "$ROOT/logs" "$ROOT/lists" "$ROOT/tmp"
+# The private yt-dlp is a one-file build that unpacks itself into $TMPDIR on every
+# call; a full /tmp (seen 2026-11-19: "Failed to extract entry") stops the run.
+export TMPDIR="$ROOT/tmp"
 DONE="$ROOT/logs/done-$MONTH"
 if [ -e "$DONE" ] && [ "${1:-}" != "--force" ]; then
   echo "already done this month ($DONE)"

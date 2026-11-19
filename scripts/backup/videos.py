@@ -284,8 +284,22 @@ def download(v: Video, dest: Path, log: Log) -> bool:
         r = subprocess.run(cmd, capture_output=True, text=True)
     if r.returncode != 0 or not dest.exists():
         log(f'error {v.id}: {(r.stderr or r.stdout).strip().splitlines()[-1:] or "no file"}')
+        global LAST_SIGNIN
+        LAST_SIGNIN = needs_signin(r.stderr or '')
         return False
     return True
+
+
+LAST_SIGNIN = False
+
+
+def needs_signin(stderr: str) -> bool:
+    """A video gated behind a sign-in (YouTube: "Please sign in"), not a broken yt-dlp.
+
+    Such videos go to lists/signin.txt for a run with the user's own cookies; they
+    must not count towards the "failed in a row" stop.
+    """
+    return 'Please sign in' in stderr
 
 
 def fetch_captions(v: Video, dest: Path) -> bool:
@@ -336,7 +350,7 @@ def cmd_run(root: Path, max_new: int | None, check: bool) -> int:
                 has = download(v, dest, log)
                 tried_and_failed = not has
                 failed += tried_and_failed
-                streak = streak + 1 if tried_and_failed else 0
+                streak = (streak if LAST_SIGNIN else streak + 1) if tried_and_failed else 0
                 if streak >= MAX_FAILS_IN_A_ROW:
                     # Every download failing means yt-dlp is out of date or YouTube is
                     # blocking us: stop instead of hammering it; tomorrow's run retries.

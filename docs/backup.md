@@ -46,6 +46,7 @@ amgueddfa-backup/
                   + .info.json (YouTube's metadata) + .<lang>.vtt (transcriptions)
   logs/YYYY-MM.log
   bin/            private yt-dlp, updated by every run
+  tmp/            yt-dlp's temporary files (it unpacks itself on every call)
 ```
 
 The folders follow the archive's `Videos/` tree (`Eisteddfod_del_Chubut/2012/…`).

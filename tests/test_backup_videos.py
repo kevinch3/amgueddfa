@@ -92,3 +92,10 @@ def test_caption_state(tmp_path):
     assert caption_state(dest) == 'missing'          # misdetected language still counts
     (tmp_path / '2012_CH2012006_x_abc.uk-orig.vtt').write_text('WEBVTT')
     assert caption_state(dest) == 'yes'
+
+
+def test_signin_gate_is_not_a_tool_failure():
+    from scripts.backup.videos import needs_signin
+    assert needs_signin("ERROR: [youtube] ABYirmAXp3M: Please sign in. This helps protect our community.")
+    assert not needs_signin("ERROR: unable to download video data: HTTP Error 403: Forbidden")
+    assert not needs_signin("[PYI-2124995:ERROR] Failed to extract entry: Cryptodome/Cipher/_ARC4.abi3.so.")

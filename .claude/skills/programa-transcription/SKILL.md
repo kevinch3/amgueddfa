@@ -16,6 +16,27 @@ description: Use when transcribing an Eisteddfod programa (list of competitions)
 
 # Programa and Ganadores transcriptions
 
+## Every document gets one (user rule, 2026-11-19)
+
+**All documents get a transcription**, not only programas and winners lists. Priority order:
+programa → programa del día → resultados → preliminares → bases y avisos → otros (press, photos with
+captions). Only items with no text at all (a photo of people, a building) are marked "Sin texto para
+transcribir" instead.
+
+- **Group first, transcribe once.** Several images or captures of ONE resource (a flyer shot in parts, a
+  multi-page programa photographed page by page, the web page that only links the PDF, a newspaper article
+  continued on another page) get ONE transcription file: front matter `items:` lists every item, the file is
+  named after the first in reading order. Look at the images (contact sheet, `sheet.py`) before deciding:
+  same document, same date and source = one group; reposts of the same flyer = one group.
+- **Documents that are not lists** (bases, avisos, preliminares notices, press articles): a faithful
+  transcription of the text in reading order, original language, `##` for the printed headlines, paragraphs
+  as printed, the closing `## Notas · Nodiadau` for date, source, inferred data and names as printed. Leave out
+  unrelated items on the same page (other news, ads), naming them in the notes.
+- Stored as kind `programa` (`src/data/transcripciones/`), the only public kind besides `ganadores`; lists of
+  results and qualifiers follow the Ganadores rules (Mimosa and Juventud stay private).
+- An item already in the database: change its `items` with SQL (`update public.transcriptions set items = …`),
+  then `scripts/export_approved.mjs`; `seed_transcriptions.mjs` never updates an existing row.
+
 ## Where they go
 
 | What | File | Public? |

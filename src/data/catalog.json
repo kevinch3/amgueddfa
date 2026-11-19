@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-19T13:56:16+00:00",
+ "generated": "2026-11-19T14:07:09+00:00",
  "items": [
   {
    "id": "84b01d326cbc",
@@ -1156,6 +1156,33 @@
    "thumb": "05d365c46a2b/thumb.webp",
    "page_paths": [
     "05d365c46a2b/p01.webp"
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "36bbb549b129",
+   "festival": "chubut",
+   "year": 1954,
+   "undated": false,
+   "category": "otros",
+   "title": "Jornada 1954-11-24 Evocaran tradiciones galesas",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1954/Prensa/Jornada_1954-11-24_Evocaran_tradiciones_galesas.jpg",
+   "alt_paths": [],
+   "source_url": null,
+   "source_label": "Diario Jornada (Trelew), [24 de noviembre de 1954]",
+   "retrieved": "2026-11-19",
+   "note_public": "Jornada, Trelew, [24 de noviembre de 1954]: «Evocarán tradiciones galesas los actos que tendrán lugar hoy».",
+   "rights": "Diario Jornada, Trelew (1954) · foto de la página impresa",
+   "year_inferred": true,
+   "restricted": false,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "36bbb549b129/thumb.webp",
+   "page_paths": [
+    "36bbb549b129/p01.webp"
    ],
    "text_excerpt": null,
    "table": null

@@ -69,8 +69,11 @@ const retrieved = item.retrieved
   ? new Date(`${item.retrieved}T12:00:00`).toLocaleDateString(intlLocales(), { day: 'numeric', month: 'long', year: 'numeric' })
   : '';
 ---
-<Base title={item.title} festival={item.festival} year={item.year} item={item.id} description={description} image={image} jsonLd={item.hidden ? null : jsonLd} markdown={item.hidden || item.restricted ? null : `item/${item.id}.md`} noindex={Boolean(item.hidden)}>
-  <nav class="crumbs" aria-label={t('comun.miga')}>
+<Base title={item.title} festival={item.festival} year={item.year} item={item.id} description={description} image={image} jsonLd={item.hidden ? null : jsonLd} markdown={item.hidden || item.restricted ? null : `item/${item.id}.md`} searchable={!item.hidden && !item.restricted} noindex={Boolean(item.hidden)}>
+  <meta data-pagefind-filter="eisteddfod[content]" content={fest} />
+  {item.year !== null && <meta data-pagefind-filter="decada[content]" content={`${Math.floor(item.year / 10) * 10}`} />}
+  <meta data-pagefind-filter="categoria[content]" content={t(`categorias.${item.category}`)} />
+  <nav class="crumbs" aria-label={t('comun.miga')} data-pagefind-ignore="all">
     <ol>
       <li><a href={url('/')}>{t('nav.inicio')}</a></li>
       <li><a href={url(`${item.festival}/`)} data-live="festival">{fest}</a></li>
@@ -128,7 +131,7 @@ const retrieved = item.retrieved
         <p class="textcard">{t('item.sin_vista')}</p>
       )}
       {ocr && (
-        <section class="section" aria-labelledby="ocr-t" data-ocr>
+        <section class="section" aria-labelledby="ocr-t" data-ocr data-pagefind-weight="0.5">
           <details>
             <summary><h2 id="ocr-t">{t('item.ocr_titulo')}</h2></summary>
             <p class="muted small">{t('item.ocr_ayuda')}</p>
@@ -195,7 +198,7 @@ const retrieved = item.retrieved
         )}
       </section>
       {!item.restricted && (
-        <section class="island-section" aria-labelledby="tarea-t">
+        <section class="island-section" aria-labelledby="tarea-t" data-pagefind-ignore="all">
           <h2 id="tarea-t" class="small">{t('item.tarea_titulo')}</h2>
           <Mount id="tarea" festival={item.festival} year={item.year} item={item.id} category={item.category} />
         </section>

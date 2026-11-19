@@ -23,7 +23,8 @@
     "principal": "Navigazione principale",
     "ingresar": "Accedi",
     "ranking": "Classifica",
-    "tareas": "Attività veloci"
+    "tareas": "Attività veloci",
+    "buscar": "Cerca"
   },
   "idiomas": {
     "titulo": "Lingua",
@@ -947,5 +948,19 @@
       "cy": "gallese",
       "en": "inglese"
     }
+  },
+  "buscar": {
+    "titulo": "Cerca nell'archivio",
+    "ayuda": "Cerca nei titoli, nelle trascrizioni, nei dati di ogni edizione e nel testo automatico dei documenti. I nomi gallesi si trovano anche senza accenti.",
+    "placeholder": "Per esempio: Cadair, Trelew, 1937, recitazione",
+    "borrar": "Cancella",
+    "mas": "Altri risultati",
+    "etiqueta": "Cerca nell'archivio",
+    "filtros": "Filtri",
+    "sin_resultados": "Nessun risultato per «[SEARCH_TERM]»",
+    "resultados": "[COUNT] risultati per «[SEARCH_TERM]»",
+    "un_resultado": "1 risultato per «[SEARCH_TERM]»",
+    "buscando": "Ricerca di «[SEARCH_TERM]»…",
+    "sin_js": "La ricerca richiede JavaScript. Puoi consultare l'archivio per eisteddfod e anno."
   }
 }

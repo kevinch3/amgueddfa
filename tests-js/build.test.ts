@@ -44,7 +44,7 @@ describe('static build', () => {
     const env = Object.fromEntries(
       Object.entries(process.env).filter(([k]) => !/^(BASE_URL|MODE|DEV|PROD|SSR|VITEST.*|TEST)$/.test(k)),
     );
-    execSync('npx astro build', { cwd: join(__dirname, '..'), stdio: 'pipe', env: { ...env, NODE_ENV: 'production' } });
+    execSync('npm run build', { cwd: join(__dirname, '..'), stdio: 'pipe', env: { ...env, NODE_ENV: 'production' } });
   }, 300_000);
 
   it('edition page lists its programa with media', () => {
@@ -245,6 +245,25 @@ describe('static build', () => {
     }
   });
 
+  it('site search: one Spanish Pagefind index over year and document pages, a /buscar/ page in every language', () => {
+    expect(existsSync(join(DIST, 'pagefind', 'pagefind-ui.js'))).toBe(true);
+    expect(existsSync(join(DIST, 'pagefind', 'pagefind-entry.json'))).toBe(true);
+    const entry = JSON.parse(read('pagefind/pagefind-entry.json'));
+    expect(Object.keys(entry.languages)).toEqual(['es']);
+    // Spanish pages are indexed; the translations (same documents) are not, so results are not repeated 7 times.
+    expect(read('chubut/1937/index.html')).toContain('data-pagefind-body');
+    expect(read('cy/chubut/1937/index.html')).not.toContain('data-pagefind-body');
+    const pub = catalog.find((i) => !i.restricted && !i.hidden)!;
+    expect(read(`item/${pub.id}/index.html`)).toContain('data-pagefind-body');
+    for (const i of catalog.filter((x) => x.restricted || x.hidden)) {
+      if (existsSync(join(DIST, 'item', i.id, 'index.html'))) expect(read(`item/${i.id}/index.html`), i.id).not.toContain('data-pagefind-body');
+    }
+    for (const page of ['index.html', 'tareas/index.html', 'ranking/index.html']) expect(read(page), page).not.toContain('data-pagefind-body');
+    expect(read('buscar/index.html')).toContain('id="buscador"');
+    expect(read('cy/buscar/index.html')).toContain('data-prefix="/cy/"');
+    expect(read('index.html')).toContain('href="/buscar"');
+  });
+
   it('Markdown twins: one per year page and public document, never a restricted one', () => {
     const yearMd = read('chubut/1937.md');
     expect(yearMd).toMatch(/^---\n/);
@@ -373,7 +392,8 @@ describe('static build', () => {
     const walk = (d: string): string[] =>
       readdirSync(d).flatMap((n) => {
         const p = join(d, n);
-        return statSync(p).isDirectory() ? (n === 'media' ? [] : walk(p)) : /\.(html|js|css|json|txt|xml)$/.test(n) ? [p] : [];
+        // media/: images; pagefind/: the search library's own bundle (its translator credits carry other people's addresses).
+        return statSync(p).isDirectory() ? (n === 'media' || n === 'pagefind' ? [] : walk(p)) : /\.(html|js|css|json|txt|xml)$/.test(n) ? [p] : [];
       });
     const files = walk(DIST);
     expect(files.length).toBeGreaterThan(100);

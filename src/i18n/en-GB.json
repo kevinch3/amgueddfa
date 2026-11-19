@@ -23,7 +23,8 @@
     "principal": "Main navigation",
     "ingresar": "Sign in",
     "ranking": "Leaderboard",
-    "tareas": "Quick tasks"
+    "tareas": "Quick tasks",
+    "buscar": "Search"
   },
   "idiomas": {
     "titulo": "Language",
@@ -947,5 +948,19 @@
       "cy": "Welsh",
       "en": "English"
     }
+  },
+  "buscar": {
+    "titulo": "Search the archive",
+    "ayuda": "Search titles, transcriptions, each edition's details and the documents' automatic text. Welsh names are found without accents too.",
+    "placeholder": "For example: Cadair, Trelew, 1937, recitation",
+    "borrar": "Clear",
+    "mas": "More results",
+    "etiqueta": "Search the archive",
+    "filtros": "Filters",
+    "sin_resultados": "Nothing found for “[SEARCH_TERM]”",
+    "resultados": "[COUNT] results for “[SEARCH_TERM]”",
+    "un_resultado": "1 result for “[SEARCH_TERM]”",
+    "buscando": "Searching for “[SEARCH_TERM]”…",
+    "sin_js": "Search needs JavaScript. You can browse the archive by eisteddfod and year."
   }
 }

@@ -109,3 +109,15 @@ year's eisteddfod. Strongest:
    with the article as source (bulk-facts-loading).
 3. Facts from the NLW Journal article (1893, 1922, 1923, 1925).
 4. Ask the association for Cerddi'r Gadair.
+
+## Chubut Cultural (chubutcultural.com.ar), found 2026-11-19
+
+Puerto Madryn's culture site (WordPress). Its media and posts are listed by the public API,
+no browser needed: `/wp-json/wp/v2/media?search=eisteddfod&per_page=100` and
+`/wp-json/wp/v2/posts?search=eisteddfod`. ~140 eisteddfod posts since 2010, mostly Mimosa.
+Archived: Chubut 2019 programa (55 pp., was a gap) and 2021 adaptations; Mimosa results
+2011, 2014, 2017, 2018, 2019, 2023, 2024, 2025, programa del día 2011, preliminaries 2017,
+announcements 2024 and 2026; Trevelin results 2014 and 2022; Chubut 2019 Corona note. The
+Mimosa 2015 and 2016 programas del día already in the archive come from here.
+Left out: Mimosa photo galleries (children, #29) and announcement-only posts.
+Still to transcribe: the Mimosa and Trevelin results (private master copies).

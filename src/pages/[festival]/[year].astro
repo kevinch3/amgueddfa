@@ -17,7 +17,7 @@ import approvedRaw from '../../../data/approved/contributions.json';
 import editionsStatic from '../../../data/approved/editions.json';
 import { byLine, factDisplay, factInOriginal, forEdition, jsonForScript, sortFacts, sourceLine, type Contribution } from '../../lib/contrib';
 import { mediaUrl, uploadMedia } from '../../lib/uploads';
-import { absUrl, editionDescription, editionFacts, editionJsonLd } from '../../lib/seo';
+import { absUrl, breadcrumbJsonLd, editionDescription, editionFacts, editionJsonLd, ldGraph } from '../../lib/seo';
 import { editionVideos } from '../../lib/videos-data';
 
 export function getStaticPaths() {
@@ -75,7 +75,11 @@ const editionStatus = (editionsStatic as { festival: string; year: number; statu
   .find((e) => e.festival === slug && e.year === year)?.status ?? null;
 const known = editionFacts(approved as Contribution[], slug, year, editionStatus);
 const seoDescription = editionDescription(fest.name, year, state, known, list.length + uploads.length);
-const seoLd = editionJsonLd({ name: fest.name, year, url: absUrl(url(`${slug}/${year}/`)), image: cover ? absUrl(cover.page) : null, facts: known });
+const seoLd = ldGraph(
+  editionJsonLd({ name: fest.name, year, url: absUrl(url(`${slug}/${year}/`)), image: cover ? absUrl(cover.page) : null, facts: known }),
+  // The same crumbs as the visible <nav class="crumbs"> below.
+  breadcrumbJsonLd([{ name: t('nav.inicio'), url: absUrl(url('/')) }, { name: fest.name, url: absUrl(url(`${slug}/`)) }, { name: String(year) }]),
+);
 // Standardized transcriptions, folded under their own section (programa, programa del día),
 // and approved contributor transcriptions under Programa (edicion.ts merges live rows).
 // A document spanning several images is listed once, under its first image's title.

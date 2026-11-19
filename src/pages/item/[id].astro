@@ -7,7 +7,8 @@ import approvedRaw from '../../../data/approved/contributions.json';
 import { byLine, jsonForScript, type Contribution } from '../../lib/contrib';
 import { transcriptionDoc } from '../../lib/transcripciones';
 import { allItems, pageUrls, thumbUrl } from '../../lib/catalog';
-import { absUrl, itemJsonLd } from '../../lib/seo';
+import { absUrl, breadcrumbJsonLd, editionFacts, isConfirmedEdition, itemJsonLd, ldGraph } from '../../lib/seo';
+import editionsStatic from '../../../data/approved/editions.json';
 import { contentLang, intlLocales, t } from '../../lib/i18n';
 import { url } from '../../lib/paths';
 import { festivalName } from '../../lib/site';
@@ -28,11 +29,24 @@ const yearHref = item.year ? url(`${item.festival}/${item.year}/`) : url(`genera
 const image = thumbUrl(item);
 const description = [item.title, `${fest}${item.year ? ` ${item.year}` : ''}.`, t(`categorias.${item.category}`) + '.'].join(' · ');
 // Restricted documents get no structured data (they are not freely available here).
-const jsonLd = item.restricted ? null : itemJsonLd({
-  name: item.title, url: absUrl(url(`item/${item.id}/`)), image: image ? absUrl(image) : null,
-  editionUrl: item.year ? absUrl(url(`${item.festival}/${item.year}/`)) : null,
-  editionName: item.year ? `${fest} ${item.year}` : null, year: item.year,
-});
+// "About" the edition's Event only when the archive knows whether it took place (see seo.ts).
+const editionStatus = item.year === null ? null : (editionsStatic as { festival: string; year: number; status: 'held' | 'not_held' | 'unknown' }[])
+  .find((e) => e.festival === item.festival && e.year === item.year)?.status ?? null;
+const editionConfirmed = item.year !== null && isConfirmedEdition(editionFacts(approvedRaw as Contribution[], item.festival, item.year, editionStatus));
+const jsonLd = item.restricted ? null : ldGraph(
+  itemJsonLd({
+    name: item.title, url: absUrl(url(`item/${item.id}/`)), image: image ? absUrl(image) : null,
+    editionUrl: item.year ? absUrl(url(`${item.festival}/${item.year}/`)) : null,
+    editionName: item.year ? `${fest} ${item.year}` : null, year: item.year, editionConfirmed,
+  }),
+  // The same crumbs as the visible <nav class="crumbs"> below.
+  breadcrumbJsonLd([
+    { name: t('nav.inicio'), url: absUrl(url('/')) },
+    { name: fest, url: absUrl(url(`${item.festival}/`)) },
+    { name: String(yearLabel), url: absUrl(yearHref) },
+    { name: t(`categorias.${item.category}`) },
+  ]),
+);
 // Standardized transcription (committed) and approved contributor transcriptions (last export; transcripciones.ts merges live rows).
 const trDoc = item.restricted ? null : transcriptionDoc(item.id);
 const transcription = trDoc?.text ?? null;

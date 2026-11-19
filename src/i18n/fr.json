@@ -199,7 +199,10 @@
     "imagen": "Image {n} sur {total}",
     "retirado": "Ce document a été retiré des archives : il ne concerne pas les eisteddfodau de Patagonie.",
     "notas_titulo": "Informations apportées",
-    "sin_texto": "Ce document ne contient aucun texte à transcrire."
+    "sin_texto": "Ce document ne contient aucun texte à transcrire.",
+    "ocr_titulo": "Texte automatique (non relu)",
+    "ocr_ayuda": "Lu sur l'image par une machine (OCR) : il peut contenir des erreurs, surtout dans les noms gallois, les dates et les nombres. Il ne remplace pas la transcription.",
+    "ocr_pagina": "Page {n}"
   },
   "tabla": {
     "numero": "N°",

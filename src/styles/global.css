@@ -307,6 +307,8 @@ html[data-contraste='alto'] .st-some, html[data-contraste='alto'] .swatch.st-som
 .page-btn .pn { position: absolute; right: 0.4rem; bottom: 0.4rem; font: 600 0.85rem/1 var(--sans); background: var(--ink); color: var(--paper-hi); padding: 0.3rem 0.5rem; border-radius: 3px; }
 
 .textcard { background: var(--paper-hi); border: 1px solid var(--rule); padding: 1.1rem 1.25rem; max-width: var(--measure); white-space: pre-line; overflow-wrap: anywhere; }
+[data-ocr] summary { cursor: pointer; }
+[data-ocr] summary h2 { display: inline; }
 .restricted { background: var(--paper-hi); border: 1px solid var(--rule); border-top: 4px solid var(--ink-soft); padding: 1.5rem 1.25rem; max-width: var(--measure); }
 .restricted h2 { display: flex; gap: 0.6rem; align-items: center; }
 

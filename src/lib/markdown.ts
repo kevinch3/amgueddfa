@@ -84,9 +84,11 @@ export function itemMarkdown(o: {
   /** The document's transcription body (docmd), or null. */
   transcription: string | null;
   transcriptionLicense: string;
+  /** Machine text per page (scripts/ocr.py), used only when there is no transcription. */
+  ocr?: { n: number; text: string }[] | null;
 }): string {
   const out = [
-    frontMatter({ tipo: 'documento', id: o.id, eisteddfod: o.festival, ano: o.year, categoria: o.category, url: o.url, derechos: o.rights, transcrito: o.transcription !== null }),
+    frontMatter({ tipo: 'documento', id: o.id, eisteddfod: o.festival, ano: o.year, categoria: o.category, url: o.url, derechos: o.rights, transcrito: o.transcription !== null, texto_automatico: o.transcription === null && Boolean(o.ocr?.length) }),
     `# ${o.title}`,
     '',
     `${o.festivalName}${o.year !== null ? ` ${o.year}` : ''} · ${o.category}`,
@@ -105,6 +107,12 @@ export function itemMarkdown(o: {
   }
   if (o.transcription !== null) {
     out.push('## Transcripción', '', `Licencia de la transcripción: ${o.transcriptionLicense}.`, '', nestHeadings(o.transcription.trim()), '');
+  } else if (o.ocr?.length) {
+    out.push('## Texto automático (OCR, sin revisar)', '', 'Leído por una máquina en la imagen: puede tener errores, sobre todo en nombres en galés, fechas y números. No es una transcripción.', '');
+    for (const p of o.ocr) {
+      if (o.ocr.length > 1) out.push(`### Página ${p.n}`, '');
+      out.push(p.text.trim(), '');
+    }
   }
   return out.join('\n');
 }

@@ -227,6 +227,24 @@ describe('static build', () => {
     }
   });
 
+  it('machine text (OCR) shows only on public items with no transcription, labelled as unreviewed', () => {
+    const ocrIds = existsSync(join(__dirname, '..', 'src', 'data', 'ocr'))
+      ? readdirSync(join(__dirname, '..', 'src', 'data', 'ocr')).filter((f) => f.endsWith('.json')).map((f) => f.replace(/\.json$/, ''))
+      : [];
+    const byId = new Map(catalog.map((i) => [i.id, i] as const));
+    const human = new Set(transcribedIds());
+    for (const id of ocrIds) {
+      const it = byId.get(id);
+      if (!it) continue;
+      const page = read(`item/${id}/index.html`);
+      if (it.restricted || human.has(id) || it.text_excerpt) expect(page, id).not.toContain('data-ocr');
+      else {
+        const ocr = JSON.parse(readFileSync(join(__dirname, '..', 'src', 'data', 'ocr', `${id}.json`), 'utf8'));
+        if (ocr.pages.some((p: any) => p.text.trim())) expect(page, id).toContain('Texto automático (sin revisar)');
+      }
+    }
+  });
+
   it('Markdown twins: one per year page and public document, never a restricted one', () => {
     const yearMd = read('chubut/1937.md');
     expect(yearMd).toMatch(/^---\n/);

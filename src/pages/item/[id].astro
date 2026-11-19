@@ -6,6 +6,7 @@ import Transcripcion from '../../components/Transcripcion.astro';
 import approvedRaw from '../../../data/approved/contributions.json';
 import { byLine, jsonForScript, type Contribution } from '../../lib/contrib';
 import { transcriptionDoc } from '../../lib/transcripciones';
+import { ocrFor } from '../../lib/ocr';
 import { allItems, pageUrls, thumbUrl } from '../../lib/catalog';
 import { absUrl, breadcrumbJsonLd, editionFacts, isConfirmedEdition, itemJsonLd, ldGraph } from '../../lib/seo';
 import editionsStatic from '../../../data/approved/editions.json';
@@ -50,6 +51,8 @@ const jsonLd = item.restricted ? null : ldGraph(
 // Standardized transcription (committed) and approved contributor transcriptions (last export; transcripciones.ts merges live rows).
 const trDoc = item.restricted ? null : transcriptionDoc(item.id);
 const transcription = trDoc?.text ?? null;
+// Machine text (scripts/ocr.py), only when there is no transcription and no embedded text.
+const ocr = item.restricted || transcription || item.text_excerpt ? null : ocrFor(item.id);
 // A transcription shared by several images of one document: link the other images.
 const byIdAll = new Map(allItems().map((i) => [i.id, i] as const));
 const trSiblings = (trDoc?.items ?? []).filter((x) => x !== item.id).map((x) => byIdAll.get(x)).filter((x) => x && !x.restricted);
@@ -121,8 +124,22 @@ const retrieved = item.retrieved
           <p class="muted small">{t('item.texto_ayuda')}</p>
           <div class="textcard" lang={contentLang()}>{item.text_excerpt}</div>
         </section>
-      ) : transcription ? null : (
+      ) : transcription || ocr ? null : (
         <p class="textcard">{t('item.sin_vista')}</p>
+      )}
+      {ocr && (
+        <section class="section" aria-labelledby="ocr-t" data-ocr>
+          <details>
+            <summary><h2 id="ocr-t">{t('item.ocr_titulo')}</h2></summary>
+            <p class="muted small">{t('item.ocr_ayuda')}</p>
+            {ocr.pages.map((p) => (
+              <div id={`ocr-p${p.n}`}>
+                {ocr.pages.length > 1 && <h3 class="small">{t('item.ocr_pagina', { n: p.n })}</h3>}
+                <div class="textcard" lang={contentLang()}>{p.text}</div>
+              </div>
+            ))}
+          </details>
+        </section>
       )}
       {!item.restricted && (
         <section class="section" aria-labelledby="transcripcion-t" data-tr-item={item.id} data-tr-items={trDoc?.items.join(' ')} hidden={!transcription}>

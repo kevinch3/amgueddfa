@@ -199,7 +199,10 @@
     "imagen": "Delwedd {n} o {total}",
     "retirado": "Tynnwyd y ddogfen hon o'r archif: dydy hi ddim yn perthyn i eisteddfodau'r Wladfa.",
     "notas_titulo": "Gwybodaeth gan y gymuned",
-    "sin_texto": "Does dim testun i'w drawsgrifio yn y ddogfen hon."
+    "sin_texto": "Does dim testun i'w drawsgrifio yn y ddogfen hon.",
+    "ocr_titulo": "Testun awtomatig (heb ei adolygu)",
+    "ocr_ayuda": "Wedi'i ddarllen gan beiriant (OCR) o'r ddelwedd: gall fod gwallau, yn enwedig mewn enwau Cymraeg, dyddiadau a rhifau. Nid yw'n disodli'r trawsgrifiad.",
+    "ocr_pagina": "Tudalen {n}"
   },
   "tabla": {
     "numero": "Rhif",

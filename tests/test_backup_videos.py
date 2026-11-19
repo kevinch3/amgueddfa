@@ -109,3 +109,17 @@ def test_live_chat_is_not_a_transcription(tmp_path):
     dest = tmp_path / 'v_abc.mp4'
     dest.with_suffix('.info.json').write_text(json.dumps({'subtitles': {'live_chat': []}}))
     assert caption_state(dest) == 'none'
+
+
+def test_whisper_states(tmp_path):
+    import json
+    from scripts.backup.videos import caption_state
+    dest = tmp_path / 'v_abc.mp4'
+    dest.with_suffix('.info.json').write_text(json.dumps({'subtitles': {}}))
+    assert caption_state(dest) == 'none'
+    dest.with_suffix('.whisper.json').write_text('{"segments": []}')
+    assert caption_state(dest) == 'no_speech'
+    (tmp_path / 'v_abc.cy-whisper.vtt').write_text('WEBVTT')
+    assert caption_state(dest) == 'whisper'
+    (tmp_path / 'v_abc.es-orig.vtt').write_text('WEBVTT')
+    assert caption_state(dest) == 'yes'

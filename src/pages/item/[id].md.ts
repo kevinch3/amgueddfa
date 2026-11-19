@@ -4,6 +4,7 @@ import { t } from '../../lib/i18n';
 import { itemMarkdown } from '../../lib/markdown';
 import { url } from '../../lib/paths';
 import { absUrl, rightsText, TRANSCRIPTION_LICENSE } from '../../lib/seo';
+import { ocrFor } from '../../lib/ocr';
 import { transcriptionDoc } from '../../lib/transcripciones';
 import type { Item } from '../../lib/types';
 
@@ -22,6 +23,7 @@ export const GET: APIRoute = ({ props }) => {
     rights: rightsText(item.rights), source: item.source_label || null, sourceUrl: item.source_url,
     note: item.note_public ?? '', images: pageUrls(item).map(absUrl),
     transcription: transcriptionDoc(item.id)?.text ?? null, transcriptionLicense: TRANSCRIPTION_LICENSE,
+    ocr: item.text_excerpt ? null : ocrFor(item.id)?.pages ?? null,
   });
   return new Response(body, { headers: { 'Content-Type': 'text/markdown; charset=utf-8' } });
 };

@@ -199,7 +199,10 @@
     "imagen": "Image {n} of {total}",
     "retirado": "This document has been withdrawn from the archive: it does not belong to the eisteddfodau of Patagonia.",
     "notas_titulo": "Information from the community",
-    "sin_texto": "This document has no text to transcribe."
+    "sin_texto": "This document has no text to transcribe.",
+    "ocr_titulo": "Automatic text (not reviewed)",
+    "ocr_ayuda": "Read from the image by a machine (OCR): it may contain errors, especially in Welsh names, dates and numbers. It does not replace the transcription.",
+    "ocr_pagina": "Page {n}"
   },
   "tabla": {
     "numero": "No.",

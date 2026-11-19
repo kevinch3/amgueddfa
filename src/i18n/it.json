@@ -199,7 +199,10 @@
     "imagen": "Immagine {n} di {total}",
     "retirado": "Questo documento è stato ritirato dall'archivio: non riguarda gli Eisteddfod della Patagonia.",
     "notas_titulo": "Informazioni aggiunte",
-    "sin_texto": "Questo documento non ha testo da trascrivere."
+    "sin_texto": "Questo documento non ha testo da trascrivere.",
+    "ocr_titulo": "Testo automatico (non revisionato)",
+    "ocr_ayuda": "Letto dall'immagine da una macchina (OCR): può contenere errori, soprattutto nei nomi gallesi, nelle date e nei numeri. Non sostituisce la trascrizione.",
+    "ocr_pagina": "Pagina {n}"
   },
   "tabla": {
     "numero": "N.",

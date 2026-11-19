@@ -42,5 +42,13 @@ describe('markdown twins', () => {
     const bare = itemMarkdown({ ...base, transcription: null });
     expect(bare).not.toContain('## Transcripción');
     expect(bare).toContain('transcrito: false');
+    expect(bare).toContain('texto_automatico: false');
+    const machine = itemMarkdown({ ...base, transcription: null, ocr: [{ n: 1, text: 'CADAIR YR EISTEDDFOD' }, { n: 2, text: 'Soned' }] });
+    expect(machine).toContain('## Texto automático (OCR, sin revisar)');
+    expect(machine).toContain('### Página 2');
+    expect(machine).toContain('texto_automatico: true');
+    // A human transcription always wins over machine text.
+    const both = itemMarkdown({ ...base, transcription: '## Lunes', ocr: [{ n: 1, text: 'OCR' }] });
+    expect(both).not.toContain('Texto automático');
   });
 });

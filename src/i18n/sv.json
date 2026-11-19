@@ -199,7 +199,10 @@
     "imagen": "Bild {n} av {total}",
     "retirado": "Det här dokumentet har tagits bort ur arkivet: det hör inte till Patagoniens eisteddfodau.",
     "notas_titulo": "Uppgifter från gemenskapen",
-    "sin_texto": "Det här dokumentet har ingen text att transkribera."
+    "sin_texto": "Det här dokumentet har ingen text att transkribera.",
+    "ocr_titulo": "Automatisk text (ej granskad)",
+    "ocr_ayuda": "Maskinläst ur bilden (OCR): den kan innehålla fel, särskilt i walesiska namn, datum och siffror. Den ersätter inte transkriptionen.",
+    "ocr_pagina": "Sida {n}"
   },
   "tabla": {
     "numero": "Nr",

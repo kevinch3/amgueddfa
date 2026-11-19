@@ -199,7 +199,10 @@
     "imagen": "Imagen {n} de {total}",
     "retirado": "Este documento se retiró del archivo: no corresponde a los eisteddfodau de la Patagonia.",
     "notas_titulo": "Información aportada",
-    "sin_texto": "Este documento no tiene texto para transcribir."
+    "sin_texto": "Este documento no tiene texto para transcribir.",
+    "ocr_titulo": "Texto automático (sin revisar)",
+    "ocr_ayuda": "Leído por una máquina (OCR) en la imagen: puede tener errores, sobre todo en nombres en galés, fechas y números. No reemplaza a la transcripción.",
+    "ocr_pagina": "Página {n}"
   },
   "tabla": {
     "numero": "N.º",

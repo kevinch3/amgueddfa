@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "LITERATURA EN GALE\n\nLITERATURA EN CASTELLANO — 09/09/19 NORMAL\n\nARTES PLÁSTICAS, ARTESANÍAS, 20/09/19\nFOTOGRAFÍA",
+   "conf": 83.2
+  }
+ ]
+}

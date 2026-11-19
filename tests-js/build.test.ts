@@ -240,7 +240,8 @@ describe('static build', () => {
       if (it.restricted || human.has(id) || it.text_excerpt) expect(page, id).not.toContain('data-ocr');
       else {
         const ocr = JSON.parse(readFileSync(join(__dirname, '..', 'src', 'data', 'ocr', `${id}.json`), 'utf8'));
-        if (ocr.pages.some((p: any) => p.text.trim())) expect(page, id).toContain('Texto automático (sin revisar)');
+        if (ocr.pages.some((p: any) => p.text.trim() && (p.conf ?? 0) >= 75)) expect(page, id).toContain('Texto automático (sin revisar)');
+        else expect(page, id).not.toContain('data-ocr');
       }
     }
   });

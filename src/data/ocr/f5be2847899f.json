@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "QUERÉS SABER DÓNDE\nINSCRIBIRTE?\n\ncretaria Eisteddfod del Chubut\nSan Martin 90 - (9100) Trelew — Chubu!\nsteddfodpatagoni",
+   "conf": 90.9
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "Eisteddfod del Chubut\n\nfecha de inscripció\ndel 20/09/2019 hasta om |\n\nconsulta en nuestra pâgina de\nFacebook e\ninstagram",
+   "conf": 86.2
+  }
+ ]
+}

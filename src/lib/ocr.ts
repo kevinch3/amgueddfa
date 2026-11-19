@@ -12,10 +12,13 @@ const FILES = import.meta.glob('../data/ocr/*.json', { import: 'default', eager:
 
 const BY_ID = new Map(Object.entries(FILES).map(([p, v]) => [p.replace(/^.*\/([^/]+)\.json$/, '$1'), v] as const));
 
-/** The item's OCR with only the pages that found some text, or null. */
+/** Pages read with less mean confidence than this are kept in the file but not shown (stylised posters, handwriting). */
+export const MIN_PAGE_CONF = 75;
+
+/** The item's OCR with only the readable pages that found some text, or null. */
 export function ocrFor(id: string): Ocr | null {
   const o = BY_ID.get(id);
   if (!o) return null;
-  const pages = o.pages.filter((p) => p.text.trim().length > 0);
+  const pages = o.pages.filter((p) => p.text.trim().length > 0 && (p.conf ?? 0) >= MIN_PAGE_CONF);
   return pages.length ? { ...o, pages } : null;
 }

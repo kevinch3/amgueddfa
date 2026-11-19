@@ -1,0 +1,13 @@
+{
+ "tool": "tesseract",
+ "version": "5.5.0",
+ "langs": "cym+spa+eng",
+ "date": "2026-11-20",
+ "pages": [
+  {
+   "n": 1,
+   "text": "inarios\n\n23 al 29 de octubre de 2023 patagónicos\n\n10. Poesía. Rima y métrica libre, lengua autóctona.\nExpresión libre de un estado de ánimo que inspira.\nSe analizará el contenido y la sintaxis, tomando en cuenta\nsiempre que se trata de idiomas contextuales. (Pedir material\ninformativo en Secretaría del Eisteddfod).\n\nASOCIACIÓN\n\nIngeripciones: 18 al 22 de gepliembre ES",
+   "conf": 90.1
+  }
+ ]
+}

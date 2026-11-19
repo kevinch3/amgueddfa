@@ -105,7 +105,7 @@ def test_only_source_captions_are_published(items):
     # Internal working notes never reach the site: only a Facebook post's text
     # or the caption column (a platform's own description).
     for i in items:
-        if i.source_label not in ("Facebook", "Casgliad y Werin Cymru"):
+        if i.source_label not in ("Facebook", "Casgliad y Werin Cymru", "Papurau Newydd Cymru", "Wikimedia Commons"):
             assert i.note_public == "", i.src_path
 
 
@@ -126,6 +126,8 @@ def test_named_source_without_url():
     from scripts.catalog.scan import _source
     assert _source("Asociación Eisteddfod del Chubut") == (None, "Asociación Eisteddfod del Chubut")
     assert _source("https://drive.google.com/file/d/x/view") == ("https://drive.google.com/file/d/x/view", "Google Drive")
+    u = "https://newspapers.library.wales/view/4021959/4021960/1/"
+    assert _source(u) == (u, "Papurau Newydd Cymru")
 
 
 def test_platform_source_with_rights_and_caption(items):

@@ -31,6 +31,10 @@ KINDS = {
 PLATFORMS = {
     "casgliadywerin.cymru": "Casgliad y Werin Cymru",
     "peoplescollection.wales": "Casgliad y Werin Cymru",
+    # National Library of Wales newspapers (Y Drafod 1913-1919 and the Welsh press).
+    "newspapers.library.wales": "Papurau Newydd Cymru",
+    "papuraunewydd.llyfrgell.cymru": "Papurau Newydd Cymru",
+    "commons.wikimedia.org": "Wikimedia Commons",
 }
 PRE_EXISTING = "(pre-existing in folder; origin not recorded)"
 # Videos/ + VIDEOS.tsv: YouTube thumbnails and links, catalogued separately (not items yet).

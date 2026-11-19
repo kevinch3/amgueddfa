@@ -1186,6 +1186,19 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "2ae98cae-8437-4653-b080-e110e9d4882a",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2024,
+    "item_id": "ee3f14f29b10",
+    "payload": {
+      "year": 2024
+    },
+    "created_at": "2026-11-19T22:50:11.043915+00:00",
+    "reviewed_at": "2026-11-19T22:50:11.043915+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "2c15ab21-8015-4ea8-ab0c-4dee855cdd5c",
     "type": "tag",
     "festival": "chubut",
@@ -2090,6 +2103,22 @@
     },
     "created_at": "2026-11-17T13:32:44.148707+00:00",
     "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "50f07615-2667-4b50-bb60-9b6bfafe51af",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2019,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Programa del Eisteddfod del Chubut 2022 (ganadores 2019): https://asociaciongalesamadryn.org/wp-content/uploads/2022/05/Programa-2022-Eisteddfod-del-Chubut.pdf",
+      "lote": "763203e7-37fe-4618-93ac-a236a61535bf",
+      "value": "Medalla de Plata (Asociación San David): Facundo Lopez Morgan"
+    },
+    "created_at": "2026-11-19T22:56:14.458787+00:00",
+    "reviewed_at": "2026-11-19T22:56:14.458787+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -3508,6 +3537,22 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "8044fa9b-cef1-4543-ae2d-47e3969376f8",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2019,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "fuente": "Programa del Eisteddfod del Chubut 2022 (ganadores 2019): https://asociaciongalesamadryn.org/wp-content/uploads/2022/05/Programa-2022-Eisteddfod-del-Chubut.pdf",
+      "lote": "763203e7-37fe-4618-93ac-a236a61535bf",
+      "value": "si"
+    },
+    "created_at": "2026-11-19T22:56:14.458787+00:00",
+    "reviewed_at": "2026-11-19T22:56:14.458787+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "825670c1-8a47-4abd-b88f-6d386a242e3d",
     "type": "tag",
     "festival": "chubut",
@@ -3518,6 +3563,19 @@
     },
     "created_at": "2026-11-17T13:32:44.148707+00:00",
     "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "82b0480e-0ad8-4687-9d4d-60a89d07fc83",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2026,
+    "item_id": "7c02116f1bda",
+    "payload": {
+      "year": 2026
+    },
+    "created_at": "2026-11-19T22:46:17.390604+00:00",
+    "reviewed_at": "2026-11-19T22:46:17.390604+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -5877,6 +5935,19 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "cce610a1-d1ce-4469-8362-0976cbd7254c",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2024,
+    "item_id": "6fd18f7c40b1",
+    "payload": {
+      "year": 2024
+    },
+    "created_at": "2026-11-19T22:51:02.436186+00:00",
+    "reviewed_at": "2026-11-19T22:51:02.436186+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "ccf128db-c17c-4fe4-a3bd-9a6809ea5923",
     "type": "fact",
     "festival": "chubut",
@@ -6093,6 +6164,22 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "d72ce4e3-e543-4f51-99a1-83157c33fb06",
+    "type": "fact",
+    "festival": "mimosa",
+    "year": 2019,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Programa del Eisteddfod Mimosa 2023, comp. 68 y 79: https://asociaciongalesamadryn.org/wp-content/uploads/2023/06/PROGRAMA-2023-EISTEDDFOD-MIMOSA-PORTH-MADRYN-1.pdf",
+      "lote": "79d2de4e-be0a-4068-bb4d-69b2d21fcb1d",
+      "value": "Premio Telyn (poesía en galés): Ana Chiabrando Rees («Ffenestri dwy»); Premio Mimosa (poesía en castellano): Alejandro Jones («Niebla»)"
+    },
+    "created_at": "2026-11-19T22:56:16.125403+00:00",
+    "reviewed_at": "2026-11-19T22:56:16.125403+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "d762c3a0-966f-407b-a9af-0998177f8e57",
     "type": "tag",
     "festival": "chubut",
@@ -6147,6 +6234,20 @@
     },
     "created_at": "2026-11-17T11:06:25.263276+00:00",
     "reviewed_at": "2026-11-17T11:06:25.263276+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "d84fd57c-1ab1-4b88-877c-41d7da8ccd98",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2024,
+    "item_id": "ee3f14f29b10",
+    "payload": {
+      "hidden": true,
+      "no_text": true
+    },
+    "created_at": "2026-11-19T22:50:50.650775+00:00",
+    "reviewed_at": "2026-11-19T22:50:50.650775+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -6677,6 +6778,22 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "e8cc8d57-901c-45b5-9bfb-b7a1bbdb2f8a",
+    "type": "fact",
+    "festival": "mimosa",
+    "year": 2019,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "fuente": "Programa del Eisteddfod Mimosa 2023, comp. 68 y 79: https://asociaciongalesamadryn.org/wp-content/uploads/2023/06/PROGRAMA-2023-EISTEDDFOD-MIMOSA-PORTH-MADRYN-1.pdf",
+      "lote": "79d2de4e-be0a-4068-bb4d-69b2d21fcb1d",
+      "value": "si"
+    },
+    "created_at": "2026-11-19T22:56:16.125403+00:00",
+    "reviewed_at": "2026-11-19T22:56:16.125403+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "e9d49fd6-7016-468d-a535-20445503f196",
     "type": "tag",
     "festival": "chubut",
@@ -6792,6 +6909,19 @@
     "created_at": "2026-11-16T18:39:27.894079+00:00",
     "reviewed_at": "2026-11-16T18:39:27.894079+00:00",
     "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "ef047eeb-7a49-4ac3-a0c2-1127a32c6fa4",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 1934,
+    "item_id": "58d5ef55dc35",
+    "payload": {
+      "year": 1934
+    },
+    "created_at": "2026-11-19T22:52:44.034874+00:00",
+    "reviewed_at": "2026-11-19T22:52:44.034874+00:00",
+    "display_name": "Kevin Roberts"
   },
   {
     "id": "efb733f1-758d-48cd-a21d-90983dff15b9",
@@ -7053,6 +7183,19 @@
     },
     "created_at": "2026-11-15T09:43:29.574885+00:00",
     "reviewed_at": "2026-11-15T09:43:29.574885+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "f98f5821-98f7-48c1-bdb2-e6ec6b98c6d1",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2024,
+    "item_id": "2a55246506fd",
+    "payload": {
+      "hidden": true
+    },
+    "created_at": "2026-11-19T22:50:29.170701+00:00",
+    "reviewed_at": "2026-11-19T22:50:29.170701+00:00",
     "display_name": "Kevin Roberts"
   },
   {

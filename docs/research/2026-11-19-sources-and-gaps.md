@@ -121,3 +121,17 @@ announcements 2024 and 2026; Trevelin results 2014 and 2022; Chubut 2019 Corona 
 Mimosa 2015 and 2016 programas del día already in the archive come from here.
 Left out: Mimosa photo galleries (children, #29) and announcement-only posts.
 Still to transcribe: the Mimosa and Trevelin results (private master copies).
+
+## Asociación Galesa de Puerto Madryn (asociaciongalesamadryn.org), found 2026-11-19
+
+WordPress; its "Eisteddfodau <year>" page links each year's programas (some on Google Drive).
+Use Chrome for this site (user, 2026-11-19); a public page can't post to 127.0.0.1, so files
+go through the sink page opened by a real click + postMessage. Media list: `/wp-json/wp/v2/media`.
+Archived: Chubut 2022 and 2026 programas and the 2024 cover; Juventud 2026 programa and 2022
+recitation texts; Trevelin 2022, 2025, 2026 programas; Mimosa 2023 programa, 2025 programa del
+día; Her Siriol at Trevelin 2019 (3 adult photos).
+Held back (#29): 6 Trevelin 2019 photos with children, in ../.prensa/_entrada/agm_2019_10_*.
+Lost: "PROGRAMA-DEL-EISTEDDFOD-2023.pdf" and "RHAGLEN-EISTEDDFOD-2023.pdf" (gone from the site;
+the Wayback copies stop at exactly 1 MiB) and the Juventud 2022 "Reglamento y Programa" (gone,
+never captured). Ask the association for them.
+Skipped: Semana de la Cultura Galesa, sandcastle contest, balances, undated stock photos.

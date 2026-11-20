@@ -45,5 +45,29 @@
    "desde": 70,
    "hasta": 407
   }
+ ],
+ "tbDh70HXvDY": [
+  {
+   "letra": "ciego-quisiera-haber-sido",
+   "desde": 0,
+   "hasta": 105
+  }
+ ],
+ "hVtD63KLlsw": [
+  {
+   "letra": "el-buen-remedio",
+   "desde": 35800,
+   "hasta": 35945
+  },
+  {
+   "letra": "el-buen-remedio",
+   "desde": 36340,
+   "hasta": 36490
+  },
+  {
+   "letra": "illuxit-nobis-hodie",
+   "desde": 37610,
+   "hasta": 37745
+  }
  ]
 }

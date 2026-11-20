@@ -2,7 +2,7 @@
 
 Generado por `python3 -m scripts.letras_pendientes`: no editar a mano. Cómo cargar una letra: skill `video-lyrics`.
 
-Obras cantadas con título en el programa y video transcripto: **64** (5 con letra, 59 pendientes). Obras «a elección» por identificar: **120** apariciones.
+Obras cantadas con título en el programa y video transcripto: **61** (12 con letra, 49 pendientes). Obras «a elección» por identificar: **117** apariciones.
 
 Primero las de texto probablemente libre (litúrgico, tradicional, autores antiguos: una pista, los derechos los confirma el mantenedor), después por cantidad de videos (una letra sirve para todos). Para cada una hace falta el texto **tal como se canta**, en su idioma.
 
@@ -21,14 +21,8 @@ Primero las de texto probablemente libre (litúrgico, tradicional, autores antig
 | In stiller Nacht | Johannes Brahms | probablemente libre | 1 | chubut 2026 comp. 79<br>[hVtD63KLlsw 9:53:02](https://www.youtube.com/watch?v=hVtD63KLlsw&t=35582s) | pendiente |
 | Pater noster | Igor Stravinsky | probablemente libre | 1 | chubut 2018 comp. 64<br>[eNmj-1_HlIk 1:30:39](https://www.youtube.com/watch?v=eNmj-1_HlIk&t=5439s) | pendiente |
 | Wade in the water | espiritual negro, anónimo, arr. Muitis | probablemente libre | 1 | chubut 2018 comp. 56<br>[utHSvsjwvwo 2:59:59](https://www.youtube.com/watch?v=utHSvsjwvwo&t=10799s) | pendiente |
-| Allá lejos y hace tiempo | Ariel Ramírez y Armando Tejada Gómez, arr. Néstor Zadoff | verificar derechos | 1 | chubut 2018 comp. 76<br>[eNmj-1_HlIk 4:47:18](https://www.youtube.com/watch?v=eNmj-1_HlIk&t=17238s) | pendiente |
-| Angor | Tudur Huws Jones | verificar derechos | 1 | chubut 2024 comp. 58<br>[L6FSD_iI5ew](https://www.youtube.com/watch?v=L6FSD_iI5ew) | pendiente |
-| Ar Lan y Môr | trefn. D. E. Parry Williams | verificar derechos | 1 | chubut 2018 comp. 71<br>[utHSvsjwvwo 7:56:22](https://www.youtube.com/watch?v=utHSvsjwvwo&t=28582s) | pendiente |
-| Cachilo dormido | Atahualpa Yupanqui, versión coral de Joaquín Martínez Dávila | verificar derechos | 1 | chubut 2026 comp. 71<br>[cDpe89FFjOA 4:46:38](https://www.youtube.com/watch?v=cDpe89FFjOA&t=17198s) | pendiente |
 | Canción de cuna india | Gilardo Gilardi | verificar derechos | 1 | chubut 2024 comp. 48<br>[VDCKHPXzibM 36:59](https://www.youtube.com/watch?v=VDCKHPXzibM&t=2219s) | pendiente |
-| Canción de cuna para despertar a un negrito | C. Isella – N. Guillén | verificar derechos | 1 | chubut 2025 comp. 65<br>[_75BiKuifoQ](https://www.youtube.com/watch?v=_75BiKuifoQ) | pendiente |
 | Canto versos | Jorge Fandermole | verificar derechos | 1 | chubut 2026 comp. 54<br>[cDpe89FFjOA 2:39:01](https://www.youtube.com/watch?v=cDpe89FFjOA&t=9541s) | pendiente |
-| Ciego quisiera haber sido | Carlos Guastavino – Eduardo Falú | verificar derechos | 1 | chubut 2013 comp. 53<br>[tbDh70HXvDY](https://www.youtube.com/watch?v=tbDh70HXvDY) | pendiente |
 | Cinema Paradiso (Se) | Ennio Morricone | verificar derechos | 1 | chubut 2025 comp. 49<br>[MIW7333GiIY 4:16:48](https://www.youtube.com/watch?v=MIW7333GiIY&t=15408s) | pendiente |
 | Como pájaros en el aire | Peteco Carabajal, arr. Liliana Cangiano | verificar derechos | 1 | chubut 2014 comp. 62<br>[-250wdPJHUk](https://www.youtube.com/watch?v=-250wdPJHUk) | pendiente |
 | Coplas para la tejedora | Jorge Fandermole, versión coral de Pablo Roberto | verificar derechos | 1 | chubut 2026 comp. 72<br>[hVtD63KLlsw 1:00:43](https://www.youtube.com/watch?v=hVtD63KLlsw&t=3643s) | pendiente |
@@ -36,11 +30,9 @@ Primero las de texto probablemente libre (litúrgico, tradicional, autores antig
 | Cwsg Osian | — | verificar derechos | 1 | chubut 2025 comp. 54<br>[Y0Az9sUWak0](https://www.youtube.com/watch?v=Y0Az9sUWak0) | pendiente |
 | Dashenka | Islwyn Ffowc Ellis | verificar derechos | 1 | chubut 2022 comp. 68<br>[-t5r4pwKx50 7:15:30](https://www.youtube.com/watch?v=-t5r4pwKx50&t=26130s) | pendiente |
 | Eiddot Ti, O Dduw, yw y Mawredd | — | verificar derechos | 1 | chubut 2012 comp. 62<br>[6bEQQTDyMqY](https://www.youtube.com/watch?v=6bEQQTDyMqY) | pendiente |
-| El buen remedio | C. Montbrum Ocampo y H. Videla Flores, versión coral María del Carmen Aguilar | verificar derechos | 1 | chubut 2026 comp. 79<br>[hVtD63KLlsw 9:53:02](https://www.youtube.com/watch?v=hVtD63KLlsw&t=35582s) | pendiente |
 | Flores argentinas | Carlos Guastavino | verificar derechos | 1 | chubut 2013 comp. 62<br>[fpNpqWUJ5GM](https://www.youtube.com/watch?v=fpNpqWUJ5GM) | pendiente |
 | Gurisito | candombe con percusión corporal, Daniel Viglietti, versión coral Pablo D. Roberto | verificar derechos | 1 | chubut 2022 comp. 61<br>[0X83qrUotz0 1:10:40](https://www.youtube.com/watch?v=0X83qrUotz0&t=4240s) | pendiente |
 | Gweddi y Pechadur | Morfudd Llwyn Owen | verificar derechos | 1 | chubut 2008 comp. 44<br>[d4K4n-FH7IY](https://www.youtube.com/watch?v=d4K4n-FH7IY) | pendiente |
-| Illuxit nobis hodie | Albert Alcaraz | verificar derechos | 1 | chubut 2026 comp. 78<br>[hVtD63KLlsw 10:26:18](https://www.youtube.com/watch?v=hVtD63KLlsw&t=37578s) | pendiente |
 | Juana Azurduy | Ariel Ramírez, v. c. Juan Picarel | verificar derechos | 1 | chubut 2024 comp. 65<br>[VDCKHPXzibM 4:43](https://www.youtube.com/watch?v=VDCKHPXzibM&t=283s) | pendiente |
 | La finadita | — | verificar derechos | 1 | chubut 2024 comp. 63<br>[VDCKHPXzibM 2:32:16](https://www.youtube.com/watch?v=VDCKHPXzibM&t=9136s) | pendiente |
 | La muerte del ángel | Astor Piazolla, arr. Néstor Zadoff | verificar derechos | 1 | chubut 2018 comp. 73<br>[utHSvsjwvwo 7:16:25](https://www.youtube.com/watch?v=utHSvsjwvwo&t=26185s) | pendiente |
@@ -55,22 +47,27 @@ Primero las de texto probablemente libre (litúrgico, tradicional, autores antig
 | Oro y plata | música Charlo, letra Homero Manzi, versión coral Javier Zentner | verificar derechos | 1 | chubut 2026 comp. 78<br>[hVtD63KLlsw 10:26:18](https://www.youtube.com/watch?v=hVtD63KLlsw&t=37578s) | pendiente |
 | Pam Fod Eira yn Wyn? | Dafydd Iwan, trefn. Eirian Williams | verificar derechos | 1 | chubut 2018 comp. 62<br>[eNmj-1_HlIk 3:48:04](https://www.youtube.com/watch?v=eNmj-1_HlIk&t=13684s) | pendiente |
 | Pistyll y Llan | — | verificar derechos | 1 | chubut 2025 comp. 43<br>[_75BiKuifoQ](https://www.youtube.com/watch?v=_75BiKuifoQ) | pendiente |
-| Popule meus | Leonardo San Juan | verificar derechos | 1 | chubut 2024 comp. 72<br>[arqF7QHVMw0 4:52:54](https://www.youtube.com/watch?v=arqF7QHVMw0&t=17574s) | pendiente |
 | Rabo de nube | Silvio Rodríguez, arr. César A. Carrillo | verificar derechos | 1 | chubut 2018 comp. 75<br>[eNmj-1_HlIk 3:26:24](https://www.youtube.com/watch?v=eNmj-1_HlIk&t=12384s) | pendiente |
 | Rhywle gyda'r hwyr | Tudur Dylan Jones / Hector Mac Donald | verificar derechos | 1 | chubut 2022 comp. 59<br>[GTMOQf-GWjM](https://www.youtube.com/watch?v=GTMOQf-GWjM) | pendiente |
 | Si llega a ser tucumana | Cuchi Leguizamón, v. c. Santiago Búcar | verificar derechos | 1 | chubut 2024 comp. 73<br>[arqF7QHVMw0 4:27:20](https://www.youtube.com/watch?v=arqF7QHVMw0&t=16040s) | pendiente |
 | Stesion Strata | Tecwyn Ifan, trefniant Euros Rhys Evans | verificar derechos | 1 | chubut 2022 comp. 55<br>[jwdDEPP-Pd0](https://www.youtube.com/watch?v=jwdDEPP-Pd0) | pendiente |
 | Tamquam agnus | Tomás Luis de Victoria | verificar derechos | 1 | chubut 2018 comp. 54<br>[utHSvsjwvwo 6:15:04](https://www.youtube.com/watch?v=utHSvsjwvwo&t=22504s) | pendiente |
 | Theodora | J. Vernon Lewis – A. Legge | verificar derechos | 1 | chubut 2023 comp. 54<br>[LQ28BhyOZBQ 11:19](https://www.youtube.com/watch?v=LQ28BhyOZBQ&t=679s) | pendiente |
-| Whitburn | Henry Baker, trefn. Eric Jones | verificar derechos | 1 | chubut 2018 comp. 59<br>[eNmj-1_HlIk 1:43:10](https://www.youtube.com/watch?v=eNmj-1_HlIk&t=6190s) | pendiente |
 | Wrth fynd efo Deio i Dywyn | — | verificar derechos | 1 | chubut 2025 comp. 45<br>[C20iW5Fuac8](https://www.youtube.com/watch?v=C20iW5Fuac8) | pendiente |
 | Y Cymro | Meirion Williams | verificar derechos | 1 | chubut 2024 comp. 43<br>[VDCKHPXzibM 33:16](https://www.youtube.com/watch?v=VDCKHPXzibM&t=1996s) | pendiente |
 | Ysbryd Rebeca | Tecwyn Ifan | verificar derechos | 1 | chubut 2026 comp. 65<br>[cDpe89FFjOA 5:32:48](https://www.youtube.com/watch?v=cDpe89FFjOA&t=19968s) | pendiente |
 | Zamba del carnaval | Cuchi Leguizamón, versión coral Pablo D. Roberto | verificar derechos | 1 | chubut 2022 comp. 71<br>[-t5r4pwKx50 8:04:03](https://www.youtube.com/watch?v=-t5r4pwKx50&t=29043s) | pendiente |
 | En los brazos de la luna | Alfonso Letelier | verificar derechos | 3 | chubut 2008 comp. 60<br>[2VjZIBTMmqo](https://www.youtube.com/watch?v=2VjZIBTMmqo) [BFkVC4Xe7RA](https://www.youtube.com/watch?v=BFkVC4Xe7RA) [cLZdGxOA1TE](https://www.youtube.com/watch?v=cLZdGxOA1TE) | ✅ cargada |
-| El abuelo y el pehuen | Rubén Patagonia, Jeremías Chauque y Fabián Vejar, versión coral Sergio Rodrigo Seballos | verificar derechos | 2 | chubut 2022 comp. 60<br>[0X83qrUotz0 3:24:09](https://www.youtube.com/watch?v=0X83qrUotz0&t=12249s) [txd21BSbm70](https://www.youtube.com/watch?v=txd21BSbm70) | ✅ cargada |
 | Ta na solbici | Samo Vovk | verificar derechos | 2 | chubut 2025 comp. 76<br>[MIW7333GiIY 4:25](https://www.youtube.com/watch?v=MIW7333GiIY&t=265s) [_75BiKuifoQ](https://www.youtube.com/watch?v=_75BiKuifoQ) | ✅ cargada |
 | Alfonsina y el mar | A. Ramírez – F. Luna, v. c. C. Jones | verificar derechos | 1 | chubut 2012 comp. 67<br>[-3MdFJJ4-Qs](https://www.youtube.com/watch?v=-3MdFJJ4-Qs) | ✅ cargada |
+| Allá lejos y hace tiempo | Ariel Ramírez y Armando Tejada Gómez, arr. Néstor Zadoff | verificar derechos | 1 | chubut 2018 comp. 76<br>[eNmj-1_HlIk 4:47:18](https://www.youtube.com/watch?v=eNmj-1_HlIk&t=17238s) | ✅ cargada |
+| Angor | Tudur Huws Jones | verificar derechos | 1 | chubut 2024 comp. 58<br>[L6FSD_iI5ew](https://www.youtube.com/watch?v=L6FSD_iI5ew) | ✅ cargada |
+| Ar Lan y Môr | trefn. D. E. Parry Williams | verificar derechos | 1 | chubut 2018 comp. 71<br>[utHSvsjwvwo 7:56:22](https://www.youtube.com/watch?v=utHSvsjwvwo&t=28582s) | ✅ cargada |
+| Canción de cuna para despertar a un negrito | C. Isella – N. Guillén | verificar derechos | 1 | chubut 2025 comp. 65<br>[_75BiKuifoQ](https://www.youtube.com/watch?v=_75BiKuifoQ) | ✅ cargada |
+| Ciego quisiera haber sido | Carlos Guastavino – Eduardo Falú | verificar derechos | 1 | chubut 2013 comp. 53<br>[tbDh70HXvDY](https://www.youtube.com/watch?v=tbDh70HXvDY) | ✅ cargada |
+| El abuelo y el pehuen | Rubén Patagonia, Jeremías Chauque y Fabián Vejar, versión coral Sergio Rodrigo Seballos | verificar derechos | 1 | chubut 2022 comp. 60<br>[txd21BSbm70](https://www.youtube.com/watch?v=txd21BSbm70) | ✅ cargada |
+| El buen remedio | C. Montbrum Ocampo y H. Videla Flores, versión coral María del Carmen Aguilar | verificar derechos | 1 | chubut 2026 comp. 79<br>[hVtD63KLlsw 9:53:02](https://www.youtube.com/watch?v=hVtD63KLlsw&t=35582s) | ✅ cargada |
+| Illuxit nobis hodie | Albert Alcaraz | verificar derechos | 1 | chubut 2026 comp. 78<br>[hVtD63KLlsw 10:26:18](https://www.youtube.com/watch?v=hVtD63KLlsw&t=37578s) | ✅ cargada |
 | Rosa Amarela | Heitor Villalobos | verificar derechos | 1 | chubut 2025 comp. 75<br>[h5zX7SaZJt8](https://www.youtube.com/watch?v=h5zX7SaZJt8) | ✅ cargada |
 
 ## Obras «a elección» (identificar primero cuál se cantó)
@@ -157,7 +154,6 @@ Escuchar el video o leer el anuncio; con el título, la letra se pide como cualq
 | chubut 2019 | 53 | Dúo de voces iguales o mixtas: obra a elección del repertorio popular argentino o latinoamericano. | [_Ilm9yIVpgw](https://www.youtube.com/watch?v=_Ilm9yIVpgw) |
 | chubut 2019 | 53 | Dúo de voces iguales o mixtas: obra a elección del repertorio popular argentino o latinoamericano. | [xnscjSsuFDE](https://www.youtube.com/watch?v=xnscjSsuFDE) |
 | chubut 2019 | 60 | Parti neu gôr teulu: hunanddewisiad. | [SvBTOh3OlMg 17:26](https://www.youtube.com/watch?v=SvBTOh3OlMg&t=1046s) |
-| chubut 2019 | 68 | Conjunto o coro familiar: obra o arreglo coral en castellano a elección. | [3jnNklLlxQ0 1:45:30](https://www.youtube.com/watch?v=3jnNklLlxQ0&t=6330s) |
 | chubut 2019 | 68 | Conjunto o coro familiar: obra o arreglo coral en castellano a elección. | [5G_NHhXz3fo](https://www.youtube.com/watch?v=5G_NHhXz3fo) |
 | chubut 2019 | 68 | Conjunto o coro familiar: obra o arreglo coral en castellano a elección. | [g4i99zBwQkY](https://www.youtube.com/watch?v=g4i99zBwQkY) |
 | chubut 2019 | 74 | Segunda competencia principal para coro mixto: a) «Ave María», Karl Jenkins; b) obra de jazz, góspel o negr… | [SvBTOh3OlMg 3:13:26](https://www.youtube.com/watch?v=SvBTOh3OlMg&t=11606s) |
@@ -177,7 +173,6 @@ Escuchar el video o leer el anuncio; con el título, la letra se pide como cualq
 | chubut 2023 | 49 | Solo, música argentina: homenaje a María Elena Walsh, composición a elección. | [EV2CceTr4sk](https://www.youtube.com/watch?v=EV2CceTr4sk) |
 | chubut 2023 | 60 | Parti neu gôr capel: hunanddewisiad. | [iJoP7cnrRU4](https://www.youtube.com/watch?v=iJoP7cnrRU4) |
 | chubut 2023 | 64 | Cuarteto mixto: himno a elección, en idioma no galés. | [LQ28BhyOZBQ 15:40](https://www.youtube.com/watch?v=LQ28BhyOZBQ&t=940s) |
-| chubut 2023 | 74 | Conjunto familiar: obra o arreglo a elección. | [LQ28BhyOZBQ 5:13:08](https://www.youtube.com/watch?v=LQ28BhyOZBQ&t=18788s) |
 | chubut 2023 | 75 | Conjunto o coro de capilla: obra o arreglo a elección. | [LQ28BhyOZBQ 3:15:24](https://www.youtube.com/watch?v=LQ28BhyOZBQ&t=11724s) |
 | chubut 2023 | 76 | Competencia principal para coro: «Ubi caritas», Gjeilo; spiritual, góspel o jazz a elección. | [7GeZCEDgcoc](https://www.youtube.com/watch?v=7GeZCEDgcoc) |
 | chubut 2023 | 76 | Competencia principal para coro: «Ubi caritas», Gjeilo; spiritual, góspel o jazz a elección. | [LQ28BhyOZBQ 8:44:52](https://www.youtube.com/watch?v=LQ28BhyOZBQ&t=31492s) |
@@ -186,7 +181,6 @@ Escuchar el video o leer el anuncio; con el título, la letra se pide como cualq
 | chubut 2024 | 50 | Solo libre, música rioplatense: obra a elección (tango, milonga, candombe). | [VDCKHPXzibM 2:44:02](https://www.youtube.com/watch?v=VDCKHPXzibM&t=9842s) |
 | chubut 2024 | 51 | Solo libre, rock nacional: obra a elección. | [arqF7QHVMw0 3:08:57](https://www.youtube.com/watch?v=arqF7QHVMw0&t=11337s) |
 | chubut 2024 | 66 | Conjunto o coro familiar: obra o arreglo coral a elección. | [arqF7QHVMw0 2:59:02](https://www.youtube.com/watch?v=arqF7QHVMw0&t=10742s) |
-| chubut 2024 | 72 | Competencia principal. Coro mixto: «Popule meus», Leonardo San Juan; obra original para coro de libre elecc… | [arqF7QHVMw0 4:52:54](https://www.youtube.com/watch?v=arqF7QHVMw0&t=17574s) |
 | chubut 2025 | 47 | Unawd canu emyn: hunanddewisiad. | [P1UDkhDczBA](https://www.youtube.com/watch?v=P1UDkhDczBA) |
 | chubut 2025 | 47 | Unawd canu emyn: hunanddewisiad. | [ZPpmyykLYXc](https://www.youtube.com/watch?v=ZPpmyykLYXc) |
 | chubut 2025 | 48 | Unawd cerdd dant: hunanddewisiad. | [Uc6M-ifLmOE](https://www.youtube.com/watch?v=Uc6M-ifLmOE) |

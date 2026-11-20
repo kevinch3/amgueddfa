@@ -960,7 +960,8 @@
     "fuente": {
       "subida": "Upphovspersonens undertexter",
       "youtube": "YouTube, automatisk",
-      "whisper": "Whisper, inte granskad"
+      "whisper": "Whisper, inte granskad",
+      "reconstruida": "Automatisk rekonstruktion"
     },
     "idiomas": {
       "es": "spanska",
@@ -973,7 +974,14 @@
     "nota_capitulos": "Markerade automatiskt utifrån det som annonseras under sessionen; de kan innehålla fel.",
     "ver_en_video": "Se i videon, från {tiempo}",
     "letra_alineada": "sångtext synkad",
-    "nota_letra": "Sångtext till {piezas}, automatiskt synkad med videon: tiderna är ungefärliga."
+    "nota_letra": "Sångtext till {piezas}, automatiskt synkad med videon: tiderna är ungefärliga.",
+    "origen": {
+      "subida": "upphovspersonens undertexter",
+      "yt_es": "YouTube automatisk",
+      "whisper_es": "Whisper",
+      "cy": "taligenkänning för walesiska",
+      "letra": "verkets sångtext"
+    }
   },
   "buscar": {
     "titulo": "Sök i arkivet",

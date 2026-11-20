@@ -158,6 +158,8 @@ if (dialog) {
       if (letra) li.classList.add('rep-letra');
       if (letra?.idioma || tr.lang) words.lang = letra?.idioma || tr.lang;
       b.setAttribute('aria-label', `${t('reproductor.ir_a', { tiempo: fmtTime(start) })}: ${text}`);
+      const fu = tr.fuentes?.[i];
+      if (fu?.length) b.title = fu.map((x) => t(`reproductor.origen.${x}`)).join(' + ');
       b.append(time, words);
       li.append(b);
       frag.append(li);

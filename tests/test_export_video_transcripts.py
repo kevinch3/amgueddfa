@@ -169,3 +169,22 @@ def test_fix_eisteddfod_context_keeps_real_words():
     assert f("la estancia Trevelin") == "la estancia Trevelin"
     assert f("premio del Estado provincial") == "premio del Estado provincial"
     assert f("comisión del Estado del Chubut") == "comisión del Eisteddfod del Chubut"
+
+
+def test_export_prefers_reconstruction(tmp_path):
+    b = tmp_path / "backup"
+    _video(b, "C/2025/a_AAAAAAAAAAA.mp4", {"es-orig": YT_AUTO})
+    _video(b, "J/2025/d_DDDDDDDDDDD.mp4", {"es-orig": YT_AUTO})
+    (b / "INDEX.tsv").write_text("id\tfile\n" + f"{'A' * 11}\tC/2025/a_AAAAAAAAAAA.mp4\n{'D' * 11}\tJ/2025/d_DDDDDDDDDDD.mp4\n", encoding="utf-8")
+    recon = tmp_path / "recon"
+    recon.mkdir()
+    rec = {"src": "reconstruida", "lang": "es", "modelo": "claude-sonnet-5-5", "seg": [[1.4, "buenas noches a todos"]],
+           "fuentes": [["yt_es"]], "ventanas": {"total": 1, "modelo": 1, "reglas": 0, "vacias": 0}}
+    for vid in ("A" * 11, "D" * 11):
+        (recon / f"{vid}.json").write_text(json.dumps(rec), encoding="utf-8")
+    out = tmp_path / "out"
+    export(b, [{"id": "A" * 11, "festival": "chubut"}, {"id": "D" * 11, "festival": "juventud"}], out, recon=recon)
+    a = json.loads((out / ("A" * 11 + ".json")).read_text())
+    assert a["src"] == "reconstruida" and len(a["fuentes"]) == len(a["seg"]) == 1
+    assert "ventanas" not in a and "modelo" not in a
+    assert not (out / ("D" * 11 + ".json")).exists()  # Juventud stays out even with a reconstruction file

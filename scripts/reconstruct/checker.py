@@ -14,6 +14,27 @@ from __future__ import annotations
 from scripts.reconstruct.context import tokens
 from scripts.reconstruct.windows import Window
 
+# Welsh initial mutations, mutated -> radical (soft, nasal, aspirate; folded spelling). A Welsh line
+# may use a mutated form of a heard word ("o Cymru" heard -> "o Gymru"): grammar, not new words.
+_UNMUTATE = [("ngh", "c"), ("mh", "p"), ("nh", "t"), ("ng", "g"), ("ph", "p"), ("th", "t"), ("ch", "c"),
+             ("dd", "d"), ("rh", "r"), ("b", "p"), ("d", "t"), ("g", "c"), ("f", "b"), ("f", "m"),
+             ("l", "ll"), ("r", "rh"), ("m", "b"), ("n", "d")]
+_VOWELS = "aeiouwy"
+
+
+def _radicals(word: str) -> set[str]:
+    """The word and every form it could be a mutation of (soft g-loss and h-prefix included)."""
+    out = {word}
+    for mut, rad in _UNMUTATE:
+        if word.startswith(mut):
+            out.add(rad + word[len(mut):])
+    if word[:1] in _VOWELS:
+        out.add("g" + word)            # soft mutation drops g: "ardd" <- "gardd"
+    if word.startswith("h") and word[1:2] in _VOWELS:
+        out.add(word[1:])              # h-prefix: "ei henw" <- "enw"
+    return out
+
+
 NEAR = 5.0   # seconds: a word must have been heard this close to the line that uses it
 SAME = 0.05  # seconds: a line's time must be a source line's time
 
@@ -58,7 +79,11 @@ def check_window(w: Window, reply: dict) -> list[str]:
                 else:
                     fixed.update(to)
                     from_words.update(frm)
-            unknown = [tok for tok in words if tok not in heard and tok not in fixed]
+            if line.get("lang") == "cy":
+                heard_roots = {r for tok in heard for r in _radicals(tok)}
+                unknown = [tok for tok in words if tok not in heard and tok not in fixed and not (_radicals(tok) & heard_roots)]
+            else:
+                unknown = [tok for tok in words if tok not in heard and tok not in fixed]
             if unknown:
                 errors.append(f"rule 1: {where} uses words nobody heard: {', '.join(unknown)}")
             if not src:

@@ -109,3 +109,19 @@ def test_line_time_must_be_a_source_time():
 
 def test_empty_text_line_fails():
     assert check_window(WR, {"lines": [line(3.4, "  ¡! ")]})
+
+
+WCY = Window(0.0, 60.0, (Line(10.0, "ac yn cyfarch o Cymru am dychwelyd adre", "cy", "cy"),),
+             Context("", frozenset()), "h")
+
+
+def test_welsh_mutations_of_a_heard_word_pass_in_welsh_lines():
+    ok = {"lines": [line(10.0, "ac yn cyfarch o Gymru am ddychwelyd adre", src=("cy",), lang="cy")]}
+    assert check_window(WCY, ok) == []
+
+
+def test_mutations_do_not_open_spanish_lines_or_other_words():
+    es = {"lines": [line(10.0, "ac yn cyfarch o Gymru", src=("cy",), lang="es")]}
+    assert any(e.startswith("rule 1") for e in check_window(WCY, es))
+    other = {"lines": [line(10.0, "ac yn cyfarch o Gaerdydd", src=("cy",), lang="cy")]}
+    assert any(e.startswith("rule 1") for e in check_window(WCY, other))

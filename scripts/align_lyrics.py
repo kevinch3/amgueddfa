@@ -167,3 +167,37 @@ def apply(t: dict, spans: list[dict], letras: Path = LETRAS) -> dict:
 def spans_for(video_id: str, letras: Path = LETRAS) -> list[dict]:
     p = letras / "videos.json"
     return json.loads(p.read_text(encoding="utf-8")).get(video_id, []) if p.exists() else []
+
+
+def preview(seg: list, stanzas: list[list[str]], desde: float, hasta: float) -> tuple[list[list], list[str]]:
+    """The aligned lines and warnings worth a look before publishing."""
+    out = align(seg, stanzas, desde, hasta)
+    warn = []
+    for (a, la), (b, _) in zip(out, out[1:]):
+        if b - a < 1.0:
+            warn.append(f"{a:.1f}s «{la}»: next line under 1 s later (too many repeats, or the span is too short?)")
+    if out and out[0][0] - desde > 30:
+        warn.append(f"first line {out[0][0] - desde:.0f} s after 'desde': the span may start too early")
+    if not any(_words(x) for t, x in seg if desde <= t < hasta):
+        warn.append("no heard words in the span: wrong video or times")
+    return out, warn
+
+
+if __name__ == "__main__":
+    import argparse
+
+    ap = argparse.ArgumentParser(description="Preview an alignment before adding it to data/letras/videos.json.")
+    ap.add_argument("video")
+    ap.add_argument("letra", help="slug in data/letras/ (without .md)")
+    ap.add_argument("desde", type=float)
+    ap.add_argument("hasta", type=float)
+    a = ap.parse_args()
+    tr = json.loads((REPO / "public" / "transcripciones-video" / f"{a.video}.json").read_text(encoding="utf-8"))
+    if tr.get("letras"):
+        print("note: this file already carries aligned lyrics; preview the raw text by re-exporting without the span")
+    _, st = parse_letra((LETRAS / f"{a.letra}.md").read_text(encoding="utf-8"))
+    lines, warnings = preview(tr["seg"], st, a.desde, a.hasta)
+    for t, l in lines:
+        print(f"{int(t) // 60}:{int(t) % 60:02d}  {l}")
+    for w in warnings:
+        print("WARN", w)

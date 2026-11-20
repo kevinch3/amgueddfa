@@ -89,6 +89,17 @@ export function yearRange(f: FestivalSlug, approved: DatedLike[] = APPROVED_DATE
 }
 
 /**
+ * Every year of the timeline plus documented not-held years outside it (#22): a
+ * "no se realizó" before the first material is real data, not an empty year.
+ */
+export function editionYears(f: FestivalSlug, notHeld: number[] = [], approved: DatedLike[] = APPROVED_DATED): number[] {
+  const [a, b] = yearRange(f, approved);
+  const ys = new Set(Array.from({ length: b - a + 1 }, (_, k) => a + k));
+  for (const y of notHeld) ys.add(y);
+  return [...ys].sort((x, y) => x - y);
+}
+
+/**
  * Nothing at all for this edition: no catalog item and no approved contribution
  * of any type (upload, fact or memory) other than a "no se realizó" fact. Empty decades collapse on this, not on
  * editionState, so a decade with only a memory stays open.

@@ -1,0 +1,22 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Esw, gan Selwyn Griffiths. O, mami, mae'n braf gael dod i'r sw. Edrychwch, eliffant mawr a chyngarŵ, dacw deugr a llew a gardd fawr wen a mwyn cyn sefyll ar ei ben. O, mami, mae'n braf gael dod i'r sw. Glywch y parod yn gwaedu."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 1,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

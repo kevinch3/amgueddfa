@@ -1,0 +1,36 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Pryddemos silensio, por fawr. Daily Evans."
+  ],
+  [
+   44.88,
+   "A ffant o'r bore ar y gwael yn rhondda wrth ymyl fy ngwenyn i."
+  ],
+  [
+   62.88,
+   "Mae ei weddi o hyd, yn niwsig i gyd, mi wnaeth e walgu."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

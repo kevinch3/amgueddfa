@@ -1,0 +1,36 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "A chawdd ma' drw'ch ffrindie lliw iechyd ym mwyn."
+  ],
+  [
+   41.0,
+   "Chwarae uwch y lawon ar y denin o'r groen, sy'n myneud i fy nghalon am bob un o'i choen."
+  ],
+  [
+   49.0,
+   "Fel dygyn yn dwylo'r africa a'i goed, ar y bwyd oedd hi'n damwain."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

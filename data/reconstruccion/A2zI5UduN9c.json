@@ -1,0 +1,43 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "O'r heddynt, o'r heddynt, o'r heddynt drabwyg byd, drabwyg byd."
+  ],
+  [
+   20.0,
+   "A fy'n fodlon i fy ymdre, nid yn gaethwas ond mewn lle, pan na fadre fi'n gwledd dy damddu."
+  ],
+  [
+   43.0,
+   "Ni bydd gwylo'n oel ofni, ni'n gwylo'n oel ofni, ni'n gwylo t'na mwy byd, o t'na mwy byd."
+  ],
+  [
+   94.0,
+   "Halleluja, daw a fi, pan ga'l i fi, ne- i fi fy ngogledd yn rhydd, pan ddaw nawr ŵan, dyma'r dydd, cadw i'n ddadredd yn rhydd, at o hydd."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Hora santa de Raúl Artola, cuando lo llamas para cumer, el viene, re monolea en los juguetes, te dice que si, ya va."
+  ],
+  [
+   26.08,
+   "Pryse demora, para que insistas amorosamente y le dedicas su plato preferido, sus dubitas al ron con crema."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 1,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

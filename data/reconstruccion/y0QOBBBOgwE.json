@@ -1,0 +1,50 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Tyd i'r oeddais tliw i'r wawr, a hyd i'r machludwm."
+  ],
+  [
+   30.0,
+   "Tyd i aluniaist cerddasawr y gwanwyn anaw llwym, o cadw ni rhag colli'r hyd sydd yn hud yn oed."
+  ],
+  [
+   60.0,
+   "Bydd e'n crwydro drwy'r holl byd."
+  ],
+  [
+   100.0,
+   "Tyd i awelais't, taf na'i gwaed y gŵr ar ddydd fe'i rhyddid, o cadw ni rhag dafod oes, heb gŵr o'n i ddeud."
+  ],
+  [
+   130.0,
+   "Bod y ddraen na chyr na chroes, amen, amen, amen, amen."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

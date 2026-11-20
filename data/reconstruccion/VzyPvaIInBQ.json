@@ -1,0 +1,36 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Y Blodau Gwynion, o mor wyn oedd bod blodyn yn dyfechan lawn, oedd, yr oedd popeth mor wyn na thithau dim ond naw, a gwyniodd y rhosynnau ar hyd y llwybyr han, fyndysion cusanau yn gwrnel cudd yr aw."
+  ],
+  [
+   27.0,
+   "A beth am flodau gwynion oedd yno o'ch gwmpas di, pan brodais di hefo dynion oedd gasaf gennyf i?"
+  ],
+  [
+   38.0,
+   "A nawr, trallifan deigryn, gwyddos heb weld fy ngwyrdd, mai gwyn fydd pob blodyn a roddaf ar dy fedd."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

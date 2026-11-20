@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Y Storm, gan Guto Dafydd. A'i glustiau'n glwyfus, ferwyn, taranodd rhai yn glir y bydd gwlad y camdreigliadau yn wlad heb iaith cyn hir. Ystyriwch y camdreiglwyr, medd eraill, blin fel bellt. O'i dychryn a chywirdeb y fe aeth yr iaith i'r gwellt."
+  ],
+  [
+   30.0,
+   "Si prydaf yn estorom o ffraeo am yr iaith, wnaiff y safon ddim ei lladd hi nac am her ffeithrwydd chwaith."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 1,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

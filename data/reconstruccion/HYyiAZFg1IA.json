@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Mae'r ddaear yn glasu, yr agwedd sydd yn tyfu, a gweryddion yw'r gerddi, mae'r llwyni mor llon, a cheirdd yw'r eginiau, a'r adeilad y dolau, a blodau byrllannau byr llawnion."
+  ],
+  [
+   30.0,
+   "Mae'r ddaear yn fawr ffrwythlon a'i thrysor yn ddigon i bore ddydd rhy goleon yn dirion bob dydd, pe byddem ni ddynion mewn cyflwr heddychlon yn caru ni'n galw'n ein gilydd."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

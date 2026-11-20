@@ -1,0 +1,43 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   60.0,
+   "Gath ei ddangos at y ffôn."
+  ],
+  [
+   67.0,
+   "Hefyd mi oedd y llanwyr yn galw am y ffôn."
+  ],
+  [
+   72.0,
+   "Mi oedd y llanwyr yn galw am y ffôn."
+  ],
+  [
+   77.0,
+   "Mi oedd y stiwdio yn dangos at y ffôn."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   46.92,
+   "Er fod e fodd yn swrwm yn nebranwm, naddes e gyd landede, o ddify ffiori, o ddify ffiori, ddify colori, clwsy'r lenin, fe comi'n pastori."
+  ],
+  [
+   97.96,
+   "Ni shimta'i sgars a rydd e'i santella, er o'n ni'n bars a leia'n rebella, cosi'r y pastorella, pasio i'r demba."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

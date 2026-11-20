@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Ble rei di, ble rei di, yr hen dderyn bach, un anffurfi ar y goeden, pam o'r ugen yw y bren, wer ddam yng ngwych ben, o mis Ia. yn ffin, yr hen dderyn bach."
+  ],
+  [
+   30.0,
+   "Ble rei di, ble rei di, yr hendid i'n bach, i rywle i torri fy ngaclon, pam oeddai di ffwrdd yn syth, blant ddrwg fi'n tynnu'r neff, o ddruan ni yr hendid i'n bach."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 1,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   27.02,
+   "Llorare, llorare, llorare, mewn silencio proffwndo, llorare, llorare, solo y trist yn ystod y dwrnod."
+  ],
+  [
+   50.02,
+   "Gwando'r a'moerte'n mis Neve, por su camino resumas, el viento ni adeudare, esta sambar que te nombra, llorare, llorare, llorare."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

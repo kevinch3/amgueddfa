@@ -1,0 +1,36 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Un fis i fyny, un fis i lawr, ddau fis i fyny, a ddau fis i lawr."
+  ],
+  [
+   18.0,
+   "Un llaw i fyny, un llaw i lawr, dwy llaw i fyny, a dwy llaw i lawr."
+  ],
+  [
+   36.0,
+   "Un tro i fyny, un tro i lawr, dwy tro i fyny a dwy tro i lawr."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 1,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

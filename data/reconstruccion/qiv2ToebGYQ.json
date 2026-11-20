@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "Fe ddlaniodd cariad ddu ynghlŷn, a gafodd ato'n henw'n ddydd."
+  ],
+  [
+   83.0,
+   "Mae'n caro'r bôn, mae'n caro'r byd, ym mhob rew dras wrth y dydd, a rai yn caro'r blant yn coed."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

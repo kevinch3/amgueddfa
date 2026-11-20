@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Nos da, bob nos rhoi'r genod yn i'w gwlau, ac yno fe gysgant dan quiltiau Disney, lleuad aur a'r gotwm glas yn ffin i'w byd. Yn ddeddfol sythaf gynfas, codaf degan, rhwng lyfr gwaith cartref yn amlwg at y bore, dant dan obennydd lliw."
+  ],
+  [
+   26.0,
+   "Ond heno, a hithau ei ffaneidiau di-ddiwedd yn ddeuddeg heglog ynghlwm wrth ffilm, gadewais hi, pen dwmpian yn fy ngwely uwch fy llyfr ac eiliad ddwy awr wedyn rhwng cwsg ac effro, rhwng heddiw ac yfory, synhwyro bysedd ifanc yn tynnu'r sbectol. Diolch yn fawr."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

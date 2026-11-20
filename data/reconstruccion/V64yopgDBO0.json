@@ -1,0 +1,43 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Gwraidd os hi'n ei ddisgwyl, byddwn ni'n clywed Andres."
+  ],
+  [
+   30.0,
+   "Mae llawer am eu charu, ond na ydyn nhw ddim mor ydrych arno fo."
+  ],
+  [
+   45.36,
+   "Byswn i'n bod ar y ffwliad y dŵlon, rhywun yn nabod y dau neu dri, chwaith gyda mi mae'r allwedd,"
+  ],
+  [
+   74.36,
+   "Chwaith gyda mi mae'r allwedd, chwaith gyda mi mae'r allwedd, fi ganu gwaith yn y clywod."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "La alianza de los tiempos, de Fieda Non Owens de Medina, cuando uno a su marw muchos años, libera su aventura terena para apresionar el osumbro diario de los cielos, rescata el reflejo conveniente, pulveriza las turbulencias, alcanza la piedra y su indudable libertad."
+  ],
+  [
+   30.0,
+   "do'n detritura sus fronteras, y'n consecuente arena, dibuha sus manesias sin minutos, para arribar a tiempo en las coincidencias, coloquio ritual de la impuestable aventura."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

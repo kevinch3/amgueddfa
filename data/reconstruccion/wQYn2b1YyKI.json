@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Yr Wyddfa. Fe glywais amdanat, do, lawer gwaeth mai ti oedd brenhines eryri faith, a deuthim i'th weled gan feddwl yn siŵr y byddet yn hoffi edmygedd gŵr."
+  ],
+  [
+   30.0,
+   "Fe siomi a wnaethost am ddyddiau'r pryd hyn, gan gadw dy ben yn y cwmwl gwyn. Ond wedyn, un noson ddiango fawr, fe thwelais yng nglaslyn, a'th ben i lawr. Hathrannoeth, a minnau'n troi tua thri, fe dynnais dehet i druan o'r de."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 0,
+  "reglas": 1,
+  "vacias": 1
+ }
+}

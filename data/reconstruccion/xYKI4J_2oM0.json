@@ -1,0 +1,36 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Nos da, gan Siân Northy. Pob nos rhoi'r genod yn ei gwlau, ac enw fy gesgan dan gwiltiau disny, lleia tair ar gotwm glas yn ffin i'w byd, yn deddfol, sythaf cynfas, godaf degan, rhwb lywyr gwaith cartref yn amlwg a dy bore, dant dan obennydd lliw."
+  ],
+  [
+   30.0,
+   "Ond heno, a hithai a'i ffaneidiau di-ddiwedd yn ddeuddeg heglog yn nhwm yr ffilm, gadewais hi, bynn dwmpion ym fy gwely uwch fy llyfr, ac eiliai ddwy awr wedyn rhwng cwsg ac yffro, rhwng heddiw ac yfory, senhwyro bysedd ifanc yn tynnu fy sbectol."
+  ],
+  [
+   60.0,
+   "Dioch yn fawr."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 1,
+  "reglas": 1,
+  "vacias": 0
+ }
+}

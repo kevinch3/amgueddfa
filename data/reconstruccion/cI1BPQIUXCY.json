@@ -1,0 +1,43 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Uwch a chynnu chod bydd mewn bydd, a bennwch dewrio. A bennwch dewrio."
+  ],
+  [
+   24.0,
+   "Ewch a rhannu fo'r byd mewn cref, a meddwch dewrio, a meddwch dewrio."
+  ],
+  [
+   39.52,
+   "Daliwch er cysiddaf, nad yw'ch drwg am drwg byth yn erbyn, nid yw'ch yma'n galw, mae'n ffwr o ffwrdd i'r blaen."
+  ],
+  [
+   69.52,
+   "Fan i'r dracloddi, a fan i'r bobl, cerddwn ni'n hen diwrnod lawer. Mae e'n wnaeth i'r Ynys Bryd Santau."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 1,
+  "reglas": 1,
+  "vacias": 1
+ }
+}

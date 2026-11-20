@@ -1,0 +1,64 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   19.4,
+   "Nef o'r dda ddyma i eto'n y nos i, gwahanol adolefen a hwyrol wedi, rhydd yw'r nos yn y nos i ti."
+  ],
+  [
+   39.6,
+   "Rhag ei deflu'n ogan ei hofannau, rhag y fofannu wedyn yn ei eidiau, yn y ddeheuydd o cadw'n dŷ."
+  ],
+  [
+   60.08,
+   "Cyn i dy gaddu cae am ydanwm, teun a thaden a ten yn y droswm, gef a thit a welwch sydd yn dy dy cariad yma."
+  ],
+  [
+   90.08,
+   "Mae yma geledd, yn addedde, nes mai tangan efyd wedd ei holl finder ar y dydd."
+  ],
+  [
+   107.08,
+   "Fel ddim anen ar y glwyth ar y flodau, o disgyn yn daranom yn ein dau, ben y dydd pa a wel nefol ddydd,"
+  ],
+  [
+   133.72,
+   "Ca i a di yn y lle, ga i dy henw wedi madau ac anghofio, pan awyredd ar y foes i gyd."
+  ],
+  [
+   163.72,
+   "Diolch yn fawr Alun."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

@@ -1,0 +1,36 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "Y denau'r law, bo'n gwarchod drosom ni, a'r goman diogel am feddwl yn dy fal di."
+  ],
+  [
+   52.0,
+   "Mae'r llys diwrnod, da gwmni di o hyd, mwy bai ddim fod yn bob amser yn hwy na'r byd."
+  ],
+  [
+   95.0,
+   "Yn lle wyr, casodd mewn hanwain yn ffordd am wyr."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

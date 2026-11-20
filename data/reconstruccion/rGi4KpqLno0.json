@@ -1,0 +1,43 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Felly, diolch yn fawr iawn i chi am wneud y cwympo, diolch yn fawr iawn i chi."
+  ],
+  [
+   109.84,
+   "Mosgale a la vie cawn viejo, sor mas y tu podras vivir."
+  ],
+  [
+   115.34,
+   "Pobrecita y canabá, la vida al medio maltrato."
+  ],
+  [
+   120.34,
+   "Siempre sonido el bobol, traquilando risa y llanto, traquilando risa y llanto."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

@@ -1,0 +1,57 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Colli iaith a chollir eiddas, colli awen, colli barddas, colli coronau'r gymdeithas ac ennill y caelbradiaethos."
+  ],
+  [
+   30.0,
+   "Collir hen alawon peresau, collir y cwrain ddi-asbedau, colli tannau'r edelyn cewrau, a ceneille cael clepar y brau."
+  ],
+  [
+   60.0,
+   "Colli crefydd, colli enaid, collir y ffydd ar y hen wroniaid, colli popeth glan a thelaid, ac yn ei lle cael bawb."
+  ],
+  [
+   90.0,
+   "walltaid. Cael e nôl o bwredd marwolaeth gan na ffydd a ddry ar yr hen"
+  ],
+  [
+   105.32,
+   "iaith cael e nôl ar yr hen drefdaddaeth a Chymru'n cychwyn ar ei hymddangos."
+  ],
+  [
+   120.0,
+   "da-a-a-a-a-a-a-ith."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

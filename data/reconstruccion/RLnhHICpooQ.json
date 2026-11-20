@@ -1,0 +1,36 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Waw, mil naw dau dau. Mewn ffram o amser mae dy lun, a thraig lygathi, tythau'n ddyn, dylaw yr ysgwydd sepi ar y ferch, cofnodwyd briodas, fflach o serch."
+  ],
+  [
+   20.06,
+   "Roedd oriau loyal amod drwy air yn clymu'r weithred wrth y gair mewn stiwdio'n llawn o balm oedd tal a lluniau benthyg ar y wal."
+  ],
+  [
+   33.98,
+   "Mae'r siwt a'r ffrog a prynwyd cynt fel mwg a chwalwyd gan y gwynt, ond cwlwm cemeg a ddaliodd ddau am eiliad bapur mae'n parhau."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 1,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

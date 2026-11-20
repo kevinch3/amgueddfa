@@ -1,0 +1,64 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Blerwyd i myned fy morwyn ffeini, myned i o dros yr mynte hi dau rhosyn coch a dau lygad i yn dy baw arllac a os yr gwelwch fi, a gaf i ddod gyda chi fy morwyn ffeini."
+  ],
+  [
+   29.0,
+   "Cewch os dewiswch os yr mynt e hi dau rhosyn coch a dau lygad i yn y bawar llaca os yr gwelwch fi ag a fi i'n gusan fy morwyn ffeini."
+  ],
+  [
+   54.52,
+   "Peth ydi hwnnw os yr mynt e hi dau rhosyn coch a dau lygad i yn y baw arllac a os yr gwelwch fi ag a fydd y briodi fy morwyn ffeini."
+  ],
+  [
+   76.44,
+   "Os bydd mam yn fodlon os yr mynt e hi dau rosyn coch a dau lygad i yn y bawar llac a os yr gwelwch fi peth yw dywaddol fy morwyn ffeini."
+  ],
+  [
+   98.56,
+   "Cymaint ac a welwch os yr mynte hi dau rosyn coch a dau lygad i yn y bawer llac a os yr gwelwch fi, yna neith briodaf fy morwyn ffeini."
+  ],
+  [
+   120.24,
+   "Ni ofynnais i chi os yr mynte hi dau rosyn coch a dau lygad i yn y baw arllac a os yr gwelwch fi, dau rosyn coch a dau lygad i yn y baw arllac a os yr gwelwch fi, os yr gwelwch fi, os yr."
+  ],
+  [
+   150.24,
+   "Gwelwch fi."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

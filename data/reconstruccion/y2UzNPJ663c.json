@@ -1,0 +1,43 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Fy Ngwlad gan Gerallt Lloyd Owen, wylid wylid Llewelyn, wylid waed pe gwelid hyn, ein calon gan estron wŵr, ein coron gan goncwerwr, a gwerin o ffafrgarwyr llariaid ei gwên."
+  ],
+  [
+   30.0,
+   "Lle'r oedd gwŷr, fe ro'n wên i'r frenhiniaeth, nid gwerin nat gwerin caeth, byddwn daioc ddiogel a dedwydd iawn, doed a ddên, heb wraidd na chadwynau bro, heb ofal ond bihafio."
+  ],
+  [
+   54.08,
+   "Ni'n twyllir yn hir gannau hanesion rhyw hen oesau. Y ni o gymedrol nwyd yw'r dynion a brydeinwyd. Ni yw'r claiar wladgarwyr eithafol ryngwladol wir."
+  ],
+  [
+   74.72,
+   "Fy ngwlad, fy ngwlad, cei fy ngledd yn wridog dros anrhydedd, o gallwn, gallwn golli y gwaed hwn o'th blygid di."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

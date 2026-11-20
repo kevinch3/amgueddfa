@@ -1,0 +1,36 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   29.0,
+   "O, a hwnna dan fwya'r dydd, y coedwya a'r fwya'r gwyn, nes diarth o bawb a'r adeg am Iesu Gristna iawn na ef, am Iesu Gristna iawn na ef."
+  ],
+  [
+   59.0,
+   "Y sir yw'r fawr yn yr arwydd i, i'r reitiam dref fod o'n fy hun, a'i ddau a'i ddau a'i ddoriaid i, a meddwch dwy ddim ar drwyd fi, a meddwch dwy dim ar drwyd fi."
+  ],
+  [
+   89.0,
+   "Oedd hwn yn siant drwy'r tŷ, fel boed mwyaf a ddrwy'r tŷ, nes gadw pawb wrth adeg e, a nes i fynd rhag ofn adeg e."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

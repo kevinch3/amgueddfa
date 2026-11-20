@@ -1,0 +1,22 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   79.28,
+   "i Ddyfed o'i grym, a chyniodd e'n ei grym nant i roi Dyfed nôl i'r dym, a dwynodd o'i ffyrdd o fodem, a'i wraig yn ened."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

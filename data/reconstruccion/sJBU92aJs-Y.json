@@ -1,0 +1,43 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Glas gan Bryan Martin Davies. Pan oes a dyna'i'n glas ar y môr yn Abertawe'n rhwng y chwedlin a'r traeth, roedd cychod a chestyll a chloc o flodau yn llan o'r diwrnod, a gyda lwc yn ymddeithiem yn y pensil goch o dre yna."
+  ],
+  [
+   30.0,
+   "Banciau hanner cylch ei dda, rhwng rhimyn glas y bae i bwynt y mwmbws. Ceis ne' ddim ar y tywynt i gynydde'r breswyl, ein llygaid newyddion yn syllu'n awrchus ar y fwrdd y môr, dilyn ein ddadiau gwyn y gwylau'n aflonydd yn trywanu targed y cleigiau."
+  ],
+  [
+   59.5,
+   "a sbïen fyn syn ar y llonau banana melyn cawr gorllewin a sglefrio yn ara dros y gwydyr glas, a gorffwys ar y creiniau tâl a grafau'r wifren glin uwchben glan dŵr, haen oed sadyrnau syndod, y dyddiau glas, a enwau'r fflwch."
+  ],
+  [
+   89.5,
+   "Llunai'n ffoaduriaid dindydd, brwd yn blasu'r rhyddid byr o ddyffrindi totalitariaeth clôc."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

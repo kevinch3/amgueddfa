@@ -1,0 +1,71 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Os hoffech wybod sut mae dyn fel fi yn byw, mi ddysgais gan fy nhadwedd gyntaf dynol ryw."
+  ],
+  [
+   24.0,
+   "Mi ddysgais wneud y gors yn wyrddlo ffrwythlon i, i godi deu ar las a rwy'n eban i aaldir. Rwy'n y gorwedd efo'r hwyr ac yn codi efo'r wawr. Rwy'n gorwedd efo'r hwyr ac yn codi efo'r wawr. I ddilyn yr og ar ochr y glog, a chanlyn yn aros."
+  ],
+  [
+   54.0,
+   "a goch ar ben y mynydd mawr."
+  ],
+  [
+   62.0,
+   "Cyn poddio ar eich byd pa grefftwyr bynnag fowch,"
+  ],
+  [
+   70.0,
+   "chwyddolech ddod am dro rhwng Gyrn yr Araf Goch,"
+  ],
+  [
+   78.0,
+   "A pheidiwch meddwl fod pob pleser a mwynhad yn aros bydd heb fod i bryniau ucha'r wlad."
+  ],
+  [
+   89.5,
+   "Rwy'n gorwedd efo'r hwyr ac yn codi efo'r wawr. Rwy'n gorwedd efo'r hwyr ac yn codi efo'r wawr. I dilyn yr ogar ochr y glog, a chanlyn yr ara goch ar y ben."
+  ],
+  [
+   108.0,
+   "Ym mynydd mawr."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

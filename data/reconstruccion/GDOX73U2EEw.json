@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Ci Mary, ganddi ras drwy'r tywyll, un nos fan hyn lladdwyd Llewelyn, bydd ni'n tarhoddio hi. Yn y tawela fan hyn awyddodd Llewelyn, camodd ar y cerddi'r ci, un nos fan hyn o'r golwg nesai'r gerrig, a wnaeth y cefan fan hyn. Rwyf i nawr, fan hyn, llebu wallt ar wellty, i'r oer."
+  ],
+  [
+   30.0,
+   "Ac dyna un waith fan hyn, fan hyn yw ein gofyn i ni, fan hyn sy'n ein adeiladu ni, fan hyn genna'r un gêm."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 1,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

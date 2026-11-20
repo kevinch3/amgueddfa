@@ -1,0 +1,36 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "Na, gynna i'n gyflwyno fy ngwelais hwnna, yn ei wallt yn gwyllt a'i gosod hi, heb roi fy ngwlad gyda'n blod i fi, a isie gallu allan fy glôd dros gin llawn o chwarae llysa dros gin."
+  ],
+  [
+   45.0,
+   "Yn fwyau drwchus, fel dau wych, a chlamp o glori ar y glamp o drwyddi, dim yn y bapur, dim yn y sêr, dim yn y llongau. Yn syrcais, arsadion, a'r amgylchedd llifoedd, doedd hi'n annog wedr y byd i gyd, symudais yn nes adref nes adref i fyny, i graffu barniau'n allan i fi."
+  ],
+  [
+   75.0,
+   "Ac wrth gwrs a'i drist yn syth arnon ni, wha- meddwn ni a wha- meddai hi ta, y ddwy ohono wedi dechru ei ddeutha, o- meddwn ni na a o- meddai hi, a meddai ni'n ddwy, yr un un ydyn ni!"
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

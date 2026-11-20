@@ -1,0 +1,57 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Welir ti o arglwydd neb, dan dy fendith cadw ef."
+  ],
+  [
+   19.72,
+   "Cadw'r muriau oll yn gry, rhag bob loes a gofid y dydd."
+  ],
+  [
+   29.2,
+   "Cadw'r tor sy'n newyn, dan dangnefedd y heulog nen. Cadw'r drws a fydd o mwy, bydd yn agor i hyd ei glwy."
+  ],
+  [
+   49.68,
+   "Cadw di'r ffenestri hyn i groesawyr golau gwyn, glan ffor ailwyd yn gluddugwyn, a'r mwg yn codi weddi foen."
+  ],
+  [
+   78.68,
+   "Cadw dir y teulu llon, heb un cur yn bur ei bron. Bendith Duw yn digon nï, fruodd Iw iddo gartref y dŷ, yn dogni bawb i'r ddwyfol o hyd."
+  ],
+  [
+   104.58,
+   "A byw a ddyw'r diwedd."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

@@ -1,0 +1,50 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Heb Amynedd Doeth ni fydd, heb dosturi dani does, balechwyr i alanaethu, isel y fydd a sanwy foes."
+  ],
+  [
+   19.88,
+   "A fyddai o haf i ddyn, yn y ddon y dwy gŵyr yn a'i dyn."
+  ],
+  [
+   41.64,
+   "Lle bo' gwres o gariad gwir, maeth fel y cawod haf a rydd, ti fe popeth tanwres yr haen, ffrwythau da a blodau fudd."
+  ],
+  [
+   63.32,
+   "Felly ti fy bopeth yn un, y Llydawen o cariad dyn."
+  ],
+  [
+   74.32,
+   "Felly ti fy bopeth yn un, Llydawen o cariad dyn."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

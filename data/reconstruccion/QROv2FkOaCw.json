@@ -1,0 +1,22 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "Dio llawn o balmwydd tal a'r lluniau benthyg ar y wal, ma'r ffrog a'r siwt a brynwyd gynt, fel mwg a chwalwyd gan y gwynt, ond cwmw- cwlwm cemig a ddaliodd ddau, am eiliad bapur, mae'n parhau."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 1,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

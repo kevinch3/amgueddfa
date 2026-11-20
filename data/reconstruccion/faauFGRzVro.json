@@ -1,0 +1,57 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Cwrseion"
+  ],
+  [
+   30.0,
+   "A bod yn ewdd arno'r creffaen ni, erthyng bore, gofyn wedyn yn y mae."
+  ],
+  [
+   54.64,
+   "Nws i'n sâl mil o'i enw, gwyna brifodl teg o fri, ar ddeg mil y mae'n agori, o wrth y cae pennau ni."
+  ],
+  [
+   76.32,
+   "Ffrind fy'n caru, ffrind fy'n caru, dyma'n beilod ar y môr, ar y môr, dyma'r beilod ar y môr."
+  ],
+  [
+   95.32,
+   "Fels i ddi ddim mwy am genwyf a geiniog gwael e llaw, destio'r ŵyl a dydd e gwmni i'w gystadlu am Iesu naw."
+  ],
+  [
+   117.32,
+   "O ambarws, o ambarws, yn negariant dyddiau mwy, dyddiau gwrth, yn negariant dyddiau gwrth."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

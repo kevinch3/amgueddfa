@@ -1,0 +1,57 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Sbwriel."
+  ],
+  [
+   6.44,
+   "Sbwriel, oes yr iâr oedd y cerrig clefion, orweddain blêr hyd lan air afon."
+  ],
+  [
+   13.42,
+   "Sbarion a siabins, hun a morthwyl, yr hewlydd a siabiodd bob dyffryn, ganrif wrth ganrif."
+  ],
+  [
+   24.28,
+   "Ac ar sbwriel cododd engyn-deidiau'n ddyfan bwthyn clud yn ffôr-afon, a seiliau petru iawn. Nosodd carreg ar garreg rhwng gwyllt a fawr, a chynnau tân cyn i'w angor ddeu'r cyfan i lawr, hawlio dawn o dyn a'i godi'n eilwyd drwy nerth bon braich troedd Llafur yn fraint."
+  ],
+  [
+   54.28,
+   "Ar lannau drafferth y dinasoedd llwydio, ac yng ngesau'r goncrit swyddfeydd gweigio, dan bontu ffyrdd o'r ffordd, mewn meysydd parcio, mae rhai yn wneud dyflai heno hefyd wrthi'n codi tai."
+  ],
+  [
+   73.28,
+   "Rhoed drefn a'r sbwriel dan y stedd, hawlio darn o dydd a focsis carbod blêc."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

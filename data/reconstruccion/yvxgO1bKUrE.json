@@ -1,0 +1,50 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Mewn barll- sori, mewn darlleniad barddoniaeth gan Brian Martin Davies."
+  ],
+  [
+   18.32,
+   "Dyma'r tro cyntaf i ni glywed eich iaith, darllenwch hi eto, meddai'r merched glorietaraidd ein hlwb e gwerin."
+  ],
+  [
+   30.0,
+   "Mae hi'n fel aderyn dieithr, yn hedfan ar draws y fistula, yn esgyn ac yn ddisgyn, yn ddisgyn ac yn estyn, yn glesnu'r cliw."
+  ],
+  [
+   43.74,
+   "Darllenwch hi eto, mae hi'n llawn lliwiau i ni yma. Mae hi'n wyrdd fel gobeithion, yn felyn fel hyder, yn goch gan ddigter."
+  ],
+  [
+   59.42,
+   "Wrth i'w phlu fflachio dan hael ein gwrando, darllenwch hi eto cwestiwn, ydy hi fel un o'r adarheni agedwyr mewn cawell?"
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

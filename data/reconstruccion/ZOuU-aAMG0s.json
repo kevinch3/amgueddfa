@@ -1,0 +1,22 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   19.0,
+   "Y llwybrau gerddasom ninnau ar ein ffordd i'r ysgol cynt, ein traed cyn ysgafned a'n calon a'n galon mor ysgafn â'r gwynt, a'r llwybrau a gerddaf heddiw a'm plentyn yn fy llaw, y llwybrau fydd i ddillithau yn annwyl rhyw ddydd a ddaw."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 1,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

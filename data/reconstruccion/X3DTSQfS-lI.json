@@ -1,0 +1,43 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   29.0,
+   "O'n i'n wely'r eira mawr, o'n i'n chlymu'r sarn ffïo."
+  ],
+  [
+   40.0,
+   "O'n i'n wely'r eira môr, o'n i'n wyneb ledan ffost, nid yw damor glawr yn fôr."
+  ],
+  [
+   59.0,
+   "Flodyn ei ddydd ma'n aros gwrando, hyd yn fydd hi tim llawer gwell, rhag bydd hi ac Anna Rewnt, rhed yn ôl idd welygeth."
+  ],
+  [
+   163.0,
+   "Diolch yn fawr."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

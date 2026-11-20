@@ -1,0 +1,64 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Wedyn sefydlwch fel medwy o'r dydd fei o'r nofel dydd, er mae o yr erbyn hwnna'n nabod, ei fod hi wrth lawr ffryntau'r dydd, bendith gore, bendith gore,"
+  ],
+  [
+   28.0,
+   "Cafwyd welyb fel y maes fel y môr, cafwyd welyb fel y maes."
+  ],
+  [
+   40.8,
+   "Rhosy'n sâl, o'n i'n weud ei enw, ŵyn a gwyl, o der o wyr. Ar ddem mil y mae'n rhagori, o'r tecawyd penna'r byd."
+  ],
+  [
+   61.92,
+   "Dwi'n pecafyr, dwi'n pecafyr, ond mae'r ddwylo'n ddau y môr ar y môr, ond mae'r ddwylo'n dau y môr."
+  ],
+  [
+   80.92,
+   "Nes i fi i rywun mwyaf ferwy, gwarel un o'r blaen a llaw, nes i orwywn a ddiweud gwmni byw, nes gad ir am Iesu Mawr."
+  ],
+  [
+   102.08,
+   "O am arws, o am arws, denu'r gariad dyddiau oes dyddiau oes, lefydd daria ddeniau oes."
+  ],
+  [
+   120.56,
+   "O am aros, o am aros, ond wneith ddaru a ddyddiau'n oes, ddyddiau'n oes, ond wneith ddaru a ddyddiau'n oes."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

@@ -1,0 +1,43 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Gan Mererid Hopwood, oedau gau'r drws ar fyd geiriau'r dryswch, oeda mae'n rhaid chwilio'r tynerwch, eiliad i hawlio'r wlad o dawelwch, eiliad i gael pen ffordd diogelwch."
+  ],
+  [
+   28.22,
+   "Yr eiliad braf sy'n arafwch, eiliad yr hen wahoddiad i rannu heddwch a disgwyl, disgwyl nes bod esgor yr awr wag lle nad oes dim rhagor ond awel ac angel yn gyngor."
+  ],
+  [
+   56.98,
+   "Mae'n dweud digon, feth awr manion didor i drefn, cyll y cefnfor ei ofnau, a daw'r eisiau i gwrdd a'i drysor."
+  ],
+  [
+   86.98,
+   "Diolch yn fawr a diweddglo gasa leia."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

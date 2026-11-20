@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Os yw dy galon yn fanon mewn ffor i, paid â deud, am eu bod serch dy fanon yn ogi, pa- paid â deud."
+  ],
+  [
+   78.0,
+   "haid a deud, hawdd i'r lwyddi byth trwy dy ddwylo, wrth i dy ddeud."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

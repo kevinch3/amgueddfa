@@ -1,0 +1,50 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "Ceir llawysgrifau Llywodraeth Cymru ers dwy fil ac un deg wythnos yng Nghaerfyrddin a Llywodraeth Cymru ers dwy fil ag un deg wythnos."
+  ],
+  [
+   60.0,
+   "A chrynge, dim ar gin o'r gloch, ond ni yn gyngor. Heibio'r llysedd sant yn ôl y ffor' i'r llawr, yn mynd i'r sianau'n ofer i fyny ar gyfer."
+  ],
+  [
+   109.96,
+   "Natsiwch dy frys yn bachgen dy gyson ar y we, oddi ar dir am y wal oddi ar dir i nôl."
+  ],
+  [
+   117.96,
+   "Calir am y we fel y bwll neis ar y we, oddi ar dir i nôl oddi ar dir i nôl."
+  ],
+  [
+   125.96,
+   "Cadarn gadol y blwyddyn a chyfandir, oddi ar dir am y wal oddi ar dir i nôl."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

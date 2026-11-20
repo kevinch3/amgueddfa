@@ -1,0 +1,43 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "gojitian i wino, ai pob redem i ddim i paloma, ni plant a concyn"
+  ],
+  [
+   36.4,
+   "cwmprano. Donde andara, donde andara, ysa chunita traidora, ysa"
+  ],
+  [
+   42.88,
+   "chunita traidora, Iesu cantando y bailando, ai pob redem i ddim i paloma, chichita"
+  ],
+  [
+   52.08,
+   "Mae'n ngoglan ynddo, gonde anddara, gonde anddara? Esa chulita traidorala, esa chulita traidorala, esa chulita traidorala, esa chulita traidorala, traidorala."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 0,
+  "reglas": 1,
+  "vacias": 1
+ }
+}

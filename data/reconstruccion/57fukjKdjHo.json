@@ -1,0 +1,64 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Mae'r lôn fel craith i yn yr eira, a barug ar y brigau yn dew, un frân ar y dorwel yn gwylio'r ffin, a llyn clywed o dan y dew."
+  ],
+  [
+   29.6,
+   "Chwefror yng Nghymru'n troi'n chwerw, fod o'n dras ni fel cerdyn bost."
+  ],
+  [
+   36.94,
+   "Mae Mabai'n effror, ofn i'r ffôn, a gweddwn yn cyfri'r gost."
+  ],
+  [
+   48.1,
+   "Alan yr Iorddonen, mae'r ddaear yn crino a chrio am lawr, a'r cychod yn barod i dewis, i cargo i'r ochr drân, ac wrth i haen yr arian fflachludo,"
+  ],
+  [
+   77.76,
+   "Gwelaf goboen codi i law, ac arwain y garafan i gyrraedd yn y paeth, a na fo hwn gweud i gerllaw."
+  ],
+  [
+   93.44,
+   "Ac mae'r ffiniau bob nos ar y satinaid yn pregethu bod Diw ond blaid. Ma' na aur yn y bryniau a frys yn fy nôr, ac mae o newydd dewall na gwaed."
+  ],
+  [
+   119.44,
+   "Ac mae'r lluniau bob nos ar y satellites yn profi bod Duw yn plaid, a'r sgrifen yr hawlod y dwyrain yn dweud bod olew yn dewach na gwaed."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

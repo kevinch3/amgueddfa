@@ -1,0 +1,36 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Côr Gymraeg, Drelew."
+  ],
+  [
+   89.0,
+   "Dwi'n bechadu, dwi'n bechadu, dyma'r benod ar y môr, ar y môr, dyma'r benod ar y môr."
+  ],
+  [
+   140.0,
+   "O amgaros, o amgaros, yn ein cariad ddyddiau nos, dyddiau nos, yn ein cariad ddyddiau nos."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

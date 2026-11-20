@@ -1,0 +1,57 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   11.3,
+   "vamos invitar a Gladis segunda"
+  ],
+  [
+   13.7,
+   "participante para esta competencia la"
+  ],
+  [
+   17.0,
+   "número 23"
+  ],
+  [
+   25.2,
+   "recitación"
+  ],
+  [
+   27.5,
+   "silencio Gladis"
+  ],
+  [
+   35.1,
+   "Nicholas"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

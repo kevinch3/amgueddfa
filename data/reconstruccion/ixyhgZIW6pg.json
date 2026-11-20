@@ -1,0 +1,36 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "A mwy tir ddim mwy, sef un blodeysiau far mwy. So mwy tir ddim drwm, sef un blodeysiau far mwy."
+  ],
+  [
+   47.0,
+   "Mwy beintiau'r arddangosfa, o beintiau'r arddangosfa. Mwy gynffon tŷ'r fan arddangosfa, o beintiau'r arddangosfa."
+  ],
+  [
+   59.0,
+   "Gweithiau'r môr a gweithiau'r mynydd, Siân mwy Siân, a ddod â dy hen ddigeri, Siân mwy, tir gyffrwy, sefyll i'r nodi, Siân un bach mwy, dros y môr y mae'r ben manwl."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

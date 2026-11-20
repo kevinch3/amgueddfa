@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Cariad, Cynthia Cariad gan Myrddin ap Dafydd. Yno tim a'i tan, o glau Awst, tir i glân ar gawod gân ar goed y gwanwyn. Yno tim a'i ton, cwyl yn ei galon, unigolion yn wyn i'w gilydd. Yno tim a'i taw a llall."
+  ],
+  [
+   30.0,
+   "Dim ond llaw yn rhwyfo'r llaw ar fôr y lleuad. Enw ti, mae taith y tu hwnt i iaith a hen, hen obaith hunanabod."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 1,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

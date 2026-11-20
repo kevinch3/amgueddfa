@@ -1,0 +1,22 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "De Conrado en Alê Roxlo, el bosque se duerme y sueña, el rio no duerme, canta, por entre las sombras verdes del agua sonora pasa, dejando en la orilla oscura manojos de espuma blanca, llenos los ojos de estrellas en el fondo de una barca, yo voy como una canción por la música del agua, y llevo el rio en loco."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 1,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

@@ -1,0 +1,64 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "Dyna ydyw gofau a bryd hyn iau, byw wedi ei waith enw hi. Byw Fyddi Nant Gwrtheyrn, yn nheri ni, yn nheri nesgron, yn nheri farwn, byw wedi di. Byw Fyddi Nant Gwrtheyrn."
+  ],
+  [
+   72.0,
+   "Mae'r gofren ola'n i'w goseli'n draf, a'i henwau prenwaith wedi sôn ar gyf."
+  ],
+  [
+   91.0,
+   "Mi ddoeth bwerwn o, mi'r ddoeth darwydd o, a'i her efyd fod o'n ennill o, miwn meddyg nôl i'r hen."
+  ],
+  [
+   108.0,
+   "Mae'n her i'r byd, mae'r un estron yn parhau'n galw, ni'n wedi byw, ni'n wedi dod o'r pen."
+  ],
+  [
+   121.5,
+   "Mae'n her i'r byd, mae'r un estron yn parhau'n galw, ni'n wedi byw, ni'n dod o'r pen."
+  ],
+  [
+   134.0,
+   "Mi wmed di dant o'r cefn, yn heri di heri nes tro, yn fan y galon."
+  ],
+  [
+   145.44,
+   "Mi wmed di, mi wmed di dant o'r cefn, yn heri di heri nes tro, yn fan y galon."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

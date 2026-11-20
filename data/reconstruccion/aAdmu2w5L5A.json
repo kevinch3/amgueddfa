@@ -1,0 +1,50 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   27.0,
+   "Egin gan Gwynne Williams. Yn awr i'r Las y casau goch a'r grisiau gwyn, mae'r gêm ar droed, higion, cyffro, symud, tyfu, neithio, nodio, chwiban, gwis, ymosod, chwyrn, y dyrfan drwg tu ôl i'r dôn, y bêl yn tasgu i'r dŵr, y llawr yn mynd i'r gŵn."
+  ],
+  [
+   57.0,
+   "i'r gwynt yn ei chwythbio o'r hyn ffordd draw."
+  ],
+  [
+   65.58,
+   "Tair cwipan siarad, hanner amser, oren oer, dim y sgôr eto. Yn ôl i'r cae, hanner awr i fynd o chwys a'r gwres."
+  ],
+  [
+   87.0,
+   "Llwyfan faen, i ffwrdd â ni i lawr y cae fel mellten coch, goooor o'r ddiwedd, a llai na chwarter awr i fynd, ar y dyrfan rhiol, chwarae chwyn, ar y mosod wyllt."
+  ],
+  [
+   109.0,
+   "Dau gwiban sawl, amser llawn, un dim, un dim, i ti, dim byd!"
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

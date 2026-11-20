@@ -1,0 +1,43 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "Mi ddysgais gan fy nhad-gryff gyntaf y dynol rili, mi ddysgais wneud y gors yn werglod ffrwythlon hir, i codi ddaearlas a'r wyneb anialdir."
+  ],
+  [
+   50.48,
+   "Rwy'n gorwedd efo'r hwyr ac yn codi efo'r wawr. Rwy'n gorwedd efo'r hwyr ac yn codi efo'r wawr. I dilyn y rog ar ochr y glog, a chalu'n yr Arad Goch ar ben y mynydd mawr."
+  ],
+  [
+   74.48,
+   "Cyn boddio ar eich bydd, pa grefftwyr bynnag y foch, chwyddylech y dod am dro rhwng Cân yr Arad Goch, a pheidiwch meddwl fod pob pleser a mwynhad yn aros byth hefydodd i brynu'r goch."
+  ],
+  [
+   104.48,
+   "Rwy'n gorwedd efo'r hwyr ac yn codi efo'r wawr. Rwy'n gorwedd efo'r hwyr ac yn codi efo'r wawr. I dilyn yr arog ar ochr y gloch, a chalu'n yr ara'n y coch ar ben am y dydd yma."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

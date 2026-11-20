@@ -1,0 +1,50 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Y Gymraeg gan Geraint Jarman."
+  ],
+  [
+   4.0,
+   "Maes defnygrwydd ddynddi sy'n mynnu ffynnu mewn tir i ddiffaith, a thra bo'r greithiau'n gwae- yy a thra bo'r greithiau'n ffaith ac yn weladwy i pawb, nid yw'r corff yn gwaedu hyd ysbyty."
+  ],
+  [
+   27.0,
+   "Ga i ddechrau eto? Ie. Y Gymraeg, gan Geraint German."
+  ],
+  [
+   35.0,
+   "Mae ys defnigrwydd ynddi sy'n meniffynni mewn tir diffaith, a thra bod y greithiau'n ffaith ac enweladwy i pawb, nid yw'r corff yn gwaedu hyd ysbyty."
+  ],
+  [
+   53.0,
+   "A rhoswn beunydd yn lolba ein gobeithion yn disgwyl newyddion da, tra rhywle ym mocel creadigaeth gwn fod ystyrnigrwydd ynddi sy'n menny ffynni, y llaeth o fron mam cyfeiliaent ein telyn fel gellell drwy fynin."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 0,
+  "reglas": 1,
+  "vacias": 1
+ }
+}

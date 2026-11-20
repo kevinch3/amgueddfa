@@ -1,0 +1,50 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Caed baban bach mewn presep, dros om ni, dros om ni. Ag o lai Duw yn wyneb, dros om ni."
+  ],
+  [
+   28.0,
+   "Mae gwyrddiau Galilea ar y syched yn Samaria ar y dagrau yn Methania drosom ni, drosom ni. Mae'r llawf yn torri'r bara drosom ni."
+  ],
+  [
+   58.0,
+   "Mae'r geiriau pur lefarodd dros omni, dros omni. Mae'r dirmiau gaddi oedd efodd dros omni."
+  ],
+  [
+   83.0,
+   "Mae gwerth y cyfiawn hwnnw, ar y groes yr hoelion carw, ar y chwban chwerw, chwerw drosom ni, drosom ni."
+  ],
+  [
+   102.8,
+   "Mae y gwaed yr ŵyn fi farw dros ofn ni."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 0,
+  "reglas": 2,
+  "vacias": 1
+ }
+}

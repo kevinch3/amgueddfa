@@ -1,0 +1,113 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   8.0,
+   "aquí"
+  ],
+  [
+   12.1,
+   "por ser como"
+  ],
+  [
+   16.5,
+   "cómo"
+  ],
+  [
+   20.0,
+   "sí"
+  ],
+  [
+   23.5,
+   "la puesta de un"
+  ],
+  [
+   28.2,
+   "sí"
+  ],
+  [
+   33.3,
+   "estoy sola"
+  ],
+  [
+   35.6,
+   "como nada"
+  ],
+  [
+   39.0,
+   "amor por mi importante"
+  ],
+  [
+   43.1,
+   "amigo tono"
+  ],
+  [
+   58.9,
+   "y embargo"
+  ],
+  [
+   64.6,
+   "gorda por este corte"
+  ],
+  [
+   68.8,
+   "de bello"
+  ],
+  [
+   73.8,
+   "frontera ni por qué"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

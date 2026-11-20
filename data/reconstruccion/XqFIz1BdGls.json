@@ -1,0 +1,43 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Gwlad yw'n gwyn o bled a'i chwas, nid yw'n dyn o'r flod a'i naf. O'n i'n chlymu'r stwrn yn hir, o'n i'n chlymu'r stwrn yn hir."
+  ],
+  [
+   30.0,
+   "O'n i wedi ryddio'n fawr, o'n i'n chladdu'r son yn brin, o'n i wedi reid o'n fawr, o'dd yn brin o'r gogledd yn cael ei dros, nid yw'n dal i'w glo a fi'n dal."
+  ],
+  [
+   60.0,
+   "Glodi'n eiddil ar ysbrydol, hi wyddid yn llawr gwallt, dan fy mab ac yn y frawddeg, rhedeg nôl i'r mwynicell."
+  ],
+  [
+   82.0,
+   "'Na fy mraint i'w godi'n pernau, gan refner i'r glodau yn ôl, ac yn ffordd gref, ffordd ewch inna, er yng ngwyblyglo mawr erbyn tŵn."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

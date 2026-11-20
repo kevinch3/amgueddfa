@@ -1,0 +1,43 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "No' tengo chicha ni fino."
+  ],
+  [
+   32.0,
+   "Mae'n pob redem ni ddim i paloma. Ni'n blant a concyn cwmpo arno."
+  ],
+  [
+   38.0,
+   "Do'n iandara. Do'n iandara. Isa chulita traidora. Isa chulita traidora. Ia, sy' cantando i baena."
+  ],
+  [
+   48.0,
+   "Mae'n pob redem ni ddim i paloma. Chichita vengo ganando. Do'n iandara. Do'n iandara. Isa chulita traidora."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

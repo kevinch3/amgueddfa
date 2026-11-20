@@ -1,0 +1,43 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   60.0,
+   "Ni'n gwmni i'n cwmpas te o'n nhw'n fach."
+  ],
+  [
+   63.44,
+   "O'n nhw'n fach so be' sy'n canran, ie bo' cwmpas ie yn y cefn o'n nhw'n somran."
+  ],
+  [
+   74.4,
+   "Ni'n gwmni i'n cwmpas te o'n nhw'n fach so be' sy'n canran, ie bo' cwmpas ie yn y cefn o'n nhw'n somran."
+  ],
+  [
+   150.0,
+   "Ni efo'ch cwmpanion teg o'n i'n sondra la, ni efo'ch cwmpanion teg o'n i'n sondra la."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

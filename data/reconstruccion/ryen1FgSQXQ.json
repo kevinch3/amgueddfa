@@ -1,0 +1,71 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Dwi am ganu, fel yr enillwn hwy ar dôn Rhydyn Square."
+  ],
+  [
+   19.0,
+   "Ti ag adref y rwyf am teithio, ti ag adref at fy nhad, hoffai efo ysbryd y hed ag yno heb ymdroi mewn anial y wlad, am fodlonaf, am fodlonaf mwy o waith fel ynaf."
+  ],
+  [
+   49.0,
+   "hŷn a wnaf."
+  ],
+  [
+   57.0,
+   "Dywed â bwrdd bob un ag urddaf dewch heb oedi gyda mi, parod i'w fynhad i'ch derbyn, cartref gandos i ddychwelyd, ennill rywrain."
+  ],
+  [
+   79.0,
+   "i ennill ryw rai fydd fy ngwaith wrth fynd ymlaen."
+  ],
+  [
+   92.0,
+   "Os yn araf rwyf yn teithio deuaf a drefn yn yr hwyr, faint o ffordd sydd gen i feto,"
+  ],
+  [
+   107.0,
+   "Nid oes neb ond Duw a ŵyr, ennill rywrai, ennill rywrai, a fel y saradaeth i gyd."
+  ],
+  [
+   123.48,
+   "Venith ryw rai, venith ryw rai, a fela saradaith i gyd."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

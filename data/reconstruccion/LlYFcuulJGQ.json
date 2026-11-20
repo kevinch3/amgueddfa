@@ -1,0 +1,43 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Y breuddwyd gan Irma. Rhyw ychydig bach a ddaeth ynghyd, efallai, pwy a glywsai am Betagonia a phwy a faliau. Ond oedd yr oedd yn orhau efallai ryw bump neu chwech oed."
+  ],
+  [
+   30.0,
+   "a hoffai le yn eu gwlad, eu hen hanes a'u phobl yn eu breuddwydion, byddai'r Cymry yn rhydd, ei iaith yn fyw, a hwythau blant ac eithiwed yn canu mewn gorfoledd."
+  ],
+  [
+   51.0,
+   "Ni chredair du ffydd, tydyn nhw byth yn credu. Ond wedi'r tro cyntaf hwnnw, eginodd yr had a thyfu yn bren cryf ganghenog, ac ysgododd, deuliodd tlawd ei gwlad, a'i llochesi oedd hi tano, cydnestai ar y dydd i gefn ei gwrthrwm a hwylio."
+  ],
+  [
+   81.0,
+   "Dros foroedd a thonnau, i'r wlad well, ymhell draw, ymhell yn y dyn."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

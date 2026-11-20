@@ -1,0 +1,22 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Gwreichion dan gwyfwynyddus. Gwreichion yw'r geirie, cerddi plentyn wedi'i sych erchymyg, a'i treigwyr y gerdd gwlad y beirdd yn y byw, coed y gerdd, a fydd eu grecian yn llwyfan, hyn gyda'i rhos yn yr oceau, yn grisiau boi rŵan yn cyhoedd ac yn farw o fewn y cof am hir, wedi ei thalmolethu,"
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 1,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

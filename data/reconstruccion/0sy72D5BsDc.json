@@ -1,0 +1,36 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Ganu'r ocan môr yn y fore, ganu'r ocan môr yn y ffram, ganu'r ocan môr yn y pwllau, dod a nabod y Seigia."
+  ],
+  [
+   22.62,
+   "Fodd bynnag sy'n mynd lawr o'n i, dach chi ddim yn rhoi e mewn ffordd. Ni'n dod yma dwi eisiau symud, na neith o'n i ffurfio lan y ffordd. Dwi eisiau sbio dwi eisiau gwaedu, ond doedd dim ddim sy'n mynd lawr o'n i."
+  ],
+  [
+   45.62,
+   "O'n i'n ffansio, joio, joio caru roc-a-rol. Fi'n caru roc-a-rol yn y coleg, fi'n caru roc-a-rol yn y class, fi'n caru roc-a-rol yn yr hwyll, caru roc-a-rol i bobl estyniad."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

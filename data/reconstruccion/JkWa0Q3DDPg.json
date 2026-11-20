@@ -1,0 +1,43 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Ganwchyd a'r eglwyd, ganwchyd a'r eglwyd, i ofyn pen gwlad yn y byd."
+  ],
+  [
+   18.0,
+   "Ai dyna'r ened yne, a fathloiant iddo fe, yn diger diger o'r awyr eglwyd ein Duw?"
+  ],
+  [
+   33.0,
+   "Nôl o ffarn a'r eglwyd, nôl o ffarn a'r eglwyd, nôl o ffarn a'r eglwyd a'i saent, o'na ffynone eto'n broed ef byd, o'na fynone yn meibion y dydd, a dy'r dy'r byd fryd, rhyddid ef byd a'i baraint."
+  ],
+  [
+   63.0,
+   "Dywed i'w syniwm, dywed i'w syniwm, dyre ma'r neidr i'w gilydd."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

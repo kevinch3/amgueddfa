@@ -1,0 +1,36 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Dwyn a falau gan Emyr Lewis."
+  ],
+  [
+   30.0,
+   "a bachau gwyn ei breichiau o'r modd o'r prennau, a'i gafael yn dyner dim. Yn wysant y ffrwythau megis cariadon, ac yn anchwyn datod y cwnwm bregus a'r brigyn, gan adael dim. A'i dyma beth yw rhydydd cerddwyboch hegialau, bendig!"
+  ],
+  [
+   60.0,
+   "ydyw'r rhai sydd yn dwyn arafalau."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

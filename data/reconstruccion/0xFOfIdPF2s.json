@@ -1,0 +1,22 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   103.08,
+   "Ffor' geir di enwau ysgafn mewn inocensiad atbwrdd, ffor' geir di enwau ysgafn mewn inocensiad atbwrdd, a ia môr, a ia môr."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 3
+ }
+}

@@ -1,0 +1,50 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   28.5,
+   "And I think to myself, what a wonderful world."
+  ],
+  [
+   44.5,
+   "The colours of the rainbow, so pretty in the sky."
+  ],
+  [
+   52.5,
+   "And I saw all their faces, of people going by, and I saw his face shake in fear, saying, how do you do? They're really saying, I don't know."
+  ],
+  [
+   76.5,
+   "At his face was blood, and bones had grown. Then there was hope, then I'll never know. Then I think to myself, what a wonderful world."
+  ],
+  [
+   105.74,
+   "Yes, I've been to myself, but I'm more than full grown."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

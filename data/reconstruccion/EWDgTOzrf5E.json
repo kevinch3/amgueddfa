@@ -1,0 +1,57 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Tŷ ac adref rwy'n ymteithio, tŷ ac adref at fy nhad."
+  ],
+  [
+   17.0,
+   "Odda i ddysgrif heddiw gyrom derom, roedd ewn aniel ym mlan, ym Mgollon a Mgollon a mwy o waith fel hyn am y wlad."
+  ],
+  [
+   62.0,
+   "Ennill griwraeth, ennill griwraeth, ffurf yn waeth wrth ffurfio'n flaen."
+  ],
+  [
+   78.0,
+   "Os yma lawr, rwyf yn pleidio deud yma, drefn yn yr ŵyr."
+  ],
+  [
+   88.0,
+   "Faint o ffordd sydd erbyn ni eto, ni oes neb ond Duw a ŵyr."
+  ],
+  [
+   98.0,
+   "Pen y driwrain, pen y driwrain, o fel y sarnau hŷn."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

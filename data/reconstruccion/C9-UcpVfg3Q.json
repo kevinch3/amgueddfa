@@ -1,0 +1,50 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "Gan nos Anna, gan nos Anna, gan nos Anna dodd hi'n beidio."
+  ],
+  [
+   40.0,
+   "Gan nos Anna, gan nos Anna, gan nos Anna aeth o le."
+  ],
+  [
+   66.12,
+   "Bant o safon, dwi'n mynd i'r gwael."
+  ],
+  [
+   83.12,
+   "Cer o sêt gan fy nhon, dan ni'n gweud di. Dan ni'n gweud di nesda'r taliad mlaen."
+  ],
+  [
+   113.12,
+   "Ganol siarad, ganol siarad yw'r hyn, yw'r hyn."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

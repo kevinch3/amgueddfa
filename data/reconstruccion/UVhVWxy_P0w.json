@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   81.4,
+   "O dan menton, o dan be' yw dan menton. Hei o dan menton, o be' yw dan menton."
+  ],
+  [
+   123.4,
+   "Neu bod ar ben to, bod yr Eirug am ben to."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

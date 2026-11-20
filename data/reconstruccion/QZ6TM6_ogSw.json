@@ -1,0 +1,43 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Salwm Celst un deg chwech Molwch yr arglwydd, fe enaich, mola'r arglwydd, mola'r arglwydd tra fyddaf byw, caraf fawl i'w dyw tra fyddaf."
+  ],
+  [
+   17.0,
+   "Peidiwch ag ymddiried mewn tywysogion, mewn unrhyw dyn na allwareddy, bydd yr anegl yn darfod a cynta'n dychwelyd i'r ddaear, a ma'r diwrnod hwnnw'n derbyn ar ei gynlluniau."
+  ],
+  [
+   33.0,
+   "Gwyn ei ddydd y dyn y mae Duw Jacob yn ei gynorthwyo, a chyma'i ormoedd yr anamlwyd ei dduw, creadwr nebloedd ar daear a'r môr a'r cyfan sydd ym mynt. Y mae'i ef yn cadw'n ffyddlon hyd byth, ac yn wneud barn ar gorff frymedig. Y mae'n rhoi barau i'w newy'nno. Y mae'r arglwydd yn rhyddhau carcharorion. Y mae'r arglwydd yn rhoi golwg i'r deillad."
+  ],
+  [
+   63.0,
+   "ac yn unionni rhai gwargan, y mae'r Arglwydd yn caru rhai cyfiawn, y mae'r Arglwydd yn llwy- yn gylio dros y dieithied, ac yn cynnal y weddw ar ymddi ban, y mae'n ddifetha ffordd y drygionus, bydd yr Arglwydd yn teimlasu'i huddyll, a rhyw ddyn o lleion, dros y cenedlaethau, molwch yr Arglwydd, a'i"
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

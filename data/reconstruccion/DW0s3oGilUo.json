@@ -1,0 +1,78 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Yn berched tanwedd i colli chariad, ffoldiroldirolol ffoldiroldiro. Cael un arall, tyna oedd dy bwriad, ffoldiroldirolol ffoldiroldiro. Ond nid oedd dim o lanciau'r pentre, ffoldirololdiroldiro. Am briod i lys a fach i'r cyntre, ffoldiroldirolol ffoldiroldiro."
+  ],
+  [
+   30.0,
+   "Hen byrch y tang sydd yn dal i drio, ffoldiroldirolol ffoldiroldiro."
+  ],
+  [
+   38.5,
+   "Gwisgo lasau sydd yn acen bincio, ffoldiroldirolol ffoldiroldiro."
+  ],
+  [
+   46.5,
+   "Ond er bod brân i ffran yn rhywle, ffoldirololdiroldiro."
+  ],
+  [
+   53.5,
+   "Nes nefli- nes na hon i Lisa Bach er chemtre, ffoldiroldirolol ffoldiroldiro. Hen byrch y tan wedi thorri'i chalon, ffoldiroldirolol ffoldiroldiro. Mynd i'r llawn mae pawb oedd yn cariatôn, ffoldiroldirolol ffoldiroldiro. Bydd y datws newydd ar bren balne, ffoldirololdiroldiro."
+  ],
+  [
+   83.5,
+   "Cyn briod i Lisa Fach er chemtre, fol dir ol dir ol ol, fol dir ol dir o."
+  ],
+  [
+   91.5,
+   "Hen berched tan aeth i ffair e Bala, fol dir ol dir ol ol, fol dir ol dir o."
+  ],
+  [
+   99.5,
+   "Gwelsion Priste Fach gyntig ond smala, fol dir ol dir ol ol, fol dir ol dir o."
+  ],
+  [
+   106.5,
+   "Caer a dyweddodd wrth fynd adre, Ffoldi ro-lo-ldi ro-ldi ro, cotod calon lys a fach er chentre, Ffoldi ro-ldi ro-lo-ldi, Ffoldi ro-ldi ro."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

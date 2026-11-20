@@ -1,0 +1,58 @@
+"""About one minute of a video at a time, cut in pauses, with a few seconds of overlap,
+and a hash of everything the model would see (an unchanged window is never asked twice)."""
+from __future__ import annotations
+
+import hashlib
+import json
+import re
+from typing import Callable, NamedTuple
+
+from scripts.reconstruct.context import Context, tokens
+from scripts.reconstruct.sources import Line
+
+# Bump when prompt.md or schema.json change: every window is asked again.
+PROMPT_VERSION = 1
+SEARCH = 10.0  # a cut may move this far from its nominal place to land in a pause
+
+
+class Window(NamedTuple):
+    t0: float
+    t1: float
+    lines: tuple
+    context: Context
+    hash: str
+
+
+def _cut(starts: list[float], nominal: float) -> float:
+    best, best_gap = nominal, -1.0
+    for a, b in zip(starts, starts[1:]):
+        mid = (a + b) / 2
+        if abs(mid - nominal) <= SEARCH and b - a > best_gap:
+            best, best_gap = round(mid, 1), b - a
+    return best
+
+
+def make_windows(lines: list[Line], duration: float, context_for: Callable[[float, float], Context],
+                 size: float = 60.0, overlap: float = 5.0) -> list[Window]:
+    starts = sorted({l.t for l in lines})
+    cuts, t0 = [0.0], 0.0
+    while t0 + size < duration:
+        t0 = _cut(starts, t0 + size)
+        cuts.append(t0)
+    cuts.append(float(duration))
+    out = []
+    for a, b in zip(cuts, cuts[1:]):
+        inside = tuple(l for l in lines if a - overlap <= l.t < b + overlap)
+        ctx = context_for(a, b)
+        key = json.dumps([a, b, [list(l) for l in inside], ctx.text, PROMPT_VERSION], ensure_ascii=False, sort_keys=True)
+        out.append(Window(a, b, inside, ctx, hashlib.sha256(key.encode("utf-8")).hexdigest()[:16]))
+    return out
+
+
+def needs_model(w: Window) -> bool:
+    """False when no line has a word (music, applause): nothing to ask."""
+    return any(tokens(_strip_tags(l.text)) for l in w.lines)
+
+
+def _strip_tags(s: str) -> str:
+    return re.sub(r"\[[^\]]*\]", " ", s)

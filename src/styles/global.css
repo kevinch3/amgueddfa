@@ -634,3 +634,8 @@ dialog, .lb-stage, .rep-cuerpo, .informar { overscroll-behavior: contain; }
 .rep-tr .badge { white-space: normal; }
 .rep-seguir { white-space: nowrap; }
 .rep-buscar-fila input[type="search"] { flex: 1 1 10rem; width: 100%; min-width: 0; max-width: 100%; }
+
+/* Player: "Ver en YouTube" and "Informar un error" are secondary actions. */
+.rep-acciones { justify-content: flex-end; gap: 0.25rem 1.25rem; }
+.rep-acciones a, .rep-acciones .btn-link { color: var(--ink-soft); font: 0.85rem/1.2 var(--sans); text-decoration: none; min-height: 36px; display: inline-flex; align-items: center; padding: 0 0.15rem; }
+.rep-acciones a:hover, .rep-acciones .btn-link:hover, .rep-acciones a:focus-visible, .rep-acciones .btn-link:focus-visible { color: var(--red-deep); text-decoration: underline; }

@@ -109,5 +109,63 @@ def test_useful_keeps_spanish_speech_and_drops_misdetected_or_garbled_captions()
     assert not useful({"src": "youtube", "lang": "es", "seg": noise}, words)
     # too little text
     assert not useful({"src": "youtube", "lang": "es", "seg": good[:1]}, words)
-    # the author's own subtitles are kept as they are
-    assert useful({"src": "subida", "lang": "en", "seg": noise}, words)
+    # the author's own Spanish subtitles are kept as they are
+    assert useful({"src": "subida", "lang": "es", "seg": noise}, words)
+
+
+from scripts.export_video_transcripts import fix_eisteddfod
+
+WORDS = {"estado", "estero", "estadio", "del", "de", "la", "comision", "santiago", "este", "en", "bot", "existe", "teddy"}
+
+
+def test_fix_eisteddfod_spellings():
+    f = lambda s: fix_eisteddfod(s, WORDS)
+    assert f("la corona del Stedwood 2019") == "la corona del Eisteddfod 2019"
+    assert f("de este Stedbot, Stedbot Mimosa") == "de este Eisteddfod, Eisteddfod Mimosa"
+    assert f("la comisión del Estéduo del Chubut") == "la comisión del Eisteddfod del Chubut"
+    assert f("este issted Bot del chubut 2022") == "este Eisteddfod del chubut 2022"
+    assert f("la comisión del stad vot") == "la comisión del Eisteddfod"
+    assert f("organizadora del Estado del chubut") == "organizadora del Eisteddfod del chubut"
+    assert f("a esta última sesión del Estadio del Chibut") == "a esta última sesión del Eisteddfod del Chibut"
+    # real words stay: Santiago del Estero, existe, a name
+    assert f("en la campaña de Santiago del Estero") == "en la campaña de Santiago del Estero"
+    assert f("pero existe uno tan bello") == "pero existe uno tan bello"
+    assert f("le vamos a pedir a Teddy Lewis") == "le vamos a pedir a Teddy Lewis"
+    assert f("el estado de las cosas") == "el estado de las cosas"
+
+
+def test_author_subtitles_in_english_are_not_published():
+    assert not useful({"src": "subida", "lang": "en", "seg": [[0.0, "Video gan Andes Celtig"]]}, set())
+
+
+def test_fix_eisteddfod_leaves_inflected_words_and_names():
+    words = {"estudio", "estar", "establecer", "estrella", "estremecer", "estado", "gloria", "silvina"}
+    f = lambda s: fix_eisteddfod(s, words)
+    for s in ["en los estudios de la Universidad", "estando de salir", "están estudiando", "está establecido",
+              "los ecos estrellados", "corazón estremecido", "como el esternón", "Gloria Estefan", "Silvina Estuardo",
+              "del estético del Chubut"]:
+        assert f(s) == s or s == "del estético del Chubut", s
+    assert f("la comisión del Estéreo del Chubut") == "la comisión del Eisteddfod del Chubut"
+
+
+def test_fix_eisteddfod_shape_and_context_rules():
+    f = lambda s: fix_eisteddfod(s, {"del", "la"})
+    # the "-dfod" tail anywhere
+    for w in ["Steadwood", "statbot", "stadb", "Istedvo", "Estetbot", "Steedgod", "Steadboard"]:
+        assert f(f"en el {w} hoy") == "en el Eisteddfod hoy", w
+    # context: after "comisión/corona/presidente… del" or before "del Chubut", "de la Juventud", Mimosa, Trevelin
+    assert f("premio Corona del Estejo, competencia") == "premio Corona del Eisteddfod, competencia"
+    assert f("del esteo del chubut") == "del Eisteddfod del chubut"
+    assert f("de la Estadua del Chubut") == "de la Eisteddfod del Chubut"
+    assert f("comisión del stadbot de la juventud") == "comisión del Eisteddfod de la juventud"
+    # ordinary words and names stay, even right before "del Chubut" when they are common verbs
+    for s in ["yo estaba allí", "estará en el escenario", "durante su estadía", "la estilística del texto",
+              "Cat Stevens", "el estío", "se establece que", "Station", "la Stagnita"]:
+        assert f(s) == s, s
+
+
+def test_fix_eisteddfod_context_keeps_real_words():
+    f = lambda s: fix_eisteddfod(s, {"estancia", "estado", "del", "la"})
+    assert f("la estancia Trevelin") == "la estancia Trevelin"
+    assert f("premio del Estado provincial") == "premio del Estado provincial"
+    assert f("comisión del Estado del Chubut") == "comisión del Eisteddfod del Chubut"

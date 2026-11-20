@@ -56,12 +56,47 @@ def spanish_words() -> set[str]:
 def useful(t: dict, words: set[str]) -> bool:
     """Whether a transcription is worth showing: the author's subtitles always; machine text
     (YouTube automatic, Whisper) only when it is Spanish and reads as Spanish."""
+    if t.get("lang") != "es":  # nobody speaks English on stage: no English text, not even the author's
+        return False
     if t["src"] == "subida":
         return True
-    if t.get("lang") != "es":
-        return False
     toks = [_fold(w) for _, line in t["seg"] for w in re.findall(r"[^\W\d_]+", re.sub(r"\[[^\]]*\]", "", line))]
     return len(toks) >= MIN_TEXT_WORDS and sum(w in words for w in toks) / len(toks) >= MIN_SPANISH_SHARE
+
+
+# "Eisteddfod" as heard by YouTube and Whisper: Stedbot, Estéduo, Steadwood, Istedbot, "stad vot"…
+# An invented word that sounds like it becomes Eisteddfod; a real Spanish word (estado, estero,
+# estadio) only right before "del Chubut", never in "Santiago del Estero".
+_SPLIT = re.compile(r"\b(?:[eiy]?s{1,2}t[ae]d|ist[ae]d)\s+[bv]o[tdl]?\b", re.I)
+_CHUBUT = re.compile(r"\b(estados?|estero|estadio|estudo)(?=\s+del\s+ch[iu]but)", re.I)
+
+
+# Real words that sound like it (missing from the base-form dictionary).
+_NOT_IT = {"estetico", "estetica", "esteticas", "esternon", "estertor", "estertores", "estados", "estefan", "esteban",
+           "estaba", "estaban", "estabas", "estabamos", "estara", "estaran", "estaras", "estare", "estaremos", "estio",
+           "estadia", "estero", "estado", "estadio", "estudio", "estudios"}
+# 1. The "-dfod" tail: st + vowel + d/t + b v w f g p (Stedbot, Steadwood, statbot, Istedvo, Steedgod).
+_TAIL = re.compile(r"^(?:l|e|i|y|ei|is|es)?s{1,2}t[eai]+[dt]+[bvwfgp]")
+# 2. Context: an "est…" word where "Eisteddfod" belongs (Estéduo, Estedo, esteo, Estadua, Estejo).
+_EST = r"(?:[eiy]|ei|is|es|l)?s{1,2}t[eéaáií][^\W\d_]{0,9}"
+_AFTER = re.compile(r"(?i)\b((?:comisi[oó]n|corona|presidente|asociaci[oó]n|premio|sesi[oó]n|edici[oó]n|organizadora|plata|sill[oó]n)\s+(?:del?|de\s+la)\s+)(" + _EST + r")\b")
+_BEFORE = re.compile(r"(?i)(?<!santiago del )\b(" + _EST + r")(?=\s+(?:del\s+ch[iu]but|de\s+la\s+juventud|mimosa|trevelin)\b)")
+_SPLIT = re.compile(r"\b(?:[eiy]?s{1,2}t[ae]d|ist[ae]d)\s+[bv]o[tdl]?\b", re.I)
+_WORD = re.compile(r"\b[^\W\d_]{4,}\b(?!@)")
+_ENDINGS = [("s", ""), ("es", ""), ("os", "o"), ("as", "a"), ("ido", "er"), ("ido", "ir"), ("ado", "ar"), ("ando", "ar")]
+
+
+def _real_word(f: str, words: set[str]) -> bool:
+    return f in words or f in _NOT_IT or any(f.endswith(e) and f[: -len(e)] + r in words for e, r in _ENDINGS)
+
+
+def fix_eisteddfod(text: str, words: set[str]) -> str:
+    """"Eisteddfod" as heard by YouTube and Whisper (Stedbot, Estéduo, Steadwood, "stad vot"…), written right."""
+    text = _SPLIT.sub("Eisteddfod", text)
+    text = _AFTER.sub(lambda m: m.group(1) + (m.group(2) if _real_word(_fold(m.group(2)), words) else "Eisteddfod"), text)
+    misheard = {"estado", "estados", "estero", "estadio", "estudo"}
+    text = _BEFORE.sub(lambda m: "Eisteddfod" if _fold(m.group(1)) in misheard or not _real_word(_fold(m.group(1)), words) else m.group(1), text)
+    return _WORD.sub(lambda m: "Eisteddfod" if _fold(m.group(0)) != "eisteddfod" and _TAIL.match(_fold(m.group(0))) and not _real_word(_fold(m.group(0)), words) else m.group(0), text)
 
 
 TS = re.compile(r"(?:(\d+):)?(\d{1,2}):(\d{2})[.,](\d{3})\s+-->")
@@ -156,6 +191,8 @@ def export(backup: Path, videos: list[dict], out: Path = OUT, words: set[str] | 
         t = pick((backup / "videos" / files[vid]).with_suffix(""))
         if not t or not t["seg"] or (words is not None and not useful(t, words)):
             continue
+        if words is not None:
+            t["seg"] = [[s, fix_eisteddfod(x, words)] for s, x in t["seg"]]
         body = json.dumps(t, ensure_ascii=False, separators=(",", ":"))
         p = out / f"{vid}.json"
         if not p.exists() or p.read_text(encoding="utf-8") != body:

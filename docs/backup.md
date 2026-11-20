@@ -225,3 +225,10 @@ when it is Spanish and reads as Spanish: language `es`, at least 55% of its word
 are always kept. YouTube had tagged 268 of these Spanish/Welsh videos as English, Romanian,
 Ukrainian, Arabic and others, with nonsense text (sung Welsh, music). Result: 519 published
 (324 YouTube, 193 Whisper, 2 author's subtitles), 327 removed. Everything stays in the backup.
+
+Also at publication: no English text at all (nobody speaks English on stage, not even the
+author's subtitles), and «Eisteddfod» is written right where YouTube and Whisper heard
+Stedbot, Estéduo, Steadwood, Istedvo, "stad vot", «Estado del Chubut»… (`fix_eisteddfod`:
+the "-dfod" tail st+vowel+d/t+b/v/w/f/g/p, or an est… word right after "comisión/corona/
+presidente… del" or right before "del Chubut", "de la Juventud", Mimosa, Trevelin; real
+Spanish words and "Santiago del Estero" stay). The private backup keeps the original text.

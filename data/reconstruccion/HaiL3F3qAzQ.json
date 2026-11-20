@@ -16,24 +16,56 @@
    "claridad detrás de tu velo errante mis"
   ],
   [
+   17.7,
+   "ojos Go la"
+  ],
+  [
    21.9,
    "Inmensidad la"
   ],
   [
+   23.7,
+   "inidad la"
+  ],
+  [
+   25.7,
+   "Inmensidad la Inmensidad"
+  ],
+  [
    30.1,
-   "de la tormenta se van las"
+   "heros de la tormenta se van las"
   ],
   [
    35.8,
-   "nubes en de luz dorada se pone al"
+   "nubes en suc de luz dorada se pone al"
   ],
   [
    43.5,
-   "sol y como"
+   "sol y como si l amas negras las"
   ],
   [
    47.6,
    "colondrinas diciendo a Dios"
+  ],
+  [
+   52.0,
+   "diendo diciendo adió diciendo ad Diós"
+  ],
+  [
+   56.8,
+   "diciendo adió"
+  ],
+  [
+   60.6,
+   "vuelva la buena"
+  ],
+  [
+   64.8,
+   "doctrina"
+  ],
+  [
+   67.0,
+   "vena"
   ],
   [
    68.8,
@@ -44,8 +76,20 @@
    "vuelve desde el fondo de la"
   ],
   [
+   81.3,
+   "vida sobre la luzar"
+  ],
+  [
+   92.5,
+   "mar"
+  ],
+  [
    95.5,
    "mar un cielo de barriletes tiene la"
+  ],
+  [
+   103.0,
+   "tarde el viendo las al monedas cantando"
   ],
   [
    110.4,
@@ -92,15 +136,55 @@
    "ver"
   ],
   [
+   163.5,
+   "vuela"
+  ],
+  [
    165.6,
    "vuelve del más allá del más allá vuelve"
   ],
   [
    172.3,
-   "desde el fondo de la vida"
+   "velve desde el fondo de la vida"
   ]
  ],
  "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],
@@ -176,8 +260,8 @@
  ],
  "ventanas": {
   "total": 4,
-  "modelo": 4,
-  "reglas": 0,
+  "modelo": 3,
+  "reglas": 1,
   "vacias": 0
  }
 }

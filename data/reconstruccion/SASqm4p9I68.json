@@ -4,15 +4,57 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   30.0,
+   "El profesor mal encarado"
+  ],
+  [
+   34.0,
+   "Elas un elefante bocadilla"
+  ],
+  [
+   38.0,
+   "Elas una nariz salló y estriba"
+  ],
+  [
+   43.0,
+   "Un oído nazón mal naricado"
+  ],
+  [
+   48.0,
+   "Elas en el colón de una crea"
+  ],
+  [
    52.0,
-   "una pirámide de Egipto"
+   "Elas una pirámide de Egipto"
+  ],
+  [
+   56.0,
+   "Las dos estribles de nariz de cera"
   ],
   [
    60.0,
-   "sabañón, garrafal, morado y frito."
+   "Eras el maricísimo infinito, presoya, chingariz, caraculeja, sabañón, garrafal, morado y frito."
   ]
  ],
  "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
   [
    "whisper_es"
   ],

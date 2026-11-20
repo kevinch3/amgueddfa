@@ -9,7 +9,7 @@
   ],
   [
    5.6,
-   "He salido amigos a recorrer el valle"
+   "He salido, amigos, a recorrer el valle"
   ],
   [
    10.4,
@@ -17,15 +17,23 @@
   ],
   [
    14.6,
-   "en un charco muy quieto, paraíso de ranas"
+   "en un charco muy quieto, paraíso de ranas,"
   ],
   [
    19.3,
-   "el ramaje de un sauce se vencía y cantaba"
+   "el ramaje de un sauce se vencía y cantaba."
   ],
   [
    30.0,
    "Verdes nubes, castañas, amarillos dorados, murmuraban recuerdos de memorias casadas."
+  ],
+  [
+   47.8,
+   "Sacarían pacientes, encendían rastrojos y en columnas de uno se elevaban plegadas."
+  ],
+  [
+   55.1,
+   "El silicito cañó"
   ],
   [
    61.4,
@@ -40,6 +48,10 @@
    "El verano se iba por detrás de las párbaras"
   ],
   [
+   69.8,
+   "Parada"
+  ],
+  [
    72.1,
    "Ante el rastrojo recién encendido"
   ],
@@ -52,8 +64,16 @@
    "Subiéndole hasta el mentón mal afectado"
   ],
   [
+   83.0,
+   "Apoyado en sus manos, viejas, águas de género"
+  ],
+  [
    90.0,
    "Sufriendo los calores que le trajo la tarde al borde del anochecer"
+  ],
+  [
+   96.0,
+   "Ardía mi dolela quemazón de sudores"
   ],
   [
    99.0,
@@ -69,6 +89,21 @@
   ]
  ],
  "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
   [
    "whisper_es"
   ],

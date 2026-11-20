@@ -256,6 +256,10 @@
    "una fuerza irresistible mientras el paso"
   ],
   [
+   207.8,
+   "de los años y los siglos han y es que y"
+  ],
+  [
    210.4,
    "enriquezca esta relación y a partir de"
   ],
@@ -317,7 +321,7 @@
   ],
   [
    278.3,
-   "el olvido se valora la originalidad"
+   "el olvido ve se valora la originalidad"
   ],
   [
    282.4,
@@ -333,7 +337,7 @@
   ],
   [
    292.0,
-   "asimismo se pondera el arte de"
+   "punto c asimismo se pondera el arte de"
   ],
   [
    295.8,
@@ -412,6 +416,10 @@
    "ponga de pie y se dé a conocer"
   ],
   [
+   457.0,
+   "aquí"
+  ],
+  [
    490.3,
    "las presentaciones quizás sean"
   ],
@@ -436,8 +444,16 @@
    "daniel just presidente de la asociación"
   ],
   [
+   520.0,
+   "san david entrega la medalla y bono ven"
+  ],
+  [
    522.1,
    "quién va a colocar"
+  ],
+  [
+   525.3,
+   "la misma área"
   ],
   [
    577.7,
@@ -445,7 +461,7 @@
   ],
   [
    583.7,
-   "katherine"
+   "Katherine"
   ],
   [
    586.2,
@@ -532,16 +548,24 @@
    "hizo fruto y harina en esta tierra donde"
   ],
   [
+   654.2,
+   "un uno lejano de esperanzas vuelve el"
+  ],
+  [
    657.8,
    "nombre de kathryn en la piedra"
   ],
   [
+   678.2,
+   "y la aclaración de área"
+  ],
+  [
    682.0,
-   "al pie de su poema catherine roberge"
+   "al pie de su poema Catherine Roberge"
   ],
   [
    684.9,
-   "davis integró el grupo colonizador galés"
+   "Davis integró el grupo colonizador galés"
   ],
   [
    687.3,
@@ -557,7 +581,7 @@
   ],
   [
    695.3,
-   "en la zona de punta cuevas"
+   "en la zona me da nosa de punta cuevas"
   ],
   [
    697.4,
@@ -580,8 +604,12 @@
    "se van a brindar los tributos al poeta"
   ],
   [
+   718.0,
+   "ana grabó y Roberto Jones interpreta"
+  ],
+  [
    721.3,
-   "el himno popular amazing grace"
+   "pararía el himno popular Amazing Grace"
   ],
   [
    725.3,
@@ -589,7 +617,7 @@
   ],
   [
    728.2,
-   "matías gonzález en gaita"
+   "Matías González en gaita"
   ],
   [
    804.28,
@@ -600,16 +628,20 @@
    "How precious did that grace appear, dear, I first believed."
   ],
   [
-   937.7,
+   937.72,
    "Was blind, but now I see."
   ],
   [
    987.9,
-   "miembros de la comisión del Eisteddfod de Chubut"
+   "miembros de la comisión del Eisteddfod del Chubut"
   ],
   [
    990.4,
    "hacen entrega de un presente"
+  ],
+  [
+   992.3,
+   "floral área"
   ],
   [
    1022.7,
@@ -644,6 +676,10 @@
    "nos envuelve a todos voy a invitar a"
   ],
   [
+   1051.5,
+   "nadie"
+  ],
+  [
    1052.6,
    "a descender del escenario acompañado por"
   ],
@@ -658,10 +694,6 @@
   [
    1061.8,
    "david y del este del Chubut"
-  ],
-  [
-   1109.36,
-   "Diolch yn fawr iawn i bawb sy'n gweithio ym Mhrifysgol Sir Gaerfyrddin."
   ]
  ],
  "fuentes": [
@@ -864,6 +896,9 @@
    "yt_es"
   ],
   [
+   "yt_es"
+  ],
+  [
    "cy"
   ],
   [
@@ -1107,39 +1142,6 @@
    "yt_es"
   ],
   [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
    "yt_es"
   ],
   [
@@ -1159,12 +1161,66 @@
   ],
   [
    "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
   ]
  ],
  "ventanas": {
   "total": 19,
-  "modelo": 19,
-  "reglas": 0,
-  "vacias": 0
+  "modelo": 16,
+  "reglas": 1,
+  "vacias": 2
  }
 }

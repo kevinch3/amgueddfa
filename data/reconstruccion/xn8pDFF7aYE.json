@@ -4,11 +4,116 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   6.8,
+   "resucitado desde la misma calle"
+  ],
+  [
+   13.0,
+   "nada te importa"
+  ],
+  [
+   20.4,
+   "ella se muere casi dos meses"
+  ],
+  [
+   27.1,
+   "nada te importa"
+  ],
+  [
+   44.0,
+   "la ciudad"
+  ],
+  [
+   57.2,
+   "el mar"
+  ],
+  [
+   68.1,
+   "yo supe nada"
+  ],
+  [
+   75.7,
+   "no importa"
+  ],
+  [
    82.5,
    "es tan trágico mi amor es este sueño"
+  ],
+  [
+   94.1,
+   "por mí"
+  ],
+  [
+   102.3,
+   "es como"
+  ],
+  [
+   107.0,
+   "y no"
+  ],
+  [
+   113.0,
+   "sí"
+  ],
+  [
+   119.4,
+   "ah"
+  ],
+  [
+   123.4,
+   "y así poder así"
+  ],
+  [
+   127.7,
+   "no"
   ]
  ],
  "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ]

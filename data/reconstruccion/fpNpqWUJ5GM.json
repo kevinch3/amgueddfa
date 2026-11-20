@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Con la vela, plumerito, cuando nacaré en el viento,"
+  ],
+  [
    15.2,
    "recuerdos de tus verdores me causan un sentimiento."
   ],
@@ -12,8 +16,16 @@
    "Recuerdos de tus verdores me causan un sentimiento."
   ],
   [
+   35.9,
+   "¡Ay, cuánto te necesito de volar donde vivirá!"
+  ],
+  [
    48.9,
    "¡Podré volver algún día, Cortadera, plumerito!"
+  ],
+  [
+   58.9,
+   "¡Ay, cuánto te necesito! ¡Cortadera no me evito!"
   ],
   [
    76.4,
@@ -22,6 +34,10 @@
   [
    85.9,
    "y abanicando los aires por esos años que vi."
+  ],
+  [
+   95.2,
+   "Y abanicando los aires por esos años que vi."
   ],
   [
    106.2,
@@ -33,6 +49,18 @@
   ]
  ],
  "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
   [
    "whisper_es"
   ],

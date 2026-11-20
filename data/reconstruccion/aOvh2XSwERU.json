@@ -4,12 +4,20 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   3.1,
+   "bien"
+  ],
+  [
    20.3,
    "junto a esta pared"
   ],
   [
    24.0,
    "yo quedé llorando"
+  ],
+  [
+   28.9,
+   "no sé"
   ],
   [
    32.2,
@@ -28,6 +36,14 @@
    "crisantemos que se abre"
   ],
   [
+   61.1,
+   "cristian amor"
+  ],
+  [
+   69.3,
+   "entra"
+  ],
+  [
    86.1,
    "una vez"
   ],
@@ -44,6 +60,14 @@
    "otra vez"
   ],
   [
+   111.3,
+   "sí"
+  ],
+  [
+   114.4,
+   "cristante"
+  ],
+  [
    117.8,
    "que éste abrió encuentra camino"
   ],
@@ -57,6 +81,24 @@
   ]
  ],
  "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],

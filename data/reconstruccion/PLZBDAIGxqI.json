@@ -4,6 +4,26 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   9.8,
+   "Víctor Arias."
+  ],
+  [
+   14.6,
+   "Estás segura de ser, señor."
+  ],
+  [
+   18.5,
+   "Sentirse el pie, no."
+  ],
+  [
+   20.0,
+   "Entonces, ¿sí?"
+  ],
+  [
+   28.8,
+   "Corka Mies, Sporker de Gaiman"
+  ],
+  [
    30.8,
    "Conjunto Mixto de Escuela de Música de Gaiman"
   ],
@@ -16,8 +36,20 @@
    "La número 68"
   ],
   [
+   37.0,
+   "Circulado así lo dispone"
+  ],
+  [
+   40.0,
+   "Yo jugador"
+  ],
+  [
    41.9,
    "Conjunto Mixto de Escuela de Música de Gaiman"
+  ],
+  [
+   50.0,
+   "Amén."
   ],
   [
    170.0,
@@ -25,6 +57,30 @@
   ]
  ],
  "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
   [
    "whisper_es"
   ],

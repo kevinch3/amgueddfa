@@ -4,12 +4,32 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   4.5,
+   "a la vida"
+  ],
+  [
+   18.0,
+   "la granadina"
+  ],
+  [
    55.1,
    "un anhelo dirigido hacia ti yo estaba"
   ],
   [
    59.6,
    "solo en un rincón del camino"
+  ],
+  [
+   62.9,
+   "cuando de pronto y unas alas martín como"
+  ],
+  [
+   67.3,
+   "si un beso comenzar a ceder se iba"
+  ],
+  [
+   72.2,
+   "sí sí"
   ],
   [
    83.6,
@@ -20,16 +40,44 @@
    "al fin pero lo cierto es que la pena"
   ],
   [
+   93.2,
+   "solo"
+  ],
+  [
    94.8,
    "no importó ya ni siquiera porque seguir"
+  ],
+  [
+   100.1,
+   "se vale"
   ],
   [
    102.1,
    "se fue la vida"
   ],
   [
+   109.2,
+   "y ahora todos"
+  ],
+  [
+   116.8,
+   "sí"
+  ],
+  [
+   125.7,
+   "y no"
+  ],
+  [
+   130.5,
+   "de verdad"
+  ],
+  [
    135.4,
    "algunas veces es mejor no preguntar por"
+  ],
+  [
+   140.0,
+   "una vez pierdo me sale bien no sé todo"
   ],
   [
    144.3,
@@ -42,6 +90,10 @@
   [
    150.7,
    "se va"
+  ],
+  [
+   153.3,
+   "se va será la ganadora"
   ],
   [
    188.6,
@@ -61,6 +113,45 @@
   ]
  ],
  "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],

@@ -17,7 +17,7 @@
   ],
   [
    7.7,
-   "competencia número 73 coro de"
+   "competencia número 73 Coro de"
   ],
   [
    10.8,
@@ -37,11 +37,15 @@
   ],
   [
    24.1,
-   "dispone Muchas"
+   "dispone Juan Muchas"
   ],
   [
    27.3,
    "gracias vocal femenino"
+  ],
+  [
+   51.5,
+   "azul soy"
   ],
   [
    58.2,
@@ -66,6 +70,10 @@
   [
    101.6,
    "amor soy"
+  ],
+  [
+   117.7,
+   "tejerse y lo a"
   ],
   [
    121.8,
@@ -118,6 +126,10 @@
   [
    169.4,
    "horas como Penélope"
+  ],
+  [
+   173.7,
+   "djer la"
   ],
   [
    175.7,
@@ -212,12 +224,28 @@
    "aguas María no tiene tiempo"
   ],
   [
+   362.9,
+   "alantan los ojos María danan los"
+  ],
+  [
    367.9,
    "ojos rotos de sueño María rotos de sueño"
   ],
   [
+   374.4,
+   "alando d su tiempo María dandoa su"
+  ],
+  [
+   380.6,
+   "tiempo lo"
+  ],
+  [
    382.7,
    "trabaja María solo trabaja y su trabajo"
+  ],
+  [
+   387.2,
+   "es"
   ],
   [
    388.4,
@@ -228,8 +256,16 @@
    "para María no ha"
   ],
   [
+   418.4,
+   "mugada"
+  ],
+  [
    420.0,
    "pero para María no hay"
+  ],
+  [
+   423.8,
+   "mediodía ningun pero para María ninguna"
   ],
   [
    431.0,
@@ -244,15 +280,98 @@
    "tiempo"
   ],
   [
+   443.2,
+   "nosos María"
+  ],
+  [
+   447.6,
+   "deando sueño"
+  ],
+  [
+   450.5,
+   "María"
+  ],
+  [
+   452.8,
+   "suando anda"
+  ],
+  [
+   454.9,
+   "sufriendo María te anda sufriendo"
+  ],
+  [
+   458.5,
+   "marando solo"
+  ],
+  [
    460.8,
    "trabaja María solo trabaja solo trabaja"
   ],
   [
+   465.4,
+   "solo"
+  ],
+  [
    466.6,
    "trabaja María solo trabaja y su trabajo"
+  ],
+  [
+   470.9,
+   "es"
   ]
  ],
  "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],
@@ -442,8 +561,8 @@
  ],
  "ventanas": {
   "total": 9,
-  "modelo": 8,
-  "reglas": 1,
+  "modelo": 9,
+  "reglas": 0,
   "vacias": 0
  }
 }

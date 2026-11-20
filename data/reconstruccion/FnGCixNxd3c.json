@@ -28,6 +28,10 @@
    "El rico canto, pa' que pueda preparar"
   ],
   [
+   103.0,
+   "Aquella bebida, que llena Sevilla"
+  ],
+  [
    107.6,
    "Es mi preferida, yo la quiero disfrutar"
   ],
@@ -36,15 +40,39 @@
    "Chocolate, chocolate"
   ],
   [
+   116.9,
+   "Este bebé igual mundo es lo que quiero tener"
+  ],
+  [
    122.7,
    "Un chocolate, un chocolate, desde México al mundo es lo que hicieron regalos."
   ],
   [
    133.7,
    "Y ya en todas partes, toman chocolate."
+  ],
+  [
+   174.7,
+   "Amén."
+  ],
+  [
+   234.7,
+   "¡Adiós!"
   ]
  ],
  "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
   [
    "whisper_es"
   ],

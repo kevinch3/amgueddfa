@@ -4,12 +4,32 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "bueno"
+  ],
+  [
    15.8,
    "cuando julio me lleva por la arena de"
   ],
   [
+   19.3,
+   "allí lo vi"
+  ],
+  [
    24.9,
    "cuando junio me lleva por la arena"
+  ],
+  [
+   28.1,
+   "quemaría el paisaje"
+  ],
+  [
+   31.8,
+   "redondo me viene el regreso de una"
+  ],
+  [
+   36.1,
+   "escena"
   ],
   [
    38.8,
@@ -20,8 +40,32 @@
    "pájaro en forma de boleta"
   ],
   [
+   49.1,
+   "combinado"
+  ],
+  [
+   50.7,
+   "sombreando sobre el ojo"
+  ],
+  [
+   52.9,
+   "soy el indio"
+  ],
+  [
    55.2,
    "en la roca de las cuevas"
+  ],
+  [
+   61.2,
+   "y mira"
+  ],
+  [
+   66.6,
+   "y en boston"
+  ],
+  [
+   68.6,
+   "somos lo tanto queridos de cadera"
   ],
   [
    73.0,
@@ -44,12 +88,44 @@
    "un abrazo de sol"
   ],
   [
+   93.7,
+   "abierta y"
+  ],
+  [
    97.7,
    "en el vientre confiado de ésta"
   ],
   [
+   107.2,
+   "para isabel horas"
+  ],
+  [
+   110.1,
+   "en ambos"
+  ],
+  [
    113.7,
    "sigo sin paso de dios entre las tierras"
+  ],
+  [
+   122.5,
+   "el reto con el zoom de esperanza"
+  ],
+  [
+   128.9,
+   "y economista"
+  ],
+  [
+   130.9,
+   "qué es inquilina llegaron de sobre el"
+  ],
+  [
+   134.1,
+   "lomo"
+  ],
+  [
+   135.6,
+   "de un cordón"
   ],
   [
    138.7,
@@ -64,15 +140,212 @@
    "destellos de julio"
   ],
   [
+   157.7,
+   "y jugar"
+  ],
+  [
    159.8,
    "vertical de plata y oro las gaviotas"
   ],
   [
    166.6,
    "reciente como estrellas"
+  ],
+  [
+   169.9,
+   "dónde"
+  ],
+  [
+   201.4,
+   "tienen"
+  ],
+  [
+   205.0,
+   "tarímbaro"
+  ],
+  [
+   207.0,
+   "forma de bonita"
+  ],
+  [
+   209.5,
+   "con mi mano siempre"
+  ],
+  [
+   229.6,
+   "y ninguno"
+  ],
+  [
+   249.1,
+   "en"
+  ],
+  [
+   266.7,
+   "y el tren o mental liga"
+  ],
+  [
+   271.9,
+   "y entregados a y de promesa"
+  ],
+  [
+   274.8,
+   "escribe"
+  ],
+  [
+   287.0,
+   "anoche"
+  ],
+  [
+   291.0,
+   "de que"
+  ],
+  [
+   337.2,
+   "darse por jornada"
+  ],
+  [
+   360.5,
+   "a mí"
+  ],
+  [
+   371.9,
+   "no lo es"
+  ],
+  [
+   378.1,
+   "esto"
+  ],
+  [
+   389.7,
+   "sí"
+  ],
+  [
+   406.4,
+   "no voy"
+  ],
+  [
+   431.1,
+   "no sé"
   ]
  ],
  "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],

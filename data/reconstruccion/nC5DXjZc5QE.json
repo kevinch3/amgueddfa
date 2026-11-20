@@ -4,8 +4,16 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.6,
+   "Y bueno, y bueno, hola, y bueno, aquí estamos, nos animamos, y bueno, a ver algo, ¿qué te va a decir?"
+  ],
+  [
    11.7,
    "Me lo dijo tu mamá, me lo dijo ella, yo te puedo asegurar que a ella le digo así la receta,"
+  ],
+  [
+   19.2,
+   "ay, pero, no es un milagro sería bonita, es bonito, mucho milagro, no, sí, sería yo"
   ],
   [
    26.4,
@@ -24,6 +32,34 @@
    "La familia de mi papá era muy abundante, si no le ponían vinagre."
   ],
   [
+   42.4,
+   "La familia de mi papá era cerca de... bueno, en el norte de Italia, por ahí, de huevito."
+  ],
+  [
+   51.4,
+   "cerca de mi ciudad"
+  ],
+  [
+   53.0,
+   "y eso es que le ponía"
+  ],
+  [
+   55.3,
+   "tan dominante"
+  ],
+  [
+   57.7,
+   "y mi abuela"
+  ],
+  [
+   59.6,
+   "quería Buenos Aires"
+  ],
+  [
+   61.1,
+   "y yo quería entender la párrafa"
+  ],
+  [
    63.9,
    "cuando terminaban las clases"
   ],
@@ -38,6 +74,10 @@
   [
    69.5,
    "obvio, no es cierto"
+  ],
+  [
+   71.2,
+   "toda abuela quiere un nacimiento"
   ],
   [
    74.1,
@@ -138,9 +178,53 @@
   [
    181.6,
    "Pero bueno, yo probé nada más."
+  ],
+  [
+   184.6,
+   "¡Ya me imagino, Betina Blum, por la chacra!"
+  ],
+  [
+   190.7,
+   "¡No te tragas el puente de la chacra!"
   ]
  ],
  "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
   [
    "whisper_es"
   ],

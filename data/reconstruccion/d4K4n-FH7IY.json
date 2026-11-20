@@ -4,6 +4,22 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   7.6,
+   "sol silencio de todos nosotros"
+  ],
+  [
+   10.0,
+   "escuchamos a"
+  ],
+  [
+   23.7,
+   "nanc necesitamos"
+  ],
+  [
+   29.0,
+   "pianista"
+  ],
+  [
    36.0,
    "yo no puedo en este"
   ],
@@ -77,7 +93,7 @@
   ],
   [
    118.8,
-   "Ariel pued yo puedo"
+   "Ariel yo puedo"
   ],
   [
    121.8,
@@ -89,14 +105,33 @@
   ],
   [
    137.8,
-   "Muchas gracias Nancy Muchas"
+   "capela Muchas gracias Nancy Muchas"
   ],
   [
    140.9,
    "gracias"
+  ],
+  [
+   148.8,
+   "Alicia"
   ]
  ],
  "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],

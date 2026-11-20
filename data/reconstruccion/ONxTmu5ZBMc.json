@@ -4,6 +4,18 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   24.8,
+   "cualquier quien día"
+  ],
+  [
+   29.5,
+   "por siempre si es algún día"
+  ],
+  [
+   32.6,
+   "el hombro firme caso en mi pecho"
+  ],
+  [
    36.8,
    "y la alegría"
   ],
@@ -12,12 +24,24 @@
    "de toda la vida"
   ],
   [
+   48.7,
+   "acompañarte de ponerlo"
+  ],
+  [
    52.8,
    "el canto y la dicha y quererte tanto"
   ],
   [
+   57.3,
+   "y dar"
+  ],
+  [
    59.1,
    "en la vida mejor así mejor buscar la"
+  ],
+  [
+   64.7,
+   "manera"
   ],
   [
    66.2,
@@ -36,11 +60,43 @@
    "no tengo a nada"
   ],
   [
+   82.9,
+   "pero"
+  ],
+  [
    85.0,
    "para acompañarte"
+  ],
+  [
+   96.7,
+   "para mí"
   ]
  ],
  "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],

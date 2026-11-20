@@ -4,12 +4,20 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.3,
+   "venga"
+  ],
+  [
    11.3,
    "en refugio de Jorge Spíndola y va"
   ],
   [
    15.6,
    "rodando esa mata los tumbos"
+  ],
+  [
+   21.0,
+   "perdón puedo empezar en unos"
   ],
   [
    24.3,
@@ -60,12 +68,28 @@
    "como soplo de aire un remolino que le"
   ],
   [
+   61.0,
+   "digo y entró al bar nomás me mata loca"
+  ],
+  [
    64.8,
    "en delante del mostrador quedó como"
   ],
   [
    68.0,
    "sediento"
+  ],
+  [
+   69.6,
+   "era un ave llamada usted la vera en un"
+  ],
+  [
+   73.5,
+   "matorral de oberá estrecha la esquinas"
+  ],
+  [
+   76.6,
+   "brillantes como una rubia despeinada"
   ],
   [
    80.4,
@@ -76,12 +100,36 @@
    "de un trago que siga chupando alguna"
   ],
   [
+   87.3,
+   "cosa seca de tu salida de a dónde vendrá"
+  ],
+  [
+   91.3,
+   "la pobre tendrá fría unam atajo desde"
+  ],
+  [
+   94.0,
+   "sus campos"
+  ],
+  [
    95.7,
    "los borrachos de este bar nos miran"
   ],
   [
    98.7,
    "extrañados"
+  ],
+  [
+   99.6,
+   "que serás de su cuerpo tan blando en los"
+  ],
+  [
+   102.9,
+   "cementos que lotero en las puestas del"
+  ],
+  [
+   106.5,
+   "mardones qué manera es tomar a cuenta de"
   ],
   [
    109.5,
@@ -97,6 +145,42 @@
   ]
  ],
  "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],

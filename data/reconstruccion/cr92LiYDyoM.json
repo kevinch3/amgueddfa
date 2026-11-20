@@ -4,8 +4,24 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.7,
+   "rano de sueños y amor quiero yo algod"
+  ],
+  [
+   6.0,
+   "Don que se va que se"
+  ],
+  [
+   9.6,
+   "va plata blanda mojada de lun y un"
+  ],
+  [
    15.4,
-   "sueños y amor quiero yo quiero"
+   "ranchito sueños y amor quiero yo quiero"
+  ],
+  [
+   22.0,
+   "yoo quiero yo ranito quiero yo"
   ],
   [
    49.0,
@@ -45,10 +61,29 @@
   ],
   [
    72.1,
-   "decidido otorgar el primer premio"
+   "decidido otorgar el primer premio des"
+  ],
+  [
+   74.6,
+   "cierto y"
   ]
  ],
  "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],

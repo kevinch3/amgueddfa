@@ -4,12 +4,28 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Todavía estamos, nuestras familias, y Marcelo me soplaba recién para la Comisión del Eisteddfod,"
+  ],
+  [
    8.0,
    "que seguimos trabajando y seguimos haciendo todas estas cosas, solo para nosotros."
   ],
   [
+   15.6,
+   "Es más fácil, si yo soy de acuerdo al clave con los gatos, que nosotros por hacer otra ocasión."
+  ],
+  [
    22.9,
    "¿Estás escuchando?"
+  ],
+  [
+   27.2,
+   "Hola"
+  ],
+  [
+   57.2,
+   "Debe esa mano, su arena está en la locura, si no, no tendrá que ser amado, solo el amor haría lo que perduja tu amor."
   ],
   [
    80.8,
@@ -42,9 +58,56 @@
   [
    161.8,
    "Sólo el amor encenderá la maravilla"
+  ],
+  [
+   168.8,
+   "Solo el amor consiguen senderlo muerto"
+  ],
+  [
+   191.8,
+   "Solo el amor al librar que perdura"
+  ],
+  [
+   198.8,
+   "Sólo el amor convierte en mi lado al patrón"
+  ],
+  [
+   205.8,
+   "Sólo el amor al lugar lo quiera en tu lugar"
+  ],
+  [
+   227.8,
+   "Solo en el amor convierte en mi cara al marco"
   ]
  ],
  "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
   [
    "whisper_es"
   ],

@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   24.0,
+   "no sé"
+  ],
+  [
    28.6,
    "es que todo se volvió"
   ],
@@ -32,12 +36,40 @@
    "ahora que no tiene"
   ],
   [
+   60.0,
+   "te vencieron"
+  ],
+  [
+   64.4,
+   "yo solo me"
+  ],
+  [
+   67.0,
+   "y eso es todo"
+  ],
+  [
+   73.1,
+   "a nadie"
+  ],
+  [
+   81.7,
+   "mínimo"
+  ],
+  [
    87.4,
    "volando sobre el verde"
   ],
   [
    92.8,
    "que te envuelva"
+  ],
+  [
+   97.2,
+   "volver a usar"
+  ],
+  [
+   99.4,
+   "sentimientos"
   ],
   [
    102.9,
@@ -54,6 +86,42 @@
   [
    116.6,
    "un poco de risa y carmen"
+  ],
+  [
+   121.8,
+   "yo solo"
+  ],
+  [
+   125.7,
+   "bonito yo soy yo"
+  ],
+  [
+   129.7,
+   "me dan al"
+  ],
+  [
+   132.2,
+   "universo"
+  ],
+  [
+   136.6,
+   "en misma esquina"
+  ],
+  [
+   140.1,
+   "no sé"
+  ],
+  [
+   145.0,
+   "es que tú"
+  ],
+  [
+   155.8,
+   "perdieron la grasa"
+  ],
+  [
+   158.2,
+   "pero"
   ],
   [
    161.0,
@@ -73,6 +141,57 @@
   ]
  ],
  "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],

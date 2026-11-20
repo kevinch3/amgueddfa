@@ -4,6 +4,26 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   23.0,
+   "nada de esto"
+  ],
+  [
+   26.8,
+   "no sabes"
+  ],
+  [
+   40.7,
+   "para mí"
+  ],
+  [
+   44.4,
+   "para mirar"
+  ],
+  [
+   46.9,
+   "mirada"
+  ],
+  [
    87.6,
    "y yo somos"
   ],
@@ -16,8 +36,16 @@
    "tenerlo"
   ],
   [
+   112.1,
+   "en serio"
+  ],
+  [
    114.8,
    "y hasta me quiero tomar algo"
+  ],
+  [
+   117.8,
+   "quiero"
   ],
   [
    120.2,
@@ -28,11 +56,109 @@
    "no quería más"
   ],
   [
+   134.0,
+   "tiempo más"
+  ],
+  [
+   136.9,
+   "es grave"
+  ],
+  [
    140.2,
    "pensamos cada mañana"
+  ],
+  [
+   152.2,
+   "bien"
+  ],
+  [
+   157.4,
+   "ya somos"
+  ],
+  [
+   173.2,
+   "en el don de los sabios pero somos los"
+  ],
+  [
+   177.7,
+   "desengaños y no tomó precauciones"
+  ],
+  [
+   182.5,
+   "me asomo al aire que soplan ya tantas"
+  ],
+  [
+   186.4,
+   "las excepciones también son vuelves 11"
+  ],
+  [
+   190.5,
+   "veces y en todas las tentaciones"
+  ],
+  [
+   217.5,
+   "para mí"
+  ],
+  [
+   221.7,
+   "ya somos más todavía"
   ]
  ],
  "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],

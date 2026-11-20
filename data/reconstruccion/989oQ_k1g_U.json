@@ -4,11 +4,88 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   30.0,
+   "Por voz en el interior de la tarde que agonizó ella en cien paro que hace al mar de por ti."
+  ],
+  [
    41.0,
    "Mientras te ayuno de ese amor para siempre se va a alejar."
+  ],
+  [
+   58.0,
+   "Oh, se yo nunca volvió, nunca la vi, nunca la subió a otro hombre como a ti, es a mi balón, es tu odio."
+  ],
+  [
+   70.9,
+   "Sueña perdido con tu viejo de calentino"
+  ],
+  [
+   85.0,
+   "Eres un mortal que hace el sordo argentino"
+  ],
+  [
+   89.5,
+   "Lloras sobre el cuerpo, cantando mi canción"
+  ],
+  [
+   93.7,
+   "Lloras en la mente sobre tu resolución"
+  ],
+  [
+   98.2,
+   "A mi casa nunca vas a elevar, volando en el sol es nada que soltar,"
+  ],
+  [
+   107.8,
+   "de mi casa a las intenciones, como un mar con el sol, la obedeza del limón."
+  ],
+  [
+   116.7,
+   "Mierda del suelo, abandona el recuerdo, su suerte a su corazón."
+  ],
+  [
+   127.7,
+   "Mierda del suelo, de ese amor, la siempre va a estar junto."
+  ],
+  [
+   135.7,
+   "¡Adiós!"
   ]
  ],
  "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
   [
    "whisper_es"
   ]

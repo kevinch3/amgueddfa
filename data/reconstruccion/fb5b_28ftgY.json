@@ -4,6 +4,14 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   22.2,
+   "en el hacedor"
+  ],
+  [
+   47.6,
+   "benjamín ruiz caudales luis hay tablet a"
+  ],
+  [
    55.2,
    "amor seco"
   ],
@@ -26,9 +34,22 @@
   [
    77.0,
    "lengua del fuego"
+  ],
+  [
+   87.0,
+   "aquí"
   ]
  ],
  "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],

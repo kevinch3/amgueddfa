@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Adentro"
+  ],
+  [
    24.0,
    "Soy tu amante probador, que a ti se enamoró, buscando la felicidad"
   ],
@@ -28,8 +32,32 @@
    "Y no sé si llegaré allí donde estarás, que encuentre donde estás."
   ],
   [
+   77.6,
+   "Si en el cielo el sol me vive fin y me iluminó"
+  ],
+  [
+   83.3,
+   "Se oscurece todo me ha venido"
+  ],
+  [
+   87.1,
+   "No, mi notería buscar y poderte alcanzar"
+  ],
+  [
    93.4,
    "Para olvidar la ausencia"
+  ],
+  [
+   95.9,
+   "Y de entonces poder, me tenerte y después"
+  ],
+  [
+   102.0,
+   "Hacer algo más"
+  ],
+  [
+   105.6,
+   "Adentro"
   ],
   [
    126.6,
@@ -64,11 +92,46 @@
    "Hoy la vida me dejó, la pena de este adiós que me alejó de ti"
   ],
   [
+   180.2,
+   "Si eres lleno a su mente del estímulo y culminó, se oscurece todo mi camino"
+  ],
+  [
    188.7,
    "Solo te encontré a buscar y poderte alcanzar para olvidar tu ausencia."
+  ],
+  [
+   199.0,
+   "Y desde entonces podré verte verte y después no sé para contar."
   ]
  ],
  "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
   [
    "whisper_es"
   ],

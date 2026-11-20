@@ -4,6 +4,26 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   54.8,
+   "vivo"
+  ],
+  [
+   56.7,
+   "pasa"
+  ],
+  [
+   60.5,
+   "bueno"
+  ],
+  [
+   64.5,
+   "andar"
+  ],
+  [
+   85.4,
+   "no no no"
+  ],
+  [
    112.3,
    "buenas tardes lo quiero demostrar"
   ],
@@ -62,9 +82,31 @@
   [
    147.7,
    "que se le va a crear un presente"
+  ],
+  [
+   172.8,
+   "Verdad"
   ]
  ],
  "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],

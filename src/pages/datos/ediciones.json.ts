@@ -1,19 +1,18 @@
 import approvedRaw from '../../../data/approved/contributions.json';
 import editionsRaw from '../../../data/approved/editions.json';
-import { editionCover, editionItems, editionState, festivals, yearRange } from '../../lib/catalog';
+import { editionCover, editionItems, editionState, editionYears, festivals } from '../../lib/catalog';
 import { forEdition, sortFacts, type Contribution } from '../../lib/contrib';
 import { absUrl, editionFacts, factRecord } from '../../lib/seo';
 import { transcriptionDoc } from '../../lib/transcripciones';
 
-/** Open data: every edition in range with its state, cover and approved facts. */
+/** Open data: every edition in range (and documented not-held years before it) with its state, cover and approved facts. */
 export function GET(): Response {
   const approved = approvedRaw as Contribution[];
   const status = new Map((editionsRaw as { festival: string; year: number; status: 'held' | 'not_held' | 'unknown' }[])
     .map((e) => [`${e.festival}:${e.year}`, e.status]));
   const ediciones = festivals().flatMap((f) => {
-    const [first, last] = yearRange(f.slug);
-    return Array.from({ length: last - first + 1 }, (_, k) => {
-      const year = first + k;
+    const notHeld = [...status].filter(([k, v]) => v === 'not_held' && k.startsWith(`${f.slug}:`)).map(([k]) => Number(k.split(':')[1]));
+    return editionYears(f.slug, notHeld).map((year) => {
       const cover = editionCover(f.slug, year);
       const facts = editionFacts(approved, f.slug, year, status.get(`${f.slug}:${year}`) ?? null);
       return {

@@ -1,10 +1,12 @@
 ---
 import Base from '../layouts/Base.astro';
-import { items } from '../lib/catalog';
+import { festivals, items } from '../lib/catalog';
 import { jsonForScript } from '../lib/contrib';
 import { t } from '../lib/i18n';
-import { siteMedia } from '../lib/paths';
+import { ocrFor } from '../lib/ocr';
+import { siteMedia, url } from '../lib/paths';
 import { isTaskCandidate } from '../lib/tasks';
+import { transcriptionDoc } from '../lib/transcripciones';
 
 // Only what a task card needs, so the page does not carry the whole catalog.
 const cards = items()
@@ -20,6 +22,14 @@ const cards = items()
     title: i.title,
     img: siteMedia(i.page_paths[0] ?? i.thumb),
   }));
+
+// Public documents with only machine text (OCR) and no human transcription yet:
+// every document gets one, programas first.
+const FIRST = ['programa', 'programa-del-dia'];
+const toTranscribe = items()
+  .filter((i) => !i.restricted && !i.hidden && ocrFor(i.id) !== null && transcriptionDoc(i.id) === null)
+  .sort((a, b) => Number(!FIRST.includes(a.category)) - Number(!FIRST.includes(b.category)) || (a.year ?? 9999) - (b.year ?? 9999) || a.title.localeCompare(b.title));
+const byFestival = festivals().map(({ slug: f }) => ({ f, docs: toTranscribe.filter((i) => i.festival === f) })).filter((g) => g.docs.length);
 ---
 <Base title={t('tareas.titulo')} current="tareas">
   <section class="tareas measure">
@@ -28,6 +38,22 @@ const cards = items()
     <noscript><p class="contrib-msg">{t('contrib.sin_js')}</p></noscript>
     <div id="tareas" aria-live="polite"><p class="muted">{t('tareas.cargando')}</p></div>
   </section>
+  {toTranscribe.length > 0 && (
+    <section class="tareas measure section" aria-labelledby="transcribir-t">
+      <h2 id="transcribir-t">{t('tareas.transcribir_titulo')}</h2>
+      <p>{t('tareas.transcribir_ayuda')}</p>
+      {byFestival.map(({ f, docs }) => (
+        <details class="transcribir">
+          <summary>{t(`festivales.${f}`)} · {docs.length === 1 ? t('tareas.transcribir_uno') : t('tareas.transcribir_n', { n: docs.length })}</summary>
+          <ul>
+            {docs.map((i) => (
+              <li data-transcribir={i.id}><a href={url(`item/${i.id}/#tarea-t`)}>{i.year ?? '—'} · {t(`categorias.${i.category}`)} · {i.title}</a></li>
+            ))}
+          </ul>
+        </details>
+      ))}
+    </section>
+  )}
   <script type="application/json" id="tareas-data" set:html={jsonForScript(cards)} />
 </Base>
 
@@ -215,5 +241,7 @@ const cards = items()
   .tarea-q { font-size: 1.3rem; }
   .tarea-q:focus { outline: none; }
   .tarea-acciones { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+  .transcribir summary { cursor: pointer; font-family: var(--sans); padding-block: 0.3rem; }
+  .transcribir ul { margin-block: 0.4rem 1rem; }
   .tarea-card .btn:disabled { opacity: 0.55; cursor: not-allowed; }
 </style>

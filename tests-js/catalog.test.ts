@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, it } from 'vitest';
 import {
   editionState, mostWanted, pageUrls, setItems, thumbUrl, yearRange, editionItems, festivals,
-  firstMaterialYear, YEAR_FLOOR, undocumented, editionCover, items, allItems,
+  firstMaterialYear, editionYears, YEAR_FLOOR, undocumented, editionCover, items, allItems,
 } from '../src/lib/catalog';
 import type { Item } from '../src/lib/types';
 import { MEDIA_BASE, siteMedia } from '../src/lib/paths';
@@ -42,6 +42,15 @@ describe('catalog', () => {
     expect(editionState('chubut', 1992, [])).toBe('some');
     expect(editionState('chubut', 1993, [])).toBe('none');
     expect(editionItems('chubut', 1990)).toHaveLength(1);
+  });
+
+  it('editionYears adds documented not-held years outside the range (#22)', () => {
+    const now = new Date().getFullYear();
+    const ys = editionYears('chubut', [1890, 1995], [{ festival: 'chubut', year: 1990 }]);
+    expect(ys[0]).toBe(1890);
+    expect(ys[1]).toBe(1990);
+    expect(ys.filter((y) => y === 1995)).toHaveLength(1);
+    expect(ys.at(-1)).toBe(now);
   });
 
   it('yearRange starts at earliest catalog or approved year', () => {

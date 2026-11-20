@@ -706,7 +706,11 @@
     "ver_ficha": "Ver la ficha completa",
     "imagen_alt": "{titulo}",
     "listo": "¡Terminaste todas las tareas! Gracias por la ayuda.",
-    "ver_perfil": "Ver mi perfil"
+    "ver_perfil": "Ver mi perfil",
+    "transcribir_titulo": "Para transcribir",
+    "transcribir_ayuda": "Estos documentos solo tienen texto automático (OCR, sin revisar). Abrí uno, comparalo con la imagen y mandá la transcripción: los programas van primero.",
+    "transcribir_n": "{n} documentos",
+    "transcribir_uno": "1 documento"
   },
   "recientes": {
     "vacio": "Todavía no hay aportes aprobados. ¡Podés ser la primera persona!",

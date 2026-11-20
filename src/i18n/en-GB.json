@@ -706,7 +706,11 @@
     "ver_ficha": "See the full record",
     "imagen_alt": "{titulo}",
     "listo": "You've finished all the tasks! Thank you for your help.",
-    "ver_perfil": "See my profile"
+    "ver_perfil": "See my profile",
+    "transcribir_titulo": "To transcribe",
+    "transcribir_ayuda": "These documents only have machine text (OCR, unchecked). Open one, compare it with the image and send the transcription: programmes come first.",
+    "transcribir_n": "{n} documents",
+    "transcribir_uno": "1 document"
   },
   "recientes": {
     "vacio": "There are no approved contributions yet. You could be the first!",

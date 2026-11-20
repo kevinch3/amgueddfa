@@ -3,7 +3,14 @@
 
 /** Where a transcription comes from: subtitles someone uploaded, YouTube's automatic ones, Whisper. */
 export type TranscriptSource = 'subida' | 'youtube' | 'whisper';
-export type Transcript = { src: TranscriptSource; lang: string; seg: [number, string][] };
+/** A sung piece whose known lyric replaced the automatic lines in [desde, hasta) (scripts/align_lyrics.py). */
+export type Letra = { desde: number; hasta: number; titulo: string; autor: string; idioma: string };
+export type Transcript = { src: TranscriptSource; lang: string; seg: [number, string][]; letras?: Letra[] };
+
+/** The lyric span a line starting at `t` belongs to, or null. */
+export function letraAt(tr: Transcript, t: number): Letra | null {
+  return tr.letras?.find((l) => t >= l.desde && t < l.hasta) ?? null;
+}
 
 /** The line playing at `t` seconds: the last one that starts at or before it; -1 before the first. */
 export function lineAt(seg: [number, string][], t: number): number {
@@ -46,5 +53,9 @@ export function asTranscript(data: unknown): Transcript | null {
   const d = data as Partial<Transcript> | null;
   if (!d || !Array.isArray(d.seg) || !['subida', 'youtube', 'whisper'].includes(String(d.src))) return null;
   const seg = d.seg.filter((x): x is [number, string] => Array.isArray(x) && typeof x[0] === 'number' && typeof x[1] === 'string');
-  return seg.length ? { src: d.src as TranscriptSource, lang: String(d.lang ?? ''), seg } : null;
+  if (!seg.length) return null;
+  const letras = (Array.isArray(d.letras) ? d.letras : []).filter(
+    (l): l is Letra => !!l && typeof l.desde === 'number' && typeof l.hasta === 'number' && typeof l.titulo === 'string',
+  ).map((l) => ({ desde: l.desde, hasta: l.hasta, titulo: l.titulo, autor: String(l.autor ?? ''), idioma: String(l.idioma ?? '') }));
+  return { src: d.src as TranscriptSource, lang: String(d.lang ?? ''), seg, ...(letras.length ? { letras } : {}) };
 }

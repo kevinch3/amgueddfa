@@ -956,7 +956,9 @@
     "automatico": "自动",
     "comp": "第 {n} 项",
     "nota_capitulos": "根据现场播报自动标记,可能有误。",
-    "ver_en_video": "在视频中观看,从 {tiempo} 开始"
+    "ver_en_video": "在视频中观看,从 {tiempo} 开始",
+    "letra_alineada": "歌词已对齐",
+    "nota_letra": "{piezas} 的歌词已自动与视频对齐：时间为近似值。"
   },
   "buscar": {
     "titulo": "搜索档案",

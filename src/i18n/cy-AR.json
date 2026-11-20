@@ -956,7 +956,9 @@
     "automatico": "awtomatig",
     "comp": "Cyst. {n}",
     "nota_capitulos": "Wedi'u marcio'n awtomatig o'r hyn a gyhoeddir yn y sesiwn; gall fod gwallau.",
-    "ver_en_video": "Gwylio yn y fideo, o {tiempo}"
+    "ver_en_video": "Gwylio yn y fideo, o {tiempo}",
+    "letra_alineada": "geiriau wedi'u halinio",
+    "nota_letra": "Geiriau {piezas}, wedi'u halinio'n awtomatig â'r fideo: bras yw'r amseroedd."
   },
   "buscar": {
     "titulo": "Chwilio'r archif",

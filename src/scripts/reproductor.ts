@@ -7,7 +7,7 @@
  */
 import { t } from '../lib/i18n';
 import { url } from '../lib/paths';
-import { asTranscript, findLines, fmtTime, lineAt, type Transcript } from '../lib/video-transcript';
+import { asTranscript, findLines, fmtTime, letraAt, lineAt, type Transcript } from '../lib/video-transcript';
 import { videoUrl } from '../lib/videos';
 
 type YTPlayer = {
@@ -114,13 +114,16 @@ if (dialog) {
     $('[data-rep-vacio]')!.hidden = !!tr;
     $('[data-rep-buscador]')!.hidden = !tr;
     $('[data-rep-nota]')!.hidden = tr?.src !== 'whisper';
+    const notaLetra = $('[data-rep-nota-letra]')!;
+    notaLetra.hidden = !tr?.letras;
+    notaLetra.textContent = tr?.letras ? t('reproductor.nota_letra', { piezas: tr.letras.map((l) => `«${l.titulo}» (${l.autor})`).join(', ') }) : '';
     const badge = $('[data-rep-fuente]')!;
     badge.hidden = !tr;
     search.value = '';
     $('[data-rep-n]')!.textContent = '';
     if (!tr) return;
     const lang = LANGS[tr.lang] ? t(LANGS[tr.lang]) : tr.lang;
-    badge.textContent = `${t(`reproductor.fuente.${tr.src}`)}${lang ? ` · ${lang}` : ''}`;
+    badge.textContent = `${t(`reproductor.fuente.${tr.src}`)}${lang ? ` · ${lang}` : ''}${tr.letras ? ` · ${t('reproductor.letra_alineada')}` : ''}`;
     badge.dataset.fuente = tr.src;
     const frag = document.createDocumentFragment();
     tr.seg.forEach(([start, text], i) => {
@@ -134,7 +137,9 @@ if (dialog) {
       const words = document.createElement('span');
       words.className = 'rep-w';
       words.textContent = text;
-      if (tr.lang) words.lang = tr.lang;
+      const letra = letraAt(tr, start);
+      if (letra) li.classList.add('rep-letra');
+      if (letra?.idioma || tr.lang) words.lang = letra?.idioma || tr.lang;
       b.setAttribute('aria-label', `${t('reproductor.ir_a', { tiempo: fmtTime(start) })}: ${text}`);
       b.append(time, words);
       li.append(b);

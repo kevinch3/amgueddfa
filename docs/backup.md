@@ -185,8 +185,7 @@ YouTube's automatic Spanish captions next to the video (`.es-orig.vtt`), with
 timestamps. A later tool can search them for the presenter's cues
 ("competencia número…", "veredicto", "beirniadaeth", "primer premio"), match
 the year's numbered programa, and write markers (video, second, competition,
-start | verdict). They are checked by hand before anything is public; verdict
-markers follow issue #29. Whisper on the saved audio can fill gaps.
+start | verdict). Whisper on the saved audio can fill gaps.
 
 Related: #23 (R2 → KPC media), #26 (multimedia), #29 (privacy periods).
 
@@ -220,7 +219,7 @@ chunk, timestamps shifted. Final count: 2,159 videos, transcription from YouTube
 `python3 -m scripts.video_markers` (backup disk mounted) reads the transcription of every
 long Chubut session on the site (over 3 h) and finds where each competition of that year's
 programa starts and where the chair, crown, medal and Gorsedd ceremonies are. Upcoming calls,
-verdicts (#29) and off-stage disciplines (literature, crafts, art...) are skipped. Decision
+verdicts (they are not performances; not a privacy matter, decision 2026-11-20) and off-stage disciplines (literature, crafts, art...) are skipped. Decision
 2026-11-20: markers where the spoken call and words of the programa title match within 90 s
 are published to `public/marcadores-video/<id>.json` and shown as chapters labelled
 "automático"; every candidate, with context, stays in `../.marcadores/` for review.

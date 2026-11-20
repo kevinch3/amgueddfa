@@ -7,7 +7,8 @@ private backup (YouTube's automatic one, else Whisper's) and finds where each
 competition of that year's programa starts ("continuamos con la competencia número 64")
 and where the chair, crown and medal ceremonies are. Upcoming calls ("que se vayan
 preparando para la competencia…") and verdicts ("veredicto de la competencia…") are
-skipped: verdicts wait for the privacy periods of #29.
+skipped: a verdict is not where a performance starts (verdicts are not a privacy
+matter, decision 2026-11-20).
 
 A start is "high" when words of that competition's programa title are heard within
 90 s of the call; a ceremony is "high" when "ceremonia" and its kind are said together.

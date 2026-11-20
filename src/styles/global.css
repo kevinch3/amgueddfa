@@ -623,3 +623,14 @@ fieldset.campo { border: 0; padding: 0; }
    does not scroll, and scrolling inside the modal never passes through to the page. */
 html:has(dialog:modal) { overflow: hidden; }
 dialog, .lb-stage, .rep-cuerpo, .informar { overscroll-behavior: contain; }
+
+/* Player never wider than the screen: long titles and channel names, and larger text
+   (reading settings), wrap or clip instead of pushing the buttons off screen. */
+.reproductor[open] { grid-template-columns: minmax(0, 1fr); }
+.rep-head-t { flex: 1 1 auto; min-width: 0; }
+.rep-head p { overflow-wrap: anywhere; }
+.rep-cuerpo > * { min-width: 0; }
+.rep-tr-head { flex-wrap: wrap; }
+.rep-tr .badge { white-space: normal; }
+.rep-seguir { white-space: nowrap; }
+.rep-buscar-fila input[type="search"] { flex: 1 1 10rem; width: 100%; min-width: 0; max-width: 100%; }

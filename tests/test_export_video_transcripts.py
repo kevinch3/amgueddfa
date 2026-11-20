@@ -93,3 +93,21 @@ def test_welsh_whisper_is_held_until_checked(tmp_path):
     (b / "INDEX.tsv").write_text("id\tfile\nEEEEEEEEEEE\tC/2018/e_EEEEEEEEEEE.mp4\nFFFFFFFFFFF\tC/2018/f_FFFFFFFFFFF.mp4\n", encoding="utf-8")
     r = export(b, [{"id": "E" * 11, "festival": "chubut"}, {"id": "F" * 11, "festival": "chubut"}], tmp_path / "out")
     assert r["whisper"] == 1 and (tmp_path / "out" / ("F" * 11 + ".json")).exists()
+
+
+from scripts.export_video_transcripts import useful
+
+
+def test_useful_keeps_spanish_speech_and_drops_misdetected_or_garbled_captions():
+    words = {"buenas", "noches", "comienza", "la", "competencia", "numero", "coro", "de", "trelew", "solo", "soprano"}
+    good = [[i * 3.0, "buenas noches comienza la competencia numero doce coro de trelew"] for i in range(6)]
+    assert useful({"src": "youtube", "lang": "es", "seg": good}, words)
+    # YouTube guessed another language for a Spanish or Welsh video: nonsense
+    assert not useful({"src": "youtube", "lang": "en", "seg": good}, words)
+    # labelled Spanish but mostly not words: a song transcribed as noise
+    noise = [[i * 3.0, "ter spr i can now n i can n glv miendo lios"] for i in range(8)]
+    assert not useful({"src": "youtube", "lang": "es", "seg": noise}, words)
+    # too little text
+    assert not useful({"src": "youtube", "lang": "es", "seg": good[:1]}, words)
+    # the author's own subtitles are kept as they are
+    assert useful({"src": "subida", "lang": "en", "seg": noise}, words)

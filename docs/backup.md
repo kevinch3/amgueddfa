@@ -216,3 +216,12 @@ verdicts (#29) and off-stage disciplines (literature, crafts, art...) are skippe
 are published to `public/marcadores-video/<id>.json` and shown as chapters labelled
 "automático"; every candidate, with context, stays in `../.marcadores/` for review.
 Run it again after new programa transcriptions; commit the folder.
+
+### Quality gate for published transcriptions (2026-11-20)
+
+`export_video_transcripts.py` now publishes machine text (YouTube automatic and Whisper) only
+when it is Spanish and reads as Spanish: language `es`, at least 55% of its words in
+`/usr/share/dict/spanish` (package wspanish), at least 40 words. The author's own subtitles
+are always kept. YouTube had tagged 268 of these Spanish/Welsh videos as English, Romanian,
+Ukrainian, Arabic and others, with nonsense text (sung Welsh, music). Result: 519 published
+(324 YouTube, 193 Whisper, 2 author's subtitles), 327 removed. Everything stays in the backup.

@@ -20,6 +20,7 @@ import csv
 import json
 import re
 import sys
+import unicodedata
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
@@ -35,6 +36,33 @@ MIN_LINES, MIN_WORDS = 6, 40
 # Whisper's Welsh (mostly singing) is often phonetic nonsense that no score here tells apart from
 # the good ones: held in the backup until someone checks it (user decision 2026-11-19).
 WHISPER_LANGS = {"es"}
+
+# Quality gate (2026-11-20, after a Welsh Gorsedd video showed YouTube's "English" nonsense):
+# automatic text is published only in Spanish, with at least 55% real Spanish words and 40 words.
+SPANISH_DICT = Path("/usr/share/dict/spanish")
+MIN_SPANISH_SHARE, MIN_TEXT_WORDS = 0.55, 40
+
+
+def _fold(s: str) -> str:
+    return "".join(c for c in unicodedata.normalize("NFD", s.lower()) if unicodedata.category(c) != "Mn")
+
+
+def spanish_words() -> set[str]:
+    if not SPANISH_DICT.exists():
+        sys.exit(f"{SPANISH_DICT} missing (install the wspanish word list)")
+    return {_fold(w.strip()) for w in SPANISH_DICT.read_text(encoding="latin-1").splitlines() if w.strip()}
+
+
+def useful(t: dict, words: set[str]) -> bool:
+    """Whether a transcription is worth showing: the author's subtitles always; machine text
+    (YouTube automatic, Whisper) only when it is Spanish and reads as Spanish."""
+    if t["src"] == "subida":
+        return True
+    if t.get("lang") != "es":
+        return False
+    toks = [_fold(w) for _, line in t["seg"] for w in re.findall(r"[^\W\d_]+", re.sub(r"\[[^\]]*\]", "", line))]
+    return len(toks) >= MIN_TEXT_WORDS and sum(w in words for w in toks) / len(toks) >= MIN_SPANISH_SHARE
+
 
 TS = re.compile(r"(?:(\d+):)?(\d{1,2}):(\d{2})[.,](\d{3})\s+-->")
 TAG = re.compile(r"<[^>]+>")
@@ -115,7 +143,7 @@ def glob_escape(name: str) -> str:
     return re.sub(r"([\[\]*?])", r"[\1]", name)
 
 
-def export(backup: Path, videos: list[dict], out: Path = OUT) -> dict:
+def export(backup: Path, videos: list[dict], out: Path = OUT, words: set[str] | None = None) -> dict:
     wanted = {v["id"] for v in videos if v["festival"] in FESTIVALS}
     with (backup / "INDEX.tsv").open(newline="", encoding="utf-8") as f:
         files = {r["id"]: r["file"] for r in csv.DictReader(f, delimiter="\t") if r.get("file")}
@@ -126,7 +154,7 @@ def export(backup: Path, videos: list[dict], out: Path = OUT) -> dict:
         if vid not in files:
             continue
         t = pick((backup / "videos" / files[vid]).with_suffix(""))
-        if not t or not t["seg"]:
+        if not t or not t["seg"] or (words is not None and not useful(t, words)):
             continue
         body = json.dumps(t, ensure_ascii=False, separators=(",", ":"))
         p = out / f"{vid}.json"
@@ -147,4 +175,4 @@ if __name__ == "__main__":
     if not (backup / "INDEX.tsv").exists():
         sys.exit(f"{backup}: no INDEX.tsv (backup disk not mounted?)")
     videos = json.loads((REPO / "src" / "data" / "videos.json").read_text(encoding="utf-8"))["videos"]
-    print(export(backup, videos))
+    print(export(backup, videos, words=spanish_words()))

@@ -196,3 +196,12 @@ Spanish, filtered (`clean_whisper`: 30 s filler windows, stock phrases, loops; a
 and 40 words left). Welsh Whisper, mostly singing written phonetically, stays here until
 someone checks it (decision 2026-11-19) and removes files of videos no
 longer listed. Run it after `import-whisper` or a monthly run, then commit the folder.
+
+### Long sessions (2026-11-20)
+
+`transcribe.py` loads a whole file into memory; on the multi-hour sessions (5 to 11 h) it was
+killed for lack of memory (~24 GB). `transcribe_long.py` (also in the KPC folder) does the files
+still without a `.json` in one-hour 16 kHz chunks cut with ffmpeg, language chosen on the first
+chunk, timestamps shifted. Final count: 2,159 videos, transcription from YouTube 825, Whisper
+1,316, no speech 19 (one removed on request). When checking the run from here, use
+`pgrep -f "[t]ranscribe"`: a plain `pgrep -f transcribe.py` matches its own ssh command line.

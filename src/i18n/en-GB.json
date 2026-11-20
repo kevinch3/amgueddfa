@@ -956,7 +956,9 @@
     "automatico": "automatic",
     "comp": "Comp. {n}",
     "nota_capitulos": "Marked automatically from what is announced in the session; they may contain mistakes.",
-    "ver_en_video": "Watch in the video, from {tiempo}"
+    "ver_en_video": "Watch in the video, from {tiempo}",
+    "letra_alineada": "lyrics aligned",
+    "nota_letra": "Lyrics of {piezas}, aligned to the video automatically: the times are approximate."
   },
   "buscar": {
     "titulo": "Search the archive",

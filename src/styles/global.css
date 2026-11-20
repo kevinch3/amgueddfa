@@ -533,6 +533,8 @@ fieldset.campo { border: 0; padding: 0; }
 .rep-t { flex: none; min-width: 3.4rem; color: var(--ink-soft); font-size: 0.85rem; font-variant-numeric: tabular-nums; padding-top: 0.12rem; }
 .rep-w { overflow-wrap: anywhere; }
 .rep-lineas .coincide button { background: #f6e7b4; }
+.rep-lineas .rep-letra .rep-w { font-style: italic; }
+.rep-lineas .rep-letra .rep-w::before { content: '♪ '; font-style: normal; color: var(--red-deep); }
 .rep-lineas .actual button { background: #fff; box-shadow: inset 3px 0 0 var(--red); }
 .rep-lineas .actual .rep-t { color: var(--red-deep); font-weight: 600; }
 @media (min-width: 60rem) {

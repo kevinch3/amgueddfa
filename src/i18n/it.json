@@ -956,7 +956,9 @@
     "automatico": "automatico",
     "comp": "Gara {n}",
     "nota_capitulos": "Segnati automaticamente da ciò che viene annunciato nella sessione; possono contenere errori.",
-    "ver_en_video": "Guarda nel video, da {tiempo}"
+    "ver_en_video": "Guarda nel video, da {tiempo}",
+    "letra_alineada": "testo allineato",
+    "nota_letra": "Testo di {piezas}, allineato automaticamente al video: i tempi sono approssimativi."
   },
   "buscar": {
     "titulo": "Cerca nell'archivio",

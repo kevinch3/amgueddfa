@@ -1,0 +1,156 @@
+"""Known lyrics in place of YouTube's guesses while a piece is sung.
+
+A choir's words come out of automatic captions as near-nonsense ("tan foras, tan
+bellas"), but the programa says which piece is sung. Given the text
+(data/letras/<slug>.md) and the span of the video where it is sung
+(data/letras/videos.json), the lyric lines replace the automatic ones in that
+span, each at the time of the automatic line its words were matched to; lines
+nobody matched are spread between their neighbours by syllables. Times are
+approximate and the player says so.
+
+Choirs repeat stanzas, so every stanza is tried sung 1-3 times and the version
+that matches the heard words best wins.
+
+Used by export_video_transcripts (a re-export keeps the result). Lyrics are
+supplied by the maintainer, who confirms their rights.
+"""
+from __future__ import annotations
+
+import itertools
+import json
+import re
+import unicodedata
+from difflib import SequenceMatcher
+from pathlib import Path
+
+REPO = Path(__file__).resolve().parent.parent
+LETRAS = REPO / "data" / "letras"
+
+MATCH = 0.6     # word similarity that counts as the same word heard
+GAP = -0.2      # a heard word left unmatched
+SKIP = -0.05    # a lyric word nobody heard (singing is often missed whole)
+REPEAT = 0.6    # cost of each extra time a stanza is sung: it must earn about one heard word
+MISS = -0.5     # a mismatched pair
+MAX_REPEAT = 3  # times a stanza may be sung
+MAX_VARIANTS = 400
+
+
+def _fold(s: str) -> str:
+    return "".join(c for c in unicodedata.normalize("NFD", s.lower()) if not unicodedata.combining(c))
+
+
+def _words(s: str) -> list[str]:
+    return re.findall(r"[a-z]+", _fold(re.sub(r"\[[^\]]*\]", " ", s)))
+
+
+def _syllables(line: str) -> int:
+    return max(1, len(re.findall(r"[aeiouy]+", _fold(line))))
+
+
+def parse_letra(text: str) -> tuple[dict, list[list[str]]]:
+    """Front matter (key: value lines) and the stanzas (blank-line separated) of a lyric file."""
+    meta: dict = {}
+    m = re.match(r"^---\r?\n(.*?)\r?\n---\r?\n", text, re.S)
+    if m:
+        for line in m.group(1).splitlines():
+            if ":" in line:
+                k, v = line.split(":", 1)
+                meta[k.strip()] = v.strip()
+        text = text[m.end():]
+    stanzas = [[l.strip() for l in block.splitlines() if l.strip()] for block in re.split(r"\n\s*\n", text.strip())]
+    return meta, [s for s in stanzas if s]
+
+
+def _dp(lyric: list[tuple[str, int]], heard: list[tuple[str, float]]) -> tuple[float, dict[int, float]]:
+    """Global alignment of lyric words to heard words; score and, per lyric line, the earliest matched time."""
+    n, m = len(lyric), len(heard)
+    sim = [[SequenceMatcher(None, a, b).ratio() for b, _ in heard] for a, _ in lyric]
+    D = [[0.0] * (m + 1) for _ in range(n + 1)]
+    P = [[""] * (m + 1) for _ in range(n + 1)]
+    for i in range(1, n + 1):
+        D[i][0], P[i][0] = D[i - 1][0] + SKIP, "u"
+    for j in range(1, m + 1):
+        D[0][j], P[0][j] = D[0][j - 1] + GAP, "l"
+    for i in range(1, n + 1):
+        for j in range(1, m + 1):
+            s = sim[i - 1][j - 1]
+            D[i][j], P[i][j] = max((D[i - 1][j - 1] + (s if s >= MATCH else MISS), "d"),
+                                   (D[i - 1][j] + SKIP, "u"), (D[i][j - 1] + GAP, "l"))
+    i, j, first = n, m, {}
+    while i and j:
+        if P[i][j] == "d":
+            if sim[i - 1][j - 1] >= MATCH:
+                line = lyric[i - 1][1]
+                first[line] = min(first.get(line, heard[j - 1][1]), heard[j - 1][1])
+            i, j = i - 1, j - 1
+        elif P[i][j] == "u":
+            i -= 1
+        else:
+            j -= 1
+    return D[n][m], first
+
+
+def _variants(stanzas: list[list[str]]):
+    """Line sequences with each stanza sung 1..MAX_REPEAT times, in order (capped)."""
+    for counts in itertools.islice(itertools.product(range(1, MAX_REPEAT + 1), repeat=len(stanzas)), MAX_VARIANTS):
+        yield sum(counts) - len(counts), [line for st, k in zip(stanzas, counts) for line in st * k]
+
+
+def _times(lines: list[str], anchors: dict[int, float], start: float, end: float) -> list[float]:
+    """Anchored lines keep their time (kept increasing); the rest are spread by syllables between neighbours."""
+    keep, last = {}, start - 1
+    for k in sorted(anchors):
+        if anchors[k] > last:
+            keep[k], last = anchors[k], anchors[k]
+    pts = [(-1, start)] + sorted(keep.items()) + [(len(lines), max(end, last + 1))]
+    out = [0.0] * len(lines)
+    for (ia, ta), (ib, tb) in zip(pts, pts[1:]):
+        if ia >= 0:
+            out[ia] = ta
+        span = ([ia] if ia >= 0 else []) + list(range(ia + 1, ib))
+        total = sum(_syllables(lines[k]) for k in span) or 1
+        acc = _syllables(lines[ia]) if ia >= 0 else 0
+        for k in range(ia + 1, ib):
+            out[k] = round(ta + (tb - ta) * acc / total, 1)
+            acc += _syllables(lines[k])
+    return out
+
+
+def align(seg: list, stanzas: list[list[str]], desde: float, hasta: float) -> list[list]:
+    """Lyric lines as [[time, line], ...] for the part of `seg` in [desde, hasta)."""
+    inside = [(t, x) for t, x in seg if desde <= t < hasta]
+    heard = [(w, float(t)) for t, x in inside for w in _words(x)]
+    sung = [float(t) for t, x in inside if _words(x)]
+    start = sung[0] if sung else float(desde)
+    end = min(float(hasta), sung[-1] + 4) if sung else float(hasta)
+    best = None
+    for extra, lines in _variants(stanzas):
+        lyric = [(w, k) for k, l in enumerate(lines) for w in _words(l)]
+        score, anchors = _dp(lyric, heard)
+        score -= REPEAT * extra
+        if best is None or score > best[0]:
+            best = (score, lines, anchors)
+    if best is None:
+        return []
+    _, lines, anchors = best
+    return [[t, l] for t, l in zip(_times(lines, anchors, start, end), lines)]
+
+
+def apply(t: dict, spans: list[dict], letras: Path = LETRAS) -> dict:
+    """The transcript with each span's automatic lines replaced by its aligned lyric; `letras` lists the spans."""
+    if not spans:
+        return t
+    seg = [list(s) for s in t["seg"]]
+    info = []
+    for sp in spans:
+        meta, stanzas = parse_letra((letras / f"{sp['letra']}.md").read_text(encoding="utf-8"))
+        lyric = align(seg, stanzas, sp["desde"], sp["hasta"])
+        seg = [s for s in seg if not sp["desde"] <= s[0] < sp["hasta"]] + lyric
+        info.append({"desde": sp["desde"], "hasta": sp["hasta"], "titulo": meta.get("titulo", ""),
+                     "autor": meta.get("autor", ""), "idioma": meta.get("idioma", "")})
+    return {**t, "seg": sorted(seg, key=lambda s: s[0]), "letras": info}
+
+
+def spans_for(video_id: str, letras: Path = LETRAS) -> list[dict]:
+    p = letras / "videos.json"
+    return json.loads(p.read_text(encoding="utf-8")).get(video_id, []) if p.exists() else []

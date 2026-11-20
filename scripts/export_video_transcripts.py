@@ -23,6 +23,8 @@ import sys
 import unicodedata
 from pathlib import Path
 
+from scripts.align_lyrics import apply as apply_lyrics, spans_for
+
 REPO = Path(__file__).resolve().parent.parent
 OUT = REPO / "public" / "transcripciones-video"
 DEFAULT_BACKUP = Path("/run/media/kevinch3/4eff8b2b-61f1-4df2-bb61-5f9ba0faa94d/amgueddfa-backup")
@@ -193,6 +195,8 @@ def export(backup: Path, videos: list[dict], out: Path = OUT, words: set[str] | 
             continue
         if words is not None:
             t["seg"] = [[s, fix_eisteddfod(x, words)] for s, x in t["seg"]]
+        # Known lyrics of the pieces sung, in place of the automatic guesses (data/letras/).
+        t = apply_lyrics(t, spans_for(vid))
         body = json.dumps(t, ensure_ascii=False, separators=(",", ":"))
         p = out / f"{vid}.json"
         if not p.exists() or p.read_text(encoding="utf-8") != body:

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { asTranscript, findLines, fmtTime, fold, lineAt } from '../src/lib/video-transcript';
+import { asTranscript, findLines, fmtTime, fold, letraAt, lineAt } from '../src/lib/video-transcript';
 
 const seg: [number, string][] = [[2, 'Galwn ar yr unawdwyr'], [10.5, 'Hyd fedd hi gâr yn gywir'], [24, 'Canción de Glyndŵr'], [38, 'Veredicto']];
 
@@ -32,5 +32,13 @@ describe('video transcript', () => {
     expect(asTranscript({ src: 'other', seg })).toBeNull();
     expect(asTranscript({ src: 'whisper', seg: [] })).toBeNull();
     expect(asTranscript(null)).toBeNull();
+  });
+
+  it('keeps the aligned lyric spans and finds the one a line is in', () => {
+    const tr = asTranscript({ src: 'youtube', lang: 'es', seg, letras: [{ desde: 20, hasta: 30, titulo: 'Rosa', autor: 'Trad.', idioma: 'pt' }, { bad: 1 }] })!;
+    expect(tr.letras).toHaveLength(1);
+    expect(letraAt(tr, 24)?.idioma).toBe('pt');
+    expect(letraAt(tr, 30)).toBeNull();
+    expect(asTranscript({ src: 'youtube', lang: 'es', seg })!.letras).toBeUndefined();
   });
 });

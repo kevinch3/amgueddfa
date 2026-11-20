@@ -956,7 +956,9 @@
     "automatico": "automatique",
     "comp": "Conc. {n}",
     "nota_capitulos": "Repérés automatiquement d'après les annonces de la séance ; ils peuvent contenir des erreurs.",
-    "ver_en_video": "Voir dans la vidéo, à partir de {tiempo}"
+    "ver_en_video": "Voir dans la vidéo, à partir de {tiempo}",
+    "letra_alineada": "paroles alignées",
+    "nota_letra": "Paroles de {piezas}, alignées automatiquement sur la vidéo : les temps sont approximatifs."
   },
   "buscar": {
     "titulo": "Rechercher dans l'archive",

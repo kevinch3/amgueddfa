@@ -40,6 +40,22 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "0142af7c-1019-4c80-828d-e5c26cd46642",
+    "type": "fact",
+    "festival": "mimosa",
+    "year": 2011,
+    "item_id": null,
+    "payload": {
+      "field": "start_date",
+      "fuente": "Programa del día 2011 (archivo): https://amgueddfa.org/item/33913d15c2e6/",
+      "lote": "c099ffac-8159-46e5-93ea-9a19ba53e5d2",
+      "value": "2011-07-02"
+    },
+    "created_at": "2026-11-20T10:11:33.301197+00:00",
+    "reviewed_at": "2026-11-20T10:11:33.301197+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "01605339-3842-4190-9751-0518b3f8db72",
     "type": "tag",
     "festival": "juventud",
@@ -309,6 +325,22 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "08450363-b828-4fea-8962-c0c7f7704271",
+    "type": "fact",
+    "festival": "mimosa",
+    "year": 2025,
+    "item_id": null,
+    "payload": {
+      "field": "start_date",
+      "fuente": "Bases 2025 (archivo): https://amgueddfa.org/item/889bd82c6cb8/",
+      "lote": "c099ffac-8159-46e5-93ea-9a19ba53e5d2",
+      "value": "2025-06-27"
+    },
+    "created_at": "2026-11-20T10:11:33.301197+00:00",
+    "reviewed_at": "2026-11-20T10:11:33.301197+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "08b912f6-2d20-4b8c-901d-4345233807b4",
     "type": "fact",
     "festival": "chubut",
@@ -574,6 +606,38 @@
     },
     "created_at": "2026-11-14T14:09:57.283747+00:00",
     "reviewed_at": "2026-11-14T14:09:57.283747+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "13f6bdcc-cf3c-4598-84e0-aa2f1cd29ad8",
+    "type": "fact",
+    "festival": "juventud",
+    "year": 2024,
+    "item_id": null,
+    "payload": {
+      "field": "start_date",
+      "fuente": "Bases 2024 (archivo): https://amgueddfa.org/item/b281ccdcb875/",
+      "lote": "c099ffac-8159-46e5-93ea-9a19ba53e5d2",
+      "value": "2024-09-12"
+    },
+    "created_at": "2026-11-20T10:11:33.301197+00:00",
+    "reviewed_at": "2026-11-20T10:11:33.301197+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "1419ebcd-66b9-4041-9cb6-efdc645f2f01",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2011,
+    "item_id": null,
+    "payload": {
+      "field": "end_date",
+      "fuente": "Programa del día 2011 (archivo): https://amgueddfa.org/item/94ee7d46577c/",
+      "lote": "c099ffac-8159-46e5-93ea-9a19ba53e5d2",
+      "value": "2011-10-29"
+    },
+    "created_at": "2026-11-20T10:11:33.301197+00:00",
+    "reviewed_at": "2026-11-20T10:11:33.301197+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -935,6 +999,22 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "1e223309-54b7-4d0b-a9d1-53e228a9f996",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2012,
+    "item_id": null,
+    "payload": {
+      "field": "end_date",
+      "fuente": "Programa del día 2012 (archivo): https://amgueddfa.org/item/a101d0d87996/",
+      "lote": "c099ffac-8159-46e5-93ea-9a19ba53e5d2",
+      "value": "2012-10-27"
+    },
+    "created_at": "2026-11-20T10:11:33.301197+00:00",
+    "reviewed_at": "2026-11-20T10:11:33.301197+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "1e6305d9-b260-40bc-a2ef-26aeeb74338f",
     "type": "fact",
     "festival": "chubut",
@@ -1016,6 +1096,22 @@
     },
     "created_at": "2026-11-17T11:06:25.263276+00:00",
     "reviewed_at": "2026-11-17T11:06:25.263276+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "22082a4c-7701-4522-a8c1-c86dbc541f7f",
+    "type": "fact",
+    "festival": "mimosa",
+    "year": 2024,
+    "item_id": null,
+    "payload": {
+      "field": "start_date",
+      "fuente": "Bases 2024 (archivo): https://amgueddfa.org/item/c8cbbc4aadcd/",
+      "lote": "c099ffac-8159-46e5-93ea-9a19ba53e5d2",
+      "value": "2024-08-09"
+    },
+    "created_at": "2026-11-20T10:11:33.301197+00:00",
+    "reviewed_at": "2026-11-20T10:11:33.301197+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -1283,6 +1379,22 @@
     },
     "created_at": "2026-11-15T09:43:03.446029+00:00",
     "reviewed_at": "2026-11-15T09:43:03.446029+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "299d16f5-497d-4fd0-95e1-b92082954771",
+    "type": "fact",
+    "festival": "mimosa",
+    "year": 2024,
+    "item_id": null,
+    "payload": {
+      "field": "end_date",
+      "fuente": "Bases 2024 (archivo): https://amgueddfa.org/item/c8cbbc4aadcd/",
+      "lote": "c099ffac-8159-46e5-93ea-9a19ba53e5d2",
+      "value": "2024-08-10"
+    },
+    "created_at": "2026-11-20T10:11:33.301197+00:00",
+    "reviewed_at": "2026-11-20T10:11:33.301197+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -1651,6 +1763,22 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "36078abb-17ce-40c5-8065-f548501b6ed4",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2007,
+    "item_id": null,
+    "payload": {
+      "field": "end_date",
+      "fuente": "Programa del día 2007 (archivo): https://amgueddfa.org/item/25ef22afeb93/",
+      "lote": "c099ffac-8159-46e5-93ea-9a19ba53e5d2",
+      "value": "2007-11-03"
+    },
+    "created_at": "2026-11-20T10:11:33.301197+00:00",
+    "reviewed_at": "2026-11-20T10:11:33.301197+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "37227883-6e02-4919-8dc1-4591a7139b7d",
     "type": "tag",
     "festival": "juventud",
@@ -1774,6 +1902,22 @@
     },
     "created_at": "2026-11-13T21:14:17.363453+00:00",
     "reviewed_at": "2026-11-13T21:14:42.096951+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "3a7c1dfb-3cc1-4309-ab5a-410e582433d2",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2014,
+    "item_id": null,
+    "payload": {
+      "field": "start_date",
+      "fuente": "Programa 2014 (archivo): https://amgueddfa.org/item/c145ed52682b/",
+      "lote": "c099ffac-8159-46e5-93ea-9a19ba53e5d2",
+      "value": "2014-10-23"
+    },
+    "created_at": "2026-11-20T10:11:33.301197+00:00",
+    "reviewed_at": "2026-11-20T10:11:33.301197+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -2724,6 +2868,22 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "5e869d2c-197a-4238-ae28-fd69c04b9029",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2011,
+    "item_id": null,
+    "payload": {
+      "field": "start_date",
+      "fuente": "Programa del día 2011 (archivo): https://amgueddfa.org/item/94ee7d46577c/",
+      "lote": "c099ffac-8159-46e5-93ea-9a19ba53e5d2",
+      "value": "2011-10-28"
+    },
+    "created_at": "2026-11-20T10:11:33.301197+00:00",
+    "reviewed_at": "2026-11-20T10:11:33.301197+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "5ed7e811-a6be-469f-aea8-495b964409e0",
     "type": "fact",
     "festival": "chubut",
@@ -2825,6 +2985,22 @@
     },
     "created_at": "2026-11-14T13:19:23.605443+00:00",
     "reviewed_at": "2026-11-14T13:20:50.839324+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "612b1fcb-2170-48d0-9c99-c9b957810ba8",
+    "type": "fact",
+    "festival": "mimosa",
+    "year": 2025,
+    "item_id": null,
+    "payload": {
+      "field": "end_date",
+      "fuente": "Bases 2025 (archivo): https://amgueddfa.org/item/889bd82c6cb8/",
+      "lote": "c099ffac-8159-46e5-93ea-9a19ba53e5d2",
+      "value": "2025-06-28"
+    },
+    "created_at": "2026-11-20T10:11:33.301197+00:00",
+    "reviewed_at": "2026-11-20T10:11:33.301197+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -3034,6 +3210,22 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "67238f89-8719-4947-a92f-facd897a27bf",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2014,
+    "item_id": null,
+    "payload": {
+      "field": "end_date",
+      "fuente": "Programa 2014 (archivo): https://amgueddfa.org/item/c145ed52682b/",
+      "lote": "c099ffac-8159-46e5-93ea-9a19ba53e5d2",
+      "value": "2014-10-26"
+    },
+    "created_at": "2026-11-20T10:11:33.301197+00:00",
+    "reviewed_at": "2026-11-20T10:11:33.301197+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "67e65c7a-5c37-4a82-86bc-836eb858be44",
     "type": "fact",
     "festival": "trevelin",
@@ -3122,6 +3314,22 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "69103825-eeee-4acd-9ea3-5edaad20069c",
+    "type": "fact",
+    "festival": "trevelin",
+    "year": 2014,
+    "item_id": null,
+    "payload": {
+      "field": "start_date",
+      "fuente": "Programa 2014 (archivo): https://amgueddfa.org/item/f483c74d8219/",
+      "lote": "c099ffac-8159-46e5-93ea-9a19ba53e5d2",
+      "value": "2014-05-02"
+    },
+    "created_at": "2026-11-20T10:11:33.301197+00:00",
+    "reviewed_at": "2026-11-20T10:11:33.301197+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "698f27a2-ef0d-4518-9832-80989b85b1b0",
     "type": "fact",
     "festival": "chubut",
@@ -3167,6 +3375,22 @@
     },
     "created_at": "2026-11-20T07:03:13.676968+00:00",
     "reviewed_at": "2026-11-20T07:03:13.676968+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "6b753d62-10bb-43a5-9247-a89842ed4601",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2013,
+    "item_id": null,
+    "payload": {
+      "field": "start_date",
+      "fuente": "Programa del día 2013 (archivo): https://amgueddfa.org/item/c840e4d58e41/",
+      "lote": "c099ffac-8159-46e5-93ea-9a19ba53e5d2",
+      "value": "2013-10-31"
+    },
+    "created_at": "2026-11-20T10:11:33.301197+00:00",
+    "reviewed_at": "2026-11-20T10:11:33.301197+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -3691,6 +3915,22 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "7897013c-3da4-4f3a-a8c7-c925d7a4f4ef",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2007,
+    "item_id": null,
+    "payload": {
+      "field": "start_date",
+      "fuente": "Programa del día 2007 (archivo): https://amgueddfa.org/item/25ef22afeb93/",
+      "lote": "c099ffac-8159-46e5-93ea-9a19ba53e5d2",
+      "value": "2007-11-02"
+    },
+    "created_at": "2026-11-20T10:11:33.301197+00:00",
+    "reviewed_at": "2026-11-20T10:11:33.301197+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "78c76151-49a1-482f-bcec-b38dd573645d",
     "type": "fact",
     "festival": "trevelin",
@@ -3839,6 +4079,22 @@
     },
     "created_at": "2026-11-17T11:06:25.263276+00:00",
     "reviewed_at": "2026-11-17T11:06:25.263276+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "7cf329c6-2275-4ff8-9fe9-ec9fcef52d15",
+    "type": "fact",
+    "festival": "juventud",
+    "year": 2019,
+    "item_id": null,
+    "payload": {
+      "field": "start_date",
+      "fuente": "Bases 2019 (archivo): https://amgueddfa.org/item/6ee6974160ab/",
+      "lote": "c099ffac-8159-46e5-93ea-9a19ba53e5d2",
+      "value": "2019-09-06"
+    },
+    "created_at": "2026-11-20T10:11:33.301197+00:00",
+    "reviewed_at": "2026-11-20T10:11:33.301197+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -3999,6 +4255,22 @@
     },
     "created_at": "2026-11-17T13:32:44.148707+00:00",
     "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "8470453c-a9f4-498a-8ea6-8f1c35f692e6",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1918,
+    "item_id": null,
+    "payload": {
+      "field": "start_date",
+      "fuente": "Nota de la transcripción del programa 1918 (Y Drafod; se postergó del 17): https://amgueddfa.org/item/f3d7c7ce425d/",
+      "lote": "c099ffac-8159-46e5-93ea-9a19ba53e5d2",
+      "value": "1918-10-24"
+    },
+    "created_at": "2026-11-20T10:11:33.301197+00:00",
+    "reviewed_at": "2026-11-20T10:11:33.301197+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -4224,6 +4496,22 @@
     },
     "created_at": "2026-11-17T13:32:44.148707+00:00",
     "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "8d9f77ff-4918-42c1-830e-f499d4ac566e",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2012,
+    "item_id": null,
+    "payload": {
+      "field": "start_date",
+      "fuente": "Programa del día 2012 (archivo): https://amgueddfa.org/item/a101d0d87996/",
+      "lote": "c099ffac-8159-46e5-93ea-9a19ba53e5d2",
+      "value": "2012-10-26"
+    },
+    "created_at": "2026-11-20T10:11:33.301197+00:00",
+    "reviewed_at": "2026-11-20T10:11:33.301197+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -7820,6 +8108,22 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "f44fb2e1-25e6-44f6-b5a1-893ff9928091",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2013,
+    "item_id": null,
+    "payload": {
+      "field": "end_date",
+      "fuente": "Programa del día 2013 (archivo): https://amgueddfa.org/item/c840e4d58e41/",
+      "lote": "c099ffac-8159-46e5-93ea-9a19ba53e5d2",
+      "value": "2013-11-02"
+    },
+    "created_at": "2026-11-20T10:11:33.301197+00:00",
+    "reviewed_at": "2026-11-20T10:11:33.301197+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "f5830ad8-a5bc-4541-8a94-47b1e8944dfd",
     "type": "fact",
     "festival": "chubut",
@@ -7845,6 +8149,22 @@
     },
     "created_at": "2026-11-14T14:31:44.958927+00:00",
     "reviewed_at": "2026-11-14T14:33:21.397101+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "f5b67d7b-14b4-4ae9-8f16-fc4552c09483",
+    "type": "fact",
+    "festival": "trevelin",
+    "year": 2014,
+    "item_id": null,
+    "payload": {
+      "field": "end_date",
+      "fuente": "Programa 2014 (archivo): https://amgueddfa.org/item/f483c74d8219/",
+      "lote": "c099ffac-8159-46e5-93ea-9a19ba53e5d2",
+      "value": "2014-05-03"
+    },
+    "created_at": "2026-11-20T10:11:33.301197+00:00",
+    "reviewed_at": "2026-11-20T10:11:33.301197+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -8164,6 +8484,22 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "fead21dc-8b18-4533-abfb-cda71847ba6c",
+    "type": "fact",
+    "festival": "juventud",
+    "year": 2024,
+    "item_id": null,
+    "payload": {
+      "field": "end_date",
+      "fuente": "Bases 2024 (archivo): https://amgueddfa.org/item/b281ccdcb875/",
+      "lote": "c099ffac-8159-46e5-93ea-9a19ba53e5d2",
+      "value": "2024-09-15"
+    },
+    "created_at": "2026-11-20T10:11:33.301197+00:00",
+    "reviewed_at": "2026-11-20T10:11:33.301197+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "febc72a8-f55f-440e-ba14-9f735b6609df",
     "type": "tag",
     "festival": "mimosa",
@@ -8174,6 +8510,22 @@
     },
     "created_at": "2026-11-17T13:32:44.148707+00:00",
     "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "feefeba0-3e21-41cb-8852-8cd3dfb6cbc4",
+    "type": "fact",
+    "festival": "juventud",
+    "year": 2019,
+    "item_id": null,
+    "payload": {
+      "field": "end_date",
+      "fuente": "Bases 2019 (archivo): https://amgueddfa.org/item/6ee6974160ab/",
+      "lote": "c099ffac-8159-46e5-93ea-9a19ba53e5d2",
+      "value": "2019-09-07"
+    },
+    "created_at": "2026-11-20T10:11:33.301197+00:00",
+    "reviewed_at": "2026-11-20T10:11:33.301197+00:00",
     "display_name": "Kevin Roberts"
   },
   {

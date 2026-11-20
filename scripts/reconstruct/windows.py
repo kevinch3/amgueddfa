@@ -7,7 +7,7 @@ import json
 import re
 from typing import Callable, NamedTuple
 
-from scripts.reconstruct.context import Context, tokens
+from scripts.reconstruct.context import Context, load_glossary, tokens, with_glossary
 from scripts.reconstruct.sources import Line
 
 # Bump when prompt.md or schema.json change: every window is asked again.
@@ -33,7 +33,8 @@ def _cut(starts: list[float], nominal: float) -> float:
 
 
 def make_windows(lines: list[Line], duration: float, context_for: Callable[[float, float], Context],
-                 size: float = 60.0, overlap: float = 5.0) -> list[Window]:
+                 size: float = 60.0, overlap: float = 5.0, glossary: list | None = None) -> list[Window]:
+    glossary = load_glossary() if glossary is None else glossary
     starts = sorted({l.t for l in lines})
     cuts, t0 = [0.0], 0.0
     while t0 + size < duration:
@@ -43,7 +44,7 @@ def make_windows(lines: list[Line], duration: float, context_for: Callable[[floa
     out = []
     for a, b in zip(cuts, cuts[1:]):
         inside = tuple(l for l in lines if a - overlap <= l.t < b + overlap)
-        ctx = context_for(a, b)
+        ctx = with_glossary(context_for(a, b), inside, glossary)
         key = json.dumps([a, b, [list(l) for l in inside], ctx.text, PROMPT_VERSION], ensure_ascii=False, sort_keys=True)
         out.append(Window(a, b, inside, ctx, hashlib.sha256(key.encode("utf-8")).hexdigest()[:16]))
     return out

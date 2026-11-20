@@ -16,6 +16,22 @@ FACT_FIELDS = ("venue", "ganador_silla", "ganador_corona", "presentadores")
 BASE_WORDS = frozenset({"eisteddfod", "gorsedd", "wladfa", "chubut", "trelew", "gaiman", "trevelin", "dolavon", "madryn"})
 
 
+GLOSARIO = Path(__file__).resolve().parents[2] / "data" / "glosario.md"
+
+
+def load_glossary(path: Path = GLOSARIO) -> list[tuple[str, str]]:
+    """Known mishearings, (heard folded, right), from data/glosario.md ("heard → right" lines)."""
+    if not path.exists():
+        return []
+    out = []
+    for line in path.read_text(encoding="utf-8").splitlines():
+        if "→" in line and not line.lstrip().startswith("#"):
+            heard, right = (x.strip() for x in line.split("→", 1))
+            if heard and right:
+                out.append((fold(heard), right))
+    return out
+
+
 class Context(NamedTuple):
     text: str
     words: frozenset
@@ -75,3 +91,13 @@ def video_context(repo: Path, video: dict, t0: float, t1: float) -> Context:
             parts.append(f"{p['field']}: {p['value']}")
             values.append(p["value"])
     return Context("\n".join(parts), frozenset(tokens(" ".join(values))) | BASE_WORDS)
+
+
+def with_glossary(ctx: Context, lines, glossary: list[tuple[str, str]]) -> Context:
+    """The context plus the glossary hints whose misheard word occurs in these lines (else unchanged)."""
+    heard = {tok for l in lines for tok in tokens(l.text)}
+    hits = [(h, r) for h, r in glossary if all(t in heard for t in tokens(h))]
+    if not hits:
+        return ctx
+    text = ctx.text + "\nPalabras mal oídas conocidas: " + "; ".join(f"{h} → {r}" for h, r in hits)
+    return Context(text, ctx.words | {t for _, r in hits for t in tokens(r)})

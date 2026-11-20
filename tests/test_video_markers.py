@@ -62,3 +62,12 @@ def test_verdict_readings_and_non_stage_disciplines_are_not_starts():
     ]
     m = detect(cues, programa_titles(PROG2), stage_only=programa_stage(PROG2))
     assert [(x["n"], x["high"]) for x in m if x["kind"] == "comp"] == [("50", True)]
+
+
+def test_programa_with_base_year_and_suspensions():
+    from scripts.video_markers import merge_programa
+    base = "## Música\n44. Unawd cân ysgafn: hunanddewisiad.\n47. Solo libre: obra de Guastavino.\n50. Solo libre: rock.\n"
+    adapted = "## Solos · Unawdau\n44. Unawd cân ysgafn: hunanddewisiad. (Suspendida)\n47. Solo libre: obra a elección. (Modificada)\n"
+    titles, stage = merge_programa([adapted], base=[base])
+    assert titles == {"47": "Solo libre: obra a elección. (Modificada)", "50": "Solo libre: rock"}
+    assert stage == {"47", "50"}

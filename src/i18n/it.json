@@ -951,7 +951,8 @@
     "capitulos": "Capitoli",
     "automatico": "automatico",
     "comp": "Gara {n}",
-    "nota_capitulos": "Segnati automaticamente da ciò che viene annunciato nella sessione; possono contenere errori."
+    "nota_capitulos": "Segnati automaticamente da ciò che viene annunciato nella sessione; possono contenere errori.",
+    "ver_en_video": "Guarda nel video, da {tiempo}"
   },
   "buscar": {
     "titulo": "Cerca nell'archivio",

@@ -951,7 +951,8 @@
     "capitulos": "Capítulos",
     "automatico": "automático",
     "comp": "Comp. {n}",
-    "nota_capitulos": "Marcados automáticamente a partir de lo que se anuncia en la sesión; pueden tener errores."
+    "nota_capitulos": "Marcados automáticamente a partir de lo que se anuncia en la sesión; pueden tener errores.",
+    "ver_en_video": "Ver en el video, desde {tiempo}"
   },
   "buscar": {
     "titulo": "Buscar en el archivo",

@@ -115,20 +115,47 @@ def cues_for(stem: Path) -> list[tuple[float, str]]:
     return []
 
 
-def programa_for(year: int, catalog: list[dict]) -> tuple[dict[str, str], set[str]]:
-    """The year's programa (and programa del día) transcriptions merged (the programa wins on a clash), and its on-stage numbers."""
+# A year that ran on an earlier programa with amendments: Chubut 2021 used the printed 2020
+# programa, adapted. The archive's 2020 programa is the virtual "Eisteddfod Adre" (unnumbered),
+# not that one, so 2021 has no base yet: add {2021: 2020} once the printed 2020 programa is in.
+BASE_YEAR: dict[int, int] = {}
+
+
+def merge_programa(own: list[str], base: list[str] | None = None) -> tuple[dict[str, str], set[str]]:
+    """Titles and on-stage numbers from a year's transcriptions over its base year's; "(Suspendida)" removes one."""
     titles: dict[str, str] = {}
     stage: set[str] = set()
-    for cat in ("programa", "programa-del-dia"):
-        for i in catalog:
-            if i["festival"] == "chubut" and i.get("year") == year and i["category"] == cat:
-                p = REPO / "src" / "data" / "transcripciones" / f"{i['id']}.md"
-                if p.exists():
-                    md = p.read_text(encoding="utf-8")
-                    for n, t in programa_titles(md).items():
-                        titles.setdefault(n, t)
-                    stage |= programa_stage(md)
-    return titles, stage
+    for md in base or []:
+        for n, t in programa_titles(md).items():
+            titles.setdefault(n, t)
+        stage |= programa_stage(md)
+    mine: dict[str, str] = {}
+    for md in own:
+        for n, t in programa_titles(md).items():
+            mine.setdefault(n, t)
+        stage |= programa_stage(md)
+    for n, t in mine.items():
+        if "(Suspendida)" in t:
+            titles.pop(n, None)
+            stage.discard(n)
+        else:
+            titles[n] = t
+    return titles, stage & set(titles)
+
+
+def programa_for(year: int, catalog: list[dict]) -> tuple[dict[str, str], set[str]]:
+    """The year's programa (and programa del día) transcriptions, over its base year's when it has one."""
+    def texts(y: int) -> list[str]:
+        out = []
+        for cat in ("programa", "programa-del-dia"):
+            for i in catalog:
+                if i["festival"] == "chubut" and i.get("year") == y and i["category"] == cat:
+                    p = REPO / "src" / "data" / "transcripciones" / f"{i['id']}.md"
+                    if p.exists() and (t := p.read_text(encoding="utf-8")) not in out:
+                        out.append(t)
+        return out
+    base = BASE_YEAR.get(year)
+    return merge_programa(texts(year), texts(base) if base else None)
 
 
 def main(backup: Path) -> None:

@@ -6,6 +6,7 @@ import Mount from '../../components/Mount.astro';
 import VideoList from '../../components/VideoList.astro';
 import MediaGallery from '../../components/MediaGallery.astro';
 import { mediaItems } from '../../lib/media';
+import { playMap, type MarkerFile } from '../../lib/markers';
 import Transcripcion from '../../components/Transcripcion.astro';
 import { transcriptionDoc } from '../../lib/transcripciones';
 import { PUBLIC_WINNERS, winnersDoc } from '../../lib/ganadores';
@@ -37,6 +38,12 @@ const list = editionItems(slug, year);
 const state = editionState(slug, year);
 const cover = editionCover(slug, year);
 const videos = editionVideos(slug, year);
+// Automatic competition markers of this edition's session videos: programa lines link to their moment.
+const markerFiles = Object.fromEntries(
+  Object.entries(import.meta.glob<MarkerFile>('../../../public/marcadores-video/*.json', { eager: true, import: 'default' }))
+    .map(([path, f]) => [path.split('/').pop()!.replace(/\.json$/, ''), f]),
+);
+const play = playMap(markerFiles, videos.map((v) => v.id));
 // Photos and press go to the Multimedia section (MediaGallery), not to Otros.
 const media = mediaItems(list);
 const mediaIds = new Set(media.map((m) => m.item.id));
@@ -153,7 +160,7 @@ const missingList = formatList(missing.map((m) => m.toLocaleLowerCase(intlLocale
             <details class="tr-detalle">
               <summary>{trVer[0]}{lang ? <span lang={lang}>{item.title}</span> : item.title}{trVer[1]}</summary>
               <p class="muted small">{t('item.transcripcion_ayuda')} <a href={url(`item/${item.id}/`)}>{t('edicion.transcripcion_documento')}</a></p>
-              <Transcripcion text={text} doc={doc} />
+              <Transcripcion text={text} doc={doc} play={c === 'programa' || c === 'programa-del-dia' ? play : undefined} />
             </details>
           ))}
         </div>

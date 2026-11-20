@@ -951,7 +951,8 @@
     "capitulos": "Penodau",
     "automatico": "awtomatig",
     "comp": "Cyst. {n}",
-    "nota_capitulos": "Wedi'u marcio'n awtomatig o'r hyn a gyhoeddir yn y sesiwn; gall fod gwallau."
+    "nota_capitulos": "Wedi'u marcio'n awtomatig o'r hyn a gyhoeddir yn y sesiwn; gall fod gwallau.",
+    "ver_en_video": "Gwylio yn y fideo, o {tiempo}"
   },
   "buscar": {
     "titulo": "Chwilio'r archif",

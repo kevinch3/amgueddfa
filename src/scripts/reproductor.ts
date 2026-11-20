@@ -204,7 +204,7 @@ if (dialog) {
     renderTranscript(tr);
   }
 
-  async function show(i: number): Promise<void> {
+  async function show(i: number, start = 0): Promise<void> {
     index = Math.max(0, Math.min(list.length - 1, i));
     const li = list[index];
     const id = li.dataset.video ?? '';
@@ -221,7 +221,7 @@ if (dialog) {
     void loadChapters(id);
     await loadApi();
     if (player) {
-      player.loadVideoById(id);
+      (player as unknown as { loadVideoById(o: { videoId: string; startSeconds: number }): void }).loadVideoById({ videoId: id, startSeconds: start });
       return;
     }
     player = new window.YT!.Player($<HTMLElement>('[data-rep-player]')!, {
@@ -229,7 +229,7 @@ if (dialog) {
       videoId: id,
       width: '100%',
       height: '100%',
-      playerVars: { playsinline: 1, rel: 0, autoplay: 1 },
+      playerVars: { playsinline: 1, rel: 0, autoplay: 1, start: Math.floor(start) },
       events: {
         // 2, 5, 100, 101, 150: bad id, HTML5 error, removed, embedding not allowed.
         onError: () => {
@@ -240,13 +240,13 @@ if (dialog) {
     });
   }
 
-  function open(li: HTMLLIElement): void {
+  function open(li: HTMLLIElement, start = 0): void {
     list = videosOf(li);
     const i = list.findIndex((x) => x.dataset.video === li.dataset.video);
     if (!dialog!.open) dialog!.showModal();
     window.clearInterval(timer);
     timer = window.setInterval(tick, 300);
-    void show(i < 0 ? 0 : i);
+    void show(i < 0 ? 0 : i, start);
   }
 
   // A plain click on a card opens the player; middle click and Ctrl/⌘/Shift-click keep YouTube's link.
@@ -256,6 +256,16 @@ if (dialog) {
     if (!a.closest('[data-videos]')) return;
     ev.preventDefault();
     open(a.parentElement as HTMLLIElement);
+  });
+
+  // "▶ 1:24:14" links on programa lines (automatic markers) open the video at that moment.
+  document.addEventListener('click', (ev) => {
+    const a = (ev.target as HTMLElement | null)?.closest<HTMLAnchorElement>('a[data-play-video]');
+    if (!a || ev.button !== 0 || ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.altKey) return;
+    const li = document.querySelector<HTMLLIElement>(`[data-videos] li[data-video="${CSS.escape(a.dataset.playVideo ?? '')}"]`);
+    if (!li) return;
+    ev.preventDefault();
+    open(li, Number(a.dataset.playT) || 0);
   });
 
   lines.addEventListener('click', (ev) => {

@@ -587,3 +587,5 @@ fieldset.campo { border: 0; padding: 0; }
 .rep-cap-lista button { display: flex; gap: 0.6rem; width: 100%; text-align: left; padding: 0.45rem 0.6rem; min-height: 44px; border: 0; background: transparent; color: var(--ink); font: 0.95rem/1.35 var(--sans); cursor: pointer; }
 .rep-cap-lista button:hover { background: var(--paper); }
 .rep-cap-lista .actual button { background: #fff; box-shadow: inset 3px 0 0 var(--gold); }
+.tr-play { font: 600 0.85rem var(--sans); white-space: nowrap; text-decoration: none; padding: 0.1rem 0.4rem; border: 1px solid var(--rule); border-radius: 999px; }
+.tr-play:hover { border-color: var(--gold-ink); }

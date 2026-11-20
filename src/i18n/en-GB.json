@@ -951,7 +951,8 @@
     "capitulos": "Chapters",
     "automatico": "automatic",
     "comp": "Comp. {n}",
-    "nota_capitulos": "Marked automatically from what is announced in the session; they may contain mistakes."
+    "nota_capitulos": "Marked automatically from what is announced in the session; they may contain mistakes.",
+    "ver_en_video": "Watch in the video, from {tiempo}"
   },
   "buscar": {
     "titulo": "Search the archive",

@@ -951,7 +951,8 @@
     "capitulos": "Chapitres",
     "automatico": "automatique",
     "comp": "Conc. {n}",
-    "nota_capitulos": "Repérés automatiquement d'après les annonces de la séance ; ils peuvent contenir des erreurs."
+    "nota_capitulos": "Repérés automatiquement d'après les annonces de la séance ; ils peuvent contenir des erreurs.",
+    "ver_en_video": "Voir dans la vidéo, à partir de {tiempo}"
   },
   "buscar": {
     "titulo": "Rechercher dans l'archive",

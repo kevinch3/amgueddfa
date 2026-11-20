@@ -3,16 +3,20 @@
 // `doc` (the document id) lets scripts/live-transcripciones.ts replace it with the live text.
 import { transcriptionRuns } from '../lib/transcripciones';
 import { textHash } from '../lib/docmd';
-import { contentLang } from '../lib/i18n';
+import { contentLang, t } from '../lib/i18n';
+import type { PlayAt } from '../lib/markers';
+import { fmtTime } from '../lib/video-transcript';
+import { videoUrl } from '../lib/videos';
 
-const { text, doc } = Astro.props as { text: string; doc?: string };
+// `play`: competition number → where it starts in a session video (automatic markers); adds a link.
+const { text, doc, play } = Astro.props as { text: string; doc?: string; play?: Record<string, PlayAt> };
 const runs = transcriptionRuns(text);
 ---
 <div class="transcripcion" lang={contentLang()} data-doc={doc} data-doc-hash={doc ? textHash(text) : undefined}>
   {runs.map((r) =>
     r.kind === 'list' ? (
       <ul class="tr-lista">
-        {r.items.map((i) => <li>{i.n && <span class="tr-n">{i.n}.</span>} {i.text}</li>)}
+        {r.items.map((i) => <li>{i.n && <span class="tr-n">{i.n}.</span>} {i.text}{i.n && play?.[i.n] && <> <a class="tr-play" href={`${videoUrl(play[i.n].v)}&t=${play[i.n].t}s`} data-play-video={play[i.n].v} data-play-t={play[i.n].t} aria-label={t('reproductor.ver_en_video', { tiempo: fmtTime(play[i.n].t) })}>▶ {fmtTime(play[i.n].t)}</a></>}</li>)}
       </ul>
     ) : r.block.type === 'section' ? <h3>{r.block.text}</h3>
       : r.block.type === 'group' ? <h4>{r.block.text}</h4>

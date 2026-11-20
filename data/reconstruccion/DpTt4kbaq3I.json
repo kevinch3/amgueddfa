@@ -1,0 +1,309 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.1,
+   "Estamos eh con las preliminares en"
+  ],
+  [
+   1.9,
+   "idioma castellano de música y en galés."
+  ],
+  [
+   5.2,
+   "Hace poquito terminaron las eh"
+  ],
+  [
+   7.1,
+   "preliminares de castellano en los altos"
+  ],
+  [
+   11.4,
+   "Eisteddfod, ya estamos con el la cuenta"
+  ],
+  [
+   15.5,
+   "regresiva, se puede decir. Muy lindo, la"
+  ],
+  [
+   17.8,
+   "verdad que bueno, el lunes tuvimos eh la"
+  ],
+  [
+   19.8,
+   "entrega de los atributos en el salón"
+  ],
+  [
+   23.0,
+   "histórico de la municipalidad de Trevelin,"
+  ],
+  [
+   25.0,
+   "en la cual recibimos a los este los"
+  ],
+  [
+   28.3,
+   "premios que se van a entregar al mejor"
+  ],
+  [
+   30.3,
+   "poema en idioma castellano, eh al mejor"
+  ],
+  [
+   40.1,
+   "idioma castellano y en galés. El sillón"
+  ],
+  [
+   42.9,
+   "bárdico eh se entrega al mejor poema en"
+  ],
+  [
+   45.5,
+   "idioma galés. Y después tenemos dos"
+  ],
+  [
+   47.6,
+   "competencias al mejor poema, el idioma"
+  ],
+  [
+   54.2,
+   "corona del poeta y después en medica"
+  ],
+  [
+   59.1,
+   "dona San David. Mañana comenzamos eh a"
+  ],
+  [
+   62.0,
+   "las hoy es viernes eh mañana viernes a"
+  ],
+  [
+   64.5,
+   "las 17:30 eh arrancamos con una linda"
+  ],
+  [
+   67.5,
+   "apertura eh sorpresa, vengan a verlo,"
+  ],
+  [
+   70.3,
+   "que es muy bonita y que se va a repetir"
+  ],
+  [
+   71.7,
+   "el día sábado y comienza formalmente el"
+  ],
+  [
+   74.2,
+   "Eisteddfod del Chubut las competencias y"
+  ],
+  [
+   77.3,
+   "esperemos no terminar demasiado tarde. Y"
+  ],
+  [
+   80.2,
+   "el día sábado a las 2 de la tarde"
+  ],
+  [
+   85.0,
+   "volvemos a empezar se dividendo sesiones"
+  ],
+  [
+   87.4,
+   "hasta las 5:30 y un corte y después"
+  ],
+  [
+   90.2,
+   "retomamos y seguimos. Esperamos no"
+  ],
+  [
+   92.9,
+   "terminar muy tarde, pero no importa"
+  ],
+  [
+   98.1,
+   "año, estamos muy contentos en música,"
+  ],
+  [
+   101.1,
+   "muchos inscriptos en castellano,"
+  ],
+  [
+   103.3,
+   "en recitación, eh, bueno, en literatura,"
+  ],
+  [
+   109.5,
+   "mucha participación en muchos ámbitos."
+  ],
+  [
+   111.4,
+   "Algo hay que celebrar de alguna forma y"
+  ],
+  [
+   113.0,
+   "la forma de celebrar los gales es"
+  ],
+  [
+   115.2,
+   "recitando, cantando, bailando, eh"
+  ],
+  [
+   118.5,
+   "celebrando el idioma y la cultura. Así"
+  ],
+  [
+   120.4,
+   "que bueno, eh, muy contentos, muy"
+  ],
+  [
+   123.0,
+   "contentos, así que esperamos superar las"
+  ],
+  [
+   126.2,
+   "expectativas y que vengan mucha gente a"
+  ],
+  [
+   128.9,
+   "verlo y conocer más el Eisteddfod"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

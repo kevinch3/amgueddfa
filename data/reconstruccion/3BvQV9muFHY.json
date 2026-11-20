@@ -1,0 +1,57 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   29.0,
+   "Se acerca la madrugada, los gallos ya están cantando."
+  ],
+  [
+   45.7,
+   "Vientra el año y sale el año,"
+  ],
+  [
+   67.3,
+   "Cuando llegaré, cuando llegaré al oído"
+  ],
+  [
+   113.4,
+   "¿Cuándo llegaré? ¿Cuándo llegaré al oído?"
+  ],
+  [
+   121.1,
+   "Triste la vida del carretero"
+  ],
+  [
+   143.7,
+   "Sabiendo que su vida es un destierro"
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

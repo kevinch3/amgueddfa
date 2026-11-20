@@ -1,0 +1,36 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Entonces, si el jurado así lo dispone, escuchamos en primer lugar a la familia Mary Daniel Evans."
+  ],
+  [
+   8.3,
+   "Que Dios te bendiga."
+  ],
+  [
+   30.0,
+   "Dios te bendiga, que alce el Señor a ti su rostro."
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

@@ -1,0 +1,85 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   8.0,
+   "que seguimos trabajando y seguimos haciendo todas estas cosas, solo para nosotros."
+  ],
+  [
+   22.9,
+   "¿Estás escuchando?"
+  ],
+  [
+   80.8,
+   "Sólo el amor defiende el milagro al farcón"
+  ],
+  [
+   88.3,
+   "Sólo el amor al temprano que cae el mundo"
+  ],
+  [
+   94.6,
+   "Sólo el amor contiene el milagro al farcón"
+  ],
+  [
+   110.8,
+   "Amén."
+  ],
+  [
+   140.8,
+   "No es más que esperar tu amor"
+  ],
+  [
+   146.8,
+   "Sólo el amor encenderá la maravilla"
+  ],
+  [
+   154.8,
+   "Sólo el amor consigue encenderlo por todos"
+  ],
+  [
+   161.8,
+   "Sólo el amor encenderá la maravilla"
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

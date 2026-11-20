@@ -1,0 +1,43 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   77.0,
+   "Si me congelo, ya no me muevo. Si hace calor, me derrillo y me doy, contiendo como amor."
+  ],
+  [
+   90.4,
+   "En la tierra estoy luchando, llego plantas, hago ladrón,"
+  ],
+  [
+   108.5,
+   "Llevo por el cielo hasta el ancho mar,"
+  ],
+  [
+   113.4,
+   "Siempre cuento hasta el mar, siempre cuento hasta el mar."
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

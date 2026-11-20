@@ -1,0 +1,57 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   43.2,
+   "Última competencia de la noche,"
+  ],
+  [
+   45.7,
+   "la competencia principal para coro número 76,"
+  ],
+  [
+   50.5,
+   "obra académica o sacra"
+  ],
+  [
+   52.2,
+   "y spiritual góspel o jazz a elección."
+  ],
+  [
+   57.4,
+   "Segundo coro participante,"
+  ],
+  [
+   59.2,
+   "Locus Amoenus."
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 11,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 7
+ }
+}

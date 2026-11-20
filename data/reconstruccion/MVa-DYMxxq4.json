@@ -1,0 +1,260 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   5.7,
+   "nací en un barrio donde el club o fue un"
+  ],
+  [
+   9.2,
+   "alcohol Por eso tengo el corazón Mirando"
+  ],
+  [
+   13.6,
+   "al sol mi viejo fue una abeja en La"
+  ],
+  [
+   17.6,
+   "Colmena las manos limpias el alma buena"
+  ],
+  [
+   23.8,
+   "en esta infancia la templanza mejor"
+  ],
+  [
+   28.0,
+   "después la vida mil caminos me tendió y"
+  ],
+  [
+   37.2,
+   "tengo el corazón"
+  ],
+  [
+   40.0,
+   "Mirando al sol"
+  ],
+  [
+   44.9,
+   "mi barrio fue una planta de Jazmín"
+  ],
+  [
+   49.6,
+   "la sombra de mi vieja en el jardín la"
+  ],
+  [
+   54.1,
+   "Dulce fiesta de la cosas más sencillas y"
+  ],
+  [
+   58.0,
+   "la paz en la gramilla"
+  ],
+  [
+   60.9,
+   "de cara al sol"
+  ],
+  [
+   62.5,
+   "mi barrio fue mi gente que no está las"
+  ],
+  [
+   67.9,
+   "cosas que ella nunca volverán si desde"
+  ],
+  [
+   72.1,
+   "el día en que me fui con la emoción y"
+  ],
+  [
+   75.2,
+   "con la cruz yo sé que tengo el corazón"
+  ],
+  [
+   81.9,
+   "Mirando al sol"
+  ],
+  [
+   90.6,
+   "la geografía de mi barrio llevo en ti"
+  ],
+  [
+   95.8,
+   "será por eso que del todo no me fui"
+  ],
+  [
+   104.6,
+   "reconozco son algo mío y ahora que sé"
+  ],
+  [
+   109.6,
+   "que la distancia no es real y me"
+  ],
+  [
+   113.2,
+   "descubro en ese punto cardinal"
+  ],
+  [
+   117.0,
+   "volviendo a la niñez desde la luz"
+  ],
+  [
+   120.1,
+   "teniendo siempre el corazón"
+  ],
+  [
+   123.7,
+   "Mirando al sol"
+  ],
+  [
+   128.4,
+   "mi barrio fue una planta de Jazmín la"
+  ],
+  [
+   134.0,
+   "sombra de mi vieja en el jardín la Dulce"
+  ],
+  [
+   137.8,
+   "fiesta de las cosas tan sencillas y la"
+  ],
+  [
+   141.4,
+   "paz es la gramilla de cara al sol"
+  ],
+  [
+   146.3,
+   "mi barrio fue mi gente que no está las"
+  ],
+  [
+   151.0,
+   "cosas que ella nunca volverán si desde"
+  ],
+  [
+   155.2,
+   "el día en que me fui con la emoción y"
+  ],
+  [
+   158.0,
+   "con la cruz yo sé que tengo el corazón"
+  ],
+  [
+   165.2,
+   "Mirando al sol gracias"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

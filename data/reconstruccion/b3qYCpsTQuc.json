@@ -1,0 +1,225 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "esta poesía de Mercedes calvo que es una"
+  ],
+  [
+   3.1,
+   "autora uruguaya tiene dos partes bien"
+  ],
+  [
+   6.6,
+   "claramente definidas una parte más"
+  ],
+  [
+   8.6,
+   "descriptiva y una última parte donde la"
+  ],
+  [
+   12.6,
+   "autora menciona sus sentimientos y su"
+  ],
+  [
+   16.0,
+   "deseo Creo que este"
+  ],
+  [
+   19.7,
+   "clima lo logró Dylan muy bien con un"
+  ],
+  [
+   24.6,
+   "recitado que tuvo un creyendo emotivo"
+  ],
+  [
+   27.8,
+   "fuerte empleó distinto dos tonos de voz"
+  ],
+  [
+   31.1,
+   "que contribuyeron a la creación del"
+  ],
+  [
+   33.6,
+   "clima adecuado para el poema por lo"
+  ],
+  [
+   36.6,
+   "tanto me parece que es merecedor del"
+  ],
+  [
+   38.5,
+   "primer"
+  ],
+  [
+   39.4,
+   "premio en el caso"
+  ],
+  [
+   42.5,
+   "de en el caso de Juana y de"
+  ],
+  [
+   46.1,
+   "Ernestina ambas hicieron una recitación"
+  ],
+  [
+   49.3,
+   "una recitación muy emotiva y ambas"
+  ],
+  [
+   52.6,
+   "también le dieron el carácter"
+  ],
+  [
+   55.0,
+   "verdaderamente invocativo que tienen los"
+  ],
+  [
+   58.0,
+   "dos o tres últimos versos de texto por"
+  ],
+  [
+   60.9,
+   "lo tanto me parece que son acreedoras a"
+  ],
+  [
+   62.9,
+   "un segundo premio"
+  ],
+  [
+   64.6,
+   "compartido y en el caso final en el caso"
+  ],
+  [
+   68.0,
+   "de naara también pudo darle una"
+  ],
+  [
+   72.6,
+   "atmósfera emotiva a pesar de que no fue"
+  ],
+  [
+   75.6,
+   "tan clara como con los chicos anteriores"
+  ],
+  [
+   78.7,
+   "Así que un tercer premio para nara, bien"
+  ],
+  [
+   81.5,
+   "bueno"
+  ],
+  [
+   84.1,
+   "pueden, bueno, como los nenes están"
+  ],
+  [
+   87.2,
+   "preparados"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

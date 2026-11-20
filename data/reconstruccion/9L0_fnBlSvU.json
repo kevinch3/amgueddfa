@@ -1,0 +1,78 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   40.0,
+   "Ya me estoy acomodando"
+  ],
+  [
+   46.5,
+   "En ese instante de tiempo"
+  ],
+  [
+   85.6,
+   "Quiero hacerte el amor en las mañanas de Santiago"
+  ],
+  [
+   90.9,
+   "Pintar con tu acuarela mis ocasos"
+  ],
+  [
+   95.0,
+   "Quiero hacerte el amor en las mañanas de Santiago"
+  ],
+  [
+   101.4,
+   "Tomar cerveza entre tus brazos"
+  ],
+  [
+   188.0,
+   "Quiero hacerte el amor en las mañanas de Santiago"
+  ],
+  [
+   197.8,
+   "Quiero hacerte el amor en las mañanas de Santiago"
+  ],
+  [
+   212.9,
+   "Entre tus brazos"
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

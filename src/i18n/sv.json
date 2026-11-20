@@ -947,7 +947,11 @@
       "es": "spanska",
       "cy": "kymriska",
       "en": "engelska"
-    }
+    },
+    "capitulos": "Kapitel",
+    "automatico": "automatiskt",
+    "comp": "Tävl. {n}",
+    "nota_capitulos": "Markerade automatiskt utifrån det som annonseras under sessionen; de kan innehålla fel."
   },
   "buscar": {
     "titulo": "Sök i arkivet",

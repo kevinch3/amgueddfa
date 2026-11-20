@@ -947,7 +947,11 @@
       "es": "Sbaeneg",
       "cy": "Cymraeg",
       "en": "Saesneg"
-    }
+    },
+    "capitulos": "Penodau",
+    "automatico": "awtomatig",
+    "comp": "Cyst. {n}",
+    "nota_capitulos": "Wedi'u marcio'n awtomatig o'r hyn a gyhoeddir yn y sesiwn; gall fod gwallau."
   },
   "buscar": {
     "titulo": "Chwilio'r archif",

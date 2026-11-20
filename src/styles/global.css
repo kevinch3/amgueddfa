@@ -577,3 +577,13 @@ fieldset.campo { border: 0; padding: 0; }
 .mm-t { font-size: 1rem; line-height: 1.3; overflow-wrap: anywhere; }
 .mm-tr { color: var(--green); font-weight: 600; }
 .lb-tr-t { margin: 0 0 0.5rem; font-size: 1.05rem; font-family: var(--sans); }
+
+/* Player chapters (automatic markers, scripts/video_markers.py) ------------------- */
+.rep-capitulos { margin-top: 0.5rem; font-family: var(--sans); }
+.rep-capitulos[hidden] { display: none; }
+.rep-capitulos h3 { margin: 0 0 0.25rem; font-size: 1rem; display: flex; gap: 0.5rem; align-items: center; }
+.rep-capitulos > p { margin: 0.25rem 0 0; }
+.rep-cap-lista { list-style: none; margin: 0; padding: 0; max-height: 14rem; overflow: auto; border: 1px solid var(--rule); border-radius: 6px; }
+.rep-cap-lista button { display: flex; gap: 0.6rem; width: 100%; text-align: left; padding: 0.45rem 0.6rem; min-height: 44px; border: 0; background: transparent; color: var(--ink); font: 0.95rem/1.35 var(--sans); cursor: pointer; }
+.rep-cap-lista button:hover { background: var(--paper); }
+.rep-cap-lista .actual button { background: #fff; box-shadow: inset 3px 0 0 var(--gold); }

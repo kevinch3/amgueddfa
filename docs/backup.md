@@ -205,3 +205,14 @@ still without a `.json` in one-hour 16 kHz chunks cut with ffmpeg, language chos
 chunk, timestamps shifted. Final count: 2,159 videos, transcription from YouTube 825, Whisper
 1,316, no speech 19 (one removed on request). When checking the run from here, use
 `pgrep -f "[t]ranscribe"`: a plain `pgrep -f transcribe.py` matches its own ssh command line.
+
+## Competition markers (chapters in the player)
+
+`python3 -m scripts.video_markers` (backup disk mounted) reads the transcription of every
+long Chubut session on the site (over 3 h) and finds where each competition of that year's
+programa starts and where the chair, crown, medal and Gorsedd ceremonies are. Upcoming calls,
+verdicts (#29) and off-stage disciplines (literature, crafts, art...) are skipped. Decision
+2026-11-20: markers where the spoken call and words of the programa title match within 90 s
+are published to `public/marcadores-video/<id>.json` and shown as chapters labelled
+"automático"; every candidate, with context, stays in `../.marcadores/` for review.
+Run it again after new programa transcriptions; commit the folder.

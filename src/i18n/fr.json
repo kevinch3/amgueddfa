@@ -947,7 +947,11 @@
       "es": "espagnol",
       "cy": "gallois",
       "en": "anglais"
-    }
+    },
+    "capitulos": "Chapitres",
+    "automatico": "automatique",
+    "comp": "Conc. {n}",
+    "nota_capitulos": "Repérés automatiquement d'après les annonces de la séance ; ils peuvent contenir des erreurs."
   },
   "buscar": {
     "titulo": "Rechercher dans l'archive",

@@ -58,6 +58,9 @@ if (dialog) {
   let timer = 0;
   let userScrolledAt = 0;
   let loadToken = 0;
+  let chapters: [number, string, string, string][] = [];
+  let activeCh = -1;
+  let chToken = 0;
 
   const lines = $<HTMLOListElement>('[data-rep-lineas]')!;
   const search = $<HTMLInputElement>('[data-rep-q]')!;
@@ -93,9 +96,12 @@ if (dialog) {
   }
 
   function tick(): void {
-    if (!player || !current || !dialog!.open) return;
+    if (!player || !dialog!.open) return;
     try {
-      setActive(lineAt(current.seg, player.getCurrentTime()));
+      const now = player.getCurrentTime();
+      markChapter(lineAt(chapters.map((c) => [c[0], c[2]] as [number, string]), now));
+      if (!current) return;
+      setActive(lineAt(current.seg, now));
     } catch {
       /* the player is still loading */
     }
@@ -137,6 +143,51 @@ if (dialog) {
     lines.append(frag);
   }
 
+  function markChapter(i: number): void {
+    if (i === activeCh) return;
+    activeCh = i;
+    const list = $('[data-rep-cap-lista]')!;
+    for (const [k, li] of [...list.children].entries()) li.classList.toggle('actual', k === i);
+  }
+
+  // Automatic chapters (scripts/video_markers.py): competition starts and ceremonies of long sessions.
+  async function loadChapters(id: string): Promise<void> {
+    const box = $('[data-rep-capitulos]')!;
+    const list = $('[data-rep-cap-lista]')!;
+    const token = ++chToken;
+    chapters = [];
+    activeCh = -1;
+    list.replaceChildren();
+    box.hidden = true;
+    try {
+      const r = await fetch(url(`marcadores-video/${id}.json`));
+      if (!r.ok) return;
+      const d = await r.json();
+      if (token !== chToken || !Array.isArray(d?.markers)) return;
+      chapters = d.markers.filter((m: unknown) => Array.isArray(m) && typeof m[0] === 'number');
+    } catch {
+      return;
+    }
+    if (token !== chToken || !chapters.length) return;
+    for (const [sec, n, label, kind] of chapters) {
+      const li = document.createElement('li');
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.dataset.sec = String(sec);
+      const tm = document.createElement('span');
+      tm.className = 'rep-t';
+      tm.textContent = fmtTime(sec);
+      const w = document.createElement('span');
+      w.className = 'rep-w';
+      w.textContent = kind === 'comp' ? `${t('reproductor.comp', { n })}: ${label}` : label;
+      w.lang = 'es';
+      b.append(tm, w);
+      li.append(b);
+      list.append(li);
+    }
+    box.hidden = false;
+  }
+
   async function loadTranscript(id: string): Promise<void> {
     const token = ++loadToken;
     renderTranscript(null);
@@ -167,6 +218,7 @@ if (dialog) {
     $('[data-rep-error]')!.hidden = true;
     $('.rep-marco')!.hidden = false;
     void loadTranscript(id);
+    void loadChapters(id);
     await loadApi();
     if (player) {
       player.loadVideoById(id);
@@ -214,6 +266,14 @@ if (dialog) {
     player.seekTo(start, true);
     player.playVideo();
     setActive(Number(b.dataset.i));
+  });
+
+  $('[data-rep-cap-lista]')!.addEventListener('click', (ev) => {
+    const b = (ev.target as HTMLElement | null)?.closest<HTMLButtonElement>('button[data-sec]');
+    if (!b || !player) return;
+    userScrolledAt = 0;
+    player.seekTo(Number(b.dataset.sec), true);
+    player.playVideo();
   });
 
   search.addEventListener('input', () => {

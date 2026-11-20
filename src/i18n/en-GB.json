@@ -947,7 +947,11 @@
       "es": "Spanish",
       "cy": "Welsh",
       "en": "English"
-    }
+    },
+    "capitulos": "Chapters",
+    "automatico": "automatic",
+    "comp": "Comp. {n}",
+    "nota_capitulos": "Marked automatically from what is announced in the session; they may contain mistakes."
   },
   "buscar": {
     "titulo": "Search the archive",

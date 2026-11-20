@@ -947,7 +947,11 @@
       "es": "castellano",
       "cy": "galés",
       "en": "inglés"
-    }
+    },
+    "capitulos": "Capítulos",
+    "automatico": "automático",
+    "comp": "Comp. {n}",
+    "nota_capitulos": "Marcados automáticamente a partir de lo que se anuncia en la sesión; pueden tener errores."
   },
   "buscar": {
     "titulo": "Buscar en el archivo",

@@ -947,7 +947,11 @@
       "es": "spagnolo",
       "cy": "gallese",
       "en": "inglese"
-    }
+    },
+    "capitulos": "Capitoli",
+    "automatico": "automatico",
+    "comp": "Gara {n}",
+    "nota_capitulos": "Segnati automaticamente da ciò che viene annunciato nella sessione; possono contenere errori."
   },
   "buscar": {
     "titulo": "Cerca nell'archivio",

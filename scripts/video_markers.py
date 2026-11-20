@@ -33,9 +33,11 @@ MIN_SECONDS = 3 * 3600
 WINDOW = 90.0
 
 CALL = re.compile(r"(?:competencia|competici[oó]n|cystadleuaeth)\s+(?:n[uú]mero|nro\.?|n[º°]|rhif)?\s*(\d{1,3})\b", re.I)
-SKIP_BEFORE = re.compile(r"(preparando|prepar[aá]ndose|preparen|pr[oó]xima|veredicto|bredicto|resultados?|premios?|ganador|leer|leo)\W*(?:\w+\W+){0,6}$", re.I)
+SKIP_BEFORE = re.compile(r"(preparando|prepar[aá]ndose|preparen|preparados|pr[oó]xima|veredicto|bredicto|resultados?|premios?|ganador|leer|leo|luego|daremos|seguiremos)\W*(?:\w+\W+){0,6}$", re.I)
 # Words after a call that mean a verdict or a call for later, not a start.
 SKIP_AFTER = re.compile(r"veredicto|bredicto|jurado|premio|ganador|particip[oó]|hab[ií]an participado|que vayan|preparando|preparen", re.I)
+# A call for later, said over the next few caption lines.
+LATER = re.compile(r"inmediatamente despu[eé]s|no los veo|est[eé]n listos", re.I)
 # Disciplines judged off stage: their numbers are only ever heard in verdicts.
 OFF_STAGE = re.compile(r"literatura|llenyddiaeth|prosa|poes[ií]a|barddoniaeth|traducci[oó]n|cyfieithu|artesan|gwaith llaw|artes visuales|celf|fotograf|cocina|coginio|dise[ñn]o|destrezas", re.I)
 CEREMONY = {
@@ -91,8 +93,10 @@ def detect(cues: list[tuple[float, str]], titles: dict[str, str], stage_only: se
             if n in seen or n not in titles or (stage_only is not None and n not in stage_only):
                 continue
             nxt = cues[i + 1][1] if i + 1 < len(cues) and cues[i + 1][0] - t <= 15 else ""
+            # captions split phrases over short lines ("No los" / "veo que estén listos")
+            soon = " ".join([text[m.end():]] + [x for tt, x in cues[i + 1:i + 6] if tt - t <= 15])
             after = (text[m.end():] + " " + nxt)[:160]
-            if SKIP_BEFORE.search(text[: m.start()]) or SKIP_AFTER.search(after):
+            if SKIP_BEFORE.search(text[: m.start()]) or SKIP_AFTER.search(after) or LATER.search(soon):
                 continue
             near = " ".join(x for tt, x in cues[i:] if tt - t <= WINDOW)
             high = bool(keywords(titles[n]) & set(re.findall(r"\w{4,}", fold(near))))

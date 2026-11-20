@@ -71,3 +71,28 @@ def test_programa_with_base_year_and_suspensions():
     titles, stage = merge_programa([adapted], base=[base])
     assert titles == {"47": "Solo libre: obra a elección. (Modificada)", "50": "Solo libre: rock"}
     assert stage == {"47", "50"}
+
+
+def test_calls_for_later_are_not_starts():
+    # Phrases heard in the Chubut 2025 sessions: the competition is announced, but starts later.
+    cues = [
+        (100.0, "Vamos a pasar a la competencia número 64, que va a ser inmediatamente después de la comedia musical. Cuarteto mixto"),
+        (200.0, "Y luego de la ceremonia, daremos lugar a la competencia número 26, recitación para voz femenina"),
+        (300.0, "Luego de ella, seguiremos con la competencia número 47, solo libre"),
+        (400.0, "de la competencia 7 corona del eisteddfod. No los veo que estén listos, así que vamos"),
+        (500.0, "Continuamos con la competencia número 64, cuarteto mixto, himno"),
+    ]
+    m = detect(cues, programa_titles(PROG))
+    assert [(x["n"], x["t"]) for x in m if x["kind"] == "comp"] == [("64", 500.0)]
+
+
+def test_call_for_later_split_over_several_caption_lines():
+    # YouTube captions cut phrases in short lines: "No los" / "veo que estén listos".
+    cues = [
+        (8835.2, "de la competencia 64 cuarteto"),
+        (8837.7, "mixto. No los"),
+        (8841.8, "veo que estén listos, así que vamos a"),
+        (8849.6, "a la competencia número 26, recitación para voz femenina"),
+    ]
+    m = detect(cues, programa_titles(PROG))
+    assert [x["n"] for x in m if x["kind"] == "comp"] == ["26"]

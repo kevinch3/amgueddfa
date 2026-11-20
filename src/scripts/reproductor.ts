@@ -3,11 +3,13 @@
  * no-cookie player, with its transcription beside it (synced, searchable, each line
  * a jump to its moment). The card keeps its plain link to YouTube for no-JS, middle
  * click and modified clicks. YouTube's code loads only when a visitor opens a video.
+ * The address carries the open video (#v=<id>&t=<seconds>, lib/video-hash.ts), so a moment can be linked.
  * Transcriptions: public/transcripciones-video/<id>.json (scripts/export_video_transcripts.py).
  */
 import { t } from '../lib/i18n';
 import { url } from '../lib/paths';
 import { asTranscript, findLines, fmtTime, letraAt, lineAt, type Transcript } from '../lib/video-transcript';
+import { parseVideoHash, videoHash } from '../lib/video-hash';
 import { videoUrl } from '../lib/videos';
 
 type YTPlayer = {
@@ -222,6 +224,8 @@ if (dialog) {
     ($('[data-rep-siguiente]') as HTMLButtonElement).disabled = index === list.length - 1;
     $('[data-rep-error]')!.hidden = true;
     $('.rep-marco')!.hidden = false;
+    // The address names the open video; no history entry, so "back" still leaves the page.
+    history.replaceState(history.state, '', videoHash(id, start));
     void loadTranscript(id);
     void loadChapters(id);
     await loadApi();
@@ -273,6 +277,26 @@ if (dialog) {
     open(li, Number(a.dataset.playT) || 0);
   });
 
+  /** Open the video a hash names, at its second; false when the hash is not a video of this page. */
+  function openFromHash(hash: string): boolean {
+    const m = parseVideoHash(hash);
+    const li = m && document.querySelector<HTMLLIElement>(`[data-videos] li[data-video="${CSS.escape(m.id)}"]`);
+    if (!m || !li) return false;
+    open(li, m.t);
+    return true;
+  }
+
+  // Links to a moment of a video of this page (search results, shared links pasted in a text) open it here.
+  document.addEventListener('click', (ev) => {
+    const a = (ev.target as HTMLElement | null)?.closest<HTMLAnchorElement>('a[href*="#v="]');
+    if (!a || ev.button !== 0 || ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.altKey) return;
+    if (a.origin !== location.origin || a.pathname !== location.pathname) return;
+    if (openFromHash(a.hash)) ev.preventDefault();
+  });
+  window.addEventListener('hashchange', () => void openFromHash(location.hash));
+  // A shared link: the cards are in the page's own markup, so the player can open at once.
+  openFromHash(location.hash);
+
   lines.addEventListener('click', (ev) => {
     const b = (ev.target as HTMLElement | null)?.closest<HTMLButtonElement>('button[data-i]');
     if (!b || !current || !player) return;
@@ -315,6 +339,7 @@ if (dialog) {
   });
   dialog.addEventListener('close', () => {
     window.clearInterval(timer);
+    if (parseVideoHash(location.hash)) history.replaceState(history.state, '', location.pathname + location.search);
     try {
       player?.stopVideo();
     } catch {

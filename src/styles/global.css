@@ -261,6 +261,52 @@ html[data-contraste='alto'] .st-some, html[data-contraste='alto'] .swatch.st-som
 .video a:hover .t { text-decoration: underline; }
 .video a:hover .vframe { border-color: var(--gold-ink); }
 .videos[hidden], .videos-mas[hidden] { display: none; }
+
+/* Search field (videos' search box, the player's own search): one look, icon inside. */
+.campo-buscar { position: relative; display: block; color: var(--ink-soft); }
+.campo-buscar svg { position: absolute; left: 0.75rem; top: 50%; translate: 0 -50%; pointer-events: none; }
+.campo-buscar input[type="search"] {
+  width: 100%; min-height: 44px; padding: 0.5rem 0.75rem 0.5rem 2.6rem; box-sizing: border-box;
+  font: 1rem var(--sans); color: var(--ink); background: #fff; border: 1px solid var(--ink-soft); border-radius: 8px;
+}
+.campo-buscar input[type="search"]::placeholder { color: var(--ink-soft); opacity: 1; }
+.campo-buscar input[type="search"]:focus-visible { outline: 3px solid var(--focus); outline-offset: 1px; border-color: var(--ink); }
+.campo-buscar:focus-within { color: var(--ink); }
+
+/* Search in what the videos say (components/VideoSearch.astro, scripts/buscar-videos.ts). */
+.vbuscar { margin: 1rem 0 1.25rem; padding: 0.75rem; background: var(--paper-hi); border: 1px solid var(--rule); border-radius: 10px; font-family: var(--sans); }
+.vbuscar[hidden], .vb-nota[hidden] { display: none; }
+.vb-caja { margin: 0; }
+.vbuscar .campo-buscar input[type="search"] { min-height: 52px; font-size: 1.1rem; border-width: 2px; }
+.vb-estado { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.1rem 1rem; margin: 0.35rem 0.15rem 0; min-height: 44px; }
+.vb-estado [data-vb-estado] { color: var(--ink-soft); }
+.vb-estado a { margin-left: auto; padding: 0.6rem 0; color: var(--red-deep); font-weight: 600; white-space: nowrap; }
+.vb-resultados:empty { display: none; }
+.vb-resultados { margin-top: 0.35rem; border-top: 1px solid var(--rule); }
+[data-edicion] > .vb-resultados { max-height: min(34rem, 70vh); overflow: auto; overscroll-behavior: contain; }
+.vb-edicion h2 { margin: 1rem 0 0; font: 600 1.1rem/1.3 var(--sans); }
+.vb-edicion h2 a { color: var(--ink); }
+.vb-videos { list-style: none; margin: 0; padding: 0; }
+.vb-video { display: grid; grid-template-columns: 8rem minmax(0, 1fr); gap: 0.75rem; padding: 0.75rem 0.15rem; border-bottom: 1px solid var(--rule); }
+.vb-videos:last-child > .vb-video:last-child { border-bottom: 0; }
+.vb-thumb { display: block; align-self: start; aspect-ratio: 16 / 9; background: var(--paper); border: 1px solid var(--rule); overflow: hidden; }
+.vb-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.vb-titulo { margin: 0; line-height: 1.35; overflow-wrap: anywhere; }
+.vb-titulo a { color: var(--ink); font-weight: 600; }
+.vb-n { white-space: nowrap; }
+.vb-momentos { list-style: none; margin: 0.25rem 0 0; padding: 0; }
+.vb-momentos a { display: flex; gap: 0.6rem; padding: 0.4rem 0.4rem; min-height: 44px; align-items: baseline; border-radius: 4px; color: var(--ink); text-decoration: none; line-height: 1.45; }
+.vb-momentos a:hover { background: var(--paper); }
+.vb-momentos a:hover .vb-w { text-decoration: underline; }
+.vb-momentos .rep-t { color: var(--red-deep); font-weight: 600; padding-top: 0; }
+.vb-momentos .rep-t::before { content: '▶ '; font-size: 0.7em; }
+.vb-w { overflow-wrap: anywhere; }
+.vb-w mark { background: #f6e7b4; color: inherit; padding: 0 0.1em; border-radius: 2px; font-weight: 600; }
+.vb-nota { margin: 0.5rem 0.15rem 0; }
+@media (max-width: 30rem) {
+  .vb-video { grid-template-columns: 5rem minmax(0, 1fr); gap: 0.5rem; }
+  .vb-estado a { margin-left: 0; }
+}
 .videos-mas { margin-top: 1rem; }
 .videos-mas summary { cursor: pointer; font-family: var(--sans); padding: 0.7rem 0; } /* stays list-item: keeps the ▸ marker */
 
@@ -523,7 +569,6 @@ fieldset.campo { border: 0; padding: 0; }
 .rep-tr .badge[hidden], .rep-buscar[hidden], [data-rep-nota][hidden], [data-rep-vacio][hidden] { display: none; }
 .rep-buscar { display: grid; gap: 0.2rem; padding: 0.4rem 0.75rem; }
 .rep-buscar label { font-size: 0.9rem; color: var(--ink-soft); }
-.rep-buscar input[type="search"] { font: 1rem var(--sans); padding: 0.5rem 0.6rem; min-height: 44px; box-sizing: border-box; border: 1px solid var(--rule); border-radius: 6px; background: #fff; color: var(--ink); }
 .rep-buscar p { margin: 0; min-height: 1.2em; }
 .rep-seguir { display: flex; gap: 0.4rem; align-items: center; min-height: 32px; }
 .rep-tr > [data-rep-vacio], .rep-tr > [data-rep-nota] { margin: 0; padding: 0.5rem 0.75rem; }
@@ -594,7 +639,7 @@ fieldset.campo { border: 0; padding: 0; }
 
 /* Player: search row, and the phone layout (UX review 2026-11-20) ------------------ */
 .rep-buscar-fila { display: flex; gap: 0.5rem 0.75rem; align-items: center; flex-wrap: wrap; }
-.rep-buscar-fila input[type="search"] { flex: 1 1 12rem; min-width: 0; }
+.rep-buscar-fila .campo-buscar { flex: 1 1 12rem; min-width: 0; }
 .rep-buscar p:empty { display: none; }
 .rep-seguir { flex: none; }
 @media (max-width: 59.99rem) {
@@ -616,7 +661,7 @@ fieldset.campo { border: 0; padding: 0; }
   .rep-tr { flex: 1 1 0; min-height: 50dvh; }
   .rep-tr-head { padding: 0.4rem 0.75rem 0; }
   .rep-buscar { padding: 0.3rem 0.75rem; }
-  .rep-buscar-fila input[type="search"] { min-height: 40px; padding: 0.35rem 0.6rem; }
+  .rep-buscar-fila .campo-buscar input[type="search"] { min-height: 40px; }
   .rep-lineas { flex: 1 1 0; }
   .rep-lineas button { min-height: 40px; padding: 0.35rem 0.4rem; }
 }
@@ -635,7 +680,7 @@ dialog, .lb-stage, .rep-cuerpo, .informar { overscroll-behavior: contain; }
 .rep-tr-head { flex-wrap: wrap; }
 .rep-tr .badge { white-space: normal; }
 .rep-seguir { white-space: nowrap; }
-.rep-buscar-fila input[type="search"] { flex: 1 1 10rem; width: 100%; min-width: 0; max-width: 100%; }
+.rep-buscar-fila .campo-buscar { flex: 1 1 10rem; min-width: 0; max-width: 100%; }
 
 /* Player: "Ver en YouTube" and "Informar un error" are secondary actions. */
 .rep-acciones { justify-content: flex-end; gap: 0.25rem 1.25rem; }

@@ -736,6 +736,21 @@
       "sesion": "Sessione completa",
       "noticia": "Notizia",
       "actuacion": "Esibizione"
+    },
+    "buscar": {
+      "etiqueta": "Cerca in ciò che si dice nei video",
+      "placeholder": "Cerca una parola detta o cantata nei video",
+      "otras": "Cerca nelle altre edizioni",
+      "cargando": "Caricamento delle trascrizioni…",
+      "error": "Non è stato possibile caricare alcune trascrizioni.",
+      "resultados": "Momenti: {n} · Video: {videos}",
+      "momentos": "Momenti: {n}",
+      "sin_resultados": "Nessun video di questa edizione dice «{q}».",
+      "sin_resultados_todas": "Nessun video dice «{q}».",
+      "progreso": "Ricerca nelle edizioni: {n} di {total}…",
+      "mas": "Vedi altri {n}",
+      "nota": "La maggior parte delle trascrizioni è automatica e può contenere errori, soprattutto nel canto.",
+      "ayuda_todas": "Cerca una parola detta o cantata nei video di tutte le edizioni. Ogni risultato apre il video in quel momento."
     }
   },
   "paises": {
@@ -972,7 +987,12 @@
     "resultados": "[COUNT] risultati per «[SEARCH_TERM]»",
     "un_resultado": "1 risultato per «[SEARCH_TERM]»",
     "buscando": "Ricerca di «[SEARCH_TERM]»…",
-    "sin_js": "La ricerca richiede JavaScript. Puoi consultare l'archivio per eisteddfod e anno."
+    "sin_js": "La ricerca richiede JavaScript. Puoi consultare l'archivio per eisteddfod e anno.",
+    "pestanas": {
+      "etiqueta": "Dove cercare",
+      "documentos": "Documenti",
+      "videos": "Video"
+    }
   },
   "multimedia": {
     "titulo": "Multimedia",

@@ -736,6 +736,21 @@
       "sesion": "Full session",
       "noticia": "News",
       "actuacion": "Performance"
+    },
+    "buscar": {
+      "etiqueta": "Search what is said in the videos",
+      "placeholder": "Search for a word spoken or sung in the videos",
+      "otras": "Search other years",
+      "cargando": "Loading the transcriptions…",
+      "error": "Some transcriptions could not be loaded.",
+      "resultados": "Moments: {n} · Videos: {videos}",
+      "momentos": "Moments: {n}",
+      "sin_resultados": "No video of this Eisteddfod says “{q}”.",
+      "sin_resultados_todas": "No video says “{q}”.",
+      "progreso": "Searching the years: {n} of {total}…",
+      "mas": "See {n} more",
+      "nota": "Most transcriptions are automatic and may have errors, above all in what is sung.",
+      "ayuda_todas": "Search for a word spoken or sung in the videos of every year. Each result opens the video at that moment."
     }
   },
   "paises": {
@@ -972,7 +987,12 @@
     "resultados": "[COUNT] results for “[SEARCH_TERM]”",
     "un_resultado": "1 result for “[SEARCH_TERM]”",
     "buscando": "Searching for “[SEARCH_TERM]”…",
-    "sin_js": "Search needs JavaScript. You can browse the archive by eisteddfod and year."
+    "sin_js": "Search needs JavaScript. You can browse the archive by eisteddfod and year.",
+    "pestanas": {
+      "etiqueta": "Where to search",
+      "documentos": "Documents",
+      "videos": "Videos"
+    }
   },
   "multimedia": {
     "titulo": "Multimedia",

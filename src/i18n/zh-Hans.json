@@ -736,6 +736,21 @@
       "sesion": "完整场次",
       "noticia": "新闻",
       "actuacion": "表演"
+    },
+    "buscar": {
+      "etiqueta": "搜索视频中说的话",
+      "placeholder": "搜索视频中说出或唱出的词",
+      "otras": "在其他届次中搜索",
+      "cargando": "正在加载转录文本…",
+      "error": "部分转录文本未能加载。",
+      "resultados": "片段:{n} 处 · 视频:{videos} 个",
+      "momentos": "片段:{n} 处",
+      "sin_resultados": "本届视频中没有提到“{q}”。",
+      "sin_resultados_todas": "没有视频提到“{q}”。",
+      "progreso": "正在搜索各届:{n} / {total}…",
+      "mas": "再显示 {n} 条",
+      "nota": "大部分转录文本为自动生成,可能有错误,演唱部分尤其如此。",
+      "ayuda_todas": "搜索所有届次视频中说出或唱出的词。每条结果都会从该时刻打开视频。"
     }
   },
   "paises": {
@@ -972,7 +987,12 @@
     "resultados": "“[SEARCH_TERM]”共 [COUNT] 个结果",
     "un_resultado": "“[SEARCH_TERM]”共 1 个结果",
     "buscando": "正在搜索“[SEARCH_TERM]”…",
-    "sin_js": "搜索需要 JavaScript。你可以按艺术节和年份浏览档案。"
+    "sin_js": "搜索需要 JavaScript。你可以按艺术节和年份浏览档案。",
+    "pestanas": {
+      "etiqueta": "搜索范围",
+      "documentos": "文档",
+      "videos": "视频"
+    }
   },
   "multimedia": {
     "titulo": "多媒体",

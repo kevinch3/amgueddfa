@@ -38,3 +38,13 @@ def test_hash_changes_only_with_inputs():
 def test_music_only_window_needs_no_model():
     ws = make_windows([Line(1.0, "[música]", "yt_es", "es"), Line(9.0, "[aplausos]", "yt_es", "es")], 30, lambda a, b: CTX)
     assert [needs_model(w) for w in ws] == [False]
+
+
+def test_glossary_hint_only_in_windows_with_the_misheard_word(tmp_path):
+    from scripts.reconstruct import context as ctxmod
+    g = tmp_path / "glosario.md"
+    g.write_text("# comment\ndewenllys → Tehuelches\n", encoding="utf-8")
+    ls = [Line(10.0, "un o'r Dewenllys ac yn", "cy", "cy"), Line(100.0, "Diolch yn fawr", "cy", "cy")]
+    ws = make_windows(ls, 130, lambda a, b: CTX, glossary=ctxmod.load_glossary(g))
+    assert "dewenllys → Tehuelches" in ws[0].context.text and "tehuelches" in ws[0].context.words
+    assert "Tehuelches" not in ws[1].context.text and ws[1].context == CTX

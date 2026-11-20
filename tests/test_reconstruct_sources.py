@@ -101,3 +101,16 @@ def test_welsh_lines_carry_confidence(tmp_path):
         {"s": 80.0, "text": "Croeso i bawb", "lp": -0.19}]}), encoding="utf-8")
     cy = [l for l in load_sources(stem, "vid", letras) if l.src == "cy"]
     assert cy[0].conf == 0.83 and all(l.conf is None for l in load_sources(stem, "vid", letras) if l.src != "cy")
+
+
+def test_low_confidence_welsh_lines_are_left_out(tmp_path):
+    # Bangor writes Welsh-looking text over music and background chatter, with low confidence
+    # (2009 chair ceremony, 0:10-2:49: conf 0.14-0.49); real speech there is 0.67 or more.
+    stem, letras = _fixture(tmp_path)
+    (letras / "videos.json").write_text("{}", encoding="utf-8")
+    (stem.parent / f"{stem.name}.cy-techiaith.json").write_text(json.dumps({"segments": [
+        {"s": 80.0, "text": "Diolch am y cofio", "lp": -0.82},             # conf 0.44: background
+        {"s": 90.0, "text": "Mae pedair cerdd yn dod i'r dosbarth cyntaf", "lp": -0.23},  # conf 0.79: speech
+        {"s": 95.0, "text": "heb sgôr", "s_": 0}]}), encoding="utf-8")       # no confidence given: kept
+    cy = [l.text for l in load_sources(stem, "vid", letras) if l.src == "cy"]
+    assert cy == ["Mae pedair cerdd yn dod i'r dosbarth cyntaf", "heb sgôr"]

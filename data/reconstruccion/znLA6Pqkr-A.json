@@ -1,0 +1,337 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   9.3,
+   "casado soy como un niño dormido que"
+  ],
+  [
+   13.9,
+   "puede despertarse con apenas solo un"
+  ],
+  [
+   17.6,
+   "ruido cuando menos te lo esperas cuando"
+  ],
+  [
+   21.1,
+   "menos lo imagino s que un día no me"
+  ],
+  [
+   24.2,
+   "aguanto y voy y te"
+  ],
+  [
+   28.0,
+   "miro y lo digo a los gritos y te ríes y"
+  ],
+  [
+   33.2,
+   "me tomas por un loco atrevido pues no"
+  ],
+  [
+   37.0,
+   "sabes cuánto tiempo en mis sueños Has"
+  ],
+  [
+   40.2,
+   "vivido ni sospechas cuando te"
+  ],
+  [
+   44.0,
+   "nombré"
+  ],
+  [
+   46.4,
+   "No yo no me doy por"
+  ],
+  [
+   50.9,
+   "vencido Yo quiero mundo"
+  ],
+  [
+   55.6,
+   "contigo juro que vale la pena esperar y"
+  ],
+  [
+   60.6,
+   "esperar y Esperar un"
+  ],
+  [
+   64.7,
+   "suspiro una señal del"
+  ],
+  [
+   70.0,
+   "destino No me canso no me rindo no me"
+  ],
+  [
+   73.5,
+   "doy por"
+  ],
+  [
+   76.0,
+   "vencido tengo una flor de bolsillo"
+  ],
+  [
+   79.8,
+   "machita de buscar una mujer que me"
+  ],
+  [
+   83.6,
+   "quiera y reciba su perfume hasta traer"
+  ],
+  [
+   87.6,
+   "la primavera y más años lo que no"
+  ],
+  [
+   91.1,
+   "aprendí de la"
+  ],
+  [
+   93.8,
+   "vida que brilla más cada día porque el"
+  ],
+  [
+   98.6,
+   "corazón levanta una tormenta enfurece"
+  ],
+  [
+   102.4,
+   "porque el corazón levanta una tormenta"
+  ],
+  [
+   105.9,
+   "enfurecida desde aquel momento en que te"
+  ],
+  [
+   111.8,
+   "vino Yo no me doy por"
+  ],
+  [
+   116.4,
+   "vencido Yo quiero mundo contigo"
+  ],
+  [
+   121.7,
+   "juro que vale la pena esperar y esperar"
+  ],
+  [
+   126.6,
+   "y Esperar un"
+  ],
+  [
+   129.6,
+   "suspiro una señal del"
+  ],
+  [
+   134.8,
+   "destino No me canso no me rindo no me"
+  ],
+  [
+   138.3,
+   "doy por"
+  ],
+  [
+   139.7,
+   "vencido este"
+  ],
+  [
+   141.9,
+   "silencio esconde"
+  ],
+  [
+   144.8,
+   "demasiadas"
+  ],
+  [
+   148.8,
+   "palabras Me"
+  ],
+  [
+   150.8,
+   "detengo pase lo que pase"
+  ],
+  [
+   156.0,
+   "seguiré"
+  ],
+  [
+   158.1,
+   "No yo no me doy por"
+  ],
+  [
+   162.5,
+   "vencido Yo quiero mundo"
+  ],
+  [
+   167.0,
+   "contigo juro que vale la pena esperar y"
+  ],
+  [
+   171.9,
+   "esperar y Esperar un"
+  ],
+  [
+   175.8,
+   "suspiro una señal del destino"
+  ],
+  [
+   181.2,
+   "no No me canso no me rindo no me doy por"
+  ],
+  [
+   191.6,
+   "vencido"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

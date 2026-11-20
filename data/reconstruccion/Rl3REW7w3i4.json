@@ -1,0 +1,323 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.4,
+   "con nosotros sobre el escenario la"
+  ],
+  [
+   1.8,
+   "tercer participante entonces de esta"
+  ],
+  [
+   4.0,
+   "misma competencia Magdalena"
+  ],
+  [
+   6.9,
+   "ansor el Jurado así lo"
+  ],
+  [
+   10.7,
+   "dispone Hola buenas noches bueno"
+  ],
+  [
+   13.6,
+   "esperamos acá que nos coloquen muchas"
+  ],
+  [
+   17.4,
+   "micrófono Vengo a pedir este limosna"
+  ],
+  [
+   20.4,
+   "este Así que si alguien cuando yo me"
+  ],
+  [
+   22.4,
+   "baje quiere colaborar estaría"
+  ],
+  [
+   27.0,
+   "buenísimo Bueno este instrumento se"
+  ],
+  [
+   29.3,
+   "llama eh tambor oceánico sí y voy a"
+  ],
+  [
+   33.4,
+   "interpretar para ustedes con la ayuda"
+  ],
+  [
+   35.3,
+   "del maestro Tito rurutia acá una nana"
+  ],
+  [
+   39.8,
+   "Parece que la pancita de de anton nos ha"
+  ],
+  [
+   42.5,
+   "inspirado a cantar muchas canciones de"
+  ],
+  [
+   44.6,
+   "cuna y les voy a cantar una nana que"
+  ],
+  [
+   47.0,
+   "pertenece a Georgina hassan que se llama"
+  ],
+  [
+   49.2,
+   "de la Mar Cuándo quiera maestro un por"
+  ],
+  [
+   71.5,
+   "amar traigo este"
+  ],
+  [
+   77.5,
+   "canto para mi"
+  ],
+  [
+   80.6,
+   "niña de la"
+  ],
+  [
+   93.6,
+   "traigo este"
+  ],
+  [
+   98.4,
+   "agua para mi niña de la"
+  ],
+  [
+   106.3,
+   "mar"
+  ],
+  [
+   109.5,
+   "Dicen Los"
+  ],
+  [
+   113.8,
+   "Pescadores que habrá"
+  ],
+  [
+   117.9,
+   "crecida que los peces"
+  ],
+  [
+   123.3,
+   "subirán"
+  ],
+  [
+   125.6,
+   "dicen tus ojos"
+  ],
+  [
+   135.6,
+   "creciendo como la"
+  ],
+  [
+   150.6,
+   "traigo esta"
+  ],
+  [
+   155.4,
+   "nana que ahora"
+  ],
+  [
+   170.2,
+   "amar la voz"
+  ],
+  [
+   175.2,
+   "Serena que te"
+  ],
+  [
+   178.8,
+   "adormece de la"
+  ],
+  [
+   183.8,
+   "mar"
+  ],
+  [
+   186.9,
+   "viajan Los"
+  ],
+  [
+   190.9,
+   "pescadores de"
+  ],
+  [
+   195.3,
+   "madrugada echando redes a la"
+  ],
+  [
+   200.7,
+   "mar"
+  ],
+  [
+   203.0,
+   "luna que estás"
+  ],
+  [
+   207.5,
+   "creciendo con como mi"
+  ],
+  [
+   212.6,
+   "niña como la"
+  ],
+  [
+   226.8,
+   "Gracias"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

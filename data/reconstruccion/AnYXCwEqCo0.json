@@ -1,0 +1,141 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   1.6,
+   "Volví de Owen Tydur"
+  ],
+  [
+   4.4,
+   "Jones cuando mires las estrellas por la"
+  ],
+  [
+   7.7,
+   "noche como yo viviré en una de ellas te"
+  ],
+  [
+   11.3,
+   "sonreiré"
+  ],
+  [
+   15.3,
+   "El anil de atardecer ya no era el"
+  ],
+  [
+   20.0,
+   "de entonces y pisando ya el ocaso El"
+  ],
+  [
+   24.5,
+   "Crepúsculo tampoco era el"
+  ],
+  [
+   27.0,
+   "mismo todo era silencio"
+  ],
+  [
+   31.4,
+   "al sur las lomadas callaban El eco de su"
+  ],
+  [
+   35.9,
+   "voz y un escalofrío de miedos y tristeza"
+  ],
+  [
+   40.5,
+   "estrujo en lágrimas mi corazón"
+  ],
+  [
+   44.2,
+   "herido volví la vista para borar el"
+  ],
+  [
+   48.2,
+   "avance de La Sombra sobre el Valle y un"
+  ],
+  [
+   54.9,
+   "apasible desde su solar"
+  ],
+  [
+   58.9,
+   "nativo me retrotrajes"
+  ],
+  [
+   62.5,
+   "juveniles quise"
+  ],
+  [
+   64.5,
+   "abrazarla más solo su espíritu flotaba"
+  ],
+  [
+   69.7,
+   "sobre la Tierra"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

@@ -1,0 +1,50 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   9.9,
+   "suspiro de las novias y los poetas en"
+  ],
+  [
+   27.0,
+   "soñando con caricias y con regresos"
+  ],
+  [
+   37.2,
+   "quiero viajar y me dará alas para soñar"
+  ],
+  [
+   40.6,
+   "dios del viento que vuela las palabras"
+  ],
+  [
+   44.2,
+   "del sentimiento"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 1,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

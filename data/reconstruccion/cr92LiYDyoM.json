@@ -1,0 +1,92 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   15.4,
+   "sueños y amor quiero yo quiero"
+  ],
+  [
+   49.0,
+   "veredicto de competencia número 17 prosa"
+  ],
+  [
+   52.3,
+   "hoy tuve una mañana agitada y me"
+  ],
+  [
+   54.4,
+   "pregunté Con qué he contribuido hasta"
+  ],
+  [
+   56.7,
+   "ahora a la vida he olvidado la aventura"
+  ],
+  [
+   60.0,
+   "con la que soñé elegir una de las dos"
+  ],
+  [
+   62.7,
+   "preguntas y preparar un texto género"
+  ],
+  [
+   64.8,
+   "literario a"
+  ],
+  [
+   66.0,
+   "elección los jurados Ana virkel Carlos"
+  ],
+  [
+   68.9,
+   "Dante Ferrari y Jorge lenard vives han"
+  ],
+  [
+   72.1,
+   "decidido otorgar el primer premio"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

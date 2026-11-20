@@ -1,0 +1,148 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   1.9,
+   "me voy a gales a buscar a mi esposa"
+  ],
+  [
+   15.9,
+   "solamente por diez días"
+  ],
+  [
+   68.7,
+   "dice que ocupa menos lugar"
+  ],
+  [
+   73.9,
+   "muy buena idea"
+  ],
+  [
+   145.0,
+   "señores pasajeros Mi nombre es Bill y"
+  ],
+  [
+   148.0,
+   "soy el capitán del viaje"
+  ],
+  [
+   160.5,
+   "ajusten sus cinturones y desconecten los"
+  ],
+  [
+   163.8,
+   "aparatos electrónicos"
+  ],
+  [
+   171.9,
+   "ahora siéntense relájense y disfruten"
+  ],
+  [
+   175.7,
+   "del viaje Muchas gracias"
+  ],
+  [
+   200.4,
+   "siempre pero siempre me enfermo"
+  ],
+  [
+   211.6,
+   "estaremos en gales antes de que cambie"
+  ],
+  [
+   302.4,
+   "Bienvenidos"
+  ],
+  [
+   306.1,
+   "a mi casa"
+  ],
+  [
+   313.2,
+   "qué lugar voy a buscar a mi futura"
+  ],
+  [
+   316.6,
+   "esposa"
+  ],
+  [
+   596.4,
+   "es preciosa rubia de ojos celestes nunca"
+  ],
+  [
+   607.5,
+   "decidimos quedarnos a vivir en gales"
+  ],
+  [
+   615.8,
+   "Hija de quién es"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 13,
+  "modelo": 9,
+  "reglas": 0,
+  "vacias": 4
+ }
+}

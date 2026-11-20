@@ -1,0 +1,50 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.1,
+   "Vamos a invitar al escenario a Locus Amoenus, vocal de cámara,"
+  ],
+  [
+   5.3,
+   "para la siguiente competencia que es la número 59."
+  ],
+  [
+   9.9,
+   "Reitero el llamado al escenario a Locus Amoenus, vocal de cámara,"
+  ],
+  [
+   16.6,
+   "para la competencia número 59 en idioma galés, Rhywle gyda'r hwyr."
+  ],
+  [
+   23.3,
+   "Si el jurado así lo dispone,"
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 6,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 5
+ }
+}

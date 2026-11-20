@@ -1,0 +1,36 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "Y si estamos apretados, empezamos a fumar, hasta que alguna se anime a volar."
+  ],
+  [
+   88.9,
+   "Voy llamando por el río, hasta el ancho mar"
+  ],
+  [
+   94.4,
+   "Siempre vuelvo hasta el mar"
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

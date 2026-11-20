@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "El jurado, entonces, lo dispone, escuchamos al coro masculino"
+  ],
+  [
+   20.7,
+   "de la Escuela de Música de Gaiman en la competencia 55."
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 5,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

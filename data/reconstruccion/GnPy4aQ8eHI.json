@@ -1,0 +1,113 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   69.0,
+   "Señero, mi mente sin descanso. Señero, soy un papel en blanco."
+  ],
+  [
+   109.6,
+   "Llevo a la mitad con muchos senderos, uno cruzó la tierra y otro fluye en el cielo."
+  ],
+  [
+   181.9,
+   "Cerenero, quiere decir descanso Cerenero, solo la pide un gato"
+  ],
+  [
+   193.6,
+   "Cerenero, sentir en la de mi alma Cerenero, merecer y darme calma"
+  ],
+  [
+   254.1,
+   "No yo no puedo creer más que la noche alejada"
+  ],
+  [
+   260.5,
+   "Y el misterio detrás de las puertas"
+  ],
+  [
+   264.9,
+   "Sueñero sin descanso"
+  ],
+  [
+   272.1,
+   "Sueñero con un poder blanco"
+  ],
+  [
+   277.9,
+   "Sueñero sin mirar en mi alma"
+  ],
+  [
+   294.9,
+   "Llevo en la mitad, como dos viejos gemelos"
+  ],
+  [
+   317.0,
+   "El de las unidad, no conoce el olvido"
+  ],
+  [
+   341.9,
+   "No, yo no puedo creer más que la noche alienta"
+  ],
+  [
+   384.6,
+   "Sueñero, quédate sin descanso"
+  ],
+  [
+   402.2,
+   "Sueñero, duérmete en la recalma"
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 8,
+  "modelo": 7,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

@@ -1,0 +1,85 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   29.9,
+   "Debe un bracito y vuelva mañana, traja de ropa y de la bonita,"
+  ],
+  [
+   37.8,
+   "quédale mucho que seas mi cuñeca, no me llore mi vida,"
+  ],
+  [
+   44.9,
+   "que su mamá la cuida y la aleja de ser mal."
+  ],
+  [
+   59.9,
+   "No me llore mi vida, que su mamá la cuida y la aleja de ser mal."
+  ],
+  [
+   68.3,
+   "No le va a pasar nada, de noche la Virgen la bendice y la guarda."
+  ],
+  [
+   97.4,
+   "Si se la lleva, vuelva a regresar, háganle caso y denle su comida."
+  ],
+  [
+   105.2,
+   "Llévela al pueblo y si está cansada, traigala pronto, que aquí está su mamá."
+  ],
+  [
+   120.1,
+   "No le va a pasar nada"
+  ],
+  [
+   142.5,
+   "No me llores mi vida, que su mamá la cuida"
+  ],
+  [
+   163.3,
+   "No le va a pasar nada, de noche la virgen la bendice y la guarda."
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

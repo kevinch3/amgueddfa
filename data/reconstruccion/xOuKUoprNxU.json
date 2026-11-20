@@ -1,0 +1,113 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   7.1,
+   "Si pudiera volver desde el agua a la red"
+  ],
+  [
+   13.6,
+   "Volvería a la infancia del río"
+  ],
+  [
+   18.1,
+   "Si pudiera volver desde el agua a la red"
+  ],
+  [
+   24.2,
+   "Volvería a la infancia del río"
+  ],
+  [
+   40.1,
+   "Y la vida otra vez vuelve el flor de tu piel, bajo un sol de muchacha y aroma."
+  ],
+  [
+   49.4,
+   "Y la vida otra vez fue la flor que tuvieras"
+  ],
+  [
+   65.1,
+   "Porque con lo verde me regreso la vida"
+  ],
+  [
+   71.3,
+   "Yo no era para morir"
+  ],
+  [
+   82.0,
+   "Yo muero para volver"
+  ],
+  [
+   127.8,
+   "Porque viene de vos mi simple perdón"
+  ],
+  [
+   134.3,
+   "Como el simple perdón de la vida"
+  ],
+  [
+   165.0,
+   "es lleno de rocio y olvido"
+  ],
+  [
+   174.0,
+   "porque con lo verde me regreso a la vida"
+  ],
+  [
+   180.0,
+   "Yo muero para volver, juntando el rocío en la flor de la uve."
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

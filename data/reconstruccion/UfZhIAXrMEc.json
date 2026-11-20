@@ -1,0 +1,43 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   19.0,
+   "No permanecer y transcurrir, no es de dudar, no es de existir."
+  ],
+  [
+   28.1,
+   "Amén."
+  ],
+  [
+   184.5,
+   "y a nuestra propia libertad, la bienvenida."
+  ],
+  [
+   215.3,
+   "¡Vamos!"
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

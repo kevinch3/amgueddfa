@@ -1,0 +1,267 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   183.4,
+   "Ramos el aplauso para este grupo que"
+  ],
+  [
+   185.6,
+   "viene de"
+  ],
+  [
+   210.1,
+   "no sé si ustedes lo conocen es"
+  ],
+  [
+   212.0,
+   "integrante de El club TR de ciman y nos"
+  ],
+  [
+   217.4,
+   "acaba de regalar una entrada cierto Nos"
+  ],
+  [
+   219.8,
+   "regalaste la"
+  ],
+  [
+   221.4,
+   "entrada ustedes saben que después del"
+  ],
+  [
+   223.6,
+   "camani el día domingo se hace el asado"
+  ],
+  [
+   227.1,
+   "del Eisteddfod y bueno nos regaló una entrada"
+  ],
+  [
+   233.3,
+   "hacer quedan nada más que 16 entradas se"
+  ],
+  [
+   237.4,
+   "han vendido todas las entradas"
+  ],
+  [
+   240.6,
+   "es un lindo momento para"
+  ],
+  [
+   244.4,
+   "compartir Esto va a ser después del"
+  ],
+  [
+   246.6,
+   "camamba cerca de las 12:30 una del"
+  ],
+  [
+   249.6,
+   "mediodía en el propio club de TR si"
+  ],
+  [
+   255.9,
+   "supermercado giran a la izquierda y ahí"
+  ],
+  [
+   258.5,
+   "al fondo está el club TR si quieren"
+  ],
+  [
+   261.6,
+   "entradas por favor se"
+  ],
+  [
+   528.1,
+   "mientras los chicos bascan del escenario"
+  ],
+  [
+   547.1,
+   "vamos a necesitar un micrófono para"
+  ],
+  [
+   549.8,
+   "la mesa del Jurado en idioma"
+  ],
+  [
+   556.0,
+   "micrófono arduo trabajo el del Jurado"
+  ],
+  [
+   559.0,
+   "también hay que felicitar"
+  ],
+  [
+   628.3,
+   "buenas señora Jurado se siente"
+  ],
+  [
+   630.5,
+   "agradecida y Está disfrutando de este"
+  ],
+  [
+   632.6,
+   "momento de reunirse nuevamente con todos"
+  ],
+  [
+   634.6,
+   "nosotros siente que es un privilegio"
+  ],
+  [
+   636.7,
+   "estar en este lugar en la competencia"
+  ],
+  [
+   639.6,
+   "número 54 fue un"
+  ],
+  [
+   642.1,
+   "cuarteto donde cantaron el primer"
+  ],
+  [
+   644.9,
+   "Cuarteto cantó un himno con texto de"
+  ],
+  [
+   656.2,
+   "melodía hacen una perfecta amalgama este"
+  ],
+  [
+   658.7,
+   "himno trae Una atmósfera de oración y"
+  ],
+  [
+   660.9,
+   "cada verso nos transporta del"
+  ],
+  [
+   662.5,
+   "sufrimiento a la tristeza a la alegría"
+  ],
+  [
+   665.4,
+   "que se completa hacia el aleluya"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 11,
+  "modelo": 11,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

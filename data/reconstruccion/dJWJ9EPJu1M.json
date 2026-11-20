@@ -1,0 +1,57 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   16.0,
+   "cada vez hay mucho más que sacar, quiero cuentos, historietas y no penas"
+  ],
+  [
+   24.7,
+   "Pero no las que andan a botón"
+  ],
+  [
+   45.3,
+   "Quiero todo lo que guardo en los espejos"
+  ],
+  [
+   49.8,
+   "Y una flor adentro de un ravión"
+  ],
+  [
+   54.0,
+   "También quiero una galera con caídos, y una pelota cada dos."
+  ],
+  [
+   70.9,
+   "Quiero un río con catorce pescacitos, y un jardín sin guardia y sin ladrón."
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

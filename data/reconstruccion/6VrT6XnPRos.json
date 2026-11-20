@@ -1,0 +1,295 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   26.5,
+   "al fin termina mi pena"
+  ],
+  [
+   31.9,
+   "la tarde se está"
+  ],
+  [
+   36.3,
+   "quemando después de una larga"
+  ],
+  [
+   40.4,
+   "ausencia mi pago ya estoy"
+  ],
+  [
+   47.3,
+   "llegando después de una larga"
+  ],
+  [
+   51.1,
+   "ausencia mi pago ya estoy"
+  ],
+  [
+   58.9,
+   "llegando"
+  ],
+  [
+   60.7,
+   "de mi"
+  ],
+  [
+   63.3,
+   "tierra El viento Silva"
+  ],
+  [
+   68.6,
+   "bajito la luna alumbra de"
+  ],
+  [
+   72.6,
+   "noche al hombre que"
+  ],
+  [
+   75.4,
+   "anda"
+  ],
+  [
+   79.4,
+   "solito la luna"
+  ],
+  [
+   81.9,
+   "alumbra de noche al hombre que anda"
+  ],
+  [
+   88.8,
+   "solito"
+  ],
+  [
+   91.1,
+   "huellita que vas para"
+  ],
+  [
+   95.2,
+   "Monte Qué pena si no"
+  ],
+  [
+   100.5,
+   "pudiera volver como estoy"
+  ],
+  [
+   104.2,
+   "volviendo de tan lejano a mi"
+  ],
+  [
+   111.0,
+   "tierra al fin termina mi pena camino de"
+  ],
+  [
+   118.8,
+   "cordillera"
+  ],
+  [
+   135.8,
+   "las piedritas de la"
+  ],
+  [
+   139.8,
+   "orilla se me hace que son"
+  ],
+  [
+   145.2,
+   "estrellas que alumbran las"
+  ],
+  [
+   148.8,
+   "ilusiones"
+  ],
+  [
+   150.4,
+   "del hombre que anda en la"
+  ],
+  [
+   155.9,
+   "huella que alumbran las"
+  ],
+  [
+   159.9,
+   "ilusiones del hombre que anda en la"
+  ],
+  [
+   166.4,
+   "huella y no hay entre mil"
+  ],
+  [
+   171.6,
+   "caminos de tantos que yo"
+  ],
+  [
+   177.0,
+   "anduviera alguno Que era"
+  ],
+  [
+   181.0,
+   "tanto camino de"
+  ],
+  [
+   187.4,
+   "cordillera alguno que quiera tanto"
+  ],
+  [
+   192.3,
+   "camino de"
+  ],
+  [
+   197.4,
+   "cordillera huellita que vas para el"
+  ],
+  [
+   202.8,
+   "monte Qué pena si no"
+  ],
+  [
+   208.0,
+   "pudiera volver como estoy"
+  ],
+  [
+   211.8,
+   "volviendo de tan lejano a mi"
+  ],
+  [
+   218.5,
+   "tierra al fin termina mi pena camino de"
+  ],
+  [
+   235.4,
+   "cordillera"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

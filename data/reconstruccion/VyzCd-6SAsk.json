@@ -1,0 +1,106 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   14.4,
+   "hay florcita de cardón hay hermoso poco"
+  ],
+  [
+   19.8,
+   "yo blanco como las nubes que en el"
+  ],
+  [
+   24.1,
+   "cierro floreció"
+  ],
+  [
+   36.0,
+   "hay frita de cardón hay hermoso poco yo"
+  ],
+  [
+   41.5,
+   "a mando mi pueblo en el cerro floreció"
+  ],
+  [
+   47.2,
+   "Ay florcita de cardón Ay hermoso poco"
+  ],
+  [
+   54.6,
+   "yo perfuma mi corazón"
+  ],
+  [
+   69.7,
+   "Si yo fuera como yo y yo fuera el carbón"
+  ],
+  [
+   75.1,
+   "con toda la vida"
+  ],
+  [
+   78.9,
+   "pasaríamos Los Dos"
+  ],
+  [
+   82.5,
+   "cardón hay hermoso"
+  ],
+  [
+   91.8,
+   "corazón"
+  ],
+  [
+   100.8,
+   "perfuma mi corazón"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

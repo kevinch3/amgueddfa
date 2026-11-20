@@ -1,0 +1,176 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Muchas gracias invitamos Entonces ahora"
+  ],
+  [
+   2.0,
+   "para la misma competencia a la próxima"
+  ],
+  [
+   5.0,
+   "pareja ellos son Tadeo lescano cruz y"
+  ],
+  [
+   7.6,
+   "aelén calfunao recordemos que estamos en"
+  ],
+  [
+   10.8,
+   "la competencia número 83 pareja de danza"
+  ],
+  [
+   15.7,
+   "tradicional ellos van a bailar un"
+  ],
+  [
+   29.0,
+   "chamamé"
+  ],
+  [
+   94.5,
+   "metele plomo tan besito que en este tiro"
+  ],
+  [
+   99.1,
+   "certero me juego el rancho El apero Y si"
+  ],
+  [
+   103.2,
+   "con eso no alcanza el corazón de la que"
+  ],
+  [
+   107.2,
+   "alegra mis días de trovero que no venga"
+  ],
+  [
+   111.0,
+   "cualquier maleta con esos ritmos"
+  ],
+  [
+   113.9,
+   "extranjeros que bailan como conejos"
+  ],
+  [
+   117.6,
+   "ponele el alma a tu acordeón"
+  ],
+  [
+   120.6,
+   "inspirado por el amor de este suelo"
+  ],
+  [
+   123.8,
+   "americano y que tus melodías lleguen al"
+  ],
+  [
+   127.5,
+   "más humilde de los ranchos alegrar el"
+  ],
+  [
+   131.2,
+   "corazón agobiado de mis"
+  ],
+  [
+   134.3,
+   "paisanos a Dios que nunca"
+  ],
+  [
+   138.6,
+   "marchite tu sentir"
+  ],
+  [
+   238.7,
+   "Bravo"
+  ],
+  [
+   246.8,
+   "Qué"
+  ],
+  [
+   251.0,
+   "lindo"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

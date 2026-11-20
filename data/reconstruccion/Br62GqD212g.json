@@ -1,0 +1,141 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   39.6,
+   "Nombre nombre de vez en"
+  ],
+  [
+   45.0,
+   "cuando así le gustaba al"
+  ],
+  [
+   49.3,
+   "hombre lo nombr de vez en cuando"
+  ],
+  [
+   60.9,
+   "con el lucero"
+  ],
+  [
+   67.0,
+   "amasado el"
+  ],
+  [
+   69.4,
+   "trigo como el"
+  ],
+  [
+   77.4,
+   "alma de flor"
+  ],
+  [
+   80.6,
+   "del Como quien entrega el"
+  ],
+  [
+   107.4,
+   "puerta los pobres les"
+  ],
+  [
+   111.8,
+   "de noche la puerta abierta"
+  ],
+  [
+   134.9,
+   "jugando un pan de"
+  ],
+  [
+   137.4,
+   "palomas"
+  ],
+  [
+   141.9,
+   "blancas su"
+  ],
+  [
+   151.6,
+   "y harina su"
+  ],
+  [
+   155.1,
+   "corazón al cielos"
+  ],
+  [
+   172.9,
+   "canción"
+  ],
+  [
+   191.8,
+   "lágrimas como le iban a"
+  ],
+  [
+   217.5,
+   "deja de noche la puerta abierta"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

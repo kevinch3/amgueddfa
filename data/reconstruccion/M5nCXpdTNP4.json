@@ -1,0 +1,204 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Vamos a pedir silencio en el salón."
+  ],
+  [
+   4.8,
+   "Primera participante."
+  ],
+  [
+   28.5,
+   "Gwyneth."
+  ],
+  [
+   29.9,
+   "La pionera."
+  ],
+  [
+   31.7,
+   "De María Julia Alemán de Brand."
+  ],
+  [
+   40.6,
+   "Tallada viento."
+  ],
+  [
+   43.2,
+   "Y sombra inseparable del pionero."
+  ],
+  [
+   47.6,
+   "Su paso vigoroso fue el primero."
+  ],
+  [
+   51.8,
+   "El tuyo lo siguió."
+  ],
+  [
+   54.2,
+   "Firme y contento."
+  ],
+  [
+   57.4,
+   "Dormiste a campo raso."
+  ],
+  [
+   60.5,
+   "Encampamento."
+  ],
+  [
+   62.7,
+   "Cocinando en fogón como un tropero."
+  ],
+  [
+   67.1,
+   "Tu reloj."
+  ],
+  [
+   68.7,
+   "Alba y noche."
+  ],
+  [
+   71.0,
+   "Fue lucero."
+  ],
+  [
+   73.2,
+   "El comienzo"
+  ],
+  [
+   75.1,
+   "y el fin del diario aliento."
+  ],
+  [
+   80.0,
+   "Acayaste tu miedo muchas veces."
+  ],
+  [
+   84.4,
+   "Con un rifle en la mano temblorosa."
+  ],
+  [
+   88.0,
+   "Y el fervor anhelante de tus preces."
+  ],
+  [
+   93.0,
+   "Pionera."
+  ],
+  [
+   94.6,
+   "De la casta valerosa."
+  ],
+  [
+   97.4,
+   "Compañera de triunfos y reveses."
+  ],
+  [
+   101.3,
+   "Oh mujer de Misur."
+  ],
+  [
+   104.9,
+   "Acero y rosa."
+  ],
+  [
+   118.8,
+   "Segunda participante de esta competencia"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

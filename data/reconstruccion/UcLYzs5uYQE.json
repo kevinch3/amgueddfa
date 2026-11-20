@@ -1,0 +1,295 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "de tu Blanca mano sentí el calor que con"
+  ],
+  [
+   4.4,
+   "tus caricias me dio el"
+  ],
+  [
+   8.8,
+   "amor Dónde estás ahora cuñataí que tu"
+  ],
+  [
+   14.8,
+   "suave canto no llega a mí Dónde estás"
+  ],
+  [
+   19.3,
+   "ahora mi ser te añora con"
+  ],
+  [
+   24.4,
+   "Frenesí todo Te recuerda mi dulce amor"
+  ],
+  [
+   30.4,
+   "junto al Agua Azul de impacar ahí todo"
+  ],
+  [
+   34.8,
+   "Te recuerda mi voz te llama cuñataí"
+  ],
+  [
+   41.2,
+   "dónde estás ahora cuñataí"
+  ],
+  [
+   45.6,
+   "que tu suave canto no llega a mí Dónde"
+  ],
+  [
+   50.9,
+   "estás ahora mi ser te añora"
+  ],
+  [
+   62.5,
+   "junto al Agua Azul de impacar ahí todo"
+  ],
+  [
+   67.8,
+   "recuerda mi voz te llama cuñataí"
+  ],
+  [
+   79.3,
+   "una noche tibia nos"
+  ],
+  [
+   84.1,
+   "conocimos tibia nos"
+  ],
+  [
+   87.3,
+   "conocimos al azul"
+  ],
+  [
+   94.6,
+   "ahí tú cantabas triste por el camino"
+  ],
+  [
+   100.2,
+   "cantabas triste por el camino viejas"
+  ],
+  [
+   105.3,
+   "melodías el"
+  ],
+  [
+   110.9,
+   "guaraní y con El embrujo de tus"
+  ],
+  [
+   118.8,
+   "canciones y va renaciendo tu amor en"
+  ],
+  [
+   127.1,
+   "mí y en la noche hermosa de"
+  ],
+  [
+   135.3,
+   "pilun de tu Blanca mano sentí el calor"
+  ],
+  [
+   140.3,
+   "que con tus caricias me dio el"
+  ],
+  [
+   145.3,
+   "amor Dónde estás ahora cuñataí"
+  ],
+  [
+   150.1,
+   "ti que tu suave canto no llega a mí"
+  ],
+  [
+   155.0,
+   "dónde estás ahora mi serte añora con"
+  ],
+  [
+   161.0,
+   "Frenesí todo Te recuerda mi dulce amor"
+  ],
+  [
+   166.9,
+   "junto al Lago azul de I"
+  ],
+  [
+   170.0,
+   "pacarí todo Te recuerda mi voz te llama"
+  ],
+  [
+   174.8,
+   "cuñataí"
+  ],
+  [
+   177.8,
+   "dónde estás ahora cuñataí"
+  ],
+  [
+   182.2,
+   "que tu suave canto no llega a mí dónde"
+  ],
+  [
+   187.4,
+   "estás ahora mi ser te añora con"
+  ],
+  [
+   193.0,
+   "Frenesí todo Te recuerda mi dulce amor"
+  ],
+  [
+   199.0,
+   "junto al Lago azul"
+  ],
+  [
+   204.6,
+   "pacarí todo Te recuerda"
+  ],
+  [
+   212.1,
+   "mi voz te"
+  ],
+  [
+   217.9,
+   "llama"
+  ],
+  [
+   238.7,
+   "mientras sube Valentina"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

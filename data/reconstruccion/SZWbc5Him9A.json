@@ -1,0 +1,127 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "El frío se fue a la tarde, llevándose la canción"
+  ],
+  [
+   7.8,
+   "Al pecho la dulce pena, aceptándolo"
+  ],
+  [
+   16.5,
+   "Y al pozo de la nostalgia, el musgo del corazón"
+  ],
+  [
+   27.6,
+   "Creció dentro de la tierra casi sin dolor"
+  ],
+  [
+   36.1,
+   "Y al cielo dejó las hojas más livianitas de su color"
+  ],
+  [
+   49.0,
+   "Se levantó brazos abiertos, resignación."
+  ],
+  [
+   79.0,
+   "Cayó su piel de verano, solito se desnudó"
+  ],
+  [
+   91.8,
+   "Y nadie pasó esa tarde, ni pescador"
+  ],
+  [
+   99.2,
+   "Tenía la historia breve del lazo de su prisión"
+  ],
+  [
+   110.5,
+   "Y ocurría lentamente y no lo vio"
+  ],
+  [
+   118.1,
+   "Y al cielo dejó las hojas más livianitas de su color"
+  ],
+  [
+   128.8,
+   "Cielo, brazos abiertos, resignación, y estuvo esperando solo en las orillas del pescador."
+  ],
+  [
+   151.8,
+   "La guerra entre los dedos, llorando"
+  ],
+  [
+   181.8,
+   "El tiempo solo fue el final"
+  ],
+  [
+   197.8,
+   "Solo un rayo de la luz que te alumbraba"
+  ],
+  [
+   213.4,
+   "quemando la hoja en azúcar del corazón."
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

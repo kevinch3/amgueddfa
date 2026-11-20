@@ -1,0 +1,85 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   22.0,
+   "cuando me desperté este día"
+  ],
+  [
+   31.7,
+   "feliz de el sueño manso de los"
+  ],
+  [
+   35.2,
+   "libros sin miedo al movimiento ni el"
+  ],
+  [
+   39.4,
+   "dolor"
+  ],
+  [
+   42.8,
+   "no tengo casi nada"
+  ],
+  [
+   46.6,
+   "de sangre en la garganta de papel"
+  ],
+  [
+   152.4,
+   "tienen siempre la cara del horror"
+  ],
+  [
+   163.2,
+   "en este tiempo olvido de dios"
+  ],
+  [
+   187.5,
+   "nos alimentó con una quimera en que los"
+  ],
+  [
+   193.1,
+   "ojos al sol vean brillar"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

@@ -1,0 +1,78 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   2.4,
+   "Roxlo. El bosque se duerme y sueña. El"
+  ],
+  [
+   6.7,
+   "río no duerme, canta. Por entre las"
+  ],
+  [
+   10.4,
+   "sombras verdes el agua sanara pasa,"
+  ],
+  [
+   13.2,
+   "dejando en la orilla oscura manojos de"
+  ],
+  [
+   15.6,
+   "espuma blanca."
+  ],
+  [
+   18.6,
+   "estrellas en el fondo de una barca. Yo"
+  ],
+  [
+   22.3,
+   "voy como una canción por la música del"
+  ],
+  [
+   25.2,
+   "agua. Y llevo el río en los labios y"
+  ],
+  [
+   28.5,
+   "llevo el bosque en el alma."
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 1,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

@@ -1,0 +1,113 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.9,
+   "bien entonces llamamos a Magdalena"
+  ],
+  [
+   8.0,
+   "ansor que será la segunda y última"
+  ],
+  [
+   11.6,
+   "participante para esta competencia Juan"
+  ],
+  [
+   14.5,
+   "voy a decir unas palabras con respecto a"
+  ],
+  [
+   16.8,
+   "lo que voy a"
+  ],
+  [
+   18.3,
+   "cantar y después le voy a pedir al"
+  ],
+  [
+   20.7,
+   "sonido por favor que me acompañe con la"
+  ],
+  [
+   25.4,
+   "pista Oh arte"
+  ],
+  [
+   29.0,
+   "adorado En cuántas horas"
+  ],
+  [
+   32.2,
+   "sombrías me has conducido a un mundo"
+  ],
+  [
+   37.1,
+   "mejor te doy las gracias por"
+  ],
+  [
+   40.2,
+   "ello a la música Andy music de"
+  ],
+  [
+   47.2,
+   "schubert cuando quiera por favor el"
+  ],
+  [
+   49.8,
+   "sonido"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

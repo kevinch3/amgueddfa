@@ -1,0 +1,295 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.1,
+   "de esta competencia"
+  ],
+  [
+   4.6,
+   "Jalando repasos de Owen Tydur"
+  ],
+  [
+   10.7,
+   "Jones"
+  ],
+  [
+   13.7,
+   "amé fui amada el sol acarició mi"
+  ],
+  [
+   19.6,
+   "faz vida Nada me debes"
+  ],
+  [
+   24.3,
+   "vida estamos en paz del poema en paz"
+  ],
+  [
+   30.5,
+   "de Amado"
+  ],
+  [
+   34.1,
+   "Nervo"
+  ],
+  [
+   37.1,
+   "verano de tarde en"
+  ],
+  [
+   40.8,
+   "domingo bajo el sol de enero mi sombra y"
+  ],
+  [
+   46.4,
+   "sombra tu sueño y el"
+  ],
+  [
+   51.3,
+   "mío te"
+  ],
+  [
+   54.2,
+   "acuerdas te acuerdas del"
+  ],
+  [
+   57.4,
+   "Prado la Alameda"
+  ],
+  [
+   60.9,
+   "el terreno fragoso tras el invierno Y"
+  ],
+  [
+   64.7,
+   "aquel puente de madera sobre el"
+  ],
+  [
+   69.2,
+   "río en su lecho las piedras se hunden"
+  ],
+  [
+   74.2,
+   "limando su aspereza en el"
+  ],
+  [
+   79.6,
+   "limo y las"
+  ],
+  [
+   82.2,
+   "golondrinas con el estío siempre"
+  ],
+  [
+   86.9,
+   "regresan regresan buscando su"
+  ],
+  [
+   91.0,
+   "dejado"
+  ],
+  [
+   93.8,
+   "nido y"
+  ],
+  [
+   97.0,
+   "vuelven vuelven por sobre el torrente"
+  ],
+  [
+   101.4,
+   "jalando repasos como ataje"
+  ],
+  [
+   113.3,
+   "hoy es"
+  ],
+  [
+   118.8,
+   "domingo arpegia el viento en la arbórea"
+  ],
+  [
+   123.7,
+   "estola que Abriga el cuello del"
+  ],
+  [
+   129.5,
+   "sembradío y en las noches"
+  ],
+  [
+   132.9,
+   "largas son llamadores de ángeles los"
+  ],
+  [
+   136.8,
+   "carámbanos en mi"
+  ],
+  [
+   141.2,
+   "ventana emigran las"
+  ],
+  [
+   146.8,
+   "golondrinas y por un curvo cuarto de"
+  ],
+  [
+   150.5,
+   "luna se"
+  ],
+  [
+   152.9,
+   "Irán se irá mi"
+  ],
+  [
+   155.7,
+   "sombra y tu"
+  ],
+  [
+   159.8,
+   "sombra tu"
+  ],
+  [
+   162.5,
+   "sueño y el"
+  ],
+  [
+   165.2,
+   "mío Gracias Owen por esta hermosa"
+  ],
+  [
+   178.8,
+   "poesía"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

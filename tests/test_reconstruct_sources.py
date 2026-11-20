@@ -58,9 +58,9 @@ def test_welsh_lines_come_from_the_bangor_file(tmp_path):
     stem, letras = _fixture(tmp_path, cy=True)
     assert sources.WELSH_SOURCE == "cy-techiaith"  # chosen 2026-11-20 after the A/B review
     (stem.parent / f"{stem.name}.cy-techiaith.json").write_text(json.dumps({"segments": [
-        {"s": 50.0, "e": 52.0, "text": "Croeso i Eisteddfod y Wladfa"}, {"s": 55.0, "e": 56.0, "text": ""}]}), encoding="utf-8")
+        {"s": 80.0, "e": 82.0, "text": "Croeso i Eisteddfod y Wladfa"}, {"s": 85.0, "e": 86.0, "text": ""}]}), encoding="utf-8")
     cy = [l for l in load_sources(stem, "vid", letras) if l.src == "cy"]
-    assert [(l.t, l.text, l.lang) for l in cy] == [(50.0, "Croeso i Eisteddfod y Wladfa", "cy")]
+    assert [(l.t, l.text, l.lang) for l in cy] == [(80.0, "Croeso i Eisteddfod y Wladfa", "cy")]
 
 
 def test_uploaded_subtitles_only_in_spanish(tmp_path):
@@ -79,3 +79,16 @@ def test_welsh_lyrics_are_timed_from_the_welsh_lines(tmp_path):
         {"s": 104.0, "text": "ar lan y mor mae rhosys"}, {"s": 121.0, "text": "ar lan y mor mae lili gwynion"}]}), encoding="utf-8")
     lyr = [(l.t, l.text) for l in load_sources(stem, "vid", letras) if l.src == "letra"]
     assert lyr == [(104.0, "Ar lan y môr mae rhosys cochion"), (121.0, "Ar lan y môr mae lilis gwynion")]
+
+
+def test_welsh_lines_only_where_the_spanish_sources_are_silent(tmp_path):
+    # Bangor's model writes Welsh even over Spanish speech: on a video with Spanish text,
+    # its lines count only in the Spanish gaps (where the Welsh speech actually is).
+    stem, letras = _fixture(tmp_path)          # yt_es lines at 1, 10, 20 s; whisper_es 30-51 s
+    (letras / "videos.json").write_text("{}", encoding="utf-8")
+    (stem.parent / f"{stem.name}.cy-techiaith.json").write_text(json.dumps({"segments": [
+        {"s": 10.5, "text": "nonsens dros sbaeneg"},       # over the Spanish line at 10 s: dropped
+        {"s": 70.0, "text": "Croeso i Eisteddfod y Wladfa"},  # in a gap: kept
+    ]}), encoding="utf-8")
+    cy = [(l.t, l.text) for l in load_sources(stem, "vid", letras) if l.src == "cy"]
+    assert cy == [(70.0, "Croeso i Eisteddfod y Wladfa")]

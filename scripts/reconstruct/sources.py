@@ -20,6 +20,9 @@ from scripts.export_video_transcripts import clean_whisper, glob_escape, parse_v
 WELSH_SOURCE: str | None = "cy-techiaith"
 
 
+SPANISH_NEAR = 3.0  # seconds: a Welsh line this close to a Spanish line is taken as the same (Spanish) speech
+
+
 class Line(NamedTuple):
     t: float
     text: str
@@ -54,7 +57,11 @@ def load_sources(stem: Path, video_id: str, letras: Path = LETRAS) -> list[Line]
     if WELSH_SOURCE:
         cy = stem.with_name(f"{stem.name}.{WELSH_SOURCE}.json")
         if cy.exists():
-            out += [Line(float(s["s"]), s["text"], "cy", "cy") for s in json.loads(cy.read_text(encoding="utf-8"))["segments"] if s["text"]]
+            # The Welsh model writes Welsh even over Spanish speech: where a Spanish source
+            # has a line nearby, its line is not Welsh speech and is left out.
+            es_times = [l.t for l in out if l.lang == "es"]
+            out += [Line(float(s["s"]), s["text"], "cy", "cy") for s in json.loads(cy.read_text(encoding="utf-8"))["segments"]
+                    if s["text"] and not any(abs(float(s["s"]) - t) <= SPANISH_NEAR for t in es_times)]
     heard_es = [[l.t, l.text] for l in sorted(out) if l.src in ("subida", "yt_es", "whisper_es")]
     heard_cy = [[l.t, l.text] for l in sorted(out) if l.src == "cy"]
     for sp in spans_for(video_id, letras):

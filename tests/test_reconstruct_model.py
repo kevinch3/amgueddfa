@@ -51,4 +51,12 @@ def test_argv_never_uses_bare_and_disables_tools_and_mcp():
 def test_prompt_carries_lines_context_and_word_list():
     p = window_prompt(WINDOW)
     assert "[3.4] (yt_es, es) bienvenidos al Stedbot de Trelew" in p
-    assert "Eisteddfod del Chubut 2025." in p and "eisteddfod, trelew" in p
+    assert "Eisteddfod del Chubut 2025." in p and "Eisteddfod, Trelew" in p.split("WORD LIST:")[1]
+
+
+def test_word_list_keeps_accents_and_capitals_of_the_context():
+    w = WINDOW._replace(context=Context("Competencia 32: «Sueño Alfarero», de Julia Ibarbourou.\nvenue: Gimnasio Municipal, Trelew",
+                                        frozenset({"sueno", "alfarero", "ibarbourou", "gimnasio", "trelew", "eisteddfod"})))
+    words = window_prompt(w).split("WORD LIST:\n")[1]
+    assert "Sueño" in words and "Ibarbourou" in words and "Gimnasio" in words and "Eisteddfod" in words
+    assert "sueno" not in words

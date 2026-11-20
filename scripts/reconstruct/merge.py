@@ -1,0 +1,39 @@
+"""Output lines of a window (from the model, or from rules when it fails) and the
+joined text of a video."""
+from __future__ import annotations
+
+from typing import NamedTuple
+
+from scripts.reconstruct.windows import Window
+
+PREFERENCE = ("subida", "yt_es", "whisper_es", "cy")
+LYRIC_TAIL = 4.0  # seconds a lyric span is taken to last after its last line
+
+
+class OutLine(NamedTuple):
+    t: float
+    text: str
+    lang: str
+    fuentes: tuple
+
+
+def rules_lines(w: Window) -> list[OutLine]:
+    """No model: lyrics inside their span, otherwise the most reliable source the window has."""
+    own = [l for l in w.lines if w.t0 <= l.t < w.t1]
+    lyrics = [l for l in own if l.src == "letra"]
+    span = (min(l.t for l in lyrics), max(l.t for l in lyrics) + LYRIC_TAIL) if lyrics else None
+    src = next((s for s in PREFERENCE if any(l.src == s for l in own)), None)
+    out = [OutLine(l.t, l.text, l.lang, (l.src,)) for l in lyrics]
+    out += [OutLine(l.t, l.text, l.lang, (l.src,)) for l in own
+            if l.src == src and not (span and span[0] <= l.t <= span[1])]
+    return sorted(out)
+
+
+def reply_lines(reply: dict) -> list[OutLine]:
+    return [OutLine(float(l["t"]), l["text"], l["lang"], tuple(l["src"])) for l in reply.get("lines", [])]
+
+
+def merge(windows: list[Window], per_window: list[list[OutLine]]) -> list[OutLine]:
+    """Each window keeps only its own stretch, so lines in the overlap appear once."""
+    out = {(l.t, l.text): l for w, lines in zip(windows, per_window) for l in lines if w.t0 <= l.t < w.t1}
+    return sorted(out.values())

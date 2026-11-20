@@ -1,0 +1,284 @@
+{
+ "schema_version": 1,
+ "diagram_type": "dataflow",
+ "meta": {
+  "title": "Video Text Reconstruction",
+  "locale": "en",
+  "quality_profile": "showcase",
+  "viewBox": [
+   1070,
+   640
+  ],
+  "legend": {
+   "mode": "auto",
+   "entries": {
+    "emphasis": {
+     "label": "main path"
+    },
+    "security": {
+     "label": "reviewers' choice"
+    },
+    "dashed": {
+     "label": "held / fallback"
+    },
+    "default": {
+     "label": "input"
+    }
+   }
+  },
+  "output": "reconstruccion-videos.html"
+ },
+ "stages": [
+  {
+   "label": "Sources"
+  },
+  {
+   "label": "Inputs per video"
+  },
+  {
+   "label": "Assemble"
+  },
+  {
+   "label": "Verify"
+  },
+  {
+   "label": "Publish"
+  }
+ ],
+ "nodes": [
+  {
+   "id": "backup",
+   "type": "database",
+   "label": "Video backup",
+   "sublabel": "private 360p copy",
+   "stage": 0,
+   "row": 0,
+   "tag": "base"
+  },
+  {
+   "id": "abtest",
+   "type": "frontend",
+   "label": "A/B review",
+   "sublabel": "blind rating",
+   "stage": 0,
+   "row": 2,
+   "tag": "AB-001…"
+  },
+  {
+   "id": "context",
+   "type": "database",
+   "label": "Context",
+   "sublabel": "programa + facts",
+   "stage": 2,
+   "row": 0,
+   "tag": "word list"
+  },
+  {
+   "id": "spanish",
+   "type": "backend",
+   "label": "Spanish speech",
+   "sublabel": "YouTube, Whisper",
+   "stage": 1,
+   "row": 0,
+   "tag": "quality gate"
+  },
+  {
+   "id": "welsh",
+   "type": "backend",
+   "label": "Welsh speech",
+   "sublabel": "turbo or techiaith",
+   "stage": 1,
+   "row": 2,
+   "tag": "held until A/B"
+  },
+  {
+   "id": "lyrics",
+   "type": "database",
+   "label": "Lyrics",
+   "sublabel": "data/letras",
+   "stage": 1,
+   "row": 3,
+   "tag": "from maintainer"
+  },
+  {
+   "id": "windows",
+   "type": "backend",
+   "label": "60 s windows",
+   "sublabel": "sources + context",
+   "stage": 2,
+   "row": 1,
+   "tag": "input hash"
+  },
+  {
+   "id": "claude",
+   "type": "external",
+   "label": "Claude batch",
+   "sublabel": "claude-opus-5-5",
+   "stage": 2,
+   "row": 3,
+   "tag": "structured output"
+  },
+  {
+   "id": "checker",
+   "type": "security",
+   "label": "Checker",
+   "sublabel": "4 rules in code",
+   "stage": 3,
+   "row": 3,
+   "tag": "no invented words"
+  },
+  {
+   "id": "fallback",
+   "type": "backend",
+   "label": "Rules fallback",
+   "sublabel": "by confidence",
+   "stage": 3,
+   "row": 1,
+   "tag": "approach 1"
+  },
+  {
+   "id": "export",
+   "type": "security",
+   "label": "Export",
+   "sublabel": "Chubut + Trevelin only",
+   "stage": 4,
+   "row": 2,
+   "tag": "src reconstruida"
+  },
+  {
+   "id": "player",
+   "type": "frontend",
+   "label": "Site player",
+   "sublabel": "amgueddfa.org",
+   "stage": 4,
+   "row": 3,
+   "tag": "visitors"
+  }
+ ],
+ "flows": [
+  {
+   "id": "audio-es",
+   "from": "backup",
+   "to": "spanish",
+   "label": "audio",
+   "variant": "default",
+   "route": "straight"
+  },
+  {
+   "id": "audio-cy",
+   "from": "backup",
+   "to": "welsh",
+   "label": "audio",
+   "variant": "default"
+  },
+  {
+   "id": "pick-model",
+   "from": "abtest",
+   "to": "welsh",
+   "label": "picks",
+   "variant": "security",
+   "route": "straight",
+   "labelAt": [
+    233,
+    372
+   ]
+  },
+  {
+   "id": "word-list",
+   "from": "context",
+   "to": "windows",
+   "label": "word list",
+   "variant": "default",
+   "fromSide": "bottom",
+   "toSide": "top",
+   "route": "straight",
+   "labelAt": [
+    530,
+    200
+   ]
+  },
+  {
+   "id": "es-lines",
+   "from": "spanish",
+   "to": "windows",
+   "label": "timed lines",
+   "variant": "emphasis"
+  },
+  {
+   "id": "cy-lines",
+   "from": "welsh",
+   "to": "windows",
+   "label": "timed lines",
+   "variant": "dashed",
+   "route": "vertical-channel",
+   "channelX": 448,
+   "labelAt": [
+    409,
+    372
+   ]
+  },
+  {
+   "id": "lyric-lines",
+   "from": "lyrics",
+   "to": "windows",
+   "label": "verbatim",
+   "variant": "default",
+   "route": "vertical-channel",
+   "channelX": 448,
+   "labelAt": [
+    409,
+    486
+   ]
+  },
+  {
+   "id": "batch",
+   "from": "windows",
+   "to": "claude",
+   "label": "batch request",
+   "variant": "emphasis",
+   "labelAt": [
+    530,
+    314
+   ]
+  },
+  {
+   "id": "proposal",
+   "from": "claude",
+   "to": "checker",
+   "label": "lines + src + fixes",
+   "variant": "emphasis"
+  },
+  {
+   "id": "fail",
+   "from": "checker",
+   "to": "fallback",
+   "label": "window fails",
+   "variant": "dashed"
+  },
+  {
+   "id": "pass",
+   "from": "checker",
+   "to": "export",
+   "label": "window passes",
+   "variant": "emphasis"
+  },
+  {
+   "id": "rule-lines",
+   "from": "fallback",
+   "to": "export",
+   "label": "rule lines",
+   "variant": "dashed"
+  },
+  {
+   "id": "publish",
+   "from": "export",
+   "to": "player",
+   "label": "transcript JSON",
+   "variant": "emphasis",
+   "labelAt": [
+    960,
+    428
+   ]
+  }
+ ]
+}

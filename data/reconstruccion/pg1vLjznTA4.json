@@ -1,0 +1,57 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "El viejo río que va cruzando el amanecer"
+  ],
+  [
+   43.4,
+   "Y serán el sur con mi sombrero bajo el sol"
+  ],
+  [
+   79.7,
+   "La tierra de Chaco que la quiera encontrarás, prenderán el sartén como un beso capaño,"
+  ],
+  [
+   88.1,
+   "y serán ese como un sombrero bajo su faro de luz."
+  ],
+  [
+   94.8,
+   "Alguien con un que se va, que se va, plata blanda bojada de luna y sudor,"
+  ],
+  [
+   109.7,
+   "Amor que se va, que se va, la plata blanda, rocada de luna y un grandito bosnacho de amor, quiero yo."
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

@@ -1,0 +1,64 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   71.9,
+   "Música de brillos de pan, cada enero nuevo se hacía escuchar"
+  ],
+  [
+   81.9,
+   "como el presagio del asmo madre, el amor estrella y su soledad"
+  ],
+  [
+   91.9,
+   "y una noche antes de Navidad cortó los cables con un diamante"
+  ],
+  [
+   99.9,
+   "Y allí van parte del aire Y allí van en libertad"
+  ],
+  [
+   119.9,
+   "El amor más real de que conocí"
+  ],
+  [
+   136.9,
+   "¿Dónde va la gente y su corazón?"
+  ],
+  [
+   141.2,
+   "¿Dónde van los años?"
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

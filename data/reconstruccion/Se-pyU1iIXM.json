@@ -1,0 +1,274 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Último intento de la Margarita de Matías García."
+  ],
+  [
+   14.4,
+   "Me pareció escuchar tu nombre en el último intento de la Margarita."
+  ],
+  [
+   22.0,
+   "Pero, qué sé yo, últimamente le presto poca atención."
+  ],
+  [
+   27.4,
+   "tan pendular ella, tan blanco-negro, y tan convincente siempre, incapaz de argumentar en contra."
+  ],
+  [
+   39.6,
+   "¿Es sí o es no?"
+  ],
+  [
+   43.3,
+   "Y otra vez, no me quiere."
+  ],
+  [
+   50.4,
+   "No sé qué se me dio por revisar el resultado."
+  ],
+  [
+   53.7,
+   "escrutinio definitivo de la flor, creyendo que todavía es posible"
+  ],
+  [
+   62.1,
+   "revertir la tendencia o advertir un matiz, una esperanza,"
+  ],
+  [
+   71.1,
+   "algún petalito blanco en blanco, alguno impugnado o tu nombre."
+  ],
+  [
+   81.5,
+   "Tal vez me pareció, pero no hubo fraude y, otra vez, no me quiere."
+  ],
+  [
+   93.9,
+   "Está bien, acepto y descarto la posibilidad de que haya sido tu nombre,"
+  ],
+  [
+   101.1,
+   "si al fin y al cabo es una planta que se sabe una o dos respuestas y nada más."
+  ],
+  [
+   106.9,
+   "Pero no voy a negar que desconfío, la naturaleza tampoco es infalible"
+  ],
+  [
+   115.0,
+   "y seguramente habrá tres o cuatro margaritas falladas por maceta."
+  ],
+  [
+   121.9,
+   "Además, ¿quién me mandó a mí a recurrir a tan elemental oráculo?"
+  ],
+  [
+   128.5,
+   "Flor adivina, vidente de jardín, profeta de jarrón,"
+  ],
+  [
+   135.9,
+   "un rato sin agua y hasta las premoniciones se te marchitan."
+  ],
+  [
+   142.9,
+   "Pero marchita y todo, no me quiere."
+  ],
+  [
+   148.2,
+   "qué flor resentida, a mí no me engaña, se arroga saberes de amor para llamar la atención,"
+  ],
+  [
+   166.5,
+   "complejo de inferioridad hasta en el nombre, esa condena insoportable del diminutivo eterno,"
+  ],
+  [
+   175.2,
+   "porque nunca será margara."
+  ],
+  [
+   181.0,
+   "¿Y la rosa? ¡Ah! Le duele la rosa."
+  ],
+  [
+   186.9,
+   "Las espinas incrustan en su corazón amarillo de flor ordinaria"
+  ],
+  [
+   191.8,
+   "que ni siquiera sangra."
+  ],
+  [
+   197.0,
+   "Le envidia la redondez y la dulzura de sus pétalos."
+  ],
+  [
+   201.5,
+   "desde la angostura misma, de sus tristes y sabiondos,"
+  ],
+  [
+   207.6,
+   "me quiere, no me quiere,"
+  ],
+  [
+   211.9,
+   "destinados a dejarse caer y dejarse pisar"
+  ],
+  [
+   216.6,
+   "en la vereda opaca de la desilusión."
+  ],
+  [
+   222.2,
+   "Está bien, no me quiere."
+  ],
+  [
+   226.9,
+   "Ya lo sé, incluso antes de la Margarita, y ella todavía se burla haciéndome creer que es tu nombre."
+  ],
+  [
+   242.3,
+   "Pero a este, a este me lo quedo, sin pétalo final no hay conclusión."
+  ],
+  [
+   248.8,
+   "Me guardo, sin pétalo final no hay conclusión, un chiste sin remate, un tango sin cham, cham."
+  ],
+  [
+   262.4,
+   "Me guardo el no me quiere en el bolsillo y te nombro yo, te invoco, me vuelvo una flor que sabe y que desea."
+  ],
+  [
+   278.8,
+   "Escondo el no, me arranco del pecho las tristezas y los pétalos de a uno."
+  ],
+  [
+   288.8,
+   "Y ahora sí, me quiere, me quiere, me quiere, me quiere."
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 6,
+  "modelo": 5,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

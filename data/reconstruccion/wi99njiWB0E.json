@@ -1,0 +1,50 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   15.7,
+   "y tanta soledad"
+  ],
+  [
+   19.0,
+   "tanta lejanía"
+  ],
+  [
+   28.4,
+   "el dolor de puertas cerradas dando lo"
+  ],
+  [
+   33.5,
+   "mismo"
+  ],
+  [
+   48.2,
+   "para dar las gracias"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

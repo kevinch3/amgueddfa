@@ -1,0 +1,92 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "Miro esa sensibilidad"
+  ],
+  [
+   34.0,
+   "No podrán me entender"
+  ],
+  [
+   38.0,
+   "Lo que es amor enloquecer"
+  ],
+  [
+   43.0,
+   "Tus ojos se queman"
+  ],
+  [
+   45.0,
+   "Tus huesos se frían"
+  ],
+  [
+   48.0,
+   "Y me torturan mi razón"
+  ],
+  [
+   76.0,
+   "cuando estás dentro de mí."
+  ],
+  [
+   89.0,
+   "Te tendrás en el final, pero hoy tus ojos juntas."
+  ],
+  [
+   99.0,
+   "Si acuerdas en mi interior, una brasa, un mar amor."
+  ],
+  [
+   107.0,
+   "Tus besos de sangre, caricia que me hagan, donde el grado se paró."
+  ],
+  [
+   117.0,
+   "Sé que nunca más poderá empeñecer."
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

@@ -1,0 +1,127 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   1.0,
+   "Para la libertad de Miguel Hernández, para la libertad"
+  ],
+  [
+   16.0,
+   "Para la libertad, mis ojos y mis manos, como un árbol carnal, generoso y cautivo,"
+  ],
+  [
+   28.5,
+   "para la libertad"
+  ],
+  [
+   32.6,
+   "siento más corazones que arenas en mi pecho"
+  ],
+  [
+   39.4,
+   "y entro en los hospitales"
+  ],
+  [
+   41.9,
+   "y entro en los algodones"
+  ],
+  [
+   46.3,
+   "para la libertad"
+  ],
+  [
+   74.1,
+   "Porque donde unas cuentas vacías amanezcan"
+  ],
+  [
+   78.7,
+   "ella pondrá dos piedras de estructura mirada"
+  ],
+  [
+   84.9,
+   "y harán que nuevos brazos y nuevas piernas crezcan en la carne de talada."
+  ],
+  [
+   97.8,
+   "Recoñarán alabas de sal y nacido otoño,"
+  ],
+  [
+   104.3,
+   "reliquias de mi cuerpo que pierdo en cada edad."
+  ],
+  [
+   108.3,
+   "porque soy como el ángel talaz"
+  ],
+  [
+   114.0,
+   "que recono"
+  ],
+  [
+   115.8,
+   "porque aún"
+  ],
+  [
+   117.8,
+   "tengo la vida"
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

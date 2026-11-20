@@ -1,0 +1,50 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   69.3,
+   "de tierra"
+  ],
+  [
+   93.5,
+   "muy bien"
+  ],
+  [
+   109.6,
+   "el viento"
+  ],
+  [
+   119.3,
+   "y vamos"
+  ],
+  [
+   159.9,
+   "voy hacia mí"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

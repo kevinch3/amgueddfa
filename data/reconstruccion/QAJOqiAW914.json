@@ -1,0 +1,106 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   9.5,
+   "hoy quise escuchar tu voz y ya no estaba"
+  ],
+  [
+   16.2,
+   "busque tu cálidas manos sin hallar las"
+  ],
+  [
+   20.6,
+   "mencioné tu nombre una y mil veces sin"
+  ],
+  [
+   24.6,
+   "percibir más que el eco y la nostalgia"
+  ],
+  [
+   31.1,
+   "hoy mide tus valles y tus bardas"
+  ],
+  [
+   36.5,
+   "recordé las historias que contarás"
+  ],
+  [
+   40.7,
+   "comprendí que no te habías ido y que en"
+  ],
+  [
+   44.5,
+   "ellas simplemente perdura vas"
+  ],
+  [
+   50.6,
+   "hoy cerró el capullo su corola al viento"
+  ],
+  [
+   56.4,
+   "atrapo celoso su fragancia"
+  ],
+  [
+   61.4,
+   "y en eterna vigilia como se espera"
+  ],
+  [
+   67.1,
+   "que enraizada entre nosotros que de tu"
+  ],
+  [
+   71.2,
+   "alma"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

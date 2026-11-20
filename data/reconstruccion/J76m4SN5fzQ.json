@@ -1,0 +1,71 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   29.0,
+   "Quiero cuidarte."
+  ],
+  [
+   31.0,
+   "Tu mamá me dijo."
+  ],
+  [
+   33.0,
+   "¿Qué te dijo mi mamá?"
+  ],
+  [
+   39.0,
+   "Ay, bueno, pero mi mamá le gusta que venga."
+  ],
+  [
+   45.0,
+   "Me aprendo la letra."
+  ],
+  [
+   47.0,
+   "¿Qué te vas a poner a hacer?"
+  ],
+  [
+   64.0,
+   "A mí me parece que tenemos tiempo para la ruta de la vida."
+  ],
+  [
+   72.0,
+   "Bueno, dale, vamos por la ruta de la vida."
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

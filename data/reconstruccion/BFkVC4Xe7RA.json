@@ -1,0 +1,108 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "En los brazos de la luna"
+  ],
+  [
+   9.0,
+   "Está dormidito el sol"
+  ],
+  [
+   18.0,
+   "Qué dichosa es la Virgen"
+  ],
+  [
+   24.9,
+   "Que así tiene al Niño Dios"
+  ],
+  [
+   32.6,
+   "Qué dichosa es la Virgen"
+  ],
+  [
+   39.8,
+   "Que así tiene al Niño Dios"
+  ],
+  [
+   48.0,
+   "Esta noche es Nochebuena"
+  ],
+  [
+   55.8,
+   "Esta noche no se duerme"
+  ],
+  [
+   62.8,
+   "¿Acaso duermen las aves"
+  ],
+  [
+   69.4,
+   "Cuando el sol sus rayos vierte?"
+  ],
+  [
+   76.0,
+   "¿Acaso duermen las aves"
+  ],
+  [
+   78.0,
+   "Cuando el sol sus rayos vierte?"
+  ]
+ ],
+ "fuentes": [
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ]
+ ],
+ "letras": [
+  {
+   "desde": 0,
+   "hasta": 84,
+   "titulo": "En los brazos de la luna",
+   "autor": "Alfonso Letelier",
+   "idioma": "es"
+  }
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

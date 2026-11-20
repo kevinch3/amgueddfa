@@ -1,0 +1,120 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   8.2,
+   "queda sin brillo y el jardín se sumerge"
+  ],
+  [
+   11.6,
+   "en él"
+  ],
+  [
+   12.6,
+   "dorado"
+  ],
+  [
+   15.2,
+   "cuando el grupo bullicioso de niños que"
+  ],
+  [
+   17.7,
+   "salen a casa"
+  ],
+  [
+   21.2,
+   "corriendo sobre el pasto se dispersan"
+  ],
+  [
+   23.7,
+   "entre los arbustos"
+  ],
+  [
+   31.0,
+   "se armó un círculo alrededor de la"
+  ],
+  [
+   33.4,
+   "pequeña que muestra"
+  ],
+  [
+   45.1,
+   "luz"
+  ],
+  [
+   48.0,
+   "te acordás de la última vez que queremos"
+  ],
+  [
+   50.9,
+   "poder iluminar la noche"
+  ],
+  [
+   54.4,
+   "el tiempo nos ha vaciado del polvo"
+  ],
+  [
+   59.1,
+   "pero la oscuridad sigue poblada de"
+  ],
+  [
+   64.0,
+   "infiernos"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

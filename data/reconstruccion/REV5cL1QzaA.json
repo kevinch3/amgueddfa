@@ -1,0 +1,197 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   12.2,
+   "El arpa de Irma"
+  ],
+  [
+   16.2,
+   "perdón el arpa de Gustavo Adolfo"
+  ],
+  [
+   22.1,
+   "Bécquer"
+  ],
+  [
+   29.0,
+   "Irma"
+  ],
+  [
+   32.3,
+   "el arpa de Irma"
+  ],
+  [
+   36.2,
+   "del salón en el ángulo"
+  ],
+  [
+   40.0,
+   "oscuro de su dueño tal vez"
+  ],
+  [
+   43.5,
+   "olvidada silenciosa y cubierta de polvo"
+  ],
+  [
+   47.0,
+   "veías el arpa de su erguida mudez"
+  ],
+  [
+   51.9,
+   "arrinconada me llegan Cerca o lejos"
+  ],
+  [
+   57.4,
+   "melodías entre sus rotas cuerdas"
+  ],
+  [
+   60.3,
+   "permanece un secreto dispuesto a"
+  ],
+  [
+   64.6,
+   "descubrirse la cobija un hogar donde"
+  ],
+  [
+   67.8,
+   "perdura bajo la cruz del sur la vieja"
+  ],
+  [
+   75.6,
+   "florido y el oro de la tarde se"
+  ],
+  [
+   79.2,
+   "demora Cuánta nota dormía en sus cuerdas"
+  ],
+  [
+   83.2,
+   "como el pájaro duerme en las"
+  ],
+  [
+   85.8,
+   "ramas esperando la mano de nieve que"
+  ],
+  [
+   92.0,
+   "la paz se posa y con amor Los muros"
+  ],
+  [
+   96.8,
+   "atesoran El eco de canciones antiguas"
+  ],
+  [
+   99.9,
+   "que entonaba una"
+  ],
+  [
+   115.4,
+   "Cuántas veces el genio así duerme en el"
+  ],
+  [
+   118.3,
+   "fondo del alma"
+  ],
+  [
+   120.4,
+   "y una voz como Lázaro Espera que le diga"
+  ],
+  [
+   124.4,
+   "Levántate y"
+  ],
+  [
+   142.9,
+   "anda"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

@@ -1,0 +1,134 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   4.4,
+   "El amor loco de Cristian"
+  ],
+  [
+   9.1,
+   "Aliaga"
+  ],
+  [
+   12.9,
+   "intemperie"
+  ],
+  [
+   15.5,
+   "vivir"
+  ],
+  [
+   17.1,
+   "ese el único que traemos entre pecho y"
+  ],
+  [
+   21.8,
+   "espalda marca del"
+  ],
+  [
+   29.0,
+   "intemperie"
+  ],
+  [
+   30.6,
+   "si el frío la"
+  ],
+  [
+   33.4,
+   "tierra lo"
+  ],
+  [
+   35.5,
+   "parten si el"
+  ],
+  [
+   43.2,
+   "llovisna este"
+  ],
+  [
+   45.4,
+   "temor despertarse en mitad de la noche"
+  ],
+  [
+   53.2,
+   "horror puede este amor"
+  ],
+  [
+   56.8,
+   "único partido como la Tierra que seca"
+  ],
+  [
+   61.0,
+   "erguido como una planta Silvestre entre"
+  ],
+  [
+   64.3,
+   "abrojos"
+  ],
+  [
+   73.5,
+   "contra el viento desnudarse como si nada"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

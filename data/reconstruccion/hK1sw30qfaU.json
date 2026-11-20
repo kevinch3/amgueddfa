@@ -1,0 +1,85 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "No pensó dos veces y se me echó"
+  ],
+  [
+   10.0,
+   "Como una rodilla en su corazón"
+  ],
+  [
+   13.6,
+   "Desde el mismo orgullo como su madre"
+  ],
+  [
+   18.1,
+   "Me dejó dos discos en la cara"
+  ],
+  [
+   81.5,
+   "el amor estrella en su soledad"
+  ],
+  [
+   84.5,
+   "y una noche antes de Navidad"
+  ],
+  [
+   93.5,
+   "y allí van parte del ayer"
+  ],
+  [
+   102.5,
+   "y así va en libertad."
+  ],
+  [
+   118.5,
+   "El amor más grande que conocí,"
+  ],
+  [
+   122.5,
+   "sin querer un día pasó por mí,"
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

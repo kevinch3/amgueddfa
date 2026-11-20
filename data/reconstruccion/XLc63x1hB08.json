@@ -1,0 +1,204 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   10.5,
+   "nacimos a la intemperie"
+  ],
+  [
+   13.7,
+   "nacimos a la intemperie a la angustiante"
+  ],
+  [
+   16.8,
+   "vacío de la nada nacimos a la pura"
+  ],
+  [
+   20.1,
+   "verticalidad del cielo a la no sombra"
+  ],
+  [
+   23.1,
+   "del mediodía que raja a las piedras en"
+  ],
+  [
+   25.9,
+   "el verano"
+  ],
+  [
+   26.8,
+   "nacimos al pleno de la luna sobre la"
+  ],
+  [
+   30.1,
+   "naciente legalidad de las heladas justo"
+  ],
+  [
+   33.2,
+   "en el instante del cristal que va"
+  ],
+  [
+   35.5,
+   "quemando las yemas prematuras"
+  ],
+  [
+   38.2,
+   "nacimos para descargarnos en hielos y en"
+  ],
+  [
+   41.7,
+   "infiernos nada de medias luces nada"
+  ],
+  [
+   45.6,
+   "ocurre destello bajo la esfera del cielo"
+  ],
+  [
+   48.5,
+   "sin contemplaciones sin caridad"
+  ],
+  [
+   51.6,
+   "atormentados por los resplandores sin"
+  ],
+  [
+   54.4,
+   "atenuantes sin miramientos"
+  ],
+  [
+   57.0,
+   "nacimos llevados por viento sin piadosos"
+  ],
+  [
+   60.4,
+   "maris de arena que nubla las mañanas de"
+  ],
+  [
+   63.5,
+   "mañana la cuidada arquitectura de los"
+  ],
+  [
+   65.7,
+   "árboles vientos que arrasan la verde de"
+  ],
+  [
+   68.7,
+   "promesa de los pastos que burlan la"
+  ],
+  [
+   71.1,
+   "vigilante muralla de las puertas"
+  ],
+  [
+   73.4,
+   "sacudido sobresaltado pero él sin"
+  ],
+  [
+   76.3,
+   "permiso para la fragilidad permeables"
+  ],
+  [
+   79.4,
+   "inseguros aunque con el designio intacto"
+  ],
+  [
+   82.4,
+   "de soportar heridos los desacatos de"
+  ],
+  [
+   85.1,
+   "nuestras latitudes"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

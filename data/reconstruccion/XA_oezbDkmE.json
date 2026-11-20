@@ -1,0 +1,134 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   5.0,
+   "y escribir nuestros nombres"
+  ],
+  [
+   14.6,
+   "contra todos los mares de tormentas"
+  ],
+  [
+   17.6,
+   "contra todos los aires de tormenta"
+  ],
+  [
+   26.7,
+   "y escribir un poema de amores pájaros en"
+  ],
+  [
+   30.3,
+   "su vuelo viento de panaderos y ganará el"
+  ],
+  [
+   34.4,
+   "amor de la victoria del día de cotidiano"
+  ],
+  [
+   40.0,
+   "y tiene un poema sino de nombres tibios"
+  ],
+  [
+   42.8,
+   "que son como el pan ana maría libertad"
+  ],
+  [
+   48.2,
+   "que son como en agua juan manuel leonado"
+  ],
+  [
+   65.0,
+   "mientras la mano que queda jugando la"
+  ],
+  [
+   72.2,
+   "escribí el suspiro escribí de la memoria"
+  ],
+  [
+   76.8,
+   "escribir la palabra"
+  ],
+  [
+   79.7,
+   "escribir todavía por la sangre del"
+  ],
+  [
+   84.0,
+   "nombre"
+  ],
+  [
+   85.4,
+   "con la ausencia del nombre"
+  ],
+  [
+   88.1,
+   "como si fuera un parto como si fuera un"
+  ],
+  [
+   91.9,
+   "pacto sin silencios"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

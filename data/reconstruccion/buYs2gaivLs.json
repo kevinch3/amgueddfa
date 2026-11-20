@@ -1,0 +1,57 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Amén, Señor, un saludo corazón, para que pueda conocer en ti."
+  ],
+  [
+   22.2,
+   "Ven, Señor, y toda bendición, y liberante del pecado asfixi."
+  ],
+  [
+   39.2,
+   "Amén, Señor, tu humilde corazón, para lograr mi orgullo dominar."
+  ],
+  [
+   57.1,
+   "En referencia y en contemplación"
+  ],
+  [
+   65.4,
+   "A todos sombras, tu verdad divino"
+  ],
+  [
+   74.4,
+   "Dame, Señor, un tierno corazón"
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

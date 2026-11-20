@@ -1,0 +1,232 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   2.5,
+   "de Gustavo García Saraví"
+  ],
+  [
+   7.4,
+   "Memorándum ayer"
+  ],
+  [
+   9.7,
+   "cumplí fielmente con mis"
+  ],
+  [
+   13.2,
+   "obligaciones sin olvidarme creo de"
+  ],
+  [
+   17.9,
+   "ninguna pagué las cuotas del"
+  ],
+  [
+   21.4,
+   "televisor la"
+  ],
+  [
+   24.2,
+   "heladera y el banco"
+  ],
+  [
+   27.0,
+   "Ah el amoroso banco donde opero que"
+  ],
+  [
+   32.0,
+   "tiene música funcional y que"
+  ],
+  [
+   37.4,
+   "le puse aceite al auto"
+  ],
+  [
+   41.6,
+   "eh le di"
+  ],
+  [
+   45.0,
+   "propina al"
+  ],
+  [
+   47.6,
+   "Gran al"
+  ],
+  [
+   49.6,
+   "Gran rufián que cuida y"
+  ],
+  [
+   54.2,
+   "descuida mi departamento planta"
+  ],
+  [
+   58.9,
+   "baja compré un billete de lotería que no"
+  ],
+  [
+   63.2,
+   "me engañarás"
+  ],
+  [
+   65.4,
+   "Seguramente me"
+  ],
+  [
+   67.7,
+   "hice varios análisis clínicos todos bien"
+  ],
+  [
+   72.6,
+   "para llegar a los 200"
+  ],
+  [
+   75.7,
+   "años puse el día mis"
+  ],
+  [
+   78.7,
+   "cartas y comencé a pensar en la paella"
+  ],
+  [
+   84.5,
+   "que comeré el domingo"
+  ],
+  [
+   90.7,
+   "Claro que me olvidé de ir a la misa que"
+  ],
+  [
+   94.0,
+   "le rezaban a mi"
+  ],
+  [
+   96.1,
+   "madre sería conveniente que nadie se"
+  ],
+  [
+   99.8,
+   "enterara al cumplirse el primer"
+  ],
+  [
+   105.4,
+   "inolvidable"
+  ],
+  [
+   111.6,
+   "inolvidable aniversario de"
+  ],
+  [
+   115.0,
+   "su"
+  ],
+  [
+   118.8,
+   "muerte"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

@@ -1,0 +1,113 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   55.1,
+   "un anhelo dirigido hacia ti yo estaba"
+  ],
+  [
+   59.6,
+   "solo en un rincón del camino"
+  ],
+  [
+   83.6,
+   "de la puesta de sol o algún efecto"
+  ],
+  [
+   88.9,
+   "al fin pero lo cierto es que la pena"
+  ],
+  [
+   94.8,
+   "no importó ya ni siquiera porque seguir"
+  ],
+  [
+   102.1,
+   "se fue la vida"
+  ],
+  [
+   135.4,
+   "algunas veces es mejor no preguntar por"
+  ],
+  [
+   144.3,
+   "empieza y todo tiene un final"
+  ],
+  [
+   147.9,
+   "hay que pensar que la tristeza también"
+  ],
+  [
+   150.7,
+   "se va"
+  ],
+  [
+   188.6,
+   "y si todo empieza y todo tiene un final"
+  ],
+  [
+   192.6,
+   "hay que pensar que la tristeza también"
+  ],
+  [
+   195.8,
+   "se va"
+  ],
+  [
+   200.2,
+   "y se fue"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

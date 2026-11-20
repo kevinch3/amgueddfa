@@ -1,0 +1,218 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   21.0,
+   "me acuerdo fue"
+  ],
+  [
+   24.4,
+   "balvanera en una noche"
+  ],
+  [
+   29.0,
+   "lejana qui dejó caer el"
+  ],
+  [
+   32.2,
+   "nombre de un tal Jacinto"
+  ],
+  [
+   37.1,
+   "chiclana algo se dijo también algo se"
+  ],
+  [
+   41.2,
+   "dijo también una esquina Y un"
+  ],
+  [
+   45.4,
+   "cuchillo los años no dejan"
+  ],
+  [
+   49.2,
+   "ver el entre Vero y el"
+  ],
+  [
+   54.1,
+   "brillo quién sabe por qué razón"
+  ],
+  [
+   60.2,
+   "buscando Ese"
+  ],
+  [
+   62.5,
+   "nombre me gustaría"
+  ],
+  [
+   67.0,
+   "saber cómo habrá sido aquel"
+  ],
+  [
+   71.6,
+   "hombre lo"
+  ],
+  [
+   75.0,
+   "ve con el alma"
+  ],
+  [
+   79.3,
+   "con capaz de no alzar la"
+  ],
+  [
+   83.7,
+   "voz y de jugarse la vida"
+  ],
+  [
+   101.9,
+   "nadie habrá"
+  ],
+  [
+   106.5,
+   "nadie con paso más firme habrá"
+  ],
+  [
+   110.5,
+   "pisado la"
+  ],
+  [
+   112.4,
+   "tierra nadie habrá habido como"
+  ],
+  [
+   115.5,
+   "él en el amor y en la guerra"
+  ],
+  [
+   123.7,
+   "sobre la huerta y el"
+  ],
+  [
+   126.1,
+   "patio las torres de"
+  ],
+  [
+   129.3,
+   "balvanera y aquella muerte"
+  ],
+  [
+   132.6,
+   "casual en una esquina"
+  ],
+  [
+   139.4,
+   "cualquiera solo Dios puede saber"
+  ],
+  [
+   151.6,
+   "cantando lo que se cifra en el"
+  ],
+  [
+   156.4,
+   "nombre siempre el coraje es mejor el"
+  ],
+  [
+   160.5,
+   "coraje es mejor"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

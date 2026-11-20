@@ -1,0 +1,43 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   112.0,
+   "Y ahora de nuevo, vamos a preguntarles una cosa"
+  ],
+  [
+   118.6,
+   "Le tengo un segundo trabajo."
+  ],
+  [
+   122.9,
+   "Sí, yo también le tengo."
+  ],
+  [
+   154.4,
+   "La verdad es que tenemos..."
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

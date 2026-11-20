@@ -1,0 +1,57 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   55.2,
+   "amor seco"
+  ],
+  [
+   57.6,
+   "topa topa"
+  ],
+  [
+   59.7,
+   "lengua del fuego"
+  ],
+  [
+   73.0,
+   "amor seco"
+  ],
+  [
+   74.8,
+   "top a tope"
+  ],
+  [
+   77.0,
+   "lengua del fuego"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

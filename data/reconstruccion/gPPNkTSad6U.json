@@ -1,0 +1,183 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   5.5,
+   "y de persistir"
+  ],
+  [
+   7.5,
+   "como aquel faro de nuestras costas"
+  ],
+  [
+   14.5,
+   "solitario"
+  ],
+  [
+   16.9,
+   "arrollado por las tempestades y los"
+  ],
+  [
+   20.6,
+   "soles"
+  ],
+  [
+   23.0,
+   "y de persistir"
+  ],
+  [
+   28.0,
+   "guardianes desde siempre de mis sueños"
+  ],
+  [
+   30.8,
+   "los sueños que caminan y caminan"
+  ],
+  [
+   35.4,
+   "cotidianos y que son los que me susurra"
+  ],
+  [
+   38.9,
+   "el ser"
+  ],
+  [
+   41.3,
+   "y de persistir"
+  ],
+  [
+   43.9,
+   "desde la soledad acompañada que"
+  ],
+  [
+   47.4,
+   "agradezco"
+  ],
+  [
+   49.9,
+   "desde acompañar a la soledad de los"
+  ],
+  [
+   52.4,
+   "otros desde la pura soledad que me"
+  ],
+  [
+   56.6,
+   "conversa"
+  ],
+  [
+   58.3,
+   "y me encuentra bien adentro"
+  ],
+  [
+   62.1,
+   "es de persistir aunque me canse en este"
+  ],
+  [
+   67.1,
+   "acelerado deshacerse de los lazos"
+  ],
+  [
+   69.5,
+   "deshacerse de los nudos de los enredos"
+  ],
+  [
+   72.8,
+   "promiscuos del apego"
+  ],
+  [
+   74.6,
+   "y de persistir"
+  ],
+  [
+   77.3,
+   "contigo"
+  ],
+  [
+   79.0,
+   "hermano en este tiempo"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

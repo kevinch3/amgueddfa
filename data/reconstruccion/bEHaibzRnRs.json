@@ -1,0 +1,155 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.4,
+   "vamos a"
+  ],
+  [
+   3.4,
+   "San Juan de la Costa de Graciela"
+  ],
+  [
+   8.6,
+   "Cros a celebrar el día hemos ido al"
+  ],
+  [
+   11.9,
+   "mercado por el borde del mar trajimos"
+  ],
+  [
+   15.4,
+   "avas choclos arvejitas"
+  ],
+  [
+   18.9,
+   "azules gruesos dientes de ajo y un"
+  ],
+  [
+   22.3,
+   "róbalo"
+  ],
+  [
+   28.0,
+   "disponemos el cuerpo preparamos la boca"
+  ],
+  [
+   32.3,
+   "entregamos las"
+  ],
+  [
+   34.7,
+   "manos para el amor y el hambre abrimos"
+  ],
+  [
+   38.6,
+   "las ventanas encendemos el"
+  ],
+  [
+   42.9,
+   "fuego para el"
+  ],
+  [
+   45.6,
+   "amor sabemos detenernos"
+  ],
+  [
+   50.2,
+   "es certero quien"
+  ],
+  [
+   60.3,
+   "según hambre o amor elige el tiempo"
+  ],
+  [
+   63.5,
+   "diferentes pasos la sangre adelanta o"
+  ],
+  [
+   69.7,
+   "retrasa es certero quien dice se"
+  ],
+  [
+   73.6,
+   "adelanta o retrasa según hambre o amor"
+  ],
+  [
+   78.9,
+   "yo"
+  ],
+  [
+   80.2,
+   "apuré yo detuve"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

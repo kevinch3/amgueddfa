@@ -1,0 +1,190 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "He llegado hasta tu casa"
+  ],
+  [
+   22.9,
+   "Yo no sé cómo he podido"
+  ],
+  [
+   28.4,
+   "Si me han dicho que no estás, que ya nunca volverás"
+  ],
+  [
+   35.5,
+   "Si me han dicho que te has ido"
+  ],
+  [
+   38.7,
+   "Cuánta nieve hay en mi alma"
+  ],
+  [
+   44.3,
+   "Qué silencio hay en tu puerta"
+  ],
+  [
+   49.6,
+   "Que al llegar hasta el umbral"
+  ],
+  [
+   53.7,
+   "Un candado de dolor me detuvo en el corazón"
+  ],
+  [
+   64.7,
+   "Solo de las arañas que tejen el yuyal y el rosal"
+  ],
+  [
+   76.4,
+   "Todo es una cruz"
+  ],
+  [
+   79.0,
+   "Nada, nada más que tristeza y quietud"
+  ],
+  [
+   83.8,
+   "Nadie que me diga si vives aún donde estás"
+  ],
+  [
+   90.1,
+   "Para decirte que hoy he vuelto arrepentido a buscar tu amor"
+  ],
+  [
+   109.0,
+   "Ya me alejo de tu casa"
+  ],
+  [
+   125.0,
+   "Y me voy ya ni sé dónde"
+  ],
+  [
+   129.7,
+   "Sin quererte digo adiós"
+  ],
+  [
+   134.0,
+   "Y hasta el eco de tu voz de la nada me responde"
+  ],
+  [
+   141.2,
+   "En la cruz de tu candado, por tu pena yo he rezado"
+  ],
+  [
+   150.2,
+   "Y ha rodado en tu portón una lágrima hecha flor de mi pobre corazón"
+  ],
+  [
+   158.9,
+   "Nada, nada queda en tu casa natal"
+  ],
+  [
+   178.9,
+   "Nada, nada más que tristeza y quieto"
+  ],
+  [
+   183.3,
+   "No hay nadie que me diga si vives aún donde estás"
+  ],
+  [
+   190.1,
+   "Para decirte que hoy he vuelto arrepentido a buscar"
+  ],
+  [
+   197.7,
+   "Tu amor"
+  ],
+  [
+   201.9,
+   "Tu amor"
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

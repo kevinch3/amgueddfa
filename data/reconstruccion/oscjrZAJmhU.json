@@ -1,0 +1,141 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "La noche llena de hastío y de frío, el viento trae un extraño, lamento."
+  ],
+  [
+   22.3,
+   "Mientras tanto la garúa se halló con sus púas en mi corazón."
+  ],
+  [
+   30.0,
+   "Esa noche tan fría y tan bonita, pensando siempre en lo mismo, me abismo"
+  ],
+  [
+   69.5,
+   "Como un duende que en las sombras"
+  ],
+  [
+   79.1,
+   "Hasta el cielo se ha puesto a llorar"
+  ],
+  [
+   83.0,
+   "Noche llena de destino y de frío"
+  ],
+  [
+   99.0,
+   "Sobre la calle la hilera hace focos"
+  ],
+  [
+   111.6,
+   "Esperándote"
+  ],
+  [
+   113.8,
+   "Las gotas caen en el charco de mi alma"
+  ],
+  [
+   119.2,
+   "Hasta los huesos calados y lagos"
+  ],
+  [
+   122.5,
+   "Y humillando este tormento todavía pasa el viento"
+  ],
+  [
+   126.8,
+   "Empujándome"
+  ],
+  [
+   134.8,
+   "Solo es triste con la cera"
+  ],
+  [
+   139.1,
+   "Con tristezas de tapera, sintiendo tu ir"
+  ],
+  [
+   145.0,
+   "Porque aquella con su olvido hay abierto una gotera"
+  ],
+  [
+   150.7,
+   "Perdido, como un duende que en las sombras"
+  ],
+  [
+   156.3,
+   "Marabuja y maranombra, y la luna"
+  ],
+  [
+   160.0,
+   "Tristezas, hasta el cielo se vuelve a llorar"
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

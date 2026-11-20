@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "La obra original compuesta por un compositor galés en los últimos 50 años."
+  ],
+  [
+   16.6,
+   "Único coro participante, coro de la Escuela de Música de Gaiman."
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 9,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 7
+ }
+}

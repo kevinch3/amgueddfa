@@ -1,0 +1,232 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   3.9,
+   "estampas de Lidia Ester Romero"
+  ],
+  [
+   8.2,
+   "he salido amigos a recorrer el Valle y"
+  ],
+  [
+   12.1,
+   "encontré el otoño metido entre los"
+  ],
+  [
+   14.4,
+   "árboles en un charco muy quieto paraíso"
+  ],
+  [
+   18.7,
+   "de ranas el ramaje de un sauce se"
+  ],
+  [
+   26.0,
+   "Castaños amarillos dorados murmuraban"
+  ],
+  [
+   29.3,
+   "recuerdos de su gloria pasada"
+  ],
+  [
+   32.0,
+   "chacareros pacientes se encendían"
+  ],
+  [
+   34.6,
+   "rastrojos y en columnas de humo se"
+  ],
+  [
+   37.9,
+   "elevaban plegarias"
+  ],
+  [
+   40.2,
+   "bajo el manto crujiente de la tibia"
+  ],
+  [
+   43.0,
+   "hojarasca trabajaban hormigas y crecían"
+  ],
+  [
+   46.7,
+   "las larvas"
+  ],
+  [
+   48.0,
+   "el solcito caía"
+  ],
+  [
+   50.8,
+   "Cuánta Paz"
+  ],
+  [
+   52.9,
+   "Cuánta calma y el verano se iba por"
+  ],
+  [
+   56.6,
+   "detrás de las parvas"
+  ],
+  [
+   59.4,
+   "parado ante el rastrojo recién encendido"
+  ],
+  [
+   62.3,
+   "con el rastrillo entre los pies"
+  ],
+  [
+   65.4,
+   "subiéndole hasta el mentón mal afeitado"
+  ],
+  [
+   68.0,
+   "que se apoya en sus manos viejas antes"
+  ],
+  [
+   71.8,
+   "que él sufriendo los calores que le"
+  ],
+  [
+   74.9,
+   "trajo la tarde al borde del anochecer"
+  ],
+  [
+   79.6,
+   "ardiéndole la quemazón de sudores que"
+  ],
+  [
+   82.6,
+   "sus pañuelos han enjugado por centésima"
+  ],
+  [
+   85.2,
+   "vez"
+  ],
+  [
+   86.5,
+   "con un Pucho apagado entre los labios"
+  ],
+  [
+   89.1,
+   "secos"
+  ],
+  [
+   90.5,
+   "a contraluz allí de pie el chacarero es"
+  ],
+  [
+   95.9,
+   "una estampa cotidiana y la luz que la"
+  ],
+  [
+   99.2,
+   "enmarca lo bendice a la vez"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

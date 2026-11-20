@@ -1,0 +1,57 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   3.9,
+   "al puerto de rawson"
+  ],
+  [
+   6.7,
+   "de Sergio Pravaz"
+  ],
+  [
+   10.5,
+   "me gusta el golpe de la rumba sobre los"
+  ],
+  [
+   14.1,
+   "agujeros de las velas"
+  ],
+  [
+   53.5,
+   "canto"
+  ],
+  [
+   55.4,
+   "el de todos los días"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

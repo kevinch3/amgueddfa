@@ -1,0 +1,113 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   4.1,
+   "la alianza de los tiempos de Fieda Non"
+  ],
+  [
+   8.0,
+   "Owens de"
+  ],
+  [
+   10.3,
+   "Medina cuando uno ha sumado muchos"
+  ],
+  [
+   13.7,
+   "años libera su Aventura terrena para"
+  ],
+  [
+   17.8,
+   "aprisionar el asombro diario de los"
+  ],
+  [
+   22.6,
+   "cielos rescata el reflejo"
+  ],
+  [
+   26.8,
+   "conveniente"
+  ],
+  [
+   29.0,
+   "pulveriza"
+  ],
+  [
+   32.2,
+   "alcanza la piedra y su indudable"
+  ],
+  [
+   35.9,
+   "libertad donde tritura sus"
+  ],
+  [
+   39.5,
+   "fronteras y en consecuente"
+  ],
+  [
+   42.6,
+   "Arena dibuja sus manecillas sin"
+  ],
+  [
+   47.2,
+   "minutos para arribar a tiempo en las"
+  ],
+  [
+   52.1,
+   "coincidencias coloquio ritual de la"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

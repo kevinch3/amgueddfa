@@ -1,0 +1,50 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Viento, meses de fuego"
+  ],
+  [
+   18.3,
+   "No lo abandones, nos deja entero"
+  ],
+  [
+   56.4,
+   "Árbol te quiero entero, no lo abandonen las estaciones"
+  ],
+  [
+   77.4,
+   "Llevo mi canción hasta el corazón"
+  ],
+  [
+   109.5,
+   "Abre el suelo, déjalo salir"
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

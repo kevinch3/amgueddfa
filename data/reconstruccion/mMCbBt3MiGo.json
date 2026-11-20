@@ -1,0 +1,57 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   2.8,
+   "Hora santa de Raúl"
+  ],
+  [
+   8.5,
+   "Artola cuando lo llamas para comer él"
+  ],
+  [
+   12.4,
+   "viene remolon los juguetes te dice que"
+  ],
+  [
+   15.9,
+   "sí que ya va o se demora para que"
+  ],
+  [
+   20.2,
+   "insistas amorosamente y le dediqu su"
+  ],
+  [
+   29.0,
+   "crema"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 1,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

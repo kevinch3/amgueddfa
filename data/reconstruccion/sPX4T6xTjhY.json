@@ -1,0 +1,106 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Un hombre se despide insensiblemente de pequeñas cosas"
+  ],
+  [
+   22.3,
+   "Lo mismo que un árbol que en tiempo de otoño se queda sin hojas"
+  ],
+  [
+   34.9,
+   "Al fin la tristeza es la muerte lenta de las simples cosas"
+  ],
+  [
+   46.2,
+   "Esas cosas simples que quedan doliendo en el corazón"
+  ],
+  [
+   59.9,
+   "Uno vuelve siempre a esos viejos sitios donde amó la vida"
+  ],
+  [
+   70.7,
+   "Y después comprende cómo están de ausentes las cosas queridas"
+  ],
+  [
+   83.3,
+   "Por eso muchacha no partas ahora soñando un regreso"
+  ],
+  [
+   94.0,
+   "Que el amor es simple y a las cosas simples las devora el tiempo"
+  ],
+  [
+   109.4,
+   "Temorate aquí en la luz mayor de este mediodía"
+  ],
+  [
+   118.2,
+   "¿Dónde encontrarás con el pan al sol, la mesa tendida?"
+  ],
+  [
+   130.1,
+   "Por eso, muchacha, no partas ahora, soñando en regreso"
+  ],
+  [
+   139.8,
+   "Que el amor es simple y a las cosas simples las demoran el tiempo"
+  ],
+  [
+   154.1,
+   "Uno vuelve siempre a esos viejos sitios donde amó la vida"
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

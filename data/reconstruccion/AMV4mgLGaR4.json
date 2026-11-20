@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "de Pregolesi que se llama Se Tu Mami."
+  ],
+  [
+   101.2,
+   "Pero del hombre el consejo yo para mí no seguiré, no porque me gusta el gilio, los otros flores prestaré."
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

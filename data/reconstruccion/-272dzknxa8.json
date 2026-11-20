@@ -1,0 +1,71 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "La primera es la obra a elección, Margarita de Guastavino."
+  ],
+  [
+   242.2,
+   "La lluvia desde el umbral guardando el dolor,"
+  ],
+  [
+   252.2,
+   "La lluvia en tu casa, la lluvia en tu corazón,"
+  ],
+  [
+   266.1,
+   "nada más que tristeza y quietud, nadie que me diga si vives aún dónde estás."
+  ],
+  [
+   287.5,
+   "Para decirte que hoy he vuelto arrepentido a buscar"
+  ],
+  [
+   294.5,
+   "Mamá"
+  ],
+  [
+   384.7,
+   "No es que tristeza y tiempo, nadie que me diga si vives aún, ¿dónde estás?"
+  ],
+  [
+   397.0,
+   "Para decirle que hoy he vuelto arrepentido a buscar tu amor, buscar tu amor."
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 8,
+  "modelo": 7,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

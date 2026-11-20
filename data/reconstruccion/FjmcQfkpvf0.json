@@ -1,0 +1,148 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   6.8,
+   "Quizá la más querida de Julio Cortázar"
+  ],
+  [
+   11.4,
+   "medita la intemperie"
+  ],
+  [
+   14.3,
+   "la leve sombra de tu mano pasando por mi"
+  ],
+  [
+   17.2,
+   "cara"
+  ],
+  [
+   18.7,
+   "me diste el frío la distancia"
+  ],
+  [
+   22.4,
+   "el amargo café de medianoche entre mesas"
+  ],
+  [
+   25.4,
+   "vacías"
+  ],
+  [
+   27.8,
+   "siempre empezó a llover en la mitad de"
+  ],
+  [
+   30.1,
+   "la película"
+  ],
+  [
+   32.9,
+   "darán la flor que te lleve tenía una"
+  ],
+  [
+   35.9,
+   "araña esperando entre los pétalos creo"
+  ],
+  [
+   39.0,
+   "que lo sabías y que favorece la"
+  ],
+  [
+   41.5,
+   "desgracia"
+  ],
+  [
+   43.6,
+   "siempre olvide el paraguas antes de ir a"
+  ],
+  [
+   46.4,
+   "buscarte"
+  ],
+  [
+   48.2,
+   "el restaurant estaba lleno y voceaban la"
+  ],
+  [
+   51.1,
+   "guerra en las esquinas"
+  ],
+  [
+   53.8,
+   "fina letra de tango para tu indiferente"
+  ],
+  [
+   56.8,
+   "melodía"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

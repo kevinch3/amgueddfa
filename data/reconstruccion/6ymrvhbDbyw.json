@@ -1,0 +1,155 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   7.0,
+   "ellos a mis"
+  ],
+  [
+   10.7,
+   "nietos justo cuando la vida da vuelta a"
+  ],
+  [
+   14.4,
+   "la esquina de los"
+  ],
+  [
+   15.8,
+   "años aparecen"
+  ],
+  [
+   18.5,
+   "ellos Pequeños"
+  ],
+  [
+   21.0,
+   "Gigantes artistas"
+  ],
+  [
+   23.9,
+   "incansables pintando paredes con trazos"
+  ],
+  [
+   29.0,
+   "chocolate"
+  ],
+  [
+   31.2,
+   "tomadores de caballos de"
+  ],
+  [
+   34.8,
+   "calecita superhéroes y"
+  ],
+  [
+   38.3,
+   "princesas jugando a La Ronda tocando el"
+  ],
+  [
+   43.0,
+   "tambor"
+  ],
+  [
+   46.2,
+   "ellos aclaran con sus risas toda"
+  ],
+  [
+   51.3,
+   "oscuridad rozando con sus dedos los"
+  ],
+  [
+   54.3,
+   "surcos de mi"
+  ],
+  [
+   55.7,
+   "piel le dan sentido a todo lo que fue"
+  ],
+  [
+   61.0,
+   "y hacen que los sueños vuelvan a"
+  ],
+  [
+   65.7,
+   "empezar justo cuando la vida da vuelta a"
+  ],
+  [
+   69.8,
+   "la esquina de los"
+  ],
+  [
+   71.6,
+   "años aparecen"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

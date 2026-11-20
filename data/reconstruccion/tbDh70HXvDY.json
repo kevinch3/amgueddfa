@@ -1,0 +1,94 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Ciego quisiera haber sido,"
+  ],
+  [
+   11.3,
+   "mi vida, para no verte,"
+  ],
+  [
+   21.3,
+   "porque de verte me nace"
+  ],
+  [
+   27.7,
+   "la inclinación al quererte."
+  ],
+  [
+   35.0,
+   "La inclinación al quererte"
+  ],
+  [
+   42.2,
+   "me tiene fuera de sí;"
+  ],
+  [
+   60.2,
+   "quisiera saber de cierto"
+  ],
+  [
+   68.7,
+   "si has nacido para mí."
+  ],
+  [
+   77.2,
+   "Ciego quisiera haber sido,"
+  ],
+  [
+   91.0,
+   "mi vida, para no verte."
+  ]
+ ],
+ "fuentes": [
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ]
+ ],
+ "letras": [
+  {
+   "desde": 0,
+   "hasta": 105,
+   "titulo": "Ciego quisiera haber sido",
+   "autor": "Carlos Guastavino – Eduardo Falú",
+   "idioma": "es"
+  }
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

@@ -1,0 +1,211 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   13.2,
+   "abrázame que hace frío"
+  ],
+  [
+   16.6,
+   "abrasame un poco más que esta noche no"
+  ],
+  [
+   25.4,
+   "mar tengo miedo de la"
+  ],
+  [
+   29.0,
+   "radio fantasma de tu"
+  ],
+  [
+   31.8,
+   "amor tengo miedo de perder en"
+  ],
+  [
+   63.0,
+   "Dios Dame un minuto"
+  ],
+  [
+   68.0,
+   "ti dame en esta noche tengo"
+  ],
+  [
+   71.8,
+   "miedo solo"
+  ],
+  [
+   75.6,
+   "en estrellas en el cielo y mi Dios"
+  ],
+  [
+   86.0,
+   "ti que sea tan solo de momento"
+  ],
+  [
+   93.9,
+   "y si se me olvida un sentimiento es que"
+  ],
+  [
+   104.9,
+   "que y la Luna serás Blanca"
+  ],
+  [
+   110.2,
+   "serás miel"
+  ],
+  [
+   121.6,
+   "Serás un poco de"
+  ],
+  [
+   131.6,
+   "pazos no preguntes nada Solo quiero"
+  ],
+  [
+   135.0,
+   "estar"
+  ],
+  [
+   137.4,
+   "aquí esperemos la mañana besados"
+  ],
+  [
+   141.6,
+   "simplemente"
+  ],
+  [
+   143.4,
+   "así necesito este calor Necesito saber"
+  ],
+  [
+   149.4,
+   "que fueras"
+  ],
+  [
+   154.3,
+   "eso Dame un minuto más"
+  ],
+  [
+   159.2,
+   "ti dame que esta noche tengo"
+  ],
+  [
+   167.2,
+   "destellos en el cielo y mi niños"
+  ],
+  [
+   176.8,
+   "aunque"
+  ],
+  [
+   178.8,
+   "sea Solo este momento"
+  ],
+  [
+   184.2,
+   "Perdona si"
+  ],
+  [
+   194.0,
+   "mí que no hay luna y la Luna serás vos"
+  ],
+  [
+   200.6,
+   "Serás un poco de"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

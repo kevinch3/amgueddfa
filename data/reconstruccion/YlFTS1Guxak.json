@@ -1,0 +1,183 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   26.4,
+   "ñaña y muchas de llorar"
+  ],
+  [
+   28.5,
+   "cuando yo me muera"
+  ],
+  [
+   30.7,
+   "ñaña y muchas de llorar"
+  ],
+  [
+   33.1,
+   "otras que te quieran"
+  ],
+  [
+   35.1,
+   "ñaña y ya no encontrarás"
+  ],
+  [
+   37.6,
+   "será porque te amo tanto"
+  ],
+  [
+   43.3,
+   "todos andan con el tema"
+  ],
+  [
+   45.4,
+   "yo no sé que les importa"
+  ],
+  [
+   47.5,
+   "el amor de vidas ajenas"
+  ],
+  [
+   49.8,
+   "cuando yo me muera"
+  ],
+  [
+   51.6,
+   "ñaña y muchas de llorar"
+  ],
+  [
+   53.7,
+   "me dicen que los ríos crecen"
+  ],
+  [
+   56.0,
+   "Cuando acaba de llover, así crecen mis amores cuando no te puedo ver"
+  ],
+  [
+   62.6,
+   "Cuando yo me muera, ñaña, y mucho has de llorar"
+  ],
+  [
+   67.0,
+   "Me pides que te olvide, ñaña, y como si fuera"
+  ],
+  [
+   82.8,
+   "Me pides que te olvide, ña, ñay, como si fuera"
+  ],
+  [
+   86.9,
+   "Una cosa tan fácil, ña, ñay, que se pudiera"
+  ],
+  [
+   91.1,
+   "Viguita, ya estoy cansada de solicitar de amor"
+  ],
+  [
+   99.4,
+   "Y de ver que no procuras aliviarme mi dolor"
+  ],
+  [
+   103.3,
+   "Cuando yo me muera, ña, ña, y mucho has de llorar"
+  ],
+  [
+   107.4,
+   "Mira que soy desgraciada, mira que soy infeliz"
+  ],
+  [
+   111.5,
+   "Si hasta para bautizarme faltó el agua para mí"
+  ],
+  [
+   115.6,
+   "Cuando yo me muera, ñaña, hay mucho de llorar"
+  ],
+  [
+   119.6,
+   "Gracias, gracias Chaucha por prestarnos sin saberlo el bombo"
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

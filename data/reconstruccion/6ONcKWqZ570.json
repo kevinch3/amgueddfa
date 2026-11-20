@@ -1,0 +1,64 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Esto es un programa de música de prensa y un noticio de interés para las comunidades."
+  ],
+  [
+   75.1,
+   "¡Vamos!"
+  ],
+  [
+   298.7,
+   "Hola, Federico"
+  ],
+  [
+   305.6,
+   "Che, Fede, ¿no sabes dónde está el sillón?"
+  ],
+  [
+   313.1,
+   "Daniel, Fede, Daniel"
+  ],
+  [
+   314.7,
+   "Atrás mío"
+  ],
+  [
+   317.3,
+   "Bueno, sí, lo encontré, lo encontré, chao"
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 9,
+  "modelo": 8,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

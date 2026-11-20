@@ -1,0 +1,162 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.4,
+   "Hola."
+  ],
+  [
+   17.0,
+   "Así que bueno, vamos a arrancar."
+  ],
+  [
+   22.8,
+   "Dale, que se hace tarde, apúrate."
+  ],
+  [
+   24.6,
+   "¿Qué tiempo tenemos?"
+  ],
+  [
+   25.8,
+   "Media hora, dale, apúrate."
+  ],
+  [
+   27.0,
+   "Bueno, media hora para salir."
+  ],
+  [
+   45.5,
+   "No, no, porque yo digo que la ruta de abajo es mejor."
+  ],
+  [
+   57.5,
+   "Sí, dale."
+  ],
+  [
+   59.9,
+   "Pero si no salimos, no vamos a ir por la de arriba o por la de abajo."
+  ],
+  [
+   71.9,
+   "Y que esperen, señor, que tenemos que atacar solo nosotros."
+  ],
+  [
+   79.9,
+   "No, tenés que apurarte, vamos, por la vista de abajo, que es más rápida."
+  ],
+  [
+   91.9,
+   "Sí, pero vamos a tener que parar a comprar manteca."
+  ],
+  [
+   108.9,
+   "Hay un tambo acá."
+  ],
+  [
+   112.9,
+   "A ver, hay que preguntarles la vuelta a ella."
+  ],
+  [
+   116.9,
+   "Yo no quiero comer los quejas, quiero comer queso."
+  ],
+  [
+   119.9,
+   "Ah, bueno, estos son por la de cocina."
+  ],
+  [
+   122.9,
+   "No, te estoy diciendo que es por la ruta de abajo."
+  ],
+  [
+   125.9,
+   "¿Y por la de abajo donde queso tenemos?"
+  ],
+  [
+   127.9,
+   "No sé, en un lugar donde hay una ruta grande, ahí hay unos quesos."
+  ],
+  [
+   148.0,
+   "¿Qué tipo tenemos?"
+  ],
+  [
+   152.8,
+   "Si quieres, se lo damos."
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

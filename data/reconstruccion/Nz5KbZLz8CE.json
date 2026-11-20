@@ -1,0 +1,127 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.2,
+   "sin Lágrimas de Silvia"
+  ],
+  [
+   6.0,
+   "Castellón puse el"
+  ],
+  [
+   8.2,
+   "cuerpo la"
+  ],
+  [
+   10.4,
+   "garra y el"
+  ],
+  [
+   13.8,
+   "alma me expuse a los inviernos de tus"
+  ],
+  [
+   20.0,
+   "palabras levanté mil"
+  ],
+  [
+   23.3,
+   "ilusiones"
+  ],
+  [
+   25.9,
+   "pisoteadas y no sirvió de nada"
+  ],
+  [
+   30.3,
+   "pequeño de"
+  ],
+  [
+   33.1,
+   "nada te lo hubiera tolerado"
+  ],
+  [
+   36.1,
+   "todo sin demasiado rincor sin presentar"
+  ],
+  [
+   43.2,
+   "batalla Pero"
+  ],
+  [
+   46.0,
+   "sabes mis ojos ven profundo en tu"
+  ],
+  [
+   51.1,
+   "mirada y no van a perdonarte nunca que"
+  ],
+  [
+   55.8,
+   "los dejes sin"
+  ],
+  [
+   58.9,
+   "esperanzas"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

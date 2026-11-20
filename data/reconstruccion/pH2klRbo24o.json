@@ -1,0 +1,120 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.3,
+   "de parís podías decir a los forasteros"
+  ],
+  [
+   33.7,
+   "con sus dos manos tendidas con su hombre"
+  ],
+  [
+   47.2,
+   "trabajo por afuera pero por dentro en"
+  ],
+  [
+   82.1,
+   "está en ti algún monte adentro y sólo"
+  ],
+  [
+   85.5,
+   "para mirar sus ojos siempre volando al"
+  ],
+  [
+   88.5,
+   "recuerdo años de empeño y labor"
+  ],
+  [
+   91.2,
+   "sembrando música"
+  ],
+  [
+   138.0,
+   "amigo de raúl carnota en homenaje a"
+  ],
+  [
+   141.1,
+   "pedro evaristo díaz que es un personaje"
+  ],
+  [
+   144.5,
+   "muy importante que abría su casa para"
+  ],
+  [
+   146.5,
+   "que todas las personas que no podían y"
+  ],
+  [
+   150.1,
+   "quitaban bajos de recursos pudieran"
+  ],
+  [
+   151.9,
+   "comer y alimentarse en su casa una vez a"
+  ],
+  [
+   154.5,
+   "la semana y así y generaban grandes"
+  ],
+  [
+   157.2,
+   "guitarreadas para amigos gracias"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

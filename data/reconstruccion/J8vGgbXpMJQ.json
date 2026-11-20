@@ -1,0 +1,64 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   20.0,
+   "cara de roca, mástica de roca y se ilumina."
+  ],
+  [
+   32.0,
+   "El seclanteño lento camina como su sueño."
+  ],
+  [
+   46.0,
+   "Baja una nube, mientras se sube, no tiene apuro"
+  ],
+  [
+   59.0,
+   "Ese clanteño de pelo oscuro, como su sueño"
+  ],
+  [
+   87.0,
+   "Tu pena de arena no vale la pena"
+  ],
+  [
+   156.7,
+   "Sarcillo de arena, contame la pena"
+  ],
+  [
+   170.3,
+   "Tu pena de arena, no volte la pena"
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

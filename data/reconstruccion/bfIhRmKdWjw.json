@@ -1,0 +1,162 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   4.0,
+   "Escribir nuestros nombres"
+  ],
+  [
+   6.9,
+   "de Viviana Ayilef"
+  ],
+  [
+   12.9,
+   "escribir un poema en el medio del odio"
+  ],
+  [
+   17.0,
+   "es como es el mismo al exterior"
+  ],
+  [
+   22.2,
+   "contra todos los males de todo"
+  ],
+  [
+   27.5,
+   "contra todos los aires de tormenta"
+  ],
+  [
+   32.2,
+   "contra el triunfo preciso de ese odio"
+  ],
+  [
+   41.6,
+   "tiene un poema de amores"
+  ],
+  [
+   48.5,
+   "y los panaderos"
+  ],
+  [
+   52.5,
+   "gestionará la muerte la victoria del día"
+  ],
+  [
+   57.3,
+   "cotidiano"
+  ],
+  [
+   62.2,
+   "Escribir"
+  ],
+  [
+   64.9,
+   "lleno de nombres tibios"
+  ],
+  [
+   114.2,
+   "Escribir en sus hilos"
+  ],
+  [
+   117.5,
+   "Escribir la memoria"
+  ],
+  [
+   121.9,
+   "Escribir la nada"
+  ],
+  [
+   128.1,
+   "escribir todavía"
+  ],
+  [
+   131.8,
+   "por la sangre del nombre"
+  ],
+  [
+   136.8,
+   "porque la ausencia de nombre"
+  ],
+  [
+   142.3,
+   "como si fuera el parto"
+  ],
+  [
+   152.5,
+   "sin silencios"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

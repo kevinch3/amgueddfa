@@ -1,0 +1,134 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   13.9,
+   "furioso pétalo de sal"
+  ],
+  [
+   21.4,
+   "nada te importa en la ciudad si nada"
+  ],
+  [
+   28.7,
+   "todo se vuelve carmesí y no sé si es"
+  ],
+  [
+   33.2,
+   "baires o madrid nada te importa en la"
+  ],
+  [
+   38.2,
+   "ciudad"
+  ],
+  [
+   50.7,
+   "y ayer pareció tan extraño por menos"
+  ],
+  [
+   61.5,
+   "yo entiendo bien darle a la pared y tú"
+  ],
+  [
+   68.4,
+   "podrías darme fe"
+  ],
+  [
+   77.2,
+   "furioso pétalo de sal la misma calle"
+  ],
+  [
+   82.5,
+   "misma bala nada te importa en la ciudad"
+  ],
+  [
+   87.4,
+   "sin antes ver"
+  ],
+  [
+   91.4,
+   "y no estando aquí con mi amor es este"
+  ],
+  [
+   95.8,
+   "sueño existe esa calle"
+  ],
+  [
+   100.1,
+   "me pareció extraño por menos"
+  ],
+  [
+   116.4,
+   "y te imagino dando"
+  ],
+  [
+   140.7,
+   "y se siente que te extraño y voy a ser"
+  ],
+  [
+   149.9,
+   "feliz"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

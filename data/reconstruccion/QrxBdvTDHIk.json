@@ -1,0 +1,85 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "En los momentos de dolor, hasta la muerte Cristo está, nuestra esperanza y nuestra fe."
+  ],
+  [
+   60.0,
+   "Danos la fe que dio poder a los soldados de la cruz, que en cumplimiento del deber dieron su vida por Jesús."
+  ],
+  [
+   86.9,
+   "Hasta la muerte, Cristo es fe, nuestra esperanza y nuestra fe."
+  ],
+  [
+   100.9,
+   "Danos la fe que dé valor"
+  ],
+  [
+   115.7,
+   "Para enfrentarnos con el mal"
+  ],
+  [
+   123.0,
+   "Y por palabra y por acción"
+  ],
+  [
+   129.7,
+   "o en testimonio siempre dar."
+  ],
+  [
+   136.3,
+   "Hasta la muerte en Cristo esté"
+  ],
+  [
+   143.5,
+   "nuestra esperanza y nuestra fe."
+  ],
+  [
+   151.2,
+   "Amén."
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

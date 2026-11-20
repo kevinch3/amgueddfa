@@ -1,0 +1,106 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   20.3,
+   "junto a esta pared"
+  ],
+  [
+   24.0,
+   "yo quedé llorando"
+  ],
+  [
+   32.2,
+   "quiero gritar"
+  ],
+  [
+   35.1,
+   "a través"
+  ],
+  [
+   38.8,
+   "y volar otra vez"
+  ],
+  [
+   47.3,
+   "crisantemos que se abre"
+  ],
+  [
+   86.1,
+   "una vez"
+  ],
+  [
+   89.5,
+   "yo fui solo una voz que no se podía"
+  ],
+  [
+   100.0,
+   "quiero decir"
+  ],
+  [
+   102.9,
+   "otra vez"
+  ],
+  [
+   117.8,
+   "que éste abrió encuentra camino"
+  ],
+  [
+   131.8,
+   "que se abrió"
+  ],
+  [
+   136.3,
+   "descubra de nuevo"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

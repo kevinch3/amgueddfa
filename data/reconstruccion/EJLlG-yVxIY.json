@@ -1,0 +1,127 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   25.3,
+   "A través de la ventana yo vería un maicito"
+  ],
+  [
+   32.9,
+   "Cantándole a la mañana"
+  ],
+  [
+   40.5,
+   "Si usted asumara la frente"
+  ],
+  [
+   48.0,
+   "Y me hablara cara a cara"
+  ],
+  [
+   51.9,
+   "Yo tendría un tamalito"
+  ],
+  [
+   79.8,
+   "color de tu madre"
+  ],
+  [
+   87.1,
+   "no me hagas"
+  ],
+  [
+   90.1,
+   "mi desaire"
+  ],
+  [
+   91.5,
+   "que tengo"
+  ],
+  [
+   95.4,
+   "a las cuatro"
+  ],
+  [
+   97.3,
+   "a las cinco"
+  ],
+  [
+   98.9,
+   "a seis de la mañana"
+  ],
+  [
+   104.4,
+   "Si usted mirara un ratito a través de la ventana"
+  ],
+  [
+   131.6,
+   "Si usted asomara frente y me hablara cara a cara"
+  ],
+  [
+   150.5,
+   "Que me hable de frente"
+  ],
+  [
+   178.8,
+   "A las cuatro, a las cinco, a las seis de la mañana"
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

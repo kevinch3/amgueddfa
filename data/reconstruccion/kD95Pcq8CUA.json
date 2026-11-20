@@ -1,0 +1,85 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Ven a Jesús y paz de él le encontrará."
+  ],
+  [
+   14.4,
+   "Ven a Jesús y encalma tu dolor."
+  ],
+  [
+   22.4,
+   "Ven a Él que tus palabras llevará."
+  ],
+  [
+   28.4,
+   "Busca a Cristo su perfecto amor, ven a Jesús y más en Él encontrarás."
+  ],
+  [
+   44.4,
+   "Ven a Jesús, tú que estás en el dolor, ven a Él que su amor no faltará."
+  ],
+  [
+   58.4,
+   "Busca a Cristo, el triunfo te dará. Ven a Jesús, ven a Jesús."
+  ],
+  [
+   71.0,
+   "Ven a Jesús, confiando solo en Él, bendiciones sin fin te dará."
+  ],
+  [
+   108.3,
+   "Bendiciones sin fin el te darán."
+  ],
+  [
+   115.4,
+   "Busca a Cristo en este mundo cruel."
+  ],
+  [
+   122.8,
+   "Ven a Jesús y viva tierra en Él."
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

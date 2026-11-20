@@ -1,0 +1,99 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   14.7,
+   "Y es mi lejano país, una dulce raíz que no sabe olvidar"
+  ],
+  [
+   26.4,
+   "Y es mi lejana país, una luz de raíz que no sabe olvidar."
+  ],
+  [
+   38.6,
+   "Frente a la bruma y al mar, la lejanía es un dios."
+  ],
+  [
+   50.5,
+   "Y se me da por pensar que el recuerdo de allá se me ha vuelto a canción."
+  ],
+  [
+   61.8,
+   "Y se me da por pensar que el recuerdo de allá se me ha vuelto a canción."
+  ],
+  [
+   95.1,
+   "Y por mi sangre una voz materna, nombra Argentina."
+  ],
+  [
+   125.1,
+   "A continuación, un miembro de la Comisión Organizadora del Eisteddfod del Chubut"
+  ],
+  [
+   137.9,
+   "hará entrega de un ramo de flores a la poeta."
+  ],
+  [
+   155.1,
+   "También, en representación de la senadora Nancy González, harán entrega de una plaqueta donada por el Senado de la Nación."
+  ],
+  [
+   185.1,
+   "Y ahora sí, ya finalizando esta ceremonia, voy a solicitarle al presidente del círculo"
+  ],
+  [
+   211.0,
+   "bárdico, señor Benito Jones, que inicie el regreso a nuestros lugares descendiendo"
+  ],
+  [
+   218.3,
+   "del escenario."
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

@@ -1,0 +1,141 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "para ofrecerles zamba de usted"
+  ],
+  [
+   6.0,
+   "buenas noches"
+  ],
+  [
+   7.5,
+   "esta samba cuesta por su autor riojano"
+  ],
+  [
+   11.0,
+   "el poeta argentino félix luna"
+  ],
+  [
+   14.9,
+   "y pertenece a un pedacito de su historia"
+  ],
+  [
+   17.9,
+   "personal"
+  ],
+  [
+   19.9,
+   "conoce a su esposa y compañera toda la"
+  ],
+  [
+   23.2,
+   "vida"
+  ],
+  [
+   24.9,
+   "y quien termina sus años en 2010"
+  ],
+  [
+   28.5,
+   "le compone esta samba junto con su amigo"
+  ],
+  [
+   31.9,
+   "arias ramírez que la empresa con su"
+  ],
+  [
+   34.3,
+   "música"
+  ],
+  [
+   35.7,
+   "pero esa parte"
+  ],
+  [
+   107.5,
+   "caminan buenos aires pasando por ahí no"
+  ],
+  [
+   115.0,
+   "aquella niña entrañable mirada"
+  ],
+  [
+   118.2,
+   "y suave y tersa piel"
+  ],
+  [
+   122.4,
+   "embelesado sus ojos"
+  ],
+  [
+   127.5,
+   "atrapada de la trascendente mirada"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 8,
+  "modelo": 8,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

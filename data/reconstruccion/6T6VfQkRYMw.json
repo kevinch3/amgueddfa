@@ -1,0 +1,218 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   18.6,
+   "no diciendo el árbol milenario de"
+  ],
+  [
+   21.1,
+   "profunda raíz americana"
+  ],
+  [
+   24.4,
+   "y sangre tras su al sur su itinerario"
+  ],
+  [
+   28.8,
+   "el padre de mi abuelo pisó un día la sal"
+  ],
+  [
+   31.8,
+   "de la jarilla cresta y samba"
+  ],
+  [
+   36.8,
+   "sol del sueño"
+  ],
+  [
+   43.0,
+   "atrás quedó la muerte en las pizarras la"
+  ],
+  [
+   46.6,
+   "voz tuberculosa de las minas gritándole"
+  ],
+  [
+   50.0,
+   "tirana no te vayas"
+  ],
+  [
+   55.2,
+   "el viento surco grietas en su acento"
+  ],
+  [
+   59.7,
+   "y al espejismo herido el ojo de agua"
+  ],
+  [
+   61.9,
+   "premio de identidad su pensamiento"
+  ],
+  [
+   66.5,
+   "pulso del terror"
+  ],
+  [
+   68.7,
+   "adormecido"
+  ],
+  [
+   70.4,
+   "en trigo floreció sobre la reja de su"
+  ],
+  [
+   73.3,
+   "brazo mancera dolorido"
+  ],
+  [
+   79.4,
+   "dejo las chacras cada hueso"
+  ],
+  [
+   83.8,
+   "la fibra enredándose a un sol fa"
+  ],
+  [
+   86.2,
+   "visceral en el silbo de la río"
+  ],
+  [
+   90.4,
+   "los callos de su mano en las tijeras"
+  ],
+  [
+   94.5,
+   "y desnatado rocíos la cintura"
+  ],
+  [
+   99.5,
+   "en otra vuelta más de las maneras"
+  ],
+  [
+   103.8,
+   "su memoria ese mes en el estío fugaz y"
+  ],
+  [
+   107.4,
+   "somnoliento de las lengas"
+  ],
+  [
+   110.6,
+   "y su sangre de nace está en el río"
+  ],
+  [
+   115.5,
+   "y en la canción de sauce y de membrillo"
+  ],
+  [
+   118.1,
+   "que la lluvia otoñal le han dado al"
+  ],
+  [
+   120.8,
+   "viento"
+  ],
+  [
+   122.9,
+   "de esa tierra sembrada fue nacido"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   46.2,
+   "Lo abrido, no nací de cual, pues me conduce el fuego a su amor."
+  ],
+  [
+   58.6,
+   "La mano quiero junto a la he visto tu capacidad, cumpliendo con mi felicidad."
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

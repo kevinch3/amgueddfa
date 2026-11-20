@@ -1,0 +1,127 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   74.4,
+   "Tápate la cara, que te doy licencia"
+  ],
+  [
+   79.1,
+   "Allá va mi corazón, dirigido en un papel"
+  ],
+  [
+   83.7,
+   "Llorando gotas de sangre por una ingrata mujer"
+  ],
+  [
+   90.0,
+   "Anteanoche me confesé con el cura de Santa Clara"
+  ],
+  [
+   110.4,
+   "Y me dio de penitencia que la firmeza bailara"
+  ],
+  [
+   116.4,
+   "Darás una vuelta con tu compañera"
+  ],
+  [
+   125.3,
+   "Con la tras trasera, con la delantera"
+  ],
+  [
+   130.0,
+   "Por este costado, por el otro lado"
+  ],
+  [
+   134.8,
+   "Con ese modito, ponele el codito"
+  ],
+  [
+   139.5,
+   "Ponele el oído, también los sentidos"
+  ],
+  [
+   144.5,
+   "Como corresponde una mano al hombro"
+  ],
+  [
+   149.1,
+   "Retírate un paso, dámele un abrazo"
+  ],
+  [
+   153.9,
+   "Otro poquitito, tírale un besito"
+  ],
+  [
+   163.3,
+   "Tápate la cara, que te doy licencia"
+  ],
+  [
+   167.8,
+   "Allá va mi corazón, dirigido en un papel"
+  ],
+  [
+   172.5,
+   "Llorando gotas de sangre por una ingrata mujer"
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

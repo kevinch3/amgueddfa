@@ -1,0 +1,456 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "recordarles mañana a las 11 de la mañana"
+  ],
+  [
+   9.6,
+   "sesquicentenario importante todo lo que"
+  ],
+  [
+   12.1,
+   "lo tengan por allí por favor llevarlo"
+  ],
+  [
+   16.1,
+   "esperamos tempranito"
+  ],
+  [
+   22.2,
+   "que ir temprano para buscar el lugar"
+  ],
+  [
+   25.9,
+   "y no sean temerosos de subir al"
+  ],
+  [
+   27.5,
+   "escenario vamos ahí está bien mira"
+  ],
+  [
+   45.8,
+   "ahí está grandes de la comisión le van a"
+  ],
+  [
+   49.6,
+   "hacer entrega de un presente a cada uno"
+  ],
+  [
+   52.7,
+   "de los directores de los jurados de los"
+  ],
+  [
+   54.5,
+   "traductores"
+  ],
+  [
+   57.9,
+   "y a héctor ariel mcdonald también por su"
+  ],
+  [
+   61.4,
+   "trabajo incansable"
+  ],
+  [
+   74.9,
+   "los vamos a invitar a quedarse sobre el"
+  ],
+  [
+   77.1,
+   "escenario"
+  ],
+  [
+   80.4,
+   "enrique korn hará entrega a continuación"
+  ],
+  [
+   84.2,
+   "de la distinción especial a la mejor"
+  ],
+  [
+   87.3,
+   "recitación en idioma castellano esto"
+  ],
+  [
+   90.8,
+   "será en nombre de la fundación museo"
+  ],
+  [
+   93.8,
+   "egídio feruglio"
+  ],
+  [
+   101.0,
+   "los jurados"
+  ],
+  [
+   104.4,
+   "han determinado"
+  ],
+  [
+   115.1,
+   "que esta distinción especial"
+  ],
+  [
+   118.5,
+   "a la mejor recitación en idioma"
+  ],
+  [
+   120.7,
+   "castellano es para alejandro jons"
+  ],
+  [
+   134.3,
+   "te invitamos a alejandro a ascender al"
+  ],
+  [
+   136.4,
+   "escenario"
+  ],
+  [
+   145.6,
+   "y enrique korn hacer entrega del"
+  ],
+  [
+   148.0,
+   "presente en nombre de la fundación museo"
+  ],
+  [
+   150.1,
+   "egídio feruglio"
+  ],
+  [
+   165.3,
+   "le vamos a ver alejandro que se quede"
+  ],
+  [
+   167.4,
+   "por favor sobre el escenario"
+  ],
+  [
+   173.4,
+   "él no sabe para qué"
+  ],
+  [
+   176.6,
+   "premio cinta azul al mejor solista"
+  ],
+  [
+   180.0,
+   "otorgado por los descendientes de héctor"
+  ],
+  [
+   182.4,
+   "y sara macdonald entrega héctor ariel"
+  ],
+  [
+   184.8,
+   "mcdonald a alejandro jons"
+  ],
+  [
+   207.3,
+   "a continuación la profesora sonia"
+  ],
+  [
+   210.3,
+   "baliente hará entrega en nombre de"
+  ],
+  [
+   213.4,
+   "adícora de la distinción especial a la"
+  ],
+  [
+   217.4,
+   "mejor interpretación coral argentina"
+  ],
+  [
+   222.0,
+   "ésta será por la interpretación por la"
+  ],
+  [
+   225.8,
+   "estrella azul a los monos"
+  ],
+  [
+   232.0,
+   "recibe su directora karina torres"
+  ],
+  [
+   244.1,
+   "el señor benito jones hará entrega de la"
+  ],
+  [
+   247.0,
+   "distinción especial a la excelencia en"
+  ],
+  [
+   249.6,
+   "recitación en idioma galés premio"
+  ],
+  [
+   252.3,
+   "otorgado por el círculo bárdico del"
+  ],
+  [
+   254.5,
+   "chubut"
+  ],
+  [
+   261.8,
+   "la distinción especial excelencia"
+  ],
+  [
+   264.2,
+   "recitación en idioma galés en esta"
+  ],
+  [
+   266.8,
+   "oportunidad es para alguien Green"
+  ],
+  [
+   291.7,
+   "en una foto debidamente"
+  ],
+  [
+   302.5,
+   "vamos a invitar al escenario el señor"
+  ],
+  [
+   304.6,
+   "jorge reynoso en representación del"
+  ],
+  [
+   307.5,
+   "rotary club Trelew para hacer entrega"
+  ],
+  [
+   310.5,
+   "del premio a la excelencia musical"
+  ],
+  [
+   314.6,
+   "de Chubut 2017"
+  ],
+  [
+   318.5,
+   "en esta oportunidad los jurados han"
+  ],
+  [
+   321.9,
+   "coincidido en otorgar esta distinción a"
+  ],
+  [
+   385.5,
+   "no voy a estar demasiado tarde pero que"
+  ],
+  [
+   483.6,
+   "vamos a centrar la foto vamos a correr"
+  ],
+  [
+   486.1,
+   "un poquito"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 9,
+  "modelo": 8,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

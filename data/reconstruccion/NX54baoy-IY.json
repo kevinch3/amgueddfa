@@ -1,0 +1,344 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   202.3,
+   "Muchas gracias"
+  ],
+  [
+   208.7,
+   "es mientras se prepara el último grupo"
+  ],
+  [
+   212.6,
+   "el cuarto de esta misma competencia"
+  ],
+  [
+   214.4,
+   "hablamos de"
+  ],
+  [
+   216.2,
+   "Eisteddfod queremos comentarles que estamos"
+  ],
+  [
+   220.2,
+   "saliendo en vivo por internet a través"
+  ],
+  [
+   222.8,
+   "de la página web del"
+  ],
+  [
+   227.7,
+   "www.org.ar así que bueno Un saludo para"
+  ],
+  [
+   230.6,
+   "toda la gente gales que va haber muchas"
+  ],
+  [
+   233.1,
+   "suponemos"
+  ],
+  [
+   234.0,
+   "viendo a través de internet esta"
+  ],
+  [
+   236.6,
+   "realización del 2009"
+  ],
+  [
+   264.6,
+   "No solamente la gente, los de acá"
+  ],
+  [
+   268.1,
+   "y nos pueden ver y"
+  ],
+  [
+   271.0,
+   "compartir con nosotros y estamos voy a"
+  ],
+  [
+   274.4,
+   "leer una un mail que mandaron a"
+  ],
+  [
+   278.6,
+   "propósito de esto"
+  ],
+  [
+   282.5,
+   "para la comisión del Eisteddfod cuando"
+  ],
+  [
+   287.2,
+   "leí tu mensaje no sé por qué se me vino"
+  ],
+  [
+   290.5,
+   "a la memoria el primer Eisteddfod al que"
+  ],
+  [
+   297.2,
+   "de la década del 60 en el viejo salón"
+  ],
+  [
+   300.5,
+   "San David Para mí era todo un misterio"
+  ],
+  [
+   304.6,
+   "saber de qué se trataba esa palabra que"
+  ],
+  [
+   307.9,
+   "sonaba tan rara a mis oídos aún guardo"
+  ],
+  [
+   312.8,
+   "la imagen de las antiguas estufas"
+  ],
+  [
+   316.4,
+   "calentando el salón y un escenario"
+  ],
+  [
+   320.4,
+   "iluminado con una luz que sin duda hoy"
+  ],
+  [
+   324.6,
+   "en día no dudarías en"
+  ],
+  [
+   328.5,
+   "llamar"
+  ],
+  [
+   331.3,
+   "a la salida que era un verdadero evento"
+  ],
+  [
+   335.0,
+   "social nos estaba esperando Aunque"
+  ],
+  [
+   339.0,
+   "no le gustaba mucho sabía que había"
+  ],
+  [
+   342.1,
+   "estado con varios amigos de la chakra en"
+  ],
+  [
+   344.5,
+   "la Guada de Don Pepe Charlando"
+  ],
+  [
+   348.2,
+   "seguramente de helles"
+  ],
+  [
+   351.6,
+   "perdidos cuando en tu mensaje leo hoy"
+  ],
+  [
+   354.7,
+   "que podemos ver el por internet me doy"
+  ],
+  [
+   358.5,
+   "cuenta que muchos años han pasado"
+  ],
+  [
+   362.0,
+   "desde la primera vez que concurrí"
+  ],
+  [
+   365.3,
+   "estos años tuve la fortuna de poder"
+  ],
+  [
+   368.8,
+   "participar y también de colaborar en la"
+  ],
+  [
+   373.0,
+   "organización entonces puedo decir que si"
+  ],
+  [
+   377.0,
+   "bien la evolución tecnológica ha hecho"
+  ],
+  [
+   379.8,
+   "una gran diferencia entre mis primeros"
+  ],
+  [
+   382.1,
+   "recuerdos y la realidad de hoy Aún se"
+  ],
+  [
+   386.0,
+   "conserva el sano"
+  ],
+  [
+   388.4,
+   "espíritu"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 7,
+  "modelo": 7,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

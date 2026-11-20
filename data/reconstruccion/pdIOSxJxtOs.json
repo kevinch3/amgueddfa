@@ -1,0 +1,99 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   19.6,
+   "Gracias a Dios, aún sobra el viento"
+  ],
+  [
+   28.8,
+   "Gracias a Dios, aún corre el agua"
+  ],
+  [
+   33.8,
+   "Gracias a Dios, aún cae la lluvia"
+  ],
+  [
+   39.2,
+   "Gracias a Dios, son claras la mañana"
+  ],
+  [
+   59.8,
+   "Te trajo el viento de dichas esperanzas"
+  ],
+  [
+   65.0,
+   "Marín Chihuahua, si seguimos caminando"
+  ],
+  [
+   69.6,
+   "Marín Chihuahua, si la paz siempre nos pasa"
+  ],
+  [
+   74.6,
+   "Marich y huevos, porque alabraron los campos, más no pudieron alabrarnos el alma."
+  ],
+  [
+   88.4,
+   "Gracias a Dios, aún suenan canciones, saludando al sol sobre las casas."
+  ],
+  [
+   97.9,
+   "Gracias a Dios porque aún discutimos sobre el futuro de nuestra raza"
+  ],
+  [
+   108.5,
+   "No hay un tratado porque aún nos marchían y cierran dudas sobre nuestro mañana"
+  ],
+  [
+   117.6,
+   "No hay un tratado porque el mundo grande no nos impide de la alegría"
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

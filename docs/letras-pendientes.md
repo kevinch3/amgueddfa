@@ -2,7 +2,7 @@
 
 Generado por `python3 -m scripts.letras_pendientes`: no editar a mano. Cómo cargar una letra: skill `video-lyrics`.
 
-Obras cantadas con título en el programa y video transcripto: **64** (1 con letra, 63 pendientes). Obras «a elección» por identificar: **120** apariciones.
+Obras cantadas con título en el programa y video transcripto: **64** (5 con letra, 59 pendientes). Obras «a elección» por identificar: **120** apariciones.
 
 Primero las de texto probablemente libre (litúrgico, tradicional, autores antiguos: una pista, los derechos los confirma el mantenedor), después por cantidad de videos (una letra sirve para todos). Para cada una hace falta el texto **tal como se canta**, en su idioma.
 
@@ -21,10 +21,6 @@ Primero las de texto probablemente libre (litúrgico, tradicional, autores antig
 | In stiller Nacht | Johannes Brahms | probablemente libre | 1 | chubut 2026 comp. 79<br>[hVtD63KLlsw 9:53:02](https://www.youtube.com/watch?v=hVtD63KLlsw&t=35582s) | pendiente |
 | Pater noster | Igor Stravinsky | probablemente libre | 1 | chubut 2018 comp. 64<br>[eNmj-1_HlIk 1:30:39](https://www.youtube.com/watch?v=eNmj-1_HlIk&t=5439s) | pendiente |
 | Wade in the water | espiritual negro, anónimo, arr. Muitis | probablemente libre | 1 | chubut 2018 comp. 56<br>[utHSvsjwvwo 2:59:59](https://www.youtube.com/watch?v=utHSvsjwvwo&t=10799s) | pendiente |
-| En los brazos de la luna | Alfonso Letelier | verificar derechos | 3 | chubut 2008 comp. 60<br>[2VjZIBTMmqo](https://www.youtube.com/watch?v=2VjZIBTMmqo) [BFkVC4Xe7RA](https://www.youtube.com/watch?v=BFkVC4Xe7RA) [cLZdGxOA1TE](https://www.youtube.com/watch?v=cLZdGxOA1TE) | pendiente |
-| El abuelo y el pehuen | Rubén Patagonia, Jeremías Chauque y Fabián Vejar, versión coral Sergio Rodrigo Seballos | verificar derechos | 2 | chubut 2022 comp. 60<br>[0X83qrUotz0 3:24:09](https://www.youtube.com/watch?v=0X83qrUotz0&t=12249s) [txd21BSbm70](https://www.youtube.com/watch?v=txd21BSbm70) | pendiente |
-| Ta na solbici | Samo Vovk | verificar derechos | 2 | chubut 2025 comp. 76<br>[MIW7333GiIY 4:25](https://www.youtube.com/watch?v=MIW7333GiIY&t=265s) [_75BiKuifoQ](https://www.youtube.com/watch?v=_75BiKuifoQ) | pendiente |
-| Alfonsina y el mar | A. Ramírez – F. Luna, v. c. C. Jones | verificar derechos | 1 | chubut 2012 comp. 67<br>[-3MdFJJ4-Qs](https://www.youtube.com/watch?v=-3MdFJJ4-Qs) | pendiente |
 | Allá lejos y hace tiempo | Ariel Ramírez y Armando Tejada Gómez, arr. Néstor Zadoff | verificar derechos | 1 | chubut 2018 comp. 76<br>[eNmj-1_HlIk 4:47:18](https://www.youtube.com/watch?v=eNmj-1_HlIk&t=17238s) | pendiente |
 | Angor | Tudur Huws Jones | verificar derechos | 1 | chubut 2024 comp. 58<br>[L6FSD_iI5ew](https://www.youtube.com/watch?v=L6FSD_iI5ew) | pendiente |
 | Ar Lan y Môr | trefn. D. E. Parry Williams | verificar derechos | 1 | chubut 2018 comp. 71<br>[utHSvsjwvwo 7:56:22](https://www.youtube.com/watch?v=utHSvsjwvwo&t=28582s) | pendiente |
@@ -71,6 +67,10 @@ Primero las de texto probablemente libre (litúrgico, tradicional, autores antig
 | Y Cymro | Meirion Williams | verificar derechos | 1 | chubut 2024 comp. 43<br>[VDCKHPXzibM 33:16](https://www.youtube.com/watch?v=VDCKHPXzibM&t=1996s) | pendiente |
 | Ysbryd Rebeca | Tecwyn Ifan | verificar derechos | 1 | chubut 2026 comp. 65<br>[cDpe89FFjOA 5:32:48](https://www.youtube.com/watch?v=cDpe89FFjOA&t=19968s) | pendiente |
 | Zamba del carnaval | Cuchi Leguizamón, versión coral Pablo D. Roberto | verificar derechos | 1 | chubut 2022 comp. 71<br>[-t5r4pwKx50 8:04:03](https://www.youtube.com/watch?v=-t5r4pwKx50&t=29043s) | pendiente |
+| En los brazos de la luna | Alfonso Letelier | verificar derechos | 3 | chubut 2008 comp. 60<br>[2VjZIBTMmqo](https://www.youtube.com/watch?v=2VjZIBTMmqo) [BFkVC4Xe7RA](https://www.youtube.com/watch?v=BFkVC4Xe7RA) [cLZdGxOA1TE](https://www.youtube.com/watch?v=cLZdGxOA1TE) | ✅ cargada |
+| El abuelo y el pehuen | Rubén Patagonia, Jeremías Chauque y Fabián Vejar, versión coral Sergio Rodrigo Seballos | verificar derechos | 2 | chubut 2022 comp. 60<br>[0X83qrUotz0 3:24:09](https://www.youtube.com/watch?v=0X83qrUotz0&t=12249s) [txd21BSbm70](https://www.youtube.com/watch?v=txd21BSbm70) | ✅ cargada |
+| Ta na solbici | Samo Vovk | verificar derechos | 2 | chubut 2025 comp. 76<br>[MIW7333GiIY 4:25](https://www.youtube.com/watch?v=MIW7333GiIY&t=265s) [_75BiKuifoQ](https://www.youtube.com/watch?v=_75BiKuifoQ) | ✅ cargada |
+| Alfonsina y el mar | A. Ramírez – F. Luna, v. c. C. Jones | verificar derechos | 1 | chubut 2012 comp. 67<br>[-3MdFJJ4-Qs](https://www.youtube.com/watch?v=-3MdFJJ4-Qs) | ✅ cargada |
 | Rosa Amarela | Heitor Villalobos | verificar derechos | 1 | chubut 2025 comp. 75<br>[h5zX7SaZJt8](https://www.youtube.com/watch?v=h5zX7SaZJt8) | ✅ cargada |
 
 ## Obras «a elección» (identificar primero cuál se cantó)

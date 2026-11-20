@@ -173,6 +173,22 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "04d6f4c5-7115-484a-808b-4524d6327c75",
+    "type": "fact",
+    "festival": "mimosa",
+    "year": 2014,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Chubut Cultural, 10/08/2014: https://chubutcultural.com.ar/2014/08/resultados-eisteddfod-mimosa-poth-madryn/",
+      "lote": "f407cbf2-3737-41d0-a84a-fe3f422d034c",
+      "value": "Premio Telyn (poesía en galés): Mary Green de Borda, de Trevelin; Premio Mimosa (poesía en castellano): Vilma Nanci Jones"
+    },
+    "created_at": "2026-11-20T07:03:43.622237+00:00",
+    "reviewed_at": "2026-11-20T07:03:43.622237+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "05147349-3e43-46bd-9b12-e82b752fb432",
     "type": "tag",
     "festival": "chubut",
@@ -1061,6 +1077,22 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "24048579-baa3-4a7e-b591-c5f6738a7553",
+    "type": "fact",
+    "festival": "mimosa",
+    "year": 2017,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Chubut Cultural, 08/08/2017: https://chubutcultural.com.ar/2017/08/resultados-eisteddfod-mimosa-2017/",
+      "lote": "c24eb853-ccfe-4d2c-b186-dfe60a1a9195",
+      "value": "Premio Telyn (poesía en galés): Sara Borda Green, de Trevelin («Nant y pysgod (I Llwyd ap Iwan)», seudónimo «Dominga»); Premio Mimosa (poesía en castellano): Alicia Cristina de Volpi («Hilván secreto», seudónimo «Rizoma»)"
+    },
+    "created_at": "2026-11-20T07:03:45.304602+00:00",
+    "reviewed_at": "2026-11-20T07:03:45.304602+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "241b4735-a17b-4a8f-a55a-d78eed71ab1b",
     "type": "fact",
     "festival": "chubut",
@@ -1324,6 +1356,22 @@
     },
     "created_at": "2026-11-20T07:03:13.676968+00:00",
     "reviewed_at": "2026-11-20T07:03:13.676968+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "2b838044-99b1-4e42-9543-638278d75ef8",
+    "type": "fact",
+    "festival": "mimosa",
+    "year": 2023,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Gacetilla y resultados 2023 (Chubut Cultural): https://chubutcultural.com.ar/wp-content/uploads/2023/08/gacetilla-y-resultados-2023.pdf",
+      "lote": "755d1a87-f1ba-49c4-abf4-29c964c0f5fa",
+      "value": "Premio Telyn (poesía en galés): Geraldine Mac Burney Jones («Llanw a thrai»); Premio Mimosa (poesía en castellano): Pedro Tagliabúe, de Gaiman («Elementos», seudónimo «Simón»)"
+    },
+    "created_at": "2026-11-20T07:03:48.568139+00:00",
+    "reviewed_at": "2026-11-20T07:03:48.568139+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -5081,6 +5129,22 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "a41fd481-eef0-48bd-b96a-787f1a7938bc",
+    "type": "fact",
+    "festival": "mimosa",
+    "year": 2018,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Resultados del Eisteddfod Mimosa, 04/08/2018 (Chubut Cultural): https://chubutcultural.com.ar/wp-content/uploads/2018/08/prog-del-dia-2018_RESULTADOS.pdf",
+      "lote": "18ed4b1b-b014-4771-bbe3-57021949eb5a",
+      "value": "Premio Mimosa (poesía en castellano): Alicia Cristina de Volpi"
+    },
+    "created_at": "2026-11-20T07:03:46.890003+00:00",
+    "reviewed_at": "2026-11-20T07:03:46.890003+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "a4470a1e-e25f-41d3-84ef-0c76fd397a46",
     "type": "fact",
     "festival": "chubut",
@@ -5575,6 +5639,22 @@
     "created_at": "2026-11-16T18:31:17.630618+00:00",
     "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
     "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "b89305b3-eadf-4a73-8ff5-2033432595d0",
+    "type": "fact",
+    "festival": "mimosa",
+    "year": 2024,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Resultados 10/08/2024 (Chubut Cultural): https://chubutcultural.com.ar/wp-content/uploads/2024/08/RESULTADOS-10-de-agosto-2024.pdf",
+      "lote": "c20b5690-2c42-4bfc-8493-ba336a04f53d",
+      "value": "Premio Telyn (poesía en galés): Noelia Sánchez Jenkins, de Esquel («Taran a mellt», seudónimo «Caradog»); Premio Mimosa (poesía en castellano): desierto, con menciones especiales a Nanci Jones («Libélulas») y Pablo Pecorelli («Tierra y raíz»)"
+    },
+    "created_at": "2026-11-20T07:03:50.158692+00:00",
+    "reviewed_at": "2026-11-20T07:03:50.158692+00:00",
+    "display_name": "Kevin Roberts"
   },
   {
     "id": "b8a66142-aa69-4254-b25c-30985eff960e",
@@ -8034,6 +8114,22 @@
     },
     "created_at": "2026-11-14T14:09:09.603838+00:00",
     "reviewed_at": "2026-11-14T14:09:09.603838+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "fcb55806-c9b4-4303-812d-9bc70b9cb0ff",
+    "type": "fact",
+    "festival": "mimosa",
+    "year": 2011,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Chubut Cultural, 05/07/2011: https://chubutcultural.com.ar/2011/07/los-ganadores-del-eisteddfod-mimosa-excelencia-musical-para-el-coro-estable-municipal-de-puerto-madryn/",
+      "lote": "90445722-32d6-4caa-aff0-d3d90b3b28d2",
+      "value": "Premio Telyn (poesía en galés): Ana Chiabrando, de Gaiman (seudónimo «Lleuad Fedi»); Premio Mimosa (poesía en castellano): Mónica Jones, de Gaiman («Parábola nueva», seudónimo «Id est»)"
+    },
+    "created_at": "2026-11-20T07:03:41.992072+00:00",
+    "reviewed_at": "2026-11-20T07:03:41.992072+00:00",
     "display_name": "Kevin Roberts"
   },
   {

@@ -1,0 +1,25 @@
+---
+import { t } from '../lib/i18n';
+import { url } from '../lib/paths';
+
+// Search in what is said in the videos (scripts/buscar-videos.ts): one edition's videos on its
+// page (`edicion`, "chubut-2025"), or every edition's on /buscar/. Hidden until the script runs:
+// it needs JavaScript. Results link to the moment (#v=<id>&t=<seconds>, lib/video-hash.ts).
+interface Props { edicion?: string }
+const { edicion } = Astro.props;
+---
+<div class="vbuscar" data-vbuscar data-edicion={edicion} hidden data-pagefind-ignore="all">
+  <form class="vb-caja" role="search" data-vb-form>
+    <label for="vb-q" class="sr-only">{t('videos.buscar.etiqueta')}</label>
+    <span class="campo-buscar">
+      <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7" /><path d="m20 20-3.6-3.6" /></svg>
+      <input id="vb-q" type="search" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" placeholder={t('videos.buscar.placeholder')} data-vb-q />
+    </span>
+  </form>
+  <p class="vb-estado small">
+    <span data-vb-estado role="status"></span>
+    {edicion && <a href={`${url('buscar/')}?en=videos`} data-vb-otras data-base={url('buscar/')}>{t('videos.buscar.otras')} <span aria-hidden="true">→</span></a>}
+  </p>
+  <div class="vb-resultados" data-vb-resultados></div>
+  <p class="vb-nota muted small" data-vb-nota hidden>{t('videos.buscar.nota')}</p>
+</div>

@@ -736,6 +736,21 @@
       "sesion": "Sesiwn gyfan",
       "noticia": "Newyddion",
       "actuacion": "Perfformiad"
+    },
+    "buscar": {
+      "etiqueta": "Chwilio yn yr hyn a ddywedir yn y fideos",
+      "placeholder": "Chwilio am air a ddywedir neu a genir yn y fideos",
+      "otras": "Chwilio mewn blynyddoedd eraill",
+      "cargando": "Wrthi'n llwytho'r trawsgrifiadau…",
+      "error": "Methwyd llwytho rhai trawsgrifiadau.",
+      "resultados": "Eiliadau: {n} · Fideos: {videos}",
+      "momentos": "Eiliadau: {n}",
+      "sin_resultados": "Nid oes yr un fideo o'r Eisteddfod hon yn dweud «{q}».",
+      "sin_resultados_todas": "Nid oes yr un fideo yn dweud «{q}».",
+      "progreso": "Wrthi'n chwilio'r blynyddoedd: {n} o {total}…",
+      "mas": "Gweld {n} arall",
+      "nota": "Mae'r rhan fwyaf o'r trawsgrifiadau'n awtomatig a gallant gynnwys gwallau, yn enwedig yn y canu.",
+      "ayuda_todas": "Chwiliwch am air a ddywedir neu a genir yn fideos pob blwyddyn. Mae pob canlyniad yn agor y fideo ar yr eiliad honno."
     }
   },
   "paises": {
@@ -972,7 +987,12 @@
     "resultados": "[COUNT] canlyniad ar gyfer «[SEARCH_TERM]»",
     "un_resultado": "1 canlyniad ar gyfer «[SEARCH_TERM]»",
     "buscando": "Yn chwilio am «[SEARCH_TERM]»…",
-    "sin_js": "Mae angen JavaScript i chwilio. Gallwch bori'r archif fesul eisteddfod a blwyddyn."
+    "sin_js": "Mae angen JavaScript i chwilio. Gallwch bori'r archif fesul eisteddfod a blwyddyn.",
+    "pestanas": {
+      "etiqueta": "Ble i chwilio",
+      "documentos": "Dogfennau",
+      "videos": "Fideos"
+    }
   },
   "multimedia": {
     "titulo": "Amlgyfrwng",

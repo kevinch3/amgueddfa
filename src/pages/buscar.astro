@@ -1,10 +1,13 @@
 ---
 import Base from '../layouts/Base.astro';
+import VideoSearch from '../components/VideoSearch.astro';
 import { t } from '../lib/i18n';
 import { url } from '../lib/paths';
 
 // Pagefind builds one Spanish index at build time (package.json "build"); every
 // language's /buscar/ reads it and rewrites result links to its own pages.
+// A second tab searches what is said in the videos of every edition (?en=videos;
+// components/VideoSearch.astro), which Pagefind does not index.
 const strings = {
   placeholder: t('buscar.placeholder'),
   clear_search: t('buscar.borrar'),
@@ -22,8 +25,18 @@ const prefix = url('/');
   <link slot="head" rel="stylesheet" href={url('pagefind/pagefind-ui.css')} />
   <article class="measure">
     <h1>{t('buscar.titulo')}</h1>
-    <p class="lead">{t('buscar.ayuda')}</p>
-    <div id="buscador" data-prefix={prefix} data-strings={JSON.stringify(strings)}></div>
+    <div class="tabs" role="tablist" aria-label={t('buscar.pestanas.etiqueta')} data-buscar-tabs hidden>
+      <button type="button" role="tab" id="btab-documentos" aria-controls="bpanel-documentos" aria-selected="true" tabindex="0" data-tab="documentos">{t('buscar.pestanas.documentos')}</button>
+      <button type="button" role="tab" id="btab-videos" aria-controls="bpanel-videos" aria-selected="false" tabindex="-1" data-tab="videos">{t('buscar.pestanas.videos')}</button>
+    </div>
+    <div role="tabpanel" id="bpanel-documentos" aria-labelledby="btab-documentos">
+      <p class="lead">{t('buscar.ayuda')}</p>
+      <div id="buscador" data-prefix={prefix} data-strings={JSON.stringify(strings)}></div>
+    </div>
+    <div role="tabpanel" id="bpanel-videos" aria-labelledby="btab-videos" hidden>
+      <p class="lead">{t('videos.buscar.ayuda_todas')}</p>
+      <VideoSearch />
+    </div>
     <noscript><p class="textcard">{t('buscar.sin_js')}</p></noscript>
   </article>
   <script is:inline src={url('pagefind/pagefind-ui.js')}></script>
@@ -47,8 +60,50 @@ const prefix = url('/');
           return r;
         },
       });
-      if (q) ui.triggerSearch(q);
+      // Two tabs, one query: Documentos (Pagefind) and Videos (scripts/buscar-videos.ts, which reads ?q= itself on arrival).
+      var tabs = [].slice.call(document.querySelectorAll('[data-buscar-tabs] [role="tab"]'));
+      var videoInput = document.querySelector('#bpanel-videos [data-vb-q]');
+      var docInput = function () { return el.querySelector('.pagefind-ui__search-input'); };
+      var current = 'documentos';
+      function show(name, carry) {
+        var text = carry ? ((current === 'videos' ? videoInput : docInput()) || {}).value || '' : null;
+        current = name;
+        tabs.forEach(function (b) {
+          var on = b.dataset.tab === name;
+          b.setAttribute('aria-selected', on ? 'true' : 'false');
+          b.tabIndex = on ? 0 : -1;
+          document.getElementById('bpanel-' + b.dataset.tab).hidden = !on;
+        });
+        if (text === null) return;
+        var p = new URLSearchParams();
+        if (text) p.set('q', text);
+        if (name === 'videos') p.set('en', 'videos');
+        history.replaceState(history.state, '', location.pathname + (String(p) ? '?' + p : ''));
+        if (name === 'videos' && videoInput) {
+          videoInput.value = text;
+          videoInput.dispatchEvent(new Event('input', { bubbles: true }));
+          videoInput.focus();
+        } else {
+          ui.triggerSearch(text);
+          if (docInput()) docInput().focus();
+        }
+      }
+      tabs.forEach(function (b, i) {
+        b.addEventListener('click', function () { show(b.dataset.tab, true); });
+        b.addEventListener('keydown', function (ev) {
+          if (ev.key !== 'ArrowLeft' && ev.key !== 'ArrowRight') return;
+          var next = tabs[(i + (ev.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length];
+          next.focus();
+          show(next.dataset.tab, true);
+        });
+      });
+      document.querySelector('[data-buscar-tabs]').hidden = false;
+      if (new URLSearchParams(location.search).get('en') === 'videos') show('videos', false);
+      else if (q) ui.triggerSearch(q);
     })();
+  </script>
+  <script>
+    import '../scripts/buscar-videos.ts';
   </script>
 </Base>
 
@@ -63,4 +118,13 @@ const prefix = url('/');
     --pagefind-ui-border-radius: 2px;
     margin-block: 1.5rem;
   }
+  /* Same tabs as /contribuir/. */
+  [data-buscar-tabs] { display: flex; gap: 0.25rem; border-bottom: 2px solid var(--red); margin-bottom: 1rem; flex-wrap: wrap; }
+  [data-buscar-tabs][hidden] { display: none; }
+  [data-buscar-tabs] [role='tab'] {
+    font: 600 1.05rem/1.2 var(--sans); padding: 0.65rem 1.1rem; min-height: 44px; border: 1px solid var(--rule); border-bottom: 0;
+    border-radius: 4px 4px 0 0; background: var(--paper); color: var(--ink); cursor: pointer;
+  }
+  [data-buscar-tabs] [role='tab'][aria-selected='true'] { background: var(--red); border-color: var(--red); color: var(--paper-hi); }
+  [data-buscar-tabs] [role='tab']:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
 </style>

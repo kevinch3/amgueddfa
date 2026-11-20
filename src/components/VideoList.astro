@@ -4,7 +4,10 @@ import { contentLang, t } from '../lib/i18n';
 // Titles and channels are the uploaders' own words (WCAG 3.1.2 on translated pages).
 const lang = contentLang();
 import { splitVideos, videoThumb, videoUrl, type Video } from '../lib/videos';
+import { editionKey } from '../lib/video-search';
+import { searchEditions } from '../lib/video-search-data';
 import VideoPlayer from './VideoPlayer.astro';
+import VideoSearch from './VideoSearch.astro';
 
 // Always rendered (hidden when empty) so live corrections (scripts/live-videos.ts) can move videos in.
 // Each card carries its data so the live script and "Informar un error" can read it; live-videos.ts builds the same markup.
@@ -12,10 +15,14 @@ interface Props { videos: Video[]; festival: string; year: number }
 const { festival, year } = Astro.props;
 const { highlights, performances } = splitVideos(Astro.props.videos);
 const total = highlights.length + performances.length;
+// The search box only where there is something to search: some video of this edition is transcribed.
+const edicion = editionKey(festival, year);
+const searchable = searchEditions().has(edicion);
 ---
 <section class="section" aria-labelledby="videos-t" data-videos data-festival={festival} data-year={year} hidden={total === 0}>
   <h2 id="videos-t">{t('videos.titulo')} <span class="muted small">(<span data-videos-n>{total}</span>)</span></h2>
   <p class="measure muted small">{t('videos.ayuda')}</p>
+  {searchable && <VideoSearch edicion={edicion} />}
   <ul class="videos" data-videos-lista="destacados" hidden={highlights.length === 0}>
     {highlights.map((v) => (
       <li class="video" data-video={v.id} data-title={v.title} data-channel={v.channel} data-kind={v.kind}>

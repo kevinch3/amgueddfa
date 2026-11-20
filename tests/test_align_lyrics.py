@@ -59,3 +59,9 @@ def test_apply_replaces_only_the_span_and_records_it(tmp_path):
 def test_apply_without_spans_is_unchanged(tmp_path):
     t = {"src": "youtube", "lang": "es", "seg": [[1.0, "hola"]]}
     assert apply(t, [], tmp_path) == t
+
+
+def test_align_does_not_invent_repeats():
+    _, stanzas = parse_letra(LETRA)
+    once = [s for s in SEG if s[0] < 25 or s[0] >= 40]  # second stanza heard only once
+    assert len(align(once, stanzas, 5, 40)) == 4

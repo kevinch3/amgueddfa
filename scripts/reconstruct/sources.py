@@ -21,6 +21,9 @@ from scripts.export_video_transcripts import clean_whisper, glob_escape, parse_v
 WELSH_SOURCE: str | None = "cy-techiaith"
 
 
+# Welsh lines the model was less sure of than this are background (music, chatter), not speech:
+# 2009 chair ceremony, the five lines over the opening music are 0.14-0.49; real speech is 0.67+.
+MIN_CY_CONF = 0.6
 SPANISH_NEAR = 3.0  # seconds: a Welsh line this close to a Spanish line is taken as the same (Spanish) speech
 
 
@@ -64,7 +67,8 @@ def load_sources(stem: Path, video_id: str, letras: Path = LETRAS) -> list[Line]
             es_times = [l.t for l in out if l.lang == "es"]
             out += [Line(float(s["s"]), s["text"], "cy", "cy", round(math.exp(s["lp"]), 2) if "lp" in s else None)
                     for s in json.loads(cy.read_text(encoding="utf-8"))["segments"]
-                    if s["text"] and not any(abs(float(s["s"]) - t) <= SPANISH_NEAR for t in es_times)]
+                    if s["text"] and ("lp" not in s or math.exp(s["lp"]) >= MIN_CY_CONF)
+                    and not any(abs(float(s["s"]) - t) <= SPANISH_NEAR for t in es_times)]
     heard_es = [[l.t, l.text] for l in sorted(out) if l.src in ("subida", "yt_es", "whisper_es")]
     heard_cy = [[l.t, l.text] for l in sorted(out) if l.src == "cy"]
     for sp in spans_for(video_id, letras):

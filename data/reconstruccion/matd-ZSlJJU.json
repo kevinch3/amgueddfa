@@ -4,26 +4,6 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
-   10.42,
-   "anadlu'r cerdd orchuddol, a'i chysgodi'n amlwg."
-  ],
-  [
-   32.22,
-   "Diolch am y cofio!"
-  ],
-  [
-   60.0,
-   "Diolch yn fawr."
-  ],
-  [
-   112.78,
-   "iddyn nhw ar hyn o bry' fel arfer."
-  ],
-  [
-   169.2,
-   "Diolch am y cofnodion, mae'n dda i chi ddod i'r cofnodion!"
-  ],
-  [
    173.88,
    "Hybarchlywydd a canwyl i'r Eisteddfodwyr. Mae'n fraint i'w gael ei chroesawu i brif seremoni'r Prynhawn, sef hefod y Cadeirio. Ar ganiad y fanffêr a wnaiff pawb yn y neuadd sefyll, os gwelwch yn dda."
   ],
@@ -33,11 +13,7 @@
   ],
   [
    260.2,
-   "gwybod, ar ben y geiant, gwybod, ac yn gwybod y cefiant, ei garu."
-  ],
-  [
-   280.96,
-   "Ma' cogaru yn y coed anodd yn neud amly, ma' cogaru, core bob hanfod, ac yng nghob hanfod, core gudd."
+   "gwybod, ar ben y geiant, gwybod, ac yn gwybod, gwybod y cefiant, ac yn gwybod, gwybod y cefiant, ac yn gwybod y cefiant, ei garu."
   ],
   [
    303.44,
@@ -126,30 +102,12 @@
   ],
   [
    "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
   ]
  ],
  "ventanas": {
   "total": 9,
-  "modelo": 9,
+  "modelo": 7,
   "reglas": 0,
-  "vacias": 0
+  "vacias": 2
  }
 }

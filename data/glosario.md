@@ -4,3 +4,5 @@
 # Add a line when a listener reports a misheard name; then rerun the videos that contain it.
 dewenllys → Tehuelches
 e-paith → y paith
+dylenneg → telyneg
+cyfarth → cyfarch

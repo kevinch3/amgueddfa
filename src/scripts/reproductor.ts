@@ -63,6 +63,21 @@ if (dialog) {
   let chapters: [number, string, string, string][] = [];
   let activeCh = -1;
   let chToken = 0;
+  /** The second the open video must start at, until it has really played from there. Safari and phones
+   *  block autoplay: YouTube then only cues the video, and its own play button may ignore `start`. */
+  let pendingStart = 0;
+
+  /** Put the video at its moment (when it is ready, and again when it first plays). */
+  function honourStart(playing: boolean): void {
+    if (!player || pendingStart <= 0) return;
+    try {
+      if (Math.abs(player.getCurrentTime() - pendingStart) > 2) player.seekTo(pendingStart, true);
+      if (playing) pendingStart = 0;
+      else player.playVideo();
+    } catch {
+      /* not ready yet: the next event tries again */
+    }
+  }
 
   const lines = $<HTMLOListElement>('[data-rep-lineas]')!;
   const search = $<HTMLInputElement>('[data-rep-q]')!;
@@ -228,6 +243,7 @@ if (dialog) {
     history.replaceState(history.state, '', videoHash(id, start));
     void loadTranscript(id);
     void loadChapters(id);
+    pendingStart = Math.floor(start);
     await loadApi();
     if (player) {
       (player as unknown as { loadVideoById(o: { videoId: string; startSeconds: number }): void }).loadVideoById({ videoId: id, startSeconds: start });
@@ -240,6 +256,11 @@ if (dialog) {
       height: '100%',
       playerVars: { playsinline: 1, rel: 0, autoplay: 1, start: Math.floor(start) },
       events: {
+        onReady: () => honourStart(false),
+        // 1: playing.
+        onStateChange: (ev: { data: number }) => {
+          if (ev.data === 1) honourStart(true);
+        },
         // 2, 5, 100, 101, 150: bad id, HTML5 error, removed, embedding not allowed.
         onError: () => {
           $('.rep-marco')!.hidden = true;
@@ -302,6 +323,7 @@ if (dialog) {
     if (!b || !current || !player) return;
     const start = current.seg[Number(b.dataset.i)]?.[0] ?? 0;
     userScrolledAt = 0;
+    pendingStart = 0; // the visitor chose another moment
     player.seekTo(start, true);
     player.playVideo();
     setActive(Number(b.dataset.i));
@@ -311,6 +333,7 @@ if (dialog) {
     const b = (ev.target as HTMLElement | null)?.closest<HTMLButtonElement>('button[data-sec]');
     if (!b || !player) return;
     userScrolledAt = 0;
+    pendingStart = 0; // the visitor chose another moment
     player.seekTo(Number(b.dataset.sec), true);
     player.playVideo();
   });

@@ -74,7 +74,8 @@ function videoRow(page: string, r: VideoHits): HTMLLIElement {
   const body = el('div', 'vb-cuerpo');
   const head = el('p', 'vb-titulo');
   const title = el('a', undefined, r.video.title);
-  title.href = moment(0);
+  // Every part of a result goes to where the word is said, the title too.
+  title.href = moment(r.hits[0]?.t ?? 0);
   // The uploader's own words: their language, not the page's (WCAG 3.1.2).
   const lang = contentLang();
   if (lang) title.lang = lang;
@@ -211,9 +212,12 @@ function setup(root: HTMLElement): void {
     const p = new URLSearchParams(location.search);
     if (p.get('en') === 'videos' && p.get('q')) {
       input.value = p.get('q')!;
-      void load();
-      run();
     }
+  }
+  // Text already in the box (from ?q=, or put back by the browser on "back"): search it now.
+  if (input.value.trim()) {
+    void load();
+    run();
   }
 }
 

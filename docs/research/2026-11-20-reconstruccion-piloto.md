@@ -32,9 +32,22 @@ The long session `3jnNklLlxQ0` (2019, 3.9 h, 234 windows) ran as a dry run only,
 
 In run 1 the model was shown the word list in the checker's folded form, so "sueno alfarero" came out without the ñ or capitals. Prompt v2 shows the words as the context spells them, and the checker still compares folded forms. The test is `test_word_list_keeps_accents_and_capitals_of_the_context`.
 
+## Checker hardened after review
+
+A whole-branch review found that a line made only of word-list words passed the checker. It could have published a wrong winner's name. The checker now:
+- accepts a word-list word only through a fix whose original word was heard;
+- builds the word list from names and values only, never field labels;
+- requires lyric lines to keep their time and appear once;
+- verifies that sources are real and that line times are source times.
+
+Results after hardening:
+- **Real replies:** all 32 cached pilot replies still pass. Rechecking them cost nothing because they were cached.
+- **Injected invention:** an invented winner line added to 9 real replies was rejected 9/9.
+- **Empty results:** an empty result now writes no file. FtRH27iNJtM keeps its current transcript and is listed in the run summary as "sin texto".
+
 ## Things to watch
 
-- **Empty results.** `FtRH27iNJtM`, a sung piece with garbled Whisper text, ended with **no lines**, so the player now shows no transcription for it. That fits the rule "leaving out is better than guessing". It needs the song's lyrics (skill `video-lyrics`) to get text back.
+- **Empty results.** `FtRH27iNJtM`, a sung piece with garbled Whisper text, ended with no lines. It keeps its current transcript, and the song's lyrics (skill `video-lyrics`) would give it a real one.
 - **Pass rate.** 100% of windows passed, partly because the model mostly keeps or removes heard words. The checker rejected nothing in this sample, so its value shows only when the model goes wrong. It is covered by tests.
 - **Leftover duplicates.** Some kept lines duplicate a lyric at the edge of a song: one automatic "Se va, se va…" line at 2:55, inside the Guastavino span.
 

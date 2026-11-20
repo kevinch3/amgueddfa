@@ -58,8 +58,8 @@ Only windows whose inputs changed are asked again, because each window carries a
 
 | Sign | Meaning | Do |
 |---|---|---|
-| `reglas` > 0 | the model wrote an unheard word, or a call failed | normal in small numbers. The reason is printed per window (`rule 1…4`) |
-| A video with 0 lines | no source made sense (garbled singing) | supply the piece's lyrics (`video-lyrics`); don't force text |
+| `reglas` > 0 | the model wrote an unheard word, an unverified fix or source, or a call failed | normal in small numbers. The reason is printed per window (`rule 1…5`) |
+| A video in the summary's `sin texto` list | no source made sense (garbled singing). No file is written and today's transcript stays | supply the piece's lyrics (`video-lyrics`); don't force text |
 | A word without accents or capitals | the word list was folded again | check `display_words()` in `model.py` |
 | An automatic line inside a song | the model kept a heard line next to the lyric | acceptable; better span times in `data/letras/videos.json` fix it |
 

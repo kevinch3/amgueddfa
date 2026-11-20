@@ -1,0 +1,232 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   15.4,
+   "Qué bien baila la"
+  ],
+  [
+   17.8,
+   "niña con qué don"
+  ],
+  [
+   20.7,
+   "aire. Parece una"
+  ],
+  [
+   24.0,
+   "plumita que anda en el aire."
+  ],
+  [
+   27.9,
+   "Parece una"
+  ],
+  [
+   40.3,
+   "Es un batir de alas su"
+  ],
+  [
+   45.2,
+   "pañolito. Y es un matir de alas su"
+  ],
+  [
+   50.4,
+   "pañuelito."
+  ],
+  [
+   53.0,
+   "Hay quien"
+  ],
+  [
+   55.0,
+   "pudiera besar su boca y mirarse en sus"
+  ],
+  [
+   61.1,
+   "ojitos todas las"
+  ],
+  [
+   63.9,
+   "Mirarse en sus ojitos. Hay todas"
+  ],
+  [
+   69.0,
+   "las horas."
+  ],
+  [
+   86.6,
+   "Bailando me"
+  ],
+  [
+   88.8,
+   "parece mimbre su"
+  ],
+  [
+   91.7,
+   "cuerpo. Varilla de membrillo hay junco"
+  ],
+  [
+   96.4,
+   "en el viento."
+  ],
+  [
+   98.8,
+   "Varilla de membrillo hay junco en el"
+  ],
+  [
+   103.0,
+   "viento."
+  ],
+  [
+   104.6,
+   "Y si al norte ya se"
+  ],
+  [
+   107.2,
+   "fuera, sería la reina."
+  ],
+  [
+   123.4,
+   "Hay quien"
+  ],
+  [
+   125.4,
+   "pudiera besar su boca y mirarse en sus"
+  ],
+  [
+   131.6,
+   "ojitos todas las"
+  ],
+  [
+   134.4,
+   "horas. Mirarse en sus ojitos hay todas"
+  ],
+  [
+   139.4,
+   "las horas."
+  ],
+  [
+   141.8,
+   "Hay quien"
+  ],
+  [
+   143.8,
+   "pudiera besar su boca y mirarse en sus"
+  ],
+  [
+   149.9,
+   "ojitos todas las"
+  ],
+  [
+   152.6,
+   "horas mirarse en sus ojitos hay"
+  ],
+  [
+   159.9,
+   "todas las horas"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

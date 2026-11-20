@@ -1,0 +1,99 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   33.9,
+   "Y así de final pasarás llena de ilusión"
+  ],
+  [
+   37.6,
+   "Cállate cuando no llores más"
+  ],
+  [
+   41.7,
+   "Que este mañana se te olvidará"
+  ],
+  [
+   52.5,
+   "Y así de final pasarás llena de ilusión"
+  ],
+  [
+   90.0,
+   "Que la regaña y le pega sin tener razón"
+  ],
+  [
+   104.5,
+   "Que la regaña y le pega sin tener razón"
+  ],
+  [
+   109.5,
+   "Calma de Juana y no llora más"
+  ],
+  [
+   113.0,
+   "Que el día de mañana se te olvidará"
+  ],
+  [
+   126.0,
+   "pasarás en llena de ilusión"
+  ],
+  [
+   128.9,
+   "calma de cuarga y no dole más"
+  ],
+  [
+   132.7,
+   "cada mañana se te arreglará"
+  ],
+  [
+   143.0,
+   "y a su vida pasarás en llena de ilusión"
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

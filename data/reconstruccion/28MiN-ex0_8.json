@@ -1,0 +1,113 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   1.0,
+   "Hoy, a media voz, traigo esta hermosa historia de Basilio,"
+  ],
+  [
+   21.2,
+   "un niño de 11 años que trabaja en las minas de Bolivia."
+  ],
+  [
+   30.0,
+   "Debajo en la piedra duerme en Dios, dicen que es más fuerte que el Dios de afuera,"
+  ],
+  [
+   44.5,
+   "que si le da la gana te hace una broma"
+  ],
+  [
+   52.8,
+   "y te lleva con él dentro de la tierra."
+  ],
+  [
+   62.9,
+   "Yo prefiero llevarle un bradito en coca"
+  ],
+  [
+   68.3,
+   "para tenerlo contento y que no se ofenda."
+  ],
+  [
+   74.5,
+   "Y me dejé salir corriendo del cerro, a inventarse la vida que a mí me toca."
+  ],
+  [
+   116.6,
+   "La suerte que yo sufro, nadie la entiende"
+  ],
+  [
+   127.5,
+   "Solo el diablo que vive del mismo pueblo"
+  ],
+  [
+   133.4,
+   "Por eso el mío diablo, cosas que ofrendo"
+  ],
+  [
+   139.1,
+   "Porque arriba del cerro ya mi Dios sube"
+  ],
+  [
+   145.7,
+   "Un día al año el carnaval me alegra, y bailamos cantando de la montaña."
+  ],
+  [
+   158.2,
+   "Vecido de colores el viento suena, como si cosmos él también ligera."
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

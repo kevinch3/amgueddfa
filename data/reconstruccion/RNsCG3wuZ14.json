@@ -1,0 +1,358 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   5.8,
+   "que todo mi cantar me justifique"
+  ],
+  [
+   9.1,
+   "de maría julia alemán de brand"
+  ],
+  [
+   15.5,
+   "mi canto estuvo siempre enamorado de"
+  ],
+  [
+   18.4,
+   "esta tierra paisana y fronteriza"
+  ],
+  [
+   23.5,
+   "un puñado de sal y de ceniza por el"
+  ],
+  [
+   26.1,
+   "viento del sur desparramado"
+  ],
+  [
+   29.5,
+   "pero a veces ni fue canto sino un grito"
+  ],
+  [
+   34.1,
+   "liberado por fin de su envoltura"
+  ],
+  [
+   37.6,
+   "una flecha en el aire a la aventura una"
+  ],
+  [
+   40.6,
+   "estrella lanzada al infinito"
+  ],
+  [
+   44.3,
+   "pero flecha o estrella"
+  ],
+  [
+   46.9,
+   "su elemento su materia vital y primitiva"
+  ],
+  [
+   52.1,
+   "fue la tierra"
+  ],
+  [
+   53.9,
+   "que en ellas sobreviva más allá de la"
+  ],
+  [
+   56.5,
+   "vida y su momento"
+  ],
+  [
+   60.2,
+   "más allá de mi cuerpo y de su escoria mi"
+  ],
+  [
+   63.8,
+   "canto vivirá"
+  ],
+  [
+   65.8,
+   "fiel testimonio de todo lo que fue mi"
+  ],
+  [
+   68.7,
+   "patrimonio y ha de ser una parte de su"
+  ],
+  [
+   71.2,
+   "historia"
+  ],
+  [
+   73.4,
+   "y yo he de estar ahí"
+  ],
+  [
+   75.6,
+   "detrás del canto detrás de lo que ame y"
+  ],
+  [
+   79.2,
+   "volví poesía de todo lo que fue lírica y"
+  ],
+  [
+   84.6,
+   "mía la razón de mi risa y de mi llanto"
+  ],
+  [
+   91.1,
+   "la razón de mi búsqueda en la vida sin"
+  ],
+  [
+   93.8,
+   "saber al final lo que buscaba sabiendo"
+  ],
+  [
+   97.8,
+   "nada más que se me daba el canto como"
+  ],
+  [
+   102.2,
+   "punto de partida"
+  ],
+  [
+   105.4,
+   "ya ese canto fui fiel"
+  ],
+  [
+   108.8,
+   "cada jornada y en espíritu y alma fui tu"
+  ],
+  [
+   113.0,
+   "amante"
+  ],
+  [
+   115.6,
+   "sur de mi recuerdo más distante"
+  ],
+  [
+   120.8,
+   "o sur de mi voz última y callada"
+  ],
+  [
+   128.7,
+   "yo te amé"
+  ],
+  [
+   138.8,
+   "el bosque con el árbol en su entraña y"
+  ],
+  [
+   141.2,
+   "el lago con azul de firmamento"
+  ],
+  [
+   145.3,
+   "en el cielo de estrellas constelado la"
+  ],
+  [
+   148.9,
+   "libre infinidad del campo abierto"
+  ],
+  [
+   154.0,
+   "y en toda la aridez de su desierto los"
+  ],
+  [
+   157.3,
+   "matojos de pasto calcinado"
+  ],
+  [
+   162.8,
+   "dame un poco de ti"
+  ],
+  [
+   165.9,
+   "tierra sureña"
+  ],
+  [
+   168.7,
+   "para cuando cumplido este mi plazo"
+  ],
+  [
+   172.8,
+   "abre el pardo frescor de tu regazo"
+  ],
+  [
+   177.5,
+   "y recibe mi cuerpo en tu estameña"
+  ],
+  [
+   181.5,
+   "y el lugar de mi tumba identifique un"
+  ],
+  [
+   184.4,
+   "silvestre manojo de mosqueta"
+  ],
+  [
+   187.4,
+   "tierra mía del sur si he sido poeta que"
+  ],
+  [
+   192.9,
+   "este canto de amor me justifique"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

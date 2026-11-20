@@ -1,0 +1,71 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Que se amontó una en la noche, que canción vuelve a crecer."
+  ],
+  [
+   18.3,
+   "Que vino por las cantinas, flores de anochecer."
+  ],
+  [
+   32.3,
+   "¿Por qué viene tu amor y aquí se mora por él?"
+  ],
+  [
+   47.5,
+   "Porque sobre ella se duerme y nos llama una mujer"
+  ],
+  [
+   61.5,
+   "Que se amontona en la noche"
+  ],
+  [
+   70.1,
+   "Que yo no sé"
+  ],
+  [
+   85.5,
+   "Sólo igual a la noche en el cielo"
+  ],
+  [
+   144.4,
+   "Ay amor, que yo no sé, que se amontona la noche."
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

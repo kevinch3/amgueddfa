@@ -1,0 +1,365 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   12.3,
+   "Las tardecitas de Buenos Aires tienen ese..."
+  ],
+  [
+   16.0,
+   "qué sé yo, ¿viste?"
+  ],
+  [
+   18.2,
+   "Salís de tu casa por arenales, lo de siempre, en la calle y en vos."
+  ],
+  [
+   23.8,
+   "Cuando de repente, de atrás de un árbol, me aparezco yo."
+  ],
+  [
+   30.0,
+   "Mezcla rara de penúltimo niñera y de primer polizonte en el viaje a Venus."
+  ],
+  [
+   38.0,
+   "Medio melón en la cabeza, las rayas de la camisa pintadas en la piel,"
+  ],
+  [
+   44.0,
+   "dos medios suelas clavadas en los pies y una banderita de taxi libre levantada en cada mano."
+  ],
+  [
+   51.0,
+   "Te reís, pero solo vos me ves, porque yo paso entre la gente y los maniquees me guiñan,"
+  ],
+  [
+   59.0,
+   "Y los semáforos me dan tres luces celestes y las naranjas del frutero de la esquina me tiran azares."
+  ],
+  [
+   66.6,
+   "Vení, que así, medio bailando y medio volando, me saco el melón para saludarte, te regalo una banderita y te digo."
+  ],
+  [
+   84.5,
+   "No ves que va la luna rodando por callao"
+  ],
+  [
+   90.0,
+   "Y un corzo de astronautas y niños con un vals"
+  ],
+  [
+   95.3,
+   "Me baila alrededor, baila, vení, volá"
+  ],
+  [
+   114.4,
+   "El loco berretín que tengo para vos"
+  ],
+  [
+   124.2,
+   "Cuando anochezca en tu porteña soledad"
+  ],
+  [
+   128.5,
+   "Por la ribera de tu sábana vendré"
+  ],
+  [
+   133.4,
+   "Con un poema y un trombón"
+  ],
+  [
+   136.1,
+   "A desvelarte el corazón"
+  ],
+  [
+   143.7,
+   "Como un acróbata de mente saltaré"
+  ],
+  [
+   147.8,
+   "Sobre el abismo de tu escote hasta sentir"
+  ],
+  [
+   152.8,
+   "Enloquecí tu corazón de libertad"
+  ],
+  [
+   156.8,
+   "Ya vas a ver"
+  ],
+  [
+   158.5,
+   "Salgamos a volar, querida mía"
+  ],
+  [
+   162.1,
+   "Subite a mi ilusión super sport"
+  ],
+  [
+   165.0,
+   "Y vamos a correr por las cornizas"
+  ],
+  [
+   167.8,
+   "Con una golondrina en el motor"
+  ],
+  [
+   171.6,
+   "¡Viva!"
+  ],
+  [
+   173.1,
+   "¡Viva a los locos que inventaron el amor!"
+  ],
+  [
+   177.1,
+   "Un ángel, un soldado y una niña"
+  ],
+  [
+   180.4,
+   "Nos dan un balsecito bailador"
+  ],
+  [
+   182.8,
+   "Nos sale a saludar la gente linda, sí"
+  ],
+  [
+   186.3,
+   "Y yo loco"
+  ],
+  [
+   187.6,
+   "Pero loco tuyo, qué sé yo"
+  ],
+  [
+   190.1,
+   "Provoco campanarios con la risa y al fin te miro y canto a media voz"
+  ],
+  [
+   205.7,
+   "La ternura de locos que hay en mí"
+  ],
+  [
+   210.2,
+   "Ponete esta peluca de alondra así volá, volá conmigo ya"
+  ],
+  [
+   247.8,
+   "Ponete esta peluca de alondras y volá"
+  ],
+  [
+   252.3,
+   "Volá conmigo ya"
+  ],
+  [
+   261.7,
+   "Ábrite a los amores que vamos a intentar"
+  ],
+  [
+   266.0,
+   "La mágica, locura total de revivir"
+  ],
+  [
+   270.7,
+   "Bailá conmigo ya"
+  ],
+  [
+   276.8,
+   "¡Viva! ¡Viva!"
+  ],
+  [
+   280.6,
+   "Loca ella, loco yo"
+  ],
+  [
+   282.7,
+   "Todos locos"
+  ],
+  [
+   284.7,
+   "Todos locos"
+  ],
+  [
+   285.8,
+   "¿Qué importa estar loco?"
+  ],
+  [
+   287.8,
+   "¿Qué importa que te digan que estás loco?"
+  ],
+  [
+   289.6,
+   "¿Qué importa estar loco?"
+  ],
+  [
+   292.2,
+   "¿Qué importa estar loco?"
+  ],
+  [
+   295.2,
+   "Loca ella y loco yo"
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 6,
+  "modelo": 6,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

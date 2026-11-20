@@ -1,0 +1,127 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   1.2,
+   "de Irma Cuña Tejedora."
+  ],
+  [
+   6.1,
+   "Seguí surdiendo,"
+  ],
+  [
+   8.8,
+   "atenta,"
+  ],
+  [
+   10.7,
+   "sin preguntas."
+  ],
+  [
+   13.4,
+   "La geometría interminable,"
+  ],
+  [
+   16.9,
+   "blanco y negro"
+  ],
+  [
+   20.1,
+   "de la desilusión y del olvido."
+  ],
+  [
+   25.2,
+   "En tu matra antiquísima"
+  ],
+  [
+   29.1,
+   "vuelan los pájaros,"
+  ],
+  [
+   32.2,
+   "giran las guirnaldas."
+  ],
+  [
+   35.2,
+   "Y oscila entre tus dedos incansables"
+  ],
+  [
+   39.8,
+   "el zigzag de la víbora,"
+  ],
+  [
+   43.6,
+   "las cinco puntas de la estrella"
+  ],
+  [
+   55.8,
+   "Seguís entretegiendo,"
+  ],
+  [
+   61.5,
+   "las huellas de un ritual que te ha"
+  ],
+  [
+   64.6,
+   "perdido."
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

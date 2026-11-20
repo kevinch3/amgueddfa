@@ -1,0 +1,64 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "El regreso siempre se vuelve al ritmo de la vida."
+  ],
+  [
+   93.9,
+   "Y en el alma cerrada un dulce recuerdo que lloró otra vez."
+  ],
+  [
+   109.9,
+   "Tengo miedo del encuentro con el pasado que vuelve a enfrentarse con mi vida."
+  ],
+  [
+   120.9,
+   "Tengo miedo de las noches que por la tarde puede sentarte y soñar, pero hay viajero que huye, tarde o temprano defiende su amor."
+  ],
+  [
+   139.1,
+   "Y aunque olvido que todo destruye, haya matado mi vida, mi ilusión."
+  ],
+  [
+   150.0,
+   "Hoy conmigo respires a un río, es toda la fortuna de mi corazón."
+  ],
+  [
+   194.0,
+   "Y el alma aferrada a un dulce recuerdo que yo otra vez."
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

@@ -1,0 +1,204 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   68.6,
+   "flor yo no sé por qué hoy me"
+  ],
+  [
+   76.8,
+   "más tu señal de"
+  ],
+  [
+   82.5,
+   "amor yo no sé por qué hoy me hiere más"
+  ],
+  [
+   90.6,
+   "tu señal de"
+  ],
+  [
+   94.0,
+   "amor"
+  ],
+  [
+   95.9,
+   "Quiero"
+  ],
+  [
+   99.7,
+   "ir a la tarde"
+  ],
+  [
+   107.7,
+   "capullo de luz que quiere ser"
+  ],
+  [
+   117.0,
+   "ser capullo del luz que quiere ser"
+  ],
+  [
+   123.1,
+   "sol y no puede"
+  ],
+  [
+   133.7,
+   "tristecita"
+  ],
+  [
+   143.8,
+   "murmuro"
+  ],
+  [
+   148.8,
+   "Cañaveral"
+  ],
+  [
+   199.7,
+   "el viento la"
+  ],
+  [
+   203.6,
+   "atrá se la lleva el"
+  ],
+  [
+   208.7,
+   "sol el sueño en el"
+  ],
+  [
+   212.6,
+   "trigal y sobre el sausal lamento de"
+  ],
+  [
+   219.8,
+   "amor sueño en el trigal y sobre el"
+  ],
+  [
+   225.3,
+   "sausal"
+  ],
+  [
+   227.2,
+   "lamento de"
+  ],
+  [
+   230.7,
+   "amor Ya"
+  ],
+  [
+   232.9,
+   "siento"
+  ],
+  [
+   236.1,
+   "llegar del cerro"
+  ],
+  [
+   242.7,
+   "pañuelo ha de ser y lo he de prender en"
+  ],
+  [
+   252.0,
+   "corazón pañuelo ha de ser y lo ha de"
+  ],
+  [
+   257.5,
+   "prender en el"
+  ],
+  [
+   262.8,
+   "corazón hay"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 6,
+  "modelo": 6,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

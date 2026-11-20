@@ -1,0 +1,134 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   15.8,
+   "cuando julio me lleva por la arena de"
+  ],
+  [
+   24.9,
+   "cuando junio me lleva por la arena"
+  ],
+  [
+   38.8,
+   "y entrando el lapso por el golfo casi un"
+  ],
+  [
+   43.3,
+   "pájaro en forma de boleta"
+  ],
+  [
+   55.2,
+   "en la roca de las cuevas"
+  ],
+  [
+   73.0,
+   "de comando los límites del trono"
+  ],
+  [
+   77.3,
+   "agrupando corales dirigiendo"
+  ],
+  [
+   85.1,
+   "la distancia"
+  ],
+  [
+   86.8,
+   "decide el desembarco"
+  ],
+  [
+   91.3,
+   "un abrazo de sol"
+  ],
+  [
+   97.7,
+   "en el vientre confiado de ésta"
+  ],
+  [
+   113.7,
+   "sigo sin paso de dios entre las tierras"
+  ],
+  [
+   138.7,
+   "en la vecindad"
+  ],
+  [
+   144.5,
+   "la noche de la luna del golfo"
+  ],
+  [
+   150.9,
+   "destellos de julio"
+  ],
+  [
+   159.8,
+   "vertical de plata y oro las gaviotas"
+  ],
+  [
+   166.6,
+   "reciente como estrellas"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 9,
+  "modelo": 8,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

@@ -1,0 +1,169 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   1.0,
+   "ignoro Por qué tan"
+  ],
+  [
+   4.4,
+   "triste y"
+  ],
+  [
+   7.1,
+   "apenado"
+  ],
+  [
+   9.1,
+   "estoy un cuento de días"
+  ],
+  [
+   13.6,
+   "lejanos"
+  ],
+  [
+   39.2,
+   "atardecer sentada en La Roca"
+  ],
+  [
+   44.1,
+   "elevada está la más bella"
+  ],
+  [
+   53.4,
+   "dorada fulgura el"
+  ],
+  [
+   62.8,
+   "dorado y canta dulce"
+  ],
+  [
+   67.7,
+   "canción en"
+  ],
+  [
+   70.5,
+   "melodía"
+  ],
+  [
+   72.6,
+   "extraña de"
+  ],
+  [
+   78.5,
+   "la mira el barquero en su"
+  ],
+  [
+   83.7,
+   "barca con"
+  ],
+  [
+   86.0,
+   "torturante"
+  ],
+  [
+   88.9,
+   "ansiedad"
+  ],
+  [
+   93.3,
+   "piedra Solo ella y su"
+  ],
+  [
+   97.9,
+   "cantar me Temo que el agua"
+  ],
+  [
+   102.5,
+   "destroce barquero y Barca por"
+  ],
+  [
+   107.6,
+   "fin por culpa de aquella"
+  ],
+  [
+   112.2,
+   "sirena ya"
+  ],
+  [
+   114.5,
+   "amada"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

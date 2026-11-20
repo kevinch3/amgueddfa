@@ -1,0 +1,120 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.5,
+   "Alumbramiento de Geraldine McBurney"
+  ],
+  [
+   18.9,
+   "Esa noche el crispar de sus alas presagió mi soledad en silencio"
+  ],
+  [
+   28.0,
+   "Entre sus entrañas glaciales el cielo tembló, con esquirlas titilantes como engranajes de plata."
+  ],
+  [
+   38.3,
+   "Un bosquejo de sombra lunar anunciaba el fin de tu espera."
+  ],
+  [
+   44.5,
+   "Hoy necesito tu abrazo, tibio, como cuando encorvada en tu vientre germinaba elemental"
+  ],
+  [
+   54.0,
+   "y éramos un solo silencio."
+  ],
+  [
+   58.0,
+   "Esta noche un frío de una venebra a mis manos, la niebla todo lo envuelve."
+  ],
+  [
+   67.7,
+   "Ya es hora de volver a casa."
+  ],
+  [
+   81.2,
+   "Esa noche el crespar de sus alas presagió mi soledad en silencio"
+  ],
+  [
+   91.1,
+   "Entre sus entrañas graciales el cielo tembló con esquinas titillantes como engranajes de plata"
+  ],
+  [
+   102.4,
+   "Un bosquejo de sombra lunar anunciaba el fin de tu espera"
+  ],
+  [
+   108.1,
+   "Hoy, necesito tu abrazo, tibio, como cuando encorvada en tu vientre, germinaba en el mental, y éramos un solo silencio"
+  ],
+  [
+   125.2,
+   "Esta noche, frío lunar en nebra mis manos"
+  ],
+  [
+   133.3,
+   "La niebla todo lo envuelve"
+  ],
+  [
+   137.4,
+   "Ya es hora de volver a casa"
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

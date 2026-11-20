@@ -1,0 +1,85 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Competencia número 77, Coro de Formación Libre, mínimo 12 integrantes y Conjunto Instrumental de Formación Libre, obra a elección."
+  ],
+  [
+   22.1,
+   "En primer lugar vamos a escuchar el vocal femenino Sur Azul con la obra Chocolatina."
+  ],
+  [
+   63.0,
+   "que me ha mandado a llamar, mi señor Montezuma, que me puedo ayudar, mi señor Montezuma,"
+  ],
+  [
+   73.8,
+   "Dígame, ¿de qué le puedo yo servir?"
+  ],
+  [
+   92.1,
+   "Quiero que me traigas, de allá de Tabasco,"
+  ],
+  [
+   97.4,
+   "El rico canto, pa' que pueda preparar"
+  ],
+  [
+   107.6,
+   "Es mi preferida, yo la quiero disfrutar"
+  ],
+  [
+   113.0,
+   "Chocolate, chocolate"
+  ],
+  [
+   122.7,
+   "Un chocolate, un chocolate, desde México al mundo es lo que hicieron regalos."
+  ],
+  [
+   133.7,
+   "Y ya en todas partes, toman chocolate."
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 5,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

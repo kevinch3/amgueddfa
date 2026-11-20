@@ -1,0 +1,22 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   41.0,
+   "Mientras te ayuno de ese amor para siempre se va a alejar."
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

@@ -1,0 +1,57 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "Y se que viaja de lo del nube, sembrando baños, arambres, piedras"
+  ],
+  [
+   41.8,
+   "Sus manos de acero son cariñas en el metal"
+  ],
+  [
+   46.8,
+   "El vino es bueno si se sabe tomar, dicen, si se sabe tomar"
+  ],
+  [
+   89.0,
+   "Y siempre hay noches, el agua y luna, los vieron volados"
+  ],
+  [
+   98.4,
+   "Un día abierto al infinito, y de nuevo aterrizar"
+  ],
+  [
+   107.9,
+   "Sus manos de acero, tu cariño es el metal"
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

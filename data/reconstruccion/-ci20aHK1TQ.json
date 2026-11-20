@@ -1,0 +1,99 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "...de guitarras en la otra categoría, que era el movimiento instrumental, obra popular."
+  ],
+  [
+   7.9,
+   "Entonces vamos a juntarlo con esta categoría que se va a interpretar ahora, que es obra clásica a elección."
+  ],
+  [
+   18.8,
+   "Pensamos que lo que interpretaron fue más un estudio, una obra académica,"
+  ],
+  [
+   23.7,
+   "más cerca de ser una obra académica o un estudio, que de obra popular."
+  ],
+  [
+   28.0,
+   "entonces en la categoría anterior quedan los otros cuatro agrupaciones"
+  ],
+  [
+   34.7,
+   "cuatro agrupaciones y en esta hora van a quedar dos"
+  ],
+  [
+   39.9,
+   "es decir que el Instituto 805 Puerto Madryn que interpretó sonoridades"
+  ],
+  [
+   44.3,
+   "participaría de esta competencia que vamos a escuchar ahora"
+  ],
+  [
+   47.1,
+   "exactamente"
+  ],
+  [
+   47.7,
+   "perfecto"
+  ],
+  [
+   49.6,
+   "ahora es el lugar entonces de alumnos de ensamble instrumental del Instituto Superior de Formación Docente Artística"
+  ],
+  [
+   115.8,
+   "Amén."
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 6,
+  "modelo": 5,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

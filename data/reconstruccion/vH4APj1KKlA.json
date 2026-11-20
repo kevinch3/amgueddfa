@@ -1,0 +1,162 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   2.0,
+   "de Gioconda Belli"
+  ],
+  [
+   5.4,
+   "a las 5 de la tarde"
+  ],
+  [
+   8.2,
+   "cuando no se queda sin brillo"
+  ],
+  [
+   11.1,
+   "y el jardín se sumergen en un último"
+  ],
+  [
+   14.4,
+   "hervor dorado del día"
+  ],
+  [
+   17.5,
+   "el grupo muchachos o de niños"
+  ],
+  [
+   21.2,
+   "que salen a cazar luciérnagas"
+  ],
+  [
+   26.0,
+   "corriendo sobre él"
+  ],
+  [
+   32.2,
+   "y su excitación"
+  ],
+  [
+   35.5,
+   "sus nombres"
+  ],
+  [
+   40.8,
+   "el color de la pequeña que muestra la"
+  ],
+  [
+   45.4,
+   "encendida cuenca de sus manos"
+  ],
+  [
+   50.1,
+   "y tirando"
+  ],
+  [
+   54.1,
+   "antiguo dice un humano"
+  ],
+  [
+   57.4,
+   "de querer apagar la luz"
+  ],
+  [
+   64.2,
+   "de la última vez que creímos poder"
+  ],
+  [
+   67.3,
+   "iluminar"
+  ],
+  [
+   69.3,
+   "noche"
+  ],
+  [
+   73.4,
+   "el tiempo nos ha vaciado dejó el borde"
+  ],
+  [
+   78.6,
+   "pero la oscuridad sigue poblada de"
+  ],
+  [
+   82.5,
+   "luciérnagas"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

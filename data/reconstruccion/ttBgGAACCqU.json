@@ -1,0 +1,148 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Para la libertad de Miguel Hernández"
+  ],
+  [
+   14.9,
+   "Para la libertad, mis ojos y mis manos"
+  ],
+  [
+   19.8,
+   "Como un árbol carnal, generoso y cautivo"
+  ],
+  [
+   25.5,
+   "Para la libertad siento más corazones y arelas en mi pecho"
+  ],
+  [
+   48.2,
+   "Y me desprendo a golpes de mis pies, de mis brazos, de mi casa"
+  ],
+  [
+   55.0,
+   "de todo"
+  ],
+  [
+   56.8,
+   "porque donde unas puestas vacías"
+  ],
+  [
+   61.5,
+   "ella pondrá dos piedras"
+  ],
+  [
+   64.1,
+   "de la pintura mirada"
+  ],
+  [
+   65.3,
+   "y hará que nuevos brazos"
+  ],
+  [
+   68.0,
+   "y nuevas piernas"
+  ],
+  [
+   69.7,
+   "crezcan en la carne instalada"
+  ],
+  [
+   72.3,
+   "retoñarán"
+  ],
+  [
+   74.1,
+   "en el árbol de sabias"
+  ],
+  [
+   76.3,
+   "reliquias de mi cuerpo"
+  ],
+  [
+   78.0,
+   "que pierdo en cada vida"
+  ],
+  [
+   80.2,
+   "porque soy como el árbol calado"
+  ],
+  [
+   83.9,
+   "que retorno"
+  ],
+  [
+   85.3,
+   "porque aún tengo la vida"
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

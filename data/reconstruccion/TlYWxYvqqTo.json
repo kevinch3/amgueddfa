@@ -1,0 +1,134 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   28.6,
+   "es que todo se volvió"
+  ],
+  [
+   34.3,
+   "cerrar la puerta del sendero"
+  ],
+  [
+   39.7,
+   "la gracia del cartero"
+  ],
+  [
+   43.2,
+   "porque aunque sea"
+  ],
+  [
+   45.9,
+   "una flor"
+  ],
+  [
+   48.7,
+   "pintas el cielo de amor"
+  ],
+  [
+   53.5,
+   "ahora que no tiene"
+  ],
+  [
+   87.4,
+   "volando sobre el verde"
+  ],
+  [
+   92.8,
+   "que te envuelva"
+  ],
+  [
+   102.9,
+   "no te dejes más vencer"
+  ],
+  [
+   106.8,
+   "al alma y que darle de comer"
+  ],
+  [
+   112.1,
+   "un poco de su carne"
+  ],
+  [
+   116.6,
+   "un poco de risa y carmen"
+  ],
+  [
+   161.0,
+   "no te dejes más vencer"
+  ],
+  [
+   168.4,
+   "de comer"
+  ],
+  [
+   176.6,
+   "un poco de risa y"
+  ],
+  [
+   179.1,
+   "caramelos"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

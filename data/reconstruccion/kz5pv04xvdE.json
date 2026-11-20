@@ -1,0 +1,162 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   14.9,
+   "pero a nosotros nos gusta llamar esto la"
+  ],
+  [
+   16.7,
+   "semana del estreno"
+  ],
+  [
+   30.6,
+   "comenzamos con eso lo hicimos un"
+  ],
+  [
+   32.4,
+   "concierto y no solamente el patagonia"
+  ],
+  [
+   37.9,
+   "un conjunto de jóvenes que vienen"
+  ],
+  [
+   45.0,
+   "gente ha preguntado por qué motivo el"
+  ],
+  [
+   54.6,
+   "por eso están habilitados completamente"
+  ],
+  [
+   62.6,
+   "estamos sacar como era antes"
+  ],
+  [
+   63.9,
+   "tradicionalmente así que volvimos acá y"
+  ],
+  [
+   66.8,
+   "bueno ya el jueves comenzamos a la parte"
+  ],
+  [
+   68.9,
+   "más fuerte de la tarde comenzamos ya a"
+  ],
+  [
+   71.0,
+   "trabajar fuerte con los preliminares de"
+  ],
+  [
+   72.6,
+   "música en castellano y danzas"
+  ],
+  [
+   75.9,
+   "folklóricas recitaciones castellanos"
+  ],
+  [
+   83.5,
+   "viernes comenzamos con las competencias"
+  ],
+  [
+   87.3,
+   "que es una sonrisa es una conjunción de"
+  ],
+  [
+   90.2,
+   "artistas de los del valle son de hecho"
+  ],
+  [
+   95.8,
+   "de acá que es de la plata es oriunda de"
+  ],
+  [
+   98.2,
+   "Gaiman así que no quiero adelantar mucho"
+  ],
+  [
+   100.5,
+   "así que vengan a disfrutar la apertura"
+  ],
+  [
+   119.3,
+   "y el martes de nada más por un concierto"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

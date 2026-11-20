@@ -1,0 +1,344 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   1.8,
+   "Hola del Chango Rodríguez Mi luna"
+  ],
+  [
+   29.0,
+   "cautiva"
+  ],
+  [
+   33.5,
+   "de nuevo estoy de"
+  ],
+  [
+   35.4,
+   "vuelta después de larga"
+  ],
+  [
+   38.4,
+   "ausencia igual que La calandria que"
+  ],
+  [
+   41.7,
+   "azota El vendaval y traigo mil canciones"
+  ],
+  [
+   46.8,
+   "como leñita seca recuerdo de fogones que"
+  ],
+  [
+   52.1,
+   "invitan a matear y traigo mil canciones"
+  ],
+  [
+   63.6,
+   "matiar y divise tu rancho a orillas del"
+  ],
+  [
+   68.4,
+   "camino a donde los Jazmín tendieron un"
+  ],
+  [
+   73.0,
+   "altar al pie del"
+  ],
+  [
+   75.7,
+   "calicanto la luna cuando pasa peinó mi"
+  ],
+  [
+   80.6,
+   "serenata la cresta del"
+  ],
+  [
+   84.0,
+   "sausal serenata la cresta"
+  ],
+  [
+   88.8,
+   "del Vino mi serenata la cresta del"
+  ],
+  [
+   93.6,
+   "sausal Tu amor es una estrella con"
+  ],
+  [
+   96.9,
+   "cuerdas de"
+  ],
+  [
+   98.6,
+   "guitarra una luz que me alumbra en mi"
+  ],
+  [
+   103.0,
+   "oscuridad Acércate a La rejas sos la"
+  ],
+  [
+   106.7,
+   "dueña de mi alma sos Mi luna cautiva que"
+  ],
+  [
+   111.1,
+   "me besa y se va Acércate a las rejas sos"
+  ],
+  [
+   116.0,
+   "la dueña de mi alma sos Mi luna ia que"
+  ],
+  [
+   120.8,
+   "me besa y se"
+  ],
+  [
+   147.0,
+   "va escucha que mis Grillos"
+  ],
+  [
+   150.4,
+   "es tan"
+  ],
+  [
+   151.9,
+   "enamorado que llora mi guitarra soso del"
+  ],
+  [
+   156.4,
+   "cantar el tintinear de espuelas del río"
+  ],
+  [
+   160.7,
+   "allá en el vado de una noche serena"
+  ],
+  [
+   164.8,
+   "prendido al mi cantar el tintinear de"
+  ],
+  [
+   168.7,
+   "espuelas del río allá en el vado de una"
+  ],
+  [
+   172.8,
+   "noche serena prendida en mi"
+  ],
+  [
+   176.0,
+   "cantar de nuevo estoy de"
+  ],
+  [
+   178.8,
+   "vuelta cop plastan la huella ar ridos"
+  ],
+  [
+   182.8,
+   "musiqueros me ayudan a llegar tuve que"
+  ],
+  [
+   186.8,
+   "hacer un alto por un toro mañero allá en"
+  ],
+  [
+   191.8,
+   "el calicanto A orilla del sausal tuve"
+  ],
+  [
+   196.0,
+   "que hacer un alto por un torom mañero"
+  ],
+  [
+   200.7,
+   "allá en el calicanto A orilla del"
+  ],
+  [
+   204.7,
+   "sausal Tu amor es una estrella con"
+  ],
+  [
+   208.0,
+   "cuerdas de guitarra"
+  ],
+  [
+   210.7,
+   "una luz que me alumbra en mi"
+  ],
+  [
+   213.8,
+   "oscuridad Acércate a las rejas o la"
+  ],
+  [
+   217.4,
+   "dueña de mi alma sos Mi luna cautiva que"
+  ],
+  [
+   221.8,
+   "me besa y se va Acércate a la reja sos"
+  ],
+  [
+   226.5,
+   "la dueña de mi alma sos Mi luna cautiva"
+  ],
+  [
+   230.9,
+   "que me besa y se"
+  ],
+  [
+   238.7,
+   "gracias"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 4,
+  "reglas": 1,
+  "vacias": 0
+ }
+}

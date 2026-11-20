@@ -1,0 +1,113 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Hola Rodríguez, ¿cómo estás?"
+  ],
+  [
+   4.0,
+   "Eh, buen día, maravilloso."
+  ],
+  [
+   7.0,
+   "¿Pero no tienes que tardar bastante?"
+  ],
+  [
+   11.0,
+   "Sí, pero resulta que el lugar de poner gasolina"
+  ],
+  [
+   39.0,
+   "Sí, vamos por el camino de abajo, como hace años."
+  ],
+  [
+   42.0,
+   "¿Te acordaste?"
+  ],
+  [
+   44.0,
+   "Sí."
+  ],
+  [
+   124.0,
+   "Es lindo, es así."
+  ],
+  [
+   126.0,
+   "Es lindo."
+  ],
+  [
+   140.8,
+   "Y no había nada más picante."
+  ],
+  [
+   142.8,
+   "¡Vamos a pasar!"
+  ],
+  [
+   144.2,
+   "Está en un lado de aquí."
+  ],
+  [
+   145.4,
+   "¡Sí, sí!"
+  ],
+  [
+   158.0,
+   "Venían a buscar y conocían."
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

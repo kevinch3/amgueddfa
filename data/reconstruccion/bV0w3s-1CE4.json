@@ -1,0 +1,106 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   10.0,
+   "Aunque estoy yo para hacerte ir una vez más"
+  ],
+  [
+   46.0,
+   "Le digo al sol, que una estrella azul, que alcanza a mí, brinda el amor en su luz."
+  ],
+  [
+   64.0,
+   "Aquí estoy yo, abriéndome en el corazón"
+  ],
+  [
+   72.5,
+   "Llenando tu cualidad de amor, llenando el corazón"
+  ],
+  [
+   119.4,
+   "Un nuevo sentimiento"
+  ],
+  [
+   151.5,
+   "Aquí estoy yo, abriéndote mi corazón"
+  ],
+  [
+   159.5,
+   "Llenando tu puerta de amor, cerrando el paso al dolor"
+  ],
+  [
+   169.5,
+   "No te mandaré cuidaré, siempre te amaré"
+  ],
+  [
+   178.5,
+   "Dame tu paz, te voy a curar"
+  ],
+  [
+   187.5,
+   "Te mandaré, te invito a cuidar"
+  ],
+  [
+   204.9,
+   "aquí estoy yo"
+  ],
+  [
+   208.0,
+   "abriendo de mi corazón"
+  ],
+  [
+   217.6,
+   "cerrando el pasado"
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

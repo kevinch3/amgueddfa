@@ -1,0 +1,85 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "El jabón de Silvina Ocampo habla una madre su hija."
+  ],
+  [
+   10.0,
+   "Con un jabón metiano verde y rosa, como de mármol, suave y con fragancia,"
+  ],
+  [
+   21.0,
+   "me lavaba las manos en infancia en unas palanganas azul de losa."
+  ],
+  [
+   29.0,
+   "Merecía mi fiebre, la preciosa tensión que esperaba yo con ansia,"
+  ],
+  [
+   36.1,
+   "el hábito ritual de tu constancia, mi devoción ya casi religiosa."
+  ],
+  [
+   44.4,
+   "De Dios en manos y jabón, no en vano ahora el agua lo disuelve."
+  ],
+  [
+   50.3,
+   "Aún late en mis manos su corazón"
+  ],
+  [
+   61.3,
+   "Y en mis amadas palmas me devuelve"
+  ],
+  [
+   64.4,
+   "Con su perfume y su papel de plata"
+  ],
+  [
+   68.8,
+   "Esa íntima ternura que me mata"
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

@@ -1,0 +1,253 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.3,
+   "Vencidos de León"
+  ],
+  [
+   3.4,
+   "Felipe. Por la manchega"
+  ],
+  [
+   6.3,
+   "llanura se vuelve a ver la figura de don"
+  ],
+  [
+   10.5,
+   "Quijote"
+  ],
+  [
+   12.3,
+   "pasar. Y ahora ociosa y abollada va en"
+  ],
+  [
+   17.8,
+   "el rucio la"
+  ],
+  [
+   19.7,
+   "armadura. Y va ocioso el caballero, sin"
+  ],
+  [
+   24.8,
+   "peto y sin"
+  ],
+  [
+   26.8,
+   "espaldar. Va cargado de amargura."
+  ],
+  [
+   30.1,
+   "que allá encontró sepultura su amoroso"
+  ],
+  [
+   34.7,
+   "batallar. Va cargado de amargura, que"
+  ],
+  [
+   38.5,
+   "allá quedó su"
+  ],
+  [
+   40.2,
+   "ventura en la playa de Barcino, frente"
+  ],
+  [
+   44.2,
+   "al"
+  ],
+  [
+   45.3,
+   "mar. Por la manchega llanura se vuelve a"
+  ],
+  [
+   49.6,
+   "ver la figura de don Quijote pasar."
+  ],
+  [
+   54.1,
+   "Va cargado de"
+  ],
+  [
+   56.0,
+   "amargura, va vencido el caballero de"
+  ],
+  [
+   60.9,
+   "retorno a su"
+  ],
+  [
+   63.0,
+   "lugar. Cuántas veces, don Quijote, por"
+  ],
+  [
+   67.5,
+   "esa misma llanura, en horas de"
+  ],
+  [
+   70.6,
+   "desaliento, así te miro pasar. Y cuántas"
+  ],
+  [
+   74.3,
+   "veces te grito, \"Hazme un sitio en tu"
+  ],
+  [
+   77.8,
+   "montura y llévame a tu lugar."
+  ],
+  [
+   81.4,
+   "Hazme un sitio en tu montura, caballero"
+  ],
+  [
+   86.1,
+   "derrotado. Hazme un sitio en tu montura,"
+  ],
+  [
+   89.6,
+   "que yo también voy cargado de amargura y"
+  ],
+  [
+   93.5,
+   "no puedo batallar."
+  ],
+  [
+   96.2,
+   "Ponme a la grupa contigo, caballero del"
+  ],
+  [
+   100.4,
+   "honor. Ponme a la grupa contigo y"
+  ],
+  [
+   104.2,
+   "llévame a ser contigo"
+  ],
+  [
+   108.3,
+   "pastor. Por la manchega"
+  ],
+  [
+   111.4,
+   "llanura se vuelve a ver la figura de don"
+  ],
+  [
+   115.9,
+   "Quijote pasar."
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

@@ -1,0 +1,36 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   58.8,
+   "y para el otro lado Y de lado a lado"
+  ],
+  [
+   126.0,
+   "y agarra tu pareja por esa cintura"
+  ],
+  [
+   178.6,
+   "y bailaremos bien afincado"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

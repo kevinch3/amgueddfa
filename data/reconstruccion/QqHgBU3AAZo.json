@@ -1,0 +1,141 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.3,
+   "si el Jurado así lo"
+  ],
+  [
+   2.5,
+   "dispone sí no tengo ganas de ir a"
+  ],
+  [
+   9.3,
+   "no tengo ganas dije temblaron"
+  ],
+  [
+   15.1,
+   "estructuras y todos me miraron como si"
+  ],
+  [
+   17.4,
+   "un tornado hubiera sacudido a las"
+  ],
+  [
+   21.0,
+   "ventanas yo solo había dicho no tengo"
+  ],
+  [
+   26.4,
+   "ganas porque es cierto"
+  ],
+  [
+   30.4,
+   "no tengo ganas de nada ni de"
+  ],
+  [
+   33.4,
+   "nadie ni siquiera de"
+  ],
+  [
+   41.7,
+   "veces que otros tomen por mí las"
+  ],
+  [
+   45.5,
+   "decisiones que otros hablen se"
+  ],
+  [
+   49.6,
+   "rían que otros se busquen se amen y se"
+  ],
+  [
+   57.6,
+   "la comida caminar con su"
+  ],
+  [
+   60.4,
+   "por la orilla del mal escribir una carta"
+  ],
+  [
+   63.3,
+   "recibir un amigo discutir los derechos y"
+  ],
+  [
+   67.9,
+   "libertad esta en la que quiero estar"
+  ],
+  [
+   72.7,
+   "porque yo"
+  ],
+  [
+   74.1,
+   "hoy no tengo"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

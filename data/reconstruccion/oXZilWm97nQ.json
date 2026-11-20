@@ -1,0 +1,197 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   4.3,
+   "Bajo por una"
+  ],
+  [
+   9.4,
+   "huella de muy"
+  ],
+  [
+   16.1,
+   "arriba."
+  ],
+  [
+   17.7,
+   "Vengo de las"
+  ],
+  [
+   21.7,
+   "estrellas. Traigo alegría."
+  ],
+  [
+   33.8,
+   "estrellas,"
+  ],
+  [
+   35.4,
+   "traigo"
+  ],
+  [
+   40.1,
+   "alegrías de donde vengo."
+  ],
+  [
+   54.0,
+   "humo en la"
+  ],
+  [
+   56.4,
+   "noche de las estrellas"
+  ],
+  [
+   62.6,
+   "vengo. Rastro de humo en la"
+  ],
+  [
+   73.2,
+   "Ay de mi amor que baja pintando"
+  ],
+  [
+   84.2,
+   "vida por las estrellas."
+  ],
+  [
+   91.8,
+   "Flor del camino"
+  ],
+  [
+   105.9,
+   "lejano no existe."
+  ],
+  [
+   131.3,
+   "estrellas llegar a un día."
+  ],
+  [
+   138.0,
+   "ni de las"
+  ],
+  [
+   141.8,
+   "estrellas a quien las"
+  ],
+  [
+   147.3,
+   "mira, ni desde las"
+  ],
+  [
+   151.9,
+   "estrellas a quién la mirá."
+  ],
+  [
+   159.0,
+   "Porque estaré tan lejos de lo que"
+  ],
+  [
+   165.4,
+   "quiero. Hay de esta vida luz que no"
+  ],
+  [
+   170.8,
+   "llega"
+  ],
+  [
+   175.7,
+   "tiempo. ¿Dónde están estos"
+  ],
+  [
+   180.7,
+   "ojos?"
+  ],
+  [
+   182.4,
+   "Brillo breve."
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

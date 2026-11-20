@@ -1,0 +1,36 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   12.9,
+   "hay un modo de ver las cosas que quieren"
+  ],
+  [
+   138.3,
+   "cuando los pasos y que no lo permita"
+  ],
+  [
+   147.9,
+   "acaso no lo ves"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

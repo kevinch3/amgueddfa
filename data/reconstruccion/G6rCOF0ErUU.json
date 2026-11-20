@@ -1,0 +1,246 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   10.9,
+   "de Lidia Romero"
+  ],
+  [
+   15.3,
+   "cuando niña Me encantaba hacer rondas"
+  ],
+  [
+   18.8,
+   "con mi sombra era a veces pequeñita bajo"
+  ],
+  [
+   22.2,
+   "el sol del mediodía"
+  ],
+  [
+   23.8,
+   "Yo giraba me reía y las aspas de mis"
+  ],
+  [
+   27.7,
+   "brazos remolinos inventaban"
+  ],
+  [
+   31.2,
+   "preguntándole a los aires"
+  ],
+  [
+   33.3,
+   "quién a quién se perseguía"
+  ],
+  [
+   36.6,
+   "por entonces tú mi sombra era solo una"
+  ],
+  [
+   41.9,
+   "locuela que bajaba que subía y a mis"
+  ],
+  [
+   45.5,
+   "piernas se enredaba y una alondra que"
+  ],
+  [
+   49.4,
+   "volaba"
+  ],
+  [
+   55.1,
+   "preguntando por tu magia que no está"
+  ],
+  [
+   58.9,
+   "allá donde estaba"
+  ],
+  [
+   61.4,
+   "hoy lo sabes me consuelas porque un más"
+  ],
+  [
+   66.9,
+   "a mi costado"
+  ],
+  [
+   68.6,
+   "ya no juego"
+  ],
+  [
+   70.7,
+   "y te acompasas a mi ritmo no tan nuevo"
+  ],
+  [
+   74.6,
+   "pero aún vuela si yo vuelo"
+  ],
+  [
+   78.6,
+   "has crecido eres más vieja pues mi sol"
+  ],
+  [
+   82.6,
+   "no te renueva"
+  ],
+  [
+   85.0,
+   "me pregunto cuando juntas dormiremos"
+  ],
+  [
+   88.1,
+   "bajo el suelo"
+  ],
+  [
+   90.2,
+   "abrazadas para siempre"
+  ],
+  [
+   94.7,
+   "con tu boca algodonosa me hablaras de"
+  ],
+  [
+   98.2,
+   "aquellas horas"
+  ],
+  [
+   100.7,
+   "en septiembre"
+  ],
+  [
+   102.6,
+   "seré sombra"
+  ],
+  [
+   104.9,
+   "hecho ya mi aprendizaje en el oscuro"
+  ],
+  [
+   107.8,
+   "tibio vientre"
+  ],
+  [
+   111.4,
+   "Volveré"
+  ],
+  [
+   113.4,
+   "y habrá otra niña para bailarte mis"
+  ],
+  [
+   116.0,
+   "rondas"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

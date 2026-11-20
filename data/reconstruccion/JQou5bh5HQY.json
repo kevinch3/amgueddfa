@@ -1,0 +1,183 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "No hay corazón como el mío, ay sí, para sentir una pena, ay no."
+  ],
+  [
+   22.7,
+   "Tuyo hay de ser mientras vivas yo"
+  ],
+  [
+   32.5,
+   "Corazón que sufre y calla y sí"
+  ],
+  [
+   45.7,
+   "Encontrarán ande quiera y no"
+  ],
+  [
+   54.7,
+   "Tuyo hay de ser mientras viva yo"
+  ],
+  [
+   75.7,
+   "Yo soy esa fulanita, ay, padeciendo ando"
+  ],
+  [
+   94.5,
+   "Triste en la noche sin luna, ay, padeciendo ando"
+  ],
+  [
+   103.9,
+   "Triste es el día sin sol"
+  ],
+  [
+   113.8,
+   "Pero más triste es querer"
+  ],
+  [
+   119.5,
+   "Ay, padeciendo al dolor"
+  ],
+  [
+   122.8,
+   "Sin esperanza ninguna"
+  ],
+  [
+   128.7,
+   "Más vale voy a dejar de amar yo"
+  ],
+  [
+   158.5,
+   "Tanto amor para quererte"
+  ],
+  [
+   166.3,
+   "Ay, que me has de olvidar"
+  ],
+  [
+   175.7,
+   "Ahora para olvidarme"
+  ],
+  [
+   183.9,
+   "Será preciso la muerte"
+  ],
+  [
+   190.9,
+   "Ay, que me has olvidado"
+  ],
+  [
+   237.5,
+   "Después de mucho tiempo te he vuelto a ver"
+  ],
+  [
+   249.3,
+   "La verdad que yo tenía se ha vuelto alegría"
+  ],
+  [
+   261.6,
+   "en mi corazón y mi corazón ayer"
+  ],
+  [
+   272.6,
+   "se fue llorando, llorando por amor"
+  ],
+  [
+   314.2,
+   "Aquellos son los tuyos que vuelvo a ver"
+  ],
+  [
+   333.9,
+   "Sabré donde nuevo al verte otra vez"
+  ],
+  [
+   374.8,
+   "Se fue llorando, llorando tu amor, se fue olvidada en algún canto."
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 8,
+  "modelo": 8,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

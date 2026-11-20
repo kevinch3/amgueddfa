@@ -1,0 +1,57 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   290.2,
+   "necesitamos una sola escuela"
+  ],
+  [
+   318.7,
+   "nuevas de esa manera tendremos una"
+  ],
+  [
+   323.1,
+   "sola escuela primaria y el jardín a su"
+  ],
+  [
+   326.2,
+   "lado"
+  ],
+  [
+   364.2,
+   "el intendente está allá"
+  ],
+  [
+   372.0,
+   "el vicegobernador está"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 13,
+  "modelo": 13,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

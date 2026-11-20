@@ -1,0 +1,36 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   16.3,
+   "Salgo a caminar, por la cintura cósmica del"
+  ],
+  [
+   25.3,
+   "Cristo en mi Dios, más vegetal del viento y de la luz."
+  ],
+  [
+   34.5,
+   "Sin caminar, la tierra de América en mi piel,"
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

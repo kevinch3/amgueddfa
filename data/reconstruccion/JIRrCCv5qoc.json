@@ -1,0 +1,218 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   5.6,
+   "en paz"
+  ],
+  [
+   7.4,
+   "de amado nervo"
+  ],
+  [
+   12.3,
+   "muy cerca de mi ocaso"
+  ],
+  [
+   15.9,
+   "yo te bendigo vida"
+  ],
+  [
+   20.9,
+   "porque nunca me diste mi esperanza"
+  ],
+  [
+   23.9,
+   "fallida"
+  ],
+  [
+   25.8,
+   "ni trabajos injustos"
+  ],
+  [
+   28.9,
+   "ni pena inmerecida"
+  ],
+  [
+   34.7,
+   "porque veo al final de mi rudo camino"
+  ],
+  [
+   39.0,
+   "que yo fui la arquitecta de mi propio"
+  ],
+  [
+   41.8,
+   "destino"
+  ],
+  [
+   45.0,
+   "que si extraje las mieles"
+  ],
+  [
+   48.9,
+   "o la hiel de las cosas"
+  ],
+  [
+   56.6,
+   "o mieles sabrosas"
+  ],
+  [
+   60.4,
+   "cuando plantee rosales cosecha siempre"
+  ],
+  [
+   65.2,
+   "rosas"
+  ],
+  [
+   70.2,
+   "cierto"
+  ],
+  [
+   76.2,
+   "invierno"
+  ],
+  [
+   79.9,
+   "más tú no me dijiste que mayo fue ese"
+  ],
+  [
+   82.6,
+   "eterno"
+  ],
+  [
+   88.3,
+   "sin duda largas las noches de mis penas"
+  ],
+  [
+   94.8,
+   "más no me prometiste tan solo noches"
+  ],
+  [
+   97.4,
+   "buenas y en cambio tuve algunas"
+  ],
+  [
+   102.6,
+   "santamente serenas"
+  ],
+  [
+   110.7,
+   "fui amada"
+  ],
+  [
+   113.8,
+   "el sol acarició mi faz"
+  ],
+  [
+   118.0,
+   "vida nada me debes"
+  ],
+  [
+   122.2,
+   "vida"
+  ],
+  [
+   124.8,
+   "estamos en paz"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

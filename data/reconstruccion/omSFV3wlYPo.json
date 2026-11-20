@@ -1,0 +1,127 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   113.9,
+   "geometría de"
+  ],
+  [
+   116.2,
+   "Miguelo era un punto un punto caminando"
+  ],
+  [
+   120.9,
+   "caminando en un papel era una línea una"
+  ],
+  [
+   125.0,
+   "línea corriendo corriendo en el papel"
+  ],
+  [
+   128.3,
+   "fue línea curva cerrada en sinusoides"
+  ],
+  [
+   132.3,
+   "abierta en muchas parábolas fue línea"
+  ],
+  [
+   135.5,
+   "recta que se cortaba en ángulos agudos"
+  ],
+  [
+   138.9,
+   "rectos obtusos que nunca se"
+  ],
+  [
+   142.1,
+   "encontraban me tocó tangencialmente"
+  ],
+  [
+   145.5,
+   "intenté abordarla por la esquina de la"
+  ],
+  [
+   148.0,
+   "ternura"
+  ],
+  [
+   150.0,
+   "y se escapó de los dedos y rodó hasta"
+  ],
+  [
+   153.0,
+   "caerse"
+  ],
+  [
+   154.6,
+   "ella se perdió por el"
+  ],
+  [
+   157.0,
+   "margen soy un punto un punto caminando"
+  ],
+  [
+   162.0,
+   "caminando solo por el papel"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

@@ -1,0 +1,197 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   22.8,
+   "me voy"
+  ],
+  [
+   31.4,
+   "decirme a Dios"
+  ],
+  [
+   36.2,
+   "decímelo que la paloma de tu"
+  ],
+  [
+   41.1,
+   "pañuelo me diga Dios me"
+  ],
+  [
+   47.8,
+   "no me dices no dices No pero tus ojos se"
+  ],
+  [
+   54.0,
+   "van"
+  ],
+  [
+   55.3,
+   "conmigo por donde voy pues"
+  ],
+  [
+   61.9,
+   "soy que va y que vuelve como dos veces"
+  ],
+  [
+   81.0,
+   "entre vos y"
+  ],
+  [
+   85.0,
+   "yo tan solo un"
+  ],
+  [
+   88.9,
+   "pañuelo a donde el cielo se me"
+  ],
+  [
+   94.4,
+   "olvidó se te"
+  ],
+  [
+   98.2,
+   "olvidó se me olvidó"
+  ],
+  [
+   129.7,
+   "azul que sube y sube desde la leña"
+  ],
+  [
+   136.7,
+   "quemándose"
+  ],
+  [
+   140.4,
+   "quemándome como la luna que con tu"
+  ],
+  [
+   144.8,
+   "ausencia me sale a ver quemando"
+  ],
+  [
+   152.0,
+   "ausente soy ausente soy como Paloma"
+  ],
+  [
+   160.2,
+   "penando estoy me suelen"
+  ],
+  [
+   165.2,
+   "ver a medio vuelo de tu"
+  ],
+  [
+   169.8,
+   "pañuelo buscándote"
+  ],
+  [
+   176.8,
+   "buscándome qué sencillo"
+  ],
+  [
+   180.6,
+   "modo tuvo el cariño entre vos y"
+  ],
+  [
+   187.6,
+   "yo tan solo un"
+  ],
+  [
+   196.7,
+   "olvidó se te"
+  ],
+  [
+   201.1,
+   "olvidó se me olvido"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

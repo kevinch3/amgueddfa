@@ -1,0 +1,183 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   28.0,
+   "homenajeamos hoy"
+  ],
+  [
+   32.6,
+   "trabajadora incansable"
+  ],
+  [
+   36.4,
+   "académica de la película docente y poeta"
+  ],
+  [
+   42.9,
+   "desde 1927 y profesora de letras"
+  ],
+  [
+   48.6,
+   "nacional de la patagonia san juan bosco"
+  ],
+  [
+   81.2,
+   "ha participado de las diferentes"
+  ],
+  [
+   93.6,
+   "su labor ha sido premiada y galardonada"
+  ],
+  [
+   96.0,
+   "en diferentes eventos culturales y"
+  ],
+  [
+   97.8,
+   "académicos"
+  ],
+  [
+   99.2,
+   "el 2011 fue incorporada al Gorsedd cuyo"
+  ],
+  [
+   102.9,
+   "propósito es conservar el idioma y"
+  ],
+  [
+   112.9,
+   "colaboradora de"
+  ],
+  [
+   124.4,
+   "sacar numerosos textos alusivos a la"
+  ],
+  [
+   129.2,
+   "relacionados han sido publicados o"
+  ],
+  [
+   131.9,
+   "revistas académicas nacionales e"
+  ],
+  [
+   134.7,
+   "internacionales"
+  ],
+  [
+   141.7,
+   "afirma Nanci Jones"
+  ],
+  [
+   182.5,
+   "muchas gracias"
+  ],
+  [
+   196.9,
+   "información libre mínimo 12 integrantes"
+  ],
+  [
+   200.6,
+   "y conjunto instrumental de formación"
+  ],
+  [
+   203.5,
+   "libre música de película obra"
+  ],
+  [
+   206.8,
+   "elección esta competencia se desarrolla"
+  ],
+  [
+   211.3,
+   "de manera virtual vamos a ver en la"
+  ],
+  [
+   213.4,
+   "pantalla único participante"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 8,
+  "modelo": 7,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

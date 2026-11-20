@@ -1,0 +1,127 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "lectura al veredicto de la competencia"
+  ],
+  [
+   2.2,
+   "número 91"
+  ],
+  [
+   4.2,
+   "fotografía noveles tema raíces técnica"
+  ],
+  [
+   9.1,
+   "fotografía directa color o blanco y"
+  ],
+  [
+   12.1,
+   "negro los premios son primer premio para"
+  ],
+  [
+   15.5,
+   "el seudónimo Isa curuf seudónimo Isa B"
+  ],
+  [
+   20.8,
+   "es Verónica Soledad despo de Gaiman el"
+  ],
+  [
+   24.5,
+   "segundo premio es para"
+  ],
+  [
+   26.5,
+   "Zurdo de bringüino y es Alfredo Miguel"
+  ],
+  [
+   31.3,
+   "Jaime de Gaiman Tercer premio para hacer"
+  ],
+  [
+   35.1,
+   "en Y ceren responde a Estela Williams de"
+  ],
+  [
+   38.9,
+   "Dolavon primera mención para Ciro y"
+  ],
+  [
+   43.4,
+   "ciroes Verónica Soledad despo de Gaiman"
+  ],
+  [
+   46.8,
+   "segunda mención para César es Estela"
+  ],
+  [
+   51.2,
+   "Williams de Dolavon tercera mención"
+  ],
+  [
+   53.8,
+   "buscando nutrientes Jorge barzini de"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 1,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

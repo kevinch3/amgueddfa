@@ -1,0 +1,50 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.8,
+   "Conjunto Mixto de Escuela de Música de Gaiman"
+  ],
+  [
+   33.7,
+   "Segundo lugar para la misma competencia"
+  ],
+  [
+   35.6,
+   "La número 68"
+  ],
+  [
+   41.9,
+   "Conjunto Mixto de Escuela de Música de Gaiman"
+  ],
+  [
+   170.0,
+   "Amén."
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

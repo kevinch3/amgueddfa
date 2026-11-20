@@ -1,0 +1,64 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   60.0,
+   "Llena el sol su eterno andar, su luz nos tira por sentas de amor."
+  ],
+  [
+   76.4,
+   "¡Honor y gloria al Salvador! ¡Honor y gloria al Salvador!"
+  ],
+  [
+   94.1,
+   "Los cielos llaman la gloria eterna y cantando a su albriador"
+  ],
+  [
+   118.1,
+   "La tierra lava, los mares se elevan, el santo nombre del Señor."
+  ],
+  [
+   134.6,
+   "En mar, cielo, estrellas y luna"
+  ],
+  [
+   146.9,
+   "Y venga el sol su eterno andar"
+  ],
+  [
+   155.5,
+   "Su luz nos guía por sentas de amor, color y gloria al Salvador, color y gloria al Salvador."
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

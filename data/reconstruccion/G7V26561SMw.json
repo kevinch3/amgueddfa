@@ -1,0 +1,120 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Lo pensó dos veces y se echó como una frutilla en su corazón"
+  ],
+  [
+   17.6,
+   "Siempre el mismo rollo de los parientes"
+  ],
+  [
+   22.5,
+   "Me dejó dos discos en el placar"
+  ],
+  [
+   36.4,
+   "Y allí va"
+  ],
+  [
+   42.2,
+   "Y allí va"
+  ],
+  [
+   52.5,
+   "de libertad."
+  ],
+  [
+   74.5,
+   "cada enero nuevo se asienta,"
+  ],
+  [
+   85.5,
+   "el amo una estrella en su soledad"
+  ],
+  [
+   88.5,
+   "y una noche antes de Navidad"
+  ],
+  [
+   97.5,
+   "y allí van para el tiempo de ayer"
+  ],
+  [
+   107.5,
+   "Y allí vivan en libertad"
+  ],
+  [
+   122.5,
+   "El amor más grande que conocí"
+  ],
+  [
+   126.5,
+   "Sin querer un día pasó por mí"
+  ],
+  [
+   130.5,
+   "¿Dónde va la gente y su corazón?"
+  ],
+  [
+   140.6,
+   "¿Dónde van los años y este dolor?"
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

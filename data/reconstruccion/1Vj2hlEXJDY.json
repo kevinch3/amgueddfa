@@ -1,0 +1,78 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   3.7,
+   "Luciérnagas"
+  ],
+  [
+   10.1,
+   "a las 5 de la tarde cuando el resplandor"
+  ],
+  [
+   14.3,
+   "se queda sin brillo y el jardín se"
+  ],
+  [
+   21.1,
+   "del día"
+  ],
+  [
+   33.6,
+   "entre los arbustos"
+  ],
+  [
+   65.5,
+   "la noche"
+  ],
+  [
+   68.2,
+   "la oscuridad"
+  ],
+  [
+   70.8,
+   "el tiempo"
+  ],
+  [
+   76.9,
+   "pero la oscuridad"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

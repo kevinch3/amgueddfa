@@ -1,0 +1,50 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   69.3,
+   "Amén."
+  ],
+  [
+   107.8,
+   "Porque en mi vida triunfaré mañana."
+  ],
+  [
+   115.3,
+   "Porque en mi vida ya no hay temor."
+  ],
+  [
+   136.7,
+   "Porque él vive, triunfaré mañana, porque él vive, ya no hay temor, porque yo sé que el futuro es tuyo."
+  ],
+  [
+   159.8,
+   "La vida vale más y más solo por él"
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

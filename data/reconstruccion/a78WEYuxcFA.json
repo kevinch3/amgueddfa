@@ -1,0 +1,50 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   56.2,
+   "En los ojos, en las manos,"
+  ],
+  [
+   68.0,
+   "en las manos, en los armoníos,"
+  ],
+  [
+   72.6,
+   "en los alianos de Dios."
+  ],
+  [
+   78.8,
+   "En las manos, en los armoníos,"
+  ],
+  [
+   83.4,
+   "de los salones de tu bailar."
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 2
+ }
+}

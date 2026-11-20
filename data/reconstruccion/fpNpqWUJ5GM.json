@@ -1,0 +1,64 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   15.2,
+   "recuerdos de tus verdores me causan un sentimiento."
+  ],
+  [
+   24.1,
+   "Recuerdos de tus verdores me causan un sentimiento."
+  ],
+  [
+   48.9,
+   "¡Podré volver algún día, Cortadera, plumerito!"
+  ],
+  [
+   76.4,
+   "Por esos campos viví, provincia de Buenos Aires"
+  ],
+  [
+   85.9,
+   "y abanicando los aires por esos años que vi."
+  ],
+  [
+   106.2,
+   "Ay, cuánto te necesito de volar donde vivía, podré volver algún día, Cortadera, plumerito."
+  ],
+  [
+   127.7,
+   "Ay, cuando te necesito, Cortadera, plumerito."
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

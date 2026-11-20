@@ -1,0 +1,141 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "De Miguel Hernández, para la libertad."
+  ],
+  [
+   4.3,
+   "Para la libertad, sangro, lucho, pervivo."
+  ],
+  [
+   10.2,
+   "Para la libertad, mis ojos y mis manos,"
+  ],
+  [
+   14.0,
+   "como un árbol carnal generoso y cautivo,"
+  ],
+  [
+   17.7,
+   "doy a los dibujantes."
+  ],
+  [
+   20.2,
+   "Para la libertad, siento más corazones que arenas en mi pecho,"
+  ],
+  [
+   25.0,
+   "dan espumas mis venas, y entro en los hospitales,"
+  ],
+  [
+   29.1,
+   "y entro en los argodones como en las azucenas."
+  ],
+  [
+   34.3,
+   "Para la libertad me desprendo a balazos"
+  ],
+  [
+   37.2,
+   "de los que han revolcado su estatua por el lodo"
+  ],
+  [
+   40.6,
+   "y me desprendo a golpes de mis pies, de mis brazos,"
+  ],
+  [
+   46.2,
+   "de mi casa, de todo."
+  ],
+  [
+   50.0,
+   "Porque donde unas cuecas vacías amanezcan,"
+  ],
+  [
+   54.0,
+   "ella pondrá dos piedras de futura mirada"
+  ],
+  [
+   57.2,
+   "y hará que nuevos brazos y nuevas piernas crezcan en la carne talada."
+  ],
+  [
+   64.5,
+   "Retoñarán aladas de sabias en otoño,"
+  ],
+  [
+   68.1,
+   "reliquias de mi cuerpo que pierdo en cada herida,"
+  ],
+  [
+   72.3,
+   "porque soy como el árbol talado que retoño."
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

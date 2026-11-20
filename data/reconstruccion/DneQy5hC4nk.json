@@ -1,0 +1,120 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "Pero en tu piecita regata esa musiquita"
+  ],
+  [
+   35.9,
+   "Esa musiquita del pueblo, esa musiquita"
+  ],
+  [
+   43.3,
+   "Tan arrastradita que suena, tan arrastradita"
+  ],
+  [
+   49.1,
+   "Cómo te acompaña y te mese, cómo te acaricia"
+  ],
+  [
+   56.2,
+   "¿Cómo te devuelve a la vida esa musiquita?"
+  ],
+  [
+   76.4,
+   "Gira con su sombra, gira con su sombra, esa musiquita"
+  ],
+  [
+   89.4,
+   "Desde que recuerdo la sal, mágica y sencilla"
+  ],
+  [
+   95.9,
+   "Llena de temblores de soles, esa musiquina"
+  ],
+  [
+   102.2,
+   "En la cara gris del espejo de la bailarina"
+  ],
+  [
+   108.6,
+   "Son rubor de niña bailar, son rubor de niña"
+  ],
+  [
+   122.8,
+   "Esa musiquita del alma, esa musiquita"
+  ],
+  [
+   128.6,
+   "Esa musiquita del pueblo, esa musiquita"
+  ],
+  [
+   134.8,
+   "Tan arrastradita que suena, tan arrastradita"
+  ],
+  [
+   148.2,
+   "Como la devuelve a la vida, esa musiquita"
+  ],
+  [
+   154.3,
+   "Como la devuelve a la vida"
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

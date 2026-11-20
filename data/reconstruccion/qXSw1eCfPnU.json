@@ -1,0 +1,260 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   3.9,
+   "recordación"
+  ],
+  [
+   6.0,
+   "Puerto Madryn madrugada cálido sol de"
+  ],
+  [
+   10.3,
+   "invierno mar encrespado acumulado por"
+  ],
+  [
+   14.2,
+   "nidos de gaviotas y viento viento"
+  ],
+  [
+   18.7,
+   "patagónico potros salvajes del desierto"
+  ],
+  [
+   23.3,
+   "indomable insaciable de distancias como"
+  ],
+  [
+   26.9,
+   "el vuelo"
+  ],
+  [
+   28.7,
+   "paisaje gris plomo hasta donde abarque"
+  ],
+  [
+   31.3,
+   "la mirada soledad de patagonia que va"
+  ],
+  [
+   33.6,
+   "desde la playa hacia el oeste agreste"
+  ],
+  [
+   37.1,
+   "fría sin color casi sin sol"
+  ],
+  [
+   44.0,
+   "lejos contra la línea del horizonte"
+  ],
+  [
+   46.6,
+   "adormilado se destaca un perfil"
+  ],
+  [
+   49.3,
+   "insinuante"
+  ],
+  [
+   51.8,
+   "dibujado"
+  ],
+  [
+   53.5,
+   "es una goleta coqueta aún a pesar de las"
+  ],
+  [
+   57.6,
+   "penurias que ha pasado"
+  ],
+  [
+   60.5,
+   "y la mimosa y trae en su regazo"
+  ],
+  [
+   63.2,
+   "dulcemente un puñado sacrificado de"
+  ],
+  [
+   66.8,
+   "mujeres y de hombres valientes de"
+  ],
+  [
+   69.2,
+   "pequeños rubios con absorta mirada"
+  ],
+  [
+   71.6,
+   "celeste"
+  ],
+  [
+   73.3,
+   "son 153 y en galés entona en un himno"
+  ],
+  [
+   78.2,
+   "por la patria ausente"
+  ],
+  [
+   81.2,
+   "28 de julio 1865"
+  ],
+  [
+   85.3,
+   "desembarco confusión desolación ante el"
+  ],
+  [
+   89.6,
+   "nuevo y extraño destino pero armas"
+  ],
+  [
+   93.0,
+   "seguras bravura y fe para enfrentar la"
+  ],
+  [
+   97.5,
+   "lucha con ahínco"
+  ],
+  [
+   100.1,
+   "detrás de esta historia forjada por"
+  ],
+  [
+   102.8,
+   "galeses valientes hay nombres de hombres"
+  ],
+  [
+   106.0,
+   "y mujeres que merecen recuerdos"
+  ],
+  [
+   108.0,
+   "ferviente por labrar con amor y dolor"
+  ],
+  [
+   111.7,
+   "éste Chubut oasis que es orgullo"
+  ],
+  [
+   114.9,
+   "presente"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

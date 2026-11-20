@@ -1,0 +1,148 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   7.6,
+   "Rumbo al sur donde el oleaje del"
+  ],
+  [
+   12.3,
+   "océano y la cruz de las estrellas nos"
+  ],
+  [
+   16.1,
+   "llaman a lo"
+  ],
+  [
+   17.5,
+   "desconocido"
+  ],
+  [
+   37.9,
+   "arados donde el Horizonte sin límites"
+  ],
+  [
+   41.4,
+   "huele a trigo"
+  ],
+  [
+   45.0,
+   "por la agitada Inmensidad avanza el"
+  ],
+  [
+   48.8,
+   "navío"
+  ],
+  [
+   53.8,
+   "frío enciende aristas en el aliento de"
+  ],
+  [
+   57.6,
+   "julio y las gaviotas se entretejen"
+  ],
+  [
+   61.0,
+   "espacios"
+  ],
+  [
+   62.4,
+   "inmigrantes sobre el confín del"
+  ],
+  [
+   65.9,
+   "desembarco por la agitada"
+  ],
+  [
+   69.4,
+   "Inmensidad llega el navío los ojos"
+  ],
+  [
+   73.0,
+   "llenos de mar se enjan el asombro en la"
+  ],
+  [
+   76.8,
+   "aborigen tenacidad del"
+  ],
+  [
+   79.4,
+   "páramo el verde eco se alza entre las"
+  ],
+  [
+   84.1,
+   "Matas como un bajidor del"
+  ],
+  [
+   88.0,
+   "Génesis espaldas al al mar ha parido la"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

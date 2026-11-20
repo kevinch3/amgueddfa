@@ -1,0 +1,267 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   9.5,
+   "la quiero porque si es así con su"
+  ],
+  [
+   12.9,
+   "corazón de gris o le gusta lo mismo que"
+  ],
+  [
+   16.6,
+   "a mí el café y el cigarrillo sentarme la"
+  ],
+  [
+   20.8,
+   "mesa de un mar y sin plata caminar así"
+  ],
+  [
+   25.1,
+   "como es rebelde y angelical así como es"
+  ],
+  [
+   31.0,
+   "azúcar pimienta y sal"
+  ],
+  [
+   36.9,
+   "la quiero hacer"
+  ],
+  [
+   39.7,
+   "con su cabecita hueca la quiero así con"
+  ],
+  [
+   45.2,
+   "su cara de muñeca"
+  ],
+  [
+   46.9,
+   "la quiero hacer con sus sueños de papel"
+  ],
+  [
+   51.4,
+   "y aunque siempre está en la luna no la"
+  ],
+  [
+   54.0,
+   "cambio por ninguna yo las llevo como el"
+  ],
+  [
+   56.0,
+   "sol en la piel"
+  ],
+  [
+   57.5,
+   "soy feliz a mi manera y me gusta que me"
+  ],
+  [
+   59.6,
+   "quiera así como él"
+  ],
+  [
+   69.9,
+   "la quiero difícil como es con su mundo"
+  ],
+  [
+   74.0,
+   "diferente que importa su mundo al revés"
+  ],
+  [
+   77.2,
+   "y que cambie fácilmente"
+  ],
+  [
+   79.9,
+   "tampoco lo que hablen de mí porque yo la"
+  ],
+  [
+   83.4,
+   "quiero así y así como es rebelde y"
+  ],
+  [
+   88.3,
+   "angelical así como es azúcar pimienta y"
+  ],
+  [
+   93.6,
+   "sal"
+  ],
+  [
+   97.7,
+   "la quiero hacer con su cara de muñeca no"
+  ],
+  [
+   103.0,
+   "la quiero hacer con su cabecita hueca la"
+  ],
+  [
+   108.6,
+   "quiero hacer con sus sueños de papel y"
+  ],
+  [
+   113.3,
+   "aunque siempre está en la luna no la"
+  ],
+  [
+   114.8,
+   "cambio por ninguna yo la llevo como el"
+  ],
+  [
+   116.8,
+   "sol en la piel"
+  ],
+  [
+   118.3,
+   "soy feliz a mi manera y me gusta que me"
+  ],
+  [
+   120.6,
+   "quieras así como es estoy feliz a mi"
+  ],
+  [
+   123.9,
+   "manera y me gusta que me quiera así como"
+  ],
+  [
+   126.8,
+   "es"
+  ],
+  [
+   129.4,
+   "así como es rebelde y angelical así como"
+  ],
+  [
+   136.0,
+   "es azúcar pimienta y sal azúcar pimienta"
+  ],
+  [
+   139.8,
+   "y sal azúcar pimienta y sal azúcar"
+  ],
+  [
+   143.8,
+   "pimienta y sal"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

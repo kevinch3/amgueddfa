@@ -1,0 +1,225 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   25.0,
+   "lástima bandoneón"
+  ],
+  [
+   28.9,
+   "mi corazón"
+  ],
+  [
+   39.4,
+   "tus lágrimas de error me lleva"
+  ],
+  [
+   42.8,
+   "hacia el hondo bajo fondo"
+  ],
+  [
+   45.3,
+   "donde el barro se subleva"
+  ],
+  [
+   50.4,
+   "y ya sé"
+  ],
+  [
+   52.3,
+   "no me digas tener razón"
+  ],
+  [
+   56.9,
+   "la vida es una vida absurda"
+  ],
+  [
+   61.4,
+   "y es todo todo tan fugaz"
+  ],
+  [
+   78.2,
+   "y decime tu fracaso no ves la pena que"
+  ],
+  [
+   85.5,
+   "y háblame simplemente de aquel amor"
+  ],
+  [
+   89.9,
+   "ausente tras un rechazo del olvido"
+  ],
+  [
+   104.0,
+   "pero es el viejo amor que tiembla"
+  ],
+  [
+   108.0,
+   "bandoneón y buscan un licor que aturde"
+  ],
+  [
+   112.6,
+   "la cuerda que al final"
+  ],
+  [
+   115.4,
+   "termina la función"
+  ],
+  [
+   121.0,
+   "corazón"
+  ],
+  [
+   168.2,
+   "pocos de recuerdo"
+  ],
+  [
+   171.8,
+   "sin sabor"
+  ],
+  [
+   202.0,
+   "no ves que vengo de un país"
+  ],
+  [
+   206.2,
+   "que está de olvido siempre gris"
+  ],
+  [
+   209.2,
+   "tras el alcohol"
+  ],
+  [
+   219.6,
+   "decime tu fracaso no ves la pena que me"
+  ],
+  [
+   229.6,
+   "de aquel amor ausente será el recurso"
+  ],
+  [
+   232.8,
+   "del olvido"
+  ],
+  [
+   243.4,
+   "pero es el viejo amor que tiembla"
+  ],
+  [
+   247.2,
+   "bandoneón y busca en un licor que"
+  ],
+  [
+   253.4,
+   "y al final"
+  ],
+  [
+   254.7,
+   "termina la función"
+  ],
+  [
+   257.0,
+   "corriendo le perdona al corazón"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 5,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

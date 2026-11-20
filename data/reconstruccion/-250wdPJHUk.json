@@ -1,0 +1,85 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "Las manos de mi madre, las brazos de mi madre, han vuelto a las calles de amor."
+  ],
+  [
+   42.0,
+   "Para no bailar cuando avanza en la vida, al horno de barro, antes de la amistad."
+  ],
+  [
+   54.0,
+   "Las manos de mi madre llegan al patio desde temprano, muy temprano, todo se vuelve en fiesta cuando ellas llegan junto a otros pájaros,"
+  ],
+  [
+   70.8,
+   "Escudo a los pájaros que aman la vida y la construyen con el trabajo."
+  ],
+  [
+   78.0,
+   "Ay, de la leña, lina y barro, tu cotidiano se vuelve mágico."
+  ],
+  [
+   125.0,
+   "Las manos de mi madre me representan un cielo abierto"
+  ],
+  [
+   138.0,
+   "y un recuerdo añorado, trapos calientes por los inviernos."
+  ],
+  [
+   178.0,
+   "Se temprano, todo se vuelve fiesta cuando ellas llegan."
+  ],
+  [
+   186.9,
+   "Junto a los pájaros, los pájaros llaman la vida y la construyen con el trabajo."
+  ],
+  [
+   197.0,
+   "Arde la leña, harina y barro, lo cotidiano se vuelve mágico."
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

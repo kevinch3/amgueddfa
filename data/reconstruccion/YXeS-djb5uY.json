@@ -1,0 +1,386 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "bueno yo soy de Trevelin y trabajo en"
+  ],
+  [
+   3.9,
+   "el campo y este vengo casi todos los"
+  ],
+  [
+   8.8,
+   "años al estado del Chubut"
+  ],
+  [
+   12.6,
+   "en este año participé solo y con unos 2"
+  ],
+  [
+   16.8,
+   "y con un coro como miembro de"
+  ],
+  [
+   20.5,
+   "un coro de esquel"
+  ],
+  [
+   37.8,
+   "yo soy descendiente galeses"
+  ],
+  [
+   41.0,
+   "y bueno estamos criados en un ambiente"
+  ],
+  [
+   44.6,
+   "de canto desde música"
+  ],
+  [
+   48.7,
+   "bueno es una tradición del canto y el"
+  ],
+  [
+   53.7,
+   "canto coral así que por ahí viene"
+  ],
+  [
+   57.2,
+   "digamos la raíz"
+  ],
+  [
+   59.8,
+   "de que uno esté acá participando"
+  ],
+  [
+   73.9,
+   "es casi todo"
+  ],
+  [
+   76.1,
+   "siempre hemos empezado en los Eisteddfod"
+  ],
+  [
+   78.3,
+   "infantiles"
+  ],
+  [
+   80.2,
+   "que teníamos apenas sabíamos hablar y"
+  ],
+  [
+   82.3,
+   "por ahí ya nos haciendo decir alguna"
+  ],
+  [
+   83.8,
+   "poesía ahora sí entonces estamos"
+  ],
+  [
+   85.6,
+   "cantando en los coros infantiles"
+  ],
+  [
+   89.0,
+   "entonces tenemos una participación desde"
+  ],
+  [
+   90.7,
+   "muy chicos"
+  ],
+  [
+   92.6,
+   "es una"
+  ],
+  [
+   94.8,
+   "es una es un hobby o no sé cómo se como"
+  ],
+  [
+   99.1,
+   "se diría pero no no es para nada"
+  ],
+  [
+   100.9,
+   "profesional"
+  ],
+  [
+   148.2,
+   "no no para nada porque incluso en"
+  ],
+  [
+   150.7,
+   "trevelin estamos recién empezando ahora"
+  ],
+  [
+   153.6,
+   "hay una escuela de música así que"
+  ],
+  [
+   156.6,
+   "el nivel que tenemos nosotros es"
+  ],
+  [
+   159.7,
+   "totalmente amateur y incluso autodidacta"
+  ],
+  [
+   163.5,
+   "digamos"
+  ],
+  [
+   165.1,
+   "así que"
+  ],
+  [
+   167.8,
+   "no profesional no para nada"
+  ],
+  [
+   241.8,
+   "el hecho de que hay un jurado que otorga"
+  ],
+  [
+   246.0,
+   "un veredicto a cada competencia y que le"
+  ],
+  [
+   249.5,
+   "dice a cada"
+  ],
+  [
+   250.6,
+   "participante sirve como"
+  ],
+  [
+   254.8,
+   "aprendizaje así que en teoría uno cada"
+  ],
+  [
+   258.9,
+   "año tendría que ir aprendiendo y por lo"
+  ],
+  [
+   262.2,
+   "tanto mejorando no siempre es así porque"
+  ],
+  [
+   265.2,
+   "a veces no aprende pero"
+  ],
+  [
+   270.6,
+   "es de cualquier manera es un hobby y lo"
+  ],
+  [
+   274.3,
+   "hacemos en un nivel amateur no es cierto"
+  ],
+  [
+   345.1,
+   "normalmente casi todos los años estoy"
+  ],
+  [
+   347.7,
+   "participando en esa competencia porque"
+  ],
+  [
+   349.3,
+   "es muy muy linda es una Eisteddfod"
+  ],
+  [
+   353.4,
+   "y también participó en canción"
+  ],
+  [
+   355.7,
+   "folclórica Eisteddfod"
+  ],
+  [
+   358.7,
+   "que este año participé con una samba que"
+  ],
+  [
+   361.4,
+   "me pertenece y bueno siempre tratamos de"
+  ],
+  [
+   365.5,
+   "hacer varias cosas ya que venimos de 600"
+  ],
+  [
+   368.5,
+   "km para que para que valga la pena"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 7,
+  "modelo": 7,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

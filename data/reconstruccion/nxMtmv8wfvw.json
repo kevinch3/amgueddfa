@@ -1,0 +1,78 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.5,
+   "Para la libertad, Miguel Hernández."
+  ],
+  [
+   8.2,
+   "Para la libertad, mis ojos y mis manos,"
+  ],
+  [
+   11.7,
+   "como un árbol carnal, generoso y cautivo,"
+  ],
+  [
+   18.0,
+   "Para la libertad, siento más corazones que arenas en mi pecho."
+  ],
+  [
+   23.3,
+   "Dan espumas mis venas, y entro en los hospitales,"
+  ],
+  [
+   27.1,
+   "y entro en los algodones como en las azucenas."
+  ],
+  [
+   45.4,
+   "Porque donde unas cuencas vacías amanezcan,"
+  ],
+  [
+   48.6,
+   "ella pondrá dos piedras de futura mirada"
+  ],
+  [
+   64.9,
+   "porque soy como el árbol calado del tonto, porque aún tengo la vida."
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

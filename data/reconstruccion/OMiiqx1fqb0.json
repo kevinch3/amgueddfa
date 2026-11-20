@@ -1,0 +1,43 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   34.8,
+   "mi nombre para recordar su vida"
+  ],
+  [
+   38.5,
+   "sentimental llorando de tu amor no sé"
+  ],
+  [
+   46.0,
+   "con qué"
+  ],
+  [
+   57.5,
+   "para desearte"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

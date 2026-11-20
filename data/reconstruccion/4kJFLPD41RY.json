@@ -1,0 +1,316 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "En la Patagonia de William Mellon Hughes, fragmentos del capítulo 2, un vistazo hacia adelante."
+  ],
+  [
+   13.7,
+   "No había ni casa ni tinglado en la boca del río Chubut en aquel tiempo,"
+  ],
+  [
+   20.8,
+   "sólo médanos de arena y algunas matas del Tuzo Gras,"
+  ],
+  [
+   25.5,
+   "penachos que apenas matizaban la uniformidad del suelo arenoso"
+  ],
+  [
+   31.8,
+   "Había que caminar, pues, a Tres Rausos, tres millas distantes"
+  ],
+  [
+   38.2,
+   "aunque nuestras piernas estaban débiles y vacilantes por la falta de ejercicio"
+  ],
+  [
+   44.6,
+   "Nuestra imaginación pintaba un cuadro brillante de lo que disfrutaríamos luego de llegar al pueblo"
+  ],
+  [
+   52.8,
+   "Uno iba a dormir un mes entero, por lo que decía, y otro iba a pasar un año entero comiendo pan con manteca"
+  ],
+  [
+   63.7,
+   "Y la verdad es que en ello consistió la primera comida saboreada a nuestra llegada"
+  ],
+  [
+   71.3,
+   "La que recordaré por largo tiempo debido a lo buena que fue"
+  ],
+  [
+   77.2,
+   "Para quienes estuvimos obligados a subsistir a galletas duras y momosas de barco por tanto tiempo, el pan de la colonia nos fue como pan de ángeles."
+  ],
+  [
+   93.2,
+   "Un pueblito de esparramado, de aspecto poco próspero"
+  ],
+  [
+   101.9,
+   "Edificado en ambas márgenes del río, era el re-Rawson en aquellos días"
+  ],
+  [
+   111.2,
+   "Consistía en algo treinta y cuarenta casas"
+  ],
+  [
+   116.7,
+   "Algunas de barro, algunas de ladrillo, crudos o cocidos"
+  ],
+  [
+   122.0,
+   "y unas pocas casas de comercio."
+  ],
+  [
+   125.8,
+   "Para cruzar de una parte del pueblo a la otra había un bote"
+  ],
+  [
+   129.8,
+   "alquilado y un botero robusto al servicio del pueblo"
+  ],
+  [
+   136.0,
+   "cobrando por ello una pequeña retención."
+  ],
+  [
+   141.0,
+   "A veces sucedía que el bote invitaba a los lados puestos del solicitante."
+  ],
+  [
+   145.9,
+   "En aquellas oportunidades, el que quería cruzar"
+  ],
+  [
+   150.3,
+   "tenían que gritar estentoramente otro lado"
+  ],
+  [
+   155.5,
+   "por las dudas que los dedos hubiese"
+  ],
+  [
+   158.9,
+   "como los antiguos dioses de Baal, de Diablo"
+  ],
+  [
+   162.9,
+   "o de Orbitano y que era necesario descartarlo."
+  ],
+  [
+   168.7,
+   "A mí no me pareció raro el contexto de tener"
+  ],
+  [
+   171.1,
+   "que llamar el castellano para conseguir un bote"
+  ],
+  [
+   174.4,
+   "en una colonia analizada, pero así era."
+  ],
+  [
+   177.6,
+   "Este era el principal pueblo de la colonia y sede de las autoridades."
+  ],
+  [
+   184.6,
+   "La mayoría de los habitantes eran calices, aunque había también alumnos de otras razas"
+  ],
+  [
+   191.6,
+   "y alumnos de otros, naufragados o de paso."
+  ],
+  [
+   196.6,
+   "A pesar de que el aspecto del pueblo desfraudaba al recién llegado,"
+  ],
+  [
+   202.6,
+   "era, no obstante, el fruto del eléctrico esfuerzo de 16 años penosos."
+  ],
+  [
+   212.6,
+   "Había dos capillas, una de los congregacionalistas y otra de los metodistas gallinistas."
+  ],
+  [
+   222.8,
+   "Había ya en el lugar excelentes ministros que trabajaban duramente"
+  ],
+  [
+   230.9,
+   "tratando de mantener encendida la láfara del Evangelio"
+  ],
+  [
+   235.4,
+   "y cada uno de ellos tenía que depender de su trabajo corporal"
+  ],
+  [
+   241.5,
+   "principalmente la agricultura"
+  ],
+  [
+   244.5,
+   "para obtener el sustento para sí mismo y para sus familiares"
+  ],
+  [
+   250.0,
+   "experimenté la sensación de estar recuperando mi fuerza gradualmente"
+  ],
+  [
+   257.7,
+   "en el aire vivificante de la región"
+  ],
+  [
+   260.8,
+   "lo que me animó mucho"
+  ],
+  [
+   262.8,
+   "haciéndome mirar al futuro incierto con confianza"
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 5,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

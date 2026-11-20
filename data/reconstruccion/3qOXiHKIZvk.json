@@ -1,0 +1,57 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   2.9,
+   "Fuerte el aplauso para todos los que han colaborado desinteresadamente"
+  ],
+  [
+   6.5,
+   "con este Eisteddfod de Chubut en la provincia."
+  ],
+  [
+   15.4,
+   "Diego, el mic de Mariela."
+  ],
+  [
+   21.8,
+   "Hola, hola."
+  ],
+  [
+   23.5,
+   "Una chacarera voy a cantar de Carlos Carajal."
+  ],
+  [
+   26.5,
+   "¿Qué más se puede pedir?"
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

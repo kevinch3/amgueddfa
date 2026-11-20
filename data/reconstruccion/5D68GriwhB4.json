@@ -1,0 +1,120 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.4,
+   "competencia 83 pareja de danza"
+  ],
+  [
+   2.5,
+   "tradicional danza elección del repertorio"
+  ],
+  [
+   5.4,
+   "de danzas folklóricas tradicionales"
+  ],
+  [
+   8.5,
+   "argentinas primera"
+  ],
+  [
+   120.8,
+   "sabiendo que enferma estabas para"
+  ],
+  [
+   123.2,
+   "curarte he"
+  ],
+  [
+   128.1,
+   "venido pensando que no tendrías remedio"
+  ],
+  [
+   131.7,
+   "te lo he"
+  ],
+  [
+   161.8,
+   "déjame tocar tu cuerpo queé tibio lo"
+  ],
+  [
+   164.7,
+   "habías tenido cuando te rozan mis manos"
+  ],
+  [
+   167.8,
+   "Te Vienen escal"
+  ],
+  [
+   172.9,
+   "fríos cuando te rozan mis manos te"
+  ],
+  [
+   176.0,
+   "vienen"
+  ],
+  [
+   178.8,
+   "esal"
+  ],
+  [
+   192.2,
+   "seg"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 1,
+  "vacias": 0
+ }
+}

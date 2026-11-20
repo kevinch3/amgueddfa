@@ -1,0 +1,134 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Quiero dejar todas las manos en el centro de tu alma y todo el beso en tus pies"
+  ],
+  [
+   23.9,
+   "Sé que te estoy dando poco"
+  ],
+  [
+   26.7,
+   "Y mucho te pediré"
+  ],
+  [
+   30.5,
+   "Si la luna es sola en mi pradera"
+  ],
+  [
+   36.1,
+   "Seré tu querido verde"
+  ],
+  [
+   41.6,
+   "Y si ves que mi verde se quema"
+  ],
+  [
+   51.2,
+   "Y el verde me puso en rojo"
+  ],
+  [
+   63.7,
+   "Vas a marchar hacia el final"
+  ],
+  [
+   79.3,
+   "Hasta el sol cercano en la distancia"
+  ],
+  [
+   97.0,
+   "No quiero tener más noches frías"
+  ],
+  [
+   103.6,
+   "Mi poder tan solo en sueños"
+  ],
+  [
+   106.6,
+   "despiertarme junto a Dios"
+  ],
+  [
+   110.8,
+   "que tengamos alrededor nuestro"
+  ],
+  [
+   122.1,
+   "y cuando lleguemos a la tierra"
+  ],
+  [
+   146.5,
+   "Quiero ser también dueña del cielo"
+  ],
+  [
+   158.1,
+   "Quiero ser también dueña del cielo"
+  ],
+  [
+   165.6,
+   "Pero es preciso que me enseñes a hablar"
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

@@ -1,0 +1,92 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   3.8,
+   "tarde de té de María Julia"
+  ],
+  [
+   9.5,
+   "Guzmán junto a aquellas primas con"
+  ],
+  [
+   12.1,
+   "arrugas y algunos dientes nenos que ríen"
+  ],
+  [
+   16.4,
+   "alocadas de papelones trágicos anécdotas"
+  ],
+  [
+   20.4,
+   "pasadas y dolores"
+  ],
+  [
+   24.3,
+   "maduros llegan los tíos muertos a"
+  ],
+  [
+   27.0,
+   "compartir la rueda"
+  ],
+  [
+   30.8,
+   "ahora las ausencias no"
+  ],
+  [
+   34.2,
+   "pesan la mesa está"
+  ],
+  [
+   37.9,
+   "completa los recuerdos llenan la casa y"
+  ],
+  [
+   42.8,
+   "Bebo la infancia en el té"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 1,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

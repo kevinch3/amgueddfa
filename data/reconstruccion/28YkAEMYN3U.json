@@ -1,0 +1,127 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   3.7,
+   "de Fieda Non Owens de Medina La"
+  ],
+  [
+   7.5,
+   "alianza de los tiempos"
+  ],
+  [
+   11.0,
+   "cuando uno ha sumado muchos años"
+  ],
+  [
+   14.9,
+   "vivirá su aventura terrena"
+  ],
+  [
+   18.1,
+   "para aprisionar"
+  ],
+  [
+   20.7,
+   "el asombro diario de los cielos"
+  ],
+  [
+   25.4,
+   "rescata el reflejo conveniente"
+  ],
+  [
+   30.2,
+   "pulveriza las tribulaciones"
+  ],
+  [
+   33.1,
+   "alcanza la piedra con su indudable"
+  ],
+  [
+   36.9,
+   "libertad"
+  ],
+  [
+   38.5,
+   "donde tritura sus fronteras"
+  ],
+  [
+   42.9,
+   "y en consecuente arena"
+  ],
+  [
+   46.1,
+   "dibuja sus manecillas sin minutos para"
+  ],
+  [
+   51.5,
+   "arribar a tiempo en las coincidencias"
+  ],
+  [
+   56.8,
+   "coloquio ritual de la impostergable"
+  ],
+  [
+   60.7,
+   "aventura"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

@@ -1,0 +1,106 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Oda al niño de la liebre, de Pablo Neruda."
+  ],
+  [
+   7.1,
+   "A la luz del otoño en el camino, el niño ofrecía en sus manos,"
+  ],
+  [
+   12.6,
+   "no una flor, ni una lámpara, sino una liebre muerta."
+  ],
+  [
+   18.1,
+   "Los motores rayaban la carretera fría, los rostros no miraban."
+  ],
+  [
+   23.7,
+   "Detrás de los cristales eran ojos enemigos."
+  ],
+  [
+   27.0,
+   "Eran ojos de hierro, orejas enemigas, rápidos dientes que relampagueaban resbalando hacia el mar y las ciudades"
+  ],
+  [
+   36.8,
+   "Y el niño del otoño con su hielo, huraño como un caldo, duro como una piedrecita"
+  ],
+  [
+   45.3,
+   "Levantando la mano hacia la exhalación de los viajeros, nadie se detenía"
+  ],
+  [
+   70.1,
+   "dos cuchillitos negros"
+  ],
+  [
+   71.7,
+   "eran los ojos del niño"
+  ],
+  [
+   73.1,
+   "allí terminó ofreciendo su lleno"
+  ],
+  [
+   76.4,
+   "en el inmenso otoño"
+  ],
+  [
+   78.3,
+   "del camino"
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

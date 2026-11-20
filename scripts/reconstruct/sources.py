@@ -8,6 +8,7 @@ published one), "cy" (Welsh, only once the A/B review names a model), "letra"
 from __future__ import annotations
 
 import json
+import math
 from pathlib import Path
 from typing import NamedTuple
 
@@ -28,6 +29,7 @@ class Line(NamedTuple):
     text: str
     src: str
     lang: str
+    conf: float | None = None  # the model's own confidence (0-1), Welsh lines only
 
 
 def _vtts(stem: Path) -> dict[str, Path]:
@@ -60,7 +62,8 @@ def load_sources(stem: Path, video_id: str, letras: Path = LETRAS) -> list[Line]
             # The Welsh model writes Welsh even over Spanish speech: where a Spanish source
             # has a line nearby, its line is not Welsh speech and is left out.
             es_times = [l.t for l in out if l.lang == "es"]
-            out += [Line(float(s["s"]), s["text"], "cy", "cy") for s in json.loads(cy.read_text(encoding="utf-8"))["segments"]
+            out += [Line(float(s["s"]), s["text"], "cy", "cy", round(math.exp(s["lp"]), 2) if "lp" in s else None)
+                    for s in json.loads(cy.read_text(encoding="utf-8"))["segments"]
                     if s["text"] and not any(abs(float(s["s"]) - t) <= SPANISH_NEAR for t in es_times)]
     heard_es = [[l.t, l.text] for l in sorted(out) if l.src in ("subida", "yt_es", "whisper_es")]
     heard_cy = [[l.t, l.text] for l in sorted(out) if l.src == "cy"]

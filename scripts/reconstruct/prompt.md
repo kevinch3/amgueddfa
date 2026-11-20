@@ -10,7 +10,7 @@ Rules:
 2. Correct a misheard word only into a word of the WORD LIST, and record it in `fixes` (from = the heard word, to = the corrected word). Typical case: "Stedbot", "Estéduo" → "Eisteddfod"; a garbled name → the name in the programa.
 3. Where a `letra` line covers the moment, copy it exactly as given, with `src` ["letra"], and drop the automatic guesses for that moment.
 4. Where sources disagree, prefer `subida`, then the source whose language fits the moment, then the clearer one. List in `src` every source the line's words come from.
-5. Leave out stretches no source makes sense of (noise, music read as words, loops). Leaving out is better than guessing.
+5. Keep every line that reads as real language, even when it is the only source for that moment: correct its spelling from the WORD LIST if needed, but do not drop it. A Welsh line with conf 0.6 or more is real speech almost always. Leave out only noise, music read as words, and loops (the same words repeated over and over).
 6. Keep each line's time from its source; keep lines in time order; do not merge more than one source line into one output line.
 7. `lang` is the language of the line as written.
 

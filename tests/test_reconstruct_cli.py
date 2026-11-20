@@ -114,3 +114,14 @@ def test_rules_lines_get_the_eisteddfod_spelling_fix(tmp_path):
                             fix_text=lambda s: s.replace("Stedbot", "Eisteddfod"))
     first_window = [x for t, x in res["seg"] if t < 60]
     assert first_window and all("Stedbot" not in x for x in first_window)
+
+
+def test_welsh_only_video_is_reconstructed_and_marked_welsh(tmp_path):
+    repo, backup, video = _setup(tmp_path)
+    (repo / "public/transcripciones-video/vid.json").unlink()  # nothing published today
+    (backup / "videos/x/clip_vid.es-orig.vtt").unlink()
+    (backup / "videos/x/clip_vid.cy-techiaith.json").write_text(json.dumps({"segments": [
+        {"s": float(s), "text": f"Croeso i bawb heddiw {s}"} for s in range(0, 180, 10)]}), encoding="utf-8")
+    res = reconstruct_video(repo, backup, video, ask=echo_model([]), replies=tmp_path / "replies")
+    assert res is not None and res["lang"] == "cy" and len(res["seg"]) == 18
+    assert all(f == ["cy"] for f in res["fuentes"])

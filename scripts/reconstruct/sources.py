@@ -14,9 +14,10 @@ from typing import NamedTuple
 from scripts.align_lyrics import LETRAS, align, parse_letra, spans_for
 from scripts.export_video_transcripts import clean_whisper, glob_escape, parse_vtt
 
-# The Welsh model the A/B review picks, as the suffix of its file next to the video
-# (<stem>.<WELSH_SOURCE>.json, segments [{"s": start, "text": ...}]). None: Welsh stays out.
-WELSH_SOURCE: str | None = None
+# The Welsh model, as the suffix of its file next to the video (<stem>.<WELSH_SOURCE>.json,
+# segments [{"s": start, "text": ...}]). Bangor University's techiaith/whisper-large-ft-cy-en,
+# chosen by the maintainer on 2026-11-20 after the A/B review ("go full Bangor").
+WELSH_SOURCE: str | None = "cy-techiaith"
 
 
 class Line(NamedTuple):

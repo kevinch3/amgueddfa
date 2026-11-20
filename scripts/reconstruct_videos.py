@@ -16,6 +16,7 @@ import argparse
 import csv
 import json
 import sys
+from collections import Counter
 from pathlib import Path
 from typing import Callable
 
@@ -25,7 +26,7 @@ from scripts.reconstruct.checker import check_window
 from scripts.reconstruct.context import video_context
 from scripts.reconstruct.merge import merge, reply_lines, rules_lines
 from scripts.reconstruct.model import MODEL, ModelError, ask as ask_claude
-from scripts.reconstruct.sources import load_sources
+from scripts.reconstruct.sources import WELSH_SOURCE, load_sources
 from scripts.reconstruct.windows import make_windows, needs_model
 
 REPO = Path(__file__).resolve().parent.parent
@@ -54,21 +55,28 @@ def _duration(stem: Path, lines: list) -> float:
         return max(l.t for l in lines) + 5
 
 
-def in_scope(repo: Path, video: dict) -> bool:
-    return video["festival"] in FESTIVALS and (repo / "public/transcripciones-video" / f"{video['id']}.json").exists()
+def in_scope(repo: Path, video: dict, stem: Path | None = None) -> bool:
+    """Chubut and Trevelin only (#29), with a published transcript or a Welsh one to build from."""
+    if video["festival"] not in FESTIVALS:
+        return False
+    if (repo / "public/transcripciones-video" / f"{video['id']}.json").exists():
+        return True
+    return bool(stem and WELSH_SOURCE and stem.with_name(f"{stem.name}.{WELSH_SOURCE}.json").exists())
 
 
 def reconstruct_video(repo: Path, backup: Path, video: dict, ask=ask_claude, replies: Path = REPLIES,
                       state: dict | None = None, files: dict | None = None,
                       fix_text: Callable[[str], str] = lambda s: s) -> dict | None:
     """Write data/reconstruccion/<id>.json for one video and return it; None when out of scope."""
-    if not in_scope(repo, video):
+    if video["festival"] not in FESTIVALS:
         return None
     state = state if state is not None else {"streak": 0, "usd": 0.0, "asked": 0}
     files = files if files is not None else _backup_files(backup)
     if video["id"] not in files:
         return None
     stem = (backup / "videos" / files[video["id"]]).with_suffix("")
+    if not in_scope(repo, video, stem):
+        return None
     letras = repo / "data" / "letras"
     lines = load_sources(stem, video["id"], letras)
     if not lines:
@@ -114,7 +122,8 @@ def reconstruct_video(repo: Path, backup: Path, video: dict, ask=ask_claude, rep
         meta, _ = parse_letra((letras / f"{sp['letra']}.md").read_text(encoding="utf-8"))
         letras_info.append({"desde": sp["desde"], "hasta": sp["hasta"], "titulo": meta.get("titulo", ""),
                             "autor": meta.get("autor", ""), "idioma": meta.get("idioma", "")})
-    result = {"src": "reconstruida", "lang": "es", "modelo": MODEL,
+    spoken = Counter(l.lang for l in lines if l.src != "letra")
+    result = {"src": "reconstruida", "lang": spoken.most_common(1)[0][0] if spoken else "es", "modelo": MODEL,
               "seg": [[l.t, l.text] for l in out_lines], "fuentes": [list(l.fuentes) for l in out_lines],
               **({"letras": letras_info} if letras_info else {}), "ventanas": counts}
     dest = repo / "data" / "reconstruccion" / f"{video['id']}.json"
@@ -140,11 +149,13 @@ def main() -> int:
     backup = Path(a.backup)
     if not (backup / "INDEX.tsv").exists():
         sys.exit(f"{backup}: no INDEX.tsv (backup disk not mounted?)")
-    videos = [v for v in json.loads((REPO / "src/data/videos.json").read_text(encoding="utf-8"))["videos"] if in_scope(REPO, v)]
+    files = _backup_files(backup)
+    stem_of = lambda v: (backup / "videos" / files[v["id"]]).with_suffix("") if v["id"] in files else None
+    videos = [v for v in json.loads((REPO / "src/data/videos.json").read_text(encoding="utf-8"))["videos"]
+              if in_scope(REPO, v, stem_of(v))]
     if a.ids:
         videos = [v for v in videos if v["id"] in set(a.ids)]
     videos = videos[: a.limit] if a.limit else videos
-    files = _backup_files(backup)
     if a.dry_run:
         total = 0
         for v in videos:

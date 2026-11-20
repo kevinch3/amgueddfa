@@ -93,6 +93,15 @@ rsync -a kpc.local:/mnt/raid2/data/V1/amgueddfa-whisper/out/ /tmp/whisper-out/
 python3 scripts/backup/videos.py import-whisper /tmp/whisper-out
 ```
 
+**Welsh, Bangor's model (2026-11-20).**
+- `run_cy.py` transcribes the Chubut and Trevelin videos that have no published text (`cy-ids.txt`, 1,002 ids, shortest first) with `techiaith/whisper-large-ft-cy-en-ct2`, in one-hour chunks, into `out-cy/<id>.json`. Start it with `start_cy.sh`; the log is `cy.log`.
+- Missing audio tracks were cut from the backup (`ffmpeg -vn -c:a copy`) into `audio/`. Then:
+
+```bash
+rsync -a kpc.local:/mnt/raid2/data/V1/amgueddfa-whisper/out-cy/ /tmp/out-cy/
+python3 scripts/backup/videos.py import-cy /tmp/out-cy
+```
+
 Spanish (recitation, songs) comes out readable; Welsh singing is weak (often
 nonsense or English words). Every file says "generated, not checked".
 

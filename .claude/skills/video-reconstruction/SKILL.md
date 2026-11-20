@@ -16,7 +16,10 @@ Design: `docs/superpowers/specs/2026-11-20-reconstruccion-videos-design.md`. Pil
 
 - **Lyrics come only from the maintainer** (skill `video-lyrics`). Never type, recall or complete lyrics, not even public-domain ones.
 - **Never loosen the checker** to make a window pass. A rules fallback is the intended outcome when the model strays.
-- **Welsh stays out** until the A/B review names a model: `WELSH_SOURCE = None` in `scripts/reconstruct/sources.py`. The review page is https://claude.ai/artifact/4s6RExhR7UmN2ZbidbBGs5, and the answer key is private in `../.reconstruccion/ab-pilot/key.json`.
+- **Welsh comes from Bangor's model** (`techiaith/whisper-large-ft-cy-en-ct2`), chosen 2026-11-20 after the A/B review.
+  - Its files sit next to the videos as `<stem>.cy-techiaith.json`, and `WELSH_SOURCE = "cy-techiaith"`.
+  - KPC writes them to `out-cy/` with `run_cy.py`; bring them in with `scripts/backup/videos.py import-cy` (see `docs/backup.md`).
+  - Videos with a Welsh file are in scope even when nothing is published today.
 - **Juventud and Mimosa are never reconstructed** (children, #29). The scope check is `in_scope()`, and the export applies it again.
 - **Usage needs the maintainer's OK above 50 windows.** Show the dry run's window count first. The pilot cost about USD 0.028 API-equivalent per window, and the full archive is about 8,500 windows.
 - **No `--bare`, no API key, no batch API.** Bare mode refuses the subscription.
@@ -48,7 +51,7 @@ npm run build && npm test && python3 -m pytest -q tests
 | New lyrics or span in `data/letras/` | that video |
 | New approved facts (venue, winners, presenters) for an edition | that edition's videos |
 | Programa transcription added or fixed | that edition's videos |
-| A/B winner: set `WELSH_SOURCE` and copy the model's files next to the videos | Welsh-held videos first, then all |
+| New Welsh files imported (`import-cy`) | those videos |
 | `prompt.md` or `schema.json` edited | everything (bump `PROMPT_VERSION` in `windows.py`) |
 | New video harvested | that video |
 

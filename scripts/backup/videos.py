@@ -448,6 +448,22 @@ def cmd_remove(root: Path, vid: str, reason: str) -> int:
     return 0
 
 
+def cmd_import_cy(root: Path, src: Path) -> int:
+    """Copy Bangor's Welsh transcriptions (src/<id>.json, KPC out-cy/) next to their videos
+    as <stem>.cy-techiaith.json; the reconstruction reads them (WELSH_SOURCE)."""
+    idx = read_index(root)
+    n = 0
+    for j in sorted(src.glob('*.json')):
+        row = idx.get(j.stem)
+        if not row or not row.get('file'):
+            continue
+        dest = root / 'videos' / row['file']
+        shutil.copyfile(j, dest.with_suffix('.cy-techiaith.json'))
+        n += 1
+    print(f'imported {n} Welsh (techiaith) results')
+    return 0
+
+
 def cmd_import_whisper(root: Path, src: Path) -> int:
     """Copy Whisper results (src/<id>.json and src/<id>.vtt, from KPC) next to their
     videos as <stem>.whisper.json and <stem>.<lang>-whisper.vtt, then refresh INDEX."""
@@ -494,6 +510,8 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser('index')
     w = sub.add_parser('import-whisper', help='copy Whisper results next to their videos')
     w.add_argument('src', type=Path)
+    c = sub.add_parser('import-cy', help="copy Bangor's Welsh transcriptions next to their videos")
+    c.add_argument('src', type=Path)
     a = ap.parse_args(argv)
     if not a.root.parent.is_dir():
         # An external disk that is not plugged in: never create the tree somewhere else.
@@ -508,6 +526,8 @@ def main(argv: list[str] | None = None) -> int:
         return cmd_remove(a.root, a.id, a.reason)
     if a.cmd == 'import-whisper':
         return cmd_import_whisper(a.root, a.src)
+    if a.cmd == 'import-cy':
+        return cmd_import_cy(a.root, a.src)
     return cmd_index(a.root)
 
 

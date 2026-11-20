@@ -107,3 +107,13 @@ Nothing open. Decided on 2026-11-20:
 - The model is `claude-sonnet-5-5`.
 - Calls run on the maintainer's Claude subscription through `claude -p`. There is no API key and no batch API.
 - Usage counts against the subscription's limits. The pilot reports the usage per video before the full run.
+
+## Update 2026-11-20: Welsh source chosen
+
+The maintainer chose Bangor's model, `techiaith/whisper-large-ft-cy-en-ct2`, for all Welsh ("go full Bangor"), after 40 blind A/B ratings:
+- it was rated better 25 times against 11 for turbo (p ≈ 0.03);
+- on music windows the split was 19–7.
+
+The music/speech split was considered and dropped.
+
+KPC transcribes every Chubut and Trevelin video that has no published text: 1,002 videos, 127.7 h. The files are imported as `<stem>.cy-techiaith.json`. Videos with a Welsh file come into the reconstruction's scope.

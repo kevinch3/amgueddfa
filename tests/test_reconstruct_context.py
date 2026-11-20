@@ -52,3 +52,11 @@ def test_context_follows_session_chapters(tmp_path):
 
 def test_tokens_fold_accents_case_and_punctuation():
     assert tokens("¡Gracias, TRELEW! Gŵyl Eisteddfod's") == ["gracias", "trelew", "gwyl", "eisteddfod's"]
+
+
+def test_word_list_has_fact_values_not_field_labels(tmp_path):
+    repo = _repo(tmp_path)
+    video = {"id": "vid", "festival": "chubut", "year": "2025", "title": "Competencia Nº 75"}
+    ctx = video_context(repo, video, 0, 60)
+    assert {"gimnasio", "municipal"} <= ctx.words
+    assert "venue" not in ctx.words and "ganador" not in ctx.words

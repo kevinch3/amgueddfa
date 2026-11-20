@@ -17,9 +17,10 @@ import csv
 import json
 import sys
 from pathlib import Path
+from typing import Callable
 
 from scripts.align_lyrics import parse_letra, spans_for
-from scripts.export_video_transcripts import DEFAULT_BACKUP, FESTIVALS
+from scripts.export_video_transcripts import DEFAULT_BACKUP, FESTIVALS, fix_eisteddfod, spanish_words
 from scripts.reconstruct.checker import check_window
 from scripts.reconstruct.context import video_context
 from scripts.reconstruct.merge import merge, reply_lines, rules_lines
@@ -41,6 +42,11 @@ def _backup_files(backup: Path) -> dict[str, str]:
         return {r["id"]: r["file"] for r in csv.DictReader(f, delimiter="\t") if r.get("file")}
 
 
+def _fallback(w, fix_text: Callable[[str], str]) -> list:
+    """Rules lines, with the same spelling fixes the export gives automatic text ("Stedbot" -> "Eisteddfod")."""
+    return [l if "letra" in l.fuentes else l._replace(text=fix_text(l.text)) for l in rules_lines(w)]
+
+
 def _duration(stem: Path, lines: list) -> float:
     try:
         return float(json.loads(stem.with_name(f"{stem.name}.info.json").read_text(encoding="utf-8"))["duration"])
@@ -53,7 +59,8 @@ def in_scope(repo: Path, video: dict) -> bool:
 
 
 def reconstruct_video(repo: Path, backup: Path, video: dict, ask=ask_claude, replies: Path = REPLIES,
-                      state: dict | None = None, files: dict | None = None) -> dict | None:
+                      state: dict | None = None, files: dict | None = None,
+                      fix_text: Callable[[str], str] = lambda s: s) -> dict | None:
     """Write data/reconstruccion/<id>.json for one video and return it; None when out of scope."""
     if not in_scope(repo, video):
         return None
@@ -73,7 +80,7 @@ def reconstruct_video(repo: Path, backup: Path, video: dict, ask=ask_claude, rep
     for w in windows:
         if not needs_model(w):
             counts["vacias"] += 1
-            per_window.append(rules_lines(w))
+            per_window.append([])  # music or applause only: nothing to publish
             continue
         cached = cache / f"{w.hash}.json"
         reply = json.loads(cached.read_text(encoding="utf-8")) if cached.exists() else None
@@ -86,7 +93,7 @@ def reconstruct_video(repo: Path, backup: Path, video: dict, ask=ask_claude, rep
                 if state["streak"] >= MAX_ERRORS_IN_A_ROW:
                     raise TooManyErrors(str(e)) from e
                 counts["reglas"] += 1
-                per_window.append(rules_lines(w))
+                per_window.append(_fallback(w, fix_text))
                 continue
             state["streak"] = 0
             state["asked"] += 1
@@ -97,7 +104,7 @@ def reconstruct_video(repo: Path, backup: Path, video: dict, ask=ask_claude, rep
         if errors:
             print(f"  {video['id']} {w.t0:g}s: rules ({errors[0]})", file=sys.stderr)
             counts["reglas"] += 1
-            per_window.append(rules_lines(w))
+            per_window.append(_fallback(w, fix_text))
         else:
             counts["modelo"] += 1
             per_window.append(reply_lines(reply))
@@ -111,6 +118,11 @@ def reconstruct_video(repo: Path, backup: Path, video: dict, ask=ask_claude, rep
               "seg": [[l.t, l.text] for l in out_lines], "fuentes": [list(l.fuentes) for l in out_lines],
               **({"letras": letras_info} if letras_info else {}), "ventanas": counts}
     dest = repo / "data" / "reconstruccion" / f"{video['id']}.json"
+    if not out_lines:
+        # Nothing survived: write no reconstruction, so the export keeps today's transcript
+        # and the run summary lists the video for a person to look at.
+        dest.unlink(missing_ok=True)
+        return result
     dest.parent.mkdir(parents=True, exist_ok=True)
     body = json.dumps(result, ensure_ascii=False, indent=1) + "\n"
     if not dest.exists() or dest.read_text(encoding="utf-8") != body:
@@ -148,12 +160,17 @@ def main() -> int:
             print(f"{v['id']}  {v['title'][:60]}  windows {len(ws)}, to ask {len(todo)}")
         print(f"{len(videos)} video(s), {total} window(s) to ask")
         return 0
+    words = spanish_words()
+    fix = lambda text: fix_eisteddfod(text, words)
     state = {"streak": 0, "usd": 0.0, "asked": 0}
+    empty: list[str] = []
     sums = {"total": 0, "modelo": 0, "reglas": 0, "vacias": 0}
     done = 0
     try:
         for v in videos:
-            res = reconstruct_video(REPO, backup, v, state=state, files=files)
+            res = reconstruct_video(REPO, backup, v, state=state, files=files, fix_text=fix)
+            if res and not res["seg"]:
+                empty.append(v["id"])
             if res:
                 done += 1
                 for k in sums:
@@ -163,6 +180,8 @@ def main() -> int:
         print(f"stopped: {MAX_ERRORS_IN_A_ROW} model errors in a row ({e})", file=sys.stderr)
     print(f"{done} video(s); windows {sums}; asked {state['asked']}; "
           f"USD {state['usd']:.2f} equivalente API, cubierto por la suscripción")
+    if empty:
+        print(f"sin texto (no file written, today's transcript stays): {' '.join(empty)}")
     return 0
 
 

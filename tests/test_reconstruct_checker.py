@@ -35,7 +35,7 @@ def test_fix_outside_word_list_fails():
 
 
 def test_time_outside_window_or_backwards_fails():
-    assert check_window(W, {"lines": [line(70.0, "Trelew")]})[0].startswith("rule 3")
+    assert any(e.startswith("rule 3") for e in check_window(W, {"lines": [line(70.0, "Trelew")]}))
     errs = check_window(W, {"lines": [line(20.0, "gracias a Trelew"), line(3.4, "bienvenidos al Trelew")]})
     assert any(e.startswith("rule 3") for e in errs)
 
@@ -53,3 +53,59 @@ def test_punctuation_accents_and_case_still_match():
 
 def test_empty_reply_passes():
     assert check_window(W, {"lines": []}) == []
+
+
+# Real-shaped context: a programa line and approved facts, as video_context builds them.
+CTX_REAL = Context(
+    "Eisteddfod del Chubut 2025.\nCompetencia 75: Segunda competencia principal, coro mixto: a) «Rosa Amarela», Heitor Villalobos.\n"
+    "ganador_corona: Arie Lloyd de Lewis\nganador_silla: Sara Borda Green",
+    frozenset({"eisteddfod", "chubut", "2025", "segunda", "competencia", "principal", "coro", "mixto", "a", "rosa", "amarela",
+               "heitor", "villalobos", "arie", "lloyd", "de", "lewis", "sara", "borda", "green", "ganador", "corona", "silla", "trelew"}))
+WR = Window(0.0, 60.0, (
+    Line(3.4, "bienvenidos al Stedbot de Trelew", "yt_es", "es"),
+    Line(30.0, "Olha a Rosa amarela, Rosa", "letra", "pt"),
+    Line(32.0, "Tão Formosa, tão bela, Rosa", "letra", "pt"),
+), CTX_REAL, "h")
+
+
+def test_line_made_only_of_word_list_words_fails():
+    reply = {"lines": [line(45.0, "ganador corona Sara Borda Green")]}
+    assert any(e.startswith("rule 1") for e in check_window(WR, reply))
+
+
+def test_word_list_word_only_through_a_heard_fix():
+    ok = {"lines": [line(3.4, "bienvenidos al Eisteddfod de Trelew", fixes=[{"from": "Stedbot", "to": "Eisteddfod"}])]}
+    assert check_window(WR, ok) == []
+    unheard_from = {"lines": [line(3.4, "bienvenidos al Eisteddfod de Trelew", fixes=[{"from": "Estéduo", "to": "Eisteddfod"}])]}
+    assert any(e.startswith("rule 2") for e in check_window(WR, unheard_from))
+    no_fix = {"lines": [line(3.4, "bienvenidos al Eisteddfod de Trelew Sara Borda")]}
+    assert any(e.startswith("rule 1") for e in check_window(WR, no_fix))
+
+
+def test_lyric_words_cannot_build_a_new_line():
+    reply = {"lines": [line(30.0, "a Rosa bela, tão amarela", src=("yt_es",), lang="pt")]}
+    assert check_window(WR, reply)
+
+
+def test_lyric_line_must_keep_its_time_and_appear_once():
+    moved = {"lines": [line(5.0, "Olha a Rosa amarela, Rosa", src=("letra",), lang="pt")]}
+    assert any(e.startswith("rule 4") for e in check_window(WR, moved))
+    twice = {"lines": [line(30.0, "Olha a Rosa amarela, Rosa", src=("letra",), lang="pt"),
+                       line(30.0, "Olha a Rosa amarela, Rosa", src=("letra",), lang="pt")]}
+    assert any(e.startswith("rule 4") for e in check_window(WR, twice))
+
+
+def test_sources_must_be_real_and_non_empty():
+    fake_src = {"lines": [line(3.4, "bienvenidos al Stedbot de Trelew", src=("whisper_es",))]}
+    assert any(e.startswith("rule 5") for e in check_window(WR, fake_src))
+    no_src = {"lines": [line(3.4, "bienvenidos al Stedbot de Trelew", src=())]}
+    assert any(e.startswith("rule 5") for e in check_window(WR, no_src))
+
+
+def test_line_time_must_be_a_source_time():
+    reply = {"lines": [line(4.1, "bienvenidos al Stedbot de Trelew")]}
+    assert any(e.startswith("rule 3") for e in check_window(WR, reply))
+
+
+def test_empty_text_line_fails():
+    assert check_window(WR, {"lines": [line(3.4, "  ¡! ")]})

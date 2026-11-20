@@ -84,3 +84,33 @@ def test_juventud_video_is_never_reconstructed(tmp_path):
     repo, backup, video = _setup(tmp_path, festival="juventud")
     assert reconstruct_video(repo, backup, video, ask=echo_model([]), replies=tmp_path / "replies") is None
     assert not (repo / "data/reconstruccion").exists()
+
+
+def test_music_only_and_empty_results_publish_nothing(tmp_path):
+    repo, backup, video = _setup(tmp_path)
+    (backup / "videos/x/clip_vid.es-orig.vtt").write_text(
+        "WEBVTT\nKind: captions\nLanguage: es\n\n00:00:01.000 --> 00:00:03.000 align:start position:0%\n[Música]\n\n"
+        "00:01:30.000 --> 00:01:32.000 align:start position:0%\n[Aplausos]\n", encoding="utf-8")
+    dest = repo / "data/reconstruccion/vid.json"
+    dest.parent.mkdir(parents=True)
+    dest.write_text("{}", encoding="utf-8")  # an older reconstruction
+    res = reconstruct_video(repo, backup, video, ask=echo_model([]), replies=tmp_path / "replies")
+    assert res["seg"] == [] and res["ventanas"]["vacias"] == res["ventanas"]["total"]
+    assert not dest.exists()  # empty: no file, the export keeps today's transcript
+
+
+def test_rules_lines_get_the_eisteddfod_spelling_fix(tmp_path):
+    repo, backup, video = _setup(tmp_path)
+    calls = []
+    good = echo_model(calls)
+    state = {"n": 0}
+
+    def flaky(w):
+        state["n"] += 1
+        if state["n"] == 1:
+            raise ModelError("boom")
+        return good(w)
+    res = reconstruct_video(repo, backup, video, ask=flaky, replies=tmp_path / "replies",
+                            fix_text=lambda s: s.replace("Stedbot", "Eisteddfod"))
+    first_window = [x for t, x in res["seg"] if t < 60]
+    assert first_window and all("Stedbot" not in x for x in first_window)

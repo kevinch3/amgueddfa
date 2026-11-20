@@ -61,15 +61,17 @@ def _on_screen(repo: Path, video: dict, t0: float, t1: float) -> list[int]:
 def video_context(repo: Path, video: dict, t0: float, t1: float) -> Context:
     festival, year = video["festival"], int(video["year"])
     parts = [f"{FESTIVAL_NAMES.get(festival, festival)} {year}."]
+    values = [parts[0]]  # the word list: names and values only, never field labels
     lines = programa_lines(repo, festival, year)
     for n in _on_screen(repo, video, t0, t1):
         if n in lines:
             parts.append(f"Competencia {n}: {lines[n]}")
+            values.append(lines[n])
     facts = json.loads((repo / "data/approved/contributions.json").read_text(encoding="utf-8"))
     for c in facts:
         p = c.get("payload") or {}
         if (c.get("type") == "fact" and c.get("status", "approved") == "approved" and c.get("festival") == festival
                 and c.get("year") == year and p.get("field") in FACT_FIELDS and p.get("value")):
             parts.append(f"{p['field']}: {p['value']}")
-    text = "\n".join(parts)
-    return Context(text, frozenset(tokens(text)) | BASE_WORDS)
+            values.append(p["value"])
+    return Context("\n".join(parts), frozenset(tokens(" ".join(values))) | BASE_WORDS)

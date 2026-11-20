@@ -58,3 +58,11 @@ def test_welsh_is_left_out_until_chosen(tmp_path):
     stem, letras = _fixture(tmp_path, cy=True)
     assert sources.WELSH_SOURCE is None
     assert not any(l.src == "cy" for l in load_sources(stem, "vid", letras))
+
+
+def test_uploaded_subtitles_only_in_spanish(tmp_path):
+    stem, letras = _fixture(tmp_path)
+    folder = stem.parent
+    (folder / "2025_clip_vid.en.vtt").write_text(VTT.replace("Language: es", "Language: en"), encoding="utf-8")
+    (folder / "2025_clip_vid.info.json").write_text(json.dumps({"subtitles": {"en": []}}), encoding="utf-8")
+    assert not any(l.src == "subida" for l in load_sources(stem, "vid", letras))

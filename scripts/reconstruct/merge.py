@@ -4,7 +4,8 @@ from __future__ import annotations
 
 from typing import NamedTuple
 
-from scripts.reconstruct.windows import Window
+from scripts.reconstruct.context import tokens
+from scripts.reconstruct.windows import Window, _strip_tags
 
 PREFERENCE = ("subida", "yt_es", "whisper_es", "cy")
 LYRIC_TAIL = 4.0  # seconds a lyric span is taken to last after its last line
@@ -19,7 +20,7 @@ class OutLine(NamedTuple):
 
 def rules_lines(w: Window) -> list[OutLine]:
     """No model: lyrics inside their span, otherwise the most reliable source the window has."""
-    own = [l for l in w.lines if w.t0 <= l.t < w.t1]
+    own = [l for l in w.lines if w.t0 <= l.t < w.t1 and tokens(_strip_tags(l.text))]  # no bare [Música] tags
     lyrics = [l for l in own if l.src == "letra"]
     span = (min(l.t for l in lyrics), max(l.t for l in lyrics) + LYRIC_TAIL) if lyrics else None
     src = next((s for s in PREFERENCE if any(l.src == s for l in own)), None)

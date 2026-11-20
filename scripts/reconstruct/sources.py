@@ -38,8 +38,10 @@ def load_sources(stem: Path, video_id: str, letras: Path = LETRAS) -> list[Line]
         info = json.loads(stem.with_name(f"{stem.name}.info.json").read_text(encoding="utf-8"))
     except (OSError, ValueError):
         info = {}
+    # Uploaded subtitles: Spanish only, like the export (no English text, not even the author's); Welsh once chosen.
+    langs = {"es"} | ({"cy"} if WELSH_SOURCE else set())
     for k in (info.get("subtitles") or {}):
-        if k != "live_chat" and k in vtts:
+        if k != "live_chat" and k in vtts and k.split("-")[0] in langs:
             out += [Line(float(t), x, "subida", k.split("-")[0]) for t, x in parse_vtt(vtts[k].read_text(encoding="utf-8"))]
     if "es-orig" in vtts:
         out += [Line(float(t), x, "yt_es", "es") for t, x in parse_vtt(vtts["es-orig"].read_text(encoding="utf-8"))]

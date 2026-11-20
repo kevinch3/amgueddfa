@@ -42,7 +42,8 @@ def display_words(w: Window) -> list[str]:
 
 
 def window_prompt(w: Window) -> str:
-    src = "\n".join(f"[{l.t:g}] ({l.src}, {l.lang}) {l.text}" for l in w.lines)
+    src = "\n".join(f"[{l.t:g}] ({l.src}, {l.lang}{f', conf {l.conf:.2f}' if l.conf is not None else ''}) {l.text}"
+                     for l in w.lines)
     return (f"WINDOW: {w.t0:g} to {w.t1:g} seconds\n\nSOURCES:\n{src}\n\nCONTEXT:\n{w.context.text}\n\n"
             f"WORD LIST:\n{', '.join(display_words(w))}\n")
 

@@ -92,3 +92,12 @@ def test_welsh_lines_only_where_the_spanish_sources_are_silent(tmp_path):
     ]}), encoding="utf-8")
     cy = [(l.t, l.text) for l in load_sources(stem, "vid", letras) if l.src == "cy"]
     assert cy == [(70.0, "Croeso i Eisteddfod y Wladfa")]
+
+
+def test_welsh_lines_carry_confidence(tmp_path):
+    stem, letras = _fixture(tmp_path)
+    (letras / "videos.json").write_text("{}", encoding="utf-8")
+    (stem.parent / f"{stem.name}.cy-techiaith.json").write_text(json.dumps({"segments": [
+        {"s": 80.0, "text": "Croeso i bawb", "lp": -0.19}]}), encoding="utf-8")
+    cy = [l for l in load_sources(stem, "vid", letras) if l.src == "cy"]
+    assert cy[0].conf == 0.83 and all(l.conf is None for l in load_sources(stem, "vid", letras) if l.src != "cy")

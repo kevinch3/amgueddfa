@@ -60,3 +60,8 @@ def test_word_list_keeps_accents_and_capitals_of_the_context():
     words = window_prompt(w).split("WORD LIST:\n")[1]
     assert "Sueño" in words and "Ibarbourou" in words and "Gimnasio" in words and "Eisteddfod" in words
     assert "sueno" not in words
+
+
+def test_prompt_shows_welsh_confidence():
+    w = WINDOW._replace(lines=(Line(404.0, "Yn yr ail dosbarth rhoddaf", "cy", "cy", 0.83),))
+    assert "[404] (cy, cy, conf 0.83) Yn yr ail dosbarth rhoddaf" in window_prompt(w)

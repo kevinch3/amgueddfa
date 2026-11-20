@@ -80,7 +80,7 @@ def _walk(archive: Path):
         rel = p.relative_to(archive)
         if not p.is_file() or any(part.startswith(".") for part in rel.parts):
             continue
-        if rel.parts[0] in IGNORED:
+        if rel.parts[0] in IGNORED or rel.parts[0].startswith("amgueddfa"):  # the repo and its git worktrees
             continue
         yield p, rel
 

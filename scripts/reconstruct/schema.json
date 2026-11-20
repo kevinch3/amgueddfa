@@ -1,0 +1,30 @@
+{
+ "type": "object",
+ "additionalProperties": false,
+ "required": ["lines"],
+ "properties": {
+  "lines": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["t", "lang", "text", "src", "fixes"],
+    "properties": {
+     "t": {"type": "number"},
+     "lang": {"enum": ["cy", "es", "en", "pt", "la"]},
+     "text": {"type": "string"},
+     "src": {"type": "array", "items": {"enum": ["subida", "yt_es", "whisper_es", "cy", "letra"]}},
+     "fixes": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "additionalProperties": false,
+       "required": ["from", "to"],
+       "properties": {"from": {"type": "string"}, "to": {"type": "string"}}
+      }
+     }
+    }
+   }
+  }
+ }
+}

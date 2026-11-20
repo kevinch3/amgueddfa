@@ -706,7 +706,11 @@
     "ver_ficha": "查看完整条目",
     "imagen_alt": "{titulo}",
     "listo": "所有任务都完成了！谢谢您的帮助。",
-    "ver_perfil": "查看我的主页"
+    "ver_perfil": "查看我的主页",
+    "transcribir_titulo": "待转录",
+    "transcribir_ayuda": "这些文件只有机器识别文字（OCR，未经校对）。打开一份，对照图片，提交转录：节目单优先。",
+    "transcribir_n": "{n} 份文件",
+    "transcribir_uno": "1 份文件"
   },
   "recientes": {
     "vacio": "还没有通过审核的贡献。快来成为第一位贡献者吧！",

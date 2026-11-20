@@ -381,6 +381,14 @@ describe('static build', () => {
     }
     for (const i of catalog.filter((x) => x.restricted)) expect(html).not.toContain(i.id);
     expect(read('index.html')).toContain('id="recientes-data"');
+    // OCR-only documents are listed to transcribe; ones with a human transcription are not.
+    const ocrIds = readdirSync('src/data/ocr').map((f) => f.replace(/\.json$/, ''));
+    const listed = [...html.matchAll(/data-transcribir="([0-9a-f]{12})"/g)].map((x) => x[1]);
+    expect(listed.length).toBeGreaterThan(100);
+    for (const id of listed) {
+      expect(ocrIds, id).toContain(id);
+      expect(existsSync(join('src/data/transcripciones', `${id}.md`)), id).toBe(false);
+    }
   });
 
   it('no internal link escapes the base path', () => {

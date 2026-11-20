@@ -706,7 +706,11 @@
     "ver_ficha": "Vedi la scheda completa",
     "imagen_alt": "{titulo}",
     "listo": "Hai finito tutte le attività! Grazie per l'aiuto.",
-    "ver_perfil": "Vedi il mio profilo"
+    "ver_perfil": "Vedi il mio profilo",
+    "transcribir_titulo": "Da trascrivere",
+    "transcribir_ayuda": "Questi documenti hanno solo testo automatico (OCR, non rivisto). Aprine uno, confrontalo con l'immagine e invia la trascrizione: prima i programmi.",
+    "transcribir_n": "{n} documenti",
+    "transcribir_uno": "1 documento"
   },
   "recientes": {
     "vacio": "Non ci sono ancora contributi approvati. Puoi essere la prima persona!",

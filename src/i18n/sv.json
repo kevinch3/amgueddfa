@@ -706,7 +706,11 @@
     "ver_ficha": "Se hela posten",
     "imagen_alt": "{titulo}",
     "listo": "Du har gjort alla uppgifter! Tack för hjälpen.",
-    "ver_perfil": "Se min profil"
+    "ver_perfil": "Se min profil",
+    "transcribir_titulo": "Att transkribera",
+    "transcribir_ayuda": "De här dokumenten har bara maskinläst text (OCR, ogranskad). Öppna ett, jämför med bilden och skicka in transkriptionen: programmen först.",
+    "transcribir_n": "{n} dokument",
+    "transcribir_uno": "1 dokument"
   },
   "recientes": {
     "vacio": "Det finns inga godkända bidrag än. Du kan bli den första!",

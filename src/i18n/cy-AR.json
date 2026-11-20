@@ -706,7 +706,11 @@
     "ver_ficha": "Gweld y cofnod llawn",
     "imagen_alt": "{titulo}",
     "listo": "Rydych chi wedi gorffen y tasgau i gyd! Diolch am yr help.",
-    "ver_perfil": "Gweld fy mhroffil"
+    "ver_perfil": "Gweld fy mhroffil",
+    "transcribir_titulo": "I'w trawsgrifio",
+    "transcribir_ayuda": "Dim ond testun peiriant (OCR, heb ei wirio) sydd gan y dogfennau yma. Agorwch un, cymharwch e â'r ddelwedd ac anfonwch y trawsgrifiad: y rhaglenni sy'n dod gyntaf.",
+    "transcribir_n": "{n} dogfen",
+    "transcribir_uno": "1 ddogfen"
   },
   "recientes": {
     "vacio": "Does dim cyfraniadau wedi'u cymeradwyo eto. Mi allech chi fod y cyntaf!",

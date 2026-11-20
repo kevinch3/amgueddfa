@@ -2207,6 +2207,19 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "54c553b4-cacb-4e07-b02c-22f9966a73cc",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 1942,
+    "item_id": "1ed746f08126",
+    "payload": {
+      "year": 1942
+    },
+    "created_at": "2026-11-19T23:09:13.116966+00:00",
+    "reviewed_at": "2026-11-19T23:09:13.116966+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "5509b1bc-5ebc-4650-b2ce-8be146f7d0f6",
     "type": "tag",
     "festival": "trevelin",
@@ -6522,6 +6535,19 @@
     },
     "created_at": "2026-11-17T13:32:44.148707+00:00",
     "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "df88592f-fc58-4819-a594-81b9b67ec69f",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 1942,
+    "item_id": "05d365c46a2b",
+    "payload": {
+      "hidden": true
+    },
+    "created_at": "2026-11-19T23:09:00.682864+00:00",
+    "reviewed_at": "2026-11-19T23:09:00.682864+00:00",
     "display_name": "Kevin Roberts"
   },
   {

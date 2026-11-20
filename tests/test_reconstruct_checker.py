@@ -125,3 +125,25 @@ def test_mutations_do_not_open_spanish_lines_or_other_words():
     assert any(e.startswith("rule 1") for e in check_window(WCY, es))
     other = {"lines": [line(10.0, "ac yn cyfarch o Gaerdydd", src=("cy",), lang="cy")]}
     assert any(e.startswith("rule 1") for e in check_window(WCY, other))
+
+
+WSA = Window(0.0, 60.0, (Line(10.0, "llun o'r paith dylenneg ar gyfer pedair cerdd", "cy", "cy"),),
+             Context("", frozenset()), "h")
+
+
+def test_welsh_sound_alike_fix_from_context_passes():
+    reply = {"lines": [line(10.0, "llun o'r paith telyneg ar gyfer pedair cerdd", src=("cy",), lang="cy",
+                            fixes=[{"from": "dylenneg", "to": "telyneg"}])]}
+    assert check_window(WSA, reply) == []
+
+
+def test_welsh_fix_to_a_word_that_does_not_sound_alike_fails():
+    reply = {"lines": [line(10.0, "llun o'r paith Gwenllian ar gyfer pedair cerdd", src=("cy",), lang="cy",
+                            fixes=[{"from": "dylenneg", "to": "Gwenllian"}])]}
+    assert any(e.startswith("rule 2") for e in check_window(WSA, reply))
+
+
+def test_numbers_never_change_even_if_they_sound_alike():
+    reply = {"lines": [line(10.0, "llun o'r paith dylenneg ar gyfer tair cerdd", src=("cy",), lang="cy",
+                            fixes=[{"from": "pedair", "to": "tair"}])]}
+    assert any(e.startswith("rule 2") for e in check_window(WSA, reply))

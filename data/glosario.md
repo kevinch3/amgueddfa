@@ -6,3 +6,4 @@ dewenllys → Tehuelches
 e-paith → y paith
 dylenneg → telyneg
 cyfarth → cyfarch
+i symud Mhont a Caerfyrddin → syml a thaclus

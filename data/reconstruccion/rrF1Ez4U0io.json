@@ -1,0 +1,36 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   28.8,
+   "i holl ffwys ar y nôl e. Caf yn ddorlas, yn hyfryd i diflas, yn y mwyn y gymdeithas y dydd, yn yr athar rydd yn ôl a dydd, rheolau sydd ar y lwybrau ffydd, rhoi fe bai ni ddydd o'r ysgrifennu."
+  ],
+  [
+   58.8,
+   "byd. Mae Iau di ddanwch y dydd, yn y tŷ noswyl i'r byd, yn ei llwyr, ei myd yw'r rhwys a'r blwydd, ond y gweg i gyd. Tam fe ddim barod, y fel ydw i fel y drog i'r byd."
+  ],
+  [
+   88.8,
+   "O'i dirion ei gariade. Mi glygwaf agor ar isial afor, a gweler fod tangnefeddion yn agor yn y nef."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

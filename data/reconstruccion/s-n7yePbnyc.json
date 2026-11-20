@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "Ar y ddaearbyn i'r oedd yn awen, oedd y nw difroes oedd gorau i'r a- awen oedd, oedd y nw difroes i'r oedd."
+  ],
+  [
+   53.0,
+   "O'r hen dwylo'n ni'n dorri yn ei ffordd, sydd o'i gilydd Cymru mewn elfennau doi, o lanau yr oedd o yn fy ffyrdd i fi."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

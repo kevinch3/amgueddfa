@@ -1,0 +1,22 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   120.0,
+   "Diolch yn fawr, Gwanwyn, diolch am y lectwr a'r benedictod, y competensiaeth tri deg tri."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

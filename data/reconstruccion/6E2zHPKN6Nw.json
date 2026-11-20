@@ -1,0 +1,57 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "A welswch erioed mo Carren, ferch Mabell, o gwmpas ei gwaith o'n ddiwyd allon, mae popeth a' o'n el, yn bleser i'w weled, a'i gwenna'n y tŷ fel heulwen ar y dôn."
+  ],
+  [
+   28.0,
+   "Bydd y cysur ymwiniad o'i hwyneb yn tynnu wrth olchi a sgwmpio a gweithio'n ddigwydd, yn beraidd o'i min bydd miwsig yn llifo mor swynol a llais yr eos mewn llwyth."
+  ],
+  [
+   58.0,
+   "Ma' caren yn lan a gonest ei chalon, a'i ffydd, be' bai ffydd, yn glodus drwy'n gwlad."
+  ],
+  [
+   72.0,
+   "Caredig yw hi a hoffis a thirion, a'n wylid ei mam llawenydd ei thad."
+  ],
+  [
+   86.0,
+   "Ffynhonnell gysuron a thelyn anwyldeb Bydd y carref anwyli tan un mi'r na ni."
+  ],
+  [
+   101.0,
+   "Wrth deithio drwy'r byd mewn heb a boddlondeb Dedwyd byd bydd hi bob munud."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 1,
+  "reglas": 1,
+  "vacias": 0
+ }
+}

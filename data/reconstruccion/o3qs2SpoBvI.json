@@ -1,0 +1,43 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Y deryn du a'i blyfu'n sidan a'i bigau'r reit dafod arian a'i ddud drosto'i i gyd-wely i sbïo o hyd y ferch rwy'n garu."
+  ],
+  [
+   30.0,
+   "A dwc o'r tŷ, a dwc o'r sgubor, a dwc o glwyd yr ardd yn agor, a dwc o'r golfen fawr yn tyfu, a dyna'i bwrw am fy nghladd i."
+  ],
+  [
+   57.0,
+   "Un, dou, tri pheth sy'n anodd i mi yw rhifo'r ser pan fo hi'n rhewi, a dotio'r llaw i datsio'r Lleuad, a deall y meddwl fanwy'r gariad."
+  ],
+  [
+   83.0,
+   "Llawn iawn yw'r wy o wyn a melyn, llawn iawn yw'r môr o sownd a chregin, llawn iawn yw'r coed o ddail a blodau, llawn iawn o gariad a dwy fine."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

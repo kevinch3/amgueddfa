@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Wrth oriau'r dewodau'r ynaf, wrth gerdd yr y byd, sai hyn yr ewyllaf."
+  ],
+  [
+   89.0,
+   "O bechgyn i bechgyn a'r gorffen wedi fwyd, mi gynna'r dwrnod dŵr i bab yn byd, i bab yn byd, i bab yn byd."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

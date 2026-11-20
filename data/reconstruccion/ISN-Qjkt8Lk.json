@@ -1,0 +1,71 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "O dôra, dôra di."
+  ],
+  [
+   35.32,
+   "Mi glywais lais y rêos yn tiwnio yn y coed, ac roeddwn i'n disgwyl fy nghariad gorau erioed."
+  ],
+  [
+   50.12,
+   "Dôra do, dôra do, o dôra, dôra di."
+  ],
+  [
+   57.68,
+   "Pan gwrddesaf fy nghariad, a hynny oedd yn gas, rhwng breichiau bachgen arall yn cael eu charu'n glos, dora dod, dora dod, ora, dora di."
+  ],
+  [
+   83.2,
+   "Mi gydiesam ei chanol, gofynes iddi hi, dewiswch un ohonom, y gorau gennych chwi, dora do, dora do, o dora, dora di."
+  ],
+  [
+   106.68,
+   "A'r ateb a gis ganddi, a hynny oedd yn gas, ni wedai ddim heno fod dyn yn well na'r llall."
+  ],
+  [
+   122.28,
+   "Dora do, dora do, o dora, dora di, dowch yma nos yfory, cewch wybod gen i'n glau, os cwrddaf â fy nghariad, ma' dawad fach i'ch dau."
+  ],
+  [
+   145.96,
+   "Dora do, dora do, o dora, dora di."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

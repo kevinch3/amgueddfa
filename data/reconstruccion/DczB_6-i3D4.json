@@ -1,0 +1,78 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   2.2,
+   "tú eras valais"
+  ],
+  [
+   7.1,
+   "en turín a la cara"
+  ],
+  [
+   22.1,
+   "por igual"
+  ],
+  [
+   26.3,
+   "dejando disk angela y a suelo"
+  ],
+  [
+   41.4,
+   "primero"
+  ],
+  [
+   43.9,
+   "el vaso colombia que es africana"
+  ],
+  [
+   47.4,
+   "tarantino"
+  ],
+  [
+   50.6,
+   "tema"
+  ],
+  [
+   56.7,
+   "en el interior"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

@@ -1,0 +1,36 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "Ambell i ddaeth i gyflwyno'i moronau a'i thŷ, mor swnio'n agos, a ddigon o nofau fflamoglau anghof, y drwg drws."
+  ],
+  [
+   60.0,
+   "Ambell i gân, brif arfer yn y graig, ar y swydd i gau o aml manifail, a gryma'n amsgaru ambell i gân, amsgaru ambell i gân."
+  ],
+  [
+   85.48,
+   "Ambell i gân, a dafarn erbyn, ond teithiag yw'r gofyn rhannu i, ac wedyn i madael yr arian a'r lôn, gobeithioedd cae'l canu byth ambell i gân, gobeithioedd cae'l canu byth."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

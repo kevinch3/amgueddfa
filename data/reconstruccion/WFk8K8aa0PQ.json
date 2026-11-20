@@ -1,0 +1,22 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   139.06,
+   "For you're better off lost than found, at last."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 2
+ }
+}

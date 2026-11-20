@@ -1,0 +1,43 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Anfonwyd amdani, a daeth hithau am bontell sidan fflam goch amdani, a thorch drwch ei syfryddau'r amwdd fy forwyn, a ffermau gwerthfawr ynddi, a gemau coch."
+  ],
+  [
+   18.56,
+   "Melynach oedd ei gwallt na blodau'r banadl, gwynach oedd ei chnawd nag ewin y don, gwynach oedd ei dwylo a'i bysedd nag egin ffâr gors yng nghanol graean ma'r ffynnon fyrlymus."
+  ],
+  [
+   39.66,
+   "Nid oedd llygad hebog wedi bwrw ei glu, na llygad gwalch wedi bwrw ei glu, deir gwaeth yn becach na llygad a oedd yn eiddo iddi hi."
+  ],
+  [
+   54.66,
+   "Yr oedd ei dwy fron yn wynach na bron a larch gwyn, cochach oedd ei dwy rif na rhïon, fe fyddai'r sawl a'i gwelai yn gyflawn o serch tuag ati, tyfai peiriau meillionen wen o'i hôl, lle bynnag yr ai, ac oherwydd hynny y gelwyd hi."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

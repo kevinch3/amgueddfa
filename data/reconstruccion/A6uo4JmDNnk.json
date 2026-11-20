@@ -1,0 +1,64 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "Dwy lawen ennyn sydd yn y darlun wrth ddannedd yng ngwely i, o bore y nos mae'n gweddi'n un drws."
+  ],
+  [
+   58.0,
+   "Mi hwn yn achlywad i."
+  ],
+  [
+   67.0,
+   "Yna fu bysgu, mae'r dwy law fyny, wrth ymyl fy ngwely."
+  ],
+  [
+   80.0,
+   "Mewn gweddi ar Dduw, yw'n cadw un byw, miwn pernach law a ffug."
+  ],
+  [
+   98.0,
+   "A fandaw'r bore, a'r wawr a'r nore, wrth ymyl fy ngwely i."
+  ],
+  [
+   112.0,
+   "Mae'r gweddill ar hyd, yn byw sydd i gyd, mi yw'n ffermio'ch llaw ar fi."
+  ],
+  [
+   129.0,
+   "Rhyw nos o'ch dawel, phenw ger awel, o amlwg yng ngwedd i ni."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

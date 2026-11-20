@@ -1,0 +1,22 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   41.0,
+   "Gad i'm, gad i'm, deng lo. Gad i'm, gad i'm, deng lo. Gad i'm, gad i'm, deng lo. O welwch gael farn ia fryn. O welwch gael farn ia fryn."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 2
+ }
+}

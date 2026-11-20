@@ -1,0 +1,50 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Nos da, bob nos roi'r genod yn ei gwlau, ac yno fe gysgant dan gwyltiau disney, lleuad aur a'r gotwm glas yn ffin i'w byd. Yn ddeddfol sythaf gynfas, codaf degan, rhof lyfr gwaith gartre yn amlwg at y bore."
+  ],
+  [
+   30.0,
+   "Dant dan obennydd lliw."
+  ],
+  [
+   35.0,
+   "Ond heno, a hithau ei ffaneidiau di-ddiwedd yn ddeuddeg heglog ynghlwm wrth ffilm, gadewais hi."
+  ],
+  [
+   47.0,
+   "Pen dwmpian yn fy ngwely yw fy llyfr, ac eiliad ddwy awr wedyn rhwng cwsg ag effro, rhwng heddiw ag fory."
+  ],
+  [
+   59.0,
+   "Synhwyro bysedd ifanc yn tynnu fy sbectol."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

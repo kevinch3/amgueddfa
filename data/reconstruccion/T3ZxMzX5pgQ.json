@@ -1,0 +1,85 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   14.2,
+   "no no"
+  ],
+  [
+   17.3,
+   "nada"
+  ],
+  [
+   23.0,
+   "sí"
+  ],
+  [
+   34.0,
+   "para nada"
+  ],
+  [
+   61.1,
+   "sí"
+  ],
+  [
+   78.9,
+   "para nada"
+  ],
+  [
+   84.0,
+   "y otra"
+  ],
+  [
+   95.6,
+   "en la nada"
+  ],
+  [
+   109.7,
+   "hola"
+  ],
+  [
+   113.0,
+   "sí"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

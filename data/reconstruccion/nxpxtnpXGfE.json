@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Gawel, gawel, tu'n gwyfu a phw ma' bw'n i'n lafu, ffidd ma' bw', ffidd ma' bw', gomi'n tynnu mewn."
+  ],
+  [
+   15.0,
+   "Gawel gawel e-o."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 1,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

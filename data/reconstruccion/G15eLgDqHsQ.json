@@ -1,0 +1,64 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Santiago"
+  ],
+  [
+   30.0,
+   "melyswin o legan, yno o'i raidd e gwin fan e hiraeth. Moes dy fynwes, tir et yn e gyniges, tyw e tim yn e rhydd et y hanes, a i blin e cofio gael et y glwyfo, nawr e roedd o'n atal o cawdaeth."
+  ],
+  [
+   88.0,
+   "O te rinepire mai geni de fron, en e calon elan rwyne gwelled."
+  ],
+  [
+   98.7,
+   "Ac a vivoti tian e was, ac a dastirion nodet."
+  ],
+  [
+   109.9,
+   "Gnafet y helbi wneud y ledi, casglaf wlan y geudith a un neti, er efanellachot a rete amod, obrón ganebirait y roefaneparot,"
+  ],
+  [
+   129.0,
+   "Rhaid yr wyf yn barod, ac afad e i'r ail y brin, heb y trefin wedi tarfod."
+  ],
+  [
+   139.4,
+   "Heb trefin wedi tarfod"
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

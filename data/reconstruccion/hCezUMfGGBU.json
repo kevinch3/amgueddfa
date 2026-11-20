@@ -1,0 +1,57 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   10.0,
+   "Paf gyda'r dyrfa grefyddol gref I weled mai'n greu enief, ond, ni chafanol, ar red o'r byd, mae baban o'r affari yn ei gryf."
+  ],
+  [
+   30.0,
+   "I'r bwndel esgyn sy'n dyrys deud y ren, mae disgwyl yn glychau meddlen. I leddfu poen, hyd a wely cyri, mor ofer yw'r rhwysg a ffasiant yr i."
+  ],
+  [
+   60.0,
+   "I'r baban sy'n warth i'n dyddiaid tyrist, pa werth yw ystrydebau am gryst, neu weddi'r bugeiliaid parchus neis ac yntau'n trengu oesiau'r reis."
+  ],
+  [
+   90.0,
+   "Mae hwythau'r doethion yn sefyll draw ac anreg o famiau yn eu llaw, a obaith y tyf yn blentyn tlws a newyn ar rhyfel wrth ei ddrws."
+  ],
+  [
+   120.0,
+   "Ni wyr am gytgan anghylionan,"
+  ],
+  [
+   128.24,
+   "demoniai sy'n hofran uwch ei ben, o dau o'n oll ond mae llysr o'i clud, i blygu mewn cwilydd wrth ei gryd."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

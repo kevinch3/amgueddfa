@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "Wener ebad, ydw o lebad, ydw o lebad, bia Mater, nôl ddeud ebad, na dim welas, welas i ti, y dref ebad, o byd ebad."
+  ],
+  [
+   132.6,
+   "buenas"
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

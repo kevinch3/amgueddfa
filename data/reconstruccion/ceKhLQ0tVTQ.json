@@ -1,0 +1,92 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Benedictus, Benedictus, qui venit in nomine Domini."
+  ],
+  [
+   24.0,
+   "Benedictus, Benedictus,"
+  ],
+  [
+   32.08,
+   "qui venit in nomine Domini."
+  ],
+  [
+   43.68,
+   "Benedictus, Benedictus,"
+  ],
+  [
+   51.84,
+   "Gwyfynid Gwyfynid in nomine Domini."
+  ],
+  [
+   61.92,
+   "Benedictus Benedictus Gwyfynid in nomine Domini."
+  ],
+  [
+   81.84,
+   "Os na' na un ecselsis, os na' na un ecselsis, os na' na, os na' na un ecselsis."
+  ],
+  [
+   129.84,
+   "Gwyfynid, gwyfynid in nomine Domini."
+  ],
+  [
+   139.92,
+   "Benedictus, Benedictus."
+  ],
+  [
+   148.96,
+   "Gwyfynid in nomine Domini."
+  ],
+  [
+   159.52,
+   "Gwyfynid in nomine Domini."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

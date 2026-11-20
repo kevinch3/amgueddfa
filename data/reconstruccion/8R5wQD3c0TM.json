@@ -1,0 +1,22 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   53.48,
+   "Then we rise and the resemblance is shown, we are gone, we are gone, and the resemblance is shown, we are gone. Then with all the help we've grown, we rejoice, we rejoice, and with all the help we've grown, we rejoice, shouting glory to our King."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

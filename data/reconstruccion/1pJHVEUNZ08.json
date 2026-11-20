@@ -1,0 +1,22 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "I fi ddwylo tra bwy byd, a fy ngodlon i fy medd, nid fel caethwas ond mewn hyn, a na madref i'r hwyl yn y damdyn."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

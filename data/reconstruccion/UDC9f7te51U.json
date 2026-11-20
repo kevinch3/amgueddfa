@@ -1,0 +1,64 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Invitamos a Virginia Steincamp subir al escenario por favor para la próxima competencia, la número veintitrés recitación en idioma Galés, Castellauaidd dau ddeg tri adrodd, Taswni Ond, gan Llŷr Wyn Lewis, yr unig un sy'n cystadlu yw Virginia Steincamp."
+  ],
+  [
+   25.0,
+   "Felly, os ydy'r beirdd yna wedi bod yn barod, diolch yn fawr, lecw jamos."
+  ],
+  [
+   55.0,
+   "Gysylltu a'm ffrindiau, dim bwys pa mor bell. Tyswn i ond yn diffodd y we ac yn wneud diwrnod o waith sa bob dim yn ocê. Tyswn i'n ond yn cael mynd am dro i ddysgu'r adar ar fy ngho, neu taswn i'n codi efo'r wawr, mi allwn gyflawni bethau mawr. Tyswn i ond heb siomi'r rhieni, a dyswn i'n hapus."
+  ],
+  [
+   85.0,
+   "efo'r hyn sydd gen i. Taswn i'n medru siarad yn gall, nid bod i â sgrolio drwy'r ffôn yn dall, a taswn i'n hapus â'n hi, mond bod to ac ambell i'w ffenest ynddo fo. Taswn i, ond, yn fwy heini. Dwi'n deud wrthoch chi, ond, dydw i ddim hadu na ni, neu'n bwyta'n well ac yn yfed llai, ond sa rywbeth yn bownt o cael ei bod yn well na ni."
+  ],
+  [
+   115.0,
+   "Taswn i ond yn filiwner ac amser i breni ac amser i'w breni isellu ar sêr."
+  ],
+  [
+   125.0,
+   "Taswn i'n medru cysgu'r nos a bywyd yn stopio bod yn bôs. Taswn i ond yn ddifyrin o ddŵr. Fodlonwn ni wedyn? Dwi ddim mor siŵr."
+  ],
+  [
+   141.0,
+   "Mi fydda i un dydd, yn llonydd, yn lliwyr, yn rhyw fath ar fodlon, yn llawer rhy hwyr."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 2,
+  "reglas": 1,
+  "vacias": 0
+ }
+}

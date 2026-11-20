@@ -1,0 +1,43 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   27.74,
+   "Nid fel caethwams ond mewn hen, pan ymadref i'r wlyb, gyda'm dyn."
+  ],
+  [
+   57.74,
+   "Mi ddwylo tra fwy byd, a fy ngogledd i fa- we, nid fel caethodd sôn mewn hyn, pan na madref i'r we hyd am dyn."
+  ],
+  [
+   87.74,
+   "O, fydd canu fi o, halleluja o, halleluja o, halleluja o, dyma'r dydd canu fi ar yr ne."
+  ],
+  [
+   107.24,
+   "Ni bydd anonym yn gryf, ma' frawddrag frawddwlad, dyma'r dydd, cafyn dadrefn yn rhyw, datso ef."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

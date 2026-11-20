@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   90.68,
+   "Mi fyddai'r dda gyda'r lawr yn y byd lle byddai'r iau'n mynd gyda'r ffraen i'r byd. Neu fod e'n newid i'r natur neu fyddai'r sneb yn mynd i'r wefan, fel bod nhw ar hyd, s'byddai'r gallu'n ffurfio'r dydd, s'byddai'r dawn yn mynd i'r fwyd, yn mynd i'r cyfan, byddai'r byd yn mynd i'r llawn."
+  ],
+  [
+   120.68,
+   "Paid a throi ar y rifan, hwnnw di dy hunan, i lawr i dyndeda."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

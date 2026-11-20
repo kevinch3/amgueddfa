@@ -1,0 +1,57 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Noson Loergan Patagonia, gwrthgrwyddo adref am fy nhaid, a'r llif, braidd yn unig, a llais yn ei panw, eang maith, rhuganol chwyn ap hefyd, pêl glirio ar y llaw, ar oeriana'n wytholau. Fyd-einog, ryw gyfaren mawr, arwydden ar ei golau."
+  ],
+  [
+   30.0,
+   "Roedd y taibair yn gwenu'r dydd a phlaned iau yn ffuriol, taid gafodd y torr o eifr yn wir, a choes y de mor hudol."
+  ],
+  [
+   44.0,
+   "Mae'n brif haen i'r hen gollwng llwyth a gweddill ar y gorwel, a tawel bach yn chwarae hwyl i'r holl blaen yn ystod y tawel."
+  ],
+  [
+   60.0,
+   "Mor bell y sŵn y byd a'i fywyd gynta' o'r waith o'r holl blaen."
+  ],
+  [
+   74.0,
+   "Mae'r ambell gyflwyn ar y clod croesi fel pendansio, a'r serdd a'r blodau dros y nhw, wrth a'r ail yn nicio. Mor fawr a'r bwysig yw'r rhai, a'r cread yn fyd derbyn. To iechyd, dywedai nain, fel casgod dros y dyfryn."
+  ],
+  [
+   103.0,
+   "A chdi o'dd hud yn llenwi'r fan, pleserau mynd yn bellach, a minnau fel pwll hud yn ŵan, a dim fel pennawd gollach."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

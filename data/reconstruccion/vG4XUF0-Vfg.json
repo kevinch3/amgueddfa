@@ -1,0 +1,43 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Cariad can Myrddin ap Dafydd. Unod timau dan, o gleiaws tir glan, ar y gawod gan ar goed y gwanwyn. Unod timau don, gŵyl yn y galon, unigolion yn wynt i'w gilydd. Unod timau daw, y llais dim ond llaw, yn rhwyfor llaw ar y fôr y lleuad."
+  ],
+  [
+   29.0,
+   "Un o dîmau daeth i di-hwnt i iaith a hyn, hyn nobaith, hun na nabod."
+  ],
+  [
+   41.0,
+   "Cariad can Myrddin ap Dafydd. Un o dîmau dân, o gleiaws, tir glân, ar y gawod gan ar goed y Gwanwyn. Un o dîmau dôn, gŵyl yn y galon, unigolion yn wynt i'w gilydd."
+  ],
+  [
+   59.0,
+   "Uno dîm ai daw y llais, dim ond llaw yn rhwyfor llaw ar y môr y lleuad. Uno dîm mai daeth i di-hwn diaeth a hyn, hyn obaith hun na nabod."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

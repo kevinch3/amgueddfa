@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Dim ond digwydd, gan merelydd hobl, dim ond digwydd, edrych nes i, pan neidiodd y cwpan o'r sinc, dim ond digwydd, ac yna ddyle bydd ddisgyn o de bote linc, dim ond digwydd, mi hebioni, pan serthiodd y bladur llawr, dim ond digwydd, ac yna annisgwyl i sinsanodd y sosban barb, a dim ond digwydd,"
+  ],
+  [
+   30.0,
+   "Yn poten o'n i, pan heddfanodd e mewn i nyrshan, dim ond digwydd ei gwylio'n glanio ar sliber newydd mam. Mae bron yn amhosib credu mod i'n unrhyw sydd yn yr union le, pa mor fath a'n i'n bydodd ym mhob man, pan ma' minnau'n digwydd gael tŷ."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 1,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

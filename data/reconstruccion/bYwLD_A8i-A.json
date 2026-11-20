@@ -1,0 +1,43 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Rwy'n meddwl beth ydi hwnnw, bydd drwg y fanu ei isel, yn eiddo Iesu Mab, ar ôl y nysau mae hi."
+  ],
+  [
+   30.0,
+   "y môr, ym mhryd yr y ffrog, sy'n hawn yn ôl, dros fwy ne'r dydd, ia'r dda."
+  ],
+  [
+   46.0,
+   "Mae teg o blaen i blaen y wlaw, o blaen i blaen yn gwaed yn awr,"
+  ],
+  [
+   70.0,
+   "Fod y bore gyd gerdd lawr, mae pen ym mhryniau'm llaw yn cau, wrth weld yr haen yn agosau."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   148.6,
+   "Pryd o'n i'n mard, pryd o'n i'n mard fel chwara'r gwael, pryd o'n i'n mard, pryd o'n i'n mard fel chwara'r gwael."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 2
+ }
+}

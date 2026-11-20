@@ -1,0 +1,85 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Tríptico para una ciudad sin montañas de Magda Massacese."
+  ],
+  [
+   10.88,
+   "Pasó que un día juntamos caracolas, pasó que pasaron muchos días, la caracola"
+  ],
+  [
+   20.12,
+   "pula vacia persistio en su muerte, y la volvimos al mar, a la esperanza."
+  ],
+  [
+   31.12,
+   "Paso que el puente se quedo dormido, paso que pasaron muchos anos, y los"
+  ],
+  [
+   39.6,
+   "Los barcos no volvieron a inquietarlos, y las gaviotas se afincaron en el puerto."
+  ],
+  [
+   50.8,
+   "Paso que pasan y pasaron vidas, trages anonymos, corbatas, guardapolvos, pasillos"
+  ],
+  [
+   62.96,
+   "rectos, consinuosos caminantes. El viejo puente se obstinó en su amnesia,"
+  ],
+  [
+   72.8,
+   "pero a su vera, la ciudad crecía, porque entre todos los que aún creían,"
+  ],
+  [
+   80.88,
+   "los que habían sido, los que estaban siendo, fueron sembrando una vez más"
+  ],
+  [
+   87.72,
+   "los suenios, y a pesar de todo, persistio la vida."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

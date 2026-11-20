@@ -1,0 +1,43 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Molwch yr arglwydd, freinaid, mola'r arglwydd, molaf yr arglwydd ta byddaf byw, canaf fawl i'm byw ta byddaf, peidiwch ag ymddiried mewn tywysogion, mewn unrhyw ddyn na all waredi, bydd ei anadl yn darfod, ac yn tafarn."
+  ],
+  [
+   30.0,
+   "ddychwelyd i'r ddaear, a'r diwrnod hwnnw derfydd am ei gynlluniaeth. Gwyn ei fyd y dydd y mae Duw Jacob yn ei gynorthwyo, ac y mae ei obaith yn yr arglwydd ei dduw, creawd dwrnefoedd at daear a'r môn a'r cyfan sydd ynddynt, y mae ef yn cadw'n ffyddlon hud byth, ac yn gwneud barn ar gollwng y daear."
+  ],
+  [
+   60.0,
+   "ffordd dromedig. Y mae'n rhoi bara i'r newynog. Y mae'r arglwydd yn rhyddhau carcharorion. Y mae'r arglwydd yn rhoi golwg i'r deillion. Ac yn unionni rhai gwargam. Y mae'r arglwydd yn caru rhai cyfiawn. Y mae'r arglwydd yn gwylio dros y dieithriaid. Ac yn cynnal y weddw ar amddifad. Y mae'n difetha ffordd y drygionus. Bydd yr arglwydd yn teyrnasu hyd byth."
+  ],
+  [
+   90.0,
+   "a thriw di-loseuon, draethau, molwch yr arglwydd."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Y Blodau Gwynion, gan Geraint Edmunds. O, mor wyn oedd bob blodi, oedd ynydd uchel-nawr, oedd, yr oedd popeth mor wyllt, a ddullau dim ond nawr, a gwyn oedd y resennau ar hyd y llwybru'r har, fu'n dystion i'n cusanau yn hornel hŷn."
+  ],
+  [
+   30.0,
+   "A beth o'dd blodeu gwynion, oedden nôth i'n fasi, pan priodais ti i un denion, oedd casàu'r gêm ddu, a nawr, tra llithram negrin, gwyddos, heb gweld yn wedd, mae gwyn byd pob blodeu'n arholwch ar dy gŵn."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

@@ -1,0 +1,57 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "O ble gystir y ddawn, o dorri galone. O ble gystir y dawn, ti yn dweud y celwydde. Ac o ble gystir y gwen ar dail y cad fach tyner."
+  ],
+  [
+   26.0,
+   "Y gofleg ystyr y tŷ'n candelaes. Os mai hyn oedd y bwriad, i'm gwneud i yn ffŵl, yng ngweld o mil wyth eist, mil wyth eist yn llawn, ond yn ei hun yr wyf am gwybod yna."
+  ],
+  [
+   56.0,
+   "Dwed i mi, o, dwed i mi, ble gest ti'n y dda? Rwy'n cofio fel ddoe ti yn dweud caraf un ad, a minnau yn ateb fel ei hun, caraf di nawr."
+  ],
+  [
+   82.0,
+   "Ond mae'r ddwy wedi mynd, a doedd heddiw yn greulon ag o fle, ag o fle, fle rwyt ti."
+  ],
+  [
+   97.0,
+   "Os mai hyn oedd y bwriad i'm gwneud, fi'n ffŵl gweld o milwyd-aist, milwyd-aist yn llawn."
+  ],
+  [
+   111.0,
+   "Ond ar ei hun, rwyfain gwybod yna, dywed i mi, o dywed i mi, ble gest ti'r y ddawn, ble gest ti'r y ddawn."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

@@ -1,0 +1,43 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "O hyd, gogoniant byth i'r oen, yr aur y dylanau'r byd, ei groes yn gwell ar y byd o'i boen, gogoniant iddo ef."
+  ],
+  [
+   54.0,
+   "Tywynne'r golau'r groes, hyd am dy'r tlodi din, gan ddangos gobaith dôn trwy loes ar y ddel o Duw ei hun."
+  ],
+  [
+   72.0,
+   "Gogoniant byth i'r roen, a'r air dylan a'r nef, ei groes yn gwell ar y byd o'i boen, Gogoniant iddo ef."
+  ],
+  [
+   102.0,
+   "Diolch yn fawr, Bailey Hughes."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

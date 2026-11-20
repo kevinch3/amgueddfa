@@ -1,0 +1,22 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   90.0,
+   "Mae'n holl, mae'n holl, mae'n holl a'i ni, ag ews i'n mab ei bys a di."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 2
+ }
+}

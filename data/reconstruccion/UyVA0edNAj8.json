@@ -1,0 +1,50 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Mae'n ail yn ddyddio dros y fi, mae'n ôl yn ôl i'r llw."
+  ],
+  [
+   30.0,
+   "Mae'n dawel iog er llaw mae'n llif, led lais y nos i'w ffwrdd."
+  ],
+  [
+   42.0,
+   "Nos da, Ffrindiau, mae'n dau yn lle, wel nos da, aeth e'n hir i'r lle."
+  ],
+  [
+   54.0,
+   "Diolch yn fawr iawn mae'n ddoe, diolch yn fawr iawn mae'n dda gwynnau'n ddoe. Nos da ffrindiau a'r beirdd yma, nos da sylfaenau diolch yn fawr iawn."
+  ],
+  [
+   77.0,
+   "O'r unig be'n i'w ngeni'n ffab, o'r unig i'w nesaf, mae'n serthio'n i'r drefn i'w ben, i'w laeth i'w nos i'w lan."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

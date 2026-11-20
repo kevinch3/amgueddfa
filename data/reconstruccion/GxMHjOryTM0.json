@@ -1,0 +1,43 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Nosons drwy'r siarch a defnydd, gan erbyn swyddfa. Doddrwy drwy adref ar fy nhraeth fel llwybyr braidd yn mynydd, yn chrwythu rhan o'i anghyffardd drwy gadw hwyl a helydd, rhyw yn deilio ar y llawr ac yn ddoi'n ganddo fo'i ganddo fo'i sylfaen."
+  ],
+  [
+   28.0,
+   "Roedd deimlo ryw gyfaredd mawr pan dwi bren ar ei gorau. Roedd y tai bai'r wen wir, a blant iau'n suddiol. Saith gafr y dwy eiryn wir, achos y dêm mor hudol. Roedd gwryb haedd golli'n hir, a gwener yn hudol."
+  ],
+  [
+   58.0,
+   "Nag o'n nhw, ac awyddach am chwarae hwnnw drwy draen yr awgrymu Brutal, mor bell ag o'n nhw'n ista'r diwrnod ar ben y bryniau, mor bell o'r sŵn o fudd-deud neu gofn rwbeth mor llongynau."
+  ],
+  [
+   82.0,
+   "Mae yna ffwng o gwyneb bron croes i berchen dawnsio, has, fel blodau dros y fro, o allanau yn ffwciwch, mor fawr mor agosig i fwynhau, a'r cread yn fyd-derbyn."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

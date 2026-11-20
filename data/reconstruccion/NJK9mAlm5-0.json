@@ -1,0 +1,36 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Flores"
+  ],
+  [
+   127.0,
+   "Flores, Flores mewn basiant, Rhydd yn ôl."
+  ],
+  [
+   157.0,
+   "Diolch yn fawr."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

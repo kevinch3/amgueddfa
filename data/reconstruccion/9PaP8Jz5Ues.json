@@ -1,0 +1,22 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   90.0,
+   "Mi oeddwn i'n meddwl bod nhw'n iawn, ond mi oeddwn i ddim yn meddwl bod nhw'n dda."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 2
+ }
+}

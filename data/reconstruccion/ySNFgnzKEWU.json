@@ -1,0 +1,71 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Pwy sy'n seiniwr yr halen yw Ia, ymthambolion y tŷ ddoe."
+  ],
+  [
+   27.0,
+   "Fle mae'r dŵr efo'i pheryl o sana i groesau gwybreninef."
+  ],
+  [
+   36.44,
+   "Rwy'n glegwedd eto'r alwad i ymuno yn y côr, sydd yn canmol Iesu'r ceidwad yn dyrchafu henw'r iôr."
+  ],
+  [
+   57.0,
+   "Diolch am y doniau tân, wyt, i foliani denw glân."
+  ],
+  [
+   70.24,
+   "Diolch am y gair bregyth, wyt, i roi Cymru holl ar y dân."
+  ],
+  [
+   79.96,
+   "Lle fydd y tyfryd doniau'n egwydd i fel un a'i eglwys iddi hiw, a phandir i y rhodd bydd clod idd mewn a canion ei iau yng y buw."
+  ],
+  [
+   99.16,
+   "O rôl ddaw ar y dŵr anhefiais, sydd yn boddi dreiriau glân, dadodd rhywun mynd tyn am hyniaith, sydd yn bygwth y tagir y gân."
+  ],
+  [
+   123.64,
+   "Ar y glwydd agor ein calonnau, a ryddhau'n y tafodau byd, nes fodd moliant ein haned ddyfain, seinio'n uwch na'r lleis o'r byd."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

@@ -1,0 +1,50 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "A welsoch chi roedd Moelyn ferch began o gwmpas ei gwaith yn ddiwydiannol. Mae pob dydd a ddydd yn bleser i weled, a'i gwyneb yn tŷ fel heddfu."
+  ],
+  [
+   30.0,
+   "Gulweg ar dôn. Nid cysur a mwyn iant o'i wyn ar ddatganu, mwrddwch chi ond sgwylio a gweithio'n ddigwydd. Yndderaidd o'i byd, byd byw sy'n cynllun, mor swynol a llaes yr eos mewn llwyn."
+  ],
+  [
+   60.0,
+   "Mae Elin yn nodd ag onest ei chalon ei ffyrneb a'i ffydd yn gloddyst drwy glan caredig yw hi a hoffis a thirion."
+  ],
+  [
+   84.8,
+   "Fan wylyd ei mam, llawenydd ei ddad. Yn hwn, wrth gysur, wnaeth ddelyn anwyliant i ddelyn fan wylyd fan hyn i'r ddyn ni, wrth deithio drwy'r byd, mewn hyd a fodd londda, dad wylyd iddi hi."
+  ],
+  [
+   114.26,
+   "bob munud i mi."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

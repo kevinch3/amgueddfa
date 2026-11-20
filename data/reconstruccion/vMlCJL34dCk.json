@@ -1,0 +1,43 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "A welaist ti'r ddau ddaeth gyda'r hwyr, onas aruth draw wedi'u blino'n llwyr. By' raid i mi ddweud fod dy llety llawn, a chlywais hwy'n sibrwd, pa beth a wnawn."
+  ],
+  [
+   25.0,
+   "A wyt yn fy meuw am troi i ddau i letu'r anifail a hun hwyrhau, rhoedd yr awel neithiwr yn fini o goer a llithraidd ei thrwch dros wedd y llwyr, a glywais ti ganu yn hannol nos a miwsig fel clechau draw ar y rhos, dychmygais unwaith fod rhywrai'n dod i strydoedd y ffradau."
+  ],
+  [
+   55.0,
+   "Gai ganu clod a wely di olau draw ar y brin a hwnnw yn disglair fel eira gwyn, mae'n gwawrio yn araf yn meddwl ei heimdref ar dydd neu wyddennu yn gloywyr nef, a deimly di heddiw fod rhyfed wyrth yn dadod y gloion yn acw'r byrdd."
+  ],
+  [
+   85.0,
+   "O, dered! O, dered! Heb oed dim mwy, i lety'r anifail, i'w gweled hwy."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

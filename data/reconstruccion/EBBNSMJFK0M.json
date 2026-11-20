@@ -1,0 +1,50 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Why those eyes that see you every time you are near, oh, just like me, they look to be close to you."
+  ],
+  [
+   20.5,
+   "Why do stars in the sky every time you are by look just like these, they look to be close to you?"
+  ],
+  [
+   41.5,
+   "On the day they knew, all the angels gathered together, and decided to create the dream come true, come true, so that spring would come soon, and all the flowers that were in your hands would bloom, that is why all the roses that are in your hands will bloom, oh, just like me."
+  ],
+  [
+   71.5,
+   "They long to be close to you Just like me, they long to be close to you."
+  ],
+  [
+   101.5,
+   "Diolch yn fawr."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

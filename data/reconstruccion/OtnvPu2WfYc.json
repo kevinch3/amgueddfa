@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Mae gen i dipyn o dim bach dwd ar wymdi drws bob bore."
+  ],
+  [
+   26.5,
+   "Agorwch dipyn o gilydd drws gae gwaed y môr a dôn e."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 1,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

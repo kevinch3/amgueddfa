@@ -1,0 +1,43 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "S i, beirniad yn barod, Sara Alys, Bwthyn, Fy Nain."
+  ],
+  [
+   30.0,
+   "A thyddyn bychan tŵt a'i eirdiri ar fuwch a'r gath a'r ci a'r mochyn yn y cwt."
+  ],
+  [
+   48.0,
+   "Pan fydd plant y llawr yn methu byw ynghyd â chyrru galan asfawr, mae nain yng ngwyn eu byd."
+  ],
+  [
+   64.82,
+   "Mae perllan ganddi hi a thyddyn bychan twt a ieirdir i ar fuwch a'r gath a'r ci a'r mochyn yn y cwt."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

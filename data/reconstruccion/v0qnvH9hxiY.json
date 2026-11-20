@@ -1,0 +1,57 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.8,
+   "dentro de"
+  ],
+  [
+   3.6,
+   "las que se pueblan con las de Gas"
+  ],
+  [
+   40.8,
+   "hay"
+  ],
+  [
+   42.4,
+   "sobres"
+  ],
+  [
+   45.2,
+   "losos en la"
+  ],
+  [
+   51.4,
+   "tribuna con"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

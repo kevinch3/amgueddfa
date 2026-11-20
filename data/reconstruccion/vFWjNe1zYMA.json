@@ -1,0 +1,22 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Chifours. Yn adegol mi chifours, ti enw'n o grandes bigodes, las orejas chiquiticas, el brauo mwy grandote. Se pasea por el techo, ve la luna como un queso, juega con una pelota, y con"
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 1,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

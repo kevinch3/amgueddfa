@@ -1,0 +1,36 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "I droi fy myd yn llawn, o drefn drwy glun, o law a wlyb i drefn, ein dau yn un, a'n haenios ni mewn i hyn."
+  ],
+  [
+   60.0,
+   "Gariad mawr, gariad mwy, ti'n gyd a saeth am dron, ni ffradd i fynwes ond, ma' fi a'i gwyrdd yn dwyn, a gwadd a'i gwydd."
+  ],
+  [
+   90.0,
+   "Wysoedd a a hŷn yn y chwerfyn y bydd, a bydd ond drech i ni."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

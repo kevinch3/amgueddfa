@@ -1,0 +1,57 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Moloneg o ran, brenin mawr yn hen, creuwr o ffynhau, ddawn i dadi'n hen."
+  ],
+  [
+   28.0,
+   "Serch hwnna wnaeth ddansodd cawer mhen ag y ddawn, ne' rhodd neb yn ymddangos neu dŵr yn fy mawn, mond hwn enw raddw sant a'i ddiwedd e."
+  ],
+  [
+   57.0,
+   "Lle wyrch ei gwynebid I'w goleu ddeud, Enryneb ei ars-gwyd I sancteiddio dyn, Nes fod aur yn y man, Fel aneb ei hun."
+  ],
+  [
+   87.0,
+   "Nôl nw'n enw'r ardd, ffurf ddim ei ras, teuluw ei grug arren, cyrraedd y ddau ar y mas."
+  ],
+  [
+   104.0,
+   "Pan fyrhau hwnt adref, draw ti hwnt i'r llyn, o'r lŵn yn ôl oedd llynydde oedd y wên."
+  ],
+  [
+   134.0,
+   "Diolch yn fawr i chi am ddarllen y thema."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Blyrei du, blyrei du, yr hender un bach, un a thugri ar y goeden, pa mor uchel yw y bren, wel tacw fo uwchben, a mis ar ddydd, yr hender un bach."
+  ],
+  [
+   30.0,
+   "Ble rei di, ble rei di, yr hen dderyn bach, i ryw le di torri fy nhalon, pam y rei ddim ffwrdd yn syth, blant drwg yn tynnu'r nyth, o ddruan ni yr hen dderyn bach."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 1,
+  "modelo": 0,
+  "reglas": 1,
+  "vacias": 0
+ }
+}

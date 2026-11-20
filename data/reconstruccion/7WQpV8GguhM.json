@@ -1,0 +1,36 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   81.0,
+   "Mae ei ddewis e, yng ngorau'r gloedd y pawb,"
+  ],
+  [
+   95.5,
+   "Hyd yn oed nawr, wnei'n brenin i'w tlawd, o niw wei'n deud yw o brenin i'w tlawd."
+  ],
+  [
+   130.5,
+   "O niwed ydyw, ond nid yw'n tlawd, mynnu fe i'w achosi o hyd i neb. I ffwrdd gafodd y dyn, ddim yn anffurfiol o'i glaw, ma'n rownd a rownd a rownd, i'w brynu hi'n ei tlawd."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 2
+ }
+}

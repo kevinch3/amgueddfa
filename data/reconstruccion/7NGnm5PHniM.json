@@ -1,0 +1,50 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Mewn darlleniad barddoniaeth, dyma'r tro cyntaf i mi glywed eich hiaith. Darllenwch hi eto, meddai'r merched proletaraidd yng Nghlwb y Werin."
+  ],
+  [
+   29.66,
+   "Mae hi fel aderyn dieithr yn hedfan ar draws y fistiwla, yn esgyn ac yn disgyn, yn disgyn ac yn estyn yng nglesnu'r cliw."
+  ],
+  [
+   43.36,
+   "Darllenwch hi eto. Mae hi'n llawn lliwiau i ni yma. Mae hi'n wyrdd fel gobeithion, yn felyn fel hyder, yn goch gan ddicte."
+  ],
+  [
+   59.66,
+   "Wrth i'w flu fflachio, dan hael ein gwrando, darllenwch hi eto."
+  ],
+  [
+   67.98,
+   "Cwestiwn, yn eich gwlad chi, ydi hi fel un o'r adarlliwgar hynny, ag edwir mewn cawell?"
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 1,
+  "reglas": 1,
+  "vacias": 0
+ }
+}

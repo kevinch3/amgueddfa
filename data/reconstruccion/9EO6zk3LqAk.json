@@ -1,0 +1,57 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "O santianna chwith dy gorn, ai, o santianna, gu'r wynt oedd tegu rowndio'r horn, mae'n nghartre i yng Nghymru bell."
+  ],
+  [
+   22.62,
+   "Mae'r rhaff e'i gyd fel ffyn o rew, ai o santiannau, a'r môr yn wyllt neu'r niwl yn dew. Mae'n nghartre yng Nghymru bell."
+  ],
+  [
+   47.38,
+   "Mae tŷ fy nhad yn wyn a hardd, ai o santianna, a rosys cochion yn yr ardd, mae nghartre yng Nghymru bell."
+  ],
+  [
+   77.38,
+   "Ar ben y drws mae mam anhad ei o santianna, does i'n llyn debyg i fy ngwlad, mae nghartre i yng Nghymru bell."
+  ],
+  [
+   102.26,
+   "Mae'r adar bach yn canu'n y coed, ai o santiannau, a peiron gwrando am sŵn fy nroed, mae'n nghartref i yng Nghymru bell."
+  ],
+  [
+   127.46,
+   "Mae'r hwyliau wedi rhewi'r gorn, ai o santiannau, ger wyntoedd tegi rowndian y horn, mae'n nghartreu yng Nghymru bell."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

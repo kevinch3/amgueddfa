@@ -1,0 +1,36 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Yn trydydd ar gyfer yr un gystadleuaeth, yn trydydd ag yn olaf, ffrindiau."
+  ],
+  [
+   30.0,
+   "Coch yw y gân, coch yw yr angerdd sy'n cynnau ein tan, coch sy'n carlamu, coch sy'n cyffroi, coch sydd yn tymu a coch sydd yn rhoi, ond cochach na'r rhain yw'r coch ar ein crys, coch sydd yn gariad yn ferw o chwys. Dyma goch Cymru ein wreichion i gyd, y coch a'n harweiniau."
+  ],
+  [
+   60.0,
+   "At Gwpan y Byd!"
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 1,
+  "reglas": 1,
+  "vacias": 0
+ }
+}

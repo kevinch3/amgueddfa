@@ -1,0 +1,36 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   10.7,
+   "Rhys Nicholas yn yr Wyddfa."
+  ],
+  [
+   17.2,
+   "Fe glewaisd amdanat, do, law er gwaith, mai ti oedd brenhines yr eri faeth, a deuthim i'th weled, canfeddwl yn siŵr y byddid yn hoffi ti."
+  ],
+  [
+   30.0,
+   "i'r meced cwr. Fysio mi a wnaeth o stamdyddia'r bryd hyn, gan gadw dy ben yn y cwmwl gwyn. Ond wedyn, un noson ddiann ngof awr, fe ddwelais yng nglasin a'th byn i lawr, a'th rhannoedd a minnau'n tro i ti a'th re, fe denais dy het i drian o'r de."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

@@ -1,0 +1,78 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Bydd anwrol, paid â llithro, yr mor dewill yw y daith."
+  ],
+  [
+   16.0,
+   "O mae serenith o leiaf, credan yw a gwnad yw waeth."
+  ],
+  [
+   26.0,
+   "Yr i'r llwybr dydd i ffagio, yr i'r rhan i alfod yn ffaith, dim ddarwr o'r blaen a beidio, credan yw, credan yw a gwnad yw waeth."
+  ],
+  [
+   46.0,
+   "Creden yw agw nad yw waeth."
+  ],
+  [
+   61.52,
+   "Paid â gofyn i'r anawsterau Paid â gofyn i'r brwydrau chwaeth"
+  ],
+  [
+   71.36,
+   "Paid â gofyn i'r canlyniadau, credan yw a gwna dy waith."
+  ],
+  [
+   82.0,
+   "Ceir gondymio, ceir dy garu, ceir dy wawdio lawer waith."
+  ],
+  [
+   91.84,
+   "Paid gofal iddi'm am hynny, credu'n niw, credu'n niw, credu'n niw, ma' gwnad y waith."
+  ],
+  [
+   121.84,
+   "Diolch yn fawr."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 2,
+  "reglas": 1,
+  "vacias": 0
+ }
+}

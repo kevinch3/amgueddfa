@@ -1,0 +1,22 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Gwreichion gan Gwynne Williams. Gwreichion yw geiriau, cytiant yn gwell, sych a dychymyg, a'u troi'n gwelcer o arogleuon amrywiol, gwelcer a fydd yn clecian yn y llygad, yn gwneu'r rhost yn y gerdded, a gweithiai wedi'i weiddi arwain."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 1,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

@@ -1,0 +1,50 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Y Deryn Prif ar adain y wasg fydd hi'n mynd wast i brydau, o bras y gwres at y dde lle fydd ei fysedd yn cael ei chosi ati gwyrdd i wrthi, neu mwy ar dŵr."
+  ],
+  [
+   30.0,
+   "yng Nghefndir, mod i'n ei radda yn ei gwylad, ar ôl ei chariad yn ffair Bethelda, odi fyddai o'i fath yn ei hun, ond wedi dim o'i galad."
+  ],
+  [
+   56.0,
+   "Pan o'n i'n hapus iawn dyddiw, dyw arno dwi'n byw. Candlen yfed i'r anafioedd, yr ysgafn drôl i fy nghofio."
+  ],
+  [
+   76.0,
+   "Pan welais, sydd yn sefais, yma'n hafon mi o ddyddias, weledd y mas lan ar y deyrnas, a'i gwen yn hardd i'r oll o'i chwmpas, i fyrs gredu'r un dydd i fi."
+  ],
+  [
+   106.0,
+   "Nad oedd hi'n rhyddid i'r blaen yn yr oes."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

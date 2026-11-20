@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   84.38,
+   "Ma'r ffordd yn mynd o'r un fys o'r gwas o'r sŵn."
+  ],
+  [
+   95.38,
+   "Fa-la-la-la-la-la-la-la Fa-la-la-la-la-la-la-la Fa-la-la-la-la-la-la Fa-la-la-la-la-la-la."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 2
+ }
+}

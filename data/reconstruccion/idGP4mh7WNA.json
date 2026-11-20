@@ -1,0 +1,36 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   60.0,
+   "Paid a gofnir na'r elfennau, paid a gofnir brwydrau clou,"
+  ],
+  [
+   79.0,
+   "Ddoi'r gogwn i'r caffael i adael, Greden niw a chafael yr oer, Geidd yr ardd, geidd y garri, Geidd tew mawn i'r shower gwael, Na fo adael neb am hyny, Greden niw, greden niw a caffael yr oer."
+  ],
+  [
+   109.0,
+   "Ni yw greden niw a'n adegau, greden niw greden niw greden niw a'n adegau."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

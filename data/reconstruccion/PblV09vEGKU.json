@@ -1,0 +1,36 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Ag i wob o'r lot o'i le, iolwch be fi'n dilyn, i le ma' ma' i ag i wob o'r lot o'i le."
+  ],
+  [
+   30.0,
+   "Ac i bobol ddod o'i le, i bobol be' bydde le, i le fana, ac i bobol ddod o'i le, o ddod o'i le."
+  ],
+  [
+   74.52,
+   "A ni wobr loc o'i le A ni wobr loc o'i le."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

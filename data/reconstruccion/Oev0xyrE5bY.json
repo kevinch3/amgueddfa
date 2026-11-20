@@ -1,0 +1,57 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Dewyddion da, a wnaeth ddim dro, i hael ein cael ein dwynau fo. Mae Iesu wedi'i cariad di, caem gartarorion fynd yn ffîn."
+  ],
+  [
+   21.4,
+   "O daw e'n hawdd, cyd-daw e'n hawdd, am dy fod Iesu Grist i'r byd. Oedd e i'r gwaith i'w cariad i, oedd e i'r gobaith i'i gilydd, a'i eiliad hawdd yn hawdd, cyd-daw e'n hawdd, am dy fod Iesu Grist i'r byd."
+  ],
+  [
+   51.4,
+   "Ma' Iesu Grist yng ngochor ni, fe gollodd ef ei waed yn llu. Twyfi'n meddwl, meddwl ben iach, iddo ffordd dnaw, mewn bron i'r bach."
+  ],
+  [
+   70.4,
+   "Bod llawen hawdd, bydd llawen hawdd, am dy fod Iesu Grist di'r byd. Yfe yw'r daith, yw'r cariad Duw, yfe yw'r gobaith i ni ni, a'r eluned llawen hawdd, bydd llawen hawdd, am dy fod Iesu Grist di'r byd."
+  ],
+  [
+   97.4,
+   "O Llawenham, i Llawenham, am dy fod Iesu Grist di'r byd. Yfe yw'r gair, yw'r gair y dydd, yfe yw'r gwmpas y dydd i dydd. Halleluja."
+  ],
+  [
+   117.4,
+   "Dwi'n cael tlawen rham, dwi'n tlawen rham, am dy fod Iesu Grist i fi."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

@@ -1,0 +1,50 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "Rwy'n gwrweithian yn araf wrth ei hunan i bwrdd o neb ar ben y brin."
+  ],
+  [
+   45.04,
+   "Mae'r adar yn noswylio parod a fi'n ympresio, i'w neud darlan y fflin."
+  ],
+  [
+   60.84,
+   "O Sir Seigrist fi'n henw, o Helen yw ben o'r ffwyso, caeth gwmni dda ar ben y brin."
+  ],
+  [
+   78.24,
+   "Pan fydd y gwynt yn ei chel, ar y to mae'i fel mewn rhyfel, yn rhydd dro dros y llyn. Iechyd fe'i gyfeillion, a wnes i Grist ymdreflon."
+  ],
+  [
+   104.32,
+   "O bwrdd o neb ar ben y brin."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

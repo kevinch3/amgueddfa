@@ -1,0 +1,50 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "Arglwydd yma fu, ar y ddylanwadu, canaf ei wnaed yn y gwaed, a gair ar gael oddi."
+  ],
+  [
+   49.0,
+   "Yr Iesu sy'n fy ngwlad i ddefnyddio dy Sainc, ffug tro maith cariad y pyramid a bob dwi'n ebol fraint."
+  ],
+  [
+   70.0,
+   "A'r flwydd yma fi, ar dy alwad i, can af heinaidd yn y gwaed, a gain ar galwad i."
+  ],
+  [
+   89.4,
+   "O ddoniant byth am drefn, y cymod a'r grynhad, ddefania'r Iesu fel yr wyf, a thanaf am y gwaed."
+  ],
+  [
+   109.4,
+   "Ar drwy'r dyma fi, ar dy alwad i, canaf enaid yn y gwaed, a'r gain a'r galwad i, am I."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

@@ -1,0 +1,43 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Mae dal ar y siem drws doi, dwi'n sŵn ag erbyn presidio mafal, dwi ar ddegau gam a joi, dwi ddim yn gwbod be dach chi'n feddwl, mae dal ar y siem drws doi, dwi'n sŵn ag erbyn presidio mafal, dwi ar ddegau gam a joi."
+  ],
+  [
+   30.0,
+   "Dwi'n deud y dydd a'i dydd so't dwi'n gweld y sien mor glou."
+  ],
+  [
+   38.0,
+   "Dwi'n deud a'r noson ddim diwrnod ma'r ffordd dwi'n edrych ar y dydd a'r dydd so't."
+  ],
+  [
+   46.0,
+   "Dwi'n deud y dydd a'r dydd so't dwi'n gweld y sien mor glou."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

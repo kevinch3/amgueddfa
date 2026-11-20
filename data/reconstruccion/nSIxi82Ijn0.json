@@ -1,0 +1,57 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Beth yw'r wrthdynnu, doedd amser ddim yn bod, bod ein gilydd oedd yn bwysig, a chariad oedd yn o."
+  ],
+  [
+   30.0,
+   "Ond hyn o't yr dim reich i el, cen i ni dynnu'r llel, a gad i ni o beiddio na ddaw'r noson byth i ben."
+  ],
+  [
+   60.0,
+   "A phan ddaw yfory rhaid dweud ffarwel, arhau pob dim yn ôl yn ôl i'r gorffennol, adew a oer, cwr ywyd fwyaf ffôl."
+  ],
+  [
+   90.0,
+   "A hwn mae camgymeriad oedd gafael yno y tŷ, ac fe weddwn ni o'r cychwyn nad oedd gwawr ein cariad ni."
+  ],
+  [
+   107.0,
+   "A hwn yw'r hyn o wlaw cyn hir fy dir o wawr, felly'r rhwym doedd yn erwch cyn mochlyd misydd nawr."
+  ],
+  [
+   137.0,
+   "A phan ddaw yfory rhaid dweud ffarwel, arhau pob dim yn ôl, yn ôl i'r gorffennol, adew a ŵyr pwy oedd fwyaf ffôl."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

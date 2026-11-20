@@ -1,0 +1,36 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Briodas, Bangor, mil naw cant dau ddeg a dau. Mewn ffrâm o amser, mae dylun a thwraig lygad-ddi, dithau'n ddyn, dylaw ar ysgwydd sepia'r ferch, cofnodwyd briodas, fflach o serch."
+  ],
+  [
+   26.74,
+   "Roedd yr iawr loyw a modrwy aur yn clymu'r weithred wrth y gair mewn stiwdion llawn o palmwyd y tal, a lluniau benthyg ar y wal."
+  ],
+  [
+   40.62,
+   "Mae'r siwt ar y ffroc a prynwyd gynt, fel mwg a chwalwyd can y gwynt, ond cwlwm cemeg a ddaliodd ddau am eiliad bapur, mae'n parhau."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

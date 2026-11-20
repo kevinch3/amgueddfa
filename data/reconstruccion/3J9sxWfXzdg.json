@@ -1,0 +1,36 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Gofuned, rhyfedd y gweled tonnau wraig fel ysgyrnygus gŵn, ddannedd yn annedd gyda'r graig, heb glywed dim o'u sŵn, eu gweld â llygad llym y byddar yn ei rym."
+  ],
+  [
+   25.44,
+   "Rhyfedd ei gwrando ar nos, ar lef rhyw anweledig lu, pan fo soniarus yn y nef, y gwyddai gwylltio'n fru, a'i gwrando fel y bydd y dall yn gwrando'r dydd."
+  ],
+  [
+   48.44,
+   "Pe cawn gan fywyd, ddewis dawn yw marfer hyd fy medd, dewiswn a llu medi'n llawn ddau hyfryd faes a fedd, a'i lloffa fel y gall y bydda'r doeth ar dall."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

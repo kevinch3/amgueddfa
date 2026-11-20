@@ -1,0 +1,43 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   26.5,
+   "Mor iawn o le, mwy o golau, ond mae'n gwerth o fwy na fi."
+  ],
+  [
+   77.5,
+   "Aeth o i fyny, aeth o i fyny ers i'r cyrraedd droi i'r drws, ers i'r cyrraedd droi i'r drws."
+  ],
+  [
+   100.5,
+   "Mae'r anferm ar fi sy'n gweithio, gwaetha'r neb wrthiol i fi, nes yw fy fodr yma ddwy gadw nwy mewn amer byd."
+  ],
+  [
+   128.5,
+   "Ws i'r amser, cyn cael delyn yn y côr."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

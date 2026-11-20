@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "T Gwyn Jones. Eisteddent yn nhes ar wifren y telegraff, mae'r hiwbeth yn galw, crynant edrychant yn graff. Dechreuant rydau, mae'r hiwbeth yn galw'n draf. Hir i'w chwedleua, a phob un a'i gymor wrth law."
+  ],
+  [
+   29.74,
+   "Yn y Mac y' bodant, bob un ar eiladau'n ddu, trônt yn yr awyr uwchben ac o gwmpas y tŷ, a'nt yn llai ac yn llai, toddant yn gwresni'r ne. Yfory, gorffwysant yn dawel, yn heulwen y dyn."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 1,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

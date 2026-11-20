@@ -1,0 +1,22 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   143.72,
+   "Te ddithe, por una volta de tu voz, por una volta de tu voz, te decí a recordar en mi corazón, corazón, por encontrarte una vez mas, una vez mas, abro el cielo de mar en mar."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 2
+ }
+}

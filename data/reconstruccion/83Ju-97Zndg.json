@@ -1,0 +1,50 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Yr afon ylifodd, rhwng nefoedd a llawr, i'w graidd fyny'n grafolaeth amcysur yn nawr."
+  ],
+  [
+   24.0,
+   "Ar y brynydd yn cael ei fariad, ar y ddodd ar ei hedd, oedd hi yno tawr y honcwest, a'r angaeaf ar ei bedd."
+  ],
+  [
+   39.0,
+   "Bennaent, wele gariad y tragwyddol ar y bren, ac yno mewningoedd yn gostwng ei ben."
+  ],
+  [
+   59.8,
+   "Yr ymarfer Iesu tan y hoelion yn y wlyw, parhaodd o'i gariad drwy angheuon y fyw."
+  ],
+  [
+   104.6,
+   "i'r bangwyd tân e hwn, ymled a dros wyneb y ddau arwr e bron, lanofi ym mareddiannau i'r bangwyd tân e hwn."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   76.0,
+   "Nôl i'r cam, ond na'n rhyweddol, yndw i'm byd, ond elw fi."
+  ],
+  [
+   89.0,
+   "Dim cawn o'r lân, mae'n cawn a'i oni, sef caffiwch a'r awyr dros. Dim ond canwm a'r allganu, canu'r dydd a chanu'r dyddodd."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 2
+ }
+}

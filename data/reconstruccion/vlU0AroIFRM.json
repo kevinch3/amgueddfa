@@ -1,0 +1,36 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Megan Cariad gan Myrddin ap Dafydd."
+  ],
+  [
+   7.0,
+   "Un o'r tŷ mae tân, oglau Awst, tir y glan ar gawod gân ar goed a gwanwyn. Un o'r tŷ mae tôn, gŵyl yn ei galon, unigolion yn wyn i'w gilydd."
+  ],
+  [
+   22.0,
+   "Un o'r timau taw y llais dim ond llaw yn rwyfor llaw ar fôr y lleuad. Un o'r timau taith ydy hwnt i iaith a hyn, hyn o baith, hun na nabod."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 1,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

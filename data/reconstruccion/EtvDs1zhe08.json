@@ -1,0 +1,43 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "A safon i'r lyn, a'r Iesu ddringo weithiau, yn araf wrth ei hunan, i bwrdd â neb ar ben y brin."
+  ],
+  [
+   54.48,
+   "Mae'r adarang o swylio, a'r wlaf inna'n brysio, i'w nidd ar lan y llyn."
+  ],
+  [
+   71.48,
+   "O Iesu Grist y heno, er le i'w ben o'r ffwyso, cae fwng ni tad ar y ben y brin."
+  ],
+  [
+   92.28,
+   "Pan bwyd y gwynt yn uchel, ar y tŵnau fel mewn rhyfel, yn rhydd rodos a llun, wein a chybed gyfeillion, ma'wn Iesu Grist yn briodlon."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

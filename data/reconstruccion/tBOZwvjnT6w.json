@@ -16,8 +16,36 @@
    "¿Pero no tienes que tardar bastante?"
   ],
   [
+   9.0,
+   "¿No te has arrancado la derecha?"
+  ],
+  [
    11.0,
    "Sí, pero resulta que el lugar de poner gasolina"
+  ],
+  [
+   15.0,
+   "se puso en hasta enrobarcada y de casualidad, hombre."
+  ],
+  [
+   19.0,
+   "Esa que se trata de algo bastante barato, como siempre."
+  ],
+  [
+   23.0,
+   "Y sí, ahora que está el 20% más barato,"
+  ],
+  [
+   25.0,
+   "no la tienes que poner en hasta menos."
+  ],
+  [
+   27.0,
+   "A mí me parece que mejora despacito, porque yo mismo ganaría algo, cuando hablábamos."
+  ],
+  [
+   35.0,
+   "Pero todo va por el camino de la vida, todo va por el camino de abajo, por ahora."
   ],
   [
    39.0,
@@ -32,12 +60,108 @@
    "Sí."
   ],
   [
+   46.0,
+   "Esto por acá, por DJ Inés, me parece lindo."
+  ],
+  [
+   49.0,
+   "¿Cómo cambió esto?"
+  ],
+  [
+   51.0,
+   "Está ahí."
+  ],
+  [
+   52.0,
+   "Sí."
+  ],
+  [
+   83.0,
+   "¿Puede la mano izquierda?"
+  ],
+  [
+   85.0,
+   "Sí, hace mucho tiempo que se lo apoyaba."
+  ],
+  [
+   88.0,
+   "Ahora había tirado un poco así."
+  ],
+  [
+   90.0,
+   "¿Puede la mano izquierda?"
+  ],
+  [
+   92.0,
+   "¿No se empezaba a tomar la mano izquierda?"
+  ],
+  [
+   96.0,
+   "Una vez que lo he recortado, lo he comido y nunca más."
+  ],
+  [
+   99.0,
+   "Sí."
+  ],
+  [
+   100.0,
+   "¿Cómo sigue pasando la mano izquierda?"
+  ],
+  [
+   102.0,
+   "Nos crearon, ¿eh?"
+  ],
+  [
+   105.0,
+   "Estaba tan difícil, ¿eh?"
+  ],
+  [
+   107.0,
+   "Nos cuidaron con el..."
+  ],
+  [
+   109.0,
+   "¿Qué comercio es el centro de la tienda?"
+  ],
+  [
+   111.0,
+   "No, la que no me pone es que no me pasa."
+  ],
+  [
+   116.0,
+   "Si vamos a tomar agua a los liches, hermanos,"
+  ],
+  [
+   120.0,
+   "yo quiero decir eso, porque me siento que me pesca que me gustó mucho."
+  ],
+  [
    124.0,
    "Es lindo, es así."
   ],
   [
    126.0,
    "Es lindo."
+  ],
+  [
+   127.0,
+   "Venera, sabré mismo, la verdad es un lugar hermoso."
+  ],
+  [
+   131.0,
+   "Y antes llegamos a un lugar como se tomaba como la candada de huevo,"
+  ],
+  [
+   136.0,
+   "con una roca de minuto."
+  ],
+  [
+   137.8,
+   "¡Ciataba porra!"
+  ],
+  [
+   139.4,
+   "¡Ciataba la monujería!"
   ],
   [
    140.8,
@@ -56,11 +180,202 @@
    "¡Sí, sí!"
   ],
   [
+   147.1,
+   "¡En la mano, en la mano, en la mano."
+  ],
+  [
+   149.8,
+   "¡ после de ahí, veníamos a pasar y vinimos a pasar"
+  ],
+  [
+   154.5,
+   "ahí a la entrada de los padres de José José Leart."
+  ],
+  [
    158.0,
    "Venían a buscar y conocían."
+  ],
+  [
+   159.6,
+   "No se comían así."
+  ],
+  [
+   160.3,
+   "Niña, ¿no?"
+  ],
+  [
+   161.1,
+   "y salió de las cosas que realizamos, que está ahí en la casa de la casa, y salió de las cosas,"
+  ],
+  [
+   169.1,
+   "vas a ver, ¿no es completo donde caño?"
+  ],
+  [
+   173.1,
+   "Estaba así, y apuntó así, pero no me iba a decir que todo se caía."
+  ],
+  [
+   180.1,
+   "Aprendió un calcio, y el joven, ¡pum! ¡Pum!"
+  ],
+  [
+   185.1,
+   "y se levantaron en el vuelo para esa montada"
+  ],
+  [
+   189.1,
+   "todo hace lo que no vio la hacer"
+  ],
+  [
+   192.1,
+   "y entonces la ruida y el profesor"
+  ],
+  [
+   195.1,
+   "también está cerrando la situación de saber que dijo"
+  ],
+  [
+   198.1,
+   "si vuelve a encontrarse acá, me estiro a matar a la vez"
   ]
  ],
  "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
   [
    "whisper_es"
   ],
@@ -106,8 +421,8 @@
  ],
  "ventanas": {
   "total": 4,
-  "modelo": 4,
-  "reglas": 0,
+  "modelo": 3,
+  "reglas": 1,
   "vacias": 0
  }
 }

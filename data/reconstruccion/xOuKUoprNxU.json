@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Pero su nombre debería, va a ser un río"
+  ],
+  [
    7.1,
    "Si pudiera volver desde el agua a la red"
   ],
@@ -20,12 +24,24 @@
    "Volvería a la infancia del río"
   ],
   [
+   28.9,
+   "El oberta en la oler de tus ojos, el misterio, el monte, el gasomar."
+  ],
+  [
    40.1,
    "Y la vida otra vez vuelve el flor de tu piel, bajo un sol de muchacha y aroma."
   ],
   [
    49.4,
    "Y la vida otra vez fue la flor que tuvieras"
+  ],
+  [
+   55.8,
+   "Bajo el sol, tu chacha y aroma"
+  ],
+  [
+   60.0,
+   "Deja verlo verde, de celebra el día"
   ],
   [
    65.1,
@@ -36,8 +52,24 @@
    "Yo no era para morir"
   ],
   [
+   76.1,
+   "Juntando el nacido en la flor del ángel"
+  ],
+  [
    82.0,
    "Yo muero para volver"
+  ],
+  [
+   85.9,
+   "Juntando el nacido en la flor del ángel"
+  ],
+  [
+   106.1,
+   "Si no perdí su piel a tu nombre, la perdura no me olvidaría."
+  ],
+  [
+   118.3,
+   "Porque viene de vos, pura y simple, menor, como el simple, mejor de la vida."
   ],
   [
    127.8,
@@ -48,8 +80,28 @@
    "Como el simple perdón de la vida"
   ],
   [
+   138.9,
+   "Señor, no hay tono como yo en silencio"
+  ],
+  [
+   144.2,
+   "Dejé en alto brillas del río"
+  ],
+  [
+   149.3,
+   "Y me gusta saber que un aroma a la vez"
+  ],
+  [
+   155.0,
+   "y me gusta saber que una roca en el tren"
+  ],
+  [
    165.0,
    "es lleno de rocio y olvido"
+  ],
+  [
+   169.0,
+   "venga a ver tu verde en febrada el día"
   ],
   [
    174.0,
@@ -58,9 +110,55 @@
   [
    180.0,
    "Yo muero para volver, juntando el rocío en la flor de la uve."
+  ],
+  [
+   190.7,
+   "Yo muero para volver, juntando el rocío en la flor de la uve."
   ]
  ],
  "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
   [
    "whisper_es"
   ],

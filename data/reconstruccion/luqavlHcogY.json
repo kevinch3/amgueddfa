@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "La vida"
+  ],
+  [
    30.0,
    "Miro esa sensibilidad"
   ],
@@ -28,6 +32,26 @@
    "Y me torturan mi razón"
   ],
   [
+   52.0,
+   "Sé que me asarde"
+  ],
+  [
+   56.0,
+   "y que me enciende el pecho de los cielos."
+  ],
+  [
+   62.0,
+   "Estás claro por mí, destino en el jardín,"
+  ],
+  [
+   67.0,
+   "a pasones que sientes."
+  ],
+  [
+   71.0,
+   "Te amo por estar, señor Chupaz,"
+  ],
+  [
    76.0,
    "cuando estás dentro de mí."
   ],
@@ -46,9 +70,48 @@
   [
    117.0,
    "Sé que nunca más poderá empeñecer."
+  ],
+  [
+   126.0,
+   "De bien siempre así me está lavado aquí, como un día en la tarde."
+  ],
+  [
+   135.0,
+   "Y a quien me va a llorar, me va a llorar, quiero el corazón morir."
+  ],
+  [
+   143.0,
+   "Y a quien me va a llorar, me va a llorar, quiero el corazón morir."
   ]
  ],
  "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
   [
    "whisper_es"
   ],

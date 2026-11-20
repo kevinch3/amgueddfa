@@ -4,6 +4,34 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   3.8,
+   "dice que para más tarde el momento"
+  ],
+  [
+   7.9,
+   "me gusta algo más curiosa de las velas"
+  ],
+  [
+   15.8,
+   "contra la torre de mis días"
+  ],
+  [
+   20.4,
+   "con la lluvia abriga en un globo a la"
+  ],
+  [
+   23.1,
+   "deriva"
+  ],
+  [
+   26.9,
+   "que saltó de cubierta tiene amarillo"
+  ],
+  [
+   30.2,
+   "barco haya hierba húmeda del cielo"
+  ],
+  [
    37.7,
    "en el sur donde yo vivo"
   ],
@@ -14,9 +42,37 @@
   [
    44.9,
    "de todos los días"
+  ],
+  [
+   46.9,
+   "le hace tanto"
   ]
  ],
  "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],

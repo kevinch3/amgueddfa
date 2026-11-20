@@ -4,6 +4,66 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "de la ciudad de Madrid"
+  ],
+  [
+   2.0,
+   "Cállate"
+  ],
+  [
+   5.0,
+   "¿Sabes qué?"
+  ],
+  [
+   7.0,
+   "Te quería decir que"
+  ],
+  [
+   9.0,
+   "acá te voy a presentar"
+  ],
+  [
+   11.0,
+   "¿Dónde te voy a presentar?"
+  ],
+  [
+   13.0,
+   "¿Qué?"
+  ],
+  [
+   15.0,
+   "¿Qué competencia?"
+  ],
+  [
+   16.0,
+   "¿Es la competencia?"
+  ],
+  [
+   19.0,
+   "¿No?"
+  ],
+  [
+   21.0,
+   "Sí"
+  ],
+  [
+   22.0,
+   "¿Estás segura?"
+  ],
+  [
+   23.0,
+   "¿Seguro?"
+  ],
+  [
+   27.0,
+   "¿Te parece?"
+  ],
+  [
+   28.0,
+   "Yo quería decirte, pero..."
+  ],
+  [
    29.0,
    "Quiero cuidarte."
   ],
@@ -16,8 +76,20 @@
    "¿Qué te dijo mi mamá?"
   ],
   [
+   35.0,
+   "Yo que me la pasé enamorando."
+  ],
+  [
+   37.0,
+   "¿Qué vas a ir a grabar a un escenario?"
+  ],
+  [
    39.0,
    "Ay, bueno, pero mi mamá le gusta que venga."
+  ],
+  [
+   41.0,
+   "Y bueno, pero claro que..."
   ],
   [
    45.0,
@@ -26,6 +98,22 @@
   [
    47.0,
    "¿Qué te vas a poner a hacer?"
+  ],
+  [
+   51.0,
+   "¡No sé! ¡Algo!"
+  ],
+  [
+   53.0,
+   "¡Pues esto!"
+  ],
+  [
+   55.0,
+   "Es el único que sabe hacerse un ejercicio."
+  ],
+  [
+   57.0,
+   "Bueno, me los actúo, me los hago así, con estiramiento."
   ],
   [
    64.0,
@@ -37,6 +125,72 @@
   ]
  ],
  "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
   [
    "whisper_es"
   ],

@@ -4,6 +4,22 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   25.0,
+   "Qué"
+  ],
+  [
+   26.6,
+   "lindo que y me acuer"
+  ],
+  [
+   30.1,
+   "de Don Juan rera"
+  ],
+  [
+   34.6,
+   "cantando que así le gaba"
+  ],
+  [
    39.6,
    "Nombre nombre de vez en"
   ],
@@ -36,12 +52,28 @@
    "del Como quien entrega el"
   ],
   [
+   85.8,
+   "alma como le"
+  ],
+  [
+   92.1,
+   "que queriendo a Don Juan"
+  ],
+  [
    107.4,
    "puerta los pobres les"
   ],
   [
    111.8,
-   "de noche la puerta abierta"
+   "dej de noche la puerta abierta"
+  ],
+  [
+   130.8,
+   "a"
+  ],
+  [
+   132.3,
+   "veces haí"
   ],
   [
    134.9,
@@ -56,6 +88,10 @@
    "blancas su"
   ],
   [
+   145.9,
+   "coraz se le volaba"
+  ],
+  [
    151.6,
    "y harina su"
   ],
@@ -64,12 +100,48 @@
    "corazón al cielos"
   ],
   [
+   160.8,
+   "le por la mistad en el"
+  ],
+  [
+   166.2,
+   "vino"
+  ],
+  [
+   167.8,
+   "querendo"
+  ],
+  [
+   169.8,
+   "cant su"
+  ],
+  [
    172.9,
    "canción"
   ],
   [
+   175.1,
+   "con con"
+  ],
+  [
+   178.8,
+   "sus y"
+  ],
+  [
+   182.1,
+   "más su canción como al"
+  ],
+  [
    191.8,
    "lágrimas como le iban a"
+  ],
+  [
+   197.0,
+   "robarse queriendo a Don Juan"
+  ],
+  [
+   213.2,
+   "pucia los pobres"
   ],
   [
    217.5,
@@ -77,6 +149,60 @@
   ]
  ],
  "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],

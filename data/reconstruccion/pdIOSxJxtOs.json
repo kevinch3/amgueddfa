@@ -4,6 +4,18 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "No es nada de tiempos vivos, sino reflejando las luces que hicieron en su vida de la lucha."
+  ],
+  [
+   7.0,
+   "Somos la piedra, esa piedra en la cual tropiezan los bajos estertos"
+  ],
+  [
+   12.7,
+   "de apagar el huevo que siempre, que siempre ha río en nuestra celda."
+  ],
+  [
    19.6,
    "Gracias a Dios, aún sobra el viento"
   ],
@@ -18,6 +30,18 @@
   [
    39.2,
    "Gracias a Dios, son claras la mañana"
+  ],
+  [
+   43.7,
+   "Mañunta chao, aún flores del campo"
+  ],
+  [
+   49.0,
+   "Marín Chihuahua, nuestra verdad es clara"
+  ],
+  [
+   54.1,
+   "Marín Chihuahua, nacemos en amor"
   ],
   [
    59.8,
@@ -50,9 +74,55 @@
   [
    117.6,
    "No hay un tratado porque el mundo grande no nos impide de la alegría"
+  ],
+  [
+   127.9,
+   "Salí Chihuahua, si no te va el viento, en un sueño de todos ustedes los ganarán."
+  ],
+  [
+   137.8,
+   "Salí Chihuahua, porque salen los bosques, pero jamás salarán las montañas."
+  ],
+  [
+   147.6,
+   "Pero jamás salarán las montañas, pero jamás salarán las montañas."
+  ],
+  [
+   156.6,
+   "es como un día."
   ]
  ],
  "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
   [
    "whisper_es"
   ],

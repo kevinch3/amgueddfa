@@ -20,6 +20,10 @@
    "Por una boca de tu amor"
   ],
   [
+   21.0,
+   "Por una boca de tu amor"
+  ],
+  [
    23.0,
    "Le decía el amor de mi corazón"
   ],
@@ -34,9 +38,19 @@
   [
    47.0,
    "Para pensar que estaré de frente a ti, preparando esta canción,"
+  ],
+  [
+   54.0,
+   "¿Qué dice?"
   ]
  ],
  "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
   [
    "whisper_es"
   ],

@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Solo como el aclarar este lucero, como el ajo palco del cielo va girando en la órbita lunar."
+  ],
+  [
    19.0,
    "Solo como el primer hombre de la tierra"
   ],
@@ -18,6 +22,10 @@
   [
    39.9,
    "Solo como uno baila con sus ensueños"
+  ],
+  [
+   50.5,
+   "Como el monstruo que se nega un perennio"
   ],
   [
    55.3,
@@ -64,6 +72,14 @@
    "Solo como dioses que nievan sus criaturas"
   ],
   [
+   134.8,
+   "Como el tiempo ahora son duro"
+  ],
+  [
+   139.1,
+   "Dividiendo los cuerpos y el delincuado"
+  ],
+  [
    145.4,
    "Solo, solo está en su mundo cada muerto"
   ],
@@ -76,6 +92,18 @@
    "Y solo como al grito siempre la verdad"
   ],
   [
+   164.8,
+   "Solo como el que no es verdad en todo el mundo"
+  ],
+  [
+   182.3,
+   "Solo"
+  ],
+  [
+   186.9,
+   "Como esto mismo es lo que se ofiende"
+  ],
+  [
    194.5,
    "Como el único que ha visto el rayo verde"
   ],
@@ -84,8 +112,20 @@
    "Cuando se cayó el último sol"
   ],
   [
+   208.2,
+   "Solo un fin que se entregan en un mensaje"
+  ],
+  [
+   216.4,
+   "Y un hombre que vive en un relojio"
+  ],
+  [
    221.4,
    "Como todo el que pierde la razón"
+  ],
+  [
+   226.4,
+   "Solo un muertes extraño sin darse cuenta"
   ],
   [
    234.4,
@@ -101,6 +141,36 @@
   ]
  ],
  "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
   [
    "whisper_es"
   ],

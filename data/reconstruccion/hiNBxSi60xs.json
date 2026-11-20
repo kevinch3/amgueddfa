@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   1.6,
+   "dicha cita riojana"
+  ],
+  [
    4.6,
    "madre vida a la del carnaval"
   ],
@@ -25,7 +29,7 @@
   ],
   [
    25.8,
-   "un gesto antiguo su agüita es poca"
+   "light un gesto antiguo su agüita es poca"
   ],
   [
    30.4,
@@ -40,8 +44,24 @@
    "enamorar"
   ],
   [
+   41.9,
+   "bajando una"
+  ],
+  [
    43.7,
    "chiquita de esta época pero se da"
+  ],
+  [
+   49.6,
+   "mamá no sé si huele"
+  ],
+  [
+   54.0,
+   "no te voy a festejar"
+  ],
+  [
+   58.0,
+   "ya te la chile era mi alma taller a se"
   ],
   [
    87.7,
@@ -52,15 +72,114 @@
    "coronar"
   ],
   [
+   95.3,
+   "una comadre cobra simple esa compra de"
+  ],
+  [
+   103.4,
+   "una comadre cura algo"
+  ],
+  [
+   108.2,
+   "por coronar"
+  ],
+  [
    112.7,
    "todo va bien todo mira qué lindo que"
   ],
   [
    119.5,
    "con la camisa vieja que está tan solo"
+  ],
+  [
+   124.1,
+   "para ganar"
+  ],
+  [
+   128.8,
+   "esta dieta"
+  ],
+  [
+   131.1,
+   "era aquel hito"
+  ],
+  [
+   135.1,
+   "mamá no sé si vuelvo me voy a"
+  ],
+  [
+   141.3,
+   "festejar"
+  ],
+  [
+   143.7,
+   "ya te de la chistera"
+  ],
+  [
+   147.3,
+   "era así"
+  ],
+  [
+   151.7,
+   "y a la oreja"
+  ],
+  [
+   155.6,
+   "la vida las"
   ]
  ],
  "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],

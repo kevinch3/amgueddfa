@@ -4,8 +4,12 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   2.2,
+   "de espaldas al mar de arielo y"
+  ],
+  [
    7.6,
-   "Rumbo al sur donde el oleaje del"
+   "deu Rumbo al sur donde el oleaje del"
   ],
   [
    12.3,
@@ -17,7 +21,27 @@
   ],
   [
    17.5,
-   "desconocido"
+   "desconocido William"
+  ],
+  [
+   22.2,
+   "Melo por la agitada"
+  ],
+  [
+   26.0,
+   "Inmensidad avanza el navío desando"
+  ],
+  [
+   30.6,
+   "libertades desde el paisaje de pañuelos"
+  ],
+  [
+   34.4,
+   "va gestando el amor que nacerá detrás de"
+  ],
+  [
+   36.9,
+   "los"
   ],
   [
    37.9,
@@ -29,11 +53,15 @@
   ],
   [
    45.0,
-   "por la agitada Inmensidad avanza el"
+   "paz por la agitada Inmensidad avanza el"
   ],
   [
    48.8,
-   "navío"
+   "navío Desatando"
+  ],
+  [
+   51.8,
+   "esperanzas el"
   ],
   [
    53.8,
@@ -78,9 +106,37 @@
   [
    88.0,
    "Génesis espaldas al al mar ha parido la"
+  ],
+  [
+   92.6,
+   "aro"
   ]
  ],
  "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],

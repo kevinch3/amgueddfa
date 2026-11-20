@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   11.0,
+   "en esto de"
+  ],
+  [
    20.1,
    "decía que voy a cantar este himno que se"
   ],
@@ -36,11 +40,21 @@
    "hace 120 años, un poquito más ya."
   ],
   [
+   99.7,
+   "Buen"
+  ],
+  [
    162.8,
    "Amen."
   ]
  ],
  "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],

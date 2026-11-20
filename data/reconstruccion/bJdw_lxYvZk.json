@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   60.0,
+   "¡Dale!"
+  ],
+  [
    90.0,
    "Y que Lolita, la piconera, con la bomba que tira los fanfarrones, se hacen las malagueñas, tira buzones, tira buzones, tira buzones, con la bomba que tira los fanfarrones."
   ],
@@ -32,6 +36,10 @@
    "Que ya estoy loquilito por ti"
   ],
   [
+   219.5,
+   "Cuando se trapo caí por la bahía"
+  ],
+  [
    224.0,
    "Se entra en el paraíso de la alegría"
   ],
@@ -40,11 +48,38 @@
    "De la alegría, madre, de la alegría"
   ],
   [
+   232.3,
+   "Y cuando se entra por caer"
+  ],
+  [
+   235.3,
+   "Por la baila"
+  ],
+  [
+   241.3,
+   "La vela de mi bancada"
+  ],
+  [
    257.3,
    "¡Vamos!"
   ]
  ],
  "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
   [
    "whisper_es"
   ],

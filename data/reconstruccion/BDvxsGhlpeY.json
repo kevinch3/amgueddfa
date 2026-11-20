@@ -4,28 +4,72 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   1.1,
+   "y"
+  ],
+  [
    11.6,
-   "la municipalidad de Gaiman"
+   "la municipalidad de asia"
   ],
   [
    20.4,
-   "sonia baliente y sus acompañantes"
+   "Sonia Baliente y sus acompañantes"
+  ],
+  [
+   25.4,
+   "y sin tomar en sus piernas"
   ],
   [
    29.6,
-   "la villa romana y carlos"
+   "la villa romana y Carlos"
+  ],
+  [
+   35.6,
+   "Maikel de las ciudades"
+  ],
+  [
+   38.5,
+   "al recordar puede ir a más"
   ],
   [
    42.6,
-   "lucia pastor"
+   "Lucía Pastor"
+  ],
+  [
+   43.9,
+   "y dejando todo"
+  ],
+  [
+   46.6,
+   "a María Mardones el color"
   ],
   [
    54.0,
    "otorgado por la municipalidad"
   ],
   [
+   59.9,
+   "García"
+  ],
+  [
+   62.9,
+   "también"
+  ],
+  [
    66.2,
    "ceremonia"
+  ],
+  [
+   72.4,
+   "su presidente el señor pregunto yo vos"
+  ],
+  [
+   77.2,
+   "limitado"
+  ],
+  [
+   78.6,
+   "adriano momento nacional"
   ],
   [
    160.9,
@@ -82,6 +126,10 @@
   [
    201.1,
    "encuentro fraternal"
+  ],
+  [
+   203.2,
+   "el bbva quizá no sea otra cosa que un"
   ],
   [
    206.8,
@@ -148,6 +196,10 @@
    "la gente quede temblando"
   ],
   [
+   261.0,
+   "intentad unos nuevos vincula tu palabra"
+  ],
+  [
    265.9,
    "celebramos en esta ubicación la"
   ],
@@ -168,6 +220,14 @@
    "inflada de vida"
   ],
   [
+   282.7,
+   "pajín ha deshecho cable lo trascienda y"
+  ],
+  [
+   286.8,
+   "se anide en el sentir y la de odia de"
+  ],
+  [
    289.8,
    "quienes creemos en la poesía como una"
   ],
@@ -186,6 +246,22 @@
   [
    304.2,
    "lo gesta"
+  ],
+  [
+   305.6,
+   "y el dios y conoceremos resonará de esta"
+  ],
+  [
+   309.1,
+   "sala"
+  ],
+  [
+   310.2,
+   "póngame una tradición milenaria que se"
+  ],
+  [
+   313.2,
+   "mece el lírico"
   ],
   [
    314.7,
@@ -224,6 +300,14 @@
    "fe en lo bello su lucha cotidiana"
   ],
   [
+   346.9,
+   "encarnados todos los versos que"
+  ],
+  [
+   350.3,
+   "vencieron el fin para este externo de la"
+  ],
+  [
    353.9,
    "página en blanco"
   ],
@@ -254,6 +338,26 @@
   [
    377.3,
    "a continuación"
+  ],
+  [
+   380.1,
+   "de dictó que elaboraron los jurados de"
+  ],
+  [
+   382.4,
+   "esta competencia profesores ninguna"
+  ],
+  [
+   385.8,
+   "grande ya mercedes cool y no suscriban"
+  ],
+  [
+   389.1,
+   "ticket which de las ciudades que jurados"
+  ],
+  [
+   392.7,
+   "que debieron escoger a del poema ganador"
   ],
   [
    394.9,
@@ -336,6 +440,14 @@
    "la primera estrofa claramente"
   ],
   [
+   457.0,
+   "autorreferencial el 90 observa el"
+  ],
+  [
+   460.4,
+   "exterior y aplican"
+  ],
+  [
    462.7,
    "se habilita para su transformación"
   ],
@@ -380,6 +492,14 @@
    "primera persona plural en las fórmulas"
   ],
   [
+   494.9,
+   "cito leeremos ganaron nos unirán"
+  ],
+  [
+   499.6,
+   "céntimos"
+  ],
+  [
    501.4,
    "sin decir se mencionan en esta estrofa"
   ],
@@ -416,6 +536,14 @@
    "hornero si no le hemos ganado al sol que"
   ],
   [
+   527.6,
+   "es adelantarse"
+  ],
+  [
+   530.7,
+   "ahora no es efectivamente bailo celebrar"
+  ],
+  [
    534.4,
    "la hipotética victoria"
   ],
@@ -426,6 +554,14 @@
   [
    539.4,
    "versos sentimos espíritu del remolino"
+  ],
+  [
+   542.7,
+   "del triunfo este remate de la obra que a"
+  ],
+  [
+   546.6,
+   "la vez eleva las subidas"
   ],
   [
    548.4,
@@ -442,6 +578,14 @@
   [
    559.0,
    "el poema seleccionado es conciso preciso"
+  ],
+  [
+   562.7,
+   "o con mil un hipotético conductor claro"
+  ],
+  [
+   566.0,
+   "delante perico se observa un manejo"
   ],
   [
    569.4,
@@ -476,6 +620,18 @@
    "a los sustantivos seleccionados respecto"
   ],
   [
+   592.4,
+   "del athletic a la opción de versos y"
+  ],
+  [
+   595.2,
+   "estrofas breves sin una enzima fijo"
+  ],
+  [
+   597.8,
+   "fortalece la ajuste za expresiva lo que"
+  ],
+  [
    600.9,
    "provoca una interesante sensación de"
   ],
@@ -494,6 +650,10 @@
   [
    611.9,
    "técnicamente la presencia de versos en"
+  ],
+  [
+   614.6,
+   "cábala nos fundamentalmente en la"
   ],
   [
    617.1,
@@ -565,19 +725,27 @@
   ],
   [
    672.0,
-   "firma del veredicto"
+   "firma del veredicto maria landeira darse"
+  ],
+  [
+   675.9,
+   "de cool y no el de la ciudad"
+  ],
+  [
+   692.5,
+   "hoy editar entonces"
   ],
   [
    696.2,
-   "ganador de esta competencia cuyo"
+   "al 90 ganador de esta competencia cuyo"
   ],
   [
    701.4,
-   "seudónimo es Bretón"
+   "seudónimo es retomar a fidel donde"
   ],
   [
    705.6,
-   "la sala le voy a pedir que se"
+   "encontrar la sala le voy a pedir que se"
   ],
   [
    708.7,
@@ -605,6 +773,132 @@
   ]
  ],
  "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],

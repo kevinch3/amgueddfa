@@ -4,6 +4,14 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "¡Adiós!"
+  ],
+  [
+   60.0,
+   "Señor, a ti la victoria, que alibio el amor."
+  ],
+  [
    71.7,
    "Por su alegría reine por lo que, porque Cristo hoy día muestra su poder."
   ],
@@ -21,7 +29,7 @@
   ],
   [
    113.6,
-   "A ti la victoria, gran libertador, libre de penas nuestro Rey Jesús,"
+   "A ti la victoria, gran libertador, libre de penas nuestro Rey Jesús, rompe las tabelas de la escritura."
   ],
   [
    140.6,
@@ -29,10 +37,16 @@
   ],
   [
    158.6,
-   "A ti la gloria, oh nuestro Señor."
+   "A ti la gloria, oh nuestro Señor, a ti la victoria de Aguileo, a ti la gloria, oh nuestro Señor."
   ]
  ],
  "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
   [
    "whisper_es"
   ],

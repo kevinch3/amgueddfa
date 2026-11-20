@@ -5,11 +5,15 @@
  "seg": [
   [
    0.0,
-   "Segundo participante,"
+   "Segundo participante, vocal sur."
   ],
   [
    43.0,
    "En mis palos hay un árbol que en el olvido se llama,"
+  ],
+  [
+   57.0,
+   "¿Dónde van a despegarse, Vida Vita, los monibujos del alma, para no pensar en Dios?"
   ],
   [
    74.1,
@@ -20,8 +24,16 @@
    "Al despertar de aquel sueño, pensaba en vos otra vez."
   ],
   [
+   102.1,
+   "Amén."
+  ],
+  [
    132.1,
    "En mis manos hay un árbol que en el olvido se llama"
+  ],
+  [
+   147.1,
+   "Donde van a despegarse y van a gritar los monimundos del alma"
   ],
   [
    158.0,
@@ -30,9 +42,25 @@
   [
    180.2,
    "Al despertar de aquel sueño, pensaba en vos otra vez."
+  ],
+  [
+   191.4,
+   "Pues, navide, y canté, y canté, y canté, y canté, y canté en mi cuantito me acosté."
   ]
  ],
  "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
   [
    "whisper_es"
   ],

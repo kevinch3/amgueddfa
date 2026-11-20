@@ -28,12 +28,20 @@
    "Yo soy esa fulanita, ay, padeciendo ando"
   ],
   [
+   85.8,
+   "Yo soy la que siempre ha sido, más vale voy a dejar de amar"
+  ],
+  [
    94.5,
    "Triste en la noche sin luna, ay, padeciendo ando"
   ],
   [
    103.9,
    "Triste es el día sin sol"
+  ],
+  [
+   110.0,
+   "Más vale voy a dejar de amar yo"
   ],
   [
    113.8,
@@ -72,6 +80,10 @@
    "Ay, que me has olvidado"
   ],
   [
+   213.9,
+   "Creí dentro a ver"
+  ],
+  [
    237.5,
    "Después de mucho tiempo te he vuelto a ver"
   ],
@@ -88,19 +100,70 @@
    "se fue llorando, llorando por amor"
   ],
   [
+   281.6,
+   "se ha vuelto mirada en algún marmón."
+  ],
+  [
+   291.6,
+   "Se envuelvo a ver"
+  ],
+  [
    314.2,
    "Aquellos son los tuyos que vuelvo a ver"
+  ],
+  [
+   327.1,
+   "Dulces cabullos del cielo"
   ],
   [
    333.9,
    "Sabré donde nuevo al verte otra vez"
   ],
   [
+   343.8,
+   "Y vino para que ayer se fue llorando, llorando de amor"
+  ],
+  [
+   358.8,
+   "Se ha vuelto mi gana, el alucinando, viviendo para la muerte."
+  ],
+  [
    374.8,
    "Se fue llorando, llorando tu amor, se fue olvidada en algún canto."
+  ],
+  [
+   423.9,
+   "La ciudad caminara, la que si me está de más, suelta el coche ardiendo y el viento la llevará."
   ]
  ],
  "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
   [
    "whisper_es"
   ],

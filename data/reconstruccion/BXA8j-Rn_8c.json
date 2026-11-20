@@ -4,8 +4,20 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   30.0,
+   "Así está la tumba porque triunfó, porque en mi vida triunfaré mañana, porque en mi vida ya no hay temor."
+  ],
+  [
+   53.3,
+   "Porque yo sé que el futuro es tuyo, la vida vale más y más, solo moriré."
+  ],
+  [
    69.3,
    "Amén."
+  ],
+  [
+   99.3,
+   "Que el Cristo al rey nos puede dar, pues vivo está."
   ],
   [
    107.8,
@@ -14,6 +26,10 @@
   [
    115.3,
    "Porque en mi vida ya no hay temor."
+  ],
+  [
+   121.7,
+   "Porque yo sé que el futuro escucha, la vida vale más y más solo paré."
   ],
   [
    136.7,
@@ -25,6 +41,18 @@
   ]
  ],
  "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
   [
    "whisper_es"
   ],

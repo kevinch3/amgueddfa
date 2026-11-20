@@ -4,6 +4,22 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   35.1,
+   "alún supo"
+  ],
+  [
+   37.2,
+   "alarme de chito en mi"
+  ],
+  [
+   42.6,
+   "sueño algún"
+  ],
+  [
+   45.6,
+   "m supo acun arme de chito en mi sueño"
+  ],
+  [
    60.0,
    "va cantando Mi"
   ],
@@ -37,7 +53,11 @@
   ],
   [
    97.8,
-   "venas me hace gritar"
+   "venas me hace gritar al Vid"
+  ],
+  [
+   103.1,
+   "lear nuestras"
   ],
   [
    107.4,
@@ -57,7 +77,7 @@
   ],
   [
    140.8,
-   "cantor Busco al sol"
+   "cantor Busco al sol Vid leando hasta el"
   ],
   [
    147.0,
@@ -66,6 +86,10 @@
   [
    150.0,
    "caja"
+  ],
+  [
+   151.5,
+   "está"
   ],
   [
    153.3,
@@ -116,6 +140,10 @@
    "siento cre es duende"
   ],
   [
+   212.4,
+   "misas me hace gritar"
+  ],
+  [
    217.5,
    "olvídale nuestras"
   ],
@@ -133,6 +161,27 @@
   ]
  ],
  "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],

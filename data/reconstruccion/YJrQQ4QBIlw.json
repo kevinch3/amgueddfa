@@ -5,15 +5,23 @@
  "seg": [
   [
    29.0,
-   "a apertura de esta edición a cargo del"
+   "a apertura de esta edición a cargo delge"
   ],
   [
    33.7,
    "dirigido por el profesor Sebastián"
   ],
   [
+   53.0,
+   "mulero es fresca y"
+  ],
+  [
    55.7,
    "Ventosa la primavera en el valle de"
+  ],
+  [
+   58.9,
+   "ch atardecer del"
   ],
   [
    61.3,
@@ -69,7 +77,7 @@
   ],
   [
    165.6,
-   "tengo algo que"
+   "música tengo algo que"
   ],
   [
    168.6,
@@ -100,20 +108,56 @@
    "No porque una lechuza me"
   ],
   [
+   208.7,
+   "canta"
+  ],
+  [
    242.2,
    "Por qué no se toca un paso doble antes"
+  ],
+  [
+   244.4,
+   "terminar la"
+  ],
+  [
+   268.6,
+   "noche"
   ],
   [
    375.0,
    "bendita"
   ],
   [
+   376.6,
+   "Consuelo estoy muriendo del R deso al"
+  ],
+  [
+   381.6,
+   "miso daa mi alma"
+  ],
+  [
    385.8,
    "porque tu boca"
   ],
   [
+   388.4,
+   "de"
+  ],
+  [
    391.1,
    "Tom mis penas"
+  ],
+  [
+   394.1,
+   "yota"
+  ],
+  [
+   396.0,
+   "deena y no me puede cantar esta cosa voy"
+  ],
+  [
+   401.7,
+   "viando la miel de tu"
   ],
   [
    418.4,
@@ -180,6 +224,14 @@
    "quedaron"
   ],
   [
+   535.0,
+   "alodio con amor"
+  ],
+  [
+   538.2,
+   "alotro"
+  ],
+  [
    540.4,
    "ellos"
   ],
@@ -188,8 +240,12 @@
    "entendieron"
   ],
   [
+   544.7,
+   "ellos lo"
+  ],
+  [
    547.6,
-   "ellos lo hicieron y a ese pueblo nativo"
+   "hicieron y a ese pueblo nativo"
   ],
   [
    553.2,
@@ -204,12 +260,20 @@
    "abrazaron"
   ],
   [
+   568.1,
+   "Jos ellos no"
+  ],
+  [
    572.9,
    "subieron Y así se"
   ],
   [
    578.4,
    "quedaron por la vida"
+  ],
+  [
+   598.1,
+   "salud"
   ],
   [
    607.7,
@@ -396,12 +460,60 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
   ]
  ],
  "ventanas": {
   "total": 10,
-  "modelo": 10,
-  "reglas": 0,
+  "modelo": 9,
+  "reglas": 1,
   "vacias": 0
  }
 }

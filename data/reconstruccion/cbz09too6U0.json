@@ -4,12 +4,20 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   45.2,
+   "Ah."
+  ],
+  [
    62.8,
    "160 aniversario del colonos a las costas"
   ],
   [
    67.3,
    "del Chubut. Único participante Cor"
+  ],
+  [
+   70.6,
+   "Moría."
   ],
   [
    97.4,
@@ -72,6 +80,14 @@
    "hacia el futuro, hacia una nueva vida."
   ],
   [
+   178.0,
+   "Señor"
+  ],
+  [
+   187.8,
+   "fuiste"
+  ],
+  [
    190.0,
    "haciendo el bien."
   ],
@@ -92,6 +108,18 @@
    "aliento"
   ],
   [
+   214.4,
+   "Oh, pero qué lindo que cantamos,"
+  ],
+  [
+   225.4,
+   "se dije, no digan nada"
+  ],
+  [
+   230.9,
+   "el mar no siempre pecamos"
+  ],
+  [
    233.8,
    "y el viento muchas veces trajo más dudas"
   ],
@@ -100,8 +128,20 @@
    "que certezas."
   ],
   [
+   238.0,
+   "Hubo pérditas,"
+  ],
+  [
    240.0,
    "lágrimas que se mezclaban con la sal de"
+  ],
+  [
+   242.0,
+   "los y silencios que pesaban más que el"
+  ],
+  [
+   245.9,
+   "tipaje."
   ],
   [
    258.3,
@@ -128,8 +168,36 @@
    "herramientas."
   ],
   [
+   272.6,
+   "Soy un afamado carpintero. La necesito"
+  ],
+  [
+   275.8,
+   "para trabajar."
+  ],
+  [
+   277.1,
+   "Bueno, comenzaremos con otra cosa y"
+  ],
+  [
+   278.5,
+   "luego seguimos con la caja de la se"
+  ],
+  [
+   280.3,
+   "terminó."
+  ],
+  [
    298.5,
    "También hubo esperanza."
+  ],
+  [
+   301.4,
+   "Hubo cantos a veces que resigieron el"
+  ],
+  [
+   303.6,
+   "orejo,"
   ],
   [
    305.1,
@@ -225,7 +293,7 @@
   ],
   [
    382.4,
-   "se elevan sus voces al cielo."
+   "se elevan sus voces al cielo. Ay, pero"
   ],
   [
    408.0,
@@ -301,7 +369,7 @@
   ],
   [
    537.6,
-   "digo o no lo digo. Lo digo o no lo digo."
+   "Digo o no lo digo. Lo digo o no lo digo."
   ],
   [
    543.2,
@@ -316,16 +384,40 @@
    "tanto frío, pero son bienvenidos."
   ],
   [
+   564.6,
+   "Yo soy Kis."
+  ],
+  [
+   570.9,
+   "Hola, Chiqu."
+  ],
+  [
+   574.8,
+   "Yo soy Hurus."
+  ],
+  [
    578.4,
    "Tengan en cuenta este apellido. Vamos a"
+  ],
+  [
+   580.1,
+   "hacer plaga en la pat."
   ],
   [
    585.2,
    "Bienvenidos a todos. Ah, y a ver, a ver,"
   ],
   [
+   588.5,
+   "eh, hay promociones para las ballenas."
+  ],
+  [
    616.1,
    "es el tesoro más preciado de la familia,"
+  ],
+  [
+   619.7,
+   "pero"
   ],
   [
    621.2,
@@ -334,6 +426,10 @@
   [
    623.8,
    "de 160 años?"
+  ],
+  [
+   626.7,
+   "El sí está."
   ],
   [
    643.4,
@@ -386,9 +482,88 @@
   [
    706.8,
    "Estamos aquí."
+  ],
+  [
+   748.0,
+   "Vamosamos el aplauso para Coría"
   ]
  ],
  "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],

@@ -16,6 +16,10 @@
    "El vino es bueno si se sabe tomar, dicen, si se sabe tomar"
   ],
   [
+   59.0,
+   "Amén."
+  ],
+  [
    89.0,
    "Y siempre hay noches, el agua y luna, los vieron volados"
   ],
@@ -26,9 +30,19 @@
   [
    107.9,
    "Sus manos de acero, tu cariño es el metal"
+  ],
+  [
+   113.9,
+   "Y la abuelito no deja de soñar y será un modelo de soñar."
   ]
  ],
  "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
   [
    "whisper_es"
   ],

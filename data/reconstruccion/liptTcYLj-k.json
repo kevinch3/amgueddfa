@@ -8,6 +8,10 @@
    "El niño vuelve a casa con dos chichones"
   ],
   [
+   23.5,
+   "El niño vuelve a casa con dos chichones"
+  ],
+  [
    28.6,
    "El médico amenaza dar inyecciones, pregunta la abuela."
   ],
@@ -21,6 +25,10 @@
   ],
   [
    58.6,
+   "El niño está muy triste, que descontento"
+  ],
+  [
+   68.1,
    "El niño está muy triste, que descontento"
   ],
   [
@@ -38,6 +46,10 @@
   [
    91.4,
    "Su madre pa' curarlo le cuenta un cuento."
+  ],
+  [
+   106.6,
+   "El niño amanecido con pesadillas."
   ],
   [
    112.3,
@@ -68,15 +80,45 @@
    "La laray, la laray, la laray, la ray, la rara ponerle un beso"
   ],
   [
+   173.0,
+   "El parro ordena, y crema la pena el doble dos besos"
+  ],
+  [
    179.7,
    "Su madre pa curarlo lo come a besos"
   ],
   [
+   186.2,
+   "La laray, la ray, la rara, la rara"
+  ],
+  [
    189.5,
    "Lo come a besos"
+  ],
+  [
+   191.6,
+   "¡Mua!"
   ]
  ],
  "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
   [
    "whisper_es"
   ],

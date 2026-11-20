@@ -8,15 +8,14 @@ span, each at the time of the automatic line its words were matched to; lines
 nobody matched are spread between their neighbours by syllables. Times are
 approximate and the player says so.
 
-Choirs repeat stanzas, so every stanza is tried sung 1-3 times and the version
-that matches the heard words best wins.
+Choirs repeat stanzas: a stanza is taken as sung again (up to 3 times) only
+when the extra pass anchors at least half its lines to heard words.
 
 Used by export_video_transcripts (a re-export keeps the result). Lyrics are
 supplied by the maintainer, who confirms their rights.
 """
 from __future__ import annotations
 
-import itertools
 import json
 import re
 import unicodedata
@@ -29,10 +28,8 @@ LETRAS = REPO / "data" / "letras"
 MATCH = 0.6     # word similarity that counts as the same word heard
 GAP = -0.2      # a heard word left unmatched
 SKIP = -0.05    # a lyric word nobody heard (singing is often missed whole)
-REPEAT = 0.6    # cost of each extra time a stanza is sung: it must earn about one heard word
 MISS = -0.5     # a mismatched pair
 MAX_REPEAT = 3  # times a stanza may be sung
-MAX_VARIANTS = 400
 
 
 def _fold(s: str) -> str:
@@ -90,18 +87,19 @@ def _dp(lyric: list[tuple[str, int]], heard: list[tuple[str, float]]) -> tuple[f
     return D[n][m], first
 
 
-def _variants(stanzas: list[list[str]]):
-    """Line sequences with each stanza sung 1..MAX_REPEAT times, in order (capped)."""
-    for counts in itertools.islice(itertools.product(range(1, MAX_REPEAT + 1), repeat=len(stanzas)), MAX_VARIANTS):
-        yield sum(counts) - len(counts), [line for st, k in zip(stanzas, counts) for line in st * k]
+def _kept(anchors: dict[int, float]) -> dict[int, float]:
+    """Anchors whose times increase with the line order (a later line heard earlier is dropped)."""
+    keep, last = {}, float("-inf")
+    for k in sorted(anchors):
+        if anchors[k] > last:
+            keep[k], last = anchors[k], anchors[k]
+    return keep
 
 
 def _times(lines: list[str], anchors: dict[int, float], start: float, end: float) -> list[float]:
     """Anchored lines keep their time (kept increasing); the rest are spread by syllables between neighbours."""
-    keep, last = {}, start - 1
-    for k in sorted(anchors):
-        if anchors[k] > last:
-            keep[k], last = anchors[k], anchors[k]
+    keep = {k: v for k, v in _kept(anchors).items() if v >= start}
+    last = max(keep.values(), default=start)
     pts = [(-1, start)] + sorted(keep.items()) + [(len(lines), max(end, last + 1))]
     out = [0.0] * len(lines)
     for (ia, ta), (ib, tb) in zip(pts, pts[1:]):
@@ -123,16 +121,31 @@ def align(seg: list, stanzas: list[list[str]], desde: float, hasta: float) -> li
     sung = [float(t) for t, x in inside if _words(x)]
     start = sung[0] if sung else float(desde)
     end = min(float(hasta), sung[-1] + 4) if sung else float(hasta)
-    best = None
-    for extra, lines in _variants(stanzas):
-        lyric = [(w, k) for k, l in enumerate(lines) for w in _words(l)]
-        score, anchors = _dp(lyric, heard)
-        score -= REPEAT * extra
-        if best is None or score > best[0]:
-            best = (score, lines, anchors)
-    if best is None:
+    if not stanzas:
         return []
-    _, lines, anchors = best
+
+    def run(counts):
+        lines = [line for st, k in zip(stanzas, counts) for line in st * k]
+        score, anchors = _dp([(w, k) for k, l in enumerate(lines) for w in _words(l)], heard)
+        return score, len(_kept(anchors)), lines, anchors
+
+    # Each stanza once, then add a repeat only where the choir was heard singing it again:
+    # the extra pass must anchor at least half its lines and raise the score.
+    counts = [1] * len(stanzas)
+    cur = run(counts)
+    while True:
+        best = None
+        for i, st in enumerate(stanzas):
+            if counts[i] >= MAX_REPEAT:
+                continue
+            trial = counts[:i] + [counts[i] + 1] + counts[i + 1:]
+            r = run(trial)
+            if r[0] > cur[0] and r[1] - cur[1] >= (len(st) + 1) // 2 and (best is None or r[0] > best[1][0]):
+                best = (trial, r)
+        if best is None:
+            break
+        counts, cur = best
+    _, _, lines, anchors = cur
     return [[t, l] for t, l in zip(_times(lines, anchors, start, end), lines)]
 
 

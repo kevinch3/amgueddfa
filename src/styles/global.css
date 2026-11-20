@@ -589,3 +589,32 @@ fieldset.campo { border: 0; padding: 0; }
 .rep-cap-lista .actual button { background: #fff; box-shadow: inset 3px 0 0 var(--gold); }
 .tr-play { font: 600 0.85rem var(--sans); white-space: nowrap; text-decoration: none; padding: 0.1rem 0.4rem; border: 1px solid var(--rule); border-radius: 999px; }
 .tr-play:hover { border-color: var(--gold-ink); }
+
+/* Player: search row, and the phone layout (UX review 2026-11-20) ------------------ */
+.rep-buscar-fila { display: flex; gap: 0.5rem 0.75rem; align-items: center; flex-wrap: wrap; }
+.rep-buscar-fila input[type="search"] { flex: 1 1 12rem; min-width: 0; }
+.rep-buscar p:empty { display: none; }
+.rep-seguir { flex: none; }
+@media (max-width: 59.99rem) {
+  .reproductor { width: 100vw; height: 100dvh; max-height: 100dvh; margin: 0; border: 0; border-radius: 0; }
+  .reproductor[open] { grid-template-rows: auto minmax(0, 1fr); }
+  .rep-head { padding: 0.35rem 0.5rem 0.35rem 0.75rem; gap: 0.5rem; }
+  .rep-head h2 { font-size: 1rem; line-height: 1.25; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .rep-head p { font-size: 0.85rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .rep-nav { gap: 0.25rem; }
+  .rep-btn { min-width: 40px; min-height: 40px; font-size: 1.05rem; }
+  /* the body scrolls as a whole only if the video and chapters leave too little room */
+  .rep-cuerpo { display: flex; flex-direction: column; overflow-y: auto; overscroll-behavior: contain; }
+  .rep-video { flex: none; padding: 0; }
+  .rep-acciones { margin: 0; padding: 0.3rem 0.75rem; gap: 0.25rem 1rem; }
+  .rep-acciones .btn-link { min-height: 36px; }
+  .rep-capitulos { margin: 0; padding: 0 0.75rem 0.4rem; }
+  .rep-capitulos > p { display: none; }
+  .rep-cap-lista { max-height: 6.5rem; }
+  .rep-tr { flex: 1 1 0; min-height: 50dvh; }
+  .rep-tr-head { padding: 0.4rem 0.75rem 0; }
+  .rep-buscar { padding: 0.3rem 0.75rem; }
+  .rep-buscar-fila input[type="search"] { min-height: 40px; padding: 0.35rem 0.6rem; }
+  .rep-lineas { flex: 1 1 0; }
+  .rep-lineas button { min-height: 40px; padding: 0.35rem 0.4rem; }
+}

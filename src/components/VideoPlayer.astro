@@ -37,10 +37,12 @@ import { t } from '../lib/i18n';
         <span class="badge" data-rep-fuente hidden></span>
       </div>
       <div class="rep-buscar" data-rep-buscador hidden>
-        <label for="rep-q">{t('reproductor.buscar')}</label>
-        <input id="rep-q" type="search" autocomplete="off" data-rep-q />
+        <label for="rep-q" class="sr-only">{t('reproductor.buscar')}</label>
+        <div class="rep-buscar-fila">
+          <input id="rep-q" type="search" autocomplete="off" placeholder={t('reproductor.buscar')} data-rep-q />
+          <label class="rep-seguir small"><input type="checkbox" data-rep-seguir checked /> {t('reproductor.seguir')}</label>
+        </div>
         <p class="muted small" data-rep-n aria-live="polite"></p>
-        <label class="rep-seguir small"><input type="checkbox" data-rep-seguir checked /> {t('reproductor.seguir')}</label>
       </div>
       <p class="muted small" data-rep-vacio>{t('reproductor.sin_transcripcion')}</p>
       <ol class="rep-lineas" data-rep-lineas></ol>

@@ -11,7 +11,7 @@ from scripts.reconstruct.context import Context, load_glossary, tokens, with_glo
 from scripts.reconstruct.sources import Line
 
 # Bump when prompt.md or schema.json change: every window is asked again.
-PROMPT_VERSION = 4  # 4: Welsh mutations corrected; 2: word list spelled as in the context; 3: keep single-source real speech, Welsh confidence shown
+PROMPT_VERSION = 5  # 5: Welsh sound-alike corrections from context; 4: Welsh mutations corrected; 2: word list spelled as in the context; 3: keep single-source real speech, Welsh confidence shown
 SEARCH = 10.0  # a cut may move this far from its nominal place to land in a pause
 
 

@@ -24,6 +24,28 @@ Design: `docs/superpowers/specs/2026-11-20-reconstruccion-videos-design.md`. Pil
 - **Usage needs the maintainer's OK above 50 windows.** Show the dry run's window count first. The pilot cost about USD 0.028 API-equivalent per window, and the full archive is about 8,500 windows.
 - **No `--bare`, no API key, no batch API.** Bare mode refuses the subscription.
 
+## How Welsh is handled (2026-11-20)
+
+- **Which Welsh lines are used:**
+  - Bangor's lines below **0.6 confidence** are dropped: background under music or chatter (`MIN_CY_CONF`).
+  - On videos that also have Spanish text, Welsh lines within 3 s of a Spanish line are dropped. Bangor writes Welsh over Spanish speech too.
+- **Prompt v5 rules:**
+  - Keep any line that reads as real speech, even when it is the only source.
+  - Drop only noise and loops.
+  - Each Welsh line shows its `conf`.
+- **What the checker accepts in Welsh lines (and only there):**
+  - **Initial mutations** of a heard word: *o Cymru → o Gymru*, *am dychwelyd → am ddychwelyd*.
+  - **Sound-alike corrections** of a heard word that the story makes clear, recorded in `fixes`:
+    - *dylenneg → telyneg*, *cyfarth → cyfarch*, *hefod → defod*;
+    - the sound-key similarity must be ≥ 0.7 (`sounds_alike`);
+    - number words never change.
+  - Spanish lines may correct only to the word list.
+- **Glossary of known mishearings, `data/glosario.md`:**
+  - It holds `heard → right` lines, from the maintainer or from cases that are certain.
+  - A hint reaches only the windows where the heard word occurs, and the right word joins that window's word list.
+  - When someone reports a misheard name: add a line, then rerun the videos that contain it. Only the windows with the word are asked again.
+- **Prompt changes:** bump `PROMPT_VERSION` in `windows.py`; every window is asked again on its next run.
+
 ## Steps
 
 Work in a worktree (`../amgueddfa-wt-*`), with the backup disk mounted (`/run/media/kevinch3/4eff8b2b-…/amgueddfa-backup`).
@@ -65,6 +87,8 @@ Only windows whose inputs changed are asked again, because each window carries a
 | A video in the summary's `sin texto` list | no source made sense (garbled singing). No file is written and today's transcript stays | supply the piece's lyrics (`video-lyrics`); don't force text |
 | A word without accents or capitals | the word list was folded again | check `display_words()` in `model.py` |
 | An automatic line inside a song | the model kept a heard line next to the lyric | acceptable; better span times in `data/letras/videos.json` fix it |
+| A listener reports a wrong Welsh word | a mishearing no rule closed | add `heard → right` to `data/glosario.md`, rerun that video |
+| Welsh text over music at the start | Bangor writing over background | should be gone (conf < 0.6); if not, check the `lp` values in its file |
 
 ## Common mistakes
 

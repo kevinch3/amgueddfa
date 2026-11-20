@@ -11,6 +11,9 @@ Rules, per line:
 """
 from __future__ import annotations
 
+import re
+from difflib import SequenceMatcher
+
 from scripts.reconstruct.context import tokens
 from scripts.reconstruct.windows import Window
 
@@ -33,6 +36,30 @@ def _radicals(word: str) -> set[str]:
     if word.startswith("h") and word[1:2] in _VOWELS:
         out.add(word[1:])              # h-prefix: "ei henw" <- "enw"
     return out
+
+
+# Sound-alike corrections (Welsh lines only): the model may correct a misheard word into the word
+# the story makes clear (dylenneg -> telyneg, cyfarth -> cyfarch) when the two sound alike.
+SOUND_ALIKE = 0.7
+NUMBERS = set("un dau dwy tri tair pedwar pedair pump pum chwech saith wyth naw deg cant mil "
+              "cero uno una dos tres cuatro cinco seis siete ocho nueve diez cien mil".split())
+
+
+def sound_key(word: str) -> str:
+    """A rough sound of a folded word: voiced/unvoiced pairs, digraphs and vowels merged."""
+    w = word.lower()
+    for a, b in [("ngh", "n"), ("th", "d"), ("dd", "d"), ("ch", "c"), ("ll", "l"), ("ff", "f"), ("ph", "f"),
+                 ("rh", "r"), ("ng", "n"), ("qu", "c"), ("gu", "g"), ("h", "")]:
+        w = w.replace(a, b)
+    w = w.translate(str.maketrans("tkqgpvfwzsjx", "dccgbbbbssss"))
+    w = re.sub("[aeiouyw]+", "a", w)
+    return re.sub(r"(.)\1+", r"\1", w)
+
+
+def sounds_alike(heard: str, new: str) -> bool:
+    if heard in NUMBERS or new in NUMBERS:
+        return False
+    return SequenceMatcher(None, sound_key(heard), sound_key(new)).ratio() >= SOUND_ALIKE
 
 
 NEAR = 5.0   # seconds: a word must have been heard this close to the line that uses it
@@ -72,7 +99,9 @@ def check_window(w: Window, reply: dict) -> list[str]:
             from_words: set[str] = set()
             for fix in fixes:
                 to, frm = tokens(fix.get("to", "")), tokens(fix.get("from", ""))
-                if not to or any(tok not in w.context.words for tok in to):
+                welsh = line.get("lang") == "cy"
+                ok_to = [tok in w.context.words or tok in frm or (welsh and any(sounds_alike(f, tok) for f in frm)) for tok in to]
+                if not to or not all(ok_to):
                     errors.append(f"rule 2: {where} fixes to words outside the word list: {fix.get('to')}")
                 elif not frm or any(tok not in heard for tok in frm):
                     errors.append(f"rule 2: {where} fixes a word nobody heard: {fix.get('from')}")

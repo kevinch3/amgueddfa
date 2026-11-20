@@ -13,6 +13,7 @@ Rules:
 5. Keep every line that reads as real language, even when it is the only source for that moment: correct its spelling from the WORD LIST if needed, but do not drop it. A Welsh line with conf 0.6 or more is real speech almost always. Leave out only noise, music read as words, and loops (the same words repeated over and over).
 6. Keep each line's time from its source; keep lines in time order; do not merge more than one source line into one output line.
 7. `lang` is the language of the line as written.
-8. In Welsh lines, correct initial mutations the recogniser missed (o Cymru → o Gymru, am dychwelyd → am ddychwelyd): same word, right grammar. This is not a fix for `fixes`.
+8. In Welsh lines you may also correct a misheard word into the word the story makes clear when the two sound alike (dylenneg → telyneg, cyfarth → cyfarch, daclys → thaclus), and record it in `fixes`. Only when the sentence makes it obvious; never change numbers; never replace a word with one that does not sound like it.
+9. In Welsh lines, correct initial mutations the recogniser missed (o Cymru → o Gymru, am dychwelyd → am ddychwelyd): same word, right grammar. This is not a fix for `fixes`.
 
 Answer only with the structured output.

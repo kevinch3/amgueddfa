@@ -96,3 +96,25 @@ def test_call_for_later_split_over_several_caption_lines():
     ]
     m = detect(cues, programa_titles(PROG))
     assert [x["n"] for x in m if x["kind"] == "comp"] == ["26"]
+
+
+def test_verdict_word_on_the_previous_caption_line_is_not_a_start():
+    # 2022 session 0X83qrUotz0, 3:24:07: captions split "El veredicto de la / competencia número 60".
+    cues = [(12243.1, "se prepara vamos a pedirle a Juan si"), (12247.0, "estaría disponible El veredicto de la"),
+            (12249.4, "competencia número 60"), (12252.6, "conjunto vocal hasta 16 integrantes")]
+    titles = {"60": "Conjunto vocal hasta 16 integrantes: «El abuelo y el pehuen»"}
+    assert detect(cues, titles) == []
+
+
+def test_prize_handed_out_on_the_previous_line_does_not_hide_the_next_start():
+    # 2023 session LQ28BhyOZBQ, 0:15:40: the previous competition's prize, then the next call.
+    cues = [(938.0, "retirar su certificado y su premio bien"), (940.0, "continuamos con la competencia número 64"),
+            (943.0, "Cuarteto mixto himno elección idioma")]
+    titles = {"64": "Cuarteto mixto: himno a elección."}
+    assert [(x["n"], x["t"]) for x in detect(cues, titles)] == [("64", 940.0)]
+
+
+def test_get_ready_call_on_the_previous_line_is_not_a_start():
+    cues = [(12253.0, "que por favor se vayan preparando"), (12255.0, "para la competencia número 67"),
+            (12258.0, "conjunto femenino")]
+    assert detect(cues, {"67": "Conjunto femenino: obra a elección."}) == []

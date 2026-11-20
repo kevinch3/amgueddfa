@@ -4,6 +4,8 @@ import EmptySlot from '../../components/EmptySlot.astro';
 import ItemCard from '../../components/ItemCard.astro';
 import Mount from '../../components/Mount.astro';
 import VideoList from '../../components/VideoList.astro';
+import MediaGallery from '../../components/MediaGallery.astro';
+import { mediaItems } from '../../lib/media';
 import Transcripcion from '../../components/Transcripcion.astro';
 import { transcriptionDoc } from '../../lib/transcripciones';
 import { PUBLIC_WINNERS, winnersDoc } from '../../lib/ganadores';
@@ -35,9 +37,12 @@ const list = editionItems(slug, year);
 const state = editionState(slug, year);
 const cover = editionCover(slug, year);
 const videos = editionVideos(slug, year);
-const sections = CATEGORY_ORDER.map((c) => ({ c, items: list.filter((i) => i.category === c).sort(byTitle) }));
+// Photos and press go to the Multimedia section (MediaGallery), not to Otros.
+const media = mediaItems(list);
+const mediaIds = new Set(media.map((m) => m.item.id));
+const sections = CATEGORY_ORDER.map((c) => ({ c, items: list.filter((i) => i.category === c && !mediaIds.has(i.id)).sort(byTitle) }));
 // Programa always shows (with its slot when incomplete); other empty sections are hidden (live corrections may fill them) and named in one slot.
-const missing = sections.filter((s) => s.c !== 'programa' && s.items.length === 0).map((s) => t(`categorias.${s.c}`));
+const missing = sections.filter((s) => s.c !== 'programa' && s.items.length === 0 && !(s.c === 'otros' && media.length > 0)).map((s) => t(`categorias.${s.c}`));
 // Approved facts and memories from the last export, baked in for search engines; edicion.ts merges live rows.
 const approved = (approvedRaw as Contribution[]).filter((c) => c.festival === slug && c.year === year && ['fact', 'memory', 'upload', 'transcription'].includes(c.type))
   .map((c) => {
@@ -92,7 +97,7 @@ const onePerDoc = (items: typeof list, docOf: (id: string) => DocText | null) =>
     return [{ item: i, text: d.text, images: d.items.length, doc: d.id }];
   });
 };
-const transcribedIn = (c: string) => onePerDoc(list.filter((i) => i.category === c && !i.restricted), transcriptionDoc);
+const transcribedIn = (c: string) => onePerDoc(list.filter((i) => i.category === c && !i.restricted && !mediaIds.has(i.id)), transcriptionDoc);
 // Published winners (Chubut, Trevelin): folded under Resultados; the documents stay restricted.
 const winners = PUBLIC_WINNERS.includes(slug) ? onePerDoc(list.filter((i) => i.category === 'resultados'), winnersDoc) : [];
 const itemTitles = Object.fromEntries(list.filter((i) => !i.restricted).map((i) => [i.id, i.title]));
@@ -183,6 +188,7 @@ const missingList = formatList(missing.map((m) => m.toLocaleLowerCase(intlLocale
     </section>
   )}
 
+  {media.length > 0 && <MediaGallery media={media} videos={videos.length} />}
   <VideoList videos={videos} festival={slug} year={year} />
 
   <section class="section island-section" aria-labelledby="recuerdos-t">

@@ -1,0 +1,86 @@
+---
+import Transcripcion from './Transcripcion.astro';
+import { pageUrls, thumbUrl } from '../lib/catalog';
+import { contentLang, t } from '../lib/i18n';
+import type { MediaKind } from '../lib/media';
+import { url } from '../lib/paths';
+import { transcriptionDoc } from '../lib/transcripciones';
+import type { Item } from '../lib/types';
+
+// Photos and press of the edition in one grid (issue #26). Images open in the shared lightbox
+// (group "multimedia"); a document's transcription goes in a <template> the lightbox shows beside
+// the image, one per document even when it spans several images. Filter chips appear when the
+// section has more than one kind (videos count: they follow in VideoList).
+interface Props { media: { item: Item; kind: MediaKind }[]; videos: number }
+const { media, videos } = Astro.props;
+const lang = contentLang();
+const counts = { foto: media.filter((m) => m.kind === 'foto').length, prensa: media.filter((m) => m.kind === 'prensa').length, video: videos };
+const kinds = (Object.keys(counts) as (keyof typeof counts)[]).filter((k) => counts[k] > 0);
+const cards = media.map(({ item, kind }) => {
+  const doc = transcriptionDoc(item.id);
+  const pages = pageUrls(item);
+  const caption = [item.title, item.source_label, item.rights].filter(Boolean).join(' · ');
+  return { item, kind, doc, pages, caption, thumb: thumbUrl(item) };
+});
+const templates = [...new Map(cards.filter((c) => c.doc).map((c) => [c.doc!.id, c.doc!])).values()];
+---
+<section class="section multimedia" aria-labelledby="multimedia-t" data-multimedia>
+  <h2 id="multimedia-t">{t('multimedia.titulo')}</h2>
+  <p class="measure muted small">{t('multimedia.ayuda')}</p>
+  {kinds.length > 1 && (
+    <div class="mm-filtros" role="group" aria-label={t('multimedia.filtrar')}>
+      <button type="button" class="mm-chip" aria-pressed="true" data-mm-filtro="todo">{t('multimedia.filtro.todo')}</button>
+      {kinds.map((k) => <button type="button" class="mm-chip" aria-pressed="false" data-mm-filtro={k}>{t(`multimedia.filtro.${k}`)} <span class="muted">({counts[k]})</span></button>)}
+    </div>
+  )}
+  <ul class="mm-grid">
+    {cards.map(({ item, kind, doc, pages, caption, thumb }) => (
+      <li class="mm-card" data-media={kind}>
+        {pages.length > 0 ? (
+          <a class="mm-frame" href={pages[0]} data-lb="multimedia" data-lb-alt={item.title} data-lb-caption={caption} data-lb-tr={doc ? `tr-${doc.id}` : undefined}>
+            {thumb && <img src={thumb} alt="" loading="lazy" decoding="async" width="240" height="320" />}
+            <span class="badge mm-badge">{t(`multimedia.tipos.${kind}`)}</span>
+            {pages.length > 1 && <span class="mm-n" aria-hidden="true">{pages.length}</span>}
+          </a>
+        ) : (
+          <a class="mm-frame mm-web" href={url(`item/${item.id}/`)}><span class="badge mm-badge">{t(`multimedia.tipos.${kind}`)}</span></a>
+        )}
+        {pages.slice(1).map((src, n) => (
+          <a hidden href={src} data-lb="multimedia" data-lb-alt={`${item.title} (${n + 2}/${pages.length})`} data-lb-caption={caption} data-lb-tr={doc ? `tr-${doc.id}` : undefined}></a>
+        ))}
+        <span class="mm-t" lang={lang}>{item.title}</span>
+        <span class="muted small">{item.source_label}{doc && <> · <span class="mm-tr">{t('multimedia.con_transcripcion')}</span></>}</span>
+        <a class="small" href={url(`item/${item.id}/`)}>{t('multimedia.ficha')}</a>
+      </li>
+    ))}
+  </ul>
+  {templates.length > 0 && (
+    <div class="transcripciones">
+      {cards.filter((c) => c.doc && templates.includes(c.doc)).filter((c, i, a) => a.findIndex((x) => x.doc!.id === c.doc!.id) === i).map(({ item, doc }) => (
+        <details class="tr-detalle">
+          <summary>{t('multimedia.leer_transcripcion')}: <span lang={lang}>{item.title}</span></summary>
+          <Transcripcion text={doc!.text} doc={doc!.id} />
+        </details>
+      ))}
+    </div>
+  )}
+  {templates.map((d) => (
+    <template id={`tr-${d.id}`}><h3 class="lb-tr-t">{t('reproductor.transcripcion')}</h3><Transcripcion text={d.text} doc={d.id} /></template>
+  ))}
+</section>
+
+<script>
+  // Filter chips: show one kind (photos, press, videos) or all. Videos are VideoList's section.
+  const sec = document.querySelector<HTMLElement>('[data-multimedia]');
+  sec?.addEventListener('click', (e) => {
+    const b = (e.target as HTMLElement | null)?.closest<HTMLButtonElement>('[data-mm-filtro]');
+    if (!b) return;
+    const k = b.dataset.mmFiltro;
+    for (const c of sec.querySelectorAll<HTMLButtonElement>('[data-mm-filtro]')) c.setAttribute('aria-pressed', String(c === b));
+    for (const li of sec.querySelectorAll<HTMLElement>('[data-media]')) li.hidden = k !== 'todo' && li.dataset.media !== k;
+    const grid = sec.querySelector<HTMLElement>('.mm-grid');
+    if (grid) grid.hidden = k === 'video';
+    const vids = document.querySelector<HTMLElement>('section[data-videos]');
+    if (vids) vids.classList.toggle('mm-oculto', k !== 'todo' && k !== 'video');
+  });
+</script>

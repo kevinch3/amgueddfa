@@ -962,5 +962,23 @@
     "un_resultado": "1 canlyniad ar gyfer «[SEARCH_TERM]»",
     "buscando": "Yn chwilio am «[SEARCH_TERM]»…",
     "sin_js": "Mae angen JavaScript i chwilio. Gallwch bori'r archif fesul eisteddfod a blwyddyn."
+  },
+  "multimedia": {
+    "titulo": "Amlgyfrwng",
+    "ayuda": "Lluniau a phapurau newydd o'r eisteddfod hon; maen nhw'n agor yma, gyda'u trawsgrifiad wrth eu hochr pan fo un.",
+    "filtrar": "Hidlo amlgyfrwng",
+    "filtro": {
+      "todo": "Y cyfan",
+      "foto": "Lluniau",
+      "prensa": "Y wasg",
+      "video": "Fideos"
+    },
+    "tipos": {
+      "foto": "Llun",
+      "prensa": "Y wasg"
+    },
+    "con_transcripcion": "gyda thrawsgrifiad",
+    "ficha": "Gweld y cofnod",
+    "leer_transcripcion": "Trawsgrifiad"
   }
 }

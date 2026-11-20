@@ -962,5 +962,23 @@
     "un_resultado": "1 träff för ”[SEARCH_TERM]”",
     "buscando": "Söker efter ”[SEARCH_TERM]”…",
     "sin_js": "Sökningen kräver JavaScript. Du kan bläddra i arkivet per eisteddfod och år."
+  },
+  "multimedia": {
+    "titulo": "Multimedia",
+    "ayuda": "Foton och press från den här upplagan; de öppnas här, med transkription bredvid när det finns en.",
+    "filtrar": "Filtrera multimedia",
+    "filtro": {
+      "todo": "Allt",
+      "foto": "Foton",
+      "prensa": "Press",
+      "video": "Videor"
+    },
+    "tipos": {
+      "foto": "Foto",
+      "prensa": "Press"
+    },
+    "con_transcripcion": "med transkription",
+    "ficha": "Se posten",
+    "leer_transcripcion": "Transkription"
   }
 }

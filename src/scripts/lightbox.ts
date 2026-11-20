@@ -20,7 +20,9 @@ export function clamp(i: number, total: number): number {
   return Math.max(0, Math.min(total - 1, i));
 }
 
-type Member = { anchor: HTMLAnchorElement; href: string; alt: string };
+// Optional on the anchor: data-lb-caption (title, source, rights) and data-lb-tr (the id of a
+// <template> with the document's transcription, shown beside the image).
+type Member = { anchor: HTMLAnchorElement; href: string; alt: string; caption: string; tr: string };
 
 const esc = (s: string) => (typeof CSS !== 'undefined' && CSS.escape ? CSS.escape(s) : s.replace(/["\\]/g, '\\$&'));
 
@@ -31,7 +33,7 @@ function membersOf(group: string): Member[] {
     const href = a.href;
     const alt = a.dataset.lbAlt || a.querySelector('img')?.alt || '';
     const prev = seen.get(href);
-    if (!prev) seen.set(href, { anchor: a, href, alt });
+    if (!prev) seen.set(href, { anchor: a, href, alt, caption: a.dataset.lbCaption || '', tr: a.dataset.lbTr || '' });
     else if (!prev.alt && alt) prev.alt = alt;
   }
   return [...seen.values()];
@@ -45,7 +47,11 @@ type Box = {
   prev: HTMLButtonElement;
   next: HTMLButtonElement;
   zoom: HTMLButtonElement;
+  cap: HTMLElement;
+  aside: HTMLElement;
 };
+
+let shownTr = '';
 
 let box: Box | null = null;
 let members: Member[] = [];
@@ -90,7 +96,9 @@ function build(): Box {
   zoom.setAttribute('aria-pressed', 'false');
   const close = button('lb-close', t('item.cerrar'));
   tools.append(zoom, close);
-  bar.append(count, tools);
+  const cap = document.createElement('span');
+  cap.className = 'lb-cap';
+  bar.append(count, cap, tools);
 
   const stage = document.createElement('div');
   stage.className = 'lb-stage';
@@ -104,7 +112,12 @@ function build(): Box {
   const next = button('lb-next', t('item.pag_siguiente'));
   nav.append(prev, next);
 
-  dlg.append(bar, stage, nav);
+  const aside = document.createElement('aside');
+  aside.className = 'lb-tr';
+  aside.hidden = true;
+  aside.setAttribute('aria-label', t('reproductor.transcripcion'));
+
+  dlg.append(bar, stage, aside, nav);
   document.body.append(dlg);
 
   const toggle = () => setZoom(!stage.classList.contains('zoomed'));
@@ -125,6 +138,7 @@ function build(): Box {
       back.focus();
     } else opener?.focus();
     big.removeAttribute('src');
+    shownTr = '';
   });
 
   // Swipe: a mostly horizontal single-finger move of 50 px or more turns the page.
@@ -143,7 +157,7 @@ function build(): Box {
     if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) show(cur + (dx < 0 ? 1 : -1));
   });
 
-  return { dlg, stage, big, count, prev, next, zoom };
+  return { dlg, stage, big, count, prev, next, zoom, cap, aside };
 }
 
 function show(i: number): void {
@@ -154,6 +168,20 @@ function show(i: number): void {
   setZoom(false);
   box.big.src = m.href;
   box.big.alt = m.alt;
+  box.cap.textContent = m.caption;
+  // The transcription panel: one per document, kept (and its scroll) while paging through its images.
+  const tpl = m.tr ? document.getElementById(m.tr) : null;
+  if (!(tpl instanceof HTMLTemplateElement)) {
+    box.aside.hidden = true;
+    box.dlg.classList.remove('lb-has-tr');
+    shownTr = '';
+  } else if (shownTr !== m.tr) {
+    box.aside.replaceChildren(tpl.content.cloneNode(true));
+    box.aside.hidden = false;
+    box.aside.scrollTop = 0;
+    box.dlg.classList.add('lb-has-tr');
+    shownTr = m.tr;
+  }
   box.count.textContent = total > 1 ? t('item.pagina', { n: cur + 1, total }) : '';
   box.prev.disabled = cur === 0;
   box.next.disabled = cur === total - 1;

@@ -962,5 +962,23 @@
     "un_resultado": "1 risultato per «[SEARCH_TERM]»",
     "buscando": "Ricerca di «[SEARCH_TERM]»…",
     "sin_js": "La ricerca richiede JavaScript. Puoi consultare l'archivio per eisteddfod e anno."
+  },
+  "multimedia": {
+    "titulo": "Multimedia",
+    "ayuda": "Foto e stampa di questa edizione; si aprono qui, con la trascrizione accanto quando c'è.",
+    "filtrar": "Filtra i contenuti multimediali",
+    "filtro": {
+      "todo": "Tutto",
+      "foto": "Foto",
+      "prensa": "Stampa",
+      "video": "Video"
+    },
+    "tipos": {
+      "foto": "Foto",
+      "prensa": "Stampa"
+    },
+    "con_transcripcion": "con trascrizione",
+    "ficha": "Vedi la scheda",
+    "leer_transcripcion": "Trascrizione"
   }
 }

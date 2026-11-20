@@ -962,5 +962,23 @@
     "un_resultado": "“[SEARCH_TERM]”共 1 个结果",
     "buscando": "正在搜索“[SEARCH_TERM]”…",
     "sin_js": "搜索需要 JavaScript。你可以按艺术节和年份浏览档案。"
+  },
+  "multimedia": {
+    "titulo": "多媒体",
+    "ayuda": "本届赛事的照片和报刊,在本站直接打开,如有文字稿会显示在旁边。",
+    "filtrar": "筛选多媒体",
+    "filtro": {
+      "todo": "全部",
+      "foto": "照片",
+      "prensa": "报刊",
+      "video": "视频"
+    },
+    "tipos": {
+      "foto": "照片",
+      "prensa": "报刊"
+    },
+    "con_transcripcion": "附文字稿",
+    "ficha": "查看条目",
+    "leer_transcripcion": "文字稿"
   }
 }

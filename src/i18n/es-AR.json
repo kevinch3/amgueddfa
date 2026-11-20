@@ -962,5 +962,23 @@
     "un_resultado": "1 resultado para «[SEARCH_TERM]»",
     "buscando": "Buscando «[SEARCH_TERM]»…",
     "sin_js": "La búsqueda necesita JavaScript. Podés recorrer el archivo desde cada Eisteddfod y año."
+  },
+  "multimedia": {
+    "titulo": "Multimedia",
+    "ayuda": "Fotos y prensa de esta edición; se abren aquí, con su transcripción al lado cuando la hay.",
+    "filtrar": "Filtrar multimedia",
+    "filtro": {
+      "todo": "Todo",
+      "foto": "Fotos",
+      "prensa": "Prensa",
+      "video": "Videos"
+    },
+    "tipos": {
+      "foto": "Foto",
+      "prensa": "Prensa"
+    },
+    "con_transcripcion": "con transcripción",
+    "ficha": "Ver la ficha",
+    "leer_transcripcion": "Transcripción"
   }
 }

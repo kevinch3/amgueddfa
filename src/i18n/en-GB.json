@@ -962,5 +962,23 @@
     "un_resultado": "1 result for “[SEARCH_TERM]”",
     "buscando": "Searching for “[SEARCH_TERM]”…",
     "sin_js": "Search needs JavaScript. You can browse the archive by eisteddfod and year."
+  },
+  "multimedia": {
+    "titulo": "Multimedia",
+    "ayuda": "Photos and press from this edition; they open here, with their transcript beside them when there is one.",
+    "filtrar": "Filter multimedia",
+    "filtro": {
+      "todo": "All",
+      "foto": "Photos",
+      "prensa": "Press",
+      "video": "Videos"
+    },
+    "tipos": {
+      "foto": "Photo",
+      "prensa": "Press"
+    },
+    "con_transcripcion": "with transcript",
+    "ficha": "See the record",
+    "leer_transcripcion": "Transcript"
   }
 }

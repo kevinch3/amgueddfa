@@ -30,7 +30,9 @@ chapter). **Anti-goal:** downloading every transcription on every edition page.
 - `lib/video-search.ts` (pure, tested): query → folded words; a line answers
   alone or together with the next one (caption lines are 3–8 words), counted
   once, where the phrase starts. `matches()` is the one rule that says how
-  permissive the search is.
+  permissive the search is; the user chose: every word, anywhere inside a
+  word, in its own form or a Welsh initial mutation of it ("cadair" finds
+  "gadair", "chadair", "nghadair").
 - `lib/video-hash.ts` + `scripts/reproductor.ts`: `#v=<id>&t=<seconds>` opens
   the player at that moment; the player keeps the hash while open
   (`replaceState`, no history entries) and clears it on close. Search results

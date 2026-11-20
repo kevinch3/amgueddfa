@@ -22,14 +22,35 @@ export function queryTerms(query: string): string[] {
 }
 
 /**
+ * Welsh initial mutations, radical → the forms it takes (soft, nasal, aspirate), on folded text:
+ * "cadair" is also said "gadair", "chadair", "nghadair". Digraphs first ("ll" before "l").
+ */
+const MUTATIONS: [string, string[]][] = [
+  ['ll', ['l']], ['rh', ['r']], ['ch', []], ['dd', []], ['ph', []], ['th', []], ['ff', []], ['ng', []],
+  ['p', ['b', 'mh', 'ph']], ['t', ['d', 'nh', 'th']], ['c', ['g', 'ngh', 'ch']],
+  ['b', ['f', 'm']], ['d', ['dd', 'n']], ['g', ['', 'ng']], ['m', ['f']],
+];
+
+/**
+ * A folded term and its mutated forms. The soft mutation of "g" drops it ("gwlad" → "wlad"),
+ * which only counts when four letters remain: shorter stumps are in every other word.
+ */
+export function variants(term: string): string[] {
+  const rule = MUTATIONS.find(([radical]) => term.startsWith(radical));
+  if (!rule) return [term];
+  const rest = term.slice(rule[0].length);
+  return [term, ...rule[1].map((m) => m + rest).filter((v) => (v === rest ? v.length >= 4 : v.length >= 2))];
+}
+
+/**
  * Does this folded text answer these folded terms? The one rule that says how
  * permissive the search is; everything else (the two-line window, the marks,
- * the order of results) follows it.
- *
- * TODO(kevinch3): the rule is yours. Today: every term, anywhere in a word.
+ * the order of results) follows it. Chosen by the user (2026-11-20): every
+ * term must be there, anywhere inside a word ("rosa" finds "prosa"), in its
+ * own form or a Welsh mutation of it ("cadair" finds "gadair").
  */
 export function matches(text: string, terms: string[]): boolean {
-  return terms.every((w) => text.includes(w));
+  return terms.every((w) => variants(w).some((v) => text.includes(v)));
 }
 
 /** Where the terms are in `text` (original, unfolded), as merged [from, to) ranges. */
@@ -43,7 +64,7 @@ export function markRanges(text: string, terms: string[]): [number, number][] {
     folded += f;
   }
   const raw: [number, number][] = [];
-  for (const w of terms) {
+  for (const w of terms.flatMap(variants)) {
     for (let from = folded.indexOf(w); from !== -1; from = folded.indexOf(w, from + w.length)) {
       raw.push([at[from], at[from + w.length - 1] + 1]);
     }

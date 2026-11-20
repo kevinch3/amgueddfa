@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { editionKey, markRanges, queryTerms, searchVideos, videoHits, type SearchVideo } from '../src/lib/video-search';
+import { editionKey, markRanges, matches, queryTerms, searchVideos, variants, videoHits, type SearchVideo } from '../src/lib/video-search';
 
 const video = (id: string, lines: string[]): SearchVideo => ({ id, title: id, kind: 'actuacion', lang: 'es', seg: lines.map((text, i) => [i * 4, text]) });
 const coro = video('A', ['Competencia 75, segunda competencia', 'principal para coro,', 'escuela de música Gaiman.', 'Olha a Rosa amarela, Rosa']);
@@ -48,6 +48,27 @@ describe('video search', () => {
     expect(searchVideos([one, coro, two], 'rosa').map((r) => [r.video.id, r.total])).toEqual([['D', 2], ['C', 1], ['A', 1]]);
     expect(searchVideos([one], ' ')).toEqual([]);
     expect(searchVideos([one], 'silla')).toEqual([]);
+  });
+
+  it('asks for every word, anywhere inside a word', () => {
+    expect(matches('la prosa generosa', ['rosa'])).toBe(true);
+    expect(matches('el coro de gaiman', ['coro', 'gaiman'])).toBe(true);
+    expect(matches('el coro de trelew', ['coro', 'gaiman'])).toBe(false);
+  });
+
+  it('finds the Welsh mutations of a word, and marks them', () => {
+    expect(variants('cadair')).toEqual(['cadair', 'gadair', 'nghadair', 'chadair']);
+    expect(variants('llyfr')).toEqual(['llyfr', 'lyfr']);
+    expect(variants('gwlad')).toEqual(['gwlad', 'wlad', 'ngwlad']);
+    expect(variants('gato')).toEqual(['gato', 'ngato']); // "ato" is in every other word
+    expect(variants('chwarae')).toEqual(['chwarae']);
+    expect(variants('eisteddfod')).toEqual(['eisteddfod']);
+    for (const said of ['y gadair', 'ei chadair', 'fy nghadair', 'cadair']) expect(matches(said, ['cadair'])).toBe(true);
+    expect(matches('y wladfa', ['gwladfa'])).toBe(true);
+    expect(matches('y gadair', ['gadair'])).toBe(true);
+    expect(matches('y tad', ['dad'])).toBe(false); // from the radical to its mutations, not back
+    const text = 'Enillodd y Gadair';
+    expect(markRanges(text, ['cadair']).map(([a, b]) => text.slice(a, b))).toEqual(['Gadair']);
   });
 
   it('names an edition file', () => {

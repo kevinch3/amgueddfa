@@ -34,6 +34,14 @@ describe('video transcript', () => {
     expect(asTranscript(null)).toBeNull();
   });
 
+  it('accepts the reconstructed text with its per-line sources', () => {
+    const tr = asTranscript({ src: 'reconstruida', lang: 'es', seg, fuentes: [['yt_es'], ['letra'], ['yt_es', 'whisper_es'], ['yt_es']] })!;
+    expect(tr.src).toBe('reconstruida');
+    expect(tr.fuentes?.[2]).toEqual(['yt_es', 'whisper_es']);
+    expect(asTranscript({ src: 'reconstruida', lang: 'es', seg, fuentes: [['yt_es']] })!.fuentes).toBeUndefined();
+    expect(asTranscript({ src: 'inventada', lang: 'es', seg })).toBeNull();
+  });
+
   it('keeps the aligned lyric spans and finds the one a line is in', () => {
     const tr = asTranscript({ src: 'youtube', lang: 'es', seg, letras: [{ desde: 20, hasta: 30, titulo: 'Rosa', autor: 'Trad.', idioma: 'pt' }, { bad: 1 }] })!;
     expect(tr.letras).toHaveLength(1);

@@ -2,10 +2,10 @@
 // The files come from scripts/export_video_transcripts.py: public/transcripciones-video/<id>.json.
 
 /** Where a transcription comes from: subtitles someone uploaded, YouTube's automatic ones, Whisper. */
-export type TranscriptSource = 'subida' | 'youtube' | 'whisper';
+export type TranscriptSource = 'subida' | 'youtube' | 'whisper' | 'reconstruida';
 /** A sung piece whose known lyric replaced the automatic lines in [desde, hasta) (scripts/align_lyrics.py). */
 export type Letra = { desde: number; hasta: number; titulo: string; autor: string; idioma: string };
-export type Transcript = { src: TranscriptSource; lang: string; seg: [number, string][]; letras?: Letra[] };
+export type Transcript = { src: TranscriptSource; lang: string; seg: [number, string][]; letras?: Letra[]; fuentes?: string[][] };
 
 /** The lyric span a line starting at `t` belongs to, or null. */
 export function letraAt(tr: Transcript, t: number): Letra | null {
@@ -51,11 +51,15 @@ export function fmtTime(s: number): string {
 /** A parsed transcription file, or null when it is not one (a 404 page, a broken file). */
 export function asTranscript(data: unknown): Transcript | null {
   const d = data as Partial<Transcript> | null;
-  if (!d || !Array.isArray(d.seg) || !['subida', 'youtube', 'whisper'].includes(String(d.src))) return null;
+  if (!d || !Array.isArray(d.seg) || !['subida', 'youtube', 'whisper', 'reconstruida'].includes(String(d.src))) return null;
   const seg = d.seg.filter((x): x is [number, string] => Array.isArray(x) && typeof x[0] === 'number' && typeof x[1] === 'string');
   if (!seg.length) return null;
   const letras = (Array.isArray(d.letras) ? d.letras : []).filter(
     (l): l is Letra => !!l && typeof l.desde === 'number' && typeof l.hasta === 'number' && typeof l.titulo === 'string',
   ).map((l) => ({ desde: l.desde, hasta: l.hasta, titulo: l.titulo, autor: String(l.autor ?? ''), idioma: String(l.idioma ?? '') }));
-  return { src: d.src as TranscriptSource, lang: String(d.lang ?? ''), seg, ...(letras.length ? { letras } : {}) };
+  // Per-line sources of a reconstruction: kept only when there is one list per line.
+  const f = (d as { fuentes?: unknown }).fuentes;
+  const fuentes = Array.isArray(f) && f.length === seg.length && f.every((x) => Array.isArray(x) && x.every((y) => typeof y === 'string'))
+    ? (f as string[][]) : null;
+  return { src: d.src as TranscriptSource, lang: String(d.lang ?? ''), seg, ...(letras.length ? { letras } : {}), ...(fuentes ? { fuentes } : {}) };
 }

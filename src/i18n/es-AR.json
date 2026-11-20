@@ -960,7 +960,8 @@
     "fuente": {
       "subida": "Subtítulos del autor",
       "youtube": "YouTube, automática",
-      "whisper": "Whisper, sin revisar"
+      "whisper": "Whisper, sin revisar",
+      "reconstruida": "Reconstrucción automática"
     },
     "idiomas": {
       "es": "castellano",
@@ -973,7 +974,14 @@
     "nota_capitulos": "Marcados automáticamente a partir de lo que se anuncia en la sesión; pueden tener errores.",
     "ver_en_video": "Ver en el video, desde {tiempo}",
     "letra_alineada": "letra alineada",
-    "nota_letra": "Letra de {piezas}, alineada automáticamente con el video: los tiempos son aproximados."
+    "nota_letra": "Letra de {piezas}, alineada automáticamente con el video: los tiempos son aproximados.",
+    "origen": {
+      "subida": "subtítulos del autor",
+      "yt_es": "YouTube automático",
+      "whisper_es": "Whisper",
+      "cy": "reconocimiento de galés",
+      "letra": "letra de la obra"
+    }
   },
   "buscar": {
     "titulo": "Buscar en el archivo",

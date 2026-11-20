@@ -12,6 +12,7 @@ This plan puts the pieces already built in order and shows where the sung words 
 | 2 | Speech transcription | what announcers, juries and presenters say | done for Spanish: YouTube automatic + Whisper, quality gate. Welsh held for review (#32) |
 | 3 | Structure | where each competition and ceremony starts | chapters for long sessions (#26), competition number in clip titles; share links to a moment (#47) |
 | 4 | **Sung words** | the text of each piece, line by line, at its moment | **in progress**: comp. 75 Chubut 2025 done (#48, #49); list in `docs/letras-pendientes.md` |
+| 2–4 | **Reconstruction** | one checked text per video from all the layers above | pilot on 10 clips done (`docs/research/2026-11-20-reconstruccion-piloto.md`); skill `video-reconstruction`; full run (~8,500 windows) waits for the maintainer's OK |
 | 5 | Review | errors fixed by people | "Informar un error" in the player; Welsh review (#32); spot checks of layer 4 |
 
 Juventud and Mimosa videos stay without text (children named aloud, #29); that holds for layer 4 too.

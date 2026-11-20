@@ -960,7 +960,8 @@
     "fuente": {
       "subida": "Sous-titres de l'auteur",
       "youtube": "YouTube, automatique",
-      "whisper": "Whisper, non relue"
+      "whisper": "Whisper, non relue",
+      "reconstruida": "Reconstruction automatique"
     },
     "idiomas": {
       "es": "espagnol",
@@ -973,7 +974,14 @@
     "nota_capitulos": "Repérés automatiquement d'après les annonces de la séance ; ils peuvent contenir des erreurs.",
     "ver_en_video": "Voir dans la vidéo, à partir de {tiempo}",
     "letra_alineada": "paroles alignées",
-    "nota_letra": "Paroles de {piezas}, alignées automatiquement sur la vidéo : les temps sont approximatifs."
+    "nota_letra": "Paroles de {piezas}, alignées automatiquement sur la vidéo : les temps sont approximatifs.",
+    "origen": {
+      "subida": "sous-titres de l'auteur",
+      "yt_es": "YouTube automatique",
+      "whisper_es": "Whisper",
+      "cy": "reconnaissance du gallois",
+      "letra": "paroles de l'œuvre"
+    }
   },
   "buscar": {
     "titulo": "Rechercher dans l'archive",

@@ -1,0 +1,120 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.4,
+   "Persistir, de Cecilia"
+  ],
+  [
+   2.9,
+   "Glanzmann he de persistir como el faro"
+  ],
+  [
+   9.6,
+   "Solitario arrullado por las tempestades"
+  ],
+  [
+   19.6,
+   "siempre de mis sueños los sueños que"
+  ],
+  [
+   22.6,
+   "caminan y caminan"
+  ],
+  [
+   24.8,
+   "cotidianos y que son los que me susurra"
+  ],
+  [
+   29.0,
+   "ser de persistir desde la soledad"
+  ],
+  [
+   32.8,
+   "acompañada que agradezco desde acompañar"
+  ],
+  [
+   37.2,
+   "a la soledad de los otros desde la pura"
+  ],
+  [
+   40.4,
+   "soledad que me conversa y me encuentra"
+  ],
+  [
+   45.0,
+   "adentro he de persistir Aunque me canse"
+  ],
+  [
+   49.6,
+   "en este acelerado desasirse de Los lazos"
+  ],
+  [
+   53.2,
+   "desasirse de los nudos de los Enredos"
+  ],
+  [
+   56.4,
+   "promiscuos del apego he de persistir"
+  ],
+  [
+   60.6,
+   "contigo hermano en este tiempo"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

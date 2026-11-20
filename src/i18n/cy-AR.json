@@ -960,7 +960,8 @@
     "fuente": {
       "subida": "Isdeitlau'r awdur",
       "youtube": "YouTube, awtomatig",
-      "whisper": "Whisper, heb ei wirio"
+      "whisper": "Whisper, heb ei wirio",
+      "reconstruida": "Ail-luniad awtomatig"
     },
     "idiomas": {
       "es": "Sbaeneg",
@@ -973,7 +974,14 @@
     "nota_capitulos": "Wedi'u marcio'n awtomatig o'r hyn a gyhoeddir yn y sesiwn; gall fod gwallau.",
     "ver_en_video": "Gwylio yn y fideo, o {tiempo}",
     "letra_alineada": "geiriau wedi'u halinio",
-    "nota_letra": "Geiriau {piezas}, wedi'u halinio'n awtomatig â'r fideo: bras yw'r amseroedd."
+    "nota_letra": "Geiriau {piezas}, wedi'u halinio'n awtomatig â'r fideo: bras yw'r amseroedd.",
+    "origen": {
+      "subida": "isdeitlau'r awdur",
+      "yt_es": "YouTube awtomatig",
+      "whisper_es": "Whisper",
+      "cy": "adnabod lleferydd Cymraeg",
+      "letra": "geiriau'r darn"
+    }
   },
   "buscar": {
     "titulo": "Chwilio'r archif",

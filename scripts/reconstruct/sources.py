@@ -1,0 +1,61 @@
+"""Every timed line a video has, from every source, for the reconstruction.
+
+Sources (src): "subida" (subtitles the uploader wrote), "yt_es" (YouTube's
+automatic Spanish captions), "whisper_es" (Whisper, Spanish, filtered like the
+published one), "cy" (Welsh, only once the A/B review names a model), "letra"
+(lyrics from data/letras, aligned by scripts/align_lyrics.py).
+"""
+from __future__ import annotations
+
+import json
+from pathlib import Path
+from typing import NamedTuple
+
+from scripts.align_lyrics import LETRAS, align, parse_letra, spans_for
+from scripts.export_video_transcripts import clean_whisper, glob_escape, parse_vtt
+
+# The Welsh model the A/B review picks, as the suffix of its file next to the video
+# (<stem>.<WELSH_SOURCE>.json, segments [{"s": start, "text": ...}]). None: Welsh stays out.
+WELSH_SOURCE: str | None = None
+
+
+class Line(NamedTuple):
+    t: float
+    text: str
+    src: str
+    lang: str
+
+
+def _vtts(stem: Path) -> dict[str, Path]:
+    return {p.name[len(stem.name) + 1:-4]: p for p in stem.parent.glob(f"{glob_escape(stem.name)}.*.vtt")}
+
+
+def load_sources(stem: Path, video_id: str, letras: Path = LETRAS) -> list[Line]:
+    """All timed lines of one backed-up video (its path without suffix), sorted by time."""
+    out: list[Line] = []
+    vtts = _vtts(stem)
+    try:
+        info = json.loads(stem.with_name(f"{stem.name}.info.json").read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        info = {}
+    # Uploaded subtitles: Spanish only, like the export (no English text, not even the author's); Welsh once chosen.
+    langs = {"es"} | ({"cy"} if WELSH_SOURCE else set())
+    for k in (info.get("subtitles") or {}):
+        if k != "live_chat" and k in vtts and k.split("-")[0] in langs:
+            out += [Line(float(t), x, "subida", k.split("-")[0]) for t, x in parse_vtt(vtts[k].read_text(encoding="utf-8"))]
+    if "es-orig" in vtts:
+        out += [Line(float(t), x, "yt_es", "es") for t, x in parse_vtt(vtts["es-orig"].read_text(encoding="utf-8"))]
+    w = stem.with_name(f"{stem.name}.whisper.json")
+    if w.exists():
+        d = json.loads(w.read_text(encoding="utf-8"))
+        if d.get("language") == "es":
+            out += [Line(float(t), x, "whisper_es", "es") for t, x in clean_whisper(d.get("segments", []))]
+    if WELSH_SOURCE:
+        cy = stem.with_name(f"{stem.name}.{WELSH_SOURCE}.json")
+        if cy.exists():
+            out += [Line(float(s["s"]), s["text"], "cy", "cy") for s in json.loads(cy.read_text(encoding="utf-8"))["segments"] if s["text"]]
+    heard = [[l.t, l.text] for l in sorted(out) if l.src in ("subida", "yt_es", "whisper_es")]
+    for sp in spans_for(video_id, letras):
+        meta, stanzas = parse_letra((letras / f"{sp['letra']}.md").read_text(encoding="utf-8"))
+        out += [Line(float(t), x, "letra", meta.get("idioma", "")) for t, x in align(heard, stanzas, sp["desde"], sp["hasta"])]
+    return sorted(out, key=lambda l: (l.t, l.src))

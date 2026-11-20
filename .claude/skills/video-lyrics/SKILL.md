@@ -61,7 +61,9 @@ for the export (`/run/media/kevinch3/4eff8b2b-…/amgueddfa-backup`).
 8. **Look at it** in the player: `npx astro preview --port <free port>` (check the port is free:
    another session may own 4321-4330), open the edition page, open the video; lyric lines show in
    italics with ♪ and the badge says "letra alineada".
-9. **Commit** `videos: «<title>» aligned in <festival> <year> comp. <n>` with `data/letras/`, the
+9. **If the video already has a reconstruction** (`data/reconstruccion/<id>.json`), rerun it so the
+   published text picks up the lyrics: skill `video-reconstruction` (`python3 -m scripts.reconstruct_videos --ids <id>`).
+10. **Commit** `videos: «<title>» aligned in <festival> <year> comp. <n>` with `data/letras/`, the
    transcript JSON and `docs/letras-pendientes.md`; no AI attribution lines. PR, squash-merge (the
    merge deploys amgueddfa.org).
 

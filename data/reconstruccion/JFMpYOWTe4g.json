@@ -1,0 +1,372 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   12.4,
+   "sueño alfarero de Carlos Dante Ferrari"
+  ],
+  [
+   21.2,
+   "hundió las manos en el barro"
+  ],
+  [
+   25.0,
+   "con ademán seguro y de morado"
+  ],
+  [
+   31.9,
+   "entre sus Palmas"
+  ],
+  [
+   35.3,
+   "el húmedo contacto con el cielo"
+  ],
+  [
+   39.3,
+   "fue como una caricia fugaz que se"
+  ],
+  [
+   43.9,
+   "escurría en un discreto y voluptuoso"
+  ],
+  [
+   47.5,
+   "juego"
+  ],
+  [
+   52.0,
+   "auscultó con los dedos la voz y larga"
+  ],
+  [
+   55.9,
+   "masa para extraer un bollo"
+  ],
+  [
+   59.4,
+   "amorfo y apretado"
+  ],
+  [
+   64.7,
+   "en el cuenco el hueco socavado"
+  ],
+  [
+   68.6,
+   "mostraba las improntas de su profanación"
+  ],
+  [
+   72.0,
+   "sobre el espejo de barro reposado"
+  ],
+  [
+   78.3,
+   "vino luego el paciente laboreo de unir"
+  ],
+  [
+   86.1,
+   "sus Palmas batían la arcilla"
+  ],
+  [
+   89.8,
+   "complaciente con el susurro de un silbo"
+  ],
+  [
+   94.7,
+   "acompasado"
+  ],
+  [
+   97.9,
+   "así"
+  ],
+  [
+   100.0,
+   "callada y lentamente"
+  ],
+  [
+   104.5,
+   "se mezclaron la magia y el oficio"
+  ],
+  [
+   109.5,
+   "tallando su misterio"
+  ],
+  [
+   114.4,
+   "llegó el final"
+  ],
+  [
+   117.4,
+   "que apaciguó su gesto como un feliz"
+  ],
+  [
+   123.5,
+   "soñado alumbramiento"
+  ],
+  [
+   129.4,
+   "pasaron las semanas"
+  ],
+  [
+   132.3,
+   "callaba El alfarero"
+  ],
+  [
+   135.3,
+   "impaciente"
+  ],
+  [
+   137.6,
+   "descubría la imagen cada noche"
+  ],
+  [
+   142.4,
+   "mirandola en silencio"
+  ],
+  [
+   146.3,
+   "le subyugaban sus brazos delicados"
+  ],
+  [
+   150.6,
+   "el rostro altivo el tono y el capricho"
+  ],
+  [
+   155.6,
+   "de sus ligeros labios entreabiertos"
+  ],
+  [
+   163.3,
+   "al fin llegó el momento"
+  ],
+  [
+   166.5,
+   "inflamando el hornillo crepitaron los"
+  ],
+  [
+   169.3,
+   "leños y el fuego se adueñó de sus"
+  ],
+  [
+   172.6,
+   "contornos gestando el cocimiento"
+  ],
+  [
+   178.1,
+   "con lenta alquimia Se cerraron los puros"
+  ],
+  [
+   183.9,
+   "de su carne"
+  ],
+  [
+   185.7,
+   "sellándola a Perpetuo"
+  ],
+  [
+   190.6,
+   "así nació la Estatua imagen y figura de"
+  ],
+  [
+   196.8,
+   "secretos desvelos"
+  ],
+  [
+   203.1,
+   "contemplando su logro"
+  ],
+  [
+   206.6,
+   "el hacedor de formas vio el barro"
+  ],
+  [
+   210.7,
+   "potencial de pronto convertido en acto"
+  ],
+  [
+   214.3,
+   "de su Ingenio"
+  ],
+  [
+   218.0,
+   "y pudo descansar como si fuera el sacro"
+  ],
+  [
+   224.4,
+   "día séptimo"
+  ],
+  [
+   227.8,
+   "soñando"
+  ],
+  [
+   230.3,
+   "que jugaba a ser el creador"
+  ],
+  [
+   235.7,
+   "Sueño El alfarero"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 5,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

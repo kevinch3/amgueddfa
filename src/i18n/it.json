@@ -960,7 +960,8 @@
     "fuente": {
       "subida": "Sottotitoli dell'autore",
       "youtube": "YouTube, automatica",
-      "whisper": "Whisper, non rivista"
+      "whisper": "Whisper, non rivista",
+      "reconstruida": "Ricostruzione automatica"
     },
     "idiomas": {
       "es": "spagnolo",
@@ -973,7 +974,14 @@
     "nota_capitulos": "Segnati automaticamente da ciò che viene annunciato nella sessione; possono contenere errori.",
     "ver_en_video": "Guarda nel video, da {tiempo}",
     "letra_alineada": "testo allineato",
-    "nota_letra": "Testo di {piezas}, allineato automaticamente al video: i tempi sono approssimativi."
+    "nota_letra": "Testo di {piezas}, allineato automaticamente al video: i tempi sono approssimativi.",
+    "origen": {
+      "subida": "sottotitoli dell'autore",
+      "yt_es": "YouTube automatico",
+      "whisper_es": "Whisper",
+      "cy": "riconoscimento del gallese",
+      "letra": "testo del brano"
+    }
   },
   "buscar": {
     "titulo": "Cerca nell'archivio",

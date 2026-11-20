@@ -180,7 +180,10 @@ def glob_escape(name: str) -> str:
     return re.sub(r"([\[\]*?])", r"[\1]", name)
 
 
-def export(backup: Path, videos: list[dict], out: Path = OUT, words: set[str] | None = None) -> dict:
+RECON = REPO / "data" / "reconstruccion"
+
+
+def export(backup: Path, videos: list[dict], out: Path = OUT, words: set[str] | None = None, recon: Path = RECON) -> dict:
     wanted = {v["id"] for v in videos if v["festival"] in FESTIVALS}
     with (backup / "INDEX.tsv").open(newline="", encoding="utf-8") as f:
         files = {r["id"]: r["file"] for r in csv.DictReader(f, delimiter="\t") if r.get("file")}
@@ -189,6 +192,17 @@ def export(backup: Path, videos: list[dict], out: Path = OUT, words: set[str] | 
     counts = {"subida": 0, "youtube": 0, "whisper": 0}
     for vid in sorted(wanted):
         if vid not in files:
+            continue
+        rec = recon / f"{vid}.json"
+        if rec.exists():
+            # The reconstruction (scripts/reconstruct_videos.py) already chose and checked every line.
+            t = {k: v for k, v in json.loads(rec.read_text(encoding="utf-8")).items() if k not in ("ventanas", "modelo")}
+            body = json.dumps(t, ensure_ascii=False, separators=(",", ":"))
+            p = out / f"{vid}.json"
+            if not p.exists() or p.read_text(encoding="utf-8") != body:
+                p.write_text(body, encoding="utf-8")
+            written.add(vid)
+            counts["reconstruida"] = counts.get("reconstruida", 0) + 1
             continue
         t = pick((backup / "videos" / files[vid]).with_suffix(""))
         if not t or not t["seg"] or (words is not None and not useful(t, words)):
@@ -202,7 +216,7 @@ def export(backup: Path, videos: list[dict], out: Path = OUT, words: set[str] | 
         if not p.exists() or p.read_text(encoding="utf-8") != body:
             p.write_text(body, encoding="utf-8")
         written.add(vid)
-        counts[t["src"]] += 1
+        counts[t["src"]] = counts.get(t["src"], 0) + 1
     removed = 0
     for p in out.glob("*.json"):
         if p.stem not in written:

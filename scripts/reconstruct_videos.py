@@ -142,6 +142,7 @@ def reconstruct_video(repo: Path, backup: Path, video: dict, ask=ask_claude, rep
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--ids", nargs="*")
+    ap.add_argument("--ids-file", help="file with video ids (whitespace-separated); ids may start with '-'")
     ap.add_argument("--limit", type=int)
     ap.add_argument("--dry-run", action="store_true", help="list the windows that would be asked, call nothing")
     ap.add_argument("--backup", default=str(DEFAULT_BACKUP))
@@ -153,8 +154,9 @@ def main() -> int:
     stem_of = lambda v: (backup / "videos" / files[v["id"]]).with_suffix("") if v["id"] in files else None
     videos = [v for v in json.loads((REPO / "src/data/videos.json").read_text(encoding="utf-8"))["videos"]
               if in_scope(REPO, v, stem_of(v))]
-    if a.ids:
-        videos = [v for v in videos if v["id"] in set(a.ids)]
+    wanted = set(a.ids or []) | (set(Path(a.ids_file).read_text().split()) if a.ids_file else set())
+    if wanted:
+        videos = [v for v in videos if v["id"] in wanted]
     videos = videos[: a.limit] if a.limit else videos
     if a.dry_run:
         total = 0

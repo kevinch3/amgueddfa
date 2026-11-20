@@ -69,3 +69,13 @@ def test_uploaded_subtitles_only_in_spanish(tmp_path):
     (folder / "2025_clip_vid.en.vtt").write_text(VTT.replace("Language: es", "Language: en"), encoding="utf-8")
     (folder / "2025_clip_vid.info.json").write_text(json.dumps({"subtitles": {"en": []}}), encoding="utf-8")
     assert not any(l.src == "subida" for l in load_sources(stem, "vid", letras))
+
+
+def test_welsh_lyrics_are_timed_from_the_welsh_lines(tmp_path):
+    stem, letras = _fixture(tmp_path)
+    (letras / "can.md").write_text("---\ntitulo: Cân\nidioma: cy\n---\nAr lan y môr mae rhosys cochion\n\nAr lan y môr mae lilis gwynion\n", encoding="utf-8")
+    (letras / "videos.json").write_text(json.dumps({"vid": [{"letra": "can", "desde": 100, "hasta": 140}]}), encoding="utf-8")
+    (stem.parent / f"{stem.name}.cy-techiaith.json").write_text(json.dumps({"segments": [
+        {"s": 104.0, "text": "ar lan y mor mae rhosys"}, {"s": 121.0, "text": "ar lan y mor mae lili gwynion"}]}), encoding="utf-8")
+    lyr = [(l.t, l.text) for l in load_sources(stem, "vid", letras) if l.src == "letra"]
+    assert lyr == [(104.0, "Ar lan y môr mae rhosys cochion"), (121.0, "Ar lan y môr mae lilis gwynion")]

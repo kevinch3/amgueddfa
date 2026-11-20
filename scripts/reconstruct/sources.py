@@ -55,8 +55,11 @@ def load_sources(stem: Path, video_id: str, letras: Path = LETRAS) -> list[Line]
         cy = stem.with_name(f"{stem.name}.{WELSH_SOURCE}.json")
         if cy.exists():
             out += [Line(float(s["s"]), s["text"], "cy", "cy") for s in json.loads(cy.read_text(encoding="utf-8"))["segments"] if s["text"]]
-    heard = [[l.t, l.text] for l in sorted(out) if l.src in ("subida", "yt_es", "whisper_es")]
+    heard_es = [[l.t, l.text] for l in sorted(out) if l.src in ("subida", "yt_es", "whisper_es")]
+    heard_cy = [[l.t, l.text] for l in sorted(out) if l.src == "cy"]
     for sp in spans_for(video_id, letras):
         meta, stanzas = parse_letra((letras / f"{sp['letra']}.md").read_text(encoding="utf-8"))
+        # A Welsh song is timed from what the Welsh model heard; anything else from the Spanish sources.
+        heard = heard_cy if meta.get("idioma") == "cy" and heard_cy else heard_es
         out += [Line(float(t), x, "letra", meta.get("idioma", "")) for t, x in align(heard, stanzas, sp["desde"], sp["hasta"])]
     return sorted(out, key=lambda l: (l.t, l.src))

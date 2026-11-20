@@ -54,10 +54,13 @@ def test_load_sources_reads_youtube_whisper_and_lyrics(tmp_path):
     assert [l.text for l in lines if l.src == "letra"] == ["Verde campo de la sierra", "Llueve mucho sobre el valle"]
 
 
-def test_welsh_is_left_out_until_chosen(tmp_path):
+def test_welsh_lines_come_from_the_bangor_file(tmp_path):
     stem, letras = _fixture(tmp_path, cy=True)
-    assert sources.WELSH_SOURCE is None
-    assert not any(l.src == "cy" for l in load_sources(stem, "vid", letras))
+    assert sources.WELSH_SOURCE == "cy-techiaith"  # chosen 2026-11-20 after the A/B review
+    (stem.parent / f"{stem.name}.cy-techiaith.json").write_text(json.dumps({"segments": [
+        {"s": 50.0, "e": 52.0, "text": "Croeso i Eisteddfod y Wladfa"}, {"s": 55.0, "e": 56.0, "text": ""}]}), encoding="utf-8")
+    cy = [l for l in load_sources(stem, "vid", letras) if l.src == "cy"]
+    assert [(l.t, l.text, l.lang) for l in cy] == [(50.0, "Croeso i Eisteddfod y Wladfa", "cy")]
 
 
 def test_uploaded_subtitles_only_in_spanish(tmp_path):

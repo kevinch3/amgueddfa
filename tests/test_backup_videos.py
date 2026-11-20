@@ -123,3 +123,18 @@ def test_whisper_states(tmp_path):
     assert caption_state(dest) == 'whisper'
     (tmp_path / 'v_abc.es-orig.vtt').write_text('WEBVTT')
     assert caption_state(dest) == 'yes'
+
+
+def test_import_cy_copies_bangor_results_next_to_videos(tmp_path):
+    import json
+    from scripts.backup.videos import cmd_import_cy
+    root = tmp_path / "backup"
+    (root / "videos/C/2025").mkdir(parents=True)
+    (root / "videos/C/2025/a_AAAAAAAAAAA.mp4").write_bytes(b"")
+    (root / "INDEX.tsv").write_text("id\tfile\nAAAAAAAAAAA\tC/2025/a_AAAAAAAAAAA.mp4\n", encoding="utf-8")
+    src = tmp_path / "out-cy"
+    src.mkdir()
+    (src / "AAAAAAAAAAA.json").write_text(json.dumps({"id": "AAAAAAAAAAA", "segments": [{"s": 1.0, "text": "Croeso"}]}), encoding="utf-8")
+    (src / "ZZZZZZZZZZZ.json").write_text("{}", encoding="utf-8")  # not in the backup: skipped
+    assert cmd_import_cy(root, src) == 0
+    assert json.loads((root / "videos/C/2025/a_AAAAAAAAAAA.cy-techiaith.json").read_text())["segments"][0]["text"] == "Croeso"

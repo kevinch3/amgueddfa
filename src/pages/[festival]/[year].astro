@@ -1,4 +1,5 @@
 ---
+import Bloque from '../../components/Bloque.astro';
 import Base from '../../layouts/Base.astro';
 import EmptySlot from '../../components/EmptySlot.astro';
 import ItemCard from '../../components/ItemCard.astro';
@@ -18,7 +19,7 @@ import { byTitle, CATEGORY_ORDER, docCount, stateLabel } from '../../lib/site';
 import type { FestivalSlug } from '../../lib/types';
 import approvedRaw from '../../../data/approved/contributions.json';
 import editionsStatic from '../../../data/approved/editions.json';
-import { byLine, factDisplay, factInOriginal, forEdition, jsonForScript, sortFacts, sourceLine, type Contribution } from '../../lib/contrib';
+import { byLine, factDisplay, factInOriginal, forEdition, jsonForScript, sortFacts, sourceLine, splitFuente, type Contribution } from '../../lib/contrib';
 import { mediaUrl, uploadMedia } from '../../lib/uploads';
 import { absUrl, breadcrumbJsonLd, editionDescription, editionFacts, editionJsonLd, ldGraph } from '../../lib/seo';
 import { editionVideos } from '../../lib/videos-data';
@@ -62,7 +63,7 @@ const trVer = tAround('edicion.transcripcion_ver', 'titulo');
 const ganVer = tAround('edicion.ganadores_ver', 'titulo');
 const trAporte = tAround('edicion.transcripcion_aporte', 'titulo');
 const fuenteAround = tAround('edicion.fuente', 'fuente');
-const facts = sortFacts(forEdition(approved, slug, year, 'fact')).map((c) => ({ ...factDisplay(c), lang: factInOriginal(c) ? contentLang() : undefined, by: byLine(c), fuente: sourceLine(c), fuenteText: String(c.payload?.fuente ?? '').trim() }));
+const facts = sortFacts(forEdition(approved, slug, year, 'fact')).map((c) => ({ ...factDisplay(c), lang: factInOriginal(c) ? contentLang() : undefined, by: byLine(c), fuente: sourceLine(c), src: splitFuente(String(c.payload?.fuente ?? '')) }));
 const memories = forEdition(approved, slug, year, 'memory').map((c) => ({ text: String(c.payload?.text ?? ''), by: byLine(c) }));
 // Approved uploads with their low-res derivatives (media bucket); same markup edicion.ts renders live.
 const mediaBase = import.meta.env.PUBLIC_SUPABASE_URL;
@@ -87,6 +88,8 @@ const editionStatus = (editionsStatic as { festival: string; year: number; statu
   .find((e) => e.festival === slug && e.year === year)?.status ?? null;
 const known = editionFacts(approved as Contribution[], slug, year, editionStatus);
 // Restricted documents are not counted, like /datos/ediciones.json (#19).
+// Edition blocks with this many documents or fewer start open; longer lists start closed (#78).
+const BLOQUE_ABIERTO = 8;
 const seoDescription = editionDescription(fest.name, year, state, known, list.filter((i) => !i.restricted).length + uploads.length);
 const seoLd = ldGraph(
   editionJsonLd({ name: fest.name, year, url: absUrl(url(`${slug}/${year}/`)), image: cover ? absUrl(cover.page) : null, facts: known, description: seoDescription }),
@@ -144,14 +147,14 @@ const missingList = formatList(missing.map((m) => m.toLocaleLowerCase(intlLocale
     <h2 id="hechos-t">{t('edicion.hechos_titulo')}</h2>
     <Mount id="hechos" festival={slug} year={year}>{facts.length > 0 && (
       <dl class="hechos">
-        {facts.map((f) => <div><dt>{f.label}</dt><dd><span lang={f.lang}>{f.value}</span>{f.by && <> <span class="muted small">{f.by}</span></>}{f.fuente && <span class="muted small fuente">{lang ? <>{fuenteAround[0]}<span lang={lang}>{f.fuenteText}</span>{fuenteAround[1]}</> : f.fuente}</span>}</dd></div>)}
+        {facts.map((f) => <div><dt>{f.label}</dt><dd><span lang={f.lang}>{f.value}</span>{f.by && <> <span class="muted small">{f.by}</span></>}{f.fuente && <span class="muted small fuente">{fuenteAround[0]}<span lang={lang}>{f.src.href ? <a href={f.src.href} rel="noopener">{f.src.label}</a> : f.src.label}</span>{fuenteAround[1]}</span>}</dd></div>)}
       </dl>
     )}</Mount>
   </section>
 
   {sections.map(({ c, items }) => (
     <section class="section" aria-labelledby={`cat-${c}`} data-cat-section={c} hidden={c !== 'programa' && items.length === 0}>
-      <h2 id={`cat-${c}`}>{t(`categorias.${c}`)}</h2>
+      <Bloque id={`cat-${c}`} titulo={t(`categorias.${c}`)} open={c === 'programa' || items.length <= BLOQUE_ABIERTO} n={items.length || undefined}>
       <ul class="cards" data-scope-festival={slug} data-scope-year={year} data-scope-category={c} hidden={items.length === 0}>
         {items.map((item) => <ItemCard item={item} />)}
       </ul>
@@ -187,6 +190,7 @@ const missingList = formatList(missing.map((m) => m.toLocaleLowerCase(intlLocale
         ))}</Mount>
       )}
       {c === 'programa' && state !== 'full' && <div data-falta-programa data-festival={slug} data-year={year}><EmptySlot message={t('edicion.falta_programa')} /></div>}
+      </Bloque>
     </section>
   ))}
 

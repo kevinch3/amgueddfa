@@ -1,4 +1,5 @@
 ---
+import Bloque from './Bloque.astro';
 import Transcripcion from './Transcripcion.astro';
 import { pageUrls, thumbUrl } from '../lib/catalog';
 import { contentLang, t } from '../lib/i18n';
@@ -25,7 +26,7 @@ const cards = media.map(({ item, kind }) => {
 const templates = [...new Map(cards.filter((c) => c.doc).map((c) => [c.doc!.id, c.doc!])).values()];
 ---
 <section class="section multimedia" aria-labelledby="multimedia-t" data-multimedia>
-  <h2 id="multimedia-t">{t('multimedia.titulo')}</h2>
+  <Bloque id="multimedia-t" titulo={t('multimedia.titulo')} open={cards.length <= 8} n={cards.length}>
   <p class="measure muted small">{t('multimedia.ayuda')}</p>
   {kinds.length > 1 && (
     <div class="mm-filtros" role="group" aria-label={t('multimedia.filtrar')}>
@@ -67,6 +68,7 @@ const templates = [...new Map(cards.filter((c) => c.doc).map((c) => [c.doc!.id, 
   {templates.map((d) => (
     <template id={`tr-${d.id}`}><h3 class="lb-tr-t">{t('reproductor.transcripcion')}</h3><Transcripcion text={d.text} doc={d.id} /></template>
   ))}
+</Bloque>
 </section>
 
 <script>

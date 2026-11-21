@@ -1,4 +1,5 @@
 ---
+import Bloque from './Bloque.astro';
 import { contentLang, t } from '../lib/i18n';
 
 // Titles and channels are the uploaders' own words (WCAG 3.1.2 on translated pages).
@@ -20,7 +21,8 @@ const edicion = editionKey(festival, year);
 const searchable = searchEditions().has(edicion);
 ---
 <section class="section" aria-labelledby="videos-t" data-videos data-festival={festival} data-year={year} hidden={total === 0}>
-  <h2 id="videos-t">{t('videos.titulo')} <span class="muted small">(<span data-videos-n>{total}</span>)</span></h2>
+  <Bloque id="videos-t" titulo={t('videos.titulo')} open={total <= 8}>
+    <Fragment slot="titulo"> <span class="muted small">(<span data-videos-n>{total}</span>)</span></Fragment>
   <p class="measure muted small">{t('videos.ayuda')}</p>
   {searchable && <VideoSearch edicion={edicion} />}
   <ul class="videos" data-videos-lista="destacados" hidden={highlights.length === 0}>
@@ -51,6 +53,7 @@ const searchable = searchEditions().has(edicion);
       ))}
     </ul>
   </details>
+  </Bloque>
 </section>
 <VideoPlayer />
 {/* One "Informar un error" dialog per page (outside the section, which may be hidden); scripts/informar.ts fills it. */}

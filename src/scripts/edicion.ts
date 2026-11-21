@@ -1,5 +1,5 @@
 import staticEditions from '../../data/approved/editions.json';
-import { approvedForEdition, byLine, factDisplay, factInOriginal, forEdition, mergeApproved, ownPending, pendingView, sortFacts, sourceLine, type Contribution } from '../lib/contrib';
+import { approvedForEdition, byLine, factDisplay, factInOriginal, forEdition, mergeApproved, ownPending, pendingView, sortFacts, sourceLine, splitFuente, type Contribution } from '../lib/contrib';
 import { contentLang, t, tAround } from '../lib/i18n';
 import { stateLabel } from '../lib/site';
 import { liveQuery } from '../lib/live';
@@ -37,14 +37,21 @@ export function renderFacts(mount: HTMLElement, facts: Contribution[]): void {
     dd.append(factInOriginal(c) ? original(el('span', undefined, value)) : value);
     const by = byLine(c);
     if (by) dd.append(' ', el('span', 'muted small', by));
-    const fuente = sourceLine(c);
-    if (fuente && contentLang()) {
-      // "Fuente: …" in the page's language; what the contributor wrote, in theirs.
+    if (sourceLine(c)) {
+      // "Fuente: …" in the page's language; what the contributor wrote, in theirs; a trailing URL links the label.
       const [before, after] = tAround('edicion.fuente', 'fuente');
+      const { label, href } = splitFuente(String(c.payload?.fuente ?? ''));
+      const inner = el('span');
+      if (href) {
+        const a = el('a', undefined, label) as HTMLAnchorElement;
+        a.href = href;
+        a.rel = 'noopener';
+        inner.append(a);
+      } else inner.append(label);
       const s = el('span', 'muted small fuente');
-      s.append(before, original(el('span', undefined, String(c.payload?.fuente ?? '').trim())), after);
+      s.append(before, contentLang() ? original(inner) : inner, after);
       dd.append(s);
-    } else if (fuente) dd.append(el('span', 'muted small fuente', fuente));
+    }
     row.append(el('dt', undefined, label), dd);
     dl.append(row);
   }

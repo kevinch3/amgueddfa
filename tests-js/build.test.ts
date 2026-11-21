@@ -609,6 +609,21 @@ describe('static build', () => {
     expect(page).toContain('id="no-contar"');
   });
 
+  it('edition blocks open and close (details), long lists start closed, facts stay open (#78)', () => {
+    const html = read('chubut/2024/index.html');
+    const blocks = [...html.matchAll(/<details class="bloque"( open)?[^>]*>\s*<summary class="bloque-t"><h2 id="([^"]+)"/g)].map((m) => [m[2], Boolean(m[1])]);
+    const ids = Object.fromEntries(blocks);
+    expect(ids['cat-programa'], 'programa').toBe(true);
+    expect(ids['videos-t'], 'videos').toBeDefined();
+    expect(ids['multimedia-t'] ?? ids['cat-bases'], 'a long list').toBe(false);
+    // Datos de la edición is never folded away
+    expect(html).not.toMatch(/<summary class="bloque-t"><h2 id="hechos-t"/);
+    // the script that opens the block holding a link target, and everything before printing
+    expect(html).toMatch(/beforeprint/);
+    // closed blocks are still in the page for search engines and Pagefind
+    expect(html).toContain('data-pagefind-body');
+  });
+
   it('no public document is titled by a bare file-name slug (#90)', () => {
     const docs = JSON.parse(read('datos/documentos.json')).documentos as { id: string; titulo: string }[];
     const slugs = docs.filter((d) => /^[a-z0-9-]+$/.test(d.titulo) || /^(web|ig|villagra|culturagaiman|chubutcultural) /.test(d.titulo));

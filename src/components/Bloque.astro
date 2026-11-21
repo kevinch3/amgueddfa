@@ -1,0 +1,38 @@
+---
+// A block of the edition page that opens and closes (issue #78): native <details>, so it works
+// without JS and stays in the HTML for search engines, Pagefind and printing.
+// `open` decides how it starts; the script opens it when a link points inside it, and before printing.
+interface Props {
+  id: string;
+  titulo: string;
+  open: boolean;
+  n?: number;
+}
+const { id, titulo, open, n } = Astro.props;
+---
+<details class="bloque" open={open} data-bloque>
+  <summary class="bloque-t"><h2 id={id}>{titulo}{n !== undefined && <> <span class="muted small">(<span data-bloque-n>{n}</span>)</span></>}<slot name="titulo" /></h2></summary>
+  <slot />
+</details>
+
+<script>
+  // A link to something inside a closed block (#aportar, #cat-bases, a heading id) opens the block.
+  function openAround(hash: string): void {
+    if (!hash || hash.length < 2 || hash.startsWith('#v=')) return;
+    let el: Element | null = null;
+    try {
+      el = document.getElementById(decodeURIComponent(hash.slice(1)));
+    } catch {
+      return;
+    }
+    for (let d = el?.closest('details[data-bloque]'); d; d = d.parentElement?.closest('details[data-bloque]') ?? null) {
+      (d as HTMLDetailsElement).open = true;
+    }
+  }
+  openAround(location.hash);
+  window.addEventListener('hashchange', () => openAround(location.hash));
+  // Print everything, closed blocks included.
+  window.addEventListener('beforeprint', () => {
+    for (const d of document.querySelectorAll<HTMLDetailsElement>('details[data-bloque]')) d.open = true;
+  });
+</script>

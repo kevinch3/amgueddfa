@@ -524,6 +524,20 @@ export function approvedNotes(itemId: string, client: SupabaseClient | null = ge
 }
 
 /** "Fuente: …" for a fact that names where it comes from; null otherwise. */
+/** A fact's source as a label plus its link, when the source ends with a URL ("Diario Jornada, 14/10/2024: https://…"),
+ *  so the page shows the short label as a link instead of the long address (#78). */
+export function splitFuente(f: string): { label: string; href?: string } {
+  const m = /^(.*?)[\s:,]*\(?(https?:\/\/[^\s()]+)\)?\s*$/.exec(f.trim());
+  if (!m) return { label: f.trim() };
+  let host = m[2];
+  try {
+    host = new URL(m[2]).hostname.replace(/^www\./, '');
+  } catch {
+    return { label: f.trim() };
+  }
+  return { label: m[1].trim() || host, href: m[2] };
+}
+
 export function sourceLine(c: Contribution): string | null {
   const f = String(c.payload?.fuente ?? '').trim();
   return f ? t('edicion.fuente', { fuente: f }) : null;

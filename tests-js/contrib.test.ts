@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { approvedForEdition, approvedNotes, isoFromParts, longDate, mergeApproved, ownPending, pendingView, sourceLine, submit, submitFacts, validate, type Contribution } from '../src/lib/contrib';
+import { approvedForEdition, approvedNotes, isoFromParts, longDate, mergeApproved, ownPending, pendingView, sourceLine, splitFuente, submit, submitFacts, validate, type Contribution } from '../src/lib/contrib';
 import { t } from '../src/lib/i18n';
 
 const MB = 1024 * 1024;
@@ -366,5 +366,18 @@ describe('approvedNotes', () => {
     expect(r).toEqual({ offline: false, data: [expect.objectContaining({ id: 'n1' })] });
     expect(a.log).toContain('select:public_contributions');
     expect(a.eqs).toEqual(expect.arrayContaining([['type', 'note'], ['item_id', 'fcb0d30de6eb']]));
+  });
+});
+
+describe('splitFuente (#78)', () => {
+  it('turns a trailing URL into a link on the source label', () => {
+    expect(splitFuente('Diario Jornada, 14/10/2024: https://www.diariojornada.com.ar/380164/magazine/x')).toEqual({ label: 'Diario Jornada, 14/10/2024', href: 'https://www.diariojornada.com.ar/380164/magazine/x' });
+    expect(splitFuente('Gacetilla y resultados 2023 (Chubut Cultural): https://chubutcultural.com.ar/a.pdf')).toEqual({ label: 'Gacetilla y resultados 2023 (Chubut Cultural)', href: 'https://chubutcultural.com.ar/a.pdf' });
+    expect(splitFuente('Casgliad y Werin Cymru, «Rhaglen 1886» (https://www.casgliadywerin.cymru/items/13516)')).toEqual({ label: 'Casgliad y Werin Cymru, «Rhaglen 1886»', href: 'https://www.casgliadywerin.cymru/items/13516' });
+    expect(splitFuente('https://www.ejemplo.org/a/b')).toEqual({ label: 'ejemplo.org', href: 'https://www.ejemplo.org/a/b' });
+  });
+  it('leaves a source without a trailing URL as text', () => {
+    expect(splitFuente('Lista de resultados de esa edición en el archivo (no pública)')).toEqual({ label: 'Lista de resultados de esa edición en el archivo (no pública)' });
+    expect(splitFuente('Ver https://a.org y el libro')).toEqual({ label: 'Ver https://a.org y el libro' });
   });
 });

@@ -1,0 +1,50 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Ar y bryn ger y dref, heb ser anan ef."
+  ],
+  [
+   29.66,
+   "Roedd y bugeiliaid tawd ar y rhos, i'w lle i ben anan en, daeth gwlyb seren gwyn, i waleuo'r ym-"
+  ],
+  [
+   74.22,
+   "Welsant wyr y ddannedd, ar ei hynt o bell draeth."
+  ],
+  [
+   128.22,
+   "Cwmwyliaid y troedient at ei gryd."
+  ],
+  [
+   148.7,
+   "Un oedd a daeth i addoli'r ydlws yn y gwair, rhoddion coedd drigwr doedd o ffyrdd i Lyn Mair."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

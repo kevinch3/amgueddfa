@@ -1,0 +1,57 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "Yna nef, a rodd af fwys fo hen, a'i dwys hi o'r fwys arno ef."
+  ],
+  [
+   46.0,
+   "Cafwyd o ras o hyfryd flas, a mwyn cymdeithas fyw."
+  ],
+  [
+   58.0,
+   "Ei nerth a'r rhyd yn ôl y dydd, ei olau sydd ar y lwybrau ffyd, rwybe i ni ddydd o'm byw."
+  ],
+  [
+   75.52,
+   "Mae eint i ddanwch drud, yn ddy fasgwyn y byd, yn llwyr i mi, duw'r rwysg a bryd, yn dym on y gweg i gyd."
+  ],
+  [
+   103.52,
+   "Daw heddiw'm bron fel dwy fodlon o edurion cariad ef. Mi glywaf o gôn a risial y môr a gwelaf y ddwrtangnefed diwrn yn agor yn anef."
+  ],
+  [
+   133.52,
+   "Daw heddi mron fel dwy boldon, o edurion cariad heb, mi glywodd y gôr a risial y fôr, a gwelawdd yr tangne bleniôr yn agor."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

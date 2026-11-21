@@ -1,0 +1,57 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "Ma' na rywbeth amdanat ti a fedrwn ni ddyrchafo Rywbeth amdanat ti fedrwn ni ffonio."
+  ],
+  [
+   76.0,
+   "Na rywbeth amdanat ti na fedrai ddi-einio. Na rywbeth amdanat ti nid i cadw'n hir. Na rywbeth amdanat ti na fedrai ddi-einio. Na rywbeth amdanat ti na fedrai ddi-einio."
+  ],
+  [
+   121.0,
+   "Ni'n gweld y dydd Ima, amdan y dydd yn ddigwyddodd i fod, gyfan a'r ofeiriodd, amser y dydd arna i'n ddiodd, a na rywbeth amdanat ti, fel fedra i, i ddeilio. Rywbeth amdanat ti, sy'n wneud i cadw fi'n hirio."
+  ],
+  [
+   151.0,
+   "Rhywbeth amdanat ti a fedra i fi amdano. Rhywbeth amdanat ti a fedra i fi anghofio."
+  ],
+  [
+   167.0,
+   "Di'r ffarmwr diogel yn rhan o'r ysgol, di'r wledig ar ddarn yng Nghaerfyrddin a'r flod, o o o yng Nghaerfyrdin a'r flod. Ma' na ddiwedd amdanat ti fel menter i'r hirol."
+  ],
+  [
+   197.0,
+   "Ma' rywbeth amdanat ti sy'n wneud i'n ffara o ddifiro. Ma' rywbeth andanat ti sy'n barod i fod yn barod. Ma' rywbeth andanat ti sy'n wneud i'n ffara o ddifiro. Ma' rywbeth andanat ti, rywbeth andanat ti."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

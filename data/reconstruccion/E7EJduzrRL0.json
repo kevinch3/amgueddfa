@@ -1,0 +1,78 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "Aros mae'r mynyddau mawr,"
+  ],
+  [
+   38.0,
+   "Ffrae o drostynt mae y gwydyd."
+  ],
+  [
+   68.0,
+   "Clywir yto gyd-ar-wawr, gan bu geiriau megis gyd."
+  ],
+  [
+   80.0,
+   "Eto, tyfar y llygad y dydd, o gylchgraidd y graig, ar y brin."
+  ],
+  [
+   92.0,
+   "Ond bu geiriaid newydd, sydd ar yr hen fynadd, oedd hi."
+  ],
+  [
+   122.0,
+   "O'r arferion Cymru i gyd, newydd daeth o rod i rod."
+  ],
+  [
+   143.0,
+   "Mae gynhedlaeth wedi mynd, a chenhedlaeth wedi dod, wedi oes a meslog y hir, a Lyn Mabon mwyn i Duw."
+  ],
+  [
+   173.0,
+   "Ond mae'r hen iaith yn y tir, a'r alawon hen yn fyw."
+  ],
+  [
+   190.0,
+   "Ond mae'r hen iaith yn y tir, a'r alawon hen yn fyw."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

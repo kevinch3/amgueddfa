@@ -1,0 +1,36 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   74.0,
+   "Beth benedictus fructus erbyn stori Iesu, Iesu, Iesu."
+  ],
+  [
+   261.12,
+   "Baned, baned, innau dermwch, baned, baned, innau dermwch."
+  ],
+  [
+   282.12,
+   "Na wna, na wna be ddominwm, na wna be dominwm."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 6,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 4
+ }
+}

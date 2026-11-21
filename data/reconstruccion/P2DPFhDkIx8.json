@@ -1,0 +1,22 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   180.0,
+   "Yym, hwna'n hir permanente i'r grŵp, grâs i Amaru, sy'n byw'n dda yn ein prosiectau ni, yym a'n ni'n teimlo'n dda bod hwnna'n ocasiwn sbesial heddiw i'r grŵp, er mwyn i ni gallu darlunio yr amor gennyn ni am y musica. Yym, dwi'n teimlo'n dda bod hwnna'n ocasiwn wych, yym a'n ni'n dedigio'r par hir i'r grŵp. Diolch yn fawr."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 9,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 5
+ }
+}

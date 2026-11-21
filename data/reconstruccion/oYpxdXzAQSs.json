@@ -1,0 +1,50 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   120.0,
+   "Ni ystyr ar safbwyst ein diod, byth yn ôl i banas gefndir."
+  ],
+  [
+   134.0,
+   "Ni ystyr ar safbwyst ein diod, a'n stafell i ga'l."
+  ],
+  [
+   150.0,
+   "Su tierno amor se muestra en cad amaneser,"
+  ],
+  [
+   162.0,
+   "que viene al que me han dado pecador,"
+  ],
+  [
+   169.0,
+   "para sanar y para perdonar, el que confia en el,"
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 2
+ }
+}

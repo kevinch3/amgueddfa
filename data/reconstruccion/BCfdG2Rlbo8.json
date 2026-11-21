@@ -1,0 +1,99 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Dwyt ti'm yn cofio Macsen, does neb yn ei nabod oedd."
+  ],
+  [
+   30.0,
+   "Mae mil a chwe chant o flynyddoedd yn amser hir i'r côr, ond wnaeth Magnus Maximus o Gymru, yn y flwyddyn tri chant wyth tri, yn gadael yn genedl gyfan, a heddiw, eleni."
+  ],
+  [
+   82.0,
+   "Er gwaetha pawb a phopeth Er gwaetha pawb a phopeth by' ni yma odi."
+  ],
+  [
+   112.0,
+   "A llyred y troiodd y llawr Er died y fatfi o'n cwmpas Rydwi'n barod am dyrriad y wlad."
+  ],
+  [
+   122.0,
+   "Rydwi yma o hyd Rydwi yma o hyd Er gwaetha pawb a phopeth Er gwaetha pawb a phopeth Er gwaetha pawb a phopeth"
+  ],
+  [
+   140.0,
+   "Ma' pawb a phopeth rili yma o hyd, rili yma o hyd. Er gwaetha ma' pawb a phopeth, er gwaetha ma' pawb a phopeth, er gwaetha ma' pawb a phopeth rili yma o hyd."
+  ],
+  [
+   165.0,
+   "Mi wn i fanxen wledig gadael ein gwlad ni'n darn, ac oeddwn i'n derfron y gwledydd, byddwn yma hyd ddydd y farn, er gwaetha' protection Dafydd, er gwaetha' enwau gaeaeth Rhyw, byddwn yma hyd ddiwedd amser, bydd yr iaith Gymraeg yn ferch i ni yma oddi."
+  ],
+  [
+   195.0,
+   "i ni yma o hyd. Er gwaetha pawb a phopeth, er gwaetha pawb a phopeth, er gwaetha pawb a phopeth, i ni yma o hyd."
+  ],
+  [
+   359.6,
+   "Nid yw'n swydd efelyd o'r ysgolion, a'i ympelydwr yw'r ddynes alw."
+  ],
+  [
+   373.6,
+   "Nid yw'n swydd efelyd o'r ysgolion, a'i ympelydwr yw'r ddynes alw."
+  ],
+  [
+   417.62,
+   "Yn ystod y cyfnod tro ysgrifennu, corff ganddo sy'n ymholiad i'r alw, o ddefnyddio'r Llyfr."
+  ],
+  [
+   477.62,
+   "Mae'n rhan o'r ffordd mwyaf debyg i'r ffordd mae'n cael ei ddefnyddio, ond mae'n rhan o'r ffordd fwyaf debyg i'r ffordd mae'n cael ei ddefnyddio."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 12,
+  "modelo": 8,
+  "reglas": 1,
+  "vacias": 3
+ }
+}

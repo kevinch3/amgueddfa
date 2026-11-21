@@ -1,0 +1,92 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "Bajo el puñal del invierno, muriw en los campos la tarde."
+  ],
+  [
+   53.0,
+   "Gon su tambor de desvelo, salio la luna a resarle."
+  ],
+  [
+   61.0,
+   "Gon su tambor de desvelo, salio la luna a resarle."
+  ],
+  [
+   70.0,
+   "Rhesus y la noche blanca, tan y en las aspas del aire."
+  ],
+  [
+   81.0,
+   "Mientras le nacen fiolines a los alamos del valle."
+  ],
+  [
+   88.76,
+   "Mientras le nacen fiolines a los alamos del valle."
+  ],
+  [
+   97.64,
+   "Samba de la luna llena, baila la noche en las calles."
+  ],
+  [
+   108.76,
+   "O! Cwm sŵp a niwel o ddysgu nos, disgwad yma am desawdau."
+  ],
+  [
+   138.76,
+   "los verdes calla verares, y caminan los caminos con sus escotas de azares,"
+  ],
+  [
+   168.76,
+   "La noche llena de arfejios, la copa de los nogales y el tamboril de la luna cuelga su copa en el aire."
+  ],
+  [
+   195.76,
+   "Sambar de la luna llena, baila la noche en las calles. Oh, con sopan y suelo de finas, y suave man de saunas."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

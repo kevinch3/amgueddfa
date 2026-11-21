@@ -1,0 +1,43 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   54.0,
+   "La cancion que canta, la cancion que canta en Alfonsina y el mar, la caracula."
+  ],
+  [
+   64.0,
+   "Vivas al pensil, y pensil sonando, y con el pensil nos fuiste a buscá, un agos antig, un agos antig."
+  ],
+  [
+   120.82,
+   "I nos habitantes de mar, pronto a tu lado, bajame la lampara un poco mas, deja que duerma tu triste paz."
+  ],
+  [
+   142.82,
+   "I sy lla ma' ef, no le digas genst oed inne cê a'r consina no gwele."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

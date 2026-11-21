@@ -1,0 +1,36 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Oedd e'n gyntaf ar ei list chi, dwi'n meddwl. Ie. Os dach chi'n rhoi'r caniatâd, y côr, y Parti merched, Cwsg Osian, yn barod i berfformio."
+  ],
+  [
+   89.6,
+   "Yr ofnau fi wrth gwrs yn arf."
+  ],
+  [
+   133.88,
+   "Daw ryw sŵn a ddaw ryw weiddi i mwyn, daw ryw gladdi blaen a dŵr, Cwsg Osian, daw hud a'n hyn, ceir byw a'n nyfn, Cwsg Osian, Cwsg Osian."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

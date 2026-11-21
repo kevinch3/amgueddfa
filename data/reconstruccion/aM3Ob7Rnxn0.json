@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   214.88,
+   "Felly, diolch yn fawr iawn i bawb sy'n ymuno'n gyda ni, a diolch yn fawr iawn i bawb sy'n ymuno'n gyda ni hefyd."
+  ],
+  [
+   244.88,
+   "Diolch yn fawr."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 3
+ }
+}

@@ -1,0 +1,50 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "Bajo por una huella, de muy arriba."
+  ],
+  [
+   46.8,
+   "Vengo de las estrellas, traigo alegrías."
+  ],
+  [
+   58.0,
+   "Vengo de las estrellas tra yw'r alegria."
+  ],
+  [
+   69.0,
+   "De ddonde vengo nadie, viene viniendo."
+  ],
+  [
+   79.0,
+   "Rastro diwmo yn las noce de las estrellas del mar. Rastro diwmo yn las noce de las estrellas del mar."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 3
+ }
+}

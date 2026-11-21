@@ -1,0 +1,113 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Pasamos a la competencia número setenta y nueve en el ía. Bien, Conjunto Instrumental, Música Ciudadana o Música Popular, Rock, Melodico, Obra de Lección. Escuchamos en primer lugar a Pablo Pecorelli con Milton y Fernando."
+  ],
+  [
+   165.0,
+   "Un fforte aplauso, entonces, para Pablo Pecorelli, a Milton y a Fernando, que nos ha hecho una interpretación con fflauta irlandesa, fflauta bajo, y lo que se escuchaba de la percusión eran cucharas de madera."
+  ],
+  [
+   183.0,
+   "Competensia nômero ochynta, grŵp stepio, glocsio, hunan dewisiad, yr unig sy'n castellu yn y castellau hwn ydi dawnswyr mennydd llwyd."
+  ],
+  [
+   398.98,
+   "Cystadlaeth wyth deg wyth ddeg dau dawns llys hunan ddywysiad gyda chyfeillion a y y gerddoriaeth yn fyw."
+  ],
+  [
+   421.98,
+   "Esta es un a dan sa de corte a e lec siôn ac ympaniada con mwsica yn vivo."
+  ],
+  [
+   427.98,
+   "Wisin gestad li- yy grwpia Wisin gestad liw, dawnswyr Gwanwyn a Esgolcerdd y Gaiman."
+  ],
+  [
+   437.98,
+   "La competencia nômero ochenta y dos, dan sa de corte a lec siôn ac ympaniada con mwsica yn vivo, los participantes Esgolcerdd y Gaiman, y dawnswyr Gwanwyn."
+  ],
+  [
+   661.98,
+   "Mae'n rhan o'r rhan fwyaf o'r ffordd mae'n cael ei dynnu."
+  ],
+  [
+   767.98,
+   "Cystadleuaeth rhif wyth deg tri. Dawns y teuluoedd, dawns Dinbych. Cyntaf ar y llwyfan, dawnswyr Gwanwyn, a Gwanwyn ar y llwyfan, beirniaid yn barod? Disfrwdwch?"
+  ],
+  [
+   943.98,
+   "Dyna y grŵp Gwanwyn dawnswr Gwanwyn yn y Castaliaid wyth deg tri, dawns eu teuluoedd, dawns Dinbych."
+  ],
+  [
+   951.98,
+   "O'n i ymlaen efo'r grŵp gystadleuaeth wytheg un, wytheg un, dawns hogia'r foelas, competensia nwmero wytheg un, ddansa hogia'r foelas."
+  ],
+  [
+   976.14,
+   "Prymer grŵp o bartisipantau, criw cyntaf ar y llwyfan yw dawnswyr Gwanwyn. Sy'n barn i atab barod, diffrutamos de la danza joque alboilas dawnswyr Gwanwyn."
+  ],
+  [
+   1190.14,
+   "Diolch yn fawr, diolch o galon dawnswyr Gwanwyn."
+  ],
+  [
+   1220.14,
+   "am ei berfformiad arbennig o dda."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 21,
+  "modelo": 9,
+  "reglas": 2,
+  "vacias": 10
+ }
+}

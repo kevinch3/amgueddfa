@@ -1,0 +1,43 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   60.0,
+   "Las horas flores que di, y desde el mar llegó un fantasma checho de cosas que a mi perdi."
+  ],
+  [
+   94.82,
+   "Des pues busqué perderte en tantas otras, ni aquella otra ni todas serán dos."
+  ],
+  [
+   105.22,
+   "Al fin no me reconocé cuando un adiós, jesŵ, un adiós, la soledad me devorô, y fuimos dos."
+  ],
+  [
+   123.22,
+   "Sur i sur un pachar oedd di, oh, e'n gwel' fe des, e'n gwel' fe des del mas allan, a confundise con un sieno, que nunca mas podre, recuperar."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

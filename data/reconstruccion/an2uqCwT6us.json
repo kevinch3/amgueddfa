@@ -1,0 +1,71 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   49.0,
+   "Dwys i'w sebrwt gangau'r gwedid, gliriwch llawed uwchben, gliriwch llawed uwchben."
+  ],
+  [
+   72.0,
+   "Paid â gaflu brantlis greiniwr, o fan ŵyl i dwyn, o fan ŵyl i dwyn."
+  ],
+  [
+   102.0,
+   "Glew, mae'n ews, byd yn erbyn, erbyn arna ti."
+  ],
+  [
+   132.0,
+   "Gyda'i nadau mwyn, mae'n eirio'r hyn o drosofi."
+  ],
+  [
+   149.44,
+   "Gŵyr a mafu, dwy fron glwybus, gŵyr a mwyn a'i serch."
+  ],
+  [
+   162.0,
+   "Gwylio'n glöyn a'i serch."
+  ],
+  [
+   168.54,
+   "Call ei nod a'i arian deffro, calwm dyn yr merch, calwm dyn yr merch."
+  ],
+  [
+   205.32,
+   "Tyd bendithio fi, tyd bendithio fi, bendithio fi."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

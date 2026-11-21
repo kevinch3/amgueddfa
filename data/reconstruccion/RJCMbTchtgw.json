@@ -1,0 +1,50 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   182.0,
+   "Mis mewn i bron a'i groes, a'r un mewn fannau gwlyb, a'i mab a'i ddyn o gloes, mi oes e'n blwyddyn briod dydd, gogonial ddydd i hwn, a'r dyn a'i dyn, ei groes i chweched dydd o'i glôd."
+  ],
+  [
+   212.0,
+   "Gogonian di-go-ren."
+  ],
+  [
+   220.0,
+   "Tywen y dŵr a'i groes, sydd yn meddwl ddigyn,"
+  ],
+  [
+   228.0,
+   "Dan ddangos golau ddodrwyr oes, ar ddenw'r diwedd gin,"
+  ],
+  [
+   237.0,
+   "Gogonian myth i roi ar anfered o'i ben, ei droi sy'n gwella'r byd o'i fôn, Gogonian meddwl oedd, amen."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 2
+ }
+}

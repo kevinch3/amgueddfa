@@ -1,0 +1,50 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Merched Cwlwm Cariad alawon Cymreig, ddaemos yn y competensia nwmero cin gwynta i seis, conjunto o gôr ffemennin, Cwlwm Cariad."
+  ],
+  [
+   18.88,
+   "Yn cyntaf, yn y lwgar, vocal ffemennin sur azul. Si beirniad yn barod?"
+  ],
+  [
+   26.08,
+   "Vocal ffemenino, sur a sŵl, Cwlwm Cariad."
+  ],
+  [
+   108.0,
+   "Ni unan dawel yw'r plentyn, ni unan gŵyl yw'r drama, ar lan y môr, ar lan y môr."
+  ],
+  [
+   189.26,
+   "Ar lan, ar lan y môr, ar lan y môr."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

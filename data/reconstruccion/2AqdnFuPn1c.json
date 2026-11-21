@@ -1,0 +1,85 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Eistedd ym mynnu'n unig ar ben fy hun."
+  ],
+  [
+   29.0,
+   "Hen o's dim ymynedd i helpu'r byd. Ond mae'r nos yn ffoi, fel mae'r byd yn troi, fel y môr o gariad a rhoddais i ti."
+  ],
+  [
+   59.0,
+   "Sdim byd yma heno Ond dadlais cariad mawr."
+  ],
+  [
+   74.0,
+   "Ac enwyd rhai gweigion ar y llawr."
+  ],
+  [
+   83.0,
+   "Ac i gwplau'r llun, mae yna botel gwaddod gwyn, gwaddod y côr o gariad, a rhoddais i ti."
+  ],
+  [
+   102.68,
+   "Hwn oedd cariad glân, hwn oedd cariad ffôn, o'n i ar y dân, s'dim ar ôl."
+  ],
+  [
+   132.68,
+   "Strydoedd oedd y ddinas, strydoedd mor llawn, atgofion fydd amdano, ei serch a'i ddawn."
+  ],
+  [
+   160.68,
+   "Serch hynny mae'n rhaid byw, ymuno efo hwyl y criw."
+  ],
+  [
+   170.42,
+   "Sych yw'r môr o gariad, a rhoddais i ti. O!"
+  ],
+  [
+   179.66,
+   "Sych yw'r môr o gariad, a rhoddais i ti."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

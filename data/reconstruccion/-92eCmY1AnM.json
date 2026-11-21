@@ -1,0 +1,64 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "Wrth i ni am y cyfle arbennig yma, wrth i ni am gysgu gyda'n gilydd yn y Eisteddfod Badran yma heddiw, i fwynhau'r gwrando ar holl ddoniau a fydd yn dod yma i ganu, i adrodd ac i ddawnsio, yn deithio hefyd y rai a fydd yn dangos eu doniau mewn ffyrdd wahanol, mewn ffyrdd mwy distaw dros y bwyd arbennig yma, rwyf wedi gwybod yn dda bod eu cyfraniad nhw fel un mor bwysig."
+  ],
+  [
+   60.0,
+   "I ti bod diolch am y roi o dalent ar y gweledigaeth er mwyn i galluogi pawb i gamu'r llwyfan ac i rannu talentau arbennig gyda ni gyd."
+  ],
+  [
+   73.0,
+   "Gofynnwn yn arbennig felly i difendithio'r holl berfformwyr fel eu gilydd dros y ddeu dydd nesa, a diolch iddyn nhw am eu gwaith galed yn baratoi ac yn ymarfer er mwyn sirhau mwy pa hun yn y llefa yn y ddigwyddiad arbennig yma."
+  ],
+  [
+   94.0,
+   "Diolch i ti o dad am y holl gwaith galed pwyllgor yr Eisteddfod, ac am lafu dy llu o weithwyr a fydd yn gweithio'n ddiwyd ar ho- yr ochor a llwyfan i ôl i'r llynnu, er mwyn sicrhau llwyniad i'r hwy."
+  ],
+  [
+   114.0,
+   "Rho cymorth ar ben i hefyd i'ch holl beirniad, rhai ohonyn nhw wedi deithio ymhell i fod yma gyda ni, a bendithiau i'w all, ei ddoethineb a'i dealltwriaeth wrth clorianu'r holl gythuraethau. Diolch i ti am dy ofyniant, ac am dy haeddion ni, ac am dy gariad bethol tuag aton ni, dy plant, yn enw i ysgrifennu."
+  ],
+  [
+   266.0,
+   "Diolch i be' sy'n bwrdd o'r esgobed, a'r y gwefan gen diolch sy'n fowr, a'r gwefan gen diolch sy'n fowr."
+  ],
+  [
+   1301.98,
+   "I Batagonia oh oh oh i Batagonia oh oh oh i Batagonia."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 22,
+  "modelo": 7,
+  "reglas": 0,
+  "vacias": 15
+ }
+}

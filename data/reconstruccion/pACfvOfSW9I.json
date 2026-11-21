@@ -1,0 +1,50 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Sebben crudele, me'i ffeil angwyr. Sempre ffedele, sempre ffedele, di folio yw amor."
+  ],
+  [
+   30.0,
+   "Sebben crudele mi ffailen gwy'r sem pre fe dde le ti foliw amal."
+  ],
+  [
+   47.0,
+   "Sebben crudele mi ffaila'n gwir, sempre feddele ti fo' i'w amar."
+  ],
+  [
+   103.0,
+   "Sebben crudele, mi ffail anghywir, sympry ffyddel, sympry ffyddel, ti fo'n i'w amau."
+  ],
+  [
+   133.0,
+   "Seben crudele, mi ffail angwyr, sempre fedele, ti fo i'w amar."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 2,
+  "reglas": 1,
+  "vacias": 1
+ }
+}

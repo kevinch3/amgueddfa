@@ -1,0 +1,113 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   337.02,
+   "Neu chopen a sawdd, neu chopen a sawdd."
+  ],
+  [
+   344.02,
+   "Clavenesia susenas, doblen sus gallos, para un arros hermosa del mes de Mayo."
+  ],
+  [
+   352.02,
+   "Clavenesia susenas, doblen sus gallos, para un arros hermosa del mes de Mayo."
+  ],
+  [
+   365.02,
+   "Lle nes y basio?"
+  ],
+  [
+   369.02,
+   "Be' le diran gofenllito, gei mi athratad o de rosa, le dirai ce' sy'n clavell, gei ne' lawr ce' sy'n soca."
+  ],
+  [
+   423.02,
+   "wna be' yn mi gora so."
+  ],
+  [
+   429.52,
+   "Con su permiso seniores voy a sacrarme el sombrero."
+  ],
+  [
+   434.8,
+   "Permiso."
+  ],
+  [
+   436.2,
+   "Par atapar esta rosa que no la moj' el sereno."
+  ],
+  [
+   441.24,
+   "Sereno."
+  ],
+  [
+   442.68,
+   "Par atapar esta rosa que no la moj' el sereno."
+  ],
+  [
+   449.12,
+   "No se dole estremocito, guarde no mas tu sombrero, sombrero, nada me han echo los cielos que pueda serme sereno, sereno, nada me han echo los cielos que pueda serme sereno, no paso, mi vida a mi, mi vida a mi a mis brazos, que tengo en corazon, corazon, corazon."
+  ],
+  [
+   493.8,
+   "Ddim byd yn anodd, ond mae'r pennau'n anodd, dim byd yn anodd."
+  ],
+  [
+   549.0,
+   "Estrellita de los cielos, lusero de la mañana, luserito sonoro, un rendido corazón, no merece tu mirada."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 11,
+  "modelo": 8,
+  "reglas": 0,
+  "vacias": 3
+ }
+}

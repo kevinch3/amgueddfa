@@ -1,0 +1,57 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   90.0,
+   "Pan fwy bydd neb yn ychwanegu am y gwaed yn llifo'r môr, am canol hon hyb gyflawn wrth wyneb y clod i'r llawr, bydd y gobaith hyn yn siŵr."
+  ],
+  [
+   120.0,
+   "bryd hynny mewn bo' ddim sydd a'i lo a treiau Abertawe a ffonau gwyllt y môr."
+  ],
+  [
+   150.0,
+   "O blynyddoedd gydym ni'n gadarn, Yn ddi-wastad yn ysbryd,"
+  ],
+  [
+   165.0,
+   "Rhan laes o'r hen Wcráin a wel fi i fyny'r gwynt."
+  ],
+  [
+   178.0,
+   "Y llan a ma'r hen Llangern wrth gwrs all i ti ar y bôn."
+  ],
+  [
+   189.0,
+   "Yn creigiau Aberdaman, a ffwrdd a'i gwyllt yr môr, a ffwrdd a'i gwyllt, gwyllt, a môr."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 2
+ }
+}

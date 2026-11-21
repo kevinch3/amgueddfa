@@ -1,0 +1,43 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "I Patagonia, i Patagonia, i Patagonia."
+  ],
+  [
+   390.0,
+   "Mae nawr galon i ar her seilio ar y llwyfan, os gwelwch yn dda."
+  ],
+  [
+   890.8,
+   "Diwrnod o'r blaen ma'n gwasanaeth negedd gŵn."
+  ],
+  [
+   1129.76,
+   "Gwernas wrth ddwy."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 20,
+  "modelo": 5,
+  "reglas": 0,
+  "vacias": 15
+ }
+}

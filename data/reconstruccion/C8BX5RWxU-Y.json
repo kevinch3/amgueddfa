@@ -1,0 +1,50 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Dwy lawen erbyn sydd yn y dadlun wrth amryw yng ngwely."
+  ],
+  [
+   21.0,
+   "Bob bore a nos, mae'n gweddi'n i'n dlos, mi yw'n enwch lywaf i."
+  ],
+  [
+   40.0,
+   "Pan nath hi gysgu, nai'r ddwy law hynny wrth amlwg yng ngwenu, mewn weddi ar Dduw, un caled."
+  ],
+  [
+   123.12,
+   "Rhyw nos fach dawel, meddwg yr awel, o amryw fy ngwely."
+  ],
+  [
+   146.12,
+   "Y weddi'r sir, fel e'i osodir, a minnau'n ei chlywed hi."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

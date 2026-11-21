@@ -1,0 +1,78 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Cawn ni mwynhau y gystadleuaeth."
+  ],
+  [
+   30.0,
+   "a'i chwer o loes, tarwyd meddran ei obeithion, a'i rhai yn ŵyl wrth y groes."
+  ],
+  [
+   57.0,
+   "Cododd Iesu, cododd Iesu nos a'i thrallwraeth yn y dydd, gyda sanctaidd wahaniaeth."
+  ],
+  [
+   87.0,
+   "awr y bore, taeth i ar y gwragedd atebe. Clywyd ingan sŵn ei camre,"
+  ],
+  [
+   111.4,
+   "Mynydd i stwgan ei gwedd."
+  ],
+  [
+   122.4,
+   "Corddodd Iesu, corddodd Iesu,"
+  ],
+  [
+   134.4,
+   "O chaneudiai ddroes yngan."
+  ],
+  [
+   146.4,
+   "Bwydaseuon mewn anobaith, a genedion mewn crefau, wedi'r mildd yn culio y maeth."
+  ],
+  [
+   176.4,
+   "a dadlodd a'i dydd Iau Gain, God odd Iesu, God odd Iesu, i wirion meddygol."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 2
+ }
+}

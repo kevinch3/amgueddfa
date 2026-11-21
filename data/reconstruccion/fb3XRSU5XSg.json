@@ -1,0 +1,43 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "Chispa, chispa, candela, Juego a que me quemo, chispa, candela, Juego a que me quemo."
+  ],
+  [
+   80.0,
+   "Ai, mae'n cemê, ai, ai, ai, ai, awelita mewn cemê, Chispa, Chispa, candela, welwag y me quemo, Chispa, candela, cefn me stoi cefando, Chispa, candela, welwag y me quemo, Chispa, candela, cefn me stoi cefando."
+  ],
+  [
+   158.06,
+   "Iesu'r gwaelodd, siaraddodd, nac ystynnodd, siaraddodd."
+  ],
+  [
+   174.06,
+   "A'i, siaradodd."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

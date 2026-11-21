@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   90.0,
+   "Mi oeddwn i'n meddwl bod y llawr yn cael ei ddisgyblio fel arfer, ond mi oeddwn i ddim yn meddwl bod y llawr yn cael ei ddisgyblio fel arfer."
+  ],
+  [
+   162.0,
+   "Mi oeddwn i'n meddwl bod nhw'n iawn, ond mi oeddwn i ddim yn meddwl bod nhw'n dda."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 2
+ }
+}

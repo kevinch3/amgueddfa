@@ -1,0 +1,99 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Chware lw'r a dwy fi, a tyma hi'w fyny grug, a gafi unwaith eto'm gweld ar y haf."
+  ],
+  [
+   30.0,
+   "Ac o fôl y mynydd yn fawr, lle gwelodd y neb y gwael, cat i mi unwaith eto gweld yr hael."
+  ],
+  [
+   47.0,
+   "Yn ddi niwedd i chwareles i ddechrau yn illbres, cyn cyrraedd fy mhymlwyf yn y dau ar y deg."
+  ],
+  [
+   63.0,
+   "Dim ond y mis a'r sgladdin had, ei fywyd o mor yr had, mwyol na chi oedd yr unig yr ên."
+  ],
+  [
+   80.0,
+   "Chware lôn y dwy fi, a tyma hi'n fyn y gri, y caf i'n waeth eto gweld ar yr haul."
+  ],
+  [
+   96.0,
+   "Ac o Fôl Mynydd y Mawr, lle gwelodd y nef y gwael, ga't ti'm un waith eto gweld yr haen."
+  ],
+  [
+   112.0,
+   "Meddyliais ambell waith erbyn hyn mae'i ffaith, does ti'm i dianc allan o'r twll fawn."
+  ],
+  [
+   128.0,
+   "Un i gyd at ein dawn, dim ond at ein caef a'r haw, o, am gael gweithio yn y rhagwyr iach."
+  ],
+  [
+   144.0,
+   "Chware lôn y dwy fi, a dyma hi i'w fynigri, a caf i'n waeth eto gweld ar ei haul."
+  ],
+  [
+   160.0,
+   "Ac o ddol ym mynydd yn fawr, lle gwaelodd y neb yn gwawr, gad i mi, unwaith eto, gweld yr haul."
+  ],
+  [
+   175.68,
+   "Cwarel o'r y dwy fi a dyma hi'n wynebu y cam unwaith eto. Gweld yr haul ac o bobol ym mynydd y mawr lle gwelodd y neb y gwar. Gat i mi unwaith eto gweld yr haul."
+  ],
+  [
+   205.68,
+   "Gat i mi unwaith eto, gweld dy ddechrau."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

@@ -1,0 +1,64 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "O gwrando ar y forwyn o gri- iau, ti'n clywed i'r wlyb a'r greiddiog dwyn, ac mewn anodd a'i glyw i ni i wnaeth."
+  ],
+  [
+   56.0,
+   "Daw y taw fel hyn yn dofal dyddau, yr un i foi dros brin a bant, o farwain clywed bo' rywun o greu, o ffarm clywedd un o'r blant."
+  ],
+  [
+   116.0,
+   "Berfa i ddlan, bydd glan i'r graig lle'r hun o'n i."
+  ],
+  [
+   128.1,
+   "Nain dan gorlid gwyw a feddal fan, o sgid amddiffyn yw'r hen gân, hen nain."
+  ],
+  [
+   146.58,
+   "Bydd awyr efo llyn o gofninau, yn efo ymos gwyn a ddau o dafant. O forwyn, rhyw forwyn o greuau, wbath am rywwedd i un o'r plant."
+  ],
+  [
+   212.74,
+   "Fe ffîll y llonydd a dau iâr o'r fan lle'r heddiau'n llwyr o'r blaen i ffwrdd o wyd a fynwys wyfrâr."
+  ],
+  [
+   237.62,
+   "Un tynged dymws dyngon ninnau, yn erydd dy gyfarwyddyd Sant, dros forwyn rhyw forwyn o greu, a thros y tad clyw un o'r plant."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 5,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

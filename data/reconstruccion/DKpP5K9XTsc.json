@@ -1,0 +1,36 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "Dwi'n daro'n nhw'n cyfran i symud i fyny'n ca'l i fyny'n ôl."
+  ],
+  [
+   43.0,
+   "Dwi'n ca'l i blodau gwylltion sydd yn ca'l i fyny i fyny'n ôl."
+  ],
+  [
+   155.0,
+   "i'r gwanin a'r eiria, ond cyrraedd sŵn edrych i ni yw'r hir o fwy lledol, mae'r gwladau yn defnyddio'r gwanin a'r eiria."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 2
+ }
+}

@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   44.4,
+   "A nes yw nes, a nes yw wrando, feddoedd y gwael, a amgen perched y gwynydd, a nes yw nes, a gofyn i ni, yn y galad ni, gorfwyno'n dduw, beth yw dy grefft."
+  ],
+  [
+   103.02,
+   "Ar glwyl mawr y blid, sanctaidd, sanctaidd, sanctaidd, awydd mawr ynghyd."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 2
+ }
+}

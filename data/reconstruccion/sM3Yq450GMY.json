@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   273.76,
+   "Diolch yn fawr iawn i'r holl gynghorau am eu cwrdd â nhw, ac i'n holl gynghorau am eu cwrdd â nhw, diolch yn fawr iawn i'n holl gynghorau am eu gwaith."
+  ],
+  [
+   348.96,
+   "Am dŵr dafarn iau i'r gwald o ffennog, am dŵr lan iau i'r destun o lywodraeth, nai swnder lais yn ddigon i chwalu popeth yn rheilffordd."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 11,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 7
+ }
+}

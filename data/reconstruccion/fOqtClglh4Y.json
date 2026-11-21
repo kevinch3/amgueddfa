@@ -1,0 +1,43 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Diolch yn fawr am y cerddiad, os dach chi'n barod, disgwyl gerdd y caeman."
+  ],
+  [
+   82.28,
+   "Caed bach gynt o'i ffyrseia, rhodd e'i wydro i dioglau, hedd ai ffordd o ddegau ar yr un ddoi, ar yr un ddau, mewn cwrel y fflemgydd da ar yr un ddau."
+  ],
+  [
+   112.28,
+   "A bydd hi'n bychadyn eisoes gen y lwyd, gen y lwyd, i ofyn am ddangos o ben y lwyd."
+  ],
+  [
+   131.28,
+   "Ni tir agor wyth yn lôn, a'r uch na ddwy ar dy lôn. Gen wir a ddwyn ein safon, fel ma'r lwyd, fel ma'r lwyd, gan chymryd i'r dyn brawd lôn."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

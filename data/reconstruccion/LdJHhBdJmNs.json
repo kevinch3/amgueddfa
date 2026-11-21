@@ -1,0 +1,71 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "yn ffro. Am dwi'n gwybod dwyt ti'n credu dy fod yn ôl, a chwefa'n anafusen, dy bais yn galw'n dawel, y ffwrdd a fangel, i dy warchod di, yn ffwrdd a fangel, i dy warchod heno."
+  ],
+  [
+   60.0,
+   "Pan fo' na fangel i chysuro di, mae swydd y lais yn ddigon i chwalu'r holl amheuon, pan fo' na fangel atat ti."
+  ],
+  [
+   90.0,
+   "Ac am bell waith, yn nghanol berwgol bydd, dwi'n teimlo'n unig, ac yn isel hefyd."
+  ],
+  [
+   106.0,
+   "Ond pan dwi'n barfair i leia, byddai'n aflwyf yn agra, a chofio'r geiria' dwi'n mynd a'i swrda i."
+  ],
+  [
+   121.0,
+   "Anfon afannau i dy warchod heno, anfon addannau i dy sirol di, mae sŵn dy lais yn ddigon i chwalu'r holl amheuon, anfon addannau atat di."
+  ],
+  [
+   151.0,
+   "Ti yw yr angen sydd fe'n anwastadol, mae'n gofalu amdanach, lle bynnag am y dda. Ti yw'r angen, fy angen mor ffeindio, dwi'n cofio'r geiria, wedai symud ffari."
+  ],
+  [
+   178.0,
+   "Anfon afaniaeth i dy fyrch o ffennod, anfon afaniaeth i dy su' di, a'i sŵn dy lais yn ddigon i chwaddu'r holl angheuon, anfon afangel atat ti."
+  ],
+  [
+   208.0,
+   "Ar yr orhafanedd, i dy warchod heno, ar yr anafonedd, i dy sirol di, mae swydd dy iaith yn ddigon i chwalu'r holl amheuon, ar fôn abangel atat ti."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

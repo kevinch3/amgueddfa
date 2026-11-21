@@ -1,0 +1,99 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Ar y lân y môr mae'r rosys cochion, ar y lân y môr mae'r dilys gweddion, ar y lân y môr mae'r dilys gweddion."
+  ],
+  [
+   30.0,
+   "môr mae ei ddariad innau, yn cysgu'r nos a oddi'r bore, ond mae yng Ngwlad y Môr mae carreg gwastraff, lle fydd y marwodd gynt am tarian."
+  ],
+  [
+   78.98,
+   "Dros y môr y mae fy nghalon, dros y môr y mae fy chneudion, dros y môr y mae fy nwybydd, sy'n fy meddwl i bob dydd."
+  ],
+  [
+   138.98,
+   "O deuwch i'r Dyfroedd roi bob un ymysg y darn o."
+  ],
+  [
+   159.98,
+   "O deuwch i'r Dyfroedd, o deuwch i'r Dyfroedd, o fydd ymysg y darn o, o fydd ymysg y darn o."
+  ],
+  [
+   178.98,
+   "Cyflwynodd jais heb arian a ddim pŵer, heb arian a ddim pŵer."
+  ],
+  [
+   199.98,
+   "A'r ffarm yn gwael i'w chariad, ac yn ffini di'w bara, ac llafur am y ddim byd di'w bendigoni."
+  ],
+  [
+   219.98,
+   "O deuwch i'r Dyfroedd, pob un mewn maes eich heddarnwch. O deuwch, o deuwch, i'r Dyfroedd roi."
+  ],
+  [
+   239.98,
+   "Ceisiwch yr arglwydd drafodd ger ei gael e."
+  ],
+  [
+   255.98,
+   "Ceisiwch yr arglwydd drafodd ger ei gael e."
+  ],
+  [
+   269.98,
+   "Cofiwch arno, trafarnwch, trafarnwch, trafarnwch, yn agos, yn agos."
+  ],
+  [
+   286.06,
+   "O Deuwch i'r Dyfroedd, pob un ym maes ychyd arno."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 6,
+  "modelo": 6,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

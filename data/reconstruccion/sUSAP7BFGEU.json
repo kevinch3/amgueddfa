@@ -1,0 +1,85 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   55.0,
+   "Halleluja, halleluja, drwy'r galw beth a'r byd."
+  ],
+  [
+   66.0,
+   "Halleluja, halleluja, drwy'r galw beth a'r byd."
+  ],
+  [
+   78.0,
+   "Fe fregeth in Iesu ei ras, mewn awdurdod, yn yr India eang ras, yn fudd ar fwd."
+  ],
+  [
+   98.0,
+   "Creaswn y byd gwmpir, byd yr eithaf, i'r ngwrthewyn anial dydd, halleluja, i'r ngwrthewyn anial dydd, halleluja, halleluja, halleluja."
+  ],
+  [
+   128.0,
+   "i'r gŵr tewi'n anial dydd."
+  ],
+  [
+   133.0,
+   "Halleluja, halleluja, i'r gŵr tewi'n anial dydd."
+  ],
+  [
+   145.0,
+   "Gwyna bryd o'r carchar iawn i'w fannwyli, ddoniau'r de sydd yn ddon tân, ferai'r tyfu."
+  ],
+  [
+   164.0,
+   "Hara byta bydd dyneb, bydd hi'n ffeindio, hara debyg bydd oedd, halleluja, hara debyg bydd oedd, halleluja, halleluja, halleluja."
+  ],
+  [
+   194.0,
+   "ar a'r cefn i ni ddoe."
+  ],
+  [
+   198.88,
+   "Halleluja, halleluja, ar a'r cefn i ni ddoe."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

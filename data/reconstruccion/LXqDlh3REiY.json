@@ -1,0 +1,155 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Sosman bach yn beri ar y tân, sosman fawr yn beri am dawn, a dawn wedi sgrafo joli bach."
+  ],
+  [
+   646.04,
+   "Togwyd meddwl dyni obeithiwn erchylanwyd wrth y cws."
+  ],
+  [
+   662.04,
+   "Cododd Iesu, cododd Iesu, nos weithiau fod aeth yn ddyn."
+  ],
+  [
+   686.04,
+   "Gyda'r sun tair mawr y bore, tywydd iawn y gwragedd a tybin."
+  ],
+  [
+   704.04,
+   "Trefu digon, sŵn eu canfyr, wefus i sŵn, gyfan eu gwyrdd."
+  ],
+  [
+   721.04,
+   "Cododd Iesu, cododd Iesu, a chyneudiai ei droes yn gân."
+  ],
+  [
+   740.04,
+   "Gŵyl a seilio'n mêr anogaeth, ar gynion y cryfaeth,"
+  ],
+  [
+   764.04,
+   "Gwelir ni'r ddan geliolau, a ta ffordd mai dydd Iau gai, rhododd Iesu, rhododd Iesu."
+  ],
+  [
+   790.04,
+   "I wirionedd y gorsedd fi Dododd Iesu, Dododd Iesu I i wirionedd y gorsedd fi."
+  ],
+  [
+   850.04,
+   "wrth y caffanol, sy'n ychydig o ymddiddan, ar gyfer i'w gasglu, yn y groes, yn y groes, byr yma o dan y cadol, nes gyhoeddodd y ddimogledd,"
+  ],
+  [
+   878.04,
+   "Trawnt i'r bont i'r agor."
+  ],
+  [
+   894.04,
+   "Wrth y gwrs do'n i a ffwrdd, cafodd ras i'n gyntaf."
+  ],
+  [
+   932.54,
+   "Yn y maes, yn y maes, dorri fy ngwlad a'n cadw, nes gyhaedda fy ofyn môn, ti lawr, ti'n ffôn, ti'n ron."
+  ],
+  [
+   962.54,
+   "Dwi am ganu brenhiniaeth yr Iesu a'r don Sadwrn."
+  ],
+  [
+   992.54,
+   "O ddewn i'r bech oedd y gwen, mewn gallu ag o gofniant mawr, ar y gôr o'dd ona ar ei ben."
+  ],
+  [
+   1012.54,
+   "Mae'n haeddu cael y clod ym mholl i ddydd bod yn dydd, mae'n uwch na'r engil lan ar y saent mewn i ddydd fel braint."
+  ],
+  [
+   1042.54,
+   "Dandodd ein Iesu'n rhan, rhoddedd lafant yn nerth, ac yndda lawr mi ddof i'r lan drwydda i'n llwyr."
+  ],
+  [
+   1274.54,
+   "Mi ddoth a fewn gan lef, a dies i yn el ef, ar rod a bwys ben, a'i dws i orffwys ar nof ef."
+  ],
+  [
+   1294.54,
+   "Cafwch y coras o gefryd las a mwnt gen beichastur, ein nerth a ni, yn ôl y dydd, ei olau sydd ar lwydda i fi, Rwy'n beryg i ddod fi."
+  ],
+  [
+   1322.54,
+   "Mae'n hen dydd a dydd tri, hen dydd a swydd fi, hen llwyr i mi, i'w gwisga fi, hen ddim ond wedi gyd."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 24,
+  "modelo": 13,
+  "reglas": 0,
+  "vacias": 11
+ }
+}

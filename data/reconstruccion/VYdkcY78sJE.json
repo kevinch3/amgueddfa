@@ -1,0 +1,85 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Mae yr e-haf yn hir yn y tyfod, madder yn y thyfychen gladd."
+  ],
+  [
+   29.66,
+   "Pryd mae'r gwanwyn yn mynd atar y fot, pryd yw fy mam y taw ar y hardd."
+  ],
+  [
+   46.38,
+   "Gan yr holl ym mhen y gyfeillion, madd ar unig y cysur gadd, cymer y galon yn nyth y tirion, mi fynd i ti pan ddawn yr haf."
+  ],
+  [
+   74.38,
+   "A glywad yn yb y goglen i, ar y hen dderwen fawr a ddoe, ar ôl i honno ddechrau canu, yr haf sy'n dilyn ar ei hôl."
+  ],
+  [
+   102.38,
+   "Gan yr holl ymhen gyfeillion, tymor unig y gysur gaf, cymer y galon yn nyth y tirion, mi fyn y dŷ dŷ pan y ddaw yn yr haf."
+  ],
+  [
+   129.62,
+   "Oes rhyw ar y golau'r bod o'n ynysu? Oes fyn ei allu yn y bant? Ydi'r adar y bach yn canu yn y mur i gwyllt y nant?"
+  ],
+  [
+   156.12,
+   "Gan yr holl ymhen gyfeillion, tymor unig a gysur ei gaf, cymer ei galon yn nyth y tirion, mi fenddi di pan ddaw yr haf."
+  ],
+  [
+   186.12,
+   "Mae ar y haf a bron iawn at y fod, a'i tybed y mam ei gweled ei gaf, ond dweud o hyd mae fy nghyfeillion mi fyn y dŷ dŷ pan y ddaw ar y haf."
+  ],
+  [
+   216.12,
+   "Gan yr holl ymhen gyfeillion, timau'r unig beth a gaf, ar fy meddwl ti flodeuôd."
+  ],
+  [
+   240.12,
+   "Rhywsap yn y fach o flodau'r haf."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 5,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

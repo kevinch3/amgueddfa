@@ -1,0 +1,57 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   90.8,
+   "vivo"
+  ],
+  [
+   93.3,
+   "bien"
+  ],
+  [
+   99.0,
+   "y tú"
+  ],
+  [
+   138.2,
+   "o no"
+  ],
+  [
+   154.4,
+   "para qué"
+  ],
+  [
+   160.5,
+   "todo el verano"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

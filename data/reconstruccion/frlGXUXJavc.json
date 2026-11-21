@@ -1,0 +1,22 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Diolch yn fawr iawn i chi am ddod a'i chroeso i ni weithio'n fawr iawn, a diolch yn fawr iawn i ti am ddod a'i chroeso i ni weithio."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 3
+ }
+}

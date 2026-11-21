@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "Sef yn grwdd yn ym mifoedd longwyr, sef yn brethyn di-folio yma."
+  ],
+  [
+   71.68,
+   "Arnan wnaetha, fel mi o's erbyn, gwlad a fi eretha, gwlad a fi eretha, ta bros angan."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 2
+ }
+}

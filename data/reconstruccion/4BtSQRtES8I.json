@@ -1,0 +1,155 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Ail ai gollwng hi athraw fel nes i, ai nag o'r fwysnes a'i chael yn wraig i ti."
+  ],
+  [
+   23.0,
+   "Dal hi'n dyn, dal y dyn, dal hi'n dyn, y freich a'i chyn, byw iau a trafodiad a'i hen a'i stîn."
+  ],
+  [
+   39.0,
+   "Dal hi'n dyn, a dal dyn i herio ffôn, dal hi'n dyn, dal hi'n dyn, chwaer o'i chwaer, dal hi'n dyn."
+  ],
+  [
+   53.0,
+   "O'r diwedd yn codi ar ei thraed."
+  ],
+  [
+   83.0,
+   "Mi ddaw carcharad a waredd iddi fi, a daw'n rhai'n fwy riencsyn na'r mint lli."
+  ],
+  [
+   102.0,
+   "Dal hi'm dim ar gael yn y nos, dal hi'm dim ac yna dos at y bar, ag yna dal hi'm dim i fi."
+  ],
+  [
+   118.0,
+   "Dal hi'n dim, pan nath dydd i'n herio ffafr, dal hi'n fyw, chwaer wrth chwaer, dal hi'n fyw."
+  ],
+  [
+   133.46,
+   "Gawd in y byd y boel y gwaed a chaw weld geinen y dda o'r diwedd yn codi ar ei thradd."
+  ],
+  [
+   149.46,
+   "Paid a gadal iddi ŵr fel wnes i, paid a'i chodi hi yn siŵr fel wnes i."
+  ],
+  [
+   164.46,
+   "Dal ni'n dyn, ers nawr nawr, eriad dyneb a lawr wâl, ar y podd yn ôl i fod ni yn ôl i'n gul."
+  ],
+  [
+   181.46,
+   "Dal ni'n dyn, pan ydi ni'n helio ffawl."
+  ],
+  [
+   188.46,
+   "Dal hi'n dyn, dal hi'n dyn, dal hi'n dyn, fel dydd ydi'r môr yn waeth a chan wlad, mor diwedd yn codi ar ei draed."
+  ],
+  [
+   213.02,
+   "Dal hi'n dim, dal y dim i herio'n fawr, dal hi'n dim, dal hi'n dim, dal hi'n dim."
+  ],
+  [
+   228.2,
+   "Nawddin y byd y môr yn waeth a chyfweld genedl gyfan, ond diwedd yn codi ar ei thra."
+  ],
+  [
+   318.2,
+   "Ceidwad cryn ymlaen, y celais ran y groes a'r gwael, heb nebodd dyn, heb nebodd dyn, heb nebodd dyn, gan slosgi'r maeth yn ariad i'r bobman."
+  ],
+  [
+   348.2,
+   "Ni ath o lan a'i hun i ffodd i'r fflam."
+  ],
+  [
+   378.2,
+   "Cyrhaeddais di ben dy ansiriau fryn drwy boenau mawr, drwy boenau mawr, a gwelais di dan waith gofyn iau'r dyn yn gwyro'i law, yn gwyro'i law."
+  ],
+  [
+   408.2,
+   "A canta o haen dŵr, sathru a lluogledd, yn galw'r afragloniaeth du a ddredd."
+  ],
+  [
+   424.2,
+   "Rhoeni'r wefen i gair fawr, a'r tŷ yn clwyno ffordd i ddilyn hi, a llwybrau dyrys di."
+  ],
+  [
+   453.2,
+   "E'sa chdi'n nôl, e'sa chdi'n nôl, am oes dy law ni, ni raid di lanu, ag arwain ni, ag arwain ni."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 10,
+  "modelo": 9,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

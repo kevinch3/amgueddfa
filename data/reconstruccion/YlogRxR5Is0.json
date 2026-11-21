@@ -1,0 +1,183 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Mae periodista wedi dod o Gymru i siarad drwy grwp o bobl sy'n siarad Cymraeg."
+  ],
+  [
+   10.0,
+   "Periodista Cymraeg yn y Wladfa, ond rhai bobl yn cycharsu. Cycharsu ddim am y cig, dim am y gwin co. Na, maen nhw'n dweud bod nhw ddim yn siarad Cymraeg drwy'r amser."
+  ],
+  [
+   59.0,
+   "Degwyd Talent. Helo a chroeso. O diolch yn fawr i chi. Diolch am siarad gyda fi. Os ga i ofyn, ydach chi'n siarad Cymraeg bob dydd? Wel o ydw. Ag yn lle? Wel yn yy San Dafydd, Gull Cymraeg, Camwy. O ww a beth am y chwaer? O ma' chwaer, gynna chwaer yy awdusion yn yy radio bob dydd Gwener. O. a wel da iawn. Diolch."
+  ],
+  [
+   89.0,
+   "O da iawn!"
+  ],
+  [
+   232.0,
+   "Diolch yn fawr iawn iawn diolch o galon gennych chi i ddod yma."
+  ],
+  [
+   239.34,
+   "Croeso, croeso gabri iawn. Ia, achos mae perthyniad yn barod, mae perthyniad yn barod, wyt ti'n barod? Iawn, iawn. A beth ydach chi wedi wneud ers i chi ddod yn faer? Wel, dwi wedi bod i Gymru."
+  ],
+  [
+   262.0,
+   "A beth arall? A dan ni wedi rhoid arwyddion yn bob lle yn Negaeman, Garchelis, gwelwch chi. Wel dan ni wedi rhoi fel, fel sbethi. A fanc."
+  ],
+  [
+   292.0,
+   "Diolch yn fawr am siarad gyda fi. Diolch yn fawr iawn i chi i ddod i'r wlad yma. Diolch yn fawr o cario. Diolch yn fawr. Croeso. A mae ysgol Gymraeg yn mynd i, ysgol Hendry yn troi'n liw."
+  ],
+  [
+   318.18,
+   "a drawaisai ysgolion Henglyd a ni, a byddwn ni'n cael adeilad newydd ysbôn."
+  ],
+  [
+   328.34,
+   "Deunain, ddeg ysgol, un, dau, tri, two island o adenau ni, sbïo mewn drwy'r ffenest fe welwn ni,"
+  ],
+  [
+   341.46,
+   "Plant bach yn dysgu sh-dach chi."
+  ],
+  [
+   371.46,
+   "Deng am ol i sgwennu sgriw a'i enw yw y Galenau."
+  ],
+  [
+   375.46,
+   "Coeddi di lant am tŷ i'r eto fi, dri lant am dant i'r lant a'n i, deng am ol i sgwennu sgriw a'i enw yw y Galenau."
+  ],
+  [
+   389.46,
+   "A dwi'n deall fod i'n eisteddfod arnoch chi. Ia ma' eisteddfod yn Patagonia. Da iawn, a pwy ydi'r llwydd?"
+  ],
+  [
+   400.66,
+   "Daniel Williams?"
+  ],
+  [
+   407.66,
+   "Hola, Federico! Che, Fede, no' ch'dave d'donde e'ta el sillôn. Daniel, Fede, Daniel, atrân mîn. No, we- we- wel, si, l'encontré, l'encontré, ciau!"
+  ],
+  [
+   460.66,
+   "Cerwch! Cerw!"
+  ],
+  [
+   464.16,
+   "Dwi'n deall bod Menter Patagonia gyda chi am y tro cyntaf eleni."
+  ],
+  [
+   468.16,
+   "Hei, Menter!"
+  ],
+  [
+   476.16,
+   "Croeso dyfed, Siôn. Diolch yn fawr iawn."
+  ],
+  [
+   479.16,
+   "Allwch chi ddeutha fi be' yn union dach chi'n wneud fel Menter Patagonia?"
+  ],
+  [
+   484.16,
+   "Wel, dwi ddim yn gwybod, dwi ddim yn canu, dwi ddim yn chwarae rygbi."
+  ],
+  [
+   490.16,
+   "Dwi ddim yn dawnsio gwerin, a dwi ddim yn mynd i'r capel."
+  ],
+  [
+   550.68,
+   "Heddiw mae godan i llined a tegau bach yn ddifain, a Daniel a Wendela Glynadd a Gabriella Mair y Cymraeg, daeth ysgolion heddiw i fodroni, yn y flwyddyn ddwy fil a chwech, a chynnig gobaith i blantws ac ynaidd."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 11,
+  "modelo": 10,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

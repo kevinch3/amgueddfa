@@ -1,0 +1,155 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Aver Maria, gratia plena, Dominus, Dominus tegum,"
+  ],
+  [
+   26.0,
+   "Benedicta."
+  ],
+  [
+   29.0,
+   "Benedicta."
+  ],
+  [
+   32.0,
+   "Benedicta tui mwyeddi i hwt."
+  ],
+  [
+   37.0,
+   "Benedicta tu."
+  ],
+  [
+   43.0,
+   "Et Benedictus."
+  ],
+  [
+   48.0,
+   "frutus ventris glori Iesu, Iesu Santa Maria, Mare Dei."
+  ],
+  [
+   201.0,
+   "Thee alone, we believe, Lord eternal."
+  ],
+  [
+   221.0,
+   "Praise the Lord in the lapis, praise His holy name. Let all things that happen appear,"
+  ],
+  [
+   229.0,
+   "Jys' praise the Lord. I believe in the Father, the Son, and the Holy Ghost. I will sing, I will shout, it's worthy to be praised, to be praised."
+  ],
+  [
+   276.12,
+   "Hath come into the house of the Lord, to praise his holy name."
+  ],
+  [
+   282.62,
+   "To get glory on our father the door his son's life he gave."
+  ],
+  [
+   288.62,
+   "Let the trumpet sound, let the trumpet sound, of the sinful souls he saved."
+  ],
+  [
+   294.62,
+   "And the station is working to be praised, to be praised."
+  ],
+  [
+   302.62,
+   "There's a voice that's had us sing to the Lord, it's worthy to be praised."
+  ],
+  [
+   309.62,
+   "Shout to the sun and high to the God of war, this everlasting grace."
+  ],
+  [
+   315.62,
+   "Let the trumpets sound, let the rock be sound, our voices raise each day."
+  ],
+  [
+   321.62,
+   "And I see it's worthy to be praised, to be praised."
+  ],
+  [
+   332.62,
+   "Praise the Lord in your heart, my ears, praise His holy name. Let all things that happen in the world just praise the Lord. I believe in the Father, the Son and the Holy Ghost. I wish all things were worth living for to be praised. To be praised."
+  ],
+  [
+   447.5,
+   "I believe in the father, the son and the holy ghost. I will sing a song that is worthy to be praised, to be praised."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 8,
+  "modelo": 6,
+  "reglas": 0,
+  "vacias": 2
+ }
+}

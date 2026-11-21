@@ -1,0 +1,85 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Draw, yn on y twallwch, ffoadur sy'n rhedeg, diras a gau, diras a gau."
+  ],
+  [
+   30.0,
+   "Duw fo'n dyst i mi, nid mildiaf i ddim, nes y cwrdd o'n i'n dau, nes y cwrdd o'n i'n dau."
+  ],
+  [
+   49.0,
+   "Ny ffortwyr fag fi fe'i gŵyr, dewisa fi ffwrdd diwr hir, i'r neb arodio hyd lwybrau cyfiawnder, dal gwobrau'n ddifeth, a syrthiant hwy fel liw syffr gynt, y fflam, y clef."
+  ],
+  [
+   79.0,
+   "Sul, Sul, yn eich farddiannau, sef dirife din, llenwi'r tywod fflwch, a threfen mor dlws chi yw'r gwylia' yna."
+  ],
+  [
+   109.0,
+   "Ie, dyddio'n tyng fel dy' stwr, yno'n gwylio drwy'r nos, yno'n gwylio drwy'r nos."
+  ],
+  [
+   128.2,
+   "Dewinwch eich llyn yne, a dieliwch chi'r cwrs ar am, pob un yn ei dymor, dwch nôl ac yn ôl, heb wir, droi yr un cam."
+  ],
+  [
+   148.68,
+   "O syrthiant chwi fel liwsyff yr gynt i lawr mewn fflam, ac felly y bu fel hyn ysgrifennwyd, uwchben ei barad, dwys a'i ddrys, i'r sawla gwymp o bydd raid rywun i'w baratoi."
+  ],
+  [
+   178.68,
+   "yw ddydd llaw dal i'r pris."
+  ],
+  [
+   186.68,
+   "Gad i meiddala, a'i ddwyni garchar, o arglwydd ne'r llawr."
+  ],
+  [
+   216.68,
+   "Ni o'r ffwys a fym na byth ar fy llw' hyn a dyngaf i'r sim."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

@@ -1,0 +1,64 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "o'r eglwys, o'r eglwys byw."
+  ],
+  [
+   38.0,
+   "Mae groesan, o mae groesan, o fawr mae arnaf groesan,"
+  ],
+  [
+   49.0,
+   "Bendid iawn i'r ymweilwyr, bendid iawn iawn."
+  ],
+  [
+   90.0,
+   "Mae geision, o mae geision, o waw, mae arnaf geision, yn ddydd Iawn i'n ymrwywad, yn ddydd Iawn na."
+  ],
+  [
+   111.56,
+   "Mae geisiau ni bobol sanctaidd iawn i, ym Iesu'n gafydd gwych yn neud o ti."
+  ],
+  [
+   137.56,
+   "Mae deusien, o mae deusien, o fawr mae ar gadeisien, bendithian, ni'n ymdeudian, bendithian da."
+  ],
+  [
+   159.06,
+   "Mae deusiau, o mae deusiau, o fawr mae arnam deusiau, bendidiau a fydd yn rheilffa, bendidiau yn fawr."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

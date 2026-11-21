@@ -1,0 +1,134 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "Lwli, lwla, lwli i lwla, bai bai lwli, lwle."
+  ],
+  [
+   47.0,
+   "Nwly nwla, nwly nwlai, mae'n fai nwly nwlai."
+  ],
+  [
+   63.0,
+   "Oh sisters, look how gay we look, for to present this day, this joyous day, for whom we sing, our high holy new day."
+  ],
+  [
+   93.0,
+   "Rwli rwla rwli rwla, by by rwli rwle."
+  ],
+  [
+   152.0,
+   "Lwli lwla, lwli lwla, wau wau lwli lwle. Lwli lwla, lwli lwla, wau wau lwli lwle."
+  ],
+  [
+   209.5,
+   "O'n i'n ffair i'n lwla, o'n i'n lwla o'n i'n ffair i'n lwla."
+  ],
+  [
+   537.5,
+   "Diolch yn fawr iawn Jay Lee Gwanwyn, da iawn chi."
+  ],
+  [
+   806.4,
+   "Grŵp y Gwanwyn, diolch yn fawr."
+  ],
+  [
+   809.74,
+   "Ultima interpretasio o'r Eisteddfod ddwy fil a un deg saith deg sy'n dod i'r final, a dan ni'n cael yr honorddiad ar y scenario, y cwroseion. Mae ddwy wedi mynd, un o ni, yn bar- Carwyn Parry-Jones, sydd yn barod, cwrseion."
+  ],
+  [
+   881.4,
+   "Mae nôl i'w weiddi ni mae heddiw wedd o i ni, i'w chwalu efo'i gathw, mae ganddo fo ddôl i'w dwylo ni."
+  ],
+  [
+   911.4,
+   "Ai la meth o'dd o, dim tai mi'n heddiw'n i, a'r fain o'r gorffennol, lle na'm byd ne'n dywyddi, a'r gloedd dwi'n ychwanegu,"
+  ],
+  [
+   970.4,
+   "Miwfori yn fy nghefnod, mae dy ffordd yn fy ngwyneb i."
+  ],
+  [
+   979.4,
+   "Mae'n ddoe wedi fi, mae'n dref i'w meddwi fi. Miwfori yn fy nghefnod, mae dy ffordd yn fy ngwyneb i."
+  ],
+  [
+   991.4,
+   "Dwylo ni na'i ddoe wedyn, a'i drefiw le doi ni, i'r fory, yn y campwr, ag y fôr, yn ein dwylo ni, yn ein dwylo ni."
+  ],
+  [
+   1127.4,
+   "Ti'n yr un dwi a dy gloyw galadr, ti'n yr un dwi."
+  ],
+  [
+   1157.4,
+   "Dwi'n siŵr ei fod mae e'n debyg, ac chi'n gwybod be dwi'n feddwl ydi e."
+  ],
+  [
+   1170.4,
+   "Dodd i fyny'n ffyrdd yng Nghaernarfon i Gaernarfon, ac o leiaf ryw."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 22,
+  "modelo": 12,
+  "reglas": 0,
+  "vacias": 10
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   147.0,
+   "Cadw llaw mewn ffrawddai oru, teg y ffurf ar hyn ei dros. Dim ond cadw mawn at ragu, rhannu'r dydd a rhannu'r nos."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 4
+ }
+}

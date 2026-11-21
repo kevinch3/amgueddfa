@@ -1,0 +1,71 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   51.0,
+   "Pwys yw sibrwd, cangau'r goeden, glir yw'r llwyr uwchben, glir yw'r llwyr uwchben."
+  ],
+  [
+   74.0,
+   "Paid â gofni, brat, clustfeidwr, o fan hwyl i dy we, o fan hwyl i dy we."
+  ],
+  [
+   104.0,
+   "Clew'r maer eos per yr erfyn, erfyr na'r natur."
+  ],
+  [
+   124.0,
+   "Gyda'i nodau mhoen, mae'n eirio pennod drosofi."
+  ],
+  [
+   140.0,
+   "Gŵyr am hof i dwy fron glwyfys. Gŵyr am hoen a'i serch. Gŵr am hoen a'i serch."
+  ],
+  [
+   162.0,
+   "Gall ein odau arian ddeffro galon dân er merch, calon dân er merch."
+  ],
+  [
+   180.5,
+   "Codith fy nwest eimlo caffyro, grand a gwyn fy nghrub, cron a rwyf yn awr wrth erbyn."
+  ],
+  [
+   195.78,
+   "Tirbendithio fi. Tirbendithio fi. Bendithio fi."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

@@ -1,0 +1,57 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Soi un o'r is-fynafa, un awyduwr geiria'n calenda, diwadd ar y Môrs a'r Môr, sylw ar y Môrs a'r ffordd i dda."
+  ],
+  [
+   28.0,
+   "Soy un pais tan oselio, soy gente de remanso valerio, que des lond el cielo, remontan huelva en el Paraná."
+  ],
+  [
+   42.0,
+   "Tengo el color del rio, y su misma voz en mi canto sillo, del agua mansa y su suave danza en mi corazón."
+  ],
+  [
+   123.0,
+   "Llefodd mi somna lerda Sobre las camas del agua abierta Y en el reposo vertiginoso dilectiné."
+  ],
+  [
+   137.0,
+   "Sueño que alzó la broa y subo al alma en la canon, y a las de descanso hecho un ramazo a mi propia piel."
+  ],
+  [
+   151.0,
+   "Calma de mis dolores, ay Cristo de los pescadores, y la gemada que está frenada despejeandome."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

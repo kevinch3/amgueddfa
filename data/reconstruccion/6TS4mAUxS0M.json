@@ -1,0 +1,64 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Mae rhyw un, stwylon i'r distan, ar bob rhin a chowmwr y cîn,"
+  ],
+  [
+   28.0,
+   "Dywed tin e ei mogaeth grefydd fod yna Gymru sydd yn rhydd. Gwlad y Môr a gwlad y Mynydd. Gwlad y Ddinas lawr a gwlad y Mynydd."
+  ],
+  [
+   54.0,
+   "Hyn yw sôn bob afon heddiw bod yna gynghrys mewn yr hud."
+  ],
+  [
+   68.88,
+   "Drefnau'r ffordd, fel drefnau du, yn neu'au, dwys i'r iau, i awgrymu'r ormod."
+  ],
+  [
+   81.08,
+   "Yn bob chwarae'r Iardd yr Ysgol, yn bob sgwrs rhwng dau, yn bob brawddeg arnegid yn ôl, yn ôl, yn ôl."
+  ],
+  [
+   125.7,
+   "Bod yna wanwyn ar ein hadwr, bod yna Gymru, bod yna Gymru Sul ar yr gyd."
+  ],
+  [
+   152.2,
+   "Yn Porth Terfod y cerdd anodyn, ym Mhortref a Chaer, yn y Stadiwm mae'n chware uwch yn ôl i'r glofau, yn ôl i'r glofau."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

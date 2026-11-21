@@ -1,0 +1,64 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Lle i geisiwyd, rwyt ti'n haer. Rwyt ti'n werth y byd i mi. Rwyt ti'n anfer. Rwyt ti'n caru dydd i dydd. O rwy'n cofio cwrdd a thŷ."
+  ],
+  [
+   30.0,
+   "Ac rwy'n cofio'r glaw, y di rews yn y goedwig, y di'r blodau yn y maes ger y llaw."
+  ],
+  [
+   46.0,
+   "Yn yr afon mae cyfrinach, dygusan cyntaf y dydd. Yn y goedwig mae y blodau, yn sibrwd yr enw du."
+  ],
+  [
+   68.0,
+   "Lle i gyswyd rwyd di'n hardd. Lle i gyswyd rwyd di'n gwerth a byd i mi. Lle i gyswyd rwyd yn angan. Lle i gyswyd rwyd dy gair i di di di."
+  ],
+  [
+   98.0,
+   "O mae'r oriau ma'n mynd pasio fy leoliad a'r adain a gwynt, o gwrddwydda' fara fy ngwely, efallai daw'n wreiddwyd yn gynt."
+  ],
+  [
+   125.0,
+   "Ond mae rywun yn agosau, ni glywaf gwychian a gloed, ac rwy'n nabod sŵn yr ysgud, mae'n perthyn i Lleucu Llwyd."
+  ],
+  [
+   147.52,
+   "Lle i gyswyd rwyt ti'n ffyrdd. Lle i gyswyd rwyt ti'n gwerth y byd i mi. Lle i gyswyd rwyt ti'n angen. Lle i gyswyd rwynt dy garu di di di. Lle i gyswyd rwyt ti'n angen."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

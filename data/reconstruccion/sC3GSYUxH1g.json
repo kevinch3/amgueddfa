@@ -1,0 +1,127 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Sosman bach yn peri ar y tân, sosman fawr yn peri am dawn, a dawn wedi sgrafo jolly bach."
+  ],
+  [
+   30.0,
+   "Castellau Sant Degin, parti rif grân poblogaidd, yr un cefndar yn y castellau yma yw Côr Brwlew."
+  ],
+  [
+   608.2,
+   "O iawn ni'n gal ein mlaen drw'r amlwg at dda"
+  ],
+  [
+   693.4,
+   "Nw'n nath de allan,"
+  ],
+  [
+   1184.52,
+   "Mi oedd hi'n dda, mi oedd hi'n dda yn chwarae'r ffordd. Mi oedd hi'n dda, mi oedd hi'n dda yn chwarae'r ffordd."
+  ],
+  [
+   1274.52,
+   "Shut up! Halleluja, a'r pres is all in it."
+  ],
+  [
+   1283.52,
+   "Amazing grace, how sweet the sound, the day that Mary died for me."
+  ],
+  [
+   1287.52,
+   "Her blood was gone, but now her soul was better now with me."
+  ],
+  [
+   1292.52,
+   "Jesus, Jesus, how I love you."
+  ],
+  [
+   1297.52,
+   "Shut up! Halleluja, a'r pres is all in it."
+  ],
+  [
+   1301.52,
+   "Sing to the power of the Lord's countdown, shout halleluja, praise his holy name."
+  ],
+  [
+   1349.52,
+   "Halleluja, praise his holy name, sing till the power of the Lord come down, shout halleluja, praise his holy name."
+  ],
+  [
+   1365.52,
+   "Halleluja, praise his name, halleluja, our Lord praise his holy name halleluja,"
+  ],
+  [
+   1502.8,
+   "Ahora si, entonces, último participante de la competencia setenta y uno, Instituto Ochocientos Cinco, Guajira, el vaiver de Micarrega."
+  ],
+  [
+   1582.28,
+   "O! Ma' arno siarad, ma' arno siarad arno ni. O! Ma' arno siarad, ma' arno siarad arno ni. O!"
+  ],
+  [
+   1620.28,
+   "Ma' na ddawns i ennyn, ma' na ddawns i ennyn erbyn hwnnw. Ma' na ddawns i ennyn, ma' na ddawns i ennyn erbyn hwnnw."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 29,
+  "modelo": 17,
+  "reglas": 0,
+  "vacias": 12
+ }
+}

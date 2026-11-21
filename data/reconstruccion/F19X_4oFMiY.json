@@ -1,0 +1,99 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   153.66,
+   "Volver, volver, volver, por ese camino que termina de corrido, a cwmpo de trave que vuelve a su lido, buscando un alilio, para su doror."
+  ],
+  [
+   500.56,
+   "Cantaf, cantaf a'i rheiny i ga'l, o'n e'n semyl, o'n e'n lwtsh a, be' bendithiwr a be' ystyr, o'n e'n fatsh a o'n e'n estryst."
+  ],
+  [
+   551.92,
+   "Amen, amen, amen, amen."
+  ],
+  [
+   611.92,
+   "Os a' na rif amdani, foria' hwn i'r ail ef, mae'n gwrdd â'i hun at gwerth, a'i deddf a'i henw wedi ôl. Os a' na rif amdani, mae'n gneud o a'i hun o boes."
+  ],
+  [
+   723.92,
+   "Diolch yn fawr iawn, a ddechreir at ei ddiwinyddiaeth ar ei gwaith."
+  ],
+  [
+   1010.78,
+   "Mwy de madrwgada', mwy de madrwgada', dwi'n iawn os ti'n larwm."
+  ],
+  [
+   1106.78,
+   "Soy la morocha Argentina, la que nos siente pesares, y a la que parla la vida con sus cantares."
+  ],
+  [
+   1118.78,
+   "Soy la gentil compañia, de nombre gancho y forteño, la que conserva cariño para su sueño."
+  ],
+  [
+   1346.78,
+   "Siempre, solo, siempre, aparte, esperándote."
+  ],
+  [
+   1353.58,
+   "De las agotas cae en el charco de mi alma"
+  ],
+  [
+   1358.38,
+   "hasta los huesos canados llegaron,"
+  ],
+  [
+   1361.98,
+   "ilumineando a ese torpedo que todavía pasa el viento, empujándome."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 29,
+  "modelo": 11,
+  "reglas": 0,
+  "vacias": 18
+ }
+}

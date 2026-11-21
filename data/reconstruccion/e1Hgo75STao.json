@@ -1,0 +1,456 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   158.0,
+   "Mae'n hoffi mynyddodd yr handys a ca'l dring o'n yr eira a'r lliw."
+  ],
+  [
+   165.8,
+   "Mae am y wyneb a hyd ma' nhw'n dod."
+  ],
+  [
+   172.6,
+   "Mae am y wyneb a hyd ma' nhw'n dod i dy go."
+  ],
+  [
+   179.6,
+   "I Batagonia."
+  ],
+  [
+   260.0,
+   "mi welais enw'r eigan yn eistedd mewn cornel a'i hwyneb yn hen a blinder."
+  ],
+  [
+   290.0,
+   "siaradai'n ddisgaw am oesau a fu mewn llais oedd yn wan a chynedig, edrychai'r fflamau a chofio am ddyddiau pan oedd hi yn ieuanc ei fryd, ac yna dywedodd â chrac yn ei llais fod ei gobaith yn wir o hyd."
+  ],
+  [
+   313.0,
+   "Mae'n disgwyl i'w meibion a'i merched i godi ei phennau yn uchel mis blwyddyn y byd."
+  ],
+  [
+   324.0,
+   "Mae'n disgwyl i'w meibion a'i merched ar ryddid i roddi ei bryd."
+  ],
+  [
+   334.0,
+   "Mae'n disgwyl gweld dymchwel holl geirau a thyrrau a thargor ne' sŵr talog i'r llawr. Mae'n disgwyl gweld cenedl newydd yn cerdded yng ngolau wal."
+  ],
+  [
+   364.0,
+   "Diolch yn fawr iawn am wrando. Os ydych chi'n dymuno'r ffordd grisiau, dwi'n eu hoffi chi fwynhau'r fideo."
+  ],
+  [
+   394.0,
+   "Oddi mor dda i'r sylfaenod barhaol, Libertad,"
+  ],
+  [
+   459.6,
+   "I los libres del mundo responden, al gran pueblo argentino, Salud."
+  ],
+  [
+   473.6,
+   "I los libres del mundo responden, al gran pueblo argentino, Salud."
+  ],
+  [
+   714.24,
+   "Ac yn neall gwybod, ac yn neall gwybod, gwybod y cef iawn, ac yn gwybod y cef iawn ei garu."
+  ],
+  [
+   744.24,
+   "Ac o garu, caru pob hanfod. Ac o garu, garu pob hanfod. Ac ym mhob hanfod, caru dim. Ac ym mhob hanfod, caru dim."
+  ],
+  [
+   797.24,
+   "Diolch ac i bawb o Gymru yn enwedig aelodau Gorsedd Cymru sydd yma yn un pryd heddiw mae Rhian Gruggeran a Jennifer Yorwerth, croeso i chi i'r Gorsedd yma."
+  ],
+  [
+   813.24,
+   "Nawr dan ni'n croesawu côr merched ysgol gerdd y Gaiman i ganu i ni bydden nhw'n canu gan y Wladfa gan arweiniad gladdu Sbaeth Coch."
+  ],
+  [
+   888.24,
+   "Cyn a lled y tywy'n frenhau, iach de a dy rhif, tywallt bywyd yn gofodau, ar fy hael bob dydd, iddo syrthio fy gartref i ddod a'i lwyddi'n fân."
+  ],
+  [
+   913.24,
+   "Nôl i'r sgrin o fewn papur i rywle i'w adeiladau, o fewn gardd a dros. Rwy'n byw a drwy'n dros, rwy'n meddwr o hyd a'i gwynt a hyd."
+  ],
+  [
+   937.24,
+   "O fernanddo'r nos."
+  ],
+  [
+   958.24,
+   "Diolch yn fawr i'r côr Merched Ysgol Gerdd y Caemau,"
+  ],
+  [
+   964.24,
+   "Ag iddyn fel y gwyddom fe gollwn ni ond aelodau eleni, dan ni wedi ma' ma'r restr yn eitha hir eleni gwaetha'r modd dan ni wedi colli pobl fel Elmer Davies yn Macdonald oedd hi'n cael ei adnabod yn yr orsedd Elmer Ysbyty Ifan hefyd y cyn llywydd y gorsedd sef Geraint ap Iorwerth."
+  ],
+  [
+   994.24,
+   "o'u genedl mwnc, hefyd eleni Morgan Williams, eleni Emmyg Elizabeth, Estella Morgan, Estella Degban, ac o Gymru."
+  ],
+  [
+   1183.32,
+   "Cafodd Menna ei geni fe ddeutha Penparc yn agos i Aberdeen, yn bedwaredd blentyn i Helfiw, Melfyr a Rhydd a George. Tyfodd i fyny ar ffarm, yn mynychu capel Penparc ddwywaith ar y sir, a eto ysgol gynradd Penparc hefyd, a wedyn i ysgol uwchradd Aberdeen, yn fuan wedyn a eto i Goleg Rhydaman i astudio ddatblygiad plant bach."
+  ],
+  [
+   1209.4,
+   "Fe fu'n gweithio fel nani ac yn weinyddres feithrin. Yn ddwy ar hugain oed, aeth i Goleg y Drindod yng Nghaerfyrddin i astudio Cymraeg a drama Gymraeg. Wedi graddio, cafodd swydd fel athrawes yn Abertawe. Oedd hi yno, daeth i ddysgu Cymraeg yn y Wladfa rhwng Mai dwy fil ac Awst dwy fil ac un. Yn dwy fil ac wyth, cafodd y profiad o fod yn bennaeth Ysgol Gymraeg Llundain."
+  ],
+  [
+   1239.4,
+   "tan dwy fil a deuddeg, pan ddychwelodd i Ysgol Gymraeg Pont-y-Brenin, Abertawe. Mae hi wrth ei bodd gyda barddoniaeth ac yn aelod o Ysgol Barddon Caerfyrddin. Ers iddi fod yn dysgu yma, mae hi wedi ymdadgos iawn afo, ac mae'n aelod falch o bwllgorwaith Cymdeithas Cymru Ariannu ers dros bymtheg mlynedd. Heddiw mae hi'n llywydd yn y gymdeithas. Yn ddiweddar mae hi'n"
+  ],
+  [
+   1269.4,
+   "Fe wrthi'n casglu a golygu atgofion athrawon a swyddogion prosiect y Gymraeg yn y Wladfa, caiff ei hadnabod yn yr Gorsedd fel Menna Pen Park."
+  ],
+  [
+   1299.4,
+   "Cyngor Llywyd, gofynion i chi yn awr, teuluoedd a'u meiniad."
+  ],
+  [
+   1329.4,
+   "Tafodd syniad ei geni ym Mhrifysgol yr Osaines, pan oedd e'n un ar bymtheg mlynedd oed, symudodd y teulu ei hun i Trelew. Yma, wrhaodd ei dda- rihadist uwchradd a hyfforddodd i fod yn athrawes, yn briodd ac yma'n freier, mai ganddi ddau o blant wedi gweithio mewn nifer o sgolion cynradd lleol, na hi ers saith mlynedd yn bennaeth yr ysgol yr Henre, yn Trelew."
+  ],
+  [
+   1358.52,
+   "Mae hi wedi ymddiddori â chymryd rhan yn orfewol mewn gareddau i ddannu iaith a diwylliant Gymreig."
+  ],
+  [
+   1365.94,
+   "Mae hi'n dysgu Gymraeg ers dwy fil ac unarddeg, mae hi'n dawnsio gwerin ac yn cymryd rhan yn cariadwr yr ysgol yn Eisteddfod ym Mangor, a'i chdi'n hadnabod mewn gorsedd y Wladfa bensilio'r hen frên."
+  ],
+  [
+   1418.52,
+   "a chaeth i Gymru gyda'r ysgoloriaeth y Cyngor Prydeinig i wella'i Chymraeg ar gwrs ym mhrifysgol Aberystwyth."
+  ],
+  [
+   1425.98,
+   "Gyda'i henw yn yr orsedd, mae Noelia yn ceisio ymrhydeddu ei hen nain am ei gweledigaeth i fyrhau caeau ac felly adfer dyfodol y Wladfa."
+  ],
+  [
+   1438.18,
+   "Caiff ei hadnabod yn yr orsedd fel Rachel ap Sienkin."
+  ],
+  [
+   1478.52,
+   "Mae'n gweithio yng Nghaerdydd ym mhob agwedd a'r Gymreictod ym mhob Madryn. Yn Gymdeithas Gymraeg Porth Madryn, ym mwthos gyntaf gwefus yr ysgrifennydd, cymerodd rhan yn ymgyrchu adfederyn Cymraeg ar Bwrs y Cwm yn dwy fil a phymtheg, cymerodd rhan yn forferol i ymchwil hanes Catrin Jones, le Roberts Davies, ac yn chladdu digaeth yn ddiweddarach."
+  ],
+  [
+   1506.5,
+   "Cefnogodd a threfnodd drosglwyddo gerfluniau o'r mimosa i amgueddfa Trefeni a Madryn, a'i chymryd rhan yn na- allai fwy o glaniau yn flynyddoedd ym Mhorthmadryn, a'i hynny adnabod yn orsaf y Wladfa fel Môr Gwyn."
+  ],
+  [
+   1542.5,
+   "Tarot!"
+  ],
+  [
+   1562.5,
+   "Cafodd ei eni yn Nghorthmadryn, yn ailwr o deulu traddodiadol y dref, ers yn ifanc iawn ymddiddorol mewn cerddoriaeth, ac yn"
+  ],
+  [
+   1572.2,
+   "Pedair ar ddeg mlwydd oed, cafodd ei ddenu fel arweinydd côr. Fe fu'r Athro Kedwyn Jones yn ysbrydoliaeth iddo fo, ac fe fu yn ffrind agos. Aeth ymlaen i astudio Morosaires yn Nghrolfan Lelwsinach, a ar hyn o bryd mae'n addysgu yn Nghrolfan Uw Efrydiau y Celfyddydau lly wyth cant ag wyth, wyth cant a pump ar ôl pump. Mae'n arwain Côr Madrid ers ugain mlynedd, ac wedi trafeilio llawer gyda'r côr"
+  ],
+  [
+   1602.14,
+   "ar hyd a lled De America a'r Llywrog, aethon nw i Gymru yn y dwy fil ag wyth."
+  ],
+  [
+   1611.04,
+   "Mae nw hefyd yn cystadlu yn ddrwg ym mhob Eisteddfod yn y Dafydd, ceis caeth ei hadnabod yng ngorsedd y Wladfa fel diefo cerddor Madei."
+  ],
+  [
+   1662.14,
+   "Cafodd fwg at ei enie rhynewch, ac yno cafodd ei addysg gynradd ac uwchradd. Yn disgynner- disgynnydd i Daniel ac Affin Gibon, cafodd ei hacu ar aelwyd Cristnogol sydd yn sylfaen byw bywyd a gwaith bob dydd. Astudiodd Diwinyddiaeth yng Ngholeg Lomas de Samoran, Buenos Aires, a graddiodd mewn Hanes y Brifysgol Batabonia, Coleg Trevelin. Mae'n darlithio ar lefel uwchradd a phrifysgol, a'r"
+  ],
+  [
+   1692.0,
+   "ac yn wasanaethu yn capeli Gymreig ac i'r lled Cymru dyfu'n camwy, ac yn achlysuro yn yr Andes, gan gyfrannu ar agweddau corfyddol a diwylliannol. Mae'n cerddor ac mae'n dysgu Gymraeg yn cadw yn fyw yng ngyswllt ieithoedd yn y capeli, a hefyd yn gyd-lennu rhwng capeli y Wladfa a chabeli yng Nghymru yn reolaidd, caiff ei adnabod yng Ngorsedd y Wladfa fel Lwcas Maen Ffydd."
+  ],
+  [
+   1752.0,
+   "Cafodd ei eni'n ngoddol o ryw addafiant, ac yn bennau'r oes y cerddodd y tŷ i ryw dwylo. Mae'n cofio'i frodyr egni oedd yn canu mynau, a chaneuon traddodiadol, ac yn canu'r gitâr, celyn, banjo, ac agodion. Yn bennau'r ddeg mwy oed cafodd gyd-ffwrdd yn rhan cael ei adeiladu'n llyn, yn fuan wedi ddechreuodd y tŷ i ryw dwylo, ac yn cael ei gael yn rhan fwyaf o adeiladu'r tŷ i ryw dwylo."
+  ],
+  [
+   1782.0,
+   "sy'n gwrtherydd a lleddoliad. Gweithiodd gan yr eiddo gyda band ieuen cyd-frawson ac ymunodd yn ddigwydd arall â band yr heddlu yn Halaic y Siŵrd. Mae'n dal fel bydd ganwr yno, ac mae hefyd yn ymuno â bandiau cysnogol ddifyrnod."
+  ],
+  [
+   1812.0,
+   "yn seremoni'r orsedd a'r s- o'r Steddfod ac mae'n dal i wneud hynny gyda phrysur, ceir ei hadnabod yn yr orsedd fel Albert."
+  ],
+  [
+   1822.0,
+   "Aelodau gors y ddifrifol. Afenwch chi yn awr o'ch rhwng y meini hyn, ac yn mwy neu mhaill y gatholeuni, gadalnai etholiad yr aelodau newydd hyn, os menwch, ateb bob un ohonoch."
+  ],
+  [
+   1852.0,
+   "Heddwch. Halan o'r calon. A oes heddwch. Heddwch. Heddwch. Mi ddathlugosawwn aelodau o barti dawns Gwerin Ysgol Gerdd y Gaiman, gan arwainiad gladdis,"
+  ],
+  [
+   1882.0,
+   "berthyr, a nirna a'r hienyn, un byd annibynnol."
+  ],
+  [
+   2163.0,
+   "Diolch yn fawr, dadmaniaf ar ystyr destunau a llawni, gan dymuno fod clwyddiant i'r Eisteddfod, mae'r raglen hon yn gadarnhau y bydd Eisteddfod y Wladfa yn cael ei chynnal yn yr lew, yn y flwyddyn dwy fil ag un deg naw. Diolch yn fawr."
+  ],
+  [
+   2193.0,
+   "Diolch i holl, i chi holl am ddod yma ar fory niwlog heddiw, ond yy yn yym gyfarwydd iawn yng Nghaergwanian, ac i fod yn dystwr y seremoni hon, rwy nawr yn cloi'r cyfarfod hwn o'r Sylwladfa tan prynhawn mis Sadwrn, yn yn esgyn i lwyfan yr Eisteddfod, ac yn gobeithio y byddai'r cyfarfodydd yn cael eu cynnal yn fwy llwyddiannus yn ystod y cyfarfodydd hwn."
+  ],
+  [
+   2253.0,
+   "O'dd dorri'r trafod dros fynydd o tan sant yng Ngwlad Gwlad, Gwlad, gwreiddio'r ŵyl i'n gwlad."
+  ],
+  [
+   2276.5,
+   "Tra'r môr a'r dydd i'r byd o blaen, o ddylen i'r eniau ar haen."
+  ],
+  [
+   2294.9,
+   "Gwas, gwas, blaidio'r wyf yn gwas, tra fore dydd, bydd bydd hoff ddau, hoff byrdd y dydd yn iau, bara bai."
+  ],
+  [
+   2435.9,
+   "Lliw ei gwallt fel yr hedyn, ar ochr y bryn,"
+  ],
+  [
+   2442.9,
+   "A'i gruddiau fel rhosyn ar luain maen gwyn Roedd ei gwen fel yr heulwen a'i llygaid ar dân Wrth feddwl amdani mi ganaf yn hân."
+  ],
+  [
+   2463.9,
+   "O Mari Malŵ, fy Mari Malŵ, gei di gario fy nghelyn, fy Mari Malŵ."
+  ],
+  [
+   2479.9,
+   "Nid wyf yn gofyn bywyd moethus, aur y pinau, berlau mam."
+  ],
+  [
+   2500.9,
+   "Gofyn wyf am galon hapus, calon onest, calon lân."
+  ],
+  [
+   2511.9,
+   "Calon lân yn siamddai o'n i, tecaf hwn ar lwyd y nos."
+  ],
+  [
+   2522.9,
+   "Dim ond cawl lan a sganu, canu'r dydd a chanu'r nos."
+  ],
+  [
+   2534.9,
+   "Gyda'n ni nw'n olygydol, chwim a denydd iddo sydd, godid gola'n lan fy ngweddol, yn dwyn y sylw ddim."
+  ],
+  [
+   2562.9,
+   "Paw yma yn ystafell o'n i, tecaf lliw na'r lili dros, dim ond calon lan allan i, canu'r dydd a chanu'r nos."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 43,
+  "modelo": 29,
+  "reglas": 2,
+  "vacias": 12
+ }
+}

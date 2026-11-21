@@ -1,0 +1,106 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Sosban fach yn peri ar y tân, sosban fawr yn peri ar y ddawn, a'r gath wedi sgrafo joli bach."
+  ],
+  [
+   453.0,
+   "Ni wnaeth y llaw arni, pan nath hi gysgu mae'r dwy law hynny, wrth ddymu'r ymweli, ymweli â'i dduw yn galw hi'n fyw."
+  ],
+  [
+   481.0,
+   "byw mewn y llewod ni."
+  ],
+  [
+   494.0,
+   "Athan nawr y bore ag yn wawr iawn o le, wrth dynnu fy ngwely i, a'i wedi a'i byw mewn rywsut i fi."
+  ],
+  [
+   592.0,
+   "Beirniaid, sef Meirion Jones o Gymru, yn cyflwyno y gofod gyntaf i'r ffigennw Gaston, sef Celyn Wilias. Diolch i'r gwaharddwyr Celyn Wilias."
+  ],
+  [
+   622.0,
+   "Yr unig cwmpws sy'n cystadlu yw Veronica ac Errol."
+  ],
+  [
+   629.0,
+   "Ys unig o bartisipantau yn y competensia, Veronica a Errol, sydd yn gwylio'r citasiwn, galifto, y byddwn i'n cwrdd â nhw."
+  ],
+  [
+   712.0,
+   "Sallgai mola, swetai'r safal, digidau mewn lanw cefnog sefal. De allu no ay nadi que se sepal, mirei no pal, oerai no pal, beblai no pal, rwmai no pal, bimai no pal, que el son de todos no fal."
+  ],
+  [
+   1132.0,
+   "Cysi me clavan yn el pecho, mi corazón anelante, añora tu mirada y tu amor, me acompaña en el piano el benedolz."
+  ],
+  [
+   1271.98,
+   "I'r toser dwi'n llama, i'r ffenswm dwi'n awgrymu, o'n i'n awgrymu lliwfa o ddata so eri."
+  ],
+  [
+   1530.98,
+   "Dyna ddeu'r sgwennu."
+  ],
+  [
+   1560.98,
+   "Sy'n byd yn amryw gwir."
+  ],
+  [
+   1628.98,
+   "Sem byd yn ymreigwyr sem byd yn ymreigwyr."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 32,
+  "modelo": 12,
+  "reglas": 0,
+  "vacias": 20
+ }
+}

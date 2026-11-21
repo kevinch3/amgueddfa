@@ -233,7 +233,8 @@
       "accesibilidad": "Hygyrchedd",
       "derechos": "Hawliau",
       "privacidad": "Preifatrwydd",
-      "cookies": "Cwcis"
+      "cookies": "Cwcis",
+      "creditos": "Cydnabyddiaeth"
     }
   },
   "auth": {
@@ -765,7 +766,8 @@
       "objetivos": "Amcanion",
       "accesibilidad": "Hygyrchedd",
       "derechos": "Hawlfraint a thynnu cynnwys",
-      "privacidad": "Preifatrwydd a data personol"
+      "privacidad": "Preifatrwydd a data personol",
+      "creditos": "Cydnabyddiaeth ac offer"
     },
     "actualizado": "Diweddarwyd ddiwethaf: {fecha}.",
     "traduccion": "Cyfieithiad ydy'r dudalen yma: os oes gwahaniaeth, y testun Sbaeneg sy'n cyfrif.",
@@ -888,6 +890,38 @@
       "derechos_plazos": "Mi ddangoswn ni'ch data i chi o fewn 10 diwrnod calendr, ac mi wnawn ni ei gywiro neu ei ddileu o fewn 5 diwrnod gwaith.",
       "derechos_aportes": "Os gofynnwch chi am ddileu'ch cyfrif, mae'r cyfraniadau sydd wedi'u cyhoeddi'n aros yn yr archif dan drwydded CC BY-SA 4.0, efo'ch enw neu'n ddienw, fel y mynnwch chi.",
       "derechos_aaip": "Os na chewch chi ateb gynnon ni, mi fedrwch chi gwyno wrth yr Agencia de Acceso a la Información Pública (Asiantaeth Mynediad at Wybodaeth Gyhoeddus), sy'n goruchwylio'r ddeddf honno."
+    },
+    "creditos": {
+      "descripcion": "Yr offer a'r adnoddau sy'n creu testunau'r archif, efo'u trwyddedau.",
+      "intro": "Mae testunau fideos a dogfennau'r archif yma'n cael eu creu efo offer ac adnoddau pobl eraill. Dyma nhw i gyd, efo'u trwyddedau.",
+      "videos_titulo": "Testun y fideos",
+      "videos_intro": "Mae pob fideo'n dod â sawl ffynhonnell at ei gilydd: be ddywedwyd yn Sbaeneg ac yn Gymraeg, a geiriau'r hyn sy'n cael ei ganu pan fydd gynnon ni nhw.",
+      "reconstruido_titulo": "Be ydi «testun wedi'i ail-greu»",
+      "reconstruido_1": "Mewn testun wedi'i ail-greu, mae pob llinell yn dod o'r hyn a glywyd go iawn yn un o'r ffynonellau: does dim geiriau'n cael eu dyfeisio. Mae'r model yn cywiro enwau, treigladau a chamgymeriadau adnabod efo help y rhaglen a data'r eisteddfod, ac mae ein rheolau ein hunain yn gwirio pob ateb (bod pob llinell mewn ffynhonnell ac yn ei hamser). Os nad ydi ateb yn eu pasio, mae'r ffynhonnell yn aros heb ei newid.",
+      "reconstruido_2": "Mi all fod gwallau ynddo, a gallwch chi eu riportio o'r chwaraewr. Mwy o fanylion:",
+      "reconstruido_enlace": "sut mae'n cael ei wneud a'i wirio (yn Saesneg)",
+      "letras_titulo": "Geiriau",
+      "letras_1": "Mae geiriau'r hyn sy'n cael ei ganu'n dod gan gynhaliwr yr archif a'r gymuned. Mae'r chwaraewr yn enwi pob darn efo'i awdur, ei hawliau a'i ffynhonnell. Os mai chi biau'r hawliau ar eiriau a dydach chi ddim isio iddyn nhw gael eu cyhoeddi, gwelwch",
+      "letras_derechos": "Hawlfraint a thynnu cynnwys",
+      "documentos_titulo": "Testun awtomatig y dogfennau",
+      "sitio_titulo": "Y wefan a'r data",
+      "gracias_titulo": "Diolch",
+      "gracias_1": "Diolch yn arbennig i Uned Technolegau Iaith Prifysgol Bangor am gyhoeddi eu model Cymraeg yn agored: hebddo, mi fyddai Cymraeg fideos y Wladfa'n dal heb destun.",
+      "item": {
+        "gales": "Adnabod Cymraeg llafar. O'r model yma y daw'r rhan fwya o'r testun Cymraeg yn y fideos.",
+        "youtube": "Isdeitlau Sbaeneg awtomatig.",
+        "whisper": "Adnabod Sbaeneg yn y fideos nad ydi YouTube yn eu trawsgrifio.",
+        "faster_whisper": "Rhedeg modelau Whisper ar ein cyfrifiadur ein hunain.",
+        "claude": "Ail-greu'r testun: mae'n cymharu ffynonellau pob munud ac yn dewis ac yn cywiro pob llinell.",
+        "tesseract": "Testun awtomatig, heb ei adolygu, o'r sganiau yn Gymraeg, Sbaeneg a Saesneg: mae'n help i chwilio ac yn ddrafft i drawsgrifio.",
+        "astro": "Cynhyrchu'r wefan.",
+        "pagefind": "Chwilio yn y wefan.",
+        "supabase": "Cyfrifon, cyfraniadau a data wedi'u cymeradwyo.",
+        "pages": "Cartrefu'r wefan.",
+        "cloudflare": "Delweddau'r dogfennau ac ystadegau ymweld heb gwcis.",
+        "ytdlp": "Copi wrth gefn preifat o'r fideos a'u hisdeitlau.",
+        "ffmpeg": "Tynnu'r sain allan ar gyfer adnabod lleferydd."
+      }
     }
   },
   "accesibilidad": {
@@ -983,7 +1017,8 @@
       "whisper_es": "Whisper",
       "cy": "adnabod lleferydd Cymraeg",
       "letra": "geiriau'r darn"
-    }
+    },
+    "como_se_produce": "Sut mae'r testun yma'n cael ei greu"
   },
   "buscar": {
     "titulo": "Chwilio'r archif",

@@ -233,7 +233,8 @@
       "accesibilidad": "Accessibilità",
       "derechos": "Diritti",
       "privacidad": "Privacy",
-      "cookies": "Cookie"
+      "cookies": "Cookie",
+      "creditos": "Crediti"
     }
   },
   "auth": {
@@ -765,7 +766,8 @@
       "objetivos": "Obiettivi",
       "accesibilidad": "Accessibilità",
       "derechos": "Diritti d'autore e rimozione dei contenuti",
-      "privacidad": "Privacy e dati personali"
+      "privacidad": "Privacy e dati personali",
+      "creditos": "Crediti e strumenti"
     },
     "actualizado": "Ultimo aggiornamento: {fecha}.",
     "traduccion": "Questa pagina è una traduzione: in caso di differenze, fa fede il testo in spagnolo.",
@@ -888,6 +890,38 @@
       "derechos_plazos": "Ti mostriamo i tuoi dati entro 10 giorni di calendario, e li correggiamo o cancelliamo entro 5 giorni lavorativi.",
       "derechos_aportes": "Se chiedi di cancellare il tuo account, i contributi già pubblicati restano nell'archivio con licenza CC BY-SA 4.0, con il tuo nome o in forma anonima, come preferisci.",
       "derechos_aaip": "Se non ti rispondiamo, puoi presentare un reclamo all'Agencia de Acceso a la Información Pública (l'Agenzia argentina per l'accesso all'informazione pubblica), che vigila sul rispetto di quella legge."
+    },
+    "creditos": {
+      "descripcion": "Gli strumenti e le risorse che producono i testi dell'archivio, con le loro licenze.",
+      "intro": "I testi dei video e dei documenti di questo archivio sono prodotti con strumenti e risorse di altri. Eccoli tutti, con le loro licenze.",
+      "videos_titulo": "Testo dei video",
+      "videos_intro": "Ogni video riunisce diverse fonti: ciò che è stato detto in spagnolo e in gallese, e il testo di ciò che viene cantato quando lo abbiamo.",
+      "reconstruido_titulo": "Che cos'è un «testo ricostruito»",
+      "reconstruido_1": "In un testo ricostruito ogni riga viene da ciò che si è davvero sentito in una delle fonti: nessuna parola è inventata. Il modello corregge nomi, mutazioni del gallese ed errori di riconoscimento con l'aiuto del programma e dei dati dell'edizione, e regole nostre controllano ogni risposta (ogni riga deve essere in una fonte, al suo momento). Se una risposta non le rispetta, resta la fonte senza modifiche.",
+      "reconstruido_2": "Può contenere errori, che si possono segnalare dal lettore. Maggiori dettagli:",
+      "reconstruido_enlace": "come si fa e come si controlla (in inglese)",
+      "letras_titulo": "Testi cantati",
+      "letras_1": "I testi di ciò che viene cantato sono forniti dal curatore dell'archivio e dalla comunità. Il lettore indica per ogni brano l'autore, i diritti e la fonte. Se detieni i diritti di un testo e non vuoi che sia pubblicato, vedi",
+      "letras_derechos": "Diritto d'autore e rimozione dei contenuti",
+      "documentos_titulo": "Testo automatico dei documenti",
+      "sitio_titulo": "Sito e dati",
+      "gracias_titulo": "Ringraziamenti",
+      "gracias_1": "Un grazie speciale all'Unità di tecnologie linguistiche dell'Università di Bangor per aver pubblicato apertamente il suo modello di gallese: senza di esso il gallese dei video della Wladfa sarebbe ancora senza testo.",
+      "item": {
+        "gales": "Riconoscimento del gallese parlato. La maggior parte del testo gallese dei video viene da questo modello.",
+        "youtube": "Sottotitoli automatici in spagnolo.",
+        "whisper": "Riconoscimento dello spagnolo nei video che YouTube non trascrive.",
+        "faster_whisper": "Esecuzione dei modelli Whisper su un nostro computer.",
+        "claude": "Ricostruzione del testo: confronta le fonti di ogni minuto e sceglie e corregge ogni riga.",
+        "tesseract": "Testo automatico, non revisionato, delle scansioni in gallese, spagnolo e inglese: serve per la ricerca e come bozza per trascrivere.",
+        "astro": "Generatore del sito.",
+        "pagefind": "Ricerca nel sito.",
+        "supabase": "Account, contributi e dati approvati.",
+        "pages": "Hosting del sito.",
+        "cloudflare": "Immagini dei documenti e statistiche delle visite senza cookie.",
+        "ytdlp": "Copia di sicurezza privata dei video e dei loro sottotitoli.",
+        "ffmpeg": "Estrazione dell'audio per il riconoscimento vocale."
+      }
     }
   },
   "accesibilidad": {
@@ -983,7 +1017,8 @@
       "whisper_es": "Whisper",
       "cy": "riconoscimento del gallese",
       "letra": "testo del brano"
-    }
+    },
+    "como_se_produce": "Come viene prodotto questo testo"
   },
   "buscar": {
     "titulo": "Cerca nell'archivio",

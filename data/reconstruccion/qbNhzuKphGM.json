@@ -1,0 +1,64 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Yr ail yn y gasaleiaeth yma yw Ysgol Gerdd y Gaiman."
+  ],
+  [
+   29.96,
+   "oes y beirniad yn barod, difrodamos Cwlwm cariad."
+  ],
+  [
+   89.16,
+   "Gyda cefnau lan y sŵn, mae'r ffosys gwech iawn gwanso'r ffosys goch iawn yndan y lawr yma, ac iawn gwanso'r eisteddfod ym mhlaen i'r sgwyl."
+  ],
+  [
+   113.16,
+   "Ni haeth dim ond yr eith-ben-tyd ym mynydd, na ddim byd braf ddigon."
+  ],
+  [
+   131.16,
+   "Un ym Mgawennon, mwy'r blentyn, un â mwy, mwy, mae'r gronfa ar lan y môr."
+  ],
+  [
+   155.16,
+   "Yn bedair tro diog, bedair y dydd yn llong y byd, mae'n ffano'n ffôn, yn ffano'n ffôn sy'n mynd yn rhydd, y gwell sŵn, er ddydd i'r gwael, do'dd hi reit fawr o lawr, is-fawr o lawr."
+  ],
+  [
+   201.44,
+   "Nawr ti'n sgwennu nis y cern o'r môr, well na'r gwir, ar lan y môr, ar lan y môr, ar lan y môr."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

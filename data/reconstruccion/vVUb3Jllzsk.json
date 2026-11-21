@@ -1,0 +1,50 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "Hw sy'n i'w bradach chdi, hw sy'n hw sy'n chdi."
+  ],
+  [
+   50.0,
+   "Tra bo' gwae a thraw o'r aflaen maen, tra bo'r glên yn rhydd o'r blaen, wsg ymlaen, fel adda'r dydd, neu fod na'i gyd."
+  ],
+  [
+   73.52,
+   "Cwsg ymlaen. Cwsg ym, cwsg yn flin."
+  ],
+  [
+   98.32,
+   "Dws yna freuddwyr dydd, dws yna wed dydd."
+  ],
+  [
+   116.64,
+   "Dawn ryw swydnad, dawn ryw breuddwyd mwy, dawn ryw redyn raddef mwy, gŵr sgern mwy, dawn ni ddoldi, ein byw yn gryf, gŵr sgern mwy."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 2
+ }
+}

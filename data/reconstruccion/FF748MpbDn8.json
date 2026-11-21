@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   106.0,
+   "Er o'n aninia, o'naninia profeta, er o'naninia, o'naninia profeta, sef la Roma."
+  ],
+  [
+   136.0,
+   "Ni'n cawsem e's gonsolwgwm, ne' estaw siwrandwm, ne' estaw siwrandwm."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 2
+ }
+}

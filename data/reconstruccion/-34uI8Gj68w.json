@@ -1,0 +1,190 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Ni glygwabd yn yr laes, yn galw fyrnaf fi, i beidio gwel' chimau i gyd, ynaf yn calfari."
+  ],
+  [
+   60.0,
+   "Y syth sy'n fy ngwlad, i ddere binced y Saint, ffydd y gobaith, cariad pur a lled, a phob rhyw nefwl y fraint."
+  ],
+  [
+   107.12,
+   "Gogoniant byth ymdrew, y cymod a'r glanhad, dyrymaniaf Iesu fel yr wyf, a chanaf am y gwaed."
+  ],
+  [
+   135.12,
+   "Ar y flwyddyn oddi, ar y dy heddlu di, ga' na'm fynaid yn y gwaed, a caid y cerddari."
+  ],
+  [
+   159.44,
+   "Am hyn."
+  ],
+  [
+   175.94,
+   "Mi glywaf dyne'r lais yn galw arnaf fi."
+  ],
+  [
+   186.44,
+   "Mi ddoth y golchi, meiau i gyd, yn anfon celfaru. Arblwydd, dyma fi, cael dy alwad i."
+  ],
+  [
+   222.1,
+   "Yr Iesu sy'n fy ngwaed, i dderbyn gyda'i sant, fydd gopaith cariad pur a hedd, a phob ryw nefwl fraint."
+  ],
+  [
+   251.1,
+   "Arwynt yma fi, ar dy alwad di, canaf yn eud yn y gwaed, ac aid y galwad i."
+  ],
+  [
+   274.1,
+   "Gogoniant byth am drefn y cymoedd a'n glanhad. Derbyniam Iesu fel yr wyf a chanaf am y gwaed."
+  ],
+  [
+   304.1,
+   "Ar fynd yma fi, ar dy alwad di. Cynnau fy naid yn y gwaed, ac aid a'i galwad i."
+  ],
+  [
+   326.22,
+   "Ar y blwyddyn ma' fi, ar dy alwad di, co' na fy naid yn y gwaed, ac oedd yn galwad i."
+  ],
+  [
+   356.22,
+   "Mi glywaf y dyne lais yn ei galw arnaf ri, i ddod â golchineiau i gyd yn afon Calfari."
+  ],
+  [
+   382.22,
+   "Ar eglwyd yma fi, ar dy alwad di, ca' na fenaid yn y gwaed, ac aeth â'i galfa rydd."
+  ],
+  [
+   403.9,
+   "i dderbyn y Godaisaint, ffurfio gobaith cariad pur a rhed, a phob ryw nefwl fraint."
+  ],
+  [
+   431.9,
+   "A'r eglwys yma fi, a'r dy alwad i, cynnaf ei wneud yn y gwaed, ac aedd ar ei galfa'r un."
+  ],
+  [
+   453.18,
+   "Gogoniant byth ymdrefn, y camod a'r glanhad, derbyniodd Iesu fel yr wyf a chanaf am y gwaed."
+  ],
+  [
+   480.18,
+   "Gorddwyr, dyma fi, paid â alwad i, ca' na frenaid yn y gwaed, a gaid ar galwad i."
+  ],
+  [
+   510.18,
+   "Ni glywad yn yr iais yr eu cadw arnaf ni i ddod a golchi beiau i gyd yn ein ofon y galwad ni."
+  ],
+  [
+   534.18,
+   "O'r eglwyd y dyma fi, ar dy alwad di, canaf y naid yn y gwaed, ac aid ar dy galwad di."
+  ],
+  [
+   554.66,
+   "Yr Iesu sy'n fy nwad i ddeddi gydai Saint, bydd y gobaith cariad byr a hedd a phog i'w nebol fraint."
+  ],
+  [
+   582.66,
+   "Yr eglwyd, dyma fi, ar dy halad di. Ca' na bennaid yn y gwaed, a gaid ar y galwad i."
+  ],
+  [
+   604.34,
+   "Gogoniant byth am y drefn ac efod yr glanhad, yr penia' fues i fel yr wy, a chanaf am y gwaed."
+  ],
+  [
+   631.34,
+   "Ar eglwyd dyma ni, ar eich alwad di. Ca' na fannaid yn y gwaed, nag ai ar eich galwad di."
+  ],
+  [
+   652.34,
+   "Ar eglwys dy mab i, ar e dy alwad di, cal na bennaid yn y gwaed, ag haid ar y galwad di."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 12,
+  "modelo": 12,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

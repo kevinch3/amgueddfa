@@ -1,0 +1,64 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "Mor dlws ei gwedd a theg ei llun, fel gwarfod a'i ddydd pur, neb i hario'i phoblon a'i chun, a'i chariad fel adur."
+  ],
+  [
+   60.0,
+   "Cyfoeth nid yw ynddo fe ar ef, glendid nid yw e'n parhau."
+  ],
+  [
+   77.0,
+   "O, yn y cariad y pur, sydd fel y dŷr, yn y para drafodai."
+  ],
+  [
+   95.0,
+   "O sglafion calon i o serch, gobeithio fod hi'n iach. Rwy'n caru'r tir lle'r troediau aber, dan wraidd anhalan y bach."
+  ],
+  [
+   125.0,
+   "Os rhaid i'm rywbryd groesi'r llu, nid gormes ddydd a gwaed, mil gwest nath dach wel ata fi, ar y bod a ffordd mor bach."
+  ],
+  [
+   155.0,
+   "Cyfoeth nid yw yn gofyn yr wyr, glendid nid yw yn parhau."
+  ],
+  [
+   172.0,
+   "O, yna cariad pur, sydd fel adur, yna paradra bodau."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

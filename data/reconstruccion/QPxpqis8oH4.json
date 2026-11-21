@@ -1,0 +1,71 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   90.0,
+   "So, dwi'n mynd i canta un gwaith sy'n enwog o'r gynulleidfa Cansiwn y Cwna, a dwi eisiau i Francisco ddod o'i gilydd."
+  ],
+  [
+   120.0,
+   "o del mar en su voz, cuando venga mi niño que me encuentre cantando,"
+  ],
+  [
+   135.0,
+   "mientras a Dios le pido que se lleve mi llanto."
+  ],
+  [
+   150.0,
+   "Canto perthyn llanto, se lo lleva el aire, se lo lleva lejos, muy lejos de aquí. Lloro por si acaso los cielos se nublen, y aunque sea la lluvia sea piada de mi, ay, de mi niño que viene."
+  ],
+  [
+   180.0,
+   "Este niño que viene, ya lo estoy esperando, nada puedo yo darle mas que el mundo que esconde en mi vientre su amor."
+  ],
+  [
+   200.0,
+   "Cando nazca mi niño que me encuentre cantando, canto mientras me olvido de esta vida tan sola que a mi me tocó."
+  ],
+  [
+   213.56,
+   "Canto a ver si el llanto se lo lleva al aire, se lo llevo lejo muy lejo de aquí, canto por si acaso los cielos se nublen y aunque sea la luna se acuerda de mi, canto a ver si acaso hay un Dios que me escucha,"
+  ],
+  [
+   229.56,
+   "Ese diod dorpido que no piensa en mi, canto por mi niño que no tiene culpa, de no tener techo ni donde dormir, ay, de mi niño que viene."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 6,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 2
+ }
+}

@@ -1,0 +1,50 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "Cortadera plumerito, cuánto naca en el viento,"
+  ],
+  [
+   39.0,
+   "recuerdos de tus verdores me causan un sentimiento."
+  ],
+  [
+   47.0,
+   "Recuerdos de tus verdores me causan un sentimiento."
+  ],
+  [
+   58.0,
+   "Oh, faint o'n i'n eisiau treblau lle byddai poblogaidd yn mynd i fod yn llongyfarch, llongyfarch."
+  ],
+  [
+   80.0,
+   "Oh, faint o'n i'n eisiau llongyfarch, llongyfarch."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 2
+ }
+}

@@ -1,0 +1,50 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   489.28,
+   "nos o'i senior."
+  ],
+  [
+   492.6,
+   "Dewa' la secondi."
+  ],
+  [
+   504.6,
+   "Mi wnes i ddiancu ar iddo ia ddespertar,"
+  ],
+  [
+   509.2,
+   "dwi'mde'n l'encontrêr i ddalld o a drafarchar,"
+  ],
+  [
+   513.8,
+   "Sa' na man ca'l y cefan yno."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 10,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 6
+ }
+}

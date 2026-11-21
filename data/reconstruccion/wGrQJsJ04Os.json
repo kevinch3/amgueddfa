@@ -1,0 +1,78 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Garen yn barod felly, gafael yn y llawn."
+  ],
+  [
+   30.0,
+   "Mi welais i fy mywyd i, ti a fi yn dilyn ein cariad. Treulio oriau ein bod yn ein gyd, rhwy dy garu di, mor falch dwyt ti'r nawr i. Ni'n cael gweld yn clir drwy'r glas, gafael yn fy llas."
+  ],
+  [
+   60.0,
+   "Mi gawn ni weld y goleuni heb rwyst i'r gen dy y byd i gyd. Dwi'n falch pel chdi wrth fy ochr a chyfadd ef nad oes gwell na hyn."
+  ],
+  [
+   83.0,
+   "Ti a fi, yn dilyn ein cariad, dri le o oriau yn fodlon ein byd, faint y gari di. O, pam sgwn i tir yn awr i ni cael gweld yn clir drwy'r glaw, gafael yn fy llaw."
+  ],
+  [
+   108.04,
+   "Ie, ti a fi yn teithio'r gwawr, a neb yn mynd i roi ein cariad ni law, dim hiraeth naw, na fael yn fy llaw."
+  ],
+  [
+   127.72,
+   "Dyma fydda i i ti, be dy hi isie di, dwi isie di yn fy mywyd i o hyd. Ie ie ie ie."
+  ],
+  [
+   151.92,
+   "Ti a fi yn teithio'r gwawr, a neb yn mynd i roi ein cariad ni lawr. Gafael yn fy llaw, ho ho, gafael yn fy llaw, gafael yn fy llaw."
+  ],
+  [
+   181.92,
+   "Diolch yn fawr Caryn. A dan ni'n mynd i wrando nawr Andres Evans. Mae o'n mynd i ganu Hawl i Fyw."
+  ],
+  [
+   196.92,
+   "Vamos a escuchar ahora a Andrés Evans, que va a cantar Howl y Vio."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

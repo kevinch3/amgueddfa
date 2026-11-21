@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   180.0,
+   "Diolch yn fawr."
+  ],
+  [
+   420.0,
+   "Nôl ym mhlwm, ysgafn, teg,"
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 8,
+  "modelo": 7,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

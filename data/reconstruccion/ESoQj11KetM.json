@@ -1,0 +1,50 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "Nair a thir i'n gofal, fer o ddwy gwlad."
+  ],
+  [
+   38.0,
+   "Mewn gweddi daer, erfany a fam, yn nerth i'w chanal, fer o ddwy gwlad."
+  ],
+  [
+   51.44,
+   "Oed dim i'r grym a'r gallu sy'n dragwyddo, gwynebu her a chamu i'r dyfodol."
+  ],
+  [
+   100.44,
+   "Fe roddwyd nos, fe roddwyd ail dydd i'w gadlu, fe roddwyd nos, a thra bydd nerth, fe heriaf eto gai'r gelyn boed dim i'r nerth."
+  ],
+  [
+   128.44,
+   "Rhaid i mi fyw, byw ymysg fy mhobol, rhaid i mi fyw a chael fi i'r dyfodol."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

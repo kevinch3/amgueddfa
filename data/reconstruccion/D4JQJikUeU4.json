@@ -1,0 +1,120 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Mae efo ni felly yn barod yr ail yn yr un gystadleuaeth sef Nansi Jones-Rawson Meinir chi'n barod? Nansi."
+  ],
+  [
+   30.0,
+   "am bump y bore. Ww. Sŵn y ser ar ddiwedd diwrnod. Ww. Sŵn gyfarfod a chyfadrach."
+  ],
+  [
+   51.92,
+   "Sŵn yr oes y ddydd a ma' byllach."
+  ],
+  [
+   71.92,
+   "Sŵn y galar yn y galon."
+  ],
+  [
+   78.92,
+   "Sŵn y drena, sŵn hen ddynion, ww, sŵn y dafod aur yn dod i, sŵn y daw ar ddiwedd storm."
+  ],
+  [
+   108.92,
+   "O'r un."
+  ],
+  [
+   113.92,
+   "'Swn y Beatles, swng barddoniaeth, ww. Swng caneuon a chwedloniaeth, ww. Dymor y sŵn sy'n gyrru rywun."
+  ],
+  [
+   138.92,
+   "Gomens, tuag at y dipyn. Ie, dyma'r sŵn sy'n gyrru rywun."
+  ],
+  [
+   168.92,
+   "Gomennus tuag at y di-bin."
+  ],
+  [
+   180.92,
+   "A beth am gerddi'n bost o'r Wladfa?"
+  ],
+  [
+   186.92,
+   "Swn y baeth o ddan benhamau."
+  ],
+  [
+   194.92,
+   "Ww, sŵn y gwyn sy'n torri'r adain. Ww, sŵn yr enfys ar ein gorwedd."
+  ],
+  [
+   213.92,
+   "Sonne, blant, sim peintio'r dŵr, sonne."
+  ],
+  [
+   233.92,
+   "Sŵn yr hedyn, cen i'r deffryn, o- o- o- o- o- sŵn ffeindelyn ar ein brenin, o- o- o- o- o- sŵn tŵr tŵr bach dim, rownd y gornel."
+  ],
+  [
+   256.16,
+   "Sŵn y sŵs o dan groes y dde. Ied yma'r sŵn sy'n codi'n ysbryd."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 6,
+  "modelo": 5,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

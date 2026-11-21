@@ -1,0 +1,64 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "Do'n i ddim wedi cwrdd, arsu tŷ i'elder bag a redeg i ffwrdd. A rwy'n cofio nawr, o'n i'n meddwl fod i'n fechgyr mawr, cerdded gyda'n tadau, y llwybyr hir i'r pellter, o la la la."
+  ],
+  [
+   84.24,
+   "Wi'n cdi cofio'r tro ar lythyr y glo, sgath ri'n gliniau ei dringo hom ac o'r rheini o."
+  ],
+  [
+   98.92,
+   "La la la la, craig yn sôn o dân ein traed, y cariad y tecwm yn berwi yn ein haed."
+  ],
+  [
+   114.24,
+   "Cyraig yn sôn o dad ein traed y cariad at y cwm yn berwi yn ein gwaed."
+  ],
+  [
+   132.12,
+   "efyd newydd mawr, ers iddyn nhw gau'r holl bylla'n lawr. Ac fe gweli dy hun, do's dim nawr i ddal y bois rhag y ffin. Y teith e wedi magu blas, am ragor o haw i'r las, rwy'n credu taw ti oedd y cyntaf i weld."
+  ],
+  [
+   162.12,
+   "Y tywydd o'r ein gorwelddol, la la la la, craig yn sôn amdan ein ffraed, y cariad at y cwm yn berwi yn ein gwaed, craig yn sôn amdan ein ffraed."
+  ],
+  [
+   192.12,
+   "Y cariad ar dy gwm yn berwi yn ein gwaed."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 1,
+  "vacias": 0
+ }
+}

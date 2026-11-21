@@ -1,0 +1,36 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   74.3,
+   "Wel, joy's in our song, and together singing loud. That's where we'll be free, when everyone"
+  ],
+  [
+   163.1,
+   "And together sing in harmony"
+  ],
+  [
+   173.1,
+   "As one that will be free, free, free."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 2
+ }
+}

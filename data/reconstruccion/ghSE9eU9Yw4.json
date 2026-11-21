@@ -1,0 +1,92 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "Caminito del indio, sendero collas, sembran we piedras,"
+  ],
+  [
+   43.0,
+   "caminito del indio, que junta el valle con las estrellas,"
+  ],
+  [
+   91.94,
+   "Bandes de la montaña, la pachama, mas en sombre siera."
+  ],
+  [
+   102.94,
+   "Cantando en el serro, llorando en el rio."
+  ],
+  [
+   144.94,
+   "Nes anws biedras, Camino del Indio."
+  ],
+  [
+   157.94,
+   "Nes anws biedras, Camino del Indio."
+  ],
+  [
+   225.94,
+   "Brafos dolienteth yn y bagwanna, I'r camino lamentas yn cwmpaneth yn y distancia."
+  ],
+  [
+   243.46,
+   "I'r camino lamentas yn cwmpaneth yn y distancia."
+  ],
+  [
+   254.34,
+   "Candandwe ne'r sero, trwanddwe ne'r rio, sy'n agrandau'n y noce, lofenodd e'n ifu drw."
+  ],
+  [
+   282.82,
+   "Besod i'r lŵan, i'r ste gân ddomino, nes antws biedras, camino d'erindio."
+  ],
+  [
+   369.82,
+   "Diolch yn fawr."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 7,
+  "modelo": 6,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

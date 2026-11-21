@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   14.16,
+   "Hoi di bo, di boi di boi di bo, gair gweld y môr a'r sion, ble?"
+  ],
+  [
+   35.16,
+   "Ni'n poeni fo, ni'n poeni poeni fo, gair wedd y ffordd a'r llondde."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 3
+ }
+}

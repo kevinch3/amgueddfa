@@ -1,0 +1,43 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Felly, diolch yn fawr iawn i chi am eich gysylltu a'i gysylltwch efo ni, a hoffwn i fod yn ddiolch yn fawr iawn i chi am eich gysylltu a'i gysylltwch efo ni hefyd."
+  ],
+  [
+   60.0,
+   "Felly, diolch yn fawr iawn i chi am eich gysylltu a'i gysylltwch efo ni, a hoffwn i fod yn ddiolch yn fawr iawn i chi am eich gysylltu a'i gysylltwch efo ni hefyd."
+  ],
+  [
+   120.0,
+   "Felly, diolch yn fawr iawn i chi am eich gysylltu a'i gysylltwch efo ni, a hoffwn i fod yn ddiolch yn fawr iawn i chi am eich gysylltu a'i gysylltwch efo ni hefyd."
+  ],
+  [
+   180.0,
+   "Felly, diolch yn fawr iawn i chi am eich gysylltu a'i gysylltwch efo ni, a hoffwn i fod yn ddiolch yn fawr iawn i chi am eich gysylltu a'i gysylltwch efo ni hefyd."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

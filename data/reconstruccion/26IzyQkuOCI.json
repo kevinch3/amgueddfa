@@ -1,0 +1,71 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Os yw'th galon bron â thorri, paid â deud."
+  ],
+  [
+   29.0,
+   "Am fod serch dy frôn yn oeri, paid â deud."
+  ],
+  [
+   45.88,
+   "Ac os chwalu maint o beithion, paid â deud, ni ddaw neb i drwsio'th galon."
+  ],
+  [
+   71.96,
+   "Paid â deud."
+  ],
+  [
+   79.96,
+   "Pan fo stormydd y byd yn gwgi, paid â deud."
+  ],
+  [
+   95.96,
+   "A golynion am dy faeddi paid â deud, ac os chwalu maint obeithion paid â deud."
+  ],
+  [
+   125.96,
+   "Hawdd i'r llwyddynt drwyd a ddwylo wrth ei deud."
+  ],
+  [
+   185.62,
+   "Paid â deud, hawdd i'th lwydd fynd trwyd a ddwylo, wrthi'n deud."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   316.0,
+   "I Patagonia, i Patagonia, i Patagonia."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 6,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 5
+ }
+}

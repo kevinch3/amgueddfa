@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   125.0,
+   "Fel yr awyren, i'r drefn, er enghraifft, yn erbyn."
+  ],
+  [
+   139.0,
+   "Terbyst i ben o'r ffordd, o'r ffarm, fel drefn, o'r fardd, a'r pridd."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 3
+ }
+}

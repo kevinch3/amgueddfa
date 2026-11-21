@@ -1,0 +1,78 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "Ddo i'n dod i'r nos yn brysur iawn, o beio'r gwlyb o'r lle yn llawn, o fin a'i flaen, o fôn a'n straen, ar drefn mewn mwy na ffordd fawr."
+  ],
+  [
+   60.0,
+   "i'r nos a'r taid ar hyd y stryd, ac ambell byd yn pario'r gyd, a fryd mae'r gadw'r nos yn cau, a fwrdd o'r caw o'm gnau."
+  ],
+  [
+   83.0,
+   "Mae'n gorfod y bobl heblau, ac mae'n ddrysau i gyd ar gau, ond mae'r un yn cysgu o ffydd ar y pryd mae'r gŵr ers drud, a'r un sy'n hen ond rhaid i ni ei golau hi."
+  ],
+  [
+   123.22,
+   "Cyfrainc yn blin o dan y sydd, ar gŵr yn llych o stafell ble, sy'n modd tan ddim yn llwyr erych, na'i to ar gwair yn syth."
+  ],
+  [
+   143.0,
+   "Ac os oes sŵn i be'au glin a chan anferion uwch y tŷ, dwi'n gwrthwyno syrpreis i'r ddwy am un ydi flin ond llw."
+  ],
+  [
+   163.0,
+   "Bod mae gormod o bobl rhywlaidd, bod mae'r drysau i gyd ar gau, bod ma'r flin yn cysgu o hyd a yn creu fy ffwrdd o ystryd, fel y flin sy'n henw'n haeddu'r olau i blid."
+  ],
+  [
+   190.0,
+   "Ond mae ormod o bobl Hemraeg ac mae'n ddrysau di-gweriniaig."
+  ],
+  [
+   199.0,
+   "Ond mae'r un yn cysgu o hyd a'r un ffurfio'r oes bryd, yr un sy'n pell o'n haeru'r golau ei hun."
+  ],
+  [
+   218.0,
+   "Yr un sydd hefyd yn haeddu'r golau ni gyd, golau ni gyd, golau ni gyd."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

@@ -1,0 +1,50 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Solo Libre Mwsica Popular Argentina, Folclore Argentino o gwsiga ciudadana."
+  ],
+  [
+   5.3,
+   "Primer Participant sonia."
+  ],
+  [
+   11.3,
+   "Sacer, el huayno, andá y decide a tu mamá."
+  ],
+  [
+   106.6,
+   "En la puerta de la iglesia te vi por primera vez y los santos que salvaron, deben decir tu que"
+  ],
+  [
+   152.12,
+   "Si'n meddwl dwi'n mynd i neud hyn, dwi'n ymarfer bob man dwi'n byw. Fe ddoniwch ga i yn y base, ddim byddech chdi am hyn."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

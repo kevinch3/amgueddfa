@@ -1,0 +1,57 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Ynys Môn byddai'n ystod y cyfnod cyntaf y cyfnod diwethaf yng Nghaerfyrddin."
+  ],
+  [
+   30.0,
+   "Oddi'r nos o bres i'n iawn, o ddyn a'i ddyn bob lle uchel, o ddyn a'i ddau o gwmpas blaen, yn y dref yn fwy nag o'r blaen."
+  ],
+  [
+   60.0,
+   "Mae'r nos yn ffaen, yr hyd yn stryd, a'r glaw fel rhug yw cario'r byd, a'r ris yw'r glan, y drws yw'r coed, a'r wch fel gwael bo'n dau."
+  ],
+  [
+   80.0,
+   "Ond mae gormod o bobl rhyflau, ac mae'n dresau i gyd ar gau, ond mae un yn cysgu bobl byth, yn rhedw bwrdd y stryd, yr un sy'n henw'n haeddu'r bore i gyd."
+  ],
+  [
+   183.0,
+   "Pwmpau gormod o bobl gen blaen, a mae'r dryse i gyd yn gae, pwmpau i'r drys gyfnod ni, a'r drefn dŵr a'i stryd, yr un sydd heno'n haeddu gorau i gyd."
+  ],
+  [
+   210.0,
+   "Hefyd sydd cerddad hefyd nôl a'i gilydd, nôl a'i gilydd, nôl a'i gilydd."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

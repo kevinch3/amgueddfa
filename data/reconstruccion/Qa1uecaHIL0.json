@@ -1,0 +1,155 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   16.0,
+   "Felly, diolch yn fawr iawn i chi am wneud y cwestiwn, a wrth gwrs, diolch yn fawr iawn i chi am wneud y cwestiwn."
+  ],
+  [
+   136.0,
+   "Roedd yna banad ynddo, a fyddai canad yn dda, yn dda iawn ar ôl y daith hir o Gwener Lleidys, tai ddoe o godio ar y ffurf gweidio syth fes eiddo, lle doedd neb yn hafla'n galed nac unles, ac yn sbïo'n gam os oedd yn haged neu swnio'n Saesneg, No, so ma' galedes! a geiriau hynny oedd,"
+  ],
+  [
+   166.0,
+   "nago'n drysau a chodi gwên a'r hanu maden."
+  ],
+  [
+   171.44,
+   "Ferwyn lôn, gwyntio at y posteli mawrion oedd yn gloeddio, lawn o'r Mina Bethel o Wethras, a'r Cymryn bydd teimlo'n frwd fel cŵn tegan a ffêdd gen y pab."
+  ],
+  [
+   185.04,
+   "Ingles? No, galed!"
+  ],
+  [
+   187.84,
+   "Lwcus yn ôl y clwb hwnnw, neu fyddai'r gringo wedi cael ei smagu lawr i bawb?"
+  ],
+  [
+   193.0,
+   "Chwerthin Cymru'n yn rhy uchel, mod falch nad Saeson oedd eni, ac yn fwy falch byth o Geraint o'r afon gan o ddeu ar ddiwedd yr helyg Melyn Melyn a thingo gwres y dwylo, a sgwrsio hir ar fod pori mewn geiriadur. Er taw bydd! Yna wnaig yngosod mynydd o wasteio dau."
+  ],
+  [
+   223.0,
+   "o'n blaenau, yn panadau yn ôl-afon, yn toddi ar dyfodau sychion, yn codi chwerthin hir dan gwirion, chwerthin pennaeth syth o galon, sydd yn panadau ar hyd ein cystedd, a'u blas yn aros am ugain mlynedd, blas llawn canu, blas llawn croeso."
+  ],
+  [
+   253.0,
+   "Un diwrnod, fe ddoth i'w blasu eto."
+  ],
+  [
+   343.0,
+   "Ydy hi'n fodloni arwain tra bod ni'n pe- pe- yr anthem cenedlaethol ysgwyd hynna? Pawb yn sefyll ar eich traed, yn ymchwil eich mochydiau, ydy dyrenie yn cyfrifion y byddu? Ydy dyrenie?"
+  ],
+  [
+   477.06,
+   "Bum mlwydd oed mi dorrodd ei droed yn bymtheg mi dorrodd ei chalon."
+  ],
+  [
+   503.06,
+   "Unigain a ddair, mi dorrodd o'i air, a thaflu'r ddau hadau."
+  ],
+  [
+   599.06,
+   "I'm burning out, all this pain now"
+  ],
+  [
+   605.06,
+   "It just don't get me down, still up here looking for a new way out"
+  ],
+  [
+   613.06,
+   "I've drained it from the bottom, I'm led to distraction, scratching the surface of life"
+  ],
+  [
+   621.06,
+   "It often really happens but it's easy to keep busy when you tell yourself you're traveling right."
+  ],
+  [
+   628.06,
+   "But it's all right now, all right now, just don't waste your time."
+  ],
+  [
+   636.06,
+   "Keep on second guessing and you'll end up like a weapon that is here to try."
+  ],
+  [
+   643.06,
+   "Fairyland, all night hanging around, it just don't get me down, too popular looking for everywhere, fairyland, it's all night hanging around, all night getting down, it's all night looking for everywhere."
+  ],
+  [
+   673.06,
+   "Diolch yn fawr."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 12,
+  "modelo": 9,
+  "reglas": 0,
+  "vacias": 3
+ }
+}

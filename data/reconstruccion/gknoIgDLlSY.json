@@ -1,0 +1,92 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Dwi'n dy weld yn sefyd rhwng ymyr y tŷ, gwrdd eich trin o holl fryd. Yr o'nant yn anadl, ac yn dŵr i'r clwb i'r holl beirdd."
+  ],
+  [
+   60.0,
+   "Eleni, ddou caras de la misma manera, en cada uno de sus líneas, las"
+  ],
+  [
+   66.34,
+   "imágenes que cuaban en sus sueños, su fe y lo fechó, su lucha cotidiana,"
+  ],
+  [
+   73.42,
+   "encarnados todos en los versos, que vencieron al fin, para este Eisteddfod, la"
+  ],
+  [
+   80.22,
+   "página en blanc, esta transfiguración, donde hablant y poeta fel jugar dou niveles,"
+  ],
+  [
+   87.74,
+   "uno d'estetiedigol, y uno d'interio genal."
+  ],
+  [
+   91.94,
+   "Yn eich un nifell se logra, no'n solo transmitio unigrafs intrusiones individuales,"
+  ],
+  [
+   98.5,
+   "sin'o' que ademas, permite a'n ymdrever un universo rilico de alto poder suggestivo,"
+  ],
+  [
+   104.7,
+   "donde la propia poesia se hace tema objectivo, y a la vez se subjetiviza"
+  ],
+  [
+   111.7,
+   "en la transformacion personal que el autor propone."
+  ],
+  [
+   235.42,
+   "Una lwm soledad, ym mynd i'r anadá, susurra'r ffendo a se'n mynd, enloqueciendo el color, y es una nostalgia, un adios."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 2
+ }
+}

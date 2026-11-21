@@ -1,0 +1,43 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   22.0,
+   "no' abramas penas mi albinos."
+  ],
+  [
+   35.0,
+   "Y forryto de la calle en que nací en que nací"
+  ],
+  [
+   40.0,
+   "fue sentinela de mis promesas de amor promesas de amor"
+  ],
+  [
+   91.0,
+   "Yn carafan a'r nos recordos pasan, con un estelas de emoción. Quiero que sepas, que adelgostas, sepas de mi corazon."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 3
+ }
+}

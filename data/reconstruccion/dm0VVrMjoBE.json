@@ -1,0 +1,85 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Mae yna alaw yn ymder fy hen haen sy'n fy nilyn hyd lwybrau y byd."
+  ],
+  [
+   23.0,
+   "Mae hi yno yn aros am ddannadd, mae hi yno o hyd, o hyd."
+  ],
+  [
+   38.0,
+   "Ond drwy fil o falon ein dyddiau uwchdrybestod a dwndwr ein byd, dim ond adlais ohoni a ddaw i'm cof ni ddaw'r nodau i leddfu'n glir."
+  ],
+  [
+   68.0,
+   "Ond mewn ambell i eiliad ddistŵr, ar y hyd yn oed lwybrau'n cynefin at yr ofn, ac ymysg yr holl ddyfyrdodau mân."
+  ],
+  [
+   96.0,
+   "Fe ddaw'r alaw yn ôl i'r côr."
+  ],
+  [
+   112.0,
+   "Hon yw'r alaw sy'n disgyn o'r nefoedd,"
+  ],
+  [
+   120.0,
+   "Hwn sy'n codi o dynder y môr, hwn yw'r alaw sy'n cyffwrdd fy nghalon i, hwn sy'n nghofran ger y llaw fy nôr."
+  ],
+  [
+   140.0,
+   "Ond yng nghanol ein ffwd anan blinder, wrth dramwy o ymhell dros y llun, fe ddaw weithiau cymalau i'r awyr las, a ddaw hiraeth amdani hi."
+  ],
+  [
+   170.0,
+   "Ond mewn ambell i eiliad y ddistŵr, ar hyd y lwybrau'n cynefin y trodd, ac ymysg yr holl fyfyrdodau ma."
+  ],
+  [
+   200.0,
+   "Fe ddaw'r alaw yn ôl i'r cof, fe ddaw'r alaw yn ôl i'r cof."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

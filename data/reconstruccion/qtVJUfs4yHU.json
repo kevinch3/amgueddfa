@@ -1,0 +1,106 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Entonces, si Juan así lo dispone, Antonio con nosotras."
+  ],
+  [
+   30.0,
+   "Dire frases d'amor, iremos a bailar, beveremos chandon, y a la hora en que las princesas se enamoran, dejaras el salón por quedarnos a solas, hoy, puedo morir de amor, rescata mi corazón, quédate conmigo."
+  ],
+  [
+   60.0,
+   "Hoy puedo morir de amor, rescata mi corazon, quedate conmigo."
+  ],
+  [
+   74.0,
+   "Esta noche tendre un buen auto prestado, una Roma Frances y una flor de tu lado."
+  ],
+  [
+   83.0,
+   "Pero escucho tu voz en el contestador y mi noche de sueños se esfuma."
+  ],
+  [
+   91.0,
+   "Que tienes que estudiar, yo lo puedo entender, cumple años papá, que le vamos a hacer."
+  ],
+  [
+   100.0,
+   "Y tu novio volvió antes de lo previsto esta visto, que hoy no es mi día."
+  ],
+  [
+   108.0,
+   "Porque hoy, puedo morir de amor, rescata mi corazón, quédate conmigo."
+  ],
+  [
+   124.0,
+   "Hoy, puedo morir de amor, rescata mi corazón, quédate conmigo."
+  ],
+  [
+   138.0,
+   "Y les puedes decir a tu novia pap- a tu novia papá y a la universidad que al fin por una vez esta noche,"
+  ],
+  [
+   150.52,
+   "olvidate de todo en mi coche, porque hoy puedo morir de amor."
+  ],
+  [
+   160.52,
+   "Rescata mi corazón, quédate conmigo."
+  ],
+  [
+   168.52,
+   "Hoy puedo morir de amor, rescata mi corazón, quédate conmigo, quédate conmigo, quédate conmigo."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

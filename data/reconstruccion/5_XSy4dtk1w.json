@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   81.64,
+   "Cynegiwyd rhos ar fynteg i, i'r byros i'n ffwrdd, a doi yn ym mhant i, yn y fawrth a'r bwys a'r gwaelod i, nad oedd Dodd yn gallu fy mhormod i'n ddwy, ewch os dewiswn rhos ar fynteg i, i'r byros i'n ffwrdd, a doi yn ym mhant i, yn y fawrth a'r gwaelod i."
+  ],
+  [
+   111.64,
+   "Os a'n gwelwch chi, a gath i isan fy môr wedi'i ddeu, beth ydyw hwnnw os arwent ei hun, os ydoedd am y dŷ, os a'n gwelwch chi, a gath i dyfrio i fy môr wedi'i ddeu, os bydd mam yn fodlon os arwent ei hun,"
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 6,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 5
+ }
+}

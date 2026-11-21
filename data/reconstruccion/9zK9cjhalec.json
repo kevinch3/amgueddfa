@@ -1,0 +1,92 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   48.0,
+   "Callé en perdida, dejó un pedazo de vida y se marchó."
+  ],
+  [
+   65.4,
+   "Primero hay que saber sufrir, después amar, después partir, y al fin andar sin pensamientos."
+  ],
+  [
+   76.6,
+   "Perffumes d'aranjou en fflôr, promesas fanas o un amôr, que se escaparon con el viento."
+  ],
+  [
+   84.6,
+   "Después, qué importará el después, toda mi vida es el ayer, que me detiene en el pasado."
+  ],
+  [
+   94.6,
+   "Eterna y vieja juventud, que me ha dejado acobardado."
+  ],
+  [
+   102.6,
+   "Como un pajaro sin luz, que le habrán hecho mis manos, que le habrán hecho para dejarle en el pecho tanto ddolor, ddolor de vieja arboleda."
+  ],
+  [
+   132.6,
+   "de canción de esquina con un pedaso de vida, un aranjo en flor."
+  ],
+  [
+   148.6,
+   "Primero hay que saber sufrir, después amar, después partir, y al final andar sin pensamientos."
+  ],
+  [
+   158.6,
+   "Perffume d'aranjou en fflon, promesas fanas de un amor, que se escaparon con el viento."
+  ],
+  [
+   166.6,
+   "Después, qué importará el después, toda mi vida es el ayer, que me detiene en el pasado."
+  ],
+  [
+   176.6,
+   "Eternau vieja cuentum, que me ha dejado acubadado, como un pájaro sin luz."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

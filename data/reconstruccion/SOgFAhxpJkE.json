@@ -1,0 +1,43 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "A'i sêr llond yr awyr, a'i ddeuadd yn y pwynt, fe aneg yr oedd dorri'n ffair i bawb yn barhau'n wely gwraig."
+  ],
+  [
+   50.0,
+   "Mae'r noson yn dechrau dod, mae'r dew yn cysgu'n ddrwg."
+  ],
+  [
+   69.0,
+   "Pennaeth i beiaid o'dd is ar dôn y llety llw, ac o'dd ei farn o syr Llundain ar wyneb arwyddo'dd y môr."
+  ],
+  [
+   89.0,
+   "Y noson ddydd yn dŵr dros er mwyn teimlo'r coed, oedd dwyrain felly'n berffaith, feddai'n ddigren i'r coed i blagu'n fwy."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 2
+ }
+}

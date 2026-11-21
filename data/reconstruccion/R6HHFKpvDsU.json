@@ -1,0 +1,50 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "Un ar ddau ar y môr, oedd hi'n beilio ei gair o ddyn, yn gwyliau'r drefn."
+  ],
+  [
+   129.0,
+   "Ei enw e sydd y dyst i'r dyffrynnoedd, ond arna chdi, yna ei pridd."
+  ],
+  [
+   149.0,
+   "Cadarnach na'r creigiau yw ei wirionedd, a'i gariad lles a lliw na'i ffôn, o henna i'r tŷ genedlaeth."
+  ],
+  [
+   179.0,
+   "Cynwch ei fawr e, mwy mwy mwy dda yw'r annwyddiad, mae'n dda, mae'n dda yw'r annwyddiad."
+  ],
+  [
+   209.0,
+   "Diolch yn fawr."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

@@ -1,0 +1,50 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   60.0,
+   "Rwy'n samu'r, pob uchaf, i'r person sy'n ysgrifennu'r poema antigwadd Capisa Rholal, yn sefydlonol o un sy'n dod yn ôl, i'r person sy'n ymddangos yna."
+  ],
+  [
+   175.0,
+   "El ha cruzado nuestra meseta caballo, el andado es un cadro, nuestros bases residen en Bariloche, lo tenemos permanentemente sobre nuestro escenario, y hoy es un placer tenerlo como rueda ganador Anandres Evans, nacido yn Trevelin, yn Llanfairpwll."
+  ],
+  [
+   306.0,
+   "Hoy tu puerta esta atravada, cual si fuera tu destino, cuidar la biblia cerrada y el calis fach o divino. Uno que muriou."
+  ],
+  [
+   356.0,
+   "I be' ti'n swnio'n dda os ti'n gwybod be?"
+  ],
+  [
+   543.02,
+   "Para' este final, decir la verdad ante el muro, la poesia como arma cargada de futuro, pero tan sentida por cad uno de nosotros, ante esta maravillosa herencia que nos llena de orgullo, que las alas y disierda nos sigan creciendo a todos, en la búsqueda maravillosa de arte en todas sus expresiones."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 11,
+  "modelo": 8,
+  "reglas": 0,
+  "vacias": 3
+ }
+}

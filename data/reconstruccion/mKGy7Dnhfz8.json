@@ -1,0 +1,36 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   293.42,
+   "Rhoddir Cymru ar Wladfa yn un o mewn tân."
+  ],
+  [
+   306.42,
+   "Cysgallt iest y cipoedd paned o dyn, a'i dorri'n bob serched o dan hen groes y dyn."
+  ],
+  [
+   350.42,
+   "Rhoddir Cymru ar raddfa, yn un o mewn tân. Rhoddir Cymru ar raddfa, yn un o mewn, un o mewn tân."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 7,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 3
+ }
+}

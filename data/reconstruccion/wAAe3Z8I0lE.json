@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   81.84,
+   "Trafeddwn ni nant a'i enw fendirai, wenir o'i ddoe, o'r holl ffordd o'i dda, wenir o'i dda, o'i ffordd o'i da."
+  ],
+  [
+   188.84,
+   "Mae'n mae'n mae'n dda, uwch a ŵyr iawn. Mae'n mae'n mae'n dda, uwch a ŵyr iawn."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 2
+ }
+}

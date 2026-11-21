@@ -1,0 +1,92 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "I Patagonia."
+  ],
+  [
+   60.0,
+   "Er gwaetha mawr am ofer, be dwi am ofer."
+  ],
+  [
+   316.02,
+   "Gyddios de Bendiga. Dan ni'n y gasolwyr chwe deg pedwar, parti teulu, yn gyntaf ar y llwyfan, teulu Mary a Daniel Iwas, dan ni'n Gyddios de Bendiga."
+  ],
+  [
+   346.02,
+   "So, os yw'r cwraddod wedi ychwanegu, ysgrifennuwn yn gyntaf i'r Family Medi, Daniel Evans, God Bless You."
+  ],
+  [
+   608.84,
+   "Gloria canteros al redentor, que por fasoros quiso morir, y que la gracia del Salvador, siempre divina nuestro vivir."
+  ],
+  [
+   657.34,
+   "Ni oedd ganddem os ar redentor, ceffor nos os gisio fory, de la gracia del salvador, siempre diga nuesdo fi."
+  ],
+  [
+   682.34,
+   "Nodia cantemos al redentor, que por nosotros quiso morir, y que la gracia del Salvador, siempre diga nuestro fin."
+  ],
+  [
+   742.34,
+   "yw ein baraveinyddion, a'n hollol y' ni'n defnyddio'n, fel yma fe yw'n ni'n neud defnydd gwir, ac nac arwain ni'n bromedigaeth, neith yr gwael ni adnodd drwg, a'n ni'n seilio'n tŷ'n ddeyrnas arnydd."
+  ],
+  [
+   1052.02,
+   "Ya le estoy esperando, no le puedo llamarle más que el mundo que esconde en mi vientre sur."
+  ],
+  [
+   1063.02,
+   "Cuando nazca mi amuro, que me encuentre cantando, canto mientras me olvido de esta vida tan sola que a mí le tocó."
+  ],
+  [
+   1196.9,
+   "Felly, hwyl rŵan."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 21,
+  "modelo": 11,
+  "reglas": 0,
+  "vacias": 10
+ }
+}

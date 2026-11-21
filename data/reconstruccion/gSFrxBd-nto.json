@@ -1,0 +1,71 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Dwi'n cofio gweld y Lleuad yn wyn fel yr haen, a'r tywod fel eira yn y golau."
+  ],
+  [
+   29.0,
+   "Dy law di yn dy llaw i'r oer, a dwi di fel trwy'n esgifo, ond dyma be dwi'n cofio o lau, cofio dy wyneb yn edrych ar ddwyneb, dy lygaid yn edrych i fy llyfr."
+  ],
+  [
+   59.0,
+   "Dy law ar fy sgwîn, a'th galon fy mhoced, ces sail fy ngôt."
+  ],
+  [
+   76.0,
+   "Duw mellach, ddim yn nefoedd, yn enwedig yn yr haf, ond roedd dy gwmni di yn ei wella."
+  ],
+  [
+   99.0,
+   "Ond chydig a wyddwn i, bod y tywydd ar dy gloi, am mod i ar fin dy bod di, cofio dy Wyneb, yn edrych ar dy wyneb."
+  ],
+  [
+   123.0,
+   "Dylygaid yn edrych i fy llygaid. Dyfalw ar fy sgwyd, a'th galon ym mhoced cesa' yn fy not."
+  ],
+  [
+   153.0,
+   "Nid a fi benllech eto, mae'n hawdd wedi mynd, a'r ceir mynd yn ôl dros Bontmenau, a'r gadair am weithio'r stîn, a gwrnaf oedi byth yn ôl, ond eto, mae'n fawr a mi fyddai."
+  ],
+  [
+   181.4,
+   "Cofio dy Wyneb, yn edrych ar dy Wyneb, dy legaid yn edrych i fy llegaid."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

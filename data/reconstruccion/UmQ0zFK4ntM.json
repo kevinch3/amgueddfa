@@ -1,0 +1,57 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "arian yn fy nghôd, a phob arniaid a'i drosodd, a pawb yn canu'n llwod, mi bron a fwth yn unig, heb ddim o flaen ei ddôr, ond creigiau o brydain."
+  ],
+  [
+   60.0,
+   "Larwn nath hwnna i gwynt y môr."
+  ],
+  [
+   69.28,
+   "Pan fwyf yn hen a phan llys, am gwaed yn llifo'n oer."
+  ],
+  [
+   99.28,
+   "nôl am calon a gyflamu wrth ddwyliad y cod i'r lloel bydd y gobaith ddim bryd hynny mewn bwthyn sydd a'i ddod at creigiau Aberdaron a ffonau gwyllt."
+  ],
+  [
+   155.02,
+   "A dlais o'r hen wrddryfel, a wybu fy hynau'n gynt, a chan am yr hen amgylch wrth syllu diar y ddôr."
+  ],
+  [
+   177.02,
+   "Ar y creigiau Aberdaron a thôn a'i wyllt y môr, a thôn a'i gwyllt, wyllt y môr."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

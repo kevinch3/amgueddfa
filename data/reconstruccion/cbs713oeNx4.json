@@ -1,0 +1,43 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   47.0,
+   "Nath bod wedd, wedd y lwc o'm trin. Nath bod wedd, wedd y lwc o'm trin."
+  ],
+  [
+   70.0,
+   "Pan fyw sy'n fawr i'n feter i, Pen tra, hen lôn, le ffordd wna i, Pen tra, hen lôn, le ffordd wna i."
+  ],
+  [
+   248.0,
+   "Am bo' na fanerwm, iddi warchod bennod Am bo' na fanerws, iddi sylw di. Maes nw'n belais yn digon I chwalu'r ffordd ma' creuodd Am bo' na fanerad ar di."
+  ],
+  [
+   351.84,
+   "Mae swnder a'i symud nôl, i chwalu'r coes yn leol, am ŵr abandel adar dydd, am ŵr abandel adar dydd."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 7,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 3
+ }
+}

@@ -1,0 +1,99 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Dwi'n cofio weld y lleia yn wyn fel yr haul, a'r tŵr yn y ddeira yn y golau."
+  ],
+  [
+   29.96,
+   "Dy law di yn fy llaw i'n oer a thrwy'n di fel drwy'n esgimôr ond dyma be dwi'n cofio o'r gora' ddau."
+  ],
+  [
+   40.96,
+   "Dwi'n cofio dy fwyne yn edrych ar fy fwyne, dy lygaid yn edrych i fy llygaid."
+  ],
+  [
+   54.96,
+   "Dy law ar fy ysgwyd, a'th galon ym mhoced y ceseil fy ngwt."
+  ],
+  [
+   70.64,
+   "Dyw benllech ddim yn nefoedd, nenwai ddig yn yr ha, ond rhaid y cwmni tir ei gwella."
+  ],
+  [
+   81.72,
+   "Ond chydig awydd o'n i, oedd y tywydd ar droi, a mod i ar fin dy golli di."
+  ],
+  [
+   94.72,
+   "Cofiodd o fwy neb yn edrych ar fy wyneb, dy lygaid yn edrych i fy llygaid."
+  ],
+  [
+   107.72,
+   "Dy law ar foes hwyr, aeth galon ym mhoced y cesail mewn ffordd."
+  ],
+  [
+   120.72,
+   "Gyda fi bynlle eto, ma'r hawl wedi mynd, a'r ceir yn mynd yn ôl dros gwynt fy nain, ac a'r dail a wnaeth ddysgu, ac wnna ddoedd i byth yn ôl, ond eto pan ddaw'r haf, oedd mi'n dda."
+  ],
+  [
+   150.72,
+   "Cofiodd o fwy neb, yn edrych arno fo fwy neb, dylygaid yn edrych i fy llygaid."
+  ],
+  [
+   163.72,
+   "Dy law ar ôl o esgwyd, a'th galon ym mhonged lle sail fy nghod. Cwmiodd o fwy neb yn edrych arno fwy neb, dy lygaid yn edrych i fi fy llygaid."
+  ],
+  [
+   189.72,
+   "Dy law ar fy ysgwyd, a'th galon yng nghogedd ffesedd yng ngho- dwi'n cofio dy fwy neb."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 3,
+  "reglas": 1,
+  "vacias": 1
+ }
+}

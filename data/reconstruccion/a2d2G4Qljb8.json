@@ -1,0 +1,50 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   25.5,
+   "Iesu, goleu ni'r byd gofian ni i nai, ti yw'r gwir ar y ddawn gadw i nai."
+  ],
+  [
+   36.02,
+   "Christ yw ein cryf, goleu a ni."
+  ],
+  [
+   46.02,
+   "Mae'r mis Meddyliw, derodd o lefi'r gwlad bach heddiw, tir nes yw'r glan, rhodd y ddang i ni."
+  ],
+  [
+   64.46,
+   "Hen am gwmpas, teithio'r gariad. Ar draws y gweddill, dyrrodd yr oer, a bwlein un o fi."
+  ],
+  [
+   138.66,
+   "Cerdd a bwmpias, taith a ddariad, a thraws a gwedyn, dyr o Fearn ac o'n rheiny, a'r ddisgynuw, gyr o ddwrnau i'w radda heddiw, dilys becan, rhodd y dail."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

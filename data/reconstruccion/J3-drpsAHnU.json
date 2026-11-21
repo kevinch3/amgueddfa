@@ -1,0 +1,64 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   26.2,
+   "Mandan muchas felicitaciones los integrantes de Scholargendre de Trelew."
+  ],
+  [
+   30.0,
+   "gadeirydd Cylch Cymraeg Trelew. Clap mawr iddi hi, mandan mwy o"
+  ],
+  [
+   35.28,
+   "ffelicitaciy, los integrantiaeth y ysgol erthynged y Trelew."
+  ],
+  [
+   60.0,
+   "Ie mi o'dd e'n barod Bryn Grŵn."
+  ],
+  [
+   118.64,
+   "Mae Iesu sy'n fy ngwlad i ddebyg y ddau saent, i'r gwmpas cariad byr a chled, a phop i'w meddwl ddaent."
+  ],
+  [
+   140.64,
+   "Am fy nghefn a fi, am fy anog i, canaf fy maint yn fy gwaith, a gwaed yn cael fy hun."
+  ],
+  [
+   146.2,
+   "Amén."
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 2
+ }
+}

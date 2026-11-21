@@ -1,0 +1,50 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   80.0,
+   "Pam oeddet ti'n siarad dychrynnau bob blaid, yn wir oedd bob coeden yn ystwythu'r blaid. Ond eto fe allet ti siarad ffordd fwy efo'r adar a'r coesgoch a'r defaid a'r ŵyn."
+  ],
+  [
+   109.0,
+   "Ti fuost yn gymorth i Arthur sawl blaen, yn gleddu dros Gymru a tharian i'r iau."
+  ],
+  [
+   132.0,
+   "A phan oedd yr heulwen yn machlud yr ardd Caedd arian caled hwch ac lliwiodd y ward."
+  ],
+  [
+   162.0,
+   "Pan seiniau trwmpedig y filwyr neu gynt, a dadwrdd a drymiau yn llenwi y gwynt, fe roedd e mor sicr a thoriad y wawr, mond wedd i mi Myrddin ble rwyt ti yn awr."
+  ],
+  [
+   190.0,
+   "Gwedd wyt ti yn dda, gwedd wyt ti yn dda."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

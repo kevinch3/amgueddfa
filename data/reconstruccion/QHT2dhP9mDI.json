@@ -1,0 +1,64 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Dwi am ganu y geiriau gan Nantlais Evans, Cant a Hanner ar y dôn Llanuwllyn."
+  ],
+  [
+   30.0,
+   "O ar y glwyd a wyliais taeth ein tadau, dros donnau'r môr oedd â gwastadau'r baeth,"
+  ],
+  [
+   54.0,
+   "O wadd i â beth, a twyll lannau'r gamwy, dyno heddiw arnom ni, o ddeuglur daw i neb ydi."
+  ],
+  [
+   82.0,
+   "Tydi, a roddais di ddim tobaith gryf, ym mhlwad y lle teyrnasau dy heddan gyfiawn."
+  ],
+  [
+   101.0,
+   "Am ryddid i'r ysbryd ac i'r hen iaith, dyro heddiw arnom blant, eto y genid ysbryd y sant."
+  ],
+  [
+   131.0,
+   "Cadew ar y fam flaen o'i phant a haner, fel y gwarchoddaest gynt a fynt a'i gant a llewar y chaeaf llwyr a wynebar yn omni."
+  ],
+  [
+   161.0,
+   "Dy'r ofen dy'th daden wen, yma dan dde heol yn ên."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

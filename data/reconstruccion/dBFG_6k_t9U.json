@@ -1,0 +1,78 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "a'i waredigaeth ymysg yr holl genhedloedd, bydded i'r bobloedd dyfoli o Dduw, bydded i'r holl bobloedd dyfoli di, bydded i'r cenhedloedd lawenhau a gorfoleddu, oherwydd yr wyt ti'n barn i pobloedd yn gywir, ac yn arwain cenhedloedd ar ddaear, bydded i'r bobloedd dyfoli o Dduw, bydded i'r"
+  ],
+  [
+   59.98,
+   "Yn holl bobloedd dy foli di, roes y ddaear ei chnwd, Duw, ein Duw ni, a'n bendithiwr. Bendithiodd Duw ni, bydded holl gyrraedd yr ddaear yn ei ofn ni. Amen."
+  ],
+  [
+   89.98,
+   "I ofyn wrth feddwl am oll waith dy dwylo di, yn hanes hyn a rhydd a dda dan dyfod drwy'r lle a dod, dy rym a wela fi."
+  ],
+  [
+   119.98,
+   "Mor fawr i ti, mor fawr i ti, mor fawr i ti, dan bennaeth awgrymu ydi di, mor fawr i ti, mor fawr i ti, mor fawr i ti."
+  ],
+  [
+   149.98,
+   "a'r ffordd mae'n iawn, tu hwnt i dde a chdi, ar groeso'i fod e'n clywed mae di'n gware, i fannau mae, groeso fe'n fwy geni."
+  ],
+  [
+   174.98,
+   "Canfed a'i ddon, byddai'n mwy duw i ti, mor fawr i ti, mor fawr i ti."
+  ],
+  [
+   204.98,
+   "Yn mynydd Crist, angloedd efyd ei goleu, anghywir idde mo'r llawen medda fi. Yng ngeni'r enw, nawnt mewn farchedigaeth, dan datgan ni fe miwn mor fawr i ti."
+  ],
+  [
+   234.98,
+   "Can ben a'i can, be arnwyd i wyt ti, mor fawr wyt ti, mor fawr wyt ti."
+  ],
+  [
+   249.48,
+   "Can be' na'i can be' o'n nwy diw i ti, mor fawr wyt ti, mor fawr wyt ti."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 6,
+  "modelo": 5,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

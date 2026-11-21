@@ -1,0 +1,64 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   100.0,
+   "A wnaeth yr yma bendita, gesia ni'n ddianw, tesalia."
+  ],
+  [
+   150.0,
+   "Os yw'r nofel yn serad ar y bennod, yna ydy'r samosa yn sŵn cwbana."
+  ],
+  [
+   170.32,
+   "Os yw'r cyswfft yna'n fanno, yna ydy'r fanno yn fflamio distansiau."
+  ],
+  [
+   357.7,
+   "I me'n veras inutilemente inconscientemente la-la-la-la-la."
+  ],
+  [
+   369.7,
+   "Yo pizarre tu cama de rosas y no mariposas la-la-la-la-la."
+  ],
+  [
+   382.18,
+   "Resolverai'r awyren ddim am drosodd, reswolverai'r cosedd, y soledad, y soledad, y soledad."
+  ],
+  [
+   412.18,
+   "Yn soledad, yn soledad."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 16,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 12
+ }
+}

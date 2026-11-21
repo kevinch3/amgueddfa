@@ -1,0 +1,57 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Yn awr, Cyferhir Prifardd Eisteddfod y Wladfa dwy fil ag wyth, gan Monica Pitchell."
+  ],
+  [
+   10.0,
+   "Egin berth ar wawr a geni, i'w awenai, cerdd y bardd, hanes tyll i'r wlad lawer, a wna'r smotyn ddu yn hardd."
+  ],
+  [
+   30.0,
+   "Promina Herrera a Valeria Lewis fu'n hyfforddi'r parti dawns o ysgol peirianyddiaeth Lleuw a fydd nawr yn anghredennu'r pîn bach."
+  ],
+  [
+   180.0,
+   "Nawr, cyflwynir rôl i'r Prifardd gan Llywodraeth Dalaith Triwbwt."
+  ],
+  [
+   210.0,
+   "A dyna ni, wedi cyrraedd diwedd y seremoni hon."
+  ],
+  [
+   238.0,
+   "Diolch i chi am fod yn gynulleidfa mor cadarnog. Does dim ar ôl i ni wneud yn awr ond gwahodd yr orsedd, a pawb sydd wedi cymryd rhan i adael y llwyfan. Diolch yn fawr."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 6,
+  "modelo": 3,
+  "reglas": 1,
+  "vacias": 2
+ }
+}

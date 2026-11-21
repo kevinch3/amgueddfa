@@ -1,0 +1,64 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Gwelais lindan lasgwyr faben,"
+  ],
+  [
+   24.0,
+   "Hoffais ef ei hun ddisgwyl, Ac er tlesed glas yr wybren, Tlesach oed o dan y dŵr."
+  ],
+  [
+   52.0,
+   "Ar ei lan, yn grym, a'i gwyrddion coel, a miwsig yn ei ddail, blagent fel druan, medd heirddion."
+  ],
+  [
+   110.0,
+   "Toc y ffyrdd a iau a mawr, ac ymylwr gwir y tir, ac a wneu'r rhain fy nghalon am hir heddwd am yr clir."
+  ],
+  [
+   140.0,
+   "Sefais ar ei lonyn y sir, a gwrandewais rhy anwyl, fel ben disgwyl glawed y miwsig."
+  ],
+  [
+   166.0,
+   "I'w gyson o dan y dŵr, fel bendisglwyl glawedd liwsig,"
+  ],
+  [
+   194.0,
+   "Yn y dau lw dan y dŵr."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

@@ -1,0 +1,64 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   27.0,
+   "Cysgodif am lentyn tlws. Cei cysgu tan y bore."
+  ],
+  [
+   57.0,
+   "O'r un, o'r un, hwy yn hwyf ym mhlentyn tlos, wedi cau a chloi y ddrws, hwy yn hwyf ym mhlentyn tlos, cei cysgu tân y bôn."
+  ],
+  [
+   87.0,
+   "Cei gysgu tan a bore orê."
+  ],
+  [
+   102.0,
+   "Pwy a'r gwefan bach a'n glan, cysgu mai a rad a'r man."
+  ],
+  [
+   114.0,
+   "Hwyl a hwyl ym Mharchanglan, cei cysgu tan y bore, cei cysgu tan y bore."
+  ],
+  [
+   136.0,
+   "Hwyl yn, hwyl fy nghariad i, ceffyl brennan dam i'r lu. Hwyl yn, hwyl fy nghariad i, cei cysgu tan y bore."
+  ],
+  [
+   159.0,
+   "Ceir cysgu tan y bwryn, bwryn"
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   159.5,
+   "One win, two die. Si benni ad yn barod? Conrad yr Organisacion de Curadur William Roberts, one win, two die."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 6,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 5
+ }
+}

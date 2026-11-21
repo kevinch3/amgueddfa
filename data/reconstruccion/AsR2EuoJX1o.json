@@ -1,0 +1,36 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   75.8,
+   "Er sa'th i'w serth- er sa'th i'w serth- yw'r gorffan- yw'r gorffan- yw'r bobl di- yw'r bobl di- yn fwylo'n ha- yn."
+  ],
+  [
+   127.66,
+   "Yr serth i'r ser, y serth i'r ser, ag yr gwyneb i'r hael, ag ein bod ni'n tîm, ein bod ni'n tîm, ein gwyneb i'r hael."
+  ],
+  [
+   154.14,
+   "Bleser di'r stre- bleser di'r stre- ym Mhorgannwg ym Mhorgannwg ym Mhorgannwg i ti, er mwyn i'r haul i'r haul."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

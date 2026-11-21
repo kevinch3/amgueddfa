@@ -1,0 +1,162 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Afon i ddigesau. Croeso i'r rhaglen Soniando Pwrw'n Eisteddfod dwy fil a deuddeg. Mae mae gennym bobl o'r dyffryn yma a mae gennym ni bobl o'r Andes ond yn gyntaf i gyd hoffwn i gyflwyno'r beirniad ein beirniad arbennig iawn heddiw yr gantores enwocaf,"
+  ],
+  [
+   30.0,
+   "yn y byd. Marged ap cynnan ladegrin. Hoffwn i chi gyflwyno marged ap cynnan ladegrin."
+  ],
+  [
+   90.0,
+   "Bŵt bach jîn hen. So s'gyn am bys, met s'gyn am bys, rownd am tŷ, o'n nhw'n myn' bys."
+  ],
+  [
+   107.0,
+   "Diolch yn fawr iawn, Marged. Hoffwn i chi eistedd ychydig bach mwy ymlaen os gwelwch yn dda."
+  ],
+  [
+   120.0,
+   "Ac yn awr, bobl, y rhan bwysicaf y cystadlu, ac yn gyntaf yn yma heno, mae'r merched o'r Andes."
+  ],
+  [
+   146.84,
+   "A ble dych chi'n dod ohono ferched? O Brynamlwg, o Ysgely, o Rwta se deng dau un, Mynydd Llwyd, Brynamlwg, Afon Fawr. O llawer o lefydd gwahanol."
+  ],
+  [
+   165.0,
+   "A be di enw'ch grŵp? Merched y Machlud. O, Merched y Machlud. A be dach chi'n mynd i ganu ni heno, Ferched y Machlud? Calon Lân. O, yr hen ffefryn, Calon Lân. Hoffwn chi i gyd roi cymeradwyaeth arall i Merched y Machlud."
+  ],
+  [
+   195.0,
+   "Nid wyf yn gofyn bywyd moyn bys, aur yr ugain berlain mân, ond mi wyf am galon hapus, calon onest, calon lân."
+  ],
+  [
+   219.0,
+   "Calon lân yn llawn daioni, teg ag iwn ar lili'n gloch, dim ond calon lân a chanu, canu'r dydd a chanu'r nos."
+  ],
+  [
+   274.0,
+   "Dwi'm yn gofyn, ma' dwi'n goethus, a'i ddim byd yn serflau mlan. So dwi'n lwyfan, nadw'm hapus, nadw'm os dwi'n galw'n lan. Nadw'm laner, na'm maeoni, deg a piw lan yw'r nos. Dwi'm yn malw, nadw'm tani, na neb di dachau i'r nos."
+  ],
+  [
+   364.0,
+   "Dwi'n mynd i noddi bywyd moethus, ar finnau perlau man, gofyn mwy na galon hapus, cael onest galon man. Sbwyd a fore fyn y linell, swydd neb ar edrych tan, ar ei ryw e rwy'n mynd neis lan, dod i mi galon man. Le- le- le- le- le, a'r honnan."
+  ],
+  [
+   424.0,
+   "Diddorol iawn mae'n rhaid dweud, ond yn awr, y foment bwysig, y feirniadaeth,"
+  ],
+  [
+   450.08,
+   "Margret ap Cynan la de Green. Ysgydwch chi. Dwi wedi canu'r gân ma ers blynyddoedd ond dwi erioed wedi clywed rhywbeth fel hwn. Perfformiad fel hwn am y tro yma a dim ond am y tro nesa."
+  ],
+  [
+   480.08,
+   "tro'ma, dych chi'n cael dau."
+  ],
+  [
+   487.08,
+   "Dau. Wrth gwrs. Dau. Wrth gwrs. Dim ond dau. Dydy hyn ddim yn deg. Pam? Dan ni wedi cael"
+  ],
+  [
+   509.96,
+   "Cam. Dan ni'n haeddu mwy. Mwy. Mwy beth? Mwy. Mwy beth? Mae hi'n warthus. Justitia. Beth ydi Justitia?"
+  ],
+  [
+   584.92,
+   "Sobor na. Sobor na. Fi. Marged ap cunan la degris. Ie. Rhag eich cwilydd chi. Dach chi'n cael y stack."
+  ],
+  [
+   603.22,
+   "Felly, boneddigion a boneddigesau, mae'r dyffryn yn cael ei des- cael ei fficario."
+  ],
+  [
+   624.9,
+   "Felly, bobl, enillwyr, soniando porwni Eisteddfod dwy fil a deuddeg, yw, Merched y Machlud!"
+  ],
+  [
+   684.9,
+   "Op, op, op, op, op a'n gangnam style, gangnam style"
+  ],
+  [
+   695.9,
+   "Hey, sexy lady! Op, op, op, op, op a'n gangnam style Hey, sexy lady!"
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 12,
+  "modelo": 11,
+  "reglas": 1,
+  "vacias": 0
+ }
+}

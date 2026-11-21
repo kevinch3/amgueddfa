@@ -1,0 +1,85 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   60.0,
+   "Gyda phwy nos di, gewch chi dawnsio yn gyfiawn i gyfrannu."
+  ],
+  [
+   70.0,
+   "Pnawn da sy'n caffi, dewch i'r man sôn i, awn ni i weld e'n answyl i."
+  ],
+  [
+   82.0,
+   "Dewch i ddawnsio'n gynnon ni, gerdd a thwylo os di, dewch i ddawnsio'n eniwm bron i gyfnod ni."
+  ],
+  [
+   396.0,
+   "Dyna'r awst, dyna'r blic, dyna'r siant, dyna'r meddws, dyna'r fol, dyna'r cefn i, dyna'r meddws, dyna'r fol, dyna'r cefn i."
+  ],
+  [
+   465.0,
+   "Bydd yn dydd, bydd yn dydd."
+  ],
+  [
+   525.0,
+   "The wind be always at your side, may the sun shine more upon your head, the rain falls on top of your head."
+  ],
+  [
+   549.0,
+   "Until we meet again, until we meet again, may glory long for you in the heart of this land."
+  ],
+  [
+   599.0,
+   "Until we meet again, until we meet again, may more of us, more young and more lost, hold these hands."
+  ],
+  [
+   622.0,
+   "Until we meet again, until we meet again, may your love hold you in the palm of his hand."
+  ],
+  [
+   792.64,
+   "Dilyn y corff o'r enw'r asgwrn, fe ddisgrision nw'n amigos, o enw'r seren o'r asgwrn, fe'n nw'r bras nw'n ddianclo'n fiennog,"
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 21,
+  "modelo": 8,
+  "reglas": 0,
+  "vacias": 13
+ }
+}

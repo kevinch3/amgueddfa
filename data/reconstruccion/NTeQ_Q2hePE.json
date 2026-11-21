@@ -1,0 +1,85 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Hw, hw. Neu di'n nghofio fi, pan ddaw'r gwynt o'r de, a thrwy y ceuau gwenith, ceuad goffa'r haul, dan ei gwmwl blu."
+  ],
+  [
+   30.0,
+   "Unig rwydro'r ceuau aur."
+  ],
+  [
+   36.0,
+   "Felly aeth a'i serch a gwrweddodd hi."
+  ],
+  [
+   43.0,
+   "Ymhlith y ceiau gwenith rhedodd yntau i lawr drwy gydynnau gwallt."
+  ],
+  [
+   54.0,
+   "Ymhlith y ceiau aur. Neu di ngharu, neu di gadw'r holl. Ymhlith y ceiau gwenith, ceuad goffa'r haul, dal neu gwbl blin, i ni grwydro'r ceiau aur."
+  ],
+  [
+   84.0,
+   "Nes i ddim gadw pob addewid, fe gafodd ambell un ei thorri, ond fewn am bob dydd sydd ar ôl, fe gaw grwydro'r caeau aur, fe gaw grwydro'r caeau aur."
+  ],
+  [
+   114.0,
+   "Nes i ddim gadw pob addewid"
+  ],
+  [
+   142.2,
+   "Fe gafodd ymbell i'n ei thorri, ond fe wna'm bob dydd sydd ar ôl. Fe gaw grwydro'r caeau aur, fe gaw grwydro'r caeau aur."
+  ],
+  [
+   163.2,
+   "Mae y blynyddoedd nawr, er yr hafau hi, ymhlith y caeau gwenith, ac mae'r plant ar gam wrth i'r haul fynd lawr, tu draw i'r caeau aur, ag fe gofid i pan ddaw'r gwynt o'r de."
+  ],
+  [
+   193.2,
+   "A thrwy y caeau gwenith, caead goch ar haul dan ei gwmwl blin, i ni grwydro'r caeau aur."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

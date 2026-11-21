@@ -1,0 +1,22 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Gas y leiaeth wyth ddeg dawns Llangadfan Fach, competensia wtshenta dansa Llangadfan Fach, prifio partisipante grŵp cyntaf ar y llwyfan her sidiol, siberniad yn barod, her sidiol."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 3
+ }
+}

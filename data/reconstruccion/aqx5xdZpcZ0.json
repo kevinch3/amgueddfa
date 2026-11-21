@@ -1,0 +1,92 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Andrés Evans, próximo participante para la misma competencia, Andrés Evans."
+  ],
+  [
+   8.9,
+   "Bernat Marot, disfrutamos de la interpretación de Andrés."
+  ],
+  [
+   30.0,
+   "Llai syfrid ei raddau'r ras sydd yn gweithio i ddehongliadau yn y llwybrau fy mab a duw, y lladur yma yn nodda bach."
+  ],
+  [
+   54.0,
+   "I olchi y blaen y dydd a allodd yn y follol, y rhedodd ei gwaed yn y ffryddiau a chisel."
+  ],
+  [
+   70.16,
+   "Halleluja i'r oen, bod y gasaddain i'n paredw, nôl y groesinion a ddalen y drydach hefyd ni a'u molw."
+  ],
+  [
+   86.8,
+   "Ar ran y gae a chith yr yn cyfiawn buddugoliaeth, ysbeiliodd y holl allur ty gwell wch a'r unig waith."
+  ],
+  [
+   103.28,
+   "Holl filwyr a fy groes, gant yn y ddod a'n y nefedd, feu hardegwain y hwynestigid i berffaith o'r afaled."
+  ],
+  [
+   136.5,
+   "¡Nol tíriu emiach, ir t'agüel anedai!"
+  ],
+  [
+   144.0,
+   "Niseiuneigloch arreirai dhtaladai"
+  ],
+  [
+   153.2,
+   "Tuinevol ardaloi veimol unbithbethol"
+  ],
+  [
+   161.5,
+   "Urthodio arlanda rabonadraguithal"
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

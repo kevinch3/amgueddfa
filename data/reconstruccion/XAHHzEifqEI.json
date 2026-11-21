@@ -1,0 +1,50 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "and down the mountain side, the sun has gone, and all the roses have withered."
+  ],
+  [
+   59.6,
+   "And while we snow, it's time we give in sunshine or in shadow."
+  ],
+  [
+   77.8,
+   "Oh Anniboy, oh Anniboy, I love you so."
+  ],
+  [
+   119.8,
+   "a ni, a ni am serth anafedder ffor' mi, a nais ag ni ddawn so fiwtredd opon ni,"
+  ],
+  [
+   168.0,
+   "And I shall sleep in peace until you come to me."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

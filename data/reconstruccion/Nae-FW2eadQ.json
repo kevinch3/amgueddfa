@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   118.0,
+   "Mae'n cynnig synnwyr i ni, teg iawn sy'n fawr iawn."
+  ],
+  [
+   194.0,
+   "I'n ôl sy'n staf, i'n ôl sy'n stafu."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

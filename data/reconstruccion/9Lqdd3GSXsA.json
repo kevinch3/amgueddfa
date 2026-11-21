@@ -1,0 +1,85 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Nir, dan ni'n yy sgynno ni ddim amser i gweithio ar gyfer y y gestadleuaeth arall. Maen nhw'n cyfieithu. Oes bosib dechrau? Diolch yn fawr. Siwan."
+  ],
+  [
+   28.4,
+   "Ga i jyst deud cyn i ni gychwyn, yym, ar ran Cymdeithas Cymru Arianyn, yym, llongyfarchiadau, pwyllgor y Steddfod a'r drefnu Steddfod eleni, felicitaciones para el comision de- yy Eisteddfod, brawg ynys ar Estanio, yym, dwi'n falch iawn o fod yma, mae'n braf fod yn ôl."
+  ],
+  [
+   46.4,
+   "yn ôl. Dwi'n gwybod yym ma' na lawer o bobl yng Nghymru yn gwylio ar YouTube. Dwi'n gwybod bod nhw yn eistedd efo'r sgrîn. Iawn, wna i drio canu. Dwi'n mynd i ganu yy Gwydr Glas."
+  ],
+  [
+   76.4,
+   "Ma' heno i guro'r gwydyr glas, rhowch ateb gweddus iddo, na tebwch monongas."
+  ],
+  [
+   96.98,
+   "Nad ydyw'r ferch ddim gartre na'i hollus dan y tŷ."
+  ],
+  [
+   108.34,
+   "Llanc ifanc o'r plwy arall sydd wedi mynd â hi."
+  ],
+  [
+   122.66,
+   "Fy nghalon sydd cyn drymed, sydd cyn drymed, a'r march sy'n dringo rhyw, wrth geisio bod yn llawen, bod yn llawen, ni fedrwn yn fy miw."
+  ],
+  [
+   148.64,
+   "Yr esgid yn fy ngwasgu, mewn man a sgwyddoch chi, a llawer gofid meddwl, gofid meddwl, sy'n torri'n nghalon i."
+  ],
+  [
+   172.8,
+   "Pe meddwn ydyn eryr, ydyn eryr, mi fyddwn llawer gwell, i hedeg at fy nghariad, at fy nghariad, sydd yn y gwledydd pell."
+  ],
+  [
+   197.8,
+   "Dros dir o'i maeth a morwy, gobeithio'i fod o'n iach. Rwy'n caru'r tir lle cerddodd, tir lle cerddodd, o wraidd fy nghalon fach."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

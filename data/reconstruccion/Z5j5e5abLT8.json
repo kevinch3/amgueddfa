@@ -1,0 +1,50 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   50.0,
+   "Mae apasig ym Mro Dydd Saes, a'i bigau wrth amlen, erbyn mewn mwyaf mwyaf llais, fel fanwyn wael iawen."
+  ],
+  [
+   72.0,
+   "Fyna, fyna, o fynna, fyna dylanwyr gwalia fyny, yn fynna, yn fynna, yn fynna dylanwyr gwalia fyny."
+  ],
+  [
+   116.68,
+   "Fy ngwlad, fy ngwlad, o fy ngwlad, fy ngwlad, dy amwylliant a ni, yn rhan, yn rhan, o dy ngwlad, fy ngwlad, dy amwylliant a ni."
+  ],
+  [
+   139.3,
+   "O fannwy wlad yr oes i gyd, yn nid o ben iddyn, a'r legell i gyd yn y byd, fel fannwy wwan iawn."
+  ],
+  [
+   161.3,
+   "Fyna, fyna, o fynna, fyna dylanwyr gwael am y dydd."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

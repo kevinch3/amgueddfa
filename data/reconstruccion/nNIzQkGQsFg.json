@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   794.0,
+   "Gawn ni barod ar y tan, gân ni'n barod ar y gwael, ond gobeithio nawn ni'n barod ar y gwael."
+  ],
+  [
+   884.0,
+   "Diolch yn fawr."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 15,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 13
+ }
+}

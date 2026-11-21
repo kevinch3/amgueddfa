@@ -1,0 +1,64 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Pan oedd Iesu pan yr hoelion, pan ymdar o'i chwelyau, torrwyd meddroni o beithiau."
+  ],
+  [
+   30.0,
+   "Ei rai a nwyl wrth y glws, cododd Iesu, cododd Iesu, nos ei drallwyd a'i thymbyd."
+  ],
+  [
+   56.0,
+   "Gad a santau mawr y bore, traeth i'r ddau ddedd ateb, a'r dyn a'n sŵn eu canre, welid hysbys yn gynnar."
+  ],
+  [
+   86.0,
+   "Cododd Iesu, cododd Iesu, bwch yn ei ddiaith roes yn gân."
+  ],
+  [
+   106.0,
+   "Yn nosenion mewn anwradd, ar galadion a'n crafaddau, gwelir nirddan miliwn."
+  ],
+  [
+   130.0,
+   "At y ffordd o'i duwiau ddoe, cododd Iesu, cadodd Iesu i wirionedd gorsedd y byd."
+  ],
+  [
+   155.6,
+   "Cadodd Iesu, cadodd Iesu i wirion y gorsen fi."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

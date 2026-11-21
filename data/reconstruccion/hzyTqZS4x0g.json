@@ -1,0 +1,64 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   29.8,
+   "O gwrandorf o rwyn a griau, ti'n clywed ef o greig a dwyn, ac mewn anobaith gleuni unai."
+  ],
+  [
+   54.68,
+   "Daw taw, wel hi'n ynddo fe dwi i ddallt, yr un i ffoi dros fryn a phant, o farwyn clyw, farwyn a grioedd, a thros y plant clyw un o'n plant."
+  ],
+  [
+   123.68,
+   "Bydd gwely'r graig i'r hun o ninnau, pan gwrdd iddi gwyw o fledd-y-fan, os bydd amddiffyn uwch ein pennau."
+  ],
+  [
+   149.36,
+   "Bydd awyr fallu'n hogaf ninnau, yn y fan ymos gwyn a ddeu ar dy fant, o fo rywun clyw, o fo rywun yn crio, o fo clywedd i un o'r plan."
+  ],
+  [
+   221.36,
+   "Mi all y llonydd a daear, o'r fan lle'r haedyn trwy'r blaen, i ffwrdd o wydd ym Mgwanwys Mawrth."
+  ],
+  [
+   245.36,
+   "Ddim tang na dang os dang o'n i'n wina, a nerth dog o fawr oedd ei tant."
+  ],
+  [
+   260.36,
+   "Dros y farwyn, clywodd y rywun yn crio, a thros y tad glyw un o'r plant, Are Maria."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 5,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

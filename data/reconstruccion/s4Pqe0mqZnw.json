@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   115.5,
+   "O, do's ond efo chos, nes de que se fue, nes de que se fue."
+  ],
+  [
+   145.5,
+   "Yn fi'n pobryd ranjo, no existe la calma, es que esta ausente la luz de mi alma, la luz de mi alma."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 2
+ }
+}

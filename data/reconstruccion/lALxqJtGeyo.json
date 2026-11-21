@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "O'n i'n mynd i ddod i'r noson gwyn, a'r un un we, o'n i'n mynd i ddod i'r lwybyr, o'n i'n mynd i ddod i'r noson gwyn."
+  ],
+  [
+   143.0,
+   "Dydd dwrnod o'n i, o'dd na ddim o'n i, Dydd dwrnod o'n i, o'dd na ddim o'n i, nes i fi, by my God, o'dd e?"
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 2
+ }
+}

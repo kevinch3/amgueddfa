@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   176.0,
+   "Ddawns erioed teulu Hendre i ddiweddglo'r gastaliaeth yma."
+  ],
+  [
+   206.0,
+   "Da iawn a diolch yn fawr i bawb am gymryd rhan yn y geseleiaeth hon."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 2
+ }
+}

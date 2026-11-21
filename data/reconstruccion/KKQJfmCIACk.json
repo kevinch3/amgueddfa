@@ -1,0 +1,50 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   113.4,
+   "Byw fyddi dydd, byw wedi'r nant o'r drefn, a'i ddrefn hi, mae'n rhestron, heb a byw ar ôl, byw wedi'r nant o'r drefn."
+  ],
+  [
+   150.76,
+   "Mi wnaeth y moron, mi wnaeth y gwrhon, a gerdd ei fodlon yn ei tân. Mi wnaeth i'r nant gwrthwyneb, er gyr i fi, er gyr i Nantgwrtheyrn, neu mae'n mynd ar ôl mi wnaeth i tŷ."
+  ],
+  [
+   204.9,
+   "Mil wedi dydd, mil wedi'r Nantgwrtheyrn, ein gelyn i, yr ymestyn i'r amgylchedd ar ôl, mil wedi'r Nantgwrtheyrn."
+  ],
+  [
+   636.32,
+   "Sy'n deud o'n sôn o be' bynnag s'dodd a'r llefydd hwnnw hasta'r ysgubeddan."
+  ],
+  [
+   793.08,
+   "I sy siama e, nid ys ydy di, achos ges i'r sioe i lyfio ar y fonsina'n dwy eilad. I si siama e, nid ydy di, achos nid ydw i, dwi'n teimlo'n neidio."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 16,
+  "modelo": 5,
+  "reglas": 0,
+  "vacias": 11
+ }
+}

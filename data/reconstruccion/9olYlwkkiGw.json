@@ -1,0 +1,50 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   90.0,
+   "Ia."
+  ],
+  [
+   99.0,
+   "Mae'n bleser gen i gyhoeddi mai Terwyn Tomos yw enw iawn ein bardd fuddugol, ac mae"
+  ],
+  [
+   105.4,
+   "Juan Siôn Davies yn eu cynrychioli."
+  ],
+  [
+   120.0,
+   "Enawr dyna'n symud i gadeirio Juan Devis sydd yn cynrychioli Terwyn Tomos yn brif ardd Eisteddfod y Wladfa dwy fil pedwar ar hugain."
+  ],
+  [
+   150.0,
+   "calon wrth galon a oes heddwch heddwch gwaedd uwch adwaidd a oes heddwch heddwch eistedd y barn yn nhed yr Eisteddfod."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 2
+ }
+}

@@ -1,0 +1,141 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Sosban bach yn berwi ar y tân, sosban fawr yn berwi am dawn, a dawn wedi sgrafo joli bach."
+  ],
+  [
+   60.0,
+   "Lon' in the sky, you know how I feel, breathing in your path, you know how I feel."
+  ],
+  [
+   85.0,
+   "Pen ar y ffin, ww."
+  ],
+  [
+   98.0,
+   "In the scene, you know how it feels."
+  ],
+  [
+   104.0,
+   "We know why we, you know the way it feels."
+  ],
+  [
+   110.0,
+   "Bros am y tris, you know how I feel. If I'm gone, if I'm there, if I'm gone, for me, I'll be free."
+  ],
+  [
+   128.0,
+   "Every day I'll need a sun You'll know where I'm need, don't you know?"
+  ],
+  [
+   134.0,
+   "More than you and I all loved before, you'll know where I need."
+  ],
+  [
+   140.0,
+   "Sleeping peace when the day is done, that's what I need."
+  ],
+  [
+   146.0,
+   "Is your world really one that they've unworn for me? Yeah, yeah, yeah, yeah."
+  ],
+  [
+   165.0,
+   "Stand quite a shot, you know how I feel"
+  ],
+  [
+   171.0,
+   "Since I've been by, you know how I feel, the freedom is mine and to where I feel is the law, is the name, is the life, is the law."
+  ],
+  [
+   196.0,
+   "It means something, it's a time for me"
+  ],
+  [
+   207.0,
+   "And I'm feeling good, and I'm feeling good"
+  ],
+  [
+   279.0,
+   "Fo' in love with you, child, I'm scared, will you leave me and stay?"
+  ],
+  [
+   329.0,
+   "Something has come to be in my head, in my whole life too."
+  ],
+  [
+   507.54,
+   "Ni'n meddwl mai'r drefn sy'n ffwrdd i'r gloch yw'r dydd Iwerddon, ond dwi'n meddwl mai'r drefn sy'n ffwrdd i'r gloch yw'r dydd Iwerddon."
+  ],
+  [
+   671.68,
+   "Ww, nid o'n iws, fel nith o'n i fod e, nid oedd e'n mynd i bar, i fynd drwy'r môr."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 15,
+  "modelo": 8,
+  "reglas": 0,
+  "vacias": 7
+ }
+}

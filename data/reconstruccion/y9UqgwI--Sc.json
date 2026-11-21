@@ -1,0 +1,57 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Mae Iesu yn mynedd i ryfedd, a'i gongres ei warchid by budd, ei fanedd a chwenyn yr awydd mwy ddawdan ei fanedd mewn pryd, os ydda hwn yn cwmpan ei obid, os gweithiwm ef gerrig y boen, os negwn ei groes yn ei gwendid, dilynwyd a blynyddodd."
+  ],
+  [
+   52.0,
+   "Y gwaith ag uchwaith ydy'r glawr i chi, mae dy lenw mor dderfnog, o niwelyn i'n gilydd a draf, mae dy arswyd drwy'r creadigaeth, a'i dy byddi di."
+  ],
+  [
+   82.0,
+   "Mae'n gwyso angheredd a'n wledydd, tybed naill gywodaeth ei chas? Mae'n gwyso ei gwledydd a'i ddiniog, mae'n galw ei milwyr i'r maes, a thuodd tywyllwch sy'n crynu, mae milodd yn mynd i'r ffydd, mae'r cadar yn golli ei deiliaid."
+  ],
+  [
+   112.0,
+   "Caffaeliau sy'n dy fodd yn rhydd."
+  ],
+  [
+   142.0,
+   "Mae'r enw Moraf derfog o'r diweddu'n gul a drach, mae dy arswyd drwy chreadigau, a'i ddefnyddig yn llawn."
+  ],
+  [
+   167.0,
+   "Mae'r enw Môr a Lerpog o Friwedd yn gul a draw, mae fe ar y swydd rwythiad digon, pan ydan ni diger clwad."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

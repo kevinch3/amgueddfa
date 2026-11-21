@@ -1,0 +1,43 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "I Patagonia, i Patagonia, i Patagonia."
+  ],
+  [
+   119.9,
+   "She had a dream, but what was it for, so she chased after her dream with much desire, but when she got too close to her expectation"
+  ],
+  [
+   144.9,
+   "We're dreaming of like paper and fire, paper and fire, singing of the history, paper and fire, smoking of the aloes."
+  ],
+  [
+   204.9,
+   "Pa bant sy'n arw da, ddo'n i'n borth ar fy mysgol i, be' o'n i ddo'n i'n cofio, be' sonia' o'dd o dani'n byd."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 6,
+  "modelo": 5,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

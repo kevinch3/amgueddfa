@@ -1,0 +1,85 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Cennir cân cadeirio gan William Gwyndi i gyfeiriant Mab Patagonia."
+  ],
+  [
+   48.0,
+   "un ai gerbron i'r eiriau neu'n bob mod, calon wrth galon yw'r prif dŵr y wlad, sy'n cadw goleu i beini lan ei lwyth, diwadd fod o'i ofn iddo fo'n dwydd, yn y ffurf i'r barwyd."
+  ],
+  [
+   78.0,
+   "Gwraig fy llawr i'r cymydd, bloedio fy rhesymau bob yn un pryd i'r lle, yn ffeindlwri fo, gwraig fy llawr i'r cymydd, bloedio fy rhesymau bob yn un pryd i'r lle."
+  ],
+  [
+   108.0,
+   "Yn awr, cyflwynir tisw olwadau i'r bardd buddugol."
+  ],
+  [
+   138.0,
+   "A gad i e nawr alw ar Glan Camwy ymlaen i Gyfarch Rhubardd Eisteddfod y Wladfa dwy fil a naw."
+  ],
+  [
+   150.0,
+   "Llyfarchion i Grifadd Cadeiryddion Eisteddfod y Wladfa dwy fil a naw gan un sy'n pell bell o fod yn wardd."
+  ],
+  [
+   158.0,
+   "Odd gell tan mwya est ar hyd erwedd gof, ar drywydd ei atgofion melys, ci, a lly nes gerdd am fro a chartref, am ryfeddwr natur, ac am oes a ni."
+  ],
+  [
+   172.5,
+   "Heddiw, canmol mewn y gamp yn Llawen, blwyddwn hedwch rhwng ddawns a chân, a dallt mai ti yw Prifardd y Eisteddfod na bawb sydd yma, yn fawr a mân, a wrth i ti ddychwelyd adre yn ôl ar draws y gwastadirau ymaith, cofia mai dyletswydd, dyletswydd pob gwirfardd yw mynd ymlaen o'i wobrwch at ei waith."
+  ],
+  [
+   202.5,
+   "Diolch yn fawr Elfyn. Ma' Talia Williams sydd di hyfforddi'r parti dawns o weithdi dawns Cyngor y Gaerfan a bydd nawr yn Anrhydeddur Rhufain."
+  ],
+  [
+   382.5,
+   "i cyrraedd ddiwedd y seremoni hon. Diolch i chi am fod y gynulleidfa mor rhaglon. Does dim ar ôl i mi wneud yn awr, ond gwahodd yr orsedd, a phawb sy'n gallu cymryd rhan, i adael i'r llwyfan. Diolch yn fawr."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 11,
+  "modelo": 4,
+  "reglas": 1,
+  "vacias": 6
+ }
+}

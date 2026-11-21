@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Competencia numero siento tres Libre danza y elección el grupo deberá estar conformado por niños y adultos, por ejemplo, padres e hijos, maestros y alumnos."
+  ],
+  [
+   20.92,
+   "Ceir teuluoedd cant a tri, dawns iweryn, rhydd, a felly os ydy'r bennant yn barod, sy'n chwaraol a sydd o'i ddisbonio, yn gyntaf nos Sadwrn y gweithio."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 3
+ }
+}

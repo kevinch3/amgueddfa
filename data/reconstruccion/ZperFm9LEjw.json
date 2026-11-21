@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   60.0,
+   "Dwi isio asgogi o ar hanner ddwy. Dwi isio bod leio fy llysen ar ddwy. Dwi isio bo' dy well o be' fi. Dwi isio bod leio fy llysen ar ddwy. Ddau rywsut drwy dy well o be' fi. Drwy dy well i fi."
+  ],
+  [
+   136.62,
+   "Fy nhad yw'r byd a'm gwaredir, fy niw yw fy nhaid i'r tro caesaf, fy nharia fy ofn i fy ngogledd."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

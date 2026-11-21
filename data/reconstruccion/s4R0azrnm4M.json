@@ -1,0 +1,43 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   75.0,
+   "Dwi'm yn gwybod pam, ond un diwrnod mwy, dyna syniad i mi."
+  ],
+  [
+   89.0,
+   "Dwi'm yn gwybod pam, ond un diwrnod mwy, dyna syniad i mi."
+  ],
+  [
+   221.0,
+   "Cawsarnau'n gofio."
+  ],
+  [
+   227.0,
+   "Sgwennwyd ei hunan, isio bod yn cawsarnau'n gofio."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 6,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 4
+ }
+}

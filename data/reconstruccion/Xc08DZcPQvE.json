@@ -1,0 +1,36 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   245.0,
+   "Ei di'n drwym a'r gwrym a'r glwch, ei di'n drwym a'r gwyn a'r gwch."
+  ],
+  [
+   471.0,
+   "Cenedl yn dda, ma' cenedl yn drwm, dysgent mwy na'i beth yw hi."
+  ],
+  [
+   591.0,
+   "Diolch yn fawr."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 10,
+  "modelo": 5,
+  "reglas": 0,
+  "vacias": 5
+ }
+}

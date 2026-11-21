@@ -1,0 +1,50 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "Tydi, a luniaist gerddas samwr, y gwanwyn yn y llwyd. O cadw ni rhag y colli'r hyd, sydd heddiw'n crwydro drwyddo."
+  ],
+  [
+   60.0,
+   "ddwy'r holl fyd. Tydi a luniaist gan i'r nant a'i sir goedwig werth? Tydi ar oes i'r awel y dant?"
+  ],
+  [
+   90.0,
+   "ac i'r ehedydd gerdd, o cadw ni rhag y dyfod dydd, na i'r rain cael y nos yn rhydd."
+  ],
+  [
+   117.0,
+   "Tydi a glywais lythriad traed Ar y ffordd gal far ia gynt? Tydi a welais dramau gwaed, Y gŵr ar ddiaith ar hyn?"
+  ],
+  [
+   147.0,
+   "O cadw'n mur, ag y dyfod oes, heb y barodd draed, na chur na chroes. Amen, amen."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

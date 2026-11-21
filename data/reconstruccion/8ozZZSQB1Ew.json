@@ -1,0 +1,22 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   240.0,
+   "Felly, diolch yn fawr iawn i bawb sy'n ceisio cefnogi'r cerddoriaeth, a diolch yn fawr iawn i'r holl gynghorau am eu cefnogaeth."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 2
+ }
+}

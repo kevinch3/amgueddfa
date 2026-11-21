@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   27.0,
+   "Teddug rhwng ymyr y dwy, wrth eich teuluwng yng ngholl fryd, er mae o ran er mwyn dy hadnabod, dy fwriad uwch lai gwrthrych ar y byd."
+  ],
+  [
+   55.8,
+   "Ww, o am yr eiliad, y gaf a weled fel yr oed."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 2
+ }
+}

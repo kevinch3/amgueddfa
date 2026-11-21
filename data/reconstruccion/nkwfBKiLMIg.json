@@ -1,0 +1,64 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   25.02,
+   "O llawen hawdd, cyd-llawen hawdd, ymddangos i Iesu Grist yn y byd. Ef yw'r gof, yw'r cariad Duw, ef yw'r gobaith unigryw. O llawen hawdd, cyd-llawen hawdd, ymddangos i Iesu Grist yn y byd."
+  ],
+  [
+   55.02,
+   "Mae Iesu Grist off ochr y byd, fe gollodd ef ei waed yn y sir. Trwy'r bin wedd hwn, felly dan iach, i'r ochr ddraw pen-gron ni'n fach. Rhowch awen hawn, cyd-lawen hawn, am gyfod Iesu Grist yn y byd."
+  ],
+  [
+   85.02,
+   "Hynny yw'r goeth, ryw cariad Duw, hynny yw'r gobaith i ni gyd, halleluja llawen hawn, dydd lawen hawn, am dy fodest ti'n Grist i'n mynd."
+  ],
+  [
+   104.02,
+   "Wylfyn a'i bedd, siacod a bent, mae'r ffordd yn rhydd i eneb o'i went. Mae'i chollau'n ynion ni a gawr, mewn cadwyd gan y Brenin y Fôn."
+  ],
+  [
+   125.02,
+   "Rhowch lawen hawn, cyd-lawen hawn, am dy fod Iesu Grist di'n ym myd. Hefe yw'r gair, dyw cariad Duw. Hefe yw'r gwmau, di'n unig yw. Halleluja, lawen hawn, cyd-lawen hawn, am dy fod Iesu Grist di'n ym myd."
+  ],
+  [
+   153.02,
+   "Rhowch lawen hawn, cydlawen hawn, am dy fod Iesu Grist yn y byd. Ef ei i'r dau, byw cariad Duw, ef ei i'r gobaith i ni gyd."
+  ],
+  [
+   171.5,
+   "Halleluja, llawen hawn, cryf llawen hawn, am dy fod Iesu Grist gin y byd."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

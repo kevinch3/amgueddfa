@@ -1,0 +1,22 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   296.0,
+   "Ni'n dechrau dau ar y pryd, dydd a dau yn y blaen, a chwe dydd mewn llw."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 8,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 6
+ }
+}

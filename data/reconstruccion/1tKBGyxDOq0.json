@@ -1,0 +1,71 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Pan fwy fy'n hen a pharchus, ag arian yn fy ngôd."
+  ],
+  [
+   28.8,
+   "A phob un iâ daeth drosodd, a phawb yn canu glodd, mi brynaf w'th un unig heb ddim o flaen ei fôr, at greigiau Aberdaron a thôn."
+  ],
+  [
+   86.2,
+   "Angfwyf yn hen a pharchus,"
+  ],
+  [
+   93.2,
+   "Am y gwaed yn llifo'n oer, am y calon heb gyflymu wrth wyliad codi'r lloer, bydd y gobaith i'm byd hynny, mewn bwthyn sydd o'i ddora'n nôr."
+  ],
+  [
+   123.2,
+   "At greigiau Aberdaron a ffonau gwyllt y môn."
+  ],
+  [
+   135.2,
+   "O ble gyd mig a fynno Yng nghrir y stormus wynt"
+  ],
+  [
+   161.2,
+   "A gleis o'r hen wrthryfel, a wybu fennaid gynt, a chana fo'r hen angerdd wrth syllu ti ar y ddŵr, a'r greigiau a'r beredarmon a'r ffordd."
+  ],
+  [
+   191.2,
+   "A thonnau gwyllt y môr, a thonnau gwyllt, gwyllt y môr."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

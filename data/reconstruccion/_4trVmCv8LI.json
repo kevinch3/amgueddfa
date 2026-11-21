@@ -1,0 +1,64 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   60.0,
+   "Dita de plata quedan de forjo y que lindres amor."
+  ],
+  [
+   70.32,
+   "La queda de algún viejo pastor, triste suena por el air am bal."
+  ],
+  [
+   79.88,
+   "Perffuman nos Iorquis flores el cardom, y en el cerro es canción un manantial."
+  ],
+  [
+   150.24,
+   "Una penna i'r viento se llefô, por la puna inmensa soledad."
+  ],
+  [
+   180.22,
+   "Lloro la montaña a su eterno dolor, y en el erque, en el erque broto este cantar."
+  ],
+  [
+   190.06,
+   "Canta el goya con mi misma voz, rudo y bello sentir mineral, a crestes maguanas y encoplas de amor, en las piedras de jôc el carnaval."
+  ],
+  [
+   209.5,
+   "Grest esmagwadas y encoplas de amor, que en las piedras dejo el carnaval, o, o, otra vez, a soñar, volveré, por así, quebradas y guases vivos llanllan, y los cerros dirán, cu-hoy, cu-hoy, llan-lan."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

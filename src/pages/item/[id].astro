@@ -28,7 +28,7 @@ const yearLabel = item.year ?? (item.undated ? t('item.sin_fecha') : t('item.gen
 const yearHref = item.year ? url(`${item.festival}/${item.year}/`) : url(`general/${item.festival}/`);
 // For search engines: restricted items never expose an image (thumbUrl is null for them).
 const image = thumbUrl(item);
-const description = [item.title, `${fest}${item.year ? ` ${item.year}` : ''}.`, t(`categorias.${item.category}`) + '.'].join(' · ');
+const description = `${[item.title.replace(/[.\s]+$/, ''), `${fest}${item.year ? ` ${item.year}` : ''}`, t(`categorias.${item.category}`)].join(' · ')}.`;
 // Restricted documents get no structured data (they are not freely available here).
 // "About" the edition's Event only when the archive knows whether it took place (see seo.ts).
 const editionStatus = item.year === null ? null : (editionsStatic as { festival: string; year: number; status: 'held' | 'not_held' | 'unknown' }[])

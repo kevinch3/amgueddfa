@@ -86,7 +86,8 @@ const uploads = forEdition(approved, slug, year, 'upload').map((c) => {
 const editionStatus = (editionsStatic as { festival: string; year: number; status: 'held' | 'not_held' | 'unknown' }[])
   .find((e) => e.festival === slug && e.year === year)?.status ?? null;
 const known = editionFacts(approved as Contribution[], slug, year, editionStatus);
-const seoDescription = editionDescription(fest.name, year, state, known, list.length + uploads.length);
+// Restricted documents are not counted, like /datos/ediciones.json (#19).
+const seoDescription = editionDescription(fest.name, year, state, known, list.filter((i) => !i.restricted).length + uploads.length);
 const seoLd = ldGraph(
   editionJsonLd({ name: fest.name, year, url: absUrl(url(`${slug}/${year}/`)), image: cover ? absUrl(cover.page) : null, facts: known }),
   // The same crumbs as the visible <nav class="crumbs"> below.

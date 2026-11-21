@@ -37,7 +37,7 @@ const groups = decades(first, last, (y) => undocumented(slug, y))
 const since = firstMaterialYear(slug);
 const general = items().filter((i) => i.festival === slug && i.year === null).length;
 ---
-<Base title={fest.name} festival={slug} description={since !== null ? `${fest.name}: ${t('festival.desde', { year: since })} ${t('inicio.lema')}` : t('inicio.lema')}>
+<Base title={fest.name} festival={slug} description={since !== null ? `${fest.name}. ${t('festival.desde', { year: since })} ${t('inicio.lema')}` : t('inicio.lema')}>
   <header class="cover">
     <h1>{fest.name}</h1>
     {fest.nameCy !== fest.name && <p class="cy" lang="cy"><em>{fest.nameCy}</em></p>}

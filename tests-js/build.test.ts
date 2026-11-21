@@ -591,6 +591,21 @@ describe('static build', () => {
     expect(page).toContain('id="no-contar"');
   });
 
+  it('page descriptions read cleanly and count only public documents, like the open data (#19)', () => {
+    const desc = (f: string) => /<meta name="description" content="([^"]*)"/.exec(read(f))?.[1] ?? '';
+    const eds = JSON.parse(read('datos/ediciones.json')).ediciones as { url: string; documentos: number }[];
+    for (const e of eds.filter((x) => x.documentos > 0)) {
+      const path = new URL(e.url).pathname.replace(/^\//, '');
+      const n = Number(/(\d+) documentos?\b/.exec(desc(`${path}index.html`))?.[1]);
+      expect(n, e.url).toBe(e.documentos);
+    }
+    // Festival pages: a full stop after the name, not a colon before a capital.
+    expect(desc('chubut/index.html')).toMatch(/^Eisteddfod del Chubut\. Material desde \d{4}\./);
+    // Item pages: "Title · Festival Year · Category." with no stray full stop inside.
+    const docs = JSON.parse(read('datos/documentos.json')).documentos as { id: string }[];
+    for (const d of docs.slice(0, 50)) expect(desc(`item/${d.id}/index.html`), d.id).not.toMatch(/\. ·/);
+  });
+
   it('the credits page names every tool and resource behind the texts, with its licence and link', () => {
     const html = read('creditos/index.html');
     for (const s of [

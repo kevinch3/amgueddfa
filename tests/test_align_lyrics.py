@@ -53,7 +53,8 @@ def test_apply_replaces_only_the_span_and_records_it(tmp_path):
     assert res["seg"][0] == [0.5, "Competencia 12, coro"]
     assert res["seg"][-2:] == [[40.0, "[aplausos]"], [45.0, "Muchas gracias al coro"]]
     assert "lluve mucho sobre" not in [x for _, x in res["seg"]]
-    assert res["letras"] == [{"desde": 5, "hasta": 40, "titulo": "Canción de prueba", "autor": "Tradicional", "idioma": "pt"}]
+    assert res["letras"] == [{"desde": 5, "hasta": 40, "titulo": "Canción de prueba", "autor": "Tradicional", "idioma": "pt",
+                              "derechos": "Dominio público"}]
 
 
 def test_apply_without_spans_is_unchanged(tmp_path):

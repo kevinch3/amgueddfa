@@ -974,7 +974,9 @@
     "nota_capitulos": "Segnati automaticamente da ciò che viene annunciato nella sessione; possono contenere errori.",
     "ver_en_video": "Guarda nel video, da {tiempo}",
     "letra_alineada": "testo allineato",
-    "nota_letra": "Testo di {piezas}, allineato automaticamente al video: i tempi sono approssimativi.",
+    "letras_titulo": "Testi allineati automaticamente al video (tempi approssimativi)",
+    "copiar_enlace": "Copia il link a questo momento",
+    "enlace_copiado": "Link a {tiempo} copiato",
     "origen": {
       "subida": "sottotitoli dell'autore",
       "yt_es": "YouTube automatico",

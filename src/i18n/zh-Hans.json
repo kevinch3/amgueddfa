@@ -974,7 +974,9 @@
     "nota_capitulos": "根据现场播报自动标记,可能有误。",
     "ver_en_video": "在视频中观看,从 {tiempo} 开始",
     "letra_alineada": "歌词已对齐",
-    "nota_letra": "{piezas} 的歌词已自动与视频对齐：时间为近似值。",
+    "letras_titulo": "歌词已自动与视频对齐（时间为近似值）",
+    "copiar_enlace": "复制此时刻的链接",
+    "enlace_copiado": "已复制 {tiempo} 的链接",
     "origen": {
       "subida": "作者字幕",
       "yt_es": "YouTube 自动字幕",

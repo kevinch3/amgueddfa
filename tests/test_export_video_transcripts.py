@@ -188,3 +188,24 @@ def test_export_prefers_reconstruction(tmp_path):
     assert a["src"] == "reconstruida" and len(a["fuentes"]) == len(a["seg"]) == 1
     assert "ventanas" not in a and "modelo" not in a
     assert not (out / ("D" * 11 + ".json")).exists()  # Juventud stays out even with a reconstruction file
+
+
+def test_export_credits_each_lyric_with_its_rights_and_source(tmp_path):
+    b = tmp_path / "backup"
+    _video(b, "C/2025/a_AAAAAAAAAAA.mp4", {"es-orig": YT_AUTO})
+    (b / "INDEX.tsv").write_text("id\tfile\n" + f"{'A' * 11}\tC/2025/a_AAAAAAAAAAA.mp4\n", encoding="utf-8")
+    letras = tmp_path / "letras"
+    letras.mkdir()
+    (letras / "pieza.md").write_text("---\ntitulo: Pieza\nautor: X\nidioma: es\nderechos: Texto tradicional (dominio público)\n"
+                                     "fuente: https://ejemplo.org/pieza, aportado por Alguien\n---\nuna línea\n", encoding="utf-8")
+    (letras / "videos.json").write_text(json.dumps({"A" * 11: [{"letra": "pieza", "desde": 0, "hasta": 9}]}), encoding="utf-8")
+    recon = tmp_path / "recon"
+    recon.mkdir()
+    rec = {"src": "reconstruida", "lang": "es", "seg": [[1.4, "una línea"]], "fuentes": [["letra"]],
+           "letras": [{"desde": 0, "hasta": 9, "titulo": "Pieza", "autor": "X", "idioma": "es"}]}
+    (recon / f"{'A' * 11}.json").write_text(json.dumps(rec), encoding="utf-8")
+    out = tmp_path / "out"
+    export(b, [{"id": "A" * 11, "festival": "chubut"}], out, recon=recon, letras=letras)
+    l = json.loads((out / ("A" * 11 + ".json")).read_text())["letras"][0]
+    assert l["derechos"] == "Texto tradicional (dominio público)"
+    assert l["fuente"] == "https://ejemplo.org/pieza, aportado por Alguien"

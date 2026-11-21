@@ -561,7 +561,11 @@ fieldset.campo { border: 0; padding: 0; }
 .rep-marco iframe { width: 100%; height: 100%; border: 0; display: block; }
 .rep-error { aspect-ratio: 16 / 9; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 0.5rem; margin: 0; padding: 1rem; text-align: center; background: #14151c; color: #f8f2e4; font-family: var(--sans); }
 .rep-error a { color: #f1d98f; }
-.rep-acciones { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; align-items: center; margin: 0.35rem 0 0; font-family: var(--sans); }
+.rep-acciones { display: flex; flex-wrap: wrap; gap: 0 0.75rem; align-items: center; margin: 0.35rem 0 0; font: 0.85rem/1.3 var(--sans); color: var(--ink-soft); }
+.rep-acciones a, .rep-acciones .btn-link { color: var(--ink-soft); font-size: inherit; }
+.rep-acciones a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 0.25rem; }
+.rep-acciones a:hover, .rep-acciones .btn-link:hover { color: var(--ink); }
+.rep-acciones [data-rep-copiado] { overflow-wrap: anywhere; }
 .rep-tr { display: flex; flex-direction: column; min-height: 0; border-top: 1px solid var(--rule); background: var(--paper); font-family: var(--sans); }
 .rep-tr-head { display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; padding: 0.5rem 0.75rem 0; }
 .rep-tr-head h3 { margin: 0; font-size: 1rem; }
@@ -571,7 +575,16 @@ fieldset.campo { border: 0; padding: 0; }
 .rep-buscar label { font-size: 0.9rem; color: var(--ink-soft); }
 .rep-buscar p { margin: 0; min-height: 1.2em; }
 .rep-seguir { display: flex; gap: 0.4rem; align-items: center; min-height: 32px; }
-.rep-tr > [data-rep-vacio], .rep-tr > [data-rep-nota] { margin: 0; padding: 0.5rem 0.75rem; }
+.rep-tr > [data-rep-vacio] { margin: 0; padding: 0.5rem 0.75rem; }
+/* Footer under the lines (issue #80): secondary, never taller than ~5 lines, its own scroll beyond. */
+.rep-pie { flex: none; max-height: 7.2em; overflow: auto; overscroll-behavior: contain; padding: 0.4rem 0.75rem 0.5rem; border-top: 1px solid var(--rule); color: var(--ink-soft); font-size: 0.8rem; line-height: 1.4; }
+.rep-pie[hidden], .rep-pie [hidden] { display: none; }
+.rep-pie p { margin: 0 0 0.15rem; }
+.rep-creditos { list-style: none; margin: 0; padding: 0; }
+.rep-creditos li { padding: 0.05rem 0; overflow-wrap: anywhere; }
+.rep-creditos cite { color: var(--ink); }
+.rep-pie a { color: inherit; }
+.rep-pie a:hover { color: var(--ink); }
 .rep-lineas { list-style: none; margin: 0; padding: 0.25rem 0.4rem; overflow: auto; flex: 1 1 auto; min-height: 0; overscroll-behavior: contain; }
 .rep-lineas button { display: flex; gap: 0.6rem; width: 100%; text-align: left; padding: 0.45rem 0.4rem; min-height: 44px; border: 0; border-radius: 4px; background: transparent; color: var(--ink); font: 1rem/1.45 var(--sans); cursor: pointer; }
 .rep-lineas button:hover { background: var(--paper-hi); }

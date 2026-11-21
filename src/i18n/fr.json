@@ -974,7 +974,9 @@
     "nota_capitulos": "Repérés automatiquement d'après les annonces de la séance ; ils peuvent contenir des erreurs.",
     "ver_en_video": "Voir dans la vidéo, à partir de {tiempo}",
     "letra_alineada": "paroles alignées",
-    "nota_letra": "Paroles de {piezas}, alignées automatiquement sur la vidéo : les temps sont approximatifs.",
+    "letras_titulo": "Paroles alignées automatiquement sur la vidéo (horaires approximatifs)",
+    "copiar_enlace": "Copier le lien vers ce moment",
+    "enlace_copiado": "Lien vers {tiempo} copié",
     "origen": {
       "subida": "sous-titres de l'auteur",
       "yt_es": "YouTube automatique",

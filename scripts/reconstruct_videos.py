@@ -20,7 +20,7 @@ from collections import Counter
 from pathlib import Path
 from typing import Callable
 
-from scripts.align_lyrics import parse_letra, spans_for
+from scripts.align_lyrics import lyric_info, parse_letra, spans_for
 from scripts.export_video_transcripts import DEFAULT_BACKUP, FESTIVALS, fix_eisteddfod, spanish_words
 from scripts.reconstruct.checker import check_window
 from scripts.reconstruct.context import video_context
@@ -120,8 +120,7 @@ def reconstruct_video(repo: Path, backup: Path, video: dict, ask=ask_claude, rep
     letras_info = []
     for sp in spans_for(video["id"], letras):
         meta, _ = parse_letra((letras / f"{sp['letra']}.md").read_text(encoding="utf-8"))
-        letras_info.append({"desde": sp["desde"], "hasta": sp["hasta"], "titulo": meta.get("titulo", ""),
-                            "autor": meta.get("autor", ""), "idioma": meta.get("idioma", "")})
+        letras_info.append(lyric_info(sp, meta))
     spoken = Counter(l.lang for l in lines if l.src != "letra")
     result = {"src": "reconstruida", "lang": spoken.most_common(1)[0][0] if spoken else "es", "modelo": MODEL,
               "seg": [[l.t, l.text] for l in out_lines], "fuentes": [list(l.fuentes) for l in out_lines],

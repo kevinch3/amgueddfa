@@ -28,7 +28,9 @@ import { t } from '../lib/i18n';
       </section>
       <p class="rep-acciones small">
         <a data-rep-yt rel="noopener" target="_blank">{t('reproductor.ver_youtube')}</a>
+        <button type="button" class="btn-link small" data-rep-copiar>{t('reproductor.copiar_enlace')}</button>
         <button type="button" class="btn-link small" data-rep-informar>{t('informar.titulo')}</button>
+        <span class="muted" data-rep-copiado role="status"></span>
       </p>
     </div>
     <section class="rep-tr" aria-labelledby="rep-tr-t">
@@ -49,8 +51,13 @@ import { t } from '../lib/i18n';
       </div>
       <p class="muted small" data-rep-vacio>{t('reproductor.sin_transcripcion')}</p>
       <ol class="rep-lineas" data-rep-lineas></ol>
-      <p class="muted small" data-rep-nota hidden>{t('reproductor.nota_whisper')}</p>
-      <p class="muted small" data-rep-nota-letra hidden></p>
+      <footer class="rep-pie" data-rep-pie hidden>
+        <p data-rep-nota hidden>{t('reproductor.nota_whisper')}</p>
+        <div data-rep-creditos hidden>
+          <p id="rep-cred-t">{t('reproductor.letras_titulo')}</p>
+          <ul class="rep-creditos" data-rep-creditos-lista aria-labelledby="rep-cred-t"></ul>
+        </div>
+      </footer>
     </section>
   </div>
 </dialog>

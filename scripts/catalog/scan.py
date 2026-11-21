@@ -150,10 +150,14 @@ def title_key(title: str) -> list:
 
 
 def number_repeats(items: list[Item]) -> None:
-    """Documents of one edition with the same title get "(n de N)", in file order (Facebook ids grow with time)."""
+    """Public documents of one edition section with the same title get "(n de N)", in file order
+    (Facebook ids grow with time). Hidden and restricted ones are not shown, so they are not counted:
+    run it after the overlay (scripts/build_catalog.py), which can hide an item."""
     groups: dict[tuple, list[Item]] = {}
     for it in items:
-        groups.setdefault((it.festival, it.year, it.undated, it.title), []).append(it)
+        if it.hidden or it.restricted:
+            continue
+        groups.setdefault((it.festival, it.year, it.undated, it.category, it.title), []).append(it)
     for same in groups.values():
         if len(same) < 2:
             continue
@@ -240,7 +244,6 @@ def scan(archive: Path, restricted_extra: set[str]) -> list[Item]:
             restricted=(category == "resultados" or iid in restricted_extra),
         )
     items = list(by_id.values())
-    number_repeats(items)
     for it in items:
         it.alt_paths.sort()
     items.sort(key=lambda i: (i.festival, i.year if i.year is not None else -1,

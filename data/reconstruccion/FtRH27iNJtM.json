@@ -1,0 +1,57 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Que le daré en el noy de la mar, que le daré que le hizo mi gabo,"
+  ],
+  [
+   13.8,
+   "le daré en pases a un nunes barances, le daré en pides a un nún padrero."
+  ],
+  [
+   25.5,
+   "Que le daré, que le daré, que le daré, que le daré, que le daré al dame sin cuanto,"
+  ],
+  [
+   39.9,
+   "Pancés sin figo, sin olides, Pancés olides de Medibarón."
+  ],
+  [
+   52.5,
+   "Tan patan, tan que desvigues son verdes, tan patan, tan que ya madurarán."
+  ],
+  [
+   65.5,
+   "Si no maduran el día de pascual, madurarán el día del gran."
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

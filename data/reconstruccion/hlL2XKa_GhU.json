@@ -1,0 +1,1191 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   6.9,
+   "dice el poeta Octavio Paz la poesía debe"
+  ],
+  [
+   11.6,
+   "ser un poco seca para que arda bien y de"
+  ],
+  [
+   15.0,
+   "este modo iluminarnos y calentarnos"
+  ],
+  [
+   18.6,
+   "será este el momento de"
+  ],
+  [
+   21.9,
+   "escribir de comenzar a llenar la página"
+  ],
+  [
+   24.6,
+   "en"
+  ],
+  [
+   25.3,
+   "blanco el miedo de no decir la instancia"
+  ],
+  [
+   28.6,
+   "de crear el placer de buscar y encontrar"
+  ],
+  [
+   32.5,
+   "será pronto el disfrute único de la"
+  ],
+  [
+   35.1,
+   "lectura la intimidad de estremecen Más"
+  ],
+  [
+   38.1,
+   "allá de tener a cientos de personas a"
+  ],
+  [
+   40.6,
+   "nuestro"
+  ],
+  [
+   42.6,
+   "lado será el momento de arder"
+  ],
+  [
+   46.0,
+   "iluminarnos y calentarnos tibiamente"
+  ],
+  [
+   49.0,
+   "alrededor de la"
+  ],
+  [
+   51.7,
+   "palabra será este el momento de"
+  ],
+  [
+   54.6,
+   "apropiarnos del Eisteddfod y esperar con"
+  ],
+  [
+   58.9,
+   "ansias certidumbre el rostro la figura"
+  ],
+  [
+   64.2,
+   "la corporización del poeta la imagen de"
+  ],
+  [
+   67.6,
+   "aquel o aquella que ha manejado las"
+  ],
+  [
+   70.3,
+   "palabras de tal manera que es necesario"
+  ],
+  [
+   75.1,
+   "reconocerlo Y en este"
+  ],
+  [
+   77.6,
+   "momento es este el momento que ocurrirá"
+  ],
+  [
+   82.2,
+   "en minutos nada más Y seremos todos"
+  ],
+  [
+   85.6,
+   "partícipes de la poesía y su encanto"
+  ],
+  [
+   92.0,
+   "el"
+  ],
+  [
+   93.8,
+   "poeta comienza a mostrarnos una meseta"
+  ],
+  [
+   96.3,
+   "que cija un cielo que acompaña una mata"
+  ],
+  [
+   100.0,
+   "que"
+  ],
+  [
+   101.0,
+   "alimenta una canción Tal vez toma la"
+  ],
+  [
+   104.5,
+   "nada misma para conducirnos hasta más"
+  ],
+  [
+   106.6,
+   "allá del último Horizonte el poeta crea"
+  ],
+  [
+   109.7,
+   "fuera del mundo que existe el que"
+  ],
+  [
+   111.5,
+   "debiera existir es la voz desde los"
+  ],
+  [
+   114.8,
+   "inicios logra unir desencuentro de"
+  ],
+  [
+   117.9,
+   "vocábulos para hacerlos está allar en la"
+  ],
+  [
+   120.7,
+   "síntesis precisa y preciosa del verso"
+  ],
+  [
+   125.2,
+   "dice el poeta chileno Vicente guolo las"
+  ],
+  [
+   129.0,
+   "palabras tienen un genio recóndito un"
+  ],
+  [
+   131.7,
+   "pasado mágico que solo el poeta sabe"
+  ],
+  [
+   134.6,
+   "descubrir porque él siempre vuelve a la"
+  ],
+  [
+   138.0,
+   "fente y es el Estero precisamente esto"
+  ],
+  [
+   141.6,
+   "un pasado mágico que nos remite a las"
+  ],
+  [
+   144.6,
+   "fuentes es la palabra esa que llega en"
+  ],
+  [
+   147.7,
+   "el momento justo de la lectura única del"
+  ],
+  [
+   151.0,
+   "poema y es aquí donde los jurados desde"
+  ],
+  [
+   154.9,
+   "el disfrute íntimo"
+  ],
+  [
+   158.4,
+   "del voy a dar lectura al veredicto de la"
+  ],
+  [
+   162.3,
+   "competencia número o del Eisteddfod del Chubut año"
+  ],
+  [
+   166.2,
+   "2013 Medalla de plata premio Asociación"
+  ],
+  [
+   171.3,
+   "San"
+  ],
+  [
+   178.8,
+   "David"
+  ],
+  [
+   183.6,
+   "competencia número o Medalla de plata"
+  ],
+  [
+   187.0,
+   "premio Asociación San David son los"
+  ],
+  [
+   193.0,
+   "jurados y"
+  ],
+  [
+   195.3,
+   "David dicen los"
+  ],
+  [
+   199.3,
+   "jados es para nosotros primordial"
+  ],
+  [
+   203.0,
+   "determinar el primer premio al poema"
+  ],
+  [
+   206.4,
+   "arpegios de luz bajo el seudónimo"
+  ],
+  [
+   210.5,
+   "azul y la fundamentación del premio dice"
+  ],
+  [
+   214.4,
+   "lo siguiente artegios de luz es un"
+  ],
+  [
+   218.1,
+   "soneto construido con perión formal y un"
+  ],
+  [
+   222.3,
+   "contenido que da cuenta del espíritu"
+  ],
+  [
+   224.3,
+   "poético del galés transformado en una"
+  ],
+  [
+   227.3,
+   "tradición ritual de amor a la tierra que"
+  ],
+  [
+   229.6,
+   "lo cobijo la arisa Patagonia con un"
+  ],
+  [
+   233.8,
+   "lenguaje claro y transparente fundamenta"
+  ],
+  [
+   236.9,
+   "su Canto al legado de sus orígenes de"
+  ],
+  [
+   239.6,
+   "desde un Temple de ánimo"
+  ],
+  [
+   241.5,
+   "celebratorio felicitaciones al firmante"
+  ],
+  [
+   245.1,
+   "repito son los jurados Berta vilbao"
+  ],
+  [
+   247.9,
+   "rister Graciela buci y David"
+  ],
+  [
+   255.8,
+   "Sor entonces a partir de este momento"
+  ],
+  [
+   260.0,
+   "Llegará el momento de"
+  ],
+  [
+   263.2,
+   "reconocer al poeta corporizar entre"
+  ],
+  [
+   266.5,
+   "nosotros empezar a calentarnos"
+  ],
+  [
+   269.8,
+   "de la palabra saber quién es el que está"
+  ],
+  [
+   272.3,
+   "a nuestro"
+  ],
+  [
+   273.6,
+   "lado por"
+  ],
+  [
+   275.8,
+   "eso"
+  ],
+  [
+   277.8,
+   "invito a azul quien ha escrito arreios"
+  ],
+  [
+   283.2,
+   "de luz a que se ponga"
+  ],
+  [
+   298.6,
+   "de"
+  ],
+  [
+   301.2,
+   "invito por segunda vez a"
+  ],
+  [
+   305.4,
+   "azul a que se ponga de"
+  ],
+  [
+   317.4,
+   "p en esta arisca"
+  ],
+  [
+   321.5,
+   "Patagonia como dice"
+  ],
+  [
+   324.3,
+   "poeta"
+  ],
+  [
+   326.0,
+   "invito por tercera vez a"
+  ],
+  [
+   330.0,
+   "a ponerse de"
+  ],
+  [
+   495.3,
+   "azul quien ha escrito arpegios de luz es"
+  ],
+  [
+   499.2,
+   "nuestra conocida giselda"
+  ],
+  [
+   517.2,
+   "voy"
+  ],
+  [
+   518.4,
+   "pedirle al señor presidente de"
+  ],
+  [
+   563.4,
+   "voy a dar lectura al"
+  ],
+  [
+   568.1,
+   "poema"
+  ],
+  [
+   571.3,
+   "el canto del galés ya no es un canto"
+  ],
+  [
+   574.6,
+   "sino un Rito ancestral de amor suio para"
+  ],
+  [
+   578.4,
+   "visar la tierra con su Encanto emerge"
+  ],
+  [
+   581.6,
+   "como el sol des los sueños es el ar que"
+  ],
+  [
+   585.4,
+   "usaron como sello para maestar laa"
+  ],
+  [
+   588.7,
+   "Patagonia es la Clara elocuencia de lo"
+  ],
+  [
+   592.3,
+   "bello la inata concepción de la Colonia"
+  ],
+  [
+   596.9,
+   "el canto de es esa escia que nutre el"
+  ],
+  [
+   600.8,
+   "corazón de los poetas con la magia"
+  ],
+  [
+   603.4,
+   "virtual de su"
+  ],
+  [
+   605.2,
+   "existencia por eso está mi pluma tan"
+  ],
+  [
+   608.5,
+   "coqueta para adorar quizás con estos"
+  ],
+  [
+   612.4,
+   "versos al galés su legado a su universo"
+  ],
+  [
+   632.1,
+   "vamos a invitar"
+  ],
+  [
+   634.3,
+   "a a que rindan"
+  ],
+  [
+   636.9,
+   "atributos"
+  ],
+  [
+   638.6,
+   "laa con esta Samba por voz de"
+  ],
+  [
+   658.0,
+   "Alfredo por"
+  ],
+  [
+   661.6,
+   "voz te canta las"
+  ],
+  [
+   666.4,
+   "Samba y dice al cantar no te puedo"
+  ],
+  [
+   672.2,
+   "olvidar no te puedo"
+  ],
+  [
+   688.0,
+   "olvidar yo no Canto por"
+  ],
+  [
+   693.3,
+   "voz te cantada"
+  ],
+  [
+   698.4,
+   "Santa y cantando Así canta para mí canta"
+  ],
+  [
+   706.2,
+   "para"
+  ],
+  [
+   708.7,
+   "mí y cantando Así canta para mí canta"
+  ],
+  [
+   718.0,
+   "mí"
+  ],
+  [
+   720.6,
+   "sita"
+  ],
+  [
+   723.1,
+   "cantarita cantar no le"
+  ],
+  [
+   729.0,
+   "esperes tienes que pensar que si no"
+  ],
+  [
+   734.1,
+   "volvió es porque ya te"
+  ],
+  [
+   738.9,
+   "olvidó"
+  ],
+  [
+   740.4,
+   "perfuma esa flor que se"
+  ],
+  [
+   745.2,
+   "marcho que se"
+  ],
+  [
+   761.8,
+   "yo tuve un"
+  ],
+  [
+   765.6,
+   "amor lo dejé"
+  ],
+  [
+   770.6,
+   "esperando y cuando volví no lo"
+  ],
+  [
+   775.9,
+   "conocí no lo conocí"
+  ],
+  [
+   781.8,
+   "y cuando volví no lo"
+  ],
+  [
+   786.0,
+   "conocí no lo"
+  ],
+  [
+   791.0,
+   "conocí dijo que tal"
+  ],
+  [
+   795.9,
+   "vez me suiera"
+  ],
+  [
+   800.8,
+   "amando"
+  ],
+  [
+   802.5,
+   "y se sin decir el por qué sin"
+  ],
+  [
+   808.0,
+   "decir por"
+  ],
+  [
+   811.2,
+   "me miró y se fue sin decir por qué"
+  ],
+  [
+   817.8,
+   "sin decir por"
+  ],
+  [
+   823.0,
+   "qué"
+  ],
+  [
+   826.3,
+   "cantar no eses má"
+  ],
+  [
+   832.0,
+   "noes que pensar que si no volvió es"
+  ],
+  [
+   837.4,
+   "porque ya"
+  ],
+  [
+   841.0,
+   "olvidó"
+  ],
+  [
+   842.6,
+   "perfuma esa flor que se"
+  ],
+  [
+   847.6,
+   "marchitó que se"
+  ],
+  [
+   854.1,
+   "marchitó"
+  ],
+  [
+   856.1,
+   "perfuma esa"
+  ],
+  [
+   859.0,
+   "flor que se"
+  ],
+  [
+   865.1,
+   "marcho que es el mar"
+  ],
+  [
+   891.0,
+   "el regalo de J Wilber para Griselda jes"
+  ],
+  [
+   895.8,
+   "de"
+  ],
+  [
+   896.8,
+   "Redondo y"
+  ],
+  [
+   900.7,
+   "en los atributos del presidente del Eisteddfod"
+  ],
+  [
+   904.1,
+   "Orlando gfis a la entrega de un presente"
+  ],
+  [
+   927.6,
+   "floral"
+  ],
+  [
+   930.0,
+   "el poeta nos ha mostrado la Patagonia ha"
+  ],
+  [
+   934.5,
+   "cantado ha tocado los acordes precisos"
+  ],
+  [
+   938.2,
+   "para continuar con este bello invitamos"
+  ],
+  [
+   942.5,
+   "y a la comitiva descender del"
+  ],
+  [
+   945.6,
+   "escenario con nuestro reconocimiento con"
+  ],
+  [
+   947.9,
+   "nuestro fuerte aplauso para esta"
+  ],
+  [
+   950.0,
+   "ceremonia Asociación San"
+  ],
+  [
+   957.6,
+   "David"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 19,
+  "modelo": 18,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

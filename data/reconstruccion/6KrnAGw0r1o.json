@@ -1,0 +1,1002 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   11.1,
+   "Wow."
+  ],
+  [
+   47.5,
+   "Take your"
+  ],
+  [
+   49.3,
+   "take"
+  ],
+  [
+   90.0,
+   "Voy a ir dormir."
+  ],
+  [
+   137.9,
+   "Take your"
+  ],
+  [
+   284.3,
+   "dime"
+  ],
+  [
+   286.2,
+   "continuamos."
+  ],
+  [
+   288.4,
+   "Bien, competencia número 106, eh libro"
+  ],
+  [
+   291.3,
+   "principalencia, poesía ganadora en el"
+  ],
+  [
+   293.7,
+   "año 2025 de Trevelin de Noelia María"
+  ],
+  [
+   297.1,
+   "Sánchez."
+  ],
+  [
+   299.5,
+   "Vamos a llamar a Sofía Georgina."
+  ],
+  [
+   311.7,
+   "Me llamo Sofía y voy a recitar Querencia"
+  ],
+  [
+   314.3,
+   "de Noelia Mariel Sánchez."
+  ],
+  [
+   318.0,
+   "Cuando la vida me lleva a otros lares,"
+  ],
+  [
+   320.6,
+   "es menester aferrarme, recuerdo, para"
+  ],
+  [
+   324.2,
+   "mermar mis pesares."
+  ],
+  [
+   326.8,
+   "Allí comprendo el amor que te guardo. No"
+  ],
+  [
+   329.4,
+   "hay paisaje que se te asemeje."
+  ],
+  [
+   333.8,
+   "La nostalgia es como un dardo que"
+  ],
+  [
+   336.1,
+   "penetra oxidado en una lastima todo a su"
+  ],
+  [
+   340.0,
+   "paso. Brota en mi mente su yel. Sé que"
+  ],
+  [
+   344.0,
+   "he de volverte a ver."
+  ],
+  [
+   346.7,
+   "Le pido a los calafates que alimenten"
+  ],
+  [
+   349.2,
+   "ese cometido,"
+  ],
+  [
+   351.5,
+   "pero si la dama del negro me abraza"
+  ],
+  [
+   353.8,
+   "antes de haberlo cumplido,"
+  ],
+  [
+   356.6,
+   "querían que estoy dormida y me lleven"
+  ],
+  [
+   358.9,
+   "contigo"
+  ],
+  [
+   360.8,
+   "para una última despedida. Que los auces"
+  ],
+  [
+   364.2,
+   "mi frente, que el viento acaricie mi"
+  ],
+  [
+   367.4,
+   "piel y los arrollitos me lloren"
+  ],
+  [
+   371.1,
+   "y que den luna este cuerpo, porque mi"
+  ],
+  [
+   373.6,
+   "sangre ya no va a poder."
+  ],
+  [
+   377.1,
+   "Y las montañas, ay, esas montañas"
+  ],
+  [
+   380.7,
+   "centinelas de este amor desenfrenado,"
+  ],
+  [
+   383.5,
+   "serán guardianes de mi morada."
+  ],
+  [
+   387.6,
+   "Cuando las voces me nombren el pasado y"
+  ],
+  [
+   391.0,
+   "cuando veas tras ellas el sol naciente"
+  ],
+  [
+   394.1,
+   "de la alborada,"
+  ],
+  [
+   395.8,
+   "será mi alma que se presenta para no ser"
+  ],
+  [
+   399.0,
+   "olvidada."
+  ],
+  [
+   401.5,
+   "Pero mientras tanto castigo"
+  ],
+  [
+   404.0,
+   "apundando la hazaña de ser digna de ti,"
+  ],
+  [
+   406.5,
+   "pueblo mío."
+  ],
+  [
+   420.7,
+   "Y en la competencia número 106, la"
+  ],
+  [
+   422.3,
+   "poesía creadora del año pasado de aquí"
+  ],
+  [
+   423.8,
+   "en"
+  ],
+  [
+   691.0,
+   "Wow."
+  ],
+  [
+   709.7,
+   "Continuamos con la competencia número"
+  ],
+  [
+   711.2,
+   "56."
+  ],
+  [
+   712.7,
+   "Invitamos al grupo Trio Giman, por"
+  ],
+  [
+   716.0,
+   "favor, acercarse."
+  ],
+  [
+   767.0,
+   "casi"
+  ],
+  [
+   864.9,
+   "Wow."
+  ],
+  [
+   908.0,
+   "Estrella"
+  ],
+  [
+   911.6,
+   "de estrellar"
+  ],
+  [
+   917.2,
+   "hace tiempo buscando por ahí una"
+  ],
+  [
+   920.3,
+   "chacalera"
+  ],
+  [
+   922.2,
+   "allá los montes que hay en mi pago campo"
+  ],
+  [
+   925.6,
+   "afuera campo de la rudita monta tu"
+  ],
+  [
+   929.6,
+   "lumana"
+  ],
+  [
+   938.6,
+   "la montancia"
+  ],
+  [
+   941.8,
+   "y unos bisones de le manza la aromaban"
+  ],
+  [
+   946.4,
+   "la aromaban solor los dear"
+  ],
+  [
+   950.9,
+   "mi amigo conmigo"
+  ],
+  [
+   953.5,
+   "el tiempo pasado"
+  ],
+  [
+   957.9,
+   "suerte"
+  ],
+  [
+   959.7,
+   "las altas"
+  ],
+  [
+   962.1,
+   "los montes y la luna"
+  ],
+  [
+   967.4,
+   "del aire quedó el polvo alegera"
+  ],
+  [
+   977.1,
+   "con su bata de puro cantar va doña"
+  ],
+  [
+   980.7,
+   "dominga todas las flores que hay en el"
+  ],
+  [
+   983.9,
+   "monte se la envidian se la envidian"
+  ],
+  [
+   987.8,
+   "porque no hay un color más hermoso"
+  ],
+  [
+   991.0,
+   "y cosas que se va a regalar suar."
+  ],
+  [
+   996.6,
+   "Y las niñas quisieran bailar como lo"
+  ],
+  [
+   999.7,
+   "hace Jesús."
+  ],
+  [
+   1002.0,
+   "Viento y unento en la cadera su cadera"
+  ],
+  [
+   1007.0,
+   "su parecido."
+  ],
+  [
+   1010.5,
+   "Es mi abuela bendecir"
+  ],
+  [
+   1016.2,
+   "si no se tentará"
+  ],
+  [
+   1019.2,
+   "y así"
+  ],
+  [
+   1021.5,
+   "lo que ha sido"
+  ],
+  [
+   1023.9,
+   "una cosa de"
+  ],
+  [
+   1028.6,
+   "como en el aire quedó el polvo alerto"
+  ],
+  [
+   1034.8,
+   "de luna"
+  ],
+  [
+   1071.1,
+   "Recibimos al coro."
+  ],
+  [
+   1120.0,
+   "hace tiempo y buscando por una chancara"
+  ],
+  [
+   1124.8,
+   "hacia los montes que hay bajo. Campo"
+  ],
+  [
+   1128.2,
+   "afuera campo de laita mundial de la"
+  ],
+  [
+   1133.0,
+   "encontrar y"
+  ],
+  [
+   1137.2,
+   "noche"
+  ],
+  [
+   1143.9,
+   "y los bises de laanza"
+  ],
+  [
+   1148.7,
+   "aromaban solos de"
+  ],
+  [
+   1152.9,
+   "mi amigo que"
+  ],
+  [
+   1155.9,
+   "pasaba pasaba"
+  ],
+  [
+   1158.6,
+   "yitas fue alar de las albaratas"
+  ],
+  [
+   1163.5,
+   "de los montes subió la luna para"
+  ],
+  [
+   1169.0,
+   "el aire quedó el volado"
+  ],
+  [
+   1172.8,
+   "con la deona la"
+  ],
+  [
+   1178.2,
+   "santila"
+  ],
+  [
+   1184.6,
+   "todas las flores"
+  ],
+  [
+   1187.3,
+   "Se la envidia, se la envidia porque lo"
+  ],
+  [
+   1191.4,
+   "más hermoso que"
+  ],
+  [
+   1199.2,
+   "las niñas"
+  ],
+  [
+   1201.7,
+   "como lo"
+  ],
+  [
+   1204.0,
+   "pensamiento y unito"
+  ],
+  [
+   1206.6,
+   "la cadera su car es un parcido al"
+  ],
+  [
+   1213.4,
+   "puesto."
+  ],
+  [
+   1220.7,
+   "lo que ha sido antes una consuela"
+  ],
+  [
+   1225.9,
+   "que no"
+  ],
+  [
+   1228.0,
+   "de verdad"
+  ],
+  [
+   1287.5,
+   "Hace tiempo buscando por ahí una"
+  ],
+  [
+   1290.5,
+   "chancalera."
+  ],
+  [
+   1292.4,
+   "Allá los montes que hay en mi pago,"
+  ],
+  [
+   1295.0,
+   "campo afuera campo de la rudita de cual"
+  ],
+  [
+   1299.2,
+   "tuuma la encontrar"
+  ],
+  [
+   1308.8,
+   "por monta"
+  ],
+  [
+   1310.8,
+   "y unos tizones de manza la aromaban la"
+  ],
+  [
+   1315.4,
+   "aromaban con suoset"
+  ],
+  [
+   1319.4,
+   "mi amigo mi amigo"
+  ],
+  [
+   1324.8,
+   "y suelta al de las almargantas"
+  ],
+  [
+   1329.4,
+   "de entre los montes subió la luna para"
+  ],
+  [
+   1332.2,
+   "alumbrarla"
+  ],
+  [
+   1334.7,
+   "en el equipo el volveral"
+  ],
+  [
+   1338.7,
+   "o afectos de luna de caer"
+  ],
+  [
+   1344.0,
+   "segundita"
+  ],
+  [
+   1353.1,
+   "Con su banda de puro pecar a doña"
+  ],
+  [
+   1356.3,
+   "Dominga. Todas las flores que hay en el"
+  ],
+  [
+   1359.4,
+   "monte se la envidian. Se la envidia"
+  ],
+  [
+   1363.0,
+   "porque no hay un color más hermoso que"
+  ],
+  [
+   1371.3,
+   "y las niñas quisieran bailar"
+  ],
+  [
+   1374.4,
+   "a la viento y una manera"
+  ],
+  [
+   1380.1,
+   "su cadera es un baile parecido a"
+  ],
+  [
+   1384.4,
+   "esta es mi abuela sabe que el mundo"
+  ],
+  [
+   1388.2,
+   "hablaré si te hablaba"
+  ],
+  [
+   1391.3,
+   "Así lo que sigo en una consuela no de"
+  ],
+  [
+   1396.1,
+   "aquí de que no más"
+  ],
+  [
+   1403.4,
+   "ojita que segura la chará"
+  ],
+  [
+   1436.3,
+   "Vamos."
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 25,
+  "modelo": 23,
+  "reglas": 0,
+  "vacias": 2
+ }
+}

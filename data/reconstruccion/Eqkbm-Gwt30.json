@@ -1,0 +1,540 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   6.8,
+   "Gloria"
+  ],
+  [
+   121.8,
+   "a enseñar"
+  ],
+  [
+   123.4,
+   "como son las mutaciones que nos vamos a"
+  ],
+  [
+   129.5,
+   "olvidar"
+  ],
+  [
+   191.9,
+   "quiero decirle al oído"
+  ],
+  [
+   194.3,
+   "cuántas cosas preciosas estoy sintiendo"
+  ],
+  [
+   197.9,
+   "por ti"
+  ],
+  [
+   202.4,
+   "ya no"
+  ],
+  [
+   204.1,
+   "está"
+  ],
+  [
+   208.0,
+   "el aire"
+  ],
+  [
+   226.6,
+   "la maestra nueva es tan linda vistes"
+  ],
+  [
+   237.9,
+   "que me roba tu tiempo valor"
+  ],
+  [
+   299.2,
+   "quería que está buscando"
+  ],
+  [
+   323.2,
+   "y aquí no hay más lugar que para"
+  ],
+  [
+   326.1,
+   "nosotros todos"
+  ],
+  [
+   328.9,
+   "está enojada"
+  ],
+  [
+   331.5,
+   "Ya has llenado mi corazón y a mí no me"
+  ],
+  [
+   334.4,
+   "importara"
+  ],
+  [
+   490.0,
+   "desde Chica ya"
+  ],
+  [
+   496.2,
+   "esa loca"
+  ],
+  [
+   498.2,
+   "fantasía de soñar"
+  ],
+  [
+   501.9,
+   "fue mi sueño de porrete ser igual que un"
+  ],
+  [
+   506.9,
+   "barrilito que elevándose"
+  ],
+  [
+   510.3,
+   "con un viento de Esperanza"
+  ],
+  [
+   515.1,
+   "sube y"
+  ],
+  [
+   521.1,
+   "y crecí en ese mundo de ilusión"
+  ],
+  [
+   525.9,
+   "y escuché solo a mi propio corazón"
+  ],
+  [
+   543.6,
+   "Yo quise ser un barril"
+  ],
+  [
+   549.7,
+   "buscando"
+  ],
+  [
+   551.4,
+   "en mi sonido"
+  ],
+  [
+   554.8,
+   "tratando de explicarme que la vida es"
+  ],
+  [
+   558.4,
+   "algo más que darlo todo"
+  ],
+  [
+   575.2,
+   "no sé si me falló la fe la voluntad"
+  ],
+  [
+   600.0,
+   "en amores solo tuve decepción"
+  ],
+  [
+   606.2,
+   "por no vender mi corazón"
+  ],
+  [
+   610.5,
+   "ese versos olvidando que la vida es solo"
+  ],
+  [
+   615.0,
+   "poderoso dolorida que va ahogando lo"
+  ],
+  [
+   618.8,
+   "mejor y abriendo heridas Ay"
+  ],
+  [
+   634.6,
+   "mi sonrisa de cristal"
+  ],
+  [
+   638.2,
+   "cuando miro un barrilete me pregunto"
+  ],
+  [
+   642.4,
+   "aquel"
+  ],
+  [
+   651.6,
+   "Yo"
+  ],
+  [
+   653.4,
+   "quise ser un barril"
+  ],
+  [
+   658.5,
+   "buscando altura en mi sonido"
+  ],
+  [
+   664.1,
+   "tratando de explicarme que la vida es"
+  ],
+  [
+   667.7,
+   "algo más que darlo todo"
+  ],
+  [
+   684.9,
+   "no sé no sé si mejor yo la fe la"
+  ],
+  [
+   689.4,
+   "voluntad"
+  ],
+  [
+   694.9,
+   "que me"
+  ],
+  [
+   699.1,
+   "faltó"
+  ],
+  [
+   915.8,
+   "la comisión de la Eisteddfod del Chubut"
+  ],
+  [
+   918.3,
+   "quiere hacer un reconocimiento a dos"
+  ],
+  [
+   920.4,
+   "destacada poetas de la zona que"
+  ],
+  [
+   922.9,
+   "colaboraron desinteresadamente en la"
+  ],
+  [
+   925.2,
+   "realización de talleres de recitación en"
+  ],
+  [
+   928.0,
+   "idioma Castellano y gales ellas son arié"
+  ],
+  [
+   932.8,
+   "LoL de Lewis y"
+  ],
+  [
+   935.1,
+   "nest"
+  ],
+  [
+   938.5,
+   "miembros de la comisión"
+  ],
+  [
+   944.1,
+   "quieren hacer entregas de presentes y"
+  ],
+  [
+   948.2,
+   "vamos a llamar a Marisa y alcira"
+  ],
+  [
+   954.9,
+   "y a 10 y así"
+  ],
+  [
+   960.8,
+   "para recibir entonces este"
+  ],
+  [
+   962.7,
+   "reconocimiento por su colaboración"
+  ],
+  [
+   965.9,
+   "donde ayudaron"
+  ],
+  [
+   970.6,
+   "a poder subir al escenario a varios de"
+  ],
+  [
+   973.6,
+   "los que nunca antes lo habían hecho"
+  ],
+  [
+   978.7,
+   "invitarlos al próximo año a ser"
+  ],
+  [
+   981.1,
+   "continuando"
+  ],
+  [
+   986.1,
+   "gente que sabe de esto y mucho es un"
+  ],
+  [
+   989.8,
+   "placer tenerlas"
+  ],
+  [
+   1022.5,
+   "olvido"
+  ],
+  [
+   1191.3,
+   "mientras se prepara el coro Municipal de"
+  ],
+  [
+   1194.6,
+   "Puerto Madryn para la próxima"
+  ],
+  [
+   1196.9,
+   "competencia"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 20,
+  "modelo": 16,
+  "reglas": 0,
+  "vacias": 4
+ }
+}

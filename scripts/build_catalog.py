@@ -20,7 +20,7 @@ sys.path.insert(0, str(REPO))
 
 from scripts.catalog.derive import derive  # noqa: E402
 from scripts.catalog.overlay import apply_overlay  # noqa: E402
-from scripts.catalog.scan import scan  # noqa: E402
+from scripts.catalog.scan import number_repeats, scan  # noqa: E402
 
 # rclone remote:path of the public derivatives ("r2" is set up in ~/.config/rclone/rclone.conf).
 MEDIA_REMOTE = os.environ.get("MEDIA_REMOTE", "r2:amgueddfa-media/media")
@@ -82,6 +82,7 @@ def main(argv=None) -> int:
 
     items = scan(archive, load_extra(repo))
     apply_tags(items, repo)
+    number_repeats(items)  # after the overlay, which can hide an item
     todo = [i for i in items if a.only in (None, i.id)]
     if a.only and not todo:
         print(f"no item with id {a.only}", file=sys.stderr)

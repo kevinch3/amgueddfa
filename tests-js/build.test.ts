@@ -591,8 +591,22 @@ describe('static build', () => {
     expect(page).toContain('id="no-contar"');
   });
 
+  it('the credits page names every tool and resource behind the texts, with its licence and link', () => {
+    const html = read('creditos/index.html');
+    for (const s of [
+      'huggingface.co/techiaith/whisper-large-ft-cy-en', 'Uned Technolegau Iaith', 'Prifysgol Bangor', 'Apache-2.0',
+      'github.com/openai/whisper', 'large-v3-turbo', 'github.com/SYSTRAN/faster-whisper',
+      'Anthropic', 'claude-sonnet-5-5', 'restauracion-videos.md',
+      'tesseract-ocr', 'astro.build', 'pagefind.app', 'supabase.com', 'pages.github.com', 'github.com/yt-dlp/yt-dlp', 'ffmpeg.org',
+    ]) expect(html, s).toContain(s);
+    expect(html).toContain('id="videos"');
+    expect(read('cy/creditos/index.html')).toContain('Uned Technolegau Iaith');
+    expect(read('llms.txt')).toContain('/creditos/');
+    expect(read('llms.txt')).toContain('techiaith/whisper-large-ft-cy-en');
+  });
+
   it('legal pages exist, are linked from every page footer and the sitemap, and state the licences', () => {
-    const pages = ['objetivos', 'derechos', 'privacidad', 'cookies'];
+    const pages = ['objetivos', 'derechos', 'privacidad', 'cookies', 'creditos'];
     for (const p of pages) expect(existsSync(join(DIST, p, 'index.html')), p).toBe(true);
     for (const f of ['index.html', 'chubut/2024/index.html']) {
       const html = read(f);
@@ -731,7 +745,7 @@ describe('static build', () => {
     });
 
     it('translated legal pages say the Spanish text prevails and link to it', () => {
-      for (const p of ['objetivos', 'derechos', 'privacidad', 'cookies']) {
+      for (const p of ['objetivos', 'derechos', 'privacidad', 'cookies', 'creditos']) {
         expect(read(`${p}/index.html`), p).not.toContain('data-traduccion');
         for (const l of OTHERS) {
           const html = read(`${l}/${p}/index.html`);

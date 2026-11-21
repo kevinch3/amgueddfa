@@ -170,7 +170,8 @@ if (dialog) {
     const cred = tr ? creditos(tr) : [];
     $('[data-rep-nota]')!.hidden = !whisper;
     $('[data-rep-creditos]')!.hidden = !cred.length;
-    $('[data-rep-pie]')!.hidden = !whisper && !cred.length;
+    // Always there under a transcript: at least the link to how its text is produced (/creditos/#videos).
+    $('[data-rep-pie]')!.hidden = !tr;
     const ul = $('[data-rep-creditos-lista]')!;
     ul.replaceChildren(
       ...cred.map((c) => {

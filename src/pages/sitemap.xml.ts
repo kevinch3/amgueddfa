@@ -16,7 +16,7 @@ export function GET(): Response {
   const hasSomething = (f: string, y: number) =>
     editionItems(f, y).some((i) => !i.restricted) || forEdition(approved, f, y, 'upload').length > 0 || forEdition(approved, f, y, 'fact').length > 0;
   const pages = ['/', 'buscar/', 'ranking/', 'tareas/'];
-  for (const p of ['objetivos', 'accesibilidad', 'derechos', 'privacidad', 'cookies']) pages.push(`${p}/`);
+  for (const p of ['objetivos', 'accesibilidad', 'derechos', 'privacidad', 'cookies', 'creditos']) pages.push(`${p}/`);
   for (const f of festivals()) {
     pages.push(`${f.slug}/`, `general/${f.slug}/`);
     const [first, last] = yearRange(f.slug);

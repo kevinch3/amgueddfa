@@ -1,0 +1,218 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   28.0,
+   "Siempre, siempre, ya hemos parecido."
+  ],
+  [
+   32.3,
+   "Ya me hagas el show, sólo a la instancia en su vida."
+  ],
+  [
+   38.0,
+   "Ya me hagas el uden en el sitio, pero vosotros,"
+  ],
+  [
+   43.9,
+   "Cada, cada una."
+  ],
+  [
+   56.1,
+   "¿A que no hay luz?"
+  ],
+  [
+   60.1,
+   "¿Dónde está?"
+  ],
+  [
+   63.1,
+   "¡Gania!"
+  ],
+  [
+   67.1,
+   "¡No hay luz!"
+  ],
+  [
+   74.1,
+   "¡Hanías! ¡Gania!"
+  ],
+  [
+   79.1,
+   "¡Obvio, no hay luz!"
+  ],
+  [
+   84.1,
+   "¿Cuántos años?"
+  ],
+  [
+   86.1,
+   "¿Se nota?"
+  ],
+  [
+   90.1,
+   "Mira, que piensa que me ocurre en ustedes y en las ciencias de la cabeza, porque me digo, ¿verdad?"
+  ],
+  [
+   95.1,
+   "Me hablo de enemigos."
+  ],
+  [
+   97.1,
+   "Queridos, ¿estás acá o a casa?"
+  ],
+  [
+   99.1,
+   "Como vos."
+  ],
+  [
+   101.1,
+   "Yo no voy a ir a estar aquí para mí desde el costado de mí."
+  ],
+  [
+   105.1,
+   "Eso no es el costo de uno de los hombres."
+  ],
+  [
+   113.1,
+   "¿Por qué no lo hacemos?"
+  ],
+  [
+   115.1,
+   "¿Puedo hacer una cosa?"
+  ],
+  [
+   117.1,
+   "¿Cómo no lo hace?"
+  ],
+  [
+   119.1,
+   "¿Decido de acuerdo?"
+  ],
+  [
+   121.1,
+   "¿Cuál es?"
+  ],
+  [
+   125.1,
+   "¿Sabes qué?"
+  ],
+  [
+   127.1,
+   "¿A mí me hagan eso?"
+  ],
+  [
+   133.1,
+   "¿Qué es una mujer?"
+  ],
+  [
+   135.1,
+   "¿Dónde está la mujer?"
+  ],
+  [
+   137.1,
+   "¿Usted me haces?"
+  ],
+  [
+   139.1,
+   "¿Este año?"
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

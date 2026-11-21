@@ -1,0 +1,2402 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   129.7,
+   "encontrarnos nuevamente con la música"
+  ],
+  [
+   131.6,
+   "con la recitación con la danza en Eisteddfod"
+  ],
+  [
+   135.2,
+   "del Chubut"
+  ],
+  [
+   136.9,
+   "2023 realmente es un placer poder"
+  ],
+  [
+   139.6,
+   "compartir esta tarde Ventosa aquí en la"
+  ],
+  [
+   143.2,
+   "ciudad de Trevelin esperemos que no pase"
+  ],
+  [
+   146.7,
+   "nada raro no lo voy a decir por las"
+  ],
+  [
+   148.8,
+   "dudas Sí así que vamos a iniciar esta"
+  ],
+  [
+   153.6,
+   "primera sesión del segundo día del Eisteddfod"
+  ],
+  [
+   156.7,
+   "primero pidiendo que cada uno eh"
+  ],
+  [
+   159.8,
+   "encuentre sus ubicaciones que se sienten"
+  ],
+  [
+   164.0,
+   "en las sillas asignadas así"
+  ],
+  [
+   168.6,
+   "iniciamos esta primera sesión del Eisteddfod"
+  ],
+  [
+   171.6,
+   "del Chubut año"
+  ],
+  [
+   178.8,
+   "2023"
+  ],
+  [
+   182.3,
+   "mientras hacemos silencio invitamos"
+  ],
+  [
+   316.0,
+   "oremos padre celestial Venimos ante con"
+  ],
+  [
+   319.6,
+   "gratitud para invocar tu presencia en el"
+  ],
+  [
+   322.1,
+   "inicio de"
+  ],
+  [
+   325.9,
+   "Eisteddfod rogamos tu bendición y tu gu"
+  ],
+  [
+   330.2,
+   "ayuda a todos los que se han reunido hoy"
+  ],
+  [
+   332.4,
+   "aquí y a los participantes y locutores"
+  ],
+  [
+   336.8,
+   "concede a los jurados una visión Clara y"
+  ],
+  [
+   340.5,
+   "juicios"
+  ],
+  [
+   341.7,
+   "justos Gracias padre por el país que"
+  ],
+  [
+   344.6,
+   "habitamos por la herencia recibida por"
+  ],
+  [
+   347.8,
+   "la fe y el coraje de quienes nos"
+  ],
+  [
+   351.0,
+   "precedieron Bendice señor los hogares de"
+  ],
+  [
+   355.0,
+   "nuestra patria danos un corazón"
+  ],
+  [
+   358.5,
+   "agradecido anos del olvido de quienes se"
+  ],
+  [
+   361.0,
+   "encuentran en la miseria y la"
+  ],
+  [
+   363.1,
+   "pobreza Ayúdanos a ser sensibles y"
+  ],
+  [
+   367.1,
+   "misericordiosos con el"
+  ],
+  [
+   369.2,
+   "prójimo tú enviaste a tu hijo al mundo"
+  ],
+  [
+   372.1,
+   "para vivir y Morir con nosotros que"
+  ],
+  [
+   375.2,
+   "entendamos que el amor es el poder más"
+  ],
+  [
+   378.0,
+   "grande fortalécelo siempre para defender"
+  ],
+  [
+   381.5,
+   "la verdad que tu justicia y tu Paz unan"
+  ],
+  [
+   385.1,
+   "a todas las naciones de la tierra y que"
+  ],
+  [
+   387.9,
+   "tus Santos Ángeles permanezcan aquí para"
+  ],
+  [
+   390.9,
+   "guardarnos durante todo el exo por el"
+  ],
+  [
+   394.8,
+   "amor de jesucristo Nuestro Señor"
+  ],
+  [
+   406.8,
+   "Amén a continuación invitamos a Héctor"
+  ],
+  [
+   410.5,
+   "McDonald y Romina vaca para entonar las"
+  ],
+  [
+   414.4,
+   "estrofas del himno nacional"
+  ],
+  [
+   418.4,
+   "Argentino"
+  ],
+  [
+   426.6,
+   "amor"
+  ],
+  [
+   534.9,
+   "espíritos"
+  ],
+  [
+   536.8,
+   "Libertad Libertad"
+  ],
+  [
+   542.1,
+   "liberad y"
+  ],
+  [
+   545.1,
+   "rido"
+  ],
+  [
+   547.2,
+   "deas"
+  ],
+  [
+   550.3,
+   "cenas el"
+  ],
+  [
+   559.1,
+   "vantar"
+  ],
+  [
+   568.1,
+   "suim"
+  ],
+  [
+   569.7,
+   "encias"
+  ],
+  [
+   571.5,
+   "unas del"
+  ],
+  [
+   574.7,
+   "sur y los"
+  ],
+  [
+   577.7,
+   "Libres del"
+  ],
+  [
+   579.8,
+   "mundo"
+  ],
+  [
+   582.8,
+   "responde al Gran pueblo"
+  ],
+  [
+   587.7,
+   "argentino"
+  ],
+  [
+   590.8,
+   "salud al Gran puero"
+  ],
+  [
+   598.1,
+   "salud y los"
+  ],
+  [
+   601.5,
+   "Libres del mundo"
+  ],
+  [
+   606.2,
+   "responden alá pu"
+  ],
+  [
+   610.8,
+   "argentino"
+  ],
+  [
+   613.2,
+   "salud y los"
+  ],
+  [
+   616.4,
+   "Libres del mundo"
+  ],
+  [
+   621.1,
+   "responde a la pueblo"
+  ],
+  [
+   625.8,
+   "argentino"
+  ],
+  [
+   628.0,
+   "salud"
+  ],
+  [
+   652.7,
+   "sios Los"
+  ],
+  [
+   654.8,
+   "laureles que supimos"
+  ],
+  [
+   669.1,
+   "conseguir"
+  ],
+  [
+   673.1,
+   "coron de"
+  ],
+  [
+   675.4,
+   "Gloria"
+  ],
+  [
+   686.5,
+   "emos con Gloria"
+  ],
+  [
+   690.3,
+   "comemos con Gloria"
+  ],
+  [
+   694.4,
+   "podemos con"
+  ],
+  [
+   714.8,
+   "Gloria le pedimos a Héctor que se qu"
+  ],
+  [
+   718.5,
+   "escenario"
+  ],
+  [
+   723.2,
+   "homenaje a encuentran entre"
+  ],
+  [
+   727.3,
+   "nosotros"
+  ],
+  [
+   867.7,
+   "Oh"
+  ],
+  [
+   869.8,
+   "sin"
+  ],
+  [
+   873.5,
+   "meison tru"
+  ],
+  [
+   946.7,
+   "muchas voy a dar lectura A quién será la"
+  ],
+  [
+   951.5,
+   "persona que"
+  ],
+  [
+   952.7,
+   "preside la sesión del delut el día"
+  ],
+  [
+   957.6,
+   "sábado 28 de"
+  ],
+  [
+   962.1,
+   "octubre el galés Es parte fundamental de"
+  ],
+  [
+   966.6,
+   "su vida de joven pasó largos periodos en"
+  ],
+  [
+   972.4,
+   "el viejo país donde cada vez que puede"
+  ],
+  [
+   977.3,
+   "regresa de profesión docente de origen"
+  ],
+  [
+   983.9,
+   "cordillerano sus días transcurren en el"
+  ],
+  [
+   987.0,
+   "Valle Hermoso ser pueblos de molinos y"
+  ],
+  [
+   991.6,
+   "hoy es además tierra de dragones y de"
+  ],
+  [
+   997.6,
+   "tulipanes Desde allí colabora"
+  ],
+  [
+   1001.3,
+   "asiduamente en las diferentes causas"
+  ],
+  [
+   1004.2,
+   "culturales que sostienen la"
+  ],
+  [
+   1006.2,
+   "idiosincrasia galesa y en cada Eisteddfod nos"
+  ],
+  [
+   1011.0,
+   "engalana con su presencia y con su"
+  ],
+  [
+   1014.9,
+   "exquisita pronunciación en cada"
+  ],
+  [
+   1017.9,
+   "recitación"
+  ],
+  [
+   1019.4,
+   "ella además es parte de la asociación"
+  ],
+  [
+   1022.4,
+   "que fundó la escuela galesa del"
+  ],
+  [
+   1027.0,
+   "baso es una persona que siempre está"
+  ],
+  [
+   1030.3,
+   "dispuesta a ayudar a quien se lo"
+  ],
+  [
+   1032.9,
+   "solicite porque ante todo lleva el don"
+  ],
+  [
+   1036.8,
+   "de la bondad en su"
+  ],
+  [
+   1039.5,
+   "impronta una referente en la Cordillera"
+  ],
+  [
+   1043.2,
+   "su nombre es significante de"
+  ],
+  [
+   1047.4,
+   "Logan"
+  ],
+  [
+   1049.1,
+   "cuando la duda remete a los más nobeles"
+  ],
+  [
+   1053.5,
+   "en el idioma siempre está ella para"
+  ],
+  [
+   1058.4,
+   "disparas así"
+  ],
+  [
+   1060.6,
+   "es"
+  ],
+  [
+   1062.6,
+   "sencilla"
+  ],
+  [
+   1064.5,
+   "amigable una gran persona que cosecha a"
+  ],
+  [
+   1068.0,
+   "cada paso la siembra que deposita en su"
+  ],
+  [
+   1077.4,
+   "andar"
+  ],
+  [
+   1110.0,
+   "disfrutes de"
+  ],
+  [
+   1111.8,
+   "este como lo ven haciendo en los timos"
+  ],
+  [
+   1114.4,
+   "tiempos Muchas gracias Que"
+  ],
+  [
+   1119.8,
+   "disfrutes seguidamente vamos a hacer"
+  ],
+  [
+   1122.4,
+   "lectura de la declaración de interés"
+  ],
+  [
+   1124.6,
+   "cultural provincial del del visto que el"
+  ],
+  [
+   1129.3,
+   "del es una expresión cultural gal que"
+  ],
+  [
+   1133.2,
+   "coloca en escena la historia las"
+  ],
+  [
+   1135.2,
+   "tradiciones y los valores que trajer"
+  ],
+  [
+   1137.6,
+   "primer que se embarcaron en la provincia"
+  ],
+  [
+   1140.1,
+   "del Chubut siendo un evento provincial"
+  ],
+  [
+   1143.2,
+   "que brinda un espacio a los lenguajes"
+  ],
+  [
+   1145.6,
+   "artísticos tales como la poesía"
+  ],
+  [
+   1148.8,
+   "recitación música danzas artes plásticas"
+  ],
+  [
+   1152.8,
+   "y artesanías que la secretaría de"
+  ],
+  [
+   1155.8,
+   "ciencia tecnología innovación productiva"
+  ],
+  [
+   1158.6,
+   "y cultural alienta este tipo de"
+  ],
+  [
+   1161.2,
+   "actividades que promueven el intercambio"
+  ],
+  [
+   1164.2,
+   "cultural por ello el secretario de"
+  ],
+  [
+   1167.1,
+   "ciencia tecnología e Innovación"
+  ],
+  [
+   1169.3,
+   "productiva cultural resuelve artículo"
+  ],
+  [
+   1172.4,
+   "primero declarar de interés cultural"
+  ],
+  [
+   1175.6,
+   "provincial al Eisteddfod del Chubut a"
+  ],
+  [
+   1178.8,
+   "desarrollarse en el Salón San David los"
+  ],
+  [
+   1181.3,
+   "días 26 27 y 28 de octubre del"
+  ],
+  [
+   1185.6,
+   "2023 artículo 2 la presente resolución"
+  ],
+  [
+   1189.1,
+   "será rendada por la subsecretaría de"
+  ],
+  [
+   1191.7,
+   "cultura y artículo tercero regístrese"
+  ],
+  [
+   1195.0,
+   "comuníquese desde el boletín oficial y"
+  ],
+  [
+   1197.3,
+   "cumpliendo archivos Así que esta es la"
+  ],
+  [
+   1199.9,
+   "declaración de interés cultural"
+  ],
+  [
+   1202.1,
+   "provincial del Eisteddfod del"
+  ],
+  [
+   1217.4,
+   "Ahora sí con el viento que nos"
+  ],
+  [
+   1220.6,
+   "acompaña escuchamos"
+  ],
+  [
+   1222.8,
+   "desde muy buenas tardes ahora pas toda"
+  ],
+  [
+   1225.8,
+   "la parte protocolar Así que empezamos"
+  ],
+  [
+   1227.4,
+   "con las"
+  ],
+  [
+   1246.7,
+   "preparando para"
+  ],
+  [
+   1257.1,
+   "competen"
+  ],
+  [
+   1377.0,
+   "amén"
+  ],
+  [
+   1400.7,
+   "mientras se termin dees tiempo"
+  ],
+  [
+   1406.9,
+   "enes de prosa traducción artesanías"
+  ],
+  [
+   1410.5,
+   "artes visuales cocina y fotografía por"
+  ],
+  [
+   1413.7,
+   "favor se les pide retirar la copia de"
+  ],
+  [
+   1415.5,
+   "los veredictos por la mesa de la"
+  ],
+  [
+   1417.4,
+   "comisión o por la secretaría del est"
+  ],
+  [
+   1420.2,
+   "veredicto de la competencia número 22 en"
+  ],
+  [
+   1423.0,
+   "homenaje a quino que falleció en 2020"
+  ],
+  [
+   1426.4,
+   "escribir tres breves relatos desde la"
+  ],
+  [
+   1428.7,
+   "mirada de Mafalda tomando como tema a"
+  ],
+  [
+   1431.1,
+   "sus amigos el primer premio fue des"
+  ],
+  [
+   1434.2,
+   "cierto pero hubo una mención al"
+  ],
+  [
+   1436.0,
+   "seudónimo meliva que"
+  ],
+  [
+   1438.9,
+   "esa de Así que la"
+  ],
+  [
+   1471.3,
+   "cor"
+  ],
+  [
+   1496.8,
+   "nos"
+  ],
+  [
+   1526.7,
+   "la"
+  ],
+  [
+   1531.1,
+   "parte"
+  ],
+  [
+   1539.7,
+   "de"
+  ],
+  [
+   1556.7,
+   "buen"
+  ],
+  [
+   1579.4,
+   "al mientras se prepara el tercer y"
+  ],
+  [
+   1582.6,
+   "último grupo vamos llamando"
+  ],
+  [
+   1588.6,
+   "que se vayan acercando porque son"
+  ],
+  [
+   1591.1,
+   "las próximas de la competencia"
+  ],
+  [
+   1604.3,
+   "recitación"
+  ],
+  [
+   1635.3,
+   "nos"
+  ],
+  [
+   1646.5,
+   "piden"
+  ],
+  [
+   1676.5,
+   "la"
+  ],
+  [
+   1734.4,
+   "Aleluya bueno se ve que el viento afloja"
+  ],
+  [
+   1738.0,
+   "no recién se escuchó como lluvia no sé"
+  ],
+  [
+   1740.7,
+   "una buena tarde para estar acá No acá"
+  ],
+  [
+   1744.0,
+   "tranquilos en el est disfrutando de esta"
+  ],
+  [
+   1746.6,
+   "de esta música y ahora pasamos de la"
+  ],
+  [
+   1749.0,
+   "música a la recitación en el idioma"
+  ],
+  [
+   1751.8,
+   "Castellano Dale seguimos con la"
+  ],
+  [
+   1754.2,
+   "competencia número 30 recitación libre"
+  ],
+  [
+   1757.1,
+   "para al hombro de Ariel de lebis el"
+  ],
+  [
+   1761.0,
+   "primer participante de esta competencia"
+  ],
+  [
+   1763.2,
+   "es Alejandro"
+  ],
+  [
+   1769.2,
+   "le preguntamos a Jurado de recitación si"
+  ],
+  [
+   1771.7,
+   "está"
+  ],
+  [
+   1772.6,
+   "lista primer participante entonces"
+  ],
+  [
+   1777.6,
+   "Alejandro a John de AR le pala al"
+  ],
+  [
+   1786.6,
+   "hombro El ocaso labriego de sus manos"
+  ],
+  [
+   1791.5,
+   "fue dejando sus rastros en la"
+  ],
+  [
+   1794.2,
+   "chacra resignando los surcos del verano"
+  ],
+  [
+   1798.6,
+   "añorando los diálogos del"
+  ],
+  [
+   1802.4,
+   "Alba y caían los postes alambrados e"
+  ],
+  [
+   1806.7,
+   "invadía la red de la maleza mientras iba"
+  ],
+  [
+   1810.7,
+   "porfiando los arados con achaques y"
+  ],
+  [
+   1814.6,
+   "brújulas"
+  ],
+  [
+   1817.6,
+   "acuestas tanto abrazo a la tierra no"
+  ],
+  [
+   1822.0,
+   "cedía al cansancio que dobla las espigas"
+  ],
+  [
+   1826.4,
+   "y los huesos del tiempo envejecí como el"
+  ],
+  [
+   1829.6,
+   "gesto en la piel de sus"
+  ],
+  [
+   1834.3,
+   "fatigas ha emigrado una tarde de febrero"
+  ],
+  [
+   1839.0,
+   "Pero está pala al hombro en el"
+  ],
+  [
+   1856.2,
+   "Potrero"
+  ],
+  [
+   1857.9,
+   "invitamos a berti que es la segunda"
+  ],
+  [
+   1862.2,
+   "participante mientras berti sube al"
+  ],
+  [
+   1865.0,
+   "escenario le vamos a pedir a herol y a"
+  ],
+  [
+   1868.1,
+   "skol deiman que se vaya preparando para"
+  ],
+  [
+   1870.3,
+   "la competencia número"
+  ],
+  [
+   1872.4,
+   "85 Town saon"
+  ],
+  [
+   1883.9,
+   "conelli Ahora sí con el silencio de todo"
+  ],
+  [
+   1887.8,
+   "disfrutamos"
+  ],
+  [
+   1891.6,
+   "de pala al"
+  ],
+  [
+   1894.2,
+   "hombro de AR Lloyd de Lewis a"
+  ],
+  [
+   1902.2,
+   "joh El ocaso labriego de sus"
+  ],
+  [
+   1906.5,
+   "manos fue dejando sus rastros en la"
+  ],
+  [
+   1911.2,
+   "chakra resignando los surcos del"
+  ],
+  [
+   1916.2,
+   "verano añorando los diálogos del"
+  ],
+  [
+   1921.6,
+   "alma y caían los postes alambrados e"
+  ],
+  [
+   1925.8,
+   "invadía la red de la"
+  ],
+  [
+   1928.6,
+   "maleza mientras iba porfiando los arados"
+  ],
+  [
+   1933.2,
+   "con achaques y brújulas"
+  ],
+  [
+   1939.4,
+   "acuestas tanto abrazo a la tierra no"
+  ],
+  [
+   1944.0,
+   "cedía al cansancio que dobla las"
+  ],
+  [
+   1948.7,
+   "espigas y los huesos del tiempo"
+  ],
+  [
+   1953.1,
+   "envejecía como el gesto en la piel de"
+  ],
+  [
+   1957.2,
+   "sus"
+  ],
+  [
+   1960.4,
+   "fatigas ha emigrado una tarde de"
+  ],
+  [
+   1965.2,
+   "febrero Pero está pal al hombro en el"
+  ],
+  [
+   1976.0,
+   "Potrero"
+  ],
+  [
+   1987.3,
+   "la tercera participante de esta"
+  ],
+  [
+   1989.1,
+   "competencia es María Ester"
+  ],
+  [
+   2005.0,
+   "Evans de de"
+  ],
+  [
+   2008.3,
+   "Lewis pala al hombro a John el looc caso"
+  ],
+  [
+   2015.3,
+   "abrigo de sus"
+  ],
+  [
+   2017.2,
+   "manos fue dejando sus rastros en la"
+  ],
+  [
+   2022.0,
+   "chakra resignando los surcos del"
+  ],
+  [
+   2025.6,
+   "verano"
+  ],
+  [
+   2027.2,
+   "añorando los diálogos del"
+  ],
+  [
+   2030.2,
+   "Alba y caían los postes alambrados e"
+  ],
+  [
+   2034.6,
+   "invadía la red de la maleza"
+  ],
+  [
+   2038.0,
+   "mientras iba porfiando en los"
+  ],
+  [
+   2041.1,
+   "arados con achaques y brújulas"
+  ],
+  [
+   2046.7,
+   "acuestas tanto abrazo a la tierra no"
+  ],
+  [
+   2050.2,
+   "cedía al cansancio que dobla las"
+  ],
+  [
+   2055.1,
+   "espigas y los huesos del tiempo"
+  ],
+  [
+   2059.2,
+   "envejecí como el gesto en la piel de sus"
+  ],
+  [
+   2065.9,
+   "fatigas ha emigrado una tarde de"
+  ],
+  [
+   2070.0,
+   "febrero Pero está pala al hombro en el"
+  ],
+  [
+   2087.8,
+   "Potrero mientras sorasa se acomoda en el"
+  ],
+  [
+   2091.0,
+   "escenario vamos a llamar también al Core"
+  ],
+  [
+   2093.4,
+   "moría Core capel beel trip Richard"
+  ],
+  [
+   2097.9,
+   "y que se vayan preparando para la"
+  ],
+  [
+   2100.1,
+   "competencia posterior a la"
+  ],
+  [
+   2102.4,
+   "danza Ahora sí cuarta y última"
+  ],
+  [
+   2105.2,
+   "participante"
+  ],
+  [
+   2112.4,
+   "Sor pal"
+  ],
+  [
+   2114.5,
+   "alombro"
+  ],
+  [
+   2125.8,
+   "eloco de sus"
+  ],
+  [
+   2128.5,
+   "manos fue dejando sus rastros en la"
+  ],
+  [
+   2134.3,
+   "chakra"
+  ],
+  [
+   2136.3,
+   "resignando los surcos del verano"
+  ],
+  [
+   2142.7,
+   "añorando los diálogos del"
+  ],
+  [
+   2146.9,
+   "Alba y caían los postes alambrados e"
+  ],
+  [
+   2152.0,
+   "invadía la red de la"
+  ],
+  [
+   2155.0,
+   "maleza mientras iba porfiando los"
+  ],
+  [
+   2160.2,
+   "arados con"
+  ],
+  [
+   2162.5,
+   "achaques y brújulas"
+  ],
+  [
+   2168.3,
+   "acuestas tanto abrazo a la"
+  ],
+  [
+   2172.8,
+   "Tierra no se vía"
+  ],
+  [
+   2176.8,
+   "al"
+  ],
+  [
+   2179.8,
+   "cansancio que dobla las"
+  ],
+  [
+   2184.2,
+   "espigas y los esos del tiempo"
+  ],
+  [
+   2191.5,
+   "envejecí como el gesto en la piel de su"
+  ],
+  [
+   2198.7,
+   "fatiga ha"
+  ],
+  [
+   2202.9,
+   "emigrado una tarde de"
+  ],
+  [
+   2206.6,
+   "febrero Pero está para al hombro en el"
+  ],
+  [
+   2215.7,
+   "Potrero"
+  ],
+  [
+   2220.2,
+   "Muchas"
+  ],
+  [
+   2221.9,
+   "gracias Quisiera renovar el aplauso ya"
+  ],
+  [
+   2225.2,
+   "que la autora de esta poesía está"
+  ],
+  [
+   2228.5,
+   "presente con todos"
+  ],
+  [
+   2242.4,
+   "nosotros bien continuamos con un benedo"
+  ],
+  [
+   2245.1,
+   "mientras se va acercando el próximo"
+  ],
+  [
+   2247.6,
+   "participante que es la competencia"
+  ],
+  [
+   2249.8,
+   "número 110 fotografía categoría nobeles"
+  ],
+  [
+   2254.0,
+   "tema mundo vegetal cualquier especie"
+  ],
+  [
+   2256.8,
+   "vegetal o fúngica y en su hábitat"
+  ],
+  [
+   2259.3,
+   "natural sin presencia de personas el"
+  ],
+  [
+   2262.2,
+   "primer Premio lo lleva el seudónimo"
+  ],
+  [
+   2265.0,
+   "nostromo de Luis Ramón Molina de Trevelin"
+  ],
+  [
+   2268.4,
+   "por arie firma el Benedicto"
+  ],
+  [
+   2271.8,
+   "Silvina un aplauso"
+  ],
+  [
+   2275.6,
+   "para"
+  ],
+  [
+   2305.5,
+   "ya está arriba del escenario"
+  ],
+  [
+   2310.1,
+   "herol disfrutamos desde la"
+  ],
+  [
+   2335.5,
+   "danza"
+  ],
+  [
+   2602.8,
+   "vamos a pedir por favor para la"
+  ],
+  [
+   2603.9,
+   "competencia"
+  ],
+  [
+   2605.1,
+   "número"
+  ],
+  [
+   2612.0,
+   "por favor se preparando al pie del"
+  ],
+  [
+   2614.3,
+   "escenario que son los próximos"
+  ],
+  [
+   2635.1,
+   "participantes"
+  ],
+  [
+   2952.3,
+   "fuerte el aplauso para los chicos que"
+  ],
+  [
+   2953.8,
+   "perdieron un zapato por favor lo vengan"
+  ],
+  [
+   2956.2,
+   "a"
+  ],
+  [
+   2964.5,
+   "buscar"
+  ],
+  [
+   2996.5,
+   "mientras se acomoda el coro arriba del"
+  ],
+  [
+   2998.6,
+   "escenario Analía va a leer una"
+  ],
+  [
+   3001.0,
+   "salutación"
+  ],
+  [
+   3003.8,
+   "de la Asociación galesa de Esquel Saluda"
+  ],
+  [
+   3007.2,
+   "al señor presidente del exbo del chubut"
+  ],
+  [
+   3010.0,
+   "señor Rodolfo villagra y a toda la"
+  ],
+  [
+   3012.6,
+   "comisión organizadora deseándoles el"
+  ],
+  [
+   3015.2,
+   "mayor de los éxitos en esta nueva"
+  ],
+  [
+   3017.1,
+   "edición y felicitando por su constante"
+  ],
+  [
+   3019.8,
+   "trabajo en Pos de mantener vivo este"
+  ],
+  [
+   3022.1,
+   "evento cultural maravilloso que nos han"
+  ],
+  [
+   3024.8,
+   "legado nuestro an y que hoy convoca a"
+  ],
+  [
+   3028.6,
+   "tantos chubutenses en las distintas"
+  ],
+  [
+   3031.0,
+   "expresiones artísticas que propone ao a"
+  ],
+  [
+   3035.2,
+   "año 27 deu"
+  ],
+  [
+   3038.2,
+   "firma presidente de la asociación gala"
+  ],
+  [
+   3041.9,
+   "de un fuerte aplao para"
+  ],
+  [
+   3054.4,
+   "os"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 54,
+  "modelo": 49,
+  "reglas": 3,
+  "vacias": 2
+ }
+}

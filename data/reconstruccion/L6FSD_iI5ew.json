@@ -1,0 +1,722 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   174.6,
+   "la tu"
+  ],
+  [
+   353.7,
+   "Elogio de la lluvia dejó"
+  ],
+  [
+   358.6,
+   "ídola vendrá la lluvia y parrir con"
+  ],
+  [
+   363.2,
+   "todo entrará en las calles y en los"
+  ],
+  [
+   367.2,
+   "barrios y en los ojos"
+  ],
+  [
+   371.2,
+   "mojar tus saus de llorones"
+  ],
+  [
+   376.1,
+   "aplastados qué alegría tendrán los"
+  ],
+  [
+   379.0,
+   "ciruelos asfixiados de"
+  ],
+  [
+   381.6,
+   "viero qué aroma de Volverán las"
+  ],
+  [
+   386.5,
+   "lavandas las hilas hilas"
+  ],
+  [
+   390.0,
+   "y las blancas vilas"
+  ],
+  [
+   393.2,
+   "perfumadas vendrá la lluvia y se llamará"
+  ],
+  [
+   398.0,
+   "la lluvia"
+  ],
+  [
+   400.4,
+   "fresc agua con su velo"
+  ],
+  [
+   404.6,
+   "transparente entrá la lluvia a"
+  ],
+  [
+   407.0,
+   "levantarle los aromas a esta"
+  ],
+  [
+   411.1,
+   "tierra una vez vimos la luna Calle abajo"
+  ],
+  [
+   416.3,
+   "reflejada y la lluvia era un cam Lino de"
+  ],
+  [
+   420.0,
+   "agua"
+  ],
+  [
+   421.3,
+   "Ora un breve olor a tomillos crecía"
+  ],
+  [
+   425.8,
+   "entre"
+  ],
+  [
+   427.1,
+   "nosotros y eramos niños perfumados por"
+  ],
+  [
+   431.8,
+   "la"
+  ],
+  [
+   434.6,
+   "lluvia ahora estoy"
+  ],
+  [
+   437.0,
+   "tristeando y hay un río de mes por el"
+  ],
+  [
+   442.6,
+   "cielo vendrá la lluvia volverá a correr"
+  ],
+  [
+   447.6,
+   "el velo de las cosas"
+  ],
+  [
+   450.9,
+   "se mojarnos cuerpos"
+  ],
+  [
+   454.6,
+   "inocentes todo el polvo de los"
+  ],
+  [
+   458.2,
+   "árboles volverá al golpo de la"
+  ],
+  [
+   462.6,
+   "tierra los"
+  ],
+  [
+   467.3,
+   "quedarán limpios y rojos esta noche"
+  ],
+  [
+   485.0,
+   "Elogio de la lluvia de Jorge"
+  ],
+  [
+   489.9,
+   "Spíndola vendrá la lluvia y barrer con"
+  ],
+  [
+   495.2,
+   "to entrarán las calles en los patios y"
+  ],
+  [
+   500.5,
+   "en los ojos mojar Sauces llorones"
+  ],
+  [
+   505.7,
+   "aplastados qué alegría tendrán los"
+  ],
+  [
+   508.7,
+   "iruelos asiciados de febrero qué aromas"
+  ],
+  [
+   512.9,
+   "devolverán las lavandas las lilas lilas"
+  ],
+  [
+   516.4,
+   "y las blancas lilas"
+  ],
+  [
+   519.3,
+   "perfumadas vendrá la"
+  ],
+  [
+   522.4,
+   "lluvia volverá vendrá la lluvia y se"
+  ],
+  [
+   526.9,
+   "llamará la"
+  ],
+  [
+   529.9,
+   "Lluvia fresca agua con su velo"
+  ],
+  [
+   534.2,
+   "transparente vendrá la lluvia a"
+  ],
+  [
+   536.8,
+   "levantarle los aromas a esta tier"
+  ],
+  [
+   540.4,
+   "tierra una vez vimos la luna cí abajo"
+  ],
+  [
+   546.6,
+   "reflejada la lluvia era un camino de"
+  ],
+  [
+   550.3,
+   "agua y Luna un breve olor a tomillos"
+  ],
+  [
+   556.0,
+   "crecía entre nosotros y éramos niños"
+  ],
+  [
+   560.2,
+   "perfumados por la"
+  ],
+  [
+   562.6,
+   "lluvia ahora está"
+  ],
+  [
+   566.0,
+   "chispeando hay un río de es por el cielo"
+  ],
+  [
+   571.3,
+   "vendrá la lluvia volverá a correr el"
+  ],
+  [
+   575.8,
+   "velo de las cosas se"
+  ],
+  [
+   579.0,
+   "mojarnos"
+  ],
+  [
+   582.1,
+   "inocentes todo el polvo de los árboles"
+  ],
+  [
+   586.4,
+   "volverá al polvo de la tierra los"
+  ],
+  [
+   591.5,
+   "milagros quedarán"
+  ],
+  [
+   594.4,
+   "limpios y rojos en la noche"
+  ],
+  [
+   606.9,
+   "tercela y última participante recitación"
+  ],
+  [
+   610.4,
+   "Libre principal Elogio de la"
+  ],
+  [
+   613.4,
+   "lluvia"
+  ],
+  [
+   618.1,
+   "del poeta Jorge Spíndola"
+  ],
+  [
+   621.6,
+   "Elogio de la"
+  ],
+  [
+   625.8,
+   "lluvia volverá la lluvia y barrer con"
+  ],
+  [
+   629.5,
+   "con todo entrará en las calles y en los"
+  ],
+  [
+   634.1,
+   "patios y en los"
+  ],
+  [
+   636.8,
+   "ojos mojar estos Sauces llorones"
+  ],
+  [
+   642.4,
+   "aplastados qué alegría tendrán los"
+  ],
+  [
+   645.3,
+   "iruelos afix ados de"
+  ],
+  [
+   648.0,
+   "febrero qué aroma devolverán las"
+  ],
+  [
+   651.6,
+   "lavandas las lilas lilas y las blancas"
+  ],
+  [
+   656.6,
+   "lilas perfumadas"
+  ],
+  [
+   660.7,
+   "vendrá la lluvia y se llamará la"
+  ],
+  [
+   665.3,
+   "Lluvia fresca agua con su velo"
+  ],
+  [
+   670.3,
+   "transparente vendrá la lluvia a"
+  ],
+  [
+   672.8,
+   "levantarle los aromas a esta"
+  ],
+  [
+   676.7,
+   "tierra una vez vimos la luna Calle abajo"
+  ],
+  [
+   682.5,
+   "reflejada y la lluvia era un camino de"
+  ],
+  [
+   687.1,
+   "agua y Luna"
+  ],
+  [
+   689.9,
+   "un breve olor a tomillo crecía entre"
+  ],
+  [
+   692.6,
+   "nosotros y éramos niños perfumados por"
+  ],
+  [
+   696.3,
+   "la"
+  ],
+  [
+   698.3,
+   "lluvia ahora estoy lando y hay un río de"
+  ],
+  [
+   703.3,
+   "nubes por el cielo vendrá la lluvia"
+  ],
+  [
+   707.2,
+   "vendrá a correr el velo de las"
+  ],
+  [
+   710.5,
+   "cosas se mojarnos cuerpos"
+  ],
+  [
+   715.4,
+   "inocentes todo el polvo de los árboles"
+  ],
+  [
+   719.6,
+   "volverá al polvo de la"
+  ],
+  [
+   721.8,
+   "tierra los"
+  ],
+  [
+   724.0,
+   "braos quedarán limpios y rojos esta"
+  ],
+  [
+   728.4,
+   "noche"
+  ],
+  [
+   767.1,
+   "me gustaría"
+  ],
+  [
+   769.7,
+   "aclarar explicar el contenido de la"
+  ],
+  [
+   772.1,
+   "canón que vamos a"
+  ],
+  [
+   775.8,
+   "cantar y el autor"
+  ],
+  [
+   779.5,
+   "al quedarse cada uno en su puesto de"
+  ],
+  [
+   781.3,
+   "trabajo luchando por la cultura el país"
+  ],
+  [
+   784.5,
+   "el idioma por los"
+  ],
+  [
+   786.2,
+   "niños que de eso se trata esta canción"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 19,
+  "modelo": 18,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

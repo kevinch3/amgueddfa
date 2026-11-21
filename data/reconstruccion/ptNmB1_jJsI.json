@@ -1,0 +1,974 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   45.2,
+   "Ah."
+  ],
+  [
+   60.9,
+   "Vamos a dar continuidad a la competencia"
+  ],
+  [
+   63.6,
+   "número 81, dúo instrumental, violín y"
+  ],
+  [
+   68.2,
+   "piano, cello y piano o flauta y piano."
+  ],
+  [
+   72.7,
+   "Vamos a comentarles que tenemos dos"
+  ],
+  [
+   75.4,
+   "participantes, María Esiros y Zoe. Y"
+  ],
+  [
+   79.5,
+   "atención porque el final es libre."
+  ],
+  [
+   82.6,
+   "María Elquiroz en el finalita"
+  ],
+  [
+   88.0,
+   "La escuchamos."
+  ],
+  [
+   158.8,
+   "Amén."
+  ],
+  [
+   240.1,
+   "Bueno, realmente muy bella la melodía."
+  ],
+  [
+   242.7,
+   "Vamos a invitar a Zoe también con esta"
+  ],
+  [
+   247.3,
+   "modalidad de final libre. En esta"
+  ],
+  [
+   250.7,
+   "oportunidad Zoe en el final hará"
+  ],
+  [
+   255.4,
+   "agudos y percusivos."
+  ],
+  [
+   395.7,
+   "Muy bien, la danza uno de los las"
+  ],
+  [
+   399.8,
+   "mejores formas, ¿no?,"
+  ],
+  [
+   401.5,
+   "de llenarse de alegría, de vida y"
+  ],
+  [
+   404.7,
+   "también participar del arte como lo"
+  ],
+  [
+   407.4,
+   "estamos haciendo ahí, ¿no?, con todas"
+  ],
+  [
+   409.4,
+   "sus manifestaciones, poesía, recitación,"
+  ],
+  [
+   412.9,
+   "música. Y hablando de recitación vamos a"
+  ],
+  [
+   417.2,
+   "invitar a que se vayan acercando al"
+  ],
+  [
+   419.0,
+   "escenario a los participantes de la"
+  ],
+  [
+   422.8,
+   "competencia de recitación en Galés"
+  ],
+  [
+   425.9,
+   "número 24,"
+  ],
+  [
+   428.8,
+   "Adrodd."
+  ],
+  [
+   452.3,
+   "Mientras ellos vienen, se acercan, vamos"
+  ],
+  [
+   455.1,
+   "a comentarle a los amigos legales que"
+  ],
+  [
+   458.5,
+   "nos visitan."
+  ],
+  [
+   460.2,
+   "que"
+  ],
+  [
+   461.9,
+   "eh habrá una noche muy especial el 15 de"
+  ],
+  [
+   464.8,
+   "noviembre en aquel país para ayudar a"
+  ],
+  [
+   467.4,
+   "las escuelas"
+  ],
+  [
+   469.5,
+   "bilingües"
+  ],
+  [
+   471.2,
+   "galés castellano de la pandemia."
+  ],
+  [
+   475.9,
+   "Y esta propaganda dice lo siguiente."
+  ],
+  [
+   520.3,
+   "Maris"
+  ],
+  [
+   552.6,
+   "Muy bien, ya tenemos sobre el escenario"
+  ],
+  [
+   555.4,
+   "al primer participante de la competencia"
+  ],
+  [
+   558.4,
+   "24"
+  ],
+  [
+   563.2,
+   "Griffit."
+  ],
+  [
+   807.2,
+   "Muchas gracias. Próxima competencia, la"
+  ],
+  [
+   809.2,
+   "número 77, Coro de formación libre,"
+  ],
+  [
+   811.6,
+   "mínimo 12 integrantes. Obra con uso de"
+  ],
+  [
+   814.9,
+   "recursos de ambientación, movimiento,"
+  ],
+  [
+   817.6,
+   "puesta escénica a elección."
+  ],
+  [
+   821.2,
+   "Dos conjuntos para esta competencia."
+  ],
+  [
+   823.2,
+   "Primero de ellos, vocal femenino sur"
+  ],
+  [
+   825.0,
+   "azul."
+  ],
+  [
+   826.6,
+   "Ellos nos interpretarán Song of Miriam"
+  ],
+  [
+   831.8,
+   "y le vamos a pedir al coro municipal TRU"
+  ],
+  [
+   835.1,
+   "esté listo sobre al pie del escenario"
+  ],
+  [
+   837.2,
+   "para interpretar al catá."
+  ],
+  [
+   862.0,
+   "Vocal femenino sur azul."
+  ],
+  [
+   865.3,
+   "Song of"
+  ],
+  [
+   868.5,
+   "el jurado está listo. Muchas gracias."
+  ],
+  [
+   873.2,
+   "Escuchamos."
+  ],
+  [
+   888.7,
+   "Yo,"
+  ],
+  [
+   890.5,
+   "Miriam,"
+  ],
+  [
+   892.9,
+   "me paro junto al mar y me vuelvo hacia"
+  ],
+  [
+   897.1,
+   "el desierto"
+  ],
+  [
+   898.8,
+   "que se extienda interminable y quieto."
+  ],
+  [
+   903.4,
+   "Mis ojos están deslumbrados,"
+  ],
+  [
+   905.8,
+   "el cielo azul brillante,"
+  ],
+  [
+   908.7,
+   "las arenas,"
+  ],
+  [
+   910.6,
+   "las arenas quemadas por el sol de un"
+  ],
+  [
+   913.2,
+   "blanco inquebrantable."
+  ],
+  [
+   916.9,
+   "Mis manos,"
+  ],
+  [
+   919.4,
+   "mis manos se convierten en alas de"
+  ],
+  [
+   922.1,
+   "paloma. Mis brazos alcanzan el cielo y"
+  ],
+  [
+   925.3,
+   "quiero cantar la canción que crece"
+  ],
+  [
+   928.4,
+   "dentro de mí."
+  ],
+  [
+   936.5,
+   "Con la boca abierta me detengo."
+  ],
+  [
+   941.5,
+   "¿Dónde están las palabras?"
+  ],
+  [
+   945.1,
+   "¿Dónde está la melodía?"
+  ],
+  [
+   948.2,
+   "En un momento de pánico, mis ojos se"
+  ],
+  [
+   950.2,
+   "vuelven ciegos."
+  ],
+  [
+   952.2,
+   "Puedo dar un paso sin conocer el"
+  ],
+  [
+   954.1,
+   "destino."
+  ],
+  [
+   955.9,
+   "Caeré,"
+  ],
+  [
+   959.8,
+   "se hundirá el suelo debajo de mí."
+  ],
+  [
+   964.2,
+   "La canción"
+  ],
+  [
+   966.1,
+   "aún no está formada."
+  ],
+  [
+   969.4,
+   "¿Cómo puedo cantar?"
+  ],
+  [
+   972.5,
+   "Dar el primer paso, cantar una nueva"
+  ],
+  [
+   975.7,
+   "canción es cerrar los ojos y sumergirse"
+  ],
+  [
+   978.5,
+   "en aguas desconocidas, nuevas. por un"
+  ],
+  [
+   981.9,
+   "momento sin saber nada, arriesgarlo"
+  ],
+  [
+   984.8,
+   "todo,"
+  ],
+  [
+   990.3,
+   "pero luego"
+  ],
+  [
+   993.9,
+   "luego descubrir"
+  ],
+  [
+   998.2,
+   "las aguas. Las aguas son amigables."
+  ],
+  [
+   1005.1,
+   "El suelo"
+  ],
+  [
+   1007.0,
+   "es firme"
+  ],
+  [
+   1009.7,
+   "y la canción,"
+  ],
+  [
+   1012.2,
+   "la canción vuelve a surgir. De mi boca"
+  ],
+  [
+   1016.0,
+   "salen palabras que levantan el viento y"
+  ],
+  [
+   1018.5,
+   "escucho por primera vez la canción que"
+  ],
+  [
+   1022.2,
+   "ha estado en mi corazón."
+  ],
+  [
+   1025.7,
+   "silenciosa,"
+  ],
+  [
+   1028.4,
+   "desconocida,"
+  ],
+  [
+   1030.0,
+   "incluso para mí."
+  ],
+  [
+   1075.5,
+   "Will"
+  ],
+  [
+   1088.8,
+   "my"
+  ],
+  [
+   1091.0,
+   "turn to"
+  ],
+  [
+   1094.8,
+   "my heart is the sky"
+  ],
+  [
+   1103.8,
+   "I want"
+  ],
+  [
+   1106.1,
+   "to"
+  ],
+  [
+   1107.8,
+   "see"
+  ],
+  [
+   1112.4,
+   "I want to sing"
+  ],
+  [
+   1131.7,
+   "ahí está"
+  ],
+  [
+   1199.1,
+   "nothing"
+  ],
+  [
+   1202.6,
+   "for our moment"
+  ],
+  [
+   1211.4,
+   "to discover the waters"
+  ],
+  [
+   1222.9,
+   "All my"
+  ],
+  [
+   1228.5,
+   "I for the first"
+  ],
+  [
+   1236.6,
+   "nuestra empresa"
+  ],
+  [
+   1321.4,
+   "Vamos a invitar ahora a subir al"
+  ],
+  [
+   1323.2,
+   "escenario el municipal de Alz."
+  ],
+  [
+   1377.9,
+   "por"
+  ],
+  [
+   1403.2,
+   "Al sol de la tambor y la salente"
+  ],
+  [
+   1408.5,
+   "de que no me quema atrás"
+  ],
+  [
+   1419.0,
+   "que el alar me quema el alaro."
+  ],
+  [
+   1426.5,
+   "Salgan todos,"
+  ],
+  [
+   1428.8,
+   "salgan todos a la banda. Uno con sus"
+  ],
+  [
+   1432.5,
+   "hijos y otro con su lampa. Uno con sus"
+  ],
+  [
+   1436.8,
+   "picos y otros van con su"
+  ],
+  [
+   1440.8,
+   "alma."
+  ],
+  [
+   1442.7,
+   "El al me quema el alma."
+  ],
+  [
+   1455.1,
+   "No le cale que no me queman"
+  ],
+  [
+   1474.6,
+   "Jesús"
+  ],
+  [
+   1486.5,
+   "Jesús,"
+  ],
+  [
+   1490.3,
+   "Jesús, lo tengo"
+  ],
+  [
+   1497.5,
+   "me voy a"
+  ],
+  [
+   1507.2,
+   "que está"
+  ],
+  [
+   1516.2,
+   "levantar siempre."
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 28,
+  "modelo": 26,
+  "reglas": 0,
+  "vacias": 2
+ }
+}

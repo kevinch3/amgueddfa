@@ -1,0 +1,603 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   48.4,
+   "en los brazos de"
+  ],
+  [
+   54.6,
+   "la Eisteddfod"
+  ],
+  [
+   85.3,
+   "viene esta noche es noche"
+  ],
+  [
+   92.5,
+   "esta noche no"
+  ],
+  [
+   96.9,
+   "se"
+  ],
+  [
+   99.1,
+   "acaso ven las"
+  ],
+  [
+   103.5,
+   "aves"
+  ],
+  [
+   105.0,
+   "conul sus Ros"
+  ],
+  [
+   111.6,
+   "vien"
+  ],
+  [
+   114.5,
+   "lases con el sol sus"
+  ],
+  [
+   118.8,
+   "braos Oh"
+  ],
+  [
+   172.2,
+   "celestial sus"
+  ],
+  [
+   176.2,
+   "palabras ala"
+  ],
+  [
+   217.1,
+   "voluntad"
+  ],
+  [
+   296.1,
+   "mar pastore"
+  ],
+  [
+   302.1,
+   "que cantan"
+  ],
+  [
+   309.1,
+   "melodías Cristo el re"
+  ],
+  [
+   312.7,
+   "pastor"
+  ],
+  [
+   314.8,
+   "sel"
+  ],
+  [
+   319.9,
+   "canto El"
+  ],
+  [
+   323.4,
+   "maro María"
+  ],
+  [
+   332.1,
+   "ofrendas al rey"
+  ],
+  [
+   336.9,
+   "con al rei de re"
+  ],
+  [
+   341.8,
+   "salva"
+  ],
+  [
+   349.7,
+   "uno Cristo el rey"
+  ],
+  [
+   353.4,
+   "pastor"
+  ],
+  [
+   355.3,
+   "Ángeles cantar"
+  ],
+  [
+   361.5,
+   "el al hijo de María"
+  ],
+  [
+   488.0,
+   "Eisteddfod"
+  ],
+  [
+   535.0,
+   "unas operas de"
+  ],
+  [
+   537.1,
+   "carón noche"
+  ],
+  [
+   556.2,
+   "sigió tu corazón que las"
+  ],
+  [
+   560.8,
+   "quedó pensando am"
+  ],
+  [
+   571.2,
+   "laina Dios como yo tiene la noche ganas"
+  ],
+  [
+   576.3,
+   "de"
+  ],
+  [
+   605.2,
+   "seguir adelante"
+  ],
+  [
+   615.0,
+   "sin"
+  ],
+  [
+   628.3,
+   "elar el poder"
+  ],
+  [
+   630.8,
+   "laor sin ilusión"
+  ],
+  [
+   637.7,
+   "con de la"
+  ],
+  [
+   642.3,
+   "tentación como yo que la noche ganas de"
+  ],
+  [
+   646.7,
+   "llorar y me empu peo afuera"
+  ],
+  [
+   727.2,
+   "misum et"
+  ],
+  [
+   733.2,
+   "mil sakramentu"
+  ],
+  [
+   764.2,
+   "ut Maria"
+  ],
+  [
+   840.2,
+   "Hola buenas noches Cómo"
+  ],
+  [
+   842.1,
+   "está que"
+  ],
+  [
+   844.5,
+   "cansados"
+  ],
+  [
+   846.3,
+   "Vamos a cantar"
+  ],
+  [
+   850.7,
+   "querido maestro"
+  ],
+  [
+   893.6,
+   "fuerte con una bruca Al despertar"
+  ],
+  [
+   899.2,
+   "me encontrado con mi suegra y"
+  ],
+  [
+   919.9,
+   "L el me anda buscando no me"
+  ],
+  [
+   925.5,
+   "encontró pare que Leo un"
+  ],
+  [
+   930.7,
+   "al sol mana"
+  ],
+  [
+   939.5,
+   "llevate la"
+  ],
+  [
+   941.5,
+   "ascensor marchad por las noches sale"
+  ],
+  [
+   946.3,
+   "mejor"
+  ],
+  [
+   949.9,
+   "santao soy Señor"
+  ],
+  [
+   970.0,
+   "yo me la encontré gritando a trabajar"
+  ],
+  [
+   1124.9,
+   "o sakramentu"
+  ],
+  [
+   1154.9,
+   "sacrament"
+  ],
+  [
+   1268.5,
+   "saliste entre la gente a salvar"
+  ],
+  [
+   1295.9,
+   "todo lo que digas"
+  ],
+  [
+   1301.2,
+   "dte las luces siempren si el alma y"
+  ],
+  [
+   1307.5,
+   "cuando"
+  ],
+  [
+   1313.2,
+   "ciudad cosas es comprend"
+  ],
+  [
+   1319.8,
+   "es solo un rato no más tendría que"
+  ],
+  [
+   1325.6,
+   "llorar í a"
+  ],
+  [
+   1394.7,
+   "de algun"
+  ],
+  [
+   1405.5,
+   "lugaras un vestigo"
+  ],
+  [
+   1418.6,
+   "am todo lo que vida está"
+  ],
+  [
+   1425.0,
+   "de las luces siempre"
+  ],
+  [
+   1428.1,
+   "encienden el alma y cuando me Pio en la"
+  ],
+  [
+   1434.2,
+   "ciudad"
+  ],
+  [
+   1438.7,
+   "sabes"
+  ],
+  [
+   1442.3,
+   "comprender es solo un frano no más"
+  ],
+  [
+   1447.1,
+   "tendría que llorar o sía"
+  ],
+  [
+   1452.9,
+   "matar"
+  ],
+  [
+   1458.2,
+   "tení solo lo"
+  ],
+  [
+   1463.6,
+   "buscará te"
+  ],
+  [
+   1470.1,
+   "yo lo buscaba"
+  ],
+  [
+   1473.2,
+   "nadie nadie"
+  ],
+  [
+   1499.9,
+   "bravo bravo"
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 26,
+  "modelo": 25,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

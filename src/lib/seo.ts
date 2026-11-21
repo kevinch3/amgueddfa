@@ -99,12 +99,21 @@ export function isConfirmedEdition(f: EditionFacts): boolean {
 }
 
 /**
- * schema.org for an edition's page; only the fields we actually know.
- * Confirmed editions are an Event (cancelled when not held); the others are
- * a CollectionPage: the archive's material for that year, nothing more.
+ * Whether an edition's page is a schema.org Event: it is confirmed, and both its date and its
+ * place are approved. Google treats an Event without `startDate` or `location` as broken
+ * (Search Console, critical), so the others are described as the archive's page for that year (#16).
  */
-export function editionJsonLd(o: { name: string; year: number; url: string; image: string | null; facts: EditionFacts }): Ld {
-  if (!isConfirmedEdition(o.facts)) {
+export function isEventEdition(f: EditionFacts): boolean {
+  return isConfirmedEdition(f) && Boolean(f.startDate) && Boolean(f.venue);
+}
+
+/**
+ * schema.org for an edition's page; only the fields we actually know.
+ * An Event (cancelled when not held) when the date and place are approved; otherwise a
+ * CollectionPage: the archive's material for that year, nothing more.
+ */
+export function editionJsonLd(o: { name: string; year: number; url: string; image: string | null; facts: EditionFacts; description?: string }): Ld {
+  if (!isEventEdition(o.facts)) {
     const page: Ld = {
       '@context': 'https://schema.org',
       '@type': 'CollectionPage',
@@ -113,22 +122,26 @@ export function editionJsonLd(o: { name: string; year: number; url: string; imag
       isAccessibleForFree: true,
       temporalCoverage: String(o.year),
     };
+    if (o.description) page.description = o.description;
     if (o.image) page.image = o.image;
     return page;
   }
   const ld: Ld = {
     '@context': 'https://schema.org',
     '@type': 'Event',
+    '@id': `${o.url}#evento`,
     name: `${o.name} ${o.year}`,
     url: o.url,
     isAccessibleForFree: true,
     inLanguage: ['cy', 'es'],
+    startDate: o.facts.startDate,
+    // Every eisteddfod in the archive is in the province of Chubut, Argentina.
+    location: { '@type': 'Place', name: o.facts.venue, address: { '@type': 'PostalAddress', addressRegion: 'Chubut', addressCountry: 'AR' } },
+    eventStatus: o.facts.notHeld ? 'https://schema.org/EventCancelled' : 'https://schema.org/EventScheduled',
   };
-  if (o.facts.startDate) ld.startDate = o.facts.startDate;
+  if (o.description) ld.description = o.description;
   if (o.facts.endDate) ld.endDate = o.facts.endDate;
-  if (o.facts.venue) ld.location = { '@type': 'Place', name: o.facts.venue };
   if (o.image) ld.image = o.image;
-  if (o.facts.notHeld) ld.eventStatus = 'https://schema.org/EventCancelled';
   return ld;
 }
 
@@ -137,7 +150,7 @@ export function editionJsonLd(o: { name: string; year: number; url: string; imag
  * Event only when that edition is confirmed; otherwise it is part of the
  * edition's page.
  */
-export function itemJsonLd(o: { name: string; url: string; image: string | null; editionUrl: string | null; editionName: string | null; year: number | null; editionConfirmed?: boolean; rights?: string }): Ld {
+export function itemJsonLd(o: { name: string; url: string; image: string | null; editionUrl: string | null; editionName: string | null; year: number | null; editionEvent?: boolean; rights?: string }): Ld {
   const ld: Ld = {
     '@context': 'https://schema.org',
     '@type': 'ArchiveComponent',
@@ -151,7 +164,8 @@ export function itemJsonLd(o: { name: string; url: string; image: string | null;
   // Only a credit line the archive actually has; never a guessed author or licence.
   if (o.rights?.trim()) ld.copyrightNotice = o.rights.trim();
   if (o.editionUrl && o.editionName) {
-    if (o.editionConfirmed) ld.about = { '@type': 'Event', name: o.editionName, url: o.editionUrl };
+    // A reference to the year page's full Event (by @id), not a second, incomplete Event node.
+    if (o.editionEvent) ld.about = { '@id': `${o.editionUrl}#evento` };
     else ld.isPartOf = { '@type': 'CollectionPage', name: o.editionName, url: o.editionUrl };
   }
   return ld;

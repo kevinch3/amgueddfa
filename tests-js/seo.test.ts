@@ -1,7 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import {
-  absUrl, breadcrumbJsonLd, editionDescription, editionFacts, editionJsonLd, factRecord, isConfirmedEdition, itemJsonLd, ldGraph, siteJsonLd, sitemapXml, xmlEscape,
-} from '../src/lib/seo';
+import { absUrl, breadcrumbJsonLd, editionDescription, editionFacts, editionJsonLd, factRecord, isConfirmedEdition, itemJsonLd, ldGraph, siteJsonLd, sitemapXml, xmlEscape, isEventEdition } from '../src/lib/seo';
 
 const fact = (field: string, value: string, extra: Record<string, unknown> = {}) =>
   ({ id: field, type: 'fact', festival: 'chubut', year: 1937, item_id: null, payload: { field, value, ...extra }, created_at: '', reviewed_at: null, display_name: null }) as any;
@@ -44,21 +42,27 @@ describe('seo builders', () => {
     expect(editionFacts([], 'chubut', 1937)).toMatchObject({ held: null, notHeld: false });
   });
 
-  it('editionJsonLd: a full Event, and a minimal valid one without facts', () => {
+  it('editionJsonLd: an Event only with an approved date and place, with what Google asks for (#16)', () => {
     const full = editionJsonLd({
-      name: 'Eisteddfod del Chubut', year: 1937, url: absUrl('chubut/1937/'), image: 'https://x/c.webp',
+      name: 'Eisteddfod del Chubut', year: 1937, url: absUrl('chubut/1937/'), image: 'https://x/c.webp', description: 'Eisteddfod del Chubut 1937. Lugar: Salón San David.',
       facts: { startDate: '1937-12-08', venue: 'Salón San David', silla: 'E. M. Roberts', notHeld: false, held: true },
     });
     expect(full).toMatchObject({
-      '@context': 'https://schema.org', '@type': 'Event', name: 'Eisteddfod del Chubut 1937',
-      startDate: '1937-12-08', location: { '@type': 'Place', name: 'Salón San David' }, image: 'https://x/c.webp',
-      isAccessibleForFree: true,
+      '@context': 'https://schema.org', '@type': 'Event', '@id': 'https://amgueddfa.org/chubut/1937/#evento', name: 'Eisteddfod del Chubut 1937', description: 'Eisteddfod del Chubut 1937. Lugar: Salón San David.',
+      startDate: '1937-12-08', eventStatus: 'https://schema.org/EventScheduled',
+      location: { '@type': 'Place', name: 'Salón San David', address: { '@type': 'PostalAddress', addressRegion: 'Chubut', addressCountry: 'AR' } },
+      image: 'https://x/c.webp', isAccessibleForFree: true,
     });
-    const bare = editionJsonLd({ name: 'Eisteddfod de Trevelin', year: 2016, url: absUrl('trevelin/2016/'), image: null, facts: { notHeld: false, held: true } });
-    expect(bare).toMatchObject({ '@type': 'Event', name: 'Eisteddfod de Trevelin 2016', url: 'https://amgueddfa.org/trevelin/2016/' });
-    for (const k of ['startDate', 'location', 'image', 'eventStatus']) expect(bare).not.toHaveProperty(k);
-    const cancelled = editionJsonLd({ name: 'X', year: 1930, url: 'u', image: null, facts: { notHeld: true, held: false } });
+    const cancelled = editionJsonLd({ name: 'X', year: 1930, url: 'u', image: null, facts: { startDate: '1930-10-01', venue: 'Trelew', notHeld: true, held: false } });
     expect(cancelled.eventStatus).toBe('https://schema.org/EventCancelled');
+    // Held, but no date or no place approved: an archive page, never an incomplete Event.
+    for (const facts of [{ notHeld: false, held: true }, { startDate: '2016-04-30', notHeld: false, held: true }, { venue: 'Trevelin', notHeld: false, held: true }, { notHeld: true, held: false }]) {
+      const ld = editionJsonLd({ name: 'Eisteddfod de Trevelin', year: 2016, url: absUrl('trevelin/2016/'), image: null, facts });
+      expect(ld, JSON.stringify(facts)).toMatchObject({ '@type': 'CollectionPage', url: 'https://amgueddfa.org/trevelin/2016/' });
+      expect(JSON.stringify(ld)).not.toContain('Event');
+    }
+    expect(isEventEdition({ startDate: '1937-12-08', venue: 'Salón San David', notHeld: false, held: true })).toBe(true);
+    expect(isEventEdition({ startDate: '1937-12-08', notHeld: false, held: true })).toBe(false);
   });
 
   it('editionJsonLd: an edition not known to have happened is never an Event', () => {
@@ -102,10 +106,11 @@ describe('seo builders', () => {
   });
 
   it('itemJsonLd and siteJsonLd', () => {
-    const item = itemJsonLd({ name: 'Programa Rhaglen 2012', url: absUrl('item/abc/'), image: absUrl('media/abc/thumb.webp'), editionUrl: absUrl('chubut/2012/'), editionName: 'Eisteddfod del Chubut 2012', year: 2012, editionConfirmed: true });
-    expect(item).toMatchObject({ '@type': 'ArchiveComponent', name: 'Programa Rhaglen 2012', about: { '@type': 'Event', url: 'https://amgueddfa.org/chubut/2012/' } });
-    // Edition not confirmed: the document belongs to the edition's page, not to an asserted Event.
-    const unsure = itemJsonLd({ name: 'Recorte 1880', url: absUrl('item/def/'), image: null, editionUrl: absUrl('chubut/1880/'), editionName: 'Eisteddfod del Chubut 1880', year: 1880, editionConfirmed: false });
+    const item = itemJsonLd({ name: 'Programa Rhaglen 2012', url: absUrl('item/abc/'), image: absUrl('media/abc/thumb.webp'), editionUrl: absUrl('chubut/2012/'), editionName: 'Eisteddfod del Chubut 2012', year: 2012, editionEvent: true });
+    expect(item).toMatchObject({ '@type': 'ArchiveComponent', name: 'Programa Rhaglen 2012', about: { '@id': 'https://amgueddfa.org/chubut/2012/#evento' } });
+    expect(JSON.stringify(item)).not.toContain('"@type":"Event"');
+    // Edition with no Event (no approved date and place): the document belongs to the edition's page, not to an asserted Event.
+    const unsure = itemJsonLd({ name: 'Recorte 1880', url: absUrl('item/def/'), image: null, editionUrl: absUrl('chubut/1880/'), editionName: 'Eisteddfod del Chubut 1880', year: 1880, editionEvent: false });
     expect(unsure).toMatchObject({ isPartOf: { '@type': 'CollectionPage', url: 'https://amgueddfa.org/chubut/1880/' } });
     expect(JSON.stringify(unsure)).not.toContain('Event');
     expect(unsure).not.toHaveProperty('copyrightNotice');

@@ -205,9 +205,27 @@ describe('static build', () => {
     expect(early).toContain('"@type":"CollectionPage"');
     expect(early).not.toContain('"@type":"Event"');
     expect(year).toMatch(/<meta name="description" content="Eisteddfod del Chubut 1937\./);
-    // Every approved start date shows up in its edition's Event (zero or many, whatever the data is).
-    for (const c of (approved as any[]).filter((x) => x.type === 'fact' && x.payload?.field === 'start_date')) {
-      expect(read(`${c.festival}/${c.year}/index.html`)).toContain(`"startDate":"${c.payload.value}"`);
+    // An Event always has what Google requires: a date and a place (#16); and every edition with both is one.
+    let events = 0;
+    for (const f of readdirSync(DIST).filter((d) => statSync(join(DIST, d)).isDirectory())) {
+      for (const y of readdirSync(join(DIST, f)).filter((d) => /^\d{4}$/.test(d) && existsSync(join(DIST, f, d, 'index.html')))) {
+        const html = read(`${f}/${y}/index.html`);
+        if (!html.includes('"@type":"Event"')) continue;
+        events++;
+        expect(html, `${f}/${y}`).toContain('"startDate":');
+        expect(html, `${f}/${y}`).toContain('"location":');
+        expect(html, `${f}/${y}`).toContain('"eventStatus":');
+        expect(html, `${f}/${y}`).toContain('"description":');
+      }
+    }
+    expect(events).toBeGreaterThan(0);
+    expect(readdirSync(join(DIST, 'item')).filter((id) => existsSync(join(DIST, 'item', id, 'index.html'))).some((id) => read(`item/${id}/index.html`).includes('"@type":"Event"'))).toBe(false);
+    const facts = (approved as any[]).filter((x) => x.type === 'fact');
+    for (const c of facts.filter((x) => x.payload?.field === 'start_date')) {
+      const venue = facts.some((x) => x.festival === c.festival && x.year === c.year && x.payload?.field === 'venue');
+      const html = read(`${c.festival}/${c.year}/index.html`);
+      if (venue) expect(html, `${c.festival} ${c.year}`).toContain(`"startDate":"${c.payload.value}"`);
+      else expect(html, `${c.festival} ${c.year}`).not.toContain('"@type":"Event"');
     }
     const prog = catalog.find((i) => i.category === 'programa' && !i.restricted && i.year !== null && i.thumb)!;
     const itemPage = read(`item/${prog.id}/index.html`);

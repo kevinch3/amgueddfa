@@ -48,7 +48,7 @@ Objetivo: WCAG 2.2 nivel AA. Declaración, estado y ajustes de lectura: ${absUrl
 ## Notas
 
 - Los documentos restringidos por pedido de las asociaciones no se publican ni se listan.
-- Las páginas de cada año llevan datos estructurados schema.org: Event solo cuando hay constancia de la edición (se realizó o no, o una fecha aprobada); si no, CollectionPage. Las de cada documento, ArchiveComponent; todas con BreadcrumbList.
+- Las páginas de cada año llevan datos estructurados schema.org: Event solo cuando la edición está confirmada y tiene fecha y lugar aprobados; si no, CollectionPage. Las de cada documento, ArchiveComponent; todas con BreadcrumbList.
 `;
   return new Response(text, { headers: { 'Content-Type': 'text/plain; charset=utf-8' } });
 }

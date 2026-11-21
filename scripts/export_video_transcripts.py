@@ -183,6 +183,20 @@ def glob_escape(name: str) -> str:
 RECON = REPO / "data" / "reconstruccion"
 
 
+def main_language(t: dict) -> str:
+    """The language most of a reconstruction's text is in, by length: a line the Welsh model heard is
+    Welsh, any other Spanish. Counting source lines instead lets YouTube's many short "Spanish"
+    mishearings of Welsh outvote it (Chubut 2008 3u6cv4eV1IA was labelled castellano)."""
+    fu = t.get("fuentes")
+    if not fu or len(fu) != len(t["seg"]):
+        return t.get("lang", "es")
+    size = {"cy": 0, "es": 0}
+    for (_, text), f in zip(t["seg"], fu):
+        if "letra" not in f:
+            size["cy" if "cy" in f else "es"] += len(text)
+    return max(size, key=size.get) if any(size.values()) else t.get("lang", "es")
+
+
 def export(backup: Path, videos: list[dict], out: Path = OUT, words: set[str] | None = None, recon: Path = RECON, letras: Path = LETRAS) -> dict:
     wanted = {v["id"] for v in videos if v["festival"] in FESTIVALS}
     with (backup / "INDEX.tsv").open(newline="", encoding="utf-8") as f:
@@ -199,6 +213,7 @@ def export(backup: Path, videos: list[dict], out: Path = OUT, words: set[str] | 
             t = {k: v for k, v in json.loads(rec.read_text(encoding="utf-8")).items() if k not in ("ventanas", "modelo")}
             if t.get("letras"):
                 t["letras"] = credit(t["letras"], spans_for(vid, letras), letras)
+            t["lang"] = main_language(t)
             body = json.dumps(t, ensure_ascii=False, separators=(",", ":"))
             p = out / f"{vid}.json"
             if not p.exists() or p.read_text(encoding="utf-8") != body:

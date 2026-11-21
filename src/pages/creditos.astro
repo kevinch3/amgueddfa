@@ -1,0 +1,49 @@
+---
+import Base from '../layouts/Base.astro';
+import TranslationNote from '../components/TranslationNote.astro';
+import { t } from '../lib/i18n';
+import { url } from '../lib/paths';
+import { COMO_SE_RECONSTRUYE, DOCUMENTOS, SITIO, VIDEOS, type Credito } from '../lib/creditos';
+
+// Issue #82: which tools and resources produce the archive's texts, with their licences.
+const c = (k: string) => t(`legal.creditos.${k}`);
+const grupos: [string, string, Credito[]][] = [
+  ['videos', c('videos_titulo'), VIDEOS],
+  ['documentos', c('documentos_titulo'), DOCUMENTOS],
+  ['sitio', c('sitio_titulo'), SITIO],
+];
+---
+<Base title={t('legal.titulos.creditos')} description={c('descripcion')}>
+  <article class="legal measure">
+    <h1>{t('legal.titulos.creditos')}</h1>
+    <TranslationNote />
+    <p class="lead">{c('intro')}</p>
+
+    {grupos.map(([id, titulo, lista]) => (
+      <section aria-labelledby={id}>
+        <h2 id={id}>{titulo}</h2>
+        {id === 'videos' && <p>{c('videos_intro')}</p>}
+        <ul class="creditos">
+          {lista.map((x) => (
+            <li>
+              <a href={x.href} rel="noopener">{x.nombre}</a>{x.licencia && <span class="muted"> ({x.licencia})</span>}
+              {x.key === 'gales' ? <> — <span lang="cy">Uned Technolegau Iaith, Canolfan Bedwyr, Prifysgol Bangor</span>. {c(`item.${x.key}`)}</> : <> — {c(`item.${x.key}`)}</>}
+            </li>
+          ))}
+        </ul>
+        {id === 'videos' && (
+          <>
+            <h3 id="reconstruido">{c('reconstruido_titulo')}</h3>
+            <p>{c('reconstruido_1')}</p>
+            <p>{c('reconstruido_2')} <a href={COMO_SE_RECONSTRUYE} rel="noopener">{c('reconstruido_enlace')}</a>{t('comun.punto')}</p>
+            <h3 id="letras">{c('letras_titulo')}</h3>
+            <p>{c('letras_1')} <a href={url('derechos')}>{c('letras_derechos')}</a>{t('comun.punto')}</p>
+          </>
+        )}
+      </section>
+    ))}
+
+    <h2 id="gracias">{c('gracias_titulo')}</h2>
+    <p>{c('gracias_1')}</p>
+  </article>
+</Base>

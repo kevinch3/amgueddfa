@@ -233,7 +233,8 @@
       "accesibilidad": "Accessibility",
       "derechos": "Rights",
       "privacidad": "Privacy",
-      "cookies": "Cookies"
+      "cookies": "Cookies",
+      "creditos": "Credits"
     }
   },
   "auth": {
@@ -765,7 +766,8 @@
       "objetivos": "Aims",
       "accesibilidad": "Accessibility",
       "derechos": "Copyright and content removal",
-      "privacidad": "Privacy and personal data"
+      "privacidad": "Privacy and personal data",
+      "creditos": "Credits and tools"
     },
     "actualizado": "Last updated: {fecha}.",
     "traduccion": "This page is a translation: if there are any differences, the Spanish text prevails.",
@@ -888,6 +890,38 @@
       "derechos_plazos": "We'll show you your data within 10 calendar days, and correct or delete it within 5 working days.",
       "derechos_aportes": "If you ask us to delete your account, contributions that have already been published stay in the archive under the CC BY-SA 4.0 licence, under your name or anonymously, as you prefer.",
       "derechos_aaip": "If we don't reply, you can complain to the Agencia de Acceso a la Información Pública (Argentina's Agency for Access to Public Information), which oversees compliance with that law."
+    },
+    "creditos": {
+      "descripcion": "The tools and resources that produce the archive's texts, with their licences.",
+      "intro": "The texts of this archive's videos and documents are produced with other people's tools and resources. Here they all are, with their licences.",
+      "videos_titulo": "Video text",
+      "videos_intro": "Each video brings several sources together: what was said in Spanish and in Welsh, and the lyrics of what is sung when we have them.",
+      "reconstruido_titulo": "What a “reconstructed text” is",
+      "reconstruido_1": "In a reconstructed text, every line comes from what was actually heard in one of the sources: no words are invented. The model corrects names, Welsh mutations and recognition errors with the help of the programa and the edition's facts, and our own rules check every answer (each line must be in a source, at its time). If an answer fails them, the source stays unchanged.",
+      "reconstruido_2": "It may still have errors, which can be reported from the player. More details:",
+      "reconstruido_enlace": "how it is made and checked",
+      "letras_titulo": "Lyrics",
+      "letras_1": "The lyrics of what is sung are supplied by the archive's maintainer and the community. The player names each piece with its author, its rights and its source. If you hold the rights to a lyric and do not want it published, see",
+      "letras_derechos": "Copyright and content removal",
+      "documentos_titulo": "Automatic text of the documents",
+      "sitio_titulo": "Site and data",
+      "gracias_titulo": "Thanks",
+      "gracias_1": "Special thanks to Bangor University's Language Technologies Unit for publishing their Welsh model openly: without it, the Welsh in the Wladfa's videos would still have no text.",
+      "item": {
+        "gales": "Recognition of spoken Welsh. Most of the Welsh text in the videos comes from this model.",
+        "youtube": "Automatic Spanish captions.",
+        "whisper": "Recognition of Spanish in the videos YouTube does not transcribe.",
+        "faster_whisper": "Runs the Whisper models on our own computer.",
+        "claude": "Text reconstruction: it compares the sources for each minute and chooses and corrects each line.",
+        "tesseract": "Automatic, unreviewed text of the scans in Welsh, Spanish and English: it helps searching and is a draft for transcribers.",
+        "astro": "Site generator.",
+        "pagefind": "Site search.",
+        "supabase": "Accounts, contributions and approved data.",
+        "pages": "Site hosting.",
+        "cloudflare": "Document images and cookie-free visit statistics.",
+        "ytdlp": "Private backup copy of the videos and their captions.",
+        "ffmpeg": "Audio extraction for speech recognition."
+      }
     }
   },
   "accesibilidad": {
@@ -974,14 +1008,17 @@
     "nota_capitulos": "Marked automatically from what is announced in the session; they may contain mistakes.",
     "ver_en_video": "Watch in the video, from {tiempo}",
     "letra_alineada": "lyrics aligned",
-    "nota_letra": "Lyrics of {piezas}, aligned to the video automatically: the times are approximate.",
+    "letras_titulo": "Lyrics aligned to the video automatically (times are approximate)",
+    "copiar_enlace": "Copy link to this moment",
+    "enlace_copiado": "Link to {tiempo} copied",
     "origen": {
       "subida": "uploader's subtitles",
       "yt_es": "YouTube automatic",
       "whisper_es": "Whisper",
       "cy": "Welsh speech recognition",
       "letra": "the piece's lyrics"
-    }
+    },
+    "como_se_produce": "How this text is produced"
   },
   "buscar": {
     "titulo": "Search the archive",

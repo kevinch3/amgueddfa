@@ -8,7 +8,7 @@
  */
 import { t } from '../lib/i18n';
 import { url } from '../lib/paths';
-import { asTranscript, findLines, fmtTime, letraAt, lineAt, type Transcript } from '../lib/video-transcript';
+import { asTranscript, creditos, findLines, fmtTime, letraAt, lineAt, type Transcript } from '../lib/video-transcript';
 import { parseVideoHash, videoHash } from '../lib/video-hash';
 import { videoUrl } from '../lib/videos';
 
@@ -130,10 +130,7 @@ if (dialog) {
     lines.replaceChildren();
     $('[data-rep-vacio]')!.hidden = !!tr;
     $('[data-rep-buscador]')!.hidden = !tr;
-    $('[data-rep-nota]')!.hidden = tr?.src !== 'whisper';
-    const notaLetra = $('[data-rep-nota-letra]')!;
-    notaLetra.hidden = !tr?.letras;
-    notaLetra.textContent = tr?.letras ? t('reproductor.nota_letra', { piezas: tr.letras.map((l) => `«${l.titulo}» (${l.autor})`).join(', ') }) : '';
+    renderFooter(tr);
     const badge = $('[data-rep-fuente]')!;
     badge.hidden = !tr;
     search.value = '';
@@ -165,6 +162,35 @@ if (dialog) {
       frag.append(li);
     });
     lines.append(frag);
+  }
+
+  /** The footer under the lines: the Whisper warning, and one credit line per lyric (title, author, rights, source). */
+  function renderFooter(tr: Transcript | null): void {
+    const whisper = tr?.src === 'whisper';
+    const cred = tr ? creditos(tr) : [];
+    $('[data-rep-nota]')!.hidden = !whisper;
+    $('[data-rep-creditos]')!.hidden = !cred.length;
+    // Always there under a transcript: at least the link to how its text is produced (/creditos/#videos).
+    $('[data-rep-pie]')!.hidden = !tr;
+    const ul = $('[data-rep-creditos-lista]')!;
+    ul.replaceChildren(
+      ...cred.map((c) => {
+        const li = document.createElement('li');
+        const ti = document.createElement('cite');
+        ti.textContent = `«${c.titulo}»`;
+        li.append(ti, c.autor ? `, ${c.autor}` : '');
+        if (c.derechos) li.append(` · ${c.derechos}`);
+        if (c.fuente.href) {
+          const a = document.createElement('a');
+          a.href = c.fuente.href;
+          a.rel = 'noopener';
+          a.target = '_blank';
+          a.textContent = c.fuente.host ?? c.fuente.href;
+          li.append(' · ', a, c.fuente.texto ? `, ${c.fuente.texto}` : '');
+        } else if (c.fuente.texto) li.append(` · ${c.fuente.texto}`);
+        return li;
+      }),
+    );
   }
 
   function markChapter(i: number): void {
@@ -240,6 +266,7 @@ if (dialog) {
     ($('[data-rep-anterior]') as HTMLButtonElement).disabled = index === 0;
     ($('[data-rep-siguiente]') as HTMLButtonElement).disabled = index === list.length - 1;
     $('[data-rep-error]')!.hidden = true;
+    $('[data-rep-copiado]')!.textContent = '';
     $('.rep-marco')!.hidden = false;
     // The address names the open video; no history entry, so "back" still leaves the page.
     history.replaceState(history.state, '', videoHash(id, start));
@@ -356,6 +383,26 @@ if (dialog) {
   $('[data-rep-anterior]')?.addEventListener('click', () => void show(index - 1));
   $('[data-rep-siguiente]')?.addEventListener('click', () => void show(index + 1));
   $('[data-rep-cerrar]')?.addEventListener('click', () => dialog.close());
+  // "Copiar enlace a este momento": the page's address with the open video and the second it is at.
+  $('[data-rep-copiar]')?.addEventListener('click', async () => {
+    const id = list[index]?.dataset.video ?? '';
+    let now = 0;
+    try {
+      now = player?.getCurrentTime() ?? 0;
+    } catch {
+      /* not ready yet: the start */
+    }
+    const hash = videoHash(id, now);
+    history.replaceState(history.state, '', hash);
+    const href = `${location.origin}${location.pathname}${location.search}${hash}`;
+    const status = $('[data-rep-copiado]')!;
+    try {
+      await navigator.clipboard.writeText(href);
+      status.textContent = t('reproductor.enlace_copiado', { tiempo: fmtTime(now) });
+    } catch {
+      status.textContent = href; // no clipboard (http, old browser): the address bar has it too
+    }
+  });
   // "Informar un error": close the player and use the card's own report button (scripts/informar.ts).
   $('[data-rep-informar]')?.addEventListener('click', () => {
     const btn = list[index]?.querySelector<HTMLButtonElement>('[data-informar-video]');

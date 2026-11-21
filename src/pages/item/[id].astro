@@ -8,7 +8,7 @@ import { byLine, jsonForScript, type Contribution } from '../../lib/contrib';
 import { transcriptionDoc } from '../../lib/transcripciones';
 import { ocrFor } from '../../lib/ocr';
 import { allItems, pageUrls, thumbUrl } from '../../lib/catalog';
-import { absUrl, breadcrumbJsonLd, editionFacts, isConfirmedEdition, itemJsonLd, ldGraph } from '../../lib/seo';
+import { absUrl, breadcrumbJsonLd, editionFacts, isEventEdition, itemJsonLd, ldGraph } from '../../lib/seo';
 import editionsStatic from '../../../data/approved/editions.json';
 import { contentLang, intlLocales, t } from '../../lib/i18n';
 import { url } from '../../lib/paths';
@@ -28,17 +28,17 @@ const yearLabel = item.year ?? (item.undated ? t('item.sin_fecha') : t('item.gen
 const yearHref = item.year ? url(`${item.festival}/${item.year}/`) : url(`general/${item.festival}/`);
 // For search engines: restricted items never expose an image (thumbUrl is null for them).
 const image = thumbUrl(item);
-const description = [item.title, `${fest}${item.year ? ` ${item.year}` : ''}.`, t(`categorias.${item.category}`) + '.'].join(' · ');
+const description = `${[item.title.replace(/[.\s]+$/, ''), `${fest}${item.year ? ` ${item.year}` : ''}`, t(`categorias.${item.category}`)].join(' · ')}.`;
 // Restricted documents get no structured data (they are not freely available here).
 // "About" the edition's Event only when the archive knows whether it took place (see seo.ts).
 const editionStatus = item.year === null ? null : (editionsStatic as { festival: string; year: number; status: 'held' | 'not_held' | 'unknown' }[])
   .find((e) => e.festival === item.festival && e.year === item.year)?.status ?? null;
-const editionConfirmed = item.year !== null && isConfirmedEdition(editionFacts(approvedRaw as Contribution[], item.festival, item.year, editionStatus));
+const editionEvent = item.year !== null && isEventEdition(editionFacts(approvedRaw as Contribution[], item.festival, item.year, editionStatus));
 const jsonLd = item.restricted ? null : ldGraph(
   itemJsonLd({
     name: item.title, url: absUrl(url(`item/${item.id}/`)), image: image ? absUrl(image) : null,
     editionUrl: item.year ? absUrl(url(`${item.festival}/${item.year}/`)) : null,
-    editionName: item.year ? `${fest} ${item.year}` : null, year: item.year, editionConfirmed, rights: item.rights,
+    editionName: item.year ? `${fest} ${item.year}` : null, year: item.year, editionEvent, rights: item.rights,
   }),
   // The same crumbs as the visible <nav class="crumbs"> below.
   breadcrumbJsonLd([

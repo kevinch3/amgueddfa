@@ -233,7 +233,8 @@
       "accesibilidad": "Accessibilité",
       "derechos": "Droits",
       "privacidad": "Confidentialité",
-      "cookies": "Cookies"
+      "cookies": "Cookies",
+      "creditos": "Crédits"
     }
   },
   "auth": {
@@ -765,7 +766,8 @@
       "objetivos": "Objectifs",
       "accesibilidad": "Accessibilité",
       "derechos": "Droits d'auteur et retrait de contenu",
-      "privacidad": "Confidentialité et données personnelles"
+      "privacidad": "Confidentialité et données personnelles",
+      "creditos": "Crédits et outils"
     },
     "actualizado": "Dernière mise à jour : {fecha}.",
     "traduccion": "Cette page est une traduction : en cas de divergence, le texte espagnol fait foi.",
@@ -888,6 +890,38 @@
       "derechos_plazos": "Nous vous communiquons vos données sous 10 jours calendaires, et nous les corrigeons ou les supprimons sous 5 jours ouvrables.",
       "derechos_aportes": "Si vous demandez la suppression de votre compte, les contributions déjà publiées restent dans les archives sous licence CC BY-SA 4.0, sous votre nom ou de façon anonyme, comme vous le préférez.",
       "derechos_aaip": "Si nous ne vous répondons pas, vous pouvez déposer une réclamation auprès de l'Agencia de Acceso a la Información Pública (l'Agence argentine d'accès à l'information publique), qui contrôle le respect de cette loi."
+    },
+    "creditos": {
+      "descripcion": "Les outils et les ressources qui produisent les textes de l'archive, avec leurs licences.",
+      "intro": "Les textes des vidéos et des documents de cette archive sont produits avec des outils et des ressources d'autres personnes. Les voici tous, avec leurs licences.",
+      "videos_titulo": "Texte des vidéos",
+      "videos_intro": "Chaque vidéo réunit plusieurs sources : ce qui a été dit en espagnol et en gallois, et les paroles de ce qui est chanté quand nous les avons.",
+      "reconstruido_titulo": "Qu'est-ce qu'un « texte reconstruit »",
+      "reconstruido_1": "Dans un texte reconstruit, chaque ligne vient de ce qui a réellement été entendu dans l'une des sources : aucun mot n'est inventé. Le modèle corrige les noms, les mutations du gallois et les erreurs de reconnaissance à l'aide du programme et des données de l'édition, et nos propres règles vérifient chaque réponse (chaque ligne doit figurer dans une source, à son moment). Si une réponse ne les respecte pas, la source reste inchangée.",
+      "reconstruido_2": "Il peut contenir des erreurs, que l'on peut signaler depuis le lecteur. Plus de détails :",
+      "reconstruido_enlace": "comment il est fait et vérifié (en anglais)",
+      "letras_titulo": "Paroles",
+      "letras_1": "Les paroles de ce qui est chanté sont fournies par le responsable de l'archive et par la communauté. Le lecteur indique pour chaque œuvre son auteur, ses droits et sa source. Si vous détenez les droits d'un texte et ne souhaitez pas qu'il soit publié, voir",
+      "letras_derechos": "Droits d'auteur et retrait de contenu",
+      "documentos_titulo": "Texte automatique des documents",
+      "sitio_titulo": "Site et données",
+      "gracias_titulo": "Remerciements",
+      "gracias_1": "Merci tout particulièrement à l'Unité des technologies du langage de l'Université de Bangor d'avoir publié son modèle gallois en accès libre : sans lui, le gallois des vidéos de la Wladfa serait toujours sans texte.",
+      "item": {
+        "gales": "Reconnaissance du gallois parlé. La plupart du texte gallois des vidéos vient de ce modèle.",
+        "youtube": "Sous-titres automatiques en espagnol.",
+        "whisper": "Reconnaissance de l'espagnol dans les vidéos que YouTube ne transcrit pas.",
+        "faster_whisper": "Exécution des modèles Whisper sur notre propre ordinateur.",
+        "claude": "Reconstruction du texte : il compare les sources de chaque minute, puis choisit et corrige chaque ligne.",
+        "tesseract": "Texte automatique, non relu, des numérisations en gallois, espagnol et anglais : il sert à la recherche et de brouillon pour la transcription.",
+        "astro": "Générateur du site.",
+        "pagefind": "Recherche sur le site.",
+        "supabase": "Comptes, contributions et données approuvées.",
+        "pages": "Hébergement du site.",
+        "cloudflare": "Images des documents et statistiques de visite sans cookies.",
+        "ytdlp": "Copie de sauvegarde privée des vidéos et de leurs sous-titres.",
+        "ffmpeg": "Extraction de l'audio pour la reconnaissance vocale."
+      }
     }
   },
   "accesibilidad": {
@@ -974,14 +1008,17 @@
     "nota_capitulos": "Repérés automatiquement d'après les annonces de la séance ; ils peuvent contenir des erreurs.",
     "ver_en_video": "Voir dans la vidéo, à partir de {tiempo}",
     "letra_alineada": "paroles alignées",
-    "nota_letra": "Paroles de {piezas}, alignées automatiquement sur la vidéo : les temps sont approximatifs.",
+    "letras_titulo": "Paroles alignées automatiquement sur la vidéo (horaires approximatifs)",
+    "copiar_enlace": "Copier le lien vers ce moment",
+    "enlace_copiado": "Lien vers {tiempo} copié",
     "origen": {
       "subida": "sous-titres de l'auteur",
       "yt_es": "YouTube automatique",
       "whisper_es": "Whisper",
       "cy": "reconnaissance du gallois",
       "letra": "paroles de l'œuvre"
-    }
+    },
+    "como_se_produce": "Comment ce texte est produit"
   },
   "buscar": {
     "titulo": "Rechercher dans l'archive",

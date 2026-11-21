@@ -2,6 +2,7 @@ import { festivals, firstMaterialYear } from '../lib/catalog';
 import { DEFAULT_LOCALE, LOCALES, LOCALE_INFO } from '../lib/i18n';
 import { url } from '../lib/paths';
 import { absUrl } from '../lib/seo';
+import { DOCUMENTOS, MODELO_RECONSTRUCCION, SITIO, VIDEOS } from '../lib/creditos';
 
 /** A plain-text guide to the site for language models and other bots (llms.txt). */
 export function GET(): Response {
@@ -34,6 +35,12 @@ ${fests.join('\n')}
 
 Cada página registra herramientas WebMCP (\`document.modelContext\`) en los navegadores que lo soportan: \`get_page_info\`, \`search_documents\`, \`list_editions\`, \`get_edition\`, \`open_page\`, \`set_language\` y \`set_reading_settings\`. Ninguna escribe en el archivo. Los formularios para aportar un dato o un recuerdo (${absUrl('contribuir')}) son herramientas declarativas (\`toolname\` \`add_edition_fact\` y \`share_memory\`): el agente los completa y la persona los envía.
 
+## De dónde salen los textos
+
+- Videos de Chubut y Trevelin: texto reconstruido a partir de los subtítulos de YouTube, Whisper (castellano) y el modelo de galés de la Universidad de Bangor (${VIDEOS[0].href}), más la letra de lo que se canta cuando la tenemos. Cada línea sale de lo que se escuchó en alguna fuente; ${MODELO_RECONSTRUCCION} (Anthropic) elige y corrige, y reglas propias comprueban cada respuesta. Cada archivo de texto indica la fuente de cada línea (\`fuentes\`).
+- Documentos: transcripciones hechas por personas; aparte, texto automático sin revisar (${DOCUMENTOS.map((x) => x.nombre).join(', ')}).
+- Herramientas, recursos y licencias: ${absUrl('creditos/')} (${[...VIDEOS, ...SITIO].map((x) => x.nombre).join(', ')}).
+
 ## Accesibilidad
 
 Objetivo: WCAG 2.2 nivel AA. Declaración, estado y ajustes de lectura: ${absUrl('accesibilidad/')}
@@ -41,7 +48,7 @@ Objetivo: WCAG 2.2 nivel AA. Declaración, estado y ajustes de lectura: ${absUrl
 ## Notas
 
 - Los documentos restringidos por pedido de las asociaciones no se publican ni se listan.
-- Las páginas de cada año llevan datos estructurados schema.org: Event solo cuando hay constancia de la edición (se realizó o no, o una fecha aprobada); si no, CollectionPage. Las de cada documento, ArchiveComponent; todas con BreadcrumbList.
+- Las páginas de cada año llevan datos estructurados schema.org: Event solo cuando la edición está confirmada y tiene fecha y lugar aprobados; si no, CollectionPage. Las de cada documento, ArchiveComponent; todas con BreadcrumbList.
 `;
   return new Response(text, { headers: { 'Content-Type': 'text/plain; charset=utf-8' } });
 }

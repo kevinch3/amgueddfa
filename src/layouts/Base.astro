@@ -123,7 +123,7 @@ const webmcpToken = (import.meta.env.PUBLIC_WEBMCP_OT_TOKEN ?? '').trim();
         <p>{t('pie.retiro_1')}<a href={url('derechos')}>{t('pie.retiro_enlace')}</a>{t('pie.retiro_2')}</p>
         <nav class="pie-legal" aria-label={t('pie.legal')}>
           <ul>
-            {(['objetivos', 'accesibilidad', 'derechos', 'privacidad', 'cookies'] as const).map((k) => (
+            {(['objetivos', 'accesibilidad', 'derechos', 'privacidad', 'cookies', 'creditos'] as const).map((k) => (
               <li><a href={url(k)}>{t(`pie.enlaces.${k}`)}</a></li>
             ))}
           </ul>

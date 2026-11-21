@@ -4,12 +4,37 @@
 /** Where a transcription comes from: subtitles someone uploaded, YouTube's automatic ones, Whisper. */
 export type TranscriptSource = 'subida' | 'youtube' | 'whisper' | 'reconstruida';
 /** A sung piece whose known lyric replaced the automatic lines in [desde, hasta) (scripts/align_lyrics.py). */
-export type Letra = { desde: number; hasta: number; titulo: string; autor: string; idioma: string };
+export type Letra = { desde: number; hasta: number; titulo: string; autor: string; idioma: string; derechos?: string; fuente?: string };
+/** How the player credits a lyric: one line per piece. `fuente` is the file's "url, aportado por …" split. */
+export type Credito = { titulo: string; autor: string; derechos: string; fuente: { href?: string; host?: string; texto: string } };
 export type Transcript = { src: TranscriptSource; lang: string; seg: [number, string][]; letras?: Letra[]; fuentes?: string[][] };
 
 /** The lyric span a line starting at `t` belongs to, or null. */
 export function letraAt(tr: Transcript, t: number): Letra | null {
   return tr.letras?.find((l) => t >= l.desde && t < l.hasta) ?? null;
+}
+
+/** One credit per piece sung (a piece sung twice is credited once), in the order first sung. */
+export function creditos(tr: Transcript): Credito[] {
+  const seen = new Set<string>();
+  const out: Credito[] = [];
+  for (const l of [...(tr.letras ?? [])].sort((a, b) => a.desde - b.desde)) {
+    const key = `${l.titulo}\u0000${l.autor}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    const f = (l.fuente ?? '').trim();
+    const m = /^(https?:\/\/\S+?)[,;]?(?:\s+(.*))?$/.exec(f);
+    let fuente: Credito['fuente'] = { texto: f };
+    if (m) {
+      try {
+        fuente = { href: m[1], host: new URL(m[1]).hostname.replace(/^www\./, ''), texto: (m[2] ?? '').trim() };
+      } catch {
+        /* not a real URL: keep it as text */
+      }
+    }
+    out.push({ titulo: l.titulo, autor: l.autor, derechos: l.derechos ?? '', fuente });
+  }
+  return out;
 }
 
 /** The line playing at `t` seconds: the last one that starts at or before it; -1 before the first. */
@@ -56,7 +81,8 @@ export function asTranscript(data: unknown): Transcript | null {
   if (!seg.length) return null;
   const letras = (Array.isArray(d.letras) ? d.letras : []).filter(
     (l): l is Letra => !!l && typeof l.desde === 'number' && typeof l.hasta === 'number' && typeof l.titulo === 'string',
-  ).map((l) => ({ desde: l.desde, hasta: l.hasta, titulo: l.titulo, autor: String(l.autor ?? ''), idioma: String(l.idioma ?? '') }));
+  ).map((l) => ({ desde: l.desde, hasta: l.hasta, titulo: l.titulo, autor: String(l.autor ?? ''), idioma: String(l.idioma ?? ''),
+    ...(l.derechos ? { derechos: String(l.derechos) } : {}), ...(l.fuente ? { fuente: String(l.fuente) } : {}) }));
   // Per-line sources of a reconstruction: kept only when there is one list per line.
   const f = (d as { fuentes?: unknown }).fuentes;
   const fuentes = Array.isArray(f) && f.length === seg.length && f.every((x) => Array.isArray(x) && x.every((y) => typeof y === 'string'))

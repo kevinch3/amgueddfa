@@ -205,9 +205,27 @@ describe('static build', () => {
     expect(early).toContain('"@type":"CollectionPage"');
     expect(early).not.toContain('"@type":"Event"');
     expect(year).toMatch(/<meta name="description" content="Eisteddfod del Chubut 1937\./);
-    // Every approved start date shows up in its edition's Event (zero or many, whatever the data is).
-    for (const c of (approved as any[]).filter((x) => x.type === 'fact' && x.payload?.field === 'start_date')) {
-      expect(read(`${c.festival}/${c.year}/index.html`)).toContain(`"startDate":"${c.payload.value}"`);
+    // An Event always has what Google requires: a date and a place (#16); and every edition with both is one.
+    let events = 0;
+    for (const f of readdirSync(DIST).filter((d) => statSync(join(DIST, d)).isDirectory())) {
+      for (const y of readdirSync(join(DIST, f)).filter((d) => /^\d{4}$/.test(d) && existsSync(join(DIST, f, d, 'index.html')))) {
+        const html = read(`${f}/${y}/index.html`);
+        if (!html.includes('"@type":"Event"')) continue;
+        events++;
+        expect(html, `${f}/${y}`).toContain('"startDate":');
+        expect(html, `${f}/${y}`).toContain('"location":');
+        expect(html, `${f}/${y}`).toContain('"eventStatus":');
+        expect(html, `${f}/${y}`).toContain('"description":');
+      }
+    }
+    expect(events).toBeGreaterThan(0);
+    expect(readdirSync(join(DIST, 'item')).filter((id) => existsSync(join(DIST, 'item', id, 'index.html'))).some((id) => read(`item/${id}/index.html`).includes('"@type":"Event"'))).toBe(false);
+    const facts = (approved as any[]).filter((x) => x.type === 'fact');
+    for (const c of facts.filter((x) => x.payload?.field === 'start_date')) {
+      const venue = facts.some((x) => x.festival === c.festival && x.year === c.year && x.payload?.field === 'venue');
+      const html = read(`${c.festival}/${c.year}/index.html`);
+      if (venue) expect(html, `${c.festival} ${c.year}`).toContain(`"startDate":"${c.payload.value}"`);
+      else expect(html, `${c.festival} ${c.year}`).not.toContain('"@type":"Event"');
     }
     const prog = catalog.find((i) => i.category === 'programa' && !i.restricted && i.year !== null && i.thumb)!;
     const itemPage = read(`item/${prog.id}/index.html`);
@@ -591,8 +609,37 @@ describe('static build', () => {
     expect(page).toContain('id="no-contar"');
   });
 
+  it('page descriptions read cleanly and count only public documents, like the open data (#19)', () => {
+    const desc = (f: string) => /<meta name="description" content="([^"]*)"/.exec(read(f))?.[1] ?? '';
+    const eds = JSON.parse(read('datos/ediciones.json')).ediciones as { url: string; documentos: number }[];
+    for (const e of eds.filter((x) => x.documentos > 0)) {
+      const path = new URL(e.url).pathname.replace(/^\//, '');
+      const n = Number(/(\d+) documentos?\b/.exec(desc(`${path}index.html`))?.[1]);
+      expect(n, e.url).toBe(e.documentos);
+    }
+    // Festival pages: a full stop after the name, not a colon before a capital.
+    expect(desc('chubut/index.html')).toMatch(/^Eisteddfod del Chubut\. Material desde \d{4}\./);
+    // Item pages: "Title · Festival Year · Category." with no stray full stop inside.
+    const docs = JSON.parse(read('datos/documentos.json')).documentos as { id: string }[];
+    for (const d of docs.slice(0, 50)) expect(desc(`item/${d.id}/index.html`), d.id).not.toMatch(/\. ·/);
+  });
+
+  it('the credits page names every tool and resource behind the texts, with its licence and link', () => {
+    const html = read('creditos/index.html');
+    for (const s of [
+      'huggingface.co/techiaith/whisper-large-ft-cy-en', 'Uned Technolegau Iaith', 'Prifysgol Bangor', 'Apache-2.0',
+      'github.com/openai/whisper', 'large-v3-turbo', 'github.com/SYSTRAN/faster-whisper',
+      'Anthropic', 'claude-sonnet-5-5', 'restauracion-videos.md',
+      'tesseract-ocr', 'astro.build', 'pagefind.app', 'supabase.com', 'pages.github.com', 'github.com/yt-dlp/yt-dlp', 'ffmpeg.org',
+    ]) expect(html, s).toContain(s);
+    expect(html).toContain('id="videos"');
+    expect(read('cy/creditos/index.html')).toContain('Uned Technolegau Iaith');
+    expect(read('llms.txt')).toContain('/creditos/');
+    expect(read('llms.txt')).toContain('techiaith/whisper-large-ft-cy-en');
+  });
+
   it('legal pages exist, are linked from every page footer and the sitemap, and state the licences', () => {
-    const pages = ['objetivos', 'derechos', 'privacidad', 'cookies'];
+    const pages = ['objetivos', 'derechos', 'privacidad', 'cookies', 'creditos'];
     for (const p of pages) expect(existsSync(join(DIST, p, 'index.html')), p).toBe(true);
     for (const f of ['index.html', 'chubut/2024/index.html']) {
       const html = read(f);
@@ -731,7 +778,7 @@ describe('static build', () => {
     });
 
     it('translated legal pages say the Spanish text prevails and link to it', () => {
-      for (const p of ['objetivos', 'derechos', 'privacidad', 'cookies']) {
+      for (const p of ['objetivos', 'derechos', 'privacidad', 'cookies', 'creditos']) {
         expect(read(`${p}/index.html`), p).not.toContain('data-traduccion');
         for (const l of OTHERS) {
           const html = read(`${l}/${p}/index.html`);

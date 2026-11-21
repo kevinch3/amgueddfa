@@ -23,7 +23,7 @@ import sys
 import unicodedata
 from pathlib import Path
 
-from scripts.align_lyrics import apply as apply_lyrics, spans_for
+from scripts.align_lyrics import LETRAS, apply as apply_lyrics, credit, spans_for
 
 REPO = Path(__file__).resolve().parent.parent
 OUT = REPO / "public" / "transcripciones-video"
@@ -183,7 +183,7 @@ def glob_escape(name: str) -> str:
 RECON = REPO / "data" / "reconstruccion"
 
 
-def export(backup: Path, videos: list[dict], out: Path = OUT, words: set[str] | None = None, recon: Path = RECON) -> dict:
+def export(backup: Path, videos: list[dict], out: Path = OUT, words: set[str] | None = None, recon: Path = RECON, letras: Path = LETRAS) -> dict:
     wanted = {v["id"] for v in videos if v["festival"] in FESTIVALS}
     with (backup / "INDEX.tsv").open(newline="", encoding="utf-8") as f:
         files = {r["id"]: r["file"] for r in csv.DictReader(f, delimiter="\t") if r.get("file")}
@@ -197,6 +197,8 @@ def export(backup: Path, videos: list[dict], out: Path = OUT, words: set[str] | 
         if rec.exists():
             # The reconstruction (scripts/reconstruct_videos.py) already chose and checked every line.
             t = {k: v for k, v in json.loads(rec.read_text(encoding="utf-8")).items() if k not in ("ventanas", "modelo")}
+            if t.get("letras"):
+                t["letras"] = credit(t["letras"], spans_for(vid, letras), letras)
             body = json.dumps(t, ensure_ascii=False, separators=(",", ":"))
             p = out / f"{vid}.json"
             if not p.exists() or p.read_text(encoding="utf-8") != body:
@@ -210,7 +212,7 @@ def export(backup: Path, videos: list[dict], out: Path = OUT, words: set[str] | 
         if words is not None:
             t["seg"] = [[s, fix_eisteddfod(x, words)] for s, x in t["seg"]]
         # Known lyrics of the pieces sung, in place of the automatic guesses (data/letras/).
-        t = apply_lyrics(t, spans_for(vid))
+        t = apply_lyrics(t, spans_for(vid, letras), letras)
         body = json.dumps(t, ensure_ascii=False, separators=(",", ":"))
         p = out / f"{vid}.json"
         if not p.exists() or p.read_text(encoding="utf-8") != body:

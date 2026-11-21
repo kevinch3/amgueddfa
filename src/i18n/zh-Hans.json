@@ -233,7 +233,8 @@
       "accesibilidad": "无障碍",
       "derechos": "权利",
       "privacidad": "隐私",
-      "cookies": "Cookie"
+      "cookies": "Cookie",
+      "creditos": "致谢"
     }
   },
   "auth": {
@@ -765,7 +766,8 @@
       "objetivos": "宗旨",
       "accesibilidad": "无障碍",
       "derechos": "版权与内容撤除",
-      "privacidad": "隐私与个人数据"
+      "privacidad": "隐私与个人数据",
+      "creditos": "致谢与工具"
     },
     "actualizado": "最后更新：{fecha}。",
     "traduccion": "本页为译文：如有出入，以西班牙语原文为准。",
@@ -888,6 +890,38 @@
       "derechos_plazos": "我们会在 10 个自然日内向您提供您的数据，并在 5 个工作日内完成更正或删除。",
       "derechos_aportes": "如果您要求删除账户，已经发布的贡献将以 CC BY-SA 4.0 许可协议保留在档案中，按您的意愿署名或匿名。",
       "derechos_aaip": "如果我们没有答复，您可以向负责监督该法律执行的阿根廷公共信息获取署（Agencia de Acceso a la Información Pública）投诉。"
+    },
+    "creditos": {
+      "descripcion": "生成本档案文本所用的工具和资源，以及它们的许可证。",
+      "intro": "本档案中视频和文献的文本是借助他人的工具和资源生成的。以下列出全部工具和资源及其许可证。",
+      "videos_titulo": "视频文本",
+      "videos_intro": "每个视频汇集了多个来源：用西班牙语和威尔士语说的话，以及在我们掌握歌词时所唱内容的歌词。",
+      "reconstruido_titulo": "什么是“重建文本”",
+      "reconstruido_1": "在重建文本中，每一行都来自某个来源中真正听到的内容：不会编造任何词语。模型借助节目单和该届的资料修正人名、威尔士语的辅音变化和识别错误，我们自己的规则会检查每个回答（每一行都必须出现在某个来源中，并在其对应时间）。如果回答不符合这些规则，就保留来源原文不变。",
+      "reconstruido_2": "文本仍可能有错误，可以在播放器中报告。更多细节：",
+      "reconstruido_enlace": "制作和检查的方法（英文）",
+      "letras_titulo": "歌词",
+      "letras_1": "所唱内容的歌词由档案维护者和社区提供。播放器会注明每首作品的作者、权利和来源。如果你拥有某段歌词的权利且不希望公开，请参阅",
+      "letras_derechos": "版权与内容删除",
+      "documentos_titulo": "文献的自动文本",
+      "sitio_titulo": "网站与数据",
+      "gracias_titulo": "致谢",
+      "gracias_1": "特别感谢班戈大学语言技术部门公开发布其威尔士语模型：没有它，Wladfa 视频中的威尔士语至今仍没有文本。",
+      "item": {
+        "gales": "威尔士语语音识别。视频中的大部分威尔士语文本来自这个模型。",
+        "youtube": "西班牙语自动字幕。",
+        "whisper": "为 YouTube 未转写的视频识别西班牙语。",
+        "faster_whisper": "在我们自己的电脑上运行 Whisper 模型。",
+        "claude": "文本重建：比较每一分钟的各个来源，选择并修正每一行。",
+        "tesseract": "扫描件的威尔士语、西班牙语和英语自动文本，未经审核：用于搜索，也可作为转写的草稿。",
+        "astro": "网站生成器。",
+        "pagefind": "站内搜索。",
+        "supabase": "账户、投稿和已审核的数据。",
+        "pages": "网站托管。",
+        "cloudflare": "文献图像和不使用 Cookie 的访问统计。",
+        "ytdlp": "视频及其字幕的私人备份。",
+        "ffmpeg": "为语音识别提取音频。"
+      }
     }
   },
   "accesibilidad": {
@@ -974,14 +1008,17 @@
     "nota_capitulos": "根据现场播报自动标记,可能有误。",
     "ver_en_video": "在视频中观看,从 {tiempo} 开始",
     "letra_alineada": "歌词已对齐",
-    "nota_letra": "{piezas} 的歌词已自动与视频对齐：时间为近似值。",
+    "letras_titulo": "歌词已自动与视频对齐（时间为近似值）",
+    "copiar_enlace": "复制此时刻的链接",
+    "enlace_copiado": "已复制 {tiempo} 的链接",
     "origen": {
       "subida": "作者字幕",
       "yt_es": "YouTube 自动字幕",
       "whisper_es": "Whisper",
       "cy": "威尔士语语音识别",
       "letra": "作品歌词"
-    }
+    },
+    "como_se_produce": "此文本是如何生成的"
   },
   "buscar": {
     "titulo": "搜索档案",

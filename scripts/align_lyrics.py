@@ -159,9 +159,26 @@ def apply(t: dict, spans: list[dict], letras: Path = LETRAS) -> dict:
         meta, stanzas = parse_letra((letras / f"{sp['letra']}.md").read_text(encoding="utf-8"))
         lyric = align(seg, stanzas, sp["desde"], sp["hasta"])
         seg = [s for s in seg if not sp["desde"] <= s[0] < sp["hasta"]] + lyric
-        info.append({"desde": sp["desde"], "hasta": sp["hasta"], "titulo": meta.get("titulo", ""),
-                     "autor": meta.get("autor", ""), "idioma": meta.get("idioma", "")})
+        info.append(lyric_info(sp, meta))
     return {**t, "seg": sorted(seg, key=lambda s: s[0]), "letras": info}
+
+
+def lyric_info(sp: dict, meta: dict) -> dict:
+    """What the player shows of a lyric sung in a span: its time, title and author, and the rights
+    and source that credit the text."""
+    return {"desde": sp["desde"], "hasta": sp["hasta"], **{k: meta.get(k, "") for k in ("titulo", "autor", "idioma")},
+            **{k: meta[k] for k in ("derechos", "fuente") if meta.get(k)}}
+
+
+def credit(info: list[dict], spans: list[dict], letras: Path = LETRAS) -> list[dict]:
+    """`info` (a reconstruction's lyrics) with each one's rights and source from its file, matched by span."""
+    by_span = {(sp["desde"], sp["hasta"]): sp["letra"] for sp in spans}
+    out = []
+    for l in info:
+        slug = by_span.get((l["desde"], l["hasta"]))
+        meta = parse_letra((letras / f"{slug}.md").read_text(encoding="utf-8"))[0] if slug else {}
+        out.append({**l, **{k: meta.get(k, "") for k in ("derechos", "fuente") if meta.get(k)}})
+    return out
 
 
 def spans_for(video_id: str, letras: Path = LETRAS) -> list[dict]:

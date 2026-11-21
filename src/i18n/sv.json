@@ -233,7 +233,8 @@
       "accesibilidad": "Tillgänglighet",
       "derechos": "Rättigheter",
       "privacidad": "Integritet",
-      "cookies": "Kakor"
+      "cookies": "Kakor",
+      "creditos": "Tack och verktyg"
     }
   },
   "auth": {
@@ -765,7 +766,8 @@
       "objetivos": "Syfte",
       "accesibilidad": "Tillgänglighet",
       "derechos": "Upphovsrätt och borttagning av innehåll",
-      "privacidad": "Integritet och personuppgifter"
+      "privacidad": "Integritet och personuppgifter",
+      "creditos": "Tack och verktyg"
     },
     "actualizado": "Senast uppdaterad: {fecha}.",
     "traduccion": "Den här sidan är en översättning: om texterna skiljer sig åt gäller den spanska.",
@@ -888,6 +890,38 @@
       "derechos_plazos": "Vi visar dina uppgifter inom 10 kalenderdagar och rättar eller raderar dem inom 5 arbetsdagar.",
       "derechos_aportes": "Om du ber att få ditt konto raderat finns bidrag som redan har publicerats kvar i arkivet under licensen CC BY-SA 4.0, med ditt namn eller anonymt, som du föredrar.",
       "derechos_aaip": "Om vi inte svarar kan du klaga hos Agencia de Acceso a la Información Pública (Argentinas myndighet för tillgång till allmän information), som övervakar att lagen följs."
+    },
+    "creditos": {
+      "descripcion": "Verktygen och resurserna som skapar arkivets texter, med deras licenser.",
+      "intro": "Texterna till arkivets videor och dokument skapas med andras verktyg och resurser. Här är alla, med sina licenser.",
+      "videos_titulo": "Text till videorna",
+      "videos_intro": "Varje video samlar flera källor: det som sades på spanska och walesiska, och sångtexten till det som sjungs när vi har den.",
+      "reconstruido_titulo": "Vad en ”rekonstruerad text” är",
+      "reconstruido_1": "I en rekonstruerad text kommer varje rad från det som faktiskt hördes i någon av källorna: inga ord hittas på. Modellen rättar namn, walesiska mutationer och igenkänningsfel med hjälp av programmet och uppgifterna om tävlingen, och våra egna regler kontrollerar varje svar (varje rad måste finnas i en källa, vid sin tid). Om ett svar inte klarar dem står källan kvar oförändrad.",
+      "reconstruido_2": "Den kan ändå innehålla fel, som kan rapporteras från spelaren. Mer information:",
+      "reconstruido_enlace": "hur den görs och kontrolleras (på engelska)",
+      "letras_titulo": "Sångtexter",
+      "letras_1": "Sångtexterna kommer från arkivets förvaltare och från gemenskapen. Spelaren anger varje verk med upphovsperson, rättigheter och källa. Om du har rättigheterna till en text och inte vill att den publiceras, se",
+      "letras_derechos": "Upphovsrätt och borttagning av innehåll",
+      "documentos_titulo": "Automatisk text i dokumenten",
+      "sitio_titulo": "Webbplats och data",
+      "gracias_titulo": "Tack",
+      "gracias_1": "Ett särskilt tack till språkteknologienheten vid Bangoruniversitetet för att de publicerar sin walesiska modell öppet: utan den skulle walesiskan i Wladfas videor fortfarande sakna text.",
+      "item": {
+        "gales": "Igenkänning av talad walesiska. Det mesta av den walesiska texten i videorna kommer från den här modellen.",
+        "youtube": "Automatiska spanska undertexter.",
+        "whisper": "Igenkänning av spanska i de videor som YouTube inte transkriberar.",
+        "faster_whisper": "Kör Whisper-modellerna på vår egen dator.",
+        "claude": "Rekonstruktion av texten: jämför källorna för varje minut och väljer och rättar varje rad.",
+        "tesseract": "Automatisk, ogranskad text från skanningarna på walesiska, spanska och engelska: den hjälper sökningen och är ett utkast för transkribering.",
+        "astro": "Bygger webbplatsen.",
+        "pagefind": "Sökning på webbplatsen.",
+        "supabase": "Konton, bidrag och godkända uppgifter.",
+        "pages": "Webbhotell.",
+        "cloudflare": "Dokumentbilder och besöksstatistik utan kakor.",
+        "ytdlp": "Privat säkerhetskopia av videorna och deras undertexter.",
+        "ffmpeg": "Ljuduttag för taligenkänning."
+      }
     }
   },
   "accesibilidad": {
@@ -974,14 +1008,17 @@
     "nota_capitulos": "Markerade automatiskt utifrån det som annonseras under sessionen; de kan innehålla fel.",
     "ver_en_video": "Se i videon, från {tiempo}",
     "letra_alineada": "sångtext synkad",
-    "nota_letra": "Sångtext till {piezas}, automatiskt synkad med videon: tiderna är ungefärliga.",
+    "letras_titulo": "Sångtexter automatiskt synkade med videon (ungefärliga tider)",
+    "copiar_enlace": "Kopiera länk till det här ögonblicket",
+    "enlace_copiado": "Länk till {tiempo} kopierad",
     "origen": {
       "subida": "upphovspersonens undertexter",
       "yt_es": "YouTube automatisk",
       "whisper_es": "Whisper",
       "cy": "taligenkänning för walesiska",
       "letra": "verkets sångtext"
-    }
+    },
+    "como_se_produce": "Hur den här texten tas fram"
   },
   "buscar": {
     "titulo": "Sök i arkivet",

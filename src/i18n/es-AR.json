@@ -233,7 +233,8 @@
       "accesibilidad": "Accesibilidad",
       "derechos": "Derechos",
       "privacidad": "Privacidad",
-      "cookies": "Cookies"
+      "cookies": "Cookies",
+      "creditos": "Créditos"
     }
   },
   "auth": {
@@ -765,7 +766,8 @@
       "objetivos": "Objetivos",
       "accesibilidad": "Accesibilidad",
       "derechos": "Derechos de autor y retiro de contenido",
-      "privacidad": "Privacidad y datos personales"
+      "privacidad": "Privacidad y datos personales",
+      "creditos": "Créditos y herramientas"
     },
     "actualizado": "Última actualización: {fecha}.",
     "traduccion": "Esta página es una traducción: en caso de diferencias, prevalece el texto en español.",
@@ -888,6 +890,38 @@
       "derechos_plazos": "Le daremos acceso a sus datos dentro de los 10 días corridos, y los rectificaremos o suprimiremos dentro de los 5 días hábiles.",
       "derechos_aportes": "Si solicita eliminar su cuenta, los aportes ya publicados permanecen en el archivo bajo la licencia CC BY-SA 4.0, con su nombre o de forma anónima, según prefiera.",
       "derechos_aaip": "Si no recibe respuesta, puede presentar un reclamo ante la Agencia de Acceso a la Información Pública, autoridad de control de esa ley."
+    },
+    "creditos": {
+      "descripcion": "Las herramientas y los recursos con que se producen los textos del archivo, con sus licencias.",
+      "intro": "Los textos de los videos y de los documentos de este archivo se producen con herramientas y recursos de otros. Acá están todos, con sus licencias.",
+      "videos_titulo": "Texto de los videos",
+      "videos_intro": "Cada video junta varias fuentes: lo que se habló en castellano y en galés, y la letra de lo que se canta cuando la tenemos.",
+      "reconstruido_titulo": "Qué es un «texto reconstruido»",
+      "reconstruido_1": "En un texto reconstruido, cada línea sale de lo que realmente se escuchó en alguna de las fuentes: no se inventan palabras. El modelo corrige nombres, mutaciones del galés y errores de reconocimiento con ayuda del programa y de los datos de la edición, y unas reglas propias comprueban cada respuesta (que cada línea esté en una fuente y en su momento). Si una respuesta no las cumple, queda la fuente sin cambios.",
+      "reconstruido_2": "Puede tener errores, que se pueden informar desde el reproductor. Más detalles:",
+      "reconstruido_enlace": "cómo se hace y se comprueba (en inglés)",
+      "letras_titulo": "Letras",
+      "letras_1": "Las letras de lo que se canta las aportan el mantenedor del archivo y la comunidad. El reproductor nombra cada obra con su autor, sus derechos y su fuente. Si sos titular de una letra y no querés que se publique, mirá",
+      "letras_derechos": "Derechos de autor y retiro de contenido",
+      "documentos_titulo": "Texto automático de los documentos",
+      "sitio_titulo": "Sitio y datos",
+      "gracias_titulo": "Agradecimientos",
+      "gracias_1": "Gracias en especial a la Unidad de Tecnologías del Lenguaje de la Universidad de Bangor por publicar abiertamente su modelo de galés: sin él, el galés de los videos de la Wladfa seguiría sin texto.",
+      "item": {
+        "gales": "Reconocimiento del galés hablado. De este modelo sale la mayor parte del texto en galés de los videos.",
+        "youtube": "Subtítulos automáticos en castellano.",
+        "whisper": "Reconocimiento del castellano en los videos que YouTube no transcribe.",
+        "faster_whisper": "Ejecución de los modelos Whisper en una computadora propia.",
+        "claude": "Reconstrucción del texto: compara las fuentes de cada minuto y elige y corrige cada línea.",
+        "tesseract": "Texto automático, sin revisar, de los escaneos en galés, castellano e inglés: sirve para buscar y como punto de partida para transcribir.",
+        "astro": "Generador del sitio.",
+        "pagefind": "Búsqueda en el sitio.",
+        "supabase": "Cuentas, aportes y datos aprobados.",
+        "pages": "Alojamiento del sitio.",
+        "cloudflare": "Imágenes de los documentos y estadísticas de visitas sin cookies.",
+        "ytdlp": "Copia privada de respaldo de los videos y sus subtítulos.",
+        "ffmpeg": "Extracción del audio para el reconocimiento de voz."
+      }
     }
   },
   "accesibilidad": {
@@ -974,14 +1008,17 @@
     "nota_capitulos": "Marcados automáticamente a partir de lo que se anuncia en la sesión; pueden tener errores.",
     "ver_en_video": "Ver en el video, desde {tiempo}",
     "letra_alineada": "letra alineada",
-    "nota_letra": "Letra de {piezas}, alineada automáticamente con el video: los tiempos son aproximados.",
+    "letras_titulo": "Letras alineadas automáticamente con el video (los tiempos son aproximados)",
+    "copiar_enlace": "Copiar enlace a este momento",
+    "enlace_copiado": "Enlace a {tiempo} copiado",
     "origen": {
       "subida": "subtítulos del autor",
       "yt_es": "YouTube automático",
       "whisper_es": "Whisper",
       "cy": "reconocimiento de galés",
       "letra": "letra de la obra"
-    }
+    },
+    "como_se_produce": "Cómo se produce este texto"
   },
   "buscar": {
     "titulo": "Buscar en el archivo",

@@ -974,7 +974,9 @@
     "nota_capitulos": "Markerade automatiskt utifrån det som annonseras under sessionen; de kan innehålla fel.",
     "ver_en_video": "Se i videon, från {tiempo}",
     "letra_alineada": "sångtext synkad",
-    "nota_letra": "Sångtext till {piezas}, automatiskt synkad med videon: tiderna är ungefärliga.",
+    "letras_titulo": "Sångtexter automatiskt synkade med videon (ungefärliga tider)",
+    "copiar_enlace": "Kopiera länk till det här ögonblicket",
+    "enlace_copiado": "Länk till {tiempo} kopierad",
     "origen": {
       "subida": "upphovspersonens undertexter",
       "yt_es": "YouTube automatisk",

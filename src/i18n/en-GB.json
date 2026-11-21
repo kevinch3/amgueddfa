@@ -974,7 +974,9 @@
     "nota_capitulos": "Marked automatically from what is announced in the session; they may contain mistakes.",
     "ver_en_video": "Watch in the video, from {tiempo}",
     "letra_alineada": "lyrics aligned",
-    "nota_letra": "Lyrics of {piezas}, aligned to the video automatically: the times are approximate.",
+    "letras_titulo": "Lyrics aligned to the video automatically (times are approximate)",
+    "copiar_enlace": "Copy link to this moment",
+    "enlace_copiado": "Link to {tiempo} copied",
     "origen": {
       "subida": "uploader's subtitles",
       "yt_es": "YouTube automatic",

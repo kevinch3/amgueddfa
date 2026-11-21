@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { asTranscript, findLines, fmtTime, fold, letraAt, lineAt } from '../src/lib/video-transcript';
+import { asTranscript, creditos, findLines, fmtTime, fold, letraAt, lineAt } from '../src/lib/video-transcript';
 
 const seg: [number, string][] = [[2, 'Galwn ar yr unawdwyr'], [10.5, 'Hyd fedd hi gâr yn gywir'], [24, 'Canción de Glyndŵr'], [38, 'Veredicto']];
 
@@ -48,5 +48,26 @@ describe('video transcript', () => {
     expect(letraAt(tr, 24)?.idioma).toBe('pt');
     expect(letraAt(tr, 30)).toBeNull();
     expect(asTranscript({ src: 'youtube', lang: 'es', seg })!.letras).toBeUndefined();
+  });
+});
+
+describe('lyric credits', () => {
+  const l = (desde: number, titulo: string, extra = {}) => ({ desde, hasta: desde + 9, titulo, autor: 'A', idioma: 'es', ...extra });
+  it('gives one credit per piece, in the order sung, with its rights and a link to its source', () => {
+    const tr = asTranscript({
+      src: 'reconstruida', lang: 'es', seg: [[1, 'x']],
+      letras: [
+        l(500, 'Zamba', { derechos: 'Dominio público', fuente: 'https://ejemplo.org/zamba, aportado por Alguien' }),
+        l(100, 'Gato', { fuente: 'Cancionero del coro' }),
+        l(900, 'Zamba', { derechos: 'Dominio público', fuente: 'https://ejemplo.org/zamba, aportado por Alguien' }),
+      ],
+    })!;
+    expect(creditos(tr)).toEqual([
+      { titulo: 'Gato', autor: 'A', derechos: '', fuente: { texto: 'Cancionero del coro' } },
+      { titulo: 'Zamba', autor: 'A', derechos: 'Dominio público', fuente: { href: 'https://ejemplo.org/zamba', host: 'ejemplo.org', texto: 'aportado por Alguien' } },
+    ]);
+  });
+  it('is empty without lyrics', () => {
+    expect(creditos(asTranscript({ src: 'youtube', lang: 'es', seg: [[1, 'x']] })!)).toEqual([]);
   });
 });

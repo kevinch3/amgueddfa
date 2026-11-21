@@ -974,7 +974,9 @@
     "nota_capitulos": "Marcados automáticamente a partir de lo que se anuncia en la sesión; pueden tener errores.",
     "ver_en_video": "Ver en el video, desde {tiempo}",
     "letra_alineada": "letra alineada",
-    "nota_letra": "Letra de {piezas}, alineada automáticamente con el video: los tiempos son aproximados.",
+    "letras_titulo": "Letras alineadas automáticamente con el video (los tiempos son aproximados)",
+    "copiar_enlace": "Copiar enlace a este momento",
+    "enlace_copiado": "Enlace a {tiempo} copiado",
     "origen": {
       "subida": "subtítulos del autor",
       "yt_es": "YouTube automático",

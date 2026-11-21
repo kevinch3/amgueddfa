@@ -185,3 +185,12 @@ def test_same_title_in_one_edition_is_numbered_in_file_order():
 def test_numbered_titles_sort_in_number_order():
     from scripts.catalog.scan import title_key
     assert sorted(["Bases (10 de 12)", "Bases (2 de 12)", "Bases (1 de 12)"], key=title_key) == ["Bases (1 de 12)", "Bases (2 de 12)", "Bases (10 de 12)"]
+
+
+def test_numbering_counts_only_public_documents_of_the_same_category():
+    from scripts.catalog.model import Item
+    mk = lambda path, cat="programa", **kw: Item(id=path, festival="chubut", year=2024, undated=False, category=cat, title="Tapa del programa",
+                                                 kind="image", src_path=path, **kw)
+    its = [mk("a.jpg", hidden=True), mk("b.jpg"), mk("c.jpg", cat="bases"), mk("d.jpg", restricted=True)]
+    number_repeats(its)
+    assert [i.title for i in its] == ["Tapa del programa"] * 4  # each public one is alone in its category

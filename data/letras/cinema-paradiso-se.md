@@ -1,0 +1,28 @@
+---
+titulo: Cinema Paradiso (Se)
+autor: Ennio Morricone
+idioma: it
+derechos: Derechos confirmados por el mantenedor del archivo
+fuente: Aportado por Kevin Roberts
+---
+Se tu fossi nei miei occhi per un giorno
+Vedresti la bellezza che piena d'allegria
+Io trovo dentro gli occhi tuoi
+Ignaro se è magia o realtà
+
+Se tu fossi nel mio cuore per un giorno
+Potresti avere un'idea
+Di ciò che sento io
+Quando mi abbracci forte a te
+E petto a petto, noi
+Respiriamo insieme
+
+Protagonista del tuo amor
+Non so se sia magia o realtà
+
+Se tu fossi nella mia anima un giorno
+Sapresti cosa sento in me
+Che m'innamorai
+Da quell'istante insieme a te
+E ciò che provo è
+Solamente amore

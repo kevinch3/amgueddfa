@@ -561,17 +561,15 @@ fieldset.campo { border: 0; padding: 0; }
 .rep-marco iframe { width: 100%; height: 100%; border: 0; display: block; }
 .rep-error { aspect-ratio: 16 / 9; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 0.5rem; margin: 0; padding: 1rem; text-align: center; background: #14151c; color: #f8f2e4; font-family: var(--sans); }
 .rep-error a { color: #f1d98f; }
-.rep-acciones { display: flex; flex-wrap: wrap; gap: 0 0.75rem; align-items: center; margin: 0.35rem 0 0; font: 0.85rem/1.3 var(--sans); color: var(--ink-soft); }
-.rep-acciones a, .rep-acciones .btn-link { color: var(--ink-soft); font-size: inherit; }
-.rep-acciones a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 0.25rem; }
-.rep-acciones a:hover, .rep-acciones .btn-link:hover { color: var(--ink); }
+.rep-acciones { display: flex; flex-wrap: wrap; align-items: center; margin: 0.35rem 0 0; font: 0.85rem/1.3 var(--sans); color: var(--ink-soft); }
 .rep-acciones [data-rep-copiado] { overflow-wrap: anywhere; }
 .rep-tr { display: flex; flex-direction: column; min-height: 0; border-top: 1px solid var(--rule); background: var(--paper); font-family: var(--sans); }
-.rep-tr-head { display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; padding: 0.5rem 0.75rem 0; }
-.rep-tr-head h3 { margin: 0; font-size: 1rem; }
+.rep-tr-head { display: flex; justify-content: space-between; align-items: baseline; gap: 0.25rem 0.5rem; padding: 0.6rem 0.75rem 0.1rem; }
+.rep-tr-head h3 { margin: 0; font: 600 0.75rem/1.2 var(--sans); letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-soft); }
+.rep-tr-head .badge { font-size: 0.75rem; line-height: 1.3; padding: 0.05rem 0.4rem; border-color: var(--rule); color: var(--ink-soft); background: transparent; }
 .rep-tr .badge[data-fuente="whisper"] { border-color: var(--ink-soft); color: var(--ink-soft); }
 .rep-tr .badge[hidden], .rep-buscar[hidden], [data-rep-nota][hidden], [data-rep-vacio][hidden] { display: none; }
-.rep-buscar { display: grid; gap: 0.2rem; padding: 0.4rem 0.75rem; }
+.rep-buscar { display: grid; gap: 0.2rem; padding: 0.35rem 0.75rem 0.5rem; }
 .rep-buscar label { font-size: 0.9rem; color: var(--ink-soft); }
 .rep-buscar p { margin: 0; min-height: 1.2em; }
 .rep-seguir { display: flex; gap: 0.4rem; align-items: center; min-height: 32px; }
@@ -585,15 +583,18 @@ fieldset.campo { border: 0; padding: 0; }
 .rep-creditos cite { color: var(--ink); }
 .rep-pie a { color: inherit; }
 .rep-pie a:hover { color: var(--ink); }
-.rep-lineas { list-style: none; margin: 0; padding: 0.25rem 0.4rem; overflow: auto; flex: 1 1 auto; min-height: 0; overscroll-behavior: contain; }
-.rep-lineas button { display: flex; gap: 0.6rem; width: 100%; text-align: left; padding: 0.45rem 0.4rem; min-height: 44px; border: 0; border-radius: 4px; background: transparent; color: var(--ink); font: 1rem/1.45 var(--sans); cursor: pointer; }
-.rep-lineas button:hover { background: var(--paper-hi); }
-.rep-t { flex: none; min-width: 3.4rem; color: var(--ink-soft); font-size: 0.85rem; font-variant-numeric: tabular-nums; padding-top: 0.12rem; }
+/* Transcript lines (issue #79): one grid (time | words), quiet time stamps, a light current line. */
+.rep-lineas { list-style: none; margin: 0; padding: 0.25rem 0; border-top: 1px solid var(--rule); overflow: auto; flex: 1 1 auto; min-height: 0; overscroll-behavior: contain; }
+.rep-lineas button { display: grid; grid-template-columns: 3.4rem minmax(0, 1fr); gap: 0 0.5rem; align-items: baseline; width: 100%; text-align: left; padding: 0.3rem 0.75rem; min-height: 2.25rem; border: 0; border-radius: 0; background: transparent; color: var(--ink); font: 0.95rem/1.5 var(--sans); cursor: pointer; }
+.rep-lineas button:hover { background: color-mix(in srgb, var(--ink) 5%, transparent); }
+.rep-t { color: var(--ink-soft); font-size: 0.75rem; font-variant-numeric: tabular-nums; }
 .rep-w { overflow-wrap: anywhere; }
-.rep-lineas .coincide button { background: #f6e7b4; }
+/* A Welsh line in a mostly Spanish transcript (or the reverse): a small language mark under its time. */
+.rep-lineas .rep-otra .rep-t::after { content: attr(data-lang); display: block; font-size: 0.65rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--green); }
+.rep-lineas .coincide button { background: color-mix(in srgb, var(--gold) 28%, transparent); }
 .rep-lineas .rep-letra .rep-w { font-style: italic; }
 .rep-lineas .rep-letra .rep-w::before { content: '♪ '; font-style: normal; color: var(--red-deep); }
-.rep-lineas .actual button { background: #fff; box-shadow: inset 3px 0 0 var(--red); }
+.rep-lineas .actual button { background: color-mix(in srgb, var(--red) 7%, transparent); box-shadow: inset 2px 0 0 var(--red); }
 .rep-lineas .actual .rep-t { color: var(--red-deep); font-weight: 600; }
 @media (min-width: 60rem) {
   .rep-cuerpo { grid-template-columns: minmax(0, 1.6fr) minmax(18rem, 1fr); grid-template-rows: minmax(0, 1fr); }
@@ -644,7 +645,7 @@ fieldset.campo { border: 0; padding: 0; }
 .rep-capitulos h3 { margin: 0 0 0.25rem; font-size: 1rem; display: flex; gap: 0.5rem; align-items: center; }
 .rep-capitulos > p { margin: 0.25rem 0 0; }
 .rep-cap-lista { list-style: none; margin: 0; padding: 0; max-height: 14rem; overflow: auto; border: 1px solid var(--rule); border-radius: 6px; }
-.rep-cap-lista button { display: flex; gap: 0.6rem; width: 100%; text-align: left; padding: 0.45rem 0.6rem; min-height: 44px; border: 0; background: transparent; color: var(--ink); font: 0.95rem/1.35 var(--sans); cursor: pointer; }
+.rep-cap-lista button { display: flex; align-items: baseline; gap: 0.6rem; width: 100%; text-align: left; padding: 0.45rem 0.6rem; min-height: 44px; border: 0; background: transparent; color: var(--ink); font: 0.95rem/1.35 var(--sans); cursor: pointer; }
 .rep-cap-lista button:hover { background: var(--paper); }
 .rep-cap-lista .actual button { background: #fff; box-shadow: inset 3px 0 0 var(--gold); }
 .tr-play { font: 600 0.85rem var(--sans); white-space: nowrap; text-decoration: none; padding: 0.1rem 0.4rem; border: 1px solid var(--rule); border-radius: 999px; }
@@ -666,7 +667,7 @@ fieldset.campo { border: 0; padding: 0; }
   /* the body scrolls as a whole only if the video and chapters leave too little room */
   .rep-cuerpo { display: flex; flex-direction: column; overflow-y: auto; overscroll-behavior: contain; }
   .rep-video { flex: none; padding: 0; }
-  .rep-acciones { margin: 0; padding: 0.3rem 0.75rem; gap: 0.25rem 1rem; }
+  .rep-acciones { margin: 0; padding: 0.15rem 0.75rem; gap: 0 1rem; }
   .rep-acciones .btn-link { min-height: 36px; }
   .rep-capitulos { margin: 0; padding: 0 0.75rem 0.4rem; }
   .rep-capitulos > p { display: none; }
@@ -676,7 +677,7 @@ fieldset.campo { border: 0; padding: 0; }
   .rep-buscar { padding: 0.3rem 0.75rem; }
   .rep-buscar-fila .campo-buscar input[type="search"] { min-height: 40px; }
   .rep-lineas { flex: 1 1 0; }
-  .rep-lineas button { min-height: 40px; padding: 0.35rem 0.4rem; }
+  .rep-lineas button { min-height: 2.25rem; padding: 0.3rem 0.75rem; }
 }
 
 /* While a modal is open (lightbox, video player, "Informar un error") the page behind it
@@ -696,6 +697,6 @@ dialog, .lb-stage, .rep-cuerpo, .informar { overscroll-behavior: contain; }
 .rep-buscar-fila .campo-buscar { flex: 1 1 10rem; min-width: 0; max-width: 100%; }
 
 /* Player: "Ver en YouTube" and "Informar un error" are secondary actions. */
-.rep-acciones { justify-content: flex-end; gap: 0.25rem 1.25rem; }
+.rep-acciones { justify-content: flex-start; gap: 0 1rem; }
 .rep-acciones a, .rep-acciones .btn-link { color: var(--ink-soft); font: 0.85rem/1.2 var(--sans); text-decoration: none; min-height: 36px; display: inline-flex; align-items: center; padding: 0 0.15rem; }
 .rep-acciones a:hover, .rep-acciones .btn-link:hover, .rep-acciones a:focus-visible, .rep-acciones .btn-link:focus-visible { color: var(--red-deep); text-decoration: underline; }

@@ -209,3 +209,14 @@ def test_export_credits_each_lyric_with_its_rights_and_source(tmp_path):
     l = json.loads((out / ("A" * 11 + ".json")).read_text())["letras"][0]
     assert l["derechos"] == "Texto tradicional (dominio público)"
     assert l["fuente"] == "https://ejemplo.org/pieza, aportado por Alguien"
+
+
+def test_main_language_follows_the_published_text_not_the_count_of_source_lines():
+    from scripts.export_video_transcripts import main_language
+    t = {"lang": "es", "seg": [[0, "Ynawn, dyma ni'n symud ymlaen i gadeirio'r Tŷ Graham Williams yn brifardd"], [10, "Williams"],
+                              [30, "Saes uwch adlais, a oes heddwch, heddwch. Debiwch adledd, a oes heddwch."]],
+         "fuentes": [["cy"], ["yt_es"], ["cy"]]}
+    assert main_language(t) == "cy"
+    t2 = {"lang": "cy", "seg": [[0, "Buenas noches a todos, bienvenidos a la última sesión"], [5, "Diolch"]], "fuentes": [["yt_es"], ["cy"]]}
+    assert main_language(t2) == "es"
+    assert main_language({"lang": "es", "seg": [[0, "hola"]]}) == "es"  # no per-line sources: keep it

@@ -153,7 +153,14 @@ if (dialog) {
       words.textContent = text;
       const letra = letraAt(tr, start);
       if (letra) li.classList.add('rep-letra');
-      if (letra?.idioma || tr.lang) words.lang = letra?.idioma || tr.lang;
+      // The line's own language: its lyric's, Welsh when the Welsh model heard it, else the transcript's.
+      const lang = letra?.idioma || (tr.fuentes?.[i]?.includes('cy') ? 'cy' : tr.lang);
+      if (lang) words.lang = lang;
+      // Quietly marked when it differs from the rest of the transcript (Welsh in a Spanish session).
+      if (lang && tr.lang && lang !== tr.lang && !letra) {
+        li.classList.add('rep-otra');
+        time.dataset.lang = lang;
+      }
       b.setAttribute('aria-label', `${t('reproductor.ir_a', { tiempo: fmtTime(start) })}: ${text}`);
       const fu = tr.fuentes?.[i];
       if (fu?.length) b.title = fu.map((x) => t(`reproductor.origen.${x}`)).join(' + ');

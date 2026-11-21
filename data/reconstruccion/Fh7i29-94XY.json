@@ -1,0 +1,99 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   349.48,
+   "Di'n angen fi, di'r tro, a'i fwy yn fawr. Di'n angen ti, newid a'i ffordd."
+  ],
+  [
+   706.64,
+   "Diolch yn fawr iawn i bawb sy'n ymestyn ar y cwestiwn, ac wrth gwrs, diolch yn fawr iawn i bawb sy'n ymestyn ar y cwestiwn."
+  ],
+  [
+   736.64,
+   "Rio, rio, rio, rio, ynddo nïo ar gofn y ffordd."
+  ],
+  [
+   750.64,
+   "Mae'n rhan o'r ffordd mwyaf debyg i'r ffordd mae'n cael ei ddefnyddio, ond mae'n rhan o'r ffordd fwyaf debyg i'r ffordd mae'n cael ei ddefnyddio."
+  ],
+  [
+   780.64,
+   "Gwm o gwrande mwanestar, diom pentar grando ffïo."
+  ],
+  [
+   852.64,
+   "Ti'n esgwyd a minnau'n erbyn, o, cwmpo trist yn y wlad y tân."
+  ],
+  [
+   962.64,
+   "Cyflawniwch y rîn i'r garcharwch gweinidog, y drefnion a'r chwarel."
+  ],
+  [
+   976.64,
+   "Cyflawniwch y rîn i'r garcharwch gweinidog, y drefnion a'r chwarel."
+  ],
+  [
+   1149.2,
+   "Na ma' mam yn debyg i'r ysbryd anenwm a destun yr ymchwil graffig."
+  ],
+  [
+   1160.2,
+   "Na ma' mam yn debyg i'r ysbryd anenwm a destun yr ymchwil graffig."
+  ],
+  [
+   1249.4,
+   "Gadewch a'r ddenyn i ddallt eich bod chi'n ffordd dda, fenderog, gobeithio dy fod di'n dda, gwylia dy hwyl."
+  ],
+  [
+   1288.4,
+   "Deyrnaf yw neb ar y cwrw, mae'r eiliad yn digwydd, mae'r adnabodd ond wedi bod yn ystod."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 25,
+  "modelo": 12,
+  "reglas": 0,
+  "vacias": 13
+ }
+}

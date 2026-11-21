@@ -1,0 +1,169 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   60.0,
+   "Er gwaelam awr am gofyn, be' sy'n iawn nawr?"
+  ],
+  [
+   113.0,
+   "Ni wne ca'l bryd fyny yn Rhiwle gyda'r gŵn, i ddringa'r breuddwyd y Deyrnas Uned i ddinas i'w hwn."
+  ],
+  [
+   130.5,
+   "Mi wnaeth y bryd fyny yn rhyw le gyda'r cŵn, hyd yn oed os bu'n parampar, hyd yn oed os bu'n llwyr."
+  ],
+  [
+   157.5,
+   "Yna fu'r dydd i'r bore, a dwy mor ar ei tai. Yna fu'r gloch ei ganol, a gwlad gofyn pwy yw'r chwaer."
+  ],
+  [
+   211.5,
+   "Mi wnaeth o bryd llynnu, yn ni wnaeth edrych i'r gŵr, i nos i'r ffor' a'r ffor'. I ni i nos i'r ffwrdd, i ni i nos i'r ffrwd."
+  ],
+  [
+   260.5,
+   "Ceir hwyrach ofn y cwmni yn un margen y ddwy, na chyreiddwyd y geiriau a'r holl sy'n ran y ffordd, i ni beidws i'n llwyr, i ni beidws i'n llwyr."
+  ],
+  [
+   357.5,
+   "Nad o'n gwyneb roedd o'n wyw."
+  ],
+  [
+   368.5,
+   "Tair sy'n ymladd ei ddeddf di, yn gwlad ei hoff, ei ffordd a'i ni, ei nod, ei hoff, ei nod oedd hi."
+  ],
+  [
+   488.5,
+   "Gawn ni'n symud neu'n rhedeg i, yn nhraed ein holl wefodau ni, yn nhraed ein holl wefodau ni."
+  ],
+  [
+   507.5,
+   "Dafydd sy'n magu'i bens y dydd, yn ffram de'i ffordd ne ffordd a'i gyd, o'm be."
+  ],
+  [
+   597.5,
+   "I oras, i cantas, duormes bien, y la lluvia te arruya una cancion de cuna."
+  ],
+  [
+   610.5,
+   "En un circulo de siem mil kilometros, nadas en un mar de estrellas fugaces, ves la luna a'r oriente, y el sol a'r poniente."
+  ],
+  [
+   627.5,
+   "Yn un sircwlwm o 10,000 mil miliwn o gilometrau, saltas allan o'r Mandala o'r system solar, mae'r galansi'n fflodebu yn y blant desient yn y prynhawn."
+  ],
+  [
+   644.5,
+   "Yn un cirglu o mil miliynau o flynyddoedd, Andromeda ei ddisgwyl, petun, fflwr o ddylina sy'n perthyn i'w petal, a nawr, mewn un cirglu o 10 mil miliynau o flynyddoedd, mae'r holl nosiwn o blynyddoedd yn defnyddio'i gilydd."
+  ],
+  [
+   674.5,
+   "i'r pasio, y de nwylo, ti sientas, i oras, i cantas, ti sientas, i oras, i cantas."
+  ],
+  [
+   730.5,
+   "Na ni na na ni na na ni o. Na ni na'n gogledd o'r gogledd dda."
+  ],
+  [
+   910.5,
+   "La-li-la-la-li-la-la-li-ho, La-li-la-la-li-ho, La-la-la-la-li-ho."
+  ],
+  [
+   1087.5,
+   "Ein edran, el delar de cada dydd, para brinarnos del ffrio que tragican nuestras horas, como pelera de destellar la drama, que insiste en cerrar con llave a llaves."
+  ],
+  [
+   1117.5,
+   "Somos mujeres, carnadoras de sueños, tintoreras de sueños, tejedoras de infancias, eternas y landeas de la vida, de je- de jersey."
+  ],
+  [
+   1259.02,
+   "Un copa, sy'n erbyn copa'r lar, ma' hwnna'n hynna'n ffordd sylweddol, sylweddol,"
+  ],
+  [
+   1266.02,
+   "ond para Maria, mae hi'n malwgra, mae hi'n malwgra, ond para Maria, mae hi'n gwylio'r dydd, ni'm hwnna, ond para Maria, ni'm hwnna'n hwnna."
+  ],
+  [
+   1310.38,
+   "Mae Maria yn ystod y diwrnod pan oedd y bobl yn ystafello. Maria'n ystod y diwrnod pan oedd hi'n ystafello."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 26,
+  "modelo": 20,
+  "reglas": 0,
+  "vacias": 6
+ }
+}

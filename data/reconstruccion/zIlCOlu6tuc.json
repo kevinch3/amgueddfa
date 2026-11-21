@@ -1,0 +1,92 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   120.0,
+   "gant a ddaeth o'r ne, roedd e'n ddyn o gig a gwaed fel chi a fi, ac er nad oedd yn gawl, roedd ei ysbryd e mor fawr, fel i fod e'n werth deng mil o rhai fel fi."
+  ],
+  [
+   145.0,
+   "Boregus, bonedigion a bonedigysau, croeso mawr i chi i sessio'n agoriadol Eisteddfod Wladfa dwy fil a phymtheg. Mae'n braidd i ni ymosod ar y bwrdd yma heno, ac yn eich ddarnau drwy gyda fithiau drwy gwron ni'n Gymraeg, dwi'n siŵr byddwch chi'n fwynhau hynna."
+  ],
+  [
+   212.0,
+   "Gweddiw, o ddim rhod y bendig di ar Eisteddfod hon wrth i ni gyd-garthu am mwy cant a hanner cariad yn y tai gyntaf, helpa ni gyd-weithio a rhannu llwybrau fel y gwnaeth y gyfrin gyntaf, diolch wrth ti am bob dawn a gawson o flaen ac am bopeth o neud wrth ystyr enw i ni, cyd-barthwya ni dros y dyddiau nesa i wneud y gwaith"
+  ],
+  [
+   242.0,
+   "i werthfawrogi'r hyn sydd gennym holl i rannu yn dy hyn di. O arglwydd byw o'i tadau, bendithi ar y Eisteddfod hon, roherbyn innau'i ddysgu mewn gwefydd gerddorol, i ti dy hun mae'n diodd am holl fforddiau'r byd, dy dydd sydd yn ein pennawd, a'r gariad y dwylo, y trid. Amen."
+  ],
+  [
+   532.56,
+   "a chrynho'r arddysg pob math o beth."
+  ],
+  [
+   543.56,
+   "Am y meddwl dwi'n dwi'n meddwl dwi'n gwrando chdi, a chrynho'r arddysg pob math o beth."
+  ],
+  [
+   952.56,
+   "Yr enw yw'r enw, a'r diridol a'i forewg."
+  ],
+  [
+   963.56,
+   "Yr enw yw'r enw, a'r diridol a'i forewg."
+  ],
+  [
+   1079.56,
+   "Ignoraban la llunia de los vientos, los caprichos de un rio desbordado. Lo aprendieron a ver, sin visitarse las estinas y cuando las cosechas fueron cruelmente arrasadas por el agua, era una tierra estricta, con los fracasos, llegaron a San Lunas y a desesperadas mesas, y entonces, unos pocos se fueron para siempre."
+  ],
+  [
+   1126.56,
+   "Entonces, cuando ya todo parecía perdido, fueron milagros del dydd, y ante cheques las siebla, los soles del verano madrana, y el miestres abundantes, redondos de sorpresos."
+  ],
+  [
+   1143.56,
+   "Mae'r teimladau wedi newid, yn hytrach na unrhyw difrifoldeb, ond nid yw'r rhai sy'n dweud fod yr holl beth wedi cael ei rannu, ond rhai yn dweud, ni'n mynd, i edrych ar y basge gael ei gilydd, y ffertil colled, y llyfr y bywyd sy'n cael ei arwain ar yr anifail, yn agor y cereddau o'r arddangos."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 27,
+  "modelo": 12,
+  "reglas": 0,
+  "vacias": 15
+ }
+}

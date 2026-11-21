@@ -1,0 +1,414 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   42.0,
+   "efo'r yym seremoni y meirio felly mae'n ni'n gofyn i yy mae'n rhaid i Lewis ddod ar y llwyfan lle mae'n deud yna. Diolch."
+  ],
+  [
+   85.28,
+   "Para eithio, invitámos a lo cenario al presidente de la Comisión Organizadora y Ministerio, y genidor Daniel Williams, al pianista Edgar Allen Macdonald, a los señores Gerard Williams, Yelis Roberts, al sonista Pete Hughes, al trombetista Claude Hughes, a la profesora Elfyn Roberts, sy'n cofisïo'r seremonia, a'r"
+  ],
+  [
+   301.28,
+   "Llwego, un tocyn de trompeta invitará al público a poner su victim."
+  ],
+  [
+   309.28,
+   "En tercer lugar, el solista Billy Hughes entonará la oración del Tron Barrio, por lo cual se invita al público a sumarse en el coro juntamente con el grupo chorales que se encuentran ar dŷr y senario, elly son el coro mixedo de la escuela domestica de Gaiman y el corustellon de Saint-Petersburg."
+  ],
+  [
+   694.5,
+   "Mae'n fraint i mi gael eich croesafu i brif seremoni'r prynhawn, sef defod y cadeirio. Ar ganiat y ffanffed a wnaiff pawb yn y neuadd sefyll os gwelwch yn dda."
+  ],
+  [
+   724.5,
+   "I agor y ddeddod bydd William Gwyndi yn ein harwain i ganu Gweddi'r Orsedd, Marc Patagonia yw'r Cyfeilydd."
+  ],
+  [
+   754.5,
+   "Yr o'dd i i'w dadlau, ac yn alw nyrff, ac yn nyrff deall."
+  ],
+  [
+   784.5,
+   "Ie, ie. Ac yn eall, gwybod. Ac yn gwybod, gwybod y cyfiawn. Ac yn gwybod y cyfiawn, ei garu."
+  ],
+  [
+   811.5,
+   "ac yn gwybod cyfiawn ei garu, ac o garu, caru pob fanfod, ac yn pob fanfod, ar y dydd."
+  ],
+  [
+   835.5,
+   "ag ym mhob hanfod a'r un, i'r athro da iawn i."
+  ],
+  [
+   865.5,
+   "Rhoddir a gwnaed y gadair Harlechon eleni gan Gabriel de Sola o'r Gaiman, ac rydym yn ddiolchgar iawn iddo am ei roddhau."
+  ],
+  [
+   880.5,
+   "Cynigir y gadair eleni am gyfres o gerddi rhwng pedwar deg wyth a chant o linellau ar y testun Cychwyn neu Dechrau."
+  ],
+  [
+   893.5,
+   "Beirniad y gystadleuaeth yw'r Prifardd Dafydd John Pritchard o Aberystwyth, yn anffodus nid yw'r medru bod gyda ni heddiw, ond mae'n bleser i ni falw ar addwedd pennant i draddodi'r beirniadaeth ar ei rhan."
+  ],
+  [
+   923.5,
+   "anrhydedd o fod yn meddian yn yr Eisteddfod erbyn hyn, tydw i ddim mwy am y preser Owain ar raddfa eto, ond y flwyddyn nesaf o bosib."
+  ],
+  [
+   933.24,
+   "Ga yw yna gyffredinol am yr ystyriaeth i ddechre? Byddai pob un o'r ymweiswyr ar eu heb i llywodraeth fod awgrym yn well na gysoddiad un o uniongyrchol môr, a bod llun i ddelweddau mewn barddoniaeth o hyd."
+  ],
+  [
+   949.92,
+   "Mae'n herifa wrthiol i greu'r cerddi uwchbwynt, ond mae'n ddigon deg i ddisgwyl i'r darlledydd wneud ychydig o waith a heri, ac felly does dim rhai lles o wybodaeth yn y rhan fwyaf uniongyrchol bob amser. Ond wrth gwrs, haws dweud na gwneud, mi roedd yna rai gwellau iau hefyd. Pob ddwad ddweud, fodd bynnag, fodd blod i'w henw fo."
+  ],
+  [
+   979.92,
+   "Mwynhau pwmpio'r beirdd, a diolch o galon iddyn nhw am eu gwaith."
+  ],
+  [
+   984.92,
+   "Mentodd pwmp, a dymahai'r byr am wn."
+  ],
+  [
+   990.92,
+   "Penlynodd, cyfres o dair cerdd, tri ddod yn wyr, hanes y gyflogwraeth clasig yma, ond bod y gair gyntaf yn cyfeirio at y creu new genesis yn ogystal â'r gair, fel y disgyblif hwnnw yn enebu Ioan."
+  ],
+  [
+   1008.92,
+   "Nid wyf yn gwybod hapus fod y gerdd gyntaf hon yn berbyn mewn gwirionedd i wneud i edrych hefyd, er na fyddai'r dreigl galed i wneud y cysylltiad hwnnw."
+  ],
+  [
+   1020.92,
+   "Crwydri, tai solid, ymdrech deg yn ei hon, ac nid yw chwarae bach yn ei ffinio solid. Mae patrymau i odli ac enwogi acen anrheiliog yn barod, sydd o bosib yn tarfu ar weithdyn."
+  ],
+  [
+   1038.92,
+   "y sonedau a'r adeiladau. Dymwch yn ofalus i beidio defnyddio gormod o ansoddeiddiau, ac, os yw posib, i beidio rhoi ansoddair o'r blaen i nhw."
+  ],
+  [
+   1050.92,
+   "Marach, dyma ymysydd diddorol, yn un beth mae'n gweud nid defnydd helaeth o hynny, ond ar y cyfan yn heffordd o dŵr."
+  ],
+  [
+   1063.92,
+   "Nid yw mond un o'r gyrchoedd ei arddull a nifer o'r ystafellwyr eraill, ac o'r hewlydd, mae'n elfen awgrymo yn peried cerddi gyn, ganu yn fwy na'r haid llych. Dyma'r haid yn beri- mae'r haid yn cerddi helygol iawn."
+  ],
+  [
+   1082.92,
+   "Hwnna. Cerddi eraill sy'n trafod hanes sefydlu'r fagwra, braidd yn gatalogau yn anffodus yw'r gwaith hwn. Dyma un peth da o gerdd neu gerddi a fyddai'n enwau llawer o ddefnyddio awgrym a dewyll, mae'r gerdd cwm Cymru yn well yn hynny o beth, ond mae'n amlwg bod y barn wedi gweithio galed ar y cerddi."
+  ],
+  [
+   1112.92,
+   "Swyn Ebrill. Dyma un o'r cyfwydion mwya diddorol, dwy gerdd yn y werth, yn y wers wlydd sydd gan y band. Y mae'r gyntaf, mewn rhwydwyr, yn ddiweddi hwnt, ond yn anffodus, dydw i ddim yn gwbl hapus efo'r mynegi at bob amser, ond mae hwn yn ymgeisydd Pen y Grist, sydd ar unwaith eto wedi chwysu dros y gerddi."
+  ],
+  [
+   1141.92,
+   "Gwan bach, dyma gasgliad ychydig yn wahanol, cerddi sy'n sôn am fer o'i geni'n yr amser yma i fyrgadau am y coleg. Mae yma ymdrech lew at ddeud cerddi cenedl, ac yn wir, mae'n gerddi hoffus iawn, ond mae'r un geiriad maen nhw'n ymddangos yn fain hefyd, i fod yn rhy uniongyrchol. Mewn cerddi cenedl, mae hynny'n gallu bod, hyd yn oed, yn dŵad."
+  ],
+  [
+   1171.92,
+   "dŵr amlwg. Caradog, welasit? Unwaith eto, y prif broblem fan hyn yw diffyg cynulleidfa o'r ac- o'r rhwystr, sy'n pyddu i wneud y cyfanswmio fel pregeth, yn anffodus. Ond, mi fedrwn dwi fodlon mentro drwy hyn, os bydd y farnwm yn fodlon dal ar dŷ, yn arfer ei grefft, y mae'n amlwg bod yr adnoddau ganddo i ddatblygu farn dda."
+  ],
+  [
+   1201.92,
+   "a fydd yn fwy dal o'i llygadau i hynny."
+  ],
+  [
+   1206.92,
+   "Bydd fi'n cael cerdd annibynnol ar ei gilydd, ac arwydd gan y bardd hwn, ond doedd ddim gwahaniaeth geni am hynny. Y prif wefydd oedd bod yr arwydd gellid wedi dweud o'n huniongyrchol, yn wir, roedd o'n swnio'n rhy rhy fuddugol yn fan hyn, ond mae yma fe ddeuliwr, diwynydd, ac arglydydd sydd o fyddfydd i'n cael ei gilydd."
+  ],
+  [
+   1231.92,
+   "o bum waith, a dyna'r ddeddf, fel y gwelwch chi, fe gafodd y triniaeth am rywiwr a rhyddid. Roedd hi'n amldewis i fyny yn y diwedd, ac i weddai, nadedd o chwaer sy'n dod i roi am y ddewis hwn, o drwch blewyn felly, y bardd buddugol hyn yw Mair."
+  ],
+  [
+   1261.92,
+   "Diolch yn fawr iawn i Dafydd John Pritchard o Gymru ac i Alwain Pennant am ddarllen yr eriaethau. Rwy'n sicr ein bod ni gyd yn falch iawn fod yn adeiladog a fod bardd gennyn yn gadeirio yma heddiw."
+  ],
+  [
+   1288.92,
+   "Yna rwy'n gwahodd y cynchwyn i baratoi i'w dywys i'r llwyfan."
+  ],
+  [
+   1300.92,
+   "Ar arwad y ffanffêr rwy'n galw ar Mara, a Mara yn unig i sefyll."
+  ],
+  [
+   1318.92,
+   "A wnaiff y marab godi ar ei draed neu ar ei thraed os gwelwch yn dda."
+  ],
+  [
+   1348.92,
+   "Ac am y tro olaf, os yw'n arall yn bresennol yn y neuadd, a wnaeth gerdd neu chi sefyll, os gwelwch yn dda."
+  ],
+  [
+   1498.92,
+   "Dalmonica o'r Gaiman yn wreiddiol, ond bellach ar ôl cyfnod y Cymry, mae'n byw yn yr Andres, mae'n drio bygwyn ac yn fam i dri, Geraldine, Macsen a Morgan."
+  ],
+  [
+   1515.92,
+   "Nid yw Monica yn dull yr hirwyddanau Eisteddfod, enillodd gadair Eisteddfod y Wlad- y Wladfa yn nwy fil ac un, yfedal y Maboniaeth Sbaeneg yn Eisteddfod Newydd Sant y Rhyfel ac yn mynd i Eisteddfod Bethel dair mlynedd yn olynol."
+  ],
+  [
+   1531.92,
+   "Yn ogystal â'r wobrau hyn yn Patagonia, derbyniodd yr ail adrodd derfawr y Maboniaeth Sbaeneg mewn cystadleuaeth ryngwladol yn dynnerig yn dilyn Iwerddon."
+  ],
+  [
+   1543.92,
+   "Dymunam am ei canuodd Emyr Gruff ac Iona Roberts, sy'n athrawon Cymraeg gyda Gaeman, am ei thywys ar ddisgybliaeth yr iaith Gymraeg, i machraith ei cyffro farddol yng Nghymru am ei arddaith a'i gyfeillgarwch, i Almaena Taddo Sgrin Michaeli Jones Gaeman a'i dysgodd i ganu ac i leddaru ac aflannodd hi dim cerddoriaeth farddoniaeth ynddi, ond yn bennaf diolch i'n ffeilydd am ei cynhaliaeth a'i cefnogaeth."
+  ],
+  [
+   1573.92,
+   "Yn nawr, dyma ni'n symud ymlaen i gadeirio Monica yn brifar Eisteddfod y Wladfa dwy fil a saith, a wnaiff y gynulleidfa eistedd os gwelwch yn dda."
+  ],
+  [
+   1603.92,
+   "Gaeth yw adlais a oes heddwch heddwch."
+  ],
+  [
+   1619.92,
+   "Sef yw adlef a oes heddwch heddwch."
+  ],
+  [
+   1627.92,
+   "Gwae duw gadwae a oes heddwch, heddwch, Eisteddfod y bardd yn nhed yr Eisteddfod."
+  ],
+  [
+   1657.92,
+   "Galwaf nawn ar Elin Cogwyn i ddarllen y gerdd ddigon."
+  ],
+  [
+   1668.92,
+   "Alawon y gwynt, fel tannau gwynt yw'r stori sy'n llifo o enau'r Rhun, lleisiau dwfn hen Gymru yn atau môr a'r dwyn."
+  ],
+  [
+   1685.92,
+   "Wrth siglo cân o ryddid a chrwydro'r anferdd bach, i gychwyn er bod breuddwyd, a thryso'r hen waith."
+  ],
+  [
+   1695.92,
+   "Wrth ddifodd mwg heb rybudd, o harddwch Cymru fach, a llithro'r llwyd o'r mynydd, llawn glo neu chware'r llan, dangosodd y tŷ heddiw dy wreiddiau amgylchedd mewn tôn werin yn ystod,"
+  ],
+  [
+   1713.92,
+   "Farwelio lwybrau gwlad, i roi hiraeth i'r englyn o gwmpas glasau gwlad. Fel môr, mae llafar straeon limpio yn ein gwaed, ac yn drenau danwy, bydd fardd, cadwrol, gwlad."
+  ],
+  [
+   1743.92,
+   "Diolch i Elin Colwyn am ddarllen gytholiad o'r gerdd ddiddorol. Cenir câd cadeirio gan William Windi i gyfeiriant Mac Patagonia."
+  ],
+  [
+   1856.92,
+   "Diolch yn fawr. Ac yn awr, cyflwyni'r blodau i'r prifardd gan aelod o bwyllgor yr Eisteddfod, Milton Brunsens."
+  ],
+  [
+   1886.92,
+   "Ac yn awr, dwi'n berchyn Prifardd Eisteddfod yr Adran dwy fil a saith gan Nantlais Natur."
+  ],
+  [
+   1916.92,
+   "Rho'n gyfarchiadau i gyfieithu i'w llu, a'r amhranith ddoniau i'w geni, yma fforddwn ni gyd nawr wobr am ein ymdrech fawr."
+  ],
+  [
+   1941.92,
+   "Cadair wych yw hon, a hardd yw mae, yw chorset i chi am dy waith, mewn gardd o gerdd a thên, yn dy annibyn iaith yma."
+  ],
+  [
+   1971.92,
+   "Diolch yn fawr. Romuna Hevera yn hyfforddi'r parti dawns o ysgol Ger Trelew, a mae'i nawr yn anrhydedd yn barod."
+  ],
+  [
+   2121.92,
+   "A dyna ni, wedi cyrraedd diwedd y seremoni hon."
+  ],
+  [
+   2151.92,
+   "Diolch i chi am fod e'n gynulleidfa mor rhaglon. Does dim rôl ni'n ei wneud nawr, ond gwahodd yr Orsedd a phawb sy' wedi cymryd rhan i adael y llwyfan, diolch yn fawr."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 40,
+  "modelo": 24,
+  "reglas": 3,
+  "vacias": 13
+ }
+}

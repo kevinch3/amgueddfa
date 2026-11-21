@@ -1,0 +1,155 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   170.48,
+   "Dyna'r strwythnos, dyna'r agor. Dyna'r strwythnos, dyna'r sgwîn. Dyna'r strwythnos, dyna'r angen byd. Dyna'r strwythnos, dyna'r enbyd byd."
+  ],
+  [
+   327.48,
+   "I spent my days in longing for the other side, for you here on me. I tell you all the ways I don't know who I am to."
+  ],
+  [
+   413.48,
+   "My heart is lonely, for you are sunny, for you there are many."
+  ],
+  [
+   442.48,
+   "Why am I not listening? I have all the money, money that I need. I spent my days having no fear."
+  ],
+  [
+   461.48,
+   "Am blod o'r gwaed i mi row, I'll tell you what you need, I'm on my way to you."
+  ],
+  [
+   480.48,
+   "I can't believe it, we've come so close to it, that you tell me you love me."
+  ],
+  [
+   490.48,
+   "Oh, oh, oh, oh, who knows, I can't pretend it, we've known each other ever since, I've got every one more chance to prove it."
+  ],
+  [
+   506.48,
+   "My life you make, you make. You know I'm yours for today. I'm very surrendered, but not surrendered to you by the end."
+  ],
+  [
+   836.48,
+   "Colli iaith a cholli hudlas, colli awen, colli baras, colli coronau'r gymdeithas, ac mae'n ei tref caniatadol."
+  ],
+  [
+   1035.48,
+   "Wel dyma ni'n diwadd gyfeillion, diwadd i bob un amgennad."
+  ],
+  [
+   1054.48,
+   "Chwe thôl i'r heddwch a'r rhagorau a'r ddaear, hyd yn hyn yn hir a'r eirian, hyd yn hyn yn hwyrach, hyd yn hyn yn hir a'r eang drw."
+  ],
+  [
+   1070.48,
+   "Cewch eich gore'r lliw na fydd neb ar salwad e ore'r cŵl."
+  ],
+  [
+   1088.48,
+   "Mi ganad am wythnos a hefyd pymtheg nos, am mis Os bydd ar nos."
+  ],
+  [
+   1100.48,
+   "i'r achos a'i chwi. O tapwch y ddadl, a llanwch yn rhugl, a faddwch i gymyl i amgylch."
+  ],
+  [
+   1124.48,
+   "Mae Mari'n wyllafen am ddod i'r Sir Fronten, ach a ni'n wylltipen, wyth a dydd Ia."
+  ],
+  [
+   1274.48,
+   "Ond mae'r seriw gyda'r lawr, gan ffrysio'r lawr, i dde."
+  ],
+  [
+   1290.48,
+   "A'i rhestr ar ei ôl y croen, ar hyd y croen, wrth gerdd drefn."
+  ],
+  [
+   1466.48,
+   "Glwbaeth na fwrdd e o'r wyf am dawn, at gant o'r nafn, na'i cryfu'n ofnadw o farawn, rhaid ymarfon a'i mam, dew i'w gofyn, rhai i'w gyflwyn, a chyfodel e a'i thai."
+  ],
+  [
+   1491.48,
+   "Ni ddawn neithiwr ni gyneffyr o'i drosodd o tŷ a nôl o'i waith."
+  ],
+  [
+   1584.48,
+   "Ti'n siomedig o gadw dŵr, cae'r noce sy'n ffraeo, sai'n siomedig o dŵr ychaw, iau di'r trowsus yn ffraeo."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 31,
+  "modelo": 15,
+  "reglas": 0,
+  "vacias": 16
+ }
+}

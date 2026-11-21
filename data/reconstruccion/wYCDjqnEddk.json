@@ -1,0 +1,22 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   653.0,
+   "Felly, diolch yn fawr iawn i chi am ddod i'r ysgolion, a diolch yn fawr iawn i chi am ddod i'r ysgolion."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 32,
+  "modelo": 7,
+  "reglas": 0,
+  "vacias": 25
+ }
+}

@@ -1,0 +1,155 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "I be' sy'n dod ia?"
+  ],
+  [
+   126.0,
+   "Fo' the King of Kings and Lord of Lords, rise arno."
+  ],
+  [
+   210.76,
+   "Him. Hallelujah, hallelu-jah, hallelu-jah."
+  ],
+  [
+   699.78,
+   "Mi gora'r sôn nos igre, de pwylo y pwylo."
+  ],
+  [
+   720.78,
+   "Diolch yn fawr iawn, diolch yn fawr iawn, diolch yn fawr iawn."
+  ],
+  [
+   810.78,
+   "acwn i'r mwryderiws."
+  ],
+  [
+   822.78,
+   "Yn benedigwch rhowch eich disgwyl i Iesu, Iesu, Iesu."
+  ],
+  [
+   1108.48,
+   "Brwd hwnt weddill dy stori'n Iesu, Iesu, Iesu."
+  ],
+  [
+   1159.96,
+   "Nw'n credu môr a môr disgwyl yw'r galw yng Nghaerfawr."
+  ],
+  [
+   1219.96,
+   "Mi guia por sendas de justicia, por amor a su nombre."
+  ],
+  [
+   1223.36,
+   "Aun si voy por valles tenebrosos, no temo peligro alguno, porque tu estas a mi lado."
+  ],
+  [
+   1228.96,
+   "Tu vara de pastor me reconforta, dispones ante mi un banquete, en presencia de mis enemigos."
+  ],
+  [
+   1235.96,
+   "A su un gilo con perfume en mi cabeza, ha sonado mi copa a rebosar."
+  ],
+  [
+   1240.46,
+   "La bondad y el amor me seguirán todos los dias de mi vida, y o la Casa del Señor, habitare para siempre."
+  ],
+  [
+   1249.96,
+   "Mae'n rhan o'r ffordd mwyaf debyg i'r ffordd mae'n cael ei ddefnyddio, ond mae'n rhan o'r ffordd fwyaf debyg i'r ffordd mae'n cael ei ddefnyddio."
+  ],
+  [
+   1345.96,
+   "You shall convert my soul, and bring me forth in the path of righteousness."
+  ],
+  [
+   1366.44,
+   "For his name's sake, for his name's sake, for his name's sake."
+  ],
+  [
+   1380.44,
+   "Ie, though I walk through the body of the shadow of death, I will fear no evil,"
+  ],
+  [
+   1470.44,
+   "But I, loving kindness and mercy, shall follow thee from the days of my birth,"
+  ],
+  [
+   1488.92,
+   "and I will dwell in their halls all day long, in their halls, in their halls all day long, all day long."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 30,
+  "modelo": 16,
+  "reglas": 1,
+  "vacias": 13
+ }
+}

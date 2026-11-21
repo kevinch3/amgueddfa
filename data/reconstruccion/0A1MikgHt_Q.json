@@ -1,0 +1,982 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Una vez más, el escenario de la Eisteddfod se transformará por unos instantes en el Palacio Real,"
+  ],
+  [
+   13.0,
+   "donde reina la poesía y brilla el poeta."
+  ],
+  [
+   18.4,
+   "A continuación, celebraremos la ceremonia del sillón bárdico,"
+  ],
+  [
+   23.3,
+   "premio del certamen número uno, composición poética en lengua galesa,"
+  ],
+  [
+   27.6,
+   "que en el presente año tiene carácter internacional y el tema sugerido es límites."
+  ],
+  [
+   37.6,
+   "Destacamos que el sillón bárdico en esta instancia ha sido donado por el artesano Felipe Fernández"
+  ],
+  [
+   45.0,
+   "y como podemos ver aquí al pie, es una réplica del sillón tradicional"
+  ],
+  [
+   51.9,
+   "dado el carácter internacional del certamen."
+  ],
+  [
+   55.9,
+   "y considerando que el poeta premiado puede pertenecer a otro lugar"
+  ],
+  [
+   62.7,
+   "y facilita de esta manera el traslado."
+  ],
+  [
+   66.6,
+   "Para llevar a cabo la ceremonia, convocamos a las siguientes personas."
+  ],
+  [
+   72.6,
+   "Al presidente de la Comisión Organizadora de la Eisteddfod,"
+  ],
+  [
+   77.0,
+   "señor Rodolfo Villagra."
+  ],
+  [
+   78.3,
+   "A los encargados de la ceremonia de la espada, Mario Jones"
+  ],
+  [
+   83.9,
+   "y Ricardo Iriani, al pianista Héctor Ariel MacDonald, al solista Billy Hughes, al trompetista"
+  ],
+  [
+   95.2,
+   "David Almonacid, al presidente del Círculo Várdico del Chubut, señor Benito Jones,"
+  ],
+  [
+   102.1,
+   "que conducirá la ceremonia, a la profesora Yvonne Owen, quien entrega un obsequio de"
+  ],
+  [
+   110.2,
+   "parte del Círculo Bárdico. A la poetisa Esis Ness Roberts, a la dama de las flores María"
+  ],
+  [
+   118.9,
+   "Solidiani y a la niña Ana Paula Hughes, encargadas de integrar la escolta que acompañará al"
+  ],
+  [
+   126.5,
+   "poeta. A la profesora Alwyn Greene, quien en representación del escritor Owen T. Jones"
+  ],
+  [
+   133.5,
+   "le brindará al poeta un saludo en verso."
+  ],
+  [
+   138.5,
+   "A la profesora Mena George del País de Gales,"
+  ],
+  [
+   142.0,
+   "quien dará lectura a algunos versos del poema premiado."
+  ],
+  [
+   146.6,
+   "Y en esta oportunidad actuaron como jurado los poetas galeses Karen Owen y Howell Griffiths."
+  ],
+  [
+   156.6,
+   "Convocamos también a las niñas del grupo Plant Guanuin,"
+  ],
+  [
+   159.7,
+   "que ofrecerán la danza de las flores a cargo de los docentes Celeste Filipponi y Gabriel Pérez Domínguez."
+  ],
+  [
+   171.2,
+   "La mayoría de las personas nombradas vendrán integrando la procesión del círculo bárbico"
+  ],
+  [
+   177.1,
+   "que ya avanza precedida por las niñas del grupo Plant Guanuin."
+  ],
+  [
+   183.1,
+   "Antes de ser ocupado el sillón de la Eisteddfod"
+  ],
+  [
+   187.7,
+   "Se llevará a cabo la ceremonia de la espada"
+  ],
+  [
+   190.6,
+   "Ceremonia esta que viene de los días del medioevo"
+  ],
+  [
+   194.9,
+   "Y recrea la consigna del círculo bárdico"
+  ],
+  [
+   199.0,
+   "Donde no se permitía el ingreso de hombres armados"
+  ],
+  [
+   205.7,
+   "Por lo tanto, la espada nunca se desenvaina en su totalidad"
+  ],
+  [
+   211.9,
+   "Pues el espíritu del canto poético une los corazones de los pueblos en alegre armonía y en lenguaje de paz"
+  ],
+  [
+   222.6,
+   "Y por tres veces se pregunta a la concurrencia"
+  ],
+  [
+   227.4,
+   "¿Hay paz? A lo que el público responde, paz"
+  ],
+  [
+   235.0,
+   "En la figura del poeta premiado se tributarán los honores a la poesía"
+  ],
+  [
+   240.5,
+   "desde el presente ofrecido por la comisión organizadora del Eisteddfod"
+  ],
+  [
+   246.3,
+   "desde el canto al poeta con la participación del público"
+  ],
+  [
+   251.0,
+   "desde el saludo en verso"
+  ],
+  [
+   253.8,
+   "desde el presente ofrecido por el círculo bárbico de la Patagonia"
+  ],
+  [
+   258.7,
+   "desde el reconocimiento representativo"
+  ],
+  [
+   262.3,
+   "de la dirección de cultura provincial del Chubut"
+  ],
+  [
+   265.9,
+   "y desde la danza de las flores"
+  ],
+  [
+   268.8,
+   "que se rendirá a sus pies con la frescura y el color personificados en las pequeñas bailarinas."
+  ],
+  [
+   277.9,
+   "Nos permitimos pedirle al público que no salude al poeta a su paso,"
+  ],
+  [
+   284.0,
+   "sino que le concedan llegar hasta el fondo de la sala,"
+  ],
+  [
+   289.9,
+   "donde sí se podrá celebrar el feliz acontecimiento."
+  ],
+  [
+   298.8,
+   "Amén."
+  ],
+  [
+   328.8,
+   "Pobno eith paob en un neill sefyll o sgolwch dda."
+  ],
+  [
+   331.9,
+   "Amén."
+  ],
+  [
+   361.9,
+   "de la Gavellia Mac Patagonia."
+  ],
+  [
+   365.18,
+   "Yr oedd uwd yn awdd, ac yn nawdd yn erth, ac yn nerth yn deall."
+  ],
+  [
+   391.9,
+   "Amén."
+  ],
+  [
+   395.18,
+   "Ac yn neall gwybod"
+  ],
+  [
+   402.7,
+   "Ac yn wybod y gwybod y cyfiawn"
+  ],
+  [
+   412.9,
+   "Ac yn wybod y cyfiawn ei garu"
+  ],
+  [
+   424.46,
+   "Ac o garu, caru pob hanfod, ac yn bob hanfod, caru Duw."
+  ],
+  [
+   451.9,
+   "Coefo daion ni."
+  ],
+  [
+   460.9,
+   "Cofia daion ni."
+  ],
+  [
+   472.9,
+   "Ciflwínir y cadar eleni yw Felipe Fernandez."
+  ],
+  [
+   476.9,
+   "Fue una vez felipe Cynllin a chreftwa y cadar bachan honno."
+  ],
+  [
+   481.9,
+   "En el penderfyniad pwylgor Eisteddfod,"
+  ],
+  [
+   487.9,
+   "mae cadar eleni en cadar bach,"
+  ],
+  [
+   490.9,
+   "gan mae'n posibiliadau i awdur dramor galei fo brio,"
+  ],
+  [
+   493.9,
+   "felly fydd yn haws i aigliddo blebennag"
+  ],
+  [
+   496.9,
+   "fydd ennig llydd en teithio."
+  ],
+  [
+   499.9,
+   "Diolch yn fawr i'r nodwyr am y cyfraniad"
+  ],
+  [
+   502.9,
+   "teacadr Eisteddfod."
+  ],
+  [
+   505.9,
+   "Beirniad de Brif y Gastadla Iaeth Llanadol Eleni y Karen Owen a Howell Griffiths o Gymru."
+  ],
+  [
+   513.3,
+   "Y di lín fe gofan nhu'n i Menapen Park darllen y byrniadaeth."
+  ],
+  [
+   549.0,
+   "Y una ddiluniant gorau'r gystadleuaeth, dili'n hanes sefydlu'r wladfa sydgan y bardd."
+  ],
+  [
+   555.0,
+   "Mae'n agor gyda hir a thoddai darbennig o dda, en derlunio bywyd Anodd Cymru, 1865, a gobaith y mimosa."
+  ],
+  [
+   565.0,
+   "Yna, daw cywyd darbennig o effeithiol, en sôn am y daith i Batagonia, a blynyddoedd cynnar y wladfa."
+  ],
+  [
+   573.0,
+   "Er engráct, «Weddu hirdaeth faith ar fôr a herio llawer gogor, roedd gwlad newid deutadau, en y sir, en agos hau»."
+  ],
+  [
+   586.0,
+   "Teg nodi bod rai camgymeriadau fan hyn, mae ambell llunell yn wythsyll ar pwyslais ar gwlad,"
+  ],
+  [
+   594.0,
+   "echod y chydig yn anateriol, ond yn angen reidiol ar gyfer y gynhanedd lusg."
+  ],
+  [
+   600.0,
+   "Yna, me faria'r bardo ar ymweliad a dyffrin camwy, ac mae'r gerdd yn arbennig o deimladrwy a synhwyrus."
+  ],
+  [
+   608.5,
+   "Gad y mi fenfug dyfreiddwyd, i deimlo caledr croeso."
+  ],
+  [
+   614.4,
+   "Yna, cei'r cerddiasgolion Cymraeg y Wladfa."
+  ],
+  [
+   618.9,
+   "Ac wrth i'r llanw droid a'n groes y de, mae ymchwydd geiriau plant yn golchu'r lle."
+  ],
+  [
+   625.8,
+   "Mae'r cerdu caith a'r hyddyn asio naturiol i greu cyfanwet cyfoethog dros ben."
+  ],
+  [
+   633.5,
+   "Dyma'r bard sicraf eu lais, greiddiola feuddelwedd a'u ymadrodd."
+  ],
+  [
+   639.0,
+   "Bard sydd wedi llwyddo i dynu unai dywladfau mewn i'w gerddi."
+  ],
+  [
+   643.8,
+   "Llon gyfarchiadau mawr iawn i breuddwyd."
+  ],
+  [
+   647.2,
+   "Y hay un darn bach, y cyflwyniad allan o'r darn buddigol."
+  ],
+  [
+   657.2,
+   "Cymru, 1865."
+  ],
+  [
+   660.9,
+   "Y gweithwi'r tawel fi'n gaithi'r tywyd, en chwali a mali ar y moelydd."
+  ],
+  [
+   668.2,
+   "Creigiau a meini, cerig y mynydd, enon llafurio a diawlio'u dolydd."
+  ],
+  [
+   674.4,
+   "Dawer hail a daw bywyd trid"
+  ],
+  [
+   678.5,
+   "Coda choil fe mosa, fe welaf y meisidd"
+  ],
+  [
+   683.6,
+   "Rwyshwr ein boden i gyd en falch o gwybod por gydan i bard yw catedrio y mahedio"
+  ],
+  [
+   698.6,
+   "Belli, rungo finir corchwil i baratoi i dewis i rluiban."
+  ],
+  [
+   712.9,
+   "Ar aluat fanfer, rungo lú arbreiduit, ag breiduit en unig i sefyll o escuelo handa."
+  ],
+  [
+   744.08,
+   "A wnaiff breuddwyd godi ar ei draed neu ar ei thraed i ni gael ei adnabod os gwelwch yn dda."
+  ],
+  [
+   784.4,
+   "Aún aif, ef, neu hi sefyll os gweloch ynda."
+  ],
+  [
+   964.4,
+   "o Abarth TV."
+  ],
+  [
+   966.7,
+   "Ond, me'n gyrionad,"
+  ],
+  [
+   968.7,
+   "dim Dye Jones"
+  ],
+  [
+   969.5,
+   "y dir en illud"
+  ],
+  [
+   971.3,
+   "er"
+  ],
+  [
+   973.0,
+   "incidente"
+  ],
+  [
+   974.7,
+   "atep a defygeno brei."
+  ],
+  [
+   976.7,
+   "Yw Terwin Thomas"
+  ],
+  [
+   978.7,
+   "a Dye Jones yw"
+  ],
+  [
+   980.1,
+   "eiconrechioli."
+  ],
+  [
+   1013.24,
+   "Heddwch. Heddwch. Lle uwch a dy lef, a oes heddwch? Heddwch. Gwaed uwch a gwaed, a oes heddwch? Heddwch."
+  ],
+  [
+   1054.4,
+   "¿Quién ircán catello con William Windy y cabellan Mac Patagonia?"
+  ],
+  [
+   1073.24,
+   "prif ar ar finig o hynt. Steiniwch a'i enw'r pedwar gwynt, hwn ydi'w brenin, feirdd yr wyf i gyd, canwch yr udgorn i bedwar fan y byd. Pen ffug y brif ar gweillaf dy cryf, gloeddiodd yr Eisteddfod yn un bryd fy hun."
+  ],
+  [
+   1103.24,
+   "Ni wna i gymrodi'r eilio'n ein boddhad, calon wrth galon yw crim Cornwlad."
+  ],
+  [
+   1118.24,
+   "Llygad goleu i beunydd ar ei lwyd, diw a phob adaeon i hir a hanner wyr."
+  ],
+  [
+   1128.24,
+   "Hen fi'ch brifar, gweinwyr llawn e clêr, gloeddiodd yr Eisteddfod yn un gryf hên."
+  ],
+  [
+   1158.24,
+   "I ddilyn, cyfeirchir brifardd Eisteddfod y Wladfa dwy fil ag un deg wyth trwy darllen cyfarchion a cyfansodwyd gan yr bardd Owain Tudur, mae gofynnwn i i Alwyn Penant darllen y pennod."
+  ],
+  [
+   1174.4,
+   "y alwen penand, darllen y penand."
+  ],
+  [
+   1182.2,
+   "Nol fy meddwl i, nid ydiw ffoi"
+  ],
+  [
+   1185.8,
+   "y mater cyfatebol"
+  ],
+  [
+   1187.8,
+   "en destyn hawdd i'w farddoni,"
+  ],
+  [
+   1190.5,
+   "ond cofiaf hed i harreb Cymreig."
+  ],
+  [
+   1193.8,
+   "Fod llawer troi y riwyl i'w wyli,"
+  ],
+  [
+   1197.4,
+   "a ffois dir holl anawsterau"
+  ],
+  [
+   1200.4,
+   "gan ennill y gadair heddiw."
+  ],
+  [
+   1203.7,
+   "Llongofarliadau Anwilfar, mi fydd en hyfryd dar llen de fardio doniaeth, Owen Tidyr."
+  ],
+  [
+   1213.5,
+   "Diolch a Mawr."
+  ],
+  [
+   1222.9,
+   "Me rai de ni cofio bod Owen Tidyr Jones wedi myndo trwy llawdriniaeth."
+  ],
+  [
+   1229.9,
+   "a me o wedi dod en iawn arol a me o andali wella pob amser."
+  ],
+  [
+   1238.6,
+   "Nawr, por dentro y wobr,"
+  ],
+  [
+   1244.9,
+   "Doma'r cada bachan y penderfynir eleni i'r enillydd y wobr"
+  ],
+  [
+   1248.24,
+   "ni roi eleni i'r enillydd y wobr."
+  ],
+  [
+   1274.76,
+   "Fel fydda aelod pwyllgor y Steddfod yn anrhydeddir y bardd."
+  ],
+  [
+   1304.76,
+   "Bydd Yvonne Maes Llaned yn cyflwyno anrheg oddi wrth yr orsedd."
+  ],
+  [
+   1314.76,
+   "Bydd Matias Gwdro yn cyflwyno cydnabyddiaeth o ran Llywodraeth Odalaith."
+  ],
+  [
+   1374.76,
+   "I hynod ydy'r prifardd bydd grŵp plant parti dawns Gwanwyn yn cynnig dawns y blodau dan arweiniad Seleste Brintirion a Gabriel Perythomingues."
+  ],
+  [
+   1527.9,
+   "Amén."
+  ],
+  [
+   1584.76,
+   "A dyna ni wedi cyrraedd diwedd y seremoni hon ac i gloi y defod yr wyf yn gwahodd i brifardd adael y llwyfan gyda'n gilydd ac i'r aelodau a'r orsedd ac rai sy'n cymryd cymryd rhan yn y seremoni ein dilyn diolch yn fawr iawn i chi am bod gynulleidfa mor rhadlon."
+  ],
+  [
+   1737.9,
+   "Amén."
+  ],
+  [
+   1789.76,
+   "Mae'n rhan o'r ffordd byth yn gallu cael ei ddisgwyl, ond mae'n rhan o'r ffordd y byddai'n cael ei ddisgwyl."
+  ],
+  [
+   1801.76,
+   "Dyma rywun wedi cael ei ddisgwyl, ond mae'n rhan o'r ffordd byth yn gallu cael ei ddisgwyl."
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es",
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 32,
+  "modelo": 21,
+  "reglas": 7,
+  "vacias": 4
+ }
+}

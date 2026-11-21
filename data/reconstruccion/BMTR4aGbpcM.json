@@ -1,0 +1,162 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   120.0,
+   "Mae ar rywbeth amdanat ti na' bendirau fi, yn fawr ddo."
+  ],
+  [
+   130.0,
+   "Rywbeth andanat ti na' bendirau fi, yn fawr ddo."
+  ],
+  [
+   140.0,
+   "Dwi'n gweld destunau, gwahanol ar gyfer o blaen, a dda wedi i weld y ddomi yn y gwael. Dwi'n gweld i'r bwrdd mae ar gael i fi, bydda i'n mynd i'r cloc i'n brin, a'n treder i fydda i'n mynd i'r cloc i'n brin."
+  ],
+  [
+   167.0,
+   "Amser hynny fydda i'n dilyn, a rywbeth amdanat ti na fydda i'n egluro. Rywbeth amdanat ti na fydda i'n anghofio."
+  ],
+  [
+   209.0,
+   "Do'n i ddim lle dwi'n byw, do'n i ddim lle dwi'n mynd i fod. Gennai'm syniad lle dwi rŵan yn byw, a dyw a fi ddim lle dwi'n mynd i fod."
+  ],
+  [
+   232.0,
+   "Dwi'n cysgu dan y stêr yn y Sahara, a caros naill ai drwy nos da."
+  ],
+  [
+   246.0,
+   "Dwi di dansio ar banu efo ffrindiau ne' fi, a defro ryw flyredd yn fana."
+  ],
+  [
+   258.0,
+   "Does dim man ynte fi i adra, gyda ddŵr tais."
+  ],
+  [
+   270.0,
+   "Does dim man ynte fi i adra, da, ma' adra ynte fi gan ne' chdi."
+  ],
+  [
+   283.0,
+   "Fy mhennef i yw fy nefoedd, a fydd o'r nefydd i'w fy nif. Nath o'r fam a gath ni fy hun, felly pam dwi ar gollwng fi?"
+  ],
+  [
+   309.0,
+   "Sgenna i mam pan sgenna i'n marwyd, sgenna i ddrysau i ddeludau, dwi'n cau fy cynnau nag ar ddod fel enau, ag i ffwrdd ddau."
+  ],
+  [
+   354.0,
+   "Yn ddaeth a nôl wrtha is, daeth synnwad ymder fi i adeiladu'r holl ddawns, adeiladu'r holl ddawns i fi i adeiladu'r holl ddawns i chdi."
+  ],
+  [
+   414.0,
+   "Aeth George i listo'n fana'n dylan i Fitzbee Park, Alun i'r Iwerddon i sleidio'n fana."
+  ],
+  [
+   444.0,
+   "Dyna ddim i greu'r broblem oeddai hi, wedi'n cynnig ateb y ateb iddi hi, fedref cael y penwys yma ar fy ngwlad hon, i chwalu'r abacus y llanw."
+  ],
+  [
+   464.0,
+   "Un o'r rhif ddau ych chi a fod yn rhydd, dwi'n cymryd byddwch chi'n bod wedi parhau, ond cerddai fawr o brin parhau mewn ryddwydion yn tynnu gwlad fy mhen, yn tynnu gwlad fy mhen a fynd mewn i'r hefydion."
+  ],
+  [
+   548.0,
+   "Wel, groeso, yn caraf groeso, gor-weithio i'r cwmni hi, a ni'n agor ein galon a'i legen, gyda'r thema ni."
+  ],
+  [
+   755.0,
+   "Os ti isio priodi fi."
+  ],
+  [
+   785.0,
+   "Na, ti ddim yn mynd i golli fi, dan ni'n gallu byw efo'n gilydd ar y ffarm neu yn Cymru."
+  ],
+  [
+   832.0,
+   "Fod yr aros bai un yn wych, lle mae'n deimlo fod caerfawr i fod, lle mae'n mentyn yn canu, ie i fi, a'r ariaith yn byw o hyd."
+  ],
+  [
+   1033.0,
+   "Gan y ffôn dwi'n ecstasi, a'r ffôn dwi'n adeiladu, dwi'n sôn am fi."
+  ],
+  [
+   1507.84,
+   "Sosban bach yn berwi ar dân, sosban fawr yn berwi am ddown, a'r gath wedi sgafn, o joli bach."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 26,
+  "modelo": 13,
+  "reglas": 1,
+  "vacias": 12
+ }
+}

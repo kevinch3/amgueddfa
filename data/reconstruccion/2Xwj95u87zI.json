@@ -1,0 +1,337 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   200.96,
+   "Er gwaetha pawb a phopeth, ni'n mynd i fyny'n llys."
+  ],
+  [
+   240.3,
+   "Dwi'n iawn fel dwi. Er gwael glaw mawr popeth."
+  ],
+  [
+   328.4,
+   "Fod e'n rili amlwg i, rili amlwg i."
+  ],
+  [
+   336.48,
+   "Dewis llawr mawr popeth."
+  ],
+  [
+   347.0,
+   "Ni a nôl i, er mwyn cael maw a popeth."
+  ],
+  [
+   707.0,
+   "yn un agreddiad sbesial ar gyfer y Conseil delifyrantig sy'n declaru'r cysermoni'r cyfathrebu permanent. Yym, diolch yn fawr, ac ro'n i'n hoffi ychwanegu i chi fod y cysermoni'r cyfathrebu, unwaith i ni i'n mynd i'r cerbyd, yn iaith Gymraeg. Mae gennych chi y programau, a mae gennych chi hyd yn oed y cwricwlwm o'r newyddion sy'n cyd-destun y cysermoni."
+  ],
+  [
+   737.0,
+   "Diolch yn fawr."
+  ],
+  [
+   757.0,
+   "Gofynnaf yn awr i Steffan Bryn Gwyn, sef Steffan Rhys Roberts o Gymru, neu parwain anweddi'r orsedd."
+  ],
+  [
+   767.0,
+   "Yn wyneb hael i llygad goleu, agorad yr orsedd."
+  ],
+  [
+   797.0,
+   "Ar y gawr yn erth. Ac yn nerth y deall. Ac yn deall y gwybod. Ac yn gwybod y cyfiawn."
+  ],
+  [
+   827.0,
+   "Ac yn gwybod mwy am yr eang, ac yn gwybod yn cyfiawn ei garu."
+  ],
+  [
+   840.0,
+   "Ac yn gwybod mwy am yr eang, ac o garu, caru bob hanfod."
+  ],
+  [
+   853.4,
+   "Athro Caru Caerfyrddin, awgrymodd ar y bôd caru i Dŷn, ar y bôd caru i Dŷn, i'w fagodd a'i ofyn."
+  ],
+  [
+   883.4,
+   "Mae'n gr- mae'n bleser gennyf eich croesawu i seremoni Gorsedd y wlad fath a threfn honna, hollwng nesdiwch croeso cynnes i bawb ohono fo, ac i bobol o Gymru, yn enwedig aelodau Gorsedd Cymru sydd yma yn eu dŷ."
+  ],
+  [
+   913.4,
+   "Rwy'n dal yn nesaf i gôr y merched ysgol gyrdd y Gaiman i ganu i ni y darn y Wladfa, gan arweinio gwladydd Berth Coch a chyfeiliant Mag Batagonia."
+  ],
+  [
+   1078.4,
+   "gei di'r hen emyn a'r naboddus diwedd y daith."
+  ],
+  [
+   1246.42,
+   "Gofynnwn i chi, aelodau newydd, addo cynnal a chefnogi'r Gymraeg yn y Patagonia, ac i ddirbyn amodau i'w Gorsedd drwy'r gofynedd yng Ngwynedd Fôrs."
+  ],
+  [
+   1257.92,
+   "Mae'r farch newydd, cyfrinach un, gan hinach, i Elfonabia, rei gwych. Gafodd Ynni Elfonabia ei geni yn olradd, roedd hi'n byw ym mhartref ei nhaid tan roedd e'n wyth oed, lle roedd y Gymraeg yn cael mwy hefydda."
+  ],
+  [
+   1283.92,
+   "Symudodd y teulu i Sarn Iwndwm oherwydd gyrfa ei thad ac i'r awdl wedyn hynny."
+  ],
+  [
+   1291.92,
+   "Ers dwy fil a naw, mae hi'n byw ym Mryn Gwyn, dechreuodd ddysgu Gymraeg yn dwy fil a deg mewn dosbarthiadau Gymraeg ei oedolion, ac mae'n dal i fynychu cwrs ymarfer llafar yn y Gaemaf, gafodd y gyfle i ddechrau ddysgu drwy gyfrwng y Gymraeg yn Ysgol Gymraeg y Ga- y Gaemaf."
+  ],
+  [
+   1311.92,
+   "Erbyn hyn mae'n dysgu llawn amser yn Ysgol yr Hendre yn Rhondda, mae hi hefyd yn dysgu Gymraeg i oedolion yng nghanolfa Capel Rhun yw Capel Berwyn yn Rhosan, mae hi'n hyfforddi plant i gystadlu yn yr Eisteddfodau Lleol, Eisteddfod Môn Ta, Eisteddfod Rhyddelig ac Eisteddfod y Bobol Ifanc, gaeth ei hadnabod yn Gorsedd fatha fel mae'r tŷ adar."
+  ],
+  [
+   1371.92,
+   "Cyfarthlywyr, cyflwynwyd i chi yn awr nesdwr Iddwadol Marinio Gorth Madryn."
+  ],
+  [
+   1386.92,
+   "Mae'n ystod y ddiwadd o maenio yn byw yng Nghwrdd Madryn gyda'i deulu, Erica, ei wraig, a Rhysender, ei bab bychan. Yn y blynyddoedd dwy fil ac un deg chwech, dechreuodd weithio yn anferth a glanio yn Pwnt y Gwefus, Ffwrdd Madryn. Ar ôl treulio ychydig o amser, gweithio yno a hyfforddi yn yr hanes i ddarparu gwybodaeth i ymwelwyr, daeth y ddiddordeb i'r iaith i'r bywyd i'r ffyrdd neu'n byw yn Nghwrdd Madryn."
+  ],
+  [
+   1416.92,
+   "i ddysgu Gymraeg. Dan ni sefyll yr arholiadau berthnasol yn dwy fil ag un deg saith ac dwy fil ag un deg wyth. Yn dwy fil a dau ddeg tri, enillodd ysgoloriaeth Gymdeithas Cymru a Rhiannu i fynd i Gymru i fynychu Cwrs Dws Canolradd un a dau ym Mhrifysgol Aberystwyth. Bryd hynny, cafodd y cyfle i fynychu Eisteddfod Genedlaethol yn Nefyn a darllen Gŵyl y Glaniaid yn Llanat Neu. Y flwyddyn yma, safodd arholiad canolradd, ac ar hyn o bryd, mae'n cynnal i ni i fynychu Cwrs Dws Canolradd un a dau. Y flwyddyn yma, safodd arholiad canol"
+  ],
+  [
+   1446.92,
+   "drwy sgwrsio â'r ffordd magic. Gaiff ei adnabod yn Gorsedd o'r Wladfa fel y dywadd do, y rog o feirdd."
+  ],
+  [
+   1476.92,
+   "Yn barhlewi, cyflwynaf i chi yn awr, ddiannaf i ar frys awen, brin gwyn."
+  ],
+  [
+   1500.92,
+   "Ganwyd ym Mrin Gwyn, lle mae hi bellach yn byw gyda'i merch ar ôl diwrnod graddiad yn ysgol Uwchradd Gaiman yn gyntaf, lle mae hi'n dysgu ar hyn o bryd fel athrawes, a wedyn fel darlledwr ac ymgyfar- ymgyfarthwyswr genedlaethol."
+  ],
+  [
+   1521.92,
+   "Cedluniodd y rhaglenni radio a theledu ers dros dau ddeg pump miloedd. Hefyd, mae hi'n addrawes yn Coleg Hyfforddi Addrawon Celf Cludwyn Aberon Jones, yn cymryd rhan mewn eisteddfodau ers pan oedd hi'n tair wy- tair oed wrth ganu, adrodd a dawnsio."
+  ],
+  [
+   1541.04,
+   "Eleni, mae hi'n ddadlu tri deg tri mlynedd yn arwain yr Eisteddfodau Ddi-ieuenctid, ac tri deg un mlynedd yn arwain Eisteddfodau Ewropad."
+  ],
+  [
+   1551.28,
+   "Cefarwyddwr diwylliant Enig Gaiman am ddau dymor, amddiffynnwr a herwyddwr ddrwd o draffdadau diwylliannol a phensilniol Cymreig, arweiniodd at feriad hanesyddol siop cyffredinol gyntaf Enig Gaiman, a adeiladwyd yn mil naw gant."
+  ],
+  [
+   1570.24,
+   "Mae hi'n aelod o dîm technegol cyfadran addysg i'r Gymraeg, arbedwyr iaith Gymraeg y Trwd ac ar hyn o bryd, hi yw'r Llywydd Cymdeithas yr Ysgol Gymraeg y Gaiman."
+  ],
+  [
+   1581.96,
+   "Gaiff ei hadnabod yng Ngorsedd yr arddafell dianna brin gwyn."
+  ],
+  [
+   1630.24,
+   "Cafodd afiadau i safbwyntiau hynny yn rhyhyw, ond wedi mynd i ôl Gaernarfon ar ddiwrnod blynyddoedd, ar hyn o bryd mae Ynion da Siân Iôn, yn fwy na un o'i ddarganiadau teg, yn gweithio mewn adran gwylltoriaeth y berson, ac yn mynychu dosbarth uwch yn yr Gymraeg, yn hyn o ran pa frawddegau eraill, yn aelod o grŵp o bwyllgor gwaith isel o fynd adra ers ddeud awgrymiadau ella, ac yn aelod o grŵp ddawnsio Werin Gwagnon, mae o hefyd yn gyfarwyddwr grŵp gwaith ar ddau."
+  ],
+  [
+   1660.24,
+   "Ers yr hiraeth ddeuthaeth, mae'n cyflymu'r dawn siaradain ac yr ysgrifennu'r Eisteddfod. Mae hefyd yn aelod o'r dechrau o wella gwrs y byddu ysgol Gymraeg y Gain, ac o'r Gymdeithas yr Isela'n ddyrchafu o San Fili, caiff haearnabod y noson gwladfa fel Gafael Ysbryd y Môr."
+  ],
+  [
+   1720.24,
+   "Aelodau Gorsedd y Wladfa, afennwch chi yn awr rhwng y meini hyn, ac yn wyneb hau llygad goleuni, gadarnhau etholiad yr aelodau newydd hyn, os mynnwch ateb yn bob un ohonoch heddiw."
+  ],
+  [
+   2073.24,
+   "i bwyllgor Eisteddfod y Wladfa i gyflwyno copi o'r rhestr testunau newydd Eisteddfod y Wladfa flwyddyn dwy fil dau ddeg chwech."
+  ],
+  [
+   2081.92,
+   "Diolch yn fawr, derbyniaf y rhestr cwestiynau a llawenir, gan ddymuno bob llwyddiant i'r Eisteddfod."
+  ],
+  [
+   2107.92,
+   "Mae'r rhamien hon yn cael amhau yng Nghaerfyrdd Eisteddfod o Lefarn cynnig yn cynnal yn ddilew yn yr dwy fil ddwy fil chwech chwech."
+  ],
+  [
+   2117.92,
+   "Diolch i chi, o, am ddodd yma ar bore, ddim ond wedi bod, i fod yn dysg i'r seremoni hon."
+  ],
+  [
+   2136.92,
+   "Rwyf nawr yn cloi'r cyfarfod hwn o'r sefyllfa tan yn hawdd i'r seddwm, byddwn yn esgyn i lwyfan yr ysgafnau ac gobeithio mai'r ysgafnau'n dda i'r adeg."
+  ],
+  [
+   2149.92,
+   "Nawr, byddwn gorfod pleithio nôl i Gapel Bethel, yna fydd ein cyfarfod blynyddol fel arfer, ond cyn hynny gofyn am anawd i gladdu Sburt Goch, ein harwain i ganu hen wlad ym Mhadau, ac yn genedlaethol Cymru, ac mae'n ddeudogiol i chi i chi bob un ohono sydd gyda ni i'w gwe."
+  ],
+  [
+   2234.92,
+   "Dim byd o'r gloyn, o'dd angen i'r hen Iau arhain."
+  ],
+  [
+   2246.92,
+   "La, la, la reidio nôl i mi, la, tra fod angen i, dim byd o'r gloyn, o'dd angen i'r hen Iau arhain."
+  ],
+  [
+   2324.92,
+   "Mae gen i gariad sy'n byw yn y gair yma, mae'n gweithio mewn siop yn tŷ lew, ac mae'n hoffi mynyddoedd yr handys ac adringo'n yr eira lew."
+  ],
+  [
+   2348.92,
+   "Mae am y wyne, hyn ma' nw nôl Mae am y wyne, a hyn ma' nw nôl i dy go. I Batagonia, i Batagonia I Batagonia, i Batagonia."
+  ],
+  [
+   2403.4,
+   "Mae'r awyren yn mynd ffordd yn ôl i dy gof, i Patagonia"
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 42,
+  "modelo": 26,
+  "reglas": 0,
+  "vacias": 16
+ }
+}

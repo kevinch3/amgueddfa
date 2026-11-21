@@ -1,0 +1,841 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   58.9,
+   "Competencia número 27, recitación libre"
+  ],
+  [
+   63.0,
+   "Te necesitas de Magdalena Sánchez."
+  ],
+  [
+   68.0,
+   "Primer participante,"
+  ],
+  [
+   70.0,
+   "Ana Andrea."
+  ],
+  [
+   83.0,
+   "Necesitas"
+  ],
+  [
+   84.8,
+   "de Magdalena Sánchez."
+  ],
+  [
+   90.9,
+   "No te das la importancia que mereces"
+  ],
+  [
+   95.3,
+   "y vas dejando que la vida pase"
+  ],
+  [
+   99.6,
+   "y para ti no hay tiempo casi nunca"
+  ],
+  [
+   103.2,
+   "y nunca te regalas un detalle"
+  ],
+  [
+   106.7,
+   "y corres por la prisa de nosotros"
+  ],
+  [
+   110.8,
+   "y llegas a tu vida siempre tarde."
+  ],
+  [
+   116.2,
+   "pasando el tiempo"
+  ],
+  [
+   118.4,
+   "y va pasando"
+  ],
+  [
+   121.5,
+   "y vas envejeciendo en el paisaje."
+  ],
+  [
+   126.3,
+   "No se te pregunta por tu risa que se fue"
+  ],
+  [
+   130.0,
+   "diluyendo por la tarde"
+  ],
+  [
+   133.3,
+   "y siempre los demás. Y para cuando una"
+  ],
+  [
+   137.1,
+   "cita contigo en cualquier parte,"
+  ],
+  [
+   140.3,
+   "te necesitas más de lo que piensas y"
+  ],
+  [
+   143.9,
+   "nunca te detienes a escucharte,"
+  ],
+  [
+   147.2,
+   "tienes tantas cosas que decirte,"
+  ],
+  [
+   151.5,
+   "pero no pareces importante."
+  ],
+  [
+   156.1,
+   "Y siempre tú detrás"
+  ],
+  [
+   158.7,
+   "y siempre luego y siempre para ti más"
+  ],
+  [
+   162.3,
+   "adelante"
+  ],
+  [
+   165.2,
+   "y siempre y siempre nunca."
+  ],
+  [
+   169.2,
+   "Y el tiempo que se va sin esperarte"
+  ],
+  [
+   174.9,
+   "queda contigo en un lugar hermoso."
+  ],
+  [
+   178.4,
+   "Lleva una flor para identificarte"
+  ],
+  [
+   181.7,
+   "y cuéntate la historia de tu vida."
+  ],
+  [
+   185.6,
+   "Ya verás cómo vas a enamorarte,"
+  ],
+  [
+   189.4,
+   "porque no hay como tú nadie en el mundo."
+  ],
+  [
+   193.7,
+   "Porque en el mundo como tú no hay nadie"
+  ],
+  [
+   199.0,
+   "y siempre los demás y siempre luego y"
+  ],
+  [
+   203.4,
+   "vas envejeciendo en el paisaje"
+  ],
+  [
+   207.5,
+   "y nunca tus asuntos lo primero y déjalo"
+  ],
+  [
+   210.6,
+   "pasar de que no hace falta."
+  ],
+  [
+   214.3,
+   "Y acaso cuando se puede en otra vida"
+  ],
+  [
+   221.1,
+   "y es tiempo que te agacha la mirada"
+  ],
+  [
+   224.8,
+   "y tú cuando los años lo termitan"
+  ],
+  [
+   229.8,
+   "y tú"
+  ],
+  [
+   231.7,
+   "cuando esta crisis un día pase"
+  ],
+  [
+   237.4,
+   "y tú cuando se puedan otra vida"
+  ],
+  [
+   241.5,
+   "y tú nunca Nunca jamás de los jamas."
+  ],
+  [
+   246.2,
+   "Y el tic tac del reloj en tu muñeca"
+  ],
+  [
+   250.2,
+   "y vas envejeciendo en el paisaje."
+  ],
+  [
+   266.8,
+   "Segunda participante,"
+  ],
+  [
+   269.2,
+   "Nancy Jones."
+  ],
+  [
+   277.8,
+   "No te das la importancia que mereces"
+  ],
+  [
+   281.9,
+   "y vas dejando que la vida pase"
+  ],
+  [
+   286.3,
+   "y para ti no hay tiempo casi nunca"
+  ],
+  [
+   291.2,
+   "y nunca te regalas un detalle"
+  ],
+  [
+   295.1,
+   "y corres por la prisa de los otros y"
+  ],
+  [
+   299.0,
+   "llegas a tu vida."
+  ],
+  [
+   301.5,
+   "Siempre tare."
+  ],
+  [
+   304.6,
+   "Y va pasando el tiempo,"
+  ],
+  [
+   307.6,
+   "va pasando"
+  ],
+  [
+   310.0,
+   "y vas envejeciendo"
+  ],
+  [
+   313.4,
+   "y vas envejeciendo un paisaje."
+  ],
+  [
+   318.6,
+   "Y no se te pregunta por tu risa"
+  ],
+  [
+   322.0,
+   "que se fue diluyendo con la parte"
+  ],
+  [
+   326.7,
+   "y siempre los demás. ¿Y para cuándo? una"
+  ],
+  [
+   331.1,
+   "cita contigo en cualquier parte."
+  ],
+  [
+   338.8,
+   "Te necesitas"
+  ],
+  [
+   340.9,
+   "más de lo que piensas"
+  ],
+  [
+   344.3,
+   "y nunca te detienes a escucharte"
+  ],
+  [
+   348.4,
+   "y tienes tantas cosas que decirte,"
+  ],
+  [
+   354.6,
+   "pero no te pareces"
+  ],
+  [
+   356.9,
+   "importante."
+  ],
+  [
+   359.6,
+   "Y siempre tú después y siempre luego y"
+  ],
+  [
+   365.1,
+   "siempre para ti más adelante."
+  ],
+  [
+   370.4,
+   "Y siempre tú detrás"
+  ],
+  [
+   378.1,
+   "y el tiempo que se va sin esperarte."
+  ],
+  [
+   383.4,
+   "Queda contigo en un lugar hermoso"
+  ],
+  [
+   386.8,
+   "y lleva alguna flor para identificarte"
+  ],
+  [
+   391.0,
+   "y cuéntate la historia de tu vida"
+  ],
+  [
+   395.0,
+   "y ya verás cómo vas a enamorarte,"
+  ],
+  [
+   400.2,
+   "porque no hay como tú nadie en el mundo."
+  ],
+  [
+   405.7,
+   "Porque como tú en el mundo no hay nadie."
+  ],
+  [
+   413.2,
+   "Y siempre los demás"
+  ],
+  [
+   416.8,
+   "y siempre luego"
+  ],
+  [
+   421.5,
+   "y vas envejeciendo en el paisaje"
+  ],
+  [
+   430.1,
+   "y nunca tus asuntos"
+  ],
+  [
+   433.4,
+   "lo primero"
+  ],
+  [
+   435.9,
+   "y déjalo pasar que me hace falta."
+  ],
+  [
+   440.9,
+   "Y acaso el mes que viene sí se puede"
+  ],
+  [
+   446.2,
+   "y el tiempo que te agacha la mirada"
+  ],
+  [
+   451.8,
+   "y tú"
+  ],
+  [
+   454.9,
+   "cuando se pueda"
+  ],
+  [
+   457.4,
+   "alguna vez."
+  ],
+  [
+   460.1,
+   "Y tú cuando esta crisis un día pase"
+  ],
+  [
+   466.2,
+   "y tú cuando se pueda en otra vida"
+  ],
+  [
+   472.2,
+   "y tú"
+  ],
+  [
+   474.0,
+   "nunca jamás"
+  ],
+  [
+   476.8,
+   "de lo jamases"
+  ],
+  [
+   479.8,
+   "y el tic tac del reloj en tu muñeca"
+  ],
+  [
+   486.6,
+   "y vas envejeciendo."
+  ],
+  [
+   489.4,
+   "en el paisage."
+  ],
+  [
+   515.0,
+   "Continuamos."
+  ],
+  [
+   536.2,
+   "Competencia número 48, solo"
+  ],
+  [
+   540.0,
+   "dos participantes para esta competencia,"
+  ],
+  [
+   542.9,
+   "Beca Fed y Andrés."
+  ],
+  [
+   546.4,
+   "Queremos comentar que los premios de"
+  ],
+  [
+   549.6,
+   "competencias globales en Galés los"
+  ],
+  [
+   552.3,
+   "otorga el G."
+  ],
+  [
+   556.7,
+   "Si el jurado así lo dispone"
+  ],
+  [
+   702.5,
+   "Vamos a invitar al segundo participante,"
+  ],
+  [
+   706.2,
+   "Andrés Evans"
+  ],
+  [
+   709.2,
+   "Divin Camil."
+  ],
+  [
+   885.7,
+   "Vamos a dar continuidad con la"
+  ],
+  [
+   888.3,
+   "competencia número"
+  ],
+  [
+   890.5,
+   "25"
+  ],
+  [
+   892.4,
+   "poesía en conjunto en Galés."
+  ],
+  [
+   898.8,
+   "Pa Beth yw Dyn,"
+  ],
+  [
+   903.8,
+   "Williams,"
+  ],
+  [
+   905.9,
+   "el único participante,"
+  ],
+  [
+   910.6,
+   "Cursiman."
+  ]
+ ],
+ "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 21,
+  "modelo": 19,
+  "reglas": 0,
+  "vacias": 2
+ }
+}

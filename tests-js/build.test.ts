@@ -609,6 +609,12 @@ describe('static build', () => {
     expect(page).toContain('id="no-contar"');
   });
 
+  it('no public document is titled by a bare file-name slug (#90)', () => {
+    const docs = JSON.parse(read('datos/documentos.json')).documentos as { id: string; titulo: string }[];
+    const slugs = docs.filter((d) => /^[a-z0-9-]+$/.test(d.titulo) || /^(web|ig|villagra|culturagaiman|chubutcultural) /.test(d.titulo));
+    expect(slugs.map((d) => `${d.id} ${d.titulo}`)).toEqual([]);
+  });
+
   it('page descriptions read cleanly and count only public documents, like the open data (#19)', () => {
     const desc = (f: string) => /<meta name="description" content="([^"]*)"/.exec(read(f))?.[1] ?? '';
     const eds = JSON.parse(read('datos/ediciones.json')).ediciones as { url: string; documentos: number }[];

@@ -28,7 +28,7 @@ const cards = items()
 const FIRST = ['programa', 'programa-del-dia'];
 const toTranscribe = items()
   .filter((i) => !i.restricted && !i.hidden && ocrFor(i.id) !== null && transcriptionDoc(i.id) === null)
-  .sort((a, b) => Number(!FIRST.includes(a.category)) - Number(!FIRST.includes(b.category)) || (a.year ?? 9999) - (b.year ?? 9999) || a.title.localeCompare(b.title));
+  .sort((a, b) => Number(!FIRST.includes(a.category)) - Number(!FIRST.includes(b.category)) || (a.year ?? 9999) - (b.year ?? 9999) || a.title.localeCompare(b.title, 'es', { numeric: true }));
 const byFestival = festivals().map(({ slug: f }) => ({ f, docs: toTranscribe.filter((i) => i.festival === f) })).filter((g) => g.docs.length);
 ---
 <Base title={t('tareas.titulo')} current="tareas">

@@ -49,6 +49,118 @@ def _title(name: str) -> str:
     return stem.replace("_", " ")
 
 
+# Readable titles for files named by a slug (issue #90): "fb_programa-del-dia_123.jpg" → "Programa del día".
+# Leading words that only say where the file came from (the item's source already says it).
+SOURCE_WORDS = {"web", "villagra", "culturagaiman", "chubutcultural", "ig"}
+# Whole slugs whose word order or joining words a word-by-word reading gets wrong.
+PHRASES = {
+    "desde-casa-competencias": "competencias desde casa",
+    "cierre-inscripciones-competencias": "cierre de inscripciones a competencias",
+    "cierre-inscripciones": "cierre de inscripciones",
+    "semana-programa": "programa de la semana",
+    "piezas-recitacion": "piezas de recitación",
+    "bases-gales": "bases en galés",
+    "programa-tapa": "tapa del programa",
+    "artes-visuales-bases": "bases de artes visuales",
+    "EisteddAdre-programa-reglamento": "EisteddAdre: programa y reglamento",
+    "EisteddAdre-programa": "EisteddAdre: programa",
+    "EisteddAdre-reglamento": "EisteddAdre: reglamento",
+    "danzas-inscripcion": "danzas: inscripción",
+    "avisos-erratas": "avisos y erratas",
+    "programa-reglamento": "programa y reglamento",
+    "preliminares-inscripciones": "preliminares: inscripciones",
+    "reglamento-competencias": "reglamento de competencias",
+    "avisos-inscripcion": "avisos de inscripción",
+    "inscripciones-erratas": "inscripciones: erratas",
+    "preliminares-orden-del-dia": "preliminares: orden del día",
+    "preliminares-semana": "preliminares: semana",
+    "fechas-recepcion": "fechas de recepción",
+    "erratas-importante-inscripcion": "erratas importantes de inscripción",
+    "programa-del-dia-anuncio": "anuncio del programa del día",
+    "programa-rhaglen-anuncio": "anuncio del programa (rhaglen)",
+    "programa-anuncio": "anuncio del programa",
+    "fechas-inscripcion": "fechas de inscripción",
+    "entrega-vencimientos": "entrega y vencimientos",
+    "fe-de-erratas-fechas": "fe de erratas: fechas",
+    "aviso-sesiones": "aviso de sesiones",
+    "horarios-entradas": "horarios y entradas",
+    "ceremonia-sillon": "ceremonia del sillón",
+    "ceremonia-corona": "ceremonia de la corona",
+    "concurso-tapa-programa": "concurso de tapa del programa",
+    "comunicado-fechas": "comunicado de fechas",
+    "nota-diario": "nota del diario",
+    "info-preliminares-sesiones": "información de preliminares y sesiones",
+    "show-apertura": "show de apertura",
+    "presentacion-programa": "presentación del programa",
+    "anuncio-preliminares": "anuncio de preliminares",
+    "culmino-37-edicion": "culminó la 37.ª edición",
+    "competencia-musica-solos": "competencia de música: solos",
+    "semana-del-eisteddfod-preliminares": "semana del Eisteddfod: preliminares",
+    "actualizacion-preliminares": "actualización de preliminares",
+    "competencias-danzas": "competencias de danzas",
+    "competencias-literatura": "competencias de literatura",
+    "competencia-coros": "competencia de coros",
+    "programa-eisteddfod-del-chubut": "programa del Eisteddfod del Chubut",
+    "resultados-vivo": "resultados en vivo",
+    "agenda-septiembre-DirCulturaGaiman": "agenda de septiembre (Dirección de Cultura de Gaiman)",
+}
+WORDS = {
+    "dia": "día", "inscripcion": "inscripción", "recitacion": "recitación", "recepcion": "recepción", "arqueria": "arquería",
+    "diseno": "diseño", "grafico": "gráfico", "fotografia": "fotografía", "musica": "música", "programacion": "programación",
+    "actualizacion": "actualización", "edicion": "edición", "gales": "galés", "sillon": "sillón", "presentacion": "presentación",
+    "donde": "dónde", "comp": "competencias", "eisteddfod": "Eisteddfod", "chubut": "Chubut", "trelew": "Trelew",
+    "gaiman": "Gaiman", "valle": "Valle", "ganu": "Ganu",
+}
+MONTHS = {"enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"}
+
+
+def readable_title(raw: str, year: int | None) -> str:
+    """A title from a slug-like file name, or `raw` unchanged when a person wrote it (capitals and spaces)."""
+    tokens = raw.split()
+    while len(tokens) > 1 and tokens[0] in SOURCE_WORDS:
+        tokens = tokens[1:]
+    rest = " ".join(tokens)
+    if rest != rest.lower() and not (len(tokens) == 1 and "-" in rest):
+        return raw if rest == raw else rest[:1].upper() + rest[1:]  # a person's title, minus a source word
+    if len(tokens) >= 3 and tokens[-3:-1] == ["feed", "wayback"]:
+        tokens = tokens[:-3]
+    words = "-".join(tokens).split("-")
+    if len(words) > 1 and re.fullmatch(r"(19|20)\d\d", words[-1]):
+        words = words[:-1]  # the year: the page already says it
+    if not words or words == [""]:
+        return raw
+    slug = "-".join(words)
+    if slug in PHRASES:
+        text = PHRASES[slug]
+    else:
+        out: list[str] = []
+        for i, w in enumerate(words):
+            if w.isdigit() and out and out[-1].isdigit():
+                out.append("y")
+            if w.lower() in MONTHS and out and out[-1].isdigit():
+                out.append("de")
+            out.append(WORDS.get(w, w))
+        text = " ".join(out)
+    return text[:1].upper() + text[1:]
+
+
+def title_key(title: str) -> list:
+    """Sort key that puts "Bases (2 de 12)" before "Bases (10 de 12)"."""
+    return [int(x) if x.isdigit() else x.lower() for x in re.split(r"(\d+)", title)]
+
+
+def number_repeats(items: list[Item]) -> None:
+    """Documents of one edition with the same title get "(n de N)", in file order (Facebook ids grow with time)."""
+    groups: dict[tuple, list[Item]] = {}
+    for it in items:
+        groups.setdefault((it.festival, it.year, it.undated, it.title), []).append(it)
+    for same in groups.values():
+        if len(same) < 2:
+            continue
+        for n, it in enumerate(sorted(same, key=lambda i: i.src_path), 1):
+            it.title = f"{it.title} ({n} de {len(same)})"
+
+
 def _source(url: str) -> tuple[str | None, str]:
     if url == PRE_EXISTING or not url:
         return None, "Colección inicial (origen no registrado)"
@@ -118,7 +230,7 @@ def scan(archive: Path, restricted_extra: set[str]) -> list[Item]:
         raw = row.get("notes") or ""
         by_id[iid] = Item(
             id=iid, festival=festival, year=year, undated=undated,
-            category=category, title=_title(p.name), kind=KINDS[ext],
+            category=category, title=readable_title(_title(p.name), year), kind=KINDS[ext],
             src_path=relstr, source_url=url, source_label=label,
             retrieved=row.get("retrieved") or "",
             note_public=clean_note(raw, relstr, row.get("caption") or ""),
@@ -128,8 +240,9 @@ def scan(archive: Path, restricted_extra: set[str]) -> list[Item]:
             restricted=(category == "resultados" or iid in restricted_extra),
         )
     items = list(by_id.values())
+    number_repeats(items)
     for it in items:
         it.alt_paths.sort()
     items.sort(key=lambda i: (i.festival, i.year if i.year is not None else -1,
-                              i.category, i.title))
+                              i.category, title_key(i.title)))
     return items

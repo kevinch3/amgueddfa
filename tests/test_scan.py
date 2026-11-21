@@ -4,7 +4,7 @@ from pathlib import Path
 
 import pytest
 
-from scripts.catalog.scan import scan
+from scripts.catalog.scan import number_repeats, readable_title, scan
 
 FIX = Path(__file__).parent / "fixtures" / "mini_archive"
 
@@ -31,7 +31,7 @@ def test_slugs_and_years(items):
     assert (g.festival, g.year, g.undated, g.category, g.kind) == ("mimosa", None, False, "otros", "web")
     assert g.year_inferred is True
     assert g.note_public == ""  # internal note "year inferred" is not published
-    fb = by_title(items, "fechas-importantes")
+    fb = by_title(items, "Fechas importantes")
     assert fb.category == "bases" and fb.year_inferred is True
     assert fb.note_public == "Atención FECHAS IMPORTANTES"
     assert fb.source_label == "Facebook"
@@ -137,3 +137,51 @@ def test_platform_source_with_rights_and_caption(items):
     assert g.rights == "Llyfrgell Genedlaethol Cymru (LLGC) · Creative Archive Licence"
     assert g.note_public == "Eisteddfod Trelew, 1913, yr Orsedd."  # the platform caption is public
     assert by_title(items, "Suelto").rights == ""
+
+
+@pytest.mark.parametrize("raw, year, want", [
+    ("bases", 2022, "Bases"),
+    ("programa-del-dia", 2019, "Programa del día"),
+    ("piezas-recitacion", 2016, "Piezas de recitación"),
+    ("desde-casa-competencias", 2020, "Competencias desde casa"),
+    ("cierre-inscripciones-competencias", 2014, "Cierre de inscripciones a competencias"),
+    ("semana-programa", 2018, "Programa de la semana"),
+    ("bases-gales", 2022, "Bases en galés"),
+    ("EisteddAdre-programa-reglamento", 2020, "EisteddAdre: programa y reglamento"),
+    ("avisos-erratas", 2015, "Avisos y erratas"),
+    ("comp-29-30", 2019, "Competencias 29 y 30"),
+    ("web programa-eisteddfod-del-chubut-2016", 2016, "Programa del Eisteddfod del Chubut"),
+    ("villagra danzas-inscripcion-2019", 2019, "Danzas: inscripción"),
+    ("web chubutcultural corona-del-poeta-2019", 2019, "Corona del poeta"),
+    ("ig afiche-2-3-mayo-2025", 2025, "Afiche 2 y 3 de mayo"),
+    ("web rhaglen-y-dydd 2023", 2023, "Rhaglen y dydd"),
+    ("web resultados-preliminar-regional-zona-trelew feed wayback 20150519", 2015, "Resultados preliminar regional zona Trelew"),
+    ("web competencias-fotografia-y-diseno-grafico", 2018, "Competencias fotografía y diseño gráfico"),
+    ("web reglamento", None, "Reglamento"),
+    ("web resultados vivo 2012", 2012, "Resultados en vivo"),
+    ("web banner Programa 2008", 2008, "Banner Programa 2008"),
+    ("web Tapa 2008", 2008, "Tapa 2008"),
+    ("culturagaiman agenda-septiembre-DirCulturaGaiman", 2019, "Agenda de septiembre (Dirección de Cultura de Gaiman)"),
+])
+def test_readable_title_from_a_file_name(raw, year, want):
+    assert readable_title(raw, year) == want
+
+
+@pytest.mark.parametrize("human", ["Corona del Eisteddfod de Trelew 1909", "Y Drafod 1913-11-28 t1", "Reglas web wayback 20060430", "Tapa programa foto 25"])
+def test_readable_title_keeps_titles_written_by_people(human):
+    assert readable_title(human, 1913) == human
+
+
+def test_same_title_in_one_edition_is_numbered_in_file_order():
+    from scripts.catalog.model import Item
+    mk = lambda path, title: Item(id=path, festival="chubut", year=2022, undated=False, category="bases", title=title, kind="image",
+                                  src_path=path, source_url=None, source_label="Facebook", retrieved="", note_public="", rights="",
+                                  year_inferred=False, restricted=False)
+    its = [mk("b/fb_bases_2.jpg", "Bases"), mk("b/fb_bases_1.jpg", "Bases"), mk("b/fb_fechas_3.jpg", "Fechas")]
+    number_repeats(its)
+    assert {i.src_path: i.title for i in its} == {"b/fb_bases_1.jpg": "Bases (1 de 2)", "b/fb_bases_2.jpg": "Bases (2 de 2)", "b/fb_fechas_3.jpg": "Fechas"}
+
+
+def test_numbered_titles_sort_in_number_order():
+    from scripts.catalog.scan import title_key
+    assert sorted(["Bases (10 de 12)", "Bases (2 de 12)", "Bases (1 de 12)"], key=title_key) == ["Bases (1 de 12)", "Bases (2 de 12)", "Bases (10 de 12)"]

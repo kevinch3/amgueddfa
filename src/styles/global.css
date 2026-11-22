@@ -621,9 +621,13 @@ fieldset.campo { border: 0; padding: 0; }
   .rep-lineas .coincide button[data-i] { outline: 1px dashed CanvasText; }
 }
 
+/* Inside the player the hidden attribute always wins: a rule that gives a control its display (".rep-acciones
+   .btn-link { display: inline-flex }" below) must never show one a script hid, such as "Editar transcripción" to a
+   signed-out visitor. No other player rule uses !important on display. */
+.reproductor [hidden] { display: none !important; }
+
 /* Player edit mode (scripts/editor-transcripcion.ts): a ✎ beside each line's seek button, the line's editor under it,
    changed lines highlighted, the author's pending changes dashed. */
-.rep-acciones [hidden], .rep-editor[hidden], [data-editor-nueva][hidden], [data-editor-confirmar][hidden] { display: none; }
 .rep-acciones .contrib-gate { margin: 0; }
 .rep-acciones .btn-link[data-rep-editar] { min-height: 44px; } /* 44 px even where the bar's other links are smaller (phones) */
 .rep-acciones .contrib-gate .btn { min-height: 44px; padding: 0.25rem; border: 0; background: none; color: var(--red-deep); font: inherit; text-decoration: underline; }

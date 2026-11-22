@@ -13,8 +13,8 @@ import { ownPendingVideo, submit, type Contribution } from '../lib/contrib';
 import { t } from '../lib/i18n';
 import {
   addNueva, cabe, cambioTexto, cambiosLabel, clearDraft, countCambios, editControls, editorAccess, emptyDraft, enviarLabel,
-  fitDraft, limiteLabel, lineIdioma, loadDraft, nuevaIdioma, nuevaTexto, pendingMarks, removeNueva, saveDraft, sendDraft,
-  setLine, undoLine, type Draft, type Idioma,
+  fitDraft, limiteLabel, lineIdioma, loadDraft, nuevaIdioma, nuevaTexto, pendingMarks, puedeEntrar, removeNueva, saveDraft,
+  sendDraft, setLine, undoLine, type Draft, type Idioma,
 } from '../lib/transcript-draft';
 import { fmtTime, lineAt, type Transcript } from '../lib/video-transcript';
 import { busy, el, gate, gateMessage, thanks, type Gate } from './ui';
@@ -367,7 +367,7 @@ export function wireEditor(dialog: HTMLDialogElement, getState: () => EditorStat
   /** Into edit mode, resuming this video's saved draft (each change back on its own line). */
   function enter(focus: boolean): void {
     const { tr, video } = state();
-    if (!tr || !video || draft || !asentada) return;
+    if (!puedeEntrar({ tr, video, editando: !!draft, asentada, puede }) || !tr || !video) return;
     const saved = loadDraft(video.id);
     const fit = saved ? fitDraft(tr, saved) : { draft: emptyDraft(video.id, tr.exportado), descartados: 0 };
     draft = fit.draft;

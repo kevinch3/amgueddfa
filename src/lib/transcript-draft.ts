@@ -245,6 +245,13 @@ export function editorAccess(
   return { boton: false, ingresar: g.reason === 'signed_out' || g.reason === 'no_name' ? g.reason : null };
 }
 
+/** Whether edit mode may start now: a visitor who may edit (editorAccess's button: signed in with a name, a Chubut or
+ * Trevelin video), once the text of the video drawn is final, and not while already editing. The button's `hidden` is
+ * not the only guard: a hidden control that a style still showed must not let a signed-out visitor in. */
+export function puedeEntrar(s: { tr: Transcript | null; video: unknown; editando: boolean; asentada: boolean; puede: boolean }): boolean {
+  return s.puede && s.asentada && !s.editando && !!s.tr && !!s.video;
+}
+
 /** One entry per line, for edit mode: `editable` lines get a ✎ control beside their seek button; lyric lines get none,
  * and the first line of each sung passage carries the lyrics note. Only the line `abierta` has its editor (and so an
  * input): entering edit mode creates no input. */

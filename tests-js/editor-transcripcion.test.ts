@@ -6,7 +6,7 @@ import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
 import {
   addNueva, cambiosLabel, cambioTexto, editControls, editorAccess, emptyDraft, enviarLabel, loadDraft, nuevaIdioma,
-  pendingMarks, saveDraft, sendDraft, setLine,
+  pendingMarks, puedeEntrar, saveDraft, sendDraft, setLine,
 } from '../src/lib/transcript-draft';
 import { asTranscript, type Transcript } from '../src/lib/video-transcript';
 
@@ -46,6 +46,31 @@ describe('who gets the edit button', () => {
     expect(editorAccess('chubut', tr, { profile: null, reason: 'offline' })).toEqual({ boton: false, ingresar: null });
     expect(editorAccess('juventud', tr, { profile: null, reason: 'signed_out' })).toEqual({ boton: false, ingresar: null });
     expect(editorAccess('chubut', null, { profile: null, reason: 'signed_out' })).toEqual({ boton: false, ingresar: null });
+  });
+});
+
+describe('a signed-out visitor never gets into edit mode (B1)', () => {
+  const ready = { tr: small(), video, editando: false, asentada: true, puede: true };
+  it('edit mode starts only for a visitor who may edit, once the text is final, and not twice', () => {
+    expect(puedeEntrar(ready)).toBe(true);
+    expect(puedeEntrar({ ...ready, puede: false })).toBe(false); // signed out, no name, offline, another festival
+    expect(puedeEntrar({ ...ready, asentada: false })).toBe(false);
+    expect(puedeEntrar({ ...ready, editando: true })).toBe(false);
+    expect(puedeEntrar({ ...ready, tr: null })).toBe(false);
+    expect(puedeEntrar({ ...ready, video: null })).toBe(false);
+  });
+
+  it('inside the player, the hidden attribute always wins: no display rule can show the edit button it hides', () => {
+    // `.rep-acciones .btn-link { display: inline-flex }` came after `.rep-acciones [hidden] { display: none }` with the
+    // same specificity, so the hidden "Editar transcripción" showed to signed-out visitors.
+    const css = readFileSync(join(__dirname, '..', 'src', 'styles', 'global.css'), 'utf8').replace(/\/\*[\s\S]*?\*\//g, '');
+    expect(css).toMatch(/(^|[\s,}])\.reproductor \[hidden\]\s*\{\s*display:\s*none\s*!important;?\s*\}/);
+    // No other player rule may out-shout it.
+    for (const [, sel, body] of css.matchAll(/([^{}]+)\{([^{}]*)\}/g)) {
+      if (/display\s*:[^;]*!important/.test(body) && /\.rep-|\.reproductor|data-rep|data-editor/.test(sel)) {
+        expect(sel.trim()).toBe('.reproductor [hidden]');
+      }
+    }
   });
 });
 

@@ -230,6 +230,32 @@ def join_fragments(t: dict, spans: list[tuple[float, float]] | tuple = ()) -> di
     return {**t, "seg": seg, "fuentes": fuentes}
 
 
+# English is never published (the site is Spanish and Welsh). Bangor's model is Welsh *and English*, so it
+# writes English songs sung in the hall as English: a Welsh-model line that reads as English is dropped.
+EN_WORDS = set("""the and you your you're you'll are is was were be been being am i'm i'll i've i'd me my mine we we're our us they they're them their he he's him his she her it it's its this that these those with have has had having will would can can't could should shall must may might do does did don't doesn't didn't won't isn't aren't wasn't not no yes of to in on at for from by as but or if so than then there here where when what who whom which why how all any some every each just like know love lord oh go going gonna come came see saw say said tell told take let get got make made way day night time down up out over into about only never ever always little old man men woman sky water heart sing song dance free""".split())
+CY_WORDS = set("""y yr ac yn ar am mae maen ein eich ei fy dy hi ni chi nhw efo gyda gan wedi bod roedd oedd hyn hon hwn sydd fel ond neu na nad dim mewn wrth dros heb rhwng hefyd iawn diolch croeso cymru cymraeg eisteddfod gorsedd""".split())
+WELSH_SPELL = re.compile(r"ll|dd|ch|rh|ff|[ŵŷâêîôû]|wy|yw")
+LATIN_WORD = re.compile(r"[a-zA-Zâêîôûŵŷ']+")
+
+def is_english(text: str) -> bool:
+    """True when a line is mostly English function words and shows little Welsh (words or spelling)."""
+    w = LATIN_WORD.findall(text.lower())
+    if len(w) < 4:
+        return False
+    en = sum(z in EN_WORDS for z in w)
+    cy = sum(z in CY_WORDS for z in w) + sum(1 for z in w if z not in EN_WORDS and WELSH_SPELL.search(z))
+    return en / len(w) >= 0.35 and en > 2 * cy
+
+
+def drop_english(t: dict) -> dict:
+    """The transcript without the Welsh-model lines that read as English."""
+    fu = t.get("fuentes")
+    if not fu or len(fu) != len(t["seg"]):
+        return t
+    keep = [i for i, ((_, x), f) in enumerate(zip(t["seg"], fu)) if not ("cy" in f and is_english(x))]
+    return {**t, "seg": [t["seg"][i] for i in keep], "fuentes": [fu[i] for i in keep]}
+
+
 def main_language(t: dict) -> str:
     """The language most of a reconstruction's text is in, by length: a line the Welsh model heard is
     Welsh, any other Spanish. Counting source lines instead lets YouTube's many short "Spanish"
@@ -260,6 +286,9 @@ def export(backup: Path, videos: list[dict], out: Path = OUT, words: set[str] | 
             t = {k: v for k, v in json.loads(rec.read_text(encoding="utf-8")).items() if k not in ("ventanas", "modelo")}
             if t.get("letras"):
                 t["letras"] = credit(t["letras"], spans_for(vid, letras), letras)
+            t = drop_english(t)
+            if not t["seg"]:
+                continue  # only English was heard: the video has no text
             t["lang"] = main_language(t)
             t = join_fragments(t, [(sp["desde"], sp["hasta"]) for sp in spans_for(vid, letras)])
             body = json.dumps(t, ensure_ascii=False, separators=(",", ":"))

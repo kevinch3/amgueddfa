@@ -13,7 +13,7 @@ from pathlib import Path
 from typing import NamedTuple
 
 from scripts.align_lyrics import LETRAS, align, parse_letra, spans_for
-from scripts.export_video_transcripts import clean_whisper, glob_escape, parse_vtt
+from scripts.export_video_transcripts import clean_whisper, glob_escape, is_english, parse_vtt
 
 # The Welsh model, as the suffix of its file next to the video (<stem>.<WELSH_SOURCE>.json,
 # segments [{"s": start, "text": ...}]). Bangor University's techiaith/whisper-large-ft-cy-en,
@@ -67,7 +67,7 @@ def load_sources(stem: Path, video_id: str, letras: Path = LETRAS) -> list[Line]
             es_times = [l.t for l in out if l.lang == "es"]
             out += [Line(float(s["s"]), s["text"], "cy", "cy", round(math.exp(s["lp"]), 2) if "lp" in s else None)
                     for s in json.loads(cy.read_text(encoding="utf-8"))["segments"]
-                    if s["text"] and ("lp" not in s or math.exp(s["lp"]) >= MIN_CY_CONF)
+                    if s["text"] and ("lp" not in s or math.exp(s["lp"]) >= MIN_CY_CONF) and not is_english(s["text"])
                     and not any(abs(float(s["s"]) - t) <= SPANISH_NEAR for t in es_times)]
     heard_es = [[l.t, l.text] for l in sorted(out) if l.src in ("subida", "yt_es", "whisper_es")]
     heard_cy = [[l.t, l.text] for l in sorted(out) if l.src == "cy"]

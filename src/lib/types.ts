@@ -34,6 +34,8 @@ export interface Item {
   pages: number;
   thumb: string | null;
   page_paths: string[];
+  /** [width, height] of page 1 (scripts/catalog/derive.py), for an image's width/height attributes. */
+  page_size?: [number, number] | null;
   text_excerpt: string | null;
   table: Record<string, unknown>[] | null;
 }

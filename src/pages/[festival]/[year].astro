@@ -130,7 +130,7 @@ const missingList = formatList(missing.map((m) => m.toLocaleLowerCase(intlLocale
   <header class={cover ? 'cover con-tapa' : 'cover'}>
     {cover && (
       <a class="tapa-link" href={cover.page} data-lb="tapa">
-        <img class="tapa" src={cover.page} alt={t('edicion.tapa_alt', { festival: fest.name, year })} decoding="async" />
+        <img class="tapa" src={cover.page} width={cover.width} height={cover.height} alt={t('edicion.tapa_alt', { festival: fest.name, year })} decoding="async" />
       </a>
     )}
     <h1><span class="fest">{fest.name}</span> <span class="year">{year}</span></h1>

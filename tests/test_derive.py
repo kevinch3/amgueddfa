@@ -267,3 +267,12 @@ def test_empty_restricted_text_writes_nothing(tmp_path):
     (arch / "w.html").write_text("<script>x</script>")
     derive(mk("w.html", "web", restricted=True), arch, res)
     assert not (res / "abc123def456" / "text.txt").exists()
+
+
+def test_page_one_size_is_recorded_even_when_fresh(tmp_path):
+    # The edition page sets the cover's width/height from it, so the layout does not jump (#5).
+    arch, out = tmp_path / "arch", tmp_path / "out"
+    arch.mkdir()
+    Image.new("RGB", (2000, 3000), "red").save(arch / "a.jpg")
+    assert derive(mk("a.jpg", "image"), arch, out).page_size == [800, 1200]
+    assert derive(mk("a.jpg", "image"), arch, out).page_size == [800, 1200]  # skipped (fresh), still known

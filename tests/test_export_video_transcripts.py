@@ -258,3 +258,22 @@ def test_join_fragments_leaves_a_transcript_without_sources_alone():
     from scripts.export_video_transcripts import join_fragments
     t = {"src": "youtube", "lang": "es", "seg": [[0, "a"], [1, "b"]]}
     assert join_fragments(t)["seg"] == [[0, "a"], [1, "b"]]
+
+
+def test_join_fragments_starts_a_line_where_whisper_starts_a_sentence():
+    from scripts.export_video_transcripts import join_fragments
+    t = join_fragments(_t([[0, "Hoy me aterra este cansancio sin final"], [3, "Y se trizas mi sonrisa de cristal"], [5, "cuando miro"]],
+                          fuentes=[["whisper_es"], ["whisper_es"], ["whisper_es"]]))
+    assert [x for _, x in t["seg"]] == ["Hoy me aterra este cansancio sin final", "Y se trizas mi sonrisa de cristal cuando miro"]
+
+
+def test_join_fragments_sees_a_sentence_end_before_a_trailing_tag_and_never_joins_the_same_second():
+    from scripts.export_video_transcripts import join_fragments
+    assert len(join_fragments(_t([[0, "un diente menos. [canto]"], [3, "por ese portillito"]]))["seg"]) == 2
+    assert len(join_fragments(_t([[8, "Gales optó por el narciso,"], [8, "como emblema"]]))["seg"]) == 2
+
+
+def test_join_fragments_keeps_declared_lyric_spans_line_by_line():
+    from scripts.export_video_transcripts import join_fragments
+    t = join_fragments(_t([[80, "zamba quiero"], [82, "oír"]]), spans=[(75, 318)])
+    assert len(t["seg"]) == 2

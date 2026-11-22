@@ -187,19 +187,26 @@ RECON = REPO / "data" / "reconstruccion"
 # punctuation ("de" / "tomando" / "quien"), and the reconstruction keeps their timing.
 SENTENCE_END = re.compile(r"[.?!…»\"]\s*$")
 MARKER = re.compile(r"^\s*[\[(][^\])]*[\])]\s*$")  # [música], (aplausos): always a line of their own
+TRAILING_MARKERS = re.compile(r"(\s*[\[(][^\])]*[\])])+\s*$")  # "menos. [canto]": the sentence ends before the tag
+# Whisper (Spanish and the Welsh model) starts each sentence or verse with a capital, often with no full stop
+# before it: a capitalised Whisper fragment begins a new line.
+WHISPER_SOURCES = ("whisper_es", "cy")
+CAPITAL_START = re.compile(r"^[¿¡«\"'(]*[A-ZÁÉÍÓÚÑÜŴŶÂÊÎÔÛ]")
 JOIN_GAP = 6.0     # s from one fragment's start to the next: 85% of continuations, measured on the published text
 JOIN_WORDS = 20    # a joined line stays a readable subtitle
 JOIN_SPAN = 15.0   # s from the line's first fragment to its last
 
 
-def join_fragments(t: dict) -> dict:
+def join_fragments(t: dict, spans: list[tuple[float, float]] | tuple = ()) -> dict:
     """A reconstruction with consecutive fragments of one sentence joined into one line (first time, the
-    union of their sources). Lines are never joined across a sentence end, a pause over JOIN_GAP, a change
-    of language (a Welsh-model line vs a Spanish one), a lyric (one verse per line) or a tag."""
+    union of their sources). Lines are never joined across a sentence end (a full stop, or a capital that
+    starts a Whisper fragment), a pause over JOIN_GAP, the same second (two subtitle lines), a change of
+    language (a Welsh-model line vs a Spanish one), a lyric (the transcript's spans and `spans`, those
+    declared in data/letras/videos.json: one verse per line) or a tag."""
     fu = t.get("fuentes")
     if not fu or len(fu) != len(t["seg"]):
         return t
-    spans = [(l["desde"], l["hasta"]) for l in t.get("letras", [])]
+    spans = [(l["desde"], l["hasta"]) for l in t.get("letras", [])] + list(spans)
     lyric = lambda time, f: "letra" in f or any(a <= time < b for a, b in spans)
     lang = lambda f: "cy" if "cy" in f else "es"
     seg, fuentes = [], []
@@ -207,7 +214,9 @@ def join_fragments(t: dict) -> dict:
         if seg:
             t0, prev = seg[-1]
             pf = fuentes[-1]
-            if (not SENTENCE_END.search(prev) and not MARKER.match(prev) and not MARKER.match(text)
+            whisper_start = any(x in f for x in WHISPER_SOURCES) and CAPITAL_START.match(text)
+            if (not SENTENCE_END.search(TRAILING_MARKERS.sub("", prev)) and not MARKER.match(prev) and not MARKER.match(text)
+                    and not whisper_start and time != prev_time
                     and time - prev_time <= JOIN_GAP and time - t0 <= JOIN_SPAN
                     and len(prev.split()) + len(text.split()) <= JOIN_WORDS
                     and lang(pf) == lang(f) and not lyric(t0, pf) and not lyric(time, f)):
@@ -252,7 +261,7 @@ def export(backup: Path, videos: list[dict], out: Path = OUT, words: set[str] | 
             if t.get("letras"):
                 t["letras"] = credit(t["letras"], spans_for(vid, letras), letras)
             t["lang"] = main_language(t)
-            t = join_fragments(t)
+            t = join_fragments(t, [(sp["desde"], sp["hasta"]) for sp in spans_for(vid, letras)])
             body = json.dumps(t, ensure_ascii=False, separators=(",", ":"))
             p = out / f"{vid}.json"
             if not p.exists() or p.read_text(encoding="utf-8") != body:

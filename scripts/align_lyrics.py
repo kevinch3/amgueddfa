@@ -209,7 +209,10 @@ if __name__ == "__main__":
     ap.add_argument("desde", type=float)
     ap.add_argument("hasta", type=float)
     a = ap.parse_args()
-    tr = json.loads((REPO / "public" / "transcripciones-video" / f"{a.video}.json").read_text(encoding="utf-8"))
+    # The reconstruction keeps the fragment timing; the published text joins fragments into sentences (#97),
+    # which would pile verses onto one line's time. Preview against the reconstruction when there is one.
+    rec = REPO / "data" / "reconstruccion" / f"{a.video}.json"
+    tr = json.loads((rec if rec.exists() else REPO / "public" / "transcripciones-video" / f"{a.video}.json").read_text(encoding="utf-8"))
     if tr.get("letras"):
         print("note: this file already carries aligned lyrics; preview the raw text by re-exporting without the span")
     _, st = parse_letra((LETRAS / f"{a.letra}.md").read_text(encoding="utf-8"))

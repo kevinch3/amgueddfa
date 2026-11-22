@@ -25,7 +25,9 @@ for the export (`/run/media/kevinch3/4eff8b2b-…/amgueddfa-backup`).
    (pieces by priority, videos and times; "a elección" ones to identify). Ask the maintainer for
    the texts of the top rows, as sung (refrains written out), in the original language.
 2. **Check the text is the right piece** before anything else: compare it with what YouTube heard
-   in the video (`python3 -c` over `public/transcripciones-video/<id>.json` segments in the span)
+   in the video (`python3 -c` over the segments in the span of `data/reconstruccion/<id>.json`, or
+   `public/transcripciones-video/<id>.json` when there is no reconstruction: the published text joins
+   caption fragments into sentences, so its times are coarser)
    and with the programa line (title, composer). Same-title songs are the trap: a pasted
    «Rosa amarela» was a 2010s pop song, not the folk song Villa-Lobos arranged. If the heard words
    don't match, say so and ask.

@@ -1,11 +1,11 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
    85.0,
-   "Miserygorddus populos adnos concreter, et Iesu, et Iesu."
+   "Misericordes, oculosa, nos convierte en Jesús, en Jesús."
   ],
   [
    109.0,
@@ -18,11 +18,23 @@
   [
    182.24,
    "Gwllt i sbilwch gwllt i sbilwch Maria, Maria."
+  ],
+  [
+   314.96,
+   "Me ha andado buscando ese nombre, me gustaría saber, cómo habrá sido aquel hombre. Alto lo veo y cabal, con el alma al cobertor, capaz de no alzar la voz, y de jugarse en la vida."
+  ],
+  [
+   374.96,
+   "y en la guerra sobre la huerta y el patio las torres de Balvanera"
+  ],
+  [
+   386.44,
+   "Esa muerte casual en una esquina cualquiera."
   ]
  ],
  "fuentes": [
   [
-   "cy"
+   "whisper_es"
   ],
   [
    "cy"
@@ -32,12 +44,21 @@
   ],
   [
    "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {
   "total": 8,
-  "modelo": 4,
+  "modelo": 5,
   "reglas": 0,
-  "vacias": 4
+  "vacias": 3
  }
 }

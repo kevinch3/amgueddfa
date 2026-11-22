@@ -16,6 +16,10 @@
    "Odyw'r ori ma'r hyn, newid neb reit arnom ninnau."
   ],
   [
+   170.0,
+   "Gracias."
+  ],
+  [
    200.0,
    "Lle bore ym mhlentyn Llŷn y bore, tyr ysbryd y nos."
   ],
@@ -53,7 +57,7 @@
   ],
   [
    295.0,
-   "Ysbryd y nos dros dolau mŵn, ysbryd y nos dros wind a sŵn, ysbryd y nos fel angen y dyn, ysbryd y nos pen naid y pryd."
+   "Ysbryd y nos dros ddolau mŵn, ysbryd y nos dros wind a sŵn, ysbryd y nos fel angen y dyn, ysbryd y nos pen naid y pryd."
   ],
   [
    325.0,
@@ -81,6 +85,9 @@
   ],
   [
    "cy"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"

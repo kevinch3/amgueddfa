@@ -1,35 +1,14 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
    0.0,
    "Mae'r ysgid bach yn gwasgu gan Meredydd Hobwood. Pe bai'n halwn i'n gwch, cawn hwylio o'r llwch yn ôl at y dôl, a mor segur doba doba lingwai'r ffwc."
-  ],
-  [
-   30.0,
-   "Ffwego. Be' fai'n halwn ni'n gryd, gawn fysiglo'n glud, yn ôl at y dol, a mor seco,"
-  ],
-  [
-   40.68,
-   "doba doba, lingwae'r ffwego. Be' fai'n halwn ni'n rhwyd, gawn dal ei lliw llwyd, a'i daflu yn ôl, a mor seco,"
-  ],
-  [
-   52.68,
-   "Doba, doba, lingwa i'r ffwgo. Be' mae'n ond, mae'n halwn i'n dân, ac mae'n llosgi fe'n hân, a does dim ar ôl. A mor seco, doba, doba, lingwa i'r ffwgo."
   ]
  ],
  "fuentes": [
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
   [
    "cy"
   ]

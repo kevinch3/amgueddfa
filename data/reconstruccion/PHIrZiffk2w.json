@@ -1,29 +1,29 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
    27.02,
-   "Llorare, llorare, llorare, mewn silencio proffwndo, llorare, llorare, solo y trist yn ystod y dwrnod."
+   "Lloraré, lloraré, en un silencio profundo, lloraré, lloraré, solo y triste en este mundo."
   ],
   [
-   50.02,
-   "Gwando'r a'moerte'n mis Neve, por su camino resumas, el viento ni adeudare, esta sambar que te nombra, llorare, llorare, llorare."
+   80.02,
+   "Solo existen este mundo."
   ]
  ],
  "fuentes": [
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ]
  ],
  "ventanas": {
   "total": 2,
-  "modelo": 1,
+  "modelo": 2,
   "reglas": 0,
-  "vacias": 1
+  "vacias": 0
  }
 }

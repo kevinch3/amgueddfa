@@ -5,11 +5,15 @@
  "seg": [
   [
    0.0,
-   "Helo, a chroeso i'r rhaglen ar ôl cant pump deg o flynyddoedd yn fyw yma yn y Wladfa o'r Eisteddfod dwy fil a pymtheg yn y flwyddyn arbennig hon, mil can- ddim mil, cant pump deg o flynyddoedd sy'n cymryd gyrraedd, a dan ni yma heno i wrando ar grŵp arbennig sydd wedi dod yr holl ffordd ohono grefelyn yma i'w diddanu ni yn y dyffryn."
+   "Helo, a chroeso i'r rhaglen ar ôl cant pump deg o flynyddoedd yn fyw yma yn y Wladfa o'r Eisteddfod dwy fil a phymtheg yn y flwyddyn arbennig hon, mil can- ddim mil, cant pump deg o flynyddoedd sy'n cymryd gyrraedd, a dan ni yma heno i wrando ar grŵp arbennig sydd wedi dod yr holl ffordd ohono grefelyn yma i'w diddanu ni yn y dyffryn."
   ],
   [
    28.0,
    "Ond, ma' na rhai o'u superfans tu allan, felly cyn i ni glywed y band, dan ni'n mynd i ga- clywed gan y superfans. Pwy dach chi'n dod yma i weld? Sori sori, nes i- dallt yn iawn. Pwy dach chi'n dod i weld? Sut dach chi'n teimlo i fod yma?"
+  ],
+  [
+   58.0,
+   "que me daría un cuadro."
   ],
   [
    79.58,
@@ -42,6 +46,9 @@
   ],
   [
    "cy"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"

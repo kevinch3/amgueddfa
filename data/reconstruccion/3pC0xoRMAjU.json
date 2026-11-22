@@ -40,8 +40,16 @@
    "Gwyl gwahanu a'n rhannu. Wel, dyma ni yn fy farn i. Pant pedwar deg naw o flynyddoedd yn arw oddi mewn twelg yna wrth fy farn i. Ond, jin, be fysa di'n digwydd os na fysa'r mimosa wedi mynd i fod yn farn i, a wedi mynd i wledydd eraill yn lle, er enghraifft, Jamaica."
   ],
   [
+   373.0,
+   "¿Cómo hubiese pasado? ¿O cómo hubiese sido su pareja que hubiesen desembatado por Somali y nos hubiesen hecho en las costas de Jamaica?"
+  ],
+  [
+   403.0,
+   "¡Gracias!"
+  ],
+  [
    463.0,
-   "Ti yn debyg, bysach chdi'n cymharu gath y busnes i gael o ar ryw adrodd ar y wrong."
+   "Si en vez de bajar de Jamaica hubiese llegado a Nueva York, a Rome,"
   ],
   [
    472.0,
@@ -57,15 +65,19 @@
   ],
   [
    658.0,
-   "Na, dwi dim yn meddwl. Dan ni'n hapus bod y Cymry gerddad wedi dod i Porth ym Madryn."
+   "Na, dwi dim yn meddwl. Dan ni'n hapus bod y Cymry gerddad wedi dod i Borth ym Madryn."
   ],
   [
    665.0,
-   "Ystamffelises de' que los primeros colonos felisis allan lleo Portho Madryn, y te, la torta negra, el mate, ystamffelises, verdad?"
+   "Estamos felices de que los primeros coloros galices hayan llegado a Puerto Madryn. El té, la torta negra, el mate. Estamos felices, ¿verdad?"
   ],
   [
    675.5,
    "Hapis!"
+  ],
+  [
+   706.0,
+   "¡Gracias!"
   ],
   [
    826.0,
@@ -77,7 +89,7 @@
   ],
   [
    864.0,
-   "Roedd y corbeth efo'r fwyr ac yn codi efo'r mawr, roedd y corbeth efo'r fwyr ac yn codi efo'r mawr, i ddifrod a bychodd e'n lôn, a chanu ar ôl y jôc ar ben y mynydd mawr."
+   "Roedd y corbeth efo'r fwyr ac yn codi efo'r mawr, i ddifrod a bychodd e'n lôn, a chanu ar ôl y jôc ar ben y mynydd mawr."
   ],
   [
    894.0,
@@ -85,7 +97,7 @@
   ],
   [
    924.0,
-   "Ucha ymladd, rwy'n gongwedd efo'r fwyr ac yn codi efo'r wal, i ddifrifo gan ochr eglwys y lôn, a chanu yn yr ardd y tro, dan beth ymladd e."
+   "Ucha ymladd, rwy'n gongwedd efo'r fwyr ac yn codi efo'r wal, rwy'n gongwedd efo'r fwyr ac yn codi efo'r wal, i ddifrifo gan ochr eglwys y lôn, a chanu yn yr ardd y tro, dan beth ymladd e."
   ],
   [
    954.0,
@@ -149,7 +161,7 @@
   ],
   [
    1331.0,
-   "yym y- y- yr Anthem Genedlaethol os gwelwch yn dda, pawb yn sefyll ar eich traed, noch bo' ni'n ymddiddi, ydy'r dyrenie yym gyfrifion y byddu, eu dyrenie?"
+   "Yr Anthem Genedlaethol os gwelwch yn dda, pawb yn sefyll ar eich traed."
   ],
   [
    1446.8,
@@ -162,54 +174,6 @@
   [
    1502.8,
    "Fe wydd a'i enwau'r blodau bach, roedd yn blentyn i'r haedd, ar awyriaeth."
-  ],
-  [
-   1562.8,
-   "Seventeen seconds and I'm over it"
-  ],
-  [
-   1578.8,
-   "Ready for the disco hit"
-  ],
-  [
-   1582.8,
-   "Putting on a brave face trying not to listen to the voices in the back of my head"
-  ],
-  [
-   1589.8,
-   "It's all that matters to me, all that matters"
-  ],
-  [
-   1597.8,
-   "Some feelings have a habit of persisting even though you wouldn't let it show"
-  ],
-  [
-   1603.8,
-   "I'm running out, all been hanging out"
-  ],
-  [
-   1610.8,
-   "It just can't get me down, still under looking for ways to help"
-  ],
-  [
-   1618.8,
-   "Rain dirt from boredom and lead to distractions, scratching yourself is a lot."
-  ],
-  [
-   1626.8,
-   "Nothing really happens but it's easy to keep busy when you tell yourself you're travelling light."
-  ],
-  [
-   1633.8,
-   "But it's all right now, all right now, just don't waste your time."
-  ],
-  [
-   1640.8,
-   "Keep on second guessing as my memory might go up and worth a try."
-  ],
-  [
-   1648.8,
-   "Where are we now, all this hate and love, it's just all getting me down, too uptight looking for an evil laugh, where are we now, it's all about the hate and love, all about the getting me down, it's all about the hate and love, looking for an evil laugh."
   ]
  ],
  "fuentes": [
@@ -241,7 +205,13 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
@@ -256,46 +226,13 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
    "cy"
   ],
   [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
+   "whisper_es"
   ],
   [
    "cy"
@@ -372,8 +309,8 @@
  ],
  "ventanas": {
   "total": 29,
-  "modelo": 25,
-  "reglas": 0,
-  "vacias": 4
+  "modelo": 23,
+  "reglas": 1,
+  "vacias": 5
  }
 }

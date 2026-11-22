@@ -14,6 +14,10 @@
   [
    154.14,
    "Bleser di'r stre- bleser di'r stre- ym Mhorgannwg ym Mhorgannwg ym Mhorgannwg i ti, er mwyn i'r haul i'r haul."
+  ],
+  [
+   265.3,
+   "La Asociación Española de Gaiman felicita al señor Daniel Hughes y Rodolfo Villagra por la organización del Eisteddfod 2023. Su comisión y presidente Diego García Neiro los saludan muy atentamente."
   ]
  ],
  "fuentes": [
@@ -25,6 +29,9 @@
   ],
   [
    "cy"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {

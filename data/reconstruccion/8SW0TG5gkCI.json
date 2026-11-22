@@ -9,11 +9,11 @@
   ],
   [
    10.82,
-   "Felly i gasaleuau chwedeg saith y prif gasaleuau côr dros tri deg o leisiau yr unig sy'n gasaleddu yma yw côr cymysg ysgol gerdd ag Eiman. Oes y befniad yn barod? Hwyl radd o os i ddod i'r pôn then."
+   "Valle Casaleya, juez de Xay, el Prif Casaleya, côr Drostri de Goliciay. Arrini, sin Casaldria Mayu, côr Camis Escolquer de Gaiman. O si perni a tambarot, jurado así lo dispone, entonces."
   ],
   [
    30.0,
-   "Mwcho blasur, e'scuchamos al coro meistro ysgolion mwsica Gaiman, Gweddir Arglwydd."
+   "Mucho placer, escuchamos al coro mixto de la Escuela de Música de Gaiman, Gweddi'r Arglwydd."
   ],
   [
    236.0,
@@ -37,10 +37,10 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
    "cy"
@@ -57,8 +57,8 @@
  ],
  "ventanas": {
   "total": 6,
-  "modelo": 2,
-  "reglas": 1,
+  "modelo": 3,
+  "reglas": 0,
   "vacias": 3
  }
 }

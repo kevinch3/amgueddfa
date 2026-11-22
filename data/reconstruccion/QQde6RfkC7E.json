@@ -1,22 +1,106 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   60.0,
+   "Para vivir, respirar y ser feliz, necesarios para mí, empaparme de tu voz. Volaré cuando el día llegue a mí, quien la luna me verá, escribiendo esta canción."
+  ],
+  [
+   80.96,
+   "¿Qué dice? Una gota de truco, una gota de truco."
+  ],
+  [
+   88.04,
+   "Él decía el nombre de mi corazón."
+  ],
+  [
+   93.12,
+   "Encontrarte una vez más"
+  ],
+  [
+   96.72,
+   "¡Abre el cielo! ¡Prepare el pan!"
+  ],
+  [
+   101.96,
+   "Contemplar de tus ojos el dolor"
+  ],
+  [
+   106.32,
+   "En tus labios no me dan"
+  ],
+  [
+   108.76,
+   "de la luz del peinador"
+  ],
+  [
+   114.08,
+   "Que estaré de frente a ti, preparando esta canción, voy cantando esta canción."
+  ],
+  [
+   122.6,
+   "¿Qué hice? Con una gota de tu voz Con otra gota de tu voz"
+  ],
+  [
+   129.6,
+   "El desierto de mi corazón"
+  ],
+  [
+   134.84,
+   "Por encontrarte una vez más, abra el cielo de par en par."
+  ],
+  [
    143.72,
-   "Te ddithe, por una volta de tu voz, por una volta de tu voz, te decí a recordar en mi corazón, corazón, por encontrarte una vez mas, una vez mas, abro el cielo de mar en mar."
+   "Por una nota de tu voz, en el desierto de mi corazón, por encontrarte una vez más, abro el cielo de mar en mar."
   ]
  ],
  "fuentes": [
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {
   "total": 3,
-  "modelo": 1,
+  "modelo": 3,
   "reglas": 0,
-  "vacias": 2
+  "vacias": 0
  }
 }

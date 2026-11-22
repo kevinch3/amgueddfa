@@ -21,7 +21,7 @@
   ],
   [
    185.04,
-   "Ingles? No, galed!"
+   "¿Inglés? ¡No! ¡Galas!"
   ],
   [
    187.84,
@@ -41,7 +41,7 @@
   ],
   [
    343.0,
-   "Ydy hi'n fodloni arwain tra bod ni'n pe- pe- yr anthem cenedlaethol ysgwyd hynna? Pawb yn sefyll ar eich traed, yn ymchwil eich mochydiau, ydy dyrenie yn cyfrifion y byddu? Ydy dyrenie?"
+   "Gracias."
   ],
   [
    477.06,
@@ -50,34 +50,6 @@
   [
    503.06,
    "Unigain a ddair, mi dorrodd o'i air, a thaflu'r ddau hadau."
-  ],
-  [
-   599.06,
-   "I'm burning out, all this pain now"
-  ],
-  [
-   605.06,
-   "It just don't get me down, still up here looking for a new way out"
-  ],
-  [
-   613.06,
-   "I've drained it from the bottom, I'm led to distraction, scratching the surface of life"
-  ],
-  [
-   621.06,
-   "It often really happens but it's easy to keep busy when you tell yourself you're traveling right."
-  ],
-  [
-   628.06,
-   "But it's all right now, all right now, just don't waste your time."
-  ],
-  [
-   636.06,
-   "Keep on second guessing and you'll end up like a weapon that is here to try."
-  ],
-  [
-   643.06,
-   "Fairyland, all night hanging around, it just don't get me down, too popular looking for everywhere, fairyland, it's all night hanging around, all night getting down, it's all night looking for everywhere."
   ],
   [
    673.06,
@@ -98,7 +70,7 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
    "cy"
@@ -113,28 +85,7 @@
    "cy"
   ],
   [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
+   "whisper_es"
   ],
   [
    "cy"
@@ -148,8 +99,8 @@
  ],
  "ventanas": {
   "total": 12,
-  "modelo": 9,
+  "modelo": 7,
   "reglas": 0,
-  "vacias": 3
+  "vacias": 5
  }
 }

@@ -1,135 +1,177 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   36.64,
+   "Cuando estés en la vereda y te fiche un bacanazo."
+  ],
+  [
+   43.0,
+   "Vos hacete la chitrula y no te le des Chávez"
+  ],
+  [
+   47.24,
+   "Que no manche que estás lista al primer tiro de lazo."
+  ],
+  [
+   52.2,
+   "Y que por un par de leones bien planchados te perdés"
+  ],
+  [
    58.04,
-   "Cuando vengas para el centro camina junando el suelo, arrastrando los fangullos y arrimada a la pared,"
+   "Cuando vengas para el centro, camina junando el suelo, arrastrando los fangullos y arrimada la pared."
   ],
   [
    66.36,
-   "como si ya no tuvieras ilusiones ni consuelo,"
+   "Como si ya no tuvieras ilusiones ni consuelo"
   ],
   [
    71.16,
-   "pues si no dicen los giles que te han echado a perder."
+   "Pues si no dicen los giles que te han echado a perder"
   ],
   [
    78.36,
-   "Si ves unos guantes, patitos rajales, o un par de polainas rajales tan bien,"
+   "Si ves unos guantes, patitos rajales, un par de polainas, rajales también."
   ],
   [
    87.72,
-   "A e'sos sobre todos con catorce ojales, no les dejo lilla' porque te perdes."
+   "A esos sobre todos con 14 ojales, no les des bolilla porque te perdés."
   ],
   [
    96.2,
-   "A e'sos bigotitos que parecen lineas y en vez de bigotes son un espinel."
+   "A esos bigotitos que parecen líneas y en vez de bigote son un espinel."
   ],
   [
    104.68,
-   "Atentti bebetta, segue mi consejo, yo soy sorro viejo y te quiero bien."
+   "Atenta y pepeta, seguí mi consejo, yo soy zorro viejo y te quiero bien"
   ],
   [
    117.72,
-   "Ah, bajate la pollera por donde nace el tobillo,"
+   "Bájate la pollera por donde nace el tobillo"
   ],
   [
    129.72,
-   "dejate crecer el pelo y un buen rodete Lucie."
+   "Dejate crecer el pelo y un buen rodete lucir"
   ],
   [
    133.72,
-   "Comprate un corse de guero con remaches y tornillos,"
+   "Comprate un corce de hierro con remaches y tornillos"
   ],
   [
    138.72,
-   "y dale el olivo al polvo, a la crema y al caramilo."
+   "Y dale el olivo al polvo, a la crema y al carmín."
   ],
   [
    142.72,
-   "Toma leche con vainilla o chocolate con churros,"
+   "Tomá leche con vainilla o chocolate con churro."
+  ],
+  [
+   146.72,
+   "Aunque estés en el momento propiamente del vermú Después, después compras un bufoso Y cachando el primer turro Por amores contrariados ¡Pum! Le haces perder la salud Si ves unos guantes Para"
   ],
   [
    176.72,
-   "Gatitos rajales a un par de polainas rajales,"
+   "patitos rajales, a un par de polaelas rajales."
   ],
   [
    181.36,
-   "tan bien a esos sobretodos con catorce ojales."
+   "a eso sobre todos con 14 ojales"
   ],
   [
    186.64,
-   "No les dejó el isha, nena, porque te perdés."
+   "No les des bolilla, nena, porque te perdés."
   ],
   [
    190.6,
-   "A esos bigotitos, que parecen liniacien,"
+   "esos cigotitos que parecen líneas"
   ],
   [
    194.96,
-   "ven de bigotes, son un espinel."
+   "de bigote son un espinel"
   ],
   [
    198.76,
    "Atent y pepeta, segui mi consejo, yo soy sorro viejo,"
+  ],
+  [
+   205.96,
+   "Y te quiero bien."
   ]
  ],
  "fuentes": [
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
   ],
   [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
+   "whisper_es"
   ]
  ],
  "ventanas": {

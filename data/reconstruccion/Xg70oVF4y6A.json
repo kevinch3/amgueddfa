@@ -1,6 +1,6 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
@@ -24,8 +24,40 @@
    "Fel yr o'n i di droi, pwy sy'n gwrthodwr, pwy sy'n gweithredu, a ddod ai'n gwrthod llefydd, llefydd arwyd, llefydd llefydd arwyd."
   ],
   [
-   1023.22,
-   "Sy'n ddinas os ti'n stori hwnna'n brafod, jyst isie debyg debyg i ni, i fod yr holl beth i ni ysgafn, dim ots, os ti'n swnio'n swnio."
+   424.0,
+   "Coro de Libre Formación, obra contemporánea, a capella. Primer participante, o can femenino, sur azul."
+  ],
+  [
+   764.6,
+   "Y en su luz, muy poqueta de polvo, veíase el arco. Cuánta luna dormía en sus puertas, como el pájaro duerme en las ramas."
+  ],
+  [
+   794.6,
+   "Esperando el amor no de nieve, que sabe arrancar el paz."
+  ],
+  [
+   811.6,
+   "¡Ay, el cielo, con las veces el brillo así! ¡Puérveme el fondo del alma!"
+  ],
+  [
+   832.6,
+   "Ni una voz como la salve espera, que le chica, levántate y anda."
+  ],
+  [
+   884.6,
+   "Muchas gracias, señoras y señores, invitamos a continuación a su olimpiante a que suba a la necesidad de la tarifa de Inglaterra."
+  ],
+  [
+   894.6,
+   "También le vamos a pedir al doctor Samuelos y a Raegué que se prepare el tercer participante de esta competencia, Coro Juvenil de Arte, si el jurado así lo dispone, los escuchamos."
+  ],
+  [
+   977.22,
+   "Tendría que llorar o salir a matar"
+  ],
+  [
+   1053.22,
+   "tendría que llorar, oscaría matar, te vi, te vi, te vi, yo no buscaba nadie, te vi."
   ]
  ],
  "fuentes": [
@@ -45,13 +77,37 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {
   "total": 26,
-  "modelo": 9,
+  "modelo": 15,
   "reglas": 0,
-  "vacias": 17
+  "vacias": 11
  }
 }

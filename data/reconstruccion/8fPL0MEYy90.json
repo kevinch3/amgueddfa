@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   59.6,
+   "Las marinas son vuestras."
+  ],
+  [
    89.6,
    "mor drad na'r Saeson oedd yn myn, ac yn hymwybod y bydd eithoedd erbyn nawr yn ananogiad, welwyd yr ene un neu'r un neu'r un, a chynnau mowrys y dynion, a sgwsio cerdd o'r goron yn myn ia? Yn pa by? Yna'r ddau gosodd mynnu o glasbeion lai yn y blaen, a"
   ],
@@ -14,6 +18,9 @@
  ],
  "fuentes": [
   [
+   "whisper_es"
+  ],
+  [
    "cy"
   ],
   [
@@ -22,8 +29,8 @@
  ],
  "ventanas": {
   "total": 3,
-  "modelo": 2,
+  "modelo": 3,
   "reglas": 0,
-  "vacias": 1
+  "vacias": 0
  }
 }

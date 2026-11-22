@@ -4,19 +4,47 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   127.0,
+   "¡Gracias!"
+  ],
+  [
+   135.0,
+   "Le van a decir que lo vuelva a repetir."
+  ],
+  [
+   150.0,
+   "Ie!"
+  ],
+  [
    159.5,
-   "One win, two die. Si benni ad yn barod? Conrad yr Organisacion de Curadur William Roberts, one win, two die."
+   "One win, die. Supernia de Barot. Con la autorización del jurado William Roberts. One win, dos."
+  ],
+  [
+   330.0,
+   "Muchas amigas, y hoy a la tarde, el aplauso para cada uno de los participantes."
   ]
  ],
  "fuentes": [
   [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
    "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {
   "total": 6,
-  "modelo": 1,
+  "modelo": 2,
   "reglas": 0,
-  "vacias": 5
+  "vacias": 4
  }
 }

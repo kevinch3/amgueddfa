@@ -1,65 +1,93 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
    60.0,
-   "Lle mae'r sol de los andes ardientes como el singani, del honor, de la paz, la nieve, el enigma y mi."
+   "Lleva ese sol de los Andes ardientes como el Zingani Y el honor de la paz, Daniel y Jimani"
   ],
   [
    70.0,
-   "Lle mae'r sol de los andes ardientes como el singani, del honor, de la paz, la nive, el enigma y mi."
+   "Llevo ese sol de los Andes a dientes como el Zingani El honor de la paz, la nieve de Nijimani"
+  ],
+  [
+   80.0,
+   "Baila Cholita, Latinoamérica en África, Latinoamérica en África, Latinoamérica Cholita."
+  ],
+  [
+   94.0,
+   "Baila chorita, Latinoamérica en África Latinoamérica en África Latinoamérica chorita"
+  ],
+  [
+   110.0,
+   "¡Esta chonita!"
+  ],
+  [
+   132.0,
+   "Hermosas flores de la puna, mi dulce y bello amor"
   ],
   [
    137.0,
-   "Mae'n rosa cof la sasa, se silla cof la quena."
+   "airosa como la jaya, sencilla como la quena."
   ],
   [
    144.0,
-   "Hermosa flor de la puna, mi dulce y bella morena."
+   "Hermosa flor de la cuna Mi dulce y bella"
   ],
   [
    149.0,
-   "Mae'n rosa cof la sasa, se silla cof la quena."
+   "morena, airosa como la talla, sencilla como la quena."
   ],
   [
    156.0,
-   "Lleva el sol de los Andes ardientes cof el cigana, y el honor de la paz, la nibe del y shimbana."
+   "Lleva el sol de los Andes ardientes como el Zingani Y el olor de la paz, la nieve del Ishimani"
   ],
   [
    167.0,
-   "Lle oes y sol de los Andes a rienes como el singani, y en honor de la paz, la nien y shimani."
+   "Llevo este sol de los Andes ardientes como el Singani Y el honor de la paz, Daniel y Jimani"
   ],
   [
    177.0,
-   "Baila, chorita, Latinoamerica en Africa, Latinoamerica en Africa, Latinoamerica, chorita."
+   "Baila chorita, Latinoamérica en África, Latinoamérica en África, Latinoamérica chorita."
   ]
  ],
  "fuentes": [
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {

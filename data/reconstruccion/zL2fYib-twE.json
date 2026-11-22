@@ -1,15 +1,23 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
    81.0,
-   "Ond os ti'n mynd i fyny, dwi ddim yn gallu edrych i'r môr, dwi'n gwisgo llaw i fyny."
+   "Que vengas hacia mí Ya no puedo mirar al mar Buscando la eternidad"
+  ],
+  [
+   141.0,
+   "Desearé encontrarte en mí Cada vez que vuelves a subir Lloraré y partiré Como lo hice aquella vez"
   ],
   [
    191.0,
-   "Los amantes de la inmacidad, bailando suarrullo por doquier, seremos nuestros otra vez."
+   "Los amantes de la etnicidad, bailando su arrullo por doquier, seremos nuestros otra vez."
+  ],
+  [
+   204.7,
+   "Y la luna nos hará los amantes de la inmensidad Bailando su arrullo por doquier seremos nuestros otra vez"
   ],
   [
    259.18,
@@ -18,18 +26,24 @@
  ],
  "fuentes": [
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
   ]
  ],
  "ventanas": {
-  "total": 5,
-  "modelo": 3,
+  "total": 6,
+  "modelo": 4,
   "reglas": 0,
   "vacias": 2
  }

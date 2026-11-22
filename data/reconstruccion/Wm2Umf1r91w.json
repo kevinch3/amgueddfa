@@ -1,6 +1,6 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
@@ -37,59 +37,83 @@
   ],
   [
    220.0,
-   "Er gwaetha pawb a phopeth Er gwaetha pawb a phopeth Er gwaetha pawb a phopeth Ry'n ni yma o hyd Ry'n ni yma o hyd Er gwaetha pawb a phopeth Er gwaetha pawb a phopeth"
+   "Er gwaetha pawb a phopeth, er gwaetha pawb a phopeth, er gwaetha pawb a phopeth, ry'n ni yma o hyd, ry'n ni yma o hyd, er gwaetha pawb a phopeth, er gwaetha pawb a phopeth."
+  ],
+  [
+   280.0,
+   "De dentro a la noble igualdad, ya subió lo dignísimo miedo."
+  ],
+  [
+   328.0,
+   "el relato, era de mi abuela, dijo a mis ojos, ella me contó que cada verla era una mujer de su época, tan verdadera, tan necesaria, tan importante, que juntas eran el collar más preciado de nuestra historia, una está en todos los libros, prestando su salón para estrenar nuestra máxima canción, pero si supieras, se opuso a todo lo naturalizado en aquella época para demostrar que las voluntades no pueden ser quebrantadas."
+  ],
+  [
+   358.0,
+   "que tenemos derechos que la igualdad es posible."
+  ],
+  [
+   361.0,
+   "Ella, unitaria, patricia, política, asesora del hombre poderoso y temido, hizo todo distinto."
+  ],
+  [
+   369.0,
+   "Llevó puesto ese collar en todas las instancias, defendiendo a las desprotegidas, impuniendo justicia con palabras y con actos."
   ],
   [
    378.0,
-   "Dan innamorada de los ideales patrioticos como inteligente, benefica, relacionista, elegante, inspiradora, libre, se despojó de las costumbres de esa epoca con estilo, bailando con el poder rojo punzó mientras lucía como mejor vestido su gualantia, su vehemencia, visionaria."
+   "Tan enamorada de los ideales patrióticos como inteligente, benéfica, relacionista, elegante, inspiradora, libre, se despojó de las costumbres de esa época con estilo, bailando con el poder rojo punzó mientras lucía como mejor vestido su valentía, su vehemencia, visionaria."
   ],
   [
    402.0,
-   "accompaniando aki'n tantas o bethau pedia clemencia por el opositor, soniadora,"
+   "acompañando a quien tantas veces pedía clemencia por el opositor soñadora"
   ],
   [
    408.0,
-   "convencida de que las diferencias políticas suman y elevan, pero que jamás debieran matar, un collar,"
+   "convencida de que las diferencias políticas suman y elevan pero que jamás debieran matar un colega"
   ],
   [
    415.0,
-   "tantas cuentas de nacas como batallas, como amores perdidos, un collar, una epoca, una mujer, un legado de vida, en mis pequeñas manos."
+   "Un collar, tantas cuentas de nácar como batallas, como amores perdidos. Un collar, una época, una mujer, un legado de vida en mis pequeñas manos."
   ],
   [
    458.72,
-   "Sierito de la patria, hemos de cantar paisano,"
+   "El espíritu de la patria hemos de cantar paisano."
   ],
   [
    468.72,
-   "porque cantando el sierito se inflama nuestro entusiasmo."
+   "Porque cantando el cielito, se inflama nuestro entusiasmo."
   ],
   [
    479.72,
-   "Porque cantando el sienito Se inflaman nuestros entusiasmos"
+   "Porque cantando el cienito, se inflama nuestro entusiasmo."
   ],
   [
    489.72,
-   "Sienito sieno y mas sieno Sienito del corazon"
+   "Cielito, cielo y más cielo, cielito del corazón."
   ],
   [
    500.72,
-   "Cienito, sien, rima cieno Cienito del corazon Que el cielo siempre proteja A esta hermosa nacion Que el cielo siempre proteja"
+   "Cielito cielo y más cielo, cielito del corazón, que el cielo siempre proteja a esa hermosa nación, que el cielo siempre proteja."
+  ],
+  [
+   527.72,
+   "A esta hermosa nación, si de todo lo creado, es el cielo lo mejor, el cielo a deservante."
   ],
   [
    548.72,
-   "De nuestra hermosa nacio, en sieno de siena amane. De nuestra hermosa nacio, sienito dico que si, sienito de la Victoria."
+   "De nuestra hermosa nación, el cielo a veces el valle, de nuestra hermosa nación. Cielito digo que sí, cielito de la victoria."
   ],
   [
    574.72,
-   "Na marn i sy'n stryglo sy'n ffôn, rhifat siempre yn fi'n memoria."
+   "La madre y sus dignos hijos, vivan siempre en mi memoria. La madre y sus dignos hijos, vivan siempre en mi memoria."
   ],
   [
    595.72,
-   "Allan ma' sien, ma' siennwm, siennwm de l'am y lladd-dra, siennwm de'r bandera, siennwm de'r glorianna llamadra."
+   "Allá va cielo y más cielo, cielo de la tierra. ¡Viva la tierra! ¡Viva la tierra! Siempre gloriosa y amada, cielo de nuestra bandera. Siempre gloriosa y amada."
   ],
   [
    625.72,
-   "Fel sienito de la patria, des del silomas divina, sieno del azul y blanco, sieno de los argentinos, sieno del azul y blanco, sieno de los argentinos."
+   "El Cielito de la Patria Es el cielo más divino Cielo del azul y blanco Cielo de los argentinos"
   ]
  ],
  "fuentes": [
@@ -121,49 +145,67 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {
   "total": 12,
-  "modelo": 9,
+  "modelo": 11,
   "reglas": 0,
-  "vacias": 3
+  "vacias": 1
  }
 }

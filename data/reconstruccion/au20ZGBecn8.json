@@ -66,16 +66,9 @@
   [
    1479.32,
    "Dwi'n mynd i'r ffyn, dwi'n mynd i'r plas, dwi'n mynd i dydd, dwi'n mynd i'r nofel, dwi'n mynd i dydd."
-  ],
-  [
-   1553.64,
-   "Walk away, you came into my life and then you ran away. Is there nothing I can do to try and make you stay? I can see you in the arms of another girl, you shallow girl."
   ]
  ],
  "fuentes": [
-  [
-   "cy"
-  ],
   [
    "cy"
   ],
@@ -127,8 +120,8 @@
  ],
  "ventanas": {
   "total": 27,
-  "modelo": 8,
+  "modelo": 7,
   "reglas": 0,
-  "vacias": 19
+  "vacias": 20
  }
 }

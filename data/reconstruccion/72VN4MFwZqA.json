@@ -4,40 +4,12 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
-   230.52,
-   "and together sing it loud and clear,"
-  ],
-  [
-   237.52,
-   "that there will be peace,"
-  ],
-  [
    242.52,
    "when everyone,"
   ],
   [
    247.52,
    "joins everyone,"
-  ],
-  [
-   251.52,
-   "that together we can achieve,"
-  ],
-  [
-   258.52,
-   "That's when we'll be free, we'll be free, to and fro and every time."
-  ],
-  [
-   269.52,
-   "The joys of freedom come and you'll learn what love is to be."
-  ],
-  [
-   279.52,
-   "A's when we'll be free, we'll be young and gay, and tall and strong and strong, and then we'll live in dignity."
-  ],
-  [
-   300.52,
-   "A when we'll be free we'll remember every love and rejoice in our song and together sing it one more time."
   ],
   [
    527.52,
@@ -64,20 +36,24 @@
    "Yn y wesant y ffrwythau megis cariadol, ac yn anffwyn ddatod y cwnwm bregus a ddigyw, gan anadau dim. Rhaid dyma beth yw rhyddid cyfrifod helpu Alan, bendigaid ydyw rhai sydd yn dwyn na falau."
   ],
   [
+   1148.92,
+   "Applau"
+  ],
+  [
    1164.92,
-   "Hoy quise escuchar tu voz, y ya no estabas. Busqué tu vocal en las manos sin hallarlas."
+   "Hoy quise escuchar tu voz y ya no estabas. Busqué tus cálidas manos sin hallarlos."
+  ],
+  [
+   1175.92,
+   "Mencioné tu nombre una y mil veces sin percibir más que el eco y la nostalgia."
+  ],
+  [
+   1186.48,
+   "Hoy miré tus valles y tus bardas, recordé las historias que contaras, comprendí que no te habías ido y que en ellas simplemente perdurabas."
   ],
   [
    1205.92,
-   "Hoy, cerroi y capullo su corona al viento, a trapu siluoso su fragancia, y en eterna vigilia con mucho estero, que enraizada entre nosotros, quede tu alma."
-  ],
-  [
-   1235.92,
-   "Ffordd anifoedd, lefais lefais agoni, from bed to bed and down the mountain side,"
-  ],
-  [
-   1257.92,
-   "The sun has gone, and not the rose is falling. It's you, it's you, that's gone, and I'm not fine."
+   "Hoy cerró el capullo su corona al viento, atrapó celoso su fragancia y en eterna vigilia como yo espero que enraizada entre nosotros quede tu alma."
   ],
   [
    1417.36,
@@ -117,34 +93,16 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
+   "whisper_es"
   ],
   [
    "cy"
@@ -155,8 +113,8 @@
  ],
  "ventanas": {
   "total": 25,
-  "modelo": 10,
+  "modelo": 8,
   "reglas": 1,
-  "vacias": 14
+  "vacias": 16
  }
 }

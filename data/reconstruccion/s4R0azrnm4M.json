@@ -1,43 +1,71 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   60.0,
+   "que se vuelve el flor."
+  ],
+  [
    75.0,
-   "Dwi'm yn gwybod pam, ond un diwrnod mwy, dyna syniad i mi."
+   "Yo no sé por qué, o no dije más, no se me ha cambiado."
   ],
   [
    89.0,
-   "Dwi'm yn gwybod pam, ond un diwrnod mwy, dyna syniad i mi."
+   "Yo no sé por qué, hoy me quieren más, tu señal de amor."
   ],
   [
-   221.0,
-   "Cawsarnau'n gofio."
+   101.0,
+   "¡Santa, quiero ir a la receta, escucho de Dios que quieres salir, no puedes!"
+  ],
+  [
+   131.0,
+   "Y no fue eso, hay tristecidad, tristecidad y madre de su vida soy murmurándote al bañalán."
   ],
   [
    227.0,
-   "Sgwennwyd ei hunan, isio bod yn cawsarnau'n gofio."
+   "Sueño en el mar y sobrecausar el amiento de amor."
+  ],
+  [
+   236.0,
+   "Se haciéndolo llegar, tengo tu voz Año me parece ir, no hay que perder el corazón"
+  ],
+  [
+   258.0,
+   "Cuando yo lo alejé y lo alejé en el corazón, hay que decir nada."
   ]
  ],
  "fuentes": [
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {
   "total": 6,
-  "modelo": 2,
+  "modelo": 5,
   "reglas": 0,
-  "vacias": 4
+  "vacias": 1
  }
 }

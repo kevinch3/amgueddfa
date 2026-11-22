@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Tres"
+  ],
+  [
    30.0,
    "Gadedd y sid o hyd ar y gwaith yn nghanol y hefyd le byd."
   ],
@@ -21,6 +25,9 @@
   ]
  ],
  "fuentes": [
+  [
+   "whisper_es"
+  ],
   [
    "cy"
   ],

@@ -4,8 +4,40 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
-   74.0,
-   "Beth benedictus fructus erbyn stori Iesu, Iesu, Iesu."
+   36.0,
+   "Ave María, grátia plena,"
+  ],
+  [
+   50.7,
+   "Dóminus tecum."
+  ],
+  [
+   59.9,
+   "Benedícta tu in muliéribus,"
+  ],
+  [
+   78.3,
+   "et benedíctus fructus ventris tui, Iesus."
+  ],
+  [
+   100.4,
+   "Sancta María, Mater Dei,"
+  ],
+  [
+   113.2,
+   "ora pro nobis peccatóribus,"
+  ],
+  [
+   131.6,
+   "nunc et in hora mortis nostræ."
+  ],
+  [
+   146.3,
+   "Amen."
+  ],
+  [
+   184.32,
+   "Gracias."
   ],
   [
    261.12,
@@ -18,7 +50,31 @@
  ],
  "fuentes": [
   [
-   "cy"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
@@ -27,10 +83,21 @@
    "cy"
   ]
  ],
+ "letras": [
+  {
+   "desde": 36,
+   "hasta": 150,
+   "titulo": "Ave Maria",
+   "autor": "Marcelo Valva",
+   "idioma": "la",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
+  }
+ ],
  "ventanas": {
   "total": 6,
-  "modelo": 2,
+  "modelo": 5,
   "reglas": 0,
-  "vacias": 4
+  "vacias": 1
  }
 }

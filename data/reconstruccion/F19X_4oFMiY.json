@@ -1,15 +1,47 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
-   153.66,
-   "Volver, volver, volver, por ese camino que termina de corrido, a cwmpo de trave que vuelve a su lido, buscando un alilio, para su doror."
+   112.34,
+   "Con sus brazos volver a ser mío, vivir como solos en mi vida de él."
+  ],
+  [
+   122.66,
+   "Pasar de blancos casines, que aroman el patio del viejo jardín. Un beso de luna me espera en los valles, mi rancho, mi madre, todo mi sermín."
+  ],
+  [
+   140.32,
+   "Nuestro de luna me espera en los valles, mi ancho y mi madre lo voy a sentir."
+  ],
+  [
+   172.14,
+   "Al rumbo del árbol que vuelve a su nido, buscando un alivio para su dolor. Volveré, volveré y lejos la noche repite mi voz. La voz de un cariño que lejos se siente y llama al ausente de su corazón."
+  ],
+  [
+   200.22,
+   "Damos el cariño que lejos se siente y llama al aceite en este corazón."
+  ],
+  [
+   210.56,
+   "La sal de blancos, casillas, que arrogan el patio del viejo canadín. Un beso de luna me espera en los valles, y la encho milagre, noche jamás."
+  ],
+  [
+   227.72,
+   "Un beso de luna me espera en los valles, mi rancho y mi madre, todo hice en mí."
+  ],
+  [
+   474.2,
+   "En este día sin igual, de alegría celestial, cantemos todos el nombre de gratitud por tanto amor."
   ],
   [
    500.56,
-   "Cantaf, cantaf a'i rheiny i ga'l, o'n e'n semyl, o'n e'n lwtsh a, be' bendithiwr a be' ystyr, o'n e'n fatsh a o'n e'n estryst."
+   "Canta, canta al rey mi da, por el seguir, por el luchar. Que bendición habéis de ser, no quieras ya, no quieres ser."
+  ],
+  [
+   538.28,
+   "¡Honor a él, los pueblos amados!"
   ],
   [
    551.92,
@@ -21,19 +53,71 @@
   ],
   [
    723.92,
-   "Diolch yn fawr iawn, a ddechreir at ei ddiwinyddiaeth ar ei gwaith."
+   "Gracias."
+  ],
+  [
+   808.16,
+   "Allá en el patio gallero, de don Máximo Peñalba, y cuando yo me sigo creyendo, y la samba enamorada, a la feo mío volví a buscarte, y ya no estaba sin él, ¡Cuándo no se rompa!"
+  ],
+  [
+   871.16,
+   "¿Qué es la flor linda?"
+  ],
+  [
+   890.78,
+   "El fruto se hace la miel de la santa enamorada Un cariño del conchullar con un potro y una avanzada Me llevaba tu recuerdo y la santa enamorada Por orden de tu gloria, Dios juega"
   ],
   [
    1010.78,
    "Mwy de madrwgada', mwy de madrwgada', dwi'n iawn os ti'n larwm."
   ],
   [
+   1024.78,
+   "Soy la morocha argentina, la que no siente pesares, y alegre pasa la vida con sus cantares."
+  ],
+  [
+   1036.78,
+   "Soy la que te compañera de nuestro engancho por temor La que cansa mi cariño para su sueño"
+  ],
+  [
+   1050.78,
+   "Yo soy la morocha de mirar ardiente."
+  ],
+  [
+   1080.78,
+   "Perdón."
+  ],
+  [
+   1082.78,
+   "Soy la norocha argentina, ya que nos miente, no estaré, y alegre por toda la vida, con sus cantores."
+  ],
+  [
+   1094.78,
+   "Soy la que sin compañera, del hombre gaucho porteño, la que conserva cariño, amable a su sueño."
+  ],
+  [
    1106.78,
-   "Soy la morocha Argentina, la que nos siente pesares, y a la que parla la vida con sus cantares."
+   "Soy la borracha argentina, la que no siente pesares Y a veces pasa la vida con sus cantares"
   ],
   [
    1118.78,
-   "Soy la gentil compañia, de nombre gancho y forteño, la que conserva cariño para su sueño."
+   "Soy la gentil compañera del hombre gaucho porteño, la que conserva el cariño para su dueño."
+  ],
+  [
+   1161.78,
+   "Segundo participante, Néstor Chiche Kirch. Interpretará esta noche, Garúa."
+  ],
+  [
+   1241.78,
+   "Camino muy lento Mientras tanto La garota se asentúa Con su voz En mi corazón"
+  ],
+  [
+   1254.9,
+   "Y en esa noche tan fría y tan mía, pensando siempre en lo mismo, mi amigo. Y por más que quiera guiarla, desecharla y olvidarla, recuerdo más."
+  ],
+  [
+   1301.78,
+   "Mala boca en mala nombra, garúa, tristeza, si hasta el cielo se ha vuelto a llorar."
   ],
   [
    1346.78,
@@ -41,20 +125,83 @@
   ],
   [
    1353.58,
-   "De las agotas cae en el charco de mi alma"
+   "Las gotas caen en el charco de mi alma."
   ],
   [
    1358.38,
-   "hasta los huesos canados llegaron,"
+   "¡Hasta los rúos con ganado llenado!"
   ],
   [
    1361.98,
-   "ilumineando a ese torpedo que todavía pasa el viento, empujándome."
+   "Y en un viciato hace tormento, todavía pasa el viento empujándome."
+  ],
+  [
+   1375.74,
+   "Sonó y triste por la acera, a este corazón transito con tristeza de la pena."
+  ],
+  [
+   1383.66,
+   "Sintiendo tu hielo Porque aquella con su olvido Hoy le abierta una gotera"
+  ],
+  [
+   1394.78,
+   "Perdido como un duende que la sombra, mala boca y mala nombra. Llega la luna, tristeza, si hasta el cielo se ha vuelto a llorar."
+  ],
+  [
+   1454.78,
+   "Lleva a mi rato, mi chino, vuelva a lo tomo, vuelva a decir, viva la barba y mientras miro, giras la cuchara de café, el último café."
+  ],
+  [
+   1484.78,
+   "tus labios con brillo y vieron esta vez con la voz de un suspiro"
+  ],
+  [
+   1498.66,
+   "Recuerdo un vestido, de bojo sin razón, de mucho sin que estrés."
+  ],
+  [
+   1507.46,
+   "Nuestro"
+  ],
+  [
+   1537.46,
+   "Me vi morir de pie, tu mi tuvalidad y entonces comprendí mi soledad sin parar Aquí yo bien te ofrecí al último café"
+  ],
+  [
+   1597.46,
+   "En el partido final de un rey con si no querés Y allí con tu impiedad me vi morir de pie Con el tuanidad y entonces comprendí mi soledad Y para aquello día te ofrecí"
   ]
  ],
  "fuentes": [
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
@@ -63,37 +210,100 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {
   "total": 29,
-  "modelo": 11,
+  "modelo": 22,
   "reglas": 0,
-  "vacias": 18
+  "vacias": 7
  }
 }

@@ -1,11 +1,11 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
    60.0,
-   "ac efo ni chwanwyd para i gloywi y gostadleuaeth yma. Diolch yn fawr."
+   "Y con nosotros, Juanvin, para incluir esta leyenda."
   ],
   [
    710.7,
@@ -32,12 +32,24 @@
    "Yn y trocad. Yn y lle ddardd yn mynd i'w ganibau, canibau yw'r ffordd iawn gwaeth."
   ],
   [
+   1102.54,
+   "una vez que terminen ¿Puedo celebrar el miedo de darles? ¿Quién? ¿Quién te va a darles? ¿Quién? ¿Ok?"
+  ],
+  [
    1132.54,
    "Diolch i'r bwrdd o'r lôn, a'i bwyd i'r wlyb i'r lôn, a diolch i'r ffordd o'r lôn. Diolch am gael ein destun, a'i ffordd o'r lôn. Diolch am greu'r goleudyn, a'i gwestai yn fawr."
   ],
   [
+   1252.54,
+   "como una transversión y todo el tiempo. Entonces queremos llegar a Martina, a Marlín y a Maita Pilar sin poder acercarse a los alumnos. Gracias."
+  ],
+  [
    1282.54,
    "Diolch yn fawr iawn, a dwi'n hoffi bod yr ymgeisydd wedi bod yn gweithio'n gair, a wedi dyna dyfed da am dan ddyluniad gan yr Eisteddfod felly, diolch yn fawr iawn i chi am ddeud di."
+  ],
+  [
+   1537.82,
+   "La grata juega escucha, en Cristo hay verdad, confiare, confiare en ella y salvación."
   ],
   [
    1582.82,
@@ -45,7 +57,7 @@
   ],
   [
    1709.82,
-   "Rhyw adeg bach fyddai bywyd, y gallai dŵr brysau iawn gadal hwnne, a hwnne bach. Ond nôl y droed yn mowrhau, mi gallai ryw bump neu chwech hoff o le yn y wlad, efo le yn haws a'i ffogwr. Mae'n breuddwydio y byddai Cymru'n rhyw, a'i hiaith yn fyw."
+   "Rhyw adeg bach fyddai bywyd, y gallai dŵr brysau iawn gadal hwnne, a hwnne bach. Ond nôl y droed yn mowrhau, mi gallai ryw bump neu chwech hoff o le yn y gwlad, efo le yn haws a'i ffogwr. Mae'n breuddwydio y byddai Cymru'n rhyw, a'i hiaith yn fyw."
   ],
   [
    1739.82,
@@ -56,8 +68,12 @@
    "Felly, wnes de i'r dydd i gefn i'r gwrthrwm a hwnna'n ddigwydd dros forau a thonnau i'r wlad well, ymhell draw, ymhell yn y dydd."
   ],
   [
+   1799.82,
+   "Entonces, el conjunto de la Escuela de Música van a participar de la competencia número 56 Party Kervant, Kervant es un género musical y en este caso ellos han elegido Arnozón Belgeno"
+  ],
+  [
    1829.82,
-   "Ceffyliaeth pum deg chwech, parti gerddaint hunan dewisiaeth, yr unig un sy'n cystadlu yw'r ysgol parti yma lly, ysgol Ceredigau yma, bydden nhw'n canu ar noson fel heno."
+   "Ceffyliaeth pum deg chwech, parti gerddaint hunan dewisiaeth, yr unig un sy'n gystadlu yw'r ysgol parti yma lly, ysgol Ceredigau yma, bydden nhw'n ganu ar noson fel heno."
   ],
   [
    1889.82,
@@ -68,33 +84,161 @@
    "Roedd fy neb gwaeth i ddod i fawr i bawr ymlaen."
   ],
   [
-   1966.82,
-   "A'r nos oedd o'n felyn heno, cawn innau gofio'r dydd a'n denu,"
+   2023.82,
+   "Que si el caballo creí, no lo entendé en ese cual."
   ],
   [
-   2023.82,
-   "Ceir un ystafell o'r ymdre i lawr yng Nghefndir i'r gwael."
+   2033.82,
+   "Que si te gustaba el hombre, los hombres de vez en cuando."
+  ],
+  [
+   2044.82,
+   "La madre todo por tierra, con el ser avanzada, y daba esta flor de trigo, como quien entrega el alma."
+  ],
+  [
+   2065.82,
+   "Y nada más hablar del río, como quien entrega el alma, como le iba a la ropa, y que el viento aún no queda."
+  ],
+  [
+   2085.82,
+   "Si a los pobres le dejaban, de noche la puerta abierta."
+  ],
+  [
+   2145.82,
+   "Y arriba en su corazón, al cielo se volará"
+  ],
+  [
+   2175.82,
+   "Y a su nación lo marcaba, la iba parando su lágrima, como reino a la ropa, y queriendo a tu entrega, se a los pobres le dejaban."
   ],
   [
    2201.82,
-   "Yn y noc yw'r awyr yn ddiweddar, tua'r ogof yn ei ddarpar, y noc yw'r awyr yn ddiweddar."
+   "De noche en la puerta abierta, cielo pobre le venta la paz, de noche en la puerta abierta."
+  ],
+  [
+   2261.82,
+   "Me empuja ahora mismo de amor donde caben los solos."
+  ],
+  [
+   2276.82,
+   "Pero estoy yo llorando por vos y nadie, nadie responde al mío."
+  ],
+  [
+   2310.82,
+   "No es tuyo, hay color, si no es, crey en un oscuro que estalla con Dios, y nadie ya le responde a mi voz."
+  ],
+  [
+   2328.82,
+   "Si mis ojos no ven, que me aborde tu piel, como un eco redondo malvado en mi ser."
   ],
   [
    2478.82,
-   "Yn cyfarfod blynyddoedd, er bod nid adeilid nw efo ben newydd i'r orsedd yma, felly ar ôl y ffyniad o gefndir yr yy y planhigyn, mae arwain pryd bod i gael i ddewis ben newydd adeilid newydd i'r orsedd am dair mlynedd o hyn ymlaen, felly mae'n hollol ddiddorol i hi adeilio'r byd."
+   "Yn cyfarfod blynyddoedd, er bod nid adeilid nw efo ben newydd i'r Gorsedd yma, felly ar ôl y ffyniad o gefndir yr yy y planhigyn, mae arwain pryd bod i gael i ddewis ben newydd adeilid newydd i'r Gorsedd am dair mlynedd o hyn ymlaen, felly mae'n hollol ddiddorol i hi adeilio'r byd."
   ],
   [
    2508.82,
-   "er mwyn i parhau o'r o'r gwael. Cydigolwch ar y glwyddyn Chwefus gorffen yw'r asemblea' de- yym, o'r Gorsedd cyhoeddus Cymru, sef realisodd un confensiynariwm i gwe- i ddianwad president o'r Gorsedd gorffesiannus, a seniad Arwen Wyn, Arwen Pennant, yn y nôl de'r gors. Yn adeiladwy ar y gwasanaethe ffwrdd yn agos i symudolodd i symudolodd i'r yy."
+   "El Moly Rathai Creí por parte que el jueves Después de la asamblea De De Gorsedd De la ceremonia Se realizó un extravencionario Y fue elegida nueva presidenta De Gorsedd por tres años La señora Alwyn Benal En el nombre de Gorsedd Por lo tanto voy a pasarles la corona Que es el símbolo visible De Gracias."
+  ],
+  [
+   2568.82,
+   "por su haberme apoyado y agradecer por este honor de cumplir con esta distinción. Espero realmente cumplir todo lo que ustedes esperan del presidente del Gorsedd. Gracias también a Bennett por sus tres años de trabajo, porque se sentó muy bien, con seguridad, cuando tomaba sus decisiones y calladito y por poder seguir sus pasos. y a mí"
   ],
   [
    2598.82,
-   "tair bennod yn ystod y tair blynedd yma, dwi'n meddwl gallu neud gwaith yy da yy dros yr orsaf yy ac yym hefyd cydweithio yn hapus gyda'r pwyllgor yym hir o'r sefyllfa, o'dd i'n eistedd o'r sefyllfa bron mewn ffor' yma o'dd o'n i'n awdur bod os o'dd y bwrdd bwrdd yna dŵad i'r bwrdd diwrnod yr orsaf, diolch yn fawr."
+   "Muchas gracias a todos, gracias a todos."
+  ],
+  [
+   2658.82,
+   "Ella nunca volverá sin el dicho que te sigo Cuánta nieve en mi alma Qué silencio hay en tu puerta Que al llegar hasta en un brazo Un candado de dolor me detuvo el corazón"
+  ],
+  [
+   2685.82,
+   "Nada, nada que era en tu casa natal, solo telarañas que tejen un rayo rosado."
+  ],
+  [
+   2704.82,
+   "Nada, nada más que tristeza y quietud Nadie que me diga si vives aún donde estás Para decirte que hoy he vuelto arrepentido a buscar tu amor"
+  ],
+  [
+   2764.82,
+   "Oh, mujer, en la cruz de tu candado, por tu pena yo he rezado y ha rogado en tu portón una lágrima echa flor de mi pobre corazón."
+  ],
+  [
+   2786.52,
+   "Nada, nada, que en tu casa natal, son dos de arañas que teje el lunar y el rosal. Tampoco existe, yo seguro, que sea cual cualito tu alma, todo es una cruz. Nada, nada, más que tristeza y quieto, nadie que me diga, si ves a un mundo donde estás."
+  ],
+  [
+   2816.52,
+   "Para decirte que yo he vuelto arrepentido a buscar tu amor, tu amor."
+  ],
+  [
+   2876.52,
+   "No sé qué están llorando, yo canto pa' no llorar Tu amor se seco de gom, pero nunca dijiste por qué Yo me estoy solo pensando que tu traición es tu hermano Pa' quererte mucho, bueno, pa' desearte el bien, bueno Pa' olvidar a grave, porque ya te perdoné tal vez"
+  ],
+  [
+   2906.52,
+   "Te provoqué risa, vuelvo metido Miren"
+  ],
+  [
+   2944.18,
+   "Mucho valor para desear de la vida."
+  ],
+  [
+   2947.12,
+   "¡Malo! ¡Vamos a empezar a ganar mi favor!"
+  ],
+  [
+   2952.88,
+   "No lo sepa nunca, tal vez no lo pueda querer, tal vez te preocupes que risa, pero mentira muy bien."
+  ],
+  [
+   2962.88,
+   "Mi nombre es tu ausencia, mi nombre es vocación Mi nombre es para que nunca te ganes de tu valor Para que vuelvas con la noche y te vayas con el sol A veces es que sí, a veces ¡Gracias!"
+  ],
+  [
+   2992.88,
+   "Pa' gritarte que no, juanón Pa' quererte mucho, juanón Pa' decirte que, juanón Pa' olvidar a que ahora Porque ya te perdoné, tal vez No lo sepas nunca, tal vez No lo pueda querer, no, mujer Es por vos, que risa Ver mentir a tu pie"
+  ],
+  [
+   3052.88,
+   "del barro se supleva ya se va a medir más de más razón la vida es una vida absurda y es todo tan feliz que es una cuerda nada más mi confesión"
+  ],
+  [
+   3075.88,
+   "Contame tu condena, decime tu fracaso, no veré la pena que he querido Y háblame simplemente de aquel amor ausente, tras un relazo del olvido"
+  ],
+  [
+   3093.88,
+   "Yo sé que me haces daño, yo sé que está aquí por la luz, mi amor de mi amor"
+  ],
+  [
+   3109.16,
+   "La culpa que ha venido, que ha venido a un ser Morrido de luna del corazón"
+  ],
+  [
+   3118.1,
+   "Un poco de recuerdo y sin sabor Botea con el beso polero María Pulicol y la rea La tropicha de la zurda El vocal, la última burra"
+  ],
+  [
+   3140.14,
+   "se rámenla en la verde y arrastra el sol su lento caracol de sueño no ves que vengo de un par que está dormido siempre tras el alcohol"
+  ],
+  [
+   3164.14,
+   "Contame tu condena, decime tus fracasos, no es la pena que me he ido. Y háblame simplemente de que la voy a sentir tras un recaso de olvido."
+  ],
+  [
+   3181.14,
+   "Yo sé que me has enamorado, yo sé que me has enamorado, y sé por qué digas."
+  ],
+  [
+   3188.14,
+   "Pero es el mismo amor que tiene en la bandería Y nunca es el único hombre que aguda La curva vio al final, pero que le aburreció Corriendo en la corona de mi corazón"
   ]
  ],
  "fuentes": [
   [
-   "cy"
+   "whisper_es"
   ],
   [
    "cy"
@@ -115,7 +259,19 @@
    "cy"
   ],
   [
+   "whisper_es"
+  ],
+  [
    "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
@@ -130,7 +286,7 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
    "cy"
@@ -142,28 +298,124 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {
   "total": 54,
-  "modelo": 19,
-  "reglas": 2,
-  "vacias": 33
+  "modelo": 37,
+  "reglas": 0,
+  "vacias": 17
  }
 }

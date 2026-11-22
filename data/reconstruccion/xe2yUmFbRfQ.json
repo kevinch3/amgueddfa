@@ -1,107 +1,119 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
    0.0,
-   "I Patagonia, i Patagonia, i Patagonia."
+   "I Batagonia, i Batagonia, i Batagonia."
   ],
   [
    74.0,
-   "I- invitamos ahora a tornera minero, ella va a compartir con nosotros tumbas de adroddiad."
+   "Y invitamos ahora a Antonella Pinheiro, que ella va a compartir con nosotros tumbas de la gloria."
   ],
   [
    120.0,
-   "Tua amor abrio'n erida, por que todo lo que te hace bien, tambien te hace mal."
+   "Tu amor abrió la herida porque todo lo que te hace bien también te hace mal"
   ],
   [
    126.0,
-   "Tua amor cambiou mi vida, como un rayo para siempre, para lo que fue y será. Lo que fue y será."
-  ],
-  [
-   138.0,
-   "Lafo, laso me'n piano aquella mañana en la que dejamos de cantar. Llego a una muerte en día y abrazo con todo, todo, todo un bendava y tu fuerte bendava."
+   "Tu amor cambió mi vida como un rayo para siempre, para lo que fue y será, lo que fue y será."
   ],
   [
    156.0,
-   "Algo de vos llegaste a mi Cuando era pibe tuve un cardi Pero me escapee a otra ciudad Y no sirvió de nada porque todo el tiempo estamos dando Vueltas y mas vueltas que tendré en la vida para tratar de reaccionar Y nao mi corazon me piano aquella que dejamos de escapar."
+   "Algo de vos llega hasta a mi, cuando era pibe tuve un jardín, pero me escapé hacia otra ciudad Y no sirvió de nada porque todo el tiempo estabas dando vueltas y más vueltas que te trae la vida para tratar de reaccionar No, corazón un piano que ya que dejamos de escapar"
   ],
   [
    186.0,
-   "Jamas, despues vinieron dias de misterio frio casi como todos los demas, lo bueno que tenemos adentro es una luz, un brillante que no deja de escapar, jamas."
+   "Jamás Después vinieron días de miseria y frío casi como todos los demás Lo bueno que tenemos dentro es una luz, un brillante que no dejaré escapar Jamás"
   ],
   [
    209.0,
-   "Algo' de vo's lleg ato mi, cae a'r llwfia'r sobre Paris. Pero me escapé a su otra ciudad, y no sirvi de naddo, por que tod' y' tiempo estaba yo en un mismo lugar, y bajo la misma piel, y en la misma ceremonia."
+   "Algo de vos llega hasta mí, cae la lluvia sobre París Pero me escapé hacia otra ciudad y no sirvió de nada Porque todo el tiempo estaba yo en un mismo lugar Y bajo la misma piel y en la misma ceremonia"
   ],
   [
-   236.0,
-   "Jo te'n dyw'n ffafr cefnom byddes caer Yn y stwmpas de la gloria, gloria, gloria, divina gloria."
-  ],
-  [
-   296.0,
-   "Ar ei bechod, yr un peth, a'r un ceremoniwm. Dwi'n gofyn ffordd fawr, a ddim bydda i'n cael ei ddechrau, yn y stwmpau o glwf. Glwfia, glwfia, glwfia diwinyddiaeth."
+   266.0,
+   "Algo de vos llega hasta mí Cuando era pibe tuve un jardín Pero me escapé hacia otra ciudad Y no sirvió de nada Porque todo el tiempo estaba en un enorme esmolgante"
   ],
   [
    356.0,
-   "Traigo este canto, para mi ni, de la mar, de la mar."
+   "Traigo este canto para mi niño de la mar, de la mar."
+  ],
+  [
+   377.0,
+   "Traigo este agua para mi niña de la mar, dicen los pescadores que habrá crecida."
   ],
   [
    403.0,
-   "Que hasta los peces huirán, dicen tus ojos palos, Que estas creciendo, como la mar."
+   "Que hasta los peces subirán, dicen, tus ojos palos, que está creciendo como la mar."
   ],
   [
    429.0,
-   "De la mar, te la ingles tan anar, que ahora te merecen, de la mar, de la mar, la voz serena."
+   "De la mar, traigo esta nana, que ahora te merece. De la mar, de la mar, la voz serena."
+  ],
+  [
+   459.0,
+   "que te adormecen de la primavera, viajan los pescadores de madrugada."
   ],
   [
    489.0,
-   "Cie ta cresiendom, cwmwn i ni, cwmwn la mar."
+   "que estás creciendo como mi tío, como la mar."
   ],
   [
    519.0,
-   "Distaw'r nocê byd-sêr, ein gosod iawn o'r sgôr."
+   "Esta noche pensé en pasarte a buscar"
   ],
   [
    523.5,
-   "Ystys distaw'r ystys, y byd adio'r senôr, a'r subsidios gynnwng cwade siamôr."
+   "Estés listo a las diez, evítate a sonar A sus sitios que nunca te llevo"
   ],
   [
    532.0,
    "Ia, bydd ystyr yn iawn y gwrdd fysa dim byd-sêr, a mawr isio adeiladu'r ffasys di abôr."
   ],
   [
+   541.0,
+   "Iremos a bailar, veremos chato Y a la hora que las princesas se enamoran Dejarás ser sano porque damos a solas Hoy puedo morir de amor Has cantado mi corazón Quédate en el mío Amén."
+  ],
+  [
    571.0,
-   "Dwi'n mynd i moryn, di amor, resgata fi'n gor'or. Quedate conmigo, esta noche temblor. Un murnato prestado, un aroma francés, y una flor de tu lado."
+   "Puedo morir de amor, rescata mi corazón, quédate conmigo. Esta noche tendré un buen auto prestado, un aroma francés y una flor de tu lado."
   ],
   [
    592.0,
-   "Nado, pero escucho tu voz en el contestador y vi noche de sueños esplomar."
+   "Pero escucho tu voz en el contestador y mi noche de sueños es pluma"
   ],
   [
    601.0,
-   "Que tenés que estudiar, yo no puedo entender, cumple años, papá, que hoy vamos a sudar."
+   "que tienes que estudiar yo no puedo entender cumpleaños papá que me vamos a hacer"
   ],
   [
    609.0,
-   "Y tu nomio murió antes de lo previsto, está listo, hoy no es mi dîa, porque hoy puedo morir."
-  ],
-  [
-   622.0,
-   "Dwi'n dianclo i'r sgadau fi'n gora'n sôn, gyda ti'n fwya'n fyw."
+   "Y tu novio volvió antes de lo previsto, está visto que hoy no es mi día, porque hoy..."
   ],
   [
    634.0,
-   "O, dwi'n dianclo i'r sgadau fi'n gora'n sôn, gyda ti'n fwya'n fyw."
+   "Hoy puedo morir de amor, rescata mi corazón, corte mi amor."
+  ],
+  [
+   647.0,
+   "Y Dios puede decir a tu nora papá, a tu nora papá y a la universidad que al fin por una vez esta noche"
+  ],
+  [
+   659.32,
+   "Olvídate de todo en mi coche Porque hoy puedo morir de amor"
   ],
   [
    669.64,
-   "O, rescata mi corazon, quedate conmigo Oh, puedo morir de amor"
+   "Rescata mi corazón, quédate conmigo Hoy puedo morir de amor"
   ],
   [
    684.64,
-   "Esgata mi corazon, quedate conmigo, quedate conmigo, quedate conmigo."
+   "Rescata mi corazón. Quédate conmigo."
+  ],
+  [
+   774.64,
+   "No me pierdes, loco, perdecito, en este estilo cementero, que fuego el rancho y la pego, si con eso no alcanza, en el corazón de la tierra, mis heridas, mi joven, que no venga cualquier maleta, con esos ritmos de extranjero, y bailando con lo rico, con el alma con lo peor, inspirado por el amor de su esposa."
   ]
  ],
  "fuentes": [
@@ -109,82 +121,91 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
+   "whisper_es"
   ]
  ],
  "ventanas": {
   "total": 19,
-  "modelo": 12,
+  "modelo": 13,
   "reglas": 0,
-  "vacias": 7
+  "vacias": 6
  }
 }

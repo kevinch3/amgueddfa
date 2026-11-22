@@ -896,6 +896,54 @@
    "los escuchamos"
   ],
   [
+   1755.0,
+   "Wade in the water,"
+  ],
+  [
+   1761.2,
+   "wade in the water, children,"
+  ],
+  [
+   1769.4,
+   "wade in the water."
+  ],
+  [
+   1775.6,
+   "God's gonna trouble the water."
+  ],
+  [
+   1783.8,
+   "See that host all dressed in white,"
+  ],
+  [
+   1793.1,
+   "God's gonna trouble the water."
+  ],
+  [
+   1801.3,
+   "The leader looks like the Israelite."
+  ],
+  [
+   1812.6,
+   "God's gonna trouble the water."
+  ],
+  [
+   1820.9,
+   "See that band all dressed in red,"
+  ],
+  [
+   1829.1,
+   "Looks like the band that Moses led."
+  ],
+  [
+   1838.4,
+   "If you don't believe I've been redeemed,"
+  ],
+  [
+   1850.7,
+   "Just follow me down to Jordan's stream."
+  ],
+  [
    1880.7,
    "Muchas gracias, Unión Ensamble Vocal."
   ],
@@ -7276,6 +7324,18 @@
    "En primer lugar será unión ensamble vocal."
   ],
   [
+   22534.0,
+   "Tamquam agnus coram tondente se obmutuit,"
+  ],
+  [
+   22555.7,
+   "et non aperuit os suum:"
+  ],
+  [
+   22567.3,
+   "de angustia, et de judicio sublatus est."
+  ],
+  [
    22604.3,
    "le voy a pedir a los participantes del conjunto en galés masculino,"
   ],
@@ -7285,7 +7345,7 @@
   ],
   [
    22614.5,
-   "como así también a Wanwin para la competencia número 83,"
+   "como así también a Trevelin para la competencia número 83,"
   ],
   [
    22618.1,
@@ -7300,8 +7360,16 @@
    "Anto, Nancy y Yamila."
   ],
   [
-   22634.3,
-   "Amén."
+   22649.0,
+   "Tamquam agnus coram tondente se obmutuit,"
+  ],
+  [
+   22666.7,
+   "et non aperuit os suum:"
+  ],
+  [
+   22676.3,
+   "de angustia, et de judicio sublatus est."
   ],
   [
    22694.3,
@@ -12047,6 +12115,42 @@
    "whisper_es"
   ],
   [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
    "whisper_es"
   ],
   [
@@ -16832,7 +16936,13 @@
    "whisper_es"
   ],
   [
-   "whisper_es"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ],
   [
    "whisper_es"
@@ -16851,6 +16961,15 @@
   ],
   [
    "whisper_es"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ],
   [
    "whisper_es"
@@ -19909,6 +20028,15 @@
  ],
  "letras": [
   {
+   "desde": 1755,
+   "hasta": 1860,
+   "titulo": "Wade in the water",
+   "autor": "espiritual negro, anónimo, arr. Muitis",
+   "idioma": "en",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
+  },
+  {
    "desde": 20927,
    "hasta": 21205,
    "titulo": "Naranjo en Flor",
@@ -19916,12 +20044,30 @@
    "idioma": "es",
    "derechos": "Derechos confirmados por el mantenedor del archivo",
    "fuente": "Aportado por Kevin Roberts"
+  },
+  {
+   "desde": 22534,
+   "hasta": 22589,
+   "titulo": "Tamquam agnus",
+   "autor": "Tomás Luis de Victoria",
+   "idioma": "la",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
+  },
+  {
+   "desde": 22649,
+   "hasta": 22694,
+   "titulo": "Tamquam agnus",
+   "autor": "Tomás Luis de Victoria",
+   "idioma": "la",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
   }
  ],
  "ventanas": {
   "total": 521,
-  "modelo": 369,
+  "modelo": 370,
   "reglas": 8,
-  "vacias": 144
+  "vacias": 143
  }
 }

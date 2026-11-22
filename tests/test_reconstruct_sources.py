@@ -186,3 +186,19 @@ def test_welsh_speech_written_by_spanish_whisper_does_not_push_out_the_welsh_mod
     ]}), encoding="utf-8")
     cy = [(l.t, l.text) for l in load_sources(stem, "vid", letras) if l.src == "cy"]
     assert cy == [(60.5, "Mae hwnna'n rhywbeth i'w ganmol yn fawr iawn")]
+
+
+def test_welsh_that_spanish_whisper_wrote_gives_way_to_bangor(tmp_path):
+    # Chubut 2016 hsUB7VS3ozo: Whisper (Spanish) wrote the chair ceremony's Welsh as "Iagor o ddebod, bydd
+    # William Windy en un harwain"; Bangor has it right 4.6 s earlier. Only Bangor's is kept; with no Bangor
+    # line near, the Spanish source's Welsh stays (it may be the only text of that speech).
+    stem, letras = _fixture(tmp_path)
+    (letras / "videos.json").write_text("{}", encoding="utf-8")
+    (stem.parent / f"{stem.name}.whisper.json").write_text(json.dumps({"language": "es", "segments": WHISPER["segments"] + [
+        [65.0, 69.0, "Iagor o ddebod, bydd William Windy en un harwain i ganu Gwedir Orser."],
+        [150.0, 154.0, "Diolch yn fawr i chi gyd am wrando mor astud heddiw"]]}), encoding="utf-8")
+    (stem.parent / f"{stem.name}.cy-techiaith.json").write_text(json.dumps({"segments": [
+        {"s": 60.4, "text": "I agor y ddefod bydd William Windi yn ein harwain i ganu Gweddi'r Orsedd."}]}), encoding="utf-8")
+    lines = load_sources(stem, "vid", letras)
+    assert [l.t for l in lines if l.src == "cy"] == [60.4]
+    assert [l.t for l in lines if l.src == "whisper_es" and l.t > 60] == [150.0]

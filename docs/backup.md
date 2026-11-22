@@ -105,6 +105,19 @@ python3 scripts/backup/videos.py import-cy /tmp/out-cy
 Spanish (recitation, songs) comes out readable; Welsh singing is weak (often
 nonsense or English words). Every file says "generated, not checked".
 
+**Spanish pass (#112, 2026-11-22).**
+- `transcribe.py` picks one language per file, from Whisper's detection on its first 30 s. A session that opens with music was transcribed as Welsh, so it has no Spanish source. Bangor's model then writes its Spanish speech in Welsh spelling, or translates it into Welsh.
+- `run_es.py es-ids.txt` takes each Bangor segment (`out-cy/`), detects its language on its own audio, and transcribes the Spanish ones with `large-v3-turbo` into `out-es/<id>.json`. Every segment gets the probabilities; only the Spanish ones get text. `--cpu --since --until --out` run a pilot while the GPU is busy.
+- `queue_es.sh` runs it after the Bangor batch, then Bangor over the published videos (`cy-pub-ids.txt`).
+- Copies of the KPC scripts are kept in `scripts/kpc/`; the KPC folder is where they run. Then:
+
+```bash
+rsync -a kpc.local:/mnt/raid2/data/V1/amgueddfa-whisper/out-es/ /tmp/out-es/
+python3 scripts/backup/videos.py import-es /tmp/out-es
+```
+
+Where a segment was found Spanish, the reconstruction takes Spanish Whisper's text (`whisper_es`) and leaves the Bangor line out.
+
 Each run checks, cheaply, that every saved video is still on YouTube, so
 `gone_kept` shows up within a month of a video disappearing.
 

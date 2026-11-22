@@ -13,7 +13,7 @@ from pathlib import Path
 from typing import NamedTuple
 
 from scripts.align_lyrics import LETRAS, align, parse_letra, spans_for
-from scripts.export_video_transcripts import MARKER, clean_whisper, glob_escape, is_english, line_language, parse_vtt
+from scripts.export_video_transcripts import LOOP, MARKER, STOCK, clean_whisper, glob_escape, is_english, line_language, parse_vtt
 
 # The Welsh model, as the suffix of its file next to the video (<stem>.<WELSH_SOURCE>.json,
 # segments [{"s": start, "text": ...}]). Bangor University's techiaith/whisper-large-ft-cy-en,
@@ -64,6 +64,17 @@ def load_sources(stem: Path, video_id: str, letras: Path = LETRAS) -> list[Line]
         d = json.loads(w.read_text(encoding="utf-8"))
         if d.get("language") == "es":
             out += [Line(float(t), x, "whisper_es", "es") for t, x in clean_whisper(d.get("segments", []))]
+    # The Spanish pass (#112, KPC run_es.py): for videos Whisper took for Welsh, every Bangor segment's
+    # language, and Spanish Whisper's text for the Spanish ones. There the Bangor line is left out below.
+    spanish_segments: set[float] = set()
+    es = stem.with_name(f"{stem.name}.whisper-es.json")
+    if es.exists():
+        for seg in json.loads(es.read_text(encoding="utf-8"))["segments"]:
+            if "text" in seg:
+                spanish_segments.add(round(float(seg["s"]), 2))
+                text = seg["text"].strip()
+                if text and not STOCK.search(text) and not LOOP.search(text):
+                    out.append(Line(float(seg["s"]), text, "whisper_es", "es"))
     if WELSH_SOURCE:
         cy = stem.with_name(f"{stem.name}.{WELSH_SOURCE}.json")
         if cy.exists():
@@ -79,7 +90,7 @@ def load_sources(stem: Path, video_id: str, letras: Path = LETRAS) -> list[Line]
             out += [Line(float(s["s"]), s["text"], "cy", "cy", round(math.exp(s["lp"]), 2) if "lp" in s else None)
                     for s in json.loads(cy.read_text(encoding="utf-8"))["segments"]
                     if s["text"] and ("lp" not in s or math.exp(s["lp"]) >= MIN_CY_CONF) and not is_english(s["text"])
-                    and not heard_as_spanish(float(s["s"]), s["text"])]
+                    and round(float(s["s"]), 2) not in spanish_segments and not heard_as_spanish(float(s["s"]), s["text"])]
     heard_es = [[l.t, l.text] for l in sorted(out) if l.src in ("subida", "yt_es", "whisper_es")]
     heard_cy = [[l.t, l.text] for l in sorted(out) if l.src == "cy"]
     for sp in spans_for(video_id, letras):

@@ -27,7 +27,7 @@ def rules_lines(w: Window) -> list[OutLine]:
     out = [OutLine(l.t, l.text, l.lang, (l.src,)) for l in lyrics]
     out += [OutLine(l.t, l.text, l.lang, (l.src,)) for l in own
             if l.src == src and not (span and span[0] <= l.t <= span[1])]
-    return sorted(out)
+    return sorted(out, key=lambda l: l.t)  # by time only: same-second lines keep their source order
 
 
 def reply_lines(reply: dict) -> list[OutLine]:
@@ -37,4 +37,4 @@ def reply_lines(reply: dict) -> list[OutLine]:
 def merge(windows: list[Window], per_window: list[list[OutLine]]) -> list[OutLine]:
     """Each window keeps only its own stretch, so lines in the overlap appear once."""
     out = {(l.t, l.text): l for w, lines in zip(windows, per_window) for l in lines if w.t0 <= l.t < w.t1}
-    return sorted(out.values())
+    return sorted(out.values(), key=lambda l: l.t)

@@ -40,3 +40,10 @@ def test_merge_keeps_one_copy_of_overlap_lines():
     dup = OutLine(62.0, "otra vez", "es", ("yt_es",))
     merged = merge([a, b], [[OutLine(10.0, "uno", "es", ("yt_es",)), dup], [dup, OutLine(90.0, "dos", "es", ("yt_es",))]])
     assert [l.text for l in merged] == ["uno", "otra vez", "dos"]
+
+
+def test_lines_at_the_same_second_keep_their_order():
+    # Sorting whole tuples ordered same-time lines alphabetically, scrambling uploaded subtitles (OZZG9Epk8CI).
+    lines = [OutLine(11.0, "que comienza a abrirse en la temprana", "es", ("subida",)), OutLine(11.0, "Estilizado, el narciso", "es", ("subida",))]
+    assert [l.text for l in merge([win(0, 60, [])], [lines])] == ["que comienza a abrirse en la temprana", "Estilizado, el narciso"]
+    assert [l.text for l in rules_lines(win(0, 60, []))] == []

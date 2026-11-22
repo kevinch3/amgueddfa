@@ -220,3 +220,60 @@ def test_main_language_follows_the_published_text_not_the_count_of_source_lines(
     t2 = {"lang": "cy", "seg": [[0, "Buenas noches a todos, bienvenidos a la última sesión"], [5, "Diolch"]], "fuentes": [["yt_es"], ["cy"]]}
     assert main_language(t2) == "es"
     assert main_language({"lang": "es", "seg": [[0, "hola"]]}) == "es"  # no per-line sources: keep it
+
+
+def _t(seg, fuentes=None, letras=None):
+    t = {"src": "reconstruida", "lang": "es", "seg": [list(s) for s in seg], "fuentes": fuentes or [["yt_es"]] * len(seg)}
+    if letras: t["letras"] = letras
+    return t
+
+
+def test_join_fragments_makes_sentences_from_caption_chunks():
+    from scripts.export_video_transcripts import join_fragments
+    t = join_fragments(_t([[455, "tardes solicitamos a todos que vayan"], [459, "tomando"], [461, "ubicación para poder dar inicio a la"],
+                           [464, "última sesión."], [488, "Bienvenidos a todos"]], fuentes=[["yt_es"], ["yt_es"], ["whisper_es"], ["yt_es"], ["yt_es"]]))
+    assert t["seg"] == [[455, "tardes solicitamos a todos que vayan tomando ubicación para poder dar inicio a la última sesión."],
+                        [488, "Bienvenidos a todos"]]
+    assert t["fuentes"] == [["yt_es", "whisper_es"], ["yt_es"]]  # union, in order, one list per line
+
+
+def test_join_fragments_respects_gaps_caps_languages_lyrics_and_tags():
+    from scripts.export_video_transcripts import join_fragments
+    assert len(join_fragments(_t([[0, "y entonces"], [9, "llegaron"]]))["seg"]) == 2  # 9 s apart: a pause, not one sentence
+    long = [[i * 2, "una dos tres cuatro cinco"] for i in range(6)]
+    assert all(len(x.split()) <= 20 for _, x in join_fragments(_t(long))["seg"])  # 20-word cap
+    slow = [[i * 5, "palabra"] for i in range(6)]
+    assert all(b - a >= 0 for (a, _), (b, _) in zip(join_fragments(_t(slow))["seg"], join_fragments(_t(slow))["seg"][1:]))
+    assert max(len(x.split()) for _, x in join_fragments(_t(slow))["seg"]) <= 4  # 15 s span cap
+    mixed = join_fragments(_t([[0, "diolch yn fawr"], [2, "muchas gracias a"], [4, "todos"]], fuentes=[["cy"], ["yt_es"], ["yt_es"]]))
+    assert mixed["seg"] == [[0, "diolch yn fawr"], [2, "muchas gracias a todos"]]  # Welsh and Spanish never joined
+    sung = join_fragments(_t([[100, "Libertad,"], [102, "libertad,"], [104, "libertad"]], fuentes=[["letra"]] * 3,
+                             letras=[{"desde": 90, "hasta": 200, "titulo": "Himno", "autor": "", "idioma": "es"}]))
+    assert len(sung["seg"]) == 3  # one verse per line
+    tags = join_fragments(_t([[0, "[música]"], [2, "y ahora"], [3, "[aplausos]"]]))
+    assert [x for _, x in tags["seg"]] == ["[música]", "y ahora", "[aplausos]"]
+
+
+def test_join_fragments_leaves_a_transcript_without_sources_alone():
+    from scripts.export_video_transcripts import join_fragments
+    t = {"src": "youtube", "lang": "es", "seg": [[0, "a"], [1, "b"]]}
+    assert join_fragments(t)["seg"] == [[0, "a"], [1, "b"]]
+
+
+def test_join_fragments_starts_a_line_where_whisper_starts_a_sentence():
+    from scripts.export_video_transcripts import join_fragments
+    t = join_fragments(_t([[0, "Hoy me aterra este cansancio sin final"], [3, "Y se trizas mi sonrisa de cristal"], [5, "cuando miro"]],
+                          fuentes=[["whisper_es"], ["whisper_es"], ["whisper_es"]]))
+    assert [x for _, x in t["seg"]] == ["Hoy me aterra este cansancio sin final", "Y se trizas mi sonrisa de cristal cuando miro"]
+
+
+def test_join_fragments_sees_a_sentence_end_before_a_trailing_tag_and_never_joins_the_same_second():
+    from scripts.export_video_transcripts import join_fragments
+    assert len(join_fragments(_t([[0, "un diente menos. [canto]"], [3, "por ese portillito"]]))["seg"]) == 2
+    assert len(join_fragments(_t([[8, "Gales optó por el narciso,"], [8, "como emblema"]]))["seg"]) == 2
+
+
+def test_join_fragments_keeps_declared_lyric_spans_line_by_line():
+    from scripts.export_video_transcripts import join_fragments
+    t = join_fragments(_t([[80, "zamba quiero"], [82, "oír"]]), spans=[(75, 318)])
+    assert len(t["seg"]) == 2

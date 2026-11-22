@@ -376,3 +376,48 @@ def test_the_word_list_keeps_its_accented_words(tmp_path, monkeypatch, encoding)
     p.write_text("número\ncanción\ncasa\n", encoding=encoding)
     monkeypatch.setattr(export_module, "SPANISH_DICT", p)
     assert {"numero", "cancion", "casa"} <= export_module.spanish_words()
+
+
+def test_term_fixes_keep_the_case_of_a_word_and_capitalise_a_name(monkeypatch):
+    monkeypatch.setitem(export_module.TERM_FIXES, "nelsis", ("Nelcis", True))
+    fix = export_module.fix_terms
+    assert fix("la presidente del Círculo Várdico del Chubut") == "la presidente del Círculo Bárdico del Chubut"
+    assert fix("del círculo várdico.") == "del círculo bárdico."
+    assert fix("gracias a nelsis y a Nelsis") == "gracias a Nelcis y a Nelcis"
+    assert fix("Vardicos y valdor") == "Vardicos y valdor"  # whole words only
+
+
+def test_export_fixes_terms_in_spanish_lines_only(tmp_path):
+    b = tmp_path / "backup"
+    _video(b, "C/2021/a_AAAAAAAAAAA.mp4", {"es-orig": YT_AUTO})
+    (b / "INDEX.tsv").write_text("id\tfile\n" + f"{'A' * 11}\tC/2021/a_AAAAAAAAAAA.mp4\n", encoding="utf-8")
+    recon = tmp_path / "recon"
+    recon.mkdir()
+    t = {"src": "reconstruida", "lang": "es", "fuentes": [["whisper_es"], ["cy"], ["letra"]],
+         "seg": [[0, "Invitamos al presidente del Círculo Várdico del Chubut."],
+                 [30, "Diolch i'r Cylch Várdico am ddod heddiw"], [60, "Várdico, canta el coro"]]}
+    (recon / f"{'A' * 11}.json").write_text(json.dumps(t), encoding="utf-8")
+    out = tmp_path / "out"
+    export(b, [{"id": "A" * 11, "festival": "chubut"}], out, recon=recon)
+    seg = [x for _, x in json.loads((out / ("A" * 11 + ".json")).read_text())["seg"]]
+    assert seg[0] == "Invitamos al presidente del Círculo Bárdico del Chubut."
+    assert "Várdico" in seg[1] and seg[2] == "Várdico, canta el coro"  # Welsh line and lyric untouched
+
+
+@pytest.mark.parametrize("heard, right", [
+    ("aquí viene el Benedicto el jurado", "aquí viene el veredicto el jurado"),
+    ("Benedicto de la competencia número 88", "Veredicto de la competencia número 88"),
+    ("El benedicto dice lo siguiente", "El veredicto dice lo siguiente"),
+    ("saludamos a Benedicto Jones", "saludamos a Benedicto Jones"),  # a person stays
+    ("fotografía categoría nobeles tema mundo vegetal", "fotografía categoría noveles tema mundo vegetal"),
+    ("los premios Nobeles de la paz", "los premios Nobeles de la paz"),
+    ("los músicos Cintia Samarreño y Silvia Valdor", "los músicos Cinthia Zamarreño y Silvia Baldor"),
+    ("el director Frank Valdor", "el director Frank Valdor"),
+    ("segundo premio para Herr Cidriol,", "segundo premio para Her Siriol,"),
+    ("el grupo de Madryn, Her Ciriol.", "el grupo de Madryn, Her Siriol."),
+    ("el segundo coro fue locus amenus aquí", "el segundo coro fue Locus Amoenus aquí"),
+    ("muchísimas grasias a la Associación San David", "muchísimas gracias a la Asociación San David"),
+])
+def test_term_fixes_in_context(heard, right, monkeypatch):
+    monkeypatch.setitem(export_module.TERM_FIXES, "cintia", ("Cinthia", True))  # only for this test
+    assert export_module.fix_terms(heard) == right

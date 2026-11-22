@@ -296,6 +296,8 @@ describe('reanchorPreview', () => {
       .toMatchObject({ antes: 'otra cosa', despues: 'colonos galeses', avisos: ['reemplaza'] });
     expect(reanchorPreview([{ t: 5, antes: 'x y z', quitar: true }], item, { t: 6, text: 'otra cosa' })!)
       .toMatchObject({ antes: 'otra cosa', despues: '', avisos: ['quita'] });
+    // A removal that also names a language (validation lets it) removes the line: no language to warn about.
+    expect(reanchorPreview([{ t: 5, antes: 'x y z', quitar: true, idioma: 'cy' }], item, { t: 6, text: 'otra cosa' })!.avisos).toEqual(['quita']);
     expect(reanchorPreview([{ t: 93, antes: 'croeso i bawb', idioma: 'cy' }], item, { t: 90, text: 'Bienvenidos, croeso i bawb' })!)
       .toMatchObject({ antes: 'Bienvenidos, croeso i bawb', despues: 'Bienvenidos, croeso i bawb', avisos: ['idioma'], idioma: 'cy' });
     expect(reanchorPreview(eli.payload.cambios, { index: 0, motivo: 'idioma_en_linea_unida' }, { t: 90, text: 'Bienvenidos a todos, croeso i bawb' })!)

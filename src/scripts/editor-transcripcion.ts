@@ -365,7 +365,9 @@ export function wireEditor(dialog: HTMLDialogElement, getState: () => EditorStat
     tiempoBox.append(el('label', { for: tiempo.id }, t('editor.momento')), tiempo);
     tiempo.addEventListener('input', () => {
       const r = tiempoNueva(tiempo.value, { prefill: at, duracion: null });
-      if (r.ok) titulo.textContent = t('editor.nueva', { tiempo: fmtTime(r.t) });
+      if (!r.ok) return;
+      titulo.textContent = t('editor.nueva', { tiempo: fmtTime(r.t) });
+      box.setAttribute('aria-label', titulo.textContent);
     });
     const { box: campo, input } = textField('rep-ed-nueva-texto', '', idioma);
     const lang = idiomaField('rep-ed-nueva-idioma', idioma);
@@ -439,8 +441,11 @@ export function wireEditor(dialog: HTMLDialogElement, getState: () => EditorStat
     paintAgregar();
     window.clearInterval(timer);
     timer = window.setInterval(paintAgregar, 1000);
-    verTranscripcion();
-    if (focus) panel.focus({ preventScroll: true });
+    // Asked for (the button), the transcript comes into view; a draft resumed as the video opens moves nothing.
+    if (focus) {
+      verTranscripcion();
+      panel.focus({ preventScroll: true });
+    }
   }
 
   /** Out of edit mode; the draft stays saved unless it was sent or discarded. */

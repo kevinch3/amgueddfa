@@ -190,7 +190,7 @@ function reanclar(cambios: Cambio[], item: { index: number; motivo: Motivo }, pi
   const avisos: Aviso[] = [];
   if (cambio.quitar === true) avisos.push('quita');
   else if (!parte && typeof cambio.texto === 'string') avisos.push('reemplaza');
-  if (cambio.idioma) avisos.push('idioma');
+  if (cambio.idioma && cambio.quitar !== true) avisos.push('idioma');
   // The database takes a texto of at most 500 characters and an antes of at most 2,000: no change past them is sent.
   if ((typeof cambio.texto === 'string' && len(cambio.texto) > VALUE_MAX) || len(pick.text) > ANTES_MAX) {
     return { cambios: [], vista: vista(pick.text, despues, ['larga']) };

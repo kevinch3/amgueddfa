@@ -1,0 +1,50 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   19.0,
+   "¡Gracias!"
+  ],
+  [
+   49.0,
+   "¡Gracias!"
+  ],
+  [
+   88.0,
+   "Sabiendo que enferma estabas para curarte el venido"
+  ],
+  [
+   97.0,
+   "Pensando que no tendrías, que me estés retraído"
+  ],
+  [
+   106.0,
+   "Así que lávate vueltas, donde te duele mi vida Según esa mujer lupa, ya también te duquería"
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

@@ -1,16 +1,23 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
-   132.4,
-   "The storm shall not break thee, nor shall overtake thee, asleep in the arms of the snow-sweet sea."
+   236.0,
+   "Bien."
+  ],
+  [
+   240.0,
+   "Gracias."
   ]
  ],
  "fuentes": [
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {

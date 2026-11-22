@@ -1,0 +1,57 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "Madre roca, Madre cielo, luchando distanza el cielo del discreción, y cada estrella se posa en tu cima blanca, anubrando el labio de los cielos."
+  ],
+  [
+   60.0,
+   "Oh, derrota, Padre Cielo, a veces me llevo a tu amor a ti."
+  ],
+  [
+   76.32,
+   "Entonces mi vino del poder va a tu centro, mi visión poseerán de los misterios."
+  ],
+  [
+   90.96,
+   "Cerro, cerro de mi chacadonia, no sabes, chalten, cuando te amo."
+  ],
+  [
+   112.8,
+   "¡Viva para los vientos de mis pies!"
+  ],
+  [
+   159.44,
+   "Cerro de mi patagonia, no sabes, Chaltén, cuándo te amo, ahoyé, Chaltén, cuando se desploma la arepa, y abro a los vientos en tus piedras."
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

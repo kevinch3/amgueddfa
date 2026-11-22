@@ -622,3 +622,83 @@ describe('reports and notes', () => {
     expect(row).toEqual([{ status: 'approved', points_awarded: 10 }]);
   });
 });
+
+describe('video_text corrections', () => {
+  const changes = (n: number) =>
+    Array.from({ length: n }, (_, i) => ({ t: i, antes: 'a', texto: 'b' }));
+  const vt = (u: string, n = 3) =>
+    contribute(u, { user_id: u, type: 'video_text', festival: 'chubut', payload: { video: { id: 'abcdef12' }, cambios: changes(n) } });
+  const withdraw = (who: string, id: string, note = 'mal') =>
+    t.q(who, 'select public.admin_withdraw_contribution($1, $2)', [id, note]);
+  const setChanges = (who: string, id: string, cambios: unknown) =>
+    t.q(who, 'select public.admin_set_video_text_changes($1, $2)', [id, JSON.stringify(cambios)]);
+
+  it('a collaborator inserts a pending video_text row', async () => {
+    const u = await t.createUser();
+    const id = await vt(u);
+    const rows = await t.q<{ status: string }>(u, 'select status from public.contributions where id = $1', [id]);
+    expect(rows).toEqual([{ status: 'pending' }]);
+  });
+
+  it('approval scores 2 per change, capped at 30', async () => {
+    const admin = await t.createAdmin();
+    const u = await t.createUser();
+    expect(await approve(admin, await vt(u, 3))).toBe(6);
+    expect(await approve(admin, await vt(u, 20))).toBe(30);
+  });
+
+  it('partial approval replaces cambios', async () => {
+    const admin = await t.createAdmin();
+    const u = await t.createUser();
+    const id = await vt(u, 3);
+    expect(await approve(admin, id, false, { cambios: changes(1) })).toBe(2);
+    const [r] = await t.q<{ n: number }>('postgres', "select jsonb_array_length(payload->'cambios') as n from public.contributions where id = $1", [id]);
+    expect(r.n).toBe(1);
+  });
+
+  it('another user cannot read a pending video_text row', async () => {
+    const u = await t.createUser();
+    const other = await t.createUser();
+    const id = await vt(u);
+    expect(await t.q(other, 'select id from public.contributions where id = $1', [id])).toHaveLength(0);
+  });
+
+  it('withdraw takes points back and hides the row', async () => {
+    const admin = await t.createAdmin();
+    const u = await t.createUser();
+    const id = await vt(u);
+    await approve(admin, id);
+    expect(await points(u)).toBe(6);
+    await withdraw(admin, id);
+    const [r] = await t.q('postgres', 'select status, review_note, points_awarded from public.contributions where id = $1', [id]);
+    expect(r).toEqual({ status: 'rejected', review_note: 'mal', points_awarded: 0 });
+    expect(await points(u)).toBe(0);
+    expect(await t.q('anon', 'select id from public.public_contributions where id = $1', [id])).toHaveLength(0);
+  });
+
+  it('withdraw and set-changes are admin-only and only for approved video_text', async () => {
+    const admin = await t.createAdmin();
+    const u = await t.createUser();
+    const pending = await vt(u);
+    await expect(withdraw(u, pending)).rejects.toThrow(/forbidden/);
+    await expect(setChanges(u, pending, changes(1))).rejects.toThrow(/forbidden/);
+    await expect(withdraw(admin, pending)).rejects.toThrow(/not_approved/);
+    await expect(setChanges(admin, pending, changes(1))).rejects.toThrow(/not_approved/);
+    const fact = await contribute(u, { user_id: u, type: 'fact', payload: { field: 'venue', value: 'Trelew' } });
+    await approve(admin, fact);
+    await expect(withdraw(admin, fact)).rejects.toThrow(/wrong_type/);
+    await expect(setChanges(admin, fact, changes(1))).rejects.toThrow(/wrong_type/);
+  });
+
+  it('set-changes validates', async () => {
+    const admin = await t.createAdmin();
+    const u = await t.createUser();
+    const id = await vt(u, 3);
+    await approve(admin, id);
+    await expect(setChanges(admin, id, [])).rejects.toThrow(/invalid/);
+    await expect(setChanges(admin, id, [{ t: 1, texto: 'x'.repeat(501) }])).rejects.toThrow(/invalid/);
+    await setChanges(admin, id, changes(2));
+    const [r] = await t.q<{ n: number; p: number }>('postgres', "select jsonb_array_length(payload->'cambios') as n, points_awarded as p from public.contributions where id = $1", [id]);
+    expect(r).toEqual({ n: 2, p: 6 });
+  });
+});

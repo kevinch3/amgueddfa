@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   90.0,
+   "Gracias."
+  ],
+  [
    120.0,
    "Dyma defnydd dydd o'r llyn, goddi dol ym mlan fy ngweddol, yn dwyn fy sylw fi."
   ],
@@ -173,7 +177,7 @@
   ],
   [
    1777.22,
-   "A nawr, cyn ein bod ni yn canu yr emyn a heimlaf anadau, byddwn ni a'r aelodau o'r côr i gyd yn orfod deithio nôl i'r hen gampaf ar ddegfed."
+   "A nawr, cyn ein bod ni yn canu yr emyn a heimlaf anadau, byddwn ni a'r aelodau o'r côr i gyd yn gorfod teithio nôl i'r hen gampaf ar ddegfed."
   ],
   [
    1807.22,
@@ -205,6 +209,9 @@
   ]
  ],
  "fuentes": [
+  [
+   "whisper_es"
+  ],
   [
    "cy"
   ],

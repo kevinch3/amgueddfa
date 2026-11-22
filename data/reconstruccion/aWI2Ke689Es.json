@@ -1,47 +1,135 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
    0.0,
-   "Diolch yn fawr iawn, a wna i ddechrau'n fawr iawn. Diolch yn fawr iawn, a wna i ddechrau'n fawr iawn."
-  ],
-  [
-   33.0,
-   "Is it all come to me here, heart reaching, silent, sweetly, it's good to touch the green, green grass of ho-me."
+   "Diolch yn fawr iawn, a wna i ddechrau'n fawr iawn."
   ],
   [
    75.0,
-   "Wrth ymyl y son o'dd e'n pennau, silencio llefodd hasta'r agor diwrnod o'dd yn dda."
+   "Pusen el sueño de pena y silencio llegó hasta el agua que ocurra."
   ],
   [
-   525.0,
-   "O'n neb o'r redondo, bydd sedd."
+   86.34,
+   "Un sendero solo de pena Hasta la espuma"
+  ],
+  [
+   98.0,
+   "Sabe Dios que a crucia te acompañó Que dolor de viejo está roto Para recostarte arrollada en el canto de las caracolas marinas"
+  ],
+  [
+   128.0,
+   "La canción que canta en el fondo oscuro del mar, la canapola. Debo estar en tu encina con tu soledad, que poemas nuevos fuiste a buscar, una voz antigua de viento y de sal."
+  ],
+  [
+   216.0,
+   "y nos hará una ronda en la ropa y los habitantes de la ropa van a acabar junto a la ropa"
+  ],
+  [
+   264.0,
+   "Y si ya muere, no le digas, nunca me estoy, déjeme ir."
+  ],
+  [
+   275.0,
+   "He pasado un signo con tu soledad, que fue más nuevo que sea buscar, una voz antigua de viento y de sal."
+  ],
+  [
+   293.0,
+   "Te rellibra el alma y está rimando y te vas hacia allá como en sueños. Dormir al cocinar, respirar de paz."
+  ],
+  [
+   353.0,
+   "La sombra caliente del sol Me empuja al abismo de amor Donde caben los"
+  ],
+  [
+   382.0,
+   "Solo dos, pero estoy yo llorando por vos Y nadie, nadie responde a mi voz La paz del grito de vos"
+  ],
+  [
+   409.0,
+   "La donna del pago crea, no es suya el dolor."
+  ],
+  [
+   422.0,
+   "Y pues, que luz juro que está allá de Dios, y nadie ya le responde a mi voz."
+  ],
+  [
+   435.0,
+   "Si mis ojos no ven, que me aborde tu pie. Por eco redondo, maldad en mi ser."
+  ],
+  [
+   495.0,
+   "¡Gracias!"
+  ],
+  [
+   585.0,
+   "contra el triunfo preciso de ese odio triunfante."
+  ],
+  [
+   595.4,
+   "Escribir un poema de amores, pájaros en su huevo, vientos de panaderos, es ganar a la muerte la victoria del día cotidiano."
   ],
   [
    614.1,
-   "Gewir i'n coelio os ti'n wneud y nombres difyrs, che swnio'n cwmpan, Anna, Maria, Libertad, che swnio'n cwmpo'n agw, Juan, Olwen, Leonardo, che swnio'n cwmpo'n sueños, Anri."
+   "Escribir un poema lleno de nombres tíbios, que suenan como el pan, Ana, María, Libertad, que suenan como el agua, Juan, Manuel, Leonardo, que suenan como los sueños, como el padre."
   ],
   [
    644.1,
-   "Macarenna, che suenen a Victoria, guido querido. Escribir tras las piedras con la mano que quedan jugando en la última larga. Escribir en subito, escribir la memoria."
+   "Macarena, que suenen a victoria, guido querido, escribir tras las piedras con la mano que quedan jugando la última lágrima, escribir el suspiro, escribir la memoria."
   ],
   [
    673.1,
-   "Ysgrifîr yn amlwg, ysgrifîr, toddi, por la sangre del nombre, por la ausencia del nombre, como si fuera un parto, como si fuera un parto, sin silencio."
+   "Escribir la palabra, escribir todavía por la sangre del nombre, por la ausencia del nombre, como si fuera un parto, como si fuera un pacto sin silencio."
   ],
   [
    733.1,
-   "Pájaros en su huela, viento de bananeras, es ganar a la muerte, la victoria, el día de Tiriata. Escribir un poema, lleno de nombres tibios, que suenen como el mar, Anna, Maria, Macarena, que suenen como el agua, Juan o Manuela, de un arbre, que suenen como el"
+   "Pájaros en su vuelo, viento de panaderos, es ganar la muerte, la victoria del día cotidiano. Escribir un poema lleno de nombres tibios, que suenen como el pan, Ana, María, Macarena, que suelen como el agua Juan o Manuel Leonardo que suelen"
   ],
   [
    763.1,
-   "Un com' yw'r swynion, Angra, Magarena. Que suene la victoria, guido que dio. Escribir tras las piernas. Escribir con la mano que queda, en jugando la ultima line. Escribir el suspiro. Escribir la memoria. Escribir la palabra. Escribir, todavía."
+   "como los sueños Ángel Macarena que suena la victoria guido querido escribir tras las piernas escribir con la mano que queda enjugando la última la vida escribir el suspiro escribir la memoria escribir la palabra escribir todavía Gracias."
   ],
   [
    793.1,
-   "Por la sangre del nombre, por la ausencia del nombre, como si fuera un parto, como si fuera un parto sin silencios."
+   "Por la sangre del nombre, por la ausencia del nombre, como si fuera un parto, como si fuera un parto sin silencio."
+  ],
+  [
+   823.1,
+   "Llegamos a todos estos temas y tener clara la idea de usar la voz y el espacio del escenario para ser escuchados. Es importante que se tome el tiempo para construir el comienzo y el final del poema, dándose un tiempo para vivirlo y disfrutarlo. A todos en general les costó superar el final de estas tropas y retomar la última."
+  ],
+  [
+   852.58,
+   "las características dramáticas del poema."
+  ],
+  [
+   857.84,
+   "Delti, con su porte en el escenario, fue ralentizando a veces demasiado las palabras, las siglas y los versos con un final categórico."
+  ],
+  [
+   871.0,
+   "Verónica hizo una interpretación con un ritmo más lento que el que pintó en preliminares, pero construyó un tempo que sostuvo logrando promovernos y transmitir el tono dramático del poema."
+  ],
+  [
+   888.92,
+   "Meghan antes se acordó un poquito, con su boca salida le dio mucho color a las enunciaciones."
+  ],
+  [
+   899.08,
+   "Lucas, a veces a ver un poco, al tener un problema de memoria que solteó, lo llevó tal vez a perder seguridad y a curarse hasta llegar al final del poema."
+  ],
+  [
+   912.76,
+   "Valoramos y felicitamos a todos los participantes de la invitación porque hacerlo sostiene un arte marido que ha llegado a su vida."
+  ],
+  [
+   924.74,
+   "Decidimos otorgar el primer premio a Verónica, muy ajustado segundo premio a Megan, tercer premio a Berti y cuarto premio a Lucas."
+  ],
+  [
+   937.74,
+   "¡Gracias!"
   ],
   [
    1141.74,
@@ -49,19 +137,15 @@
   ],
   [
    1231.74,
-   "Competencia nô mor y setenta y pedwar, segunda competencia principal para dos mixtos minimo veinte integrantes, una obra importa a de Maria, de Carl Jenkins, y una obra emocsion, obra de jazz, gospel o negrw spiritual, y en primer lugar le escucharemos a locos a buenos."
-  ],
-  [
-   1466.74,
-   "So I sing new words, singing a song, humming my new words all day long."
-  ],
-  [
-   1486.74,
-   "There is no sunshine, there is no rain, there is no cloud."
+   "Competencia número 74, segunda competencia principal para todos mixtos, mínimo 20 integrantes. Una obra impuesta, Ave María, de Carl Jenkins, y una obra de elección, obra de jazz, gospel o negro espiritual. Y en primer lugar, escucharemos a Locus Amoemus."
   ],
   [
    1505.74,
-   "Nw ddim, son am y dŵr, a mis o'r dydd Gŵst a'i drog nawr môr."
+   "Nw ddim, son am y dŵr, a mis o'r dydd Gŵst a'i drog nawr môr, a mis o'r dydd Gŵst a'i drog nawr môr."
+  ],
+  [
+   2099.1,
+   "Mae mynd i'r ardd anghyfiawnder, mae'n cael ei ddefnyddio i'r ardd anghyfiawnder, mae'n cael ei ddefnyddio i'r ardd anghyfiawnder."
   ],
   [
    2280.02,
@@ -69,19 +153,23 @@
   ],
   [
    2400.82,
-   "Canut y gwynt a drosodd, a mi yw'r dŵr o'i hollol."
+   "Canut y gwynt a drosodd, canut y gwynt a drosodd, canut y gwynt a drosodd, a mi yw'r dŵr o'i hollol, a mi yw'r dŵr o'i hollol."
   ],
   [
    2479.82,
    "Ond di gael yr arglwysi'n o dramwyddoldeb, i dramwyddoldeb, ar lau'r ofn antur, ar lau'r ofn antur, o dramwyddoldeb, i dramwyddoldeb, amen."
   ],
   [
-   2504.9,
-   "Amen."
+   2564.9,
+   "El punto instrumental de formación libre cobra la elección. En primer lugar..."
   ],
   [
-   2654.9,
-   "Nes dim byd fyny'n asiwla, cer o disgyblion. Chocolade, amor, chocolade, os wyt ti'n gostio wel, nes yfe, i gwael bwmpas, bo' gin i erioed ddeud o."
+   2571.9,
+   "Vamos a escuchar el vocal femenino surazul con la ombra chocolatina."
+  ],
+  [
+   2839.22,
+   "y conjunto instrumental de formación libre con la elección Logus Amoemus. Escucharemos todos con un año."
   ]
  ],
  "fuentes": [
@@ -89,7 +177,103 @@
    "cy"
   ],
   [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
    "cy"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
@@ -107,49 +291,19 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
+   "whisper_es"
   ]
  ],
  "ventanas": {
   "total": 52,
-  "modelo": 23,
+  "modelo": 34,
   "reglas": 0,
-  "vacias": 29
+  "vacias": 18
  }
 }

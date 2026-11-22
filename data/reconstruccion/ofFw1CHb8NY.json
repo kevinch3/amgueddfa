@@ -1,0 +1,29 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "¡Huido un sol en alto espíritu, en los cielos gloria a Dios!"
+  ],
+  [
+   60.0,
+   "La luz tan luz se asigna para darse vivir en la cruz de amor y cantar a la celeste voz en los cielos gloria a Dios."
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

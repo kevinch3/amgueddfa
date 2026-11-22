@@ -4,7 +4,8 @@ import {
   canAddNew, cardNotes, groupByVideo, reanchorOptions, reanchoredCambios, retirarTodaLabel, sinAnclarList, withdrawnInFile,
   type ApprovedVideoText,
 } from '../src/lib/admin-videos';
-import type { Cambio } from '../src/lib/video-corrections';
+import { withLiveCorrections } from '../src/lib/live-video-corrections';
+import type { Cambio, CorrectionRow } from '../src/lib/video-corrections';
 import { asTranscript, type Transcript } from '../src/lib/video-transcript';
 
 const at = (hhmm: string) => `2026-11-22T${hhmm}:00+00:00`;
@@ -162,6 +163,21 @@ describe('sinAnclarList', () => {
       { t: 90, antes: 'Bienvenidos a todos, croeso i bawb', idioma: 'cy' as const }] } };
     expect(sinAnclarList(file(), [ana, eliMoved, moved]).items).toEqual([]);
     expect(sinAnclarList(file(), [ana, eli]).items.map((x) => x.row)).toEqual(['r5']);
+  });
+});
+
+describe('rows approved at the same instant', () => {
+  it('the Videos tab applies them in the order the player and the export do (by id), whatever order it lists them in', () => {
+    const machine = asTranscript({ src: 'reconstruida', lang: 'es', seg: [[20, 'Ma gwybod yn iawn'], [50, 'Hoy cantan los coros']],
+      fuentes: [['cy'], ['whisper_es']] })!;
+    const lo = row('aaaaaaaa-0000-4000-8000-000000000000', 'V', '20:00', 'Ana', [{ t: 20, antes: 'Ma gwybod yn iawn', texto: 'Mae gwybod yn iawn' }]);
+    const hi = row('ffffffff-0000-4000-8000-000000000000', 'V', '20:00', 'Bruno', [{ t: 20, antes: 'Ma gwybod yn iawn', texto: 'Mam gwybod yn iawn' }]);
+    // The player gets them oldest first, the tie by id ascending (approvedCorrections); the tab newest first (groupByVideo).
+    const player = withLiveCorrections(machine, [lo, hi] as CorrectionRow[]).tr;
+    const tab = sinAnclarList(machine, groupByVideo([lo, hi])[0].rows);
+    expect(player.seg[0]).toEqual([20, 'Mae gwybod yn iawn']);
+    expect(tab.live.seg[0]).toEqual(player.seg[0]);
+    expect(tab.items.map((x) => x.row)).toEqual([hi.id]);
   });
 });
 

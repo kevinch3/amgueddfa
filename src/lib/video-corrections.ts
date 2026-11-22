@@ -134,8 +134,9 @@ function quedo(lines: Linea[], huellas: Huella[], t: number, texto: string): boo
     || huellas.some((h) => Math.abs(h.t - t) <= CERCA && (donde(h.w, bw) >= 0 || (h.w.length > 0 && donde(bw, h.w) >= 0)));
 }
 
-/** The transcript with `rows` applied in `reviewed_at` order, and what came of them: `applied` lists the rows that changed
- * something (the export records them so the player never applies one twice), `sinAnclar` the changes not applied, and
+/** The transcript with `rows` applied in `reviewed_at` order (a tie by id), and what came of them: `applied` lists the
+ * rows that changed something (the export records them so the player never applies one twice), `sinAnclar` the changes
+ * not applied, and
  * `autores` the display names behind each changed line of the result (an empty list when the rows had none). A line
  * whose text a correction wrote gets "colab" in its fuentes; once a correction sets a language, `idiomas` covers every line.
  * A change whose text an earlier change already took (two collaborators fixed the same original line) is not placed.
@@ -158,8 +159,10 @@ export function applyCorrections<T extends Corregible>(
   let conIdiomas = !!idiomas;
   const applied: string[] = [];
   const sinAnclar: SinAnclar[] = [];
-  const key = (r: CorrectionRow) => String(r.reviewed_at ?? '');
-  const ordered = [...rows].sort((x, y) => (key(x) < key(y) ? -1 : key(x) > key(y) ? 1 : 0));
+  // Approval order; rows approved at the same instant (approved together) by id, so the order never depends on the caller.
+  const cmp = (a: string, b: string) => (a < b ? -1 : a > b ? 1 : 0);
+  const ordered = [...rows].sort((x, y) =>
+    cmp(String(x.reviewed_at ?? ''), String(y.reviewed_at ?? '')) || cmp(String(x.id ?? ''), String(y.id ?? '')));
   const baked = opts.baked;
   const cambiosOf = (row: CorrectionRow) => (Array.isArray(row.payload?.cambios) ? row.payload.cambios : []);
   // The rows the file already holds leave what they took before any other row runs; newest first, so that a line

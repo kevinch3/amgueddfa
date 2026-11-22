@@ -144,8 +144,8 @@ def _real_time(t) -> bool:
 
 
 def apply_corrections(t: dict, rows: list[dict], idiomas_corregidos: list[int] | None = None) -> tuple[dict, list[str], list[dict]]:
-    """The transcript with `rows` (approved video_text contributions) applied in reviewed_at order, the ids of
-    the rows that changed something (the file records them so the player never applies one twice), and the
+    """The transcript with `rows` (approved video_text contributions) applied in reviewed_at order (a tie by id), the
+    ids of the rows that changed something (the file records them so the player never applies one twice), and the
     changes not applied as {"id", "cambio", "motivo": "sin_linea" | "idioma_en_linea_unida"}. A line whose text
     a correction wrote gets "colab" in its fuentes; once a correction sets a language, "idiomas" covers every
     line (the file's own where it had them, else "cy" where the Welsh model heard it, else the file's lang).
@@ -159,7 +159,8 @@ def apply_corrections(t: dict, rows: list[dict], idiomas_corregidos: list[int] |
     con_idiomas = idiomas is not None
     applied: list[str] = []
     sin_anclar: list[dict] = []
-    for row in sorted(rows, key=lambda r: str(r.get("reviewed_at") or "")):
+    # Approval order; rows approved at the same instant (approved together) by id, so the order never depends on the caller.
+    for row in sorted(rows, key=lambda r: (str(r.get("reviewed_at") or ""), str(r.get("id") or ""))):
         payload = row.get("payload")
         cambios = payload.get("cambios") if isinstance(payload, dict) else None
         hizo = False

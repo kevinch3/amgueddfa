@@ -88,8 +88,6 @@ const editionStatus = (editionsStatic as { festival: string; year: number; statu
   .find((e) => e.festival === slug && e.year === year)?.status ?? null;
 const known = editionFacts(approved as Contribution[], slug, year, editionStatus);
 // Restricted documents are not counted, like /datos/ediciones.json (#19).
-// Edition blocks with this many documents or fewer start open; longer lists start closed (#78).
-const BLOQUE_ABIERTO = 8;
 const seoDescription = editionDescription(fest.name, year, state, known, list.filter((i) => !i.restricted).length + uploads.length);
 const seoLd = ldGraph(
   editionJsonLd({ name: fest.name, year, url: absUrl(url(`${slug}/${year}/`)), image: cover ? absUrl(cover.page) : null, facts: known, description: seoDescription }),
@@ -154,7 +152,7 @@ const missingList = formatList(missing.map((m) => m.toLocaleLowerCase(intlLocale
 
   {sections.map(({ c, items }) => (
     <section class="section" aria-labelledby={`cat-${c}`} data-cat-section={c} hidden={c !== 'programa' && items.length === 0}>
-      <Bloque id={`cat-${c}`} titulo={t(`categorias.${c}`)} open={c === 'programa' || items.length <= BLOQUE_ABIERTO} n={items.length || undefined}>
+      <Bloque id={`cat-${c}`} titulo={t(`categorias.${c}`)} n={items.length || undefined}>
       <ul class="cards" data-scope-festival={slug} data-scope-year={year} data-scope-category={c} hidden={items.length === 0}>
         {items.map((item) => <ItemCard item={item} />)}
       </ul>

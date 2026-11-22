@@ -627,13 +627,17 @@ describe('static build', () => {
     expect(Math.abs(Number(tall[1]) / Number(tall[2]) - 675 / 1200)).toBeLessThan(0.01);
   });
 
-  it('edition blocks open and close (details), long lists start closed, facts stay open (#78)', () => {
+  it('edition blocks open and close (details) and all start closed; facts stay visible (#78, 2026-11-22)', () => {
     const html = read('chubut/2024/index.html');
     const blocks = [...html.matchAll(/<details class="bloque"( open)?[^>]*>\s*<summary class="bloque-t"><h2 id="([^"]+)"/g)].map((m) => [m[2], Boolean(m[1])]);
     const ids = Object.fromEntries(blocks);
-    expect(ids['cat-programa'], 'programa').toBe(true);
-    expect(ids['videos-t'], 'videos').toBeDefined();
-    expect(ids['multimedia-t'] ?? ids['cat-bases'], 'a long list').toBe(false);
+    expect(ids['cat-programa'], 'programa').toBe(false);
+    expect(ids['videos-t'], 'videos').toBe(false);
+    expect(blocks.filter(([, open]) => open), 'blocks that start open').toEqual([]);
+    // every edition page: no block starts open
+    for (const f of ['trevelin/2016/index.html', 'chubut/1965/index.html', 'cy/chubut/2024/index.html']) {
+      expect(read(f), f).not.toMatch(/<details class="bloque" open/);
+    }
     // Datos de la edición is never folded away
     expect(html).not.toMatch(/<summary class="bloque-t"><h2 id="hechos-t"/);
     // the script that opens the block holding a link target, and everything before printing

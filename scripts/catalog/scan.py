@@ -149,6 +149,44 @@ def title_key(title: str) -> list:
     return [int(x) if x.isdigit() else x.lower() for x in re.split(r"(\d+)", title)]
 
 
+# A caption that names the competition a post image is about (issue #95): «Competencias de Fotografía.»,
+# «Presentamos las competencias de #COROS - #CORAU.». Other captions (calls to take part, shared post
+# intros) don't tell images apart and are ignored.
+CAPTION_COMPETITION = re.compile(r"^(?:(?:les\s+)?presentamos\s+las\s+)?(competencias?)\b\s*([:\-–]\s*|de\s+)?(.*)$", re.I)
+# Names kept capitalised when a caption in capitals is lowered («DEL EISTEDDFOD DEL CHUBUT»).
+PROPER = {"eisteddfod": "Eisteddfod", "chubut": "Chubut", "trelew": "Trelew", "gaiman": "Gaiman", "trevelin": "Trevelin",
+          "madryn": "Madryn", "dolavon": "Dolavon", "mimosa": "Mimosa", "patagonia": "Patagonia"}
+
+
+def caption_title(caption: str | None) -> str | None:
+    """«Competencias de X» from a caption's first sentence, or None when it does not name a competition."""
+    first = re.split(r"(?<=[.!?])\s+|\n", (caption or "").strip())[0].strip()
+    m = CAPTION_COMPETITION.match(first)
+    if not m:
+        return None
+    def lower(w: str) -> str:
+        pre, core, post = re.match(r"^(\W*)(.*?)(\W*)$", w).groups()  # keep «CHUBUT.»'s full stop around the name
+        return pre + PROPER.get(core.lower(), core.lower()) + post
+    words = [lower(w) if w.isupper() and len(w) > 1 else w for w in m.group(3).replace("#", "").split()]
+    rest = " ".join(words).rstrip(" .!…")
+    # «Competencias de X», «Competencia: X» → "de"; «Competencia especial …» keeps its own words.
+    title = f"{m.group(1).capitalize()} {'de ' if m.group(2) else ''}{rest}"
+    return title if rest and len(title) <= 70 and len(title.split()) <= 12 else None
+
+
+def caption_titles(items: list[Item]) -> None:
+    """Documents that share a title within an edition section take their caption's competition, when it names
+    one, so «Bases (12 de 67)» reads «Competencias de Fotografía». Run before number_repeats."""
+    groups: dict[tuple, list[Item]] = {}
+    for it in items:
+        groups.setdefault((it.festival, it.year, it.undated, it.category, it.title), []).append(it)
+    for same in groups.values():
+        if len(same) < 2:
+            continue
+        for it in same:
+            it.title = caption_title(it.note_public) or it.title
+
+
 def number_repeats(items: list[Item]) -> None:
     """Public documents of one edition section with the same title get "(n de N)", in file order
     (Facebook ids grow with time). Hidden and restricted ones are not shown, so they are not counted:

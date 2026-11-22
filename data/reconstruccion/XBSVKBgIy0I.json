@@ -8,8 +8,16 @@
    "Diolch yn fawr iawn am wneud y cyfnod yma, ac i'n cynnig, diolch yn fawr iawn am wneud y cyfnod yma."
   ],
   [
+   30.0,
+   "De ti, yo me enamoré, en una noche azul fuimos al mar. De ti, yo me enamoré, en una noche azul fuimos al mar."
+  ],
+  [
    76.3,
    "A dyna jyst cynnwys i'r ffordd, dyna jyst cynnwys i'r ffordd."
+  ],
+  [
+   102.74,
+   "Allí, donde se acaba el mar, es que los pasos azules vengan a buscar. Allí, donde se acaba el mar, es que los pasos azules vengan a buscar."
   ]
  ],
  "fuentes": [
@@ -17,7 +25,13 @@
    "cy"
   ],
   [
+   "whisper_es"
+  ],
+  [
    "cy"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {

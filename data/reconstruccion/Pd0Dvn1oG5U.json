@@ -1,6 +1,6 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
@@ -8,16 +8,32 @@
    "I Patagonia, i Patagonia, i Patagonia."
   ],
   [
-   119.9,
-   "She had a dream, but what was it for, so she chased after her dream with much desire, but when she got too close to her expectation"
-  ],
-  [
-   144.9,
-   "We're dreaming of like paper and fire, paper and fire, singing of the history, paper and fire, smoking of the aloes."
-  ],
-  [
    204.9,
-   "Pa bant sy'n arw da, ddo'n i'n borth ar fy mysgol i, be' o'n i ddo'n i'n cofio, be' sonia' o'dd o dani'n byd."
+   "Aplausos en la luta, no me importa donde soy He unido viajando y he soñado tal inmenso"
+  ],
+  [
+   217.9,
+   "En ese sueño yo me veía en este ámbito pero no Fue el mismo banque estaba todo junto a mi señor"
+  ],
+  [
+   233.9,
+   "Este paisaje es tan extraño, se parece al de un tren eléctrico Esos árboles tienen contornos, darme cuenta es tan hermoso Ese sueño yo me veía desde alto terreno No era el mismo que tenía, fue con su interior Yo soy un niño"
+  ],
+  [
+   263.9,
+   "A mi vida que acelera Dos mil recuerdos menos teméis Y en un solo de un proyecto"
+  ],
+  [
+   280.6,
+   "Quizá no sé si el cielo está arriba, abajo dentro de mí."
+  ],
+  [
+   287.6,
+   "Aunque el paisaje sea un pan extraño, te va a estar aquí."
+  ],
+  [
+   293.08,
+   "¿Dónde estoy? ¿Quién soy yo? ¿Qué hora es? ¿Dónde estaré?"
   ]
  ],
  "fuentes": [
@@ -25,19 +41,31 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {
   "total": 6,
-  "modelo": 5,
+  "modelo": 3,
   "reglas": 0,
-  "vacias": 1
+  "vacias": 3
  }
 }

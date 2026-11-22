@@ -1,8 +1,16 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
+  [
+   42.0,
+   "Y a partir de este momento continuamos con la ceremonia de la competencia número uno de dicha ceremonia."
+  ],
+  [
+   47.44,
+   "se llevará a cabo en un año magalés y con el premio, sesión práctico, donación de la municipalidad de Trevelin, como ya es habitual."
+  ],
   [
    56.08,
    "Cystadleuaeth rhif un, cadair yr Eisteddfod, gwobr cadair yr Eisteddfod, cyngor y dref, trefnedd, gwahoddon i Alwyn Green ddarllen y feirniadaeth."
@@ -40,12 +48,20 @@
    "Y mae'n llwyddo garddau'r gan preswyl lleol Marian Thomas allan o bren sy'n dod o'r ardal hon yy felly rŵan ma' Mair yn mynd i yy roi'r gadair symolaeth i Miwan."
   ],
   [
+   367.08,
+   "la entrega simbólica del premio, el sillón, párdico, que ha sido contribuido por la profesión local de la señora Mariano Tomás, con la idea de la zona, y que a veces creo es una donación de la municipalidad del gobierno como viene haciendo la de hace muchos años a la de la parte."
+  ],
+  [
    397.08,
    "Rŵan dan ni'n galw ar gantoresi yma a shi i ganu eryn i'r ddeddf unigol a hyd yn oed i ganu cadfen gan Tom Staller Evans yy efo'r cyfeill a'r llyfrant."
   ],
   [
    457.08,
    "Dim yn ôl, dim yn ôl, a ddim yn ei fod."
+  ],
+  [
+   556.08,
+   "Ahora sí, veremos el video de la pintura de Cristina Hernández y yo presentado por su propia clara, Nanci Thomas."
   ],
   [
    568.08,
@@ -84,8 +100,100 @@
    "Dan ni'n siwr mae Benfeth yn mynd i ysgol Cwm, ysgol un chwech chwech ym Mlaen Ryfelu, ysgol pum deg saith ac ysgol mil dau ddeg pump, a ma' nhw wedi ca'l eu hyfforddi gan Jessica Jones ac Aaron Evans, felly dan ni'n croesawu nhw i'r llygad."
   ],
   [
+   813.46,
+   "A continuación, vamos a presenciar la danza de las flores, tradicional y final de esta ceremonia, en homenaje, obviamente, a los poetas ganadores, y está compuesta por todos los niños que acaba de mencionar, las niñitas que acaba de mencionar, y son alumnas de la Escuela de Escuela del Com, de la Escuela 166, de la escuela 157 perdón, 57 y de la escuela 1025 y han sido preparadas para esta danza"
+  ],
+  [
+   1200.46,
+   "Un buen aplauso en las salas."
+  ],
+  [
+   1230.46,
+   "que con su licencia y su gran honor al fin de hoy, su homenaje a los poesas ganadores en el día de hoy."
+  ],
+  [
+   1238.68,
+   "Invitamos a continuación a los poetas a ponerse de pie y acompañados por niños que los escotaron hasta el escenario, volver hacia la sala."
+  ],
+  [
+   1320.46,
+   "Gracias."
+  ],
+  [
+   1323.34,
+   "que es el premio que va a pasar dentro de la colección de Nanci. Si no, además, por otro lado, tenemos un aporte económico que ha permitido y generar muchísimos otros gastos que han involucrado la profesión de encuentros. Señor Presidente, así que el señor Intendente para decirle muchas gracias. Gracias."
+  ],
+  [
+   1353.34,
+   "¡Gracias!"
+  ],
+  [
+   1383.34,
+   "Recuerdo que mañana, a la 10 de la mañana, se va a acabar el progresismo. Que cuando hagan la reunión de canto, para agradecer al señor que habrá podido disfrutar todo el mundo de la semana, de la música, de la música, de la música."
+  ],
+  [
+   1523.34,
+   "Este año me animé con el galés que yo no me animaba porque yo no me animaba, pero ahora yo me decía que tenés que ganar. Cuando estuvimos tomando algo en el lugar de Cienacina, ¿viste que te dijo que no? Sí. ¿Cuántos? Me preguntaba, ¿cuántos habías ganado? En Galesa es la primera vez, en español se ha ganado 6.000."
+  ],
+  [
+   1553.34,
+   "Gracias."
+  ],
+  [
+   1583.34,
+   "Bueno, ya escribí yo de Omelina de Rawson, ganadora de Polka, en idioma galés esta vez, pero ya tenés otro sucebo, ¿no? Sí, es la primera vez que presento un poema en idioma galés, porque bueno, yo en realidad aprendí como segunda lengua, no es que tuve crianza en galés, aunque soy descendiente de galés. y aprendí la lengua y bueno escribir un día"
+  ],
+  [
+   1613.34,
+   "Un poquito, una vez, pero la intimidad no me animaba mucho. Sí, alguien ha contenido otro contenido de poesía, escribiendo en idioma español. En dos ocasiones, tú y Colón, aquí, en el tema, se ven y fue escribiendo en español. En 2016."
+  ],
+  [
+   1633.34,
+   "en el tercero de Madrid, en el tercero de Tropeo, pero siempre fue siempre español. Primera vez que me presento a José Calés, estoy muy conmovida."
+  ],
+  [
+   1663.34,
+   "El movimiento, el color, lo que ellas representan, pero a mí es una asociación entre la vida, el movimiento y la vida de Fíjera Abreu de Lanipengla y mi inspiración poética, lo que pasa a mí."
+  ],
+  [
+   1677.08,
+   "cuando quiero trabajar con la poesía, con la palabra, ¿no? Que a veces uno, con la presa, es como..."
+  ],
+  [
+   1682.46,
+   "entonces necesitas preguntar cómo encuentras las palabras para decir lo que siento y lo que les ha traído un poco en juego con esas ideas Me pareció que el premio Diego Morriga también era que continúa trabajando para que el Eisteddfod no se pierda, sobre todo en la provincia de Chubut Ustedes tienen experiencia en varios estadios Sí, yo considero..."
+  ],
+  [
+   1703.46,
+   "Es un espacio muy especial, en general el contenido de las artes."
+  ],
+  [
    1710.46,
-   "Mae'n pasio pan ma' un yn gallu es- pan ma' un yn cydnodd mewn stafell i ddeud bod hyn yn diffyg. Mae'n anodd cael y gair o lle bydd raid i ni ddweud be ydym ni'n wneud ar arwain ar yr artistiaeth gwlyd. Ond mae yna ddifrifolws, a ddifrifolws o'r chwedl, sy'n didactg, sy'n ddweud, dwi'n gwybod."
+   "Eso me pasa donde uno encuentra un escenario para expresarse que eso ya es todo una dificultad. A veces encontrar un espacio donde uno mostrar lo que hace, a nivel artístico o cultural. Pero además hay una devolución, hay una devolución del jurado que es didáctico, como aprende. Yo siempre digo que la esencia no es tanto la competencia, es cierto que el Eisteddfod tiene competencia en la distinta disciplina, ...con sus limitaciones, de ser timideces..."
+  ],
+  [
+   1740.46,
+   "animarse, ¿cierto?, compartir con otros porque el arte de una unión, ¿no?"
+  ],
+  [
+   1749.1,
+   "¿Usted pregona, digamos, que la juventud se sume, participe, digamos, en su ámbito personal o público?"
+  ],
+  [
+   1755.86,
+   "Yo soy docente, ahora no estoy en la secundaria, porque tuve muchos años y sí, por supuesto, la cara de los jóvenes aprecian tanta posibilidad de tomar la vida. El intercambio que yo quiero es que sí que cultiven la expresión, que todo se fue así. Bueno, como amante ganadora Álex y yo, como vivo este tipo de gente, ¡Gracias!"
+  ],
+  [
+   1785.86,
+   "el estilo que ha tenido mucho trabajo estoy sorprendida porque estamos con una gran situación"
+  ],
+  [
+   1795.08,
+   "Estamos tratando de una competencia de niños y jóvenes, en esta segunda sesión, que es la Búsqueda Listero, cuando normalmente el viernes es un viernes y se ubicarece, ¿no?, a la consecuente de niños y jóvenes. Esto habla de muchísima participación de niños y jóvenes venidos desde el Valle, desde mi localidad, de Raúl Sol, de Trelew, de la Isla. Veo mucha participación este año y muchas ganas, ¿no?, de reencontrar. Creo que este año hemos tenido..."
+  ],
+  [
+   1825.08,
+   "La actitud en volver a la normalidad después de lo que ha sido la pandemia, el gobierno, la gente. Parece que está en plena toda la vida, muy importante, ¿no? Y seguiremos hasta no sabemos qué hora, hay mucha participación. Muchas gracias, muchas gracias por el interés."
   ],
   [
    1855.08,
@@ -122,7 +230,10 @@
  ],
  "fuentes": [
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
@@ -152,7 +263,16 @@
    "cy"
   ],
   [
+   "whisper_es"
+  ],
+  [
    "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
@@ -182,7 +302,76 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
@@ -211,8 +400,8 @@
  ],
  "ventanas": {
   "total": 35,
-  "modelo": 17,
+  "modelo": 25,
   "reglas": 2,
-  "vacias": 16
+  "vacias": 8
  }
 }

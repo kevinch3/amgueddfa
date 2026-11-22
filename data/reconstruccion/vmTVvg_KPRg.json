@@ -1,22 +1,92 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   30.0,
+   "I echos ne'r sôn, i echos ne'r sôn."
+  ],
+  [
+   34.64,
+   "Recuerdo de allá, recuerdo de allá."
+  ],
+  [
    39.68,
-   "Siento en mis ojos brillan, el azul soledad, en mi tierra natal."
+   "Siento en mis ojos brillar el azul soledad de mi tierra natal. Siento en mis ojos brillar el azul soledad de mi tierra natal."
+  ],
+  [
+   60.96,
+   "Susurra el viento y se va, enloqueciendo el dolor."
+  ],
+  [
+   82.64,
+   "Y esa nostalga un adiós, se bajó la torca, mariposa y corrió."
+  ],
+  [
+   92.96,
+   "Allá lejos la patria andada, a su gran poería, y allá, y allá, por unir en el sol al sur, y por sangre una voz maternal, nombra la vida."
+  ],
+  [
+   152.96,
+   "Concho de la intensidad, de este lejano país, una dulce raíz que nos sabe olvidar."
+  ],
+  [
+   179.84,
+   "Vende a la pluma y el mar, la lejanía es un adiós, y se me da por pensar que el recuerdo de allá se me ha vuelto canción."
+  ],
+  [
+   200.96,
+   "Y se me va por pensar que el recuerdo de allá se me ha vuelto una canción."
+  ],
+  [
+   211.36,
+   "Allá lejos la patriandad, a su largo el día, se va allá, tiempo allá, por la niña, la historia del sur, y por mi sangre, una voz maternal."
+  ],
+  [
+   238.48,
+   "¡Nombra Argentina!"
   ]
  ],
  "fuentes": [
   [
    "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {
   "total": 5,
-  "modelo": 1,
+  "modelo": 5,
   "reglas": 0,
-  "vacias": 4
+  "vacias": 0
  }
 }

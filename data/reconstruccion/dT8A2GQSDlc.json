@@ -8,6 +8,10 @@
    "Beth benedictus fructus erbyn stori Iesu, Iesu, Iesu."
   ],
   [
+   184.32,
+   "Gracias."
+  ],
+  [
    261.12,
    "Baned, baned, innau dermwch, baned, baned, innau dermwch."
   ],
@@ -21,6 +25,9 @@
    "cy"
   ],
   [
+   "whisper_es"
+  ],
+  [
    "cy"
   ],
   [
@@ -29,8 +36,8 @@
  ],
  "ventanas": {
   "total": 6,
-  "modelo": 2,
+  "modelo": 4,
   "reglas": 0,
-  "vacias": 4
+  "vacias": 2
  }
 }

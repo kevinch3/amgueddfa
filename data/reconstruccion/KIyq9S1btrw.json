@@ -1,16 +1,16 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
    50.0,
-   "Dros y dref i'r drws ar ôl, chwedlon bod hi'n byd."
+   "Dios, el querido Señor, fue de amor por ti."
   ]
  ],
  "fuentes": [
   [
-   "cy"
+   "whisper_es"
   ]
  ],
  "ventanas": {

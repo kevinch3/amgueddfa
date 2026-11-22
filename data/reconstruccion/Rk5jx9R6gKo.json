@@ -8,32 +8,8 @@
    "Dyna'r strwythnos, dyna'r agor. Dyna'r strwythnos, dyna'r sgwîn. Dyna'r strwythnos, dyna'r angen byd. Dyna'r strwythnos, dyna'r enbyd byd."
   ],
   [
-   327.48,
-   "I spent my days in longing for the other side, for you here on me. I tell you all the ways I don't know who I am to."
-  ],
-  [
-   413.48,
-   "My heart is lonely, for you are sunny, for you there are many."
-  ],
-  [
-   442.48,
-   "Why am I not listening? I have all the money, money that I need. I spent my days having no fear."
-  ],
-  [
-   461.48,
-   "Am blod o'r gwaed i mi row, I'll tell you what you need, I'm on my way to you."
-  ],
-  [
-   480.48,
-   "I can't believe it, we've come so close to it, that you tell me you love me."
-  ],
-  [
-   490.48,
-   "Oh, oh, oh, oh, who knows, I can't pretend it, we've known each other ever since, I've got every one more chance to prove it."
-  ],
-  [
-   506.48,
-   "My life you make, you make. You know I'm yours for today. I'm very surrendered, but not surrendered to you by the end."
+   785.48,
+   "¡Venimos a nuestro rey! ¡Aquí es!"
   ],
   [
    836.48,
@@ -49,7 +25,7 @@
   ],
   [
    1070.48,
-   "Cewch eich gore'r lliw na fydd neb ar salwad e ore'r cŵl."
+   "Cewch eich gore'r lliw na fydd neb ar salwad e ore'r salwad."
   ],
   [
    1088.48,
@@ -82,6 +58,14 @@
   [
    1584.48,
    "Ti'n siomedig o gadw dŵr, cae'r noce sy'n ffraeo, sai'n siomedig o dŵr ychaw, iau di'r trowsus yn ffraeo."
+  ],
+  [
+   1607.48,
+   "Si el mundo fuera de caramelo, nuestros pies tendrían lenguas una puta de los dedos."
+  ],
+  [
+   1817.48,
+   "¡Gracias!"
   ]
  ],
  "fuentes": [
@@ -89,7 +73,7 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
    "cy"
@@ -128,28 +112,16 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
+   "whisper_es"
   ]
  ],
  "ventanas": {
   "total": 31,
-  "modelo": 15,
+  "modelo": 10,
   "reglas": 0,
-  "vacias": 16
+  "vacias": 21
  }
 }

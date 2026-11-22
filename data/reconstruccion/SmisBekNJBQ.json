@@ -8,6 +8,10 @@
    "Wel, dyma ni yn gyfathre cant pedwar deg naw o flynyddoedd ar ôl y dim otsa gyda'r Porth Madryn. Ond, je, be fysa di'n digwydd os na fysa'r ddim otsa wedi mynd i Borth Madryn, a wedi mynd i wleidyddiaeth sy'n lle, er enghraifft, Jamaica."
   ],
   [
+   60.0,
+   "no hubiesen desembarcado en Puerto Madryn y lo hubiesen hecho en las costas de Camaitra."
+  ],
+  [
    120.0,
    "Ie, Jamaica."
   ],
@@ -30,6 +34,14 @@
   [
    258.38,
    "Yma yn y bont, yna'r tŷ yn y bont, yma yn y bont, yna'r tŷ yn y bont."
+  ],
+  [
+   378.38,
+   "que hayan llegado a tomar el té, la campanita, la madre. Estamos felices, ¿verdad? ¡Habéis!"
+  ],
+  [
+   528.38,
+   "Muchas gracias."
   ]
  ],
  "fuentes": [
@@ -37,7 +49,7 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
    "cy"
@@ -53,12 +65,21 @@
   ],
   [
    "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {
   "total": 9,
-  "modelo": 6,
+  "modelo": 8,
   "reglas": 0,
-  "vacias": 3
+  "vacias": 1
  }
 }

@@ -13,11 +13,11 @@
   ],
   [
    20.0,
-   "Rwy'n un, rwy'n cyfri'r blodau gan dweud un, dau, tri o hyd. Rwy'n llall, rwy'n cyfri'r adar sy'n uno, dos, tres uwch y byd. Rwy'n agor un ag weiddi helo na sut wyt ti? O'r llall rwy'n mentro holi denais algwth para mi? At y naill fe ddaw mis amigos i sonrisas yn chwerthin iach. At y llall."
+   "Ruin ruin quebrir blota y gandueit, in dai tri ojit. Ruin quebrir atar sin uno, dos, tres y ujepit. Ruin agor in agueidi, helo, nacito y ti. Ruin mentro joli, ¿tenés algo para mí? Atenayl vedau mis amigos y sonrisas enjuerzi niag. a telar"
   ],
   [
    50.0,
-   "Daw'r ffrindiau doniol gan griw o ffrindiau bach. A rhwng y ddau rwy'n gwybod bo' ti'n cyfoethog iawn. Mae gen i ddau o bob peth. Mae calon ni yn llawn."
+   "Daw'r ffrindiau doniol gan criw o ffrindiau bach. A rhwng y ddau rwy'n gwybod bo' ti'n cyfoethog iawn. Mae gen i ddau o bob peth. Mae calon ni yn llawn."
   ],
   [
    67.0,
@@ -37,11 +37,11 @@
   ],
   [
    140.24,
-   "Yn fy mhen, mae dwy ffenest i weld y byd yn well. Drwy naill, rwy'n gweld montanias, drwy'r llall, hymorwedd pell."
+   "Yn fy mhen, mae dwy ffenest i weld y byd yn well. Drwy'r naill, rwy'n gweld montanias, drwy'r llall, hymorwedd pell."
   ],
   [
    157.24,
-   "Drwy un rwy'n cyfri blodau gan dweud un, dau, tri o hyd. Drwy'r llall rwy'n cyfri'r adar sy'n un, dau, tri uwch y byd. Rwy'n agor un a gweiddi, helo na sut wyt ti? O'r llall rwy'n medru holi dyne sylwad para mi. A dynaill fyddawn ni'n amigos i sonrisau ein chwerthiniau."
+   "Trúin, rúin quebrí blotá y candúeit, índáitri ojít. Trúin lláll, rúin quebrí rátar, sin uno, dos, tres, íu geít. Rúin acor ín agüeidí, hílona, síruítí. Or lláll, rúin mentro holí, ¿tenés algo para mí? Atenaill vedau mis amigos y sonrisas enjuercin ya"
   ],
   [
    187.24,
@@ -68,7 +68,7 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
    "cy"
@@ -89,7 +89,7 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
    "cy"
@@ -106,8 +106,8 @@
  ],
  "ventanas": {
   "total": 5,
-  "modelo": 5,
-  "reglas": 0,
+  "modelo": 4,
+  "reglas": 1,
   "vacias": 0
  }
 }

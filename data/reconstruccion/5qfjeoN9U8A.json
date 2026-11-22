@@ -8,8 +8,8 @@
    "Cwm Bair iau."
   ],
   [
-   202.64,
-   "Cwm Bair iau."
+   198.64,
+   "Cwm Cwm."
   ],
   [
    208.64,
@@ -20,8 +20,8 @@
    "'Sa'm hwnt be' i lawr, Cwm Bair Iar, O lawr, Cwm Bair Iar."
   ],
   [
-   241.64,
-   "Sa'm hwn sy'n i lawr, cwm yr iâr. O'r yn o'dd hwn, cwm yr iâr."
+   271.64,
+   "Muchas gracias, este fue el coro Album 1 y ahora le toca el coro Album 2"
   ],
   [
    346.64,
@@ -41,11 +41,19 @@
   ],
   [
    398.64,
-   "Sa'm hwnswn heina o'r gwmpa ia, sa'm hwnswn heina o'r gwmpa ia, o'r lwp o'r gwmpa ia."
+   "'Sa'm hwnswn heina o'r gwmpa ia, sa'm hwnswn heina o'r gwmpa ia, o'r lwp o'r gwmpa ia."
   ],
   [
    425.62,
-   "Samhwn si ni lawr, cwm bai iawn. Samhwn si ni lawr, cwm bai iawn. Samhwn si ni lawr, cwm bai iawn. O lawr, cwm bai lawn."
+   "Samhwn si ni lawr, cwm bai iawn."
+  ],
+  [
+   509.62,
+   "Recibimos al grupo Damos el Congreso Preto. Un gran aplauso."
+  ],
+  [
+   1458.4,
+   "Gracias."
   ]
  ],
  "fuentes": [
@@ -62,7 +70,7 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
    "cy"
@@ -81,12 +89,18 @@
   ],
   [
    "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {
-  "total": 25,
-  "modelo": 7,
+  "total": 26,
+  "modelo": 10,
   "reglas": 0,
-  "vacias": 18
+  "vacias": 16
  }
 }

@@ -6,17 +6,24 @@
   [
    296.0,
    "Ni'n dechrau dau ar y pryd, dydd a dau yn y blaen, a chwe dydd mewn llw."
+  ],
+  [
+   435.0,
+   "Pronto de ser revelado, el fuego es mágico Junto a él descubrirá el canto de risa de su cuerpo Y entonces, y entonces"
   ]
  ],
  "fuentes": [
   [
    "cy"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {
   "total": 8,
-  "modelo": 2,
+  "modelo": 3,
   "reglas": 0,
-  "vacias": 6
+  "vacias": 5
  }
 }

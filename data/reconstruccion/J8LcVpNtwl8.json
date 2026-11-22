@@ -1,11 +1,11 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
    30.0,
-   "Bajo por una huella, de muy arriba."
+   "Bajo por una huella de muy arriba"
   ],
   [
    46.8,
@@ -13,38 +13,66 @@
   ],
   [
    58.0,
-   "Vengo de las estrellas tra yw'r alegria."
+   "Vengo de las estrellas, traigo alegría."
   ],
   [
    69.0,
-   "De ddonde vengo nadie, viene viniendo."
+   "De donde vengo nadie viene viniendo"
   ],
   [
    79.0,
-   "Rastro diwmo yn las noce de las estrellas del mar. Rastro diwmo yn las noce de las estrellas del mar."
+   "Rastro de humo en la noche De las estrellas del amor Rastro de humo en la noche De las estrellas del amor"
+  ],
+  [
+   113.2,
+   "Flor de camino largo No te marchites Que lo lejano no existe"
+  ],
+  [
+   194.2,
+   "Porque estaré en la ley"
+  ],
+  [
+   224.2,
+   "Que siente que va y se muere"
+  ],
+  [
+   237.2,
+   "Vuelvo a la altura, llorando."
   ]
  ],
  "fuentes": [
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {
   "total": 5,
-  "modelo": 2,
+  "modelo": 5,
   "reglas": 0,
-  "vacias": 3
+  "vacias": 0
  }
 }

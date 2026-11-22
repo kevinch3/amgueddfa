@@ -13,19 +13,23 @@
   ],
   [
    89.0,
-   "Ti, gorre, gorre, no ta swstis, jys jêgo, sopla, sopla, komo un ffwyshe."
+   "Ti, ti, corre, corre, no te asustes, ya llegó, sopla, sopla como un fuelle."
   ],
   [
    100.0,
-   "“Es el viento? ” “Sí, señor. ” “Dame a vueltas, como un olivo. ” “Todo huelo al rededor, viento loco. ” “Quien lo a visto? ” “Nadie, nadie, no.”"
+   "Es el viento, sí señor, da las vueltas con un molillo, todo vuela alrededor, viento loco, ¿quién lo ha visto? Nadie, nadie."
+  ],
+  [
+   118.0,
+   "No, señor."
   ],
   [
    138.0,
-   "Yn fiento, tim, tim, gore, gore, notas urtes, ya llego, sopla, sopla, como un ffueshe."
+   "El viento, ti, ti, corre, corre, no te asustes, ya llegó, sopla, sopla como un fuelle."
   ],
   [
    153.0,
-   "'Es e'n fiento? — Si, seignor. — Na mabwyt ac un molino, — To'dd o'n wela'n lwfo, — Fiento loco, — Qui n'w a misto? — Nadie, nadie, — No, seignor."
+   "Es el viento, sí señor, da más vueltas que un molino, todo vuela en el mundo. Viento loco, ¿quién lo ha visto? Nadie, nadie, no señor."
   ],
   [
    183.0,
@@ -44,16 +48,19 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
@@ -65,7 +72,7 @@
  "ventanas": {
   "total": 16,
   "modelo": 4,
-  "reglas": 1,
-  "vacias": 11
+  "reglas": 0,
+  "vacias": 12
  }
 }

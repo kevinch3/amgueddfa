@@ -1,12 +1,8 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
-  [
-   59.9,
-   "Er gwaetha mawr a phoblogaidd, dwi'n ymladd yn llongyfarch i chi."
-  ],
   [
    76.1,
    "Gweddïw, Arglwydd Dduw ein tad Nebol, diolch i ti am y cyfle i ni gwrdd yma heddiw. Arglwydd, ti sydd wedi bod yn noddwar i ni ar hyd y flynyddoedd."
@@ -21,23 +17,31 @@
   ],
   [
    149.9,
-   "Te ddawmos gracias por poder reunirnos hoy aquí, Señor, Tú que has sido nuestro refugio a lo largo de los años, Dios de nuestros padres, Dios de nuestros abuelos, invocamos Tu Santa Presencia hoy, al iniciar esta sesiwn del Eisteddfod del Chubut 2022."
+   "Damos gracias por poder reunirnos hoy aquí Señor, Tú que has sido nuestro refugio a lo largo de los años Dios de nuestros padres, Dios de nuestros abuelos Invocamos Tu santa presencia hoy Al iniciar esta sesión de la Eisteddfod del Chubut 2022"
   ],
   [
    169.9,
-   "Te ddawmos gracias por los dones y los talentos, te ddawmos gracias por el arte, la musica y la palabra. Te agrandecemos, Señor, por los clasos del amor, que en familia y alista nos acercan a los que estamos aquí y a los que nos acompañan desde lejos. Que todos y cada uno podamos disfrutar de este tiempo bendecido, que nos covilles bajo tus alas y nos consideras tu paz. Guárdalos en tu amor."
+   "Dios, te damos gracias por los dones y los talentos, te damos gracias por el arte, la música y la palabra. Te agradecemos, Señor, por los lazos del amor que en familia y amistad nos acercan a los que estamos aquí y a los que nos acompañan desde lejos. Que todos y cada uno podamos disfrutar de este tiempo bendecido, que nos cobijes bajo tus alas y nos concedas tu paz guárdanos en tu amor"
+  ],
+  [
+   199.9,
+   "Por Jesús, nuestro Señor y Salvador. Amén."
   ],
   [
    313.9,
-   "I dos lifres y mwng o resbwnden I am wherevod enidios am dŵr."
+   "y los libres de punta responden para que la puerta de Dios nos salva."
   ],
   [
    326.9,
-   "I am wherevod enidios am dŵr. I dos lifres y mwng o resbwnden I am wherevod enidios am dŵr."
+   "Alcantor en el argentino salió y los libres del mundo responden."
   ],
   [
-   403.9,
-   "iawn i bawb. O, bydd e'n bosib mewn eoli."
+   433.9,
+   "ahora a Noelia Sánchez Jenkins a conducir este momento en el que vamos a recordar a quienes nos han dejado este último tiempo."
+  ],
+  [
+   449.86,
+   "También vamos a invitar a Andrés Evans, que va a entonar el himno MOL BAO LUMITI, y a Kevin Handley, que va a ser el acompañante del piano."
   ],
   [
    461.04,
@@ -53,7 +57,7 @@
   ],
   [
    544.04,
-   "am wyt ti'n brifo pan dawodd cofion i'w meddwl, llawer o luniau yn treffinio mewn munud tebygol, sŵn lleithiau rhai i'w ddefnydd- sŵn lleithiau rhai i'w ddefnyddio, caru yn dod at ein clustiau i sibrwd y ffairwen, daw distawrwyd yn erbyn i'r rhai sy'n teimlo'n boen, awn ni ddaeth rywun, be wyt ti, yn cofio am yr hudydd wnaethon ni, i"
+   "am wyt ti'n brifo pan dawodd cofion i'w meddwl, llawer o luniau yn treffinio mewn munud tebygol, sŵn lleithiau rhai i'w ddefnydd- sŵn lleithiau rhai i'w ddefnyddio, caru yn dod at ein clustiau i sibrwd y ffairwen, daw distawrwyd yn erbyn i'r rhai sy'n teimlo'n poen, awn ni ddaeth rywun, be wyt ti, yn cofio am yr hudydd wnaethon ni, i"
   ],
   [
    574.04,
@@ -69,19 +73,31 @@
   ],
   [
    608.04,
-   "No me pregwnten quien soy, ni si mi habian conocido, los sueños que habia querido creseran a penastoy."
+   "No me pregunten quién soy, que si me habían conocido. Los sueños que había querido crecerán apenas..."
   ],
   [
    617.04,
-   "Ya no vivo, pero voy a lo que andaba soñando, y otros que siguen andando harán nacer otras rosas. En el nombre de esas cosas, todos me estarán nombrando. Calma, quietú. El silencio golpea los pensamientos, todos comienzan a recordar a ese alguien especial mientras las agujas giran lentamente."
+   "Ya no vivo, pero voy en lo que andaba soñando y otros que siguen andando harán nacer otras rosas. En el nombre de esas cosas, todos me estarán nombrando. Calma, quietud. El silencio golpea los pensamientos. Todos comienzan a recordar a ese alguien especial mientras las agujas giran lentamente."
   ],
   [
    645.04,
-   "Ma' hynna'n traddodiad aguniad a'n ddrwg i bawb o'r bobl sy'n yma heddiw, ond nid yw'r teimlad y mae'n ei chael yn ystyr y traddodiadau silencius. Ni'n ysgrifennu, ysgrifennu pan y'n ni'n cefnogi, ysgrifennu pan y'n ni'n ffili, ysgrifennu pan y'n ni'n trist, ysgrifennu i atgyfnerthu'r ffrindiau sy'n atgyfnerthu'n ystod y viadeg yma yng Nghaerfyrddin, ysgrifennu achos mae'r silenci yn ystyr pan fydd ysgrifennu yn ystod yr anrhegori."
+   "una tradición acuñada y cercana a cada una de las personas que estamos hoy aquí. Pero lo valés, ese sentir que nos interpela, no es de tradiciones silenciosas. Nosotros cantamos, cantamos cuando celebramos, cantamos cuando estamos felices, cantamos cuando estamos tristes. Cantamos para despedir a los amigos que se nos anticipan en este viaje que es la vida. Cantamos porque el silencio lastima cuando los recuerdos se hacen presentes a la memoria."
   ],
   [
    675.04,
-   "Esa'r recordos pasan en un minuto, de ser imagenes inertes a ser peliculas, el sonido de las voces de los que queremos viene a nuestros oidos, a susurrarnos un adios. El silencio es el enemigo de quien siente el dolor."
+   "Esos recuerdos pasan en un minuto de ser imágenes inertes a ser películas El sonido de las voces de los que queremos viene a nuestros oídos a susurrarnos un adiós El silencio es enemigo de quien siente dolor"
+  ],
+  [
+   693.04,
+   "Celebremos las vidas de aquellos que nos dejaron recordando todo lo que hicieron y construyeron, porque aunque no están, sus obras los siguen, y en ellas y en los momentos compartidos vivirán por sí."
+  ],
+  [
+   707.04,
+   "Canta, mamía, canta Permitámonos recordar Mientras nuestras voces golpean las paredes En unión y en respeto De las memorias de los que ya no habíamos"
+  ],
+  [
+   717.04,
+   "están. Tan grandes son ellos, tan grandes los recuerdos. Canta que tu voz es el instrumento para disipar del alma el dolor."
   ],
   [
    775.04,
@@ -112,8 +128,40 @@
    "Yn gysgu'r nos a chodi'r fore."
   ],
   [
+   1025.74,
+   "¡Gracias!"
+  ],
+  [
+   1104.74,
+   "Nada quebrada, si lleva una plena, la pita del río."
+  ],
+  [
    1120.1,
-   "Longus mi, dos ai, no'n i'n gwybod be dwi'n gwbod, dwi'n gwybod, dwi'n gwybod, ond dwi'm yn gwybod lle dwi'n mynd."
+   "Lo mismo soy, no sé dónde vengo, no sé, no sé, ni pa' dónde voy."
+  ],
+  [
+   1137.1,
+   "Traigo de los falles un triste cantar"
+  ],
+  [
+   1154.1,
+   "Luz de la tierra y el río, que me canta y que pasa, poder me trepar."
+  ],
+  [
+   1165.1,
+   "Un río que pasa, sonando de mí."
+  ],
+  [
+   1176.14,
+   "Lo vemos trayendo, prendido en el parche, reunido a morir."
+  ],
+  [
+   1187.22,
+   "La huida del río, camino de mirar, de la quebrada, si llevo la reñar."
+  ],
+  [
+   1209.22,
+   "a cuida del río, lo vestido no soy, no sé de dónde vengo, no sé, no sé, ni para dónde voy."
   ],
   [
    1269.02,
@@ -141,31 +189,59 @@
   ],
   [
    1460.02,
-   "Tocan arno y man, ffwrdd i ffwrdd, lo siarto'n bo' ni'n estio'n ni'n solo diman curisimo, y luego nos reduce de a poco a casi naddo."
+   "y toca al arco y mal. Fuere quien fuere, lo cierto es que nos estira en un solo demand purísimo y luego nos reduce de a poco a casi nada."
   ],
   [
    1473.42,
-   "Y claro, nos arranca confesinas, quejas que son glamores, vertemas de alegria,"
-  ],
-  [
-   1482.62,
-   "Realizas que huelven como los hijos prodigos, y sobre todo como los estribillos, y jode confesar, pero lo cierto es que ya pocos quieren ser tango, la natural tendencia es ser rumba, o mambo, o cha-cha-cha, o bolero, a veces, casino, y en último caso, balsecito o millonga, paso a dormir, jamas."
+   "Y claro, nos arranca confesinas, quejas que son glamores. Ven, te mandan envidia."
   ],
   [
    1512.62,
-   "Pero cuando dios o chuchuco, quien sea, toma entre sus manos una vida abandonion y sugiere que llore o regocije, sentimos el tremendo de coro de sertango, nos dejamos cantar, ni se acuerda que allá espera el estuche."
+   "pero cuando Dios o Pichuco o quien sea toma entre sus manos la vida abandonión y le sugiere que llore o regocije sentimos el tremendo decoro de ser tambo nos dejamos cantar ni se acuerda que allá espera el estuche"
+  ],
+  [
+   1572.62,
+   "El canto de nuestra tierra, guaguita, la más hermosa que hay."
   ],
   [
    1596.62,
-   "Para que puedan tus manos chiquitas acompañar al cantar."
+   "Para que puedan tus manos chiquitas acompañarlas al cantar, para que puedan tus manos ruidas acompañarlas al cantar."
+  ],
+  [
+   1620.12,
+   "Quise hacerte esta sonrita movilidad, pa' que aprendas a cantar. Quise ser humilde y muy pobre, bendita, nunca llegue a verlo, ¿sabes?"
+  ],
+  [
+   1643.12,
+   "Porque son pobres que humildes no huirán Los que amasaron tu pan"
   ],
   [
    1673.12,
-   "Quise hacerte esta sandita, para que aprendas a soñar, con esta patria grandota, guaguita, con que soña tu papá."
+   "Quise hacerte esta sandita Pa' que aprendas a soñar Con esta patria grandota guauita Con que sueña tu papá"
+  ],
+  [
+   1700.12,
+   "Patria sin pobre y triste jueguita que algún día le dará."
+  ],
+  [
+   1712.12,
+   "Hay que crecer para arriba, y otro que engancha un alma."
   ],
   [
    1724.12,
-   "Fel oedden ni'n bresesio, o'n i'n mynd i'r bwyda, i beth oedd yn bwysig, achos os ti'n mynd i'r bwyda, ti byth yn mynd i barod."
+   "Pero hay que irse hacia adentro, guaguita, y es lo que debe importar. Pues si lo de adentro es grande, guaguita, siempre tendrás para dar."
+  ],
+  [
+   1746.52,
+   "Y si has pedido esta vida, ¿pa' que aprendas a cantar?"
+  ],
+  [
+   1757.52,
+   "Espero mi lengua y pobre petista, nunca te voy a renunciar."
+  ],
+  [
+   1768.52,
+   "Pues si lo de adentro es grande o aguita Siempre tendrás para"
   ]
  ],
  "fuentes": [
@@ -179,7 +255,25 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
@@ -203,7 +297,25 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
@@ -227,7 +339,31 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
@@ -248,55 +384,52 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
-  ],
-  [
-   "cy"
+   "whisper_es"
   ]
  ],
  "ventanas": {
   "total": 31,
-  "modelo": 25,
-  "reglas": 0,
-  "vacias": 6
+  "modelo": 27,
+  "reglas": 1,
+  "vacias": 3
  }
 }

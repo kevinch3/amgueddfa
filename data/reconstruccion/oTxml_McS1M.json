@@ -1,50 +1,78 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
    30.0,
-   "Porque a l'umbra ni nad ymos Le canto porque ella sabe De mi ladro caminar Le canto porque ella sabe De mi ladro caminar."
+   "Porque alumbra y nada más Le canto porque ya sabé De mi lado caminar Le canto porque ya sabé De mi lado caminar"
   ],
   [
    60.0,
-   "Mae'r llunia' a'r llunia' yn mynd i'r bar, yn brillio'n fwy ysbrydol. Yn y nofelau deimladol, mae'r nofelau nofelol yn mynd i'r bar."
+   "La luna que alumbra mi paz, brilla con más esplendor, y en roquecitas tempranas, oyendo vida, las alumbra mejor."
   ],
   [
    84.0,
-   "Ie'n nocces su' tas de mladdat Mwjedd o' fi ddalas a'r wmbrâd wego."
+   "Y en nochecitas templadas, huyendo mi alas, alumbra mi coro."
   ],
   [
    94.0,
-   "Fer dydd Iwan yw'n serasol, ne' Sgiendes ag i fi ddarlitho'n holl, na'n ddare. Ma' gwa'n bod o'n sarsar, a'n dwrnaf dda, na'n ddare, na'n ddare."
+   "Perdido hay más de razones ¿Quién sabe el viento de cuando cantaré? Mas cuando salga la luna Cantaré, cantaré Mas cuando salga la luna Cantaré"
+  ],
+  [
+   154.0,
+   "Yo he visto a la noche más buena, pensando que está en mi actividad."
+  ],
+  [
+   166.0,
+   "Si en algo no parezca Duna de la soledad"
   ],
   [
    177.0,
-   "Joio'n andando, joio'n cantando, lle oedd fy ngwmto'n fawr iawn iawn Joio'n andando, joio'n cantando, lle oedd fy ngwmto'n fawr iawn iawn."
+   "Joio'n andando, joio'n cantando, lle oedd fy ngwmto'n fawr iawn iawn"
+  ],
+  [
+   200.0,
+   "Me rindo en la serra sólidos Quien son duro y pecan se naré Mas cuando salga la luna Caetaré, caetaré"
+  ],
+  [
+   252.88,
+   "luna tucumana y luna santiagreña."
   ]
  ],
  "fuentes": [
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
-  ],
-  [
-   "cy"
+   "whisper_es"
   ]
  ],
  "ventanas": {
   "total": 5,
-  "modelo": 4,
+  "modelo": 5,
   "reglas": 0,
-  "vacias": 1
+  "vacias": 0
  }
 }

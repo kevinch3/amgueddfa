@@ -14,37 +14,9 @@
   [
    164.48,
    "Tefyr at ei drad, ofer yn ei gwaelhaf, wrth ffwrdd ag yng nghenyn, ar geir popeth bach, mae sydd gyda'i gwestiwn yn oes."
-  ],
-  [
-   376.48,
-   "What a wonderful world."
-  ],
-  [
-   386.48,
-   "As the stars so blue and blue so white, their brightnesses dim, their light's like the night, and I dream to myself"
-  ],
-  [
-   433.72,
-   "Light is red, shaking hands, saying how do you do? They're really saying, I love you."
-  ],
-  [
-   450.72,
-   "Light is dead, it is gone, our roads have grown, they'll never storm, they'll never know, and I think to myself, what a wonderful world."
   ]
  ],
  "fuentes": [
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
   [
    "cy"
   ],
@@ -57,8 +29,8 @@
  ],
  "ventanas": {
   "total": 13,
-  "modelo": 5,
+  "modelo": 3,
   "reglas": 0,
-  "vacias": 8
+  "vacias": 10
  }
 }

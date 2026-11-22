@@ -1,6 +1,6 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
@@ -9,31 +9,55 @@
   ],
   [
    706.64,
-   "Diolch yn fawr iawn i bawb sy'n ymestyn ar y cwestiwn, ac wrth gwrs, diolch yn fawr iawn i bawb sy'n ymestyn ar y cwestiwn."
+   "¡Cuánta energía!"
   ],
   [
    736.64,
    "Rio, rio, rio, rio, ynddo nïo ar gofn y ffordd."
   ],
   [
-   750.64,
-   "Mae'n rhan o'r ffordd mwyaf debyg i'r ffordd mae'n cael ei ddefnyddio, ond mae'n rhan o'r ffordd fwyaf debyg i'r ffordd mae'n cael ei ddefnyddio."
+   780.64,
+   "Como grande no ha de estar, si no piensa el mando fin."
   ],
   [
-   780.64,
-   "Gwm o gwrande mwanestar, diom pentar grando ffïo."
+   791.64,
+   "Si lo ves a hallar un tiempo, como que andemos a estar."
+  ],
+  [
+   801.64,
+   "Un río, un río, un río, un río, me vuelve en el amor mío, me vuelve en el amor mío, que me canto de esperar."
+  ],
+  [
+   831.64,
+   "Que triste susurra viento, parece ausencia a su lado. Que triste susurra viento, parece ausencia a su lado."
   ],
   [
    852.64,
-   "Ti'n esgwyd a minnau'n erbyn, o, cwmpo trist yn y wlad y tân."
+   "Si él escucha, mira, vengo, como triste, no alentar. Si él escucha, mira, te vengo, como triste, no alentar."
+  ],
+  [
+   913.64,
+   "En segundo término escuchamos Chacarera del Barro, segunda participante Antonella Piñero."
   ],
   [
    962.64,
-   "Cyflawniwch y rîn i'r garcharwch gweinidog, y drefnion a'r chwarel."
+   "Está muy lejos del cielo y en casa nos dueña dentro El sueño de las paredes"
   ],
   [
    976.64,
-   "Cyflawniwch y rîn i'r garcharwch gweinidog, y drefnion a'r chwarel."
+   "La vida de los míos, donde es que duerme el agua no es"
+  ],
+  [
+   1030.2,
+   "Cuando están sin maestras, no vienen a tener tan vencido, aunque así se encontraban como es mi vida."
+  ],
+  [
+   1108.2,
+   "Dejo de leones de las peras, sentados en la arena lavando ropa en el río. Pueblo, duro de nada más, una estrella en la cabeza, viene cantando y se va."
+  ],
+  [
+   1129.2,
+   "Fue el amor duro en el amor, con la tela en la cabeza que me encanta por ser más."
   ],
   [
    1149.2,
@@ -41,15 +65,35 @@
   ],
   [
    1160.2,
-   "Na ma' mam yn debyg i'r ysbryd anenwm a destun yr ymchwil graffig."
+   "Y a la espera de los mates interrumpen su traje"
+  ],
+  [
+   1170.2,
+   "La bandera, quiero cantarte con mi cara, te he entregado mi amor a mi corazón. Déjame llevar tu ropa a la rio, chico, a la samba, a mi amor, a mi amor."
+  ],
+  [
+   1230.2,
+   "al interior mientras los cerrados le llaman cruzando el ángel."
   ],
   [
    1249.4,
-   "Gadewch a'r ddenyn i ddallt eich bod chi'n ffordd dda, fenderog, gobeithio dy fod di'n dda, gwylia dy hwyl."
+   "La roca de Belénita se va por los senderos con peñas como en la oscuridad."
+  ],
+  [
+   1259.4,
+   "Nada regresa, se va por los tenderos cogeños, no se hará."
+  ],
+  [
+   1269.4,
+   "La bandera quiere cantarte con mi vida, el regalio, el ar y el corazón."
   ],
   [
    1288.4,
-   "Deyrnaf yw neb ar y cwrw, mae'r eiliad yn digwydd, mae'r adnabodd ond wedi bod yn ystod."
+   "Déjame llevar tu ropa de hoy, chico, para el alma donde vivimos el sol."
+  ],
+  [
+   1318.4,
+   "o música folklórica argentina, Karina Torres con Porcelina."
   ]
  ],
  "fuentes": [
@@ -57,43 +101,76 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {
   "total": 25,
-  "modelo": 12,
+  "modelo": 13,
   "reglas": 0,
-  "vacias": 13
+  "vacias": 12
  }
 }

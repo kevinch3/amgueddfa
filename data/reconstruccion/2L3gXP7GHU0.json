@@ -42,6 +42,14 @@
   [
    672.34,
    "Gyda'n gilydd y safon wir, gyda'n gilydd y safon wir, dros ein iau, dros ein gwlad, dros ein pobol, dros ein plant, gyda'n gilydd y safon wir."
+  ],
+  [
+   1201.96,
+   "y el canto que ha hecho en el Brasil, y nadie prometida."
+  ],
+  [
+   1213.96,
+   "¡Gracias!"
   ]
  ],
  "fuentes": [
@@ -74,12 +82,18 @@
   ],
   [
    "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {
   "total": 23,
-  "modelo": 5,
+  "modelo": 6,
   "reglas": 0,
-  "vacias": 18
+  "vacias": 17
  }
 }

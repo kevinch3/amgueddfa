@@ -4,10 +4,6 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
-   30.0,
-   "Gan nos Anna, gan nos Anna, gan nos Anna dodd hi'n beidio."
-  ],
-  [
    40.0,
    "Gan nos Anna, gan nos Anna, gan nos Anna aeth o le."
   ],
@@ -25,9 +21,6 @@
   ]
  ],
  "fuentes": [
-  [
-   "cy"
-  ],
   [
    "cy"
   ],

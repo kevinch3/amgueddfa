@@ -8,6 +8,10 @@
    "Flores"
   ],
   [
+   86.0,
+   "Que en las luces, las frutas, puestas, haya un estallido, un estallido blanco, haya un estallido, un estallido blanco."
+  ],
+  [
    127.0,
    "Flores, Flores mewn basiant, Rhydd yn ôl."
   ],
@@ -19,6 +23,9 @@
  "fuentes": [
   [
    "cy"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"

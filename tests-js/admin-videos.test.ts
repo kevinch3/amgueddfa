@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { loadApprovedVideoText, reanchor, setVideoTextChanges, withdrawContribution } from '../src/lib/admin';
 import {
-  avisoTexto, canAddNew, cardNotes, groupByVideo, reanchorOptions, reanchorPreview, reanchoredCambios, retirarTodaLabel,
+  avisoTexto, bloqueada, canAddNew, cardNotes, groupByVideo, reanchorOptions, reanchorPreview, reanchoredCambios, retirarTodaLabel,
   sinAnclarList, withdrawnInFile, type ApprovedVideoText,
 } from '../src/lib/admin-videos';
 import { withLiveCorrections } from '../src/lib/live-video-corrections';
@@ -29,19 +29,21 @@ describe('reanchorOptions', () => {
     fuentes: [['whisper_es'], ['whisper_es'], ['whisper_es'], ['whisper_es', 'colab'], ['letra'], ['cy'], ['whisper_es']],
   })!;
 
-  it('lists the lines within a minute of the time, nearest first, never a lyric line', () => {
+  it('lists the lines within a minute of the time, nearest first, never a lyric line, each with its language', () => {
     expect(reanchorOptions(tr, 100)).toEqual([
-      { i: 3, t: 100, text: 'la misma' },
-      { i: 2, t: 50, text: 'cincuenta' },
-      { i: 5, t: 159, text: 'casi un minuto' },
-      { i: 1, t: 40, text: 'justo un minuto' },
+      { i: 3, t: 100, text: 'la misma', idioma: 'es' },
+      { i: 2, t: 50, text: 'cincuenta', idioma: 'es' },
+      { i: 5, t: 159, text: 'casi un minuto', idioma: 'cy' }, // the Welsh model heard it
+      { i: 1, t: 40, text: 'justo un minuto', idioma: 'es' },
     ]);
   });
 
   it('works on a file without per-line sources, and is empty far from every line', () => {
     const plain = asTranscript({ src: 'youtube', lang: 'es', seg: [[5, 'hola'], [9, 'chau']] })!;
-    expect(reanchorOptions(plain, 8)).toEqual([{ i: 1, t: 9, text: 'chau' }, { i: 0, t: 5, text: 'hola' }]);
+    expect(reanchorOptions(plain, 8)).toEqual([{ i: 1, t: 9, text: 'chau', idioma: 'es' }, { i: 0, t: 5, text: 'hola', idioma: 'es' }]);
     expect(reanchorOptions(plain, 500)).toEqual([]);
+    // A language a collaborator cannot choose is no language to compare with.
+    expect(reanchorOptions(asTranscript({ src: 'youtube', lang: 'en', seg: [[5, 'hello']] })!, 5)).toEqual([{ i: 0, t: 5, text: 'hello', idioma: null }]);
   });
 });
 
@@ -297,6 +299,68 @@ describe('Re-anclar onto a line a rebuild joined', () => {
   });
 });
 
+describe('Re-anclar refuses a whole-line edit that changes nothing', () => {
+  const item = { index: 0, motivo: 'sin_linea' as const };
+  const refused = (cambios: Cambio[], it: { index: number; motivo: 'sin_linea' | 'idioma_en_linea_unida' }, pick: { t: number; text: string; idioma?: 'es' | 'cy' | null }) => {
+    expect(reanchoredCambios(cambios, it, pick)).toBeNull();
+    const v = reanchorPreview(cambios, it, pick)!;
+    expect(bloqueada(v)).toBe(true);
+    return v;
+  };
+
+  it('words the picked line already reads, whole or as the run of a joined line', () => {
+    expect(refused([{ t: 5, antes: 'hola amigos', texto: 'Hola amigos' }], item, { t: 4, text: 'Dijo Hola amigos y se fue', idioma: 'es' }))
+      .toMatchObject({ antes: 'Dijo Hola amigos y se fue', despues: 'Dijo Hola amigos y se fue', avisos: ['mismo_texto'] });
+    expect(refused([{ t: 5, antes: 'otra kosa', texto: 'otra cosa' }], item, { t: 6, text: 'otra cosa' }).avisos).toEqual(['mismo_texto']);
+    expect(refused([{ t: 5, antes: 'otra kosa', texto: 'otra cosa' }], item, { t: 6, text: ' otra cosa ' }).avisos).toEqual(['mismo_texto']);
+  });
+
+  it('a language the picked line is already in, on a line or on a joined line', () => {
+    expect(refused([{ t: 93, antes: 'croeso i bawb', idioma: 'cy' }], item, { t: 90, text: 'Diolch, croeso i bawb', idioma: 'cy' }))
+      .toMatchObject({ avisos: ['mismo_idioma'], idioma: 'cy' });
+    expect(refused([{ t: 93, antes: 'diolch', idioma: 'cy' }], item, { t: 90, text: 'Diolch yn fawr', idioma: 'cy' }).avisos).toEqual(['mismo_idioma']);
+    expect(refused(eli.payload.cambios, { index: 0, motivo: 'idioma_en_linea_unida' }, { t: 90, text: 'Bienvenidos a todos, croeso i bawb', idioma: 'cy' }))
+      .toMatchObject({ avisos: ['mismo_idioma'], idioma: 'cy' });
+    // Both the same: both said.
+    expect(refused([{ t: 5, antes: 'x', texto: 'Diolch yn fawr', idioma: 'cy' }], item, { t: 6, text: 'Diolch yn fawr', idioma: 'cy' }).avisos)
+      .toEqual(['mismo_texto', 'mismo_idioma']);
+  });
+
+  it('keeps only what does change: the language when the words are the same, the words when the language is', () => {
+    expect(reanchoredCambios([{ t: 5, antes: 'x', texto: 'Diolch yn fawr', idioma: 'cy' }], item, { t: 6, text: 'Diolch yn fawr', idioma: 'es' }))
+      .toEqual([{ t: 6, antes: 'Diolch yn fawr', idioma: 'cy' }]);
+    expect(reanchorPreview([{ t: 5, antes: 'x', texto: 'Diolch yn fawr', idioma: 'cy' }], item, { t: 6, text: 'Diolch yn fawr', idioma: 'es' })!)
+      .toMatchObject({ despues: 'Diolch yn fawr', avisos: ['idioma'], idioma: 'cy' });
+    expect(reanchoredCambios([{ t: 5, antes: 'x', texto: 'Diolch yn fawr', idioma: 'cy' }], item, { t: 6, text: 'Diolch yn faw', idioma: 'cy' }))
+      .toEqual([{ t: 6, antes: 'Diolch yn faw', texto: 'Diolch yn fawr' }]);
+    expect(reanchorPreview([{ t: 5, antes: 'x', texto: 'Diolch yn fawr', idioma: 'cy' }], item, { t: 6, text: 'Diolch yn faw', idioma: 'cy' })!.avisos)
+      .toEqual(['reemplaza']);
+  });
+
+  it('a line whose language is not known takes the language (nothing to compare with); a removal always changes the line', () => {
+    expect(reanchoredCambios([{ t: 93, antes: 'croeso', idioma: 'cy' }], item, { t: 90, text: 'Diolch, croeso' }))
+      .toEqual([{ t: 90, antes: 'Diolch, croeso', idioma: 'cy' }]);
+    expect(reanchoredCambios([{ t: 5, antes: 'x', idioma: 'cy' }], item, { t: 6, text: 'hello', idioma: null }))
+      .toEqual([{ t: 6, antes: 'hello', idioma: 'cy' }]);
+    expect(reanchoredCambios([{ t: 5, antes: 'x', quitar: true, idioma: 'cy' }], item, { t: 6, text: 'Diolch', idioma: 'cy' }))
+      .toEqual([{ t: 6, antes: 'Diolch', quitar: true, idioma: 'cy' }]);
+  });
+
+  it('the other warnings do not refuse the choice', () => {
+    expect(bloqueada(reanchorPreview(dora.payload.cambios, item, { t: 61, text: '¡Muy bien!', idioma: 'es' }))).toBe(false);
+    expect(bloqueada(reanchorPreview([{ t: 5, antes: 'x', quitar: true }], item, { t: 6, text: 'otra cosa', idioma: 'es' }))).toBe(false);
+    expect(bloqueada(null)).toBe(false);
+  });
+
+  it('sends nothing to the database', async () => {
+    const { client, calls } = rpcClient();
+    const r = await reanchor(row('r4', 'V', '12:00', 'Ana', [{ t: 5, antes: 'hola amigos', texto: 'Hola amigos' }]), item,
+      { t: 4, text: 'Dijo Hola amigos y se fue', idioma: 'es' }, client);
+    expect(r).toEqual({ ok: false, key: 'admin.error.valor' });
+    expect(calls).toEqual([]);
+  });
+});
+
 describe('reanchorPreview', () => {
   const item = { index: 0, motivo: 'sin_linea' as const };
   it('shows the picked line before and after, word by word, and says nothing more when only the change\'s words change', () => {
@@ -332,6 +396,8 @@ describe('reanchorPreview', () => {
     expect(avisoTexto('idioma', 'cy')).toBe('Toda la línea pasa a galés.');
     expect(avisoTexto('idioma', 'es')).toBe('Toda la línea pasa a español.');
     expect(avisoTexto('larga')).toBe('La línea quedaría con más de 500 caracteres: elegí otra.');
+    expect(avisoTexto('mismo_texto')).toBe('La línea ya dice eso, así que no cambiaría nada: elegí otra.');
+    expect(avisoTexto('mismo_idioma', 'cy')).toBe('La línea ya está en galés, así que no cambiaría nada: elegí otra.');
   });
 });
 
@@ -379,17 +445,22 @@ describe('cardNotes', () => {
 describe('a language that fell inside a joined line, live (row not in the file yet)', () => {
   it('re-anchored on the joined line, the words stay and the line takes the language', () => {
     const machine = asTranscript({ src: 'reconstruida', lang: 'es', seg: [[90, 'Bienvenidos a todos, croeso i bob'], [99, 'Gracias']],
-      fuentes: [['whisper_es', 'cy'], ['whisper_es']] })!;
+      fuentes: [['whisper_es'], ['whisper_es']] })!;
     const gwen = row('r6', 'V', '17:00', 'Gwen', [{ t: 93, antes: 'croeso i bob', texto: 'croeso i bawb', idioma: 'cy' }]);
     const before = sinAnclarList(machine, [gwen]);
     expect(before.items.map((x) => [x.row, x.motivo, x.baked])).toEqual([['r6', 'idioma_en_linea_unida', false]]);
     const [line] = reanchorOptions(before.live, 93);
-    expect(line).toEqual({ i: 0, t: 90, text: 'Bienvenidos a todos, croeso i bawb' });
+    expect(line).toEqual({ i: 0, t: 90, text: 'Bienvenidos a todos, croeso i bawb', idioma: 'es' });
     const cambios = reanchoredCambios(gwen.payload.cambios!, before.items[0], line)!;
     const after = sinAnclarList(machine, [{ ...gwen, payload: { ...gwen.payload, cambios } }]);
     expect(after.items).toEqual([]);
     expect(after.live.seg[0]).toEqual([90, 'Bienvenidos a todos, croeso i bawb']);
     expect(after.live.idiomas?.[0]).toBe('cy');
+    // A joined line the player already shows in Welsh (the Welsh model heard it) would not change: refused.
+    const welsh = asTranscript({ ...machine, fuentes: [['whisper_es', 'cy'], ['whisper_es']] })!;
+    const [same] = reanchorOptions(sinAnclarList(welsh, [gwen]).live, 93);
+    expect(same.idioma).toBe('cy');
+    expect(reanchoredCambios(gwen.payload.cambios!, before.items[0], same)).toBeNull();
   });
 });
 

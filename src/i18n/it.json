@@ -595,6 +595,8 @@
       "aviso_quita": "Viene tolta l'intera riga.",
       "aviso_idioma": "Tutta la riga passa a {idioma}.",
       "aviso_larga": "La riga supererebbe i 500 caratteri: scegline un'altra.",
+      "aviso_mismo_texto": "La riga dice già questo, non cambierebbe nulla: scegline un'altra.",
+      "aviso_mismo_idioma": "La riga è già in {idioma}, non cambierebbe nulla: scegline un'altra.",
       "tras_exportar": "È già nel file: si vedrà dopo la prossima esportazione.",
       "pausa_exportar": "Una correzione ritirata è ancora nel file: fino alla prossima esportazione, il lettore mostra il file senza le nuove correzioni.",
       "reanclada": "Modifica ri-ancorata.",

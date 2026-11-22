@@ -595,6 +595,8 @@
       "aviso_quita": "Hela raden tas bort.",
       "aviso_idioma": "Hela raden blir {idioma}.",
       "aviso_larga": "Raden skulle bli längre än 500 tecken: välj en annan.",
+      "aviso_mismo_texto": "Raden säger redan det, inget skulle ändras: välj en annan.",
+      "aviso_mismo_idioma": "Raden är redan på {idioma}, inget skulle ändras: välj en annan.",
       "tras_exportar": "Finns redan i filen: syns efter nästa export.",
       "pausa_exportar": "En tillbakadragen rättelse finns kvar i filen: fram till nästa export visar spelaren filen utan de nya rättelserna.",
       "reanclada": "Ändringen har förankrats om.",

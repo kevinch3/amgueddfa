@@ -595,6 +595,8 @@
       "aviso_quita": "Se quita la línea entera.",
       "aviso_idioma": "Toda la línea pasa a {idioma}.",
       "aviso_larga": "La línea quedaría con más de 500 caracteres: elegí otra.",
+      "aviso_mismo_texto": "La línea ya dice eso, así que no cambiaría nada: elegí otra.",
+      "aviso_mismo_idioma": "La línea ya está en {idioma}, así que no cambiaría nada: elegí otra.",
       "tras_exportar": "Ya está en el archivo: se verá después de la próxima exportación.",
       "pausa_exportar": "Una corrección retirada sigue en el archivo: hasta la próxima exportación, el reproductor muestra el archivo sin las correcciones nuevas.",
       "reanclada": "Cambio re-anclado.",

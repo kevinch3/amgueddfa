@@ -227,6 +227,10 @@ newest first, grouped by video, each with its changes and author:
   the transcript lines within ±60 s of `t` (or "agregar como línea nueva en t"); this calls new RPC
   `admin_set_video_text_changes(cid, cambios)`, admin only, approved `video_text` rows only, which
   validates and replaces `cambios` (author, credit and points unchanged). Or **Retirar**.
+  Re-anclar refuses (Confirmar disabled, the reason in words) a line that would grow past what the
+  database takes, and a whole-line edit that changes nothing: words the picked line already reads, or
+  the language it is already in (`aviso_mismo_texto`, `aviso_mismo_idioma`); of a change that does
+  both, the part the line already has is left out.
 - `/perfil/` shows a withdrawn correction as rejected with its reason, like any rejection.
 
 ### Profile

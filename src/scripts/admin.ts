@@ -41,7 +41,7 @@ import type { Kind } from '../lib/contrib';
 import { changeHeadText, isCambio, keptCambios, unreadable, videoCardRows, type VideoCardRow } from '../lib/admin-video-card';
 import { lineIdioma } from '../lib/transcript-draft';
 import {
-  avisoTexto, canAddNew, cardNotes, groupByVideo, reanchorOptions, reanchorPreview, retirarTodaLabel, sinAnclarList,
+  avisoTexto, bloqueada, canAddNew, cardNotes, groupByVideo, reanchorOptions, reanchorPreview, retirarTodaLabel, sinAnclarList,
   type ApprovedVideoText, type CardNote, type Eleccion, type SinAnclarItem, type VideoGroup,
 } from '../lib/admin-videos';
 import { fecha, fechaHora, relativa } from '../lib/dates';
@@ -655,7 +655,8 @@ function withdrawForm(ctx: VideoCtx, row: ApprovedVideoText, slot: HTMLElement, 
 /** Re-anclar: pick the line the change belongs to (within a minute of it, nearest first) or, when it has words of its
  * own, a new line at its time. The row's changes are replaced with that one moved, the rest as they were. Before
  * Confirmar, the picked line before and after, word by word, and a warning when the whole line is replaced, removed or
- * changes language (lib/admin-videos.ts, reanchorPreview). */
+ * changes language (lib/admin-videos.ts, reanchorPreview). A choice the tab refuses (a line too long, or one that already
+ * reads those words or is in that language, so nothing would change) keeps Confirmar disabled and says why. */
 function reanchorForm(ctx: VideoCtx, row: ApprovedVideoText, item: SinAnclarItem, view: Transcript, slot: HTMLElement, msg: HTMLElement): void {
   const form = el('form', { class: 'tarea-form admin-reanclar', novalidate: '' });
   const fs = el('fieldset');
@@ -671,7 +672,7 @@ function reanchorForm(ctx: VideoCtx, row: ApprovedVideoText, item: SinAnclarItem
     picks.push({ input, pick });
   };
   if (canAddNew(item.cambio, item.motivo)) option(t('admin.videos.nueva_linea', { tiempo: fmtTime(item.cambio.t) }), 'nueva');
-  for (const o of reanchorOptions(view, item.cambio.t)) option(`${fmtTime(o.t)} · ${o.text}`, { t: o.t, text: o.text });
+  for (const o of reanchorOptions(view, item.cambio.t)) option(`${fmtTime(o.t)} · ${o.text}`, { t: o.t, text: o.text, idioma: o.idioma });
   if (!picks.length) fs.append(el('p', { class: 'muted small' }, t('admin.videos.sin_opciones')));
   const go = el('button', { type: 'submit', class: 'btn' }, t('admin.videos.reanclar'));
   go.disabled = !picks.length;
@@ -685,7 +686,7 @@ function reanchorForm(ctx: VideoCtx, row: ApprovedVideoText, item: SinAnclarItem
     const chosen = picks.find((p) => p.input.checked);
     const v = chosen ? reanchorPreview(cambios, item, chosen.pick) : null;
     vista.replaceChildren();
-    go.disabled = !picks.length || !!v?.avisos.includes('larga');
+    go.disabled = !picks.length || bloqueada(v);
     if (!v) return;
     vista.append(el('p', { class: 'small' }, t('admin.videos.vista')), diffWords(v.diff));
     for (const a of v.avisos) vista.append(el('p', { class: 'small admin-aviso' }, avisoTexto(a, v.idioma)));

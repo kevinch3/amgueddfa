@@ -595,6 +595,8 @@
       "aviso_quita": "Mae'r llinell gyfan yn cael ei thynnu.",
       "aviso_idioma": "Mae'r llinell gyfan yn troi'n {idioma}.",
       "aviso_larga": "Byddai gan y llinell fwy na 500 nod: dewiswch un arall.",
+      "aviso_mismo_texto": "Mae'r llinell yn dweud hynny'n barod, felly ni fyddai dim yn newid: dewiswch un arall.",
+      "aviso_mismo_idioma": "{idioma} yw iaith y llinell yn barod, felly ni fyddai dim yn newid: dewiswch un arall.",
       "tras_exportar": "Mae eisoes yn y ffeil: bydd i'w weld ar ôl yr allforio nesaf.",
       "pausa_exportar": "Mae cywiriad a dynnwyd yn ôl yn dal yn y ffeil: tan yr allforio nesaf, mae'r chwaraewr yn dangos y ffeil heb y cywiriadau newydd.",
       "reanclada": "Newid wedi'i ail-angori.",

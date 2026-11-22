@@ -595,6 +595,8 @@
       "aviso_quita": "La ligne entière est supprimée.",
       "aviso_idioma": "Toute la ligne passe en {idioma}.",
       "aviso_larga": "La ligne dépasserait 500 caractères : choisissez-en une autre.",
+      "aviso_mismo_texto": "La ligne dit déjà cela, rien ne changerait : choisissez-en une autre.",
+      "aviso_mismo_idioma": "La ligne est déjà en {idioma}, rien ne changerait : choisissez-en une autre.",
       "tras_exportar": "Déjà dans le fichier : visible après le prochain export.",
       "pausa_exportar": "Une correction retirée est encore dans le fichier : jusqu'au prochain export, le lecteur affiche le fichier sans les nouvelles corrections.",
       "reanclada": "Modification ré-ancrée.",

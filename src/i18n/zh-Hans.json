@@ -595,6 +595,8 @@
       "aviso_quita": "整行将被删除。",
       "aviso_idioma": "整行将改为{idioma}。",
       "aviso_larga": "这一行将超过 500 个字符：请另选一行。",
+      "aviso_mismo_texto": "这一行已经是这样写的，不会有任何改变：请另选一行。",
+      "aviso_mismo_idioma": "这一行已经是{idioma}，不会有任何改变：请另选一行。",
       "tras_exportar": "已在文件中：下一次导出后才会显示。",
       "pausa_exportar": "一项已撤回的更正仍在文件中：在下一次导出之前，播放器显示的文件不含新的更正。",
       "reanclada": "修改已重新定位。",

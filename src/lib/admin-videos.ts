@@ -9,7 +9,7 @@ import { withdrawnInFile } from './live-video-corrections';
 import { isCambio } from './admin-video-card';
 import { ANTES_MAX, VALUE_MAX } from './contrib';
 import { t } from './i18n';
-import { nombreIdioma } from './transcript-draft';
+import { lineIdioma, nombreIdioma, type Idioma } from './transcript-draft';
 import { applyCorrections, conTexto, foldLine, runEnLinea, sinRun, type Cambio, type CorrectionRow } from './video-corrections';
 import type { Transcript } from './video-transcript';
 import { wordDiff, type DiffPart } from './word-diff';
@@ -33,8 +33,9 @@ export type Motivo = 'sin_linea' | 'idioma_en_linea_unida';
  * joined line). `index` is its place in the row's `cambios`; `baked` when the file already holds the row (its
  * `correcciones`), so a re-anchored change shows only after the next export. */
 export type SinAnclarItem = { row: string; index: number; cambio: Cambio; motivo: Motivo; baked: boolean };
-/** Where Re-anclar puts a change: on a line of the transcript, or as a new line at the change's own time. */
-export type Eleccion = { t: number; text: string } | 'nueva';
+/** Where Re-anclar puts a change: on a line of the transcript (with the language the player shows it in, when known), or
+ * as a new line at the change's own time. */
+export type Eleccion = { t: number; text: string; idioma?: Idioma | null } | 'nueva';
 
 const cambiosOf = (r: { payload?: { cambios?: unknown } }): Cambio[] => (Array.isArray(r.payload?.cambios) ? (r.payload.cambios as Cambio[]) : []);
 const newestFirst = (a: ApprovedVideoText, b: ApprovedVideoText) =>
@@ -120,10 +121,12 @@ export function cardNotes(file: Transcript | null | undefined, rows: { id: strin
   return out;
 }
 
-/** The lines a change near `t` may belong to: within a minute of it, nearest first, never a lyric line. */
-export function reanchorOptions(tr: Transcript, t: number): { i: number; t: number; text: string }[] {
+/** The lines a change near `t` may belong to: within a minute of it, nearest first, never a lyric line. Each with the
+ * language the player shows it in (lineIdioma; null when it is not one a collaborator can choose), so Re-anclar can tell
+ * a language the line already has. */
+export function reanchorOptions(tr: Transcript, t: number): { i: number; t: number; text: string; idioma: Idioma | null }[] {
   return tr.seg
-    .flatMap(([lt, text], i) => (Math.abs(lt - t) <= 60 && !tr.fuentes?.[i]?.includes('letra') ? [{ i, t: lt, text }] : []))
+    .flatMap(([lt, text], i) => (Math.abs(lt - t) <= 60 && !tr.fuentes?.[i]?.includes('letra') ? [{ i, t: lt, text, idioma: lineIdioma(tr, i) }] : []))
     .sort((a, b) => Math.abs(a.t - t) - Math.abs(b.t - t) || a.i - b.i);
 }
 
@@ -134,10 +137,16 @@ export function canAddNew(c: Cambio, motivo: Motivo): boolean {
 }
 
 /** What Re-anclar does to the picked line, told before the admin confirms: a whole-line rewrite (`reemplaza`), a
- * removal of the line (`quita`), a language for the whole line (`idioma`), or a rewrite the database would refuse
- * (`larga`: more than 500 characters). None when only the change's own words change. */
-export type Aviso = 'reemplaza' | 'quita' | 'idioma' | 'larga';
+ * removal of the line (`quita`), a language for the whole line (`idioma`), or a choice it refuses (see bloqueada): a
+ * rewrite the database would refuse (`larga`: more than 500 characters), or one that changes nothing, because the line
+ * already reads those words (`mismo_texto`) or is already in that language (`mismo_idioma`): it would store a change
+ * that does nothing and credit its author for it. None when only the change's own words change. */
+export type Aviso = 'reemplaza' | 'quita' | 'idioma' | 'larga' | 'mismo_texto' | 'mismo_idioma';
 export type Vista = { antes: string; despues: string; diff: DiffPart[]; avisos: Aviso[]; idioma?: 'es' | 'cy' };
+
+const BLOQUEAN: readonly Aviso[] = ['larga', 'mismo_texto', 'mismo_idioma'];
+/** Whether the choice is refused: Confirmar stays disabled, and its warnings say why. */
+export const bloqueada = (v: Vista | null | undefined): boolean => !!v?.avisos.some((a) => BLOQUEAN.includes(a));
 
 const len = (s: string) => [...s].length;
 /** A change past what the database takes: a texto of more than 500 characters, an antes of more than 2,000. */
@@ -168,6 +177,18 @@ function enLinea(c: Cambio, pick: { t: number; text: string }): { cambio: Cambio
   return { cambio, despues: c.quitar === true ? '' : typeof c.texto === 'string' ? c.texto : pick.text, parte: false };
 }
 
+/** Change `c` (on the picked line, not a removal) without what the line already has: words it already reads (texto equal
+ * to the line, as setLine compares them: trimmed), a language it is already in. `igual` names what was the same when
+ * nothing is left to change. */
+function sinRepetir(c: Cambio, pick: { text: string; idioma?: Idioma | null }): { cambio: Cambio; igual: Aviso[] } {
+  const { texto, idioma, ...resto } = c;
+  const mismoTexto = typeof texto === 'string' && texto.trim() === pick.text.trim();
+  const mismoIdioma = !!idioma && idioma === pick.idioma;
+  const cambio: Cambio = { ...resto, ...(texto !== undefined && !mismoTexto ? { texto } : {}), ...(idioma && !mismoIdioma ? { idioma } : {}) };
+  const queda = cambio.texto !== undefined || !!cambio.idioma;
+  return { cambio, igual: queda ? [] : [...(mismoTexto ? ['mismo_texto' as const] : []), ...(mismoIdioma ? ['mismo_idioma' as const] : [])] };
+}
+
 /** Re-anclar of change `index` onto `pick`: the row's new `cambios` and what the picked line becomes. Null when the choice
  * does not fit the change. */
 function reanclar(cambios: Cambio[], item: { index: number; motivo: Motivo }, pick: Eleccion): { cambios: Cambio[]; vista: Vista } | null {
@@ -181,6 +202,7 @@ function reanclar(cambios: Cambio[], item: { index: number; motivo: Motivo }, pi
   if (item.motivo === 'idioma_en_linea_unida') {
     if (pick === 'nueva' || !c.idioma) return null;
     const { idioma, ...words } = c;
+    if (idioma === pick.idioma) return { cambios: [], vista: vista(pick.text, pick.text, ['mismo_idioma'], idioma) };
     const keep = typeof words.texto === 'string' && words.texto.trim() !== '' ? [words] : [];
     const linea: Cambio = { t: pick.t, antes: pick.text, idioma };
     if ([...keep, linea].some(demasiadoLargo)) return larga(pick.text, pick.text);
@@ -195,7 +217,17 @@ function reanclar(cambios: Cambio[], item: { index: number; motivo: Motivo }, pi
     if (demasiadoLargo(nueva)) return larga('', nueva.texto ?? '');
     return { cambios: cambios.map((x, i) => (i === item.index ? nueva : x)), vista: vista('', nueva.texto ?? '', [], nueva.idioma) };
   }
-  const { cambio, despues, parte } = enLinea(c, pick);
+  const puesto = enLinea(c, pick);
+  const parte = puesto.parte;
+  let { cambio, despues } = puesto;
+  // What the line already has is no change; with nothing else left, the choice is refused (see bloqueada).
+  if (cambio.quitar !== true) {
+    const r = sinRepetir(cambio, pick);
+    if (r.igual.length) return { cambios: [], vista: vista(pick.text, pick.text, r.igual, c.idioma) };
+    if (r.cambio.texto === undefined && !r.cambio.idioma) return null; // a change that had nothing to do (validation never builds one)
+    cambio = r.cambio;
+    despues = cambio.texto ?? pick.text;
+  }
   const avisos: Aviso[] = [];
   if (cambio.quitar === true) avisos.push('quita');
   else if (!parte && typeof cambio.texto === 'string') avisos.push('reemplaza');
@@ -209,15 +241,17 @@ function reanclar(cambios: Cambio[], item: { index: number; motivo: Motivo }, pi
  * adds its words at its own time. A language that fell inside a joined line (`idioma_en_linea_unida`) only had its
  * language left out: its words stay where they landed (the export starts from the machine text every time, so they must
  * stay in the row), and the language alone goes to the picked line, as a change after the row's others, whose text the
- * picked line already shows. Null when the choice does not fit the change, or the line would be too long. */
+ * picked line already shows. What the picked line already has (its words, its language) is left out of the change. Null
+ * when the choice does not fit the change, when the line would be too long, or when nothing would change. */
 export function reanchoredCambios(cambios: Cambio[], item: { index: number; motivo: Motivo }, pick: Eleccion): Cambio[] | null {
   const r = reanclar(cambios, item, pick);
   return r && r.cambios.length ? r.cambios : null;
 }
 
-/** A warning in words: "Se reemplaza la línea entera.", "Toda la línea pasa a galés." (the language by name). */
+/** A warning in words: "Se reemplaza la línea entera.", "Toda la línea pasa a galés.", "La línea ya está en galés, así
+ * que no cambiaría nada: elegí otra." (the language by name). */
 export function avisoTexto(a: Aviso, idioma?: 'es' | 'cy'): string {
-  if (a === 'idioma') return t('admin.videos.aviso_idioma', { idioma: idioma ? nombreIdioma(idioma) : '' });
+  if (a === 'idioma' || a === 'mismo_idioma') return t(`admin.videos.aviso_${a}`, { idioma: idioma ? nombreIdioma(idioma) : '' });
   return t(`admin.videos.aviso_${a}`);
 }
 

@@ -595,6 +595,8 @@
       "aviso_quita": "The whole line is removed.",
       "aviso_idioma": "The whole line becomes {idioma}.",
       "aviso_larga": "The line would be longer than 500 characters: choose another.",
+      "aviso_mismo_texto": "The line already says that, so nothing would change: choose another.",
+      "aviso_mismo_idioma": "The line is already in {idioma}, so nothing would change: choose another.",
       "tras_exportar": "Already in the file: it will show after the next export.",
       "pausa_exportar": "A withdrawn correction is still in the file: until the next export, the player shows the file without the new corrections.",
       "reanclada": "Change re-anchored.",

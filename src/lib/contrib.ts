@@ -150,8 +150,9 @@ const ANTES_MAX = 2000;
 const VIDEO_FESTIVALS: FestivalSlug[] = ['chubut', 'trevelin'];
 
 /**
- * A transcript correction: changes to the lines of one video. A change whose texto equals its `antes` changes
- * nothing and is dropped; a malformed one makes the whole contribution fail (video_cambios / video_texto).
+ * A transcript correction: changes to the lines of one video. A change to a line (`antes`) sets its words, its
+ * language or both, or removes it; an add (no `antes`) needs words. A change whose texto equals its `antes` and sets no
+ * language changes nothing and is dropped; a malformed one makes the whole contribution fail (video_cambios / video_texto).
  */
 function validateVideoText(input: Record<string, unknown>): Validation {
   const v = input.video as Record<string, unknown> | null | undefined;
@@ -173,12 +174,16 @@ function validateVideoText(input: Record<string, unknown>): Validation {
     if (o.quitar === true) {
       if (c.antes === undefined) return fail('video_cambios');
       c.quitar = true;
+    } else if (o.texto == null && c.antes !== undefined && o.idioma) {
+      // A language-only change to an existing line: its words stay.
     } else {
       const texto = str(o.texto);
       if (!texto) return o.texto == null ? fail('video_cambios') : fail('video_texto');
       if (len(texto) > VALUE_MAX) return fail('video_texto');
-      if (texto === c.antes) continue;
-      c.texto = texto;
+      // The same words change nothing; with a language it is still a language change.
+      if (texto === c.antes) {
+        if (!o.idioma) continue;
+      } else c.texto = texto;
     }
     if (o.idioma) c.idioma = o.idioma as 'es' | 'cy';
     if (cambios.some((x) => x.t === c.t && x.antes === c.antes)) return fail('video_repetido');

@@ -418,6 +418,14 @@ describe('video_text', () => {
     expect(v).toMatchObject({ ok: true, payload: { cambios: [{ t: 3, antes: 'ruido', quitar: true }, { t: 4, texto: 'ay', idioma: 'cy' }] } });
     expect(validate('video_text', { video, cambios: [{ t: 3, antes: 'x' }] })).toEqual({ ok: false, key: 'contrib.error.video_cambios' });
   });
+  it('a language-only change to a line is kept (one of the four kinds); texto equal to antes leaves the language', () => {
+    expect(validate('video_text', { video, cambios: [{ t: 3300.2, antes: 'Diolch yn fawr i chi gyd', idioma: 'cy' }] }))
+      .toMatchObject({ ok: true, payload: { cambios: [{ t: 3300.2, antes: 'Diolch yn fawr i chi gyd', idioma: 'cy' }] } });
+    expect(validate('video_text', { video, cambios: [{ t: 3, antes: 'Diolch', texto: 'Diolch', idioma: 'cy' }] }))
+      .toMatchObject({ ok: true, payload: { cambios: [{ t: 3, antes: 'Diolch', idioma: 'cy' }] } });
+    // An add still needs its words.
+    expect(validate('video_text', { video, cambios: [{ t: 3, idioma: 'cy' }] })).toEqual({ ok: false, key: 'contrib.error.video_cambios' });
+  });
   it('antes may be up to 2000 code points; longer is video_antes', () => {
     expect(validate('video_text', { video, cambios: [{ t: 1, antes: 'a'.repeat(1000), texto: 'x' }] }).ok).toBe(true);
     expect(validate('video_text', { video, cambios: [{ t: 1, antes: 'a'.repeat(2000), texto: 'x' }] }).ok).toBe(true);

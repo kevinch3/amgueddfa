@@ -1,0 +1,22 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "Si te quiero yo, si todo lo que dices me llena de dolor"
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 7,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 6
+ }
+}

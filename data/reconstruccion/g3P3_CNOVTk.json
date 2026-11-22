@@ -1,0 +1,64 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   60.0,
+   "Las manos de mi padre saben que acuden por la mañana."
+  ],
+  [
+   87.0,
+   "Muy temprano, muy temprano, todo se vuelve a crecer con nuestra sol."
+  ],
+  [
+   170.68,
+   "Recuerdo añorando brazos calientes por los inviernos."
+  ],
+  [
+   182.32,
+   "Esa se brindan cálidas, nobles, sinceras, limpias de a todos."
+  ],
+  [
+   198.0,
+   "¡Gracias!"
+  ],
+  [
+   209.28,
+   "Gracias."
+  ],
+  [
+   218.52,
+   "Los pájaros llaman la vida y la constrallen con el trabar. Al de la lenta orilla y par, lo cotidiano se vuelve mágico, se vuelve mágico, se vuelve mágico."
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

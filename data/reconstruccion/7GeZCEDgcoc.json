@@ -5,6 +5,10 @@
  "seg": [
   [
    0.0,
+   "Plenniad a gyseleddai adroddiad i blant ar gefn geffyl neu ar gefn beic, sef perlunictod a gompetensia nwmero dos. Y wobr cyntaf mi mynd i Jac y Jwg. Prif primiwr para Jac y Jwg i Jwdydd Jones ddega Aiman. Yr ail wobr i Amangai Wlad yw Cymru'n mynd i siarad am ei wefan. Rhydd wedi bod yn ystod adroddiadau i blant ar gefn geffyl neu ar gefn beic, sef perlunictod a gompetensia nwmero dos. Y wobr cyntaf mi mynd i Jac y Jwg. Primair premiwr para Jac y Jwg is Judith Jones ddega Aiman. Yr ail wobr i Amangai Wlad yw Cymru'n"
+  ],
+  [
+   0.0,
    "¡Aplausos!"
   ],
   [
@@ -26,6 +30,10 @@
   [
    45.7,
    "la competencia principal para coro número 76,"
+  ],
+  [
+   48.96,
+   "Obra acadêmica o Sacra, y espiritual gosbel o jazz a elección, segundo coro participante, locus a moenus."
   ],
   [
    50.5,
@@ -62,7 +70,7 @@
  ],
  "fuentes": [
   [
-   "whisper_es"
+   "cy"
   ],
   [
    "whisper_es"
@@ -78,6 +86,12 @@
   ],
   [
    "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"

@@ -1,0 +1,22 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "de otros países, el grupo Juan Vín, con una danza irlandesa."
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 6,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 4
+ }
+}

@@ -17,6 +17,7 @@ export type Corregible = { seg: [number, string][]; fuentes: string[][]; idiomas
 
 const CERCA = 5; // s around a change's time where its line may now start
 const EXACTA = 2; // s within which an equal line is the same line (and an add is already there)
+const PALABRAS = 3; // words `antes` needs to be looked for anywhere but on an equal line within 2 s
 
 // Spaces are spelled out (not \s, not trim) so that the Python twin treats exactly the same characters as spaces.
 const NO_BLANCO = /[^\t\n\v\f\r\p{Zs}]/u;
@@ -56,10 +57,34 @@ function donde(ws: string[], busca: string[]): number {
   return -1;
 }
 
+/** Whether `t` falls on sung text: a lyric line is the nearest line within 2 s (or as near as the nearest), or `t` lies
+ * between two consecutive lyric lines. What a change there was made on was most likely replaced by the lyrics. */
+function enLetra(lines: Linea[], t: number): boolean {
+  let cerca = Infinity;
+  let letra = false;
+  for (const l of lines) {
+    const d = Math.abs(l.t - t);
+    if (d > EXACTA || d > cerca) continue;
+    const es = l.fu.includes('letra');
+    letra = d < cerca ? es : letra || es;
+    cerca = d;
+  }
+  if (letra) return true;
+  for (let i = 0; i + 1 < lines.length; i++) {
+    const x = lines[i];
+    const y = lines[i + 1];
+    if (x.fu.includes('letra') && y.fu.includes('letra') && Math.min(x.t, y.t) <= t && t <= Math.max(x.t, y.t)) return true;
+  }
+  return false;
+}
+
 /** The line a change with `antes` targets, nearest in time first and never a lyric line: an equal line within 2 s,
  * else `antes` as a run of whole words inside a line within 5 s (a rebuild joined fragments). 'tomada' when the
  * nearest match is text an earlier change already took: the change repeats an approved one, and trying the next
- * candidate would land it on a twin line or inside that change's new text. At equal distance the taken text counts first. */
+ * candidate would land it on a twin line or inside that change's new text. At equal distance the taken text counts first.
+ * Only an equal line within 2 s is sure: the rest is looked for only when `antes` has three words or more (one or two,
+ * like "Gracias." or "¡Bravo!", stand in many lines nearby) and `t` is not on sung text (see enLetra); otherwise the
+ * change found no line, whatever stands nearby. */
 function ubicar(lines: Linea[], huellas: Huella[], t: number, antes: string): Lugar | 'tomada' | null {
   const cand = [
     ...huellas.flatMap((h, i) => (Math.abs(h.t - t) <= CERCA ? [{ d: Math.abs(h.t - t), k: 0, i }] : [])),
@@ -74,7 +99,7 @@ function ubicar(lines: Linea[], huellas: Huella[], t: number, antes: string): Lu
     if (k === 0 && huellas[i].w.join(' ') === folded) return 'tomada';
     if (k === 1 && foldLine(lines[i].text) === folded) return { i, run: null };
   }
-  if (!busca.length) return null;
+  if (busca.length < PALABRAS || enLetra(lines, t)) return null;
   // The fragment's own opening and closing marks ("¡…!", "….") go with a texto's run when the line has them around it.
   const pre = antes.slice(0, busca[0].a);
   const post = antes.slice(busca[busca.length - 1].b);

@@ -1,21 +1,22 @@
 {
-  "about": "An equal line 3.5 s away is beyond the 2 s of an exact match: texto still lands on its words as a run, an idioma change is reported",
+  "about": "An equal line 3.5 s away is beyond the 2 s of an exact match: a texto of three words or more still lands on its words as a run, an idioma change is reported, and a one-word line is not placed",
   "transcript": {
     "lang": "es",
-    "seg": [[40.0, "Diolch yn fawr"], [50.0, "¡Bravo!"]],
-    "fuentes": [["yt_es"], ["whisper_es"]]
+    "seg": [[40.0, "Diolch yn fawr"], [50.0, "¡Muy bien, muy bien!"], [60.0, "¡Bravo!"]],
+    "fuentes": [["yt_es"], ["whisper_es"], ["whisper_es"]]
   },
   "rows": [
     {"id": "r-far", "reviewed_at": "2026-11-22T10:05:00+00:00", "display_name": "Ana",
      "payload": {"video": {"id": "TESTVIDEO01"}, "cambios": [
        {"t": 43.5, "antes": "Diolch yn fawr", "idioma": "cy"},
-       {"t": 46.5, "antes": "¡Bravo!", "texto": "¡Muy bien!"}]}}
+       {"t": 46.5, "antes": "¡Muy bien, muy bien!", "texto": "¡Muy bien, Gaiman!"},
+       {"t": 56.5, "antes": "¡Bravo!", "texto": "¡Excelente!"}]}}
   ],
   "expected": {
-    "seg": [[40.0, "Diolch yn fawr"], [50.0, "¡Muy bien!"]],
-    "fuentes": [["yt_es"], ["whisper_es", "colab"]]
+    "seg": [[40.0, "Diolch yn fawr"], [50.0, "¡Muy bien, Gaiman!"], [60.0, "¡Bravo!"]],
+    "fuentes": [["yt_es"], ["whisper_es", "colab"], ["whisper_es"]]
   },
-  "sinAnclar": [["r-far", 43.5, "idioma_en_linea_unida"]],
+  "sinAnclar": [["r-far", 43.5, "idioma_en_linea_unida"], ["r-far", 56.5, "sin_linea"]],
   "applied": ["r-far"],
   "autores": {"1": ["Ana"]}
 }

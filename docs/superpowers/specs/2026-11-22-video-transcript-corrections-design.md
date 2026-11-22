@@ -124,6 +124,12 @@ Finding the line a change with `antes` targets (no fuzzy similarity: a wrong gue
    back to the original characters), a `quitar` removes only that run (and the line if nothing is
    left); an `idioma` change on such a match is **not** applied (the joined line may hold other
    speech) and is reported instead.
+   Step 3 (and an equal line 2–5 s away, which counts as a run) is only a guess, so it is tried only
+   when folded `antes` has **at least 3 words** ("Gracias." or "¡Bravo!" stand in many lines nearby)
+   and `t` is **not on sung text**: the nearest line within ±2 s is not a lyric line (nor as near as
+   the nearest), and `t` does not lie between two consecutive lyric lines (decided at the final
+   review, 2026-11-22: a removal of Whisper's "Gracias." over a song, once lyrics replaced that
+   line, must not strip "gracias" from the presenter's line 3 s earlier). Exact matches are unaffected.
 4. Otherwise the change is **unanchored** ("sin anclar"): not applied, reported (see Admin).
    A split line (`antes` spread over two lines) is unanchored by design.
 

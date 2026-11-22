@@ -13,6 +13,7 @@ import unicodedata
 
 CERCA = 5  # s around a change's time where its line may now start
 EXACTA = 2  # s within which an equal line is the same line (and an add is already there)
+PALABRAS = 3  # words `antes` needs to be looked for anywhere but on an equal line within 2 s
 
 
 def _word_char(c: str) -> bool:
@@ -60,13 +61,33 @@ def _donde(ws: list[str], busca: list[str]) -> int:
     return next((k for k in range(len(ws) - n + 1) if ws[k:k + n] == busca), -1)
 
 
+def _en_letra(lines: list[dict], t: float) -> bool:
+    """Whether `t` falls on sung text: a lyric line is the nearest line within 2 s (or as near as the nearest), or `t`
+    lies between two consecutive lyric lines. What a change there was made on was most likely replaced by the lyrics."""
+    cerca, letra = math.inf, False
+    for l in lines:
+        d = abs(l["t"] - t)
+        if d > EXACTA or d > cerca:
+            continue
+        es = "letra" in l["fu"]
+        letra = es if d < cerca else (letra or es)
+        cerca = d
+    if letra:
+        return True
+    return any("letra" in x["fu"] and "letra" in y["fu"] and min(x["t"], y["t"]) <= t <= max(x["t"], y["t"])
+               for x, y in zip(lines, lines[1:]))
+
+
 def _ubicar(lines: list[dict], huellas: list[tuple], t: float, antes: str):
     """The line a change with `antes` targets, nearest in time first and never a lyric line: (i, None) for an equal
     line within 2 s, else (i, (a, b, qa, qb)) for `antes` as a run of whole words inside a line within 5 s (a rebuild
     joined fragments): a texto replaces [a, b) (the words with `antes`' own marks), a quitar removes [qa, qb) (the words
     with the marks glued to them and the space after). "tomada" when the nearest match is text an earlier change
     already took (huellas: (t, words)): the change repeats an approved one, and trying the next candidate would land it
-    on a twin line or inside that change's new text. At equal distance the taken text counts first. None: no line."""
+    on a twin line or inside that change's new text. At equal distance the taken text counts first. None: no line.
+    Only an equal line within 2 s is sure: the rest is looked for only when `antes` has three words or more (one or
+    two, like "Gracias." or "¡Bravo!", stand in many lines nearby) and `t` is not on sung text (see _en_letra);
+    otherwise the change found no line, whatever stands nearby."""
     cand = sorted([(abs(h_t - t), 0, i) for i, (h_t, _) in enumerate(huellas) if abs(h_t - t) <= CERCA]
                   + [(abs(l["t"] - t), 1, i) for i, l in enumerate(lines)
                      if abs(l["t"] - t) <= CERCA and "letra" not in l["fu"]])
@@ -80,7 +101,7 @@ def _ubicar(lines: list[dict], huellas: list[tuple], t: float, antes: str):
             return "tomada"
         if k == 1 and fold_line(lines[i]["text"]) == folded:
             return i, None
-    if not busca:
+    if len(busca) < PALABRAS or _en_letra(lines, t):
         return None
     # The fragment's own opening and closing marks ("¡…!", "….") go with a texto's run when the line has them around it.
     pre, post = antes[:busca[0][0]], antes[busca[-1][1]:]

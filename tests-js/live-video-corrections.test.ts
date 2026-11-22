@@ -101,11 +101,12 @@ describe('withLiveCorrections', () => {
 
   it('applies at once a change an admin re-anchored after the export (same row and time, new antes or none)', () => {
     // Task 8's re-anchor keeps the row id and replaces its changes: r9's listed change (t 33, antes "Muy bien") became
-    // an add at the same time ("agregar como línea nueva en t"), or a change of another part of the line.
+    // an add at the same time ("agregar como línea nueva en t"), or a change with a new antes (the line as Re-anclar
+    // read it: here before a case fix, so the same line by folded equality).
     const asAdd = withLiveCorrections(file(), [ana, row('r9', '11:00', 'Dora', [{ t: 33, texto: 'Muy bien dicho' }])]);
     expect(asAdd.tr.seg).toEqual([[30, '¡Bravo!'], [33, 'Muy bien'], [33, 'Muy bien dicho'], [60, '¡Bravo!'], [61, '¡Muy bien!']]);
     expect(asAdd.autores).toEqual({ 2: ['Dora'] });
-    const asRun = withLiveCorrections(file(), [ana, row('r9', '11:00', 'Dora', [{ t: 33, antes: 'bien', texto: 'bien dicho' }])]);
+    const asRun = withLiveCorrections(file(), [ana, row('r9', '11:00', 'Dora', [{ t: 33, antes: 'muy bien', texto: 'Muy bien dicho' }])]);
     expect(asRun.tr.seg[1]).toEqual([33, 'Muy bien dicho']);
     // r7's add, listed with antes null, stays out while it is the same add.
     const r7 = withLiveCorrections(file(), [ana, row('r7', '11:30', 'Fede', [{ t: 45, texto: 'Aplausos' }])]);

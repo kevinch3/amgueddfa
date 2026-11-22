@@ -23,7 +23,7 @@ const vectors = readdirSync(DIR)
 
 describe('video corrections: shared vectors', () => {
   it('finds every vector', () => {
-    expect(vectors.length).toBeGreaterThanOrEqual(17);
+    expect(vectors.length).toBeGreaterThanOrEqual(21);
   });
 
   it.each(vectors)('%s', (_, v) => {
@@ -133,11 +133,11 @@ describe('video corrections: rows the export already baked', () => {
   });
 
   it.each([
-    ['rewrote', { t: 11, antes: 'Gaiman', texto: 'Trelew' }, 'Buenas noches Trelew'],
-    ['removed', { t: 11, antes: 'Gaiman', quitar: true }, 'Buenas noches'],
+    ['rewrote', { t: 11, antes: 'coro de Gaiman', texto: 'coro de Trelew' }, 'Buenas noches coro de Trelew'],
+    ['removed', { t: 11, antes: 'coro de Gaiman', quitar: true }, 'Buenas noches'],
   ] as const)('follows a chain where a later baked change %s part of an earlier one\'s words', (_, later, shown) => {
     const rows = [
-      row('a', '10:00', 'Ana', [{ t: 11, antes: 'Buenas noches', texto: 'Buenas noches Gaiman' }]),
+      row('a', '10:00', 'Ana', [{ t: 11, antes: 'Buenas noches', texto: 'Buenas noches coro de Gaiman' }]),
       row('b', '11:00', 'Bruno', [later]),
       row('c', '12:00', 'Carla', [{ t: 11, antes: 'Buenas noches', texto: 'Buenas noches a todos' }]),
     ];

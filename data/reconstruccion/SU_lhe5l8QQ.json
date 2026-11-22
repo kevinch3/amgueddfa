@@ -1,0 +1,57 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   717.0,
+   "Ni'n cofio'r blodau gwylltion sydd fel aronyn nhw'n ffurfio'r eglurion a'r hen ddrys llu. Mae'n siŵr bod ni'n ymweli'n ysbrydol diwedd."
+  ],
+  [
+   756.0,
+   "Pawb weithiau'n ddylanwadu i'r gwaith mewn ôl diwrnod, a chwitha'n ystyr yn damwain i'r gofynion diwrnod, o'n i'n cael y sôn am dwi'n cyn i'r cyd weithiau i ddod, mae'n wallt o'i ymwybyddat i i'r gyflwyniad ynddo fo."
+  ],
+  [
+   876.0,
+   "Bydd y dafad yn ei stori i ni caru'r afio'r môr."
+  ],
+  [
+   886.0,
+   "Dwi'n caru blodau gwylltio sydd yn y ffordd fyny, dwi'n hoffi gyrru ceirion ar y llwybyr felly."
+  ],
+  [
+   1053.76,
+   "Yr eglwys sy'n dod i lawr a jyfres twel ag a jenis mewn trin o coca-nose. Ellar un wythdeg sy'n iawn yn mynd i'r tafarn di gwrando am bobol teuluol sy'n ddwysydd a di ddwysydd, joio lefydd sy'n beca ddwysydd, a bysod ffrawn o bwysedd sy'n gwisgo gorswth allan o'r coes di, o'r cura'n grando'n deud bobol sy'n mynd i lawr."
+  ],
+  [
+   1494.76,
+   "O'n i'n meddwl bo' chwaer yn iawn i'r ffans, ond o'n i'n meddwl stwff rhwng y dda, ond o'n i'n meddwl"
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 28,
+  "modelo": 8,
+  "reglas": 0,
+  "vacias": 20
+ }
+}

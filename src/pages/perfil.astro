@@ -18,6 +18,7 @@ import { t } from '../lib/i18n';
   import { countryName } from '../lib/places';
   import { countryLabel, nameField, placeFields } from '../scripts/profile-form';
   import { url } from '../lib/paths';
+  import { videoHash } from '../lib/video-hash';
   import { getClient } from '../lib/supabase';
   import { el } from '../scripts/ui';
 
@@ -70,8 +71,15 @@ import { t } from '../lib/i18n';
     for (const r of rows) {
       const li = el('li');
       li.append(el('span', { class: `pill pill-${r.status}` }, t(statusOf(r.status))), ' ', el('strong', {}, t(`perfil.tipos.${r.type}`)), ' ');
-      if (r.festival && r.year) li.append(el('a', { href: url(`${r.festival}/${r.year}/`) }, `${t(`festivales.${r.festival}`)} ${r.year}`));
-      else li.append(el('span', { class: 'muted' }, t('perfil.sin_edicion')));
+      if (r.festival && r.year) {
+        // A video correction opens the player at the first line it touches.
+        let hash = '';
+        if (r.type === 'video_text') {
+          const p = r.payload as { video?: { id?: string }; cambios?: { t?: number }[] } | undefined;
+          if (p?.video?.id) hash = videoHash(p.video.id, Number(p.cambios?.[0]?.t) || 0);
+        }
+        li.append(el('a', { href: url(`${r.festival}/${r.year}/`) + hash }, `${t(`festivales.${r.festival}`)} ${r.year}`));
+      } else li.append(el('span', { class: 'muted' }, t('perfil.sin_edicion')));
       if (r.item_id && /^[0-9a-f]{12}$/.test(r.item_id)) li.append(' · ', el('a', { href: url(`item/${r.item_id}/`) }, t('perfil.documento')));
       const when = r.reviewed_at ?? r.created_at;
       const f = relativa(when);

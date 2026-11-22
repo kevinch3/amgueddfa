@@ -187,6 +187,26 @@ describe('static build', () => {
     expect(html).toContain('name="date_month"');
   });
 
+  it('video corrections: admin Videos tab; edit control on Chubut but not Juventud or Mimosa', () => {
+    const admin = read('admin/index.html');
+    expect(admin).toContain('id="atab-videos"');
+    expect(admin).toContain('id="apanel-videos"');
+    expect(read('chubut/2024/index.html')).toContain('data-rep-editar');
+    for (const f of ['juventud', 'mimosa']) {
+      for (const y of readdirSync(join(DIST, f))) {
+        const p = `${f}/${y}/index.html`;
+        if (existsSync(join(DIST, p))) expect(read(p), p).not.toContain('data-rep-editar');
+      }
+    }
+  });
+
+  it('perfil links video corrections to the moment', () => {
+    const dir = join(DIST, '_astro');
+    const js = readdirSync(dir).filter((n) => n.startsWith('perfil.astro') && n.endsWith('.js')).map((n) => readFileSync(join(dir, n), 'utf8')).join('');
+    expect(js).toContain('video_text');
+    expect(js).toMatch(/video-hash\.[\w-]+\.js/);
+  });
+
   it('admin has a tab to load facts directly, credited to someone', () => {
     const html = read('admin/index.html');
     expect(html).toContain('Cargar datos');

@@ -33,31 +33,87 @@
   ],
   [
    242.2,
-   "La lluvia desde el umbral guardando el dolor,"
+   "He llegado hasta tu casa"
+  ],
+  [
+   242.2,
+   "¡Yo no sé cómo he podido!"
+  ],
+  [
+   242.2,
+   "Si me han dicho que no estás,"
+  ],
+  [
+   242.2,
+   "que ya nunca volverás"
+  ],
+  [
+   242.2,
+   "¡Si me han dicho que te has ido!"
+  ],
+  [
+   242.2,
+   "¡Cuánta nieve hay en mi alma!"
+  ],
+  [
+   242.2,
+   "¡Qué silencio hay en tu puerta!"
+  ],
+  [
+   242.2,
+   "Al llegar hasta el umbral,"
+  ],
+  [
+   245.7,
+   "un candado de dolor"
   ],
   [
    248.7,
-   "me recubo el corazón."
+   "me detuvo el corazón."
   ],
   [
    252.2,
-   "La lluvia en tu casa, la lluvia en tu corazón,"
+   "Nada, nada queda en tu casa natal"
   ],
   [
    259.0,
-   "solo de la lluvia y el sol y el nozal."
+   "Sólo telarañas que teje el yuyal."
+  ],
+  [
+   262.9,
+   "El rosal tampoco existe"
   ],
   [
    266.1,
-   "No se ha vuelto a mi cuerpo, todo es una cruz, nada más que tristeza y quietud, nadie que me diga si vives aún dónde estás."
+   "y es seguro que se ha muerto al irte tú"
+  ],
+  [
+   272.0,
+   "¡Todo es una cruz!"
+  ],
+  [
+   274.5,
+   "Nada, nada más que tristeza y quietud."
+  ],
+  [
+   279.5,
+   "Nadie que me diga si vives aún"
+  ],
+  [
+   283.7,
+   "¿Dónde estás, para decirte"
   ],
   [
    287.5,
-   "Para decirte que hoy he vuelto arrepentido a buscar"
+   "que hoy he vuelto arrepentido a buscar tu amor?"
   ],
   [
-   294.5,
-   "Mamá"
+   334.6,
+   "Ya me alejo de tu casa"
+  ],
+  [
+   361.1,
+   "y me voy ya ni sé donde"
   ],
   [
    377.5,
@@ -65,11 +121,35 @@
   ],
   [
    384.7,
-   "No es que tristeza y tiempo, nadie que me diga si vives aún, ¿dónde estás?"
+   "Sin querer te digo adiós"
+  ],
+  [
+   388.6,
+   "y hasta el eco de tu voz"
+  ],
+  [
+   393.1,
+   "de la nada me responde."
   ],
   [
    397.0,
-   "Para decirle que hoy he vuelto arrepentido a buscar tu amor, buscar tu amor."
+   "En la cruz de tu candado"
+  ],
+  [
+   397.8,
+   "por tu pena yo he rezado"
+  ],
+  [
+   398.7,
+   "y ha rodado en tu portón"
+  ],
+  [
+   399.5,
+   "una lágrima hecha flor"
+  ],
+  [
+   400.3,
+   "de mi pobre corazón."
   ]
  ],
  "fuentes": [
@@ -95,40 +175,111 @@
    "whisper_es"
   ],
   [
-   "whisper_es"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ],
   [
    "whisper_es"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ]
+ ],
+ "letras": [
+  {
+   "desde": 229,
+   "hasta": 412,
+   "titulo": "Nada",
+   "autor": "tango, José Dames – Horacio Sanguinetti, arr. Eduardo Ferraudi",
+   "idioma": "es",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
+  }
  ],
  "ventanas": {
   "total": 8,
-  "modelo": 7,
+  "modelo": 8,
   "reglas": 0,
-  "vacias": 1
+  "vacias": 0
  }
 }

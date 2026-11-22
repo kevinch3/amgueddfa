@@ -5,62 +5,157 @@
  "seg": [
   [
    0.0,
-   "La Vigilia, olumbrilla de la vuelva, se hunde volando en el cielo y apagasta mi espera."
+   "Yo no quiero que a mi niña"
+  ],
+  [
+   5.4,
+   "golondrina me la vuelvan;"
+  ],
+  [
+   10.2,
+   "se hunde volando en el Cielo"
+  ],
+  [
+   16.3,
+   "y no baja hasta mi estera;"
   ],
   [
    22.3,
-   "En el alero has sentido y mis manos no la prendan."
+   "en el alero hace el nido"
+  ],
+  [
+   30.1,
+   "y mis manos no la peinan."
   ],
   [
    36.3,
-   "Yo no quiero que a mi niña volumbrina me la vuelva."
+   "Yo no quiero que a mi niña"
+  ],
+  [
+   39.2,
+   "la vayan a hacer princesa."
+  ],
+  [
+   41.7,
+   "Con zapatitos de oro"
   ],
   [
    44.3,
-   "Amén."
+   "¿cómo juega en las praderas?"
   ],
   [
    74.3,
-   "Y la noche, la noche, a mi lado, si no se atura está."
+   "Y cuando llegue la noche"
+  ],
+  [
+   80.9,
+   "a mi lado no se acuesta..."
   ],
   [
    88.4,
-   "Yo no quiero que a mi niña la vaya a ser princesa."
+   "Y menos quiero que un día"
   ],
   [
    99.3,
-   "Mi pleno cielo de un día, donde la boya no se reina, la pondría en un trono, adonde mis manos nos llevan."
+   "me la vayan a hacer reina."
+  ],
+  [
+   108.1,
+   "La subirían al trono"
+  ],
+  [
+   115.8,
+   "a donde mis pies no llegan."
   ],
   [
    124.6,
-   "Cuando vi que sea la noche, la bonita, yo me encerro, yo no quiero que a mi niña de la falla nace reina."
+   "Cuando viniese la noche"
+  ],
+  [
+   133.1,
+   "yo no podría mecerla..."
+  ],
+  [
+   140.5,
+   "¡Yo no quiero que a mi niña"
+  ],
+  [
+   150.1,
+   "me la vayan a hacer reina!"
   ]
  ],
  "fuentes": [
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ]
+ ],
+ "letras": [
+  {
+   "desde": 0,
+   "hasta": 170,
+   "titulo": "Miedo",
+   "autor": "Fernando Moruja",
+   "idioma": "es",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
+  }
  ],
  "ventanas": {
   "total": 3,

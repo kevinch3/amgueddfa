@@ -19,14 +19,16 @@ class OutLine(NamedTuple):
 
 
 def rules_lines(w: Window) -> list[OutLine]:
-    """No model: lyrics inside their span, otherwise the most reliable source the window has."""
+    """No model: lyrics inside their span, otherwise the most reliable Spanish source the window has and
+    the Welsh model's lines beside it (sources already dropped those heard over Spanish speech, so a
+    bilingual window keeps both languages)."""
     own = [l for l in w.lines if w.t0 <= l.t < w.t1 and tokens(_strip_tags(l.text))]  # no bare [Música] tags
     lyrics = [l for l in own if l.src == "letra"]
     span = (min(l.t for l in lyrics), max(l.t for l in lyrics) + LYRIC_TAIL) if lyrics else None
-    src = next((s for s in PREFERENCE if any(l.src == s for l in own)), None)
+    src = next((s for s in PREFERENCE if s != "cy" and any(l.src == s for l in own)), None)
     out = [OutLine(l.t, l.text, l.lang, (l.src,)) for l in lyrics]
     out += [OutLine(l.t, l.text, l.lang, (l.src,)) for l in own
-            if l.src == src and not (span and span[0] <= l.t <= span[1])]
+            if l.src in (src, "cy") and not (span and span[0] <= l.t <= span[1])]
     return sorted(out, key=lambda l: l.t)  # by time only: same-second lines keep their source order
 
 

@@ -47,3 +47,14 @@ def test_lines_at_the_same_second_keep_their_order():
     lines = [OutLine(11.0, "que comienza a abrirse en la temprana", "es", ("subida",)), OutLine(11.0, "Estilizado, el narciso", "es", ("subida",))]
     assert [l.text for l in merge([win(0, 60, [])], [lines])] == ["que comienza a abrirse en la temprana", "Estilizado, el narciso"]
     assert [l.text for l in rules_lines(win(0, 60, []))] == []
+
+
+def test_rules_keep_the_welsh_model_beside_the_spanish_source():
+    # A bilingual window (Chubut 2019 ZfwMxCXBdpM, 8564-8618 s): the announcer in Welsh, then in Spanish.
+    # Bangor's lines left in a window are not over Spanish speech (sources drops those), so they stay.
+    w = win(8563.9, 8617.9, [
+        Line(8578.9, "Mae yna côr parti merched yn dod ar y llwyfan", "cy", "cy", 0.81),
+        Line(8602.9, "Mientras el conjunto de mujeres se aproxima al escenario", "whisper_es", "es"),
+        Line(8602.9, "mientras el conjunto de mujeres", "yt_es", "es"),
+    ])
+    assert [(l.t, l.fuentes) for l in rules_lines(w)] == [(8578.9, ("cy",)), (8602.9, ("yt_es",))]

@@ -1,7 +1,9 @@
 import { describe, expect, it } from 'vitest';
 import { approveVideoText, orFallback } from '../src/lib/admin';
-import { isCambio, keptCambios, timeLink, unreadable, videoCardRows } from '../src/lib/admin-video-card';
+import { changeHeadText, isCambio, keptCambios, timeLink, unreadable, videoCardRows } from '../src/lib/admin-video-card';
+import { lineIdioma } from '../src/lib/transcript-draft';
 import type { Cambio } from '../src/lib/video-corrections';
+import { asTranscript } from '../src/lib/video-transcript';
 
 const seg: [number, string][] = [[10, 'Benedicto de la competencia'], [20, 'hola mundo'], [30, 'adios']];
 const cambios: Cambio[] = [
@@ -35,6 +37,22 @@ describe('videoCardRows', () => {
     expect(videoCardRows('abcdef12345', [cambios[0]], null)[0].stale).toBe(false);
   });
   it('timeLink floors', () => expect(timeLink('abcdef12345', 61.9)).toContain('&t=61s'));
+});
+
+describe('the head of a change (after its time)', () => {
+  // The line «hola mundo» is Welsh (the Welsh model heard it); the others Spanish.
+  const tr = asTranscript({ src: 'reconstruida', lang: 'es', seg, fuentes: [['whisper_es'], ['cy'], ['whisper_es']] })!;
+  const idiomaDe = (i: number) => lineIdioma(tr, i);
+  it("says the kind once, and a language by name, from the line's own to the new one («Idioma · Idioma: es» before)", () => {
+    const more: Cambio[] = [...cambios, { t: 20, antes: 'hola mundo', texto: 'Hola, mundo', idioma: 'es' }];
+    expect(videoCardRows('abcdef12345', more, seg, idiomaDe).map(changeHeadText)).toEqual([
+      'Corregir', 'Quitar', 'Agregar · Idioma: español', 'Idioma: español → galés', 'Corregir · Idioma: galés → español',
+    ]);
+  });
+  it("names only the new language when the line's own is unknown (no file, or the line changed since)", () => {
+    expect(changeHeadText(videoCardRows('abcdef12345', [cambios[3]], null)[0])).toBe('Idioma: galés');
+    expect(changeHeadText(videoCardRows('abcdef12345', [cambios[3]], [[30, 'otra cosa']], () => 'es')[0])).toBe('Idioma: galés');
+  });
 });
 
 describe('keptCambios', () => {

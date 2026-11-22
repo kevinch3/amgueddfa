@@ -524,6 +524,7 @@
     "hecho_admin": "已设为管理员。",
     "error": {
       "motivo": "请填写拒绝理由。",
+      "motivo_retiro": "请填写撤回理由。",
       "algunos": "有 {n} 项无法处理，请查看每项的提示。",
       "acreditar": "请选择资料的积分归属。",
       "json": "内容不是有效的 JSON。",
@@ -1089,6 +1090,8 @@
       "es": "西班牙语",
       "cy": "威尔士语"
     },
+    "idioma_cambio": "语言：{antes} → {despues}",
+    "idioma_nuevo": "语言：{idioma}",
     "ok": "确定",
     "deshacer": "撤销",
     "agregar": "+ 在 {tiempo} 处添加一行",

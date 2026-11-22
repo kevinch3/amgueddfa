@@ -9,6 +9,7 @@ import { withdrawnInFile } from './live-video-corrections';
 import { isCambio } from './admin-video-card';
 import { ANTES_MAX, VALUE_MAX } from './contrib';
 import { t } from './i18n';
+import { nombreIdioma } from './transcript-draft';
 import { applyCorrections, conTexto, foldLine, runEnLinea, sinRun, type Cambio, type CorrectionRow } from './video-corrections';
 import type { Transcript } from './video-transcript';
 import { wordDiff, type DiffPart } from './word-diff';
@@ -210,7 +211,7 @@ export function reanchoredCambios(cambios: Cambio[], item: { index: number; moti
 
 /** A warning in words: "Se reemplaza la línea entera.", "Toda la línea pasa a galés." (the language by name). */
 export function avisoTexto(a: Aviso, idioma?: 'es' | 'cy'): string {
-  if (a === 'idioma') return t('admin.videos.aviso_idioma', { idioma: idioma ? t(`editor.idioma_nombre.${idioma}`) : '' });
+  if (a === 'idioma') return t('admin.videos.aviso_idioma', { idioma: idioma ? nombreIdioma(idioma) : '' });
   return t(`admin.videos.aviso_${a}`);
 }
 

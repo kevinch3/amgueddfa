@@ -524,6 +524,7 @@
     "hecho_admin": "Cette personne est maintenant administratrice.",
     "error": {
       "motivo": "Indiquez le motif du refus.",
+      "motivo_retiro": "Indiquez le motif du retrait.",
       "algunos": "{n} n'ont pas pu être traités ; consultez le message de chacun.",
       "acreditar": "Choisissez à qui attribuer les informations.",
       "json": "Le contenu n'est pas un JSON valide.",
@@ -1089,6 +1090,8 @@
       "es": "espagnol",
       "cy": "gallois"
     },
+    "idioma_cambio": "Langue : {antes} → {despues}",
+    "idioma_nuevo": "Langue : {idioma}",
     "ok": "OK",
     "deshacer": "Défaire",
     "agregar": "+ Ajouter une ligne à {tiempo}",

@@ -524,6 +524,7 @@
     "hecho_admin": "They're now an admin.",
     "error": {
       "motivo": "Write the reason for rejecting it.",
+      "motivo_retiro": "Write the reason for withdrawing it.",
       "algunos": "{n} couldn't be processed; check each one's message.",
       "acreditar": "Choose who to credit the facts to.",
       "json": "The content isn't valid JSON.",
@@ -1089,6 +1090,8 @@
       "es": "Spanish",
       "cy": "Welsh"
     },
+    "idioma_cambio": "Language: {antes} → {despues}",
+    "idioma_nuevo": "Language: {idioma}",
     "ok": "OK",
     "deshacer": "Undo",
     "agregar": "+ Add a line at {tiempo}",

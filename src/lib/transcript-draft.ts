@@ -298,11 +298,33 @@ export const cambiosLabel = (n: number): string => (n === 1 ? t('editor.un_cambi
 /** "Enviar 2 correcciones"; "Enviar 1 corrección". */
 export const enviarLabel = (n: number): string => (n === 1 ? t('editor.enviar_una') : t('editor.enviar', { n }));
 
-/** A change in words, for the line's note: «the new text», "Quitar esta línea", the language. */
-export function cambioTexto(c: { texto?: string; idioma?: Idioma; quitar?: boolean }): string {
-  if (c.quitar) return t('editor.quitar');
-  return [c.texto !== undefined ? `«${c.texto}»` : '', c.idioma ? t(`editor.${c.idioma}`) : ''].filter(Boolean).join(' · ');
+/** A language by name in the page's language: "español", "galés". */
+export const nombreIdioma = (x: Idioma): string => t(`editor.idioma_nombre.${x}`);
+
+/** A language change in words, from the line's own language to the new one: "Idioma: galés → español"; "Idioma:
+ * español" when the line's own is unknown (or the same). */
+export function idiomaCambio(hacia: Idioma, desde?: Idioma | null): string {
+  return desde && desde !== hacia
+    ? t('editor.idioma_cambio', { antes: nombreIdioma(desde), despues: nombreIdioma(hacia) })
+    : t('editor.idioma_nuevo', { idioma: nombreIdioma(hacia) });
 }
+
+/** A change in words, for the line's note: «the new text», "Quitar esta línea", the language (`desde`: the line's own
+ * language as shown, lineIdioma). */
+export function cambioTexto(c: { texto?: string; idioma?: Idioma; quitar?: boolean }, desde?: Idioma | null): string {
+  if (c.quitar) return t('editor.quitar');
+  return [c.texto !== undefined ? `«${c.texto}»` : '', c.idioma ? idiomaCambio(c.idioma, desde) : ''].filter(Boolean).join(' · ');
+}
+
+/** The note under a line the draft changes: "→ «the new text»", "→ Quitar esta línea"; a language change on its own
+ * reads "Idioma: galés → español" (its own arrow). */
+export function notaBorrador(c: { texto?: string; idioma?: Idioma; quitar?: boolean }, desde?: Idioma | null): string {
+  return `${c.quitar || c.texto !== undefined ? '→ ' : ''}${cambioTexto(c, desde)}`;
+}
+
+/** The note under a line with the author's own pending change: "Pendiente de revisión: Idioma: galés → español". */
+export const notaPendiente = (c: { texto?: string; idioma?: Idioma; quitar?: boolean }, desde?: Idioma | null): string =>
+  t('editor.pendiente', { cambio: cambioTexto(c, desde) });
 
 /** "+ 1:23 «texto»": a line added (in the draft, or pending). */
 export const nuevaTexto = (n: { t: number; texto: string }): string => `+ ${fmtTime(n.t)} «${n.texto}»`;

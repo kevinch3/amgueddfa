@@ -524,6 +524,7 @@
     "hecho_admin": "Ora è amministratore.",
     "error": {
       "motivo": "Scrivi il motivo del rifiuto.",
+      "motivo_retiro": "Scrivi il motivo del ritiro.",
       "algunos": "{n} non sono stati elaborati; controlla il messaggio di ciascuno.",
       "acreditar": "Scegli a chi attribuire i dati.",
       "json": "Il contenuto non è un JSON valido.",
@@ -1089,6 +1090,8 @@
       "es": "spagnolo",
       "cy": "gallese"
     },
+    "idioma_cambio": "Lingua: {antes} → {despues}",
+    "idioma_nuevo": "Lingua: {idioma}",
     "ok": "OK",
     "deshacer": "Ripristina",
     "agregar": "+ Aggiungi una riga a {tiempo}",

@@ -524,6 +524,7 @@
     "hecho_admin": "Mae'n weinyddwr rŵan.",
     "error": {
       "motivo": "Sgwennwch y rheswm dros wrthod.",
+      "motivo_retiro": "Sgwennwch y rheswm dros ei thynnu'n ôl.",
       "algunos": "Methwyd â phrosesu {n}; edrychwch ar neges pob un.",
       "acreditar": "Dewiswch i bwy i briodoli'r ffeithiau.",
       "json": "Dydy'r cynnwys ddim yn JSON dilys.",
@@ -1089,6 +1090,8 @@
       "es": "Sbaeneg",
       "cy": "Cymraeg"
     },
+    "idioma_cambio": "Iaith: {antes} → {despues}",
+    "idioma_nuevo": "Iaith: {idioma}",
     "ok": "Iawn",
     "deshacer": "Dadwneud",
     "agregar": "+ Ychwanegu llinell am {tiempo}",

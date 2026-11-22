@@ -524,6 +524,7 @@
     "hecho_admin": "Nu är personen administratör.",
     "error": {
       "motivo": "Skriv skälet till avvisningen.",
+      "motivo_retiro": "Skriv skälet till återkallelsen.",
       "algunos": "{n} kunde inte bearbetas; läs meddelandet för var och en.",
       "acreditar": "Välj vem uppgifterna ska tillskrivas.",
       "json": "Innehållet är inte giltig JSON.",
@@ -1089,6 +1090,8 @@
       "es": "spanska",
       "cy": "kymriska"
     },
+    "idioma_cambio": "Språk: {antes} → {despues}",
+    "idioma_nuevo": "Språk: {idioma}",
     "ok": "OK",
     "deshacer": "Ångra",
     "agregar": "+ Lägg till en rad vid {tiempo}",

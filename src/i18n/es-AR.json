@@ -524,6 +524,7 @@
     "hecho_admin": "Ahora es admin.",
     "error": {
       "motivo": "Escribí el motivo del rechazo.",
+      "motivo_retiro": "Escribí el motivo del retiro.",
       "algunos": "{n} no se pudieron procesar; revisá el mensaje de cada uno.",
       "acreditar": "Elegí a quién acreditar los datos.",
       "json": "El contenido no es un JSON válido.",
@@ -1089,6 +1090,8 @@
       "es": "español",
       "cy": "galés"
     },
+    "idioma_cambio": "Idioma: {antes} → {despues}",
+    "idioma_nuevo": "Idioma: {idioma}",
     "ok": "OK",
     "deshacer": "Deshacer",
     "agregar": "+ Agregar una línea en {tiempo}",

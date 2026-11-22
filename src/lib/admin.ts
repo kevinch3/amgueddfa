@@ -109,6 +109,7 @@ export function mapRpcError(e: { message?: string } | null | undefined): Result 
   if (m.includes('not_approved')) return { ok: false, key: 'admin.error.no_aprobada' };
   if (m.includes('not_admin') || m.includes('forbidden')) return { ok: false, key: 'admin.error.no_admin' };
   if (m.includes('not_found')) return { ok: false, key: 'admin.error.no_encontrado' };
+  if (m.includes('note_required')) return { ok: false, key: 'admin.error.motivo_retiro' }; // a withdrawal without a reason
   // 'invalid' and 'wrong_type': the Videos tab's RPCs (an exact match: other errors that say "invalid" are not about the value).
   if (m === 'invalid' || m.includes('invalid_value') || m.includes('edition_required') || m.includes('wrong_type')) return { ok: false, key: 'admin.error.valor' };
   return OFFLINE;
@@ -335,7 +336,7 @@ export async function approveVideoText(c: Pending, kept: Cambio[], client: Supab
  * player shows that video's file as it is, with no live corrections (lib/live-video-corrections.ts, withdrawnInFile). */
 export async function withdrawContribution(id: string, note: string, client: SupabaseClient | null = getClient()): Promise<Result> {
   const reason = (note ?? '').trim();
-  if (!reason) return { ok: false, key: 'admin.error.motivo' };
+  if (!reason) return { ok: false, key: 'admin.error.motivo_retiro' };
   if (!client) return OFFLINE;
   return rpc(client, 'admin_withdraw_contribution', { cid: id, note: reason });
 }

@@ -65,8 +65,10 @@ describe('groupByVideo', () => {
 describe('withdrawContribution', () => {
   it('asks for a reason first and sends nothing without one', async () => {
     const { client, calls } = rpcClient();
-    expect(await withdrawContribution('c1', '   ', client)).toEqual({ ok: false, key: 'admin.error.motivo' });
+    // The reason of a withdrawal, not of a rejection.
+    expect(await withdrawContribution('c1', '   ', client)).toEqual({ ok: false, key: 'admin.error.motivo_retiro' });
     expect(calls).toEqual([]);
+    expect(await withdrawContribution('c1', 'x', rpcClient({ message: 'note_required' }).client)).toEqual({ ok: false, key: 'admin.error.motivo_retiro' });
   });
 
   it('withdraws with the reason given', async () => {

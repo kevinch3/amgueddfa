@@ -12,9 +12,9 @@
 import { ownPendingVideo, submit, type Contribution } from '../lib/contrib';
 import { t } from '../lib/i18n';
 import {
-  addNueva, cabe, cambioTexto, cambiosLabel, clearDraft, countCambios, editControls, editorAccess, emptyDraft, enviarLabel,
-  fitDraft, limiteLabel, lineIdioma, loadDraft, momentoNueva, nuevaIdioma, nuevaTexto, pendingMarks, puedeEntrar, removeNueva,
-  saveDraft, sendDraft, setLine, tiempoNueva, undoLine, type Draft, type Idioma,
+  addNueva, cabe, cambiosLabel, clearDraft, countCambios, editControls, editorAccess, emptyDraft, enviarLabel, fitDraft,
+  idiomaCambio, limiteLabel, lineIdioma, loadDraft, momentoNueva, notaBorrador, notaPendiente, nuevaIdioma, nuevaTexto, pendingMarks,
+  puedeEntrar, removeNueva, saveDraft, sendDraft, setLine, tiempoNueva, undoLine, type Draft, type Idioma,
 } from '../lib/transcript-draft';
 import { parseVideoHash } from '../lib/video-hash';
 import { fmtTime, lineAt, type Transcript } from '../lib/video-transcript';
@@ -139,7 +139,7 @@ export function wireEditor(dialog: HTMLDialogElement, getState: () => EditorStat
       const x = li[Number(k)];
       if (!x) continue;
       x.dataset.pendiente = '';
-      x.append(el('p', { class: 'rep-pend' }, t('editor.pendiente', { cambio: cambioTexto(p) })));
+      x.append(el('p', { class: 'rep-pend' }, notaPendiente(p, lineIdioma(tr, Number(k)))));
     }
     for (const n of m.nuevas) {
       const x = li[Math.max(0, n.despues)];
@@ -200,7 +200,8 @@ export function wireEditor(dialog: HTMLDialogElement, getState: () => EditorStat
       return;
     }
     li.dataset.cambiado = e.quitar ? 'quitar' : e.texto !== undefined ? 'texto' : 'idioma';
-    const nota = el('p', { class: 'rep-ed-cambio rep-ed-x' }, `→ ${cambioTexto(e)}`);
+    const tr = state().tr;
+    const nota = el('p', { class: 'rep-ed-cambio rep-ed-x' }, notaBorrador(e, tr ? lineIdioma(tr, i) : null));
     const ed = li.querySelector('.rep-ed');
     if (ed) ed.before(nota);
     else li.append(nota);
@@ -217,7 +218,7 @@ export function wireEditor(dialog: HTMLDialogElement, getState: () => EditorStat
       const x = li[Math.max(0, at)];
       if (!x) return;
       const box = el('div', { class: 'rep-ed-nueva rep-ed-x' });
-      const texto = `${nuevaTexto(n)} · ${t(`editor.${n.idioma}`)}`;
+      const texto = `${nuevaTexto(n)} · ${idiomaCambio(n.idioma)}`;
       box.append(el('span', {}, texto), el('button', {
         type: 'button', class: 'btn-link small', 'data-nueva-quitar': String(k), 'aria-label': `${t('editor.deshacer')}: ${texto}`,
       }, t('editor.deshacer')));

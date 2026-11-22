@@ -38,7 +38,8 @@ import {
 } from '../lib/admin';
 import { currentProfile } from '../lib/auth';
 import type { Kind } from '../lib/contrib';
-import { isCambio, keptCambios, unreadable, videoCardRows, type VideoCardRow } from '../lib/admin-video-card';
+import { changeHeadText, isCambio, keptCambios, unreadable, videoCardRows, type VideoCardRow } from '../lib/admin-video-card';
+import { lineIdioma } from '../lib/transcript-draft';
 import {
   avisoTexto, canAddNew, cardNotes, groupByVideo, reanchorOptions, reanchorPreview, retirarTodaLabel, sinAnclarList,
   type ApprovedVideoText, type CardNote, type Eleccion, type SinAnclarItem, type VideoGroup,
@@ -176,14 +177,9 @@ async function publishedTranscript(id: string): Promise<Transcript | null> {
 }
 
 /** The published transcript lines of a video, or null when the file cannot be read. */
-async function publishedLines(id: string): Promise<[number, string][] | null> {
-  return (await publishedTranscript(id))?.seg ?? null;
-}
-
-/** "1:15 Corregir · Idioma: cy", the time linked to that moment on YouTube. */
+/** "1:15 Corregir · Idioma: galés → español", the time linked to that moment on YouTube. */
 function changeHead(r: VideoCardRow, into: HTMLElement): void {
-  into.append(el('a', { href: r.link, target: '_blank', rel: 'noopener noreferrer' }, fmtTime(r.t)), ` ${t(`admin.video.${r.kind}`)}`);
-  if (r.idioma) into.append(` · ${t('admin.video.idioma')}: ${r.idioma}`);
+  into.append(el('a', { href: r.link, target: '_blank', rel: 'noopener noreferrer' }, fmtTime(r.t)), ` ${changeHeadText(r)}`);
 }
 
 /** A change's words, struck and inserted (a language change: the line itself). All as text. */
@@ -220,9 +216,9 @@ function videoChanges(c: Pending, onChange: () => void): { box: HTMLElement; kep
   const ticks = cambios.map(() => true);
   const list = el('ol', { class: 'admin-cambios' });
   box.append(list);
-  const draw = (seg: [number, string][] | null) => {
+  const draw = (file: Transcript | null) => {
     list.replaceChildren();
-    for (const r of videoCardRows(id, cambios, seg)) {
+    for (const r of videoCardRows(id, cambios, file?.seg ?? null, file ? (i) => lineIdioma(file, i) : undefined)) {
       const li = el('li');
       const cid = `cambio-${c.id}-${r.index}`;
       const cb = el('input', { type: 'checkbox', id: cid });
@@ -240,7 +236,7 @@ function videoChanges(c: Pending, onChange: () => void): { box: HTMLElement; kep
     }
   };
   draw(null);
-  if (id) void publishedLines(id).then((seg) => seg && draw(seg));
+  if (id) void publishedTranscript(id).then((file) => file && draw(file));
   return { box, kept: () => keptCambios(cambios, ticks) };
 }
 

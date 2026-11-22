@@ -6,7 +6,7 @@ import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
 import {
   addNueva, cambiosLabel, cambioTexto, editControls, editorAccess, emptyDraft, enviarLabel, loadDraft, momentoNueva,
-  nuevaIdioma, parseTiempo, pendingMarks, puedeEntrar, saveDraft, sendDraft, setLine, tiempoNueva,
+  notaBorrador, notaPendiente, nuevaIdioma, parseTiempo, pendingMarks, puedeEntrar, saveDraft, sendDraft, setLine, tiempoNueva,
 } from '../src/lib/transcript-draft';
 import { asTranscript, type Transcript } from '../src/lib/video-transcript';
 
@@ -142,10 +142,21 @@ describe('the counter and the send button', () => {
     expect(rule(`${edit} > .rep-lineas`)).toMatch(/flex:\s*1 0 max\(12\.5rem,\s*40dvh\)/);
   });
 
-  it('describes a change in words: the new text, a removal, a language', () => {
+  it('describes a change in words: the new text, a removal, a language by name, from the line\'s own to the new one', () => {
     expect(cambioTexto({ texto: 'Veredicto' })).toBe('«Veredicto»');
     expect(cambioTexto({ quitar: true })).toBe('Quitar esta línea');
-    expect(cambioTexto({ texto: 'Diolch', idioma: 'cy' })).toBe('«Diolch» · Cymraeg');
+    expect(cambioTexto({ texto: 'Diolch', idioma: 'cy' }, 'es')).toBe('«Diolch» · Idioma: español → galés');
+    expect(cambioTexto({ idioma: 'es' }, 'cy')).toBe('Idioma: galés → español');
+    expect(cambioTexto({ idioma: 'es' })).toBe('Idioma: español'); // the line's own language unknown
+  });
+
+  it('marks a draft line and a pending one the same way: «Idioma: galés → español», not a bare «→ Español»', () => {
+    expect(notaBorrador({ idioma: 'es' }, 'cy')).toBe('Idioma: galés → español');
+    expect(notaBorrador({ texto: 'Veredicto' }, 'es')).toBe('→ «Veredicto»');
+    expect(notaBorrador({ texto: 'Diolch', idioma: 'cy' }, 'es')).toBe('→ «Diolch» · Idioma: español → galés');
+    expect(notaBorrador({ quitar: true }, 'es')).toBe('→ Quitar esta línea');
+    expect(notaPendiente({ idioma: 'es' }, 'cy')).toBe('Pendiente de revisión: Idioma: galés → español');
+    expect(notaPendiente({ texto: 'Veredicto' }, 'es')).toBe('Pendiente de revisión: «Veredicto»');
   });
 
   it('a new line takes the language of the line playing there, else Spanish', () => {

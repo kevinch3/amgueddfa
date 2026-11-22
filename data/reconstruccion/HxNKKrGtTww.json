@@ -53,27 +53,47 @@
   ],
   [
    73.6,
-   "mortal"
+   "Let all mortal flesh keep silence"
   ],
   [
    88.8,
-   "with"
+   "and stand with fear and trembling,"
+  ],
+  [
+   100.5,
+   "and lift itself above all earthly thought."
   ],
   [
    118.8,
-   "The King of Kings and lord"
+   "For the King of kings and Lord of lords, Christ our God,"
   ],
   [
-   213.5,
-   "al"
+   133.6,
+   "cometh forth to be our oblation,"
   ],
   [
-   220.5,
-   "allelu"
+   152.4,
+   "and to be given for Food to the faithful."
+  ],
+  [
+   162.4,
+   "Before Him come the choirs of angels"
+  ],
+  [
+   178.9,
+   "with every principality and power;"
+  ],
+  [
+   196.8,
+   "the Cherubim with many eyes, and wingèd Seraphim,"
+  ],
+  [
+   217.8,
+   "who veil their faces as they shout exultingly the hymn:"
   ],
   [
    238.7,
-   "alleluja"
+   "Alleluia!"
   ]
  ],
  "fuentes": [
@@ -114,23 +134,49 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ]
+ ],
+ "letras": [
+  {
+   "desde": 70,
+   "hasta": 260,
+   "titulo": "Let all mortal flesh keep silence",
+   "autor": "Edward Bairstow",
+   "idioma": "en",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
+  }
  ],
  "ventanas": {
   "total": 5,

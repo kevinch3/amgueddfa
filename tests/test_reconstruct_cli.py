@@ -164,3 +164,15 @@ def test_cached_windows_between_failures_do_not_hide_a_usage_limit(tmp_path):
         raise ModelError("usage limit")
     with pytest.raises(TooManyErrors):
         reconstruct_video(repo, backup, video, ask=down, replies=tmp_path / "replies")
+
+
+def test_a_video_with_only_a_lyric_span_is_reconstructed(tmp_path):
+    # Clips with no automatic text at all (a choir, no speech) still show the lyrics the maintainer gave (#129).
+    repo, backup, video = _setup(tmp_path)
+    (repo / "public/transcripciones-video/vid.json").unlink()
+    (backup / "videos/x/clip_vid.es-orig.vtt").unlink()
+    (repo / "data/letras/himno.md").write_text("---\ntitulo: Himno\nidioma: la\n---\nAve verum corpus\nnatum de Maria\n\nVere passum\nimmolatum\n", encoding="utf-8")
+    (repo / "data/letras/videos.json").write_text(json.dumps({"vid": [{"letra": "himno", "desde": 10, "hasta": 90}]}), encoding="utf-8")
+    res = reconstruct_video(repo, backup, video, ask=echo_model([]), replies=tmp_path / "replies")
+    assert res is not None and [x for _, x in res["seg"]] == ["Ave verum corpus", "natum de Maria", "Vere passum", "immolatum"]
+    assert all(f == ["letra"] for f in res["fuentes"]) and 10 <= res["seg"][0][0] < res["seg"][-1][0] < 90

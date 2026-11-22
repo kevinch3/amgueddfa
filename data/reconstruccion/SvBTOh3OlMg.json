@@ -4997,11 +4997,19 @@
   ],
   [
    11754.7,
-   "Santa María, Santa María, Padre, Madre de mí."
+   "Ave Maria, gratia plena, Dominus tecum."
+  ],
+  [
+   11765.4,
+   "Benedicta tu in mulieribus, et benedictus fructus ventris tui Jesus."
+  ],
+  [
+   11783.4,
+   "Sancta Maria, Mater Dei, ora pro nobis peccatoribus nunc et in hora mortis nostrae."
   ],
   [
    11804.7,
-   "Amén."
+   "Amen."
   ],
   [
    11864.7,
@@ -10318,10 +10326,16 @@
    "whisper_es"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ],
   [
    "whisper_es"
@@ -11499,6 +11513,17 @@
   [
    "whisper_es"
   ]
+ ],
+ "letras": [
+  {
+   "desde": 11647,
+   "hasta": 11839,
+   "titulo": "Ave María",
+   "autor": "Karl Jenkins",
+   "idioma": "la",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
+  }
  ],
  "ventanas": {
   "total": 273,

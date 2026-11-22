@@ -145,6 +145,11 @@
    "hasta": 637
   },
   {
+   "letra": "an-die-musik",
+   "desde": 2530,
+   "hasta": 2698
+  },
+  {
    "letra": "la-finadita",
    "desde": 9583,
    "hasta": 9818
@@ -166,11 +171,6 @@
  ],
  "eNmj-1_HlIk": [
   {
-   "letra": "rabo-de-nube",
-   "desde": 12462,
-   "hasta": 12564
-  },
-  {
    "letra": "la-vieja",
    "desde": 3798,
    "hasta": 4003
@@ -184,13 +184,38 @@
    "letra": "la-vieja",
    "desde": 4274,
    "hasta": 4472
+  },
+  {
+   "letra": "pater-noster",
+   "desde": 5611,
+   "hasta": 5712
+  },
+  {
+   "letra": "rabo-de-nube",
+   "desde": 12462,
+   "hasta": 12564
+  },
+  {
+   "letra": "alla-lejos-y-hace-tiempo",
+   "desde": 16070,
+   "hasta": 16300
   }
  ],
  "-t5r4pwKx50": [
   {
+   "letra": "let-all-mortal-flesh",
+   "desde": 28813,
+   "hasta": 29003
+  },
+  {
    "letra": "zamba-del-carnaval",
    "desde": 29594,
    "hasta": 29911
+  },
+  {
+   "letra": "ave-maria-valva",
+   "desde": 30312,
+   "hasta": 30427
   }
  ],
  "cDpe89FFjOA": [
@@ -269,9 +294,24 @@
  ],
  "utHSvsjwvwo": [
   {
+   "letra": "wade-in-the-water",
+   "desde": 1755,
+   "hasta": 1860
+  },
+  {
    "letra": "naranjo-en-flor",
    "desde": 20927,
    "hasta": 21205
+  },
+  {
+   "letra": "tamquam-agnus",
+   "desde": 22534,
+   "hasta": 22589
+  },
+  {
+   "letra": "tamquam-agnus",
+   "desde": 22649,
+   "hasta": 22694
   }
  ],
  "QnmtSgOvFKM": [
@@ -279,6 +319,199 @@
    "letra": "hen-ferchetan",
    "desde": 0,
    "hasta": 160
+  }
+ ],
+ "vmTVvg_KPRg": [
+  {
+   "letra": "alla-lejos-y-hace-tiempo",
+   "desde": 28,
+   "hasta": 254
+  }
+ ],
+ "_75BiKuifoQ": [
+  {
+   "letra": "cancion-de-cuna-para-despertar-a-un-negrito",
+   "desde": 133,
+   "hasta": 287
+  },
+  {
+   "letra": "ta-na-solbici",
+   "desde": 882,
+   "hasta": 1048
+  }
+ ],
+ "adFH5gX0z80": [
+  {
+   "letra": "la-vieja",
+   "desde": 36,
+   "hasta": 147
+  },
+  {
+   "letra": "la-vieja",
+   "desde": 176,
+   "hasta": 287
+  }
+ ],
+ "s-eVxB-tOIo": [
+  {
+   "letra": "zamba-para-olvidar",
+   "desde": 18,
+   "hasta": 245
+  }
+ ],
+ "TL1bhoNwk4U": [
+  {
+   "letra": "pam-fod-eira-yn-wyn",
+   "desde": 0,
+   "hasta": 260
+  }
+ ],
+ "7GeZCEDgcoc": [
+  {
+   "letra": "ubi-caritas",
+   "desde": 178,
+   "hasta": 355
+  }
+ ],
+ "x0-pSbbCHIA": [
+  {
+   "letra": "ubi-caritas",
+   "desde": 399,
+   "hasta": 636
+  },
+  {
+   "letra": "ubi-caritas",
+   "desde": 857,
+   "hasta": 1034
+  },
+  {
+   "letra": "ubi-caritas",
+   "desde": 1294,
+   "hasta": 1475
+  }
+ ],
+ "LQ28BhyOZBQ": [
+  {
+   "letra": "cantate-domino",
+   "desde": 25463,
+   "hasta": 25571
+  },
+  {
+   "letra": "ubi-caritas",
+   "desde": 33658,
+   "hasta": 33893
+  },
+  {
+   "letra": "ubi-caritas",
+   "desde": 34362,
+   "hasta": 34540
+  },
+  {
+   "letra": "ubi-caritas",
+   "desde": 35132,
+   "hasta": 35313
+  }
+ ],
+ "9HciLCqfIas": [
+  {
+   "letra": "ave-maria-valva",
+   "desde": 66,
+   "hasta": 193
+  }
+ ],
+ "dT8A2GQSDlc": [
+  {
+   "letra": "ave-maria-valva",
+   "desde": 36,
+   "hasta": 150
+  }
+ ],
+ "ZFTQmoycc9Y": [
+  {
+   "letra": "pater-noster",
+   "desde": 10,
+   "hasta": 105
+  }
+ ],
+ "SvBTOh3OlMg": [
+  {
+   "letra": "ave-maria-jenkins",
+   "desde": 11647,
+   "hasta": 11839
+  }
+ ],
+ "9Z8ncfFoWGc": [
+  {
+   "letra": "tamquam-agnus",
+   "desde": 4,
+   "hasta": 57
+  }
+ ],
+ "M3YhNXwo61M": [
+  {
+   "letra": "tamquam-agnus",
+   "desde": 4,
+   "hasta": 51
+  }
+ ],
+ "AnLRusbVjGs": [
+  {
+   "letra": "cantate-domino",
+   "desde": 199,
+   "hasta": 308
+  }
+ ],
+ "HxNKKrGtTww": [
+  {
+   "letra": "let-all-mortal-flesh",
+   "desde": 70,
+   "hasta": 260
+  }
+ ],
+ "_M_c9qh2pvM": [
+  {
+   "letra": "wade-in-the-water",
+   "desde": 0,
+   "hasta": 104
+  }
+ ],
+ "YJnenM8tw0I": [
+  {
+   "letra": "cinema-paradiso-se",
+   "desde": 950,
+   "hasta": 1101
+  },
+  {
+   "letra": "cinema-paradiso-se",
+   "desde": 1123,
+   "hasta": 1266
+  },
+  {
+   "letra": "cinema-paradiso-se",
+   "desde": 1308,
+   "hasta": 1481
+  },
+  {
+   "letra": "cinema-paradiso-se",
+   "desde": 1532,
+   "hasta": 1712
+  }
+ ],
+ "MIW7333GiIY": [
+  {
+   "letra": "ta-na-solbici",
+   "desde": 311,
+   "hasta": 477
+  },
+  {
+   "letra": "cinema-paradiso-se",
+   "desde": 15479,
+   "hasta": 15629
+  },
+  {
+   "letra": "cinema-paradiso-se",
+   "desde": 15684,
+   "hasta": 15830
   }
  ]
 }

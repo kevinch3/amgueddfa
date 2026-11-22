@@ -1,0 +1,47 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   4.0,
+   "Tamquam agnus coram tondente se obmutuit,"
+  ],
+  [
+   24.9,
+   "et non aperuit os suum:"
+  ],
+  [
+   36.1,
+   "de angustia, et de judicio sublatus est."
+  ]
+ ],
+ "fuentes": [
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ]
+ ],
+ "letras": [
+  {
+   "desde": 4,
+   "hasta": 57,
+   "titulo": "Tamquam agnus",
+   "autor": "Tomás Luis de Victoria",
+   "idioma": "la",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
+  }
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

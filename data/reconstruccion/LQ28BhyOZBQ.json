@@ -11860,24 +11860,28 @@
    "Domino"
   ],
   [
-   25472.5,
-   "Cantate"
+   25464.8,
+   "Cantate Domino canticum novum:"
   ],
   [
-   25474.1,
-   "Domino"
+   25472.5,
+   "cantate Domino omnis terra."
   ],
   [
    25495.7,
-   "benedic"
+   "Cantate Domino, et benedicite nomini ejus:"
   ],
   [
    25510.3,
-   "anunciate"
+   "annuntiate de die in diem salutare ejus."
   ],
   [
-   25543.8,
-   "Gloria"
+   25538.8,
+   "Annuntiate inter gentes gloriam ejus,"
+  ],
+  [
+   25548.4,
+   "in omnibus populis mirabilia ejus."
   ],
   [
    25580.6,
@@ -17132,10 +17136,6 @@
    "municipal de"
   ],
   [
-   33668.4,
-   "Trelew"
-  ],
-  [
    33681.2,
    "congreg"
   ],
@@ -17145,7 +17145,7 @@
   ],
   [
    33698.4,
-   "caritas"
+   "Ubi caritas et amor, Deus ibi est."
   ],
   [
    33707.6,
@@ -17153,23 +17153,23 @@
   ],
   [
    33716.7,
-   "concret"
+   "Congregavit nos in unum Christi amor."
   ],
   [
-   33772.8,
-   "amemus de"
+   33734.8,
+   "Exsultemus, et in ipso jucundemur."
   ],
   [
-   33841.1,
-   "deus"
+   33752.8,
+   "Timeamus, et amemus Deum vivum."
   ],
   [
-   33858.6,
-   "kristi"
+   33783.6,
+   "Et ex corde diligamus nos sincero."
   ],
   [
-   33878.1,
-   "krist"
+   33868.0,
+   "Amen."
   ],
   [
    34070.2,
@@ -17220,44 +17220,24 @@
    "amorus"
   ],
   [
-   34378.6,
-   "conreu"
-  ],
-  [
    34387.4,
-   "crist"
-  ],
-  [
-   34392.0,
-   "amor"
-  ],
-  [
-   34397.4,
-   "deus"
+   "Ubi caritas et amor, Deus ibi est."
   ],
   [
    34401.5,
-   "congreg"
-  ],
-  [
-   34404.0,
-   "unu"
-  ],
-  [
-   34410.0,
-   "Cristi"
+   "Congregavit nos in unum Christi amor."
   ],
   [
    34438.9,
-   "exultemos"
+   "Exsultemus, et in ipso jucundemur."
   ],
   [
    34449.8,
-   "emus deum"
+   "Timeamus, et amemus Deum vivum."
   ],
   [
-   34455.0,
-   "deum"
+   34466.6,
+   "Et ex corde diligamus nos sincero."
   ],
   [
    34487.9,
@@ -17278,6 +17258,10 @@
   [
    34514.5,
    "Cristi"
+  ],
+  [
+   34537.1,
+   "Amen."
   ],
   [
    34606.6,
@@ -17605,11 +17589,31 @@
   ],
   [
    35176.4,
-   "conreu Cristi"
+   "Ubi caritas et amor, Deus ibi est."
   ],
   [
    35182.3,
-   "amor Christi"
+   "Congregavit nos in unum Christi amor."
+  ],
+  [
+   35193.9,
+   "Exsultemus, et in ipso jucundemur."
+  ],
+  [
+   35205.6,
+   "Timeamus, et amemus Deum vivum."
+  ],
+  [
+   35213.0,
+   "Et ex corde diligamus nos sincero."
+  ],
+  [
+   35279.0,
+   "Amen."
+  ],
+  [
+   35286.0,
+   "amor"
   ],
   [
    35360.6,
@@ -27958,22 +27962,22 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
    "yt_es"
@@ -31921,25 +31925,25 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
    "yt_es"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
    "yt_es"
@@ -31978,19 +31982,19 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
    "yt_es"
@@ -32008,7 +32012,7 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
    "yt_es"
@@ -32254,19 +32258,22 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
+  ],
+  [
+   "letra"
   ],
   [
    "yt_es"
@@ -33360,6 +33367,44 @@
   [
    "yt_es"
   ]
+ ],
+ "letras": [
+  {
+   "desde": 25463,
+   "hasta": 25571,
+   "titulo": "Cantate Domino",
+   "autor": "Hans Leo Hassler",
+   "idioma": "la",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
+  },
+  {
+   "desde": 33658,
+   "hasta": 33893,
+   "titulo": "Ubi caritas",
+   "autor": "Gjeilo",
+   "idioma": "la",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
+  },
+  {
+   "desde": 34362,
+   "hasta": 34540,
+   "titulo": "Ubi caritas",
+   "autor": "Gjeilo",
+   "idioma": "la",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
+  },
+  {
+   "desde": 35132,
+   "hasta": 35313,
+   "titulo": "Ubi caritas",
+   "autor": "Gjeilo",
+   "idioma": "la",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
+  }
  ],
  "ventanas": {
   "total": 616,

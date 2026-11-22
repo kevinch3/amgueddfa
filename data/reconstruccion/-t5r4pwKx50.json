@@ -10649,15 +10649,47 @@
   ],
   [
    28830.0,
-   "Amén."
+   "Let all mortal flesh keep silence"
   ],
   [
-   28860.0,
-   "Amén."
+   28835.1,
+   "and stand with fear and trembling,"
   ],
   [
-   28890.0,
-   "Amén."
+   28839.1,
+   "and lift itself above all earthly thought."
+  ],
+  [
+   28845.3,
+   "For the King of kings and Lord of lords, Christ our God,"
+  ],
+  [
+   28852.1,
+   "cometh forth to be our oblation,"
+  ],
+  [
+   28857.2,
+   "and to be given for Food to the faithful."
+  ],
+  [
+   28863.4,
+   "Before Him come the choirs of angels"
+  ],
+  [
+   28869.6,
+   "with every principality and power;"
+  ],
+  [
+   28876.4,
+   "the Cherubim with many eyes, and wingèd Seraphim,"
+  ],
+  [
+   28884.4,
+   "who veil their faces as they shout exultingly the hymn:"
+  ],
+  [
+   28892.3,
+   "Alleluia!"
   ],
   [
    29031.0,
@@ -11225,19 +11257,35 @@
   ],
   [
    30312.7,
-   "Ave Maria, gracia plera, dominus tecum,"
+   "Ave María, grátia plena,"
+  ],
+  [
+   30325.1,
+   "Dóminus tecum."
   ],
   [
    30332.9,
-   "benedictatum in murierimus."
+   "Benedícta tu in muliéribus,"
+  ],
+  [
+   30354.0,
+   "et benedíctus fructus ventris tui, Iesus."
   ],
   [
    30379.3,
-   "Santa María, Mater Dei,"
+   "Sancta María, Mater Dei,"
   ],
   [
    30391.6,
-   "ora pronomis pelatoribus,"
+   "ora pro nobis peccatóribus,"
+  ],
+  [
+   30393.6,
+   "nunc et in hora mortis nostræ."
+  ],
+  [
+   30395.2,
+   "Amen."
   ],
   [
    30494.9,
@@ -11313,11 +11361,11 @@
   ],
   [
    30736.0,
-   "Competencia número 70, Competencia principal coro mixto,"
+   "Competencia número 70, competencia principal coro mixto,"
   ],
   [
    30754.8,
-   "mínimo 20 integrantes, Ave Maria de Marcelo Valva"
+   "mínimo 20 integrantes, Ave María de Marcelo Valva"
   ],
   [
    30759.6,
@@ -20833,13 +20881,37 @@
    "whisper_es"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ],
   [
    "whisper_es"
@@ -21265,16 +21337,28 @@
    "whisper_es"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ],
   [
    "whisper_es"
@@ -22485,6 +22569,15 @@
  ],
  "letras": [
   {
+   "desde": 28813,
+   "hasta": 29003,
+   "titulo": "Let all mortal flesh keep silence",
+   "autor": "Edward Bairstow",
+   "idioma": "en",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
+  },
+  {
    "desde": 29594,
    "hasta": 29911,
    "titulo": "Zamba del carnaval",
@@ -22492,12 +22585,21 @@
    "idioma": "es",
    "derechos": "Derechos confirmados por el mantenedor del archivo",
    "fuente": "Aportado por Kevin Roberts"
+  },
+  {
+   "desde": 30312,
+   "hasta": 30427,
+   "titulo": "Ave Maria",
+   "autor": "Marcelo Valva",
+   "idioma": "la",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
   }
  ],
  "ventanas": {
   "total": 562,
-  "modelo": 461,
+  "modelo": 463,
   "reglas": 11,
-  "vacias": 90
+  "vacias": 88
  }
 }

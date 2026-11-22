@@ -2537,19 +2537,47 @@
   ],
   [
    5611.8,
-   "Amén."
+   "Pater noster, qui es in caelis,"
+  ],
+  [
+   5611.8,
+   "sanctificetur nomen tuum;"
+  ],
+  [
+   5637.1,
+   "adveniat regnum tuum;"
+  ],
+  [
+   5656.0,
+   "fiat voluntas tua,"
   ],
   [
    5671.8,
-   "Sincuternus divitimus debitoribus nostris,"
+   "sicut in caelo, et in terra."
+  ],
+  [
+   5673.7,
+   "Panem nostrum quotidianum da nobis hodie;"
+  ],
+  [
+   5676.4,
+   "et dimitte nobis debita nostra,"
+  ],
+  [
+   5678.7,
+   "sicut et nos dimittimus debitoribus nostris;"
   ],
   [
    5681.9,
-   "et ne nos inducas inventatio de ser libera nos amalu."
+   "et ne nos inducas in tentationem;"
+  ],
+  [
+   5693.4,
+   "sed libera nos a malo."
   ],
   [
    5701.8,
-   "Amén."
+   "Amen."
   ],
   [
    5731.8,
@@ -6597,87 +6625,131 @@
   ],
   [
    16073.3,
-   "Lejos, muy lejos del sol, sueldo el recuerdo deallá."
+   "Lejos, muy lejos del sol"
   ],
   [
-   16082.7,
-   "Recuerdo deallá."
-  ],
-  [
-   16084.6,
-   "Siento en mis ojos brillar el azul soledad de mi tierra natal."
+   16081.9,
+   "vuelve el recuerdo de allá,"
   ],
   [
    16093.0,
-   "Siento en mis ojos brillar el azul soledad de mi tierra natal."
+   "siento en mis ojos brillar"
+  ],
+  [
+   16097.8,
+   "el azul soledad de mi tierra natal."
   ],
   [
    16105.0,
-   "Susurra el viento y se va, enloqueciendo el dolor."
+   "Susurra el viento y se va"
+  ],
+  [
+   16110.8,
+   "enloqueciendo el color"
   ],
   [
    16115.9,
-   "Y es la nostalgia, un adiós, se abafó la torca, mariposa y borrió."
+   "y es la nostalgia un adiós"
+  ],
+  [
+   16122.8,
+   "de amapola y torcaz, mariposa y gorrión."
+  ],
+  [
+   16134.4,
+   "(Estribillo)"
   ],
   [
    16137.5,
-   "Allá lejos la patria andada, la pascura del día,"
+   "Allá lejos la Patria andaba,"
+  ],
+  [
+   16144.5,
+   "azulando el día"
   ],
   [
    16148.7,
-   "y allá, y allá, por unir en el sol al sur,"
+   "cielo allá"
+  ],
+  [
+   16150.9,
+   "tiempo allá,"
+  ],
+  [
+   16153.0,
+   "vuelvo niño al asombro del sur"
   ],
   [
    16158.4,
-   "y por mi sangre una voz maternal,"
+   "y por mi sangre una voz maternal"
   ],
   [
    16165.3,
-   "Nombra la vida"
+   "nombra la vida."
+  ],
+  [
+   16189.7,
+   "Alza su sombra el ombú,"
   ],
   [
    16228.7,
-   "La aleja mía es un adiós"
+   "poncho de la inmensidad,"
+  ],
+  [
+   16230.7,
+   "y es mi lejano país"
+  ],
+  [
+   16232.4,
+   "una dulce raíz que no sabe olvidar."
   ],
   [
    16235.4,
-   "Y se me da por pensar"
+   "Frente a la bruma y el mar"
   ],
   [
    16238.8,
-   "Que el recuerdo de allá"
-  ],
-  [
-   16241.3,
-   "Se me ha vuelto canción"
+   "la lejanía es un dios"
   ],
   [
    16243.9,
-   "Y se me da por pensar"
+   "y se me da por pensar"
   ],
   [
    16249.3,
-   "Que el recuerdo de allá"
+   "que el recuerdo de allá se me ha vuelto canción."
   ],
   [
-   16252.1,
-   "Se me ha vuelto canción"
+   16253.9,
+   "(Estribillo)"
   ],
   [
    16255.1,
-   "Allá lejos la patria andada, a su largo el día"
+   "Allá lejos la Patria andaba,"
+  ],
+  [
+   16261.9,
+   "azulando el día"
+  ],
+  [
+   16266.0,
+   "cielo allá"
+  ],
+  [
+   16268.7,
+   "tiempo allá,"
   ],
   [
    16271.4,
-   "Por lo niño es roja del sur"
+   "vuelvo niño al asombro del sur"
   ],
   [
    16276.5,
-   "Y por mi sangre una voz materna"
+   "y por mi sangre una voz maternal"
   ],
   [
    16283.5,
-   "Nombra Argentina"
+   "nombra ARGENTINA...!"
   ],
   [
    16331.4,
@@ -9365,16 +9437,37 @@
    "whisper_es"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ],
   [
    "whisper_es"
@@ -12410,67 +12503,100 @@
    "whisper_es"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ],
   [
    "whisper_es"
@@ -13063,15 +13189,6 @@
  ],
  "letras": [
   {
-   "desde": 12462,
-   "hasta": 12564,
-   "titulo": "Rabo de nube",
-   "autor": "Silvio Rodríguez, arr. César A. Carrillo",
-   "idioma": "es",
-   "derechos": "Derechos confirmados por el mantenedor del archivo",
-   "fuente": "Aportado por Kevin Roberts"
-  },
-  {
    "desde": 3798,
    "hasta": 4003,
    "titulo": "La vieja",
@@ -13097,6 +13214,33 @@
    "idioma": "es",
    "derechos": "Derechos confirmados por el mantenedor del archivo",
    "fuente": "Aportado por Kevin Roberts"
+  },
+  {
+   "desde": 5611,
+   "hasta": 5712,
+   "titulo": "Pater noster",
+   "autor": "Igor Stravinsky",
+   "idioma": "la",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "https://imslp.org/wiki/File:PMLP1198744-Stravinsky_-_Pater_Noster_(1949_version).pdf, aportado por Kevin Roberts"
+  },
+  {
+   "desde": 12462,
+   "hasta": 12564,
+   "titulo": "Rabo de nube",
+   "autor": "Silvio Rodríguez, arr. César A. Carrillo",
+   "idioma": "es",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
+  },
+  {
+   "desde": 16070,
+   "hasta": 16300,
+   "titulo": "Allá lejos y hace tiempo",
+   "autor": "Ariel Ramírez; texto de Armando Tejada Gómez; arreglo de Néstor Zadoff",
+   "idioma": "es",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "https://www.folkloredelnorte.com.ar/cancionero/a/allalejosyhacetiempo.html, aportado por Kevin Roberts"
   }
  ],
  "ventanas": {

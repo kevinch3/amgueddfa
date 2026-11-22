@@ -20,8 +20,28 @@
    "Dy goleuad a'r trawd, dy goleuad a'r traud, dy goleuad di'n tlawdu, dy goleuad di'n ffug."
   ],
   [
-   265.44,
-   "Interjectus gloria venus."
+   199.0,
+   "Cantate Domino canticum novum:"
+  ],
+  [
+   214.6,
+   "cantate Domino omnis terra."
+  ],
+  [
+   228.7,
+   "Cantate Domino, et benedicite nomini ejus:"
+  ],
+  [
+   252.8,
+   "annuntiate de die in diem salutare ejus."
+  ],
+  [
+   272.6,
+   "Annuntiate inter gentes gloriam ejus,"
+  ],
+  [
+   289.6,
+   "in omnibus populis mirabilia ejus."
   ],
   [
    311.44,
@@ -29,15 +49,15 @@
   ],
   [
    368.88,
-   "Mae'r capten ar y bwrdd, sydd geir llws, cychwynnodd i drws."
+   "Mae'r capten ar y bwrdd, sydd geir lw- lw- lw- llws, cys- cy- cys- cychwynnodd i drws."
   ],
   [
    394.88,
-   "Sicr Lwli Mabi, mae'r llongan yn gwynt i'r ffôn."
+   "Si Hei Lwli Mabi, mae'r llongan yn gwynt i'r ffôn."
   ],
   [
    410.88,
-   "Sicr o'i wlad i, mae'n gwych a dwi'n cymryd."
+   "Sicr o'i wlad i, mae'n gwych a dwi'n cymryd. Sicr o'i wlad i, mae'n gwych a dwi'n cymryd."
   ],
   [
    437.88,
@@ -118,7 +138,22 @@
    "cy"
   ],
   [
-   "cy"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ],
   [
    "whisper_es"
@@ -180,6 +215,17 @@
   [
    "whisper_es"
   ]
+ ],
+ "letras": [
+  {
+   "desde": 199,
+   "hasta": 308,
+   "titulo": "Cantate Domino",
+   "autor": "Hans Leo Hassler",
+   "idioma": "la",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
+  }
  ],
  "ventanas": {
   "total": 23,

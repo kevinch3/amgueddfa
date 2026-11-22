@@ -70,10 +70,13 @@ def _ask_all(ask, ws: list, jobs: int) -> list:
 
 
 def in_scope(repo: Path, video: dict, stem: Path | None = None) -> bool:
-    """Chubut and Trevelin only (#29), with a published transcript or a Welsh one to build from."""
+    """Chubut and Trevelin only (#29), with a published transcript, a Welsh one to build from, or a lyric
+    the maintainer placed in it (a choir clip with no automatic text still shows its lyrics, #129)."""
     if video["festival"] not in FESTIVALS:
         return False
     if (repo / "public/transcripciones-video" / f"{video['id']}.json").exists():
+        return True
+    if spans_for(video["id"], repo / "data" / "letras"):
         return True
     return bool(stem and WELSH_SOURCE and stem.with_name(f"{stem.name}.{WELSH_SOURCE}.json").exists())
 

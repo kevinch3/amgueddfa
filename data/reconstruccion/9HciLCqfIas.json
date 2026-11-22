@@ -4,6 +4,38 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   66.0,
+   "Ave María, grátia plena,"
+  ],
+  [
+   82.4,
+   "Dóminus tecum."
+  ],
+  [
+   92.6,
+   "Benedícta tu in muliéribus,"
+  ],
+  [
+   113.1,
+   "et benedíctus fructus ventris tui, Iesus."
+  ],
+  [
+   137.7,
+   "Sancta María, Mater Dei,"
+  ],
+  [
+   152.0,
+   "ora pro nobis peccatóribus,"
+  ],
+  [
+   172.5,
+   "nunc et in hora mortis nostræ."
+  ],
+  [
+   188.9,
+   "Amen."
+  ],
+  [
    218.96,
    "Vamos a hacer ahora el salmo que corresponde a un fragmento del requiem de John Rutter."
   ],
@@ -22,6 +54,30 @@
  ],
  "fuentes": [
   [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
    "whisper_es"
   ],
   [
@@ -34,10 +90,21 @@
    "whisper_es"
   ]
  ],
+ "letras": [
+  {
+   "desde": 66,
+   "hasta": 193,
+   "titulo": "Ave Maria",
+   "autor": "Marcelo Valva",
+   "idioma": "la",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
+  }
+ ],
  "ventanas": {
   "total": 11,
-  "modelo": 2,
+  "modelo": 4,
   "reglas": 0,
-  "vacias": 9
+  "vacias": 7
  }
 }

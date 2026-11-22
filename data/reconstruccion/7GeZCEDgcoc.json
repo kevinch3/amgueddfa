@@ -52,20 +52,32 @@
    "Locus Amoenus."
   ],
   [
-   278.56,
-   "Fe ddisgwyl beth i ni ddangos nos Sin Cielo."
+   269.2,
+   "Ubi caritas et amor, Deus ibi est."
   ],
   [
-   288.56,
-   "Fe disgwyl beth i ni ddangos nos Sin Cielo."
+   282.8,
+   "Congregavit nos in unum Christi amor."
+  ],
+  [
+   284.1,
+   "Exsultemus, et in ipso jucundemur."
+  ],
+  [
+   285.3,
+   "Timeamus, et amemus Deum vivum."
+  ],
+  [
+   286.4,
+   "Et ex corde diligamus nos sincero."
   ],
   [
    302.56,
-   "Ubi caritas nased amor, wrth ddews i fi est. Cwmfryd arafid nos i nŵn, Cristi a mor. Cristi a mor."
+   "Ubi arid nased amor, wrth ddews i fi est. Cwmfryd arafid nos i nŵn, Cristi a mor. Cristi a mor."
   ],
   [
    329.2,
-   "Cristo ya no, amén."
+   "Amen."
   ]
  ],
  "fuentes": [
@@ -106,17 +118,37 @@
    "whisper_es"
   ],
   [
-   "cy"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ],
   [
    "cy"
   ],
   [
-   "cy"
-  ],
-  [
-   "whisper_es"
+   "letra"
   ]
+ ],
+ "letras": [
+  {
+   "desde": 178,
+   "hasta": 355,
+   "titulo": "Ubi caritas",
+   "autor": "Gjeilo",
+   "idioma": "la",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
+  }
  ],
  "ventanas": {
   "total": 11,

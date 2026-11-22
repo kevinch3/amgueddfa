@@ -105,6 +105,80 @@ def fix_eisteddfod(text: str, words: set[str]) -> str:
     return _WORD.sub(lambda m: "Eisteddfod" if _fold(m.group(0)) != "eisteddfod" and _TAIL.match(_fold(m.group(0))) and not _real_word(_fold(m.group(0)), words) else m.group(0), text)
 
 
+# Words Spanish speech recognition writes wrong in every one of these videos (b/v, s/z/c, ll/y, g/j; names
+# the archive's own texts spell otherwise): folded form as heard -> (right spelling, is a name). Each was
+# checked against every Spanish line of the published transcripts and then argued against by a second
+# reviewer (2026-11-22). A name is always written as given; any other word keeps the case of the original.
+# Spanish lines only: Welsh lines and lyrics stay as they are.
+TERM_FIXES: dict[str, tuple[str, bool]] = {
+    # the Círculo Bárdico, its prizes and the people named at ceremonies
+    "vardico": ("bárdico", False), "barbico": ("bárdico", False),
+    "sampini": ("Zampini", True),  # Virgilio Zampini; María Alba (Mary) Zampini
+    "nelsis": ("Nelcis", True),  # Nelcis Jones, jurado
+    "ansor": ("Anzor", True),  # Magda Anzor
+    "ciriol": ("Siriol", True),  # Her Siriol, Puerto Madryn
+    "samarreno": ("Zamarreño", True), "soralla": ("Soraya", True),  # Cinthia Zamarreño, Soraya Griffiths
+    "ejidio": ("Egidio", True),  # Museo Egidio Feruglio
+    "amenus": ("Amoenus", True),  # the choir Locus Amoenus
+    "gerd": ("gerdd", False),  # Ysgol Gerdd y Gaiman; "y gerdd"
+    # common words
+    "evanista": ("ebanista", False), "dansa": ("danza", False), "competensia": ("competencia", False),
+    "beredicto": ("veredicto", False), "seremonia": ("ceremonia", False), "associacion": ("asociación", False),
+    "asosiacion": ("asociación", False), "consejal": ("concejal", False), "consejales": ("concejales", False),
+    "grasias": ("gracias", False), "cansion": ("canción", False), "difisil": ("difícil", False),
+    "ofresido": ("ofrecido", False), "prosesion": ("procesión", False), "chacarrera": ("chacarera", False),
+    "pedaso": ("pedazo", False), "bendimia": ("vendimia", False), "sausal": ("sauzal", False),
+    "calecita": ("calesita", False), "galeza": ("galesa", False), "tasita": ("tacita", False),
+    "narcissos": ("narcisos", False), "sorvo": ("sorbo", False), "bozarron": ("vozarrón", False),
+    "selta": ("celta", False), "silvido": ("silbido", False), "herizo": ("erizo", False), "sorro": ("zorro", False),
+}
+# Where the heard form is also a real name or word, only next to the words that tell it apart:
+# (pattern with the heard word as group "w", right spelling, is a name).
+TERM_FIXES_IN_CONTEXT: list[tuple[re.Pattern, str, bool]] = [
+    # "veredicto" heard as the name Benedicto (21 of 22 Spanish lines, 2026-11-22)
+    (re.compile(r"(?i)\b(?:el|un|al|del|este|pr[oó]ximo|su) (?P<w>benedicto)\b"), "veredicto", False),
+    (re.compile(r"(?i)\b(?P<w>benedicto)(?= (?:de la )?competencia\b| dice\b)"), "veredicto", False),
+    # the "noveles" category heard as Nobel's plural
+    (re.compile(r"(?i)\b(?:categor[ií]a|libre) (?P<w>nobeles)\b"), "noveles", False),
+    (re.compile(r"(?i)\b(?P<w>nobeles)(?= en el idioma\b| cantores\b)"), "noveles", False),
+    # the musician Silvia Baldor
+    (re.compile(r"(?i)\b(?:silvia|sylvia)(?: mar[ií]a)? (?P<w>valdor)\b"), "Baldor", True),
+    # the choir Locus Amoenus, written as its name
+    (re.compile(r"(?i)\b(?P<w>locus am(?:o?e|ø)nus)\b"), "Locus Amoenus", True),
+    # the dance group Her Siriol (Herr Sidior, Herr Cidriol, Herr Sirion)
+    (re.compile(r"(?i)\b(?P<w>herr? (?:siriol|sidior|cidriol|sirion))\b"), "Her Siriol", True),
+]
+_TERM = re.compile(r"[^\W\d_]+")
+
+
+def _same_case(heard: str, new: str) -> str:
+    if len(heard) > 1 and heard.isupper():
+        return new.upper()
+    return new[0].upper() + new[1:] if heard[0].isupper() else new
+
+
+def fix_terms(text: str) -> str:
+    for rx, new, name in TERM_FIXES_IN_CONTEXT:
+        def in_context(m: re.Match, new=new, name=name) -> str:
+            a, b = m.span("w")
+            w = m.group("w")
+            before = m.string[:a].rstrip()
+            # a capital the misheard name brought ("el Benedicto") goes; one that starts a sentence stays
+            starts = not before or before[-1] in ".!?¡¿:"
+            right = new if name else _same_case(w if starts else w.lower(), new)
+            return m.group(0)[: a - m.start()] + right + m.group(0)[b - m.start():]
+        text = rx.sub(in_context, text)
+
+    def one(m: re.Match) -> str:
+        w = m.group(0)
+        fix = TERM_FIXES.get(_fold(w))
+        if not fix:
+            return w
+        new, name = fix
+        return new if name else _same_case(w, new)
+    return _TERM.sub(one, text)
+
+
 TS = re.compile(r"(?:(\d+):)?(\d{1,2}):(\d{2})[.,](\d{3})\s+-->")
 TAG = re.compile(r"<[^>]+>")
 
@@ -300,6 +374,15 @@ def line_languages(t: dict) -> list[str] | None:
     return [("cy" if "cy" in f else "es") if "letra" in f else line_language(x, f) for (_, x), f in zip(t["seg"], fu)]
 
 
+def with_term_fixes(t: dict) -> dict:
+    """The transcript with TERM_FIXES applied to its Spanish lines (not to Welsh lines or lyrics)."""
+    langs = line_languages(t)
+    if langs is None:
+        return {**t, "seg": [[s, fix_terms(x)] for s, x in t["seg"]]} if t.get("lang") == "es" else t
+    return {**t, "seg": [[s, fix_terms(x) if lang == "es" and "letra" not in f else x]
+                         for (s, x), f, lang in zip(t["seg"], t["fuentes"], langs)]}
+
+
 def main_language(t: dict) -> str:
     """The language most of a reconstruction's text is in, by length of its lines (line_language).
     Counting source lines instead lets YouTube's many short "Spanish" mishearings of Welsh outvote it
@@ -348,6 +431,7 @@ def export(backup: Path, videos: list[dict], out: Path = OUT, words: set[str] | 
             if not t["seg"]:
                 continue  # only English was heard: the video has no text
             t = join_fragments(t, [(sp["desde"], sp["hasta"]) for sp in spans_for(vid, letras)])
+            t = with_term_fixes(t)
             t["lang"] = main_language(t)
             t = with_line_languages(t)
             body = json.dumps(t, ensure_ascii=False, separators=(",", ":"))
@@ -361,7 +445,7 @@ def export(backup: Path, videos: list[dict], out: Path = OUT, words: set[str] | 
         if not t or not t["seg"] or (words is not None and not useful(t, words)):
             continue
         if words is not None:
-            t["seg"] = [[s, fix_eisteddfod(x, words)] for s, x in t["seg"]]
+            t["seg"] = [[s, fix_terms(fix_eisteddfod(x, words))] for s, x in t["seg"]]
         # Known lyrics of the pieces sung, in place of the automatic guesses (data/letras/).
         t = apply_lyrics(t, spans_for(vid, letras), letras)
         body = json.dumps(t, ensure_ascii=False, separators=(",", ":"))

@@ -45,6 +45,10 @@ Design: `docs/superpowers/specs/2026-11-20-reconstruccion-videos-design.md`. Pil
   - It holds `heard → right` lines, from the maintainer or from cases that are certain.
   - A hint reaches only the windows where the heard word occurs, and the right word joins that window's word list.
   - When someone reports a misheard name: add a line, then rerun the videos that contain it. Only the windows with the word are asked again.
+- **Spanish words wrong everywhere, `TERM_FIXES` in `scripts/export_video_transcripts.py`:**
+  - It holds folded heard form → (right spelling, is a name). The export applies it to Spanish lines only, so nothing is asked again: rerun the export.
+  - `TERM_FIXES_IN_CONTEXT` holds the forms that are also real names or words (Benedicto, Valdor), fixed only next to the words that tell them apart.
+  - Add an entry only when the heard form is wrong in every Spanish line of `public/transcripciones-video/` (grep them all). If it is right in some places, or needs judgement per window, use the glossary instead.
 - **Prompt changes:** bump `PROMPT_VERSION` in `windows.py`; every window is asked again on its next run.
 
 ## Steps
@@ -92,6 +96,7 @@ Only windows whose inputs changed are asked again, because each window carries a
 | A word without accents or capitals | the word list was folded again | check `display_words()` in `model.py` |
 | An automatic line inside a song | the model kept a heard line next to the lyric | acceptable; better span times in `data/letras/videos.json` fix it |
 | A listener reports a wrong Welsh word | a mishearing no rule closed | add `heard → right` to `data/glosario.md`, rerun that video |
+| A Spanish word or name misspelt the same way in many videos (Várdico, Sampini) | Spanish recognition's b/v, s/z/c, ll/y swaps | add it to `TERM_FIXES` after checking every line, rerun the export |
 | Welsh text over music at the start | Bangor writing over background | should be gone (conf < 0.6); if not, check the `lp` values in its file |
 
 ## Common mistakes

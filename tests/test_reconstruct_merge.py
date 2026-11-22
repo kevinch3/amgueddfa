@@ -58,3 +58,19 @@ def test_rules_keep_the_welsh_model_beside_the_spanish_source():
         Line(8602.9, "mientras el conjunto de mujeres", "yt_es", "es"),
     ])
     assert [(l.t, l.fuentes) for l in rules_lines(w)] == [(8578.9, ("cy",)), (8602.9, ("yt_es",))]
+
+
+def test_rules_leave_out_welsh_that_spanish_whisper_wrote_when_bangor_has_it():
+    # Chubut 2016 hsUB7VS3ozo, 333 s: the same Welsh speech from both, Bangor's far better.
+    w = win(300, 360, [
+        Line(332.9, "I agor y ddefod bydd William Windi yn ein harwain i ganu Gweddi'r Orsedd.", "cy", "cy", 0.9),
+        Line(337.5, "Iagor o ddebod, bydd William Windy en un harwain i ganu Gwedir Orser.", "whisper_es", "es"),
+        Line(350.0, "Muchas gracias a todos por acompañarnos esta tarde", "whisper_es", "es"),
+        Line(358.0, "Diolch yn fawr i chi gyd am wrando mor astud", "whisper_es", "es"),  # Bangor missed it: kept
+    ])
+    assert [(l.t, l.fuentes) for l in rules_lines(w)] == [(332.9, ("cy",)), (350.0, ("whisper_es",)), (358.0, ("whisper_es",))]
+
+
+def test_rules_keep_welsh_that_spanish_whisper_wrote_when_it_is_the_only_text():
+    w = win(300, 360, [Line(337.5, "Iagor o ddebod, bydd William Windy en un harwain i ganu", "whisper_es", "es")])
+    assert [l.t for l in rules_lines(w)] == [337.5]

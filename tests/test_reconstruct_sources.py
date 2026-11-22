@@ -114,3 +114,12 @@ def test_low_confidence_welsh_lines_are_left_out(tmp_path):
         {"s": 95.0, "text": "heb sgôr", "s_": 0}]}), encoding="utf-8")       # no confidence given: kept
     cy = [l.text for l in load_sources(stem, "vid", letras) if l.src == "cy"]
     assert cy == ["Mae pedair cerdd yn dod i'r dosbarth cyntaf", "heb sgôr"]
+
+
+def test_english_the_welsh_model_heard_is_left_out(tmp_path):
+    # Bangor's model is Welsh and English: an English song sung in the hall comes out in English.
+    stem, letras = _fixture(tmp_path, cy=True)
+    (stem.parent / f"{stem.name}.cy-techiaith.json").write_text(json.dumps({"segments": [
+        {"s": 80.0, "e": 82.0, "text": "Croeso i Eisteddfod y Wladfa"},
+        {"s": 90.0, "e": 95.0, "text": "Wade in the water, wade in the water children, oh Lord my God"}]}), encoding="utf-8")
+    assert [l.text for l in load_sources(stem, "vid", letras) if l.src == "cy"] == ["Croeso i Eisteddfod y Wladfa"]

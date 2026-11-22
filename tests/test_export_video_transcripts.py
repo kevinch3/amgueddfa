@@ -1,5 +1,7 @@
 import json
 
+import pytest
+
 from scripts.export_video_transcripts import export, parse_vtt
 
 YT_AUTO = """WEBVTT
@@ -277,3 +279,37 @@ def test_join_fragments_keeps_declared_lyric_spans_line_by_line():
     from scripts.export_video_transcripts import join_fragments
     t = join_fragments(_t([[80, "zamba quiero"], [82, "oír"]]), spans=[(75, 318)])
     assert len(t["seg"]) == 2
+
+
+@pytest.mark.parametrize("text, english", [
+    ("Why do stars in the sky every time you are by look just like these", True),
+    ("You can take, you can leave, let him be, let him leave.", True),
+    ("Fix me, fix me for my journey home", True),
+    ("Felly, diolch yn fawr iawn i chi am eich gysylltu efo ni", False),
+    ("Halleluja, halleluja, i'r gŵr tewi'n anial dydd.", False),
+    ("Will it, will it Llywelyn, will it why pe gwelyd hyn, ein calon gan estron ŵr", False),  # mostly Welsh
+    ("Hoy quise escuchar tu voz, y ya no estabas.", False),
+    ("Oh yes", False),  # too short to tell
+])
+def test_is_english(text, english):
+    from scripts.export_video_transcripts import is_english
+    assert is_english(text) is english
+
+
+def test_export_drops_english_lines_the_welsh_model_heard(tmp_path):
+    b = tmp_path / "backup"
+    _video(b, "C/2025/a_AAAAAAAAAAA.mp4", {"es-orig": YT_AUTO})
+    _video(b, "C/2025/b_BBBBBBBBBBB.mp4", {"es-orig": YT_AUTO})
+    (b / "INDEX.tsv").write_text("id\tfile\n" + f"{'A' * 11}\tC/2025/a_AAAAAAAAAAA.mp4\n{'B' * 11}\tC/2025/b_BBBBBBBBBBB.mp4\n", encoding="utf-8")
+    recon = tmp_path / "recon"
+    recon.mkdir()
+    mixed = {"src": "reconstruida", "lang": "cy", "seg": [[0, "Diolch yn fawr iawn i chi am ddod heddiw"], [30, "Why do stars in the sky every time you are by look just like these"]],
+             "fuentes": [["cy"], ["cy"]]}
+    song = {"src": "reconstruida", "lang": "cy", "seg": [[0, "Wade in the water, wade in the water children, oh Lord"]], "fuentes": [["cy"]]}
+    (recon / f"{'A' * 11}.json").write_text(json.dumps(mixed), encoding="utf-8")
+    (recon / f"{'B' * 11}.json").write_text(json.dumps(song), encoding="utf-8")
+    out = tmp_path / "out"
+    export(b, [{"id": "A" * 11, "festival": "chubut"}, {"id": "B" * 11, "festival": "chubut"}], out, recon=recon)
+    a = json.loads((out / ("A" * 11 + ".json")).read_text())
+    assert [x for _, x in a["seg"]] == ["Diolch yn fawr iawn i chi am ddod heddiw"] and len(a["fuentes"]) == 1
+    assert not (out / ("B" * 11 + ".json")).exists()  # nothing left: the video has no text

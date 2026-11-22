@@ -6,6 +6,7 @@
  * The address carries the open video (#v=<id>&t=<seconds>, lib/video-hash.ts), so a moment can be linked.
  * Transcriptions: public/transcripciones-video/<id>.json (scripts/export_video_transcripts.py), with the approved
  * corrections the file does not hold yet applied live (lib/live-video-corrections.ts).
+ * Chubut and Trevelin collaborators can correct the text here (edit mode, scripts/editor-transcripcion.ts).
  */
 import { formatList, t } from '../lib/i18n';
 import { lineCredit, loadTranscriptLive, type LiveTranscript } from '../lib/live-video-corrections';
@@ -13,6 +14,7 @@ import { url } from '../lib/paths';
 import { creditos, findLines, fmtTime, letraAt, lineAt, lineLang, type Transcript } from '../lib/video-transcript';
 import { parseVideoHash, videoHash } from '../lib/video-hash';
 import { videoUrl } from '../lib/videos';
+import { EDITANDO, LINEAS_EVENT, wireEditor, type EditorVideo } from './editor-transcripcion';
 
 type YTPlayer = {
   loadVideoById(id: string): void;
@@ -108,9 +110,10 @@ if (dialog) {
     const li = i >= 0 ? (lines.children[i] as HTMLElement | undefined) : undefined;
     if (!li) return;
     li.classList.add('actual');
-    li.querySelector('button')?.setAttribute('aria-current', 'true');
-    // Follow the video unless the visitor turned it off or is reading elsewhere (scrolled in the last 4 s).
-    if (scroll && follow.checked && Date.now() - userScrolledAt > 4000) {
+    li.querySelector('button[data-i]')?.setAttribute('aria-current', 'true');
+    // Follow the video unless the visitor turned it off, is reading elsewhere (scrolled in the last 4 s) or is
+    // correcting a line (edit mode: the line being edited stays where it is).
+    if (scroll && follow.checked && !lines.hasAttribute(EDITANDO) && Date.now() - userScrolledAt > 4000) {
       li.scrollIntoView({ block: 'nearest', behavior: reduceMotion ? 'auto' : 'smooth' });
     }
   }
@@ -127,7 +130,13 @@ if (dialog) {
     }
   }
 
+  /** Draw the lines, then tell the edit mode (it puts its controls and marks back on the new lines). */
   function renderTranscript(shown: LiveTranscript | null): void {
+    drawTranscript(shown);
+    dialog!.dispatchEvent(new CustomEvent(LINEAS_EVENT));
+  }
+
+  function drawTranscript(shown: LiveTranscript | null): void {
     const tr = shown?.tr ?? null;
     const autores = shown?.autores ?? {};
     current = tr;
@@ -455,6 +464,25 @@ if (dialog) {
     dialog.close();
     btn?.click();
   });
+  /** The video open now, with its edition (the card's section), for the edit mode. */
+  function openVideo(): EditorVideo | null {
+    const li = list[index];
+    if (!li) return null;
+    const sec = li.closest<HTMLElement>('[data-videos]');
+    return { id: li.dataset.video ?? '', title: li.dataset.title ?? '', festival: sec?.dataset.festival ?? '', year: Number(sec?.dataset.year) || 0 };
+  }
+  wireEditor(dialog, () => ({
+    tr: current,
+    video: openVideo(),
+    currentTime: () => {
+      try {
+        return player?.getCurrentTime() ?? 0;
+      } catch {
+        return 0; // not ready yet: the start
+      }
+    },
+  }));
+
   dialog.addEventListener('close', () => {
     window.clearInterval(timer);
     if (parseVideoHash(location.hash)) history.replaceState(history.state, '', location.pathname + location.search);

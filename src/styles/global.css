@@ -598,18 +598,18 @@ fieldset.campo { border: 0; padding: 0; }
 .rep-pie a:hover { color: var(--ink); }
 /* Transcript lines (issue #79): one grid (time | words), quiet time stamps, a light current line. */
 .rep-lineas { list-style: none; margin: 0; padding: 0.25rem 0; border-top: 1px solid var(--rule); overflow: auto; flex: 1 1 auto; min-height: 0; overscroll-behavior: contain; }
-.rep-lineas button { display: grid; grid-template-columns: 3.4rem minmax(0, 1fr); gap: 0 0.5rem; align-items: baseline; width: 100%; text-align: left; padding: 0.3rem 0.75rem; min-height: 2.25rem; border: 0; border-radius: 0; background: transparent; color: var(--ink); font: 0.95rem/1.5 var(--sans); cursor: pointer; }
-.rep-lineas button:hover { background: color-mix(in srgb, var(--ink) 5%, transparent); }
+.rep-lineas button[data-i] { display: grid; grid-template-columns: 3.4rem minmax(0, 1fr); gap: 0 0.5rem; align-items: baseline; width: 100%; text-align: left; padding: 0.3rem 0.75rem; min-height: 2.25rem; border: 0; border-radius: 0; background: transparent; color: var(--ink); font: 0.95rem/1.5 var(--sans); cursor: pointer; }
+.rep-lineas button[data-i]:hover { background: color-mix(in srgb, var(--ink) 5%, transparent); }
 .rep-t { color: var(--ink-soft); font-size: 0.75rem; font-variant-numeric: tabular-nums; }
 .rep-w { overflow-wrap: anywhere; }
 /* A Welsh line in a mostly Spanish transcript (or the reverse): a small language mark under its time. */
 .rep-lineas .rep-otra .rep-t::after { content: attr(data-lang); display: block; font-size: 0.65rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--green); }
-.rep-lineas .coincide button { background: color-mix(in srgb, var(--gold) 28%, transparent); }
+.rep-lineas .coincide button[data-i] { background: color-mix(in srgb, var(--gold) 28%, transparent); }
 .rep-lineas .rep-letra .rep-w { font-style: italic; }
 .rep-lineas .rep-letra .rep-w::before { content: '♪ '; font-style: normal; color: var(--red-deep); }
 /* A line a collaborator corrected (approved): its normal look plus a small mark; its title says who. */
 .rep-lineas [data-colab] .rep-w::after { content: ' ✓'; font-size: 0.75em; font-style: normal; color: var(--green); }
-.rep-lineas .actual button { background: color-mix(in srgb, var(--red) 7%, transparent); box-shadow: inset 2px 0 0 var(--red); }
+.rep-lineas .actual button[data-i] { background: color-mix(in srgb, var(--red) 7%, transparent); box-shadow: inset 2px 0 0 var(--red); }
 .rep-lineas .actual .rep-t { color: var(--red-deep); font-weight: 600; }
 @media (min-width: 60rem) {
   .rep-cuerpo { grid-template-columns: minmax(0, 1.6fr) minmax(18rem, 1fr); grid-template-rows: minmax(0, 1fr); }
@@ -617,8 +617,48 @@ fieldset.campo { border: 0; padding: 0; }
   .rep-tr { border-top: 0; border-left: 1px solid var(--rule); }
 }
 @media (forced-colors: active) {
-  .rep-lineas .actual button { outline: 2px solid Highlight; }
-  .rep-lineas .coincide button { outline: 1px dashed CanvasText; }
+  .rep-lineas .actual button[data-i] { outline: 2px solid Highlight; }
+  .rep-lineas .coincide button[data-i] { outline: 1px dashed CanvasText; }
+}
+
+/* Player edit mode (scripts/editor-transcripcion.ts): a ✎ beside each line's seek button, the line's editor under it,
+   changed lines highlighted, the author's pending changes dashed. */
+.rep-acciones [hidden], .rep-editor[hidden], [data-editor-nueva][hidden], [data-editor-confirmar][hidden] { display: none; }
+.rep-acciones .contrib-gate { margin: 0; }
+.rep-acciones .btn-link[data-rep-editar] { min-height: 44px; } /* 44 px even where the bar's other links are smaller (phones) */
+.rep-acciones .contrib-gate .btn { min-height: 44px; padding: 0.25rem; border: 0; background: none; color: var(--red-deep); font: inherit; text-decoration: underline; }
+.rep-editor { padding: 0.4rem 0.75rem 0.5rem; border-top: 1px solid var(--rule); background: var(--paper-hi); font-size: 0.95rem; }
+.rep-ed-ayuda { margin: 0 0 0.3rem; }
+.rep-ed-barra { display: flex; flex-wrap: wrap; align-items: center; gap: 0 1rem; }
+.rep-ed-n { margin: 0; font-weight: 600; }
+.rep-editor .tarea-acciones, .rep-ed .tarea-acciones { margin: 0.25rem 0 0; }
+.rep-ed-confirmar { margin-top: 0.4rem; padding: 0.5rem 0.75rem; border-left: 4px solid var(--red); background: var(--paper); }
+.rep-ed-confirmar p { margin: 0 0 0.3rem; }
+.rep-ed-estado:empty { display: none; }
+.rep-ed-estado .contrib-ok { margin: 0; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+.rep-lineas[data-modo-edicion] > li { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: start; }
+.rep-lineas[data-modo-edicion] > li > :not(button) { grid-column: 1 / -1; }
+.rep-ed-lapiz { min-width: 44px; min-height: 44px; margin: 0; padding: 0; border: 0; background: transparent; color: var(--red-deep); font: 1.15rem/1 var(--sans); cursor: pointer; }
+.rep-ed-lapiz:hover, .rep-ed-lapiz[aria-expanded="true"] { background: color-mix(in srgb, var(--ink) 7%, transparent); }
+/* Notes under a line line up with its words (the button's padding + the time column + the gap). */
+.rep-ed-nota, .rep-ed-cambio, .rep-pend, .rep-ed-nueva { margin: 0 0.75rem 0.3rem 4.65rem; font-size: 0.85rem; line-height: 1.4; overflow-wrap: anywhere; }
+.rep-ed-nota { color: var(--ink-soft); font-style: italic; }
+.rep-lineas [data-cambiado] > button[data-i] { background: color-mix(in srgb, var(--gold) 16%, transparent); box-shadow: inset 3px 0 0 var(--gold); }
+.rep-lineas [data-cambiado="quitar"] > button[data-i] .rep-w { text-decoration: line-through; }
+.rep-ed-cambio { color: var(--green); font-weight: 600; }
+.rep-lineas [data-pendiente] > button[data-i] .rep-w { text-decoration: underline dashed var(--gold-ink); text-underline-offset: 0.2em; }
+.rep-pend { padding-left: 0.4rem; border-left: 2px dashed var(--gold-ink); color: var(--gold-ink); }
+.rep-ed-nueva { display: flex; flex-wrap: wrap; align-items: center; gap: 0 0.5rem; padding-left: 0.4rem; border-left: 3px solid var(--gold); color: var(--green); font-weight: 600; }
+.rep-ed { margin: 0.25rem 0.75rem 0.5rem; padding: 0.5rem 0.75rem; border: 1px solid var(--rule); border-radius: 4px; background: var(--paper-hi); }
+.rep-editor .rep-ed { margin: 0.4rem 0 0; }
+.rep-ed .campo { margin: 0 0 0.4rem; }
+.rep-ed .campo input[type='text'] { width: 100%; }
+.rep-ed-idioma { display: flex; flex-wrap: wrap; align-items: center; gap: 0 1rem; margin: 0 0 0.2rem; padding: 0; border: 0; }
+.rep-ed-idioma legend { float: left; margin-right: 0.5rem; padding: 0; font-weight: 600; }
+.rep-ed .opt { display: inline-flex; align-items: center; gap: 0.4rem; min-height: 44px; }
+.rep-ed .tarea-q { margin: 0 0 0.3rem; }
+@media (forced-colors: active) {
+  .rep-lineas [data-cambiado] > button[data-i] { outline: 2px solid Highlight; }
 }
 
 /* Lightbox caption and transcription panel (gallery, issue #26) ------------------ */
@@ -692,7 +732,7 @@ fieldset.campo { border: 0; padding: 0; }
   .rep-buscar { padding: 0.3rem 0.75rem; }
   .rep-buscar-fila .campo-buscar input[type="search"] { min-height: 40px; }
   .rep-lineas { flex: 1 1 0; }
-  .rep-lineas button { min-height: 2.25rem; padding: 0.3rem 0.75rem; }
+  .rep-lineas button[data-i] { min-height: 2.25rem; padding: 0.3rem 0.75rem; }
 }
 
 /* While a modal is open (lightbox, video player, "Informar un error") the page behind it

@@ -15,9 +15,9 @@ export function el<K extends keyof HTMLElementTagNameMap>(tag: K, attrs: Record<
   return e;
 }
 
-/** `/ingresar?volver=<this page>`. */
-export function loginHref(): string {
-  return url(`ingresar?volver=${encodeURIComponent(location.pathname + location.search)}`);
+/** `/ingresar?volver=<this page>` (or `volver`, a path on this site, e.g. with the open video's #v=…). */
+export function loginHref(volver: string = location.pathname + location.search): string {
+  return url(`ingresar?volver=${encodeURIComponent(volver)}`);
 }
 
 export type Gate = { profile: Profile } | { profile: null; reason: 'offline' | 'signed_out' | 'no_name' };
@@ -42,13 +42,14 @@ export async function gate(): Promise<Gate> {
   return { profile: null, reason: s.offline || s.data ? 'offline' : 'signed_out' };
 }
 
-/** The message and link shown instead of a form when the visitor cannot contribute yet. */
-export function gateMessage(reason: 'offline' | 'signed_out' | 'no_name', signedOutKey: string): HTMLElement {
+/** The message and link shown instead of a form when the visitor cannot contribute yet; `volver` is where signing in
+ * comes back to (this page by default). */
+export function gateMessage(reason: 'offline' | 'signed_out' | 'no_name', signedOutKey: string, volver?: string): HTMLElement {
   const p = el('p', { class: 'contrib-gate' });
   if (reason === 'offline') p.textContent = t('estado.sin_conexion');
   else if (reason === 'no_name') {
-    p.append(t('contrib.elegir_nombre'), ' ', el('a', { href: loginHref() }, t('sesion.sin_nombre')));
-  } else p.append(el('a', { href: loginHref(), class: 'btn' }, t(signedOutKey)));
+    p.append(t('contrib.elegir_nombre'), ' ', el('a', { href: loginHref(volver) }, t('sesion.sin_nombre')));
+  } else p.append(el('a', { href: loginHref(volver), class: 'btn' }, t(signedOutKey)));
   return p;
 }
 

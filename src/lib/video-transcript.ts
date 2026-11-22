@@ -7,7 +7,11 @@ export type TranscriptSource = 'subida' | 'youtube' | 'whisper' | 'reconstruida'
 export type Letra = { desde: number; hasta: number; titulo: string; autor: string; idioma: string; derechos?: string; fuente?: string };
 /** How the player credits a lyric: one line per piece. `fuente` is the file's "url, aportado por …" split. */
 export type Credito = { titulo: string; autor: string; derechos: string; fuente: { href?: string; host?: string; texto: string } };
-export type Transcript = { src: TranscriptSource; lang: string; seg: [number, string][]; letras?: Letra[]; fuentes?: string[][] };
+export type Transcript = {
+  src: TranscriptSource; lang: string; seg: [number, string][]; letras?: Letra[]; fuentes?: string[][];
+  /** One language per line, written by the export only where the source would mislead (the Welsh model heard Spanish). */
+  idiomas?: string[];
+};
 
 /** The lyric span a line starting at `t` belongs to, or null. */
 export function letraAt(tr: Transcript, t: number): Letra | null {
@@ -87,5 +91,14 @@ export function asTranscript(data: unknown): Transcript | null {
   const f = (d as { fuentes?: unknown }).fuentes;
   const fuentes = Array.isArray(f) && f.length === seg.length && f.every((x) => Array.isArray(x) && x.every((y) => typeof y === 'string'))
     ? (f as string[][]) : null;
-  return { src: d.src as TranscriptSource, lang: String(d.lang ?? ''), seg, ...(letras.length ? { letras } : {}), ...(fuentes ? { fuentes } : {}) };
+  const g = (d as { idiomas?: unknown }).idiomas;
+  const idiomas = Array.isArray(g) && g.length === seg.length && g.every((x) => typeof x === 'string') ? (g as string[]) : null;
+  return { src: d.src as TranscriptSource, lang: String(d.lang ?? ''), seg, ...(letras.length ? { letras } : {}), ...(fuentes ? { fuentes } : {}),
+    ...(idiomas ? { idiomas } : {}) };
+}
+
+/** The language of line i: a lyric's own, else the export's `idiomas`, else Welsh for a line the Welsh model heard,
+ * else the transcript's. */
+export function lineLang(tr: Transcript, i: number, letra?: Letra | null): string {
+  return letra?.idioma || tr.idiomas?.[i] || (tr.fuentes?.[i]?.includes('cy') ? 'cy' : tr.lang);
 }

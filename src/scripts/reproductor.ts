@@ -8,7 +8,7 @@
  */
 import { t } from '../lib/i18n';
 import { url } from '../lib/paths';
-import { asTranscript, creditos, findLines, fmtTime, letraAt, lineAt, type Transcript } from '../lib/video-transcript';
+import { asTranscript, creditos, findLines, fmtTime, letraAt, lineAt, lineLang, type Transcript } from '../lib/video-transcript';
 import { parseVideoHash, videoHash } from '../lib/video-hash';
 import { videoUrl } from '../lib/videos';
 
@@ -153,8 +153,8 @@ if (dialog) {
       words.textContent = text;
       const letra = letraAt(tr, start);
       if (letra) li.classList.add('rep-letra');
-      // The line's own language: its lyric's, Welsh when the Welsh model heard it, else the transcript's.
-      const lang = letra?.idioma || (tr.fuentes?.[i]?.includes('cy') ? 'cy' : tr.lang);
+      // The line's own language: its lyric's, the export's idiomas, Welsh when the Welsh model heard it, else the transcript's.
+      const lang = lineLang(tr, i, letra);
       if (lang) words.lang = lang;
       // Quietly marked when it differs from the rest of the transcript (Welsh in a Spanish session).
       if (lang && tr.lang && lang !== tr.lang && !letra) {

@@ -290,6 +290,13 @@ def test_join_fragments_keeps_declared_lyric_spans_line_by_line():
     ("Will it, will it Llywelyn, will it why pe gwelyd hyn, ein calon gan estron ŵr", False),  # mostly Welsh
     ("Hoy quise escuchar tu voz, y ya no estabas.", False),
     ("Oh yes", False),  # too short to tell
+    # Chubut 2021 UW0GV9sicGs: pop songs over the break, kept until the capital "I" and these words counted
+    ("Even if I stop wanting you And perspective pushes true", True),
+    ("I cannot blame myself yet I should just be my own best friend", True),
+    ("The dark covers me and I cannot run now.", True),
+    ("Diolch i chi i gyd am ddod, a diolch i'r beirniaid", False),  # Welsh "i" is lowercase
+    ("I Patagonia I Patagonia I Patagonia.", False),  # a Welsh refrain: "I" alone is not English
+    ("No he hablado de ella como amiga, porque me resulta difícil", False),
 ])
 def test_is_english(text, english):
     from scripts.export_video_transcripts import is_english
@@ -313,3 +320,47 @@ def test_export_drops_english_lines_the_welsh_model_heard(tmp_path):
     a = json.loads((out / ("A" * 11 + ".json")).read_text())
     assert [x for _, x in a["seg"]] == ["Diolch yn fawr iawn i chi am ddod heddiw"] and len(a["fuentes"]) == 1
     assert not (out / ("B" * 11 + ".json")).exists()  # nothing left: the video has no text
+
+
+@pytest.mark.parametrize("text, fuentes, lang", [
+    # Chubut 2021 UW0GV9sicGs: only the Welsh model heard this session, Spanish speech included
+    ("Ahora si, entonces, si el Jurado de Música en Castellano lo dispone, competencia número cincuenta y tres, Magda y Antonella.", ["cy"], "es"),
+    ("Así que le vamos a dar el paso a ella para que lea el próximo benedicto.", ["cy"], "es"),
+    ("Mucho, gracias.", ["cy"], "es"),
+    ("a ddylai gael eu gweithio'n hellach er mwyn eu chyhoeddi, cerdd wedi'u cynllunio'n ofalus i gyrraedd diweddglo effeithiol.", ["cy"], "cy"),
+    ("parti neu côr merched yr unig yng ngosodliad y gosodleiaeth yma o'dd rhai sy'n barod. Wel dyma ni yym cystadleuaeth pum deg naw "
+     "parti neu côr merched ein gwlad gan Nia Wyn Jones. yy ysta cansion yym habla sobre nuestro pais", ["cy"], "cy"),  # mostly Welsh
+    ("Diolch yn fawr", ["cy"], "cy"),
+    ("Gwych", ["cy"], "cy"),  # nothing to tell: the model's language
+    ("Diolch", ["yt_es"], "es"),  # a Spanish source's line stays Spanish, as before
+])
+def test_line_language_reads_the_text_of_a_welsh_model_line(text, fuentes, lang):
+    from scripts.export_video_transcripts import line_language
+    assert line_language(text, fuentes) == lang
+
+
+def test_main_language_counts_spanish_the_welsh_model_heard_as_spanish():
+    from scripts.export_video_transcripts import main_language
+    t = {"lang": "cy", "seg": [[0, "Así que le vamos a dar el paso a ella para que lea el próximo veredicto."], [9, "Diolch yn fawr"]],
+         "fuentes": [["cy"], ["cy"]]}
+    assert main_language(t) == "es"
+
+
+def test_export_writes_line_languages_only_where_the_source_would_mislead(tmp_path):
+    b = tmp_path / "backup"
+    _video(b, "C/2021/a_AAAAAAAAAAA.mp4", {"es-orig": YT_AUTO})
+    _video(b, "C/2021/b_BBBBBBBBBBB.mp4", {"es-orig": YT_AUTO})
+    (b / "INDEX.tsv").write_text("id\tfile\n" + f"{'A' * 11}\tC/2021/a_AAAAAAAAAAA.mp4\n{'B' * 11}\tC/2021/b_BBBBBBBBBBB.mp4\n", encoding="utf-8")
+    recon = tmp_path / "recon"
+    recon.mkdir()
+    mixed = {"src": "reconstruida", "lang": "cy", "fuentes": [["cy"], ["cy"]],
+             "seg": [[0, "Así que le vamos a dar el paso a ella para que lea el próximo veredicto."], [30, "Diolch yn fawr iawn i chi am ddod heddiw"]]}
+    plain = {"src": "reconstruida", "lang": "es", "fuentes": [["yt_es"], ["cy"]],
+             "seg": [[0, "Buenas noches a todos, bienvenidos a la última sesión."], [30, "Diolch yn fawr iawn i chi am ddod heddiw"]]}
+    (recon / f"{'A' * 11}.json").write_text(json.dumps(mixed), encoding="utf-8")
+    (recon / f"{'B' * 11}.json").write_text(json.dumps(plain), encoding="utf-8")
+    out = tmp_path / "out"
+    export(b, [{"id": "A" * 11, "festival": "chubut"}, {"id": "B" * 11, "festival": "chubut"}], out, recon=recon)
+    a = json.loads((out / ("A" * 11 + ".json")).read_text())
+    assert a["idiomas"] == ["es", "cy"] and a["lang"] == "es"
+    assert "idiomas" not in json.loads((out / ("B" * 11 + ".json")).read_text())  # every line's source tells its language

@@ -100,14 +100,29 @@ function ubicar(lines: Linea[], huellas: Huella[], t: number, antes: string): Lu
   return null;
 }
 
+/** Whether `texto` stands in a line near `t` (equal within 2 s, a run of whole words within 5 s; never a lyric line)
+ * or in what a later change took from there: the change that wrote it landed, and what it rewrote is gone. */
+function quedo(lines: Linea[], huellas: Huella[], t: number, texto: string): boolean {
+  const bw = palabras(texto).map((p) => p.w);
+  // Equal within 2 s is a run within 5 s, so one test covers both windows.
+  return lines.some((l) => Math.abs(l.t - t) <= CERCA && !l.fu.includes('letra') && donde(palabras(l.text).map((p) => p.w), bw) >= 0)
+    || huellas.some((h) => Math.abs(h.t - t) <= CERCA && donde(h.w, bw) >= 0);
+}
+
 /** The transcript with `rows` applied in `reviewed_at` order, and what came of them: `applied` lists the rows that changed
  * something (the export records them so the player never applies one twice), `sinAnclar` the changes not applied, and
  * `autores` the display names behind each changed line of the result (an empty list when the rows had none). A line
  * whose text a correction wrote gets "colab" in its fuentes; once a correction sets a language, `idiomas` covers every line.
- * A change whose text an earlier change already took (two collaborators fixed the same original line) is not placed. */
+ * A change whose text an earlier change already took (two collaborators fixed the same original line) is not placed.
+ *
+ * `baked` (the player only; the export always starts from the machine text) names rows the file already holds (its
+ * `correcciones`): they are not applied again, but each of their changes leaves the text it took, as at the export, so
+ * a duplicate approved after the export is reported instead of landing on a twin line. A removal leaves its `antes` at
+ * `t`; a rewrite leaves it when its `texto` is still there (or in what a later baked change took: newest first). */
 export function applyCorrections<T extends Corregible>(
   tr: T,
   rows: CorrectionRow[],
+  opts: { baked?: ReadonlySet<string> } = {},
 ): { tr: T; applied: string[]; sinAnclar: SinAnclar[]; autores: Record<number, string[]> } {
   const idiomas = Array.isArray(tr.idiomas) && tr.idiomas.length === tr.seg.length ? tr.idiomas : null;
   const lines: Linea[] = tr.seg.map(([t, text], i) => ({
@@ -118,7 +133,25 @@ export function applyCorrections<T extends Corregible>(
   const applied: string[] = [];
   const sinAnclar: SinAnclar[] = [];
   const key = (r: CorrectionRow) => String(r.reviewed_at ?? '');
-  for (const row of [...rows].sort((x, y) => (key(x) < key(y) ? -1 : key(x) > key(y) ? 1 : 0))) {
+  const ordered = [...rows].sort((x, y) => (key(x) < key(y) ? -1 : key(x) > key(y) ? 1 : 0));
+  const baked = opts.baked;
+  const cambiosOf = (row: CorrectionRow) => (Array.isArray(row.payload?.cambios) ? row.payload.cambios : []);
+  // The rows the file already holds leave what they took before any other row runs; newest first, so that a line
+  // rewritten twice leads back to its first text.
+  if (baked?.size) {
+    for (const row of [...ordered].reverse()) {
+      if (!baked.has(row.id)) continue;
+      for (const c of [...cambiosOf(row)].reverse()) {
+        if (!c || typeof c.t !== 'number' || !Number.isFinite(c.t) || typeof c.antes !== 'string') continue; // an add takes nothing
+        const huella: Huella = { t: c.t, w: palabras(c.antes).map((p) => p.w) };
+        const texto = typeof c.texto === 'string' && NO_BLANCO.test(c.texto) ? c.texto : null;
+        if (c.quitar === true) huellas.push(huella);
+        else if (texto !== null && foldLine(texto) !== huella.w.join(' ') && quedo(lines, huellas, c.t, texto)) huellas.push(huella);
+      }
+    }
+  }
+  for (const row of ordered) {
+    if (baked?.has(row.id)) continue;
     const nombre = row.display_name?.trim() || '';
     const credit = (l: Linea) => {
       l.autores ??= [];
@@ -129,7 +162,7 @@ export function applyCorrections<T extends Corregible>(
       credit(l);
     };
     let hizo = false;
-    for (const c of Array.isArray(row.payload?.cambios) ? row.payload.cambios : []) {
+    for (const c of cambiosOf(row)) {
       if (!c || typeof c.t !== 'number' || !Number.isFinite(c.t)) {
         sinAnclar.push({ id: row.id, cambio: c, motivo: 'sin_linea' });
         continue;

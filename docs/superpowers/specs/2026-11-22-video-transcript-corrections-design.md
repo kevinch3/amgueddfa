@@ -22,6 +22,8 @@ the same flow as every other contribution (2026-11-22).
 - **Approach A:** a new contribution type in the existing `contributions` table, reviewed in the same
   `/admin/` queue, with the same RLS, daily limit, points and `/perfil/` list. (B, a separate table
   with per-line rows and its own review screen, was rejected as a second flow.)
+- **Undo from `/admin/`:** approved corrections can be withdrawn (points taken back) or re-anchored
+  to their line after a rebuild, with buttons in a new Videos tab.
 
 ## Goals / non-goals / anti-goals
 

@@ -364,3 +364,15 @@ def test_export_writes_line_languages_only_where_the_source_would_mislead(tmp_pa
     a = json.loads((out / ("A" * 11 + ".json")).read_text())
     assert a["idiomas"] == ["es", "cy"] and a["lang"] == "es"
     assert "idiomas" not in json.loads((out / ("B" * 11 + ".json")).read_text())  # every line's source tells its language
+
+
+import scripts.export_video_transcripts as export_module
+
+
+@pytest.mark.parametrize("encoding", ["utf-8", "latin-1"])
+def test_the_word_list_keeps_its_accented_words(tmp_path, monkeypatch, encoding):
+    # /usr/share/dict/spanish is UTF-8 today; older wspanish packages shipped it in Latin-1.
+    p = tmp_path / "spanish"
+    p.write_text("número\ncanción\ncasa\n", encoding=encoding)
+    monkeypatch.setattr(export_module, "SPANISH_DICT", p)
+    assert {"numero", "cancion", "casa"} <= export_module.spanish_words()

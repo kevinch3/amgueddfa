@@ -52,7 +52,12 @@ def _fold(s: str) -> str:
 def spanish_words() -> set[str]:
     if not SPANISH_DICT.exists():
         sys.exit(f"{SPANISH_DICT} missing (install the wspanish word list)")
-    return {_fold(w.strip()) for w in SPANISH_DICT.read_text(encoding="latin-1").splitlines() if w.strip()}
+    raw = SPANISH_DICT.read_bytes()
+    try:
+        text = raw.decode("utf-8")  # today's wspanish
+    except UnicodeDecodeError:
+        text = raw.decode("latin-1")  # older packages
+    return {_fold(w.strip()) for w in text.splitlines() if w.strip()}
 
 
 def useful(t: dict, words: set[str]) -> bool:

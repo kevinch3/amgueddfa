@@ -1054,7 +1054,7 @@
     "confirmar_cancelar": "Scartare tutte le modifiche senza inviarle?",
     "descartar": "Sì, scarta",
     "seguir": "No, continua a modificare",
-    "letra": "Testo cantato: si corregge dalla pagina dei testi",
+    "letra": "Questa riga fa parte del testo di un brano; per correggerla, usa «Segnala un errore».",
     "pendiente": "In attesa di revisione: {cambio}",
     "ingresar": "Accedi per correggere la trascrizione",
     "descartados": "Alcune modifiche salvate non corrispondono più alla trascrizione e sono state scartate: {n}."

@@ -206,6 +206,33 @@ describe('loadTranscriptLive (what the player renders)', () => {
     await done;
     expect(calls).toHaveLength(1);
   });
+
+  it('says once when the text is final: after the corrected draw, or when the corrections change nothing or cannot come', async () => {
+    // The edit mode resumes a draft only then, so a line an approved correction changed is not taken for gone.
+    const log: string[] = [];
+    const go = (approved: () => Promise<{ rows: CorrectionRow[]; offline: boolean }>, f: () => Promise<unknown> = async () => published(), stale = () => false) =>
+      loadTranscriptLive('VID', f, (_s, u) => log.push(u ? 'corregida' : 'archivo'), { approved, stale, settled: () => log.push('final') });
+    await go(async () => ({ rows: [ana, carla], offline: false }));
+    expect(log.splice(0)).toEqual(['archivo', 'corregida', 'final']);
+    await go(async () => ({ rows: [], offline: false }));
+    expect(log.splice(0)).toEqual(['archivo', 'final']);
+    await go(async () => ({ rows: [], offline: true }));
+    expect(log.splice(0)).toEqual(['archivo', 'final']);
+    await go(async () => ({ rows: [row('r9', '11:00', null, [])], offline: false })); // a row that changes nothing
+    expect(log.splice(0)).toEqual(['archivo', 'final']);
+    await go(async () => ({ rows: [], offline: false }), async () => null); // no file
+    expect(log.splice(0)).toEqual(['archivo', 'final']);
+    // Not while the corrections are on their way, and never for a video the visitor left.
+    let answer!: (a: { rows: CorrectionRow[]; offline: boolean }) => void;
+    let left = false;
+    const done = go(() => new Promise((r) => (answer = r)), undefined, () => left);
+    await new Promise((r) => setTimeout(r, 0));
+    expect(log).toEqual(['archivo']);
+    left = true;
+    answer({ rows: [carla], offline: false });
+    await done;
+    expect(log).toEqual(['archivo']);
+  });
 });
 
 describe('credits', () => {

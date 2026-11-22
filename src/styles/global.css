@@ -638,7 +638,7 @@ fieldset.campo { border: 0; padding: 0; }
 .rep-ed-estado .contrib-ok { margin: 0; border-top: 1px solid var(--rule); font-size: 0.95rem; }
 .rep-lineas[data-modo-edicion] > li { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: start; }
 .rep-lineas[data-modo-edicion] > li > :not(button) { grid-column: 1 / -1; }
-.rep-ed-lapiz { min-width: 44px; min-height: 44px; margin: 0; padding: 0; border: 0; background: transparent; color: var(--red-deep); font: 1.15rem/1 var(--sans); cursor: pointer; }
+.rep-ed-lapiz { grid-row: 1; grid-column: 2; min-width: 44px; min-height: 44px; margin: 0; padding: 0; border: 0; background: transparent; color: var(--red-deep); font: 1.15rem/1 var(--sans); cursor: pointer; }
 .rep-ed-lapiz:hover, .rep-ed-lapiz[aria-expanded="true"] { background: color-mix(in srgb, var(--ink) 7%, transparent); }
 /* Notes under a line line up with its words (the button's padding + the time column + the gap). */
 .rep-ed-nota, .rep-ed-cambio, .rep-pend, .rep-ed-nueva { margin: 0 0.75rem 0.3rem 4.65rem; font-size: 0.85rem; line-height: 1.4; overflow-wrap: anywhere; }

@@ -1054,7 +1054,7 @@
     "confirmar_cancelar": "Kasta alla ändringar utan att skicka dem?",
     "descartar": "Ja, kasta",
     "seguir": "Nej, fortsätt redigera",
-    "letra": "Sångtext: rättas från sidan med sångtexter",
+    "letra": "Den här raden är en del av en sångtext; använd ”Rapportera ett fel” för att rätta den.",
     "pendiente": "Väntar på granskning: {cambio}",
     "ingresar": "Logga in för att rätta transkriptionen",
     "descartados": "Några sparade ändringar stämmer inte längre med transkriptionen och har kastats: {n}."

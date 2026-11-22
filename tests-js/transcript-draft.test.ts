@@ -112,6 +112,16 @@ describe('setLine, undoLine, adds', () => {
     expect([0, 1, 2].map((i) => lineIdioma(x, i))).toEqual(['cy', 'es', null]);
   });
 
+  it('two lines added at the same paused moment get distinct times (+0.1 s), so the send is not refused as repeated', async () => {
+    const { validate } = await import('../src/lib/contrib');
+    let d = emptyDraft('UW0GV9sicGs');
+    for (const texto of ['Uno', 'Dos', 'Tres']) d = addNueva(d, { t: 42, texto, idioma: 'es' });
+    d = addNueva(d, { t: 42.1, texto: 'Cuatro', idioma: 'es' });
+    expect(d.nuevas.map((n) => n.t)).toEqual([42, 42.1, 42.2, 42.3]);
+    const v = validate('video_text', { video: { id: 'UW0GV9sicGs' }, cambios: cambiosFrom(tr(), d) });
+    expect(v.ok).toBe(true);
+  });
+
   it('adds keep their time and language; a blank add is ignored; removeNueva drops one', () => {
     let d = addNueva(emptyDraft('V'), { t: 12.34, texto: 'Hola', idioma: 'es' });
     d = addNueva(d, { t: 5, texto: '  ', idioma: 'cy' });

@@ -98,14 +98,17 @@ export function lineCredit(fuentes: string[] | undefined, nombres: string[] | un
  * published file at once (null when the video has none: a 404, a broken file, offline), and later, only when the
  * approved corrections change what shows (the lines, or the credit), the corrected version with `update` true. The
  * corrections are asked for only when there is a file; offline or none, nothing more happens. When `stale()` says the
- * visitor moved to another video meanwhile, a reply is dropped. */
+ * visitor moved to another video meanwhile, a reply is dropped. `settled()` is called once the text shown is final
+ * (after the corrected draw, or when the corrections change nothing, cannot come, or there is no file): the edit mode
+ * resumes a saved draft only then, so a line an approved correction changed is not taken for gone. */
 export async function loadTranscriptLive(
   id: string,
   file: (id: string) => Promise<unknown>,
   render: (shown: LiveTranscript | null, update: boolean) => void,
-  opts: { approved?: (id: string) => Promise<Approved>; stale?: () => boolean } = {},
+  opts: { approved?: (id: string) => Promise<Approved>; stale?: () => boolean; settled?: () => void } = {},
 ): Promise<void> {
   const stale = opts.stale ?? (() => false);
+  const settled = opts.settled ?? (() => {});
   let tr: Transcript | null = null;
   try {
     tr = asTranscript(await file(id));
@@ -114,10 +117,12 @@ export async function loadTranscriptLive(
   }
   if (stale()) return;
   render(tr && { tr, autores: {}, nombres: [] }, false);
-  if (!tr) return;
+  if (!tr) return settled();
   const { rows, offline } = await (opts.approved ?? approvedCorrections)(id);
-  if (stale() || offline || !rows.length) return;
+  if (stale()) return;
+  if (offline || !rows.length) return settled();
   const live = withLiveCorrections(tr, rows);
   const nombres = correctionCredits(tr, rows, live.autores);
   if (live.tr !== tr || nombres.length) render({ ...live, nombres }, true);
+  settled();
 }

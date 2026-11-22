@@ -1054,7 +1054,7 @@
     "confirmar_cancelar": "Abandonner toutes les modifications sans les envoyer ?",
     "descartar": "Oui, abandonner",
     "seguir": "Non, continuer",
-    "letra": "Paroles : elles se corrigent depuis la page des paroles",
+    "letra": "Cette ligne fait partie des paroles d'une chanson ; pour la corriger, utilisez « Signaler une erreur ».",
     "pendiente": "En attente de relecture : {cambio}",
     "ingresar": "Connectez-vous pour corriger la transcription",
     "descartados": "Certaines modifications enregistrées ne correspondent plus à la transcription et ont été abandonnées : {n}."

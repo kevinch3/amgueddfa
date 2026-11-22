@@ -1054,7 +1054,7 @@
     "confirmar_cancelar": "¿Descartar todos los cambios sin enviarlos?",
     "descartar": "Sí, descartar",
     "seguir": "No, seguir editando",
-    "letra": "Letra: se corrige desde la página de letras",
+    "letra": "Esta línea es parte de una letra; para corregirla, usá «Informar un error».",
     "pendiente": "Pendiente de revisión: {cambio}",
     "ingresar": "Ingresá para corregir la transcripción",
     "descartados": "Algunos cambios guardados ya no coinciden con la transcripción y se descartaron: {n}."

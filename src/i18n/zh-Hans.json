@@ -1054,7 +1054,7 @@
     "confirmar_cancelar": "放弃所有更改而不发送吗？",
     "descartar": "是，放弃",
     "seguir": "否，继续编辑",
-    "letra": "歌词：请在歌词页面更正",
+    "letra": "这一行是歌词的一部分；如需更正，请使用“报告错误”。",
     "pendiente": "等待审核：{cambio}",
     "ingresar": "登录后更正文字稿",
     "descartados": "部分已保存的更改与当前文字稿不再一致，已被放弃：{n}。"

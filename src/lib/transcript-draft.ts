@@ -72,11 +72,14 @@ export function undoLine(d: Draft, i: number): Draft {
   return { ...d, lines };
 }
 
-/** The draft plus a line added at `n.t` (tenths of a second); a blank one adds nothing. */
+/** The draft plus a line added at `n.t` (tenths of a second); a blank one adds nothing. Two adds never share a time
+ * (the contribution would be refused as a repeated change): a later one at a taken time moves on by 0.1 s. */
 export function addNueva(d: Draft, n: Nueva): Draft {
   const texto = n.texto.trim();
   if (!texto || !Number.isFinite(n.t) || n.t < 0 || !isIdioma(n.idioma)) return d;
-  return { ...d, nuevas: [...d.nuevas, { t: Math.round(n.t * 10) / 10, texto, idioma: n.idioma }] };
+  let t0 = Math.round(n.t * 10) / 10;
+  while (d.nuevas.some((x) => x.t === t0)) t0 = Math.round((t0 + 0.1) * 10) / 10;
+  return { ...d, nuevas: [...d.nuevas, { t: t0, texto, idioma: n.idioma }] };
 }
 
 export function removeNueva(d: Draft, k: number): Draft {

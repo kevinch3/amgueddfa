@@ -14,7 +14,7 @@ import { url } from '../lib/paths';
 import { creditos, findLines, fmtTime, letraAt, lineAt, lineLang, type Transcript } from '../lib/video-transcript';
 import { parseVideoHash, videoHash } from '../lib/video-hash';
 import { videoUrl } from '../lib/videos';
-import { EDITANDO, LINEAS_EVENT, wireEditor, type EditorVideo } from './editor-transcripcion';
+import { ASENTADA_EVENT, EDITANDO, LINEAS_EVENT, wireEditor, type EditorVideo } from './editor-transcripcion';
 
 type YTPlayer = {
   loadVideoById(id: string): void;
@@ -303,7 +303,10 @@ if (dialog) {
           renderTranscript(shown);
         }
       },
-      { stale: () => token !== loadToken }, // the visitor moved to another video meanwhile
+      {
+        stale: () => token !== loadToken, // the visitor moved to another video meanwhile
+        settled: () => dialog!.dispatchEvent(new CustomEvent(ASENTADA_EVENT)), // the text is final: edit mode may start
+      },
     );
   }
 

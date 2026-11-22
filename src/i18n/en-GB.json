@@ -1054,7 +1054,7 @@
     "confirmar_cancelar": "Discard all your changes without sending them?",
     "descartar": "Yes, discard",
     "seguir": "No, keep editing",
-    "letra": "Lyrics: corrected from the lyrics page",
+    "letra": "This line is part of a song's lyrics; to correct it, use “Report an error”.",
     "pendiente": "Awaiting review: {cambio}",
     "ingresar": "Sign in to correct the transcript",
     "descartados": "Some saved changes no longer match the transcript and were discarded: {n}."

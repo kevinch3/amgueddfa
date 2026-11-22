@@ -24,6 +24,9 @@ export type EditorState = { tr: Transcript | null; video: EditorVideo | null; cu
 
 /** The event scripts/reproductor.ts sends on the dialog each time it (re)draws the transcript lines. */
 export const LINEAS_EVENT = 'rep:lineas';
+/** Sent once the open video's text is final (the approved corrections drawn, or none to come). Edit mode starts only
+ * then: a draft fitted to the bare file would take a line an approved correction changed (or added) for gone. */
+export const ASENTADA_EVENT = 'rep:asentada';
 /** Set on the list while a line's editor (or the new-line form) is open: the player then stops scrolling to follow the video. */
 export const EDITANDO = 'data-editando';
 
@@ -73,6 +76,8 @@ export function wireEditor(dialog: HTMLDialogElement, getState: () => EditorStat
   /** The video whose lines are drawn, and whether its visitor may edit it. */
   let shown: string | null = null;
   let puede = false;
+  /** Whether the text of the video drawn is final (ASENTADA_EVENT). */
+  let asentada = false;
   /** The draft while in edit mode; null outside it. */
   let draft: Draft | null = null;
   /** The line whose editor is open. */
@@ -143,10 +148,14 @@ export function wireEditor(dialog: HTMLDialogElement, getState: () => EditorStat
       const x = li[c.i];
       if (!x) continue;
       if (c.editable) {
-        x.append(el('button', {
+        const lapiz = el('button', {
           type: 'button', class: 'rep-ed-lapiz rep-ed-x', 'data-editar-linea': String(c.i),
           'aria-label': t('editor.editar_linea', { tiempo: fmtTime(c.t) }), 'aria-expanded': 'false',
-        }, '✎'));
+        }, '✎');
+        // Right after the seek button, before any note (the author's pending one is drawn first): beside it, and next in tab order.
+        const seek = x.querySelector('button[data-i]');
+        if (seek) seek.after(lapiz);
+        else x.append(lapiz);
       } else if (c.nota) x.append(el('p', { class: 'rep-ed-nota rep-ed-x' }, t('editor.letra')));
     }
     for (const k of Object.keys(draft.lines)) paintLine(Number(k));
@@ -346,7 +355,7 @@ export function wireEditor(dialog: HTMLDialogElement, getState: () => EditorStat
   /** Into edit mode, resuming this video's saved draft (each change back on its own line). */
   function enter(focus: boolean): void {
     const { tr, video } = state();
-    if (!tr || !video || draft) return;
+    if (!tr || !video || draft || !asentada) return;
     const saved = loadDraft(video.id);
     const fit = saved ? fitDraft(tr, saved) : { draft: emptyDraft(video.id, tr.exportado), descartados: 0 };
     draft = fit.draft;
@@ -373,8 +382,15 @@ export function wireEditor(dialog: HTMLDialogElement, getState: () => EditorStat
     confirmar.hidden = true;
     msg.textContent = '';
     paintEdit();
-    boton.hidden = !puede;
-    if (focusBoton && puede) boton.focus();
+    boton.hidden = !(puede && asentada);
+    if (focusBoton && !boton.hidden) boton.focus();
+  }
+
+  /** The edit button once the visitor may edit and the text is final; an unsent draft resumes then. */
+  function ready(): void {
+    if (!puede || !asentada || draft || !shown) return;
+    boton.hidden = false;
+    if (loadDraft(shown)) enter(false); // back to where the collaborator left it
   }
 
   /** The edit button, the sign-in link, or nothing, for the video just drawn; its own pending changes; its draft. */
@@ -390,9 +406,8 @@ export function wireEditor(dialog: HTMLDialogElement, getState: () => EditorStat
     }
     puede = a.boton;
     if (!puede) return;
-    boton.hidden = !!draft;
     loadPending(video.id);
-    if (loadDraft(video.id)) enter(false); // an unsent draft: back to where the collaborator left it
+    ready();
   }
 
   dialog.addEventListener(LINEAS_EVENT, () => {
@@ -403,6 +418,7 @@ export function wireEditor(dialog: HTMLDialogElement, getState: () => EditorStat
       if (draft) leave(false);
       shown = id;
       puede = false;
+      asentada = false;
       pend = [];
       boton.hidden = true;
       gateBox.hidden = true;
@@ -414,7 +430,7 @@ export function wireEditor(dialog: HTMLDialogElement, getState: () => EditorStat
     if (!id) return;
     // The same video drawn again (approved corrections arrived): every mark back on the new lines, the draft on its lines.
     const lost = abierta !== null && !dialog.contains(document.activeElement);
-    if (draft) {
+    if (draft && asentada) {
       const fit = fitDraft(tr!, draft);
       if (fit.descartados) {
         save(fit.draft);
@@ -425,6 +441,13 @@ export function wireEditor(dialog: HTMLDialogElement, getState: () => EditorStat
     paintEdit();
     paintBar();
     if (lost && draft) panel.focus();
+  });
+
+  dialog.addEventListener(ASENTADA_EVENT, () => {
+    const { tr, video } = state();
+    if (!tr || !video || video.id !== shown) return;
+    asentada = true;
+    ready();
   });
 
   boton.addEventListener('click', () => enter(true));
@@ -498,6 +521,7 @@ export function wireEditor(dialog: HTMLDialogElement, getState: () => EditorStat
     if (draft) leave(false);
     shown = null;
     puede = false;
+    asentada = false;
     boton.hidden = true;
     gateBox.hidden = true;
   });

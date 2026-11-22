@@ -642,6 +642,16 @@ describe('static build', () => {
     expect(html).toContain('data-pagefind-body');
   });
 
+  it('an item description does not repeat its category when the title already starts with it (#95)', () => {
+    const desc = (f: string) => /<meta name="description" content="([^"]*)"/.exec(read(f))?.[1] ?? '';
+    const docs = JSON.parse(read('datos/documentos.json')).documentos as { id: string }[];
+    const repeated = docs.map((d) => desc(`item/${d.id}/index.html`)).filter((d) => {
+      const parts = d.replace(/\.$/, '').split(' · ');
+      return parts.length >= 3 && parts[0].toLowerCase().startsWith(parts[parts.length - 1].toLowerCase());
+    });
+    expect(repeated.slice(0, 5)).toEqual([]);
+  });
+
   it('no public document is titled by a bare file-name slug (#90)', () => {
     const docs = JSON.parse(read('datos/documentos.json')).documentos as { id: string; titulo: string }[];
     const slugs = docs.filter((d) => /^[a-z0-9-]+$/.test(d.titulo) || /^(web|ig|villagra|culturagaiman|chubutcultural) /.test(d.titulo));

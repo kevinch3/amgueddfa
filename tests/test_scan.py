@@ -194,3 +194,39 @@ def test_numbering_counts_only_public_documents_of_the_same_category():
     its = [mk("a.jpg", hidden=True), mk("b.jpg"), mk("c.jpg", cat="bases"), mk("d.jpg", restricted=True)]
     number_repeats(its)
     assert [i.title for i in its] == ["Tapa del programa"] * 4  # each public one is alone in its category
+
+
+@pytest.mark.parametrize("caption, want", [
+    ("Competencias de Fotografía. Mirá más competencias para participar", "Competencias de Fotografía"),
+    ("Competencia: DANZAS.", "Competencia de danzas"),
+    ("Competencias: RECITACIÓN, en castellano y galés.", "Competencias de recitación, en castellano y galés"),
+    ("Competencias de música: COROS.", "Competencias de música: coros"),
+    ("Les presentamos las competencias de DANZAS - DAWNS, argentinas, galesas y celtas.", "Competencias de danzas - dawns, argentinas, galesas y celtas"),
+    ("Presentamos las competencias de #COROS - #CORAU.", "Competencias de coros - corau"),
+    ("Competencia - Literatura: poesía en castellano y galés.", "Competencia de Literatura: poesía en castellano y galés"),
+    ("Competencia especial de la edición 2026 del Eisteddfod del Chubut", "Competencia especial de la edición 2026 del Eisteddfod del Chubut"),
+    ("COMPETENCIAS DE COCINA EN LA EDICIÓN 2024 DEL EISTEDDFOD DEL CHUBUT. La inscripción", "Competencias de cocina en la edición 2024 del Eisteddfod del Chubut"),
+])
+def test_caption_title_names_the_competition(caption, want):
+    from scripts.catalog.scan import caption_title
+    assert caption_title(caption) == want
+
+
+@pytest.mark.parametrize("caption", ["¡Sumate al Eisteddfod del Chubut!", "Para tener en cuenta!", "This photo is from a post.",
+                                     "Acá te mostramos algunas de las competencias que tendremos en la Edición 2014", "", None,
+                                     "Competencias " + "muy largas " * 12])
+def test_caption_title_ignores_generic_captions(caption):
+    from scripts.catalog.scan import caption_title
+    assert caption_title(caption) is None
+
+
+def test_caption_titles_replace_only_numbered_slug_titles():
+    from scripts.catalog.model import Item
+    from scripts.catalog.scan import caption_titles
+    mk = lambda path, title, note: Item(id=path, festival="chubut", year=2014, undated=False, category="bases", title=title,
+                                        kind="image", src_path=path, note_public=note)
+    its = [mk("a.jpg", "Bases", "Competencias de Fotografía."), mk("b.jpg", "Bases", "Para tener en cuenta!"),
+           mk("c.jpg", "Bases", "Competencias de Artesanías."), mk("d.jpg", "Programa 1990", "Competencias de música.")]
+    caption_titles(its)
+    number_repeats(its)
+    assert [i.title for i in its] == ["Competencias de Fotografía", "Bases", "Competencias de Artesanías", "Programa 1990"]

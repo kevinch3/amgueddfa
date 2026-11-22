@@ -59,6 +59,8 @@ npm run build && npm test && python3 -m pytest -q tests
 ```
 
 - `--limit N` caps the number of videos. Leaving out `--ids` means every in-scope video, which is huge: ask first.
+- `--jobs N` asks N windows at once (N parallel `claude -p` calls; same replies, shorter wait). A window takes about 30 s, so a long session of 500+ windows wants `--jobs 6`.
+- `--ids-file F` reads the ids from a file (use it for ids starting with `-`).
 - The final summary line gives windows by kind (`modelo`, `reglas`, `vacias`), the calls asked, and USD API-equivalent.
 - The run stops by itself after 3 model errors in a row (usage limit or outage): wait and rerun. Cached replies (`../.reconstruccion/replies/<id>/<hash>.json`) are never asked again.
 - Check a few videos in the player:

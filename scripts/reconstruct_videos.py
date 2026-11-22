@@ -2,7 +2,7 @@
 2026-11-20-reconstruccion-videos-design.md; procedure: the video-reconstruction skill).
 
   python3 -m scripts.reconstruct_videos --dry-run [--ids ID ...] [--limit N]
-  python3 -m scripts.reconstruct_videos [--ids ID ...] [--limit N]
+  python3 -m scripts.reconstruct_videos [--ids ID ...] [--limit N] [--jobs N]
 
 Per video: timed sources (YouTube, Whisper es, lyrics; Welsh once chosen) -> ~60 s windows
 -> Claude (claude -p, Sonnet 5.5, the maintainer's subscription) -> checker -> rules
@@ -17,6 +17,7 @@ import csv
 import json
 import sys
 from collections import Counter
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from typing import Callable
 
@@ -55,6 +56,19 @@ def _duration(stem: Path, lines: list) -> float:
         return max(l.t for l in lines) + 5
 
 
+def _ask_all(ask, ws: list, jobs: int) -> list:
+    """Each window's reply, or the ModelError it raised; up to `jobs` windows asked at once."""
+    def one(w):
+        try:
+            return ask(w)
+        except ModelError as e:
+            return e
+    if jobs <= 1 or len(ws) <= 1:
+        return [one(w) for w in ws]
+    with ThreadPoolExecutor(min(jobs, len(ws))) as ex:
+        return list(ex.map(one, ws))
+
+
 def in_scope(repo: Path, video: dict, stem: Path | None = None) -> bool:
     """Chubut and Trevelin only (#29), with a published transcript or a Welsh one to build from."""
     if video["festival"] not in FESTIVALS:
@@ -66,8 +80,9 @@ def in_scope(repo: Path, video: dict, stem: Path | None = None) -> bool:
 
 def reconstruct_video(repo: Path, backup: Path, video: dict, ask=ask_claude, replies: Path = REPLIES,
                       state: dict | None = None, files: dict | None = None,
-                      fix_text: Callable[[str], str] = lambda s: s) -> dict | None:
-    """Write data/reconstruccion/<id>.json for one video and return it; None when out of scope."""
+                      fix_text: Callable[[str], str] = lambda s: s, jobs: int = 1) -> dict | None:
+    """Write data/reconstruccion/<id>.json for one video and return it; None when out of scope.
+    jobs > 1 asks that many uncached windows at once (the replies are the same; only the wait is shorter)."""
     if video["festival"] not in FESTIVALS:
         return None
     state = state if state is not None else {"streak": 0, "usd": 0.0, "asked": 0}
@@ -85,29 +100,48 @@ def reconstruct_video(repo: Path, backup: Path, video: dict, ask=ask_claude, rep
     cache = replies / video["id"]
     counts = {"total": len(windows), "modelo": 0, "reglas": 0, "vacias": 0}
     per_window = []
-    for w in windows:
+    fresh: dict = {}  # hash -> reply or ModelError, asked but not yet used
+
+    def ask_from(i: int) -> None:
+        """Ask the next `jobs` uncached windows from windows[i] on; cache each reply as it comes."""
+        batch, seen = [], set()
+        for x in windows[i:]:
+            if len(batch) == jobs:
+                break
+            if needs_model(x) and x.hash not in seen and x.hash not in fresh and not (cache / f"{x.hash}.json").exists():
+                seen.add(x.hash)
+                batch.append(x)
+        for x, r in zip(batch, _ask_all(ask, batch, jobs)):
+            fresh[x.hash] = r
+            if not isinstance(r, ModelError):
+                state["asked"] += 1
+                state["usd"] += float(r.get("_usd") or 0)
+                cache.mkdir(parents=True, exist_ok=True)
+                (cache / f"{x.hash}.json").write_text(json.dumps(r, ensure_ascii=False), encoding="utf-8")
+
+    for i, w in enumerate(windows):
         if not needs_model(w):
             counts["vacias"] += 1
             per_window.append([])  # music or applause only: nothing to publish
             continue
+        reply = fresh.pop(w.hash, None)
+        asked_now = reply is not None  # only a reply asked in this run ends a run of model errors
         cached = cache / f"{w.hash}.json"
-        reply = json.loads(cached.read_text(encoding="utf-8")) if cached.exists() else None
+        if reply is None and cached.exists():
+            reply = json.loads(cached.read_text(encoding="utf-8"))
         if reply is None:
-            try:
-                reply = ask(w)
-            except ModelError as e:
-                state["streak"] += 1
-                print(f"  {video['id']} {w.t0:g}s: {e}", file=sys.stderr)
-                if state["streak"] >= MAX_ERRORS_IN_A_ROW:
-                    raise TooManyErrors(str(e)) from e
-                counts["reglas"] += 1
-                per_window.append(_fallback(w, fix_text))
-                continue
+            ask_from(i)
+            reply, asked_now = fresh.pop(w.hash), True
+        if isinstance(reply, ModelError):
+            state["streak"] += 1
+            print(f"  {video['id']} {w.t0:g}s: {reply}", file=sys.stderr)
+            if state["streak"] >= MAX_ERRORS_IN_A_ROW:
+                raise TooManyErrors(str(reply)) from reply
+            counts["reglas"] += 1
+            per_window.append(_fallback(w, fix_text))
+            continue
+        if asked_now:
             state["streak"] = 0
-            state["asked"] += 1
-            state["usd"] += float(reply.get("_usd") or 0)
-            cache.mkdir(parents=True, exist_ok=True)
-            cached.write_text(json.dumps(reply, ensure_ascii=False), encoding="utf-8")
         errors = check_window(w, reply)
         if errors:
             print(f"  {video['id']} {w.t0:g}s: rules ({errors[0]})", file=sys.stderr)
@@ -143,6 +177,7 @@ def main() -> int:
     ap.add_argument("--ids", nargs="*")
     ap.add_argument("--ids-file", help="file with video ids (whitespace-separated); ids may start with '-'")
     ap.add_argument("--limit", type=int)
+    ap.add_argument("--jobs", type=int, default=1, help="windows asked at once (claude -p calls in parallel)")
     ap.add_argument("--dry-run", action="store_true", help="list the windows that would be asked, call nothing")
     ap.add_argument("--backup", default=str(DEFAULT_BACKUP))
     a = ap.parse_args()
@@ -180,7 +215,7 @@ def main() -> int:
     done = 0
     try:
         for v in videos:
-            res = reconstruct_video(REPO, backup, v, state=state, files=files, fix_text=fix)
+            res = reconstruct_video(REPO, backup, v, state=state, files=files, fix_text=fix, jobs=a.jobs)
             if res and not res["seg"]:
                 empty.append(v["id"])
             if res:

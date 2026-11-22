@@ -4,44 +4,16 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
-   14.6,
-   "voy a mirar"
+   24.0,
+   "Mae Iesu wedi cario'r dydd, caiff garcharorion fynd yn yr rhydd. O llawenhawn, gyllawenhawn, am dy fod Iesu Crist yn y byd."
   ],
   [
-   23.9,
-   "my es igual"
+   42.0,
+   "Efe yw'r gair, Duw cariad Duw. Efe yw'r gobaith i ni gyd. Palleluvia llawenham, gydlawenham, am dy fod Iesu Crist yn y byd."
   ],
   [
-   28.5,
-   "gaizka los pintores"
-  ],
-  [
-   33.4,
-   "o sea mejor"
-  ],
-  [
-   35.4,
-   "aunque está bien"
-  ],
-  [
-   37.8,
-   "cantamos"
-  ],
-  [
-   41.9,
-   "del ebro"
-  ],
-  [
-   52.1,
-   "ya sabes"
-  ],
-  [
-   55.1,
-   "de agua"
-  ],
-  [
-   57.4,
-   "me gusta"
+   62.0,
+   "Mae Iesu Grist o'n ochr yn ddu, fe gollodd ef ei waed ar y llu, drwy'r un wedd hwn, bendwgan iach, i'r ochr y drong hen y gronin bach."
   ],
   [
    69.8,
@@ -50,6 +22,10 @@
   [
    71.6,
    "de nosotros"
+  ],
+  [
+   76.8,
+   "fin"
   ],
   [
    80.0,
@@ -64,8 +40,20 @@
    "no saben lo que es un verso"
   ],
   [
+   91.5,
+   "sí"
+  ],
+  [
    97.0,
    "yo estaré allí"
+  ],
+  [
+   101.6,
+   "sí"
+  ],
+  [
+   107.7,
+   "bueno"
   ],
   [
    109.8,
@@ -76,33 +64,31 @@
    "buena vista"
   ],
   [
+   122.0,
+   "asco"
+  ],
+  [
    124.8,
    "mejor de mi vida"
   ],
   [
-   129.9,
-   "para acompañar"
+   139.0,
+   "O llawen hon, i'r llawen hon, am glywad Iesu Crist yn y byd. Yfe yw'r gair, rhyw cariad Duw. Yfe yw'r gobaith i ni gyd, halleluja."
   ],
   [
-   134.2,
-   "mientras ritual"
-  ],
-  [
-   136.8,
-   "mira"
-  ],
-  [
-   141.1,
-   "pues no"
-  ],
-  [
-   166.1,
-   "antes"
+   160.94,
+   "Ia llaw yn haf, geirfa yn haf, am glywad Iesu Crist y byd."
   ]
  ],
  "fuentes": [
   [
-   "yt_es"
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -147,37 +133,16 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
+   "cy"
   ]
  ],
  "ventanas": {
   "total": 3,
-  "modelo": 3,
-  "reglas": 0,
+  "modelo": 2,
+  "reglas": 1,
   "vacias": 0
  }
 }

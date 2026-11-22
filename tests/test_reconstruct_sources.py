@@ -87,11 +87,27 @@ def test_welsh_lines_only_where_the_spanish_sources_are_silent(tmp_path):
     stem, letras = _fixture(tmp_path)          # yt_es lines at 1, 10, 20 s; whisper_es 30-51 s
     (letras / "videos.json").write_text("{}", encoding="utf-8")
     (stem.parent / f"{stem.name}.cy-techiaith.json").write_text(json.dumps({"segments": [
-        {"s": 10.5, "text": "nonsens dros sbaeneg"},       # over the Spanish line at 10 s: dropped
+        {"s": 30.5, "text": "nonsens dros sbaeneg"},       # over Spanish speech (Whisper, 7 words): dropped
         {"s": 70.0, "text": "Croeso i Eisteddfod y Wladfa"},  # in a gap: kept
     ]}), encoding="utf-8")
     cy = [(l.t, l.text) for l in load_sources(stem, "vid", letras) if l.src == "cy"]
     assert cy == [(70.0, "Croeso i Eisteddfod y Wladfa")]
+
+
+def test_welsh_lines_next_to_youtube_scraps_are_kept(tmp_path):
+    # 59 videos with both sources: 118 of the 134 Welsh lines dropped were next to a tag or a few
+    # words YouTube guessed over Welsh singing ("[Música]", "cvar", "div"), not Spanish speech.
+    stem, letras = _fixture(tmp_path)          # yt_es lines at 1, 10 (4 words), 20 s (3 words)
+    (letras / "videos.json").write_text("{}", encoding="utf-8")
+    vtt = stem.parent / f"{stem.name}.es-orig.vtt"
+    vtt.write_text(vtt.read_text(encoding="utf-8") + "\n00:01:20.000 --> 00:01:22.000 align:start position:0%\n[Música]\n", encoding="utf-8")
+    (stem.parent / f"{stem.name}.cy-techiaith.json").write_text(json.dumps({"segments": [
+        {"s": 10.5, "text": "Yr arglwydd a'th geidw rhag pob drwg"},  # 4 words of YouTube nearby: kept
+        {"s": 20.5, "text": "Llueve mucho sobre el valle"},           # Spanish the Welsh model heard too: dropped
+        {"s": 80.5, "text": "Diolch yn fawr"},                         # next to a tag only: kept
+    ]}), encoding="utf-8")
+    cy = [(l.t, l.text) for l in load_sources(stem, "vid", letras) if l.src == "cy"]
+    assert cy == [(10.5, "Yr arglwydd a'th geidw rhag pob drwg"), (80.5, "Diolch yn fawr")]
 
 
 def test_welsh_lines_carry_confidence(tmp_path):

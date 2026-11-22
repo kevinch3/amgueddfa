@@ -4,8 +4,20 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "¡Aplausos!"
+  ],
+  [
    30.0,
-   "que es Sibyl Hughes o Trevelin."
+   "que es Sibyl Hughes o Trevelyne."
+  ],
+  [
+   33.6,
+   "¿Cómo se puede hacer esto?"
+  ],
+  [
+   35.1,
+   "¿Cómo se puede hacer esto?"
   ],
   [
    43.2,
@@ -21,7 +33,7 @@
   ],
   [
    52.2,
-   "y espiritual góspel o jazz a elección."
+   "y espiritual gospel o jazz a elección."
   ],
   [
    57.4,
@@ -32,8 +44,16 @@
    "Locus Amoenus."
   ],
   [
-   293.3,
-   "No sincero"
+   278.56,
+   "Fe ddisgwyl beth i ni ddangos nos Sin Cielo."
+  ],
+  [
+   288.56,
+   "Fe disgwyl beth i ni ddangos nos Sin Cielo."
+  ],
+  [
+   302.56,
+   "Ubi caritas nased amor, wrth ddews i fi est. Cwmfryd arafid nos i nŵn, Cristi a mor. Cristi a mor."
   ],
   [
    329.2,
@@ -67,12 +87,27 @@
   ],
   [
    "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {
   "total": 11,
-  "modelo": 4,
-  "reglas": 0,
+  "modelo": 3,
+  "reglas": 1,
   "vacias": 7
  }
 }

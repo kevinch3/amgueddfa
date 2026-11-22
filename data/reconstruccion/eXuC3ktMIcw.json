@@ -4,48 +4,16 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
-   8.0,
-   "aquí"
+   0.0,
+   "Gorsedd y Cwmwl. Chaiff pawb ddim dringo i orsedd y cwmwl, a chei di byth fentro dy hun, a mai mynydd di reol a gwyllt ydi hwn, nid parch bach i gynnig llun."
   ],
   [
-   12.1,
-   "por ser como"
+   30.0,
+   "Does yna ddim llwybyr i orsedd y cwmwl, na warden, na hyrw'n coed, am fod hwn yn bwrdd ar ei ddeliau ei hun, ac am ei fod yno erioed. Does neb wedi concro gorsedd y cwmwl, dim ond un copa, ddim llawer yn ôl, am fod rhew a sgri yn fwy sefnyg na ni, ac mae siancio hŷn."
   ],
   [
-   16.5,
-   "cómo"
-  ],
-  [
-   20.0,
-   "sí"
-  ],
-  [
-   23.5,
-   "la puesta de un"
-  ],
-  [
-   28.2,
-   "sí"
-  ],
-  [
-   33.3,
-   "estoy sola"
-  ],
-  [
-   35.6,
-   "como nada"
-  ],
-  [
-   39.0,
-   "amor por mi importante"
-  ],
-  [
-   43.1,
-   "amigo tono"
-  ],
-  [
-   58.9,
-   "y embargo"
+   60.0,
+   "un far môr y ffwrdd, ond i ffwrdd anfforesydd gorsedd y cwmwl yr a a di i ddyfeio ei dduw, a mae rhywlen y drethi rhwng gaeara nef wrth heddiw ei farw, mae'n teimlo'n fyw."
   ],
   [
    64.6,
@@ -62,37 +30,13 @@
  ],
  "fuentes": [
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"

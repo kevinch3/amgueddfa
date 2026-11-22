@@ -8,8 +8,12 @@
    "Dwyn a falau, gwyn ei byd yr hau sydd yn dwyn a falau, cadarn yw ei dannedd ac ystwyth ei cymalau. Yn yr oriau ma yn y bore, drwy wyth y perllannau llaeth yn sleifio am y gore, wrth ei hyfrytaf gwaeth."
   ],
   [
-   54.9,
-   "al tema"
+   28.0,
+   "Llechant ymysg anghennau esmwyth, a bachau gwyn ei breichiau ym mwrdd y brennau, a'i gafael yn dyne'r dyn, a'n wesant y ffrwythau megis cariadon, ac yna'n chwyn ddatod y cwlwm bregus a'r brigyn, garwnadau dim."
+  ],
+  [
+   54.0,
+   "Ai dyma beth yw rhybudd cydwybod helpu alau, bendigaid ydyw rhai sydd yn dwyn na falau."
   ]
  ],
  "fuentes": [
@@ -17,13 +21,16 @@
    "cy"
   ],
   [
-   "yt_es"
+   "cy"
+  ],
+  [
+   "cy"
   ]
  ],
  "ventanas": {
   "total": 2,
-  "modelo": 2,
+  "modelo": 1,
   "reglas": 0,
-  "vacias": 0
+  "vacias": 1
  }
 }

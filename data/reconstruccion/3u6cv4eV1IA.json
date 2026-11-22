@@ -1,6 +1,6 @@
 {
  "src": "reconstruida",
- "lang": "es",
+ "lang": "cy",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
@@ -21,7 +21,15 @@
   ],
   [
    90.0,
-   "Egin Gwrandewch ar gôr cynnar yr adar wrthyn cyfargwawr y geni a'i cân yng nghoed Glanrhyd y Gwiaer, a chyfeilian ffurmeith y colli yn eryddiad der tyfu'n peryg yn adniwio eginiad y wyrdd new mewn cryd, hyd at ymgyffred ddiffoddiad ei fflam pan syllir ar y tŷ i gael ei gosiwch yn ystod yr adar diwethaf"
+   "Egin Gwrandewch ar gôr cynnar yr adar wrthyn cyfargwawr y geni a'i cân yng nghoed Llanrid y Gwiaer, a chyfeilian ffurmeith y colli yn eryddiad der tyfu'n peryg yn adniwio eginiad y wyrdd new mewn cryd, hyd at ymgyffred ddiffoddiad ei fflam pan syllir ar y tŷ i gael ei gosiwch yn ystod yr adar diwethaf"
+  ],
+  [
+   120.0,
+   "trwy wyrder diflaniad y blynyddoedd yn llythyr Trallod, Rhwyn, Rhyd Owen."
+  ],
+  [
+   127.0,
+   "Heddiw, mae'r rhain dal i daeru i nid glywed yno traed ysgafn rhyw weinidog addfwyn, wedi'i ddoblannu'n nhad ei ddylanwad, a'i gynnwyd yn obeithion mân yn mywydau gwerinwyr hynaws y llwy."
   ],
   [
    146.0,
@@ -32,12 +40,20 @@
    "Cofiwch y camweddau a'r galar wnaeth gythryblu'r bugail a'i braidd yng ngŵydd ei eginiad yn dodol. Ymdeimlwch a chwyleidra'r teuluodd, pan orfodwyd rhieniad yn dreulio'r nos dan denfwd y sêr, a'r hebwch eich sêr yn rhasied i fawr ffynno'r llyweddy, lle mae iangau yn rhyngu eu dannedd ar lyncanto'r glas a pher."
   ],
   [
+   206.0,
+   "Ddoe, wrth i'r wawr dorri'n frenhinol dros lethrau lleol gwndogin yn hir i'r bump ymholwg y môr, a dyddiau Hydref yn diblannu'n gyfal o afau mis, dihinwyd had yr egin eilaeth yng ngwen elwyd y baban a adnwyd yno."
+  ],
+  [
    228.0,
    "O lwybr egin y gwrychion, o dân efail yr awen, cymerodd brydydd benedraig o gyfer pedoli cerddi clod ei we- wead, clywch ar gysondeb glec y llythrennau yn adnewyddu'r wyddor ar union solit bob y cyflethreni."
   ],
   [
    252.0,
    "Twmlodd eiliadau bonio'r yr haen drosodd a throsodd nes i loe'r welw delweddu llendi'r tywyll a'r ffurfafen yr ymen- yr emen- ymennydd, gan wneud llawenydd Llencyndod yn derfysg nid."
+  ],
+  [
+   270.0,
+   "Cyn ddywino'r bardd yn dywysog ei waith o dan y sêr, ym mherchan werdd ei chyngdod, gan breswylio yn fardd tyfiedig ym mhrif egil ei hiraeth. Glanrhyd."
   ],
   [
    300.0,
@@ -89,8 +105,20 @@
    "cy"
   ],
   [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
    "cy",
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "cy"

@@ -4,12 +4,16 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Dechrau. Eisteddfod. Gastadleuaeth ma' na dan ni'n mynd i ddechrau yn y Gymraeg. Gastadleuaeth rhif pum deg un, os dwi'n gweud yn iawn, Triawd Ar gyfer heddiw'r bore carol traddodiadol Eos Iâl, Hokia Pentre, grŵp lo- locws a côr côr mwnicipal de Trelew, cwmpetensiwn nwymero cin gwynt a un, es un trio, i'r participant sôn."
+  ],
+  [
    21.9,
-   "grc municipal de competencia número"
+   "municipal de competencia número"
   ],
   [
    25.4,
-   "51 es un Triawd y"
+   "51 es un tro y"
   ],
   [
    29.0,
@@ -17,7 +21,7 @@
   ],
   [
    32.8,
-   "coro de la municipalidad de Trevelin que"
+   "coro de la municipalidad de Trelew que"
   ],
   [
    35.0,
@@ -57,7 +61,7 @@
   ],
   [
    63.7,
-   "municipal de trus se Sube arriba del"
+   "municipal de Trelew se sube arriba del"
   ],
   [
    65.3,
@@ -86,11 +90,39 @@
   [
    88.8,
    "autoría"
+  ],
+  [
+   90.0,
+   "Brawn a meinir, Jones, Bari, croeso unwaith eto i'w Wladfa. Os dach chi'n barod, dan ni'n dechrau efo Hogia Pentre. Diolch yn fawr."
+  ],
+  [
+   120.0,
+   "yn faban bach, baban bach, yy ganwyd gweiddi'n Iesu'n baban bach, yy cadarn daeth o bws braf, y dyddfwr gynta'r su' na, yr iawn gael ar y galf arian, baban bach."
+  ],
+  [
+   150.0,
+   "baban bach, yn sygno bron Marian faban bach. Diosg o'dd Crist ei goron, o'i wyrfodd o'i wyrfodd, er mwyn coron is euon o'i wyrfodd."
+  ],
+  [
+   178.72,
+   "I blygu bendihalog o dan y goron ddraeniog, iddi o ddefnyddio'r meic lludiog, o'i wirfodd, o'i wirfodd, er codi penereuog, o'i wirfodd."
+  ],
+  [
+   207.72,
+   "Am hyn bechadir bresia felerwyt, felerwyt, i mofyn am enodd fawr felerwyt, i tir agorwyd ffynon, a i'r rhuglwyfau duwn felerwyt."
+  ],
+  [
+   237.72,
+   "Fel eir a gwyn yn salmwn, fel yr wyt, fel yr wyt, am hannu tir dan bryglon, fel yr wyt."
+  ],
+  [
+   267.72,
+   "Diolch yn fawr."
   ]
  ],
  "fuentes": [
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -151,6 +183,30 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ]
  ],
  "ventanas": {

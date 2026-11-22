@@ -4,24 +4,16 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
-   4.3,
-   "Irma Hughes de Jones"
+   0.0,
+   "Y Delyn gan Irma Hughes de Jones. Saif yn y gogledd yn frawr, byth a ni'n fît, ar hynny, clywodd adlais y miwsigell, ffordd ambell daent, ond eris yr hyd a swyddog cynt gyfrinogi o'i gell."
   ],
   [
-   29.1,
-   "sí sí"
+   28.0,
+   "Dim gwahwnithau'r garddwyr hardd neu wyr i'w leug, na naill, dan croesi, drw ffyns, gesaw blodau dda o'r ardd, a hau'r gwyldd yn gorneuol, garddwyr llawn o dagwydda, llawn o serch, a'i fuddugol."
   ],
   [
-   55.0,
-   "vamos"
-  ],
-  [
-   62.0,
-   "y la boca"
-  ],
-  [
-   65.7,
-   "no es así"
+   58.0,
+   "Iancad i'r doi o'r can, yr hen alaw o ganodd Ieuan ferch ei dwyloeswyth ar y tanau yma, a teiniodd yma cynt ers amser maith hen nodau dilyn Cymru ger y paith."
   ],
   [
    72.7,
@@ -34,19 +26,13 @@
  ],
  "fuentes": [
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"

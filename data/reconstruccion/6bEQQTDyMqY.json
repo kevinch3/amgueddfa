@@ -4,20 +4,16 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
-   54.6,
-   "mi amor"
+   0.0,
+   "Eiddot Ti, O Dduw, yw y Mawredd, ar holl medd, ar hogoniant."
   ],
   [
-   62.5,
-   "mi alma"
+   30.0,
+   "Ar ôl i ffafiau'r ffarm anrhydi, oedd o'n tŷ, i'w ymawr e ddarner, ar gogoniant."
   ],
   [
-   99.0,
-   "cómo"
-  ],
-  [
-   101.3,
-   "faltas"
+   89.4,
+   "A chdi'n dechra'r bennin yn benna'r gogledd, yn benna'r gogledd, yn ben, yn benna'r gogledd."
   ],
   [
    103.6,
@@ -28,57 +24,27 @@
    "nuevo"
   ],
   [
-   181.4,
-   "bueno"
+   179.4,
+   "Morwch yn arglwydd, morwch yn arglwydd, morwch yn arglwydd."
   ],
   [
-   187.4,
-   "no no"
+   199.4,
+   "Morwch dim yn ei sanctaidd môr, morwch dim yn dirbaf yn ei le."
   ],
   [
-   225.9,
-   "el poder"
-  ],
-  [
-   233.7,
-   "mira"
-  ],
-  [
-   260.9,
-   "por qué"
-  ],
-  [
-   344.2,
-   "por qué"
-  ],
-  [
-   346.5,
-   "no"
-  ],
-  [
-   376.0,
-   "pero no"
-  ],
-  [
-   379.7,
-   "sí"
-  ],
-  [
-   383.0,
-   "yo"
-  ],
-  [
-   400.8,
-   "bueno"
-  ],
-  [
-   414.4,
-   "no"
+   319.4,
+   "Ma' nhw'n gorod bydd, a ma' nhw'n iawn gan bobl. Ma' nhw'n gorod bydd, a ma' nhw'n iawn gan bobl."
   ]
  ],
  "fuentes": [
   [
-   "yt_es"
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -87,49 +53,13 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
+   "cy"
   ]
  ],
  "ventanas": {

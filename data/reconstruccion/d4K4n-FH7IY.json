@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Soprano, solo soprano, Gweddi y Pechadur, yr unig yn y Casa Leia eitha yma yw Nansi, sy' berniad yn barod, silensio i todos nosotros, esguchamos a Nansi."
+  ],
+  [
    7.6,
    "sol silencio de todos nosotros"
   ],
@@ -52,6 +56,10 @@
    "Muchas gracias Y perdón por la"
   ],
   [
+   64.88,
+   "O, that's okay."
+  ],
+  [
    67.9,
    "confusión Sí buenas noches Perdón yo"
   ],
@@ -92,8 +100,12 @@
    "difícil yo no soy Héctor"
   ],
   [
+   103.08,
+   "Diolch yn fawr."
+  ],
+  [
    118.8,
-   "Ariel yo puedo"
+   "Ariel pued yo puedo"
   ],
   [
    121.8,
@@ -102,6 +114,10 @@
   [
    124.8,
    "cantarlo a"
+  ],
+  [
+   133.08,
+   "Muchas gracias, Nancy, muchas gracias, Alicia."
   ],
   [
    137.8,
@@ -114,11 +130,27 @@
   [
    148.8,
    "Alicia"
+  ],
+  [
+   187.08,
+   "Ni ddaer iddi fi dalwm, rwy'n marw, rwy'n marw, rwy'n marw yn ei ddal."
+  ],
+  [
+   241.08,
+   "Droi moed i ffynedd o air o'i chwith hi'n pethau nid oedd yn ail-ddi-edd nid oedd yn ail-di-edd."
+  ],
+  [
+   296.08,
+   "Arglwydd derbyn fi heddi'r gorau, a mae ryw ffanwyredd oedd ai, maddai mochynwyredd."
+  ],
+  [
+   326.08,
+   "Heb gofio'm gamwedd mwy."
   ]
  ],
  "fuentes": [
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -157,7 +189,7 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -190,7 +222,7 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -200,11 +232,35 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ]
  ],
  "ventanas": {
-  "total": 6,
-  "modelo": 6,
+  "total": 7,
+  "modelo": 7,
   "reglas": 0,
   "vacias": 0
  }

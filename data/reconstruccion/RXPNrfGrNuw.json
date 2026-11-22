@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "O ddiweintaf, cynhaliwr bobl byw. O'r ddeddf raddol dy gyniad, ein gweddi clud."
+  ],
+  [
    30.0,
    "Y denau'r law, bo'n gwarchod drosom ni, a'r goman diogel am feddwl yn dy fal di."
   ],
@@ -12,11 +16,21 @@
    "Mae'r llys diwrnod, da gwmni di o hyd, mwy bai ddim fod yn bob amser yn hwy na'r byd."
   ],
   [
+   74.0,
+   "Tua ysbryd glân, rhwynt o'r gaenedlur, yn lle gwyrdd casodd mewn hanwain yn ffordd ofnwyr."
+  ],
+  [
    95.0,
    "Yn lle wyr, casodd mewn hanwain yn ffordd am wyr."
   ]
  ],
  "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
   [
    "cy"
   ],

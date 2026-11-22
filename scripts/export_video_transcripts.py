@@ -109,7 +109,8 @@ def fix_eisteddfod(text: str, words: set[str]) -> str:
 # the archive's own texts spell otherwise): folded form as heard -> (right spelling, is a name). Each was
 # checked against every Spanish line of the published transcripts and then argued against by a second
 # reviewer (2026-11-22). A name is always written as given; any other word keeps the case of the original.
-# Spanish lines only: Welsh lines and lyrics stay as they are.
+# Applied to what the Spanish recognisers wrote (Welsh speech included) and to the Welsh model's Spanish
+# lines; the Welsh model's Welsh lines and lyrics stay as they are.
 TERM_FIXES: dict[str, tuple[str, bool]] = {
     # the Círculo Bárdico, its prizes and the people named at ceremonies
     "vardico": ("bárdico", False), "barbico": ("bárdico", False),
@@ -120,7 +121,8 @@ TERM_FIXES: dict[str, tuple[str, bool]] = {
     "samarreno": ("Zamarreño", True), "soralla": ("Soraya", True),  # Cinthia Zamarreño, Soraya Griffiths
     "ejidio": ("Egidio", True),  # Museo Egidio Feruglio
     "amenus": ("Amoenus", True),  # the choir Locus Amoenus
-    "gerd": ("gerdd", False),  # Ysgol Gerdd y Gaiman; "y gerdd"
+    # Welsh as Spanish recognition writes it (never in a Welsh-model line or in Spanish): Ysgol Gerdd, y gerdd
+    "gerd": ("gerdd", False), "gannu": ("ganu", False), "canni": ("canu", False), "brennin": ("brenin", False),
     # common words
     "evanista": ("ebanista", False), "dansa": ("danza", False), "competensia": ("competencia", False),
     "beredicto": ("veredicto", False), "seremonia": ("ceremonia", False), "associacion": ("asociación", False),
@@ -355,15 +357,24 @@ SPANISH_SPELL = re.compile(r"[ñáéíóú]")
 ANY_WORD = re.compile(r"[^\W\d_]+(?:'[^\W\d_]+)?")
 
 
+def _welsh_marker(z: str) -> bool:
+    return z in CY_MARKERS or bool(WELSH_ONLY_SPELL.search(z))
+
+
 def line_language(text: str, fuentes: list[str]) -> str:
-    """A published line's language: a Spanish source's line is Spanish; a Welsh-model line is Spanish when
-    its Spanish words outnumber its Welsh ones (words or spelling), else Welsh."""
-    if "cy" not in fuentes:
-        return "es"
-    w = ANY_WORD.findall(text.lower())
+    """A published line's language. A Welsh-model line is Spanish when its Spanish words outnumber its Welsh
+    ones (words or spelling), else Welsh. A Spanish source's line is Spanish unless two or more Welsh words
+    outnumber its Spanish ones: Spanish Whisper writes Welsh speech as Welsh too, with "en" for "yn" (769
+    lines in 26 videos, 2026-11-22). There a capitalised word doesn't count, except the first: a Spanish
+    announcement names Welsh choirs and chapels (Côr Ysgol Gerdd, Capel Bethel)."""
+    words = ANY_WORD.findall(text)
+    w = [z.lower() for z in words]
     es = sum(z in ES_WORDS or bool(SPANISH_SPELL.search(z)) for z in w)
-    cy = sum(z in CY_MARKERS or bool(WELSH_ONLY_SPELL.search(z)) for z in w)
-    return "es" if es > cy else "cy"
+    if "cy" in fuentes:
+        cy = sum(_welsh_marker(z) for z in w)
+        return "es" if es > cy else "cy"
+    cy = sum(_welsh_marker(z.lower()) and (i == 0 or not z[0].isupper()) for i, z in enumerate(words))
+    return "cy" if cy >= 2 and cy > es else "es"
 
 
 def line_languages(t: dict) -> list[str] | None:
@@ -375,11 +386,12 @@ def line_languages(t: dict) -> list[str] | None:
 
 
 def with_term_fixes(t: dict) -> dict:
-    """The transcript with TERM_FIXES applied to its Spanish lines (not to Welsh lines or lyrics)."""
+    """The transcript with TERM_FIXES applied to the lines a Spanish recogniser wrote, Welsh speech
+    included, and to the Welsh model's Spanish lines; never to its Welsh lines or to lyrics."""
     langs = line_languages(t)
     if langs is None:
         return {**t, "seg": [[s, fix_terms(x)] for s, x in t["seg"]]} if t.get("lang") == "es" else t
-    return {**t, "seg": [[s, fix_terms(x) if lang == "es" and "letra" not in f else x]
+    return {**t, "seg": [[s, x if "letra" in f or ("cy" in f and lang == "cy") else fix_terms(x)]
                          for (s, x), f, lang in zip(t["seg"], t["fuentes"], langs)]}
 
 

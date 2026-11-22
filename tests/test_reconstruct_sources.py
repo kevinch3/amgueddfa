@@ -139,3 +139,34 @@ def test_english_the_welsh_model_heard_is_left_out(tmp_path):
         {"s": 80.0, "e": 82.0, "text": "Croeso i Eisteddfod y Wladfa"},
         {"s": 90.0, "e": 95.0, "text": "Wade in the water, wade in the water children, oh Lord my God"}]}), encoding="utf-8")
     assert [l.text for l in load_sources(stem, "vid", letras) if l.src == "cy"] == ["Croeso i Eisteddfod y Wladfa"]
+
+
+def test_the_spanish_pass_replaces_the_welsh_model_where_it_heard_spanish(tmp_path):
+    # #112: Whisper took Chubut 2021 UW0GV9sicGs for Welsh, so the Welsh model was its only source and it wrote
+    # Spanish speech in Welsh spelling or translated it. The Spanish pass detects each Bangor segment's language
+    # and transcribes the Spanish ones: their text is Spanish Whisper's, the Bangor line goes.
+    folder = tmp_path / "C" / "2021"
+    folder.mkdir(parents=True)
+    stem = folder / "2021_sesion_vid"
+    (folder / "2021_sesion_vid.whisper.json").write_text(json.dumps({"language": "cy", "segments": [[0, 5, "rhywbeth"]]}), encoding="utf-8")
+    (folder / "2021_sesion_vid.cy-techiaith.json").write_text(json.dumps({"segments": [
+        {"s": 2648.76, "e": 2652.7, "text": "música, ystá en el segundo año de la carrera de locución"},
+        {"s": 3061.06, "e": 3069.0, "text": "Yn ystod y casglu, yna unig un cyngor sydd ar y stafell"},  # a translation
+        {"s": 2774.82, "e": 2804.8, "text": "yn dref yr hebog airiw"},                                    # Welsh poem
+        {"s": 3290.48, "e": 3291.4, "text": "Gracias."},
+    ]}), encoding="utf-8")
+    (folder / "2021_sesion_vid.whisper-es.json").write_text(json.dumps({"segments": [
+        {"s": 2648.76, "e": 2652.7, "es": 0.999, "cy": 0.0, "text": "Música, está en el segundo año de la carrera de locución."},
+        {"s": 3061.06, "e": 3069.0, "es": 0.998, "cy": 0.0, "text": "En este caso hay una sola participante que ya está en el escenario."},
+        {"s": 2774.82, "e": 2804.8, "es": 0.001, "cy": 0.832},
+        {"s": 3290.48, "e": 3291.4, "es": 0.526, "cy": 0.0, "text": ""},  # Spanish, but nothing worth keeping
+    ]}), encoding="utf-8")
+    letras = tmp_path / "letras"
+    letras.mkdir()
+    (letras / "videos.json").write_text("{}", encoding="utf-8")
+    got = [(l.t, l.src, l.text) for l in load_sources(stem, "vid", letras)]
+    assert got == [
+        (2648.76, "whisper_es", "Música, está en el segundo año de la carrera de locución."),
+        (2774.82, "cy", "yn dref yr hebog airiw"),
+        (3061.06, "whisper_es", "En este caso hay una sola participante que ya está en el escenario."),
+    ]

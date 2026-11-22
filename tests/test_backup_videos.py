@@ -138,3 +138,17 @@ def test_import_cy_copies_bangor_results_next_to_videos(tmp_path):
     (src / "ZZZZZZZZZZZ.json").write_text("{}", encoding="utf-8")  # not in the backup: skipped
     assert cmd_import_cy(root, src) == 0
     assert json.loads((root / "videos/C/2025/a_AAAAAAAAAAA.cy-techiaith.json").read_text())["segments"][0]["text"] == "Croeso"
+
+
+def test_import_es_copies_the_spanish_pass_next_to_videos(tmp_path):
+    import json
+    from scripts.backup.videos import main
+    root = tmp_path / "backup"
+    (root / "videos/C/2021").mkdir(parents=True)
+    (root / "videos/C/2021/a_AAAAAAAAAAA.mp4").write_bytes(b"")
+    (root / "INDEX.tsv").write_text("id\tfile\nAAAAAAAAAAA\tC/2021/a_AAAAAAAAAAA.mp4\n", encoding="utf-8")
+    src = tmp_path / "out-es"
+    src.mkdir()
+    (src / "AAAAAAAAAAA.json").write_text(json.dumps({"id": "AAAAAAAAAAA", "segments": [{"s": 1.0, "e": 3.0, "es": 0.99, "cy": 0.0, "text": "Muchas gracias"}]}), encoding="utf-8")
+    assert main(["--root", str(root), "import-es", str(src)]) == 0
+    assert json.loads((root / "videos/C/2021/a_AAAAAAAAAAA.whisper-es.json").read_text())["segments"][0]["text"] == "Muchas gracias"

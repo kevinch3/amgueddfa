@@ -20,6 +20,7 @@ Design: `docs/superpowers/specs/2026-11-20-reconstruccion-videos-design.md`. Pil
   - Its files sit next to the videos as `<stem>.cy-techiaith.json`, and `WELSH_SOURCE = "cy-techiaith"`.
   - KPC writes them to `out-cy/` with `run_cy.py`; bring them in with `scripts/backup/videos.py import-cy` (see `docs/backup.md`).
   - Videos with a Welsh file are in scope even when nothing is published today.
+- **Spanish for videos Whisper took for Welsh** (#112) comes from KPC's `run_es.py`, as `<stem>.whisper-es.json`, brought in with `import-es`. In a segment it found Spanish, its text replaces the Bangor line, which may be a translation.
 - **Juventud and Mimosa are never reconstructed** (children, #29). The scope check is `in_scope()`, and the export applies it again.
 - **Usage needs the maintainer's OK above 50 windows.** Show the dry run's window count first. The pilot cost about USD 0.028 API-equivalent per window, and the full archive is about 8,500 windows.
 - **No `--bare`, no API key, no batch API.** Bare mode refuses the subscription.
@@ -74,6 +75,7 @@ npm run build && npm test && python3 -m pytest -q tests
 | New approved facts (venue, winners, presenters) for an edition | that edition's videos |
 | Programa transcription added or fixed | that edition's videos |
 | New Welsh files imported (`import-cy`) | those videos |
+| New Spanish-pass files imported (`import-es`) | those videos |
 | `prompt.md` or `schema.json` edited | everything (bump `PROMPT_VERSION` in `windows.py`) |
 | New video harvested | that video |
 

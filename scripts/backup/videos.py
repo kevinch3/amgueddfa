@@ -448,9 +448,8 @@ def cmd_remove(root: Path, vid: str, reason: str) -> int:
     return 0
 
 
-def cmd_import_cy(root: Path, src: Path) -> int:
-    """Copy Bangor's Welsh transcriptions (src/<id>.json, KPC out-cy/) next to their videos
-    as <stem>.cy-techiaith.json; the reconstruction reads them (WELSH_SOURCE)."""
+def _import_beside(root: Path, src: Path, suffix: str) -> int:
+    """Copy src/<id>.json next to the backed-up video <id> as <stem><suffix>; how many."""
     idx = read_index(root)
     n = 0
     for j in sorted(src.glob('*.json')):
@@ -458,9 +457,22 @@ def cmd_import_cy(root: Path, src: Path) -> int:
         if not row or not row.get('file'):
             continue
         dest = root / 'videos' / row['file']
-        shutil.copyfile(j, dest.with_suffix('.cy-techiaith.json'))
+        shutil.copyfile(j, dest.with_suffix(suffix))
         n += 1
-    print(f'imported {n} Welsh (techiaith) results')
+    return n
+
+
+def cmd_import_cy(root: Path, src: Path) -> int:
+    """Copy Bangor's Welsh transcriptions (src/<id>.json, KPC out-cy/) next to their videos
+    as <stem>.cy-techiaith.json; the reconstruction reads them (WELSH_SOURCE)."""
+    print(f'imported {_import_beside(root, src, ".cy-techiaith.json")} Welsh (techiaith) results')
+    return 0
+
+
+def cmd_import_es(root: Path, src: Path) -> int:
+    """Copy the Spanish pass (src/<id>.json, KPC out-es/, issue #112) next to their videos as
+    <stem>.whisper-es.json; the reconstruction reads them as Spanish Whisper."""
+    print(f'imported {_import_beside(root, src, ".whisper-es.json")} Spanish-pass results')
     return 0
 
 
@@ -512,6 +524,8 @@ def main(argv: list[str] | None = None) -> int:
     w.add_argument('src', type=Path)
     c = sub.add_parser('import-cy', help="copy Bangor's Welsh transcriptions next to their videos")
     c.add_argument('src', type=Path)
+    e = sub.add_parser('import-es', help='copy the Spanish pass (#112) next to their videos')
+    e.add_argument('src', type=Path)
     a = ap.parse_args(argv)
     if not a.root.parent.is_dir():
         # An external disk that is not plugged in: never create the tree somewhere else.
@@ -528,6 +542,8 @@ def main(argv: list[str] | None = None) -> int:
         return cmd_import_whisper(a.root, a.src)
     if a.cmd == 'import-cy':
         return cmd_import_cy(a.root, a.src)
+    if a.cmd == 'import-es':
+        return cmd_import_es(a.root, a.src)
     return cmd_index(a.root)
 
 

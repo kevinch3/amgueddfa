@@ -1084,6 +1084,7 @@
     "cambios": "{n} changes",
     "un_cambio": "1 change",
     "enviar": "Send {n} corrections",
+    "limite": "One submission holds up to {max} changes: send these, then carry on in a new one.",
     "enviar_una": "Send 1 correction",
     "cancelar": "Cancel",
     "confirmar_cancelar": "Discard all your changes without sending them?",

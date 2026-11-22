@@ -1084,6 +1084,7 @@
     "cambios": "{n} 处更改",
     "un_cambio": "1 处更改",
     "enviar": "发送 {n} 处更正",
+    "limite": "一次提交最多包含 {max} 处更改：请先提交这些，再在新的提交中继续。",
     "enviar_una": "发送 1 处更正",
     "cancelar": "取消",
     "confirmar_cancelar": "放弃所有更改而不发送吗？",

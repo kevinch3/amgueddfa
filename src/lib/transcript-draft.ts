@@ -4,7 +4,7 @@
 //
 // The draft refers to the transcript AS SHOWN (the file plus the approved corrections applied live): a change's `antes`
 // is the line's text there, the text the export will find once the earlier corrections are baked.
-import type { Result } from './contrib';
+import { MAX_CAMBIOS, type Result } from './contrib';
 import { t } from './i18n';
 import type { FestivalSlug } from './types';
 import { foldLine, type Cambio } from './video-corrections';
@@ -119,6 +119,17 @@ export function cambiosFrom(tr: Transcript, d: Draft): Cambio[] {
 export function countCambios(tr: Transcript, d: Draft): number {
   return cambiosFrom(tr, d).length;
 }
+
+/** Whether `next` (the draft after one more edit or add) still fits one contribution: at most MAX_CAMBIOS changes,
+ * the limit validate applies, so the counter never offers a send that would be refused. A step that adds no change
+ * (a line changed again, an undo) always fits. */
+export function cabe(tr: Transcript, before: Draft, next: Draft): boolean {
+  const n = countCambios(tr, next);
+  return n <= MAX_CAMBIOS || n <= countCambios(tr, before);
+}
+
+/** The editor's message when a change does not fit (see cabe). */
+export const limiteLabel = (): string => t('editor.limite', { max: MAX_CAMBIOS });
 
 /** The draft on the transcript as it is now: each change back on its own line (the same index, else the line with the
  * same start and words, else the nearest line within 2 s with the same folded words), or dropped and counted when its

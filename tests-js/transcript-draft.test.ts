@@ -1,8 +1,9 @@
 import { describe, expect, it } from 'vitest';
 import {
-  addNueva, cambiosFrom, clearDraft, countCambios, DRAFT_KEY, emptyDraft, fitDraft, lineIdioma, loadDraft, removeNueva,
-  saveDraft, setLine, undoLine, type Draft,
+  addNueva, cabe, cambiosFrom, clearDraft, countCambios, DRAFT_KEY, emptyDraft, fitDraft, limiteLabel, lineIdioma, loadDraft,
+  removeNueva, saveDraft, setLine, undoLine, type Draft,
 } from '../src/lib/transcript-draft';
+import { MAX_CAMBIOS, validate } from '../src/lib/contrib';
 import { withLiveCorrections } from '../src/lib/live-video-corrections';
 import { asTranscript, type Transcript } from '../src/lib/video-transcript';
 
@@ -128,6 +129,41 @@ describe('setLine, undoLine, adds', () => {
     d = addNueva(d, { t: 20, texto: 'Bore da', idioma: 'cy' });
     expect(d.nuevas).toEqual([{ t: 12.3, texto: 'Hola', idioma: 'es' }, { t: 20, texto: 'Bore da', idioma: 'cy' }]);
     expect(removeNueva(d, 0).nuevas).toEqual([{ t: 20, texto: 'Bore da', idioma: 'cy' }]);
+  });
+});
+
+describe('cabe: one contribution holds at most MAX_CAMBIOS changes', () => {
+  // A long session: 205 lines, the first 200 already corrected.
+  const long = asTranscript({
+    src: 'reconstruida', lang: 'es',
+    seg: Array.from({ length: 205 }, (_, i) => [i * 3, `línea número ${i}`] as [number, string]),
+    fuentes: Array.from({ length: 205 }, () => ['whisper_es']),
+  })!;
+  let full = emptyDraft('LONGVIDEO01');
+  for (let i = 0; i < MAX_CAMBIOS; i++) full = setLine(long, full, i, { texto: `Línea número ${i}.` });
+
+  it('takes the 200th change, refuses the 201st edit or add, and the counter never passes 200', () => {
+    expect(MAX_CAMBIOS).toBe(200);
+    const almost = undoLine(full, 0);
+    expect(cabe(long, almost, setLine(long, almost, 0, { texto: 'otra' }))).toBe(true);
+    expect(countCambios(long, full)).toBe(200);
+    expect(cabe(long, full, setLine(long, full, 200, { texto: 'una más' }))).toBe(false);
+    expect(cabe(long, full, setLine(long, full, 201, { quitar: true }))).toBe(false);
+    expect(cabe(long, full, addNueva(full, { t: 5, texto: 'nueva', idioma: 'es' }))).toBe(false);
+    // What 200 changes send is what validate takes.
+    const cambios = cambiosFrom(long, full);
+    expect(validate('video_text', { video: { id: 'LONGVIDEO01' }, cambios }).ok).toBe(true);
+    expect(validate('video_text', { video: { id: 'LONGVIDEO01' }, cambios: [...cambios, { t: 601, texto: 'x', idioma: 'es' }] }).ok).toBe(false);
+  });
+
+  it('at the limit, a line already changed can still be changed again or undone', () => {
+    expect(cabe(long, full, setLine(long, full, 7, { texto: 'cambiada otra vez' }))).toBe(true);
+    expect(cabe(long, full, setLine(long, full, 7, { quitar: true }))).toBe(true);
+    expect(cabe(long, full, undoLine(full, 7))).toBe(true);
+  });
+
+  it('says why in the form', () => {
+    expect(limiteLabel()).toContain('200');
   });
 });
 

@@ -12,9 +12,9 @@
 import { ownPendingVideo, submit, type Contribution } from '../lib/contrib';
 import { t } from '../lib/i18n';
 import {
-  addNueva, cambioTexto, cambiosLabel, clearDraft, countCambios, editControls, editorAccess, emptyDraft, enviarLabel,
-  fitDraft, lineIdioma, loadDraft, nuevaIdioma, nuevaTexto, pendingMarks, removeNueva, saveDraft, sendDraft, setLine,
-  undoLine, type Draft, type Idioma,
+  addNueva, cabe, cambioTexto, cambiosLabel, clearDraft, countCambios, editControls, editorAccess, emptyDraft, enviarLabel,
+  fitDraft, limiteLabel, lineIdioma, loadDraft, nuevaIdioma, nuevaTexto, pendingMarks, removeNueva, saveDraft, sendDraft,
+  setLine, undoLine, type Draft, type Idioma,
 } from '../lib/transcript-draft';
 import { fmtTime, lineAt, type Transcript } from '../lib/video-transcript';
 import { busy, el, gate, gateMessage, thanks, type Gate } from './ui';
@@ -267,7 +267,13 @@ export function wireEditor(dialog: HTMLDialogElement, getState: () => EditorStat
       }
       const cur = state().tr;
       if (!draft || !cur) return;
-      save(setLine(cur, draft, i, { texto: input.value, idioma: lang.get(), quitar: quitar.checked }));
+      const next = setLine(cur, draft, i, { texto: input.value, idioma: lang.get(), quitar: quitar.checked });
+      // One contribution holds at most 200 changes: refused here rather than at the send.
+      if (!cabe(cur, draft, next)) {
+        err.textContent = limiteLabel();
+        return;
+      }
+      save(next);
       closeLine(true);
       paintLine(i);
     });
@@ -328,8 +334,14 @@ export function wireEditor(dialog: HTMLDialogElement, getState: () => EditorStat
         input.focus();
         return;
       }
-      if (!draft) return;
-      save(addNueva(draft, { t: at, texto: input.value, idioma: idi }));
+      const cur = state().tr;
+      if (!draft || !cur) return;
+      const next = addNueva(draft, { t: at, texto: input.value, idioma: idi });
+      if (!cabe(cur, draft, next)) {
+        err.textContent = limiteLabel();
+        return;
+      }
+      save(next);
       closeNueva(true);
       paintNuevas();
     });

@@ -1084,6 +1084,7 @@
     "cambios": "{n} modifications",
     "un_cambio": "1 modification",
     "enviar": "Envoyer {n} corrections",
+    "limite": "Un envoi contient au plus {max} modifications : envoyez celles-ci, puis continuez dans un nouvel envoi.",
     "enviar_una": "Envoyer 1 correction",
     "cancelar": "Annuler",
     "confirmar_cancelar": "Abandonner toutes les modifications sans les envoyer ?",

@@ -1084,6 +1084,7 @@
     "cambios": "{n} cambios",
     "un_cambio": "1 cambio",
     "enviar": "Enviar {n} correcciones",
+    "limite": "Un envío lleva hasta {max} cambios: enviá estos y seguí en un envío nuevo.",
     "enviar_una": "Enviar 1 corrección",
     "cancelar": "Cancelar",
     "confirmar_cancelar": "¿Descartar todos los cambios sin enviarlos?",

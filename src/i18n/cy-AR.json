@@ -1084,6 +1084,7 @@
     "cambios": "{n} newid",
     "un_cambio": "1 newid",
     "enviar": "Gyrru {n} cywiriad",
+    "limite": "Mae un anfoniad yn dal hyd at {max} newid: anfonwch y rhain, yna daliwch ati mewn un newydd.",
     "enviar_una": "Gyrru 1 cywiriad",
     "cancelar": "Canslo",
     "confirmar_cancelar": "Taflu'r holl newidiadau heb eu gyrru?",

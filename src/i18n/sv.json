@@ -1084,6 +1084,7 @@
     "cambios": "{n} ändringar",
     "un_cambio": "1 ändring",
     "enviar": "Skicka {n} rättelser",
+    "limite": "Ett bidrag rymmer högst {max} ändringar: skicka dessa och fortsätt sedan i ett nytt.",
     "enviar_una": "Skicka 1 rättelse",
     "cancelar": "Avbryt",
     "confirmar_cancelar": "Kasta alla ändringar utan att skicka dem?",

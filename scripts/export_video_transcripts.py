@@ -183,6 +183,44 @@ def glob_escape(name: str) -> str:
 RECON = REPO / "data" / "reconstruccion"
 
 
+# Joining caption fragments into sentences (issue #97). YouTube's captions come in 2-5 s chunks with no
+# punctuation ("de" / "tomando" / "quien"), and the reconstruction keeps their timing.
+SENTENCE_END = re.compile(r"[.?!…»\"]\s*$")
+MARKER = re.compile(r"^\s*[\[(][^\])]*[\])]\s*$")  # [música], (aplausos): always a line of their own
+JOIN_GAP = 6.0     # s from one fragment's start to the next: 85% of continuations, measured on the published text
+JOIN_WORDS = 20    # a joined line stays a readable subtitle
+JOIN_SPAN = 15.0   # s from the line's first fragment to its last
+
+
+def join_fragments(t: dict) -> dict:
+    """A reconstruction with consecutive fragments of one sentence joined into one line (first time, the
+    union of their sources). Lines are never joined across a sentence end, a pause over JOIN_GAP, a change
+    of language (a Welsh-model line vs a Spanish one), a lyric (one verse per line) or a tag."""
+    fu = t.get("fuentes")
+    if not fu or len(fu) != len(t["seg"]):
+        return t
+    spans = [(l["desde"], l["hasta"]) for l in t.get("letras", [])]
+    lyric = lambda time, f: "letra" in f or any(a <= time < b for a, b in spans)
+    lang = lambda f: "cy" if "cy" in f else "es"
+    seg, fuentes = [], []
+    for (time, text), f in zip(t["seg"], fu):
+        if seg:
+            t0, prev = seg[-1]
+            pf = fuentes[-1]
+            if (not SENTENCE_END.search(prev) and not MARKER.match(prev) and not MARKER.match(text)
+                    and time - prev_time <= JOIN_GAP and time - t0 <= JOIN_SPAN
+                    and len(prev.split()) + len(text.split()) <= JOIN_WORDS
+                    and lang(pf) == lang(f) and not lyric(t0, pf) and not lyric(time, f)):
+                seg[-1] = [t0, f"{prev} {text}"]
+                fuentes[-1] = pf + [x for x in f if x not in pf]
+                prev_time = time
+                continue
+        seg.append([time, text])
+        fuentes.append(list(f))
+        prev_time = time
+    return {**t, "seg": seg, "fuentes": fuentes}
+
+
 def main_language(t: dict) -> str:
     """The language most of a reconstruction's text is in, by length: a line the Welsh model heard is
     Welsh, any other Spanish. Counting source lines instead lets YouTube's many short "Spanish"
@@ -214,6 +252,7 @@ def export(backup: Path, videos: list[dict], out: Path = OUT, words: set[str] | 
             if t.get("letras"):
                 t["letras"] = credit(t["letras"], spans_for(vid, letras), letras)
             t["lang"] = main_language(t)
+            t = join_fragments(t)
             body = json.dumps(t, ensure_ascii=False, separators=(",", ":"))
             p = out / f"{vid}.json"
             if not p.exists() or p.read_text(encoding="utf-8") != body:

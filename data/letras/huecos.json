@@ -1,0 +1,63 @@
+{
+  "nota": "Por qué no hay letra alineada para una obra del programa, o para uno de sus videos. Lo lee scripts/letras_pendientes.py y lo muestra docs/letras-pendientes.md. Cada entrada lleva 'letra' (slug de data/letras, cuando el texto existe) u 'obra' (título como en la tabla, más 'autoria' si varias obras lo comparten); 'videos' es opcional (sin él, vale para todos los videos sin alinear); 'motivo' es un código de MOTIVOS en el script; 'detalle' es una oración neutra. Nunca se cita nada de lo que se canta: las letras vienen solo del mantenedor.",
+  "huecos": [
+    {"letra": "o-deuwch-ir-dyfroedd", "motivo": "texto_distinto",
+     "detalle": "El texto guardado parece ser el de otro himno de título parecido: casi nada de lo que se oye cantar está en él (utHSvsjwvwo contiene la misma actuación que el clip pOQSuZMyuaI), así que hay que revisar la fuente."},
+    {"letra": "ar-lan-y-mor", "motivo": "texto_distinto",
+     "detalle": "Se cantan las dos primeras estrofas del texto guardado, después una estrofa que no está en él, y no las otras tres; hace falta el texto tal como lo canta este grupo (utHSvsjwvwo es la misma actuación que el clip pOQSuZMyuaI y además no tiene fuente en galés)."},
+    {"letra": "ysbryd-rebeca", "motivo": "texto_distinto",
+     "detalle": "El texto guardado tiene solo el estribillo, que vuelve unas tres veces entre estrofas que no están en él; además el video no tiene fuente en galés."},
+    {"letra": "si-llega-a-ser-tucumana", "motivo": "texto_distinto",
+     "detalle": "Revisado por el mantenedor el 2026-11-21: el texto guardado no coincide con lo que se oye cantar en estos videos, así que queda afuera hasta revisar la fuente."},
+    {"letra": "cachilo-dormido", "videos": ["cDpe89FFjOA"], "motivo": "texto_distinto",
+     "detalle": "Revisado por el mantenedor el 2026-11-21: el texto guardado no coincide con lo que se oye cantar (Chubut 2026, comp. 71); la sesión hoy no tiene capítulo para esa competencia, por eso la obra no aparece en la tabla del programa."},
+    {"letra": "rumbo-al-cerro", "videos": ["Fkm05yVVzBY"], "motivo": "texto_distinto",
+     "detalle": "Revisado por el mantenedor el 2026-11-21: el texto guardado no coincide con lo que se oye cantar en el clip (Chubut 2012, comp. 45, obra a elección)."},
+
+    {"letra": "de-quien-pago-mi-redencion", "videos": ["HnVmmnyjBU4", "utHSvsjwvwo"], "motivo": "estrofa_omitida",
+     "detalle": "Chubut 2018, comp. 55 (himno a elección): el cuarteto canta las estrofas 1, 3 y 4 y saltea la 2 (la sesión, hacia 5:25, tiene la misma actuación que el clip), y el alineador todavía no puede saltear una estrofa."},
+
+    {"letra": "angor", "videos": ["Fh7i29-94XY"], "motivo": "gales_insuficiente",
+     "detalle": "El reconocedor galés oye la obra, pero casi todas sus líneas quedan bajo el filtro de confianza y el final del texto se amontona en pocos segundos."},
+    {"letra": "angor", "videos": ["L6FSD_iI5ew"], "motivo": "gales_insuficiente",
+     "detalle": "El video no tiene fuente en galés y lo que oyó YouTube no sirve para ubicar las líneas; la obra se identifica solo por el título (comp. 58) y parece otro grupo con el mismo arreglo."},
+    {"letra": "o-llefara-addfwyn-iesu", "motivo": "gales_insuficiente",
+     "detalle": "El anuncio la nombra y el reconocedor galés la oye, pero casi todas sus líneas quedan bajo el filtro de confianza y el texto se amontona en pocos segundos."},
+    {"letra": "pistyll-y-llan", "motivo": "gales_insuficiente",
+     "detalle": "El anuncio la nombra, pero solo 2 de las 10 líneas que oyó el reconocedor galés pasan el filtro de confianza y más de la mitad del texto se amontona en cuatro segundos."},
+    {"letra": "pam-fod-eira-yn-wyn", "videos": ["eNmj-1_HlIk"], "motivo": "gales_insuficiente",
+     "detalle": "La sesión no tiene fuente en galés y su capítulo de la comp. 62 cae en el veredicto; la primera actuación (hacia 2:54:09) es la misma grabación que el clip TL1bhoNwk4U, ya alineado, cuyo tramo corrido serviría, y en la segunda (hacia 3:00:44) no se oyó nada útil."},
+    {"letra": "newyddion-braf", "motivo": "gales_insuficiente",
+     "detalle": "Todavía no se intentó alinear: quedó para después de la pasada del modelo galés, porque con las fuentes actuales el canto en galés casi no se reconoce."},
+    {"letra": "eiddot-ti-o-dduw", "motivo": "gales_insuficiente",
+     "detalle": "Todavía no se intentó alinear: quedó para después de la pasada del modelo galés, porque con las fuentes actuales el canto en galés casi no se reconoce."},
+    {"letra": "gweddi-y-pechadur", "motivo": "gales_insuficiente",
+     "detalle": "Todavía no se intentó alinear: quedó para después de la pasada del modelo galés, porque con las fuentes actuales el canto en galés casi no se reconoce."},
+    {"letra": "ar-gyfer-heddiwr-bore", "motivo": "gales_insuficiente",
+     "detalle": "Todavía no se intentó alinear: quedó para después de la pasada del modelo galés, porque con las fuentes actuales el canto en galés casi no se reconoce."},
+    {"letra": "wrth-fynd-efo-deio-i-dywyn", "motivo": "gales_insuficiente",
+     "detalle": "Todavía no se intentó alinear: quedó para después de la pasada del modelo galés, porque con las fuentes actuales el canto en galés casi no se reconoce."},
+
+    {"letra": "es-ist-ein-ros-entsprungen", "motivo": "alineador",
+     "detalle": "Los dos videos tienen la misma actuación (comp. 54) y el tramo está ubicado, pero los reconocedores oyeron solo palabras sueltas o espurias y el alineador amontona el texto en pocos segundos."},
+    {"letra": "in-stiller-nacht", "motivo": "alineador",
+     "detalle": "Dos coros la cantan en la comp. 79 y los dos tramos están ubicados, pero el alineador se ancla en palabras sueltas mal oídas (su normalización además pierde la ß) y amontona las líneas."},
+
+    {"letra": "affanni-del-pensier", "motivo": "no_esta_en_video",
+     "detalle": "El capítulo de la comp. 47 tiene solo el llamado y el aviso de que el único participante no estaba, y en el resto de la sesión no se canta."},
+    {"letra": "oro-y-plata", "videos": ["SvBTOh3OlMg"], "motivo": "no_esta_en_video",
+     "detalle": "La transmisión se corta dentro de la comp. 73 (Chubut 2019), cuando solo cantó el primer coro y con otra obra; hace falta otra grabación."},
+    {"letra": "ubi-caritas", "videos": ["8KefoF3wKo0"], "motivo": "no_esta_en_video",
+     "detalle": "El clip tiene otra obra del mismo coro; su Ubi caritas está en LQ28BhyOZBQ y x0-pSbbCHIA, donde ya está alineado."},
+    {"letra": "cantate-domino", "videos": ["EUtZrvORMXw"], "motivo": "no_esta_en_video",
+     "detalle": "Aunque el título del video nombra la comp. 65, ninguna de sus nueve actuaciones es esta obra."},
+
+    {"obra": "Ave María", "autoria": "Dante Andreo", "motivo": "version_por_confirmar",
+     "detalle": "El mantenedor tiene que confirmar si esta versión usa el mismo texto latino que las de Karl Jenkins y Marcelo Valva, ya guardadas; todavía no hay texto."},
+    {"obra": "Ave María", "autoria": "Villa Lobos", "motivo": "version_por_confirmar",
+     "detalle": "El mantenedor tiene que confirmar si esta versión usa el mismo texto latino que las de Karl Jenkins y Marcelo Valva, ya guardadas; todavía no hay texto."},
+
+    {"obra": "La muerte del ángel", "motivo": "instrumental",
+     "detalle": "Según el mantenedor (2026-11-20), el arreglo no tiene letra."}
+  ]
+}

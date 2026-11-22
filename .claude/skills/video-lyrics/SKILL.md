@@ -22,8 +22,9 @@ All in a worktree (`../amgueddfa-wt-*`), never the main checkout. The backup dis
 for the export (`/run/media/kevinch3/4eff8b2b-…/amgueddfa-backup`).
 
 1. **What's needed:** `python3 -m scripts.letras_pendientes` regenerates `docs/letras-pendientes.md`
-   (pieces by priority, videos and times; "a elección" ones to identify). Ask the maintainer for
-   the texts of the top rows, as sung (refrains written out), in the original language.
+   (pieces by priority, videos and times; "a elección" ones to identify; why each gap is open).
+   Ask the maintainer for the texts of the top rows, as sung (refrains written out), in the
+   original language. Not every piece will get a text, and that is fine: the gaps are documented.
 2. **Check the text is the right piece** before anything else: compare it with what YouTube heard
    in the video (`python3 -c` over the segments in the span of `data/reconstruccion/<id>.json`, or
    `public/transcripciones-video/<id>.json` when there is no reconstruction: the published text joins
@@ -57,6 +58,13 @@ for the export (`/run/media/kevinch3/4eff8b2b-…/amgueddfa-backup`).
    span that is too short; a first line long after `desde` means the span starts too early.
 6. **Add the span** to `data/letras/videos.json`: `"<video>": [{"letra": "<slug>", "desde": 95, "hasta": 292}]`
    (append to the video's list if it already has one).
+   **If it can't be placed** (the text differs from what is sung, the Welsh model heard too little,
+   the aligner piles lines, the piece is not in that video…), don't force it: add an entry to
+   `data/letras/huecos.json`: `letra` (slug) or `obra` (title as in the report, plus `autoria` when
+   titles are shared), optional `videos`, `motivo` (a code of `MOTIVOS` in
+   `scripts/letras_pendientes.py`) and a one-sentence Spanish `detalle` that never quotes what is
+   sung. When you later place a video that has an entry, take it out of the entry: the report
+   raises on entries for aligned videos, and on any slug, title, video or code it doesn't know.
 7. **Export and check:** `python3 -m scripts.export_video_transcripts` (about 5 s; rewrites only
    changed files). `git status` must show only the expected `public/transcripciones-video/*.json`.
    Then `python3 -m scripts.letras_pendientes`, `npm run build`, `npm test`, `python3 -m pytest -q tests`.
@@ -79,3 +87,4 @@ for the export (`/run/media/kevinch3/4eff8b2b-…/amgueddfa-backup`).
 | Text as printed when the choir repeats a refrain many times inside a stanza | Write the refrain out as sung, or accept approximate times for those lines |
 | A Juventud or Mimosa video | No transcripts there (children, #29): out of scope |
 | Editing `docs/letras-pendientes.md` by hand | It is generated; rerun the script |
+| Leaving a text unplaced with no reason | Add the gap to `data/letras/huecos.json` |

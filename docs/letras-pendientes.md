@@ -1,158 +1,250 @@
 # Letras pendientes
 
-Generado por `python3 -m scripts.letras_pendientes`: no editar a mano. Cómo cargar una letra: skill `video-lyrics`.
+Generado por `python3 -m scripts.letras_pendientes`: no editar a mano. Cómo cargar una letra: skill `video-lyrics`. Los motivos de cada hueco: `data/letras/huecos.json`.
 
-Obras cantadas con título en el programa y video transcripto: **145** (55 con letra, 90 pendientes). Obras «a elección» por identificar: **320** apariciones.
+Obras cantadas con título en el programa y video transcripto: **144** (21 alineadas en todos sus videos, 15 en parte, 17 con texto guardado sin alinear, 91 sin texto). Obras «a elección» por identificar: **325** apariciones. Actuaciones sin identificar: **107** videos.
 
-Primero las de texto probablemente libre (litúrgico, tradicional, autores antiguos: una pista, los derechos los confirma el mantenedor), después por cantidad de videos (una letra sirve para todos). Para cada una hace falta el texto **tal como se canta**, en su idioma.
+## Huecos documentados
+
+No todas las letras van a llegar; cada hueco queda anotado con su motivo. Los motivos vienen de `data/letras/huecos.json` (curado: una entrada por obra o por video, sin citar nada de lo que se canta); «falta el texto» y «sin motivo registrado» son los estados por omisión. Cada caso, en [Detalle de los huecos documentados](#detalle-de-los-huecos-documentados).
+
+| Motivo | Obras | Videos | Qué lo cierra |
+|---|---|---|---|
+| falta el texto | 89 | 129 | El mantenedor consigue el texto tal como se canta, en su idioma (skill `video-lyrics`). |
+| sin motivo registrado | 12 | 15 | Hay texto pero no tramo ni motivo anotado: una pasada de alineación (skill `video-lyrics`); si no se puede alinear, anotar el motivo en `data/letras/huecos.json`. |
+| el texto no coincide con lo que se canta | 6 | 6 | El mantenedor revisa la fuente y manda el texto tal como se canta (estrofas que faltan, estribillos escritos donde se repiten). |
+| se canta sin una estrofa | 1 | 2 | Que el alineador acepte, por tramo, qué estrofas se cantan (#129). |
+| el reconocedor galés oyó muy poco | 10 | 14 | Reintentar cuando termine la pasada del modelo galés (en curso); si sigue igual, probar un filtro de confianza más bajo dentro de los tramos con letra (#129). |
+| el alineador amontona las líneas | 2 | 3 | Que el alineador no se ancle en palabras sueltas o mal oídas, por ejemplo repartiendo desde el inicio del tramo cuando lo oído es poco (#129). |
+| no se canta en ese video | 4 | 4 | Nada que alinear ahí: hace falta otra grabación de esa actuación, o corregir a qué competencia apunta el video. |
+| versión por confirmar | 2 | 2 | El mantenedor confirma qué versión (y qué texto) se canta; después se pide el texto o se reusa uno guardado. |
+| obra «a elección» sin identificar | — | 296 | Escuchar el anuncio o el video para saber qué obra se cantó; con el título, la letra se pide como cualquier otra (325 apariciones, lista al final). |
+| actuación sin identificar | — | 107 | Videos sin texto publicado cuyo título y capítulos no llevan a una competencia cantada del programa: darles texto y escuchar qué se canta; entonces entran aquí como obra o «a elección». |
+
+La pasada del modelo galés sobre todos los videos publicados está en curso. Cuando termine, se reintentan las obras de «el reconocedor galés oyó muy poco»: videos donde ese reconocedor oyó muy poco del canto, o que no tenían fuente en galés.
+
+No es un hueco de letra (fuera de las cuentas): «La muerte del ángel» (Astor Piazolla, arr. Néstor Zadoff), 3 videos. Según el mantenedor (2026-11-20), el arreglo no tiene letra.
+
+## Obras del programa
+
+Primero las de texto probablemente libre (litúrgico, tradicional, autores antiguos: una pista, los derechos los confirma el mantenedor), después por cantidad de videos (una letra sirve para todos). Para cada una hace falta el texto **tal como se canta**, en su idioma. «✅ alineada» cuenta solo los videos con el tramo de esa obra en `data/letras/videos.json`; donde unos videos lo tienen y otros no, «Dónde» marca cada uno con ✅ o ✗.
 
 | Obra | Autoría (programa) | Texto | Videos | Dónde | Estado |
 |---|---|---|---|---|---|
-| Cwm Rhondda | John Hughes / Williams Wiliams, Pantycelyn | probablemente libre | 4 | chubut 2008 comp. 65<br>[K3uYyZGC68o](https://www.youtube.com/watch?v=K3uYyZGC68o) [NQev8Jjs3mo](https://www.youtube.com/watch?v=NQev8Jjs3mo) [cdXPiraxidQ](https://www.youtube.com/watch?v=cdXPiraxidQ) [faauFGRzVro](https://www.youtube.com/watch?v=faauFGRzVro) | pendiente |
-| Cwlwm cariad | alawon Cymreig traddodiadol, tref. A. Ll. Thomas | probablemente libre | 3 | chubut 2022 comp. 56<br>[Z3IBzc2gERE](https://www.youtube.com/watch?v=Z3IBzc2gERE) [oULXCz__jjg](https://www.youtube.com/watch?v=oULXCz__jjg) [qbNhzuKphGM](https://www.youtube.com/watch?v=qbNhzuKphGM) | pendiente |
-| Iesu, Drud Ddifyrrwch Dynion | J. Bach | probablemente libre | 2 | chubut 2013 comp. 65<br>[RLf-rMsfxVw](https://www.youtube.com/watch?v=RLf-rMsfxVw) [Xc08DZcPQvE](https://www.youtube.com/watch?v=Xc08DZcPQvE) | pendiente |
-| La pastorella si leva per tempo | anónimo del siglo XV | probablemente libre | 2 | chubut 2008 comp. 84<br>[b9p2OkPUZk8](https://www.youtube.com/watch?v=b9p2OkPUZk8) [e3hQ1pdkgrE](https://www.youtube.com/watch?v=e3hQ1pdkgrE) | pendiente |
-| Beati mortui | Felix Mendelssohn | probablemente libre | 1 | chubut 2023 comp. 72<br>[AnLRusbVjGs](https://www.youtube.com/watch?v=AnLRusbVjGs) | pendiente |
-| Bugeilio'r Gwenith Gwyn | traddodiadol, Robat Arwyn | probablemente libre | 1 | chubut 2024 comp. 70<br>[wpSYMGm72Bk](https://www.youtube.com/watch?v=wpSYMGm72Bk) | pendiente |
-| Juego a que me quemo (Chispa candela) | tradicional colombiano, arr. Julián Gómez Giraldo | probablemente libre | 1 | chubut 2014 comp. 73<br>[fb3XRSU5XSg](https://www.youtube.com/watch?v=fb3XRSU5XSg) | pendiente |
-| Lux Aeterna | R. Arwyn | probablemente libre | 1 | chubut 2023 comp. 56<br>[Xg70oVF4y6A](https://www.youtube.com/watch?v=Xg70oVF4y6A) | pendiente |
-| O bone Jesu – Lux Aeterna | Fernando Moruja | probablemente libre | 1 | chubut 2025 comp. 74<br>[BC61L8txOaQ 10:15:14](https://www.youtube.com/watch?v=BC61L8txOaQ&t=36914s) | pendiente |
-| Sanctus | Schubert | probablemente libre | 1 | chubut 2024 comp. 56<br>[vbZPAtoYGgY](https://www.youtube.com/watch?v=vbZPAtoYGgY) | pendiente |
-| Sigl-Gân | J. Brahms, trefn. W. S. Gwynn Williams | probablemente libre | 1 | chubut 2015 comp. 66<br>[sl7LHWqYrhE](https://www.youtube.com/watch?v=sl7LHWqYrhE) | pendiente |
-| Tshotsholoza | tradicional sudafricano, arr. Jeffery L. Ames | probablemente libre | 1 | chubut 2014 comp. 64<br>[RZ3aHrvj4Es](https://www.youtube.com/watch?v=RZ3aHrvj4Es) | pendiente |
-| Cwsg Osian | Cleif Harpwood / Alun Sbardun Huws | verificar derechos | 4 | chubut 2008 comp. 62<br>[25MwUTXdIXk](https://www.youtube.com/watch?v=25MwUTXdIXk) [Q83D5ql9MCE](https://www.youtube.com/watch?v=Q83D5ql9MCE) [rl5GhfJC4qY](https://www.youtube.com/watch?v=rl5GhfJC4qY) [vVUb3Jllzsk](https://www.youtube.com/watch?v=vVUb3Jllzsk) | pendiente |
-| Sebben, crudele | Antonio Caldara | verificar derechos | 4 | chubut 2019 comp. 47<br>[ZfwMxCXBdpM 56:53](https://www.youtube.com/watch?v=ZfwMxCXBdpM&t=3413s) [kq7OuDOKFR0](https://www.youtube.com/watch?v=kq7OuDOKFR0) [pACfvOfSW9I](https://www.youtube.com/watch?v=pACfvOfSW9I) [vdriCRAMgdk](https://www.youtube.com/watch?v=vdriCRAMgdk) | pendiente |
-| Anfonaf Angel | Hywel Gwynfryn – Robat Arwyn | verificar derechos | 3 | chubut 2014 comp. 70<br>[3U_Q9iXVmLw](https://www.youtube.com/watch?v=3U_Q9iXVmLw) [cbs713oeNx4](https://www.youtube.com/watch?v=cbs713oeNx4) [sM3Yq450GMY](https://www.youtube.com/watch?v=sM3Yq450GMY) | pendiente |
-| Blodau ger y Drws | Meirion Williams | verificar derechos | 3 | chubut 2015 comp. 54<br>[84kbTqp3ksk](https://www.youtube.com/watch?v=84kbTqp3ksk) [DKpP5K9XTsc](https://www.youtube.com/watch?v=DKpP5K9XTsc) [f-ZUpxthYJ0](https://www.youtube.com/watch?v=f-ZUpxthYJ0) | pendiente |
-| Cân yr Arad Goch | Idris Lewis – Ceiriog | verificar derechos | 3 | chubut 2014 comp. 43<br>[0ah0WrQLEa4](https://www.youtube.com/watch?v=0ah0WrQLEa4) [8dpPe64kDpo](https://www.youtube.com/watch?v=8dpPe64kDpo) [N33ihYcQHEk](https://www.youtube.com/watch?v=N33ihYcQHEk) | pendiente |
-| Chwyth, chwyth aeafol chwa | TH. A. Arne | verificar derechos | 3 | chubut 2014 comp. 40<br>[R4tkVGn9pjg](https://www.youtube.com/watch?v=R4tkVGn9pjg) [l2rPv06-TNg](https://www.youtube.com/watch?v=l2rPv06-TNg) [lc0bkNk9VWY](https://www.youtube.com/watch?v=lc0bkNk9VWY) | pendiente |
-| La muerte del ángel | Astor Piazolla, arr. Néstor Zadoff | verificar derechos | 3 | chubut 2018 comp. 73<br>[uQLo3_bBjWA](https://www.youtube.com/watch?v=uQLo3_bBjWA) [utHSvsjwvwo 7:16:25](https://www.youtube.com/watch?v=utHSvsjwvwo&t=26185s) [yFAau_xtzJk](https://www.youtube.com/watch?v=yFAau_xtzJk) | pendiente |
-| Mi garganta | melodía popular argentina, arr. Carlos Guastavino | verificar derechos | 3 | chubut 2014 comp. 55<br>[1nX9tfHQXaI](https://www.youtube.com/watch?v=1nX9tfHQXaI) [8NBqb8lnGNE](https://www.youtube.com/watch?v=8NBqb8lnGNE) [ZULDqi7piuc](https://www.youtube.com/watch?v=ZULDqi7piuc) | pendiente |
-| O Dduw, Rhana'th Fendithion | J. Rutter | verificar derechos | 3 | chubut 2018 comp. 72<br>[aixCKFp0JQI](https://www.youtube.com/watch?v=aixCKFp0JQI) [utHSvsjwvwo 6:09:16](https://www.youtube.com/watch?v=utHSvsjwvwo&t=22156s) [zAlvajq-8Oo](https://www.youtube.com/watch?v=zAlvajq-8Oo) | pendiente |
-| Sul y Blodau | Owen Williams – Eifion Wyn | verificar derechos | 3 | chubut 2012 comp. 40<br>[MaG1YJk7KV8](https://www.youtube.com/watch?v=MaG1YJk7KV8) [qFZyl93FA9A](https://www.youtube.com/watch?v=qFZyl93FA9A) [y8jdA0OUEvg](https://www.youtube.com/watch?v=y8jdA0OUEvg) | pendiente |
-| Suo Gân | G. Glyn | verificar derechos | 3 | chubut 2013 comp. 66<br>[RJCMbTchtgw](https://www.youtube.com/watch?v=RJCMbTchtgw) [lVJXiosXPo4](https://www.youtube.com/watch?v=lVJXiosXPo4) [ps3CFGC3AfE](https://www.youtube.com/watch?v=ps3CFGC3AfE) | pendiente |
-| Tra Bo Dau | trefniant Sydney Northcote | verificar derechos | 3 | chubut 2008 comp. 45<br>[oUc2o1qrQac](https://www.youtube.com/watch?v=oUc2o1qrQac) [r7J0vAm6AUY](https://www.youtube.com/watch?v=r7J0vAm6AUY) [sOQSNLYjCfI](https://www.youtube.com/watch?v=sOQSNLYjCfI) | pendiente |
-| Y Blodyn Gwyn | R. H. Jones / E. J. Hughes | verificar derechos | 3 | chubut 2013 comp. 49<br>[NuN_yQdo2DA](https://www.youtube.com/watch?v=NuN_yQdo2DA) [X3DTSQfS-lI](https://www.youtube.com/watch?v=X3DTSQfS-lI) [XqFIz1BdGls](https://www.youtube.com/watch?v=XqFIz1BdGls) | pendiente |
-| Zamba del grillo | Atahualpa Yupanqui, arr. Juanjo Cura | verificar derechos | 3 | chubut 2014 comp. 65<br>[AM4Q7BwXfJo](https://www.youtube.com/watch?v=AM4Q7BwXfJo) [DCh5B75KGuM](https://www.youtube.com/watch?v=DCh5B75KGuM) [ZBhvUSP7PYU](https://www.youtube.com/watch?v=ZBhvUSP7PYU) | pendiente |
-| Aberdaron | Meirion Williams – Cynan | verificar derechos | 2 | chubut 2018 comp. 42<br>[1tKBGyxDOq0](https://www.youtube.com/watch?v=1tKBGyxDOq0) [UmQ0zFK4ntM](https://www.youtube.com/watch?v=UmQ0zFK4ntM) | pendiente |
-| Alaw Mair | trefn. Einion Dafydd | verificar derechos | 2 | chubut 2023 comp. 61<br>[HffK29rx9X0](https://www.youtube.com/watch?v=HffK29rx9X0) [R5SoIlAUMV0](https://www.youtube.com/watch?v=R5SoIlAUMV0) | pendiente |
-| Aros mae'r Mynyddau Mawr | Ceiriog a Meirion Williams | verificar derechos | 2 | chubut 2008 comp. 47<br>[E7EJduzrRL0](https://www.youtube.com/watch?v=E7EJduzrRL0) [bnN5qk4QWVQ](https://www.youtube.com/watch?v=bnN5qk4QWVQ) | pendiente |
-| Byw Fyddi Nant Gwrtheyrn | R. LL. Owain / R. Arwyn | verificar derechos | 2 | chubut 2013 comp. 58<br>[DD_UX20O-vg](https://www.youtube.com/watch?v=DD_UX20O-vg) [vhBq1_di8DM](https://www.youtube.com/watch?v=vhBq1_di8DM) | pendiente |
-| Caro mio ben | Giuseppe Giordani | verificar derechos | 2 | chubut 2008 comp. 53<br>[7ElvYmHeMqY](https://www.youtube.com/watch?v=7ElvYmHeMqY) [yS-pU_-5fnQ](https://www.youtube.com/watch?v=yS-pU_-5fnQ) | pendiente |
-| Dashenka | Islwyn Ffowc Ellis | verificar derechos | 2 | chubut 2022 comp. 68<br>[-t5r4pwKx50 7:15:30](https://www.youtube.com/watch?v=-t5r4pwKx50&t=26130s) [laF4ngmu5pI](https://www.youtube.com/watch?v=laF4ngmu5pI) | pendiente |
-| Dere Di | J. Dowland, trefn. W. S. Gwynn Williams | verificar derechos | 2 | chubut 2014 comp. 51<br>[9AqpcF1Etxk](https://www.youtube.com/watch?v=9AqpcF1Etxk) [WYa6HDALUPQ](https://www.youtube.com/watch?v=WYa6HDALUPQ) | pendiente |
-| Dod ar fy Mhen | Mary Lloyd Prichard | verificar derechos | 2 | chubut 2023 comp. 58<br>[Bzz-Kt3iR8Q](https://www.youtube.com/watch?v=Bzz-Kt3iR8Q) [LXqDlh3REiY](https://www.youtube.com/watch?v=LXqDlh3REiY) | pendiente |
-| Ewch Allan i'r Holl Fyd mewn Hedd | John Rutter | verificar derechos | 2 | chubut 2012 comp. 64<br>[96lBJxPXTUw](https://www.youtube.com/watch?v=96lBJxPXTUw) [cI1BPQIUXCY](https://www.youtube.com/watch?v=cI1BPQIUXCY) | pendiente |
-| Nos da Ffrindiau | G. Richards, trefn. C. Jones | verificar derechos | 2 | chubut 2013 comp. 54<br>[4o8eu6o_I1U](https://www.youtube.com/watch?v=4o8eu6o_I1U) [UyVA0edNAj8](https://www.youtube.com/watch?v=UyVA0edNAj8) | pendiente |
-| Pensarn | Dilys Thomas | verificar derechos | 2 | chubut 2022 comp. 52<br>[bu-8DZRzTtQ](https://www.youtube.com/watch?v=bu-8DZRzTtQ) [uZ4dG2rhcQI](https://www.youtube.com/watch?v=uZ4dG2rhcQI) | pendiente |
-| Rhyddid | Olwen Jones | verificar derechos | 2 | chubut 2012 comp. 51<br>[6E08seWPP4s](https://www.youtube.com/watch?v=6E08seWPP4s) [A2zI5UduN9c](https://www.youtube.com/watch?v=A2zI5UduN9c) | pendiente |
-| Rhywle gyda'r hwyr | Tudur Dylan Jones / Hector Mac Donald | verificar derechos | 2 | chubut 2022 comp. 59<br>[GTMOQf-GWjM](https://www.youtube.com/watch?v=GTMOQf-GWjM) [t4vIvH2r3UQ](https://www.youtube.com/watch?v=t4vIvH2r3UQ) | pendiente |
-| Variaciones sobre la guajira Guantanamera | Joseíto Fernández sobre versos de José Martí, v. c. Electo Silva, adapt. Uru Fischer | verificar derechos | 2 | chubut 2015 comp. 91<br>[LchCtdWJ7o4](https://www.youtube.com/watch?v=LchCtdWJ7o4) [QNUeHt-okRE](https://www.youtube.com/watch?v=QNUeHt-okRE) | pendiente |
-| Whitburn | Henry Baker, trefn. Eric Jones | verificar derechos | 2 | chubut 2018 comp. 59<br>[YmCzK_ad_MU](https://www.youtube.com/watch?v=YmCzK_ad_MU) [qiv2ToebGYQ](https://www.youtube.com/watch?v=qiv2ToebGYQ) | pendiente |
-| Arrayán | serie | verificar derechos | 1 | chubut 2013 comp. 63<br>[NJK9mAlm5-0](https://www.youtube.com/watch?v=NJK9mAlm5-0) | pendiente |
-| Arweiniad | Richard Mills – George Rees | verificar derechos | 1 | chubut 2018 comp. 70<br>[TH9Z5HAgSTg](https://www.youtube.com/watch?v=TH9Z5HAgSTg) | pendiente |
-| Awelon y Mynydd | Meirion Williams | verificar derechos | 1 | chubut 2013 comp. 39<br>[_4yagAjVxKY](https://www.youtube.com/watch?v=_4yagAjVxKY) | pendiente |
-| Boneddwr Mawr o'r Bala | trefn. Megan Morris | verificar derechos | 1 | chubut 2014 comp. 56<br>[kYRmo5nwhaA](https://www.youtube.com/watch?v=kYRmo5nwhaA) | pendiente |
-| Byw fyddi, Nantgwrtheyrn | — | verificar derechos | 1 | chubut 2025 comp. 64<br>[KKQJfmCIACk](https://www.youtube.com/watch?v=KKQJfmCIACk) | pendiente |
-| Cân Manawydan | M. Hopword / H. Mac Donald | verificar derechos | 1 | chubut 2019 comp. 59<br>[WeaRDK_vbiw](https://www.youtube.com/watch?v=WeaRDK_vbiw) | pendiente |
-| Canción de cuna india | Gilardo Gilardi | verificar derechos | 1 | chubut 2024 comp. 48<br>[VDCKHPXzibM 36:59](https://www.youtube.com/watch?v=VDCKHPXzibM&t=2219s) | pendiente |
-| Caneuon Llafar Gwlad | Roy Saer | verificar derechos | 1 | chubut 2009 comp. 58<br>[HRG106YXyk4](https://www.youtube.com/watch?v=HRG106YXyk4) | pendiente |
-| Chino | Segura | verificar derechos | 1 | chubut 2015 comp. 81<br>[Q4Pj4bSJwf4](https://www.youtube.com/watch?v=Q4Pj4bSJwf4) | pendiente |
-| Coedmor | R. L. Jones, trefn. Haydn | verificar derechos | 1 | chubut 2014 comp. 57<br>[2aleZnmEyMY](https://www.youtube.com/watch?v=2aleZnmEyMY) | pendiente |
-| Cofio dy Wyneb | Emyr Huws Jones | verificar derechos | 1 | chubut 2012 comp. 55<br>[gSFrxBd-nto](https://www.youtube.com/watch?v=gSFrxBd-nto) | pendiente |
-| Croeso Patagonia | Esyllt Roberts – Héctor Mac Donald | verificar derechos | 1 | chubut 2015 comp. 88<br>[mKGy7Dnhfz8](https://www.youtube.com/watch?v=mKGy7Dnhfz8) | pendiente |
-| Cuchi | Leguizamón, a elección | verificar derechos | 1 | chubut 2025 comp. 50<br>[BC61L8txOaQ 7:18:16](https://www.youtube.com/watch?v=BC61L8txOaQ&t=26296s) | pendiente |
-| Cueca del arenal | Jaime Dávalos – Eduardo Falú, arr. Enrique | verificar derechos | 1 | chubut 2015 comp. 81<br>[Q4Pj4bSJwf4](https://www.youtube.com/watch?v=Q4Pj4bSJwf4) | pendiente |
-| Cwsg Osian | — | verificar derechos | 1 | chubut 2025 comp. 54<br>[Y0Az9sUWak0](https://www.youtube.com/watch?v=Y0Az9sUWak0) | pendiente |
-| Cydiwn ddwylo | — | verificar derechos | 1 | chubut 2025 comp. 61<br>[Q5xCNF3y1k0](https://www.youtube.com/watch?v=Q5xCNF3y1k0) | pendiente |
-| Dal hi'n Dynn | R. Arwyn | verificar derechos | 1 | chubut 2012 comp. 63<br>[VIXOzSYSmlA](https://www.youtube.com/watch?v=VIXOzSYSmlA) | pendiente |
-| Dyddiau Dyn sydd Fel Glaswelltyn | Thomas Davies | verificar derechos | 1 | chubut 2015 comp. 87<br>[seH9fQCJ2jk](https://www.youtube.com/watch?v=seH9fQCJ2jk) | pendiente |
-| Ei Gwmni Ef | Eric Jones – W Rhys Nicholas | verificar derechos | 1 | chubut 2024 comp. 68<br>[W1z_1ulc_lY](https://www.youtube.com/watch?v=W1z_1ulc_lY) | pendiente |
-| Er Hwylio'r Haul | R. Arwyn – Robin Llwyd ab Owain | verificar derechos | 1 | chubut 2023 comp. 68<br>[AsR2EuoJX1o](https://www.youtube.com/watch?v=AsR2EuoJX1o) | pendiente |
-| Eryr Pengwern | — | verificar derechos | 1 | chubut 2014 comp. 60<br>[ESoQj11KetM](https://www.youtube.com/watch?v=ESoQj11KetM) | pendiente |
-| Flores argentinas | Carlos Guastavino | verificar derechos | 1 | chubut 2013 comp. 62<br>[fpNpqWUJ5GM](https://www.youtube.com/watch?v=fpNpqWUJ5GM) | pendiente |
-| Flores patagónicas | Clydwyn Jones – Virgilio Zampini | verificar derechos | 1 | chubut 2013 comp. 63<br>[NJK9mAlm5-0](https://www.youtube.com/watch?v=NJK9mAlm5-0) | pendiente |
-| Glan y Nant | — | verificar derechos | 1 | chubut 2025 comp. 55<br>[BnfV0AvvByE](https://www.youtube.com/watch?v=BnfV0AvvByE) | pendiente |
-| Gweddi'r Arglwydd | C. Roberts | verificar derechos | 1 | chubut 2022 comp. 67<br>[8SW0TG5gkCI](https://www.youtube.com/watch?v=8SW0TG5gkCI) | pendiente |
-| Gweddi'r Arglwydd | E. Jones | verificar derechos | 1 | chubut 2022 comp. 67<br>[8SW0TG5gkCI](https://www.youtube.com/watch?v=8SW0TG5gkCI) | pendiente |
-| Gwin Beaujolais | Robat Arwyn | verificar derechos | 1 | chubut 2018 comp. 58<br>[znHQyIuMFVQ](https://www.youtube.com/watch?v=znHQyIuMFVQ) | pendiente |
-| Heb Amynedd Doeth Ni Fydd | — | verificar derechos | 1 | chubut 2012 comp. 48<br>[vFrrOFE6_UM](https://www.youtube.com/watch?v=vFrrOFE6_UM) | pendiente |
-| Heledd | ), L. Gittins – D. Williams – P. Roberts | verificar derechos | 1 | chubut 2014 comp. 60<br>[ESoQj11KetM](https://www.youtube.com/watch?v=ESoQj11KetM) | pendiente |
-| Huddersfield | J. Newton | verificar derechos | 1 | chubut 2022 comp. 66<br>[eYr4bFtriWw](https://www.youtube.com/watch?v=eYr4bFtriWw) | pendiente |
-| Laudamus | Pantecelyn – William Owen | verificar derechos | 1 | chubut 2015 comp. 74<br>[RVs3i42XPWY](https://www.youtube.com/watch?v=RVs3i42XPWY) | pendiente |
-| Myrddin | R. Arwyn – R. Llwyd | verificar derechos | 1 | chubut 2012 comp. 52<br>[ehqxCSs0UZ0](https://www.youtube.com/watch?v=ehqxCSs0UZ0) | pendiente |
-| O Nefol Addfwyn Oen | — | verificar derechos | 1 | chubut 2025 comp. 53<br>[YJnenM8tw0I](https://www.youtube.com/watch?v=YJnenM8tw0I) | pendiente |
-| Popule meus | Leonardo San Juan | verificar derechos | 1 | chubut 2024 comp. 72<br>[W1z_1ulc_lY](https://www.youtube.com/watch?v=W1z_1ulc_lY) | pendiente |
-| Quae moerebat et dolebat | del | verificar derechos | 1 | chubut 2008 comp. 52<br>[h3uIDhOeVyc](https://www.youtube.com/watch?v=h3uIDhOeVyc) | pendiente |
-| Rhyddid | E. Olwen Jones | verificar derechos | 1 | chubut 2019 comp. 51<br>[1pJHVEUNZ08](https://www.youtube.com/watch?v=1pJHVEUNZ08) | pendiente |
-| Salamanqueando pa' mí | Raúl Carnota, v. c. Hugo de la Vega | verificar derechos | 1 | chubut 2015 comp. 89<br>[F54HTSkjvLw](https://www.youtube.com/watch?v=F54HTSkjvLw) | pendiente |
-| Si a mí me hubieran dicho | Beatriz Corona | verificar derechos | 1 | chubut 2025 comp. 67<br>[BC61L8txOaQ 6:40:29](https://www.youtube.com/watch?v=BC61L8txOaQ&t=24029s) | pendiente |
-| Si Hei Lwli Mabi | — | verificar derechos | 1 | chubut 2023 comp. 47<br>[AnLRusbVjGs](https://www.youtube.com/watch?v=AnLRusbVjGs) | pendiente |
-| Stabat Mater | Giambattista Pergolesi | verificar derechos | 1 | chubut 2008 comp. 52<br>[h3uIDhOeVyc](https://www.youtube.com/watch?v=h3uIDhOeVyc) | pendiente |
-| Stesion Strata | Tecwyn Ifan, trefniant Euros Rhys Evans | verificar derechos | 1 | chubut 2022 comp. 55<br>[jwdDEPP-Pd0](https://www.youtube.com/watch?v=jwdDEPP-Pd0) | pendiente |
-| Teyrnasa, Iesu Mawr | trefn. Jenkin Morgan | verificar derechos | 1 | chubut 2014 comp. 69<br>[fTEn7dSJJxQ](https://www.youtube.com/watch?v=fTEn7dSJJxQ) | pendiente |
-| Theodora | J. Vernon Lewis – A. Legge | verificar derechos | 1 | chubut 2023 comp. 54<br>[LQ28BhyOZBQ 11:19](https://www.youtube.com/watch?v=LQ28BhyOZBQ&t=679s) | pendiente |
-| Y Cymro | Meirion Williams | verificar derechos | 1 | chubut 2024 comp. 43<br>[VDCKHPXzibM 33:16](https://www.youtube.com/watch?v=VDCKHPXzibM&t=1996s) | pendiente |
-| Y Deryn Pur | trefniant John H. Roberts | verificar derechos | 1 | chubut 2008 comp. 46<br>[G15eLgDqHsQ](https://www.youtube.com/watch?v=G15eLgDqHsQ) | pendiente |
-| Y Llyn | Meirion Williams | verificar derechos | 1 | chubut 2013 comp. 40<br>[WxivXfeGnVA](https://www.youtube.com/watch?v=WxivXfeGnVA) | pendiente |
-| Y March Glas | — | verificar derechos | 1 | chubut 2023 comp. 47<br>[AnLRusbVjGs](https://www.youtube.com/watch?v=AnLRusbVjGs) | pendiente |
-| Ym Mhontypridd | neu | verificar derechos | 1 | chubut 2023 comp. 47<br>[AnLRusbVjGs](https://www.youtube.com/watch?v=AnLRusbVjGs) | pendiente |
-| Yn Iach i Ti, Gymru | Ceiriog – S. Northcote | verificar derechos | 1 | chubut 2023 comp. 43<br>[V62LETLL_ZA](https://www.youtube.com/watch?v=V62LETLL_ZA) | pendiente |
-| Ubi caritas | Gjeilo | probablemente libre | 4 | chubut 2023 comp. 76<br>[7GeZCEDgcoc](https://www.youtube.com/watch?v=7GeZCEDgcoc) [8KefoF3wKo0](https://www.youtube.com/watch?v=8KefoF3wKo0) [LQ28BhyOZBQ 8:44:52](https://www.youtube.com/watch?v=LQ28BhyOZBQ&t=31492s) [x0-pSbbCHIA](https://www.youtube.com/watch?v=x0-pSbbCHIA) | ✅ cargada |
-| Ar gyfer heddiw'r bore | carol traddodiadol, Eos Iâl | probablemente libre | 3 | chubut 2022 comp. 51<br>[-ENPPYxWGbw](https://www.youtube.com/watch?v=-ENPPYxWGbw) [3q3bZtuLbzo](https://www.youtube.com/watch?v=3q3bZtuLbzo) [RFm_ZuU6Zo8](https://www.youtube.com/watch?v=RFm_ZuU6Zo8) | ✅ cargada |
-| Ave Maria | Marcelo Valva | probablemente libre | 3 | chubut 2022 comp. 70<br>[-t5r4pwKx50 8:24:13](https://www.youtube.com/watch?v=-t5r4pwKx50&t=30253s) [9HciLCqfIas](https://www.youtube.com/watch?v=9HciLCqfIas) [dT8A2GQSDlc](https://www.youtube.com/watch?v=dT8A2GQSDlc) | ✅ cargada |
-| Cantate Domino | Hans Leo Hasler | probablemente libre | 3 | chubut 2023 comp. 65<br>[AnLRusbVjGs](https://www.youtube.com/watch?v=AnLRusbVjGs) [EUtZrvORMXw](https://www.youtube.com/watch?v=EUtZrvORMXw) [LQ28BhyOZBQ 7:04:06](https://www.youtube.com/watch?v=LQ28BhyOZBQ&t=25446s) | ✅ cargada |
-| Claros y frescos ríos | anónimo siglo XVI | probablemente libre | 3 | chubut 2013 comp. 52<br>[Q9H8mauENMw](https://www.youtube.com/watch?v=Q9H8mauENMw) [cBsyeRTrc18](https://www.youtube.com/watch?v=cBsyeRTrc18) [kHsF8eQ1L6Y](https://www.youtube.com/watch?v=kHsF8eQ1L6Y) | ✅ cargada |
-| Es ist ein Ros' entsprungen | Michael Praetorius | probablemente libre | 2 | chubut 2019 comp. 54<br>[3jnNklLlxQ0 28:24](https://www.youtube.com/watch?v=3jnNklLlxQ0&t=1704s) [s07a0VA2zus](https://www.youtube.com/watch?v=s07a0VA2zus) | ✅ cargada |
-| Let all mortal flesh keep silence | Edward Bairstow | probablemente libre | 2 | chubut 2022 comp. 72<br>[-t5r4pwKx50 7:45:45](https://www.youtube.com/watch?v=-t5r4pwKx50&t=27945s) [HxNKKrGtTww](https://www.youtube.com/watch?v=HxNKKrGtTww) | ✅ cargada |
-| Pater noster | Igor Stravinsky | probablemente libre | 2 | chubut 2018 comp. 64<br>[ZFTQmoycc9Y](https://www.youtube.com/watch?v=ZFTQmoycc9Y) [eNmj-1_HlIk 1:30:39](https://www.youtube.com/watch?v=eNmj-1_HlIk&t=5439s) | ✅ cargada |
-| Wade in the water | espiritual negro, anónimo, arr. Muitis | probablemente libre | 2 | chubut 2018 comp. 56<br>[_M_c9qh2pvM](https://www.youtube.com/watch?v=_M_c9qh2pvM) [utHSvsjwvwo 2:59:59](https://www.youtube.com/watch?v=utHSvsjwvwo&t=10799s) | ✅ cargada |
-| Affanni del pensier | arietta, George F. Händel | probablemente libre | 1 | chubut 2018 comp. 47<br>[eNmj-1_HlIk 24:13](https://www.youtube.com/watch?v=eNmj-1_HlIk&t=1453s) | ✅ cargada |
-| An die Musik | Franz Schubert, | probablemente libre | 1 | chubut 2024 comp. 48<br>[VDCKHPXzibM 36:59](https://www.youtube.com/watch?v=VDCKHPXzibM&t=2219s) | ✅ cargada |
-| Ave María | Villa Lobos | probablemente libre | 1 | chubut 2013 comp. 69<br>[W8VmPf8ZAZs](https://www.youtube.com/watch?v=W8VmPf8ZAZs) | ✅ cargada |
-| Ave María | Dante Andreo | probablemente libre | 1 | chubut 2015 comp. 82<br>[2Gd6ZkLn6as](https://www.youtube.com/watch?v=2Gd6ZkLn6as) | ✅ cargada |
-| Ave María | Karl Jenkins | probablemente libre | 1 | chubut 2019 comp. 74<br>[SvBTOh3OlMg 3:13:26](https://www.youtube.com/watch?v=SvBTOh3OlMg&t=11606s) | ✅ cargada |
-| In stiller Nacht | Johannes Brahms | probablemente libre | 1 | chubut 2026 comp. 79<br>[hVtD63KLlsw 9:53:02](https://www.youtube.com/watch?v=hVtD63KLlsw&t=35582s) | ✅ cargada |
-| En los brazos de la luna | Alfonso Letelier | verificar derechos | 4 | chubut 2008 comp. 60<br>[2VjZIBTMmqo](https://www.youtube.com/watch?v=2VjZIBTMmqo) [BFkVC4Xe7RA](https://www.youtube.com/watch?v=BFkVC4Xe7RA) [D2N_oZvygxo](https://www.youtube.com/watch?v=D2N_oZvygxo) [cLZdGxOA1TE](https://www.youtube.com/watch?v=cLZdGxOA1TE) | ✅ cargada |
-| La vieja | Hermanos Díaz, arr. Vivian Tabush | verificar derechos | 3 | chubut 2018 comp. 67<br>[2HAIydtrM4k](https://www.youtube.com/watch?v=2HAIydtrM4k) [T3ZxMzX5pgQ](https://www.youtube.com/watch?v=T3ZxMzX5pgQ) [eNmj-1_HlIk 1:01:00](https://www.youtube.com/watch?v=eNmj-1_HlIk&t=3660s) | ✅ cargada |
-| Nada | tango, José Dames – Horacio Sanguinetti, arr. Eduardo Ferraudi | verificar derechos | 3 | chubut 2013 comp. 68<br>[-272dzknxa8](https://www.youtube.com/watch?v=-272dzknxa8) [gaMvo5_oXhg](https://www.youtube.com/watch?v=gaMvo5_oXhg) [sCboAvAxOKU](https://www.youtube.com/watch?v=sCboAvAxOKU) | ✅ cargada |
-| Tamquam agnus | Tomás Luis de Victoria | verificar derechos | 3 | chubut 2018 comp. 54<br>[9Z8ncfFoWGc](https://www.youtube.com/watch?v=9Z8ncfFoWGc) [M3YhNXwo61M](https://www.youtube.com/watch?v=M3YhNXwo61M) [utHSvsjwvwo 6:15:04](https://www.youtube.com/watch?v=utHSvsjwvwo&t=22504s) | ✅ cargada |
-| Alfonsina y el mar | A. Ramírez – F. Luna, v. c. C. Jones | verificar derechos | 2 | chubut 2012 comp. 67<br>[-3MdFJJ4-Qs](https://www.youtube.com/watch?v=-3MdFJJ4-Qs) [zJE9xsshiuM](https://www.youtube.com/watch?v=zJE9xsshiuM) | ✅ cargada |
-| Allá lejos y hace tiempo | Ariel Ramírez y Armando Tejada Gómez, arr. Néstor Zadoff | verificar derechos | 2 | chubut 2018 comp. 76<br>[eNmj-1_HlIk 4:47:18](https://www.youtube.com/watch?v=eNmj-1_HlIk&t=17238s) [vmTVvg_KPRg](https://www.youtube.com/watch?v=vmTVvg_KPRg) | ✅ cargada |
-| Angor | Tudur Huws Jones | verificar derechos | 2 | chubut 2024 comp. 58<br>[Fh7i29-94XY](https://www.youtube.com/watch?v=Fh7i29-94XY) [L6FSD_iI5ew](https://www.youtube.com/watch?v=L6FSD_iI5ew) | ✅ cargada |
-| Ar Lan y Môr | trefn. D. E. Parry Williams | verificar derechos | 2 | chubut 2018 comp. 71<br>[pOQSuZMyuaI](https://www.youtube.com/watch?v=pOQSuZMyuaI) [utHSvsjwvwo 7:56:22](https://www.youtube.com/watch?v=utHSvsjwvwo&t=28582s) | ✅ cargada |
-| Ciego quisiera haber sido | Carlos Guastavino – Eduardo Falú | verificar derechos | 2 | chubut 2013 comp. 53<br>[2JkAlku3Kr8](https://www.youtube.com/watch?v=2JkAlku3Kr8) [tbDh70HXvDY](https://www.youtube.com/watch?v=tbDh70HXvDY) | ✅ cargada |
-| Cinema Paradiso (Se) | Ennio Morricone | verificar derechos | 2 | chubut 2025 comp. 49<br>[MIW7333GiIY 4:16:48](https://www.youtube.com/watch?v=MIW7333GiIY&t=15408s) [YJnenM8tw0I](https://www.youtube.com/watch?v=YJnenM8tw0I) | ✅ cargada |
-| Como pájaros en el aire | Peteco Carabajal, arr. Liliana Cangiano | verificar derechos | 2 | chubut 2014 comp. 62<br>[-250wdPJHUk](https://www.youtube.com/watch?v=-250wdPJHUk) [g3P3_CNOVTk](https://www.youtube.com/watch?v=g3P3_CNOVTk) | ✅ cargada |
-| Eiddot Ti, O Dduw, yw y Mawredd | — | verificar derechos | 2 | chubut 2012 comp. 62<br>[6bEQQTDyMqY](https://www.youtube.com/watch?v=6bEQQTDyMqY) [ATN6kZ86h8s](https://www.youtube.com/watch?v=ATN6kZ86h8s) | ✅ cargada |
-| Gurisito | candombe con percusión corporal, Daniel Viglietti, versión coral Pablo D. Roberto | verificar derechos | 2 | chubut 2022 comp. 61<br>[0X83qrUotz0 1:10:40](https://www.youtube.com/watch?v=0X83qrUotz0&t=4240s) [FR9inQWeGI8](https://www.youtube.com/watch?v=FR9inQWeGI8) | ✅ cargada |
-| Miedo | Fernando Moruja | verificar derechos | 2 | chubut 2019 comp. 65<br>[SQHehsJfn1w](https://www.youtube.com/watch?v=SQHehsJfn1w) [ZfwMxCXBdpM 1:43:36](https://www.youtube.com/watch?v=ZfwMxCXBdpM&t=6216s) | ✅ cargada |
-| Newyddion braf | Ron Jones / J. Dafydd – E. Lewys | verificar derechos | 2 | chubut 2019 comp. 52<br>[nkwfBKiLMIg](https://www.youtube.com/watch?v=nkwfBKiLMIg) [tF_V5HsV-NA](https://www.youtube.com/watch?v=tF_V5HsV-NA) | ✅ cargada |
-| O! Deuwch i'r Dyfroedd | J. Morgan Lloyd | verificar derechos | 2 | chubut 2018 comp. 71<br>[pOQSuZMyuaI](https://www.youtube.com/watch?v=pOQSuZMyuaI) [utHSvsjwvwo 7:56:22](https://www.youtube.com/watch?v=utHSvsjwvwo&t=28582s) | ✅ cargada |
-| Pam Fod Eira yn Wyn? | Dafydd Iwan, trefn. Eirian Williams | verificar derechos | 2 | chubut 2018 comp. 62<br>[TL1bhoNwk4U](https://www.youtube.com/watch?v=TL1bhoNwk4U) [eNmj-1_HlIk 3:48:04](https://www.youtube.com/watch?v=eNmj-1_HlIk&t=13684s) | ✅ cargada |
-| Rabo de nube | Silvio Rodríguez, arr. César A. Carrillo | verificar derechos | 2 | chubut 2018 comp. 75<br>[eNmj-1_HlIk 3:26:24](https://www.youtube.com/watch?v=eNmj-1_HlIk&t=12384s) [x0LBSjAuT3Q](https://www.youtube.com/watch?v=x0LBSjAuT3Q) | ✅ cargada |
-| Rosa Amarela | Heitor Villalobos | verificar derechos | 2 | chubut 2025 comp. 75<br>[BC61L8txOaQ 8:58:54](https://www.youtube.com/watch?v=BC61L8txOaQ&t=32334s) [h5zX7SaZJt8](https://www.youtube.com/watch?v=h5zX7SaZJt8) | ✅ cargada |
-| Si llega a ser tucumana | Cuchi Leguizamón, v. c. Santiago Búcar | verificar derechos | 2 | chubut 2024 comp. 73<br>[W1z_1ulc_lY](https://www.youtube.com/watch?v=W1z_1ulc_lY) [arqF7QHVMw0 4:27:20](https://www.youtube.com/watch?v=arqF7QHVMw0&t=16040s) | ✅ cargada |
-| Ta na solbici | Samo Vovk | verificar derechos | 2 | chubut 2025 comp. 76<br>[MIW7333GiIY 4:25](https://www.youtube.com/watch?v=MIW7333GiIY&t=265s) [_75BiKuifoQ](https://www.youtube.com/watch?v=_75BiKuifoQ) | ✅ cargada |
-| Zamba del carnaval | Cuchi Leguizamón, versión coral Pablo D. Roberto | verificar derechos | 2 | chubut 2022 comp. 71<br>[-t5r4pwKx50 8:04:03](https://www.youtube.com/watch?v=-t5r4pwKx50&t=29043s) [jOOx90-7F8c](https://www.youtube.com/watch?v=jOOx90-7F8c) | ✅ cargada |
-| Ar Gyfer Heddiw'r Bore | — | verificar derechos | 1 | chubut 2009 comp. 58<br>[HRG106YXyk4](https://www.youtube.com/watch?v=HRG106YXyk4) | ✅ cargada |
-| Canción de cuna para despertar a un negrito | C. Isella – N. Guillén | verificar derechos | 1 | chubut 2025 comp. 65<br>[_75BiKuifoQ](https://www.youtube.com/watch?v=_75BiKuifoQ) | ✅ cargada |
-| Canto versos | Jorge Fandermole | verificar derechos | 1 | chubut 2026 comp. 54<br>[cDpe89FFjOA 2:39:01](https://www.youtube.com/watch?v=cDpe89FFjOA&t=9541s) | ✅ cargada |
-| Coplas para la tejedora | Jorge Fandermole, versión coral de Pablo Roberto | verificar derechos | 1 | chubut 2026 comp. 72<br>[hVtD63KLlsw 1:00:43](https://www.youtube.com/watch?v=hVtD63KLlsw&t=3643s) | ✅ cargada |
-| Cortadera, plumerito | serie | verificar derechos | 1 | chubut 2013 comp. 62<br>[fpNpqWUJ5GM](https://www.youtube.com/watch?v=fpNpqWUJ5GM) | ✅ cargada |
-| El abuelo y el pehuen | Rubén Patagonia, Jeremías Chauque y Fabián Vejar, versión coral Sergio Rodrigo Seballos | verificar derechos | 1 | chubut 2022 comp. 60<br>[txd21BSbm70](https://www.youtube.com/watch?v=txd21BSbm70) | ✅ cargada |
-| El buen remedio | C. Montbrum Ocampo y H. Videla Flores, versión coral María del Carmen Aguilar | verificar derechos | 1 | chubut 2026 comp. 79<br>[hVtD63KLlsw 9:53:02](https://www.youtube.com/watch?v=hVtD63KLlsw&t=35582s) | ✅ cargada |
-| Gweddi y Pechadur | Morfudd Llwyn Owen | verificar derechos | 1 | chubut 2008 comp. 44<br>[d4K4n-FH7IY](https://www.youtube.com/watch?v=d4K4n-FH7IY) | ✅ cargada |
-| Illuxit nobis hodie | Albert Alcaraz | verificar derechos | 1 | chubut 2026 comp. 78<br>[hVtD63KLlsw 10:26:18](https://www.youtube.com/watch?v=hVtD63KLlsw&t=37578s) | ✅ cargada |
-| Juana Azurduy | Ariel Ramírez, v. c. Juan Picarel | verificar derechos | 1 | chubut 2024 comp. 65<br>[VDCKHPXzibM 4:43](https://www.youtube.com/watch?v=VDCKHPXzibM&t=283s) | ✅ cargada |
-| La finadita | — | verificar derechos | 1 | chubut 2024 comp. 63<br>[VDCKHPXzibM 2:32:16](https://www.youtube.com/watch?v=VDCKHPXzibM&t=9136s) | ✅ cargada |
-| La vieja | Hernán Díaz, arr. Vivian Tabbush | verificar derechos | 1 | trevelin 2021 comp. 102<br>[adFH5gX0z80](https://www.youtube.com/watch?v=adFH5gX0z80) | ✅ cargada |
-| O llefara addfwyn Iesu | — | verificar derechos | 1 | chubut 2025 comp. 59<br>[_75BiKuifoQ](https://www.youtube.com/watch?v=_75BiKuifoQ) | ✅ cargada |
-| Oro y plata | Homero Manzi / C. J. Pérez, arr. coral Javier Zentner | verificar derechos | 1 | chubut 2019 comp. 73<br>[SvBTOh3OlMg 4:25:47](https://www.youtube.com/watch?v=SvBTOh3OlMg&t=15947s) | ✅ cargada |
-| Oro y plata | música Charlo, letra Homero Manzi, versión coral Javier Zentner | verificar derechos | 1 | chubut 2026 comp. 78<br>[hVtD63KLlsw 10:26:18](https://www.youtube.com/watch?v=hVtD63KLlsw&t=37578s) | ✅ cargada |
-| Pistyll y Llan | — | verificar derechos | 1 | chubut 2025 comp. 43<br>[_75BiKuifoQ](https://www.youtube.com/watch?v=_75BiKuifoQ) | ✅ cargada |
-| Wrth fynd efo Deio i Dywyn | — | verificar derechos | 1 | chubut 2025 comp. 45<br>[C20iW5Fuac8](https://www.youtube.com/watch?v=C20iW5Fuac8) | ✅ cargada |
-| Ysbryd Rebeca | Tecwyn Ifan | verificar derechos | 1 | chubut 2026 comp. 65<br>[cDpe89FFjOA 5:32:48](https://www.youtube.com/watch?v=cDpe89FFjOA&t=19968s) | ✅ cargada |
+| Cwm Rhondda | John Hughes / Williams Wiliams, Pantycelyn | probablemente libre | 4 | chubut 2008 comp. 65<br>[K3uYyZGC68o](https://www.youtube.com/watch?v=K3uYyZGC68o) [NQev8Jjs3mo](https://www.youtube.com/watch?v=NQev8Jjs3mo) [cdXPiraxidQ](https://www.youtube.com/watch?v=cdXPiraxidQ) [faauFGRzVro](https://www.youtube.com/watch?v=faauFGRzVro) | falta el texto |
+| Cwlwm cariad | alawon Cymreig traddodiadol, tref. A. Ll. Thomas | probablemente libre | 3 | chubut 2022 comp. 56<br>[Z3IBzc2gERE](https://www.youtube.com/watch?v=Z3IBzc2gERE) [oULXCz__jjg](https://www.youtube.com/watch?v=oULXCz__jjg) [qbNhzuKphGM](https://www.youtube.com/watch?v=qbNhzuKphGM) | falta el texto |
+| Iesu, Drud Ddifyrrwch Dynion | J. Bach | probablemente libre | 2 | chubut 2013 comp. 65<br>[RLf-rMsfxVw](https://www.youtube.com/watch?v=RLf-rMsfxVw) [Xc08DZcPQvE](https://www.youtube.com/watch?v=Xc08DZcPQvE) | falta el texto |
+| La pastorella si leva per tempo | anónimo del siglo XV | probablemente libre | 2 | chubut 2008 comp. 84<br>[b9p2OkPUZk8](https://www.youtube.com/watch?v=b9p2OkPUZk8) [e3hQ1pdkgrE](https://www.youtube.com/watch?v=e3hQ1pdkgrE) | falta el texto |
+| Ave María | Dante Andreo | probablemente libre | 1 | chubut 2015 comp. 82<br>[2Gd6ZkLn6as](https://www.youtube.com/watch?v=2Gd6ZkLn6as) | versión por confirmar |
+| Ave María | Villa Lobos | probablemente libre | 1 | chubut 2013 comp. 69<br>[W8VmPf8ZAZs](https://www.youtube.com/watch?v=W8VmPf8ZAZs) | versión por confirmar |
+| Beati mortui | Felix Mendelssohn | probablemente libre | 1 | chubut 2023 comp. 72<br>[AnLRusbVjGs](https://www.youtube.com/watch?v=AnLRusbVjGs) | falta el texto |
+| Bugeilio'r Gwenith Gwyn | traddodiadol, Robat Arwyn | probablemente libre | 1 | chubut 2024 comp. 70<br>[wpSYMGm72Bk](https://www.youtube.com/watch?v=wpSYMGm72Bk) | falta el texto |
+| Juego a que me quemo (Chispa candela) | tradicional colombiano, arr. Julián Gómez Giraldo | probablemente libre | 1 | chubut 2014 comp. 73<br>[fb3XRSU5XSg](https://www.youtube.com/watch?v=fb3XRSU5XSg) | falta el texto |
+| Lux Aeterna | R. Arwyn | probablemente libre | 1 | chubut 2023 comp. 56<br>[Xg70oVF4y6A](https://www.youtube.com/watch?v=Xg70oVF4y6A) | falta el texto |
+| O bone Jesu – Lux Aeterna | Fernando Moruja | probablemente libre | 1 | chubut 2025 comp. 74<br>[BC61L8txOaQ 10:15:14](https://www.youtube.com/watch?v=BC61L8txOaQ&t=36914s) | falta el texto |
+| Sanctus | Schubert | probablemente libre | 1 | chubut 2024 comp. 56<br>[vbZPAtoYGgY](https://www.youtube.com/watch?v=vbZPAtoYGgY) | falta el texto |
+| Sigl-Gân | J. Brahms, trefn. W. S. Gwynn Williams | probablemente libre | 1 | chubut 2015 comp. 66<br>[sl7LHWqYrhE](https://www.youtube.com/watch?v=sl7LHWqYrhE) | falta el texto |
+| Tshotsholoza | tradicional sudafricano, arr. Jeffery L. Ames | probablemente libre | 1 | chubut 2014 comp. 64<br>[RZ3aHrvj4Es](https://www.youtube.com/watch?v=RZ3aHrvj4Es) | falta el texto |
+| Cwsg Osian | Cleif Harpwood / Alun Sbardun Huws | verificar derechos | 4 | chubut 2008 comp. 62<br>[25MwUTXdIXk](https://www.youtube.com/watch?v=25MwUTXdIXk) [Q83D5ql9MCE](https://www.youtube.com/watch?v=Q83D5ql9MCE) [rl5GhfJC4qY](https://www.youtube.com/watch?v=rl5GhfJC4qY) [vVUb3Jllzsk](https://www.youtube.com/watch?v=vVUb3Jllzsk) | falta el texto |
+| Sebben, crudele | Antonio Caldara | verificar derechos | 4 | chubut 2019 comp. 47<br>[ZfwMxCXBdpM 56:53](https://www.youtube.com/watch?v=ZfwMxCXBdpM&t=3413s) [kq7OuDOKFR0](https://www.youtube.com/watch?v=kq7OuDOKFR0) [pACfvOfSW9I](https://www.youtube.com/watch?v=pACfvOfSW9I) [vdriCRAMgdk](https://www.youtube.com/watch?v=vdriCRAMgdk) | falta el texto |
+| Anfonaf Angel | Hywel Gwynfryn – Robat Arwyn | verificar derechos | 3 | chubut 2014 comp. 70<br>[3U_Q9iXVmLw](https://www.youtube.com/watch?v=3U_Q9iXVmLw) [cbs713oeNx4](https://www.youtube.com/watch?v=cbs713oeNx4) [sM3Yq450GMY](https://www.youtube.com/watch?v=sM3Yq450GMY) | falta el texto |
+| Blodau ger y Drws | Meirion Williams | verificar derechos | 3 | chubut 2015 comp. 54<br>[84kbTqp3ksk](https://www.youtube.com/watch?v=84kbTqp3ksk) [DKpP5K9XTsc](https://www.youtube.com/watch?v=DKpP5K9XTsc) [f-ZUpxthYJ0](https://www.youtube.com/watch?v=f-ZUpxthYJ0) | falta el texto |
+| Cân yr Arad Goch | Idris Lewis – Ceiriog | verificar derechos | 3 | chubut 2014 comp. 43<br>[0ah0WrQLEa4](https://www.youtube.com/watch?v=0ah0WrQLEa4) [8dpPe64kDpo](https://www.youtube.com/watch?v=8dpPe64kDpo) [N33ihYcQHEk](https://www.youtube.com/watch?v=N33ihYcQHEk) | falta el texto |
+| Chwyth, chwyth aeafol chwa | TH. A. Arne | verificar derechos | 3 | chubut 2014 comp. 40<br>[R4tkVGn9pjg](https://www.youtube.com/watch?v=R4tkVGn9pjg) [l2rPv06-TNg](https://www.youtube.com/watch?v=l2rPv06-TNg) [lc0bkNk9VWY](https://www.youtube.com/watch?v=lc0bkNk9VWY) | falta el texto |
+| Mi garganta | melodía popular argentina, arr. Carlos Guastavino | verificar derechos | 3 | chubut 2014 comp. 55<br>[1nX9tfHQXaI](https://www.youtube.com/watch?v=1nX9tfHQXaI) [8NBqb8lnGNE](https://www.youtube.com/watch?v=8NBqb8lnGNE) [ZULDqi7piuc](https://www.youtube.com/watch?v=ZULDqi7piuc) | falta el texto |
+| O Dduw, Rhana'th Fendithion | J. Rutter | verificar derechos | 3 | chubut 2018 comp. 72<br>[aixCKFp0JQI](https://www.youtube.com/watch?v=aixCKFp0JQI) [utHSvsjwvwo 6:09:16](https://www.youtube.com/watch?v=utHSvsjwvwo&t=22156s) [zAlvajq-8Oo](https://www.youtube.com/watch?v=zAlvajq-8Oo) | falta el texto |
+| Salamanqueando pa' mí | Raúl Carnota, v. c. Hugo de la Vega | verificar derechos | 3 | chubut 2015 comp. 89<br>[F54HTSkjvLw](https://www.youtube.com/watch?v=F54HTSkjvLw) [V_AiZP9gVFE](https://www.youtube.com/watch?v=V_AiZP9gVFE) [wldmZUPS5fY](https://www.youtube.com/watch?v=wldmZUPS5fY) | falta el texto |
+| Sul y Blodau | Owen Williams – Eifion Wyn | verificar derechos | 3 | chubut 2012 comp. 40<br>[MaG1YJk7KV8](https://www.youtube.com/watch?v=MaG1YJk7KV8) [qFZyl93FA9A](https://www.youtube.com/watch?v=qFZyl93FA9A) [y8jdA0OUEvg](https://www.youtube.com/watch?v=y8jdA0OUEvg) | falta el texto |
+| Suo Gân | G. Glyn | verificar derechos | 3 | chubut 2013 comp. 66<br>[RJCMbTchtgw](https://www.youtube.com/watch?v=RJCMbTchtgw) [lVJXiosXPo4](https://www.youtube.com/watch?v=lVJXiosXPo4) [ps3CFGC3AfE](https://www.youtube.com/watch?v=ps3CFGC3AfE) | falta el texto |
+| Tra Bo Dau | trefniant Sydney Northcote | verificar derechos | 3 | chubut 2008 comp. 45<br>[oUc2o1qrQac](https://www.youtube.com/watch?v=oUc2o1qrQac) [r7J0vAm6AUY](https://www.youtube.com/watch?v=r7J0vAm6AUY) [sOQSNLYjCfI](https://www.youtube.com/watch?v=sOQSNLYjCfI) | falta el texto |
+| Y Blodyn Gwyn | R. H. Jones / E. J. Hughes | verificar derechos | 3 | chubut 2013 comp. 49<br>[NuN_yQdo2DA](https://www.youtube.com/watch?v=NuN_yQdo2DA) [X3DTSQfS-lI](https://www.youtube.com/watch?v=X3DTSQfS-lI) [XqFIz1BdGls](https://www.youtube.com/watch?v=XqFIz1BdGls) | falta el texto |
+| Zamba del grillo | Atahualpa Yupanqui, arr. Juanjo Cura | verificar derechos | 3 | chubut 2014 comp. 65<br>[AM4Q7BwXfJo](https://www.youtube.com/watch?v=AM4Q7BwXfJo) [DCh5B75KGuM](https://www.youtube.com/watch?v=DCh5B75KGuM) [ZBhvUSP7PYU](https://www.youtube.com/watch?v=ZBhvUSP7PYU) | falta el texto |
+| Aberdaron | Meirion Williams – Cynan | verificar derechos | 2 | chubut 2018 comp. 42<br>[1tKBGyxDOq0](https://www.youtube.com/watch?v=1tKBGyxDOq0) [UmQ0zFK4ntM](https://www.youtube.com/watch?v=UmQ0zFK4ntM) | falta el texto |
+| Alaw Mair | trefn. Einion Dafydd | verificar derechos | 2 | chubut 2023 comp. 61<br>[HffK29rx9X0](https://www.youtube.com/watch?v=HffK29rx9X0) [R5SoIlAUMV0](https://www.youtube.com/watch?v=R5SoIlAUMV0) | falta el texto |
+| Aros mae'r Mynyddau Mawr | Ceiriog a Meirion Williams | verificar derechos | 2 | chubut 2008 comp. 47<br>[E7EJduzrRL0](https://www.youtube.com/watch?v=E7EJduzrRL0) [bnN5qk4QWVQ](https://www.youtube.com/watch?v=bnN5qk4QWVQ) | falta el texto |
+| Byw Fyddi Nant Gwrtheyrn | R. LL. Owain / R. Arwyn | verificar derechos | 2 | chubut 2013 comp. 58<br>[DD_UX20O-vg](https://www.youtube.com/watch?v=DD_UX20O-vg) [vhBq1_di8DM](https://www.youtube.com/watch?v=vhBq1_di8DM) | falta el texto |
+| Caro mio ben | Giuseppe Giordani | verificar derechos | 2 | chubut 2008 comp. 53<br>[7ElvYmHeMqY](https://www.youtube.com/watch?v=7ElvYmHeMqY) [yS-pU_-5fnQ](https://www.youtube.com/watch?v=yS-pU_-5fnQ) | falta el texto |
+| Dashenka | Islwyn Ffowc Ellis | verificar derechos | 2 | chubut 2022 comp. 68<br>[-t5r4pwKx50 7:15:30](https://www.youtube.com/watch?v=-t5r4pwKx50&t=26130s) [laF4ngmu5pI](https://www.youtube.com/watch?v=laF4ngmu5pI) | falta el texto |
+| Dere Di | J. Dowland, trefn. W. S. Gwynn Williams | verificar derechos | 2 | chubut 2014 comp. 51<br>[9AqpcF1Etxk](https://www.youtube.com/watch?v=9AqpcF1Etxk) [WYa6HDALUPQ](https://www.youtube.com/watch?v=WYa6HDALUPQ) | falta el texto |
+| Dod ar fy Mhen | Mary Lloyd Prichard | verificar derechos | 2 | chubut 2023 comp. 58<br>[Bzz-Kt3iR8Q](https://www.youtube.com/watch?v=Bzz-Kt3iR8Q) [LXqDlh3REiY](https://www.youtube.com/watch?v=LXqDlh3REiY) | falta el texto |
+| Ewch Allan i'r Holl Fyd mewn Hedd | John Rutter | verificar derechos | 2 | chubut 2012 comp. 64<br>[96lBJxPXTUw](https://www.youtube.com/watch?v=96lBJxPXTUw) [cI1BPQIUXCY](https://www.youtube.com/watch?v=cI1BPQIUXCY) | falta el texto |
+| Nos da Ffrindiau | G. Richards, trefn. C. Jones | verificar derechos | 2 | chubut 2013 comp. 54<br>[4o8eu6o_I1U](https://www.youtube.com/watch?v=4o8eu6o_I1U) [UyVA0edNAj8](https://www.youtube.com/watch?v=UyVA0edNAj8) | falta el texto |
+| Pensarn | Dilys Thomas | verificar derechos | 2 | chubut 2022 comp. 52<br>[bu-8DZRzTtQ](https://www.youtube.com/watch?v=bu-8DZRzTtQ) [uZ4dG2rhcQI](https://www.youtube.com/watch?v=uZ4dG2rhcQI) | falta el texto |
+| Rhyddid | Olwen Jones | verificar derechos | 2 | chubut 2012 comp. 51<br>[6E08seWPP4s](https://www.youtube.com/watch?v=6E08seWPP4s) [A2zI5UduN9c](https://www.youtube.com/watch?v=A2zI5UduN9c) | falta el texto |
+| Rhywle gyda'r hwyr | Tudur Dylan Jones / Hector Mac Donald | verificar derechos | 2 | chubut 2022 comp. 59<br>[GTMOQf-GWjM](https://www.youtube.com/watch?v=GTMOQf-GWjM) [t4vIvH2r3UQ](https://www.youtube.com/watch?v=t4vIvH2r3UQ) | falta el texto |
+| Variaciones sobre la guajira Guantanamera | Joseíto Fernández sobre versos de José Martí, v. c. Electo Silva, adapt. Uru Fischer | verificar derechos | 2 | chubut 2015 comp. 91<br>[LchCtdWJ7o4](https://www.youtube.com/watch?v=LchCtdWJ7o4) [QNUeHt-okRE](https://www.youtube.com/watch?v=QNUeHt-okRE) | falta el texto |
+| Whitburn | Henry Baker, trefn. Eric Jones | verificar derechos | 2 | chubut 2018 comp. 59<br>[YmCzK_ad_MU](https://www.youtube.com/watch?v=YmCzK_ad_MU) [qiv2ToebGYQ](https://www.youtube.com/watch?v=qiv2ToebGYQ) | falta el texto |
+| Arrayán | serie | verificar derechos | 1 | chubut 2013 comp. 63<br>[NJK9mAlm5-0](https://www.youtube.com/watch?v=NJK9mAlm5-0) | falta el texto |
+| Arweiniad | Richard Mills – George Rees | verificar derechos | 1 | chubut 2018 comp. 70<br>[TH9Z5HAgSTg](https://www.youtube.com/watch?v=TH9Z5HAgSTg) | falta el texto |
+| Awelon y Mynydd | Meirion Williams | verificar derechos | 1 | chubut 2013 comp. 39<br>[_4yagAjVxKY](https://www.youtube.com/watch?v=_4yagAjVxKY) | falta el texto |
+| Boneddwr Mawr o'r Bala | trefn. Megan Morris | verificar derechos | 1 | chubut 2014 comp. 56<br>[kYRmo5nwhaA](https://www.youtube.com/watch?v=kYRmo5nwhaA) | falta el texto |
+| Byw fyddi, Nantgwrtheyrn | — | verificar derechos | 1 | chubut 2025 comp. 64<br>[KKQJfmCIACk](https://www.youtube.com/watch?v=KKQJfmCIACk) | falta el texto |
+| Cân Manawydan | M. Hopword / H. Mac Donald | verificar derechos | 1 | chubut 2019 comp. 59<br>[WeaRDK_vbiw](https://www.youtube.com/watch?v=WeaRDK_vbiw) | falta el texto |
+| Canción de cuna india | Gilardo Gilardi | verificar derechos | 1 | chubut 2024 comp. 48<br>[VDCKHPXzibM 36:59](https://www.youtube.com/watch?v=VDCKHPXzibM&t=2219s) | falta el texto |
+| Caneuon Llafar Gwlad | Roy Saer | verificar derechos | 1 | chubut 2009 comp. 58<br>[HRG106YXyk4](https://www.youtube.com/watch?v=HRG106YXyk4) | falta el texto |
+| Chino | Segura | verificar derechos | 1 | chubut 2015 comp. 81<br>[Q4Pj4bSJwf4](https://www.youtube.com/watch?v=Q4Pj4bSJwf4) | falta el texto |
+| Coedmor | R. L. Jones, trefn. Haydn | verificar derechos | 1 | chubut 2014 comp. 57<br>[2aleZnmEyMY](https://www.youtube.com/watch?v=2aleZnmEyMY) | falta el texto |
+| Cofio dy Wyneb | Emyr Huws Jones | verificar derechos | 1 | chubut 2012 comp. 55<br>[gSFrxBd-nto](https://www.youtube.com/watch?v=gSFrxBd-nto) | falta el texto |
+| Croeso Patagonia | Esyllt Roberts – Héctor Mac Donald | verificar derechos | 1 | chubut 2015 comp. 88<br>[mKGy7Dnhfz8](https://www.youtube.com/watch?v=mKGy7Dnhfz8) | falta el texto |
+| Cuchi | Leguizamón, a elección | verificar derechos | 1 | chubut 2025 comp. 50<br>[BC61L8txOaQ 7:18:16](https://www.youtube.com/watch?v=BC61L8txOaQ&t=26296s) | falta el texto |
+| Cueca del arenal | Jaime Dávalos – Eduardo Falú, arr. Enrique | verificar derechos | 1 | chubut 2015 comp. 81<br>[Q4Pj4bSJwf4](https://www.youtube.com/watch?v=Q4Pj4bSJwf4) | falta el texto |
+| Cwsg Osian | — | verificar derechos | 1 | chubut 2025 comp. 54<br>[Y0Az9sUWak0](https://www.youtube.com/watch?v=Y0Az9sUWak0) | falta el texto |
+| Cydiwn ddwylo | — | verificar derechos | 1 | chubut 2025 comp. 61<br>[Q5xCNF3y1k0](https://www.youtube.com/watch?v=Q5xCNF3y1k0) | falta el texto |
+| Dal hi'n Dynn | R. Arwyn | verificar derechos | 1 | chubut 2012 comp. 63<br>[VIXOzSYSmlA](https://www.youtube.com/watch?v=VIXOzSYSmlA) | falta el texto |
+| Dyddiau Dyn sydd Fel Glaswelltyn | Thomas Davies | verificar derechos | 1 | chubut 2015 comp. 87<br>[seH9fQCJ2jk](https://www.youtube.com/watch?v=seH9fQCJ2jk) | falta el texto |
+| Ei Gwmni Ef | Eric Jones – W Rhys Nicholas | verificar derechos | 1 | chubut 2024 comp. 68<br>[W1z_1ulc_lY](https://www.youtube.com/watch?v=W1z_1ulc_lY) | falta el texto |
+| Er Hwylio'r Haul | R. Arwyn – Robin Llwyd ab Owain | verificar derechos | 1 | chubut 2023 comp. 68<br>[AsR2EuoJX1o](https://www.youtube.com/watch?v=AsR2EuoJX1o) | falta el texto |
+| Eryr Pengwern | — | verificar derechos | 1 | chubut 2014 comp. 60<br>[ESoQj11KetM](https://www.youtube.com/watch?v=ESoQj11KetM) | falta el texto |
+| Flores argentinas | Carlos Guastavino | verificar derechos | 1 | chubut 2013 comp. 62<br>[fpNpqWUJ5GM](https://www.youtube.com/watch?v=fpNpqWUJ5GM) | falta el texto |
+| Flores patagónicas | Clydwyn Jones – Virgilio Zampini | verificar derechos | 1 | chubut 2013 comp. 63<br>[NJK9mAlm5-0](https://www.youtube.com/watch?v=NJK9mAlm5-0) | falta el texto |
+| Glan y Nant | — | verificar derechos | 1 | chubut 2025 comp. 55<br>[BnfV0AvvByE](https://www.youtube.com/watch?v=BnfV0AvvByE) | falta el texto |
+| Gweddi'r Arglwydd | C. Roberts | verificar derechos | 1 | chubut 2022 comp. 67<br>[8SW0TG5gkCI](https://www.youtube.com/watch?v=8SW0TG5gkCI) | falta el texto |
+| Gweddi'r Arglwydd | E. Jones | verificar derechos | 1 | chubut 2022 comp. 67<br>[8SW0TG5gkCI](https://www.youtube.com/watch?v=8SW0TG5gkCI) | falta el texto |
+| Gwin Beaujolais | Robat Arwyn | verificar derechos | 1 | chubut 2018 comp. 58<br>[znHQyIuMFVQ](https://www.youtube.com/watch?v=znHQyIuMFVQ) | falta el texto |
+| Heb Amynedd Doeth Ni Fydd | — | verificar derechos | 1 | chubut 2012 comp. 48<br>[vFrrOFE6_UM](https://www.youtube.com/watch?v=vFrrOFE6_UM) | falta el texto |
+| Heledd | ), L. Gittins – D. Williams – P. Roberts | verificar derechos | 1 | chubut 2014 comp. 60<br>[ESoQj11KetM](https://www.youtube.com/watch?v=ESoQj11KetM) | falta el texto |
+| Huddersfield | J. Newton | verificar derechos | 1 | chubut 2022 comp. 66<br>[eYr4bFtriWw](https://www.youtube.com/watch?v=eYr4bFtriWw) | falta el texto |
+| Laudamus | Pantecelyn – William Owen | verificar derechos | 1 | chubut 2015 comp. 74<br>[RVs3i42XPWY](https://www.youtube.com/watch?v=RVs3i42XPWY) | falta el texto |
+| Myrddin | R. Arwyn – R. Llwyd | verificar derechos | 1 | chubut 2012 comp. 52<br>[ehqxCSs0UZ0](https://www.youtube.com/watch?v=ehqxCSs0UZ0) | falta el texto |
+| O Nefol Addfwyn Oen | — | verificar derechos | 1 | chubut 2025 comp. 53<br>[YJnenM8tw0I](https://www.youtube.com/watch?v=YJnenM8tw0I) | falta el texto |
+| Popule meus | Leonardo San Juan | verificar derechos | 1 | chubut 2024 comp. 72<br>[W1z_1ulc_lY](https://www.youtube.com/watch?v=W1z_1ulc_lY) | falta el texto |
+| Quae moerebat et dolebat | del | verificar derechos | 1 | chubut 2008 comp. 52<br>[h3uIDhOeVyc](https://www.youtube.com/watch?v=h3uIDhOeVyc) | falta el texto |
+| Rhyddid | E. Olwen Jones | verificar derechos | 1 | chubut 2019 comp. 51<br>[1pJHVEUNZ08](https://www.youtube.com/watch?v=1pJHVEUNZ08) | falta el texto |
+| Si a mí me hubieran dicho | Beatriz Corona | verificar derechos | 1 | chubut 2025 comp. 67<br>[BC61L8txOaQ 6:40:29](https://www.youtube.com/watch?v=BC61L8txOaQ&t=24029s) | falta el texto |
+| Si Hei Lwli Mabi | — | verificar derechos | 1 | chubut 2023 comp. 47<br>[AnLRusbVjGs](https://www.youtube.com/watch?v=AnLRusbVjGs) | falta el texto |
+| Stabat Mater | Giambattista Pergolesi | verificar derechos | 1 | chubut 2008 comp. 52<br>[h3uIDhOeVyc](https://www.youtube.com/watch?v=h3uIDhOeVyc) | falta el texto |
+| Stesion Strata | Tecwyn Ifan, trefniant Euros Rhys Evans | verificar derechos | 1 | chubut 2022 comp. 55<br>[jwdDEPP-Pd0](https://www.youtube.com/watch?v=jwdDEPP-Pd0) | falta el texto |
+| Teyrnasa, Iesu Mawr | trefn. Jenkin Morgan | verificar derechos | 1 | chubut 2014 comp. 69<br>[fTEn7dSJJxQ](https://www.youtube.com/watch?v=fTEn7dSJJxQ) | falta el texto |
+| Theodora | J. Vernon Lewis – A. Legge | verificar derechos | 1 | chubut 2023 comp. 54<br>[LQ28BhyOZBQ 11:19](https://www.youtube.com/watch?v=LQ28BhyOZBQ&t=679s) | falta el texto |
+| Y Cymro | Meirion Williams | verificar derechos | 1 | chubut 2024 comp. 43<br>[VDCKHPXzibM 33:16](https://www.youtube.com/watch?v=VDCKHPXzibM&t=1996s) | falta el texto |
+| Y Deryn Pur | trefniant John H. Roberts | verificar derechos | 1 | chubut 2008 comp. 46<br>[G15eLgDqHsQ](https://www.youtube.com/watch?v=G15eLgDqHsQ) | falta el texto |
+| Y Llyn | Meirion Williams | verificar derechos | 1 | chubut 2013 comp. 40<br>[WxivXfeGnVA](https://www.youtube.com/watch?v=WxivXfeGnVA) | falta el texto |
+| Y March Glas | — | verificar derechos | 1 | chubut 2023 comp. 47<br>[AnLRusbVjGs](https://www.youtube.com/watch?v=AnLRusbVjGs) | falta el texto |
+| Ym Mhontypridd | neu | verificar derechos | 1 | chubut 2023 comp. 47<br>[AnLRusbVjGs](https://www.youtube.com/watch?v=AnLRusbVjGs) | falta el texto |
+| Yn Iach i Ti, Gymru | Ceiriog – S. Northcote | verificar derechos | 1 | chubut 2023 comp. 43<br>[V62LETLL_ZA](https://www.youtube.com/watch?v=V62LETLL_ZA) | falta el texto |
+| Ubi caritas | Gjeilo | probablemente libre | 4 | chubut 2023 comp. 76<br>✅ [7GeZCEDgcoc](https://www.youtube.com/watch?v=7GeZCEDgcoc) ✗ [8KefoF3wKo0](https://www.youtube.com/watch?v=8KefoF3wKo0) ✅ [LQ28BhyOZBQ 8:44:52](https://www.youtube.com/watch?v=LQ28BhyOZBQ&t=31492s) ✅ [x0-pSbbCHIA](https://www.youtube.com/watch?v=x0-pSbbCHIA) | ✅ 3 de 4 videos; sin alinear en 1: no se canta en ese video |
+| Ar gyfer heddiw'r bore | carol traddodiadol, Eos Iâl | probablemente libre | 3 | chubut 2022 comp. 51<br>[-ENPPYxWGbw](https://www.youtube.com/watch?v=-ENPPYxWGbw) [3q3bZtuLbzo](https://www.youtube.com/watch?v=3q3bZtuLbzo) [RFm_ZuU6Zo8](https://www.youtube.com/watch?v=RFm_ZuU6Zo8) | texto guardado, sin alinear: el reconocedor galés oyó muy poco |
+| Ave Maria | Marcelo Valva | probablemente libre | 3 | chubut 2022 comp. 70<br>[-t5r4pwKx50 8:24:13](https://www.youtube.com/watch?v=-t5r4pwKx50&t=30253s) [9HciLCqfIas](https://www.youtube.com/watch?v=9HciLCqfIas) [dT8A2GQSDlc](https://www.youtube.com/watch?v=dT8A2GQSDlc) | ✅ alineada |
+| Cantate Domino | Hans Leo Hasler | probablemente libre | 3 | chubut 2023 comp. 65<br>✅ [AnLRusbVjGs](https://www.youtube.com/watch?v=AnLRusbVjGs) ✗ [EUtZrvORMXw](https://www.youtube.com/watch?v=EUtZrvORMXw) ✅ [LQ28BhyOZBQ 7:04:06](https://www.youtube.com/watch?v=LQ28BhyOZBQ&t=25446s) | ✅ 2 de 3 videos; sin alinear en 1: no se canta en ese video |
+| Claros y frescos ríos | anónimo siglo XVI | probablemente libre | 3 | chubut 2013 comp. 52<br>✗ [Q9H8mauENMw](https://www.youtube.com/watch?v=Q9H8mauENMw) ✗ [cBsyeRTrc18](https://www.youtube.com/watch?v=cBsyeRTrc18) ✅ [kHsF8eQ1L6Y](https://www.youtube.com/watch?v=kHsF8eQ1L6Y) | ✅ 1 de 3 videos; sin alinear en 2: sin motivo registrado |
+| Es ist ein Ros' entsprungen | Michael Praetorius | probablemente libre | 2 | chubut 2019 comp. 54<br>[3jnNklLlxQ0 28:24](https://www.youtube.com/watch?v=3jnNklLlxQ0&t=1704s) [s07a0VA2zus](https://www.youtube.com/watch?v=s07a0VA2zus) | texto guardado, sin alinear: el alineador amontona las líneas |
+| Let all mortal flesh keep silence | Edward Bairstow | probablemente libre | 2 | chubut 2022 comp. 72<br>[-t5r4pwKx50 7:45:45](https://www.youtube.com/watch?v=-t5r4pwKx50&t=27945s) [HxNKKrGtTww](https://www.youtube.com/watch?v=HxNKKrGtTww) | ✅ alineada |
+| Pater noster | Igor Stravinsky | probablemente libre | 2 | chubut 2018 comp. 64<br>[ZFTQmoycc9Y](https://www.youtube.com/watch?v=ZFTQmoycc9Y) [eNmj-1_HlIk 1:30:39](https://www.youtube.com/watch?v=eNmj-1_HlIk&t=5439s) | ✅ alineada |
+| Wade in the water | espiritual negro, anónimo, arr. Muitis | probablemente libre | 2 | chubut 2018 comp. 56<br>[_M_c9qh2pvM](https://www.youtube.com/watch?v=_M_c9qh2pvM) [utHSvsjwvwo 2:59:59](https://www.youtube.com/watch?v=utHSvsjwvwo&t=10799s) | ✅ alineada |
+| Affanni del pensier | arietta, George F. Händel | probablemente libre | 1 | chubut 2018 comp. 47<br>[eNmj-1_HlIk 24:13](https://www.youtube.com/watch?v=eNmj-1_HlIk&t=1453s) | texto guardado, sin alinear: no se canta en ese video |
+| An die Musik | Franz Schubert, | probablemente libre | 1 | chubut 2024 comp. 48<br>[VDCKHPXzibM 36:59](https://www.youtube.com/watch?v=VDCKHPXzibM&t=2219s) | ✅ alineada |
+| Ave María | Karl Jenkins | probablemente libre | 1 | chubut 2019 comp. 74<br>[SvBTOh3OlMg 3:13:26](https://www.youtube.com/watch?v=SvBTOh3OlMg&t=11606s) | ✅ alineada |
+| In stiller Nacht | Johannes Brahms | probablemente libre | 1 | chubut 2026 comp. 79<br>[hVtD63KLlsw 9:53:02](https://www.youtube.com/watch?v=hVtD63KLlsw&t=35582s) | texto guardado, sin alinear: el alineador amontona las líneas |
+| En los brazos de la luna | Alfonso Letelier | verificar derechos | 4 | chubut 2008 comp. 60<br>✅ [2VjZIBTMmqo](https://www.youtube.com/watch?v=2VjZIBTMmqo) ✅ [BFkVC4Xe7RA](https://www.youtube.com/watch?v=BFkVC4Xe7RA) ✗ [D2N_oZvygxo](https://www.youtube.com/watch?v=D2N_oZvygxo) ✅ [cLZdGxOA1TE](https://www.youtube.com/watch?v=cLZdGxOA1TE) | ✅ 3 de 4 videos; sin alinear en 1: sin motivo registrado |
+| La vieja | Hermanos Díaz, arr. Vivian Tabush | verificar derechos | 3 | chubut 2018 comp. 67<br>✗ [2HAIydtrM4k](https://www.youtube.com/watch?v=2HAIydtrM4k) ✗ [T3ZxMzX5pgQ](https://www.youtube.com/watch?v=T3ZxMzX5pgQ) ✅ [eNmj-1_HlIk 1:01:00](https://www.youtube.com/watch?v=eNmj-1_HlIk&t=3660s) | ✅ 1 de 3 videos; sin alinear en 2: sin motivo registrado |
+| Nada | tango, José Dames – Horacio Sanguinetti, arr. Eduardo Ferraudi | verificar derechos | 3 | chubut 2013 comp. 68<br>✅ [-272dzknxa8](https://www.youtube.com/watch?v=-272dzknxa8) ✗ [gaMvo5_oXhg](https://www.youtube.com/watch?v=gaMvo5_oXhg) ✗ [sCboAvAxOKU](https://www.youtube.com/watch?v=sCboAvAxOKU) | ✅ 1 de 3 videos; sin alinear en 2: sin motivo registrado |
+| Tamquam agnus | Tomás Luis de Victoria | verificar derechos | 3 | chubut 2018 comp. 54<br>[9Z8ncfFoWGc](https://www.youtube.com/watch?v=9Z8ncfFoWGc) [M3YhNXwo61M](https://www.youtube.com/watch?v=M3YhNXwo61M) [utHSvsjwvwo 6:15:04](https://www.youtube.com/watch?v=utHSvsjwvwo&t=22504s) | ✅ alineada |
+| Alfonsina y el mar | A. Ramírez – F. Luna, v. c. C. Jones | verificar derechos | 2 | chubut 2012 comp. 67<br>✅ [-3MdFJJ4-Qs](https://www.youtube.com/watch?v=-3MdFJJ4-Qs) ✗ [zJE9xsshiuM](https://www.youtube.com/watch?v=zJE9xsshiuM) | ✅ 1 de 2 videos; sin alinear en 1: sin motivo registrado |
+| Allá lejos y hace tiempo | Ariel Ramírez y Armando Tejada Gómez, arr. Néstor Zadoff | verificar derechos | 2 | chubut 2018 comp. 76<br>[eNmj-1_HlIk 4:47:18](https://www.youtube.com/watch?v=eNmj-1_HlIk&t=17238s) [vmTVvg_KPRg](https://www.youtube.com/watch?v=vmTVvg_KPRg) | ✅ alineada |
+| Angor | Tudur Huws Jones | verificar derechos | 2 | chubut 2024 comp. 58<br>[Fh7i29-94XY](https://www.youtube.com/watch?v=Fh7i29-94XY) [L6FSD_iI5ew](https://www.youtube.com/watch?v=L6FSD_iI5ew) | texto guardado, sin alinear: el reconocedor galés oyó muy poco |
+| Ar Lan y Môr | trefn. D. E. Parry Williams | verificar derechos | 2 | chubut 2018 comp. 71<br>[pOQSuZMyuaI](https://www.youtube.com/watch?v=pOQSuZMyuaI) [utHSvsjwvwo 7:56:22](https://www.youtube.com/watch?v=utHSvsjwvwo&t=28582s) | texto guardado, sin alinear: el texto no coincide con lo que se canta |
+| Ciego quisiera haber sido | Carlos Guastavino – Eduardo Falú | verificar derechos | 2 | chubut 2013 comp. 53<br>✗ [2JkAlku3Kr8](https://www.youtube.com/watch?v=2JkAlku3Kr8) ✅ [tbDh70HXvDY](https://www.youtube.com/watch?v=tbDh70HXvDY) | ✅ 1 de 2 videos; sin alinear en 1: sin motivo registrado |
+| Cinema Paradiso (Se) | Ennio Morricone | verificar derechos | 2 | chubut 2025 comp. 49<br>[MIW7333GiIY 4:16:48](https://www.youtube.com/watch?v=MIW7333GiIY&t=15408s) [YJnenM8tw0I](https://www.youtube.com/watch?v=YJnenM8tw0I) | ✅ alineada |
+| Como pájaros en el aire | Peteco Carabajal, arr. Liliana Cangiano | verificar derechos | 2 | chubut 2014 comp. 62<br>✅ [-250wdPJHUk](https://www.youtube.com/watch?v=-250wdPJHUk) ✗ [g3P3_CNOVTk](https://www.youtube.com/watch?v=g3P3_CNOVTk) | ✅ 1 de 2 videos; sin alinear en 1: sin motivo registrado |
+| Eiddot Ti, O Dduw, yw y Mawredd | — | verificar derechos | 2 | chubut 2012 comp. 62<br>[6bEQQTDyMqY](https://www.youtube.com/watch?v=6bEQQTDyMqY) [ATN6kZ86h8s](https://www.youtube.com/watch?v=ATN6kZ86h8s) | texto guardado, sin alinear: el reconocedor galés oyó muy poco |
+| Gurisito | candombe con percusión corporal, Daniel Viglietti, versión coral Pablo D. Roberto | verificar derechos | 2 | chubut 2022 comp. 61<br>✅ [0X83qrUotz0 1:10:40](https://www.youtube.com/watch?v=0X83qrUotz0&t=4240s) ✗ [FR9inQWeGI8](https://www.youtube.com/watch?v=FR9inQWeGI8) | ✅ 1 de 2 videos; sin alinear en 1: sin motivo registrado |
+| Miedo | Fernando Moruja | verificar derechos | 2 | chubut 2019 comp. 65<br>✅ [SQHehsJfn1w](https://www.youtube.com/watch?v=SQHehsJfn1w) ✗ [ZfwMxCXBdpM 1:43:36](https://www.youtube.com/watch?v=ZfwMxCXBdpM&t=6216s) | ✅ 1 de 2 videos; sin alinear en 1: sin motivo registrado |
+| Newyddion braf | Ron Jones / J. Dafydd – E. Lewys | verificar derechos | 2 | chubut 2019 comp. 52<br>[nkwfBKiLMIg](https://www.youtube.com/watch?v=nkwfBKiLMIg) [tF_V5HsV-NA](https://www.youtube.com/watch?v=tF_V5HsV-NA) | texto guardado, sin alinear: el reconocedor galés oyó muy poco |
+| O! Deuwch i'r Dyfroedd | J. Morgan Lloyd | verificar derechos | 2 | chubut 2018 comp. 71<br>[pOQSuZMyuaI](https://www.youtube.com/watch?v=pOQSuZMyuaI) [utHSvsjwvwo 7:56:22](https://www.youtube.com/watch?v=utHSvsjwvwo&t=28582s) | texto guardado, sin alinear: el texto no coincide con lo que se canta |
+| Pam Fod Eira yn Wyn? | Dafydd Iwan, trefn. Eirian Williams | verificar derechos | 2 | chubut 2018 comp. 62<br>✅ [TL1bhoNwk4U](https://www.youtube.com/watch?v=TL1bhoNwk4U) ✗ [eNmj-1_HlIk 3:48:04](https://www.youtube.com/watch?v=eNmj-1_HlIk&t=13684s) | ✅ 1 de 2 videos; sin alinear en 1: el reconocedor galés oyó muy poco |
+| Rabo de nube | Silvio Rodríguez, arr. César A. Carrillo | verificar derechos | 2 | chubut 2018 comp. 75<br>✅ [eNmj-1_HlIk 3:26:24](https://www.youtube.com/watch?v=eNmj-1_HlIk&t=12384s) ✗ [x0LBSjAuT3Q](https://www.youtube.com/watch?v=x0LBSjAuT3Q) | ✅ 1 de 2 videos; sin alinear en 1: sin motivo registrado |
+| Rosa Amarela | Heitor Villalobos | verificar derechos | 2 | chubut 2025 comp. 75<br>✗ [BC61L8txOaQ 8:58:54](https://www.youtube.com/watch?v=BC61L8txOaQ&t=32334s) ✅ [h5zX7SaZJt8](https://www.youtube.com/watch?v=h5zX7SaZJt8) | ✅ 1 de 2 videos; sin alinear en 1: sin motivo registrado |
+| Si llega a ser tucumana | Cuchi Leguizamón, v. c. Santiago Búcar | verificar derechos | 2 | chubut 2024 comp. 73<br>[W1z_1ulc_lY](https://www.youtube.com/watch?v=W1z_1ulc_lY) [arqF7QHVMw0 4:27:20](https://www.youtube.com/watch?v=arqF7QHVMw0&t=16040s) | texto guardado, sin alinear: el texto no coincide con lo que se canta |
+| Ta na solbici | Samo Vovk | verificar derechos | 2 | chubut 2025 comp. 76<br>[MIW7333GiIY 4:25](https://www.youtube.com/watch?v=MIW7333GiIY&t=265s) [_75BiKuifoQ](https://www.youtube.com/watch?v=_75BiKuifoQ) | ✅ alineada |
+| Zamba del carnaval | Cuchi Leguizamón, versión coral Pablo D. Roberto | verificar derechos | 2 | chubut 2022 comp. 71<br>✅ [-t5r4pwKx50 8:04:03](https://www.youtube.com/watch?v=-t5r4pwKx50&t=29043s) ✗ [jOOx90-7F8c](https://www.youtube.com/watch?v=jOOx90-7F8c) | ✅ 1 de 2 videos; sin alinear en 1: sin motivo registrado |
+| Ar Gyfer Heddiw'r Bore | — | verificar derechos | 1 | chubut 2009 comp. 58<br>[HRG106YXyk4](https://www.youtube.com/watch?v=HRG106YXyk4) | texto guardado, sin alinear: el reconocedor galés oyó muy poco |
+| Canción de cuna para despertar a un negrito | C. Isella – N. Guillén | verificar derechos | 1 | chubut 2025 comp. 65<br>[_75BiKuifoQ](https://www.youtube.com/watch?v=_75BiKuifoQ) | ✅ alineada |
+| Canto versos | Jorge Fandermole | verificar derechos | 1 | chubut 2026 comp. 54<br>[cDpe89FFjOA 2:39:01](https://www.youtube.com/watch?v=cDpe89FFjOA&t=9541s) | ✅ alineada |
+| Coplas para la tejedora | Jorge Fandermole, versión coral de Pablo Roberto | verificar derechos | 1 | chubut 2026 comp. 72<br>[hVtD63KLlsw 1:00:43](https://www.youtube.com/watch?v=hVtD63KLlsw&t=3643s) | ✅ alineada |
+| Cortadera, plumerito | serie | verificar derechos | 1 | chubut 2013 comp. 62<br>[fpNpqWUJ5GM](https://www.youtube.com/watch?v=fpNpqWUJ5GM) | ✅ alineada |
+| El abuelo y el pehuen | Rubén Patagonia, Jeremías Chauque y Fabián Vejar, versión coral Sergio Rodrigo Seballos | verificar derechos | 1 | chubut 2022 comp. 60<br>[txd21BSbm70](https://www.youtube.com/watch?v=txd21BSbm70) | ✅ alineada |
+| El buen remedio | C. Montbrum Ocampo y H. Videla Flores, versión coral María del Carmen Aguilar | verificar derechos | 1 | chubut 2026 comp. 79<br>[hVtD63KLlsw 9:53:02](https://www.youtube.com/watch?v=hVtD63KLlsw&t=35582s) | ✅ alineada |
+| Gweddi y Pechadur | Morfudd Llwyn Owen | verificar derechos | 1 | chubut 2008 comp. 44<br>[d4K4n-FH7IY](https://www.youtube.com/watch?v=d4K4n-FH7IY) | texto guardado, sin alinear: el reconocedor galés oyó muy poco |
+| Illuxit nobis hodie | Albert Alcaraz | verificar derechos | 1 | chubut 2026 comp. 78<br>[hVtD63KLlsw 10:26:18](https://www.youtube.com/watch?v=hVtD63KLlsw&t=37578s) | ✅ alineada |
+| Juana Azurduy | Ariel Ramírez, v. c. Juan Picarel | verificar derechos | 1 | chubut 2024 comp. 65<br>[VDCKHPXzibM 4:43](https://www.youtube.com/watch?v=VDCKHPXzibM&t=283s) | ✅ alineada |
+| La finadita | — | verificar derechos | 1 | chubut 2024 comp. 63<br>[VDCKHPXzibM 2:32:16](https://www.youtube.com/watch?v=VDCKHPXzibM&t=9136s) | ✅ alineada |
+| La vieja | Hernán Díaz, arr. Vivian Tabbush | verificar derechos | 1 | trevelin 2021 comp. 102<br>[adFH5gX0z80](https://www.youtube.com/watch?v=adFH5gX0z80) | ✅ alineada |
+| O llefara addfwyn Iesu | — | verificar derechos | 1 | chubut 2025 comp. 59<br>[_75BiKuifoQ](https://www.youtube.com/watch?v=_75BiKuifoQ) | texto guardado, sin alinear: el reconocedor galés oyó muy poco |
+| Oro y plata | Homero Manzi / C. J. Pérez, arr. coral Javier Zentner | verificar derechos | 1 | chubut 2019 comp. 73<br>[SvBTOh3OlMg 4:25:47](https://www.youtube.com/watch?v=SvBTOh3OlMg&t=15947s) | texto guardado, sin alinear: no se canta en ese video |
+| Oro y plata | música Charlo, letra Homero Manzi, versión coral Javier Zentner | verificar derechos | 1 | chubut 2026 comp. 78<br>[hVtD63KLlsw 10:26:18](https://www.youtube.com/watch?v=hVtD63KLlsw&t=37578s) | ✅ alineada |
+| Pistyll y Llan | — | verificar derechos | 1 | chubut 2025 comp. 43<br>[_75BiKuifoQ](https://www.youtube.com/watch?v=_75BiKuifoQ) | texto guardado, sin alinear: el reconocedor galés oyó muy poco |
+| Wrth fynd efo Deio i Dywyn | — | verificar derechos | 1 | chubut 2025 comp. 45<br>[C20iW5Fuac8](https://www.youtube.com/watch?v=C20iW5Fuac8) | texto guardado, sin alinear: el reconocedor galés oyó muy poco |
+| Ysbryd Rebeca | Tecwyn Ifan | verificar derechos | 1 | chubut 2026 comp. 65<br>[cDpe89FFjOA 5:32:48](https://www.youtube.com/watch?v=cDpe89FFjOA&t=19968s) | texto guardado, sin alinear: el texto no coincide con lo que se canta |
+
+## Textos guardados fuera de la tabla
+
+Letras de obras «a elección» ya identificadas, o de obras cuyo video no llega a la competencia por título ni capítulo.
+
+| Obra | Autoría | Programa | Dónde | Estado |
+|---|---|---|---|---|
+| Ahicito | Fortunato Juárez / Raly Barrionuevo | Chubut 2014 comp. 47 (obra a elección) | [GmJvkuTeNdc](https://www.youtube.com/watch?v=GmJvkuTeNdc) | ✅ alineada |
+| Ámbar Violeta | Fito Páez | Chubut 2018 comp. 50 (obra a elección) | [Tjs4Lw93v5I](https://www.youtube.com/watch?v=Tjs4Lw93v5I) | ✅ alineada |
+| Baguala del Viento | Magdalena Matthey | Chubut 2013 comp. 51 (obra a elección) | [gu761qYfevg](https://www.youtube.com/watch?v=gu761qYfevg) | ✅ alineada |
+| Bonita rama de sauce | Carlos Guastavino; texto de Arturo Vázquez | — | [h5zX7SaZJt8](https://www.youtube.com/watch?v=h5zX7SaZJt8) | ✅ alineada |
+| Cachilo dormido | Atahualpa Yupanqui, versión coral de Joaquín Martínez Dávila | — | [cDpe89FFjOA](https://www.youtube.com/watch?v=cDpe89FFjOA) | texto guardado, sin alinear: el texto no coincide con lo que se canta |
+| Canto al Río Uruguay | Ramón Ayala | Chubut 2009 comp. 60 (obra a elección) | [KTNvEcE5bNs](https://www.youtube.com/watch?v=KTNvEcE5bNs) | ✅ alineada |
+| De quien pagó mi redención | Himno, anónimo | — | [HnVmmnyjBU4](https://www.youtube.com/watch?v=HnVmmnyjBU4) [utHSvsjwvwo](https://www.youtube.com/watch?v=utHSvsjwvwo) | texto guardado, sin alinear: se canta sin una estrofa |
+| Desarma y Sangra | Charly Garcia / Serú Giran | Chubut 2026 comp. 56 (obra a elección) | [cDpe89FFjOA](https://www.youtube.com/watch?v=cDpe89FFjOA) | ✅ alineada |
+| Desencuentro | Aníbal Troilo and lyrics by Cátulo Castillo | Chubut 2026 comp. 55 (obra a elección) | [hVtD63KLlsw](https://www.youtube.com/watch?v=hVtD63KLlsw) | ✅ alineada |
+| Hen Ferchetan | Tradicional galesa | — | [QnmtSgOvFKM](https://www.youtube.com/watch?v=QnmtSgOvFKM) | ✅ alineada |
+| La tristecita | Ariel Ramírez, with lyrics by María Elena Espiro | Chubut 2012 comp. 45 (obra a elección) | [QuOfBRbUpKQ](https://www.youtube.com/watch?v=QuOfBRbUpKQ) | ✅ alineada |
+| Naranjo en Flor | — | Chubut 2018 comp. 49 (obra a elección) | [utHSvsjwvwo](https://www.youtube.com/watch?v=utHSvsjwvwo) | ✅ alineada |
+| Ríe Chinito | Perotá Chingó | Chubut 2026 comp. 61 (obra a elección) | [hVtD63KLlsw](https://www.youtube.com/watch?v=hVtD63KLlsw) | ✅ alineada |
+| Rumbo al cerro | Alejandro Maldino / Mario Díaz | Chubut 2012 comp. 45 (obra a elección) | [Fkm05yVVzBY](https://www.youtube.com/watch?v=Fkm05yVVzBY) | texto guardado, sin alinear: el texto no coincide con lo que se canta |
+| Zamba negra | Mavi Díaz y Las Folkies | Chubut 2018 comp. 48 (obra a elección) | [xO9Sdkfw1bo](https://www.youtube.com/watch?v=xO9Sdkfw1bo) | ✅ alineada |
+| Zamba para olvidar | Daniel Toro y Julio César Bissio | — | [s-eVxB-tOIo](https://www.youtube.com/watch?v=s-eVxB-tOIo) | ✅ alineada |
+
+## Detalle de los huecos documentados
+
+Lo anotado en `data/letras/huecos.json`, por motivo; cada video enlazado es uno sin alinear.
+
+### El texto no coincide con lo que se canta
+
+- «Ar lan y môr» (trefn. D. E. Parry Williams): [pOQSuZMyuaI](https://www.youtube.com/watch?v=pOQSuZMyuaI) [utHSvsjwvwo 7:56:22](https://www.youtube.com/watch?v=utHSvsjwvwo&t=28582s). Se cantan las dos primeras estrofas del texto guardado, después una estrofa que no está en él, y no las otras tres; hace falta el texto tal como lo canta este grupo (utHSvsjwvwo es la misma actuación que el clip pOQSuZMyuaI y además no tiene fuente en galés).
+- «Cachilo dormido» (Atahualpa Yupanqui, versión coral de Joaquín Martínez Dávila): [cDpe89FFjOA](https://www.youtube.com/watch?v=cDpe89FFjOA). Revisado por el mantenedor el 2026-11-21: el texto guardado no coincide con lo que se oye cantar (Chubut 2026, comp. 71); la sesión hoy no tiene capítulo para esa competencia, por eso la obra no aparece en la tabla del programa.
+- «O! Deuwch i'r Dyfroedd» (J. Morgan Lloyd): [pOQSuZMyuaI](https://www.youtube.com/watch?v=pOQSuZMyuaI) [utHSvsjwvwo 7:56:22](https://www.youtube.com/watch?v=utHSvsjwvwo&t=28582s). El texto guardado parece ser el de otro himno de título parecido: casi nada de lo que se oye cantar está en él (utHSvsjwvwo contiene la misma actuación que el clip pOQSuZMyuaI), así que hay que revisar la fuente.
+- «Rumbo al cerro» (Alejandro Maldino / Mario Díaz): [Fkm05yVVzBY](https://www.youtube.com/watch?v=Fkm05yVVzBY). Revisado por el mantenedor el 2026-11-21: el texto guardado no coincide con lo que se oye cantar en el clip (Chubut 2012, comp. 45, obra a elección).
+- «Si llega a ser tucumana» (Cuchi Leguizamón, v. c. Santiago Búcar): [W1z_1ulc_lY](https://www.youtube.com/watch?v=W1z_1ulc_lY) [arqF7QHVMw0 4:27:20](https://www.youtube.com/watch?v=arqF7QHVMw0&t=16040s). Revisado por el mantenedor el 2026-11-21: el texto guardado no coincide con lo que se oye cantar en estos videos, así que queda afuera hasta revisar la fuente.
+- «Ysbryd Rebeca» (Tecwyn Ifan): [cDpe89FFjOA 5:32:48](https://www.youtube.com/watch?v=cDpe89FFjOA&t=19968s). El texto guardado tiene solo el estribillo, que vuelve unas tres veces entre estrofas que no están en él; además el video no tiene fuente en galés.
+
+### Se canta sin una estrofa
+
+- «De quien pagó mi redención» (Himno, anónimo): [HnVmmnyjBU4](https://www.youtube.com/watch?v=HnVmmnyjBU4) [utHSvsjwvwo](https://www.youtube.com/watch?v=utHSvsjwvwo). Chubut 2018, comp. 55 (himno a elección): el cuarteto canta las estrofas 1, 3 y 4 y saltea la 2 (la sesión, hacia 5:25, tiene la misma actuación que el clip), y el alineador todavía no puede saltear una estrofa.
+
+### El reconocedor galés oyó muy poco
+
+- «Angor» (Tudur Huws Jones): [Fh7i29-94XY](https://www.youtube.com/watch?v=Fh7i29-94XY). El reconocedor galés oye la obra, pero casi todas sus líneas quedan bajo el filtro de confianza y el final del texto se amontona en pocos segundos.
+- «Angor» (Tudur Huws Jones): [L6FSD_iI5ew](https://www.youtube.com/watch?v=L6FSD_iI5ew). El video no tiene fuente en galés y lo que oyó YouTube no sirve para ubicar las líneas; la obra se identifica solo por el título (comp. 58) y parece otro grupo con el mismo arreglo.
+- «Ar gyfer heddiw'r bore» (carol traddodiadol, Eos Iâl): [-ENPPYxWGbw](https://www.youtube.com/watch?v=-ENPPYxWGbw) [3q3bZtuLbzo](https://www.youtube.com/watch?v=3q3bZtuLbzo) [HRG106YXyk4](https://www.youtube.com/watch?v=HRG106YXyk4) [RFm_ZuU6Zo8](https://www.youtube.com/watch?v=RFm_ZuU6Zo8). Todavía no se intentó alinear: quedó para después de la pasada del modelo galés, porque con las fuentes actuales el canto en galés casi no se reconoce.
+- «Eiddot Ti, O Dduw, yw y Mawredd»: [6bEQQTDyMqY](https://www.youtube.com/watch?v=6bEQQTDyMqY) [ATN6kZ86h8s](https://www.youtube.com/watch?v=ATN6kZ86h8s). Todavía no se intentó alinear: quedó para después de la pasada del modelo galés, porque con las fuentes actuales el canto en galés casi no se reconoce.
+- «Gweddi y Pechadur» (Morfudd Llwyn Owen): [d4K4n-FH7IY](https://www.youtube.com/watch?v=d4K4n-FH7IY). Todavía no se intentó alinear: quedó para después de la pasada del modelo galés, porque con las fuentes actuales el canto en galés casi no se reconoce.
+- «Newyddion braf» (Ron Jones / J. Dafydd – E. Lewys): [nkwfBKiLMIg](https://www.youtube.com/watch?v=nkwfBKiLMIg) [tF_V5HsV-NA](https://www.youtube.com/watch?v=tF_V5HsV-NA). Todavía no se intentó alinear: quedó para después de la pasada del modelo galés, porque con las fuentes actuales el canto en galés casi no se reconoce.
+- «O llefara addfwyn Iesu»: [_75BiKuifoQ](https://www.youtube.com/watch?v=_75BiKuifoQ). El anuncio la nombra y el reconocedor galés la oye, pero casi todas sus líneas quedan bajo el filtro de confianza y el texto se amontona en pocos segundos.
+- «Pam Fod Eira yn Wyn?» (Dafydd Iwan, trefn. Eirian Williams): [eNmj-1_HlIk 3:48:04](https://www.youtube.com/watch?v=eNmj-1_HlIk&t=13684s). La sesión no tiene fuente en galés y su capítulo de la comp. 62 cae en el veredicto; la primera actuación (hacia 2:54:09) es la misma grabación que el clip TL1bhoNwk4U, ya alineado, cuyo tramo corrido serviría, y en la segunda (hacia 3:00:44) no se oyó nada útil.
+- «Pistyll y Llan»: [_75BiKuifoQ](https://www.youtube.com/watch?v=_75BiKuifoQ). El anuncio la nombra, pero solo 2 de las 10 líneas que oyó el reconocedor galés pasan el filtro de confianza y más de la mitad del texto se amontona en cuatro segundos.
+- «Wrth fynd efo Deio i Dywyn»: [C20iW5Fuac8](https://www.youtube.com/watch?v=C20iW5Fuac8). Todavía no se intentó alinear: quedó para después de la pasada del modelo galés, porque con las fuentes actuales el canto en galés casi no se reconoce.
+
+### El alineador amontona las líneas
+
+- «Es ist ein Ros' entsprungen» (Michael Praetorius): [3jnNklLlxQ0 28:24](https://www.youtube.com/watch?v=3jnNklLlxQ0&t=1704s) [s07a0VA2zus](https://www.youtube.com/watch?v=s07a0VA2zus). Los dos videos tienen la misma actuación (comp. 54) y el tramo está ubicado, pero los reconocedores oyeron solo palabras sueltas o espurias y el alineador amontona el texto en pocos segundos.
+- «In stiller Nacht» (Johannes Brahms): [hVtD63KLlsw 9:53:02](https://www.youtube.com/watch?v=hVtD63KLlsw&t=35582s). Dos coros la cantan en la comp. 79 y los dos tramos están ubicados, pero el alineador se ancla en palabras sueltas mal oídas (su normalización además pierde la ß) y amontona las líneas.
+
+### No se canta en ese video
+
+- «Affanni del pensier» (arietta, George F. Händel): [eNmj-1_HlIk 24:13](https://www.youtube.com/watch?v=eNmj-1_HlIk&t=1453s). El capítulo de la comp. 47 tiene solo el llamado y el aviso de que el único participante no estaba, y en el resto de la sesión no se canta.
+- «Cantate Domino» (Hans Leo Hassler): [EUtZrvORMXw](https://www.youtube.com/watch?v=EUtZrvORMXw). Aunque el título del video nombra la comp. 65, ninguna de sus nueve actuaciones es esta obra.
+- «Oro y plata» (Homero Manzi / C. J. Pérez, arr. coral Javier Zentner): [SvBTOh3OlMg 4:25:47](https://www.youtube.com/watch?v=SvBTOh3OlMg&t=15947s). La transmisión se corta dentro de la comp. 73 (Chubut 2019), cuando solo cantó el primer coro y con otra obra; hace falta otra grabación.
+- «Ubi caritas» (Gjeilo): [8KefoF3wKo0](https://www.youtube.com/watch?v=8KefoF3wKo0). El clip tiene otra obra del mismo coro; su Ubi caritas está en LQ28BhyOZBQ y x0-pSbbCHIA, donde ya está alineado.
+
+### Versión por confirmar
+
+- «Ave María» (Dante Andreo): [2Gd6ZkLn6as](https://www.youtube.com/watch?v=2Gd6ZkLn6as). El mantenedor tiene que confirmar si esta versión usa el mismo texto latino que las de Karl Jenkins y Marcelo Valva, ya guardadas; todavía no hay texto.
+- «Ave María» (Villa Lobos): [W8VmPf8ZAZs](https://www.youtube.com/watch?v=W8VmPf8ZAZs). El mantenedor tiene que confirmar si esta versión usa el mismo texto latino que las de Karl Jenkins y Marcelo Valva, ya guardadas; todavía no hay texto.
 
 ## Obras «a elección» (identificar primero cuál se cantó)
 
@@ -184,6 +276,7 @@ Escuchar el video o leer el anuncio; con el título, la letra se pide como cualq
 | chubut 2009 | 60 | Dúo masculino, femenino o mixto: libre a elección. | [cssmafC6tug](https://www.youtube.com/watch?v=cssmafC6tug) |
 | chubut 2009 | 60 | Dúo masculino, femenino o mixto: libre a elección. | [oTxml_McS1M](https://www.youtube.com/watch?v=oTxml_McS1M) |
 | chubut 2009 | 60 | Dúo masculino, femenino o mixto: libre a elección. | [s-eVxB-tOIo](https://www.youtube.com/watch?v=s-eVxB-tOIo) |
+| chubut 2009 | 76 | Conjunto vocal de formación libre hasta 12 integrantes: arreglo de música popular argentina a capella a ele… | [KTzdEJEaAi8](https://www.youtube.com/watch?v=KTzdEJEaAi8) |
 | chubut 2009 | 76 | Conjunto vocal de formación libre hasta 12 integrantes: arreglo de música popular argentina a capella a ele… | [XBSVKBgIy0I](https://www.youtube.com/watch?v=XBSVKBgIy0I) |
 | chubut 2012 | 41 | Unawd agored: emyn hunanddewisiad. | [83Ju-97Zndg](https://www.youtube.com/watch?v=83Ju-97Zndg) |
 | chubut 2012 | 42 | Unawd agored, cân werin: hunanddewisiad. | [-xFt_5ZLcLk](https://www.youtube.com/watch?v=-xFt_5ZLcLk) |
@@ -297,6 +390,7 @@ Escuchar el video o leer el anuncio; con el título, la letra se pide como cualq
 | chubut 2015 | 60 | Solo libre: aria u obra original académica del repertorio universal a elección. | [XX9OVATOEIE](https://www.youtube.com/watch?v=XX9OVATOEIE) |
 | chubut 2015 | 62 | Solo libre: música ciudadana (tango, milonga, vals) a elección. | [Df_T7paaPqY](https://www.youtube.com/watch?v=Df_T7paaPqY) |
 | chubut 2015 | 62 | Solo libre: música ciudadana (tango, milonga, vals) a elección. | [luqavlHcogY](https://www.youtube.com/watch?v=luqavlHcogY) |
+| chubut 2015 | 62 | Solo libre: música ciudadana (tango, milonga, vals) a elección. | [pcMbWyL3pxI](https://www.youtube.com/watch?v=pcMbWyL3pxI) |
 | chubut 2015 | 67 | Dúo de voces iguales o mixtas: obra del repertorio popular a elección. | [G10YK74oRH0](https://www.youtube.com/watch?v=G10YK74oRH0) |
 | chubut 2015 | 67 | Dúo de voces iguales o mixtas: obra del repertorio popular a elección. | [PeFm9zpC86s](https://www.youtube.com/watch?v=PeFm9zpC86s) |
 | chubut 2015 | 67 | Dúo de voces iguales o mixtas: obra del repertorio popular a elección. | [SDx1U5GWfv4](https://www.youtube.com/watch?v=SDx1U5GWfv4) |
@@ -317,6 +411,8 @@ Escuchar el video o leer el anuncio; con el título, la letra se pide como cualq
 | chubut 2015 | 86 | Côr o unrhyw gyfuniad: hunanddewisiad. | [wUW2cA4H4sk](https://www.youtube.com/watch?v=wUW2cA4H4sk) |
 | chubut 2015 | 87 | Ail gystadleuaeth (dim mwy na 30 o leisiau): «Dyddiau Dyn sydd Fel Glaswelltyn», Thomas Davies; darn gwrthg… | [seH9fQCJ2jk](https://www.youtube.com/watch?v=seH9fQCJ2jk) |
 | chubut 2015 | 89 | Competencia principal. Coro mixto: «Salamanqueando pa' mí», Raúl Carnota, v. c. Hugo de la Vega; obra contr… | [F54HTSkjvLw](https://www.youtube.com/watch?v=F54HTSkjvLw) |
+| chubut 2015 | 89 | Competencia principal. Coro mixto: «Salamanqueando pa' mí», Raúl Carnota, v. c. Hugo de la Vega; obra contr… | [V_AiZP9gVFE](https://www.youtube.com/watch?v=V_AiZP9gVFE) |
+| chubut 2015 | 89 | Competencia principal. Coro mixto: «Salamanqueando pa' mí», Raúl Carnota, v. c. Hugo de la Vega; obra contr… | [wldmZUPS5fY](https://www.youtube.com/watch?v=wldmZUPS5fY) |
 | chubut 2018 | 44 | Unawd werin: hunanddewisiad. | [6E2zHPKN6Nw](https://www.youtube.com/watch?v=6E2zHPKN6Nw) |
 | chubut 2018 | 44 | Unawd werin: hunanddewisiad. | [XLUelYclFcA](https://www.youtube.com/watch?v=XLUelYclFcA) |
 | chubut 2018 | 44 | Unawd werin: hunanddewisiad. | [o_pwWHT2oh8](https://www.youtube.com/watch?v=o_pwWHT2oh8) |
@@ -345,6 +441,7 @@ Escuchar el video o leer el anuncio; con el título, la letra se pide como cualq
 | chubut 2018 | 61 | Parti neu gôr capel: emyn neu gân Gristnogol hunanddewisiad. | [MIHR9EZbU7E](https://www.youtube.com/watch?v=MIHR9EZbU7E) |
 | chubut 2018 | 61 | Parti neu gôr capel: emyn neu gân Gristnogol hunanddewisiad. | [x4u77VKMhak](https://www.youtube.com/watch?v=x4u77VKMhak) |
 | chubut 2018 | 68 | Conjunto o coro familiar: obra o arreglo a elección. | [HRxmkqZriME](https://www.youtube.com/watch?v=HRxmkqZriME) |
+| chubut 2018 | 68 | Conjunto o coro familiar: obra o arreglo a elección. | [phGM8Sk5Ujg](https://www.youtube.com/watch?v=phGM8Sk5Ujg) |
 | chubut 2018 | 68 | Conjunto o coro familiar: obra o arreglo a elección. | [utHSvsjwvwo 10:48](https://www.youtube.com/watch?v=utHSvsjwvwo&t=648s) |
 | chubut 2018 | 69 | Conjunto o coro de capilla: obra o arreglo coral a elección. | [kD95Pcq8CUA](https://www.youtube.com/watch?v=kD95Pcq8CUA) |
 | chubut 2018 | 69 | Conjunto o coro de capilla: obra o arreglo coral a elección. | [tHqnCKQuHdw](https://www.youtube.com/watch?v=tHqnCKQuHdw) |

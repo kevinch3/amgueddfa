@@ -44,7 +44,8 @@ export const TEXT_MIN = 10;
 export const TEXT_MAX = 5000;
 /** Transcriptions copy whole documents, so they get a longer limit than memories. */
 export const TRANSCRIPTION_MAX = 15000;
-const VALUE_MAX = 500;
+/** Longest value of one field, and the longest `texto` of a transcript change (the database checks the same). */
+export const VALUE_MAX = 500;
 /** What a report is about, and what is wrong with it ("Informar un error"). */
 export const OBJETIVOS = ['documento', 'video'] as const;
 export type Objetivo = (typeof OBJETIVOS)[number];
@@ -145,7 +146,7 @@ function videoCopy(v: unknown): Record<string, string> | null {
 /** Most changes one video_text contribution may carry. */
 export const MAX_CAMBIOS = 200;
 /** Longest original line (`antes`) a change may target. */
-const ANTES_MAX = 2000;
+export const ANTES_MAX = 2000;
 /** The festivals whose videos can be corrected. */
 const VIDEO_FESTIVALS: FestivalSlug[] = ['chubut', 'trevelin'];
 

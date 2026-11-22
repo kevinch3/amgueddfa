@@ -589,6 +589,11 @@
       "elegir_linea": "Välj raden det hör till",
       "nueva_linea": "Lägg till som ny rad vid {tiempo}",
       "sin_opciones": "Det finns inga rader inom en minut.",
+      "vista": "Så här blir raden:",
+      "aviso_reemplaza": "Hela raden ersätts.",
+      "aviso_quita": "Hela raden tas bort.",
+      "aviso_idioma": "Hela raden blir {idioma}.",
+      "aviso_larga": "Raden skulle bli längre än 500 tecken: välj en annan.",
       "tras_exportar": "Finns redan i filen: syns efter nästa export.",
       "pausa_exportar": "En tillbakadragen rättelse finns kvar i filen: fram till nästa export visar spelaren filen utan de nya rättelserna.",
       "reanclada": "Ändringen har förankrats om.",
@@ -1080,6 +1085,10 @@
     "idioma": "Språk",
     "es": "Español",
     "cy": "Cymraeg",
+    "idioma_nombre": {
+      "es": "spanska",
+      "cy": "kymriska"
+    },
     "ok": "OK",
     "deshacer": "Ångra",
     "agregar": "+ Lägg till en rad vid {tiempo}",

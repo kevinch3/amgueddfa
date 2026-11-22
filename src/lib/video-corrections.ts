@@ -32,9 +32,11 @@ type Palabra = { a: number; b: number; w: string };
 type Linea = { t: number; text: string; fu: string[]; idioma: string | null; autores: string[] | null };
 /** The words an applied change took from a line (rewrote or removed), at the change's time. */
 type Huella = { t: number; w: string[] };
-/** Where a change landed: line i, whole (`run` null) or a run of a longer line. A texto replaces [a, b) (the words with
- * `antes`' own marks); a quitar removes [qa, qb) (the words with the marks glued to them and the space after). */
-type Lugar = { i: number; run: { a: number; b: number; qa: number; qb: number } | null };
+/** A run of a change's words inside a longer line: a texto replaces [a, b) (the words with `antes`' own marks); a quitar
+ * removes [qa, qb) (the words with the marks glued to them and the space after). */
+export type Run = { a: number; b: number; qa: number; qb: number };
+/** Where a change landed: line i, whole (`run` null) or a run of a longer line. */
+type Lugar = { i: number; run: Run | null };
 
 /** A line's words and where each sits in it: runs of letters, digits and marks, folded. */
 function palabras(s: string): Palabra[] {
@@ -49,6 +51,41 @@ function palabras(s: string): Palabra[] {
 /** Lower case without accents, circumflexes or punctuation, single spaces: "¡Gracias, Señor ŵ!" → "gracias senor w". */
 export function foldLine(s: string): string {
   return palabras(s).map((p) => p.w).join(' ');
+}
+
+/** Where the words `bw` (of a change's `antes`, whose own opening and closing marks are `pre` and `post`) first run in
+ * `text` as whole words, cut as a texto and a quitar take them (see Run); null when they do not run there. */
+function cortar(text: string, bw: string[], pre: string, post: string): Run | null {
+  const ws = palabras(text);
+  const at = donde(ws.map((p) => p.w), bw);
+  if (at < 0 || !bw.length) return null;
+  const wa = ws[at].a;
+  const wb = ws[at + bw.length - 1].b;
+  let a = wa;
+  let b = wb;
+  if (pre && a >= pre.length && text.slice(a - pre.length, a) === pre) a -= pre.length;
+  if (post && text.slice(b, b + post.length) === post) b += post.length;
+  const qa = wa - CABEZA.exec(text.slice(0, wa))![0].length;
+  const qb = wb + COLA.exec(text.slice(wb))![0].length;
+  return { a, b, qa, qb };
+}
+
+/** Where the words of `antes` first run as whole words in the line `text`, cut as the rule cuts them (see Run); null
+ * when they do not. The admin's Re-anclar uses it to keep the rest of a joined line (lib/admin-videos.ts). */
+export function runEnLinea(text: string, antes: string): Run | null {
+  const busca = palabras(antes);
+  if (!busca.length) return null;
+  return cortar(text, busca.map((p) => p.w), antes.slice(0, busca[0].a), antes.slice(busca[busca.length - 1].b));
+}
+
+/** `text` with the run's words rewritten as `texto` (a texto on a run). */
+export const conTexto = (text: string, run: Run, texto: string): string => text.slice(0, run.a) + texto + text.slice(run.b);
+
+/** `text` without the run's words (a quitar on a run): with the marks glued to them and the space after; at the end of
+ * the line, the space before. Nothing of the line may be left (foldLine of the result is empty). */
+export function sinRun(text: string, run: Run): string {
+  if (run.qb === text.length) return text.slice(0, run.qa).replace(BLANCO_FINAL, '');
+  return text.slice(0, run.qa) + text.slice(run.qb);
 }
 
 /** Where the words `busca` first run in `ws`, or -1. */
@@ -108,19 +145,8 @@ function ubicar(lines: Linea[], huellas: Huella[], t: number, antes: string): Lu
       if (donde(huellas[i].w, bw) >= 0) return 'tomada';
       continue;
     }
-    const text = lines[i].text;
-    const ws = palabras(text);
-    const at = donde(ws.map((p) => p.w), bw);
-    if (at < 0) continue;
-    const wa = ws[at].a;
-    const wb = ws[at + bw.length - 1].b;
-    let a = wa;
-    let b = wb;
-    if (pre && a >= pre.length && text.slice(a - pre.length, a) === pre) a -= pre.length;
-    if (post && text.slice(b, b + post.length) === post) b += post.length;
-    const qa = wa - CABEZA.exec(text.slice(0, wa))![0].length;
-    const qb = wb + COLA.exec(text.slice(wb))![0].length;
-    return { i, run: { a, b, qa, qb } };
+    const run = cortar(lines[i].text, bw, pre, post);
+    if (run) return { i, run };
   }
   return null;
 }
@@ -224,9 +250,7 @@ export function applyCorrections<T extends Corregible>(
       const run = lugar.run;
       const huella: Huella = { t: c.t, w: palabras(c.antes).map((p) => p.w) };
       if (c.quitar === true) {
-        let resto = '';
-        if (run && run.qb === l.text.length) resto = l.text.slice(0, run.qa).replace(BLANCO_FINAL, '');
-        else if (run) resto = l.text.slice(0, run.qa) + l.text.slice(run.qb);
+        const resto = run ? sinRun(l.text, run) : '';
         if (foldLine(resto)) {
           l.text = resto;
           colab(l);
@@ -236,7 +260,7 @@ export function applyCorrections<T extends Corregible>(
         continue;
       }
       if (texto !== null) {
-        l.text = run ? l.text.slice(0, run.a) + texto + l.text.slice(run.b) : texto;
+        l.text = run ? conTexto(l.text, run, texto) : texto;
         colab(l);
         if (foldLine(texto) !== huella.w.join(' ')) huellas.push(huella);
         hizo = true;

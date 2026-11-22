@@ -589,6 +589,11 @@
       "elegir_linea": "Choose the line it belongs to",
       "nueva_linea": "Add as a new line at {tiempo}",
       "sin_opciones": "There are no lines within a minute.",
+      "vista": "The line will read:",
+      "aviso_reemplaza": "The whole line is replaced.",
+      "aviso_quita": "The whole line is removed.",
+      "aviso_idioma": "The whole line becomes {idioma}.",
+      "aviso_larga": "The line would be longer than 500 characters: choose another.",
       "tras_exportar": "Already in the file: it will show after the next export.",
       "pausa_exportar": "A withdrawn correction is still in the file: until the next export, the player shows the file without the new corrections.",
       "reanclada": "Change re-anchored.",
@@ -1080,6 +1085,10 @@
     "idioma": "Language",
     "es": "Español",
     "cy": "Cymraeg",
+    "idioma_nombre": {
+      "es": "Spanish",
+      "cy": "Welsh"
+    },
     "ok": "OK",
     "deshacer": "Undo",
     "agregar": "+ Add a line at {tiempo}",

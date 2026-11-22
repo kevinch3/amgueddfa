@@ -7,9 +7,11 @@ import { corregible, liveRows } from './live-video-corrections';
 export { withdrawnInFile } from './live-video-corrections';
 import { withdrawnInFile } from './live-video-corrections';
 import { isCambio } from './admin-video-card';
+import { ANTES_MAX, VALUE_MAX } from './contrib';
 import { t } from './i18n';
-import { applyCorrections, type Cambio, type CorrectionRow } from './video-corrections';
+import { applyCorrections, conTexto, foldLine, runEnLinea, sinRun, type Cambio, type CorrectionRow } from './video-corrections';
 import type { Transcript } from './video-transcript';
+import { wordDiff, type DiffPart } from './word-diff';
 
 /** An approved video_text contribution as an admin reads it from `contributions`. */
 export type ApprovedVideoText = {
@@ -130,25 +132,90 @@ export function canAddNew(c: Cambio, motivo: Motivo): boolean {
   return motivo === 'sin_linea' && typeof c.antes === 'string' && c.quitar !== true && typeof c.texto === 'string' && c.texto.trim() !== '';
 }
 
-/** The row's `cambios` with change `index` re-anchored; every other change as it was. On a line: that change's `t` and
- * `antes` become the line's. As a new line: the change loses its `antes` and adds its words at its own time. A language
- * that fell inside a joined line (`idioma_en_linea_unida`) only had its language left out: its words stay where they
- * landed (the export starts from the machine text every time, so they must stay in the row), and the language alone
- * goes to the picked line, as a change after the row's others, whose text the picked line already shows. Null when the
- * choice does not fit the change. */
-export function reanchoredCambios(cambios: Cambio[], item: { index: number; motivo: Motivo }, pick: Eleccion): Cambio[] | null {
+/** What Re-anclar does to the picked line, told before the admin confirms: a whole-line rewrite (`reemplaza`), a
+ * removal of the line (`quita`), a language for the whole line (`idioma`), or a rewrite the database would refuse
+ * (`larga`: more than 500 characters). None when only the change's own words change. */
+export type Aviso = 'reemplaza' | 'quita' | 'idioma' | 'larga';
+export type Vista = { antes: string; despues: string; diff: DiffPart[]; avisos: Aviso[]; idioma?: 'es' | 'cy' };
+
+const len = (s: string) => [...s].length;
+
+/** Change `c` put on the picked line, and what that line becomes. When the line holds the change's `antes` as a run of
+ * whole words but is not that line alone (a rebuild joined fragments), the change becomes a WHOLE-LINE edit that keeps
+ * the rest of the line, cut as the rule cuts a run (lib/video-corrections.ts): `antes` the line, `texto` the line with
+ * the run rewritten, or without it for a removal (a removal that leaves nothing removes the line); a language goes to
+ * the whole line. Otherwise the change takes the line whole: its `t` and `antes` become the line's. */
+function enLinea(c: Cambio, pick: { t: number; text: string }): { cambio: Cambio; despues: string; parte: boolean } {
+  const linea = { t: pick.t, antes: pick.text };
+  const idioma = c.idioma ? { idioma: c.idioma } : {};
+  const run = typeof c.antes === 'string' && foldLine(pick.text) !== foldLine(c.antes) ? runEnLinea(pick.text, c.antes) : null;
+  if (run && c.quitar === true) {
+    const resto = sinRun(pick.text, run);
+    return foldLine(resto)
+      ? { cambio: { ...linea, texto: resto }, despues: resto, parte: true }
+      : { cambio: { ...linea, quitar: true }, despues: '', parte: false };
+  }
+  if (run && typeof c.texto === 'string' && c.texto.trim()) {
+    const texto = conTexto(pick.text, run, c.texto);
+    return { cambio: { ...linea, texto, ...idioma }, despues: texto, parte: true };
+  }
+  if (run && c.idioma && c.texto === undefined) return { cambio: { ...linea, ...idioma }, despues: pick.text, parte: true };
+  const cambio: Cambio = { ...c, ...linea };
+  return { cambio, despues: c.quitar === true ? '' : typeof c.texto === 'string' ? c.texto : pick.text, parte: false };
+}
+
+/** Re-anclar of change `index` onto `pick`: the row's new `cambios` and what the picked line becomes. Null when the choice
+ * does not fit the change. */
+function reanclar(cambios: Cambio[], item: { index: number; motivo: Motivo }, pick: Eleccion): { cambios: Cambio[]; vista: Vista } | null {
   const c = cambios[item.index];
   if (!isCambio(c)) return null;
+  const vista = (antes: string, despues: string, avisos: Aviso[], idioma?: 'es' | 'cy'): Vista =>
+    ({ antes, despues, diff: wordDiff(antes, despues), avisos, ...(idioma ? { idioma } : {}) });
   if (item.motivo === 'idioma_en_linea_unida') {
     if (pick === 'nueva' || !c.idioma) return null;
     const { idioma, ...words } = c;
     const keep = typeof words.texto === 'string' && words.texto.trim() !== '' ? [words] : [];
-    return [...cambios.slice(0, item.index), ...keep, ...cambios.slice(item.index + 1), { t: pick.t, antes: pick.text, idioma }];
+    return {
+      cambios: [...cambios.slice(0, item.index), ...keep, ...cambios.slice(item.index + 1), { t: pick.t, antes: pick.text, idioma }],
+      vista: vista(pick.text, pick.text, ['idioma'], idioma),
+    };
   }
   if (pick === 'nueva') {
     if (!canAddNew(c, item.motivo)) return null;
     const { antes: _antes, quitar: _quitar, ...nueva } = c;
-    return cambios.map((x, i) => (i === item.index ? nueva : x));
+    return { cambios: cambios.map((x, i) => (i === item.index ? nueva : x)), vista: vista('', nueva.texto ?? '', [], nueva.idioma) };
   }
-  return cambios.map((x, i) => (i === item.index ? { ...c, t: pick.t, antes: pick.text } : x));
+  const { cambio, despues, parte } = enLinea(c, pick);
+  const avisos: Aviso[] = [];
+  if (cambio.quitar === true) avisos.push('quita');
+  else if (!parte && typeof cambio.texto === 'string') avisos.push('reemplaza');
+  if (cambio.idioma) avisos.push('idioma');
+  // The database takes a texto of at most 500 characters and an antes of at most 2,000: no change past them is sent.
+  if ((typeof cambio.texto === 'string' && len(cambio.texto) > VALUE_MAX) || len(pick.text) > ANTES_MAX) {
+    return { cambios: [], vista: vista(pick.text, despues, ['larga']) };
+  }
+  return { cambios: cambios.map((x, i) => (i === item.index ? cambio : x)), vista: vista(pick.text, despues, avisos, cambio.idioma) };
+}
+
+/** The row's `cambios` with change `index` re-anchored; every other change as it was. On a line: see enLinea (a change
+ * whose words run inside a joined line keeps the rest of that line). As a new line: the change loses its `antes` and
+ * adds its words at its own time. A language that fell inside a joined line (`idioma_en_linea_unida`) only had its
+ * language left out: its words stay where they landed (the export starts from the machine text every time, so they must
+ * stay in the row), and the language alone goes to the picked line, as a change after the row's others, whose text the
+ * picked line already shows. Null when the choice does not fit the change, or the line would be too long. */
+export function reanchoredCambios(cambios: Cambio[], item: { index: number; motivo: Motivo }, pick: Eleccion): Cambio[] | null {
+  const r = reanclar(cambios, item, pick);
+  return r && r.cambios.length ? r.cambios : null;
+}
+
+/** A warning in words: "Se reemplaza la línea entera.", "Toda la línea pasa a galés." (the language by name). */
+export function avisoTexto(a: Aviso, idioma?: 'es' | 'cy'): string {
+  if (a === 'idioma') return t('admin.videos.aviso_idioma', { idioma: idioma ? t(`editor.idioma_nombre.${idioma}`) : '' });
+  return t(`admin.videos.aviso_${a}`);
+}
+
+/** What Re-anclar onto `pick` would do to that line, for the form before Confirmar: the line before and after, word by
+ * word, and the warnings (see Aviso). Null when the choice does not fit the change. */
+export function reanchorPreview(cambios: Cambio[], item: { index: number; motivo: Motivo }, pick: Eleccion): Vista | null {
+  return reanclar(cambios, item, pick)?.vista ?? null;
 }

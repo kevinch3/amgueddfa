@@ -589,6 +589,11 @@
       "elegir_linea": "Choisissez la ligne à laquelle elle correspond",
       "nueva_linea": "Ajouter comme nouvelle ligne à {tiempo}",
       "sin_opciones": "Aucune ligne à moins d'une minute.",
+      "vista": "La ligne deviendra :",
+      "aviso_reemplaza": "La ligne entière est remplacée.",
+      "aviso_quita": "La ligne entière est supprimée.",
+      "aviso_idioma": "Toute la ligne passe en {idioma}.",
+      "aviso_larga": "La ligne dépasserait 500 caractères : choisissez-en une autre.",
       "tras_exportar": "Déjà dans le fichier : visible après le prochain export.",
       "pausa_exportar": "Une correction retirée est encore dans le fichier : jusqu'au prochain export, le lecteur affiche le fichier sans les nouvelles corrections.",
       "reanclada": "Modification ré-ancrée.",
@@ -1080,6 +1085,10 @@
     "idioma": "Langue",
     "es": "Español",
     "cy": "Cymraeg",
+    "idioma_nombre": {
+      "es": "espagnol",
+      "cy": "gallois"
+    },
     "ok": "OK",
     "deshacer": "Défaire",
     "agregar": "+ Ajouter une ligne à {tiempo}",

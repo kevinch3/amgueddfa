@@ -589,6 +589,11 @@
       "elegir_linea": "Scegli la riga a cui corrisponde",
       "nueva_linea": "Aggiungi come nuova riga a {tiempo}",
       "sin_opciones": "Non ci sono righe entro un minuto.",
+      "vista": "La riga diventerà:",
+      "aviso_reemplaza": "Viene sostituita l'intera riga.",
+      "aviso_quita": "Viene tolta l'intera riga.",
+      "aviso_idioma": "Tutta la riga passa a {idioma}.",
+      "aviso_larga": "La riga supererebbe i 500 caratteri: scegline un'altra.",
       "tras_exportar": "È già nel file: si vedrà dopo la prossima esportazione.",
       "pausa_exportar": "Una correzione ritirata è ancora nel file: fino alla prossima esportazione, il lettore mostra il file senza le nuove correzioni.",
       "reanclada": "Modifica ri-ancorata.",
@@ -1080,6 +1085,10 @@
     "idioma": "Lingua",
     "es": "Español",
     "cy": "Cymraeg",
+    "idioma_nombre": {
+      "es": "spagnolo",
+      "cy": "gallese"
+    },
     "ok": "OK",
     "deshacer": "Ripristina",
     "agregar": "+ Aggiungi una riga a {tiempo}",

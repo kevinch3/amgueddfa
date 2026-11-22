@@ -1,11 +1,11 @@
 import { describe, expect, it } from 'vitest';
 import { loadApprovedVideoText, reanchor, setVideoTextChanges, withdrawContribution } from '../src/lib/admin';
 import {
-  canAddNew, cardNotes, groupByVideo, reanchorOptions, reanchoredCambios, retirarTodaLabel, sinAnclarList, withdrawnInFile,
-  type ApprovedVideoText,
+  avisoTexto, canAddNew, cardNotes, groupByVideo, reanchorOptions, reanchorPreview, reanchoredCambios, retirarTodaLabel,
+  sinAnclarList, withdrawnInFile, type ApprovedVideoText,
 } from '../src/lib/admin-videos';
 import { withLiveCorrections } from '../src/lib/live-video-corrections';
-import type { Cambio, CorrectionRow } from '../src/lib/video-corrections';
+import { applyCorrections, type Cambio, type CorrectionRow } from '../src/lib/video-corrections';
 import { asTranscript, type Transcript } from '../src/lib/video-transcript';
 
 const at = (hhmm: string) => `2026-11-22T${hhmm}:00+00:00`;
@@ -217,6 +217,101 @@ describe('reanchoredCambios', () => {
       .toEqual([{ t: 90, antes: 'Bienvenidos a todos, croeso i bawb', idioma: 'cy' }]);
     expect(canAddNew(eli.payload.cambios[0], 'idioma_en_linea_unida')).toBe(false);
     expect(reanchoredCambios(eli.payload.cambios, { index: 0, motivo: 'idioma_en_linea_unida' }, 'nueva')).toBeNull();
+  });
+});
+
+describe('Re-anclar onto a line a rebuild joined', () => {
+  const machine = (seg: [number, string][]) => ({ seg, fuentes: seg.map(() => ['whisper_es']), lang: 'es' });
+  const export_ = (seg: [number, string][], cambios: Cambio[]) =>
+    applyCorrections(machine(seg), [{ id: 'r', reviewed_at: at('10:00'), payload: { video: { id: 'V' }, cambios } }]).tr.seg;
+
+  it('the Cañaveral case: removing a fragment keeps the rest of the joined line (the next export keeps «Cañaveral»)', () => {
+    // A rebuild joined «Cañaveral» and «que risna Azul» (and «cañavera» and «Oh») into one line each.
+    const r3: Cambio[] = [
+      { t: 68.6, antes: 'flor yo no sé por qué hoy me lere', texto: 'flor, yo no sé por qué hoy me hiere' },
+      { t: 150.3, antes: 'que risna Azul', quitar: true },
+      { t: 302.5, antes: 'Oh', quitar: true },
+    ];
+    let next = reanchoredCambios(r3, { index: 1, motivo: 'sin_linea' }, { t: 148.8, text: 'Cañaveral que risna Azul' })!;
+    expect(next[1]).toEqual({ t: 148.8, antes: 'Cañaveral que risna Azul', texto: 'Cañaveral' });
+    next = reanchoredCambios(next, { index: 2, motivo: 'sin_linea' }, { t: 298.6, text: 'cañavera Oh' })!;
+    expect(next).toEqual([r3[0], { t: 148.8, antes: 'Cañaveral que risna Azul', texto: 'Cañaveral' }, { t: 298.6, antes: 'cañavera Oh', texto: 'cañavera' }]);
+    expect(export_([[148.8, 'Cañaveral que risna Azul'], [155.1, 'murmuro al cañ'], [298.6, 'cañavera Oh']], next))
+      .toEqual([[148.8, 'Cañaveral'], [155.1, 'murmuro al cañ'], [298.6, 'cañavera']]);
+  });
+
+  it('a rewrite of a fragment rewrites only its words in the joined line, with their own marks', () => {
+    const joined = { t: 10, text: 'Llegaron los coloros galices en 1865 al valle' };
+    expect(reanchoredCambios([{ t: 12.4, antes: 'coloros galices', texto: 'colonos galeses' }], { index: 0, motivo: 'sin_linea' }, joined))
+      .toEqual([{ t: 10, antes: 'Llegaron los coloros galices en 1865 al valle', texto: 'Llegaron los colonos galeses en 1865 al valle' }]);
+    // Folded like the rule: accents and case do not matter; the fragment's ¡…! go with it.
+    expect(reanchoredCambios([{ t: 3, antes: '¡bravo!', texto: '¡Bravísimo!' }], { index: 0, motivo: 'sin_linea' }, { t: 2, text: 'Muy bien, ¡Bravo! Gracias' }))
+      .toEqual([{ t: 2, antes: 'Muy bien, ¡Bravo! Gracias', texto: 'Muy bien, ¡Bravísimo! Gracias' }]);
+    // A removal takes the marks glued to its words and the space after; at the end, the space before.
+    expect(reanchoredCambios([{ t: 12.4, antes: 'Eh', quitar: true }], { index: 0, motivo: 'sin_linea' }, { t: 10, text: 'Llegaron los Eh, en 1865' }))
+      .toEqual([{ t: 10, antes: 'Llegaron los Eh, en 1865', texto: 'Llegaron los en 1865' }]);
+  });
+
+  it('a language change on a joined line sets that line\'s language; a rewrite with a language too', () => {
+    const joined = { t: 90, text: 'Bienvenidos a todos, croeso i bawb' };
+    expect(reanchoredCambios([{ t: 93, antes: 'croeso i bawb', idioma: 'cy' }], { index: 0, motivo: 'sin_linea' }, joined))
+      .toEqual([{ t: 90, antes: 'Bienvenidos a todos, croeso i bawb', idioma: 'cy' }]);
+    expect(reanchoredCambios([{ t: 93, antes: 'croeso i bob', texto: 'croeso i bawb', idioma: 'cy' }], { index: 0, motivo: 'sin_linea' },
+      { t: 90, text: 'Bienvenidos a todos, croeso i bob' }))
+      .toEqual([{ t: 90, antes: 'Bienvenidos a todos, croeso i bob', texto: 'Bienvenidos a todos, croeso i bawb', idioma: 'cy' }]);
+  });
+
+  it('a line without the change\'s words, or the same words, takes the change whole', () => {
+    expect(reanchoredCambios([{ t: 5, antes: 'coloros galices', texto: 'colonos galeses' }], { index: 0, motivo: 'sin_linea' }, { t: 6, text: 'otra cosa' }))
+      .toEqual([{ t: 6, antes: 'otra cosa', texto: 'colonos galeses' }]);
+    expect(reanchoredCambios([{ t: 5, antes: 'Que risna, azul', quitar: true }], { index: 0, motivo: 'sin_linea' }, { t: 6, text: '¡Que risna azul!' }))
+      .toEqual([{ t: 6, antes: '¡Que risna azul!', quitar: true }]);
+    // Words that are not whole words of the line are no run of it.
+    expect(reanchoredCambios([{ t: 5, antes: 'cañ', quitar: true }], { index: 0, motivo: 'sin_linea' }, { t: 6, text: 'Cañaveral azul' }))
+      .toEqual([{ t: 6, antes: 'Cañaveral azul', quitar: true }]);
+  });
+
+  it('refuses a rewrite that would leave the line longer than a change may be (500 characters)', () => {
+    const long = { t: 6, text: `${'palabra '.repeat(62)}coloros galices` };
+    expect(reanchoredCambios([{ t: 5, antes: 'coloros galices', texto: 'colonos galeses' }], { index: 0, motivo: 'sin_linea' }, long)).toBeNull();
+    expect(reanchorPreview([{ t: 5, antes: 'coloros galices', texto: 'colonos galeses' }], { index: 0, motivo: 'sin_linea' }, long)?.avisos)
+      .toEqual(['larga']);
+  });
+});
+
+describe('reanchorPreview', () => {
+  const item = { index: 0, motivo: 'sin_linea' as const };
+  it('shows the picked line before and after, word by word, and says nothing more when only the change\'s words change', () => {
+    const p = reanchorPreview([{ t: 150.3, antes: 'que risna Azul', quitar: true }], item, { t: 148.8, text: 'Cañaveral que risna Azul' })!;
+    expect(p).toEqual({
+      antes: 'Cañaveral que risna Azul', despues: 'Cañaveral',
+      diff: [{ op: 'same', text: 'Cañaveral' }, { op: 'del', text: 'que risna Azul' }], avisos: [],
+    });
+  });
+
+  it('warns in words when the whole line is replaced, removed, or changes language', () => {
+    expect(reanchorPreview([{ t: 5, antes: 'coloros galices', texto: 'colonos galeses' }], item, { t: 6, text: 'otra cosa' })!)
+      .toMatchObject({ antes: 'otra cosa', despues: 'colonos galeses', avisos: ['reemplaza'] });
+    expect(reanchorPreview([{ t: 5, antes: 'x y z', quitar: true }], item, { t: 6, text: 'otra cosa' })!)
+      .toMatchObject({ antes: 'otra cosa', despues: '', avisos: ['quita'] });
+    expect(reanchorPreview([{ t: 93, antes: 'croeso i bawb', idioma: 'cy' }], item, { t: 90, text: 'Bienvenidos, croeso i bawb' })!)
+      .toMatchObject({ antes: 'Bienvenidos, croeso i bawb', despues: 'Bienvenidos, croeso i bawb', avisos: ['idioma'], idioma: 'cy' });
+    expect(reanchorPreview(eli.payload.cambios, { index: 0, motivo: 'idioma_en_linea_unida' }, { t: 90, text: 'Bienvenidos a todos, croeso i bawb' })!)
+      .toMatchObject({ despues: 'Bienvenidos a todos, croeso i bawb', avisos: ['idioma'], idioma: 'cy' });
+    expect(reanchorPreview(dora.payload.cambios, item, 'nueva')!).toMatchObject({ antes: '', despues: 'Muy bien dicho', avisos: [] });
+    expect(reanchorPreview(dora.payload.cambios, item, { t: 61, text: '¡Muy bien!' })!.avisos).toEqual(['reemplaza']);
+  });
+
+  it('is null when the choice does not fit the change', () => {
+    expect(reanchorPreview([{ t: 3, antes: 'a', quitar: true }], item, 'nueva')).toBeNull();
+  });
+
+  it('says each warning in words, the language by name', () => {
+    expect(avisoTexto('reemplaza')).toBe('Se reemplaza la línea entera.');
+    expect(avisoTexto('quita')).toBe('Se quita la línea entera.');
+    expect(avisoTexto('idioma', 'cy')).toBe('Toda la línea pasa a galés.');
+    expect(avisoTexto('idioma', 'es')).toBe('Toda la línea pasa a español.');
+    expect(avisoTexto('larga')).toBe('La línea quedaría con más de 500 caracteres: elegí otra.');
   });
 });
 

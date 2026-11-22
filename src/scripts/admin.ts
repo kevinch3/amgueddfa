@@ -40,7 +40,7 @@ import { currentProfile } from '../lib/auth';
 import type { Kind } from '../lib/contrib';
 import { isCambio, keptCambios, unreadable, videoCardRows, type VideoCardRow } from '../lib/admin-video-card';
 import {
-  canAddNew, cardNotes, groupByVideo, reanchorOptions, retirarTodaLabel, sinAnclarList,
+  avisoTexto, canAddNew, cardNotes, groupByVideo, reanchorOptions, reanchorPreview, retirarTodaLabel, sinAnclarList,
   type ApprovedVideoText, type CardNote, type Eleccion, type SinAnclarItem, type VideoGroup,
 } from '../lib/admin-videos';
 import { fecha, fechaHora, relativa } from '../lib/dates';
@@ -51,6 +51,7 @@ import { t } from '../lib/i18n';
 import { url } from '../lib/paths';
 import { asTranscript, fmtTime, type Transcript } from '../lib/video-transcript';
 import type { Cambio } from '../lib/video-corrections';
+import type { DiffPart } from '../lib/word-diff';
 import { getClient } from '../lib/supabase';
 import { videoThumb, videoUrl } from '../lib/videos';
 import { el, gate, loginHref } from './ui';
@@ -188,8 +189,13 @@ function changeHead(r: VideoCardRow, into: HTMLElement): void {
 /** A change's words, struck and inserted (a language change: the line itself). All as text. */
 function changeWords(r: VideoCardRow): HTMLElement {
   if (r.kind === 'idioma') return el('p', { class: 'small' }, r.antes);
+  return diffWords(r.diff);
+}
+
+/** Words kept, struck and inserted, as text. */
+function diffWords(diff: DiffPart[]): HTMLElement {
   const d = el('p', { class: 'small' });
-  for (const part of r.diff) {
+  for (const part of diff) {
     d.append(part.op === 'same' ? document.createTextNode(`${part.text} `) : el(part.op === 'del' ? 'del' : 'ins', {}, part.text), ' ');
   }
   return d;
@@ -651,7 +657,9 @@ function withdrawForm(ctx: VideoCtx, row: ApprovedVideoText, slot: HTMLElement, 
 }
 
 /** Re-anclar: pick the line the change belongs to (within a minute of it, nearest first) or, when it has words of its
- * own, a new line at its time. The row's changes are replaced with that one moved, the rest as they were. */
+ * own, a new line at its time. The row's changes are replaced with that one moved, the rest as they were. Before
+ * Confirmar, the picked line before and after, word by word, and a warning when the whole line is replaced, removed or
+ * changes language (lib/admin-videos.ts, reanchorPreview). */
 function reanchorForm(ctx: VideoCtx, row: ApprovedVideoText, item: SinAnclarItem, view: Transcript, slot: HTMLElement, msg: HTMLElement): void {
   const form = el('form', { class: 'tarea-form admin-reanclar', novalidate: '' });
   const fs = el('fieldset');
@@ -674,7 +682,20 @@ function reanchorForm(ctx: VideoCtx, row: ApprovedVideoText, item: SinAnclarItem
   const cancel = el('button', { type: 'button', class: 'btn btn-quiet' }, t('admin.cancelar'));
   const buttons = el('div', { class: 'acciones' });
   buttons.append(go, cancel);
-  form.append(fs, buttons);
+  // What the picked line becomes, said again at each pick (a polite live region: the admin hears it too).
+  const vista = el('div', { class: 'admin-reanclar-vista', 'aria-live': 'polite' });
+  const cambios = Array.isArray(row.payload?.cambios) ? row.payload.cambios : [];
+  const preview = () => {
+    const chosen = picks.find((p) => p.input.checked);
+    const v = chosen ? reanchorPreview(cambios, item, chosen.pick) : null;
+    vista.replaceChildren();
+    go.disabled = !picks.length || !!v?.avisos.includes('larga');
+    if (!v) return;
+    vista.append(el('p', { class: 'small' }, t('admin.videos.vista')), diffWords(v.diff));
+    for (const a of v.avisos) vista.append(el('p', { class: 'small admin-aviso' }, avisoTexto(a, v.idioma)));
+  };
+  for (const p of picks) p.input.addEventListener('change', preview);
+  form.append(fs, vista, buttons);
   cancel.addEventListener('click', () => {
     show(msg, '');
     form.replaceWith(slot);

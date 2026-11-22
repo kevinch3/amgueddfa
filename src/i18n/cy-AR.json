@@ -589,6 +589,11 @@
       "elegir_linea": "Dewiswch y llinell y mae'n perthyn iddi",
       "nueva_linea": "Ychwanegu fel llinell newydd am {tiempo}",
       "sin_opciones": "Does dim llinellau o fewn munud.",
+      "vista": "Fel hyn y bydd y llinell:",
+      "aviso_reemplaza": "Mae'r llinell gyfan yn cael ei disodli.",
+      "aviso_quita": "Mae'r llinell gyfan yn cael ei thynnu.",
+      "aviso_idioma": "Mae'r llinell gyfan yn troi'n {idioma}.",
+      "aviso_larga": "Byddai gan y llinell fwy na 500 nod: dewiswch un arall.",
       "tras_exportar": "Mae eisoes yn y ffeil: bydd i'w weld ar ôl yr allforio nesaf.",
       "pausa_exportar": "Mae cywiriad a dynnwyd yn ôl yn dal yn y ffeil: tan yr allforio nesaf, mae'r chwaraewr yn dangos y ffeil heb y cywiriadau newydd.",
       "reanclada": "Newid wedi'i ail-angori.",
@@ -1080,6 +1085,10 @@
     "idioma": "Iaith",
     "es": "Español",
     "cy": "Cymraeg",
+    "idioma_nombre": {
+      "es": "Sbaeneg",
+      "cy": "Cymraeg"
+    },
     "ok": "Iawn",
     "deshacer": "Dadwneud",
     "agregar": "+ Ychwanegu llinell am {tiempo}",

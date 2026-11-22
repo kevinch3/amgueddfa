@@ -589,6 +589,11 @@
       "elegir_linea": "选择它所属的那一行",
       "nueva_linea": "在 {tiempo} 处添加为新的一行",
       "sin_opciones": "一分钟以内没有任何行。",
+      "vista": "这一行将变为：",
+      "aviso_reemplaza": "整行将被替换。",
+      "aviso_quita": "整行将被删除。",
+      "aviso_idioma": "整行将改为{idioma}。",
+      "aviso_larga": "这一行将超过 500 个字符：请另选一行。",
       "tras_exportar": "已在文件中：下一次导出后才会显示。",
       "pausa_exportar": "一项已撤回的更正仍在文件中：在下一次导出之前，播放器显示的文件不含新的更正。",
       "reanclada": "修改已重新定位。",
@@ -1080,6 +1085,10 @@
     "idioma": "语言",
     "es": "Español",
     "cy": "Cymraeg",
+    "idioma_nombre": {
+      "es": "西班牙语",
+      "cy": "威尔士语"
+    },
     "ok": "确定",
     "deshacer": "撤销",
     "agregar": "+ 在 {tiempo} 处添加一行",

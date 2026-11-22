@@ -5,153 +5,199 @@
  "seg": [
   [
    14.7,
-   "rayo de sol a la hora del sol haya"
+   "Rayos del sol a la hora del sol"
   ],
   [
    19.2,
-   "estado en cualquiera en cualquier"
+   "Ella estaba en cualquiera"
+  ],
+  [
+   20.0,
+   "En cualquier estación, esperando una fatalidad,"
   ],
   [
    21.3,
-   "estación esperando una formalidad un"
+   "o un llamado del cielo"
   ],
   [
    26.2,
-   "llamado del cielo siento el mareo de"
+   "Siente un mareo de baja presión"
   ],
   [
    33.6,
-   "baja presión por lo menos le queda ese"
+   "Por lo menos le queda ese poco de humor"
   ],
   [
    38.1,
-   "poco de humor para que si un avanza"
-  ],
-  [
-   41.7,
-   "contando"
+   "¿Para qué? si uno pasa buscando"
   ],
   [
    44.0,
-   "pero esas son los mangos se va solo"
+   "y perdiendo certezas."
   ],
   [
-   51.0,
-   "cuando no está en esto"
+   47.4,
+   "Solo cuando se va"
+  ],
+  [
+   50.2,
+   "Solo cuando no está en esto, amor"
   ],
   [
    56.0,
-   "le hace bien meterse en su laberinto"
+   "Le hace bien"
   ],
   [
-   60.6,
-   "cárcel"
+   61.7,
+   "Meterse en su laberinto carrusel"
   ],
   [
-   64.3,
-   "ya sé"
+   78.7,
+   "Le hace bien"
   ],
   [
    84.4,
-   "nada está aquí mi mejor tiene solamente"
+   "Nada está aquí ni mejor ni peor"
+  ],
+  [
+   86.6,
+   "Solamente sus ojos cambian de color"
   ],
   [
    89.0,
-   "sus ojos cambian de color a una hora del"
+   "A una hora del día"
   ],
   [
    93.7,
-   "día sentí una mar"
+   "Se tiñen de un ámbar violeta"
   ],
   [
    100.7,
-   "nadie"
+   "Nadie ni nadie la vio"
   ],
   [
    103.2,
-   "nadie la vio ahora"
+   "Ahora tiene un gran cuerno bajo el corazón"
   ],
   [
    107.4,
-   "corazón michelle cama de todos"
+   "Y se escapa de todos los hombres"
+  ],
+  [
+   113.4,
+   "Que quieren tenerla"
   ],
   [
    116.6,
-   "sólo cuando se va solo cuando no está en"
+   "Solo cuando se va,"
+  ],
+  [
+   118.1,
+   "Solo cuando no está en esto amor"
   ],
   [
    121.1,
-   "está muy bien"
+   "Le hace bien"
+  ],
+  [
+   124.0,
+   "meterse en su laberinto carrusel"
   ],
   [
    132.9,
-   "las soy bien"
+   "le hace bien"
   ]
  ],
  "fuentes": [
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ]
+ ],
+ "letras": [
+  {
+   "desde": 0,
+   "hasta": 171,
+   "titulo": "Ámbar Violeta",
+   "autor": "Fito Páez",
+   "idioma": "es",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "https://genius.com/Fito-paez-ambar-violeta-lyrics, aportado por Kevin Roberts"
+  }
  ],
  "ventanas": {
   "total": 3,

@@ -5,118 +5,115 @@
  "seg": [
   [
    30.0,
-   "en los pies"
+   "Sácame el barro que traigo en los pies"
   ],
   [
    32.5,
-   "que ya está"
-  ],
-  [
-   36.2,
-   "seco"
-  ],
-  [
-   38.2,
-   "y me quema"
-  ],
-  [
-   40.9,
-   "la piel"
+   "Que ya está seco y me quema la piel"
   ],
   [
    43.1,
-   "sácame"
+   "Sácame el manto que cubre el dolor"
   ],
   [
-   49.6,
-   "el manto"
-  ],
-  [
-   52.0,
-   "que cubre"
-  ],
-  [
-   54.6,
-   "el dolor"
-  ],
-  [
-   59.0,
-   "Ella me pesa y no tengo el valor."
+   56.2,
+   "Que ya me pesa y no tengo el valor"
   ],
   [
    71.5,
-   "Cuando el viento esté a mi favor, tocaré, tocaré."
+   "Cuando el viento esté a mi favor"
   ],
   [
    86.3,
    "la esperanza otra vez."
   ],
   [
+   98.9,
+   "Tocaré, tocaré la esperanza otra vez (tocaré) .1'"
+  ],
+  [
    141.3,
-   "Sácame ya lo que me arrojé y sabré que la mena ya no tengo el poder."
+   "Sácame el diablo que encarna mi ser"
+  ],
+  [
+   151.1,
+   "Que ya me manda y no tengo el poder"
   ],
   [
    160.8,
-   "Fuerza me queda solito en la voz, para pedirle un buen embujo."
+   "Fuerza me queda solito en la voz"
+  ],
+  [
+   173.4,
+   "Para pedirte un buen empujón"
   ],
   [
    184.8,
-   "Cuando el viento esté a mi favor, tocaré, tocaré la esperanza otra vez."
+   "Cuando el viento esté a mi favor"
+  ],
+  [
+   191.3,
+   "Tocaré, tocaré la esperanza otra vez (tocaré) (Cuando el viento) esté a mi favor"
   ],
   [
    208.0,
-   "Tocaré, tocaré la esperanza otra vez."
+   "Tocaré, tocaré la esperanza otra vez (tocaré)"
   ]
  ],
  "fuentes": [
   [
-   "whisper_es"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ],
   [
    "whisper_es"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
+   "letra"
   ]
+ ],
+ "letras": [
+  {
+   "desde": 12,
+   "hasta": 223,
+   "titulo": "Baguala del Viento",
+   "autor": "Magdalena Matthey",
+   "idioma": "es",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "spotify.com, aportado por Kevin Roberts"
+  }
  ],
  "ventanas": {
   "total": 4,

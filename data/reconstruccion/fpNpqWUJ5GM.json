@@ -5,39 +5,51 @@
  "seg": [
   [
    0.0,
-   "Con la vela, plumerito, cuando nacaré en el viento,"
+   "Cortadera, plumerito,"
+  ],
+  [
+   7.6,
+   "¡cuánto nácar en el viento!"
   ],
   [
    15.2,
-   "recuerdos de tus verdores me causan un sentimiento."
+   "Recuerdos de tus verdores"
   ],
   [
-   24.1,
-   "Recuerdos de tus verdores me causan un sentimiento."
+   25.5,
+   "me causan un sentimiento."
   ],
   [
    35.9,
-   "¡Ay, cuánto te necesito de volar donde vivirá!"
+   "¡Ay, cuánto te necesito,"
+  ],
+  [
+   42.8,
+   "trebolar donde vivía!"
   ],
   [
    48.9,
-   "¡Podré volver algún día, Cortadera, plumerito!"
+   "¿Podré volver algún día,"
+  ],
+  [
+   53.6,
+   "cortadera, plumerito?"
   ],
   [
    58.9,
-   "¡Ay, cuánto te necesito! ¡Cortadera no me evito!"
+   "Por esos campos viví,"
   ],
   [
    76.4,
-   "Por esos campos viví, provincia de Buenos Aires"
+   "provincia de Buenos Aires."
   ],
   [
    85.9,
-   "y abanicando los aires por esos años que vi."
+   "Y, abanicando los aires,"
   ],
   [
    95.2,
-   "Y abanicando los aires por esos años que vi."
+   "por esos años te vi."
   ],
   [
    106.2,
@@ -50,31 +62,40 @@
  ],
  "fuentes": [
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ],
   [
    "whisper_es"
@@ -82,6 +103,17 @@
   [
    "whisper_es"
   ]
+ ],
+ "letras": [
+  {
+   "desde": 0,
+   "hasta": 143,
+   "titulo": "Cortadera, plumerito",
+   "autor": "serie",
+   "idioma": "es",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
+  }
  ],
  "ventanas": {
   "total": 3,

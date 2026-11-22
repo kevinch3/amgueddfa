@@ -33,47 +33,43 @@
   ],
   [
    95.9,
-   "Samba Quiero"
+   "Zamba quiero oír"
   ],
   [
    99.7,
-   "ir a la tarde"
+   "al atardecer:"
   ],
   [
    107.7,
-   "capullo de luz que quiere ser"
-  ],
-  [
-   113.1,
-   "solino puede"
+   "capullo de luz"
   ],
   [
    117.0,
-   "ser capullo del luz que quiere ser"
+   "que quiere ser sol"
   ],
   [
    123.1,
-   "sol y no puede"
+   "y no puede ser."
   ],
   [
    127.4,
-   "ser Ay"
-  ],
-  [
-   133.7,
-   "tristecita"
+   "¡Ay, tristecita,"
   ],
   [
    138.8,
-   "igual que es rovis azul"
+   "tristecita igual,"
+  ],
+  [
+   141.1,
+   "que es llovizna azul"
   ],
   [
    143.8,
-   "murmuro"
+   "murmurándole"
   ],
   [
    145.5,
-   "al"
+   "al cañaveral!"
   ],
   [
    148.8,
@@ -93,51 +89,43 @@
   ],
   [
    199.7,
-   "el viento la"
+   "El viento la trae,"
   ],
   [
    203.6,
-   "atrá se la lleva el"
+   "se la lleva el sol:"
   ],
   [
    208.7,
-   "sol el sueño en el"
+   "sueño en el trigal"
   ],
   [
    212.6,
-   "trigal y sobre el sausal lamento de"
-  ],
-  [
-   219.8,
-   "amor sueño en el trigal y sobre el"
-  ],
-  [
-   225.3,
-   "sausal"
+   "y sobre el sauzal,"
   ],
   [
    227.2,
-   "lamento de"
+   "lamento de amor."
   ],
   [
    230.7,
-   "amor Ya"
-  ],
-  [
-   232.9,
-   "siento"
+   "Ya siento llegar"
   ],
   [
    236.1,
-   "llegar del cerro"
+   "del cerro su voz:"
   ],
   [
    242.7,
-   "pañuelo ha de ser y lo he de prender en"
+   "pañuelo ha de ser"
+  ],
+  [
+   245.8,
+   "y lo he de prender"
   ],
   [
    248.9,
-   "el"
+   "sobre el corazón."
   ],
   [
    252.0,
@@ -203,7 +191,34 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ],
   [
    "yt_es"
@@ -218,70 +233,34 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
+   "letra"
   ],
   [
    "yt_es"
@@ -314,10 +293,21 @@
    "yt_es"
   ]
  ],
+ "letras": [
+  {
+   "desde": 75,
+   "hasta": 318,
+   "titulo": "La tristecita",
+   "autor": "Ariel Ramírez, with lyrics by María Elena Espiro",
+   "idioma": "es",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
+  }
+ ],
  "ventanas": {
   "total": 6,
-  "modelo": 6,
-  "reglas": 0,
+  "modelo": 5,
+  "reglas": 1,
   "vacias": 0
  }
 }

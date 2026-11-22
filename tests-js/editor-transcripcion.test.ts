@@ -5,7 +5,7 @@ import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
 import {
-  addNueva, cambiosLabel, cambioTexto, editControls, editorAccess, emptyDraft, enviarLabel, loadDraft, momentoNueva,
+  addNueva, cambiosLabel, cambioTexto, editControls, editorAccess, emptyDraft, enviarLabel, errorEnVista, loadDraft, momentoNueva,
   notaBorrador, notaPendiente, nuevaIdioma, parseTiempo, pendingMarks, puedeEntrar, saveDraft, sendDraft, setLine, tiempoNueva,
 } from '../src/lib/transcript-draft';
 import { asTranscript, type Transcript } from '../src/lib/video-transcript';
@@ -46,6 +46,37 @@ describe('who gets the edit button', () => {
     expect(editorAccess('chubut', tr, { profile: null, reason: 'offline' })).toEqual({ boton: false, ingresar: null });
     expect(editorAccess('juventud', tr, { profile: null, reason: 'signed_out' })).toEqual({ boton: false, ingresar: null });
     expect(editorAccess('chubut', null, { profile: null, reason: 'signed_out' })).toEqual({ boton: false, ingresar: null });
+  });
+});
+
+describe("an editor's error never pushes OK / Deshacer out of sight", () => {
+  // On a phone the line editor grows from 239 to 330 px when its error shows: OK and Deshacer fell below the list's
+  // visible bottom. Every error brings the whole editor back into view.
+  const fake = () => {
+    const scrolls: unknown[] = [];
+    return { err: { textContent: '' as string | null }, box: { scrollIntoView: (o: unknown) => void scrolls.push(o) }, scrolls };
+  };
+
+  it('shows the message and scrolls the editor into view (nearest) each time one appears or changes', () => {
+    const { err, box, scrolls } = fake();
+    errorEnVista(err, box, 'Cada línea corregida tiene que tener entre 1 y 500 caracteres.');
+    expect(err.textContent).toBe('Cada línea corregida tiene que tener entre 1 y 500 caracteres.');
+    expect(scrolls).toEqual([{ block: 'nearest' }]);
+    errorEnVista(err, box, 'Una contribución lleva como mucho 200 cambios.');
+    expect(scrolls).toEqual([{ block: 'nearest' }, { block: 'nearest' }]);
+  });
+
+  it('clearing the message does not scroll', () => {
+    const { err, box, scrolls } = fake();
+    errorEnVista(err, box, '');
+    expect(err.textContent).toBe('');
+    expect(scrolls).toEqual([]);
+  });
+
+  it('the editors set every error through it', () => {
+    const src = readFileSync(join(__dirname, '..', 'src', 'scripts', 'editor-transcripcion.ts'), 'utf8');
+    expect(src).not.toMatch(/\berr\.textContent\s*=/);
+    expect(src.match(/errorEnVista\(err, box,/g)?.length).toBeGreaterThanOrEqual(5);
   });
 });
 

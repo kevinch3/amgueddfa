@@ -12,7 +12,7 @@
 import { ownPendingVideo, submit, type Contribution } from '../lib/contrib';
 import { t } from '../lib/i18n';
 import {
-  addNueva, cabe, cambiosLabel, clearDraft, countCambios, editControls, editorAccess, emptyDraft, enviarLabel, fitDraft,
+  addNueva, cabe, cambiosLabel, clearDraft, countCambios, editControls, editorAccess, emptyDraft, enviarLabel, errorEnVista, fitDraft,
   idiomaCambio, limiteLabel, lineIdioma, loadDraft, momentoNueva, notaBorrador, notaPendiente, nuevaIdioma, nuevaTexto, pendingMarks,
   puedeEntrar, removeNueva, saveDraft, sendDraft, setLine, tiempoNueva, undoLine, type Draft, type Idioma,
 } from '../lib/transcript-draft';
@@ -297,8 +297,8 @@ export function wireEditor(dialog: HTMLDialogElement, getState: () => EditorStat
     for (const r of lang.inputs) r.addEventListener('change', () => (input.lang = lang.get() ?? ''));
     ok.addEventListener('click', () => {
       if (!quitar.checked && !input.value.trim()) {
-        err.textContent = t('contrib.error.video_texto');
         input.focus();
+        errorEnVista(err, box, t('contrib.error.video_texto'));
         return;
       }
       const cur = state().tr;
@@ -306,7 +306,7 @@ export function wireEditor(dialog: HTMLDialogElement, getState: () => EditorStat
       const next = setLine(cur, draft, i, { texto: input.value, idioma: lang.get(), quitar: quitar.checked });
       // One contribution holds at most 200 changes: refused here rather than at the send.
       if (!cabe(cur, draft, next)) {
-        err.textContent = limiteLabel();
+        errorEnVista(err, box, limiteLabel());
         return;
       }
       save(next);
@@ -380,21 +380,21 @@ export function wireEditor(dialog: HTMLDialogElement, getState: () => EditorStat
     ok.addEventListener('click', () => {
       const cuando = tiempoNueva(tiempo.value, { prefill: at, duracion: state().duration() });
       if (!cuando.ok) {
-        err.textContent = cuando.key === 'editor.error_tiempo_fin' ? t(cuando.key, { duracion: cuando.duracion }) : t(cuando.key);
         tiempo.focus();
+        errorEnVista(err, box, cuando.key === 'editor.error_tiempo_fin' ? t(cuando.key, { duracion: cuando.duracion }) : t(cuando.key));
         return;
       }
       const idi = lang.get();
       if (!input.value.trim() || !idi) {
-        err.textContent = t('contrib.error.video_texto');
         input.focus();
+        errorEnVista(err, box, t('contrib.error.video_texto'));
         return;
       }
       const cur = state().tr;
       if (!draft || !cur) return;
       const next = addNueva(draft, { t: cuando.t, texto: input.value, idioma: idi });
       if (!cabe(cur, draft, next)) {
-        err.textContent = limiteLabel();
+        errorEnVista(err, box, limiteLabel());
         return;
       }
       save(next);

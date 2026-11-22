@@ -418,6 +418,16 @@ describe('video_text', () => {
     expect(v).toMatchObject({ ok: true, payload: { cambios: [{ t: 3, antes: 'ruido', quitar: true }, { t: 4, texto: 'ay', idioma: 'cy' }] } });
     expect(validate('video_text', { video, cambios: [{ t: 3, antes: 'x' }] })).toEqual({ ok: false, key: 'contrib.error.video_cambios' });
   });
+  it('antes may be up to 2000 code points; longer is video_antes', () => {
+    expect(validate('video_text', { video, cambios: [{ t: 1, antes: 'a'.repeat(1000), texto: 'x' }] }).ok).toBe(true);
+    expect(validate('video_text', { video, cambios: [{ t: 1, antes: 'a'.repeat(2000), texto: 'x' }] }).ok).toBe(true);
+    expect(validate('video_text', { video, cambios: [{ t: 1, antes: 'a'.repeat(2001), texto: 'x' }] })).toEqual({ ok: false, key: 'contrib.error.video_antes' });
+  });
+  it('two changes with the same t and antes are video_repetido', () => {
+    expect(validate('video_text', { video, cambios: [{ t: 1, antes: 'a', texto: 'x' }, { t: 1, antes: 'a', texto: 'y' }] })).toEqual({ ok: false, key: 'contrib.error.video_repetido' });
+    expect(validate('video_text', { video, cambios: [{ t: 1, texto: 'x' }, { t: 1, texto: 'y' }] })).toEqual({ ok: false, key: 'contrib.error.video_repetido' });
+    expect(validate('video_text', { video, cambios: [{ t: 1, antes: 'a', texto: 'x' }, { t: 1, antes: 'b', texto: 'y' }, { t: 2, antes: 'a', texto: 'z' }] }).ok).toBe(true);
+  });
   it('submit only takes chubut and trevelin editions', async () => {
     const { client, inserts } = fakeClient();
     expect(await submit('video_text', 'juventud', 2001, null, { video, cambios: [ok] }, client)).toEqual({ ok: false, key: 'contrib.error.edicion' });

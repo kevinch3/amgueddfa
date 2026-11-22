@@ -422,7 +422,9 @@
       "arreglo": "Dywedwch wrthon ni i ba eisteddfod, blwyddyn neu adran mae'n perthyn (yn wahanol i ble mae hi rŵan).",
       "video_cambios": "Rhaid i gywiriad gynnwys rhwng 1 a 200 o newidiadau.",
       "video_texto": "Rhaid i bob llinell wedi'i chywiro fod rhwng 1 a 500 nod.",
-      "video_id": "Nid yw'r fideo'n cael ei adnabod. Agorwch ef eto o'i dudalen a rhowch gynnig arall arni."
+      "video_id": "Nid yw'r fideo'n cael ei adnabod. Agorwch ef eto o'i dudalen a rhowch gynnig arall arni.",
+      "video_repetido": "Mae dau newid ar gyfer yr un llinell; gadewch un yn unig.",
+      "video_antes": "Mae'r llinell honno'n rhy hir i'w chywiro o'r fan hon; rhowch wybod i ni drwy «Rhoi gwybod am wall»."
     },
     "caracteres_transcripcion": "Rhwng 10 a 15000 nod.",
     "licencia": "Mae'r trawsgrifiadau a'r ffeithiau rydych chi'n eu cyfrannu'n cael eu cyhoeddi dan drwydded CC BY-SA 4.0.",

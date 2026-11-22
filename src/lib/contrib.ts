@@ -144,6 +144,8 @@ function videoCopy(v: unknown): Record<string, string> | null {
 
 /** Most changes one video_text contribution may carry. */
 export const MAX_CAMBIOS = 200;
+/** Longest original line (`antes`) a change may target. */
+const ANTES_MAX = 2000;
 /** The festivals whose videos can be corrected. */
 const VIDEO_FESTIVALS: FestivalSlug[] = ['chubut', 'trevelin'];
 
@@ -165,7 +167,7 @@ function validateVideoText(input: Record<string, unknown>): Validation {
     if (o.idioma != null && o.idioma !== 'es' && o.idioma !== 'cy') return fail('video_cambios');
     const c: Cambio = { t: o.t };
     if (o.antes != null && str(o.antes)) {
-      if (len(str(o.antes)) > VALUE_MAX) return fail('video_texto');
+      if (len(str(o.antes)) > ANTES_MAX) return fail('video_antes');
       c.antes = str(o.antes);
     }
     if (o.quitar === true) {
@@ -179,6 +181,7 @@ function validateVideoText(input: Record<string, unknown>): Validation {
       c.texto = texto;
     }
     if (o.idioma) c.idioma = o.idioma as 'es' | 'cy';
+    if (cambios.some((x) => x.t === c.t && x.antes === c.antes)) return fail('video_repetido');
     cambios.push(c);
   }
   if (cambios.length < 1) return fail('video_cambios');

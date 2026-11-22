@@ -422,7 +422,9 @@
       "arreglo": "Dicci a quale Eisteddfod, anno o sezione appartiene (diverso da dove si trova adesso).",
       "video_cambios": "Una correzione deve contenere da 1 a 200 modifiche.",
       "video_texto": "Ogni riga corretta deve essere lunga da 1 a 500 caratteri.",
-      "video_id": "Il video non è riconosciuto. Riaprilo dalla sua pagina e riprova."
+      "video_id": "Il video non è riconosciuto. Riaprilo dalla sua pagina e riprova.",
+      "video_repetido": "Ci sono due modifiche per la stessa riga; tienine una sola.",
+      "video_antes": "Quella riga è troppo lunga per essere corretta da qui; segnalacelo con «Segnala un errore»."
     },
     "caracteres_transcripcion": "Tra 10 e 15000 caratteri.",
     "licencia": "Le trascrizioni e i dati che contribuisci sono pubblicati con licenza CC BY-SA 4.0.",

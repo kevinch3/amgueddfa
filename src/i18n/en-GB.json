@@ -422,7 +422,9 @@
       "arreglo": "Tell us which eisteddfod, year or section it belongs to (different from where it is now).",
       "video_cambios": "A correction must have between 1 and 200 changes.",
       "video_texto": "Each corrected line must be between 1 and 500 characters.",
-      "video_id": "The video is not recognised. Open it again from its page and try again."
+      "video_id": "The video is not recognised. Open it again from its page and try again.",
+      "video_repetido": "There are two changes for the same line; keep only one.",
+      "video_antes": "That line is too long to correct from here; tell us with “Report an error”."
     },
     "caracteres_transcripcion": "Between 10 and 15000 characters.",
     "licencia": "The transcriptions and facts you contribute are published under the CC BY-SA 4.0 licence.",

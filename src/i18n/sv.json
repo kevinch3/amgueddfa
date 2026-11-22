@@ -422,7 +422,9 @@
       "arreglo": "Berätta vilken eisteddfod, vilket år eller vilken avdelning det hör till (inte där det ligger nu).",
       "video_cambios": "En korrigering måste innehålla mellan 1 och 200 ändringar.",
       "video_texto": "Varje korrigerad rad måste vara mellan 1 och 500 tecken.",
-      "video_id": "Videon känns inte igen. Öppna den igen från dess sida och försök på nytt."
+      "video_id": "Videon känns inte igen. Öppna den igen från dess sida och försök på nytt.",
+      "video_repetido": "Det finns två ändringar för samma rad; behåll bara en.",
+      "video_antes": "Den raden är för lång för att korrigeras härifrån; meddela oss via «Rapportera ett fel»."
     },
     "caracteres_transcripcion": "Mellan 10 och 15000 tecken.",
     "licencia": "Transkriptionerna och uppgifterna du bidrar med publiceras under licensen CC BY-SA 4.0.",

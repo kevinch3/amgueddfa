@@ -422,7 +422,9 @@
       "arreglo": "Dites-nous à quel eisteddfod, quelle année ou quelle rubrique il appartient (différent de l'emplacement actuel).",
       "video_cambios": "Une correction doit comporter entre 1 et 200 modifications.",
       "video_texto": "Chaque ligne corrigée doit comporter entre 1 et 500 caractères.",
-      "video_id": "La vidéo n'est pas reconnue. Rouvrez-la depuis sa page et réessayez."
+      "video_id": "La vidéo n'est pas reconnue. Rouvrez-la depuis sa page et réessayez.",
+      "video_repetido": "Il y a deux modifications pour la même ligne ; n'en gardez qu'une.",
+      "video_antes": "Cette ligne est trop longue pour être corrigée ici ; signalez-la avec « Signaler une erreur »."
     },
     "caracteres_transcripcion": "Entre 10 et 15000 caractères.",
     "licencia": "Les transcriptions et les informations que vous apportez sont publiées sous licence CC BY-SA 4.0.",

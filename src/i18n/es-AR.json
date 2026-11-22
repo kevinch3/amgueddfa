@@ -422,7 +422,9 @@
       "arreglo": "Decinos a qué eisteddfod, año o sección corresponde (distinto de donde está ahora).",
       "video_cambios": "Una corrección tiene que tener entre 1 y 200 cambios.",
       "video_texto": "Cada línea corregida tiene que tener entre 1 y 500 caracteres.",
-      "video_id": "No se reconoce el video. Abrilo de nuevo desde su página y volvé a intentar."
+      "video_id": "No se reconoce el video. Abrilo de nuevo desde su página y volvé a intentar.",
+      "video_repetido": "Hay dos cambios para la misma línea; dejá uno solo.",
+      "video_antes": "Esa línea es demasiado larga para corregirla desde acá; avisanos con «Informar un error»."
     },
     "caracteres_transcripcion": "Entre 10 y 15000 caracteres.",
     "licencia": "Las transcripciones y los datos que aportás se publican bajo la licencia CC BY-SA 4.0.",

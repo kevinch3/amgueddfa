@@ -1074,6 +1074,7 @@
     "editar": "Edit transcript",
     "editar_linea": "Correct the line at {tiempo}",
     "ayuda": "Press ✎ to correct a line, remove it or change its language. To add something that's missing, pause the video where it starts and press “Add”. Everything is sent together and published once it has been reviewed.",
+    "como_funciona": "How it works",
     "texto": "Text",
     "quitar": "Remove this line",
     "idioma": "Language",

@@ -111,6 +111,37 @@ describe('the counter and the send button', () => {
     expect(astro).toMatch(/\{editable && <button[^>]*data-rep-editar/);
   });
 
+  it('keeps a compact bar (counter, Enviar, Cancelar) and folds its help under «Cómo funciona» (B9, phone width)', () => {
+    const astro = readFileSync(join(__dirname, '..', 'src', 'components', 'VideoPlayer.astro'), 'utf8');
+    // One bar that wraps as it must: the counter, Enviar and Cancelar first, then «+ Agregar» and «Cómo funciona», which
+    // discloses the help; the help starts hidden (it no longer always takes the list's room).
+    expect(astro).toMatch(/<div class="rep-ed-barra">\s*<p[^>]*data-editor-n[^>]*><\/p>\s*<button[^>]*data-editor-enviar[^>]*><\/button>\s*<button[^>]*data-editor-cancelar[^>]*>[^<]*<\/button>\s*<button[^>]*data-editor-agregar[^>]*><\/button>\s*<button[^>]*data-editor-como aria-expanded="false" aria-controls="rep-ed-ayuda">\{t\('editor\.como_funciona'\)\}<\/button>\s*<\/div>/);
+    expect(astro).toMatch(/<p class="muted small rep-ed-ayuda" id="rep-ed-ayuda" data-editor-ayuda hidden>\{t\('editor\.ayuda'\)\}<\/p>/);
+  });
+
+  it('on a phone, edit mode gives the transcript room for its bar and a list of at least max(200 px, 40% of the screen)', () => {
+    const css = readFileSync(join(__dirname, '..', 'src', 'styles', 'global.css'), 'utf8').replace(/\/\*[\s\S]*?\*\//g, '');
+    // Every block of the phone layout (max-width 59.99rem), braces matched.
+    const blocks: string[] = [];
+    for (let at = css.indexOf('@media (max-width: 59.99rem)'); at >= 0; at = css.indexOf('@media (max-width: 59.99rem)', at + 1)) {
+      let depth = 0;
+      let k = css.indexOf('{', at);
+      const start = k;
+      for (; k < css.length; k++) {
+        if (css[k] === '{') depth++;
+        else if (css[k] === '}' && --depth === 0) break;
+      }
+      blocks.push(css.slice(start + 1, k));
+    }
+    const phone = blocks.join('\n');
+    const rule = (sel: string) => phone.match(new RegExp(`${sel.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\s*\\{([^}]*)\\}`))?.[1] ?? '';
+    const edit = '.rep-tr:has(> .rep-editor:not([hidden]))';
+    // The transcript grows with what it holds (its 50dvh floor squeezed the list to 8-198 px under the editor's panel)...
+    expect(rule(edit)).toMatch(/min-height:\s*auto/);
+    // ...and the list keeps its own floor; it scrolls inside, the player's body scrolls around it.
+    expect(rule(`${edit} > .rep-lineas`)).toMatch(/flex:\s*1 0 max\(12\.5rem,\s*40dvh\)/);
+  });
+
   it('describes a change in words: the new text, a removal, a language', () => {
     expect(cambioTexto({ texto: 'Veredicto' })).toBe('«Veredicto»');
     expect(cambioTexto({ quitar: true })).toBe('Quitar esta línea');

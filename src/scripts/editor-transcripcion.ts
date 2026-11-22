@@ -72,6 +72,8 @@ export function wireEditor(dialog: HTMLDialogElement, getState: () => EditorStat
   const seguir = q<HTMLButtonElement>('[data-editor-seguir]')!;
   const msg = q('[data-editor-msg]')!;
   const estado = q('[data-editor-estado]')!;
+  const ayuda = q('[data-editor-ayuda]');
+  const como = q<HTMLButtonElement>('[data-editor-como]');
 
   /** The video whose lines are drawn, and whether its visitor may edit it. */
   let shown: string | null = null;
@@ -98,6 +100,24 @@ export function wireEditor(dialog: HTMLDialogElement, getState: () => EditorStat
       return g;
     }));
   const syncEditando = () => lines.toggleAttribute(EDITANDO, abierta !== null || !nuevaBox.hidden);
+  /** The phone layout (global.css, max-width 59.99rem): the video above the transcript, the body scrolling as a whole. */
+  const estrecho = () => !!window.matchMedia?.('(max-width: 59.99rem)').matches;
+
+  /** «Cómo funciona»: the help shown or folded (a disclosure button; its paragraph sits under the bar). */
+  function mostrarAyuda(open: boolean): void {
+    if (!ayuda || !como) return;
+    ayuda.hidden = !open;
+    como.setAttribute('aria-expanded', String(open));
+  }
+
+  /** On a phone, the transcript in view under the player's head as edit mode starts: whole when it fits (the end of the
+   * video stays above it), else from its top (the bar first). */
+  function verTranscripcion(): void {
+    const trBox = panel.closest<HTMLElement>('.rep-tr');
+    const body = panel.closest<HTMLElement>('.rep-cuerpo');
+    if (!estrecho() || !trBox || !body) return;
+    trBox.scrollIntoView({ block: trBox.offsetHeight <= body.clientHeight ? 'end' : 'start' });
+  }
 
   // ---- The author's pending changes (always shown to them, edit mode or not) ----
 
@@ -299,7 +319,9 @@ export function wireEditor(dialog: HTMLDialogElement, getState: () => EditorStat
     abierta = i;
     lines.querySelector(`[data-editar-linea="${i}"]`)?.setAttribute('aria-expanded', 'true');
     syncEditando();
-    input.focus();
+    // The whole editor in view (its words, language, Quitar, OK and Deshacer), not only the field.
+    input.focus({ preventScroll: true });
+    box.scrollIntoView({ block: 'nearest' });
   }
 
   function closeNueva(focus: boolean): void {
@@ -361,7 +383,8 @@ export function wireEditor(dialog: HTMLDialogElement, getState: () => EditorStat
     nuevaBox.replaceChildren(box);
     nuevaBox.hidden = false;
     syncEditando();
-    input.focus();
+    input.focus({ preventScroll: true });
+    box.scrollIntoView({ block: 'nearest' });
   }
 
   /** Into edit mode, resuming this video's saved draft (each change back on its own line). */
@@ -375,6 +398,8 @@ export function wireEditor(dialog: HTMLDialogElement, getState: () => EditorStat
     msg.textContent = fit.descartados ? t('editor.descartados', { n: fit.descartados }) : '';
     estado.replaceChildren();
     confirmar.hidden = true;
+    // The help starts folded: open, it would take the list's room (on a phone, and in the narrow column of a laptop).
+    mostrarAyuda(false);
     panel.hidden = false;
     boton.hidden = true;
     paintEdit();
@@ -382,7 +407,8 @@ export function wireEditor(dialog: HTMLDialogElement, getState: () => EditorStat
     paintAgregar();
     window.clearInterval(timer);
     timer = window.setInterval(paintAgregar, 1000);
-    if (focus) panel.focus();
+    verTranscripcion();
+    if (focus) panel.focus({ preventScroll: true });
   }
 
   /** Out of edit mode; the draft stays saved unless it was sent or discarded. */
@@ -463,6 +489,7 @@ export function wireEditor(dialog: HTMLDialogElement, getState: () => EditorStat
   });
 
   boton.addEventListener('click', () => enter(true));
+  como?.addEventListener('click', () => mostrarAyuda(!!ayuda?.hidden));
   agregar.addEventListener('click', openNueva);
   agregar.addEventListener('blur', paintAgregar);
 

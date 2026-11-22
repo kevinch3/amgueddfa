@@ -1074,6 +1074,7 @@
     "editar": "Redigera transkriptionen",
     "editar_linea": "Rätta raden vid {tiempo}",
     "ayuda": "Tryck på ✎ för att rätta en rad, ta bort den eller byta dess språk. För att lägga till något som saknas, pausa videon där det börjar och tryck på ”Lägg till”. Allt skickas tillsammans och publiceras efter granskning.",
+    "como_funciona": "Så fungerar det",
     "texto": "Text",
     "quitar": "Ta bort den här raden",
     "idioma": "Språk",

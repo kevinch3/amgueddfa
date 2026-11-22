@@ -59,16 +59,17 @@ const editable = (EDITABLE_FESTIVALS as readonly string[]).includes(Astro.props.
       </div>
       {editable && (
         <section class="rep-editor" data-rep-editor hidden tabindex="-1" aria-label={t('editor.editar')}>
-          <p class="muted small rep-ed-ayuda">{t('editor.ayuda')}</p>
+          {/* A compact bar first, so the panel leaves the list its room (B9: on a phone it squeezed the list to 8 px);
+              the help folds away under «Cómo funciona», folded each time edit mode starts. */}
           <div class="rep-ed-barra">
             <p class="rep-ed-n" data-editor-n aria-live="polite"></p>
-            <button type="button" class="btn-link small" data-editor-agregar></button>
-          </div>
-          <div data-editor-nueva hidden></div>
-          <p class="tarea-acciones">
             <button type="button" class="btn" data-editor-enviar disabled></button>
             <button type="button" class="btn btn-quiet" data-editor-cancelar>{t('editor.cancelar')}</button>
-          </p>
+            <button type="button" class="btn-link small" data-editor-agregar></button>
+            <button type="button" class="btn-link small rep-ed-como" data-editor-como aria-expanded="false" aria-controls="rep-ed-ayuda">{t('editor.como_funciona')}</button>
+          </div>
+          <p class="muted small rep-ed-ayuda" id="rep-ed-ayuda" data-editor-ayuda hidden>{t('editor.ayuda')}</p>
+          <div data-editor-nueva hidden></div>
           <div class="rep-ed-confirmar" data-editor-confirmar hidden>
             <p>{t('editor.confirmar_cancelar')}</p>
             <p class="tarea-acciones">

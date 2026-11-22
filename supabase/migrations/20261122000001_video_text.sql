@@ -8,20 +8,34 @@ alter table public.contributions drop constraint contributions_type_check;
 alter table public.contributions add constraint contributions_type_check
   check (type in ('upload', 'fact', 'tag', 'transcription', 'memory', 'report', 'note', 'video_text'));
 
+-- What JavaScript's String.prototype.trim() takes off, so a blank here is a blank in the browser (validateVideoText trims
+-- each line and its words; the admin's form trims a withdrawal's reason): tabs, line breaks (U+2028 and U+2029 too),
+-- every kind of space (Unicode Zs, from U+0020 to the ideographic U+3000) and the BOM. trim() keeps a zero-width space
+-- (U+200B), a joiner or a soft hyphen, and so does this.
+create function public.js_trim(s text)
+returns text
+language sql immutable
+set search_path = public, pg_temp
+as $$
+  select btrim(s, E'\u0009\u000A\u000B\u000C\u000D\u0020\u00A0\u1680\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u2028\u2029\u202F\u205F\u3000\uFEFF')
+$$;
+
 -- Whether a video_text payload is one validateVideoText (src/lib/contrib.ts) could have built, for a video of that
--- festival: Chubut or Trevelin; payload.video.id a video id; 1 to 200 changes, each an object with `t` a number not
--- below 0; `antes` (the line it targets) a non-blank string of at most 2,000 characters; `texto` a non-blank string of
--- at most 500; `idioma` es or cy; `quitar` a boolean; and each change doing something (an add, with no `antes`, writes
--- words; a removal needs its line). The trigger below keeps any other payload out of the table (an insert crafted
--- through the API never reaches the queue), and the two admin paths that change `cambios` check what they would store.
+-- festival: Chubut or Trevelin; only the keys it builds (the payload's video, base and cambios; the video's id and title;
+-- a change's t, antes, texto, idioma and quitar), since approval publishes the payload as it is, and submit() adds
+-- nothing to a transcript correction (a lote groups facts sent together; a storage_path is an upload's); payload.video.id
+-- a video id; 1 to 200 changes, each an object with `t` a number not below 0; `antes` (the line it targets) a non-blank
+-- string of at most 2,000 characters; `texto` a non-blank string of at most 500; `idioma` es or cy; `quitar` a boolean;
+-- each change doing something (an add, with no `antes`, writes words; a removal needs its line); and no two changes to
+-- the same line (the same `t` and `antes`; two adds at the same `t`), as validate() refuses (video_repetido). The trigger
+-- below keeps any other payload out of the table (an insert crafted through the API never reaches the queue), and the
+-- two admin paths that change `cambios` check what they would store.
 create function public.video_text_valid(p_festival text, p jsonb)
 returns boolean
 language plpgsql immutable
 set search_path = public, pg_temp
 as $$
 declare
-  -- What JavaScript's trim() takes off (contrib.ts trims each texto): tabs, line breaks, every kind of space, the BOM.
-  ws constant text := E'\u0009\u000A\u000B\u000C\u000D                  　﻿';
   c jsonb;
   linea boolean;
 begin
@@ -30,6 +44,12 @@ begin
     return false;
   end if;
   if p is null or jsonb_typeof(p) <> 'object' or jsonb_typeof(p -> 'video') is distinct from 'object' then
+    return false;
+  end if;
+  if exists (select 1 from jsonb_object_keys(p) k where k not in ('video', 'base', 'cambios')) then
+    return false;
+  end if;
+  if exists (select 1 from jsonb_object_keys(p -> 'video') k where k not in ('id', 'title')) then
     return false;
   end if;
   if jsonb_typeof(p -> 'video' -> 'id') is distinct from 'string' then
@@ -60,6 +80,9 @@ begin
     if jsonb_typeof(c) <> 'object' then
       return false;
     end if;
+    if exists (select 1 from jsonb_object_keys(c) k where k not in ('t', 'antes', 'texto', 'idioma', 'quitar')) then
+      return false;
+    end if;
     if jsonb_typeof(c -> 't') is distinct from 'number' then
       return false;
     end if;
@@ -71,7 +94,7 @@ begin
       if jsonb_typeof(c -> 'antes') <> 'string' then
         return false;
       end if;
-      if btrim(c ->> 'antes', ws) = '' or char_length(c ->> 'antes') > 2000 then
+      if public.js_trim(c ->> 'antes') = '' or char_length(c ->> 'antes') > 2000 then
         return false;
       end if;
     end if;
@@ -79,7 +102,7 @@ begin
       if jsonb_typeof(c -> 'texto') <> 'string' then
         return false;
       end if;
-      if btrim(c ->> 'texto', ws) = '' or char_length(c ->> 'texto') > 500 then
+      if public.js_trim(c ->> 'texto') = '' or char_length(c ->> 'texto') > 500 then
         return false;
       end if;
     end if;
@@ -97,6 +120,14 @@ begin
       return false; -- changes nothing (an add needs words)
     end if;
   end loop;
+  -- Every change is an object with a number `t` by now, so the cast is safe.
+  if exists (
+    select 1 from jsonb_array_elements(p -> 'cambios') x
+     group by (x ->> 't')::numeric, x -> 'antes'
+    having count(*) > 1
+  ) then
+    return false; -- two changes to the same line
+  end if;
   return true;
 end
 $$;
@@ -268,6 +299,7 @@ $$;
 
 -- Execute rights, as in 20261113000003_functions.sql: the checks for nobody (the trigger and the definer functions
 -- run them as their owner); the admin RPCs for signed-in users only (each checks for an admin itself).
+revoke execute on function public.js_trim(text) from public, anon, authenticated;
 revoke execute on function public.video_text_valid(text, jsonb) from public, anon, authenticated;
 revoke execute on function public.check_video_text() from public, anon, authenticated;
 revoke execute on function public.admin_withdraw_contribution(uuid, text) from public, anon;

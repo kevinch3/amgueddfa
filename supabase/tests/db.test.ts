@@ -1,5 +1,6 @@
 import { beforeEach, describe, expect, it } from 'vitest';
 import { makeDb, type TestDb, type Who } from './harness';
+import { validate } from '../../src/lib/contrib';
 
 let t: TestDb;
 
@@ -731,6 +732,12 @@ describe('video_text corrections', () => {
     ['a removal without a line', [{ t: 1, quitar: true }]],
     ['201 changes', Array.from({ length: 201 }, (_, i) => ({ t: i, antes: 'a', texto: 'b' }))],
     ['one good, one junk', [{ t: 1, antes: 'a', texto: 'b' }, { t: 30, texto: 'Z'.repeat(5000), idioma: 'en' }]],
+    // A key validation never builds would be published on approval, whatever its size.
+    ['a change with a key of its own', [{ t: 1, antes: 'a', texto: 'b', note: 'N'.repeat(50000) }]],
+    ['a change with a key of its own, null', [{ t: 1, antes: 'a', texto: 'b', html: null }]],
+    // validate() refuses a second change to the same line (video_repetido), and a second add at the same moment.
+    ['two changes to the same line', [{ t: 1, antes: 'a', texto: 'b' }, { t: 1, antes: 'a', idioma: 'cy' }]],
+    ['two adds at the same moment', [{ t: 4.5, texto: 'uno' }, { t: 4.5, texto: 'dos', idioma: 'cy' }]],
   ];
   const valid = {
     video: { id: 'UW0GV9sicGs', title: 'Eisteddfod del Chubut - Sesión día sábado' },
@@ -754,6 +761,10 @@ describe('video_text corrections', () => {
       expect(rows).toEqual([{ status: 'pending' }]);
     }
     await insert(u, { video: { id: 'abcdef12' }, cambios: [{ t: 0, texto: 'x'.repeat(500) }] });
+    // The same line at another moment, another line at the same moment, an add beside a change: all different changes.
+    await insert(u, { video: { id: 'abcdef12' }, cambios: [
+      { t: 1, antes: 'a', texto: 'b' }, { t: 2, antes: 'a', texto: 'b' }, { t: 1, antes: 'c', quitar: true }, { t: 1, texto: 'nueva' },
+    ] });
   });
 
   it('refuses a crafted row, so junk never reaches the queue (a lote to group it with others included)', async () => {
@@ -768,6 +779,12 @@ describe('video_text corrections', () => {
       ['no changes', { ...valid, cambios: [] }],
       ['a payload that is not an object', ['x']],
       ['junk behind a lote', { ...valid, lote: 'L1', cambios: [{ t: 665, antes: 'x', texto: 'visible' }, { t: -3, texto: 'HIDDEN negative add' }] }],
+      // Only video, base and cambios: submit() adds nothing to a transcript correction (a lote is for facts sent together).
+      ['a lote', { ...valid, lote: 'L1' }],
+      ['a key of its own', { ...valid, spam: 'S'.repeat(200000) }],
+      ['a storage path', { ...valid, storage_path: 'u/x.pdf' }],
+      ['a video with a key of its own', { ...valid, video: { ...valid.video, html: '<b>hi</b>' } }],
+      ['a video with a channel', { ...valid, video: { ...valid.video, channel: 'x' } }],
       ...junkCambios.map(([name, cambios]): [string, unknown] => [name, { ...valid, cambios }]),
     ];
     for (const [name, payload, festival] of bad) {
@@ -792,6 +809,8 @@ describe('video_text corrections', () => {
     }
     await expect(approve(admin, id, false, { video: { id: 5 } }), 'a bad video').rejects.toThrow(/invalid/);
     await expect(approve(admin, id, false, ['x']), 'not an object').rejects.toThrow(/invalid/);
+    await expect(approve(admin, id, false, { cambios: changes(1), spam: 'S' }), 'a key of its own').rejects.toThrow(/invalid/);
+    await expect(approve(admin, id, false, { video: { id: 'abcdef12', html: 'x' } }), 'a video key of its own').rejects.toThrow(/invalid/);
     const [r] = await t.q('postgres', 'select status, points_awarded from public.contributions where id = $1', [id]);
     expect(r).toEqual({ status: 'pending', points_awarded: 0 });
     expect(await points(u)).toBe(0);
@@ -809,6 +828,56 @@ describe('video_text corrections', () => {
     expect(r).toEqual({ status: 'approved', points_awarded: 6 });
   });
 
+  // What the admin's form (withdrawContribution) and validateVideoText trim off: JavaScript's trim(). Every kind of space
+  // and line break is blank; a zero-width space, a soft hyphen and the like are not (trim() keeps them).
+  const JS_BLANK = ['\t', '\n', '\v', '\f', '\r', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+    ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '　', '﻿'];
+  const NOT_BLANK = ['​', '‌', '‍', '⁠', '᠎', '\u0085', '­', '.'];
+
+  it('every payload validate() builds passes video_text_valid: a real batch is never refused', async () => {
+    let seed = 20261123;
+    const rnd = () => ((seed = (seed * 1103515245 + 12345) & 0x7fffffff) / 0x7fffffff);
+    const pick = <T,>(a: T[]): T => a[Math.floor(rnd() * a.length)];
+    const odd = ['​', '\u0085', '­', '😀', 'ŵ', '¡', '«', '…', '\\', '"', '́'];
+    const words = ['Hola', 'coloros', 'galices', 'Cañaveral', 'Eisteddfod', 'Diolch', 'yn', 'fawr', '98', 'número'];
+    const text = (max: number): string => {
+      const k = rnd();
+      if (k < 0.08) return '';
+      if (k < 0.16) return Array.from({ length: 1 + Math.floor(rnd() * 3) }, () => pick(JS_BLANK)).join('');
+      if (k < 0.22) return pick(odd);
+      if (k < 0.27) return Array.from({ length: max - 2 + Math.floor(rnd() * 5) }, () => pick(['😀', 'é', 'a'])).join('');
+      const parts = Array.from({ length: 1 + Math.floor(rnd() * 8) }, () => pick(rnd() < 0.15 ? odd : words));
+      return `${rnd() < 0.3 ? pick(JS_BLANK) : ''}${parts.join(pick([' ', ' ', '']))}${rnd() < 0.3 ? pick(JS_BLANK) : ''}`;
+    };
+    const change = (): Record<string, unknown> => {
+      const c: Record<string, unknown> = { t: rnd() < 0.1 ? 0 : Math.round(rnd() * 36000) / 10 };
+      if (rnd() < 0.75) c.antes = text(2000);
+      if (rnd() < 0.65) c.texto = rnd() < 0.1 && typeof c.antes === 'string' ? c.antes : text(500);
+      if (rnd() < 0.4) c.idioma = pick(['es', 'cy']);
+      if (rnd() < 0.2) c.quitar = pick([true, false]);
+      if (rnd() < 0.15) c[pick(['note', 'html', 'lote'])] = 'x'; // what the browser sends beyond a change is dropped
+      return c;
+    };
+    let built = 0;
+    const refused: unknown[] = [];
+    for (let k = 0; k < 1500; k++) {
+      const input: Record<string, unknown> = {
+        video: { id: pick(['dQw4w9WgXcQ', 'abc_DEF-12', '  BC61L8txOaQ  ']), ...(rnd() < 0.8 ? { title: text(300) } : {}),
+          ...(rnd() < 0.1 ? { channel: 'c' } : {}) },
+        cambios: Array.from({ length: 1 + Math.floor(rnd() * (rnd() < 0.05 ? 200 : 4)) }, change),
+      };
+      if (rnd() < 0.5) input.base = pick(['2026-11-20T10:00:00Z', '2026-11-20', 'nope', ' 2026-11-20 ']);
+      if (rnd() < 0.1) input.lote = 'L1';
+      const v = validate('video_text', input);
+      if (!v.ok) continue;
+      built++;
+      const [r] = await t.q<{ ok: boolean }>('postgres', 'select public.video_text_valid($1, $2::jsonb) as ok', [pick(['chubut', 'trevelin']), JSON.stringify(v.payload)]);
+      if (!r.ok) refused.push(v.payload);
+    }
+    expect(built).toBeGreaterThan(300);
+    expect(refused).toEqual([]);
+  });
+
   it('who may run the new functions: the admin RPCs signed-in users only (they check for an admin), the checks nobody', async () => {
     const can = async (role: string, fn: string) =>
       (await t.q<{ ok: boolean }>('postgres', 'select has_function_privilege($1, $2, $3) as ok', [role, fn, 'execute']))[0].ok;
@@ -816,7 +885,7 @@ describe('video_text corrections', () => {
       expect(await can('anon', fn), `anon: ${fn}`).toBe(false);
       expect(await can('authenticated', fn), `authenticated: ${fn}`).toBe(true);
     }
-    for (const fn of ['public.video_text_valid(text, jsonb)', 'public.check_video_text()']) {
+    for (const fn of ['public.video_text_valid(text, jsonb)', 'public.check_video_text()', 'public.js_trim(text)']) {
       expect(await can('anon', fn), `anon: ${fn}`).toBe(false);
       expect(await can('authenticated', fn), `authenticated: ${fn}`).toBe(false);
     }

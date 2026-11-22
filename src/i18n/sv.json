@@ -1024,8 +1024,11 @@
       "yt_es": "YouTube automatisk",
       "whisper_es": "Whisper",
       "cy": "taligenkänning för walesiska",
-      "letra": "verkets sångtext"
+      "letra": "verkets sångtext",
+      "colab": "korrigering av bidragsgivare"
     },
+    "corregida_por": "Korrigerad av {nombres}",
+    "correcciones_de": "Korrigeringar av {nombres}",
     "como_se_produce": "Hur den här texten tas fram"
   },
   "buscar": {

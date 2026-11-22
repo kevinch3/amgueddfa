@@ -1024,8 +1024,11 @@
       "yt_es": "YouTube automatique",
       "whisper_es": "Whisper",
       "cy": "reconnaissance du gallois",
-      "letra": "paroles de l'œuvre"
+      "letra": "paroles de l'œuvre",
+      "colab": "correction des contributeurs"
     },
+    "corregida_por": "Corrigée par {nombres}",
+    "correcciones_de": "Corrections de {nombres}",
     "como_se_produce": "Comment ce texte est produit"
   },
   "buscar": {

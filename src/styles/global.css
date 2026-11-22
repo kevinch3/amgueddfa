@@ -607,6 +607,8 @@ fieldset.campo { border: 0; padding: 0; }
 .rep-lineas .coincide button { background: color-mix(in srgb, var(--gold) 28%, transparent); }
 .rep-lineas .rep-letra .rep-w { font-style: italic; }
 .rep-lineas .rep-letra .rep-w::before { content: '♪ '; font-style: normal; color: var(--red-deep); }
+/* A line a collaborator corrected (approved): its normal look plus a small mark; its title says who. */
+.rep-lineas [data-colab] .rep-w::after { content: ' ✓'; font-size: 0.75em; font-style: normal; color: var(--green); }
 .rep-lineas .actual button { background: color-mix(in srgb, var(--red) 7%, transparent); box-shadow: inset 2px 0 0 var(--red); }
 .rep-lineas .actual .rep-t { color: var(--red-deep); font-weight: 600; }
 @media (min-width: 60rem) {

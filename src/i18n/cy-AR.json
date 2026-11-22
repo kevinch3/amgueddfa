@@ -1024,8 +1024,11 @@
       "yt_es": "YouTube awtomatig",
       "whisper_es": "Whisper",
       "cy": "adnabod lleferydd Cymraeg",
-      "letra": "geiriau'r darn"
+      "letra": "geiriau'r darn",
+      "colab": "cywiriad gan gyfranwyr"
     },
+    "corregida_por": "Cywirwyd gan {nombres}",
+    "correcciones_de": "Cywiriadau gan {nombres}",
     "como_se_produce": "Sut mae'r testun yma'n cael ei greu"
   },
   "buscar": {

@@ -1024,8 +1024,11 @@
       "yt_es": "YouTube automatic",
       "whisper_es": "Whisper",
       "cy": "Welsh speech recognition",
-      "letra": "the piece's lyrics"
+      "letra": "the piece's lyrics",
+      "colab": "contributors' correction"
     },
+    "corregida_por": "Corrected by {nombres}",
+    "correcciones_de": "Corrections by {nombres}",
     "como_se_produce": "How this text is produced"
   },
   "buscar": {

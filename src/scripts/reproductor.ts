@@ -4,11 +4,13 @@
  * a jump to its moment). The card keeps its plain link to YouTube for no-JS, middle
  * click and modified clicks. YouTube's code loads only when a visitor opens a video.
  * The address carries the open video (#v=<id>&t=<seconds>, lib/video-hash.ts), so a moment can be linked.
- * Transcriptions: public/transcripciones-video/<id>.json (scripts/export_video_transcripts.py).
+ * Transcriptions: public/transcripciones-video/<id>.json (scripts/export_video_transcripts.py), with the approved
+ * corrections the file does not hold yet applied live (lib/live-video-corrections.ts).
  */
-import { t } from '../lib/i18n';
+import { formatList, t } from '../lib/i18n';
+import { lineCredit, liveTranscript, type LiveTranscript } from '../lib/live-video-corrections';
 import { url } from '../lib/paths';
-import { asTranscript, creditos, findLines, fmtTime, letraAt, lineAt, lineLang, type Transcript } from '../lib/video-transcript';
+import { creditos, findLines, fmtTime, letraAt, lineAt, lineLang, type Transcript } from '../lib/video-transcript';
 import { parseVideoHash, videoHash } from '../lib/video-hash';
 import { videoUrl } from '../lib/videos';
 
@@ -124,13 +126,15 @@ if (dialog) {
     }
   }
 
-  function renderTranscript(tr: Transcript | null): void {
+  function renderTranscript(shown: LiveTranscript | null): void {
+    const tr = shown?.tr ?? null;
+    const autores = shown?.autores ?? {};
     current = tr;
     active = -1;
     lines.replaceChildren();
     $('[data-rep-vacio]')!.hidden = !!tr;
     $('[data-rep-buscador]')!.hidden = !tr;
-    renderFooter(tr);
+    renderFooter(tr, shown?.nombres ?? []);
     const badge = $('[data-rep-fuente]')!;
     badge.hidden = !tr;
     search.value = '';
@@ -162,8 +166,10 @@ if (dialog) {
         time.dataset.lang = lang;
       }
       b.setAttribute('aria-label', `${t('reproductor.ir_a', { tiempo: fmtTime(start) })}: ${text}`);
-      const fu = tr.fuentes?.[i];
-      if (fu?.length) b.title = fu.map((x) => t(`reproductor.origen.${x}`)).join(' + ');
+      // Its sources, and who corrected it: a corrected or added line keeps its look plus a small mark.
+      const cred = lineCredit(tr.fuentes?.[i], autores[i]);
+      if (cred.title) b.title = cred.title;
+      if (cred.colab) li.dataset.colab = '';
       b.append(time, words);
       li.append(b);
       frag.append(li);
@@ -171,12 +177,16 @@ if (dialog) {
     lines.append(frag);
   }
 
-  /** The footer under the lines: the Whisper warning, and one credit line per lyric (title, author, rights, source). */
-  function renderFooter(tr: Transcript | null): void {
+  /** The footer under the lines: the Whisper warning, one credit line per lyric (title, author, rights, source), and
+   *  the collaborators whose approved corrections are in the text. */
+  function renderFooter(tr: Transcript | null, nombres: string[]): void {
     const whisper = tr?.src === 'whisper';
     const cred = tr ? creditos(tr) : [];
     $('[data-rep-nota]')!.hidden = !whisper;
     $('[data-rep-creditos]')!.hidden = !cred.length;
+    const colab = $('[data-rep-colab]')!;
+    colab.hidden = !nombres.length;
+    colab.textContent = nombres.length ? t('reproductor.correcciones_de', { nombres: formatList(nombres) }) : '';
     // Always there under a transcript: at least the link to how its text is produced (/creditos/#videos).
     $('[data-rep-pie]')!.hidden = !tr;
     const ul = $('[data-rep-creditos-lista]')!;
@@ -249,16 +259,15 @@ if (dialog) {
     const token = ++loadToken;
     renderTranscript(null);
     $('[data-rep-vacio]')!.textContent = t('reproductor.cargando');
-    let tr: Transcript | null = null;
-    try {
-      const r = await fetch(url(`transcripciones-video/${id}.json`));
-      if (r.ok) tr = asTranscript(await r.json());
-    } catch {
-      /* offline or none: the panel says so */
-    }
+    // The published file (null for a 404; offline or none: the panel says so), then the approved corrections it does
+    // not hold yet, asked only when there is a file; without an answer the file shows as it is.
+    const shown = await liveTranscript(id, async (v) => {
+      const r = await fetch(url(`transcripciones-video/${v}.json`));
+      return r.ok ? r.json() : null;
+    });
     if (token !== loadToken) return; // the visitor moved to another video meanwhile
     $('[data-rep-vacio]')!.textContent = t('reproductor.sin_transcripcion');
-    renderTranscript(tr);
+    renderTranscript(shown);
   }
 
   async function show(i: number, start = 0): Promise<void> {

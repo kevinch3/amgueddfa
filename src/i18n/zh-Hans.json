@@ -1024,8 +1024,11 @@
       "yt_es": "YouTube 自动字幕",
       "whisper_es": "Whisper",
       "cy": "威尔士语语音识别",
-      "letra": "作品歌词"
+      "letra": "作品歌词",
+      "colab": "贡献者更正"
     },
+    "corregida_por": "由 {nombres} 更正",
+    "correcciones_de": "更正者：{nombres}",
     "como_se_produce": "此文本是如何生成的"
   },
   "buscar": {

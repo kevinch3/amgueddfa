@@ -1024,8 +1024,11 @@
       "yt_es": "YouTube automático",
       "whisper_es": "Whisper",
       "cy": "reconocimiento de galés",
-      "letra": "letra de la obra"
+      "letra": "letra de la obra",
+      "colab": "corrección de colaboradores"
     },
+    "corregida_por": "Corregida por {nombres}",
+    "correcciones_de": "Correcciones de {nombres}",
     "como_se_produce": "Cómo se produce este texto"
   },
   "buscar": {

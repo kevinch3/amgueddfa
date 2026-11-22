@@ -116,6 +116,21 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "026e9508-59e7-4f2e-a0c8-e1a9c776926d",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2024,
+    "item_id": "0fa1b7b0d9ad",
+    "payload": {
+      "category": "bases",
+      "festival": "chubut",
+      "year": 2024
+    },
+    "created_at": "2026-11-22T19:39:31.245615+00:00",
+    "reviewed_at": "2026-11-22T19:39:31.245615+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "0313d7ae-7937-4abc-bd95-fb6fcaea1c50",
     "type": "tag",
     "festival": "juventud",
@@ -2021,6 +2036,19 @@
     "created_at": "2026-11-16T18:31:17.630618+00:00",
     "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
     "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "3dc697ce-2df9-4f08-ab49-3f55ac4ff728",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 1886,
+    "item_id": "74ba4c04b85f",
+    "payload": {
+      "year": 1886
+    },
+    "created_at": "2026-11-22T18:54:16.325172+00:00",
+    "reviewed_at": "2026-11-22T18:54:16.325172+00:00",
+    "display_name": "Kevin Roberts"
   },
   {
     "id": "3f952f17-e5e0-4290-a3e0-8e0947f120ec",
@@ -4399,6 +4427,19 @@
     },
     "created_at": "2026-11-14T16:38:37.91413+00:00",
     "reviewed_at": "2026-11-14T16:38:37.91413+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "88123e6a-eb3b-426b-be8d-6cbca91241a4",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 1886,
+    "item_id": "58897881813d",
+    "payload": {
+      "year": 1886
+    },
+    "created_at": "2026-11-22T18:53:57.60328+00:00",
+    "reviewed_at": "2026-11-22T18:53:57.60328+00:00",
     "display_name": "Kevin Roberts"
   },
   {

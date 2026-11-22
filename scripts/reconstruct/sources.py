@@ -30,6 +30,7 @@ SPANISH_NEAR = 3.0  # seconds: a Welsh line this close to a Spanish line is take
 # 118 of the 134 Welsh lines dropped; next to real speech the Welsh model writes the Spanish in Welsh
 # spelling or even translates it ("Aquí ha sido un placer" -> "Dwi'n meddwl bod o'n pleser").
 SPANISH_SPEECH_WORDS = 5
+SAME_SPEECH = 10.0  # s: a Spanish recogniser's Welsh line this close to a Bangor line is the same speech
 
 
 class Line(NamedTuple):
@@ -94,6 +95,11 @@ def load_sources(stem: Path, video_id: str, letras: Path = LETRAS) -> list[Line]
                     for s in json.loads(cy.read_text(encoding="utf-8"))["segments"]
                     if s["text"] and ("lp" not in s or math.exp(s["lp"]) >= MIN_CY_CONF) and not is_english(s["text"])
                     and round(float(s["s"]), 2) not in spanish_segments and not heard_as_spanish(float(s["s"]), s["text"])]
+            # The other way round: Welsh speech a Spanish recogniser wrote ("en" for "yn") is left out where
+            # Bangor has it too, within SAME_SPEECH s: the same speech, written far worse.
+            bangor = [l.t for l in out if l.src == "cy"]
+            out = [l for l in out if not (l.src in ("yt_es", "whisper_es") and line_language(l.text, [l.src]) == "cy"
+                                          and any(abs(l.t - t) <= SAME_SPEECH for t in bangor))]
     heard_es = [[l.t, l.text] for l in sorted(out) if l.src in ("subida", "yt_es", "whisper_es")]
     heard_cy = [[l.t, l.text] for l in sorted(out) if l.src == "cy"]
     for sp in spans_for(video_id, letras):

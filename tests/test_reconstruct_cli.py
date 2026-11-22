@@ -1,4 +1,6 @@
 import json
+import threading
+import time
 
 import pytest
 
@@ -70,13 +72,14 @@ def test_checker_failure_uses_rules(tmp_path):
     assert not any("ganador" in t for _, t in res["seg"])
 
 
-def test_three_model_errors_in_a_row_stop_the_run(tmp_path):
+@pytest.mark.parametrize("jobs", [1, 2])
+def test_three_model_errors_in_a_row_stop_the_run(tmp_path, jobs):
     repo, backup, video = _setup(tmp_path)
 
     def down(w):
         raise ModelError("usage limit")
     with pytest.raises(TooManyErrors):
-        reconstruct_video(repo, backup, video, ask=down, replies=tmp_path / "replies")
+        reconstruct_video(repo, backup, video, ask=down, replies=tmp_path / "replies", jobs=jobs)
     assert not (repo / "data/reconstruccion/vid.json").exists()
 
 
@@ -125,3 +128,39 @@ def test_welsh_only_video_is_reconstructed_and_marked_welsh(tmp_path):
     res = reconstruct_video(repo, backup, video, ask=echo_model([]), replies=tmp_path / "replies")
     assert res is not None and res["lang"] == "cy" and len(res["seg"]) == 18
     assert all(f == ["cy"] for f in res["fuentes"])
+
+
+def test_jobs_ask_several_windows_at_once_and_give_the_same_text(tmp_path):
+    repo, backup, video = _setup(tmp_path)
+    serial = reconstruct_video(repo, backup, video, ask=echo_model([]), replies=tmp_path / "one")
+    calls, live, peak, lock = [], [0], [0], threading.Lock()
+    echo = echo_model(calls)
+
+    def slow(w):
+        with lock:
+            live[0] += 1
+            peak[0] = max(peak[0], live[0])
+        time.sleep(0.05)
+        with lock:
+            live[0] -= 1
+        return echo(w)
+    together = reconstruct_video(repo, backup, video, ask=slow, replies=tmp_path / "many", jobs=3)
+    assert together == serial and peak[0] > 1
+    assert sorted(calls) == sorted(p.stem for p in (tmp_path / "many/vid").iterdir())
+
+
+def test_cached_windows_between_failures_do_not_hide_a_usage_limit(tmp_path):
+    repo, backup, video = _setup(tmp_path)
+    (backup / "videos/x/clip_vid.info.json").write_text('{"duration": 420}', encoding="utf-8")
+    (backup / "videos/x/clip_vid.es-orig.vtt").write_text("WEBVTT\nKind: captions\nLanguage: es\n\n" + "".join(
+        f"00:{m:02d}:{s:02d}.000 --> 00:{m:02d}:{s + 2:02d}.000 align:start position:0%\nbienvenidos a Trelew {m}{s}\n\n"
+        for m in range(0, 7) for s in range(0, 60, 10)), encoding="utf-8")
+    first = []
+    reconstruct_video(repo, backup, video, ask=echo_model(first), replies=tmp_path / "replies")
+    for h in first[1::2]:  # every other window loses its cached reply
+        (tmp_path / f"replies/vid/{h}.json").unlink()
+
+    def down(w):
+        raise ModelError("usage limit")
+    with pytest.raises(TooManyErrors):
+        reconstruct_video(repo, backup, video, ask=down, replies=tmp_path / "replies")

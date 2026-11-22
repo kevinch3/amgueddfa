@@ -132,6 +132,26 @@ describe('video corrections: rows the export already baked', () => {
     expect(full.sinAnclar.map((s) => [s.id, s.cambio.t])).toEqual([['c', 11]]);
   });
 
+  it.each([
+    ['rewrote', { t: 11, antes: 'Gaiman', texto: 'Trelew' }, 'Buenas noches Trelew'],
+    ['removed', { t: 11, antes: 'Gaiman', quitar: true }, 'Buenas noches'],
+  ] as const)('follows a chain where a later baked change %s part of an earlier one\'s words', (_, later, shown) => {
+    const rows = [
+      row('a', '10:00', 'Ana', [{ t: 11, antes: 'Buenas noches', texto: 'Buenas noches Gaiman' }]),
+      row('b', '11:00', 'Bruno', [later]),
+      row('c', '12:00', 'Carla', [{ t: 11, antes: 'Buenas noches', texto: 'Buenas noches a todos' }]),
+    ];
+    const tr = { lang: 'es', seg: [[10, 'Buenas noches'], [11, shown]] as [number, string][], fuentes: [['yt_es'], ['yt_es', 'colab']] };
+    const out = applyCorrections(tr, rows, { baked: new Set(['a', 'b']) });
+    expect(out.tr.seg).toEqual(tr.seg);
+    expect(out.sinAnclar.map((s) => [s.id, s.cambio.t])).toEqual([['c', 11]]);
+    // What the next export makes of the same rows from the machine text.
+    const machine = { lang: 'es', seg: [[10, 'Buenas noches'], [11, 'Buenas noches']] as [number, string][], fuentes: [['yt_es'], ['yt_es']] };
+    const full = applyCorrections(machine, rows);
+    expect(full.tr.seg).toEqual(tr.seg);
+    expect(full.sinAnclar.map((s) => [s.id, s.cambio.t])).toEqual([['c', 11]]);
+  });
+
   it('leaves no trace for a baked change that did not land, nor for one that only fixed case or marks', () => {
     // The file after the export: Ana's first change found no line (the export listed it in sin_anclar), her second
     // only capitalised line 21; line 20 is its twin.

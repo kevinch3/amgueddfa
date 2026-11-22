@@ -100,13 +100,13 @@ function ubicar(lines: Linea[], huellas: Huella[], t: number, antes: string): Lu
   return null;
 }
 
-/** Whether `texto` stands in a line near `t` (equal within 2 s, a run of whole words within 5 s; never a lyric line)
- * or in what a later change took from there: the change that wrote it landed, and what it rewrote is gone. */
+/** Whether the change that wrote `texto` near `t` landed: `texto` stands in a line there (equal within 2 s, a run of
+ * whole words within 5 s; never a lyric line), or a later change took it from there, all of it or some of its words. */
 function quedo(lines: Linea[], huellas: Huella[], t: number, texto: string): boolean {
   const bw = palabras(texto).map((p) => p.w);
   // Equal within 2 s is a run within 5 s, so one test covers both windows.
   return lines.some((l) => Math.abs(l.t - t) <= CERCA && !l.fu.includes('letra') && donde(palabras(l.text).map((p) => p.w), bw) >= 0)
-    || huellas.some((h) => Math.abs(h.t - t) <= CERCA && donde(h.w, bw) >= 0);
+    || huellas.some((h) => Math.abs(h.t - t) <= CERCA && (donde(h.w, bw) >= 0 || (h.w.length > 0 && donde(bw, h.w) >= 0)));
 }
 
 /** The transcript with `rows` applied in `reviewed_at` order, and what came of them: `applied` lists the rows that changed
@@ -118,7 +118,8 @@ function quedo(lines: Linea[], huellas: Huella[], t: number, texto: string): boo
  * `baked` (the player only; the export always starts from the machine text) names rows the file already holds (its
  * `correcciones`): they are not applied again, but each of their changes leaves the text it took, as at the export, so
  * a duplicate approved after the export is reported instead of landing on a twin line. A removal leaves its `antes` at
- * `t`; a rewrite leaves it when its `texto` is still there (or in what a later baked change took: newest first). */
+ * `t`; a rewrite leaves it when its `texto` is still there, or a later baked change took it or some of its words
+ * (they are replayed newest first). */
 export function applyCorrections<T extends Corregible>(
   tr: T,
   rows: CorrectionRow[],

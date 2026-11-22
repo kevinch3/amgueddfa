@@ -61,10 +61,11 @@ for the export (`/run/media/kevinch3/4eff8b2b-…/amgueddfa-backup`).
    **If it can't be placed** (the text differs from what is sung, the Welsh model heard too little,
    the aligner piles lines, the piece is not in that video…), don't force it: add an entry to
    `data/letras/huecos.json`: `letra` (slug) or `obra` (title as in the report, plus `autoria` when
-   titles are shared), optional `videos`, `motivo` (a code of `MOTIVOS` in
-   `scripts/letras_pendientes.py`) and a one-sentence Spanish `detalle` that never quotes what is
-   sung. When you later place a video that has an entry, take it out of the entry: the report
-   raises on entries for aligned videos, and on any slug, title, video or code it doesn't know.
+   titles are shared), optional `videos`, optional `desde` (`{video: seconds}`, where that video's
+   link points), `motivo` (a code of `MOTIVOS` in `scripts/letras_pendientes.py`) and a
+   one-sentence Spanish `detalle` that never quotes what is sung. When you later place a video
+   that has an entry, take it out of the entry: the report raises on entries for aligned videos,
+   and on any slug, title, video or code it doesn't know.
 7. **Export and check:** `python3 -m scripts.export_video_transcripts` (about 5 s; rewrites only
    changed files). `git status` must show only the expected `public/transcripciones-video/*.json`.
    Then `python3 -m scripts.letras_pendientes`, `npm run build`, `npm test`, `python3 -m pytest -q tests`.

@@ -1,5 +1,5 @@
 {
-  "nota": "Por qué no hay letra alineada para una obra del programa, o para uno de sus videos. Lo lee scripts/letras_pendientes.py y lo muestra docs/letras-pendientes.md. Cada entrada lleva 'letra' (slug de data/letras, cuando el texto existe) u 'obra' (título como en la tabla, más 'autoria' si varias obras lo comparten); 'videos' es opcional (sin él, vale para todos los videos sin alinear); 'motivo' es un código de MOTIVOS en el script; 'detalle' es una oración neutra. Nunca se cita nada de lo que se canta: las letras vienen solo del mantenedor.",
+  "nota": "Por qué no hay letra alineada para una obra del programa, o para uno de sus videos. Lo lee scripts/letras_pendientes.py y lo muestra docs/letras-pendientes.md. Cada entrada lleva 'letra' (slug de data/letras, cuando el texto existe) u 'obra' (título como en la tabla, más 'autoria' si varias obras lo comparten); 'videos' es opcional (sin él, vale para todos los videos sin alinear); 'desde' es opcional, {video: segundos}, el momento al que apunta el enlace de ese video; 'motivo' es un código de MOTIVOS en el script; 'detalle' es una oración neutra. Nunca se cita nada de lo que se canta: las letras vienen solo del mantenedor.",
   "huecos": [
     {"letra": "o-deuwch-ir-dyfroedd", "motivo": "texto_distinto",
      "detalle": "El texto guardado parece ser el de otro himno de título parecido: casi nada de lo que se oye cantar está en él (utHSvsjwvwo contiene la misma actuación que el clip pOQSuZMyuaI), así que hay que revisar la fuente."},
@@ -10,12 +10,12 @@
     {"letra": "si-llega-a-ser-tucumana", "motivo": "texto_distinto",
      "detalle": "Revisado por el mantenedor el 2026-11-21: el texto guardado no coincide con lo que se oye cantar en estos videos, así que queda afuera hasta revisar la fuente."},
     {"letra": "cachilo-dormido", "videos": ["cDpe89FFjOA"], "motivo": "texto_distinto",
-     "detalle": "Revisado por el mantenedor el 2026-11-21: el texto guardado no coincide con lo que se oye cantar (Chubut 2026, comp. 71); la sesión hoy no tiene capítulo para esa competencia, por eso la obra no aparece en la tabla del programa."},
-    {"letra": "rumbo-al-cerro", "videos": ["Fkm05yVVzBY"], "motivo": "texto_distinto",
-     "detalle": "Revisado por el mantenedor el 2026-11-21: el texto guardado no coincide con lo que se oye cantar en el clip (Chubut 2012, comp. 45, obra a elección)."},
+     "detalle": "Revisado por el mantenedor el 2026-11-21: el texto guardado no coincide con lo que se oye cantar (Chubut 2026, comp. 71). Además, a los marcadores de la sesión les falta el capítulo de esa competencia, por eso la obra no aparece en la tabla del programa."},
+    {"letra": "rumbo-al-cerro", "videos": ["Fkm05yVVzBY"], "motivo": "por_confirmar",
+     "detalle": "El mantenedor la dejó afuera el 2026-11-21; una pasada anterior no encontró la actuación en el clip (Chubut 2012, comp. 45, obra a elección): falta confirmar si el texto no coincide o si la obra no está."},
 
-    {"letra": "de-quien-pago-mi-redencion", "videos": ["HnVmmnyjBU4", "utHSvsjwvwo"], "motivo": "estrofa_omitida",
-     "detalle": "Chubut 2018, comp. 55 (himno a elección): el cuarteto canta las estrofas 1, 3 y 4 y saltea la 2 (la sesión, hacia 5:25, tiene la misma actuación que el clip), y el alineador todavía no puede saltear una estrofa."},
+    {"letra": "de-quien-pago-mi-redencion", "videos": ["HnVmmnyjBU4", "utHSvsjwvwo"], "desde": {"utHSvsjwvwo": 19490}, "motivo": "estrofa_omitida",
+     "detalle": "Chubut 2018, comp. 55 (himno a elección): el cuarteto canta las estrofas 1, 3 y 4 y saltea la 2 (la sesión, hacia 5:24:50, tiene la misma actuación que el clip), y el alineador todavía no puede saltear una estrofa."},
 
     {"letra": "angor", "videos": ["Fh7i29-94XY"], "motivo": "gales_insuficiente",
      "detalle": "El reconocedor galés oye la obra, pero casi todas sus líneas quedan bajo el filtro de confianza y el final del texto se amontona en pocos segundos."},
@@ -25,8 +25,7 @@
      "detalle": "El anuncio la nombra y el reconocedor galés la oye, pero casi todas sus líneas quedan bajo el filtro de confianza y el texto se amontona en pocos segundos."},
     {"letra": "pistyll-y-llan", "motivo": "gales_insuficiente",
      "detalle": "El anuncio la nombra, pero solo 2 de las 10 líneas que oyó el reconocedor galés pasan el filtro de confianza y más de la mitad del texto se amontona en cuatro segundos."},
-    {"letra": "pam-fod-eira-yn-wyn", "videos": ["eNmj-1_HlIk"], "motivo": "gales_insuficiente",
-     "detalle": "La sesión no tiene fuente en galés y su capítulo de la comp. 62 cae en el veredicto; la primera actuación (hacia 2:54:09) es la misma grabación que el clip TL1bhoNwk4U, ya alineado, cuyo tramo corrido serviría, y en la segunda (hacia 3:00:44) no se oyó nada útil."},
+
     {"letra": "newyddion-braf", "motivo": "gales_insuficiente",
      "detalle": "Todavía no se intentó alinear: quedó para después de la pasada del modelo galés, porque con las fuentes actuales el canto en galés casi no se reconoce."},
     {"letra": "eiddot-ti-o-dduw", "motivo": "gales_insuficiente",
@@ -42,6 +41,9 @@
      "detalle": "Los dos videos tienen la misma actuación (comp. 54) y el tramo está ubicado, pero los reconocedores oyeron solo palabras sueltas o espurias y el alineador amontona el texto en pocos segundos."},
     {"letra": "in-stiller-nacht", "motivo": "alineador",
      "detalle": "Dos coros la cantan en la comp. 79 y los dos tramos están ubicados, pero el alineador se ancla en palabras sueltas mal oídas (su normalización además pierde la ß) y amontona las líneas."},
+
+    {"letra": "pam-fod-eira-yn-wyn", "videos": ["eNmj-1_HlIk"], "desde": {"eNmj-1_HlIk": 10449}, "motivo": "ubicable_desde_clip",
+     "detalle": "La primera actuación de la sesión (hacia 2:54:09) es la misma grabación que el clip TL1bhoNwk4U, ya alineado: su tramo (0 a 260 s del clip) corrido 10448,6 s cae en la sesión de 2:54:09 a 2:58:29 (#129). La sesión no tiene fuente en galés, su capítulo de la comp. 62 cae en el veredicto, y en la segunda actuación (hacia 3:00:44) no se oyó nada útil: esa sigue sin letra después de ubicar la primera."},
 
     {"letra": "affanni-del-pensier", "motivo": "no_esta_en_video",
      "detalle": "El capítulo de la comp. 47 tiene solo el llamado y el aviso de que el único participante no estaba, y en el resto de la sesión no se canta."},

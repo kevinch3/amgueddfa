@@ -1,6 +1,6 @@
 ---
 titulo: Desencuentro
-autor: Aníbal Troilo and lyrics by Cátulo Castillo
+autor: Aníbal Troilo, letra de Cátulo Castillo
 idioma: es
 derechos: Derechos confirmados por el mantenedor del archivo
 fuente: Aportado por Kevin Roberts

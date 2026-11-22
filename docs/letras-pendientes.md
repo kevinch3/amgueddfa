@@ -2,7 +2,7 @@
 
 Generado por `python3 -m scripts.letras_pendientes`: no editar a mano. Cómo cargar una letra: skill `video-lyrics`. Los motivos de cada hueco: `data/letras/huecos.json`.
 
-Obras cantadas con título en el programa y video transcripto: **144** (21 alineadas en todos sus videos, 15 en parte, 17 con texto guardado sin alinear, 91 sin texto). Obras «a elección» por identificar: **325** apariciones. Actuaciones sin identificar: **107** videos.
+Obras cantadas con título en el programa y video transcripto: **138** (21 alineadas en todos sus videos, 15 en parte, 17 con texto guardado sin alinear, 85 sin texto). Esa cuenta deja afuera las obras que solo se cantan en videos sin texto publicado (5) y los videos de ediciones sin programa transcripto: los dos están en «Huecos documentados». Obras «a elección» por identificar: **312** apariciones. Actuaciones sin identificar: **290** videos.
 
 ## Huecos documentados
 
@@ -10,24 +10,34 @@ No todas las letras van a llegar; cada hueco queda anotado con su motivo. Los mo
 
 | Motivo | Obras | Videos | Qué lo cierra |
 |---|---|---|---|
-| falta el texto | 89 | 129 | El mantenedor consigue el texto tal como se canta, en su idioma (skill `video-lyrics`). |
-| sin motivo registrado | 12 | 15 | Hay texto pero no tramo ni motivo anotado: una pasada de alineación (skill `video-lyrics`); si no se puede alinear, anotar el motivo en `data/letras/huecos.json`. |
-| el texto no coincide con lo que se canta | 6 | 6 | El mantenedor revisa la fuente y manda el texto tal como se canta (estrofas que faltan, estribillos escritos donde se repiten). |
+| falta el texto | 83 | 129 | El mantenedor consigue el texto tal como se canta, en su idioma (skill `video-lyrics`). |
+| sin motivo registrado | 15 | 21 | Hay texto pero no tramo ni motivo anotado: una pasada de alineación (skill `video-lyrics`); si no se puede alinear, anotar el motivo en `data/letras/huecos.json`. |
+| el texto no coincide con lo que se canta | 5 | 5 | El mantenedor revisa la fuente y manda el texto tal como se canta (estrofas que faltan, estribillos escritos donde se repiten). |
+| motivo por confirmar | 1 | 1 | El mantenedor confirma lo que el detalle deja abierto; después la entrada pasa al motivo que corresponda. |
 | se canta sin una estrofa | 1 | 2 | Que el alineador acepte, por tramo, qué estrofas se cantan (#129). |
-| el reconocedor galés oyó muy poco | 10 | 14 | Reintentar cuando termine la pasada del modelo galés (en curso); si sigue igual, probar un filtro de confianza más bajo dentro de los tramos con letra (#129). |
+| el reconocedor galés oyó muy poco | 9 | 13 | Reintentar cuando termine la pasada del modelo galés (en curso); si sigue igual, probar un filtro de confianza más bajo dentro de los tramos con letra (#129). |
 | el alineador amontona las líneas | 2 | 3 | Que el alineador no se ancle en palabras sueltas o mal oídas, por ejemplo repartiendo desde el inicio del tramo cuando lo oído es poco (#129). |
+| se puede ubicar ya desde un clip alineado | 1 | 1 | Correr el tramo del clip ya alineado por el desfase que da el detalle y agregarlo a este video (skill `video-lyrics`); después, sacar el video de la entrada. |
 | no se canta en ese video | 4 | 4 | Nada que alinear ahí: hace falta otra grabación de esa actuación, o corregir a qué competencia apunta el video. |
 | versión por confirmar | 2 | 2 | El mantenedor confirma qué versión (y qué texto) se canta; después se pide el texto o se reusa uno guardado. |
-| obra «a elección» sin identificar | — | 296 | Escuchar el anuncio o el video para saber qué obra se cantó; con el título, la letra se pide como cualquier otra (325 apariciones, lista al final). |
-| actuación sin identificar | — | 107 | Videos sin texto publicado cuyo título y capítulos no llevan a una competencia cantada del programa: darles texto y escuchar qué se canta; entonces entran aquí como obra o «a elección». |
+| obra «a elección» sin identificar | — | 282 | Escuchar el anuncio o el video para saber qué obra se cantó (o cuál de las alternativas del programa); con el título, la letra se pide como cualquier otra (312 apariciones, lista al final). |
+| el video no tiene texto publicado | 12 | 35 | Que el video tenga texto publicado (subtítulos, Whisper o reconstrucción: `scripts/export_video_transcripts.py`); entonces entra en la tabla con sus obras. Lista en [Obras en videos sin texto publicado](#obras-en-videos-sin-texto-publicado). |
+| edición sin programa transcripto | — | 284 | Transcribir el programa de la edición (skill `programa-transcription`); hasta entonces, de esos videos solo entran los que tienen una letra alineada o nombran en su título una obra con texto guardado. |
+| actuación sin identificar | — | 290 | (260 con texto publicado, 30 sin texto.) Videos de ediciones con programa cuyo título y capítulos no nombran ninguna competencia: saber por el anuncio de cuál es y anotarlo (en una sesión, con un capítulo en `public/marcadores-video/`). Darle texto no alcanza: un video entra en la tabla solo cuando su título, sus capítulos o una letra alineada lo llevan a una competencia cantada. |
+
+Las columnas no se suman: una obra con videos en distintas situaciones cuenta en cada fila que le toca, un video con varias obras también, y «Obras» incluye 6 textos guardados fuera de la tabla del programa. «El video no tiene texto publicado» cuenta también obras que están en la tabla con otros videos; las filas de «a elección», ediciones sin programa y actuaciones sin identificar cuentan solo videos.
 
 La pasada del modelo galés sobre todos los videos publicados está en curso. Cuando termine, se reintentan las obras de «el reconocedor galés oyó muy poco»: videos donde ese reconocedor oyó muy poco del canto, o que no tenían fuente en galés.
+
+Ediciones sin programa transcripto, con sus videos (242 con texto publicado): Chubut 2016 (112), Chubut 2017 (95), Trevelin 2012 (36), Chubut 2011 (21), Trevelin 2016 (11), Chubut 2010 (3), Trevelin 2019 (2), Trevelin 2023 (2), Chubut 2003 (1), Trevelin 2020 (1).
+
+Fuera de las cuentas, además de ceremonias y noticias: 213 videos cuyo título o capítulos nombran una competencia que este informe no lee como cantada (recitación, danza, instrumental); 11 videos de Juventud y Mimosa que llegan a una obra cantada: esos videos no se transcriben (#29).
 
 No es un hueco de letra (fuera de las cuentas): «La muerte del ángel» (Astor Piazolla, arr. Néstor Zadoff), 3 videos. Según el mantenedor (2026-11-20), el arreglo no tiene letra.
 
 ## Obras del programa
 
-Primero las de texto probablemente libre (litúrgico, tradicional, autores antiguos: una pista, los derechos los confirma el mantenedor), después por cantidad de videos (una letra sirve para todos). Para cada una hace falta el texto **tal como se canta**, en su idioma. «✅ alineada» cuenta solo los videos con el tramo de esa obra en `data/letras/videos.json`; donde unos videos lo tienen y otros no, «Dónde» marca cada uno con ✅ o ✗.
+Primero las de texto probablemente libre (litúrgico, tradicional, autores antiguos: una pista, los derechos los confirma el mantenedor), después por cantidad de videos (una letra sirve para todos). Para cada una hace falta el texto **tal como se canta**, en su idioma. «✅ alineada» cuenta solo los videos con el tramo de esa obra en `data/letras/videos.json`; donde unos videos lo tienen y otros no, «Dónde» marca cada uno con ✅ o ✗. «+N sin texto» son videos de la obra que todavía no tienen texto publicado.
 
 | Obra | Autoría (programa) | Texto | Videos | Dónde | Estado |
 |---|---|---|---|---|---|
@@ -35,7 +45,7 @@ Primero las de texto probablemente libre (litúrgico, tradicional, autores antig
 | Cwlwm cariad | alawon Cymreig traddodiadol, tref. A. Ll. Thomas | probablemente libre | 3 | chubut 2022 comp. 56<br>[Z3IBzc2gERE](https://www.youtube.com/watch?v=Z3IBzc2gERE) [oULXCz__jjg](https://www.youtube.com/watch?v=oULXCz__jjg) [qbNhzuKphGM](https://www.youtube.com/watch?v=qbNhzuKphGM) | falta el texto |
 | Iesu, Drud Ddifyrrwch Dynion | J. Bach | probablemente libre | 2 | chubut 2013 comp. 65<br>[RLf-rMsfxVw](https://www.youtube.com/watch?v=RLf-rMsfxVw) [Xc08DZcPQvE](https://www.youtube.com/watch?v=Xc08DZcPQvE) | falta el texto |
 | La pastorella si leva per tempo | anónimo del siglo XV | probablemente libre | 2 | chubut 2008 comp. 84<br>[b9p2OkPUZk8](https://www.youtube.com/watch?v=b9p2OkPUZk8) [e3hQ1pdkgrE](https://www.youtube.com/watch?v=e3hQ1pdkgrE) | falta el texto |
-| Ave María | Dante Andreo | probablemente libre | 1 | chubut 2015 comp. 82<br>[2Gd6ZkLn6as](https://www.youtube.com/watch?v=2Gd6ZkLn6as) | versión por confirmar |
+| Ave María | Dante Andreo | probablemente libre | 1 (+3 sin texto) | chubut 2015 comp. 82<br>[2Gd6ZkLn6as](https://www.youtube.com/watch?v=2Gd6ZkLn6as) | versión por confirmar |
 | Ave María | Villa Lobos | probablemente libre | 1 | chubut 2013 comp. 69<br>[W8VmPf8ZAZs](https://www.youtube.com/watch?v=W8VmPf8ZAZs) | versión por confirmar |
 | Beati mortui | Felix Mendelssohn | probablemente libre | 1 | chubut 2023 comp. 72<br>[AnLRusbVjGs](https://www.youtube.com/watch?v=AnLRusbVjGs) | falta el texto |
 | Bugeilio'r Gwenith Gwyn | traddodiadol, Robat Arwyn | probablemente libre | 1 | chubut 2024 comp. 70<br>[wpSYMGm72Bk](https://www.youtube.com/watch?v=wpSYMGm72Bk) | falta el texto |
@@ -43,12 +53,12 @@ Primero las de texto probablemente libre (litúrgico, tradicional, autores antig
 | Lux Aeterna | R. Arwyn | probablemente libre | 1 | chubut 2023 comp. 56<br>[Xg70oVF4y6A](https://www.youtube.com/watch?v=Xg70oVF4y6A) | falta el texto |
 | O bone Jesu – Lux Aeterna | Fernando Moruja | probablemente libre | 1 | chubut 2025 comp. 74<br>[BC61L8txOaQ 10:15:14](https://www.youtube.com/watch?v=BC61L8txOaQ&t=36914s) | falta el texto |
 | Sanctus | Schubert | probablemente libre | 1 | chubut 2024 comp. 56<br>[vbZPAtoYGgY](https://www.youtube.com/watch?v=vbZPAtoYGgY) | falta el texto |
-| Sigl-Gân | J. Brahms, trefn. W. S. Gwynn Williams | probablemente libre | 1 | chubut 2015 comp. 66<br>[sl7LHWqYrhE](https://www.youtube.com/watch?v=sl7LHWqYrhE) | falta el texto |
+| Sigl-Gân | J. Brahms, trefn. W. S. Gwynn Williams | probablemente libre | 1 (+1 sin texto) | chubut 2015 comp. 66<br>[sl7LHWqYrhE](https://www.youtube.com/watch?v=sl7LHWqYrhE) | falta el texto |
 | Tshotsholoza | tradicional sudafricano, arr. Jeffery L. Ames | probablemente libre | 1 | chubut 2014 comp. 64<br>[RZ3aHrvj4Es](https://www.youtube.com/watch?v=RZ3aHrvj4Es) | falta el texto |
 | Cwsg Osian | Cleif Harpwood / Alun Sbardun Huws | verificar derechos | 4 | chubut 2008 comp. 62<br>[25MwUTXdIXk](https://www.youtube.com/watch?v=25MwUTXdIXk) [Q83D5ql9MCE](https://www.youtube.com/watch?v=Q83D5ql9MCE) [rl5GhfJC4qY](https://www.youtube.com/watch?v=rl5GhfJC4qY) [vVUb3Jllzsk](https://www.youtube.com/watch?v=vVUb3Jllzsk) | falta el texto |
 | Sebben, crudele | Antonio Caldara | verificar derechos | 4 | chubut 2019 comp. 47<br>[ZfwMxCXBdpM 56:53](https://www.youtube.com/watch?v=ZfwMxCXBdpM&t=3413s) [kq7OuDOKFR0](https://www.youtube.com/watch?v=kq7OuDOKFR0) [pACfvOfSW9I](https://www.youtube.com/watch?v=pACfvOfSW9I) [vdriCRAMgdk](https://www.youtube.com/watch?v=vdriCRAMgdk) | falta el texto |
 | Anfonaf Angel | Hywel Gwynfryn – Robat Arwyn | verificar derechos | 3 | chubut 2014 comp. 70<br>[3U_Q9iXVmLw](https://www.youtube.com/watch?v=3U_Q9iXVmLw) [cbs713oeNx4](https://www.youtube.com/watch?v=cbs713oeNx4) [sM3Yq450GMY](https://www.youtube.com/watch?v=sM3Yq450GMY) | falta el texto |
-| Blodau ger y Drws | Meirion Williams | verificar derechos | 3 | chubut 2015 comp. 54<br>[84kbTqp3ksk](https://www.youtube.com/watch?v=84kbTqp3ksk) [DKpP5K9XTsc](https://www.youtube.com/watch?v=DKpP5K9XTsc) [f-ZUpxthYJ0](https://www.youtube.com/watch?v=f-ZUpxthYJ0) | falta el texto |
+| Blodau ger y Drws | Meirion Williams | verificar derechos | 3 (+1 sin texto) | chubut 2015 comp. 54<br>[84kbTqp3ksk](https://www.youtube.com/watch?v=84kbTqp3ksk) [DKpP5K9XTsc](https://www.youtube.com/watch?v=DKpP5K9XTsc) [f-ZUpxthYJ0](https://www.youtube.com/watch?v=f-ZUpxthYJ0) | falta el texto |
 | Cân yr Arad Goch | Idris Lewis – Ceiriog | verificar derechos | 3 | chubut 2014 comp. 43<br>[0ah0WrQLEa4](https://www.youtube.com/watch?v=0ah0WrQLEa4) [8dpPe64kDpo](https://www.youtube.com/watch?v=8dpPe64kDpo) [N33ihYcQHEk](https://www.youtube.com/watch?v=N33ihYcQHEk) | falta el texto |
 | Chwyth, chwyth aeafol chwa | TH. A. Arne | verificar derechos | 3 | chubut 2014 comp. 40<br>[R4tkVGn9pjg](https://www.youtube.com/watch?v=R4tkVGn9pjg) [l2rPv06-TNg](https://www.youtube.com/watch?v=l2rPv06-TNg) [lc0bkNk9VWY](https://www.youtube.com/watch?v=lc0bkNk9VWY) | falta el texto |
 | Mi garganta | melodía popular argentina, arr. Carlos Guastavino | verificar derechos | 3 | chubut 2014 comp. 55<br>[1nX9tfHQXaI](https://www.youtube.com/watch?v=1nX9tfHQXaI) [8NBqb8lnGNE](https://www.youtube.com/watch?v=8NBqb8lnGNE) [ZULDqi7piuc](https://www.youtube.com/watch?v=ZULDqi7piuc) | falta el texto |
@@ -76,18 +86,16 @@ Primero las de texto probablemente libre (litúrgico, tradicional, autores antig
 | Whitburn | Henry Baker, trefn. Eric Jones | verificar derechos | 2 | chubut 2018 comp. 59<br>[YmCzK_ad_MU](https://www.youtube.com/watch?v=YmCzK_ad_MU) [qiv2ToebGYQ](https://www.youtube.com/watch?v=qiv2ToebGYQ) | falta el texto |
 | Arrayán | serie | verificar derechos | 1 | chubut 2013 comp. 63<br>[NJK9mAlm5-0](https://www.youtube.com/watch?v=NJK9mAlm5-0) | falta el texto |
 | Arweiniad | Richard Mills – George Rees | verificar derechos | 1 | chubut 2018 comp. 70<br>[TH9Z5HAgSTg](https://www.youtube.com/watch?v=TH9Z5HAgSTg) | falta el texto |
-| Awelon y Mynydd | Meirion Williams | verificar derechos | 1 | chubut 2013 comp. 39<br>[_4yagAjVxKY](https://www.youtube.com/watch?v=_4yagAjVxKY) | falta el texto |
-| Boneddwr Mawr o'r Bala | trefn. Megan Morris | verificar derechos | 1 | chubut 2014 comp. 56<br>[kYRmo5nwhaA](https://www.youtube.com/watch?v=kYRmo5nwhaA) | falta el texto |
+| Awelon y Mynydd | Meirion Williams | verificar derechos | 1 (+2 sin texto) | chubut 2013 comp. 39<br>[_4yagAjVxKY](https://www.youtube.com/watch?v=_4yagAjVxKY) | falta el texto |
+| Boneddwr Mawr o'r Bala | trefn. Megan Morris | verificar derechos | 1 (+1 sin texto) | chubut 2014 comp. 56<br>[kYRmo5nwhaA](https://www.youtube.com/watch?v=kYRmo5nwhaA) | falta el texto |
 | Byw fyddi, Nantgwrtheyrn | — | verificar derechos | 1 | chubut 2025 comp. 64<br>[KKQJfmCIACk](https://www.youtube.com/watch?v=KKQJfmCIACk) | falta el texto |
 | Cân Manawydan | M. Hopword / H. Mac Donald | verificar derechos | 1 | chubut 2019 comp. 59<br>[WeaRDK_vbiw](https://www.youtube.com/watch?v=WeaRDK_vbiw) | falta el texto |
 | Canción de cuna india | Gilardo Gilardi | verificar derechos | 1 | chubut 2024 comp. 48<br>[VDCKHPXzibM 36:59](https://www.youtube.com/watch?v=VDCKHPXzibM&t=2219s) | falta el texto |
 | Caneuon Llafar Gwlad | Roy Saer | verificar derechos | 1 | chubut 2009 comp. 58<br>[HRG106YXyk4](https://www.youtube.com/watch?v=HRG106YXyk4) | falta el texto |
-| Chino | Segura | verificar derechos | 1 | chubut 2015 comp. 81<br>[Q4Pj4bSJwf4](https://www.youtube.com/watch?v=Q4Pj4bSJwf4) | falta el texto |
 | Coedmor | R. L. Jones, trefn. Haydn | verificar derechos | 1 | chubut 2014 comp. 57<br>[2aleZnmEyMY](https://www.youtube.com/watch?v=2aleZnmEyMY) | falta el texto |
 | Cofio dy Wyneb | Emyr Huws Jones | verificar derechos | 1 | chubut 2012 comp. 55<br>[gSFrxBd-nto](https://www.youtube.com/watch?v=gSFrxBd-nto) | falta el texto |
 | Croeso Patagonia | Esyllt Roberts – Héctor Mac Donald | verificar derechos | 1 | chubut 2015 comp. 88<br>[mKGy7Dnhfz8](https://www.youtube.com/watch?v=mKGy7Dnhfz8) | falta el texto |
-| Cuchi | Leguizamón, a elección | verificar derechos | 1 | chubut 2025 comp. 50<br>[BC61L8txOaQ 7:18:16](https://www.youtube.com/watch?v=BC61L8txOaQ&t=26296s) | falta el texto |
-| Cueca del arenal | Jaime Dávalos – Eduardo Falú, arr. Enrique | verificar derechos | 1 | chubut 2015 comp. 81<br>[Q4Pj4bSJwf4](https://www.youtube.com/watch?v=Q4Pj4bSJwf4) | falta el texto |
+| Cueca del arenal | Jaime Dávalos – Eduardo Falú, arr. Enrique «Chino» Segura | verificar derechos | 1 | chubut 2015 comp. 81<br>[Q4Pj4bSJwf4](https://www.youtube.com/watch?v=Q4Pj4bSJwf4) | falta el texto |
 | Cwsg Osian | — | verificar derechos | 1 | chubut 2025 comp. 54<br>[Y0Az9sUWak0](https://www.youtube.com/watch?v=Y0Az9sUWak0) | falta el texto |
 | Cydiwn ddwylo | — | verificar derechos | 1 | chubut 2025 comp. 61<br>[Q5xCNF3y1k0](https://www.youtube.com/watch?v=Q5xCNF3y1k0) | falta el texto |
 | Dal hi'n Dynn | R. Arwyn | verificar derechos | 1 | chubut 2012 comp. 63<br>[VIXOzSYSmlA](https://www.youtube.com/watch?v=VIXOzSYSmlA) | falta el texto |
@@ -108,25 +116,21 @@ Primero las de texto probablemente libre (litúrgico, tradicional, autores antig
 | Myrddin | R. Arwyn – R. Llwyd | verificar derechos | 1 | chubut 2012 comp. 52<br>[ehqxCSs0UZ0](https://www.youtube.com/watch?v=ehqxCSs0UZ0) | falta el texto |
 | O Nefol Addfwyn Oen | — | verificar derechos | 1 | chubut 2025 comp. 53<br>[YJnenM8tw0I](https://www.youtube.com/watch?v=YJnenM8tw0I) | falta el texto |
 | Popule meus | Leonardo San Juan | verificar derechos | 1 | chubut 2024 comp. 72<br>[W1z_1ulc_lY](https://www.youtube.com/watch?v=W1z_1ulc_lY) | falta el texto |
-| Quae moerebat et dolebat | del | verificar derechos | 1 | chubut 2008 comp. 52<br>[h3uIDhOeVyc](https://www.youtube.com/watch?v=h3uIDhOeVyc) | falta el texto |
+| Quae moerebat et dolebat | del «Stabat Mater», Giambattista Pergolesi | verificar derechos | 1 | chubut 2008 comp. 52<br>[h3uIDhOeVyc](https://www.youtube.com/watch?v=h3uIDhOeVyc) | falta el texto |
 | Rhyddid | E. Olwen Jones | verificar derechos | 1 | chubut 2019 comp. 51<br>[1pJHVEUNZ08](https://www.youtube.com/watch?v=1pJHVEUNZ08) | falta el texto |
 | Si a mí me hubieran dicho | Beatriz Corona | verificar derechos | 1 | chubut 2025 comp. 67<br>[BC61L8txOaQ 6:40:29](https://www.youtube.com/watch?v=BC61L8txOaQ&t=24029s) | falta el texto |
-| Si Hei Lwli Mabi | — | verificar derechos | 1 | chubut 2023 comp. 47<br>[AnLRusbVjGs](https://www.youtube.com/watch?v=AnLRusbVjGs) | falta el texto |
-| Stabat Mater | Giambattista Pergolesi | verificar derechos | 1 | chubut 2008 comp. 52<br>[h3uIDhOeVyc](https://www.youtube.com/watch?v=h3uIDhOeVyc) | falta el texto |
 | Stesion Strata | Tecwyn Ifan, trefniant Euros Rhys Evans | verificar derechos | 1 | chubut 2022 comp. 55<br>[jwdDEPP-Pd0](https://www.youtube.com/watch?v=jwdDEPP-Pd0) | falta el texto |
 | Teyrnasa, Iesu Mawr | trefn. Jenkin Morgan | verificar derechos | 1 | chubut 2014 comp. 69<br>[fTEn7dSJJxQ](https://www.youtube.com/watch?v=fTEn7dSJJxQ) | falta el texto |
 | Theodora | J. Vernon Lewis – A. Legge | verificar derechos | 1 | chubut 2023 comp. 54<br>[LQ28BhyOZBQ 11:19](https://www.youtube.com/watch?v=LQ28BhyOZBQ&t=679s) | falta el texto |
 | Y Cymro | Meirion Williams | verificar derechos | 1 | chubut 2024 comp. 43<br>[VDCKHPXzibM 33:16](https://www.youtube.com/watch?v=VDCKHPXzibM&t=1996s) | falta el texto |
 | Y Deryn Pur | trefniant John H. Roberts | verificar derechos | 1 | chubut 2008 comp. 46<br>[G15eLgDqHsQ](https://www.youtube.com/watch?v=G15eLgDqHsQ) | falta el texto |
 | Y Llyn | Meirion Williams | verificar derechos | 1 | chubut 2013 comp. 40<br>[WxivXfeGnVA](https://www.youtube.com/watch?v=WxivXfeGnVA) | falta el texto |
-| Y March Glas | — | verificar derechos | 1 | chubut 2023 comp. 47<br>[AnLRusbVjGs](https://www.youtube.com/watch?v=AnLRusbVjGs) | falta el texto |
-| Ym Mhontypridd | neu | verificar derechos | 1 | chubut 2023 comp. 47<br>[AnLRusbVjGs](https://www.youtube.com/watch?v=AnLRusbVjGs) | falta el texto |
 | Yn Iach i Ti, Gymru | Ceiriog – S. Northcote | verificar derechos | 1 | chubut 2023 comp. 43<br>[V62LETLL_ZA](https://www.youtube.com/watch?v=V62LETLL_ZA) | falta el texto |
 | Ubi caritas | Gjeilo | probablemente libre | 4 | chubut 2023 comp. 76<br>✅ [7GeZCEDgcoc](https://www.youtube.com/watch?v=7GeZCEDgcoc) ✗ [8KefoF3wKo0](https://www.youtube.com/watch?v=8KefoF3wKo0) ✅ [LQ28BhyOZBQ 8:44:52](https://www.youtube.com/watch?v=LQ28BhyOZBQ&t=31492s) ✅ [x0-pSbbCHIA](https://www.youtube.com/watch?v=x0-pSbbCHIA) | ✅ 3 de 4 videos; sin alinear en 1: no se canta en ese video |
 | Ar gyfer heddiw'r bore | carol traddodiadol, Eos Iâl | probablemente libre | 3 | chubut 2022 comp. 51<br>[-ENPPYxWGbw](https://www.youtube.com/watch?v=-ENPPYxWGbw) [3q3bZtuLbzo](https://www.youtube.com/watch?v=3q3bZtuLbzo) [RFm_ZuU6Zo8](https://www.youtube.com/watch?v=RFm_ZuU6Zo8) | texto guardado, sin alinear: el reconocedor galés oyó muy poco |
 | Ave Maria | Marcelo Valva | probablemente libre | 3 | chubut 2022 comp. 70<br>[-t5r4pwKx50 8:24:13](https://www.youtube.com/watch?v=-t5r4pwKx50&t=30253s) [9HciLCqfIas](https://www.youtube.com/watch?v=9HciLCqfIas) [dT8A2GQSDlc](https://www.youtube.com/watch?v=dT8A2GQSDlc) | ✅ alineada |
 | Cantate Domino | Hans Leo Hasler | probablemente libre | 3 | chubut 2023 comp. 65<br>✅ [AnLRusbVjGs](https://www.youtube.com/watch?v=AnLRusbVjGs) ✗ [EUtZrvORMXw](https://www.youtube.com/watch?v=EUtZrvORMXw) ✅ [LQ28BhyOZBQ 7:04:06](https://www.youtube.com/watch?v=LQ28BhyOZBQ&t=25446s) | ✅ 2 de 3 videos; sin alinear en 1: no se canta en ese video |
-| Claros y frescos ríos | anónimo siglo XVI | probablemente libre | 3 | chubut 2013 comp. 52<br>✗ [Q9H8mauENMw](https://www.youtube.com/watch?v=Q9H8mauENMw) ✗ [cBsyeRTrc18](https://www.youtube.com/watch?v=cBsyeRTrc18) ✅ [kHsF8eQ1L6Y](https://www.youtube.com/watch?v=kHsF8eQ1L6Y) | ✅ 1 de 3 videos; sin alinear en 2: sin motivo registrado |
+| Claros y frescos ríos | anónimo siglo XVI | probablemente libre | 3 (+1 sin texto) | chubut 2013 comp. 52<br>✗ [Q9H8mauENMw](https://www.youtube.com/watch?v=Q9H8mauENMw) ✗ [cBsyeRTrc18](https://www.youtube.com/watch?v=cBsyeRTrc18) ✅ [kHsF8eQ1L6Y](https://www.youtube.com/watch?v=kHsF8eQ1L6Y) | ✅ 1 de 3 videos; sin alinear en 2: sin motivo registrado |
 | Es ist ein Ros' entsprungen | Michael Praetorius | probablemente libre | 2 | chubut 2019 comp. 54<br>[3jnNklLlxQ0 28:24](https://www.youtube.com/watch?v=3jnNklLlxQ0&t=1704s) [s07a0VA2zus](https://www.youtube.com/watch?v=s07a0VA2zus) | texto guardado, sin alinear: el alineador amontona las líneas |
 | Let all mortal flesh keep silence | Edward Bairstow | probablemente libre | 2 | chubut 2022 comp. 72<br>[-t5r4pwKx50 7:45:45](https://www.youtube.com/watch?v=-t5r4pwKx50&t=27945s) [HxNKKrGtTww](https://www.youtube.com/watch?v=HxNKKrGtTww) | ✅ alineada |
 | Pater noster | Igor Stravinsky | probablemente libre | 2 | chubut 2018 comp. 64<br>[ZFTQmoycc9Y](https://www.youtube.com/watch?v=ZFTQmoycc9Y) [eNmj-1_HlIk 1:30:39](https://www.youtube.com/watch?v=eNmj-1_HlIk&t=5439s) | ✅ alineada |
@@ -136,14 +140,15 @@ Primero las de texto probablemente libre (litúrgico, tradicional, autores antig
 | Ave María | Karl Jenkins | probablemente libre | 1 | chubut 2019 comp. 74<br>[SvBTOh3OlMg 3:13:26](https://www.youtube.com/watch?v=SvBTOh3OlMg&t=11606s) | ✅ alineada |
 | In stiller Nacht | Johannes Brahms | probablemente libre | 1 | chubut 2026 comp. 79<br>[hVtD63KLlsw 9:53:02](https://www.youtube.com/watch?v=hVtD63KLlsw&t=35582s) | texto guardado, sin alinear: el alineador amontona las líneas |
 | En los brazos de la luna | Alfonso Letelier | verificar derechos | 4 | chubut 2008 comp. 60<br>✅ [2VjZIBTMmqo](https://www.youtube.com/watch?v=2VjZIBTMmqo) ✅ [BFkVC4Xe7RA](https://www.youtube.com/watch?v=BFkVC4Xe7RA) ✗ [D2N_oZvygxo](https://www.youtube.com/watch?v=D2N_oZvygxo) ✅ [cLZdGxOA1TE](https://www.youtube.com/watch?v=cLZdGxOA1TE) | ✅ 3 de 4 videos; sin alinear en 1: sin motivo registrado |
+| Nada | tango, José Dames – Horacio Sanguinetti, arr. Eduardo Ferraudi | verificar derechos | 4 | chubut 2013 comp. 68; chubut 2014 comp. 48<br>✅ [-272dzknxa8](https://www.youtube.com/watch?v=-272dzknxa8) ✗ [gaMvo5_oXhg](https://www.youtube.com/watch?v=gaMvo5_oXhg) ✗ [sCboAvAxOKU](https://www.youtube.com/watch?v=sCboAvAxOKU) ✗ [qtFGkYN7FyQ](https://www.youtube.com/watch?v=qtFGkYN7FyQ) | ✅ 1 de 4 videos; sin alinear en 3: sin motivo registrado |
 | La vieja | Hermanos Díaz, arr. Vivian Tabush | verificar derechos | 3 | chubut 2018 comp. 67<br>✗ [2HAIydtrM4k](https://www.youtube.com/watch?v=2HAIydtrM4k) ✗ [T3ZxMzX5pgQ](https://www.youtube.com/watch?v=T3ZxMzX5pgQ) ✅ [eNmj-1_HlIk 1:01:00](https://www.youtube.com/watch?v=eNmj-1_HlIk&t=3660s) | ✅ 1 de 3 videos; sin alinear en 2: sin motivo registrado |
-| Nada | tango, José Dames – Horacio Sanguinetti, arr. Eduardo Ferraudi | verificar derechos | 3 | chubut 2013 comp. 68<br>✅ [-272dzknxa8](https://www.youtube.com/watch?v=-272dzknxa8) ✗ [gaMvo5_oXhg](https://www.youtube.com/watch?v=gaMvo5_oXhg) ✗ [sCboAvAxOKU](https://www.youtube.com/watch?v=sCboAvAxOKU) | ✅ 1 de 3 videos; sin alinear en 2: sin motivo registrado |
 | Tamquam agnus | Tomás Luis de Victoria | verificar derechos | 3 | chubut 2018 comp. 54<br>[9Z8ncfFoWGc](https://www.youtube.com/watch?v=9Z8ncfFoWGc) [M3YhNXwo61M](https://www.youtube.com/watch?v=M3YhNXwo61M) [utHSvsjwvwo 6:15:04](https://www.youtube.com/watch?v=utHSvsjwvwo&t=22504s) | ✅ alineada |
+| Zamba del carnaval | Cuchi Leguizamón, versión coral Pablo D. Roberto | verificar derechos | 3 | chubut 2022 comp. 71<br>✅ [-t5r4pwKx50 8:04:03](https://www.youtube.com/watch?v=-t5r4pwKx50&t=29043s) ✗ [5rDvIR1TtBY](https://www.youtube.com/watch?v=5rDvIR1TtBY) ✗ [jOOx90-7F8c](https://www.youtube.com/watch?v=jOOx90-7F8c) | ✅ 1 de 3 videos; sin alinear en 2: sin motivo registrado |
 | Alfonsina y el mar | A. Ramírez – F. Luna, v. c. C. Jones | verificar derechos | 2 | chubut 2012 comp. 67<br>✅ [-3MdFJJ4-Qs](https://www.youtube.com/watch?v=-3MdFJJ4-Qs) ✗ [zJE9xsshiuM](https://www.youtube.com/watch?v=zJE9xsshiuM) | ✅ 1 de 2 videos; sin alinear en 1: sin motivo registrado |
 | Allá lejos y hace tiempo | Ariel Ramírez y Armando Tejada Gómez, arr. Néstor Zadoff | verificar derechos | 2 | chubut 2018 comp. 76<br>[eNmj-1_HlIk 4:47:18](https://www.youtube.com/watch?v=eNmj-1_HlIk&t=17238s) [vmTVvg_KPRg](https://www.youtube.com/watch?v=vmTVvg_KPRg) | ✅ alineada |
 | Angor | Tudur Huws Jones | verificar derechos | 2 | chubut 2024 comp. 58<br>[Fh7i29-94XY](https://www.youtube.com/watch?v=Fh7i29-94XY) [L6FSD_iI5ew](https://www.youtube.com/watch?v=L6FSD_iI5ew) | texto guardado, sin alinear: el reconocedor galés oyó muy poco |
 | Ar Lan y Môr | trefn. D. E. Parry Williams | verificar derechos | 2 | chubut 2018 comp. 71<br>[pOQSuZMyuaI](https://www.youtube.com/watch?v=pOQSuZMyuaI) [utHSvsjwvwo 7:56:22](https://www.youtube.com/watch?v=utHSvsjwvwo&t=28582s) | texto guardado, sin alinear: el texto no coincide con lo que se canta |
-| Ciego quisiera haber sido | Carlos Guastavino – Eduardo Falú | verificar derechos | 2 | chubut 2013 comp. 53<br>✗ [2JkAlku3Kr8](https://www.youtube.com/watch?v=2JkAlku3Kr8) ✅ [tbDh70HXvDY](https://www.youtube.com/watch?v=tbDh70HXvDY) | ✅ 1 de 2 videos; sin alinear en 1: sin motivo registrado |
+| Ciego quisiera haber sido | Carlos Guastavino – Eduardo Falú | verificar derechos | 2 (+1 sin texto) | chubut 2013 comp. 53<br>✗ [2JkAlku3Kr8](https://www.youtube.com/watch?v=2JkAlku3Kr8) ✅ [tbDh70HXvDY](https://www.youtube.com/watch?v=tbDh70HXvDY) | ✅ 1 de 2 videos; sin alinear en 1: sin motivo registrado |
 | Cinema Paradiso (Se) | Ennio Morricone | verificar derechos | 2 | chubut 2025 comp. 49<br>[MIW7333GiIY 4:16:48](https://www.youtube.com/watch?v=MIW7333GiIY&t=15408s) [YJnenM8tw0I](https://www.youtube.com/watch?v=YJnenM8tw0I) | ✅ alineada |
 | Como pájaros en el aire | Peteco Carabajal, arr. Liliana Cangiano | verificar derechos | 2 | chubut 2014 comp. 62<br>✅ [-250wdPJHUk](https://www.youtube.com/watch?v=-250wdPJHUk) ✗ [g3P3_CNOVTk](https://www.youtube.com/watch?v=g3P3_CNOVTk) | ✅ 1 de 2 videos; sin alinear en 1: sin motivo registrado |
 | Eiddot Ti, O Dduw, yw y Mawredd | — | verificar derechos | 2 | chubut 2012 comp. 62<br>[6bEQQTDyMqY](https://www.youtube.com/watch?v=6bEQQTDyMqY) [ATN6kZ86h8s](https://www.youtube.com/watch?v=ATN6kZ86h8s) | texto guardado, sin alinear: el reconocedor galés oyó muy poco |
@@ -151,12 +156,11 @@ Primero las de texto probablemente libre (litúrgico, tradicional, autores antig
 | Miedo | Fernando Moruja | verificar derechos | 2 | chubut 2019 comp. 65<br>✅ [SQHehsJfn1w](https://www.youtube.com/watch?v=SQHehsJfn1w) ✗ [ZfwMxCXBdpM 1:43:36](https://www.youtube.com/watch?v=ZfwMxCXBdpM&t=6216s) | ✅ 1 de 2 videos; sin alinear en 1: sin motivo registrado |
 | Newyddion braf | Ron Jones / J. Dafydd – E. Lewys | verificar derechos | 2 | chubut 2019 comp. 52<br>[nkwfBKiLMIg](https://www.youtube.com/watch?v=nkwfBKiLMIg) [tF_V5HsV-NA](https://www.youtube.com/watch?v=tF_V5HsV-NA) | texto guardado, sin alinear: el reconocedor galés oyó muy poco |
 | O! Deuwch i'r Dyfroedd | J. Morgan Lloyd | verificar derechos | 2 | chubut 2018 comp. 71<br>[pOQSuZMyuaI](https://www.youtube.com/watch?v=pOQSuZMyuaI) [utHSvsjwvwo 7:56:22](https://www.youtube.com/watch?v=utHSvsjwvwo&t=28582s) | texto guardado, sin alinear: el texto no coincide con lo que se canta |
-| Pam Fod Eira yn Wyn? | Dafydd Iwan, trefn. Eirian Williams | verificar derechos | 2 | chubut 2018 comp. 62<br>✅ [TL1bhoNwk4U](https://www.youtube.com/watch?v=TL1bhoNwk4U) ✗ [eNmj-1_HlIk 3:48:04](https://www.youtube.com/watch?v=eNmj-1_HlIk&t=13684s) | ✅ 1 de 2 videos; sin alinear en 1: el reconocedor galés oyó muy poco |
+| Pam Fod Eira yn Wyn? | Dafydd Iwan, trefn. Eirian Williams | verificar derechos | 2 | chubut 2018 comp. 62<br>✅ [TL1bhoNwk4U](https://www.youtube.com/watch?v=TL1bhoNwk4U) ✗ [eNmj-1_HlIk 2:54:09](https://www.youtube.com/watch?v=eNmj-1_HlIk&t=10449s) | ✅ 1 de 2 videos; sin alinear en 1: se puede ubicar ya desde un clip alineado |
 | Rabo de nube | Silvio Rodríguez, arr. César A. Carrillo | verificar derechos | 2 | chubut 2018 comp. 75<br>✅ [eNmj-1_HlIk 3:26:24](https://www.youtube.com/watch?v=eNmj-1_HlIk&t=12384s) ✗ [x0LBSjAuT3Q](https://www.youtube.com/watch?v=x0LBSjAuT3Q) | ✅ 1 de 2 videos; sin alinear en 1: sin motivo registrado |
 | Rosa Amarela | Heitor Villalobos | verificar derechos | 2 | chubut 2025 comp. 75<br>✗ [BC61L8txOaQ 8:58:54](https://www.youtube.com/watch?v=BC61L8txOaQ&t=32334s) ✅ [h5zX7SaZJt8](https://www.youtube.com/watch?v=h5zX7SaZJt8) | ✅ 1 de 2 videos; sin alinear en 1: sin motivo registrado |
 | Si llega a ser tucumana | Cuchi Leguizamón, v. c. Santiago Búcar | verificar derechos | 2 | chubut 2024 comp. 73<br>[W1z_1ulc_lY](https://www.youtube.com/watch?v=W1z_1ulc_lY) [arqF7QHVMw0 4:27:20](https://www.youtube.com/watch?v=arqF7QHVMw0&t=16040s) | texto guardado, sin alinear: el texto no coincide con lo que se canta |
 | Ta na solbici | Samo Vovk | verificar derechos | 2 | chubut 2025 comp. 76<br>[MIW7333GiIY 4:25](https://www.youtube.com/watch?v=MIW7333GiIY&t=265s) [_75BiKuifoQ](https://www.youtube.com/watch?v=_75BiKuifoQ) | ✅ alineada |
-| Zamba del carnaval | Cuchi Leguizamón, versión coral Pablo D. Roberto | verificar derechos | 2 | chubut 2022 comp. 71<br>✅ [-t5r4pwKx50 8:04:03](https://www.youtube.com/watch?v=-t5r4pwKx50&t=29043s) ✗ [jOOx90-7F8c](https://www.youtube.com/watch?v=jOOx90-7F8c) | ✅ 1 de 2 videos; sin alinear en 1: sin motivo registrado |
 | Ar Gyfer Heddiw'r Bore | — | verificar derechos | 1 | chubut 2009 comp. 58<br>[HRG106YXyk4](https://www.youtube.com/watch?v=HRG106YXyk4) | texto guardado, sin alinear: el reconocedor galés oyó muy poco |
 | Canción de cuna para despertar a un negrito | C. Isella – N. Guillén | verificar derechos | 1 | chubut 2025 comp. 65<br>[_75BiKuifoQ](https://www.youtube.com/watch?v=_75BiKuifoQ) | ✅ alineada |
 | Canto versos | Jorge Fandermole | verificar derechos | 1 | chubut 2026 comp. 54<br>[cDpe89FFjOA 2:39:01](https://www.youtube.com/watch?v=cDpe89FFjOA&t=9541s) | ✅ alineada |
@@ -178,26 +182,68 @@ Primero las de texto probablemente libre (litúrgico, tradicional, autores antig
 
 ## Textos guardados fuera de la tabla
 
-Letras de obras «a elección» ya identificadas, o de obras cuyo video no llega a la competencia por título ni capítulo.
+Letras de obras «a elección» (o de una de las alternativas del programa) ya identificadas, o de obras cuyo video no llega a una competencia del programa por título ni capítulo. Cada una lleva los videos con su tramo, los que la nombran en el título y los anotados en `data/letras/huecos.json`.
 
 | Obra | Autoría | Programa | Dónde | Estado |
 |---|---|---|---|---|
-| Ahicito | Fortunato Juárez / Raly Barrionuevo | Chubut 2014 comp. 47 (obra a elección) | [GmJvkuTeNdc](https://www.youtube.com/watch?v=GmJvkuTeNdc) | ✅ alineada |
+| Ahicito | Fortunato Juárez / Raly Barrionuevo | Chubut 2014 comp. 47 (obra a elección) | [GmJvkuTeNdc 0:26](https://www.youtube.com/watch?v=GmJvkuTeNdc&t=26s) | ✅ alineada |
 | Ámbar Violeta | Fito Páez | Chubut 2018 comp. 50 (obra a elección) | [Tjs4Lw93v5I](https://www.youtube.com/watch?v=Tjs4Lw93v5I) | ✅ alineada |
-| Baguala del Viento | Magdalena Matthey | Chubut 2013 comp. 51 (obra a elección) | [gu761qYfevg](https://www.youtube.com/watch?v=gu761qYfevg) | ✅ alineada |
-| Bonita rama de sauce | Carlos Guastavino; texto de Arturo Vázquez | — | [h5zX7SaZJt8](https://www.youtube.com/watch?v=h5zX7SaZJt8) | ✅ alineada |
+| Baguala del Viento | Magdalena Matthey | Chubut 2013 comp. 51 (obra a elección) | [gu761qYfevg 0:12](https://www.youtube.com/watch?v=gu761qYfevg&t=12s) | ✅ alineada |
+| Bonita rama de sauce | Carlos Guastavino; texto de Arturo Vázquez | — | [h5zX7SaZJt8 1:35](https://www.youtube.com/watch?v=h5zX7SaZJt8&t=95s) | ✅ alineada |
 | Cachilo dormido | Atahualpa Yupanqui, versión coral de Joaquín Martínez Dávila | — | [cDpe89FFjOA](https://www.youtube.com/watch?v=cDpe89FFjOA) | texto guardado, sin alinear: el texto no coincide con lo que se canta |
 | Canto al Río Uruguay | Ramón Ayala | Chubut 2009 comp. 60 (obra a elección) | [KTNvEcE5bNs](https://www.youtube.com/watch?v=KTNvEcE5bNs) | ✅ alineada |
-| De quien pagó mi redención | Himno, anónimo | — | [HnVmmnyjBU4](https://www.youtube.com/watch?v=HnVmmnyjBU4) [utHSvsjwvwo](https://www.youtube.com/watch?v=utHSvsjwvwo) | texto guardado, sin alinear: se canta sin una estrofa |
-| Desarma y Sangra | Charly Garcia / Serú Giran | Chubut 2026 comp. 56 (obra a elección) | [cDpe89FFjOA](https://www.youtube.com/watch?v=cDpe89FFjOA) | ✅ alineada |
-| Desencuentro | Aníbal Troilo and lyrics by Cátulo Castillo | Chubut 2026 comp. 55 (obra a elección) | [hVtD63KLlsw](https://www.youtube.com/watch?v=hVtD63KLlsw) | ✅ alineada |
-| Hen Ferchetan | Tradicional galesa | — | [QnmtSgOvFKM](https://www.youtube.com/watch?v=QnmtSgOvFKM) | ✅ alineada |
-| La tristecita | Ariel Ramírez, with lyrics by María Elena Espiro | Chubut 2012 comp. 45 (obra a elección) | [QuOfBRbUpKQ](https://www.youtube.com/watch?v=QuOfBRbUpKQ) | ✅ alineada |
-| Naranjo en Flor | — | Chubut 2018 comp. 49 (obra a elección) | [utHSvsjwvwo](https://www.youtube.com/watch?v=utHSvsjwvwo) | ✅ alineada |
-| Ríe Chinito | Perotá Chingó | Chubut 2026 comp. 61 (obra a elección) | [hVtD63KLlsw](https://www.youtube.com/watch?v=hVtD63KLlsw) | ✅ alineada |
-| Rumbo al cerro | Alejandro Maldino / Mario Díaz | Chubut 2012 comp. 45 (obra a elección) | [Fkm05yVVzBY](https://www.youtube.com/watch?v=Fkm05yVVzBY) | texto guardado, sin alinear: el texto no coincide con lo que se canta |
-| Zamba negra | Mavi Díaz y Las Folkies | Chubut 2018 comp. 48 (obra a elección) | [xO9Sdkfw1bo](https://www.youtube.com/watch?v=xO9Sdkfw1bo) | ✅ alineada |
-| Zamba para olvidar | Daniel Toro y Julio César Bissio | — | [s-eVxB-tOIo](https://www.youtube.com/watch?v=s-eVxB-tOIo) | ✅ alineada |
+| De quien pagó mi redención | Himno, anónimo | — | [HnVmmnyjBU4](https://www.youtube.com/watch?v=HnVmmnyjBU4) [utHSvsjwvwo 5:24:50](https://www.youtube.com/watch?v=utHSvsjwvwo&t=19490s) | texto guardado, sin alinear: se canta sin una estrofa |
+| Desarma y Sangra | Charly Garcia / Serú Giran | Chubut 2026 comp. 56 (obra a elección) | [cDpe89FFjOA 2:00:23](https://www.youtube.com/watch?v=cDpe89FFjOA&t=7223s) | ✅ alineada |
+| Desencuentro | Aníbal Troilo, letra de Cátulo Castillo | Chubut 2026 comp. 55 (obra a elección) | [hVtD63KLlsw 6:47:52](https://www.youtube.com/watch?v=hVtD63KLlsw&t=24472s) | ✅ alineada |
+| Hen Ferchetan | Tradicional galesa | — | ✅ [QnmtSgOvFKM](https://www.youtube.com/watch?v=QnmtSgOvFKM) ✗ [cNJvd6c6B4E](https://www.youtube.com/watch?v=cNJvd6c6B4E) ✗ [eviefVEVksk](https://www.youtube.com/watch?v=eviefVEVksk) | ✅ 1 de 3 videos; sin alinear en 2: sin motivo registrado |
+| La tristecita | Ariel Ramírez, letra de María Elena Espiro | Chubut 2012 comp. 45 (obra a elección) | [QuOfBRbUpKQ 1:15](https://www.youtube.com/watch?v=QuOfBRbUpKQ&t=75s) | ✅ alineada |
+| Naranjo en Flor | — | Chubut 2018 comp. 49 (obra a elección) | ✗ [9zK9cjhalec](https://www.youtube.com/watch?v=9zK9cjhalec) ✅ [utHSvsjwvwo 5:48:47](https://www.youtube.com/watch?v=utHSvsjwvwo&t=20927s) | ✅ 1 de 2 videos; sin alinear en 1: sin motivo registrado |
+| Ríe Chinito | Perotá Chingó | Chubut 2026 comp. 61 (obra a elección) | [hVtD63KLlsw 8:44:40](https://www.youtube.com/watch?v=hVtD63KLlsw&t=31480s) | ✅ alineada |
+| Rumbo al cerro | Alejandro Maldino / Mario Díaz | Chubut 2012 comp. 45 (obra a elección) | [Fkm05yVVzBY](https://www.youtube.com/watch?v=Fkm05yVVzBY) | texto guardado, sin alinear: motivo por confirmar |
+| Zamba negra | Mavi Díaz y Las Folkies | Chubut 2018 comp. 48 (obra a elección) | [xO9Sdkfw1bo 0:09](https://www.youtube.com/watch?v=xO9Sdkfw1bo&t=9s) | ✅ alineada |
+| Zamba para olvidar | Daniel Toro y Julio César Bissio | — | ✗ [0KGzTyN3mjc](https://www.youtube.com/watch?v=0KGzTyN3mjc) ✅ [s-eVxB-tOIo 0:18](https://www.youtube.com/watch?v=s-eVxB-tOIo&t=18s) | ✅ 1 de 2 videos; sin alinear en 1: sin motivo registrado |
+
+## Obras en videos sin texto publicado
+
+Competencias cantadas del programa (y obras con texto guardado que el título nombra) cuyos videos todavía no tienen texto publicado: entran en la tabla de arriba cuando lo tengan.
+
+| Edición | Comp. | Programa | Video |
+|---|---|---|---|
+| chubut 2008 | 51 | Unawd cân ysgafn: hunanddewisiad gyda chyfeiliant rhydd. | [ucQRWWEnYgA](https://www.youtube.com/watch?v=ucQRWWEnYgA) |
+| chubut 2009 | 53 | Solo mezzosoprano: «Ombra mai fu» (de «Xerxes»), George F. Haendel. | [tsVIG-OErCo](https://www.youtube.com/watch?v=tsVIG-OErCo) |
+| chubut 2009 | 89 | Coro femenino: «Ave verum corpus», Francis Poulenc. | [3xwfWIxGxTI](https://www.youtube.com/watch?v=3xwfWIxGxTI) |
+| chubut 2013 | 39 | Unawd i ferched: «Awelon y Mynydd», Meirion Williams. | [Nt2ahYfRCZM](https://www.youtube.com/watch?v=Nt2ahYfRCZM) |
+| chubut 2013 | 39 | Unawd i ferched: «Awelon y Mynydd», Meirion Williams. | [sYx4h5y6nSA](https://www.youtube.com/watch?v=sYx4h5y6nSA) |
+| chubut 2013 | 52 | Trío: «Claros y frescos ríos», anónimo siglo XVI. | [95yFZUG64Zg](https://www.youtube.com/watch?v=95yFZUG64Zg) |
+| chubut 2013 | 53 | Octeto: «Ciego quisiera haber sido», Carlos Guastavino – Eduardo Falú. | [vcGqblxiRUk](https://www.youtube.com/watch?v=vcGqblxiRUk) |
+| chubut 2013 | 71 | Coro de formación libre: obra contemporánea original a elección, a capella o con acompañamiento original. | [DeuDFZOaHdI](https://www.youtube.com/watch?v=DeuDFZOaHdI) |
+| chubut 2013 | 71 | Coro de formación libre: obra contemporánea original a elección, a capella o con acompañamiento original. | [abaphKoAWAA](https://www.youtube.com/watch?v=abaphKoAWAA) |
+| chubut 2014 | 46 | Solo libre: aria u obra de autor académico a elección. | [xmwFe9AKPvw](https://www.youtube.com/watch?v=xmwFe9AKPvw) |
+| chubut 2014 | 52 | Pedwarawd i ferched, dynion neu gymysg: hunanddewisiad. | [7FR1Lmj0_xs](https://www.youtube.com/watch?v=7FR1Lmj0_xs) |
+| chubut 2014 | 54 | Cuarteto: himno a elección. | [4DWCOQ_d42g](https://www.youtube.com/watch?v=4DWCOQ_d42g) |
+| chubut 2014 | 54 | Cuarteto: himno a elección. | [5H0rNCosoSk](https://www.youtube.com/watch?v=5H0rNCosoSk) |
+| chubut 2014 | 54 | Cuarteto: himno a elección. | [YCM8FtFwwws](https://www.youtube.com/watch?v=YCM8FtFwwws) |
+| chubut 2014 | 56 | Parti neu gôr merched: «Boneddwr Mawr o'r Bala», trefn. Megan Morris. | [do52Cw_wHRw](https://www.youtube.com/watch?v=do52Cw_wHRw) |
+| chubut 2015 | 54 | Unawd i ferched: «Blodau ger y Drws», Meirion Williams. | [nAlfKxQFP6E](https://www.youtube.com/watch?v=nAlfKxQFP6E) |
+| chubut 2015 | 59 | Unawd cerdd dant: hunanddewisiad. | [WKDDVbzzQyA](https://www.youtube.com/watch?v=WKDDVbzzQyA) |
+| chubut 2015 | 60 | Solo libre: aria u obra original académica del repertorio universal a elección. | [W9nrFrEkJ8Q](https://www.youtube.com/watch?v=W9nrFrEkJ8Q) |
+| chubut 2015 | 63 | Solo libre: música blues o jazz a elección. | [9zAxsRQbJJU](https://www.youtube.com/watch?v=9zAxsRQbJJU) |
+| chubut 2015 | 63 | Solo libre: música blues o jazz a elección. | [WFk8K8aa0PQ](https://www.youtube.com/watch?v=WFk8K8aa0PQ) |
+| chubut 2015 | 66 | Pedwarawd: «Sigl-Gân», J. Brahms, trefn. W. S. Gwynn Williams. | [gFNc_TUTuro](https://www.youtube.com/watch?v=gFNc_TUTuro) |
+| chubut 2015 | 72 | Parti hyd 16 mewn nifer: «Daffodils», Mansel Thomas. | [qiPzn3aOn4c](https://www.youtube.com/watch?v=qiPzn3aOn4c) |
+| chubut 2015 | 76 | Parti neu gôr capel: hunanddewisiad. | [5YgdY5CmO2I](https://www.youtube.com/watch?v=5YgdY5CmO2I) |
+| chubut 2015 | 82 | Conjunto femenino: «Ave María», Dante Andreo. | [bQw6r2EV6_Q](https://www.youtube.com/watch?v=bQw6r2EV6_Q) |
+| chubut 2015 | 82 | Conjunto femenino: «Ave María», Dante Andreo. | [i76Yv67orw4](https://www.youtube.com/watch?v=i76Yv67orw4) |
+| chubut 2015 | 82 | Conjunto femenino: «Ave María», Dante Andreo. | [s96_FOydUmo](https://www.youtube.com/watch?v=s96_FOydUmo) |
+| chubut 2015 | 85 | Côr cymysg hyd 30 o leisiau: «Ar Lan Iorddonen Ddofn», C. C. N. | [8adzp7KLmAM](https://www.youtube.com/watch?v=8adzp7KLmAM) |
+| chubut 2015 | 92 | Coro de formación libre: obra académica del repertorio universal a elección. | [DijBIYobu9I](https://www.youtube.com/watch?v=DijBIYobu9I) |
+| chubut 2015 | 92 | Coro de formación libre: obra académica del repertorio universal a elección. | [HsHFk3tIwC0](https://www.youtube.com/watch?v=HsHFk3tIwC0) |
+| chubut 2015 | 92 | Coro de formación libre: obra académica del repertorio universal a elección. | [kvXjplREtvw](https://www.youtube.com/watch?v=kvXjplREtvw) |
+| chubut 2015 | 93 | Competencia especial del Sesquicentenario: relato sonoro de temática regional con dos canciones y un poema. | [W1CJlDovGwk](https://www.youtube.com/watch?v=W1CJlDovGwk) |
+| chubut 2019 | 67 | Conjunto femenino (mínimo 8 integrantes): «The seal lullaby», Eric Whitacre. | [-RHKtM1HWnc](https://www.youtube.com/watch?v=-RHKtM1HWnc) |
+| chubut 2019 | 67 | Conjunto femenino (mínimo 8 integrantes): «The seal lullaby», Eric Whitacre. | [_Ik8mz8FDnE](https://www.youtube.com/watch?v=_Ik8mz8FDnE) |
+| chubut 2019 | 67 | Conjunto femenino (mínimo 8 integrantes): «The seal lullaby», Eric Whitacre. | [vLZRPAHHh8k](https://www.youtube.com/watch?v=vLZRPAHHh8k) |
+| chubut 2023 | 78 | Coro de libre formación: obra con puesta en escena o música de películas. | [uPrIYaSB8vY](https://www.youtube.com/watch?v=uPrIYaSB8vY) |
 
 ## Detalle de los huecos documentados
 
@@ -206,15 +252,18 @@ Lo anotado en `data/letras/huecos.json`, por motivo; cada video enlazado es uno 
 ### El texto no coincide con lo que se canta
 
 - «Ar lan y môr» (trefn. D. E. Parry Williams): [pOQSuZMyuaI](https://www.youtube.com/watch?v=pOQSuZMyuaI) [utHSvsjwvwo 7:56:22](https://www.youtube.com/watch?v=utHSvsjwvwo&t=28582s). Se cantan las dos primeras estrofas del texto guardado, después una estrofa que no está en él, y no las otras tres; hace falta el texto tal como lo canta este grupo (utHSvsjwvwo es la misma actuación que el clip pOQSuZMyuaI y además no tiene fuente en galés).
-- «Cachilo dormido» (Atahualpa Yupanqui, versión coral de Joaquín Martínez Dávila): [cDpe89FFjOA](https://www.youtube.com/watch?v=cDpe89FFjOA). Revisado por el mantenedor el 2026-11-21: el texto guardado no coincide con lo que se oye cantar (Chubut 2026, comp. 71); la sesión hoy no tiene capítulo para esa competencia, por eso la obra no aparece en la tabla del programa.
+- «Cachilo dormido» (Atahualpa Yupanqui, versión coral de Joaquín Martínez Dávila): [cDpe89FFjOA](https://www.youtube.com/watch?v=cDpe89FFjOA). Revisado por el mantenedor el 2026-11-21: el texto guardado no coincide con lo que se oye cantar (Chubut 2026, comp. 71). Además, a los marcadores de la sesión les falta el capítulo de esa competencia, por eso la obra no aparece en la tabla del programa.
 - «O! Deuwch i'r Dyfroedd» (J. Morgan Lloyd): [pOQSuZMyuaI](https://www.youtube.com/watch?v=pOQSuZMyuaI) [utHSvsjwvwo 7:56:22](https://www.youtube.com/watch?v=utHSvsjwvwo&t=28582s). El texto guardado parece ser el de otro himno de título parecido: casi nada de lo que se oye cantar está en él (utHSvsjwvwo contiene la misma actuación que el clip pOQSuZMyuaI), así que hay que revisar la fuente.
-- «Rumbo al cerro» (Alejandro Maldino / Mario Díaz): [Fkm05yVVzBY](https://www.youtube.com/watch?v=Fkm05yVVzBY). Revisado por el mantenedor el 2026-11-21: el texto guardado no coincide con lo que se oye cantar en el clip (Chubut 2012, comp. 45, obra a elección).
 - «Si llega a ser tucumana» (Cuchi Leguizamón, v. c. Santiago Búcar): [W1z_1ulc_lY](https://www.youtube.com/watch?v=W1z_1ulc_lY) [arqF7QHVMw0 4:27:20](https://www.youtube.com/watch?v=arqF7QHVMw0&t=16040s). Revisado por el mantenedor el 2026-11-21: el texto guardado no coincide con lo que se oye cantar en estos videos, así que queda afuera hasta revisar la fuente.
 - «Ysbryd Rebeca» (Tecwyn Ifan): [cDpe89FFjOA 5:32:48](https://www.youtube.com/watch?v=cDpe89FFjOA&t=19968s). El texto guardado tiene solo el estribillo, que vuelve unas tres veces entre estrofas que no están en él; además el video no tiene fuente en galés.
 
+### Motivo por confirmar
+
+- «Rumbo al cerro» (Alejandro Maldino / Mario Díaz): [Fkm05yVVzBY](https://www.youtube.com/watch?v=Fkm05yVVzBY). El mantenedor la dejó afuera el 2026-11-21; una pasada anterior no encontró la actuación en el clip (Chubut 2012, comp. 45, obra a elección): falta confirmar si el texto no coincide o si la obra no está.
+
 ### Se canta sin una estrofa
 
-- «De quien pagó mi redención» (Himno, anónimo): [HnVmmnyjBU4](https://www.youtube.com/watch?v=HnVmmnyjBU4) [utHSvsjwvwo](https://www.youtube.com/watch?v=utHSvsjwvwo). Chubut 2018, comp. 55 (himno a elección): el cuarteto canta las estrofas 1, 3 y 4 y saltea la 2 (la sesión, hacia 5:25, tiene la misma actuación que el clip), y el alineador todavía no puede saltear una estrofa.
+- «De quien pagó mi redención» (Himno, anónimo): [HnVmmnyjBU4](https://www.youtube.com/watch?v=HnVmmnyjBU4) [utHSvsjwvwo 5:24:50](https://www.youtube.com/watch?v=utHSvsjwvwo&t=19490s). Chubut 2018, comp. 55 (himno a elección): el cuarteto canta las estrofas 1, 3 y 4 y saltea la 2 (la sesión, hacia 5:24:50, tiene la misma actuación que el clip), y el alineador todavía no puede saltear una estrofa.
 
 ### El reconocedor galés oyó muy poco
 
@@ -225,7 +274,6 @@ Lo anotado en `data/letras/huecos.json`, por motivo; cada video enlazado es uno 
 - «Gweddi y Pechadur» (Morfudd Llwyn Owen): [d4K4n-FH7IY](https://www.youtube.com/watch?v=d4K4n-FH7IY). Todavía no se intentó alinear: quedó para después de la pasada del modelo galés, porque con las fuentes actuales el canto en galés casi no se reconoce.
 - «Newyddion braf» (Ron Jones / J. Dafydd – E. Lewys): [nkwfBKiLMIg](https://www.youtube.com/watch?v=nkwfBKiLMIg) [tF_V5HsV-NA](https://www.youtube.com/watch?v=tF_V5HsV-NA). Todavía no se intentó alinear: quedó para después de la pasada del modelo galés, porque con las fuentes actuales el canto en galés casi no se reconoce.
 - «O llefara addfwyn Iesu»: [_75BiKuifoQ](https://www.youtube.com/watch?v=_75BiKuifoQ). El anuncio la nombra y el reconocedor galés la oye, pero casi todas sus líneas quedan bajo el filtro de confianza y el texto se amontona en pocos segundos.
-- «Pam Fod Eira yn Wyn?» (Dafydd Iwan, trefn. Eirian Williams): [eNmj-1_HlIk 3:48:04](https://www.youtube.com/watch?v=eNmj-1_HlIk&t=13684s). La sesión no tiene fuente en galés y su capítulo de la comp. 62 cae en el veredicto; la primera actuación (hacia 2:54:09) es la misma grabación que el clip TL1bhoNwk4U, ya alineado, cuyo tramo corrido serviría, y en la segunda (hacia 3:00:44) no se oyó nada útil.
 - «Pistyll y Llan»: [_75BiKuifoQ](https://www.youtube.com/watch?v=_75BiKuifoQ). El anuncio la nombra, pero solo 2 de las 10 líneas que oyó el reconocedor galés pasan el filtro de confianza y más de la mitad del texto se amontona en cuatro segundos.
 - «Wrth fynd efo Deio i Dywyn»: [C20iW5Fuac8](https://www.youtube.com/watch?v=C20iW5Fuac8). Todavía no se intentó alinear: quedó para después de la pasada del modelo galés, porque con las fuentes actuales el canto en galés casi no se reconoce.
 
@@ -233,6 +281,10 @@ Lo anotado en `data/letras/huecos.json`, por motivo; cada video enlazado es uno 
 
 - «Es ist ein Ros' entsprungen» (Michael Praetorius): [3jnNklLlxQ0 28:24](https://www.youtube.com/watch?v=3jnNklLlxQ0&t=1704s) [s07a0VA2zus](https://www.youtube.com/watch?v=s07a0VA2zus). Los dos videos tienen la misma actuación (comp. 54) y el tramo está ubicado, pero los reconocedores oyeron solo palabras sueltas o espurias y el alineador amontona el texto en pocos segundos.
 - «In stiller Nacht» (Johannes Brahms): [hVtD63KLlsw 9:53:02](https://www.youtube.com/watch?v=hVtD63KLlsw&t=35582s). Dos coros la cantan en la comp. 79 y los dos tramos están ubicados, pero el alineador se ancla en palabras sueltas mal oídas (su normalización además pierde la ß) y amontona las líneas.
+
+### Se puede ubicar ya desde un clip alineado
+
+- «Pam Fod Eira yn Wyn?» (Dafydd Iwan, trefn. Eirian Williams): [eNmj-1_HlIk 2:54:09](https://www.youtube.com/watch?v=eNmj-1_HlIk&t=10449s). La primera actuación de la sesión (hacia 2:54:09) es la misma grabación que el clip TL1bhoNwk4U, ya alineado: su tramo (0 a 260 s del clip) corrido 10448,6 s cae en la sesión de 2:54:09 a 2:58:29 (#129). La sesión no tiene fuente en galés, su capítulo de la comp. 62 cae en el veredicto, y en la segunda actuación (hacia 3:00:44) no se oyó nada útil: esa sigue sin letra después de ubicar la primera.
 
 ### No se canta en ese video
 
@@ -243,12 +295,12 @@ Lo anotado en `data/letras/huecos.json`, por motivo; cada video enlazado es uno 
 
 ### Versión por confirmar
 
-- «Ave María» (Dante Andreo): [2Gd6ZkLn6as](https://www.youtube.com/watch?v=2Gd6ZkLn6as). El mantenedor tiene que confirmar si esta versión usa el mismo texto latino que las de Karl Jenkins y Marcelo Valva, ya guardadas; todavía no hay texto.
+- «Ave María» (Dante Andreo): [2Gd6ZkLn6as](https://www.youtube.com/watch?v=2Gd6ZkLn6as). El mantenedor tiene que confirmar si esta versión usa el mismo texto latino que las de Karl Jenkins y Marcelo Valva, ya guardadas; todavía no hay texto. Además, 3 videos sin texto publicado: [bQw6r2EV6_Q](https://www.youtube.com/watch?v=bQw6r2EV6_Q) [i76Yv67orw4](https://www.youtube.com/watch?v=i76Yv67orw4) [s96_FOydUmo](https://www.youtube.com/watch?v=s96_FOydUmo).
 - «Ave María» (Villa Lobos): [W8VmPf8ZAZs](https://www.youtube.com/watch?v=W8VmPf8ZAZs). El mantenedor tiene que confirmar si esta versión usa el mismo texto latino que las de Karl Jenkins y Marcelo Valva, ya guardadas; todavía no hay texto.
 
 ## Obras «a elección» (identificar primero cuál se cantó)
 
-Escuchar el video o leer el anuncio; con el título, la letra se pide como cualquier otra.
+Escuchar el video o leer el anuncio; con el título, la letra se pide como cualquier otra. Un clip con una sola actuación sale de la lista cuando se sabe qué obra es; en una sesión larga queda, con lo ya identificado.
 
 | Edición | Comp. | Programa | Video |
 |---|---|---|---|
@@ -272,19 +324,14 @@ Escuchar el video o leer el anuncio; con el título, la letra se pide como cualq
 | chubut 2009 | 52 | Unawd cân ysgafn: hunanddewisiad gyda chyfeiliant rhydd · a elección con acompañamiento libre. | [ThC4oGGyWRI](https://www.youtube.com/watch?v=ThC4oGGyWRI) |
 | chubut 2009 | 52 | Unawd cân ysgafn: hunanddewisiad gyda chyfeiliant rhydd · a elección con acompañamiento libre. | [aKjO1DL4B7g](https://www.youtube.com/watch?v=aKjO1DL4B7g) |
 | chubut 2009 | 52 | Unawd cân ysgafn: hunanddewisiad gyda chyfeiliant rhydd · a elección con acompañamiento libre. | [dMGVBgr5yC4](https://www.youtube.com/watch?v=dMGVBgr5yC4) |
-| chubut 2009 | 60 | Dúo masculino, femenino o mixto: libre a elección. | [KTNvEcE5bNs](https://www.youtube.com/watch?v=KTNvEcE5bNs) |
 | chubut 2009 | 60 | Dúo masculino, femenino o mixto: libre a elección. | [cssmafC6tug](https://www.youtube.com/watch?v=cssmafC6tug) |
 | chubut 2009 | 60 | Dúo masculino, femenino o mixto: libre a elección. | [oTxml_McS1M](https://www.youtube.com/watch?v=oTxml_McS1M) |
-| chubut 2009 | 60 | Dúo masculino, femenino o mixto: libre a elección. | [s-eVxB-tOIo](https://www.youtube.com/watch?v=s-eVxB-tOIo) |
 | chubut 2009 | 76 | Conjunto vocal de formación libre hasta 12 integrantes: arreglo de música popular argentina a capella a ele… | [KTzdEJEaAi8](https://www.youtube.com/watch?v=KTzdEJEaAi8) |
 | chubut 2009 | 76 | Conjunto vocal de formación libre hasta 12 integrantes: arreglo de música popular argentina a capella a ele… | [XBSVKBgIy0I](https://www.youtube.com/watch?v=XBSVKBgIy0I) |
 | chubut 2012 | 41 | Unawd agored: emyn hunanddewisiad. | [83Ju-97Zndg](https://www.youtube.com/watch?v=83Ju-97Zndg) |
 | chubut 2012 | 42 | Unawd agored, cân werin: hunanddewisiad. | [-xFt_5ZLcLk](https://www.youtube.com/watch?v=-xFt_5ZLcLk) |
 | chubut 2012 | 42 | Unawd agored, cân werin: hunanddewisiad. | [0qqaiN722C0](https://www.youtube.com/watch?v=0qqaiN722C0) |
 | chubut 2012 | 42 | Unawd agored, cân werin: hunanddewisiad. | [9EO6zk3LqAk](https://www.youtube.com/watch?v=9EO6zk3LqAk) |
-| chubut 2012 | 42 | Unawd agored, cân werin: hunanddewisiad. | [cNJvd6c6B4E](https://www.youtube.com/watch?v=cNJvd6c6B4E) |
-| chubut 2012 | 45 | Solo libre: tema del folklore argentino a elección. | [Fkm05yVVzBY](https://www.youtube.com/watch?v=Fkm05yVVzBY) |
-| chubut 2012 | 45 | Solo libre: tema del folklore argentino a elección. | [QuOfBRbUpKQ](https://www.youtube.com/watch?v=QuOfBRbUpKQ) |
 | chubut 2012 | 45 | Solo libre: tema del folklore argentino a elección. | [Tv0a4Soo8C4](https://www.youtube.com/watch?v=Tv0a4Soo8C4) |
 | chubut 2012 | 45 | Solo libre: tema del folklore argentino a elección. | [hiNBxSi60xs](https://www.youtube.com/watch?v=hiNBxSi60xs) |
 | chubut 2012 | 45 | Solo libre: tema del folklore argentino a elección. | [k14zxxGpcV0](https://www.youtube.com/watch?v=k14zxxGpcV0) |
@@ -317,7 +364,6 @@ Escuchar el video o leer el anuncio; con el título, la letra se pide como cualq
 | chubut 2013 | 44 | Solo libre: aria u obra de autor académico a libre elección. | [0cxcTjG2kGk](https://www.youtube.com/watch?v=0cxcTjG2kGk) |
 | chubut 2013 | 44 | Solo libre: aria u obra de autor académico a libre elección. | [WoihPcx-4Yo](https://www.youtube.com/watch?v=WoihPcx-4Yo) |
 | chubut 2013 | 44 | Solo libre: aria u obra de autor académico a libre elección. | [yeanXbjOf6A](https://www.youtube.com/watch?v=yeanXbjOf6A) |
-| chubut 2013 | 45 | Solo libre: tema del folklore argentino a libre elección. | [0KGzTyN3mjc](https://www.youtube.com/watch?v=0KGzTyN3mjc) |
 | chubut 2013 | 45 | Solo libre: tema del folklore argentino a libre elección. | [TlYWxYvqqTo](https://www.youtube.com/watch?v=TlYWxYvqqTo) |
 | chubut 2013 | 45 | Solo libre: tema del folklore argentino a libre elección. | [ZiTKAU44dr4](https://www.youtube.com/watch?v=ZiTKAU44dr4) |
 | chubut 2013 | 45 | Solo libre: tema del folklore argentino a libre elección. | [Zp7PNRAazAQ](https://www.youtube.com/watch?v=Zp7PNRAazAQ) |
@@ -330,7 +376,6 @@ Escuchar el video o leer el anuncio; con el título, la letra se pide como cualq
 | chubut 2013 | 48 | Solo libre: tema a elección, con puesta en escena. | [JQou5bh5HQY](https://www.youtube.com/watch?v=JQou5bh5HQY) |
 | chubut 2013 | 48 | Solo libre: tema a elección, con puesta en escena. | [v1-O6wB14Tk](https://www.youtube.com/watch?v=v1-O6wB14Tk) |
 | chubut 2013 | 51 | Dúo libre: tema a elección. | [ONxTmu5ZBMc](https://www.youtube.com/watch?v=ONxTmu5ZBMc) |
-| chubut 2013 | 51 | Dúo libre: tema a elección. | [gu761qYfevg](https://www.youtube.com/watch?v=gu761qYfevg) |
 | chubut 2013 | 51 | Dúo libre: tema a elección. | [otnRyCC8s10](https://www.youtube.com/watch?v=otnRyCC8s10) |
 | chubut 2013 | 56 | Parti neu gôr teulu: hunanddewisiad. | [U1MjDx-A0Ls](https://www.youtube.com/watch?v=U1MjDx-A0Ls) |
 | chubut 2013 | 65 | Prif gystadleuaeth: a) «Iesu, Drud Ddifyrrwch Dynion», J. Bach (Y Llawlyfr Moliant Newydd); b) hunanddewisi… | [RLf-rMsfxVw](https://www.youtube.com/watch?v=RLf-rMsfxVw) |
@@ -357,13 +402,9 @@ Escuchar el video o leer el anuncio; con el título, la letra se pide como cualq
 | chubut 2014 | 45 | Unawd cerdd dant: hunanddewisiad. | [tzkyy9DDn2o](https://www.youtube.com/watch?v=tzkyy9DDn2o) |
 | chubut 2014 | 46 | Solo libre: aria u obra de autor académico a elección. | [2uELnKwPGfo](https://www.youtube.com/watch?v=2uELnKwPGfo) |
 | chubut 2014 | 46 | Solo libre: aria u obra de autor académico a elección. | [7XosfJ41KsI](https://www.youtube.com/watch?v=7XosfJ41KsI) |
-| chubut 2014 | 47 | Solo libre: música folklórica argentina a elección. | [GmJvkuTeNdc](https://www.youtube.com/watch?v=GmJvkuTeNdc) |
 | chubut 2014 | 47 | Solo libre: música folklórica argentina a elección. | [PJlXTNMrfTU](https://www.youtube.com/watch?v=PJlXTNMrfTU) |
 | chubut 2014 | 47 | Solo libre: música folklórica argentina a elección. | [pH2klRbo24o](https://www.youtube.com/watch?v=pH2klRbo24o) |
-| chubut 2014 | 48 | Solo libre: música ciudadana (tango, milonga) a elección. | [9zK9cjhalec](https://www.youtube.com/watch?v=9zK9cjhalec) |
 | chubut 2014 | 48 | Solo libre: música ciudadana (tango, milonga) a elección. | [OAJc5yzQnec](https://www.youtube.com/watch?v=OAJc5yzQnec) |
-| chubut 2014 | 48 | Solo libre: música ciudadana (tango, milonga) a elección. | [qtFGkYN7FyQ](https://www.youtube.com/watch?v=qtFGkYN7FyQ) |
-| chubut 2014 | 52 | Pedwarawd i ferched, dynion neu gymysg: hunanddewisiad. | [eviefVEVksk](https://www.youtube.com/watch?v=eviefVEVksk) |
 | chubut 2014 | 52 | Pedwarawd i ferched, dynion neu gymysg: hunanddewisiad. | [ojLWWOfFWW8](https://www.youtube.com/watch?v=ojLWWOfFWW8) |
 | chubut 2014 | 53 | Dúo de voces iguales o mixtas: obra a elección. | [JIsGRpthcF0](https://www.youtube.com/watch?v=JIsGRpthcF0) |
 | chubut 2014 | 53 | Dúo de voces iguales o mixtas: obra a elección. | [LZPnp7YyOQY](https://www.youtube.com/watch?v=LZPnp7YyOQY) |
@@ -424,16 +465,13 @@ Escuchar el video o leer el anuncio; con el título, la letra se pide como cualq
 | chubut 2018 | 48 | Solo libre: música folklórica argentina o latinoamericana a elección. | [DxhFRkNFgeQ](https://www.youtube.com/watch?v=DxhFRkNFgeQ) |
 | chubut 2018 | 48 | Solo libre: música folklórica argentina o latinoamericana a elección. | [TXWiXUNUJ6c](https://www.youtube.com/watch?v=TXWiXUNUJ6c) |
 | chubut 2018 | 48 | Solo libre: música folklórica argentina o latinoamericana a elección. | [utHSvsjwvwo 7:12:42](https://www.youtube.com/watch?v=utHSvsjwvwo&t=25962s) |
-| chubut 2018 | 48 | Solo libre: música folklórica argentina o latinoamericana a elección. | [xO9Sdkfw1bo](https://www.youtube.com/watch?v=xO9Sdkfw1bo) |
-| chubut 2018 | 49 | Solo libre: música ciudadana (tango, milonga, vals) a elección. | [utHSvsjwvwo 5:48:52](https://www.youtube.com/watch?v=utHSvsjwvwo&t=20932s) |
-| chubut 2018 | 50 | Solo libre: canción rock o pop a elección. | [Tjs4Lw93v5I](https://www.youtube.com/watch?v=Tjs4Lw93v5I) |
+| chubut 2018 | 49 | Solo libre: música ciudadana (tango, milonga, vals) a elección. | [utHSvsjwvwo 5:48:52](https://www.youtube.com/watch?v=utHSvsjwvwo&t=20932s) (ya identificada aquí: «Naranjo en Flor») |
 | chubut 2018 | 50 | Solo libre: canción rock o pop a elección. | [U95-bmeYBLg](https://www.youtube.com/watch?v=U95-bmeYBLg) |
 | chubut 2018 | 50 | Solo libre: canción rock o pop a elección. | [eNmj-1_HlIk 2:24:27](https://www.youtube.com/watch?v=eNmj-1_HlIk&t=8667s) |
 | chubut 2018 | 50 | Solo libre: canción rock o pop a elección. | [uBo5bZPuCJk](https://www.youtube.com/watch?v=uBo5bZPuCJk) |
 | chubut 2018 | 53 | Dúo de voces iguales o mixtas: obra del repertorio popular a elección. | [3QXswVOBBaI](https://www.youtube.com/watch?v=3QXswVOBBaI) |
 | chubut 2018 | 53 | Dúo de voces iguales o mixtas: obra del repertorio popular a elección. | [G7V26561SMw](https://www.youtube.com/watch?v=G7V26561SMw) |
 | chubut 2018 | 53 | Dúo de voces iguales o mixtas: obra del repertorio popular a elección. | [wi99njiWB0E](https://www.youtube.com/watch?v=wi99njiWB0E) |
-| chubut 2018 | 55 | Cuarteto mixto: himno a elección. | [HnVmmnyjBU4](https://www.youtube.com/watch?v=HnVmmnyjBU4) |
 | chubut 2018 | 55 | Cuarteto mixto: himno a elección. | [utHSvsjwvwo 5:24:25](https://www.youtube.com/watch?v=utHSvsjwvwo&t=19465s) |
 | chubut 2018 | 57 | Parti cerdd dant: hunanddewisiad. | [yZiO2KB0R14](https://www.youtube.com/watch?v=yZiO2KB0R14) |
 | chubut 2018 | 60 | Parti neu gôr teulu: hunanddewisiad. | [U0Hwpgr_CO0](https://www.youtube.com/watch?v=U0Hwpgr_CO0) |
@@ -518,6 +556,7 @@ Escuchar el video o leer el anuncio; con el título, la letra se pide como cualq
 | chubut 2023 | 46 | Unawd emyn: hunanddewisiad. | [EUtZrvORMXw](https://www.youtube.com/watch?v=EUtZrvORMXw) |
 | chubut 2023 | 46 | Unawd emyn: hunanddewisiad. | [LXqDlh3REiY](https://www.youtube.com/watch?v=LXqDlh3REiY) |
 | chubut 2023 | 46 | Unawd emyn: hunanddewisiad. | [eiwyiuYt_U0](https://www.youtube.com/watch?v=eiwyiuYt_U0) |
+| chubut 2023 | 47 | Unawd werin: «Y March Glas», «Ym Mhontypridd» neu «Si Hei Lwli Mabi». | [AnLRusbVjGs](https://www.youtube.com/watch?v=AnLRusbVjGs) |
 | chubut 2023 | 49 | Solo, música argentina: homenaje a María Elena Walsh, composición a elección. | [EV2CceTr4sk](https://www.youtube.com/watch?v=EV2CceTr4sk) |
 | chubut 2023 | 49 | Solo, música argentina: homenaje a María Elena Walsh, composición a elección. | [fBuwFDzNr4E](https://www.youtube.com/watch?v=fBuwFDzNr4E) |
 | chubut 2023 | 52 | Pueblos originarios patagónicos. Solo libre para voz femenina o masculina, en lengua autóctona: obra de rep… | [nxpxtnpXGfE](https://www.youtube.com/watch?v=nxpxtnpXGfE) |
@@ -567,9 +606,9 @@ Escuchar el video o leer el anuncio; con el título, la letra se pide como cualq
 | chubut 2025 | 75 | Segunda competencia principal, coro mixto, femenino o masculino: a) «Rosa Amarela», Heitor Villalobos (vers… | [h5zX7SaZJt8](https://www.youtube.com/watch?v=h5zX7SaZJt8) |
 | chubut 2025 | 77 | Coro de formación libre: obra con uso de recursos de ambientación, movimiento o puesta escénica, a elección. | [MIW7333GiIY 3:25:20](https://www.youtube.com/watch?v=MIW7333GiIY&t=12320s) |
 | chubut 2025 | 77 | Coro de formación libre: obra con uso de recursos de ambientación, movimiento o puesta escénica, a elección. | [ptNmB1_jJsI](https://www.youtube.com/watch?v=ptNmB1_jJsI) |
-| chubut 2026 | 55 | Solo libre, música ciudadana: tango o milonga a elección. | [hVtD63KLlsw 5:59:20](https://www.youtube.com/watch?v=hVtD63KLlsw&t=21560s) |
-| chubut 2026 | 56 | Solo libre, rock nacional: tema a elección de Charly García. | [cDpe89FFjOA 1:57:29](https://www.youtube.com/watch?v=cDpe89FFjOA&t=7049s) |
-| chubut 2026 | 61 | Dúo libre: obra a elección de música popular argentina o latinoamericana. | [hVtD63KLlsw 8:43:59](https://www.youtube.com/watch?v=hVtD63KLlsw&t=31439s) |
+| chubut 2026 | 55 | Solo libre, música ciudadana: tango o milonga a elección. | [hVtD63KLlsw 5:59:20](https://www.youtube.com/watch?v=hVtD63KLlsw&t=21560s) (ya identificada aquí: «Desencuentro») |
+| chubut 2026 | 56 | Solo libre, rock nacional: tema a elección de Charly García. | [cDpe89FFjOA 1:57:29](https://www.youtube.com/watch?v=cDpe89FFjOA&t=7049s) (ya identificada aquí: «Desarma y Sangra») |
+| chubut 2026 | 61 | Dúo libre: obra a elección de música popular argentina o latinoamericana. | [hVtD63KLlsw 8:43:59](https://www.youtube.com/watch?v=hVtD63KLlsw&t=31439s) (ya identificada aquí: «Ríe Chinito») |
 | trevelin 2021 | 97 | Solo femenino: obra a elección. | [EUHjpZkkUpM](https://www.youtube.com/watch?v=EUHjpZkkUpM) |
 | trevelin 2021 | 97 | Solo femenino: obra a elección. | [txxZGsFsWzs](https://www.youtube.com/watch?v=txxZGsFsWzs) |
 | trevelin 2021 | 100 | Solo libre: obra a elección. | [QZ8ee-pnlCI](https://www.youtube.com/watch?v=QZ8ee-pnlCI) |

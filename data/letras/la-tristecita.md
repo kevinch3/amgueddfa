@@ -1,6 +1,6 @@
 ---
 titulo: La tristecita
-autor: Ariel Ramírez, with lyrics by María Elena Espiro
+autor: Ariel Ramírez, letra de María Elena Espiro
 idioma: es
 derechos: Derechos confirmados por el mantenedor del archivo
 fuente: Aportado por Kevin Roberts

@@ -332,7 +332,13 @@ def test_export_drops_english_lines_the_welsh_model_heard(tmp_path):
      "parti neu côr merched ein gwlad gan Nia Wyn Jones. yy ysta cansion yym habla sobre nuestro pais", ["cy"], "cy"),  # mostly Welsh
     ("Diolch yn fawr", ["cy"], "cy"),
     ("Gwych", ["cy"], "cy"),  # nothing to tell: the model's language
-    ("Diolch", ["yt_es"], "es"),  # a Spanish source's line stays Spanish, as before
+    ("Diolch", ["yt_es"], "es"),  # one Welsh word in a Spanish source's line: still Spanish
+    # Spanish Whisper writes Welsh speech as Welsh too, with "en" for "yn" (Chubut 2022 -t5r4pwKx50)
+    ("Mae'n rhaid wrth gannu Emin fod yn ddidwyll.", ["whisper_es"], "cy"),
+    ("Ma hwnna'n rhywbeth i'w ganmol en fawr iawn a ni ddim en gweld hyn en amal yng Nghymru.", ["whisper_es"], "cy"),
+    # a Spanish announcement naming Welsh choirs and chapels stays Spanish
+    ("Invitamos al Côr Ysgol Gerdd y Gaiman", ["whisper_es"], "es"),
+    ("Felicitamos al Côr Merched Ysgol Gerdd Hendre y al Capel Bethel", ["yt_es"], "es"),
 ])
 def test_line_language_reads_the_text_of_a_welsh_model_line(text, fuentes, lang):
     from scripts.export_video_transcripts import line_language
@@ -393,15 +399,18 @@ def test_export_fixes_terms_in_spanish_lines_only(tmp_path):
     (b / "INDEX.tsv").write_text("id\tfile\n" + f"{'A' * 11}\tC/2021/a_AAAAAAAAAAA.mp4\n", encoding="utf-8")
     recon = tmp_path / "recon"
     recon.mkdir()
-    t = {"src": "reconstruida", "lang": "es", "fuentes": [["whisper_es"], ["cy"], ["letra"]],
+    t = {"src": "reconstruida", "lang": "es", "fuentes": [["whisper_es"], ["cy"], ["letra"], ["whisper_es"], ["whisper_es"]],
          "seg": [[0, "Invitamos al presidente del Círculo Várdico del Chubut."],
-                 [30, "Diolch i'r Cylch Várdico am ddod heddiw"], [60, "Várdico, canta el coro"]]}
+                 [30, "Diolch i'r Cylch Várdico am ddod heddiw"], [60, "Várdico, canta el coro"],
+                 [90, "Mae'r gerd hon yn hyfryd iawn, wrth gwrs."], [120, "Dyma gannu telenegol a swinol"]]}
     (recon / f"{'A' * 11}.json").write_text(json.dumps(t), encoding="utf-8")
     out = tmp_path / "out"
     export(b, [{"id": "A" * 11, "festival": "chubut"}], out, recon=recon)
     seg = [x for _, x in json.loads((out / ("A" * 11 + ".json")).read_text())["seg"]]
     assert seg[0] == "Invitamos al presidente del Círculo Bárdico del Chubut."
-    assert "Várdico" in seg[1] and seg[2] == "Várdico, canta el coro"  # Welsh line and lyric untouched
+    assert "Várdico" in seg[1] and seg[2] == "Várdico, canta el coro"  # Welsh-model line and lyric untouched
+    # Welsh that Spanish recognition wrote, whichever language the line reads as
+    assert seg[3] == "Mae'r gerdd hon yn hyfryd iawn, wrth gwrs." and seg[4] == "Dyma ganu telenegol a swinol"
 
 
 @pytest.mark.parametrize("heard, right", [

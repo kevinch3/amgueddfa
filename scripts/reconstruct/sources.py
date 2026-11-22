@@ -81,7 +81,10 @@ def load_sources(stem: Path, video_id: str, letras: Path = LETRAS) -> list[Line]
             # Next to Spanish speech the Welsh model's line is that speech again (in Spanish, Welsh spelling or a
             # translation) and is left out. Its Spanish lines go next to any Spanish text; its Welsh ones only
             # next to SPANISH_SPEECH_WORDS words of it, so a YouTube scrap over a Welsh song keeps the song.
-            es_lines = [(l.t, len(l.text.split())) for l in out if l.lang == "es" and not MARKER.match(l.text)]
+            # Spanish speech nearby; a Spanish source's line that reads as Welsh (Spanish Whisper writes Welsh
+            # speech too, with "en" for "yn") is not Spanish speech.
+            es_lines = [(l.t, len(l.text.split())) for l in out
+                        if l.lang == "es" and not MARKER.match(l.text) and line_language(l.text, [l.src]) == "es"]
 
             def heard_as_spanish(t: float, text: str) -> bool:
                 words = sum(n for x, n in es_lines if abs(t - x) <= SPANISH_NEAR)

@@ -29,7 +29,8 @@ Design: `docs/superpowers/specs/2026-11-20-reconstruccion-videos-design.md`. Pil
 
 - **Which Welsh lines are used:**
   - Bangor's lines below **0.6 confidence** are dropped: background under music or chatter (`MIN_CY_CONF`).
-  - On videos that also have Spanish text, Welsh lines within 3 s of a Spanish line are dropped. Bangor writes Welsh over Spanish speech too.
+  - On videos that also have Spanish text, a Bangor line is dropped where Spanish speech is within 3 s: 5+ words for a line that reads Welsh, any for one that reads Spanish (`SPANISH_SPEECH_WORDS`, `SPANISH_NEAR`). Bangor writes Welsh over Spanish speech too, and sometimes translates it.
+  - A Spanish source's line that reads as Welsh is not Spanish speech here: Spanish Whisper writes Welsh speech too, with "en" for "yn". The export also labels such lines Welsh (`line_language`: 2+ lowercase Welsh words outnumbering Spanish ones).
 - **Prompt v5 rules:**
   - Keep any line that reads as real speech, even when it is the only source.
   - Drop only noise and loops.
@@ -46,7 +47,7 @@ Design: `docs/superpowers/specs/2026-11-20-reconstruccion-videos-design.md`. Pil
   - A hint reaches only the windows where the heard word occurs, and the right word joins that window's word list.
   - When someone reports a misheard name: add a line, then rerun the videos that contain it. Only the windows with the word are asked again.
 - **Spanish words wrong everywhere, `TERM_FIXES` in `scripts/export_video_transcripts.py`:**
-  - It holds folded heard form → (right spelling, is a name). The export applies it to Spanish lines only, so nothing is asked again: rerun the export.
+  - It holds folded heard form → (right spelling, is a name). The export applies it to what the Spanish recognisers wrote (Welsh speech included: gerd → gerdd) and to the Welsh model's Spanish lines, never to Bangor's Welsh lines or lyrics. Nothing is asked again: rerun the export.
   - `TERM_FIXES_IN_CONTEXT` holds the forms that are also real names or words (Benedicto, Valdor), fixed only next to the words that tell them apart.
   - Add an entry only when the heard form is wrong in every Spanish line of `public/transcripciones-video/` (grep them all). If it is right in some places, or needs judgement per window, use the glossary instead.
 - **Prompt changes:** bump `PROMPT_VERSION` in `windows.py`; every window is asked again on its next run.

@@ -170,3 +170,19 @@ def test_the_spanish_pass_replaces_the_welsh_model_where_it_heard_spanish(tmp_pa
         (2774.82, "cy", "yn dref yr hebog airiw"),
         (3061.06, "whisper_es", "En este caso hay una sola participante que ya está en el escenario."),
     ]
+
+
+def test_welsh_speech_written_by_spanish_whisper_does_not_push_out_the_welsh_model(tmp_path):
+    # Spanish Whisper writes Welsh speech as Welsh, with "en" for "yn" (Chubut 2022 -t5r4pwKx50):
+    # that is not Spanish speech, so Bangor's own line next to it stays.
+    stem, letras = _fixture(tmp_path)
+    (letras / "videos.json").write_text("{}", encoding="utf-8")
+    (stem.parent / f"{stem.name}.whisper.json").write_text(json.dumps({"language": "es", "segments": WHISPER["segments"] + [
+        [60.0, 64.0, "Ma hwnna'n rhywbeth i'w ganmol en fawr iawn a ni ddim en gweld hyn"],
+        [90.0, 94.0, "muchas gracias a todos por venir hoy"]]}), encoding="utf-8")
+    (stem.parent / f"{stem.name}.cy-techiaith.json").write_text(json.dumps({"segments": [
+        {"s": 60.5, "text": "Mae hwnna'n rhywbeth i'w ganmol yn fawr iawn"},  # next to Welsh: kept
+        {"s": 90.5, "text": "Diolch yn fawr i chi gyd am ddod"},           # next to Spanish speech: dropped
+    ]}), encoding="utf-8")
+    cy = [(l.t, l.text) for l in load_sources(stem, "vid", letras) if l.src == "cy"]
+    assert cy == [(60.5, "Mae hwnna'n rhywbeth i'w ganmol yn fawr iawn")]

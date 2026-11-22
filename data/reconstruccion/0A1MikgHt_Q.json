@@ -308,20 +308,16 @@
    "Er engráct, «Weddu hirdaeth faith ar fôr a herio llawer gogor, roedd gwlad newid deutadau, en y sir, en agos hau»."
   ],
   [
-   586.0,
-   "Teg nodi bod rai camgymeriadau fan hyn, mae ambell llunell yn wythsyll ar pwyslais ar gwlad,"
+   585.68,
+   "Teg nodi bod rhai camgymeriadau fan hyn, mae ambell llinell yn wyth sill a'r pwyslais a'r gwlad uchod ychydig yn annaturiol ond yn angenreidiol ar gyfer y gynnghanedd lusg."
   ],
   [
-   594.0,
-   "echod y chydig yn anateriol, ond yn angen reidiol ar gyfer y gynhanedd lusg."
+   599.68,
+   "Yna myfyria'r bardd ar ymweliad â Dyffryn Camwy, ac mae'r gerdd yn arbennig o deimladwy a synhwyrus."
   ],
   [
-   600.0,
-   "Yna, me faria'r bardo ar ymweliad a dyffrin camwy, ac mae'r gerdd yn arbennig o deimladrwy a synhwyrus."
-  ],
-  [
-   608.5,
-   "Gad y mi fenfug dyfreiddwyd, i deimlo caledr croeso."
+   607.68,
+   "Gad ym i fenthyg dy freuddwyd, i deimlo caledu'r croeso."
   ],
   [
    614.4,
@@ -332,8 +328,8 @@
    "Ac wrth i'r llanw droid a'n groes y de, mae ymchwydd geiriau plant yn golchu'r lle."
   ],
   [
-   625.8,
-   "Mae'r cerdu caith a'r hyddyn asio naturiol i greu cyfanwet cyfoethog dros ben."
+   626.68,
+   "Mae'r cerddi caeth a rhydd yn asio naturiol i greu cyfanwaith cyfoethog dros ben. Dyma'r bardd sicraf ei lais, gwreiddio olaf ei ddelwedd a'i ymadrodd, bardd sydd wedi llwyddo i dynnu enaid y wladfa i mewn i'w gerddi."
   ],
   [
    633.5,
@@ -786,6 +782,15 @@
    "whisper_es"
   ],
   [
+   "cy",
+   "whisper_es"
+  ],
+  [
+   "cy",
+   "whisper_es"
+  ],
+  [
+   "cy",
    "whisper_es"
   ],
   [
@@ -795,15 +800,7 @@
    "whisper_es"
   ],
   [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
+   "cy",
    "whisper_es"
   ],
   [
@@ -975,8 +972,8 @@
  ],
  "ventanas": {
   "total": 32,
-  "modelo": 21,
-  "reglas": 7,
+  "modelo": 20,
+  "reglas": 8,
   "vacias": 4
  }
 }

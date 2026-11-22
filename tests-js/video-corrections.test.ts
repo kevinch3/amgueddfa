@@ -23,7 +23,7 @@ const vectors = readdirSync(DIR)
 
 describe('video corrections: shared vectors', () => {
   it('finds every vector', () => {
-    expect(vectors.length).toBeGreaterThanOrEqual(12);
+    expect(vectors.length).toBeGreaterThanOrEqual(17);
   });
 
   it.each(vectors)('%s', (_, v) => {

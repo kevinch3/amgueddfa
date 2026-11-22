@@ -11,7 +11,7 @@ VECTORS = sorted((Path(__file__).parent / "fixtures" / "video-corrections").glob
 
 
 def test_finds_every_vector():
-    assert len(VECTORS) >= 12
+    assert len(VECTORS) >= 17
 
 
 @pytest.mark.parametrize("path", VECTORS, ids=[p.name for p in VECTORS])

@@ -19,6 +19,19 @@ def _word_char(c: str) -> bool:
     return unicodedata.category(c)[0] in "LNM"
 
 
+# Spaces are spelled out (not isspace, not strip) so that the TypeScript twin treats exactly the same characters as spaces.
+def _espacio(c: str) -> bool:
+    return c in "\t\n\v\f\r" or unicodedata.category(c) == "Zs"
+
+
+def _abre(c: str) -> bool:
+    return c in "¡¿" or unicodedata.category(c) in ("Ps", "Pi")
+
+
+def _cierra(c: str) -> bool:
+    return c in ".,;:!?…" or unicodedata.category(c) in ("Pe", "Pf")
+
+
 def _palabras(s: str) -> list[tuple[int, int, str]]:
     """A line's words and where each sits in it, (start, end, folded): runs of letters, digits and marks."""
     out, i = [], 0
@@ -41,33 +54,62 @@ def fold_line(s: str) -> str:
     return " ".join(w for _, _, w in _palabras(s))
 
 
-def _ubicar(lines: list[dict], t: float, antes: str) -> tuple[int, tuple[int, int, int] | None] | None:
-    """The line a change with `antes` targets, nearest in time first and never a lyric line: an equal line within
-    2 s (run None), else `antes` as a run of whole words inside a line within 5 s (a rebuild joined fragments):
-    run (a, b, fin) with [a, b) the run and fin where the next word starts."""
-    cand = sorted((abs(l["t"] - t), i) for i, l in enumerate(lines)
-                  if abs(l["t"] - t) <= CERCA and "letra" not in l["fu"])
+def _donde(ws: list[str], busca: list[str]) -> int:
+    """Where the words `busca` first run in `ws`, or -1."""
+    n = len(busca)
+    return next((k for k in range(len(ws) - n + 1) if ws[k:k + n] == busca), -1)
+
+
+def _ubicar(lines: list[dict], huellas: list[tuple], t: float, antes: str):
+    """The line a change with `antes` targets, nearest in time first and never a lyric line: (i, None) for an equal
+    line within 2 s, else (i, (a, b, qa, qb)) for `antes` as a run of whole words inside a line within 5 s (a rebuild
+    joined fragments): a texto replaces [a, b) (the words with `antes`' own marks), a quitar removes [qa, qb) (the words
+    with the marks glued to them and the space after). "tomada" when the nearest match is text an earlier change
+    already took (huellas: (t, words)): the change repeats an approved one, and trying the next candidate would land it
+    on a twin line or inside that change's new text. At equal distance the taken text counts first. None: no line."""
+    cand = sorted([(abs(h_t - t), 0, i) for i, (h_t, _) in enumerate(huellas) if abs(h_t - t) <= CERCA]
+                  + [(abs(l["t"] - t), 1, i) for i, l in enumerate(lines)
+                     if abs(l["t"] - t) <= CERCA and "letra" not in l["fu"]])
     busca = _palabras(antes)
-    folded = " ".join(w for _, _, w in busca)
-    for d, i in cand:
-        if d <= EXACTA and fold_line(lines[i]["text"]) == folded:
+    bw = [w for _, _, w in busca]
+    folded = " ".join(bw)
+    for d, k, i in cand:
+        if d > EXACTA:
+            break
+        if k == 0 and " ".join(huellas[i][1]) == folded:
+            return "tomada"
+        if k == 1 and fold_line(lines[i]["text"]) == folded:
             return i, None
     if not busca:
         return None
-    # The fragment's own opening and closing marks ("¡…!", "….") go with its run when the line has them around it.
-    pre, post, n = antes[:busca[0][0]], antes[busca[-1][1]:], len(busca)
-    for _, i in cand:
+    # The fragment's own opening and closing marks ("¡…!", "….") go with a texto's run when the line has them around it.
+    pre, post = antes[:busca[0][0]], antes[busca[-1][1]:]
+    for _, k, i in cand:
+        if k == 0:
+            if _donde(huellas[i][1], bw) >= 0:
+                return "tomada"
+            continue
         text = lines[i]["text"]
         ws = _palabras(text)
-        for k in range(len(ws) - n + 1):
-            if any(ws[k + j][2] != busca[j][2] for j in range(n)):
-                continue
-            a, b = ws[k][0], ws[k + n - 1][1]
-            if pre and a >= len(pre) and text[a - len(pre):a] == pre:
-                a -= len(pre)
-            if post and text[b:b + len(post)] == post:
-                b += len(post)
-            return i, (a, b, ws[k + n][0] if k + n < len(ws) else len(text))
+        at = _donde([w for _, _, w in ws], bw)
+        if at < 0:
+            continue
+        wa, wb = ws[at][0], ws[at + len(bw) - 1][1]
+        a, b = wa, wb
+        if pre and a >= len(pre) and text[a - len(pre):a] == pre:
+            a -= len(pre)
+        if post and text[b:b + len(post)] == post:
+            b += len(post)
+        # A removed run takes the marks glued before it except a closing one (the end of the fragment before it),
+        # the marks glued after it except an opening ¡ ¿ ( « “ (the next fragment's), and the space after it.
+        qa, qb = wa, wb
+        while qa > 0 and not (_espacio(text[qa - 1]) or _word_char(text[qa - 1]) or _cierra(text[qa - 1])):
+            qa -= 1
+        while qb < len(text) and not (_espacio(text[qb]) or _word_char(text[qb]) or _abre(text[qb])):
+            qb += 1
+        while qb < len(text) and _espacio(text[qb]):
+            qb += 1
+        return i, (a, b, qa, qb)
     return None
 
 
@@ -85,12 +127,14 @@ def apply_corrections(t: dict, rows: list[dict]) -> tuple[dict, list[str], list[
     the rows that changed something (the file records them so the player never applies one twice), and the
     changes not applied as {"id", "cambio", "motivo": "sin_linea" | "idioma_en_linea_unida"}. A line whose text
     a correction wrote gets "colab" in its fuentes; once a correction sets a language, "idiomas" covers every
-    line (the file's own where it had them, else "cy" where the Welsh model heard it, else the file's lang)."""
+    line (the file's own where it had them, else "cy" where the Welsh model heard it, else the file's lang).
+    A change whose text an earlier change already took (two collaborators fixed the same original line) is not placed."""
     seg, fuentes, idiomas = t["seg"], t.get("fuentes") or [], t.get("idiomas")
     if not (isinstance(idiomas, list) and len(idiomas) == len(seg)):
         idiomas = None
     lines = [{"t": s, "text": x, "fu": list((fuentes[i] if i < len(fuentes) else None) or []),
               "idioma": idiomas[i] if idiomas is not None else None} for i, (s, x) in enumerate(seg)]
+    huellas: list[tuple] = []  # (t, words) an applied change took from a line, at the change's time
     con_idiomas = idiomas is not None
     applied: list[str] = []
     sin_anclar: list[dict] = []
@@ -102,36 +146,51 @@ def apply_corrections(t: dict, rows: list[dict]) -> tuple[dict, list[str], list[
             if not isinstance(c, dict) or not _real_time(c.get("t")):
                 sin_anclar.append({"id": row["id"], "cambio": c, "motivo": "sin_linea"})
                 continue
-            texto = c["texto"] if isinstance(c.get("texto"), str) and c["texto"].strip() else None
+            texto = c["texto"] if isinstance(c.get("texto"), str) and not all(map(_espacio, c["texto"])) else None
             idioma = c["idioma"] if c.get("idioma") in ("es", "cy") else None
             if not isinstance(c.get("antes"), str):
                 # An add; the same text already within 2 s means it is there (an earlier export or row put it there).
-                if texto is None:
+                # Text an earlier change took from there is not put back: it repeats an approved add, and is reported.
+                ya = texto is not None and any(abs(l["t"] - c["t"]) <= EXACTA and fold_line(l["text"]) == fold_line(texto)
+                                               for l in lines)
+                tomada = texto is not None and any(abs(h_t - c["t"]) <= EXACTA and " ".join(w) == fold_line(texto)
+                                                   for h_t, w in huellas)
+                if texto is None or (tomada and not ya):
                     sin_anclar.append({"id": row["id"], "cambio": c, "motivo": "sin_linea"})
-                elif not any(abs(l["t"] - c["t"]) <= EXACTA and fold_line(l["text"]) == fold_line(texto) for l in lines):
+                elif not ya:
                     at = next((i for i, l in enumerate(lines) if l["t"] > c["t"]), len(lines))
                     lines.insert(at, {"t": c["t"], "text": texto, "fu": ["colab"], "idioma": idioma})
                     con_idiomas = con_idiomas or idioma is not None
                     hizo = True
                 continue
-            lugar = _ubicar(lines, c["t"], c["antes"])
-            if lugar is None:
+            lugar = _ubicar(lines, huellas, c["t"], c["antes"])
+            if lugar is None or lugar == "tomada":
                 sin_anclar.append({"id": row["id"], "cambio": c, "motivo": "sin_linea"})
                 continue
             i, run = lugar
             line = lines[i]
+            huella = (c["t"], [w for _, _, w in _palabras(c["antes"])])
             if c.get("quitar") is True:
-                resto = (line["text"][:run[0]] + line["text"][run[2]:]).strip() if run else ""
+                resto = ""
+                if run and run[3] == len(line["text"]):
+                    resto = line["text"][:run[2]]
+                    while resto and _espacio(resto[-1]):
+                        resto = resto[:-1]
+                elif run:
+                    resto = line["text"][:run[2]] + line["text"][run[3]:]
                 if fold_line(resto):
                     line["text"] = resto
                     _colab(line)
                 else:
                     del lines[i]
+                huellas.append(huella)
                 hizo = True
                 continue
             if texto is not None:
                 line["text"] = line["text"][:run[0]] + texto + line["text"][run[1]:] if run else texto
                 _colab(line)
+                if fold_line(texto) != " ".join(huella[1]):
+                    huellas.append(huella)
                 hizo = True
             if idioma and run:
                 sin_anclar.append({"id": row["id"], "cambio": c, "motivo": "idioma_en_linea_unida"})

@@ -18,10 +18,22 @@ export type Corregible = { seg: [number, string][]; fuentes: string[][]; idiomas
 const CERCA = 5; // s around a change's time where its line may now start
 const EXACTA = 2; // s within which an equal line is the same line (and an add is already there)
 
+// Spaces are spelled out (not \s, not trim) so that the Python twin treats exactly the same characters as spaces.
+const NO_BLANCO = /[^\t\n\v\f\r\p{Zs}]/u;
+const BLANCO_FINAL = /[\t\n\v\f\r\p{Zs}]+$/u;
+// What a removed run takes along: the marks glued before its first word, except a closing one (the end of the
+// fragment before it), and the marks glued after its last word, except an opening ¡ ¿ ( « “ (the next fragment's),
+// then the space after it.
+const CABEZA = /[^\t\n\v\f\r\p{Zs}\p{L}\p{N}\p{M}.,;:!?…\p{Pe}\p{Pf}]*$/u;
+const COLA = /^[^\t\n\v\f\r\p{Zs}\p{L}\p{N}\p{M}¡¿\p{Ps}\p{Pi}]*[\t\n\v\f\r\p{Zs}]*/u;
+
 type Palabra = { a: number; b: number; w: string };
 type Linea = { t: number; text: string; fu: string[]; idioma: string | null; autores: string[] | null };
-/** Where a change landed: line i, whole (`run` null) or the run [a, b) of a longer line; `fin` is where the next word starts. */
-type Lugar = { i: number; run: { a: number; b: number; fin: number } | null };
+/** The words an applied change took from a line (rewrote or removed), at the change's time. */
+type Huella = { t: number; w: string[] };
+/** Where a change landed: line i, whole (`run` null) or a run of a longer line. A texto replaces [a, b) (the words with
+ * `antes`' own marks); a quitar removes [qa, qb) (the words with the marks glued to them and the space after). */
+type Lugar = { i: number; run: { a: number; b: number; qa: number; qb: number } | null };
 
 /** A line's words and where each sits in it: runs of letters, digits and marks, folded. */
 function palabras(s: string): Palabra[] {
@@ -38,34 +50,52 @@ export function foldLine(s: string): string {
   return palabras(s).map((p) => p.w).join(' ');
 }
 
+/** Where the words `busca` first run in `ws`, or -1. */
+function donde(ws: string[], busca: string[]): number {
+  for (let k = 0; k + busca.length <= ws.length; k++) if (busca.every((w, j) => ws[k + j] === w)) return k;
+  return -1;
+}
+
 /** The line a change with `antes` targets, nearest in time first and never a lyric line: an equal line within 2 s,
- * else `antes` as a run of whole words inside a line within 5 s (a rebuild joined fragments). */
-function ubicar(lines: Linea[], t: number, antes: string): Lugar | null {
-  const cand = lines
-    .flatMap((l, i) => {
-      const d = Math.abs(l.t - t);
-      return d <= CERCA && !l.fu.includes('letra') ? [{ i, d }] : [];
-    })
-    .sort((x, y) => x.d - y.d || x.i - y.i);
+ * else `antes` as a run of whole words inside a line within 5 s (a rebuild joined fragments). 'tomada' when the
+ * nearest match is text an earlier change already took: the change repeats an approved one, and trying the next
+ * candidate would land it on a twin line or inside that change's new text. At equal distance the taken text counts first. */
+function ubicar(lines: Linea[], huellas: Huella[], t: number, antes: string): Lugar | 'tomada' | null {
+  const cand = [
+    ...huellas.flatMap((h, i) => (Math.abs(h.t - t) <= CERCA ? [{ d: Math.abs(h.t - t), k: 0, i }] : [])),
+    ...lines.flatMap((l, i) =>
+      Math.abs(l.t - t) <= CERCA && !l.fu.includes('letra') ? [{ d: Math.abs(l.t - t), k: 1, i }] : []),
+  ].sort((x, y) => x.d - y.d || x.k - y.k || x.i - y.i);
   const busca = palabras(antes);
-  const folded = busca.map((p) => p.w).join(' ');
-  for (const { i, d } of cand) if (d <= EXACTA && foldLine(lines[i].text) === folded) return { i, run: null };
+  const bw = busca.map((p) => p.w);
+  const folded = bw.join(' ');
+  for (const { d, k, i } of cand) {
+    if (d > EXACTA) break;
+    if (k === 0 && huellas[i].w.join(' ') === folded) return 'tomada';
+    if (k === 1 && foldLine(lines[i].text) === folded) return { i, run: null };
+  }
   if (!busca.length) return null;
-  // The fragment's own opening and closing marks ("¡…!", "….") go with its run when the line has them around it.
+  // The fragment's own opening and closing marks ("¡…!", "….") go with a texto's run when the line has them around it.
   const pre = antes.slice(0, busca[0].a);
   const post = antes.slice(busca[busca.length - 1].b);
-  for (const { i } of cand) {
+  for (const { k, i } of cand) {
+    if (k === 0) {
+      if (donde(huellas[i].w, bw) >= 0) return 'tomada';
+      continue;
+    }
     const text = lines[i].text;
     const ws = palabras(text);
-    for (let k = 0; k + busca.length <= ws.length; k++) {
-      if (!busca.every((p, j) => ws[k + j].w === p.w)) continue;
-      let a = ws[k].a;
-      let b = ws[k + busca.length - 1].b;
-      if (pre && a >= pre.length && text.slice(a - pre.length, a) === pre) a -= pre.length;
-      if (post && text.slice(b, b + post.length) === post) b += post.length;
-      const fin = k + busca.length < ws.length ? ws[k + busca.length].a : text.length;
-      return { i, run: { a, b, fin } };
-    }
+    const at = donde(ws.map((p) => p.w), bw);
+    if (at < 0) continue;
+    const wa = ws[at].a;
+    const wb = ws[at + bw.length - 1].b;
+    let a = wa;
+    let b = wb;
+    if (pre && a >= pre.length && text.slice(a - pre.length, a) === pre) a -= pre.length;
+    if (post && text.slice(b, b + post.length) === post) b += post.length;
+    const qa = wa - CABEZA.exec(text.slice(0, wa))![0].length;
+    const qb = wb + COLA.exec(text.slice(wb))![0].length;
+    return { i, run: { a, b, qa, qb } };
   }
   return null;
 }
@@ -73,7 +103,8 @@ function ubicar(lines: Linea[], t: number, antes: string): Lugar | null {
 /** The transcript with `rows` applied in `reviewed_at` order, and what came of them: `applied` lists the rows that changed
  * something (the export records them so the player never applies one twice), `sinAnclar` the changes not applied, and
  * `autores` the display names behind each changed line of the result (an empty list when the rows had none). A line
- * whose text a correction wrote gets "colab" in its fuentes; once a correction sets a language, `idiomas` covers every line. */
+ * whose text a correction wrote gets "colab" in its fuentes; once a correction sets a language, `idiomas` covers every line.
+ * A change whose text an earlier change already took (two collaborators fixed the same original line) is not placed. */
 export function applyCorrections<T extends Corregible>(
   tr: T,
   rows: CorrectionRow[],
@@ -82,6 +113,7 @@ export function applyCorrections<T extends Corregible>(
   const lines: Linea[] = tr.seg.map(([t, text], i) => ({
     t, text, fu: [...(tr.fuentes?.[i] ?? [])], idioma: idiomas?.[i] ?? null, autores: null,
   }));
+  const huellas: Huella[] = [];
   let conIdiomas = !!idiomas;
   const applied: string[] = [];
   const sinAnclar: SinAnclar[] = [];
@@ -102,12 +134,16 @@ export function applyCorrections<T extends Corregible>(
         sinAnclar.push({ id: row.id, cambio: c, motivo: 'sin_linea' });
         continue;
       }
-      const texto = typeof c.texto === 'string' && c.texto.trim() ? c.texto : null;
+      const texto = typeof c.texto === 'string' && NO_BLANCO.test(c.texto) ? c.texto : null;
       const idioma = c.idioma === 'es' || c.idioma === 'cy' ? c.idioma : null;
       if (typeof c.antes !== 'string') {
         // An add; the same text already within 2 s means it is there (an earlier export or row put it there).
-        if (texto === null) sinAnclar.push({ id: row.id, cambio: c, motivo: 'sin_linea' });
-        else if (!lines.some((l) => Math.abs(l.t - c.t) <= EXACTA && foldLine(l.text) === foldLine(texto))) {
+        // Text an earlier change took from there is not put back: it repeats an approved add, and is reported.
+        const cerca = (x: number) => Math.abs(x - c.t) <= EXACTA;
+        const ya = texto !== null && lines.some((l) => cerca(l.t) && foldLine(l.text) === foldLine(texto));
+        const tomada = texto !== null && huellas.some((h) => cerca(h.t) && h.w.join(' ') === foldLine(texto));
+        if (texto === null || (tomada && !ya)) sinAnclar.push({ id: row.id, cambio: c, motivo: 'sin_linea' });
+        else if (!ya) {
           const at = lines.findIndex((l) => l.t > c.t);
           const nueva: Linea = { t: c.t, text: texto, fu: ['colab'], idioma, autores: null };
           lines.splice(at < 0 ? lines.length : at, 0, nueva);
@@ -117,25 +153,30 @@ export function applyCorrections<T extends Corregible>(
         }
         continue;
       }
-      const lugar = ubicar(lines, c.t, c.antes);
-      if (!lugar) {
+      const lugar = ubicar(lines, huellas, c.t, c.antes);
+      if (!lugar || lugar === 'tomada') {
         sinAnclar.push({ id: row.id, cambio: c, motivo: 'sin_linea' });
         continue;
       }
       const l = lines[lugar.i];
       const run = lugar.run;
+      const huella: Huella = { t: c.t, w: palabras(c.antes).map((p) => p.w) };
       if (c.quitar === true) {
-        const resto = run ? (l.text.slice(0, run.a) + l.text.slice(run.fin)).trim() : '';
+        let resto = '';
+        if (run && run.qb === l.text.length) resto = l.text.slice(0, run.qa).replace(BLANCO_FINAL, '');
+        else if (run) resto = l.text.slice(0, run.qa) + l.text.slice(run.qb);
         if (foldLine(resto)) {
           l.text = resto;
           colab(l);
         } else lines.splice(lugar.i, 1);
+        huellas.push(huella);
         hizo = true;
         continue;
       }
       if (texto !== null) {
         l.text = run ? l.text.slice(0, run.a) + texto + l.text.slice(run.b) : texto;
         colab(l);
+        if (foldLine(texto) !== huella.w.join(' ')) huellas.push(huella);
         hizo = true;
       }
       if (idioma && run) sinAnclar.push({ id: row.id, cambio: c, motivo: 'idioma_en_linea_unida' });

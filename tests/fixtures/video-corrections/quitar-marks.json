@@ -1,0 +1,31 @@
+{
+  "about": "quitar of a run takes its own opening and closing marks and the space after it, never the next fragment's opening ¡, ¿ or quote, nor the previous one's closing mark (also with no space between)",
+  "transcript": {
+    "lang": "es",
+    "seg": [[10.0, "Gracias. ¡Bravo!"], [20.0, "Hasta la próxima. ¡Gracias por ver!"], [30.0, "Muchas gracias. ¿Están listos?"],
+            [40.0, "Ahora canta \"Calon Lân\" el coro"], [50.0, "Bienvenidos. ¡Suscríbete!"],
+            [60.0, "Buenas noches, suscríbete al canal, comienza la competencia"], [70.0, "Gracias.¡Bravo!"], [80.0, "Gracias.¡Bravo!"]],
+    "fuentes": [["whisper_es"], ["whisper_es"], ["whisper_es"], ["whisper_es"], ["whisper_es"], ["whisper_es"], ["whisper_es"], ["whisper_es"]]
+  },
+  "rows": [
+    {"id": "r-marks", "reviewed_at": "2026-11-22T10:00:00+00:00", "display_name": "Ana",
+     "payload": {"video": {"id": "TESTVIDEO01"}, "cambios": [
+       {"t": 10.0, "antes": "Gracias.", "quitar": true},
+       {"t": 20.0, "antes": "Hasta la próxima.", "quitar": true},
+       {"t": 30.0, "antes": "Muchas gracias.", "quitar": true},
+       {"t": 40.0, "antes": "Ahora canta", "quitar": true},
+       {"t": 50.0, "antes": "Suscríbete", "quitar": true},
+       {"t": 60.0, "antes": "suscríbete al canal", "quitar": true},
+       {"t": 70.0, "antes": "¡Bravo!", "quitar": true},
+       {"t": 80.0, "antes": "Gracias.", "quitar": true}]}}
+  ],
+  "expected": {
+    "seg": [[10.0, "¡Bravo!"], [20.0, "¡Gracias por ver!"], [30.0, "¿Están listos?"], [40.0, "\"Calon Lân\" el coro"],
+            [50.0, "Bienvenidos."], [60.0, "Buenas noches, comienza la competencia"], [70.0, "Gracias."], [80.0, "¡Bravo!"]],
+    "fuentes": [["whisper_es", "colab"], ["whisper_es", "colab"], ["whisper_es", "colab"], ["whisper_es", "colab"],
+                ["whisper_es", "colab"], ["whisper_es", "colab"], ["whisper_es", "colab"], ["whisper_es", "colab"]]
+  },
+  "sinAnclar": [],
+  "applied": ["r-marks"],
+  "autores": {"0": ["Ana"], "1": ["Ana"], "2": ["Ana"], "3": ["Ana"], "4": ["Ana"], "5": ["Ana"], "6": ["Ana"], "7": ["Ana"]}
+}

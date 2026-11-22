@@ -298,7 +298,7 @@ export function wireEditor(dialog: HTMLDialogElement, getState: () => EditorStat
     ok.addEventListener('click', () => {
       if (!quitar.checked && !input.value.trim()) {
         input.focus();
-        errorEnVista(err, box, t('contrib.error.video_texto'));
+        errorEnVista(err, acciones, t('contrib.error.video_texto'));
         return;
       }
       const cur = state().tr;
@@ -306,7 +306,7 @@ export function wireEditor(dialog: HTMLDialogElement, getState: () => EditorStat
       const next = setLine(cur, draft, i, { texto: input.value, idioma: lang.get(), quitar: quitar.checked });
       // One contribution holds at most 200 changes: refused here rather than at the send.
       if (!cabe(cur, draft, next)) {
-        errorEnVista(err, box, limiteLabel());
+        errorEnVista(err, acciones, limiteLabel());
         return;
       }
       save(next);
@@ -381,20 +381,20 @@ export function wireEditor(dialog: HTMLDialogElement, getState: () => EditorStat
       const cuando = tiempoNueva(tiempo.value, { prefill: at, duracion: state().duration() });
       if (!cuando.ok) {
         tiempo.focus();
-        errorEnVista(err, box, cuando.key === 'editor.error_tiempo_fin' ? t(cuando.key, { duracion: cuando.duracion }) : t(cuando.key));
+        errorEnVista(err, acciones, cuando.key === 'editor.error_tiempo_fin' ? t(cuando.key, { duracion: cuando.duracion }) : t(cuando.key));
         return;
       }
       const idi = lang.get();
       if (!input.value.trim() || !idi) {
         input.focus();
-        errorEnVista(err, box, t('contrib.error.video_texto'));
+        errorEnVista(err, acciones, t('contrib.error.video_texto'));
         return;
       }
       const cur = state().tr;
       if (!draft || !cur) return;
       const next = addNueva(draft, { t: cuando.t, texto: input.value, idioma: idi });
       if (!cabe(cur, draft, next)) {
-        errorEnVista(err, box, limiteLabel());
+        errorEnVista(err, acciones, limiteLabel());
         return;
       }
       save(next);

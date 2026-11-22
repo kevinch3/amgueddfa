@@ -161,12 +161,13 @@ export function cabe(tr: Transcript, before: Draft, next: Draft): boolean {
 /** The editor's message when a change does not fit (see cabe). */
 export const limiteLabel = (): string => t('editor.limite', { max: MAX_CAMBIOS });
 
-/** Show `text` as an editor's error (a line's or a new line's) and bring the whole editor back into view: the message
- * makes it taller, and on a phone OK / Deshacer fell below the list's visible bottom (239 px became 330). Each error that
- * appears or changes scrolls it ('nearest', so an editor in view stays put); an empty text only clears the message. */
-export function errorEnVista(err: { textContent: string | null }, box: { scrollIntoView(o: { block: 'nearest' }): void }, text: string): void {
+/** Show `text` as an editor's error (a line's or a new line's) and bring the editor's OK / Deshacer row into view, just
+ * under the message: the message makes the editor taller (239 px became 330), which on a small phone is more than the
+ * list's visible box, and scrolling the whole editor 'nearest' aligned its top and left the buttons out of sight. Each
+ * error that appears or changes scrolls the row ('nearest', so a row in view stays put); an empty text only clears the message. */
+export function errorEnVista(err: { textContent: string | null }, acciones: { scrollIntoView(o: { block: 'nearest' }): void }, text: string): void {
   err.textContent = text;
-  if (text) box.scrollIntoView({ block: 'nearest' });
+  if (text) acciones.scrollIntoView({ block: 'nearest' });
 }
 
 /** The draft on the transcript as it is now: each change back on its own line (the same index, else the line with the

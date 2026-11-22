@@ -66,6 +66,13 @@ describe("an editor's error never pushes OK / Deshacer out of sight", () => {
     expect(scrolls).toEqual([{ block: 'nearest' }, { block: 'nearest' }]);
   });
 
+  it('an error brings the OK / Deshacer row into view, not the top of the editor (a phone shows the message and the buttons)', () => {
+    const src = readFileSync('src/scripts/editor-transcripcion.ts', 'utf8');
+    const calls = src.match(/errorEnVista\(err, (\w+),/g) ?? [];
+    expect(calls.length).toBeGreaterThanOrEqual(5);
+    expect(calls.every((c) => c === 'errorEnVista(err, acciones,')).toBe(true);
+  });
+
   it('clearing the message does not scroll', () => {
     const { err, box, scrolls } = fake();
     errorEnVista(err, box, '');
@@ -76,7 +83,7 @@ describe("an editor's error never pushes OK / Deshacer out of sight", () => {
   it('the editors set every error through it', () => {
     const src = readFileSync(join(__dirname, '..', 'src', 'scripts', 'editor-transcripcion.ts'), 'utf8');
     expect(src).not.toMatch(/\berr\.textContent\s*=/);
-    expect(src.match(/errorEnVista\(err, box,/g)?.length).toBeGreaterThanOrEqual(5);
+    expect(src.match(/errorEnVista\(err, acciones,/g)?.length).toBeGreaterThanOrEqual(5);
   });
 });
 

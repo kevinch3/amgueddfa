@@ -1,6 +1,6 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
@@ -36,72 +36,144 @@
    "Cerddodd dwylo ddowr a thân, cerddodd wnaeth ddydd a'i can ymlaen, a cherddodd nôl ymlaen."
   ],
   [
+   406.96,
+   "Mi canto estuvo siempre enamorado de esta tierra paisana y favorista."
+  ],
+  [
    414.56,
-   "fu'n buñado de sal y de ceniza por el viento del sur de Panamá."
+   "Es un puñado de salvo y de ceniza por el viento del sur, del Paraná."
   ],
   [
    421.06,
-   "Pero a veces ni fue canuto, sino un grito liberado por fin de su envoltura,"
+   "Pero a veces ni fue canto, sino un grito liberado por fin de su envoltura."
   ],
   [
    429.06,
-   "una flecha en el aire a la aventura, una estrella lanzada al infinito."
+   "Una flecha en el aire a la aventura, una estrella lanzada al infinito."
   ],
   [
    436.06,
-   "Pero flecha o estrella, su elemento, su materia vital y primitiva fuodd diarth."
+   "Pero flecha o estrella, su elemento, su materia vital y primitiva, fuera de la tierra."
+  ],
+  [
+   444.56,
+   "que en ella sobreviva más allá de la vida en su momento."
+  ],
+  [
+   450.56,
+   "Más allá de mi cuerpo y de su historia, mi canto vivirá. Fiel testimonio de todo lo que fue mi patrimonio y ha de ser una parte de su historia."
+  ],
+  [
+   467.18,
+   "detrás del canto, detrás de lo que amé y volví poesía, de todo lo que fue lírica y mía la razón de mi risa."
   ],
   [
    479.44,
-   "de mi llan, por la razón de mi buque de la vida, sin saber el final, lo dibuchaba, sabiendo naddo mas que se le daba el canto, o punto de partida, y a este canto fui fiel, cada jornada, y en espíritu y alma fui tu amante, oh, surda mi recuerdo,"
+   "el llanto. La razón de mi búsqueda en la vida, sin saber al final lo que buscaba, sabiendo nada más que se me daba el canto como punto de partida. Y a ese canto fui fiel, cada jornada Y en espíritu y alma fui tu amante Oh, son de mi recuerdo"
+  ],
+  [
+   520.44,
+   "Yo te amé, tierra azul, amé tu viento, la anisca desnudé de tu montaña, y busqué con el árbol en su entraña y el lago con azul de firmamento."
   ],
   [
    537.14,
-   "Yn el cielo de estrellas constelaron la vibre infinidad del campo abierto, y en toda la linea de su desierto, los mató por de patas encinados."
+   "en el cielo de estrellas constelado, la libre infinidad del campo abierto, y en toda la línea de su desierto, los matojos de pasto calcinados."
   ],
   [
    554.14,
-   "Dame un poco de ti, Tierra Sirenia, para cuando cumplas de mi plazo."
+   "Dame un poco de ti, tierra sureña, para cuando cumplir este mi plazo."
   ],
   [
    564.14,
-   "Abre i'r bardd ffresgor de' tŵr negaso i rhesiwi mi gwelyb mewn tŵr etameinia, i'r lŵgar dwi'n dwmbo i ddefifi un silhouette mewn ocho de' moschetta, tierra mïa de'l sur, si es siddo poeta, ge' este canto de amor me justifique."
+   "Abre el pardo frescor de tu regazo y recibe mi cuerpo en tu estameña Y el lugar de mi tumba identifique un silvestre manojo de mosqueta Tierra mía del sur, si he sido poeta, que este canto de amor me justifique"
+  ],
+  [
+   587.14,
+   "No tenemos las carpetas No tenemos la obra No sé si podemos subir después O si podemos cantar Es una obra que no podemos cantar sin las carpetas"
+  ],
+  [
+   607.5,
+   "Parece que falló el que traía las carpetas que llegó tarde. Y no sé, le pregunto a la comisión."
+  ],
+  [
+   637.5,
+   "¡Esto! ¡Esto!"
+  ],
+  [
+   648.5,
+   "Yo siempre en este momento puedo presentar una obra mía en el Eisteddfod. Siempre me la rechazaban, ¿no? Y ahora, por favor, por favor. Disculpe, disculpe. Yo tengo acá. No, pero no."
+  ],
+  [
+   673.0,
+   "Disculpen, Héctor es un paciente del diálogo si el fruto de ayuda del compositor compulsivo..."
+  ],
+  [
+   681.0,
+   "¡Gracias!"
+  ],
+  [
+   711.0,
+   "Yo no sé si ustedes conocen, yo acá tengo la ficha de Héctor Géme, sufre el síndrome de la descomposición."
+  ],
+  [
+   726.0,
+   "Les voy a contar algunas de las características antes de que evalúen, ¿no? O sea, afecta principalmente a los arregladores de música coral. Ignoran ser portadores y se dan cuenta que ya es demasiado tarde."
   ],
   [
    744.0,
-   "Algwyno symptomau son, el enceso de agudos en agoses graves, ritmos extremadamente complicados, lineas melodicas de absurdas y absoluta falta de buen gusto en sus arreglos morales."
+   "Algunos síntomas son el exceso de abusos en las voces graves, ritmos extremadamente complicados, líneas periódicas y absurdas y absolutas faltas de buen uso en sus arreglos morales."
+  ],
+  [
+   804.0,
+   "Bueno, el jurado lo dispone de esta manera, ¿sí? Bueno, perdón, ¿y el culo lo iba a poner a vista? Ok, bueno, ¿me muestra la obra?"
+  ],
+  [
+   827.16,
+   "A continuación, el grupo Polaria en Armonía interpretará la última descomposición de Héctor M., La Paloma Equivocada."
+  ],
+  [
+   876.16,
+   "Morir al norte, fuera al sur."
   ],
   [
    881.16,
-   "Gresho che'l ffîg o'r eang se'n egibwca."
+   "creyó que el pico era agua, se equivocaba."
   ],
   [
-   892.16,
-   "Gresho che'l mab yn ewca se'n egibwca."
-  ],
-  [
-   906.16,
-   "O un i'r nôl i'r de pwy ar sut, esio'r hyd yn oed y pwy ar sut."
+   936.16,
+   "Se equivocó la paloma, se equivocaba, se equivocaba, se equivocaba."
   ],
   [
    997.16,
-   "Diolch am wneud nathen i'w gamal oddi arnaf unwaith, na diolch am wneud nathen i'w gamal oddi arnaf unwaith."
+   "Dos palomitas en mi boca van otra vez Ni una ni otra le acertaban ni una vez"
   ],
   [
-   1163.96,
-   "Gwylia am dy lew, gwylia am dy lew, gwylia am dy lew, lew."
+   1027.16,
+   "Levante las langostas, los tiburones, los guardacostas, no se equivocan."
   ],
   [
    1190.96,
    "Gawn ni lasgwad isie ddod i'r lws er gwrs i genedlaethu hwnna."
   ],
   [
+   1201.96,
+   "I genedlaethu hwnna."
+  ],
+  [
    1280.96,
-   "Fuerte de Vida. Agua que liera, elemento minera, campos y frutos. Agua que amaína, ser de siesta y verano, calma del alma."
+   "fuente de vida, agua que niega, elemento primero, campos y frutos, agua que amaina, sed de siesta y verano, calma del alma."
+  ],
+  [
+   1301.96,
+   "agua en las manos de las mujeres al sol brota en trabajo"
+  ],
+  [
+   1311.96,
+   "Agua que corre como fluyen las voces, inspirándonos."
   ],
   [
    1389.96,
-   "Miliwn o fôn yn sili, miliwn o fôn yn ymladd."
+   "Miliwn o fôn yn sili, miliwn o fôn yn ymladd. Miliwn o fôn yn sili, miliwn o fôn yn ymladd."
   ],
   [
    1630.96,
@@ -112,8 +184,24 @@
    "Ces i'w nos de, o'r holl ffordd o'r ysgafn Gwynedd, sol yw'r llawr a'r bocs yw'r sêr, a'r holl ffordd o'r ysgafn de, i ddangos i'r holl ffordd o'r ysgafn de."
   ],
   [
+   1987.96,
+   "Amén."
+  ],
+  [
+   2033.94,
+   "Si se muere mi amor, me daré chaladitas de sello, voy a dejar a vos, voy a dejar a vos."
+  ],
+  [
    2063.94,
    "Felly, diolch yn fawr iawn i chi am wneud y cyfnod yma."
+  ],
+  [
+   2213.94,
+   "Gracias."
+  ],
+  [
+   2243.94,
+   "la sucesión y también para las tres escuelas, BIMPT y ECHO, que ya han sido entregadas, pero en el recierto vamos a dar la necesidad de entrega al señor Benito."
   ],
   [
    2277.94,
@@ -150,7 +238,106 @@
    "cy"
   ],
   [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
    "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
@@ -162,52 +349,19 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
+   "whisper_es"
   ],
   [
    "cy"
@@ -217,9 +371,9 @@
   ]
  ],
  "ventanas": {
-  "total": 42,
-  "modelo": 27,
+  "total": 43,
+  "modelo": 29,
   "reglas": 0,
-  "vacias": 15
+  "vacias": 14
  }
 }

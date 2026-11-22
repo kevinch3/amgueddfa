@@ -1,15 +1,15 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
    0.0,
-   "Yn un digrantau o'r côr o'dd y ffamilia Mary a Daniel Evans a rhediriodd sy' primer premiw a'r ffamilia boddi glw- yy y'r segwnd."
+   "Un integrante del coro de la familia Mary Daniel Evans a retirar su primer premio a la familia Bodiglur II."
   ],
   [
    8.22,
-   "Yn iawn, bendant yn iawn, y freg yna o'r gompetensia nwmero cinquentynw, y feirniada i'r casaliau, pum deg naw, parti côr-teulu, sori, o's i bennod yn barod?"
+   "Teníamos pendiente también el veredicto de la competencia número 59, Bernada Escasalía de Spindegnau, Particorte y Lee, sorry. José Bernat de Barot."
   ],
   [
    19.84,
@@ -21,7 +21,7 @@
   ],
   [
    33.58,
-   "Panu pedwar llais cyfoethog a phob rhan yn gywir, rhythmau cadarn a geirio clir a deallus."
+   "Canu pedwar llais cyfoethog a phob rhan yn gywir, rhythmau cadarn a geirio clir a deallus."
   ],
   [
    40.78,
@@ -29,11 +29,11 @@
   ],
   [
    59.66,
-   "Fel yn ogystal, mewn iaith Castellnau, fe chynhon nhw i ddau familiaid. Yn gyntaf, ro'n i gyda'r set, yym, o'r corff o'r familiaid o Mari a Daniel Ivans, yng nghyfnod Clawdd y Matog. Y familiaid yng nghyfnod y senario. Mi oeddan nhw'n canu i pedwar o'r golau, yn swnio'n dda, ac yn gywir. Y rhythm oedd yn dda, a'r pronunciadau a'r articuladau o'r tecst oedd yn glir a'n gwybodol."
+   "Al igual que en la competencia en idioma castellano, se presentaron dos familias. Primero tuvimos el conjunto o el coro de la familia de Mary a Daniel Evans, que cantaron el himno Dod ar fy Mhen. Esta familia colmó el escenario. Cantaron a cuatro voces con sonido rico y de manera correcta. El ritmo fue acertado y la pronunciación y articulación del texto fue claro y comprensible. Le agradó a la señora Jurado el unísono al principio de la segunda estrofa. y en la tercera estrofa llevaron a cabo un piano que fue efectivo."
   ],
   [
    89.66,
-   "I fo, isie ddat arno jo, hasta un final glorioso. La repeticion al final nos trajo una alegria con- de consagracion, como de ambiente de consagracion, y brillaron los tenores."
+   "y se desarrolló hasta un final glorioso. La repetición al final nos trajo una alegría de consagración, como de ambiente de consagración, y brillaron los tenores."
   ],
   [
    119.66,
@@ -41,19 +41,23 @@
   ],
   [
    149.66,
-   "A ma'r wobr gynta heno yn mynd i'r teulu mawr, teulu Mary a Daniel Evans, a'r ail wobr i deulu Bodeglir."
+   "También era efectivo. Le agradó a la señora jurado el tempo, era alegre. Él solo fue encantador en la segunda estrofa y el acompañamiento vocal fue efectivo. Traten de variar la dinámica la próxima vez para destacar el texto y el mensaje del himno."
+  ],
+  [
+   179.66,
+   "El primer premio en esta ocasión es para Taylor Marie Adaniel Ivans y el segundo premio para Taylor Bodeglier. Muchas gracias."
   ],
   [
    209.64,
-   "Diolch yn fawr i chi, difrwdom wrth ei ladans."
+   "Señor Jorge, disfrutamos de la danza."
   ],
   [
    466.4,
-   "Diolch yn fawr teulu Bryn Grŵn am y dawns yma, a wrth gwrs i bob un o'r teuluoedd sydd wedi bod yn dawnsio, grâios ac awn i'r ffamiliaid sydd wedi bod baelando ar y senario."
+   "Gracias a cada una de las familias que han estado bailando sobre este escenario."
   ],
   [
    487.4,
-   "La Gorsedd tiene gambio o'dd awtoridades, asi' que creu' que e's un momento importante para para gonserle a ser dentro o'dd este marco del Eisteddfod, se cambi' o'dd awtoridades, dwi'n invitar a Alwyn Green, que es la Presidenta del Circulo Bardico del Chubut, y a quie'n"
+   "El Gorsedd tiene cambio de autoridades, así que creo que es un momento importante para concederles a hacer dentro de este marco del Eisteddfod ese cambio de autoridades. Voy a invitar a Alwyn Grimm, que es la presidenta del Círculo Várdico del Chubut. Y a quien va a sucederlo en estos años por venir, que es Marley Pugh."
   ],
   [
    517.4,
@@ -68,24 +72,28 @@
    "Y dwy flynedd diwetha, a wrth gwrs, Pablwg i Marli am y tabl ddol."
   ],
   [
-   588.58,
-   "Casaliaeth bum deg wyth, Parti neu gôr merched, Dod ar fy Mhen, cynta sy'n dod ar y llwyfan yw bocal ffemenino sur azŵl."
+   596.38,
+   "Vamos a invitar a subir al escenario para la competencia 58, Dod ar fy Mhen, vocal femenino sur-azul."
   ],
   [
-   596.38,
-   "O'n i'n bitar o symud i'r esenariw gyda gomotensia cwyntiau wyth deg wyth, Dod ar fy Mhen, bocal ffemenino sur azŵl."
+   604.78,
+   "Le vamos a pedir a Sandra Coyú, a Néstor Hughes, John Owen, Sandra Contreras."
+  ],
+  [
+   614.06,
+   "Yamila Gauna y Karina Torres, que por favor se preparen ya que vamos a continuar con esa competencia."
   ],
   [
    621.1,
-   "Benedicto competencia número siento, siete técnicas mixtas, temática libre lección."
+   "Gracias."
   ],
   [
    636.1,
-   "Los participantes que elijan esta competencia podrán destacar sus obras personalizadas utilizando diferentes técnicas, pintura, acwarelas, dibujo, bordado, escultura, que incluya una breve descripción de la temática de trabajar inmatecial."
+   "Los participantes que elijan esta competencia podrán destacar sus obras personalizadas utilizando diferentes técnicas, pintura, acuarelas, dibujo, bordado, escultura, que incluya una breve descripción de la temática."
   ],
   [
    651.1,
-   "Las jurados, Rafaela Encinas y Olga Creton, han decidido otorgar una mención al pseudónimo Añosca, que corresponde a Gilda Sandiano de la provincia de Córdoba, el aplauso para ella."
+   "incluidos. Las jurados, Rafaela Encinas y Olga Cretón, han decidido otorgar una mención al seudónimo Añuska, que corresponde a Gilda Sandiano de la provincia de Córdoba. El aplauso para ella."
   ],
   [
    681.1,
@@ -97,15 +105,15 @@
   ],
   [
    696.1,
-   "No voy a decir nadda de- de las familias y y eso por fin- Pero necesitamos a Hector ahora. Pero se esta, se esta cambiando seguramente, o esta tomando agua despues de la noche."
+   "No voy a decir nada de las familias y eso, pero necesitamos a Héctor ahora. Pero se está cambiando seguramente."
   ],
   [
    711.1,
-   "dansa. Gratias Hector por estar en el piano, por estar en las danas, por estar"
+   "la danza. Gracias Héctor por estar en el piano, por estar en las danzas."
   ],
   [
    718.22,
-   "acompañando a la familia, a los ninos, en la ceremonia, diolch o galon Hector am dy waith. Casaleiaidd pum deg wyth, competencia cin cuenta y ocho, Parti en el gôr merched, conjunto femenino, do darben hên, vocal femenino, sur a sur."
+   "Por estar acompañando a la familia, a los niños en la ceremonia. Vocal femenino."
   ],
   [
    825.1,
@@ -113,15 +121,15 @@
   ],
   [
    915.1,
-   "Vocal ffemenino sur azul yn y wahodd naw parti merched Ysgol Cerdd y Gaiman, invitamos al conjunto femenino de la Escuela de Música de Gaiman que ya empiezan a subir al escenario."
+   "Vocal femenino surazul. A la mejor parte de la Escuela de Música de Gaiman, invitamos al conjunto femenino a la Escuela de Música de Gaiman, que ya empiezan a subir al escenario."
   ],
   [
    945.1,
-   "Berniade Casaledi dde chwech, cyfieithu o'r Gymraeg i'r Sbaeneg, dechreuwyr Blodwen Jones a Aderin Pryn. Yr wyfwr cyntaf yn mynd i'r sefydloniwm o Martina, ges Elfa Elfa Humphreys de Berrosi yn y lew, y sefydlog premiwraidd wyfwr unain ges Estella Rees de la Plata."
+   "Berniade Casaledi dde chwech, cyfieithu o'r Cymraeg i'r Sbaeneg, dechreuwyr Blodwen Jones a Aderin Pryn. Yr wyfwr cyntaf yn mynd i'r sefydloniwm o Martina, ges Elfa Elfa Humphreys de Berrosi yn y lew, y sefydlog premiwraidd wyfwr unain ges Estella Rees de la Plata."
   ],
   [
    975.1,
-   "Yn uwch, straeon o'r Mabinogi, gwobrw gynta'n mynd i Elsi, ges Noelia Marielle Sanjens Jenkins de esgêl, yr ail wobr yy Brynamlwg ges Alcide Williams o Drelew, i artreddu'r wobr i Amancay ges Syfil Huws o Trevelin, ffirm ar gwladdo Esillnes Roberts, rhowch gyfarchiadau i bob un ohonoch."
+   "En Juj, estrella Norma Binocchi, que es Elsi, que es Noelia Mariel Sánchez Jenkins de Esquel, el Aire Wobber Brinamlu, que es Alcira Williams o Trelew, y el Treder Wobber Iamancai, que es Sibyl Hughes o Trevelin. Firma el jurado Esignes Roberts, con caberjata y Bob Eino Honog."
   ],
   [
    1005.1,
@@ -137,171 +145,287 @@
   ],
   [
    1184.22,
-   "Diolch yn fawr, parti merched ysgol gerdd y Gaiman, gyda'r interpretasiwn o'r gynhyrch ffemenin o'r ysgolion musica y Gaiman, invitamos para darllen y competencia a raegi."
+   "¡Gracias!"
   ],
   [
    1214.22,
-   "Yr Iwerdglwch y gasa leiaf hon, rhai gê, sy'n berniaid yn barod, a'r invitasiwn manana para'l Gamambagani, gyda mi o'n peidio sbesial, recupere los simnariws, y llefen s'w simnariws por favor, por que han iddo desapareciendo de a poc, y algunos despues no los vio."
+   "La invitación mañana para el Kamamba Ghani y un pedido especial, recuperen los himnarios y lleven sus himnarios, por favor, porque han ido desapareciendo de a poco y algunos después no lo han visto."
+  ],
+  [
+   1244.22,
+   "traen, necesitamos cantar con mucha fuerza y leyendo cada una de las letras a aquellos que no se la acuerdan de memoria, por supuesto."
   ],
   [
    1479.46,
-   "Ysgrifeneddion yr Eisteddfodau ers y flwyddyn mil naw chwe deg pump."
+   "Ysgrifeneddion yr Eisteddfodau ers y blwyddyn mil naw chwe deg pump."
   ],
   [
    1496.22,
-   "Mae'r Eisteddfod yn cael ei heneb yn ddidor ers y flwyddyn ers bum deg wyth mlynedd a deud y gwir."
+   "Mae'r Eisteddfod yn cael ei heneb yn ddidor ers y blwyddyn ers bum deg wyth mlynedd a deud y gwir."
   ],
   [
    1505.34,
-   "Mae Pwyllgor yr Eisteddfod yn dymuno cydnabod y gwaith er amroddiad dau ddeg ddau ysgrifeneddion yr Eisteddfod y Chubut, y Wladfa, o mil naw chwe deg pump hyd heddiw."
+   "Mae Pwyllgor y Steddfod yn dymuno cydnabod y gwaith er amroddiad dau ddeg ddau ysgrifeneddion yr Eisteddfod y Chubut, y Wladfa, o mil naw chwe deg pump hyd heddiw."
   ],
   [
    1518.82,
    "Diolch o galon iddynt am roi eu amser i gadw ein traddodiad yn saff."
   ],
   [
+   1526.5,
+   "Este nuevo Eisteddfod año 2023 nos recuerda que desde hace 58 años se realiza en Trelew de manera ininterrumpida un Eisteddfod cada año. Esta circunstancia es motivo de festejo y celebración porque significa que hay muchas voluntades que se unen en pos de un fin común la realización de una nueva edición del Eisteddfod. Por eso, en este momento,"
+  ],
+  [
+   1556.5,
+   "ocasión queremos reconocer el trabajo y dedicación de las secretarias"
+  ],
+  [
+   1561.62,
+   "y los secretarios de las diferentes comisiones desde el año..."
+  ],
+  [
+   1566.84,
+   "165 hasta el momento, el año del centenario de la llegada de los galés."
+  ],
+  [
+   1572.0,
+   "a nuestro territorio, marcó el inicio de una continuidad mantenida hasta hoy en día en la realización del festival."
+  ],
+  [
+   1579.44,
+   "...que con anterioridad también se realizaron innumerables..."
+  ],
+  [
    1583.44,
-   "tros enotas localidades del Valle."
+   "en otras localidades del Valle."
   ],
   [
    1585.74,
-   "Eta comisiwn de mil naw hundred sent ysent y cinco tuo secretario y pro secretario,"
+   "Esta comisión de 1965 tuvo secretario y prosecretario..."
   ],
   [
    1590.38,
-   "pero la figura dest ultimo no se mantuvo posteriormente."
+   "pero la figura de este último no se mantuvo posteriormente."
   ],
   [
    1593.46,
-   "Debemos destacar tambien el trabajo de los secretarios del Estado de la Juventud, y los secretarios de Actas, un merecido reconocimiento tambien para tod'o ello."
+   "Debemos destacar también el trabajo de los secretarios del Eisteddfod de la Juventud, los secretarios de actas, un merecido reconocimiento también para todos ellos."
   ],
   [
    1602.7,
-   "En esta ocasion, mencionaremos a los veintidós secretarios del Estero del Chubut,"
+   "En esta ocasión mencionaremos a los 22 secretarios del Eisteddfod del Chubut"
   ],
   [
    1608.86,
-   "Destacando su esmerada labor, el celo con el cual lle van a cabo el mantenimiento de costumbres y tradiciones, como se ha hecho desde la primera edicion, guardando celosamente el secreto necesario para que pre- premiación sobre el escenario, entre otras cosas, sea sorpresa para todos, tambien para el resto de la comision."
+   "destacando su esmerada labor, el celo con el cual llevan a cabo el mantenimiento de costumbres y tradiciones como se ha hecho desde la primera edición, guardando celosamente el secreto necesario para que la premiación sobre el escenario, entre otras cosas, sea sorpresa para todos, también para el resto de la comisión."
   ],
   [
    1629.34,
-   "Vaya, entonces, este pequeño homenaje para tan importante labor, iremos viendo algunas imágenes que seguramente nos harán recordar momentos como los que hoy estamos viviendo en este Eisteddfod, porque veremos a amigos."
+   "Vaya entonces este pequeño homenaje para tan importante labor. Iremos viendo algunas imágenes que seguramente nos harán recordar momentos como los que hoy estamos viviendo en este Eisteddfod, porque veremos a amigos."
   ],
   [
    1647.34,
-   "Les pedimos que disfruten de este video y, mientras tanto, a los secretarios presentes que vayan subiendo luego al escenario."
+   "Les pedimos que disfruten de este video y mientras tanto a los secretarios presentes que vayan subiendo luego al escenario."
+  ],
+  [
+   1864.34,
+   "Hoy es el reconocimiento de estos..."
+  ],
+  [
+   1866.34,
+   "22 secretarios, secretarias."
+  ],
+  [
+   1870.02,
+   "Obviamente que ha habido una comisión y prosecretarios también destacar el trabajo, nos decían, cuando se hacía conjuntamente con el Eisteddfod de la Juventud."
+  ],
+  [
+   1880.78,
+   "el tiempo de los secretarios, los invitamos si hay alguno de ellos presentes."
+  ],
+  [
+   1887.7,
+   "a subir al escenario."
+  ],
+  [
+   1889.32,
+   "Es un ratito."
+  ],
+  [
+   1889.96,
+   "Listo. Se nos ha alargado todo un poquito más. Creo que vale la pena hacer este reconocimiento."
+  ],
+  [
+   1919.96,
+   "No sabías, Lily, vos."
   ],
   [
    1949.96,
-   "Y reconosimiento a esos y a esos amigos y amigas que vimos en esas imágenes."
+   "el reconocimiento a ellos y a esos amigos y amigas que vimos en esas imágenes."
+  ],
+  [
+   1957.96,
+   "Gracias."
+  ],
+  [
+   1970.46,
+   "Será la próxima comisión, tal vez."
+  ],
+  [
+   1972.78,
+   "Bien, los invitamos a descender con este fuerte aplauso y nuestro agradecimiento. Dios, Jocalo, Namek White, Dross, Resetbot."
   ],
   [
    1984.82,
-   "Le vamos a pedir a Nestor, Hughes, John Owen, Sandra Contreras, Yamila Gauna y Carina Torres que se acerquen al pie del escenario."
+   "Le vamos a pedir a Néstor Hughes, John Owen, Sandra Contreras, Yamila Gauna y Karina Torres que se acerquen al pie del escenario."
   ],
   [
    1992.78,
-   "Como son las nueve y cuarto de la noche y quedan once competencias,"
+   "Como son las 9 y cuarto de la noche y quedan 11 competencias."
   ],
   [
    1999.32,
-   "vamos a pedirles a todos que colaboremos, a los jurados que puedan acortar los veredictos, al igual que a los traductores,"
+   "Vamos a pedirles a todos que colaboremos, a los jurados que puedan acortar los veredictos al igual que a los traductores."
   ],
   [
    2011.64,
-   "i'r participantau sy'n ymddiried yn un competensi'n gyntaf, fel yna fedrwn ni i gyd-bwydo'n hapus ym mis Ebrill dwy fil ag dau ddeg tri."
+   "A los participantes que se acerquen a una competencia antes. Así podemos todos terminar felices esta edición 2023."
+  ],
+  [
+   2021.64,
+   "Competencia número 50, Solo libre, música ciudadana, tango, milonga, vals, candombe. Primera participante, Sandra."
+  ],
+  [
+   2041.64,
+   "Buenas noches."
   ],
   [
    2093.6,
-   "Loc' o amor, che mas que amor es un sufrir, y aqui vengo para eso, a borrar antiguos besos, de los besos de otras pocas."
+   "¡Gracias!"
+  ],
+  [
+   2117.6,
+   "Si tu amor fue por otro día, ¿por qué causas siempre mía esta cruel preocupación?"
+  ],
+  [
+   2129.92,
+   "Quiero por los dos mi copa alzar y así olvidar mi obstinación y más la vuelvo a recordar."
   ],
   [
    2145.92,
-   "Nostalgias, de escuchar tu risa loca y sentir junto a mi boca como un fuego, su respiracion."
+   "Nostalgias de escuchar tu risa loca y sentir junto a mi boca como fuego su respiración."
   ],
   [
    2165.72,
-   "angwstias, de sentirme abandonada y pensar que otra tu lado pronto, pronto te hablara de amor."
+   "Angustias de sentirme abandonada y pensar que otra a tu lado pronto, pronto te hablará de amor."
   ],
   [
    2184.52,
-   "Yr ema- no, yo no quiero rebajarme, ni pedirle, ni llorarle, ni decirle que no puedo mas vivir."
+   "No, yo no quiero rebajarme, ni pedirle, ni llorarle, ni decirle que no puedo mas vivir."
   ],
   [
    2204.52,
-   "Desde mi trist e' soledad peregai'r rosas muertas de mi juventud, de mi juventud."
+   "Desde mi triste soledad me recaen las rosas muertas de mi juventud, de mi juventud."
+  ],
+  [
+   2234.52,
+   "Y me abandonó tu tango gris Quizás a ti te era igual Algún dolor sentimental"
   ],
   [
    2253.52,
-   "Llora mi Alma dejantoche, sole y triste en esta noche, noche negra y sin estrellas."
+   "Llora mi alma de fantoche Solo y triste en esta noche Noche negra y sin estrellas"
   ],
   [
    2268.52,
-   "Si las copas den consuelo, aquí estoy con mis desvelos, para ahogarlas de una vez."
+   "Si las copas traen consuelo, aquí estoy con mis desvelos para ahogarlas de una vez."
   ],
   [
    2280.52,
-   "Quiero por los dos mi copa el sal"
+   "Quiero por los dos mi copa al sal"
   ],
   [
    2285.76,
-   "Para poder después brindar por los fracasos del amor."
+   "Para poder después brindar por los fracasos del amor"
   ],
   [
    2295.9,
-   "Nostalgias, de escuchar tu risa loca, y sentir junto a mi boca como fue de su"
+   "Nostalgias De escuchar tu risa loca Y sentir junto a mi boca como un fuego azul"
   ],
   [
    2334.52,
-   "Yo no quiero rebajarme, ni pedirle, ni llorarle, ni decirle que no puedo más vivir."
+   "Yr emanw, yo no quiero rebajarme, ni pedirle, ni llorarle, ni decirle que no puedo mas vivir."
   ],
   [
    2353.52,
-   "Des de mi triste soledad teca en las rosas muertas de mi juventud, de mi juventud, de mi juventud."
+   "Desde mi triste soledad de caer las rosas muertas de mi juventud, de mi juventud, de mi juventud."
   ],
   [
    2395.52,
-   "Escuchábamos a Sandra con nostalgia,"
+   "Escuchábamos a Sandra con nostalgia."
   ],
   [
    2401.52,
-   "segundo participante de esta competencia."
+   "Segundo participante de esta competencia."
+  ],
+  [
+   2413.52,
+   "Néstor Hughes."
   ],
   [
    2503.52,
-   "Era mas ffresca ac el rio, naranjo en fflôr, y en e sa calle destillo, calle perdida,"
+   "Era más fresca que el río, naranjo en flor, y en esa calle destillo, calle perdida."
   ],
   [
    2524.96,
-   "Dejo un pedaso de vida y se marchó."
+   "Dejó un pedazo de vida y se marchó."
   ],
   [
    2535.96,
-   "Primero hay que saber sufrir, después amar, después partir, y al final andar sin pensamiento."
+   "Primero hay que saber sufrir, después amar, después partir y al final andar sin pensamiento."
   ],
   [
    2544.96,
-   "Perfume de naranjo en flor, promesas fanas de un amor, que se escaparon en el viento."
+   "Perfume de naranjo en flor, promesas vanas de un amor que se escaparon en el viento."
   ],
   [
    2553.96,
-   "Yn despues, que importa el despues, toda mi vida es el ayer, que me detiene en el pasado, eterna y vieja juventud, que me ha dejado acomardado, como un pájaro sin luz."
+   "Después, qué importa del después, toda mi vida es el ayer que me detiene en el pasado, eterna y vieja juventud que me ha dejado acobardado como un pájaro sin luz."
   ],
   [
    2577.4,
-   "Ce te avran echo mis manos, ce te avran echo, para dejarme en el pecho, tan do ddunor, dunor de vieja arboleda."
+   "¿Qué te habrán hecho mis manos, qué te habrán hecho para dejarme en el pecho tanto dolor, dolor de vieja arboleda?"
   ],
   [
    2601.4,
-   "Cansion d'esquina, con un pedaso de vida, naranjo en flor."
+   "Canción de esquina Con un pedazo de vida Naranjo en flor"
   ],
   [
    2617.4,
-   "Primero hay que saber sufrir, despues amar, despues partir, y al fin andar sin pensamiento."
+   "Primero hay que saber sufrir, después amar, después partir y al final andar sin pensamiento."
+  ],
+  [
+   2626.4,
+   "Perfume de naranjo en flor Promesas vanas de un amor Que se escaparon en el viento"
+  ],
+  [
+   2635.4,
+   "Después, qué importa del después, toda mi vida es el ayer que me detiene en el pasado, eterna y vieja juventud que me ha dejado acobardado."
+  ],
+  [
+   2653.4,
+   "Como un pájaro sin luz."
+  ],
+  [
+   2676.4,
+   "Próximo participante, John Owen."
   ],
   [
    2743.4,
-   "Vu interpretar un tango naddo yy gyda lyfrau o Horacio yym i- i gyda mwsica o José Dames."
+   "Voy a interpretar un tango, nada, con letra de Horacio y con música de José Dames."
+  ],
+  [
+   2803.4,
+   "Qué día ha sido, cuanta nieve en mi alma, qué silencio hay en tu puerta, llegar hasta el umbral, un candado de dolor me detuvo el corazón."
   ],
   [
    2832.76,
@@ -309,27 +433,39 @@
   ],
   [
    2845.08,
-   "Y el rosar tampoco existe, y es seguro que se ha muerto al irte tu."
+   "Y el rosal tampoco existe y es seguro que se ha muerto al irte tú."
   ],
   [
    2855.08,
-   "todo es una cruz nada, naddo mas que tristeza y quietud."
+   "Todo es una cruz, nada más que tristeza y quietud."
   ],
   [
    2863.36,
-   "Nadie quien me diga si vives aun, donde estas, para decirte que hoy he vuelto arrepentido a buscarte tu amor."
+   "Nadie quien me diga si vives aún, ¿dónde estás para decirte que hoy he vuelto arrepentido a buscar tu amor?"
   ],
   [
    2915.08,
-   "Dim canant a dim o diod. Ia, hasta l'eco de tu voz, de la nada me responde. Yn la cruz de tu candado, por tu pena llué rezado. Ia rodda o'n gwadu por ti, una lagrima lle fluo."
+   "Sin querer te digo adiós, y hasta el eco de tu voz, de la nada me responde, y en la cruz de tu candado, por tu pena, yo he rezado, Y ha rodado en tu portón una lágrima que afloró"
+  ],
+  [
+   2945.08,
+   "De mi pobre corazón"
+  ],
+  [
+   2975.08,
+   "Una cruz, nada, nada más que tristeza y quietud Nadie quiere me diga si vives aún ¿Dónde estás? Para decirte que huye muerto arrepentido A buscar"
+  ],
+  [
+   3005.08,
+   "Tu amor"
   ]
  ],
  "fuentes": [
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
    "cy"
@@ -344,28 +480,28 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
    "cy"
@@ -377,22 +513,22 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
    "cy"
@@ -401,25 +537,25 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
    "cy"
@@ -431,13 +567,13 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
    "cy"
@@ -452,124 +588,226 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
    "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
    "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {
   "total": 53,
-  "modelo": 39,
-  "reglas": 1,
-  "vacias": 13
+  "modelo": 45,
+  "reglas": 0,
+  "vacias": 8
  }
 }

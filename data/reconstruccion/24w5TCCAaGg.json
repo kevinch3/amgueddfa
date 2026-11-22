@@ -81,27 +81,47 @@
   ],
   [
    691.98,
-   "Mae'n fwy blant ac yn fwy fawr na'r gloch, mae'n fwy brys ac yn fwy fawr na'r fflwch, mae'n fwy flawd na'r fflwch, mae'n fwy flawd na'r fflwch."
+   "Mae'n fwy blant ac yn fwy fawr na'r gloch, mae'n fwy brys ac yn fwy fawr na'r fflwch, mae'n fwy flawd na'r fflwch."
   ],
   [
    741.98,
-   "Dimero en que saber sufrir, después amar a después partir, y al final dar sin pensamientos."
+   "Primero hay que saber sufrir Después andar, después partir Y al final andar sin pensamiento"
   ],
   [
    753.98,
-   "Perfume del campo, un color promesa, guardas de un amor, que se escaparon con el viento."
+   "Dar un fume de aranjo, un flor, promesas vanas de amor Que se escaparon con el bien"
   ],
   [
    761.98,
-   "Despues, cei'm fordaran despues, todda mi fineste'n ayer, ce me detiener e'n pasado, eterneu fi eto jumentu, ce me a dechra'n ogo bardado."
+   "Después, ¿qué importará después? Toda mi vida es el ayer, que me detienen en el pasado. Eterna y vieja juventud, que me ha dejado acobardado."
   ],
   [
    779.98,
-   "Fo'n bacharo sy'n ddws, ce le obran eicho mismanows, ce le obran eicho, para dechar me'n el pecho, tan do ddolor, ddolor de vieja arboleda."
+   "Un pájaro sin luz ¿Qué le habrán hecho mis manos? ¿Qué le habrán hecho Para dejarme en el pecho Tanto dolor Dolor de vieja arboleta"
+  ],
+  [
+   809.98,
+   "De canciones giras por un pedazo de vida, naranja en flor."
+  ],
+  [
+   825.98,
+   "Primero hay que saber sufrir Después amar, después partir Y al final de ese pensamiento"
+  ],
+  [
+   836.98,
+   "Tan sube de naranja un sol, promesas vanas de un amor, que seca para un polio viento. Después, ¿qué importará después? Toda mi vida es el ayer, que me detiene en el pasado."
+  ],
+  [
+   854.98,
+   "Eterna y vieja cuento que me ha dejado por el lado Como un pájaro sin luz"
   ],
   [
    884.98,
    "Glŷn i'r rasedd eglwys am hyn, Alleluia. Iawn i'r rasedd eglwys am hyn, Alleluia. Alleluia."
+  ],
+  [
+   990.36,
+   "que donde vuelva a sentir este mundo hacia la vida."
   ],
   [
    1017.12,
@@ -109,11 +129,11 @@
   ],
   [
    1045.12,
-   "A os ti'n gweud dydd o'i lewt ti'n sefyll ar ei safon pan fo'n lwc i'n hoeddi'n dda."
+   "A os ti'n gweud dydd o'i lewt ti'n sefyll ar ei safon pan fo'n lwc i'n hoeddi'n dda"
   ],
   [
    1061.12,
-   "Ar nos e'r rhostwc wmanoedd, er gwaetha'r lwc estyn bianodd, ddawns o'r amlwg i'r rio, er gwaetha'r disgybliaeth gwastraffu."
+   "A los cerros tucumanos, en el pueblo en un triste invierno, tan solo el mundo y el río, en el resto de los pasajeros."
   ],
   [
    1079.8,
@@ -121,11 +141,51 @@
   ],
   [
    1089.0,
-   "Yn ddwfn a'i swmp efo'i gamp oedd e'n grisio cwmpo ar y camu. Grisio cwmps o gwmpas y pres ofn yr absensiau fel yr hen geulu. Grisio cwmpas y pres ofn yr absensiau fel yr hen geulu."
+   "La luna es un bravo al campo, el grillo junto al camino. Grillo con sombra de la luz, como en la ausencia del bien querido. Grillo con sombra de la luz, como en la ausencia del bien querido."
+  ],
+  [
+   1172.0,
+   "Amén."
   ],
   [
    1209.0,
-   "Soiff e glust nôl a finna fe glust nôl a finna o, gemni gemni gurasol."
+   "Soy feliz con la vida que Cristo me dio en mi tierra en mi corazón."
+  ],
+  [
+   1222.0,
+   "La azúcar de luz, la oscureza y su amor, amor que me trajo el perdón, la esperanza que aliento la rego al Señor, que brilla en mi corazón."
+  ],
+  [
+   1243.0,
+   "Gemini, gemini, gora so, gora so."
+  ],
+  [
+   1249.0,
+   "En mi mente, en mi corazón, corazón"
+  ],
+  [
+   1254.0,
+   "¡Soy feliz con la vida de Cristo!"
+  ],
+  [
+   1261.0,
+   "Él vive en mi corazón"
+  ],
+  [
+   1303.0,
+   "agudos, pelectos o abusos que nunca se comentaban."
+  ],
+  [
+   1308.1,
+   "Me tocó calidenciarme al mundo."
+  ],
+  [
+   1311.02,
+   "Intenté arrosarla con la esquina de la tarduna. El lápiz se escapó de los dedos y rodó hasta caerse."
+  ],
+  [
+   1319.12,
+   "Ella se perdió por el margen, un puto caminando, caminando solo por el papel."
   ],
   [
    1363.0,
@@ -133,11 +193,11 @@
   ],
   [
    1369.8,
-   "Estadesemos aqui, un espacio para llevar a cabo la ceremonia de llombar."
+   "Establecemos aquí un espacio para llevar a cabo la ceremonia del suyo marco."
   ],
   [
    1376.9,
-   "Premio del certamen número uno, composición poética y lengua alisa."
+   "Premio del certamen número uno, composición poética en lengua galiza."
   ],
   [
    1383.1,
@@ -145,59 +205,67 @@
   ],
   [
    1389.3,
-   "ac o gogwndad o y poeta T. T. Dylan Jones, del País Llegaes."
+   "Acuó como jugado el poeta Titi Ertalan Jones del País de Gales."
   ],
   [
    1395.88,
-   "Ysta celebración nos remite a tiempos mwy lejanos,"
+   "Esta celebración nos remite a tiempos muy lejanos."
   ],
   [
    1400.64,
-   "tiempos de círculo vardico y espada de embainada, de brudas y de canto poético."
+   "Tiempos de círculo bárdico y espada de envainada, de ruidas y de canto poético."
   ],
   [
    1409.52,
-   "Para llefar o'r cabo yy invitamons a'r escenario, a'r seignor Rolando Griffiths, presidente de la Comisión Organizadora del Eisteddfod, a Hector Daniel McDonnell, al piano, a'r solista Billy Hughes, a'r trompetista David El Monacid, quen se ubicará al pie de'r escenario,"
+   "Para llevarlo a cabo, invitamos al escenario al señor Rolando Grifis, presidente de la Comisión Oralizadora del Eisteddfod, a Héctor Ariel McDonnell, al piano, al solista Billy Hughes, al tropetista David Almonacid, quien se ubicará al pie del escenario."
   ],
   [
    1435.04,
-   "como Tambir Vara, la joven Elsie Anna Griffiths, Ubaldi, la ama de las flores, y la niña Uma López Oliver,"
+   "Como también lo hará la joven Elsiana Griffiths Ubaldi, la ama de las flores, y la niña Uma López Oliver."
   ],
   [
    1445.66,
-   "quienes junto con el poeta Elvy MacDonald, escoltarán hasta el escenario al poeta premiado."
+   "quienes junto con el poeta Elby MacDonald escoltarán hasta el escenario al poeta premiado."
   ],
   [
    1454.0,
-   "Las demás personas que participan en la ceremonia vendrán integrando la prosesión del ciclo barco."
+   "Las demás personas que participan en la ceremonia vendrán integrando la procesión del círculo bárbico."
   ],
   [
    1463.14,
-   "Destacamos que el sillón, destinado al premio en este certamen, es un trabajo diseñado en forma artesanal por el señor Andrés Cos, y donado en esta ocasión por el Diario El Chubut de Trelew."
+   "Destacamos que el sillón, destinado al premio en este certamen, es un trabajo diseñado en forma artesanal por el señor Andrés Cos y donado en esta ocasión por el diario El Chubut de Trelew."
+  ],
+  [
+   1478.96,
+   "Ya avanza la procesión del Círculo Vártico, precedida por las líneas del Grupo Land del Toro III, quienes ofrecerán la lanza de las flores, dirigidos por la profesora Presidenta Palazarte y Judith Jones."
+  ],
+  [
+   1498.08,
+   "Antes de ser ocupado en el sillón de respeto, se llevará a cabo la ceremonia de la espada, ceremonia esta que viene de los días del pleno y que crea la consigna del círculo bárbico, donde no se permitía el ingreso de hombres armados. Por lo tanto, la espada nunca se desembaina en su totalidad, Pues el espíritu del canto poetico"
   ],
   [
    1528.08,
-   "que une los corazones de los pueblos en alegre harmonia y en un lenguaje de paz, y como tres veces se pregunta la concurrencia, hay paz, a lo que el cwm corresponde, paz. En adunda del poeta acremiano, se edificaran los horrores a la polisia, desde presentes floral ofrecidos por la comisiwn organizadora de'r Eisteddfod,"
+   "que une los corazones de los pueblos en alegre armonía y en lenguaje de paz. Y por tres veces se pregunta la concurrencia. ¿Hay paz? A lo que el público responde, paz. En la figura del poeta, a creñar, se tributarán los errores a la policía. Desde el presente,"
   ],
   [
    1558.08,
-   "dero, desd de'l ganto a'l poeta por la participación del público, des del saludo in verso por Alwyn Green, miembro del Circo Barrio, en representación de su hermana Medi Green, quien ha sido distinguida en este sartamen en ediciones anteriores del Eisteddfod de Chubut."
+   "desde el canto al poeta, por la participación del público, desde el saludo en verso por Albert Green, miembro del Círculo Bárbico, en representación de su hermana Mary Green, quien ha sido distinguida en este certamen en ediciones anteriores del Eisteddfod del Chubut."
   ],
   [
    1581.06,
-   "Desde'r premiwm otorgad por l'honorable legislatura de la provincia de Chubut, yy ytregad por el diputado señor José Luis Urzú, y desde el presente ofrecido por el Círgulo Barnico de la Patagonia."
+   "Desde el premio otorgado por la Honorable Legislatura de la Provincia de Chubut, entregado por el diputado señor José Luis Chubut. Y desde el presente ofrecido por el Círculo Bárbico de la Patagonia."
   ],
   [
    1600.1,
-   "Tambien, desde la danza de las flores, que se rendirá a sus pies, con la frescura y el color personificados en las pequeñas bailarinas."
+   "También desde la danza de las flores que se retira a sus pies con la frescura y el color personificados en las pequeñas bailarinas."
   ],
   [
    1610.98,
-   "Nos permitimos pedirle al público que no salude al poeta a su paso,"
+   "Nos permitimos pedirle al público que no salude al poeta a su paso."
   ],
   [
    1616.14,
-   "sino que le conceda llegar hasta el fondo del salón, donde sí se podrá celebrar la feliz distinción."
+   "sino que le concedan llegar hasta el fondo del salón, donde sí se podrá celebrar la feliz distribución."
   ],
   [
    1750.1,
@@ -298,38 +366,6 @@
   [
    2454.6,
    "Ac fel arfer, y foment y dan ni gyd yn edrych ymlaen amdano, i wylio y plant bychan yn yy dawnsio eu cydnabyddiaeth i'r bardd."
-  ],
-  [
-   3037.6,
-   "Ever persisting even though you wouldn't let it show"
-  ],
-  [
-   3042.6,
-   "I'm burning up, all the hate around"
-  ],
-  [
-   3048.6,
-   "It just don't get me down, you know you're looking for an evil"
-  ],
-  [
-   3057.6,
-   "Rain dirt from bottom I'm led to distraction, scratching the surface of life"
-  ],
-  [
-   3064.6,
-   "Nothing really happens but it's easy to keep busy when you tell yourself you're travelling right"
-  ],
-  [
-   3071.6,
-   "It's all right now, all right now, just don't waste your time"
-  ],
-  [
-   3078.6,
-   "Keep on second guessing and then they might go up and you're missing a try"
-  ],
-  [
-   3085.6,
-   "Burn me out, all that hangin' around, it just don't get me down, you up to looking for everywhere, burn me out, it's all that hangin' around, all that can't be found, it's all that I'm looking for everywhere."
   ]
  ],
  "fuentes": [
@@ -394,7 +430,34 @@
    "cy"
   ],
   [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
    "cy"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
@@ -403,106 +466,106 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
+   "whisper_es"
   ],
   [
    "cy"

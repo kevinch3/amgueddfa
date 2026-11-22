@@ -1,0 +1,36 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Se acercó y miró, miró, que se creció, se llevó a chis, a chis, que salga la lombriz, a chis, a chis, que salga la lombriz."
+  ],
+  [
+   21.0,
+   "Su cabeza al fin se dio, se dio, hasta no dañe el favor y maldón."
+  ],
+  [
+   29.64,
+   "Yo quietito me quedé, quedé, pero igual ya se fue, se fue, achís, achís, que salga la lombriz, achís, achís, que salga la lombriz."
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 1,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

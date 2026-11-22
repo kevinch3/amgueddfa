@@ -29,11 +29,27 @@
   ],
   [
    470.0,
-   "Ni o'dd llibreth yr wmwrdd resforfer, a iawn cwedl Argentinos ar ôl nhw."
+   "Y los libres del mundo responden Al gran pueblo argentino, salud Al gran pueblo argentino, salud Y los libres del mundo responden"
+  ],
+  [
+   500.0,
+   "¡Gracias!"
+  ],
+  [
+   512.0,
+   "Haya un pueblo, haya un niño, salud."
+  ],
+  [
+   530.0,
+   "Amén."
   ],
   [
    555.32,
-   "a'r lwc mewn oerion i'r amlwg."
+   "¡Gracias!"
+  ],
+  [
+   564.32,
+   "Oh, juremos con gloria a morir, oh, juremos con gloria a morir."
   ],
   [
    675.32,
@@ -90,6 +106,10 @@
   [
    1102.38,
    "Rwan, groesawon gôr merched Ysgol Cerdd y Gaiman i ganu y Wladfa, gan Mark Valdavonia a Davi Leanne Jones, dan arwain."
+  ],
+  [
+   1223.14,
+   "Toda el blanco Dios que pida tu luz."
   ],
   [
    1254.14,
@@ -286,10 +306,6 @@
   [
    2598.96,
    "Blaen blaen, blaen, blaen yw'r nos i'r tân, a'r lôn a'r hyn i'r hyn. O blaen, o blaen yw'r llyn a'r gair, a'r haf a'r haf a'r haf."
-  ],
-  [
-   2852.96,
-   "Bright summer morning, as fields they were dawning, bright fever's arose and shone over the land."
   ]
  ],
  "fuentes": [
@@ -312,7 +328,22 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
@@ -357,10 +388,7 @@
    "cy"
   ],
   [
-   "cy"
-  ],
-  [
-   "cy"
+   "whisper_es"
   ],
   [
    "cy"

@@ -1,6 +1,6 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
@@ -29,15 +29,27 @@
   ],
   [
    70.0,
-   "Mwy hwna i'r cyngor, hwna i bawb, sy'n bleser, unwaith mwy, ein gwynebu ni yn yr ysgolion yma."
+   "Muy buenas tardes para todos. Es un placer, una vez más, encontrarnos en este salón."
   ],
   [
    83.0,
-   "Y Eisteddfod constituye una de las expresiones del arte más importante de la provincia de Chubut, y sus raices se unen en lo más profundo de la tradición caresa, llegada a nuestras piernas de la mano y el corazón de los primeros colonos que arribaron a las costas del Golfo Nuevo el veintiocho de Julio de mil ochocientos a seisnta y five."
+   "El Eisteddfod constituye una de las expresiones del arte más importante de la provincia de Chubut y sus raíces se hunden en lo más profundo de la tradición galeza, llegada a nuestras tierras de la mano y el corazón de los primeros colonos que arribaron a las costas del Golfo Nuevo el 28 de julio de 1865."
+  ],
+  [
+   108.0,
+   "El Eisteddfod es la expresión de cuantos se sienten libres y respetuosos de una convivencia en paz."
+  ],
+  [
+   118.62,
+   "Las competencias no persiguen la búsqueda de un premio, sino la oportunidad de aprender y compartir una experiencia enriquecedora."
   ],
   [
    130.62,
-   "Participant y esta celebracion constituye una posibilidad de manifestar y proyectar a la comunidad sus valores fundamentales, verdad, amor y justicia, valores que establecen nuestras vidas y contribuyen a promover la paz por el medio del encuadre de las artes,"
+   "Participar de esta celebración constituye una posibilidad de manifestar y proyectar a la comunidad sus valores fundamentales, verdad, amor y justicia, valores que establecen nuestras vidas y contribuyen a promover la paz por el medio del lenguaje de las artes."
+  ],
+  [
+   155.62,
+   "expresiones del alma que minimizan las diferencias entre los pueblos. Bienvenidos al Eisteddfod del Chubut año 2019."
   ],
   [
    168.62,
@@ -65,63 +77,131 @@
   ],
   [
    331.62,
-   "atab yr ysbrydw, ar draws y mwgwm, y cant a'r ysbrydw, y daniadau a'r ysbrydw."
+   "para el espíritu a través de la música, del canto y la poesía, las danzas y las artes."
   ],
   [
    341.62,
-   "Rydyn ni'n ddiolchgar, Father, am y cyfle i gael gysylltiad gyda ffrindiau,"
+   "Le damos gracias, Padre, por este reencuentro con amigos."
   ],
   [
    346.62,
-   "ffrindiau newydd a ffrindiau rydyn ni ddim wedi'u gweld yn amser hir."
+   "Amigos nuevos y amigos que no veíamos hacía mucho tiempo."
   ],
   [
    352.62,
-   "Rydyn ni'n ddiolchgar, Father, am yr holl gwaith rydyn ni wedi'i wneud erbyn rydyn ni'n gwneud y dydd hwn yn bosib,"
+   "Te agradecemos, Padre, por todo lo que han trabajado para que este día sea posible."
   ],
   [
    359.62,
-   "Saithde' athrawes y comisiwn organisadwr, o ddarlith- cwm integrant yn y juriadw, o ddarlith- athrawes y donasiwn o drefn, o ddarlith- integrando yn y competensiwn, yn y representasiwn."
+   "Ya sea a través de la comisión organizadora o tal vez como integrante del jurado o tal vez a través de la donación de premios o tal vez integrando alguna competencia, alguna representación."
   ],
   [
    376.62,
-   "Te pedimos Padre, una iluminacion Señor para los integrantes del Jurado, y te pedimos una bendicion para todos aquellos que nos visitan en este dia."
+   "Te pedimos Padre una iluminación Señor para los integrantes del jurado y te pedimos una bendición para todos aquellos que nos visitan en este día."
   ],
   [
    391.62,
-   "Amado Señor, te rogamos que te quedes en esta reunion hasta el final, y que cada dia procuremos Señor, seguir tu verdad, tu paz, y tu justicia."
+   "Amado Señor, te rogamos que te quedes en esta reunión hasta el final y que cada día procuremos, Señor, seguir tu verdad, tu paz y tu justicia."
+  ],
+  [
+   404.62,
+   "Y el año que viene, Señor, en un día como hoy, traenos de nuevo aquí para celebrar juntos en un mismo sentido una nueva fiesta del Eisteddfod. A ti la gloria y la honra, Señor, por los siglos de los siglos, en el nombre de nuestro Señor Jesucristo. Amén."
+  ],
+  [
+   510.62,
+   "Libertad, libertad, cuide el ruido de rocas cadenas en el trono a la noble igualdad, ya su trono divísimo a pie."
+  ],
+  [
+   539.5,
+   "Las provincias unidas del sur y los libres del mundo responden."
   ],
   [
    554.5,
-   "Mae gan Puebla gentino salŵ, mae gan Puebla gentino salŵ, y nos mifres y mwnd o respondem, mae gan Puebla gentino salŵ."
+   "¡Al gran pueblo argentino, salud! ¡Al gran pueblo argentino, salud! Y los libres del mundo responden ¡Al gran pueblo argentino, salud!"
+  ],
+  [
+   584.16,
+   "Y los libres del mundo responden al gran pueblo argentino salud."
   ],
   [
    637.12,
-   "Coronad dos mil o wyliau i bawb am bôs. O gwneb os o'n gloria moru."
+   "Coronados de gloria, vivamos. ¡Oh, juremos con gloria morir, oh, juremos con gloria morir!"
   ],
   [
    727.12,
-   "Dwyieithog a sy'n swnio sy'n mynd yn gywir ar y llawr. Mwy neu lai gyda'i nôl, mwy neu lai gyda'i nôl."
+   "No hay tristes niadas sin sueño, sin nunca vivido en esta noche, por la luna del mar del infierno, luna del mar del infierno."
+  ],
+  [
+   787.12,
+   "¡Gracias!"
+  ],
+  [
+   879.92,
+   "Gracias."
+  ],
+  [
+   939.92,
+   "Dwi'n meddwl bod o byth yn siarad Cymraeg, ond dwi'n meddwl bod o'n siarad Cymraeg."
   ],
   [
    1168.92,
    "Un aplaus i'r bachars, sydd yn awgrymu'r awduron yn cynnig y cyfnod."
   ],
   [
+   1178.92,
+   "Un aplauso para esa acción de la Citanauta de la Iglesia de la Iglesia."
+  ],
+  [
    1183.92,
-   "A na'n cinco de la tarde, cuando el resplandor se queda sin brillo, y el jardín se sumerge en el último raffordorado del dîn, rwy'n gweld grŵp gwyllysuos o ddynion sy'n mynd i'r casados y hermanas, corriendos ar y patos, se dispersan yntre'r arbustos."
+   "A las cinco de la tarde, cuando el resplandor se queda sin brillo y el jardín se sumerge en el último arbol dorado del día, oigo el grupo bullicioso de niños que salen a cazados y hermanas. Corriendo sobre el pasto se dispersan entre los arbustos."
   ],
   [
    1212.92,
-   "Gritan su' excitacion, palpan su alumbra. Se arma un circo alrededor de la pequeña, que muestra la incendida cuenca de sus manos, en el arno. Antigu oficio humana, es que le queremos apagar la luz."
+   "Gritan su excitación, palpan su deslumbre Se arma un círculo alrededor de la pequeña Que muestra la incendida cuenta de sus manos En el alma Antiguo oficio humano Este de querer apagar la luz"
+  ],
+  [
+   1236.92,
+   "¿Te acordás de la última?"
+  ],
+  [
+   1240.98,
+   "vez que creímos poder encender la noche."
+  ],
+  [
+   1246.36,
+   "El tiempo nos ha vaciado de fulgur, pero la oscuridad sigue poblada de luciérnicas."
+  ],
+  [
+   1266.92,
+   "A las cinco de la tarde, cuando el resplandor se queda sin brillo y el jardín se sumerge en el último olor dorado del día, algo en el grupo bullicioso de niños que salen a cazar luciérnagas. Corriendo sobre el pasto se dispersan entre los adultos. Gritan su excitación."
   ],
   [
    1296.92,
-   "Palpan yn swydd llwmbr."
+   "¡Pan, pan, su destumbre!"
   ],
   [
    1301.92,
-   "Seam mewn sircwl ar feddwl de la pequeña, que muestra la encendida cuenca de sus manos, titillando antigu oficio humano este de querer apagar la luz."
+   "Se arma un circo alrededor de la pequeña que muestra la encendida cuenca de sus manos, titilando antiguo oficio humano, este de querer apagar la luz."
+  ],
+  [
+   1321.92,
+   "¿Te acordás de la última vez que creímos poder iluminar la noche?"
+  ],
+  [
+   1334.36,
+   "El tiempo nos ha vaciado de fundores, pero la oscuridad sigue poblada de luciérnagas."
+  ],
+  [
+   1375.58,
+   "En el alero ha sentido, mis corazos no le apretan. No quiero que a mi vida, por un día me la vuelva."
+  ],
+  [
+   1972.1,
+   "Ellos asociaron la banda de la música del ejército de salvación HAPI y participaron en la competencia 81, conjunto instrumental de formación libre, mínimo 4 integrantes, obra popular argentina o internacional, folclore, jazz o tango."
+  ],
+  [
+   1989.72,
+   "Un fuerte aplauso para ellos."
   ],
   [
    2032.1,
@@ -129,19 +209,83 @@
   ],
   [
    2092.1,
-   "am can y gyfan i'r chwyned y gor i'r lôn, bydd y gofau hyn bryd hynny mewn bwchyn sydd a'i ron, a chreigiau a byrgara a ffodau gwyta'n fôn."
+   "am can y gyfan i'r chwyned y gor i'r lôn, bydd y gofau hyn bryd hynny mewn bwchyn sydd a'i ron, a creigiau a byrgara a ffodau gwyta'n fôn."
   ],
   [
    2152.1,
    "awr yma, daw a bydd a'n y gwynt, dychadw a'r hen anger, os allent ti ar y lôn, ar y creigiau Aberdaron, a ffonau gwyryllt y môn."
   ],
   [
+   2212.1,
+   "Me diste la intemperie, pared y sombra de tu mano pasando por mi alma. Me diste el frío, la distancia. El amargo café de medianoche entre mesas vacías. Siempre empezó a llover en la mitad de la película. La flor que te llevé, pendiendo arañas llenando entre los fétalos. Creo que lo sabías, y que favoreciste la desgracia."
+  ],
+  [
+   2240.74,
+   "Si te olvidé el paraguas, antes de ir a buscar, el restaurante estaba lleno y boceaban la guerra en las esquinas. Fui una letra de tango para tu diferente melodía."
+  ],
+  [
+   2270.74,
+   "Más allá la suerte negra de ser bonita y mujer Que lo que el cuerpo te pide, te lo prohíbe el querer"
+  ],
+  [
+   2299.74,
+   "Esa estrella en tu casa infinita quisiera ser Para morderte la boca cada vez que tengas de"
+  ],
+  [
+   2354.74,
+   "primera vez y los santos se salvarán de beneficio tu querer"
+  ],
+  [
+   2364.94,
+   "Nunca digas en la vida, desahua me debe ser, y aunque sea agua de otro pozo, te puede calmar la sed."
+  ],
+  [
+   2377.1,
+   "Aunque te quiera, motores, te tengo que dejar, no tengo nada, caray, no te puedo querer más."
+  ],
+  [
+   2389.1,
+   "Siguiendo y de quererte, una mancha compraré El odio que hay en la calle, no pregunte por qué"
+  ],
+  [
+   2400.66,
+   "El odio que hay en la calle no pregunté por quién es"
+  ],
+  [
+   2407.06,
+   "Pero Dios cae en la calle, no pregunte por quién es."
+  ],
+  [
+   2461.1,
+   "Chavaría, cuidaría, que las espinas se aporten cuando el arte caminar. Si te salveras a otro te refrescará fuerte, a paso de a tu mente o alguien te quiera dominar."
+  ],
+  [
+   2502.2,
+   "Te mentirías, te mentirías, si digo que no me importa, que por ti no resalí, que ningún verso armonioso de mi garganta saldría."
+  ],
+  [
+   2524.38,
+   "Moriría, de moriría, moriría del dolor y sin boca."
+  ],
+  [
+   2576.2,
+   "Cuando tuvieras fin, te abrigo, te enteraría Sol parece de noche, luna y candida de día Tú no seguirías de amor y te traería Los aljibes, manantiales, costas, sol y estrellas Conciido campo y litoral, como a tus pies el sendero A mi luz privará la que en tu mirar"
+  ],
+  [
+   2618.0,
+   "Me moriría, me moriría, moriría de dolor si no pudiera ayudarte, por no tenerte miedo, por no necesitar nada, esto nunca pasaría, como si un día parase el calor de tu mirada."
+  ],
+  [
    2740.96,
    "Cynghorydd i'r llefydd o'r un pryd, a'i lefydd o'r un pryd, a'i lefydd nôl i'r dydd, a'i lefydd nôl i'r dydd."
   ],
   [
+   2787.96,
+   "Un fuerte aplauso para las chicas y un honor tener a todos."
+  ],
+  [
    2798.96,
-   "Diolch yn fawr. Gyntaf, Tomas Iasociales."
+   "Quenchan Tomás y Asociados"
   ],
   [
    2879.96,
@@ -208,7 +352,22 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
@@ -229,7 +388,100 @@
    "cy"
   ],
   [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
    "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
@@ -241,58 +493,58 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
+   "whisper_es"
   ],
   [
    "cy"
@@ -330,8 +582,8 @@
  ],
  "ventanas": {
   "total": 54,
-  "modelo": 30,
+  "modelo": 39,
   "reglas": 0,
-  "vacias": 24
+  "vacias": 15
  }
 }

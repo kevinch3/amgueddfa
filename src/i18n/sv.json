@@ -575,6 +575,8 @@
       "vacia": "Det finns inga godkända rättelser av transkriptioner.",
       "aprobada": "Godkänd {fecha}",
       "retirar": "Dra tillbaka",
+      "retirar_toda": "Dra tillbaka hela bidraget ({n} ändringar)",
+      "retirar_toda_uno": "Dra tillbaka bidraget (1 ändring)",
       "motivo": "Skäl till tillbakadragandet (den som skickade den ser det)",
       "confirmar_retiro": "Bekräfta tillbakadragandet",
       "retirada": "Rättelsen har dragits tillbaka.",

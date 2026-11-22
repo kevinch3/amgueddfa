@@ -575,6 +575,8 @@
       "vacia": "There are no approved transcript corrections.",
       "aprobada": "Approved on {fecha}",
       "retirar": "Withdraw",
+      "retirar_toda": "Withdraw the whole contribution ({n} changes)",
+      "retirar_toda_uno": "Withdraw the contribution (1 change)",
       "motivo": "Reason for withdrawing (the contributor will see it)",
       "confirmar_retiro": "Confirm withdrawal",
       "retirada": "Correction withdrawn.",

@@ -575,6 +575,8 @@
       "vacia": "No hay correcciones de transcripción aprobadas.",
       "aprobada": "Aprobada el {fecha}",
       "retirar": "Retirar",
+      "retirar_toda": "Retirar toda la contribución ({n} cambios)",
+      "retirar_toda_uno": "Retirar la contribución (1 cambio)",
       "motivo": "Motivo del retiro (lo ve quien la envió)",
       "confirmar_retiro": "Confirmar el retiro",
       "retirada": "Corrección retirada.",

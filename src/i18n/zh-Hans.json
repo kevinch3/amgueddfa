@@ -575,6 +575,8 @@
       "vacia": "没有已批准的文字稿更正。",
       "aprobada": "批准于 {fecha}",
       "retirar": "撤回",
+      "retirar_toda": "撤回整项投稿（{n} 处更改）",
+      "retirar_toda_uno": "撤回该投稿（1 处更改）",
       "motivo": "撤回理由（提交者会看到）",
       "confirmar_retiro": "确认撤回",
       "retirada": "更正已撤回。",

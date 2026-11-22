@@ -575,6 +575,8 @@
       "vacia": "Does dim cywiriadau trawsgrifiad wedi'u cymeradwyo.",
       "aprobada": "Cymeradwywyd {fecha}",
       "retirar": "Tynnu'n ôl",
+      "retirar_toda": "Tynnu'r cyfraniad cyfan yn ôl ({n} newid)",
+      "retirar_toda_uno": "Tynnu'r cyfraniad yn ôl (1 newid)",
       "motivo": "Rheswm dros dynnu'n ôl (bydd y cyfrannwr yn ei weld)",
       "confirmar_retiro": "Cadarnhau tynnu'n ôl",
       "retirada": "Cywiriad wedi'i dynnu'n ôl.",

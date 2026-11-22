@@ -39,7 +39,7 @@ import { currentProfile } from '../lib/auth';
 import type { Kind } from '../lib/contrib';
 import { keptCambios, videoCardRows, type VideoCardRow } from '../lib/admin-video-card';
 import {
-  canAddNew, cardNotes, groupByVideo, reanchorOptions, sinAnclarList,
+  canAddNew, cardNotes, groupByVideo, reanchorOptions, retirarTodaLabel, sinAnclarList,
   type ApprovedVideoText, type CardNote, type Eleccion, type SinAnclarItem, type VideoGroup,
 } from '../lib/admin-videos';
 import { fecha, fechaHora, relativa } from '../lib/dates';
@@ -559,7 +559,8 @@ function sinAnclarRow(ctx: VideoCtx, item: SinAnclarItem, view: Transcript): HTM
     item.motivo === 'idioma_en_linea_unida' ? t('admin.videos.motivo_idioma') : t('admin.videos.motivo_sin_linea')));
   const actions = el('div', { class: 'acciones' });
   const again = el('button', { type: 'button', class: 'btn' }, t('admin.videos.reanclar'));
-  const out = el('button', { type: 'button', class: 'btn btn-quiet' }, t('admin.videos.retirar'));
+  // Withdrawing takes the whole contribution, not this change alone: the button says so and how many changes go.
+  const out = el('button', { type: 'button', class: 'btn btn-quiet' }, retirarTodaLabel(row));
   actions.append(again);
   // The player treats a row the file holds as applied: a change of it re-anchored now shows after the next export.
   if (item.baked) actions.append(el('span', { class: 'muted small' }, t('admin.videos.tras_exportar')));

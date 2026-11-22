@@ -1,7 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import { loadApprovedVideoText, reanchor, setVideoTextChanges, withdrawContribution } from '../src/lib/admin';
 import {
-  canAddNew, cardNotes, groupByVideo, reanchorOptions, reanchoredCambios, sinAnclarList, withdrawnInFile, type ApprovedVideoText,
+  canAddNew, cardNotes, groupByVideo, reanchorOptions, reanchoredCambios, retirarTodaLabel, sinAnclarList, withdrawnInFile,
+  type ApprovedVideoText,
 } from '../src/lib/admin-videos';
 import type { Cambio } from '../src/lib/video-corrections';
 import { asTranscript, type Transcript } from '../src/lib/video-transcript';
@@ -208,6 +209,13 @@ describe('withdrawnInFile', () => {
     expect(withdrawnInFile(file(), [ana, eli, dora])).toBe(false);
     expect(withdrawnInFile(file(), [eli, dora])).toBe(true);
     expect(withdrawnInFile(asTranscript({ src: 'youtube', lang: 'es', seg: [[1, 'a']] })!, [])).toBe(false);
+  });
+});
+
+describe('retirarTodaLabel', () => {
+  it('Retirar beside one unplaced change says it withdraws the whole contribution, and how many changes it has', () => {
+    expect(retirarTodaLabel(dora)).toBe('Retirar toda la contribución (2 cambios)');
+    expect(retirarTodaLabel(bruno)).toBe('Retirar la contribución (1 cambio)');
   });
 });
 

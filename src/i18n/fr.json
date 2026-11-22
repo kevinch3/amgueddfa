@@ -575,6 +575,8 @@
       "vacia": "Aucune correction de transcription approuvée.",
       "aprobada": "Approuvée le {fecha}",
       "retirar": "Retirer",
+      "retirar_toda": "Retirer toute la contribution ({n} modifications)",
+      "retirar_toda_uno": "Retirer la contribution (1 modification)",
       "motivo": "Motif du retrait (la personne qui l'a envoyée le verra)",
       "confirmar_retiro": "Confirmer le retrait",
       "retirada": "Correction retirée.",

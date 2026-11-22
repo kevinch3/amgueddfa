@@ -6,6 +6,7 @@ import { corregible, liveRows } from './live-video-corrections';
 // The player shows such a file as it is until the next export; the tab says so.
 export { withdrawnInFile } from './live-video-corrections';
 import { withdrawnInFile } from './live-video-corrections';
+import { t } from './i18n';
 import { applyCorrections, type Cambio, type CorrectionRow } from './video-corrections';
 import type { Transcript } from './video-transcript';
 
@@ -92,6 +93,13 @@ export function sinAnclarList(file: Transcript, approved: ApprovedVideoText[]): 
   }
   items.sort((a, b) => a.cambio.t - b.cambio.t);
   return { items, live: out.tr };
+}
+
+/** Retirar beside one unplaced change: it withdraws the whole contribution (all its changes, points and credit), not
+ * that change alone, so the button says so and how many changes go. */
+export function retirarTodaLabel(row: { payload?: { cambios?: unknown } }): string {
+  const n = cambiosOf(row).length;
+  return n === 1 ? t('admin.videos.retirar_toda_uno') : t('admin.videos.retirar_toda', { n });
 }
 
 /** A note at the top of a video's card (an admin.videos key). */

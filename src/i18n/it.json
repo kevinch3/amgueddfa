@@ -575,6 +575,8 @@
       "vacia": "Non ci sono correzioni di trascrizione approvate.",
       "aprobada": "Approvata il {fecha}",
       "retirar": "Ritira",
+      "retirar_toda": "Ritira tutto il contributo ({n} modifiche)",
+      "retirar_toda_uno": "Ritira il contributo (1 modifica)",
       "motivo": "Motivo del ritiro (lo vedrà chi l'ha inviata)",
       "confirmar_retiro": "Conferma il ritiro",
       "retirada": "Correzione ritirata.",

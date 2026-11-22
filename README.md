@@ -19,7 +19,7 @@ etiquetas o dejar un recuerdo. Cada aporte pasa por revisión antes de publicars
 | --- | --- |
 | `scripts/build_catalog.py` | Arma el catálogo desde el archivo (corre solo en tu máquina). |
 | `src/data/catalog.json` | Catálogo generado, versionado en git. |
-| `media/<id>/` | Miniaturas y páginas en WebP (nunca de ítems restringidos). No va a git: se sube al bucket R2 que sirve `amgueddfa-media.kevinroberts.ar`. |
+| `media/<id>/` | Miniaturas y páginas en WebP (nunca de ítems restringidos). No va a git: se sube al bucket R2 que sirve `media.amgueddfa.org`. |
 | `data/approved/*.json` | Copia de los aportes aprobados y del estado de las ediciones. |
 | `data/restricted_extra.txt` | Ids que se restringen además de `resultados`. |
 | `supabase/migrations/` | Esquema, RLS y funciones de la base. |

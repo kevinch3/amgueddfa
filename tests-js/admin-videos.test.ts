@@ -394,7 +394,7 @@ describe('reanchorPreview', () => {
     expect(avisoTexto('reemplaza')).toBe('Se reemplaza la línea entera.');
     expect(avisoTexto('quita')).toBe('Se quita la línea entera.');
     expect(avisoTexto('idioma', 'cy')).toBe('Toda la línea pasa a galés.');
-    expect(avisoTexto('idioma', 'es')).toBe('Toda la línea pasa a español.');
+    expect(avisoTexto('idioma', 'es')).toBe('Toda la línea pasa a castellano.');
     expect(avisoTexto('larga')).toBe('La línea quedaría con más de 500 caracteres: elegí otra.');
     expect(avisoTexto('mismo_texto')).toBe('La línea ya dice eso, así que no cambiaría nada: elegí otra.');
     expect(avisoTexto('mismo_idioma', 'cy')).toBe('La línea ya está en galés, así que no cambiaría nada: elegí otra.');

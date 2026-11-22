@@ -46,7 +46,7 @@ describe('the head of a change (after its time)', () => {
   it("says the kind once, and a language by name, from the line's own to the new one («Idioma · Idioma: es» before)", () => {
     const more: Cambio[] = [...cambios, { t: 20, antes: 'hola mundo', texto: 'Hola, mundo', idioma: 'es' }];
     expect(videoCardRows('abcdef12345', more, seg, idiomaDe).map(changeHeadText)).toEqual([
-      'Corregir', 'Quitar', 'Agregar · Idioma: español', 'Idioma: español → galés', 'Corregir · Idioma: galés → español',
+      'Corregir', 'Quitar', 'Agregar · Idioma: castellano', 'Idioma: castellano → galés', 'Corregir · Idioma: galés → castellano',
     ]);
   });
   it("names only the new language when the line's own is unknown (no file, or the line changed since)", () => {

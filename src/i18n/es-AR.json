@@ -1089,7 +1089,7 @@
     "es": "Español",
     "cy": "Cymraeg",
     "idioma_nombre": {
-      "es": "español",
+      "es": "castellano",
       "cy": "galés"
     },
     "idioma_cambio": "Idioma: {antes} → {despues}",

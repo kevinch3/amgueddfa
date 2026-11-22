@@ -298,11 +298,11 @@ export const cambiosLabel = (n: number): string => (n === 1 ? t('editor.un_cambi
 /** "Enviar 2 correcciones"; "Enviar 1 corrección". */
 export const enviarLabel = (n: number): string => (n === 1 ? t('editor.enviar_una') : t('editor.enviar', { n }));
 
-/** A language by name in the page's language: "español", "galés". */
+/** A language by name in the page's language: "castellano", "galés". */
 export const nombreIdioma = (x: Idioma): string => t(`editor.idioma_nombre.${x}`);
 
-/** A language change in words, from the line's own language to the new one: "Idioma: galés → español"; "Idioma:
- * español" when the line's own is unknown (or the same). */
+/** A language change in words, from the line's own language to the new one: "Idioma: galés → castellano"; "Idioma:
+ * castellano" when the line's own is unknown (or the same). */
 export function idiomaCambio(hacia: Idioma, desde?: Idioma | null): string {
   return desde && desde !== hacia
     ? t('editor.idioma_cambio', { antes: nombreIdioma(desde), despues: nombreIdioma(hacia) })
@@ -317,12 +317,12 @@ export function cambioTexto(c: { texto?: string; idioma?: Idioma; quitar?: boole
 }
 
 /** The note under a line the draft changes: "→ «the new text»", "→ Quitar esta línea"; a language change on its own
- * reads "Idioma: galés → español" (its own arrow). */
+ * reads "Idioma: galés → castellano" (its own arrow). */
 export function notaBorrador(c: { texto?: string; idioma?: Idioma; quitar?: boolean }, desde?: Idioma | null): string {
   return `${c.quitar || c.texto !== undefined ? '→ ' : ''}${cambioTexto(c, desde)}`;
 }
 
-/** The note under a line with the author's own pending change: "Pendiente de revisión: Idioma: galés → español". */
+/** The note under a line with the author's own pending change: "Pendiente de revisión: Idioma: galés → castellano". */
 export const notaPendiente = (c: { texto?: string; idioma?: Idioma; quitar?: boolean }, desde?: Idioma | null): string =>
   t('editor.pendiente', { cambio: cambioTexto(c, desde) });
 

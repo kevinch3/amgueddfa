@@ -145,17 +145,17 @@ describe('the counter and the send button', () => {
   it('describes a change in words: the new text, a removal, a language by name, from the line\'s own to the new one', () => {
     expect(cambioTexto({ texto: 'Veredicto' })).toBe('«Veredicto»');
     expect(cambioTexto({ quitar: true })).toBe('Quitar esta línea');
-    expect(cambioTexto({ texto: 'Diolch', idioma: 'cy' }, 'es')).toBe('«Diolch» · Idioma: español → galés');
-    expect(cambioTexto({ idioma: 'es' }, 'cy')).toBe('Idioma: galés → español');
-    expect(cambioTexto({ idioma: 'es' })).toBe('Idioma: español'); // the line's own language unknown
+    expect(cambioTexto({ texto: 'Diolch', idioma: 'cy' }, 'es')).toBe('«Diolch» · Idioma: castellano → galés');
+    expect(cambioTexto({ idioma: 'es' }, 'cy')).toBe('Idioma: galés → castellano');
+    expect(cambioTexto({ idioma: 'es' })).toBe('Idioma: castellano'); // the line's own language unknown
   });
 
-  it('marks a draft line and a pending one the same way: «Idioma: galés → español», not a bare «→ Español»', () => {
-    expect(notaBorrador({ idioma: 'es' }, 'cy')).toBe('Idioma: galés → español');
+  it('marks a draft line and a pending one the same way: «Idioma: galés → castellano», not a bare «→ Español»', () => {
+    expect(notaBorrador({ idioma: 'es' }, 'cy')).toBe('Idioma: galés → castellano');
     expect(notaBorrador({ texto: 'Veredicto' }, 'es')).toBe('→ «Veredicto»');
-    expect(notaBorrador({ texto: 'Diolch', idioma: 'cy' }, 'es')).toBe('→ «Diolch» · Idioma: español → galés');
+    expect(notaBorrador({ texto: 'Diolch', idioma: 'cy' }, 'es')).toBe('→ «Diolch» · Idioma: castellano → galés');
     expect(notaBorrador({ quitar: true }, 'es')).toBe('→ Quitar esta línea');
-    expect(notaPendiente({ idioma: 'es' }, 'cy')).toBe('Pendiente de revisión: Idioma: galés → español');
+    expect(notaPendiente({ idioma: 'es' }, 'cy')).toBe('Pendiente de revisión: Idioma: galés → castellano');
     expect(notaPendiente({ texto: 'Veredicto' }, 'es')).toBe('Pendiente de revisión: «Veredicto»');
   });
 

@@ -87,8 +87,8 @@ function cardRow(videoId: string, c: Cambio, index: number, seg: [number, string
 }
 
 /** What follows a change's time in its head: its kind ("Corregir", "Quitar", "Agregar"), and a language by name, from
- * the line's own to the new one ("Corregir · Idioma: galés → español"); a language change alone says it once
- * ("Idioma: galés → español"). */
+ * the line's own to the new one ("Corregir · Idioma: galés → castellano"); a language change alone says it once
+ * ("Idioma: galés → castellano"). */
 export function changeHeadText(r: VideoCardRow): string {
   if (r.kind === 'idioma' && r.idioma) return idiomaCambio(r.idioma, r.idiomaAntes);
   const kind = t(`admin.video.${r.kind}`);

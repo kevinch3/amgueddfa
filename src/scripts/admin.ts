@@ -177,7 +177,7 @@ async function publishedTranscript(id: string): Promise<Transcript | null> {
 }
 
 /** The published transcript lines of a video, or null when the file cannot be read. */
-/** "1:15 Corregir · Idioma: galés → español", the time linked to that moment on YouTube. */
+/** "1:15 Corregir · Idioma: galés → castellano", the time linked to that moment on YouTube. */
 function changeHead(r: VideoCardRow, into: HTMLElement): void {
   into.append(el('a', { href: r.link, target: '_blank', rel: 'noopener noreferrer' }, fmtTime(r.t)), ` ${changeHeadText(r)}`);
 }

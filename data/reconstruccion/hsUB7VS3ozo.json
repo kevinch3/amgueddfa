@@ -220,6 +220,10 @@
    "ac yn nerth deall, ac yn neall gwybod, ac yn gwybod y gwybodaeth cyfiawn."
   ],
   [
+   384.86,
+   "ac yng ngwybod y cyfiawn ei garu, ac o garu, caru pob hanfod."
+  ],
+  [
    457.5,
    "y en cobrani a tu búlcor el Estudio. Diolch i'r bonu Felipe Hernández Amway Waith."
   ],
@@ -585,7 +589,11 @@
   ],
   [
    1242.66,
-   "Nais uwch adlais, a oes heddwch? Heddwch. Teg uwch adleth, a oes heddwch? Heddwch."
+   "nais uwch adlais, a oes heddwch? Heddwch. Teg uwch adleth, a oes heddwch? Heddwch."
+  ],
+  [
+   1270.66,
+   "Gwae uwch a gwae, a oes heddwch? Heddwch."
   ],
   [
    1306.6,
@@ -684,6 +692,10 @@
    "Cartref"
   ],
   [
+   1417.6,
+   "Dychymig a meddwl am bob mynydd a gwenol a chlychau'r gog yn crynhoi a thôr beudy yn disgleirio fel môr. Ni fu boreau oer na gwlyb na phorffor. Peth rhyfedd yw dychymyg, braslun sy'n plethu'n ddistaw fel plisgyn o niw."
+  ],
+  [
    1445.6,
    "Ble, sut, prud mae'r hurraeth yn suddau mewn gan blani hadau a thyfu gwreidiae."
   ],
@@ -728,6 +740,10 @@
    "mewn cwsc?"
   ],
   [
+   1478.6,
+   "A?"
+  ],
+  [
    1480.6,
    "Amanibyniaeth?"
   ],
@@ -756,10 +772,6 @@
    "Drofa."
   ],
   [
-   1503.58,
-   "Diolch yn fawr Nance. Cenir gân y gadeirio gan William Gwyndi gydag abeiliant Mac Patagonia."
-  ],
-  [
    1510.7,
    "Diolch en fawr, Nans."
   ],
@@ -772,16 +784,12 @@
    "gyda gobeilient Mac Patagonia."
   ],
   [
-   1544.6,
-   "El gran baird y el gud, cenúth y ryd, gornímedo arban y byd."
+   1533.58,
+   "Henffych un prif ar arfuddig o fynd, Seiniwch a'i enw i'r bed o ar gwynt, Hwn ydyw brenin, beirdd ar wyl i gyd, Cenwch a'r un gorni i fedwar ban y byd, Henffych brif ar y gwenwy llawn y clên, Gloeddiodd yr Eisteddfod yn un fryd hyn."
   ],
   [
-   1552.7,
-   "En fich brifo'r gweinwi llafne clef,"
-  ],
-  [
-   1557.3,
-   "loediod ar eisteddfod en un fridd y hyn."
+   1563.58,
+   "Ni wnaig ymbrodi'r eilion ein boddhad, calon wrth y galon yw crin gormod. Llygad y goleu fi, beunydd ar ei lwyd, Duw a phob adaeon i hudd o honno fwyd."
   ],
   [
    1588.58,
@@ -992,6 +1000,9 @@
    "cy"
   ],
   [
+   "cy"
+  ],
+  [
    "whisper_es"
   ],
   [
@@ -1268,58 +1279,7 @@
    "cy"
   ],
   [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
+   "cy"
   ],
   [
    "whisper_es"
@@ -1413,6 +1373,60 @@
   ],
   [
    "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "cy"
@@ -1450,8 +1464,8 @@
  ],
  "ventanas": {
   "total": 38,
-  "modelo": 25,
-  "reglas": 10,
+  "modelo": 24,
+  "reglas": 11,
   "vacias": 3
  }
 }

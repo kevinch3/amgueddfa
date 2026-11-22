@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   72.0,
+   "El Pueblo, de Pablo Neruda."
+  ],
+  [
    76.2,
    "El Pueblo de Pablo Neruda,"
   ],
@@ -184,6 +188,10 @@
    "pero ella vive aquí."
   ],
   [
+   239.46,
+   "Muchas gracias Claudio. Invitamos a la profesora Mlaire Thomas a subir al escenario para dirigirnos una cancion comunitaria, galon lan. Claris os gwelwch yn dda? Yym byddwn ni yn cyd-ganu felly galona claris yn arwain. Diolch."
+  ],
+  [
    242.9,
    "Muchas gracias, Claudio."
   ],
@@ -328,12 +336,12 @@
    "Gracias"
   ],
   [
-   609.0,
-   "Alejandro George"
+   593.5,
+   "Este leiaeth pedwar deg pump, Unawd cân werin, Wrth fynd efo Deio i Dywyn, Beca Flir, i ddechra, ac yno dan ni'n gofyn i Lois Medin ag Alejandro Jones i fod yn bach."
   ],
   [
-   612.4,
-   "Botas."
+   609.0,
+   "Alejandro George"
   ],
   [
    615.2,
@@ -341,7 +349,7 @@
   ],
   [
    619.2,
-   "canción folclórica Galesa, Urello"
+   "canción folclórica Galesa"
   ],
   [
    623.6,
@@ -360,16 +368,36 @@
    "y para culminar Alejandro."
   ],
   [
-   734.4,
-   "para"
+   634.88,
+   "Nid erbyn iais bwtsiol nythu oddi wrth misder y trôns o'r greithdy, ac yn hwn o'r oedden y gofyn, awn ni efo tyioedd gofyn."
   ],
   [
-   842.6,
-   "Misor"
+   694.88,
+   "Fe gychwynnwyd tan nos Wener, fa-la-la-la-la-la-la-la-la, doedd ei fawr ddwy enw'r swper, fa-la-la-la-la-la-la-la-la-la, fe gyfrannodd i'w damenni, fa-la-la-la-la-la-la-la-la-la, wrth fynd efo'r dreiau tywyll, fa-la-la-la-la-la-la-la-la-la-la."
   ],
   [
-   870.4,
-   "Dora"
+   724.88,
+   "Doed ymlaen a heibio'r dinast, fa-la-la-la-la-la-la-la-la-la-la, para haws a chwrw yng ngwanast, fa-la-la-la-la-la-la-la-la-la-la-la-la, drwyd ar y llyn yn a'i mynllynyn, fa-la-la-la-la-la-la-la-la-la-la, wrth fynd efo Deio i Dywyn, fa-la-la-la-la-la-la-la-la-la-la-la."
+  ],
+  [
+   754.88,
+   "Doeddwn i drwy gafr y grynolwyn, fa-la-la-la-la-la-la-la-la-la, ac yma i dan graig y terfyn, fa-la-la-la-la-la-la-la-la-la-la, pan gyrhaeddom yn ysmaenwyn, fa-la-la-la-la-la-la-la-la, gwaeddodd Deio, dacw Dywyn, fa-la-la-la-la-la-la-la-la-la-la-la-la-la-la."
+  ],
+  [
+   828.88,
+   "Bydde'n fynnu a'i sbot o'r lythyr, fa-la-la-la-la-la-la-la-la, oddi wrth Mistar Jones o'r lythyr, fa-la-la-la-la-la-la-la-la-la, ac yn hwn oedd o'i ddaethodydd, fa-la-la-la-la-la-la-la-la, a oeddwn i efo'r deyrn o'i gywir, fa-la-la-la-la-la-la-la-la."
+  ],
+  [
+   858.88,
+   "la la la la la la la. Dim yn hir yn wsat ges i tiro, la la la la la la la la. Rhydd oedd orau mynd a'i geidio, la la la la la la la la. Ond wedi'r oll, ond wedi'r oll be dwi'n wneud cychwyn, la la la la la la la la, hefo'r lleioedd hwn yn ddigywdyn, la la la la la la la la."
+  ],
+  [
+   888.88,
+   "la la la la la la la la la. Fe gychwynwyd penoswedd, la la la la la la la la la. Doedd i frawddwy erbyn swpen, la la la la la la la la la. Fe gawodd diwrnod i'w damenni, la la la la la la la la la. Hwtwyd efo deioedd gywir, la la la la la la la la la la."
+  ],
+  [
+   918.88,
+   "Ddoid ymlaen a rhifio'r dinas, fa-la-la-la-la-la-la-la-la, barach haws parch fwrw'r gwanast, fa-la-la-la-la-la-la-la-la, drwy dal y llyn yr haen myn llyn, fa-la-la-la-la-la-la-la-la, wrth fynd efo'r deunaw i gyfri, fa-la-la-la-la-la-la-la-la-la."
   ],
   [
    965.1,
@@ -396,17 +424,33 @@
    "John"
   ],
   [
-   1092.4,
-   "super"
+   1055.48,
+   "Fy marn hir yn sâl gysgu dro, fa-la-la-la-la-la-la-la-la, pr'un o'i gorau'n mynd a'i peidio, fa-la-la-la-la-la-la-la-la-la, wedi rôll fy gilydd i gychwyn, fa-la-la-la-la-la-la-la-la, efo beio i ffwrdd ei Dywyn, fa-la-la-la-la-la-la-la-la-la-la."
   ],
   [
-   1156.4,
-   "menang"
+   1085.48,
+   "Fe'n gychwynnol am nos Wener, fa-la-la-la-la-la-la-la-la, doedd ei fabwyr wedi swper, fa-la-la-la-la-la-la-la-la-la, cafodd o ddwy o ddarwain i, fa-la-la-la-la-la-la-la-la, a wrthwyneb o henwau drwy'r gwyn, fa-la-la-la-la-la-la-la-la-la."
+  ],
+  [
+   1104.48,
+   "Doedd ymlaen â heibio'r ddinas fa-la-la-la-la-la-la-la-la-la, cae'r gwarchawst a chwrw'n gwanast fa-la-la-la-la-la-la-la-la-la-la, drwy dan llyn yr enw Llynyn, fa-la-la-la-la-la-la-la-la, wrth fwydo fod deil o'i gywyn, fa-la-la-la-la-la-la-la-la-la."
+  ],
+  [
+   1123.48,
+   "Doedd drwy aber ar gyrffor gwyn ffa-la-la-la-la-la-la-la-la, ac ymlaen dan graig y deryn ffa-la-la-la-la-la-la-la-la-la, ond ar y cyrraedd dan ysbryd gwyn ffa-la-la-la-la-la-la-la-la-la, gwaedau deio nacwn y gwyn ffa-la-la-la-la-la-la-la-la-la-la-la-la-la."
+  ],
+  [
+   1206.4,
+   "Ah."
+  ],
+  [
+   1241.2,
+   "Ahí"
   ]
  ],
  "fuentes": [
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -544,7 +588,7 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -655,7 +699,7 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -679,9 +723,30 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -698,6 +763,18 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -708,8 +785,8 @@
  ],
  "ventanas": {
   "total": 21,
-  "modelo": 21,
-  "reglas": 0,
+  "modelo": 20,
+  "reglas": 1,
   "vacias": 0
  }
 }

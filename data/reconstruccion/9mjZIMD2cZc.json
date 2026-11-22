@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "O Delyn, gan Irma. Saib yn y gornel draw, ei thanau'n ddu, er hynny clywodd arlais miwsig y peth. Torrodd am well ddawns, ond eris yr hyd, a swynodd gin disgyblion i o'i cyd o'i cell."
+  ],
+  [
    26.08,
    "Peilwng ohoniwch chi'r carcharau hardd a'i wŷr Gymreig, ymhell dan groes y dydd. Drwy'r ffenest, persawr blodaidd a hwnna'n dda, haed yr wyddyn yn goreuro'r lle, cartref llawn o dagnebau, llawn o serch a'i wiriau'n cadw eto i'r corff yna."
   ],
@@ -21,6 +25,9 @@
   ]
  ],
  "fuentes": [
+  [
+   "cy"
+  ],
   [
    "cy"
   ],

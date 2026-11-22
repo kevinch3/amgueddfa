@@ -4,69 +4,20 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
-   2.2,
-   "tú eras valais"
+   0.0,
+   "Dwyn a falau. Gwyn ei byd y rhai sydd yn dwyn a falau, cadarn yw eu dannedd, a cystwyth eu cymalau. Yng nghoriau mân y bore, drwy wlith y berllan a'i llaeth, yn sleifio am y gore, wrth ei hyfryd taf gwaith. Llechant yn is, canghennau esmwyth,"
   ],
   [
-   7.1,
-   "en turín a la cara"
-  ],
-  [
-   22.1,
-   "por igual"
-  ],
-  [
-   26.3,
-   "dejando disk angela y a suelo"
-  ],
-  [
-   41.4,
-   "primero"
-  ],
-  [
-   43.9,
-   "el vaso colombia que es africana"
-  ],
-  [
-   47.4,
-   "tarantino"
-  ],
-  [
-   50.6,
-   "tema"
-  ],
-  [
-   56.7,
-   "en el interior"
+   55.0,
+   "Bendigaid ydyw'r rhai sydd yn dwy na fanau."
   ]
  ],
  "fuentes": [
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
+   "cy"
   ]
  ],
  "ventanas": {

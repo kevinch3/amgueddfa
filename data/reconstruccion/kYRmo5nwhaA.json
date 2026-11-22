@@ -1,0 +1,22 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   78.0,
+   "O, o, o, tai ffôn, tai ffôn, tai ffôn."
+  ]
+ ],
+ "fuentes": [
+  [
+   "cy"
+  ]
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

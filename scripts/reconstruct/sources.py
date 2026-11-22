@@ -13,7 +13,7 @@ from pathlib import Path
 from typing import NamedTuple
 
 from scripts.align_lyrics import LETRAS, align, parse_letra, spans_for
-from scripts.export_video_transcripts import clean_whisper, glob_escape, is_english, parse_vtt
+from scripts.export_video_transcripts import MARKER, clean_whisper, glob_escape, is_english, line_language, parse_vtt
 
 # The Welsh model, as the suffix of its file next to the video (<stem>.<WELSH_SOURCE>.json,
 # segments [{"s": start, "text": ...}]). Bangor University's techiaith/whisper-large-ft-cy-en,
@@ -25,6 +25,11 @@ WELSH_SOURCE: str | None = "cy-techiaith"
 # 2009 chair ceremony, the five lines over the opening music are 0.14-0.49; real speech is 0.67+.
 MIN_CY_CONF = 0.6
 SPANISH_NEAR = 3.0  # seconds: a Welsh line this close to a Spanish line is taken as the same (Spanish) speech
+# Words of Spanish text (tags left out) within SPANISH_NEAR that make it Spanish speech. Fewer are YouTube's
+# guesses over Welsh singing ("cvar", "div", "[Música]"): in the 59 videos with both sources they removed
+# 118 of the 134 Welsh lines dropped; next to real speech the Welsh model writes the Spanish in Welsh
+# spelling or even translates it ("Aquí ha sido un placer" -> "Dwi'n meddwl bod o'n pleser").
+SPANISH_SPEECH_WORDS = 5
 
 
 class Line(NamedTuple):
@@ -62,13 +67,19 @@ def load_sources(stem: Path, video_id: str, letras: Path = LETRAS) -> list[Line]
     if WELSH_SOURCE:
         cy = stem.with_name(f"{stem.name}.{WELSH_SOURCE}.json")
         if cy.exists():
-            # The Welsh model writes Welsh even over Spanish speech: where a Spanish source
-            # has a line nearby, its line is not Welsh speech and is left out.
-            es_times = [l.t for l in out if l.lang == "es"]
+            # Next to Spanish speech the Welsh model's line is that speech again (in Spanish, Welsh spelling or a
+            # translation) and is left out. Its Spanish lines go next to any Spanish text; its Welsh ones only
+            # next to SPANISH_SPEECH_WORDS words of it, so a YouTube scrap over a Welsh song keeps the song.
+            es_lines = [(l.t, len(l.text.split())) for l in out if l.lang == "es" and not MARKER.match(l.text)]
+
+            def heard_as_spanish(t: float, text: str) -> bool:
+                words = sum(n for x, n in es_lines if abs(t - x) <= SPANISH_NEAR)
+                return words >= (1 if line_language(text, ["cy"]) == "es" else SPANISH_SPEECH_WORDS)
+
             out += [Line(float(s["s"]), s["text"], "cy", "cy", round(math.exp(s["lp"]), 2) if "lp" in s else None)
                     for s in json.loads(cy.read_text(encoding="utf-8"))["segments"]
                     if s["text"] and ("lp" not in s or math.exp(s["lp"]) >= MIN_CY_CONF) and not is_english(s["text"])
-                    and not any(abs(float(s["s"]) - t) <= SPANISH_NEAR for t in es_times)]
+                    and not heard_as_spanish(float(s["s"]), s["text"])]
     heard_es = [[l.t, l.text] for l in sorted(out) if l.src in ("subida", "yt_es", "whisper_es")]
     heard_cy = [[l.t, l.text] for l in sorted(out) if l.src == "cy"]
     for sp in spans_for(video_id, letras):

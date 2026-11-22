@@ -1,14 +1,21 @@
 {
  "src": "reconstruida",
- "lang": "es",
+ "lang": "cy",
  "modelo": "claude-sonnet-5-5",
  "seg": [
+  [
+   0.0,
+   "Yr Hen Lwybrau gan i'r malliws, a ddewch chi i roi tro yn fy nghwmni hyd lwybrau'r hen ardal gi, ac wrando'n hapus hiraethus, glichad cof am dyddiau fi."
+  ],
   [
    19.0,
    "Y llwybrau gerddasom ninnau ar ein ffordd i'r ysgol cynt, ein traed cyn ysgafned a'n calon a'n galon mor ysgafn â'r gwynt, a'r llwybrau a gerddaf heddiw a'm plentyn yn fy llaw, y llwybrau fydd i ddillithau yn annwyl rhyw ddydd a ddaw."
   ]
  ],
  "fuentes": [
+  [
+   "cy"
+  ],
   [
    "cy"
   ]

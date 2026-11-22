@@ -26,6 +26,10 @@
   [
    160.5,
    "todo el verano"
+  ],
+  [
+   200.0,
+   "Diolch."
   ]
  ],
  "fuentes": [
@@ -46,6 +50,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ]
  ],
  "ventanas": {

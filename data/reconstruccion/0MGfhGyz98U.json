@@ -200,24 +200,8 @@
    "Pnawn da i chi gyd."
   ],
   [
-   325.8,
-   "Quintechraebor ceremoni penotol,"
-  ],
-  [
-   330.0,
-   "oni eixo calcair bach, itali-tai en get,"
-  ],
-  [
-   334.9,
-   "ad riwinsiduiti bod o mara ruipan emma,"
-  ],
-  [
-   337.7,
-   "en arruin, a ceremoni,"
-  ],
-  [
-   342.0,
-   "y en cebrani en bauriawn"
+   325.42,
+   "Cyn dechrau efo'r seremoni yym penodol, o'n i eisio cael gair bach i talu teyrnged at rywun sydd wedi bod yma ar yr lwyfan yma yn yym yn arwain y seremoni ac yn cyf- yy cyfrannu yn fawr iawn at yr at yr Eisteddfod ac at y diwylliant Cymraeg."
   ],
   [
    345.0,
@@ -364,24 +348,16 @@
    "Jessica o'r cwm, a Sarah Cwm."
   ],
   [
-   638.4,
-   "Diolchidinu am eu cafraniat."
+   638.92,
+   "Diolch i nw am y ch- am eu cyfraniad."
   ],
   [
    642.4,
    "Nawr van entro iddalllen a berniadaid."
   ],
   [
-   646.4,
-   "Qatar Eisteddfod 2017."
-  ],
-  [
-   650.4,
-   "Verneid castatlea y zacaltar eleni y títir delan Jones y no prir va a ir de Cambrica Bois."
-  ],
-  [
-   657.9,
-   "Adiós que maur ameis alwadei kraf, atestin elenioid finiei."
+   646.92,
+   "Cadair yr Eisteddfod dwy fil a un deg saith, fyrniaid cystadleuaeth a gadair eleni yw Tudur Dylan Jones, un o brif feirdd o Gymru cyfoes, a diolch yn fawr am ei sylwadau craff, y destun eleni oedd ffiniau."
   ],
   [
    664.0,
@@ -480,12 +456,16 @@
    "Daeth i'w adlais, a oes heddwch, heddwch, lle i'w adref, a oes heddwch, heddwch, gwaed i'w gadwain, a oes heddwch, heddwch, eistedd yn fawr, a chêr yn darpariaeth."
   ],
   [
-   1118.52,
-   "Galwaf yn awr i Eirian Cleddau i ddarllen y gerdd fuddugol."
+   1142.8,
+   "Finaia."
   ],
   [
    1150.0,
-   "Ar y fin croeso."
+   "Ar y fín croeso."
+  ],
+  [
+   1154.7,
+   "All of the passports."
   ],
   [
    1158.2,
@@ -746,19 +726,7 @@
    "cy"
   ],
   [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
+   "cy"
   ],
   [
    "whisper_es"
@@ -869,19 +837,13 @@
    "cy"
   ],
   [
-   "whisper_es"
+   "cy"
   ],
   [
    "whisper_es"
   ],
   [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
+   "cy"
   ],
   [
    "whisper_es"
@@ -956,7 +918,10 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "whisper_es"
@@ -1045,8 +1010,8 @@
  ],
  "ventanas": {
   "total": 34,
-  "modelo": 23,
-  "reglas": 7,
+  "modelo": 22,
+  "reglas": 8,
   "vacias": 4
  }
 }

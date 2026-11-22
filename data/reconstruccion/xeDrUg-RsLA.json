@@ -24,8 +24,16 @@
    "silencio Gladis"
   ],
   [
+   30.0,
+   "Yr Wyddfa gan Rhys Nicholas. Fe glywais amdanat, do, lawer o waith, mai ti oedd brenhines yr ryri faeth. Fe daeth i misgweled gan feddwl, yn siŵr, y bydded yn hoffi admygedd gŵr. Fe siomi a wnaethost am ddyddiau'r pryd hyn."
+  ],
+  [
    35.1,
    "Nicholas"
+  ],
+  [
+   60.0,
+   "Gan gadw dy ben yn y gwmwl gwyn, ond wedyn, un noson, di-ango fawr, fe thwelais yng nglaslyn a'th ben i lawr, a thrannoeth am unain troed tua thre, fe dynnais dy het i druan o'r de."
   ]
  ],
  "fuentes": [
@@ -45,7 +53,13 @@
    "yt_es"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
+  ],
+  [
+   "cy"
   ]
  ],
  "ventanas": {

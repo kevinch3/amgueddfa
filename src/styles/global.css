@@ -662,6 +662,7 @@ fieldset.campo { border: 0; padding: 0; }
 .rep-editor .rep-ed { margin: 0.4rem 0 0; }
 .rep-ed .campo { margin: 0 0 0.4rem; }
 .rep-ed .campo input[type='text'] { width: 100%; }
+.rep-ed .rep-ed-tiempo input[type='text'] { width: 8rem; font-variant-numeric: tabular-nums; }
 .rep-ed-idioma { display: flex; flex-wrap: wrap; align-items: center; gap: 0 1rem; margin: 0 0 0.2rem; padding: 0; border: 0; }
 .rep-ed-idioma legend { float: left; margin-right: 0.5rem; padding: 0; font-weight: 600; }
 .rep-ed .opt { display: inline-flex; align-items: center; gap: 0.4rem; min-height: 44px; }

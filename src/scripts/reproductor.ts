@@ -23,6 +23,7 @@ type YTPlayer = {
   playVideo(): void;
   stopVideo(): void;
   getCurrentTime(): number;
+  getDuration(): number;
   getPlayerState(): number;
 };
 declare global {
@@ -70,6 +71,8 @@ if (dialog) {
   /** The second the open video must start at, until it has really played from there. Safari and phones
    *  block autoplay: YouTube then only cues the video, and its own play button may ignore `start`. */
   let pendingStart = 0;
+  /** The open video cannot play in the site (YouTube's onError: embedding disabled, removed): its player has no time. */
+  let failed = false;
 
   /** Put the video at its moment (when it is ready, and again when it first plays). */
   function honourStart(playing: boolean): void {
@@ -322,6 +325,7 @@ if (dialog) {
     ($('[data-rep-anterior]') as HTMLButtonElement).disabled = index === 0;
     ($('[data-rep-siguiente]') as HTMLButtonElement).disabled = index === list.length - 1;
     $('[data-rep-error]')!.hidden = true;
+    failed = false;
     $('[data-rep-copiado]')!.textContent = '';
     $('.rep-marco')!.hidden = false;
     // The address names the open video; no history entry, so "back" still leaves the page.
@@ -348,6 +352,7 @@ if (dialog) {
         },
         // 2, 5, 100, 101, 150: bad id, HTML5 error, removed, embedding not allowed.
         onError: () => {
+          failed = true;
           $('.rep-marco')!.hidden = true;
           $('[data-rep-error]')!.hidden = false;
         },
@@ -474,15 +479,23 @@ if (dialog) {
     const sec = li.closest<HTMLElement>('[data-videos]');
     return { id: li.dataset.video ?? '', title: li.dataset.title ?? '', festival: sec?.dataset.festival ?? '', year: Number(sec?.dataset.year) || 0 };
   }
+  /** A number the player gives, or null: no player, not ready yet, or a video that cannot play here (failed). */
+  const fromPlayer = (read: (p: YTPlayer) => number): number | null => {
+    if (!player || failed) return null;
+    try {
+      const x = read(player);
+      return Number.isFinite(x) ? x : null;
+    } catch {
+      return null;
+    }
+  };
   wireEditor(dialog, () => ({
     tr: current,
     video: openVideo(),
-    currentTime: () => {
-      try {
-        return player?.getCurrentTime() ?? 0;
-      } catch {
-        return 0; // not ready yet: the start
-      }
+    currentTime: () => fromPlayer((p) => p.getCurrentTime()),
+    duration: () => {
+      const d = fromPlayer((p) => p.getDuration());
+      return d !== null && d > 0 ? d : null;
     },
   }));
 

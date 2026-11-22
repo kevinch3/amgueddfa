@@ -65,6 +65,36 @@ export function setLine(tr: Transcript, d: Draft, i: number, edit: { texto?: str
   return { ...d, ...(base ? { base } : {}), lines };
 }
 
+/** The moment a line added now starts at ("+ Agregar una línea en 1:23"): the player's time when it has one; a video
+ * that cannot play in the site (embedding disabled) or a player not ready has none, and then the second in the address
+ * (#v=…&t=…: a shared link, "Copiar enlace"), else the line whose ✎ was used last, else the start. Tenths of a second. */
+export function momentoNueva(s: { reproductor: number | null; enlace: number | null; ultimo: number | null }): number {
+  const ok = (x: number | null, min: number): x is number => typeof x === 'number' && Number.isFinite(x) && x >= min;
+  const t0 = ok(s.reproductor, 0) ? s.reproductor : ok(s.enlace, 0.001) ? s.enlace : ok(s.ultimo, 0) ? s.ultimo : 0;
+  return Math.round(t0 * 10) / 10;
+}
+
+/** The new line's time field: "12:05" (minutes:seconds) or "1:02:03" (hours:minutes:seconds) in seconds; null when it
+ * is not one. */
+export function parseTiempo(s: string): number | null {
+  const m = /^(?:(\d+):([0-5]\d)|(\d+)):([0-5]\d)$/.exec((s ?? '').trim());
+  if (!m) return null;
+  return m[1] !== undefined ? Number(m[1]) * 3600 + Number(m[2]) * 60 + Number(m[4]) : Number(m[3]) * 60 + Number(m[4]);
+}
+
+/** The time the new-line form gives: `prefill` (to the tenth) while the field still reads it, else what was written;
+ * never past the end of the video when its length (`duracion`, seconds) is known. */
+export function tiempoNueva(
+  campo: string,
+  o: { prefill: number; duracion: number | null },
+): { ok: true; t: number } | { ok: false; key: 'editor.error_tiempo' } | { ok: false; key: 'editor.error_tiempo_fin'; duracion: string } {
+  const t0 = (campo ?? '').trim() === fmtTime(o.prefill) ? o.prefill : parseTiempo(campo);
+  if (t0 === null) return { ok: false, key: 'editor.error_tiempo' };
+  const fin = typeof o.duracion === 'number' && Number.isFinite(o.duracion) && o.duracion > 0 ? o.duracion : null;
+  if (fin !== null && t0 > fin) return { ok: false, key: 'editor.error_tiempo_fin', duracion: fmtTime(fin) };
+  return { ok: true, t: t0 };
+}
+
 /** The draft without its change to line i ("Deshacer"). */
 export function undoLine(d: Draft, i: number): Draft {
   const lines = { ...d.lines };

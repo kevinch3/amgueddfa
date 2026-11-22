@@ -13,14 +13,19 @@ import { ownPendingVideo, submit, type Contribution } from '../lib/contrib';
 import { t } from '../lib/i18n';
 import {
   addNueva, cabe, cambioTexto, cambiosLabel, clearDraft, countCambios, editControls, editorAccess, emptyDraft, enviarLabel,
-  fitDraft, limiteLabel, lineIdioma, loadDraft, nuevaIdioma, nuevaTexto, pendingMarks, puedeEntrar, removeNueva, saveDraft,
-  sendDraft, setLine, undoLine, type Draft, type Idioma,
+  fitDraft, limiteLabel, lineIdioma, loadDraft, momentoNueva, nuevaIdioma, nuevaTexto, pendingMarks, puedeEntrar, removeNueva,
+  saveDraft, sendDraft, setLine, tiempoNueva, undoLine, type Draft, type Idioma,
 } from '../lib/transcript-draft';
+import { parseVideoHash } from '../lib/video-hash';
 import { fmtTime, lineAt, type Transcript } from '../lib/video-transcript';
 import { busy, el, gate, gateMessage, thanks, type Gate } from './ui';
 
 export type EditorVideo = { id: string; title: string; festival: string; year: number };
-export type EditorState = { tr: Transcript | null; video: EditorVideo | null; currentTime: () => number };
+/** `currentTime` and `duration` are null when the player has none: not ready yet, or a video that cannot play in the
+ * site (embedding disabled). */
+export type EditorState = {
+  tr: Transcript | null; video: EditorVideo | null; currentTime: () => number | null; duration: () => number | null;
+};
 
 /** The event scripts/reproductor.ts sends on the dialog each time it (re)draws the transcript lines. */
 export const LINEAS_EVENT = 'rep:lineas';
@@ -84,6 +89,8 @@ export function wireEditor(dialog: HTMLDialogElement, getState: () => EditorStat
   let draft: Draft | null = null;
   /** The line whose editor is open. */
   let abierta: number | null = null;
+  /** The start of the line whose ✎ was used last on this video (a new line's time when the player has none). */
+  let ultimo: number | null = null;
   let pend: Contribution[] = [];
   let timer = 0;
   /** When Escape last closed an editor (some browsers still send the dialog's cancel after it). */
@@ -226,10 +233,17 @@ export function wireEditor(dialog: HTMLDialogElement, getState: () => EditorStat
     enviar.disabled = n === 0;
   }
 
-  /** "+ Agregar una línea en 1:23", at the video's time (not while focused: its label would keep changing). */
+  /** Where a line added now starts: the player's time, else the address's t, else the last ✎ used (momentoNueva). */
+  function momento(): number {
+    const { currentTime, video } = state();
+    const h = parseVideoHash(location.hash);
+    return momentoNueva({ reproductor: currentTime(), enlace: h && video && h.id === video.id ? h.t : null, ultimo });
+  }
+
+  /** "+ Agregar una línea en 1:23", at that moment (not while focused: its label would keep changing). */
   function paintAgregar(): void {
     if (document.activeElement === agregar && agregar.textContent) return;
-    agregar.textContent = t('editor.agregar', { tiempo: fmtTime(state().currentTime()) });
+    agregar.textContent = t('editor.agregar', { tiempo: fmtTime(momento()) });
   }
 
   function save(d: Draft): void {
@@ -257,6 +271,7 @@ export function wireEditor(dialog: HTMLDialogElement, getState: () => EditorStat
     if (!tr || !draft || !li || !seg) return;
     closeLine(false);
     closeNueva(false);
+    ultimo = seg[0];
     const e = draft.lines[i];
     const idioma = e?.idioma ?? lineIdioma(tr, i);
     const box = el('div', { class: 'rep-ed rep-ed-x', role: 'group', 'aria-label': t('editor.editar_linea', { tiempo: fmtTime(seg[0]) }) });
@@ -332,15 +347,25 @@ export function wireEditor(dialog: HTMLDialogElement, getState: () => EditorStat
     if (focus) agregar.focus();
   }
 
-  /** The form for a line added at the video's current time (pause it where the speech starts). */
+  /** The form for a line added at the video's current time (pause it where the speech starts); its time can be
+   * written (mm:ss), checked against the video's length when it is known. */
   function openNueva(): void {
-    const { tr, currentTime } = state();
+    const { tr } = state();
     if (!tr || !draft) return;
     closeLine(false);
     closeNueva(false);
-    const at = Math.max(0, Math.round(currentTime() * 10) / 10);
+    const at = momento();
     const idioma = nuevaIdioma(tr, at);
     const box = el('div', { class: 'rep-ed', role: 'group', 'aria-label': t('editor.nueva', { tiempo: fmtTime(at) }) });
+    const titulo = el('p', { class: 'tarea-q' }, t('editor.nueva', { tiempo: fmtTime(at) }));
+    const tiempo = el('input', { id: 'rep-ed-nueva-tiempo', type: 'text', autocomplete: 'off', size: '8', maxlength: '10' });
+    tiempo.value = fmtTime(at);
+    const tiempoBox = el('div', { class: 'campo rep-ed-tiempo' });
+    tiempoBox.append(el('label', { for: tiempo.id }, t('editor.momento')), tiempo);
+    tiempo.addEventListener('input', () => {
+      const r = tiempoNueva(tiempo.value, { prefill: at, duracion: null });
+      if (r.ok) titulo.textContent = t('editor.nueva', { tiempo: fmtTime(r.t) });
+    });
     const { box: campo, input } = textField('rep-ed-nueva-texto', '', idioma);
     const lang = idiomaField('rep-ed-nueva-idioma', idioma);
     for (const r of lang.inputs) r.addEventListener('change', () => (input.lang = lang.get() ?? ''));
@@ -350,6 +375,12 @@ export function wireEditor(dialog: HTMLDialogElement, getState: () => EditorStat
     const acciones = el('p', { class: 'tarea-acciones' });
     acciones.append(ok, undo);
     ok.addEventListener('click', () => {
+      const cuando = tiempoNueva(tiempo.value, { prefill: at, duracion: state().duration() });
+      if (!cuando.ok) {
+        err.textContent = cuando.key === 'editor.error_tiempo_fin' ? t(cuando.key, { duracion: cuando.duracion }) : t(cuando.key);
+        tiempo.focus();
+        return;
+      }
       const idi = lang.get();
       if (!input.value.trim() || !idi) {
         err.textContent = t('contrib.error.video_texto');
@@ -358,7 +389,7 @@ export function wireEditor(dialog: HTMLDialogElement, getState: () => EditorStat
       }
       const cur = state().tr;
       if (!draft || !cur) return;
-      const next = addNueva(draft, { t: at, texto: input.value, idioma: idi });
+      const next = addNueva(draft, { t: cuando.t, texto: input.value, idioma: idi });
       if (!cabe(cur, draft, next)) {
         err.textContent = limiteLabel();
         return;
@@ -374,12 +405,12 @@ export function wireEditor(dialog: HTMLDialogElement, getState: () => EditorStat
         ev.stopPropagation();
         escaped = Date.now();
         closeNueva(true);
-      } else if (ev.key === 'Enter' && ev.target === input) {
+      } else if (ev.key === 'Enter' && (ev.target === input || ev.target === tiempo)) {
         ev.preventDefault();
         ok.click();
       }
     });
-    box.append(el('p', { class: 'tarea-q' }, t('editor.nueva', { tiempo: fmtTime(at) })), campo, lang.field, err, acciones);
+    box.append(titulo, tiempoBox, campo, lang.field, err, acciones);
     nuevaBox.replaceChildren(box);
     nuevaBox.hidden = false;
     syncEditando();
@@ -457,6 +488,7 @@ export function wireEditor(dialog: HTMLDialogElement, getState: () => EditorStat
       shown = id;
       puede = false;
       asentada = false;
+      ultimo = null;
       pend = [];
       boton.hidden = true;
       gateBox.hidden = true;

@@ -5,8 +5,8 @@ import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
 import {
-  addNueva, cambiosLabel, cambioTexto, editControls, editorAccess, emptyDraft, enviarLabel, loadDraft, nuevaIdioma,
-  pendingMarks, puedeEntrar, saveDraft, sendDraft, setLine,
+  addNueva, cambiosLabel, cambioTexto, editControls, editorAccess, emptyDraft, enviarLabel, loadDraft, momentoNueva,
+  nuevaIdioma, parseTiempo, pendingMarks, puedeEntrar, saveDraft, sendDraft, setLine, tiempoNueva,
 } from '../src/lib/transcript-draft';
 import { asTranscript, type Transcript } from '../src/lib/video-transcript';
 
@@ -152,6 +152,34 @@ describe('the counter and the send button', () => {
     const tr = asTranscript({ src: 'reconstruida', lang: 'es', seg: [[10, 'a'], [20, 'b']], fuentes: [['whisper_es'], ['cy']] })!;
     expect([nuevaIdioma(tr, 5), nuevaIdioma(tr, 15), nuevaIdioma(tr, 25)]).toEqual(['es', 'es', 'cy']);
     expect(nuevaIdioma(asTranscript({ src: 'reconstruida', lang: 'en', seg: [[1, 'x']] })!, 3)).toBe('es');
+  });
+});
+
+describe('the moment of a line added («+ Agregar una línea»)', () => {
+  it("is the player's time; without one (a video that cannot play in the site), the address's t, else the last ✎ used", () => {
+    expect(momentoNueva({ reproductor: 83.27, enlace: 98, ultimo: 40 })).toBe(83.3);
+    expect(momentoNueva({ reproductor: 0, enlace: 98, ultimo: 40 })).toBe(0); // a player at the start has a time
+    expect(momentoNueva({ reproductor: null, enlace: 98, ultimo: 40 })).toBe(98);
+    expect(momentoNueva({ reproductor: null, enlace: null, ultimo: 40.5 })).toBe(40.5);
+    expect(momentoNueva({ reproductor: null, enlace: 0, ultimo: 40 })).toBe(40); // #v=…, no t: the start is no moment
+    expect(momentoNueva({ reproductor: Number.NaN, enlace: null, ultimo: null })).toBe(0);
+    expect(momentoNueva({ reproductor: null, enlace: null, ultimo: null })).toBe(0);
+  });
+
+  it('reads the mm:ss field: minutes:seconds or hours:minutes:seconds', () => {
+    expect(parseTiempo('12:05')).toBe(725);
+    expect(parseTiempo(' 0:07 ')).toBe(7);
+    expect(parseTiempo('75:00')).toBe(4500);
+    expect(parseTiempo('1:02:03')).toBe(3723);
+    for (const bad of ['', 'abc', '12', '12:5', '12:60', '1:60:00', '-1:00', '1:2:3', '12:05.5']) expect(parseTiempo(bad), bad).toBeNull();
+  });
+
+  it('takes the field as prefilled (to the tenth) or as written, never past the end of the video when its length is known', () => {
+    expect(tiempoNueva('1:23', { prefill: 83.3, duracion: 600 })).toEqual({ ok: true, t: 83.3 });
+    expect(tiempoNueva('9:59', { prefill: 83.3, duracion: 600 })).toEqual({ ok: true, t: 599 });
+    expect(tiempoNueva('10:01', { prefill: 83.3, duracion: 600 })).toEqual({ ok: false, key: 'editor.error_tiempo_fin', duracion: '10:00' });
+    expect(tiempoNueva('99:00', { prefill: 0, duracion: null })).toEqual({ ok: true, t: 5940 });
+    expect(tiempoNueva('doce', { prefill: 0, duracion: null })).toEqual({ ok: false, key: 'editor.error_tiempo' });
   });
 });
 

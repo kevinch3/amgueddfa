@@ -212,6 +212,16 @@ describe('withdrawnInFile', () => {
   });
 });
 
+describe('the Videos tab with unreadable changes', () => {
+  it('lists and re-anchors only readable changes, and never throws', () => {
+    const odd = row('r7', 'V', '17:00', 'Odd', [null, { t: 45, antes: 5, texto: 'x' }, { t: 46, texto: { a: 1 } }] as unknown as Cambio[]);
+    const { items } = sinAnclarList(file(), [ana, eli, dora, odd]);
+    expect(items.map((x) => x.row)).not.toContain('r7');
+    expect(reanchoredCambios(odd.payload.cambios, { index: 1, motivo: 'sin_linea' }, { t: 33, text: 'Muy bien' })).toBeNull();
+    expect(retirarTodaLabel(odd)).toBe('Retirar toda la contribución (3 cambios)');
+  });
+});
+
 describe('retirarTodaLabel', () => {
   it('Retirar beside one unplaced change says it withdraws the whole contribution, and how many changes it has', () => {
     expect(retirarTodaLabel(dora)).toBe('Retirar toda la contribución (2 cambios)');

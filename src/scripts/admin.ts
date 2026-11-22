@@ -15,6 +15,7 @@ import {
   loadQueue,
   loadReleased,
   makeAdmin,
+  orFallback,
   reanchor,
   recordApprovedUpload,
   reject,
@@ -37,7 +38,7 @@ import {
 } from '../lib/admin';
 import { currentProfile } from '../lib/auth';
 import type { Kind } from '../lib/contrib';
-import { keptCambios, videoCardRows, type VideoCardRow } from '../lib/admin-video-card';
+import { isCambio, keptCambios, unreadable, videoCardRows, type VideoCardRow } from '../lib/admin-video-card';
 import {
   canAddNew, cardNotes, groupByVideo, reanchorOptions, retirarTodaLabel, sinAnclarList,
   type ApprovedVideoText, type CardNote, type Eleccion, type SinAnclarItem, type VideoGroup,
@@ -147,6 +148,21 @@ function readable(c: Pending): HTMLElement {
   return box;
 }
 
+/** The stand-in for a card (or a row of one) that could not be drawn, e.g. from a crafted row: an error line naming it,
+ * so the rest of the list still draws. */
+function brokenItem(cls: string, id: string, e: unknown): HTMLLIElement {
+  console.error(e);
+  const li = el('li', { class: cls });
+  li.append(el('p', { class: 'contrib-msg', role: 'alert' }, t('admin.error.tarjeta', { id })));
+  return li;
+}
+
+/** "Cambios ilegibles…: n" under a contribution some of whose changes cannot be read (they are left out). */
+function unreadableNote(cambios: unknown[]): HTMLElement | null {
+  const n = unreadable(cambios);
+  return n ? el('p', { class: 'muted small', role: 'note' }, t('admin.video.ilegibles', { n })) : null;
+}
+
 /** The published transcript of a video (checked against the server, so a fresh export shows), or null when the file
  * cannot be read. */
 async function publishedTranscript(id: string): Promise<Transcript | null> {
@@ -185,13 +201,16 @@ function videoChanges(c: Pending, onChange: () => void): { box: HTMLElement; kep
   const p = c.payload ?? {};
   const v = (p.video ?? {}) as { id?: string; title?: string };
   const id = String(v.id ?? '');
-  const cambios: Cambio[] = Array.isArray(p.cambios) ? p.cambios : [];
+  // A crafted row may hold changes that are not changes (null, a number for texto): left out, counted, never approved.
+  const cambios: unknown[] = Array.isArray(p.cambios) ? p.cambios : [];
   const box = el('div', { class: 'admin-informe' });
-  const first = cambios[0];
+  const first = cambios.find(isCambio);
   const head = el('p');
-  const title = v.title || id;
+  const title = String(v.title || id);
   head.append(id && first ? el('a', { href: videoUrl(id) + `&t=${Math.floor(first.t)}s`, target: '_blank', rel: 'noopener noreferrer' }, title) : title);
-  box.append(head, el('p', { class: 'muted small' }, t('admin.video.cambios', { n: cambios.length })));
+  box.append(head, el('p', { class: 'muted small' }, t('admin.video.cambios', { n: cambios.length - unreadable(cambios) })));
+  const note = unreadableNote(cambios);
+  if (note) box.append(note);
   const ticks = cambios.map(() => true);
   const list = el('ol', { class: 'admin-cambios' });
   box.append(list);
@@ -379,11 +398,12 @@ async function renderQueue(): Promise<void> {
     const state = groupState(g.items);
     let onSettle = () => {};
     for (const c of g.items) {
-      const li = card(c, (key) => {
+      // A card a crafted row breaks shows an error line; the rest of the queue still draws.
+      const li: HTMLLIElement = orFallback(() => card(c, (key) => {
         li.replaceChildren(el('p', { class: 'contrib-ok', role: 'status' }, t(key)));
         state.settle(c.id); // handled on its own: the group buttons skip it from now on
         onSettle();
-      });
+      }), (e) => brokenItem('admin-card', c.id, e));
       cards.set(c.id, li);
     }
     if (!g.lote) {
@@ -489,7 +509,7 @@ async function renderVideos(): Promise<void> {
   // The files are read one after another, in the order shown, so a long list does not fetch them all at once.
   let queue = Promise.resolve();
   for (const g of groups) {
-    const { li, load } = videoCard(g);
+    const { li, load } = orFallback(() => videoCard(g), (e) => ({ li: brokenItem('admin-card', g.id, e), load: async () => {} }));
     list.append(li);
     queue = queue.then(() => load().catch((e) => console.error(e))); // one video failing does not stop the others
   }
@@ -513,7 +533,7 @@ function videoCard(g: VideoGroup): { li: HTMLLIElement; load: () => Promise<void
     file: undefined,
     redraw: () => {
       drawSinAnclar(ctx, sin);
-      rows.replaceChildren(...g.rows.map((row) => correctionRow(ctx, row)));
+      rows.replaceChildren(...g.rows.map((row) => orFallback(() => correctionRow(ctx, row), (e) => brokenItem('admin-fila', row.id, e))));
     },
     say: (text) => {
       status.textContent = text;
@@ -544,7 +564,9 @@ function drawSinAnclar(ctx: VideoCtx, box: HTMLElement): void {
   const ol = el('ol', { class: 'admin-cambios' });
   // A row the file holds is re-anchored against the file (what the export will have when it applies the row); any
   // other against what the player shows, where its other changes and earlier rows already apply.
-  for (const item of items) ol.append(sinAnclarRow(ctx, item, item.baked ? file : live));
+  for (const item of items) {
+    ol.append(orFallback(() => sinAnclarRow(ctx, item, item.baked ? file : live), (e) => brokenItem('', item.row, e)));
+  }
   box.append(el('h3', {}, t('admin.videos.sin_anclar', { n: items.length })), ol);
 }
 
@@ -578,9 +600,11 @@ function correctionRow(ctx: VideoCtx, row: ApprovedVideoText): HTMLLIElement {
   const li = el('li', { class: 'admin-fila' });
   li.append(el('p', { class: 'muted small' },
     `${t('admin.de', { nombre: row.display_name || t('admin.sin_nombre') })} · ${t('admin.videos.aprobada', { fecha: fmtDate(row.reviewed_at) })}`));
-  const cambios = Array.isArray(row.payload?.cambios) ? row.payload.cambios : [];
+  const cambios: unknown[] = Array.isArray(row.payload?.cambios) ? row.payload.cambios : [];
   const det = el('details');
-  det.append(el('summary', {}, t('admin.video.cambios', { n: cambios.length })));
+  det.append(el('summary', {}, t('admin.video.cambios', { n: cambios.length - unreadable(cambios) })));
+  const note = unreadableNote(cambios);
+  if (note) det.append(note);
   const ol = el('ol', { class: 'admin-cambios' });
   // Not checked against the file: an applied change no longer reads its antes there, and that is no warning.
   for (const r of videoCardRows(ctx.g.id, cambios, null)) {

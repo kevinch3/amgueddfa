@@ -6,6 +6,7 @@ import { corregible, liveRows } from './live-video-corrections';
 // The player shows such a file as it is until the next export; the tab says so.
 export { withdrawnInFile } from './live-video-corrections';
 import { withdrawnInFile } from './live-video-corrections';
+import { isCambio } from './admin-video-card';
 import { t } from './i18n';
 import { applyCorrections, type Cambio, type CorrectionRow } from './video-corrections';
 import type { Transcript } from './video-transcript';
@@ -33,7 +34,6 @@ export type SinAnclarItem = { row: string; index: number; cambio: Cambio; motivo
 export type Eleccion = { t: number; text: string } | 'nueva';
 
 const cambiosOf = (r: { payload?: { cambios?: unknown } }): Cambio[] => (Array.isArray(r.payload?.cambios) ? (r.payload.cambios as Cambio[]) : []);
-const isCambio = (c: unknown): c is Cambio => !!c && typeof c === 'object' && typeof (c as Cambio).t === 'number' && Number.isFinite((c as Cambio).t);
 const newestFirst = (a: ApprovedVideoText, b: ApprovedVideoText) =>
   a.reviewed_at < b.reviewed_at ? 1 : a.reviewed_at > b.reviewed_at ? -1 : a.id < b.id ? 1 : a.id > b.id ? -1 : 0;
 

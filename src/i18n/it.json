@@ -535,7 +535,8 @@
       "derivados": "Non siamo riusciti a generare le immagini in questo browser. Prova con Chrome o Firefox aggiornati.",
       "sin_archivos": "Mancano le immagini o il testo nell'archivio riservato. Esegui scripts/push_restricted.py e riprova.",
       "sin_cambios": "Seleziona almeno una modifica da approvare.",
-      "no_aprobada": "Questa correzione non è più approvata."
+      "no_aprobada": "Questa correzione non è più approvata.",
+      "tarjeta": "Impossibile mostrare questo contributo ({id}): i suoi dati non si possono leggere."
     },
     "ver_restringido": "Vedi il documento prima di pubblicarlo",
     "restringido_alt": "{titulo}, pagina {n} (vista per amministratori)",
@@ -568,6 +569,7 @@
       "idioma": "Lingua",
       "agregar": "Aggiungere",
       "cambio_linea": "La riga è cambiata dopo la modifica",
+      "ilegibles": "Modifiche illeggibili, lasciate fuori: {n}",
       "aprobar_sel": "Approva le selezionate"
     },
     "videos": {

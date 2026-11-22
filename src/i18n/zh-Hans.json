@@ -535,7 +535,8 @@
       "derivados": "无法在此浏览器中生成图片。请使用最新版的 Chrome 或 Firefox。",
       "sin_archivos": "受限存储中缺少图片或文本。请运行 scripts/push_restricted.py 后重试。",
       "sin_cambios": "请至少勾选一项修改再批准。",
-      "no_aprobada": "这项更正已不再处于批准状态。"
+      "no_aprobada": "这项更正已不再处于批准状态。",
+      "tarjeta": "无法显示此投稿（{id}）：其数据无法读取。"
     },
     "ver_restringido": "公开前查看文献",
     "restringido_alt": "{titulo}，第 {n} 页（管理员视图）",
@@ -568,6 +569,7 @@
       "idioma": "语言",
       "agregar": "添加",
       "cambio_linea": "这一行在被编辑之后已经变了",
+      "ilegibles": "无法读取、已略去的修改：{n}",
       "aprobar_sel": "批准所选"
     },
     "videos": {

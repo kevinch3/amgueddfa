@@ -535,7 +535,8 @@
       "derivados": "Vi kunde inte skapa bilderna i den här webbläsaren. Prova med en uppdaterad Chrome eller Firefox.",
       "sin_archivos": "Bilderna eller texten saknas i det begränsade lagret. Kör scripts/push_restricted.py och försök igen.",
       "sin_cambios": "Markera minst en ändring att godkänna.",
-      "no_aprobada": "Den här rättelsen är inte längre godkänd."
+      "no_aprobada": "Den här rättelsen är inte längre godkänd.",
+      "tarjeta": "Bidraget kunde inte visas ({id}): dess data går inte att läsa."
     },
     "ver_restringido": "Se dokumentet innan du publicerar det",
     "restringido_alt": "{titulo}, sida {n} (vy för administratörer)",
@@ -568,6 +569,7 @@
       "idioma": "Språk",
       "agregar": "Lägg till",
       "cambio_linea": "Raden har ändrats sedan den redigerades",
+      "ilegibles": "Oläsliga ändringar, utelämnade: {n}",
       "aprobar_sel": "Godkänn markerade"
     },
     "videos": {

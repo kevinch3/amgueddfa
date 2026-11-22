@@ -535,7 +535,8 @@
       "derivados": "Impossible de générer les images dans ce navigateur. Essayez avec une version à jour de Chrome ou de Firefox.",
       "sin_archivos": "Les images ou le texte manquent dans l'espace de stockage restreint. Lancez scripts/push_restricted.py et réessayez.",
       "sin_cambios": "Cochez au moins une modification à approuver.",
-      "no_aprobada": "Cette correction n'est plus approuvée."
+      "no_aprobada": "Cette correction n'est plus approuvée.",
+      "tarjeta": "Impossible d'afficher cette contribution ({id}) : ses données sont illisibles."
     },
     "ver_restringido": "Voir le document avant de le publier",
     "restringido_alt": "{titulo}, page {n} (vue administrateur)",
@@ -568,6 +569,7 @@
       "idioma": "Langue",
       "agregar": "Ajouter",
       "cambio_linea": "La ligne a changé depuis la modification",
+      "ilegibles": "Modifications illisibles, laissées de côté : {n}",
       "aprobar_sel": "Approuver la sélection"
     },
     "videos": {

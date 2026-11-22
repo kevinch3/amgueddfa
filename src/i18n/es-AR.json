@@ -535,7 +535,8 @@
       "derivados": "No pudimos generar las imágenes en este navegador. Probá con Chrome o Firefox actualizados.",
       "sin_archivos": "Faltan las imágenes o el texto en el depósito restringido. Corré scripts/push_restricted.py y probá de nuevo.",
       "sin_cambios": "Marcá al menos un cambio para aprobar.",
-      "no_aprobada": "Esta corrección ya no está aprobada."
+      "no_aprobada": "Esta corrección ya no está aprobada.",
+      "tarjeta": "No pudimos mostrar este aporte ({id}): sus datos no se pueden leer."
     },
     "ver_restringido": "Ver el documento antes de liberarlo",
     "restringido_alt": "{titulo}, página {n} (vista para admins)",
@@ -568,6 +569,7 @@
       "idioma": "Idioma",
       "agregar": "Agregar",
       "cambio_linea": "La línea cambió desde que se editó",
+      "ilegibles": "Cambios que no se pueden leer y quedan fuera: {n}",
       "aprobar_sel": "Aprobar seleccionadas"
     },
     "videos": {

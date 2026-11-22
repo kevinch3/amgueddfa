@@ -535,7 +535,8 @@
       "derivados": "Methon ni â chreu'r delweddau yn y porwr yma. Rhowch gynnig efo fersiwn ddiweddar o Chrome neu Firefox.",
       "sin_archivos": "Mae'r delweddau neu'r testun ar goll yn y storfa gyfyngedig. Rhedwch scripts/push_restricted.py a rhowch gynnig arall.",
       "sin_cambios": "Ticiwch o leiaf un newid i'w gymeradwyo.",
-      "no_aprobada": "Dydy'r cywiriad yma ddim wedi'i gymeradwyo bellach."
+      "no_aprobada": "Dydy'r cywiriad yma ddim wedi'i gymeradwyo bellach.",
+      "tarjeta": "Methwyd dangos y cyfraniad hwn ({id}): ni ellir darllen ei ddata."
     },
     "ver_restringido": "Gweld y ddogfen cyn ei rhyddhau",
     "restringido_alt": "{titulo}, tudalen {n} (golwg gweinyddwyr)",
@@ -568,6 +569,7 @@
       "idioma": "Iaith",
       "agregar": "Ychwanegu",
       "cambio_linea": "Mae'r llinell wedi newid ers iddi gael ei golygu",
+      "ilegibles": "Newidiadau na ellir eu darllen, wedi'u gadael allan: {n}",
       "aprobar_sel": "Cymeradwyo'r rhai a ddewiswyd"
     },
     "videos": {

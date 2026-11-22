@@ -535,7 +535,8 @@
       "derivados": "We couldn't generate the images in this browser. Try an up-to-date Chrome or Firefox.",
       "sin_archivos": "The images or text are missing from the restricted store. Run scripts/push_restricted.py and try again.",
       "sin_cambios": "Tick at least one change to approve.",
-      "no_aprobada": "This correction is no longer approved."
+      "no_aprobada": "This correction is no longer approved.",
+      "tarjeta": "This contribution could not be shown ({id}): its data cannot be read."
     },
     "ver_restringido": "See the document before releasing it",
     "restringido_alt": "{titulo}, page {n} (admin view)",
@@ -568,6 +569,7 @@
       "idioma": "Language",
       "agregar": "Add",
       "cambio_linea": "The line has changed since it was edited",
+      "ilegibles": "Unreadable changes, left out: {n}",
       "aprobar_sel": "Approve selected"
     },
     "videos": {

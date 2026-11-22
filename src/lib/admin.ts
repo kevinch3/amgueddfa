@@ -369,6 +369,16 @@ export async function reject(c: Pending, reason: string, client: SupabaseClient 
 export type QueueGroup = { lote: string | null; items: Pending[] };
 
 /** Group the queue by `lote`, in queue order (a group sits where its first row was). */
+/** What `build` makes, or `fallback`'s stand-in when it throws: one card a crafted row breaks shows an error line, and
+ * the rest of the queue still draws. */
+export function orFallback<T>(build: () => T, fallback: (e: unknown) => T): T {
+  try {
+    return build();
+  } catch (e) {
+    return fallback(e);
+  }
+}
+
 export function groupQueue(list: Pending[]): QueueGroup[] {
   const count = new Map<string, number>();
   for (const c of list) {

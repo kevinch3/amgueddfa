@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { approveVideoText } from '../src/lib/admin';
-import { keptCambios, timeLink, videoCardRows } from '../src/lib/admin-video-card';
+import { approveVideoText, orFallback } from '../src/lib/admin';
+import { isCambio, keptCambios, timeLink, unreadable, videoCardRows } from '../src/lib/admin-video-card';
 import type { Cambio } from '../src/lib/video-corrections';
 
 const seg: [number, string][] = [[10, 'Benedicto de la competencia'], [20, 'hola mundo'], [30, 'adios']];
@@ -56,5 +56,47 @@ describe('approveVideoText', () => {
   it('refuses an empty selection without calling', async () => {
     const client = { rpc: async () => { throw new Error('called'); } } as any;
     expect((await approveVideoText(c as any, [], client)).ok).toBe(false);
+  });
+});
+
+// A crafted row (validation lets none through, but a direct insert could): one bad change must not throw in the card.
+const bad: unknown[] = [
+  null, 5, 'x', [], { t: 'x', texto: 'y' }, { t: Number.NaN, texto: 'y' }, { t: -1, texto: 'y' }, { t: 1, texto: 5 },
+  { t: 1, antes: null, texto: 'y' }, { t: 1, antes: { a: 1 }, quitar: true }, { t: 1, idioma: 'en', texto: 'y' },
+  { t: 1, antes: 'a', quitar: 'si' },
+];
+
+describe('isCambio', () => {
+  it('takes the changes validation builds and nothing else', () => {
+    for (const c of cambios) expect(isCambio(c)).toBe(true);
+    expect(isCambio({ t: 0, antes: 'a', quitar: true })).toBe(true);
+    for (const c of bad) expect(isCambio(c)).toBe(false);
+  });
+});
+
+describe('a contribution with unreadable changes', () => {
+  const mixed: unknown[] = [bad[0], cambios[0], bad[7], cambios[2], bad[8]];
+
+  it('the card shows the readable changes at their own place and counts the rest', () => {
+    const rows = videoCardRows('abcdef12345', mixed, seg);
+    expect(rows.map((r) => [r.index, r.kind])).toEqual([[1, 'corregir'], [3, 'agregar']]);
+    expect(videoCardRows('abcdef12345', bad, seg)).toEqual([]);
+    expect(videoCardRows('abcdef12345', bad, null)).toEqual([]);
+    expect(unreadable(mixed)).toBe(3);
+    expect(unreadable(cambios)).toBe(0);
+  });
+
+  it('approval never sends an unreadable change, even ticked', () => {
+    expect(keptCambios(mixed, mixed.map(() => true))).toEqual([cambios[0], cambios[2]]);
+    expect(keptCambios(bad, bad.map(() => true))).toEqual([]);
+  });
+});
+
+describe('orFallback', () => {
+  it('what build makes, or the fallback when it throws (one bad card does not blank the queue)', () => {
+    expect(orFallback(() => 1, () => 2)).toBe(1);
+    const errors: unknown[] = [];
+    expect(orFallback(() => { throw new Error('boom'); }, (e) => (errors.push(e), 2))).toBe(2);
+    expect(String(errors[0])).toContain('boom');
   });
 });

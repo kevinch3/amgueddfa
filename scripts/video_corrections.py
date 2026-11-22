@@ -122,7 +122,7 @@ def _real_time(t) -> bool:
     return isinstance(t, (int, float)) and not isinstance(t, bool) and math.isfinite(t)
 
 
-def apply_corrections(t: dict, rows: list[dict]) -> tuple[dict, list[str], list[dict]]:
+def apply_corrections(t: dict, rows: list[dict], idiomas_corregidos: list[int] | None = None) -> tuple[dict, list[str], list[dict]]:
     """The transcript with `rows` (approved video_text contributions) applied in reviewed_at order, the ids of
     the rows that changed something (the file records them so the player never applies one twice), and the
     changes not applied as {"id", "cambio", "motivo": "sin_linea" | "idioma_en_linea_unida"}. A line whose text
@@ -159,7 +159,7 @@ def apply_corrections(t: dict, rows: list[dict]) -> tuple[dict, list[str], list[
                     sin_anclar.append({"id": row["id"], "cambio": c, "motivo": "sin_linea"})
                 elif not ya:
                     at = next((i for i, l in enumerate(lines) if l["t"] > c["t"]), len(lines))
-                    lines.insert(at, {"t": c["t"], "text": texto, "fu": ["colab"], "idioma": idioma})
+                    lines.insert(at, {"t": c["t"], "text": texto, "fu": ["colab"], "idioma": idioma, "corr": idioma is not None})
                     con_idiomas = con_idiomas or idioma is not None
                     hizo = True
                 continue
@@ -196,6 +196,7 @@ def apply_corrections(t: dict, rows: list[dict]) -> tuple[dict, list[str], list[
                 sin_anclar.append({"id": row["id"], "cambio": c, "motivo": "idioma_en_linea_unida"})
             elif idioma:
                 line["idioma"] = idioma
+                line["corr"] = True
                 con_idiomas = True
                 hizo = True
         if hizo:
@@ -206,4 +207,8 @@ def apply_corrections(t: dict, rows: list[dict]) -> tuple[dict, list[str], list[
                           for l in lines]
     else:
         out.pop("idiomas", None)
+    # Python-only side channel for the export (not in the shared rule's contract, the return is unchanged):
+    # the optional list gets the indices of the lines whose language a correction set, even when it equals the default.
+    if idiomas_corregidos is not None:
+        idiomas_corregidos.extend(i for i, l in enumerate(lines) if l.get("corr"))
     return out, applied, sin_anclar

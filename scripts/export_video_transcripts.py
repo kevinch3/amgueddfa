@@ -416,7 +416,7 @@ def with_line_languages(t: dict, explicit: dict[int, str] | None = None) -> dict
     """The transcript with `idiomas` (one per line) when the player's rule (a Welsh-model line is Welsh,
     any other the transcript's language) would label some line wrongly; without it otherwise.
     `explicit` (line index -> language) are languages a collaborator's correction set: they win over the
-    recomputed ones."""
+    recomputed ones, and are always written."""
     langs = line_languages(t)
     t = {k: v for k, v in t.items() if k != "idiomas"}
     if langs is None:
@@ -425,7 +425,7 @@ def with_line_languages(t: dict, explicit: dict[int, str] | None = None) -> dict
         langs[i] = l
     default = ["cy" if "cy" in f else t["lang"] for f in t["fuentes"]]
     lyric = ["letra" in f for f in t["fuentes"]]
-    if any(l != d and not y for l, d, y in zip(langs, default, lyric)):
+    if explicit or any(l != d and not y for l, d, y in zip(langs, default, lyric)):
         t["idiomas"] = langs
     return t
 
@@ -488,7 +488,8 @@ def export(backup: Path, videos: list[dict], out: Path = OUT, words: set[str] | 
             rows = corrections.get(vid)
             if rows:
                 t = {k: v for k, v in t.items() if k != "idiomas"}
-                t, ids, unplaced = apply_corrections(t, rows)
+                corregidas: list[int] = []
+                t, ids, unplaced = apply_corrections(t, rows, corregidas)
                 if ids:
                     t["correcciones"] = ids
                 if unplaced:
@@ -498,10 +499,8 @@ def export(backup: Path, videos: list[dict], out: Path = OUT, words: set[str] | 
                     for u in t["sin_anclar"]:
                         print(f"sin anclar {vid} {u['t']} «{u['antes']}» (contribución {u['id']})")
                     sin_anclar_total += len(unplaced)
-                if isinstance(t.get("idiomas"), list) and len(t["idiomas"]) == len(t["seg"]):
-                    # apply_corrections fills uncorrected lines with the default rule; what differs was set by a correction
-                    default = ["cy" if "cy" in f else t["lang"] for f in t["fuentes"]]
-                    explicit = {i: l for i, (l, d) in enumerate(zip(t["idiomas"], default)) if l != d}
+                # indices of the lines whose language a correction set (side channel of apply_corrections)
+                explicit = {i: t["idiomas"][i] for i in corregidas}
             t["lang"] = main_language(t)
             t = with_line_languages(t, explicit)
             p = out / f"{vid}.json"

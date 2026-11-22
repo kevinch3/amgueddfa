@@ -509,3 +509,15 @@ def test_export_leaves_an_unchanged_file_alone(tmp_path):
     first = p.read_text()
     export(b, vids, out, recon=recon, approved=approved)
     assert p.read_text() == first
+
+
+def test_export_keeps_a_correction_language_equal_to_the_default(tmp_path):
+    # The file's language is es, so "es" is the line's default; the corrected text reads Welsh to the recomputation
+    # (line_language would say cy). The collaborator's "es" must still win, whatever main_language and the rule say.
+    seg = [[0, "Buenas noches a todos, bienvenidos a la última sesión de hoy."], [30, "Una frase corta."]]
+    rows = [_row("r1", [{"t": 30, "antes": "Una frase corta.", "texto": "Diolch yn fawr iawn i chi am ddod heddiw", "idioma": "es"}])]
+    b, vids, recon, approved = _corrections_setup(tmp_path, rows, seg=seg, fuentes=[["yt_es"], ["yt_es"]], lang="es")
+    out = tmp_path / "out"
+    export(b, vids, out, recon=recon, approved=approved)
+    a = _read(out, "A")
+    assert a["seg"][1][1].startswith("Diolch") and a["idiomas"] == ["es", "es"]

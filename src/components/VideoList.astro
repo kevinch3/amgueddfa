@@ -21,7 +21,7 @@ const edicion = editionKey(festival, year);
 const searchable = searchEditions().has(edicion);
 ---
 <section class="section" aria-labelledby="videos-t" data-videos data-festival={festival} data-year={year} hidden={total === 0}>
-  <Bloque id="videos-t" titulo={t('videos.titulo')} open={total <= 8}>
+  <Bloque id="videos-t" titulo={t('videos.titulo')}>
     <Fragment slot="titulo"> <span class="muted small">(<span data-videos-n>{total}</span>)</span></Fragment>
   <p class="measure muted small">{t('videos.ayuda')}</p>
   {searchable && <VideoSearch edicion={edicion} />}

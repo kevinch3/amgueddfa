@@ -4,6 +4,26 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   513.22,
+   "¡Gracias!"
+  ],
+  [
+   573.22,
+   "¡Gracias!"
+  ],
+  [
+   903.94,
+   "¡Gracias!"
+  ],
+  [
+   917.74,
+   "¡Huebe醒 la voz ya no me encontró! ¡Ve con los rastros! ¡Gracias!"
+  ],
+  [
+   1098.94,
+   "¡Gracias!"
+  ],
+  [
    1143.94,
    "O ie o ie o ie Gwanganameua, o dwi'n ca'l Gwanganameua."
   ],
@@ -14,6 +34,21 @@
  ],
  "fuentes": [
   [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
    "cy"
   ],
   [
@@ -22,8 +57,8 @@
  ],
  "ventanas": {
   "total": 20,
-  "modelo": 7,
-  "reglas": 0,
+  "modelo": 6,
+  "reglas": 1,
   "vacias": 13
  }
 }

@@ -40,6 +40,18 @@
    "Er gwaetha pawb am bobl er, mi yw cawod dydd."
   ],
   [
+   515.7,
+   "¡Hallan cuentas en ti, Dios mío!"
+  ],
+  [
+   566.7,
+   "Amén."
+  ],
+  [
+   692.82,
+   "Gracias."
+  ],
+  [
    710.62,
    "Ac yn nawdd yr Urdd, ac yn nerth y Deall, ac yn deall mwy bod, ac yn gwybod, gwybod y cefn iawn."
   ],
@@ -57,11 +69,7 @@
   ],
   [
    794.62,
-   "hollwristigwraeth o ganres i bawb ohonoch ac i bawb o Gymru yn yr ydym aelodau Gorsedd Cymru sydd yma yn un pryd heddiw, sef Siŵr Meryl Rydd, Rydd Iogi, ag Jenny Hill Hardy. Hefyd, mae yy ymwelydd o ganrif wedi dod sydd yn berffyniad ar eu Gorsedd, sef Peis a Charles Evans, Gwallen un deg ddeg wyth, a Eia Lewis un deg dau ddeg un."
-  ],
-  [
-   824.62,
-   "Croeso nawr i Fwrdd Mathen Ysgol Gerdd y Gaiman i ganu i ni ffordd adra, gan arweiniad gladdu sbel ffwch."
+   "hollwristigwraeth o ganres i bawb ohonoch ac i bawb o Gymru yn yr ydym aelodau Gorsedd Cymru sydd yma yn un pryd heddiw, sef Siŵr Meryl Rydd, Rydd Iogi, ag Jenny Hill Hardy. Hefyd, mae ymwelydd o ganrif wedi dod sydd yn berffyniad ar eu Gorsedd, sef Peis a Charles Evans, Gwallen un deg ddeg wyth, a Eia Lewis un deg dau ddeg un."
   ],
   [
    950.62,
@@ -96,10 +104,6 @@
    "Gai ei hadnabod yn yr orsedd fel Nant Trawsbennydd."
   ],
   [
-   1300.52,
-   "Gawn ni nawr sifil anaib llys."
-  ],
-  [
    1320.52,
    "Gawn ni nawr sifil englyn i ofyn i'r drefn gall agos i'r diwylliant Cymreig ers oedd hi'n blentyn."
   ],
@@ -117,7 +121,7 @@
   ],
   [
    1388.52,
-   "A chlywir, cyfrwynaf i chi yn awr, simddefa nesaf Samarenniw."
+   "Chlawid, Cabruna, Vigía, Naur, Cincia, Vanessa, Sanareño."
   ],
   [
    1412.52,
@@ -125,11 +129,11 @@
   ],
   [
    1418.52,
-   "Dechreuodd ddysgu Cymraeg gyda Menna Jones yn y flwyddyn dwy fil ac ers hynny mae hi wedi bod yn ddysgu gydag athrawon o'r Wladfa ac o Gymru, mae hi wedi ddallt Cymreig i astudio Cymraeg ym Mhrifysgol Caerdydd o waith wedi'i ysgolheitho yn Wraeth Brydeinig."
+   "Dechreuodd ddysgu Cymraeg gyda Menna Jones yn y flwyddyn dwy fil ac ers hynny mae hi wedi bod yn ddysgu gydag athrawon o'r wladfa ac o Gymru, mae hi wedi ddallt Cymreig i astudio Cymraeg ym Mhrifysgol Caerdydd o waith wedi'i ysgolheitho yn Wraeth Brydeinig."
   ],
   [
    1433.52,
-   "Mynychodd ysgolion isradd, codi cawlym ac astudiodd cerddoriaeth yn ysgolion Brennan ac yn Llywelyn, lle ddaru hi gwblhau ei haddysg fel athrawes gerddoriaeth."
+   "Gracias."
   ],
   [
    1443.52,
@@ -173,7 +177,7 @@
   ],
   [
    1673.52,
-   "Cyfarwyddwr cyflwyno ddihunawr, Bro ddwyth, mis Ebrill."
+   "Gracias."
   ],
   [
    1703.52,
@@ -257,7 +261,13 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
@@ -311,7 +321,16 @@
    "cy"
   ],
   [
+   "whisper_es"
+  ],
+  [
    "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
@@ -344,19 +363,7 @@
    "cy"
   ],
   [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
+   "whisper_es"
   ],
   [
    "cy"
@@ -400,8 +407,8 @@
  ],
  "ventanas": {
   "total": 43,
-  "modelo": 25,
+  "modelo": 27,
   "reglas": 1,
-  "vacias": 17
+  "vacias": 15
  }
 }

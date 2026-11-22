@@ -6,17 +6,24 @@
   [
    403.0,
    "Gadw'r byd, oedd iaith y dyn, i gael i'r bobl i'r serth, a'i gorn o'i siwerthau, yn byw yn siŵr o'i gilydd."
+  ],
+  [
+   463.0,
+   "Pronto le será revelada el fuego y su magia Junto a él descubrirán el canto, la triste, los sueños Y entonces, y entonces"
   ]
  ],
  "fuentes": [
   [
    "cy"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {
   "total": 10,
-  "modelo": 3,
+  "modelo": 4,
   "reglas": 0,
-  "vacias": 7
+  "vacias": 6
  }
 }

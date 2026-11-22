@@ -1,6 +1,6 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
@@ -9,7 +9,15 @@
   ],
   [
    225.0,
-   "Vamos agregando las cosas para poder bailar, un ffarddon, don Juana Nietzsche, ah seran dos chicas, con un torch."
+   "Vamos agregando las cosas para poder bailar. Un fardo con guaraleche. Ah, llegan dos chicas con un torch."
+  ],
+  [
+   241.68,
+   "Creo que falta alguien, ¿estamos todos? Pau Crenetano... Bueno, también listos."
+  ],
+  [
+   481.68,
+   "Gracias."
   ]
  ],
  "fuentes": [
@@ -17,13 +25,19 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {
   "total": 9,
-  "modelo": 1,
+  "modelo": 4,
   "reglas": 0,
-  "vacias": 8
+  "vacias": 5
  }
 }

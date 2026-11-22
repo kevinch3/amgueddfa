@@ -1,36 +1,22 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
-   103.0,
-   "Old man River, my old man River, he must know something, but don't say nothing, he just keeps rowing, he keeps on rowing alone."
-  ],
-  [
-   131.0,
-   "He's on plantains, he's on plantain, but on the moon so tuneful moon, my old man weaver, he just keeps rowing along."
-  ],
-  [
-   198.0,
-   "Old man river, that old man river, he must know something, but can't say nothing, he just keeps rowing, he keeps on rowing alone."
+   0.0,
+   "Intentar cantar una vieja canción de los años 20 de los estados negros de la Colón de Mississippi absoluto de los estados únicos o de la antigüedad"
   ]
  ],
  "fuentes": [
   [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
+   "whisper_es"
   ]
  ],
  "ventanas": {
-  "total": 6,
-  "modelo": 4,
+  "total": 5,
+  "modelo": 1,
   "reglas": 0,
-  "vacias": 2
+  "vacias": 4
  }
 }

@@ -1,39 +1,63 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
    30.0,
-   "Caminito del indio, sendero collas, sembran we piedras,"
+   "Caminito en Indio, sendero, pollas, sembravo en piedras."
   ],
   [
    43.0,
-   "caminito del indio, que junta el valle con las estrellas,"
+   "Gabinito del indio que junta el valle con las estrellas."
+  ],
+  [
+   53.0,
+   "Caminito del indio que junta el valle con las estrellas"
+  ],
+  [
+   69.94,
+   "Caminito que anduvo de sur a norte, raza, raza vieja Antes que la montaña, la pachamama, se ensombreciera"
   ],
   [
    91.94,
-   "Bandes de la montaña, la pachama, mas en sombre siera."
+   "Antes que la montaña la pachamaja se ensombreciera"
   ],
   [
    102.94,
-   "Cantando en el serro, llorando en el rio."
+   "Cantando en el cerro, llorando en el río."
+  ],
+  [
+   116.94,
+   "Si había andado en la noche, la pena de mi luz, el sol y la luna, y este canto mío."
   ],
   [
    144.94,
-   "Nes anws biedras, Camino del Indio."
+   "Desar tus piedras, camino de milio."
   ],
   [
    157.94,
    "Nes anws biedras, Camino del Indio."
   ],
   [
+   174.94,
+   "En la noche cerrada llorará que nos tumba nostalgia, y el caminito sabe cuál es la chonda que el indio llama. Amén."
+  ],
+  [
+   204.94,
+   "El camino sabe cuál es la chula que el indio llama."
+  ],
+  [
+   214.26,
+   "Se levanta en el cerro"
+  ],
+  [
    225.94,
-   "Brafos dolienteth yn y bagwanna, I'r camino lamentas yn cwmpaneth yn y distancia."
+   "La voz doliente de la vaguarda, y el camino lamenta ser el culpable de la distancia."
   ],
   [
    243.46,
-   "I'r camino lamentas yn cwmpaneth yn y distancia."
+   "Y el camino lamenta ser culpable de la distancia."
   ],
   [
    254.34,
@@ -41,7 +65,7 @@
   ],
   [
    282.82,
-   "Besod i'r lŵan, i'r ste gân ddomino, nes antws biedras, camino d'erindio."
+   "El sol y la luna, y este canto mío, besan tus piedras, camino del indio."
   ],
   [
    369.82,
@@ -50,34 +74,52 @@
  ],
  "fuentes": [
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
   ],
   [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
+   "whisper_es"
   ],
   [
    "cy"
@@ -86,7 +128,7 @@
  "ventanas": {
   "total": 7,
   "modelo": 6,
-  "reglas": 0,
-  "vacias": 1
+  "reglas": 1,
+  "vacias": 0
  }
 }

@@ -4,36 +4,72 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   120.0,
+   "Y posterior a esto, entonces, sí, el intervalo para posteriormente comenzar con la última sesión de este año que nos publicamos."
+  ],
+  [
+   150.0,
+   "sugerida en esta oportunidad ha sido Puentes. Acuó como jurado el poeta T. Dirtelan Jones del País de Gales. Esta celebración nos remite a tiempos muy lejanos, tiempos de círculo bárdico y espada de envainada, de ruidas y de canto poético."
+  ],
+  [
    175.8,
-   "Para llefyd a'i gafo, invitámos al escenario, al señor Orlando Griffiths, Presidente de la Comisión Organizadora del Eisteddfod, a Hector Ariel McDonnell, al piano, al solista Billy Hughes, al trompetista David Almonacid, quien se ubicará al pie del escenario, como tambil vará la joven Elsi Anna Griffiths,"
+   "Para llevarla a cabo, invitamos al escenario al señor Rolando Griffiths, presidente de la Comisión Orrealizadora del Eisteddfod, a Héctor Ariel McDonnell, al piano, al solista Billy Hughes, al trompetista David Almonacid, quien se ubicará al pie del escenario, como también lo hará la joven Elsie Ana Griffiths."
   ],
   [
    205.78,
-   "Uvalti, la Madre Flores, y la niña Uma López Oliver, quienes junto con el poeta Elvis Macdonald, escoltarán hasta el escenario al poeta premiado."
+   "Ubaldi, dama de las flores, y la niña Uma López Oliver, quienes junto con el poeta Andy McDonnell escoltarán hasta el escenario al poeta premiado."
   ],
   [
    220.4,
-   "Las demás personas que participan en la ceremonia, vendrán integrando la prosesión del ciclo bardico."
+   "Las demás personas que participan en la ceremonia vendrán integrando la procesión del círculo bárbico."
   ],
   [
    227.64,
-   "Distagawmwn bod y sillon yn destunio i'r premiwm yn yr arddangosfa yma yn gwaith disenïo'n ffordd artesanol gan y syniadwr Andres Cos, a'i ddoniad yn ystod yr ocasiwn gan Y Diariwm y Chwmni Trelew."
+   "destacamos que el sillón destinado al premio en este certamen es un trabajo diseñado en forma artesanal por el señor Andrés Cos y donado en esta ocasión por el diario de Chubut de Trelew"
+  ],
+  [
+   244.14,
+   "Ya avanza la procesión del Círculo Gorsedd, precedida por las líneas del Grupo Plan 2-3, quienes ofrecerán la danza de las flores, dirigidos por la profesora Cecilia Corazante y Judith Jones."
+  ],
+  [
+   264.14,
+   "Antes de ser ocupado en el sillón del despedido, se llevará a cabo la ceremonia de la espada, ceremonia esta que viene de los días del peorero, que recrea la consigna del círculo Gorsedd, donde no se permitía el ingreso de hombres armados."
   ],
   [
    284.62,
-   "Por lo tanto, la espada nunca se desenvalla en su totalidad,"
+   "Por lo tanto, la espada nunca se desembaina en su totalidad."
   ],
   [
    290.62,
-   "pues el espíritu del canto poético, que une los corazones de los pueblos en alegre harmonia y en un lenguaje de pas, y por tres veces se pregunta la concurrencia, al pas, a lo que en un corresponde pas."
+   "pues el espíritu del canto poético que une los corazones de los pueblos en alegre armonía y en lenguaje de paz. Y por tres veces se pregunta la concurrencia, ¿hay paz? A lo que el público responde, paz."
+  ],
+  [
+   312.62,
+   "En la figura del poeta, a creñar, se impulsarán los errores a la policía."
+  ],
+  [
+   320.62,
+   "Desde el presente horario, presido por la Comisión Organizadora del Eisteddfod,"
+  ],
+  [
+   325.58,
+   "Desde el canto al poeta, por la participación del público. Desde el saludo en verso, por Albert Green, miembro del círculo bárbico, en representación de su hermana Mary Green, quien ha sido distinguida en este certamen."
+  ],
+  [
+   342.62,
+   "en ediciones anteriores del Ministerio de Churros."
+  ],
+  [
+   346.62,
+   "desde el premio otorgado por la honorable legislatura de la provincia de Chubut entregado por el diputado señor José Luis Chubut y desde el presente ofrecido por el círculo bárbico de la Patagonia"
   ],
   [
    365.62,
-   "Tambien des de la danza de las flores que se rendirá a sus pies con la frescura y el color personificados en las pequeñas bailarinas."
+   "También desde la danza de las flores que se retiran sus pies con la frescura y el color personificados en las pequeñas bailarinas."
   ],
   [
    376.62,
-   "No permitimos pedirle al publico que no salude al poeta su paso, sino que le conceda llegar hasta el fondo del salón, donde si se podra celebrar la feliz distinción."
+   "Nos permitimos pedirle al público que no salude al poeta a su paso sino que le conceda llegar hasta el fondo del salón donde sí se podrá celebrar la feliz distinción."
   ],
   [
    515.62,
@@ -138,109 +174,59 @@
   [
    1220.9,
    "Ac fel arfer, foment y dan ni gyd yn edrych ymlaen amdano, i wylio y plant bychan yn dawnsio eu cydnabyddiaeth i'r barn."
-  ],
-  [
-   1782.98,
-   "Ready for the disconnect"
-  ],
-  [
-   1786.98,
-   "Put it on a brave face, trying not to listen"
-  ],
-  [
-   1789.98,
-   "To the voices in the back of my head"
-  ],
-  [
-   1793.98,
-   "It's all or nothing, I'm gonna test it"
-  ],
-  [
-   1797.98,
-   "All or nothing, I should just let it go"
-  ],
-  [
-   1801.98,
-   "Some feelings have a habit of persisting even though you wouldn't let it show."
-  ],
-  [
-   1808.48,
-   "I'm burning out, all this hating now, it just don't get me down, still I'm not looking for an answer."
-  ],
-  [
-   1823.48,
-   "Rain dead from boredom and lead to distraction, scratching the surface of life."
-  ],
-  [
-   1830.48,
-   "Nothing really happens but it's easy to keep busy when you tell yourself you're traveling right."
-  ],
-  [
-   1837.48,
-   "But it's all right now, all right now, keep on second guessing and running like a weapon on a massive try."
-  ],
-  [
-   1853.48,
-   "Running around, all night hanging around, it just don't get me down, too under-looking for everywhere, everywhere, so I'm running, hanging around, all night, getting down, so I'm running, looking for everywhere."
   ]
  ],
  "fuentes": [
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
+   "whisper_es"
   ],
   [
    "cy"
@@ -323,8 +309,8 @@
  ],
  "ventanas": {
   "total": 32,
-  "modelo": 20,
+  "modelo": 19,
   "reglas": 0,
-  "vacias": 12
+  "vacias": 13
  }
 }

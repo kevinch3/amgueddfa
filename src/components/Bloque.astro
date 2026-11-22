@@ -1,16 +1,16 @@
 ---
 // A block of the edition page that opens and closes (issue #78): native <details>, so it works
 // without JS and stays in the HTML for search engines, Pagefind and printing.
-// `open` decides how it starts; the script opens it when a link points inside it, and before printing.
+// Every block starts closed (maintainer, 2026-11-22); the script opens it when a link points inside it,
+// and before printing.
 interface Props {
   id: string;
   titulo: string;
-  open: boolean;
   n?: number;
 }
-const { id, titulo, open, n } = Astro.props;
+const { id, titulo, n } = Astro.props;
 ---
-<details class="bloque" open={open} data-bloque>
+<details class="bloque" data-bloque>
   <summary class="bloque-t"><h2 id={id}>{titulo}{n !== undefined && <> <span class="muted small">(<span data-bloque-n>{n}</span>)</span></>}<slot name="titulo" /></h2></summary>
   <slot />
 </details>

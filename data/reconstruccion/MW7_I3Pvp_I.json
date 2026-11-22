@@ -1,6 +1,6 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
@@ -13,7 +13,7 @@
   ],
   [
    274.0,
-   "Mae'r gwaith yn dod nôl i'r gwein a'r gwaith ond mae'r cefn a'r pobol yn mynd i lawr i'r gwein a'r gwein."
+   "¡Gracias!"
   ],
   [
    317.0,
@@ -25,51 +25,51 @@
   ],
   [
    376.0,
-   "De Julio Cortázar."
+   "de Julio Cortázar."
   ],
   [
    380.0,
-   "Mira, no pio mucho, solamente tu mano, y tenerla como un sapito te dormecí contento."
+   "Mira, no pido mucho, solamente tu mano, tenerla como un sapito, como así, contento."
   ],
   [
    394.0,
-   "Necesito, esa puerta que me dabas para entrar a tu mundo, ese trocito de azúcar verde, redondo alegre."
+   "Esa puerta que me dabas para entrar a tu mundo. Ese trocito de azúcar verde, redondo alegre."
   ],
   [
    402.0,
-   "No me prestas tu mano esta noche de fin de año de lechuzas broncas. No puedes, por razones técnicas."
+   "No me prestaste mano esta noche de fin de año de lechuzas roncas No puedes, por razones técnicas"
   ],
   [
    414.0,
-   "Entonces, la tramo en el aire, urdiendo cada dedo, el durano se dorso y la palma, el dolce, es el pais de azules arboles."
+   "Entonces la tramo en el aire, urdiendo cada dedo El durazno sedoso y la palma, el dorso Ese país de azules árboles"
   ],
   [
    429.0,
-   "Así la tomo y la sostingo como si de ella dependiera muchísimo del mundo, y la sucesión de las cuatro estaciones, el canto de los gallos, el amor de los hombres."
+   "Así la tomo y la sostengo como si de ello dependiera muchísimo del mundo La sucesión de las cuatro estaciones El canto de los gallos El amor de los hombres"
   ],
   [
    459.0,
-   "Happy New Year! de Júlio Cortázar"
+   "Happy New Year de Julio Cortázar"
   ],
   [
    466.0,
-   "Mira, no pido mucho, solamente tu mano, tenerla, con un sapito que va mas y contenta."
+   "Mira, no pido mucho, solamente tu mano, tenerla como un sapito que durma así, contenta."
   ],
   [
    475.0,
-   "Necesitas la puerta que me dabas para entrar a tu mundo, ese trocito de azúcar verde en el redondo de ella."
+   "Necesito esa puerta que me dabas para entrar a tu mundo Ese trocito de azúcar verde en el redondo de él"
   ],
   [
    484.0,
-   "No' me prestas tu mano en esta noche del fin de ano en los truses lonjas? No puedes, por razones tecnicas."
+   "¿No me prestas tu mano en esta noche del fin de año a las cruces roncas? No puedes, por razones de educación."
   ],
   [
    493.0,
-   "Entonces llandramo en el aire, mordiendo cada dedo, en un ansiedoso de la palma, y en doce de ese pais de azules arboles."
+   "Entonces entramos en el aire perdiendo cada dedo, el glasmo sedoso de la palma y el dorso de ese país de azules árboles."
   ],
   [
    505.0,
-   "Así la tomo y la sostengo, como si de ella se dependera de muchísimo del mundo, la asociación y las participaciones, el canto de los gallos, el amor de los hofres."
+   "Así la tomo y la sostengo, como si de eso dependiera muchísimo del mundo. La sucesión de las cuatro estaciones, el canto de los gallos, el amor de los hombres."
   ],
   [
    565.0,
@@ -108,20 +108,56 @@
    "Can ym mlan yn siomt a'i hon, teg ag liw na'r hyd nodd, dim ond galw'n annall ganu, canu'r dydd a chanu'r nos."
   ],
   [
-   765.0,
-   "Teg a fyw na'n hir i'r nos, dim yn calwm na'n allan. Canu'r dydd a chanu'r nos, gan y plan yn siambrouon."
-  ],
-  [
    785.0,
    "O'n i'n teg a chyw na'n hilydd nodd dim ond calwm na'n allganu, canu'r dydd a chanu'r nodd."
   ],
   [
    815.0,
-   "Diolch."
+   "Gracias."
   ],
   [
    875.0,
    "Diolch yn fawr iawn i chi am ddod i mewn i'r ysgolion. Rydyn ni'n edrych ymlaen."
+  ],
+  [
+   922.36,
+   "Cuando te vas como una ropa de sol en la piel, mucho verano después."
+  ],
+  [
+   955.36,
+   "Tanda vida mía, decidirlo sé, a la lectoría no acostumbraré, pero por dentro la procesión se enseñaron de adiós."
+  ],
+  [
+   983.36,
+   "¡Qué dulce modo de permanecer! ¡Como verás lo murió ayer! ¡Ago de tanto trabajo de amor! ¡Tan brillos y despuntos!"
+  ],
+  [
+   1004.36,
+   "La mañana me puede callar, cántame así, como de más, dejando de misterioso rumbo, de manantial interior."
+  ],
+  [
+   1023.36,
+   "Tanta vida mía, desvivir no sé, a la lejanía te acostumbraré, pero por dentro la procesión sin señal de adiós."
+  ],
+  [
+   1049.28,
+   "Tanta vida mía, decidir no sé, o a la alejantía me acostumbraré, pero va por dentro la procesión sin señal de adiós."
+  ],
+  [
+   1169.28,
+   "Por última vez, tanta vida mía, desvivir no sé, a la lejanía me acostumbraré, pero por dentro la procesión, sin señal de adiós."
+  ],
+  [
+   1199.28,
+   "No sé el modo de permanecer, como me das un muy ayer, algo de tanto trabajo de amor, de ánimas y resplandor."
+  ],
+  [
+   1215.64,
+   "Con la manera de desagachar, cántame así cuando te vas, déjame ver mis penas sobre el amor."
+  ],
+  [
+   1229.28,
+   "Tanta vida mía es vivir, no sé, a la lejanía me acostumbraré, pero va por dentro la procesión sin señal de adiós."
   ]
  ],
  "fuentes": [
@@ -132,7 +168,49 @@
    "cy"
   ],
   [
+   "whisper_es"
+  ],
+  [
    "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
@@ -165,61 +243,46 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
+   "whisper_es"
   ]
  ],
  "ventanas": {
   "total": 26,
-  "modelo": 12,
+  "modelo": 19,
   "reglas": 0,
-  "vacias": 14
+  "vacias": 7
  }
 }

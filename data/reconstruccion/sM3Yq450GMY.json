@@ -10,6 +10,10 @@
   [
    348.96,
    "Am dŵr dafarn iau i'r gwald o ffennog, am dŵr lan iau i'r destun o lywodraeth, nai swnder lais yn ddigon i chwalu popeth yn rheilffordd."
+  ],
+  [
+   472.44,
+   "Y nunca era quien sin la voz de Dios, que no valía la verdad."
   ]
  ],
  "fuentes": [
@@ -18,12 +22,15 @@
   ],
   [
    "cy"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {
   "total": 11,
-  "modelo": 4,
+  "modelo": 5,
   "reglas": 0,
-  "vacias": 7
+  "vacias": 6
  }
 }

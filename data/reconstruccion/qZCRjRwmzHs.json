@@ -1,22 +1,43 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   38.0,
+   "¿Dónde estará la estrella oscura, esa estrella del alma, sus ojos ven en llorar, perdidos en la felicidad?"
+  ],
+  [
+   122.98,
+   "A nadie puedo preguntar, con las palabras del árbol. Y es mi tristeza un papel, que el viento no deja caer."
+  ],
+  [
    140.72,
-   "Donde estara la estrella azul, ya no podre con mi dolor, que en otro cielo brillara, esa estrellita del amor."
+   "¿Dónde estará la estrella azul? Ya no podré por mi dolor, que no creciera brillará esa estrellita del amor."
+  ],
+  [
+   153.72,
+   "Donde estará la estrecha azul, ya no podré con mi dolor, pero los cielos brillarán. Esa estrella, es estrella, es estrella, es estrella, es estrella, es estrella, es estrella."
   ]
  ],
  "fuentes": [
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {
   "total": 4,
-  "modelo": 1,
-  "reglas": 0,
-  "vacias": 3
+  "modelo": 2,
+  "reglas": 1,
+  "vacias": 1
  }
 }

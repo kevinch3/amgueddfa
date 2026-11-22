@@ -1,6 +1,6 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
@@ -8,16 +8,56 @@
    "I be' sy'n dod ia?"
   ],
   [
-   126.0,
-   "Fo' the King of Kings and Lord of Lords, rise arno."
-  ],
-  [
    210.76,
    "Him. Hallelujah, hallelu-jah, hallelu-jah."
   ],
   [
+   294.76,
+   "Madre roja, Madre cielo, llorando descansa el viento del tisquero, y cada estrella se posa en tu cima blanca."
+  ],
+  [
+   378.76,
+   "Y cantan los vientos en tus piedras, en el idioma puro de mi raza."
+  ],
+  [
+   415.86,
+   "Para que un arte y la altura de piedra interna, quedando siempre de pie sobre la tierra."
+  ],
+  [
+   430.3,
+   "No sabes, Chaltén, cuándo te amo, a mi bien, Chaltén, cuando se desploma la levada, y cabrán los vientos en tus piedras."
+  ],
+  [
+   580.5,
+   "y un empujón del diablo para enamorarte."
+  ],
+  [
+   591.7,
+   "La chicha y la albahaca llorando en el vino"
+  ],
+  [
+   603.14,
+   "los caballos atados, duermen a la luna el galope tendí."
+  ],
+  [
+   612.78,
+   "Los caballos santanos, vuelven a la luna y a lo que te envío."
+  ],
+  [
+   656.78,
+   "Samba, los ojos solidos, un maladro, un teatro de alma, conmigo adentro."
+  ],
+  [
+   676.78,
+   "Para trampear del alma conmigo a dicho, un calmerito blanco por el cielo."
+  ],
+  [
    699.78,
-   "Mi gora'r sôn nos igre, de pwylo y pwylo."
+   "Mi corazón lo sigue, te muero en vuelo, en vuelo."
+  ],
+  [
+   711.78,
+   "mi corazón lo sigue de vuelo en vuelo."
   ],
   [
    720.78,
@@ -41,47 +81,27 @@
   ],
   [
    1219.96,
-   "Mi guia por sendas de justicia, por amor a su nombre."
+   "y guía por sendas de justicia, por amor a su nombre."
   ],
   [
    1223.36,
-   "Aun si voy por valles tenebrosos, no temo peligro alguno, porque tu estas a mi lado."
+   "Aún si vuelvo por valles tenebrosos, no temo peligro alguno, porque tú estás a mi lado."
   ],
   [
    1228.96,
-   "Tu vara de pastor me reconforta, dispones ante mi un banquete, en presencia de mis enemigos."
+   "Tu vara de pastor me reconforta, dispones ante mí un banquete en presencia de mis enemigos."
   ],
   [
    1235.96,
-   "A su un gilo con perfume en mi cabeza, ha sonado mi copa a rebosar."
+   "Ha surgido con perfume mi cabeza, ha sonado mi copa rebosada."
   ],
   [
    1240.46,
-   "La bondad y el amor me seguirán todos los dias de mi vida, y o la Casa del Señor, habitare para siempre."
+   "La bondad y el amor me seguirán todos los días de mi vida y en la casa del Señor habitaré para siempre."
   ],
   [
-   1249.96,
-   "Mae'n rhan o'r ffordd mwyaf debyg i'r ffordd mae'n cael ei ddefnyddio, ond mae'n rhan o'r ffordd fwyaf debyg i'r ffordd mae'n cael ei ddefnyddio."
-  ],
-  [
-   1345.96,
-   "You shall convert my soul, and bring me forth in the path of righteousness."
-  ],
-  [
-   1366.44,
-   "For his name's sake, for his name's sake, for his name's sake."
-  ],
-  [
-   1380.44,
-   "Ie, though I walk through the body of the shadow of death, I will fear no evil,"
-  ],
-  [
-   1470.44,
-   "But I, loving kindness and mercy, shall follow thee from the days of my birth,"
-  ],
-  [
-   1488.92,
-   "and I will dwell in their halls all day long, in their halls, in their halls all day long, all day long."
+   1578.92,
+   "Gracias a todos por este Eisteddfod, a cada uno de los coros que está movilizado, es muy sencillo venir, gracias a esta tarde, gracias a la gente que viene y para conocer a ustedes que te ven y a ver que nos suena el placer volver a verlos, es muy bueno tenerlos en nosotros."
   ]
  ],
  "fuentes": [
@@ -92,7 +112,40 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
@@ -110,46 +163,28 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
+   "whisper_es"
   ]
  ],
  "ventanas": {
   "total": 30,
   "modelo": 16,
-  "reglas": 1,
-  "vacias": 13
+  "reglas": 0,
+  "vacias": 14
  }
 }

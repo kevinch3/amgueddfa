@@ -1,23 +1,19 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
    56.0,
-   "Drethia de drio, Triawd i ddynion, O Nefol Addfwyn Oen."
+   "Drethia de drio, triawd i ddynion, O Nefol Addfwyn Oen."
   ],
   [
    64.0,
-   "Muchas gracias, proxima competencia, nôl un pumpentres, trio para ombres, O Nefol Addfwyn Oen."
+   "Muchas gracias. Próxima competencia, la número 53, trío para hombres."
   ],
   [
    73.0,
    "Estaleiaist un deg tri, Triawd i ddynion, O Nefol Addfwyn Oen."
-  ],
-  [
-   80.0,
-   "Y criw cynta yn cystadlu yw Fforg Bedwar, Fforg Ford. Di'r peiriant yn barod sy'n gwylio os ydy o'n ddisgwyl ni, os ydych chi'n cwtio'r gws."
   ],
   [
    139.0,
@@ -44,72 +40,104 @@
    "Y glo- y glaw, y bar a'r un, o fydd i enw'r amlwg i fi."
   ],
   [
+   487.0,
+   "La maestra de Héctor Gagliardi, tan buena como mi vieja y como ella nerviosa, de las que abrandan las cosas y que por nada se quejan, tenía entre ceja y ceja esa cuestión del aseo y en lo mejor del recreo revisaba las orejas."
+  ],
+  [
    517.0,
-   "Des iant i un mojadito a'l oedo le nombraban los ninos que conversaban cuando salia un ratito."
+   "Decía que un pajarito al oído le nombraba los niños que conversaban cuando salía un ratito."
   ],
   [
    528.0,
-   "Nos tomaban si a un grandote de quinto, armaba la tremolina, parecia una lasina cuando tiene a los mositos."
+   "Nos tomaba si algún gratote de quinto, armaba la tremolina, parecía una gallina cuando tiene a los pollitos."
   ],
   [
    540.0,
-   "Nos tomaban a lección, siguiendo el orden de lista, y obligaban con la vista a seguir con atención."
+   "Nos tomaba la lección siguiendo el orden de lista y obligaba con la vista a seguir con atención."
   ],
   [
    549.52,
-   "Yo era medio remolona, porque andaba por la jir, y cien veces me chiqué, al preguntar de atraición."
+   "Yo era medio remolona porque andaba por la G y cien veces me chasquiega al preguntar de a traición."
   ],
   [
    562.52,
-   "Se basaban todl y dydd prometiendo malas notas y que en vez de la pelota, estudiaran geometria, era mujer, que sabia de un golaso de boleo, por eso que en el recreo los muchachos se reiaban."
+   "Se pasaban todo el día prometiendo malas notas y que en vez de la pelota estudiaran geometría. Era mujer, ¿qué sabía de un golazo de boleo? Por eso es que en el recreo los muchachos se reían."
   ],
   [
    587.52,
-   "Pero Mïa se'n uffernon, y mandaron a suplente, que enseñaba diferente, y hasta de usted nos trató, y nosotros, ¿qué es eso? Seña mejor maestra, pero fiel es a la muestra."
+   "Pero un día se enfermó y mandaron a suplente, que enseñara diferente y hasta de usted nos trató. Y nosotros, qué sé yo, sería mejor maestra, pero fieles a la muestra."
   ],
   [
    609.52,
-   "Declaramos el boicot, y cuando vino al grado de hueden a enfermedad, nos pusimos a gritar que casi la desmallamos, y al ver tantas manos que la querían tocar, de flojas se echó a llorar, y nosotros la invitamos."
+   "Declaramos el boicot. Y cuando vino al grado, después de la enfermedad, nos pusimos a gritar que casi la desmayamos. Y al ver tantas manos que la querían tocar, de floja se echó a llorar y nosotros la invitamos."
   ],
   [
    634.52,
-   "Ah, pobre maestra mïa, comodarach de vieja, rhuisade las orejas, soy chica todavia, no sabés con que alegria quisiera volverte a ver, no me vas a conocer, pero entonces, te diria, yo ocupaba el tercer banco al lado de la ventana, la que abría las"
+   "¡Ah! Pobre maestra mía, ¿cómo estarás de vieja? Revisame las orejas, soy chica todavía, no sabés con qué alegría quisiera volverte a ver. No me vas a conocer, pero entonces te diría. Yo ocupaba el tercer banco al lado de la ventana, la que abría la casa."
   ],
   [
    664.2,
-   "Y persianas, cuando el sueño no daba tanto, la que lloraba des chanto, y dia en que te dejo y que nunca te olvidó y es por eso que te canto."
+   "persianas cuando el sol no daba tanto, la que lloraba de chanto el día en que te dejó y que nunca te olvidó y es por eso que te canto."
+  ],
+  [
+   681.2,
+   "Vos sos la dulce canción de una edad que ya se fue Hoy he venido otra vez para darte la lección Preguntame de la tradición, maestra del cuarto grado Que cuanto me has enseñado, lo llevo en mi corazón"
+  ],
+  [
+   711.2,
+   "Gracias."
+  ],
+  [
+   741.2,
+   "Si no lo creo, revisaba las lágrimas. Decía que un pajarito al oído le nombraba a los niños que conversaban cuando salía un ratito. Y si un grandote de quinto armaba la tremolina, parecía una gallina cuando tiene los pollitos."
   ],
   [
    761.2,
-   "Nos tomaban la lecciun siguiendo el orden de vista, y gobenaba con la vista seguir con la tensión."
+   "Los tomaba la lección siguiendo el orden del instante. Y ordenaba con la vista seguir con la atención."
   ],
   [
    770.08,
-   "Yo era medio remolón, porque andaba por la j, y siempre se me llacia el preguntar de aprecio."
+   "Yo era medio remolón porque andaba por la G, y siempre se me chasqué al preguntarle a Tracy."
   ],
   [
    779.28,
-   "Se pasaba todo el día prometiendo malas notas, y que en vez de la pelota, tuvia la geometrina."
+   "Se pasaba todo el día prometiendo malas notas y que en vez de la pelota estudiaba la geometría."
   ],
   [
    787.68,
-   "Geraint, gesa bia de un golazo de boleo, por eso que en el recreo, los muchachos se freneaban."
+   "¿Qué era usted? ¿Qué sabía de un golazo de voleo? ¿Por eso es que en el recreo el muchacho se reñía?"
   ],
   [
    797.68,
-   "Pero un día se enfernó, y mandaron a suplentio, que enseñaba diferente, y hasta de juteo al trato."
+   "Pero un día se enfermó y mandaron al suplente que se vea diferente y hasta de él, usted despertó."
   ],
   [
    807.68,
-   "Y nosotros, quiso eso, seria mejor maestra, pero fiel a esta roentra, declaramos el boncón."
+   "Y nosotros, qué sé yo, sería mejor maestra, pero fieles a nuestra, declaramos el buen corte."
+  ],
+  [
+   816.68,
+   "Y cuando vino el grado después de la enfermedad, nos pusimos a gritar que casi la desmayamos. Cuando vio tantas manos que la querían tocar, de flojas hechas de olor, nosotros gritamos. ¡Ah! Pobre maestra mía, ¿cómo estarás de miedo? Revisame, las ovejas son un chico todavía."
+  ],
+  [
+   846.68,
+   "quisiera volverte a ver, me vas a conocer, pero entonces te diría, yo ocupaba el tercer banco, al lado de la ventana, y que había las preciadas cuando el sol no daba tanto, y que se ahogaba de llanto el día que te dejó, y que nunca te olvidó, y es por eso que te canto, vos sos la dulce canción de la edad que ya se fue, hoy he venido otra vez para Gracias."
+  ],
+  [
+   876.68,
+   "Preguntame la tradición maestra del cuarto grado, que cuanto me has enseñado, lo llevo en el corazón."
+  ],
+  [
+   900.68,
+   "Muy bien, vamos a dar lugar a la competencia número 49, Solo lírico para voz femenina o masculina, Cinema Paradiso. Ya están aquí quienes van a interpretar a Philly Hughes, Andrés Evans y Antonella Gentili."
   ],
   [
    918.68,
-   "Wel, wel, dan ni'n licio hi felly."
+   "lugar a dirigirnos."
   ],
   [
    1267.64,
-   "Muchas gracias, Andres, y ahora vamos a escuchar a la tercera participante, Antonella Cengili."
+   "Muchas gracias Andrés. Y ahora vamos a escuchar a la tercera participante, Antonella Gentili."
   ]
  ],
  "fuentes": [
@@ -117,7 +145,7 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
    "cy"
@@ -141,64 +169,85 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {
   "total": 30,
-  "modelo": 13,
+  "modelo": 16,
   "reglas": 0,
-  "vacias": 17
+  "vacias": 14
  }
 }

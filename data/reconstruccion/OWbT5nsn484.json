@@ -1,43 +1,106 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
    30.0,
-   "Yn sobre dod a'r asgorsas, mi fydd y presiwns yn misudd yn syffus, yn yr ymos transparent, sy'n ffordd arbenn, yn disgyblion, yn gwisgo straff."
+   "Es sobre todas las cosas, mi piedra preciosa, mi cita en su paz Y en el envase transparente, su forma de ventas y vuelves real"
+  ],
+  [
+   52.0,
+   "¿Quién sabe por qué misterio elige mi pecho para mirar? ¿De qué incendiado silencio vendrá? ¿De qué punto del mapa estelar?"
+  ],
+  [
+   72.0,
+   "Me abogé a la camisa, marcándome dentro su cronicidad, su fuerza de regalía, relojería de tu cristal."
   ],
   [
    92.0,
-   "Nawr buaswn i'n y fient, glaniadu'n y fient, a'i droi fo i'r fair. Rydw i'n mynd i droi mewn sbwmp, rhwng yr awyr a'r adrodd, a'i droi fo i'r fair."
+   "Ahora voy ya sin el viento, planeando en el viento y llevándolo al mar Voy a arrojarlo a la espuma entre el agua y la duda y a verlo brillar"
+  ],
+  [
+   112.0,
+   "No puedo llevar conmigo, este brillo todo vivo, esta piedra lunar, en mi campo solo sigo, es luz de infinito, no puede recordar el volcán."
+  ],
+  [
+   135.0,
+   "Fulgura, y me cegas un precioso dolor Fulgura, que en tu dolor libre de la noche de mi corazón"
+  ],
+  [
+   184.78,
+   "Tal vez se llega del cielo un presente que nunca nadie crevió Pero existe uno tan bello del que no quisiera tomar posesión"
+  ],
+  [
+   204.78,
+   "Y no solo está el vacío, me duele ponernos de nuevo a viajar. Este regalo de ti no puede ser mío sino de la sal."
+  ],
+  [
+   234.78,
+   "Por arrojarnos de espuma entre el agua y el dolor, llevando un bechón."
+  ],
+  [
+   296.78,
+   "A todos nos llega alguna vez un diamante."
+  ],
+  [
+   301.78,
+   "Un regalo inesperado de la vida Que nos he dado a recordar Viene para empujarnos a vencer nuestras oscuridades Con la fuerza sutil de su transparencia"
   ],
   [
    322.78,
-   "Smiliwch efo'r amlwg, mae'n gweithio'n fawr, y mwy mae'n cael ei weithio, y mwy fydd o'n cael ei weithio."
+   "Su brillo es como el amor Más crece, cuanto más se da"
   ],
   [
    332.78,
-   "Mae'n cael ei gwybod, os ydych chi yn y byd, mewn corff crestal, y mae'r claf yma, sy'n gwneud i eich hun fod yn fawr."
+   "Ya encontraste Vos, el tuyo En su coraza cristal Está la clave Que hace a tu alma Morar"
   ]
  ],
  "fuentes": [
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {
   "total": 7,
-  "modelo": 3,
+  "modelo": 6,
   "reglas": 0,
-  "vacias": 4
+  "vacias": 1
  }
 }

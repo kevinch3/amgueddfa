@@ -1,6 +1,6 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
@@ -24,12 +24,32 @@
    "Rho cymorth ar ben i hefyd i'ch holl beirniad, rhai ohonyn nhw wedi deithio ymhell i fod yma gyda ni, a bendithiau i'w all, ei ddoethineb a'i dealltwriaeth wrth clorianu'r holl gythuraethau. Diolch i ti am dy ofyniant, ac am dy haeddion ni, ac am dy gariad bethol tuag aton ni, dy plant, yn enw i ysgrifennu."
   ],
   [
-   266.0,
-   "Diolch i be' sy'n bwrdd o'r esgobed, a'r y gwefan gen diolch sy'n fowr, a'r gwefan gen diolch sy'n fowr."
+   213.0,
+   "¡Gracias!"
   ],
   [
-   1301.98,
-   "I Batagonia oh oh oh i Batagonia oh oh oh i Batagonia."
+   232.0,
+   "Oye el ruido de rotas cadenas"
+  ],
+  [
+   240.0,
+   "¡Gracias!"
+  ],
+  [
+   266.0,
+   "Y los miles del mundo responden a la escuela argentina salud, a la escuela argentina salud."
+  ],
+  [
+   292.0,
+   "Y los libres del mundo responden Hayan vuelo, hay mentir y no salud"
+  ],
+  [
+   309.0,
+   "Y los libres del mundo responden Al gran pueblo argentino salud"
+  ],
+  [
+   382.0,
+   "¡Oh, juremos con gloria a morir!"
   ]
  ],
  "fuentes": [
@@ -49,16 +69,31 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {
   "total": 22,
-  "modelo": 7,
+  "modelo": 8,
   "reglas": 0,
-  "vacias": 15
+  "vacias": 14
  }
 }

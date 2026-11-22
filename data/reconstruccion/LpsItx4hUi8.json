@@ -5,7 +5,15 @@
  "seg": [
   [
    0.0,
-   "Sosban fach yn peri ar y tân, sosban fawr yn peri ar y ddawn, a'r gath wedi sgrafo joli bach."
+   "Sosman fach yn peri ar y tân, sosman fawr yn peri ar y ddawn, a'r gath wedi sgrafo joli bach."
+  ],
+  [
+   60.0,
+   "Y le pedimos a él cualquier de Gaiman que se prepare, serán unos segundos participantes."
+  ],
+  [
+   243.0,
+   "Invitamos ahora a subir al escenario a Escolter el Calimán"
   ],
   [
    453.0,
@@ -20,8 +28,12 @@
    "Athan nawr y bore ag yn wawr iawn o le, wrth dynnu fy ngwely i, a'i wedi a'i byw mewn rywsut i fi."
   ],
   [
+   562.0,
+   "Mientras Errol y Verónica se preparan, damos lectura el veredicto de la competencia 11 prosa en alés, escribí a buen ver, meituriste, jugado, Daniel Jones, de País Regales, ratifica El primer premio pertenece al subónimo Castor, que es Kelvin Williams."
+  ],
+  [
    592.0,
-   "Beirniaid, sef Meirion Jones o Gymru, yn cyflwyno y gofod gyntaf i'r ffigennw Gaston, sef Celyn Wilias. Diolch i'r gwaharddwyr Celyn Wilias."
+   "Beirniaid, sef Meirion Jones o Gymru, yn cyflwyno y gofod gyntaf i'r ffugenw Gaston, sef Celyn Wilias. Diolch i'r gwaharddwyr Celyn Wilias."
   ],
   [
    622.0,
@@ -29,15 +41,23 @@
   ],
   [
    629.0,
-   "Ys unig o bartisipantau yn y competensia, Veronica a Errol, sydd yn gwylio'r citasiwn, galifto, y byddwn i'n cwrdd â nhw."
+   "los únicos participantes de esta competencia Verónica y Errol si el jurado de recitación está listo los escuchamos"
+  ],
+  [
+   652.0,
+   "Yoruba soy, lloro en Yoruba de cubito, como soy un Yoruba de Cuba, quiero que hasta Cuba lloro a mi tanto Yoruba, que suba en la negra el llanto Yoruba que sale de mí. Yoruba soy, cantando voy, llorando estoy, y cuando no soy Yoruba, soy con..."
+  ],
+  [
+   682.0,
+   "Maldita, carabalí, atienda amigos, mi son, que empieza así, adivinanza de la esperanza, lo mío es tuyo, lo tuyo es mío, toda la sangre formando un río, o atiendan a mi voz y mi voz, que ataban así."
   ],
   [
    712.0,
-   "Sallgai mola, swetai'r safal, digidau mewn lanw cefnog sefal. De allu no ay nadi que se sepal, mirei no pal, oerai no pal, beblai no pal, rwmai no pal, bimai no pal, que el son de todos no fal."
+   "Salga el mulato, suelte el zapato, dígame al blanco que no se va, de aquí no hay nadie que se separe, Mire y no pare, oiga y no pare, beba y no pare, coma y no pare, viva y no pare, que el son de todos no va."
   ],
   [
    1132.0,
-   "Cysi me clavan yn el pecho, mi corazón anelante, añora tu mirada y tu amor, me acompaña en el piano el benedolz."
+   "que se me clavan en el pecho. Mi corazón, adelante, añora tu mirada y tu amor. Me acompaña en el piano, Benetimov."
   ],
   [
    1271.98,
@@ -61,7 +81,10 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
@@ -73,7 +96,7 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
    "cy"
@@ -82,7 +105,19 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
@@ -99,8 +134,8 @@
  ],
  "ventanas": {
   "total": 32,
-  "modelo": 12,
+  "modelo": 15,
   "reglas": 0,
-  "vacias": 20
+  "vacias": 17
  }
 }

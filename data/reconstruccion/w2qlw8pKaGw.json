@@ -4,6 +4,14 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   60.0,
+   "El taquilari guardó, nuestro secreto de amor, el taquilari del mar, la playa se lo llevó."
+  ],
+  [
+   90.0,
+   "¡Gracias!"
+  ],
+  [
    120.0,
    "Ma'r sŵn yn mynd i agor star, star sy'n swnio'n swnio."
   ],
@@ -13,6 +21,12 @@
   ]
  ],
  "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
   [
    "cy"
   ],

@@ -1,11 +1,15 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   60.0,
+   "Hasta el final."
+  ],
+  [
    120.0,
-   "Ni ystyr ar safbwyst ein diod, byth yn ôl i banas gefndir."
+   "Mi esperanza está en Dios, desde hoy y para siempre."
   ],
   [
    134.0,
@@ -13,38 +17,62 @@
   ],
   [
    150.0,
-   "Su tierno amor se muestra en cad amaneser,"
+   "Su tierno amor se encuentra en cada amanecer"
   ],
   [
    162.0,
-   "que viene al que me han dado pecador,"
+   "que viene al quebrantado pecador."
   ],
   [
    169.0,
-   "para sanar y para perdonar, el que confia en el,"
+   "Para sanar y para perdonar el que confía en Él."
+  ],
+  [
+   179.4,
+   "Encontrará la partida."
+  ],
+  [
+   183.56,
+   "Mi esperanza está en Dios desde hoy y para siempre."
+  ],
+  [
+   197.24,
+   "y el esperanza está en Dios hasta el final."
   ]
  ],
  "fuentes": [
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {
   "total": 5,
-  "modelo": 3,
+  "modelo": 5,
   "reglas": 0,
-  "vacias": 2
+  "vacias": 0
  }
 }

@@ -1,7 +1,7 @@
 """Spanish text for the Spanish speech in videos Whisper took for Welsh (issue #112).
 
   run_es.sh ids.txt                                   (LD_LIBRARY_PATH, nice, nohup)
-  venv/bin/python run_es.py ids.txt [--cpu] [--since S] [--until S] [--out DIR]
+  venv/bin/python run_es.py ids.txt [--cpu] [--since S] [--until S] [--out DIR] [--detect-only]
 
 Whisper picked one language per file from its first 30 s, so sessions that open with music were
 transcribed as Welsh and have no Spanish source. Here every segment Bangor's model found
@@ -13,6 +13,8 @@ out-es/<id>.json: {"id", "model", "min_es", "duration", "segments": [{"s", "e", 
   changed later without the GPU; text: Spanish segments only. Generated, not checked.
 Skips ids already done and prints "missing" for ids without audio or Bangor output.
 --cpu / --since / --until / --out: a pilot on the CPU (while the GPU is busy) over the first SECONDS.
+--detect-only: only the probabilities, no Spanish text ("detect_only": true), for videos that already have
+  Spanish text (Whisper ran in Spanish): they tell which stretches are Spanish speech (#125).
 """
 import argparse
 import json
@@ -52,7 +54,7 @@ def spanish(model: WhisperModel, audio) -> str:
     return "" if text.lower() in JUNK else text
 
 
-def run(model: WhisperModel, vid: str, until: float | None, since: float = 0) -> dict:
+def run(model: WhisperModel, vid: str, until: float | None, since: float = 0, detect_only: bool = False) -> dict:
     src = AUDIO / f"{vid}.m4a"
     cy = json.loads((CY / f"{vid}.json").read_text(encoding="utf-8"))["segments"]
     dur = duration(src)
@@ -74,10 +76,11 @@ def run(model: WhisperModel, vid: str, until: float | None, since: float = 0) ->
                 piece = audio[int(a * SR):int(b * SR)]
                 p_es, p_cy = probs(model, piece)
                 row = {"s": s["s"], "e": s.get("e"), "es": p_es, "cy": p_cy}
-                if p_es >= MIN_ES and p_es > p_cy:
+                if p_es >= MIN_ES and p_es > p_cy and not detect_only:
                     row["text"] = spanish(model, piece)
                 rows.append(row)
-    return {"id": vid, "model": MODEL, "min_es": MIN_ES, "duration": round(dur, 1), "segments": rows}
+    return {"id": vid, "model": MODEL, "min_es": MIN_ES, "duration": round(dur, 1),
+            **({"detect_only": True} if detect_only else {}), "segments": rows}
 
 
 def main():
@@ -87,6 +90,7 @@ def main():
     ap.add_argument("--until", type=float)
     ap.add_argument("--since", type=float, default=0)
     ap.add_argument("--out", type=Path, default=OUT)
+    ap.add_argument("--detect-only", action="store_true")
     args = ap.parse_args()
     ids = Path(args.ids).read_text().replace(",", "\n").split()
     args.out.mkdir(exist_ok=True)
@@ -102,7 +106,7 @@ def main():
             continue
         t = time.time()
         try:
-            res = run(model, vid, args.until, args.since)
+            res = run(model, vid, args.until, args.since, args.detect_only)
             dest.write_text(json.dumps(res, ensure_ascii=False), encoding="utf-8")
             done += 1
             n_es = sum(1 for r in res["segments"] if "text" in r)

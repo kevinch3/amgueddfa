@@ -1,23 +1,37 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
    30.0,
-   "Jesus, la luz del sol se fue, la noche es fiera, Tú conmigo seré."
+   "Jesús, la luz del sol se fue, la noche es tierra, tú conmigo ser."
+  ],
+  [
+   46.0,
+   "No hay otro amparo en tu espantación, ni al desvalido la consolación."
   ],
   [
    119.24,
    "Felly, diolch yn fawr iawn i chi am wneud y cwestiwn, a diolch yn fawr iawn i chi am wneud y cwestiwn."
+  ],
+  [
+   149.24,
+   "Podremos darme en tu salvación"
   ]
  ],
  "fuentes": [
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {

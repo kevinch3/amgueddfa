@@ -104,7 +104,7 @@
    "Ffol-di rol-di rol-lol ffol-di rol-di ro"
   ],
   [
-   141.18,
+   141.2,
    "Gair a ddywedodd wrth fynd adre'"
   ],
   [
@@ -208,7 +208,9 @@
    "hasta": 160,
    "titulo": "Hen Ferchetan",
    "autor": "Tradicional galesa",
-   "idioma": "cy"
+   "idioma": "cy",
+   "derechos": "Texto tradicional (dominio público)",
+   "fuente": "Aportado por Kevin Roberts (estribillo escrito como se canta en cada estrofa)"
   }
  ],
  "ventanas": {

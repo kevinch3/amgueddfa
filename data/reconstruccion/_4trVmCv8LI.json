@@ -1,58 +1,72 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
    60.0,
-   "Dita de plata quedan de forjo y que lindres amor."
+   "de plata que el Ande forjó y que el hija llamó Jujuy, Jujuy."
   ],
   [
    70.32,
-   "La queda de algún viejo pastor, triste suena por el air am bal."
+   "La queda de algún viejo pastor, triste suena por el aire al mar."
   ],
   [
    79.88,
-   "Perffuman nos Iorquis flores el cardom, y en el cerro es canción un manantial."
+   "Perfuman los yurquis, florece el cardón y en el cerro es canción, manantial."
+  ],
+  [
+   120.24,
+   "Y ahora no si quedas con voz secular, mi salva dirá."
   ],
   [
    150.24,
-   "Una penna i'r viento se llefô, por la puna inmensa soledad."
+   "La Biblia"
   ],
   [
    180.22,
-   "Lloro la montaña a su eterno dolor, y en el erque, en el erque broto este cantar."
+   "lloró la montaña su eterno dolor y en el ergue, en el ergue brotó este cantar."
   ],
   [
    190.06,
-   "Canta el goya con mi misma voz, rudo y bello sentir mineral, a crestes maguanas y encoplas de amor, en las piedras de jôc el carnaval."
+   "Canta el Goya con mi misma voz, rudo y bello sentir mineral, agrestes bajo alas y en coplas de amor, en las piedras dejó el carnaval."
   ],
   [
    209.5,
-   "Grest esmagwadas y encoplas de amor, que en las piedras dejo el carnaval, o, o, otra vez, a soñar, volveré, por así, quebradas y guases vivos llanllan, y los cerros dirán, cu-hoy, cu-hoy, llan-lan."
+   "Palabres desvaguadas y en coplas de amor, que en las piedras dejó el carnaval, otra vez a soñar, volveré, por así quebradas y valles vivos llenarán, y los cerros dirán, cojo y cojo y llenarán."
+  ],
+  [
+   239.5,
+   "O si quedas con vos a colar, en mi samba dirán"
   ]
  ],
  "fuentes": [
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {

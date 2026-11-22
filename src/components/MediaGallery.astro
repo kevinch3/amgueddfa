@@ -26,7 +26,7 @@ const cards = media.map(({ item, kind }) => {
 const templates = [...new Map(cards.filter((c) => c.doc).map((c) => [c.doc!.id, c.doc!])).values()];
 ---
 <section class="section multimedia" aria-labelledby="multimedia-t" data-multimedia>
-  <Bloque id="multimedia-t" titulo={t('multimedia.titulo')} open={cards.length <= 8} n={cards.length}>
+  <Bloque id="multimedia-t" titulo={t('multimedia.titulo')} n={cards.length}>
   <p class="measure muted small">{t('multimedia.ayuda')}</p>
   {kinds.length > 1 && (
     <div class="mm-filtros" role="group" aria-label={t('multimedia.filtrar')}>

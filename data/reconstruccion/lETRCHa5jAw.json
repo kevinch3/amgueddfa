@@ -1,113 +1,358 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
-   0.0,
-   "Mae'n amlwg, mae'n amlwg, mae'n amlwg, mae'n amlwg."
-  ],
-  [
    60.0,
-   "Mae'n dod o un o'r momentau, efallai, mwy awstredig yn y Eisteddfod y Chwm,"
+   "Ha llegado uno de los momentos tal vez más esperables del Eisteddfod de Chubut."
   ],
   [
    70.0,
-   "un o'r moments lle i gyd i'n gyd i'n parhau i gyd i ddefnyddio'r poetiaeth a'r poetiaeth sy'n cael ei chyflwyno yn yr haf ym mis Iau,"
+   "Un momento en que todos nos preparamos para conocer la poesía y al poeta que obtiene el galardón de este año."
+  ],
+  [
+   78.0,
+   "Una ceremonia que año a año se repite con el mismo espíritu y con la misma expectativa, haciéndonos partícipes casi sin darnos cuenta de una tradición milenaria que a través de nosotros renace y continúa cobrando vida para homenajear y poner en el centro de la escena a la poesía."
+  ],
+  [
+   101.0,
+   "Al celebrarlo, también en este año tan especial para los descendientes legaleses que arribaron a estas tierras hace 150 años, estamos teniendo sus sueños más preciados, enraizados y fortalecidos con la turbidez del tiempo en esta tradición que constituye para nuestro pueblo el Eisteddfod. Un espacio único donde se honra a la palabra, a la música, al encuentro, al encuentro."
+  ],
+  [
+   131.0,
+   "a la memoria y a la vida, reflejado siempre en los versos de Pueblas."
+  ],
+  [
+   138.5,
+   "A los raros estamos aquí a celebrar nuestro encuentro, nuestra historia y nuestro presente."
+  ],
+  [
+   145.5,
+   "La presencia de cada uno de nosotros aquí no es más que el símbolo de la vigencia de una tradición era y compartida que nos une."
+  ],
+  [
+   156.5,
+   "Es aquí entonces donde debemos detenernos y pensar en los hechos transcurridos a lo largo de estos 150 años que nos invitan a tomar conciencia acerca del valor sostenedor que tienen las tradiciones en la comunidad y destacar en este marco el poder de la fe y de la poesía como vehículos espirituales que unen, construyen y crean a través de la palabra."
+  ],
+  [
+   186.5,
+   "Santiago Comandor, en uno de sus maravillosos ensayos, consigue estas dos palabras y se refiere a la fe literaria como un acto de amor, de amorosa comunión en el lenguaje con el lenguaje. En este acto de amor, la recíproca entrega del hombre a la palabra y de lo real al hombre en ella, jamás basta y constituye a la vez y siempre."
   ],
   [
    216.5,
-   "una emosiwn inswperable."
+   "Una emoción insuperable."
   ],
   [
    219.86,
-   "El poeta es que se refugia en la palabra y en antice"
+   "El poeta en quien se refugia en la palabra y en el canal dice,"
   ],
   [
    223.94,
-   "transformandola en un mese de vinculaci n, con uno mismo y con el otro, es"
+   "transformando la etiqueta de circulación, con uno mismo y con el otro."
   ],
   [
    229.74,
-   "que logra trasender y mundo real, el de todos los dias, marcado por las rutinas y la fugacidad,"
+   "es quien logra trascender el fruto real, el de todos los días, marcado por las rutinas y la fugacidad."
   ],
   [
    237.94,
-   "para arder en el mundo espiritual, profundamente mewn ansieddad, que se rodea en el person."
+   "para habitar en un mundo espiritual, profundamente humano y singular, que se revela en el universo."
+  ],
+  [
+   245.74,
+   "El poeta es quien logra despojarse y compartir su sentido. Es quien asiste a esa constante búsqueda de la palabra liberadora, quien nunca se conforma y esa disconformidad es la que lo lleva a la poesía, a la perfección, al origen, a la verdad única, íntima y singular."
+  ],
+  [
+   270.48,
+   "Los invito ahora a tomar asiento y a recibir el veredicto de los jurados que estuvo integrado con la doctora Ana Ester-Riskel, la profesora Angelina Covalch y el doctor Carlos Ferrari, que le escribieron a su cargo la difícil tarea de elegir el poema ganador de entre casi un centenar de trabajos presentados."
+  ],
+  [
+   299.48,
+   "El delicto dice lo siguiente. Entre leo, a los 16 días del 20 de julio de 2015, se reúne el curado de poesía en castellano de la edición 2015 del Eisteddfod de Chubut con el propósito de emitir el dictamen de la competencia número 8, Colón de Esternos, premio a Municipalidad de Tecnología. El mismo está instalado por la doctora Láctea Língel, la profesora Angelina Kowalski y el doctor Carlos Marte Pérez. En primer lugar,"
   ],
   [
    329.48,
-   "Yn arfer, se falyran yr importancia gwaithitativa de los trabahos presentados, que son novena y sete, al un o'r cwales posee un considerable valor liberal, tanto por la calidade de la expressiwn llidica, como por su riqueza conceptual."
+   "se valora la importancia cuantitativa de los trabajos presentados que son 97, algunos de los cuales poseen un considerable valor literario tanto por la calidad de la expresión lírica como por su riqueza conceptual."
+  ],
+  [
+   346.48,
+   "Una vez sometidos al proceso de selección, este jurado dictamina que el poema merecedor de la corona del Eisteddfod es A la tierra prometida, presentado por el seudónimo Derek 1."
+  ],
+  [
+   361.12,
+   "Si se trata de un trabajo de excelente realización, cuyo tema es la muerte que curaron a Daniel Roberts y David Williams, en el marco de las adversas circunstancias que debió enfrentar el primer grupo de inmigrantes de Aries."
+  ],
+  [
+   376.14,
+   "mediante versos de alta intensidad límica que la autor logra plasmar la relación trágica de la emigración."
+  ],
+  [
+   383.12,
+   "desde la partida de la limosa del puerto de Liverpool hasta la muerte que, a poco tiempo de su amigo Patagonia, trunca bruscamente los sueños de apos protagonistas."
+  ],
+  [
+   397.6,
+   "En el plan ofensivo se destaca la necesidad de la composición y el valor connotativo de las imágenes que recrean contrastes presenciales."
+  ],
+  [
+   406.14,
+   "la arco atravesía y el inhóspito escenario patadónico. La abundancia de derechos sensoriales, sobre todo visuales y auditivos, contribuye a otorgar plasticidad a la expresión. La cuidadosa selección del vocabulario da cuenta de un excelente manejo del lenguaje poético. El empleo del préstamo eléctrico, la voz de los, en lugar de su equivalente semántico en español, Narcito adquiere un valor simbólico en el mar."
   ],
   [
    436.14,
-   "o'r thematica miniclada gyda'r organizasio ym Melysa, ffirmio ar y pie los miem proffesional,"
+   "de la temática vinculada con la conversación de la mesa. Firman a pie los miembros del jurado."
   ],
   [
    443.42,
-   "Doctoral Anastasia Wilken, Professoral General of Arts and Doctor Carlos Ferrar."
+   "Doctora Anastal Wilke, profesora Eugenia Cobás y doctor Carlos Fernández."
+  ],
+  [
+   453.18,
+   "En función de lo que han descambiado los volados, voy a indicar al poeta que responde al seudónimo Narciso a ponerse de pie al toque de la canteña."
+  ],
+  [
+   483.18,
+   "Invito al poema que firma su obra con el seudónimo Narciso a ponerse de pie."
+  ],
+  [
+   513.18,
+   "Si Narciso se encuentra entre nosotros, le vamos a solicitar por favor que se ponga de pie."
+  ],
+  [
+   663.18,
+   "Quien responde al seudónimo narciso es Vilma Nancy Jones de la ciudad de Ramizón."
+  ],
+  [
+   843.18,
+   "y la aurora huele a sal por debajo de sus pasos crujen quejosan las tablas que han trajinado la planta desastinada sin partir de este a oeste vida en herras armando el edificio"
   ],
   [
    873.18,
-   "Gabonese, Allende y Ma, la semeja, Allende dios, la ilusion, Cafetero Palminos, Davia tras el novena."
+   "Ayer del mar, la semilla, ayer de Dios, la ilusión. Café y la ropa de Dios, Davia tras el novedad."
   ],
   [
    888.18,
-   "Des de la proa doniante y gulpida de odysseas, se apinian las esperanzas lusuosa por el callado, del cotil llegan dorados espetismos de otros hielos, y un aire de hielo eterno, filoso,"
+   "Desde la proa doliente esculpida de odiseas, se apiñan las esperanzas deliciosas por encallar. Del confín llegan dorados espejismos de otro cielo y un aire de hielo eterno, filósofo."
   ],
   [
    903.18,
-   "roso, rosa la piel. Las manas del café danzan tocando el estomago, se le hace como de seda, mantilla para lunar. Lade trepanoma rima bojiendo un castillo, y las manas se atuban a arrebatar del viento, a él se le hace ver galleras andando sobre ardo, en cuna hecha de los bracios dormirá la presita, y el laberinto de arena"
+   "rosa la piel. Las manos de Cásperi danzan tocando la espuma. Se le hace como de seda mantilla para acunar. La ave trepaló arriba como quien toma un castillo y las matas se sacuden arrebatadas de viento. A él se le hace ver galeras ayudando a su regalo. En cuna hecha de los brazos dormirá la parecita y en la avenida"
+  ],
+  [
+   932.18,
+   "El pinto de arena jugará su suerte el sastre. Bajo los sueños de invierno, Cual suelos aún no encendidos, Su sueño sin germinar. Destino del amor."
+  ],
+  [
+   947.18,
+   "Desandarás un día la brecha hacia la mitad. Será que es la ventana un protoneo constante de tu parola pasada. Levarás con cada abraza, cácer, sueños de hogar. Y sumarás al susurro similante de los álamos, el sisiante de cubrir de tus tijeras, David. Cosiendo con cada traje, postales de porvenir. el río que habrá buscado de tumbo en tumbo"
+  ],
+  [
+   977.18,
+   "perdido"
+  ],
+  [
+   979.18,
+   "Y verás que al fin del valle, vestidas reverdecido, iluminados jardines, vestidos de tablas."
+  ],
+  [
+   1007.18,
+   "A continuación se rendirán los tributos al poeta. En primer término, la samba de Jorge..."
+  ],
+  [
+   1067.18,
+   "Supe que no es alas para mí La noche tu pañuelo Pero la luz en los ojos"
+  ],
+  [
+   1083.18,
+   "Y si mueran las grasas en vuelo llenando sea para ti"
+  ],
+  [
+   1094.18,
+   "Solo porque la sanidad no va a dar pena separar el amor"
+  ],
+  [
+   1106.18,
+   "No te pierdas a mi alma, tus ojos bajos me cargan, no."
+  ],
+  [
+   1116.18,
+   "Y en este baño nos sigue la danza de los ojos no."
+  ],
+  [
+   1127.18,
+   "guardaré su vida con la ría, con el ensalto."
+  ],
+  [
+   1197.18,
+   "No dejes de mirarte de pasar que aparte la noche del sol."
+  ],
+  [
+   1221.18,
+   "En la luz cultivar de tus pupilas fiándome Y llena en mañana y me salva Adena blanda para tus pies O a través de un día la gola mía No me debes dar"
+  ],
+  [
+   1251.18,
+   "Juegos de mis amores y los amores de tu mirada Cuando Dios se cansa, hay una lanza que la baila"
+  ],
+  [
+   1417.18,
+   "A continuación, y ya para finalizar, voy a solicitarle al Presidente del Círculo Bárbico, Presidente Conocma, a que indique a la coheja a descender el escenario y a continuación los demás miembros del Círculo Bárbico. Muchas gracias."
   ]
  ],
  "fuentes": [
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {
   "total": 26,
-  "modelo": 6,
-  "reglas": 1,
-  "vacias": 19
+  "modelo": 21,
+  "reglas": 0,
+  "vacias": 5
  }
 }

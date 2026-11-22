@@ -458,6 +458,7 @@
     "pestanas": "Administration sections",
     "tabs": {
       "cola": "To review",
+      "videos": "Videos",
       "cargar": "Load facts",
       "restringidos": "Restricted",
       "usuarios": "Users",
@@ -533,7 +534,8 @@
       "sin_archivo": "We couldn't download the original file.",
       "derivados": "We couldn't generate the images in this browser. Try an up-to-date Chrome or Firefox.",
       "sin_archivos": "The images or text are missing from the restricted store. Run scripts/push_restricted.py and try again.",
-      "sin_cambios": "Tick at least one change to approve."
+      "sin_cambios": "Tick at least one change to approve.",
+      "no_aprobada": "This correction is no longer approved."
     },
     "ver_restringido": "See the document before releasing it",
     "restringido_alt": "{titulo}, page {n} (admin view)",
@@ -567,6 +569,26 @@
       "agregar": "Add",
       "cambio_linea": "The line has changed since it was edited",
       "aprobar_sel": "Approve selected"
+    },
+    "videos": {
+      "ayuda": "Approved transcript corrections, by video, newest first. Withdrawing one takes it out of the player at once; the next export removes it from the file.",
+      "vacia": "There are no approved transcript corrections.",
+      "aprobada": "Approved on {fecha}",
+      "retirar": "Withdraw",
+      "motivo": "Reason for withdrawing (the contributor will see it)",
+      "confirmar_retiro": "Confirm withdrawal",
+      "retirada": "Correction withdrawn.",
+      "sin_anclar": "Not anchored ({n})",
+      "motivo_sin_linea": "Its line can no longer be found.",
+      "motivo_idioma": "The language falls inside a joined line that may hold other speech: choose the line it belongs to.",
+      "reanclar": "Re-anchor",
+      "elegir_linea": "Choose the line it belongs to",
+      "nueva_linea": "Add as a new line at {tiempo}",
+      "sin_opciones": "There are no lines within a minute.",
+      "tras_exportar": "Already in the file: it will show after the next export.",
+      "pausa_exportar": "A withdrawn correction is still in the file: until the next export, the player shows the file without the new corrections.",
+      "reanclada": "Change re-anchored.",
+      "sin_archivo": "We couldn't read this video's published transcript."
     }
   },
   "admin_item": {

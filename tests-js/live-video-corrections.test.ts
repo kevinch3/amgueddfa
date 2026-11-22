@@ -112,6 +112,20 @@ describe('withLiveCorrections', () => {
     expect(r7.tr).toEqual(file());
   });
 
+  it('shows the file as it is while a row it holds is no longer approved (withdrawn), until the next export', () => {
+    // Ana's r1 was withdrawn: its text stays in the file until the export, but it left no traces to read, so Bruno's
+    // repeat of her removal would land on the twin at 30. No live correction applies on this video meanwhile.
+    const bruno = row('r2', '16:00', 'Bruno', [{ t: 31, antes: '¡Bravo!', quitar: true }]);
+    const carla = row('r3', '16:30', 'Carla', [{ t: 33, antes: 'Muy bien', texto: 'Muy bien, gracias' }]);
+    const f = file();
+    const out = withLiveCorrections(f, [bruno, carla]);
+    expect(out.tr).toBe(f);
+    expect(out.autores).toEqual({});
+    // With r1 still approved, Carla's applies and Bruno's repeat is reported.
+    const kept = withLiveCorrections(f, [ana, bruno, carla]).tr;
+    expect(kept.seg.slice(0, 2)).toEqual([[30, '¡Bravo!'], [33, 'Muy bien, gracias']]);
+  });
+
   it('returns the file itself when nothing new applies', () => {
     const f = file();
     expect(withLiveCorrections(f, []).tr).toBe(f);

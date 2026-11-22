@@ -458,6 +458,7 @@
     "pestanas": "Sections d'administration",
     "tabs": {
       "cola": "À examiner",
+      "videos": "Vidéos",
       "cargar": "Saisir des informations",
       "restringidos": "Restreints",
       "usuarios": "Utilisateurs",
@@ -533,7 +534,8 @@
       "sin_archivo": "Impossible de télécharger le fichier original.",
       "derivados": "Impossible de générer les images dans ce navigateur. Essayez avec une version à jour de Chrome ou de Firefox.",
       "sin_archivos": "Les images ou le texte manquent dans l'espace de stockage restreint. Lancez scripts/push_restricted.py et réessayez.",
-      "sin_cambios": "Cochez au moins une modification à approuver."
+      "sin_cambios": "Cochez au moins une modification à approuver.",
+      "no_aprobada": "Cette correction n'est plus approuvée."
     },
     "ver_restringido": "Voir le document avant de le publier",
     "restringido_alt": "{titulo}, page {n} (vue administrateur)",
@@ -567,6 +569,26 @@
       "agregar": "Ajouter",
       "cambio_linea": "La ligne a changé depuis la modification",
       "aprobar_sel": "Approuver la sélection"
+    },
+    "videos": {
+      "ayuda": "Corrections de transcription approuvées, par vidéo, de la plus récente à la plus ancienne. En retirer une l'enlève aussitôt du lecteur ; le prochain export la supprime du fichier.",
+      "vacia": "Aucune correction de transcription approuvée.",
+      "aprobada": "Approuvée le {fecha}",
+      "retirar": "Retirer",
+      "motivo": "Motif du retrait (la personne qui l'a envoyée le verra)",
+      "confirmar_retiro": "Confirmer le retrait",
+      "retirada": "Correction retirée.",
+      "sin_anclar": "Non ancrées ({n})",
+      "motivo_sin_linea": "Sa ligne est introuvable.",
+      "motivo_idioma": "La langue tombe dans une ligne fusionnée, qui peut contenir d'autres voix : choisissez la ligne à laquelle elle correspond.",
+      "reanclar": "Ré-ancrer",
+      "elegir_linea": "Choisissez la ligne à laquelle elle correspond",
+      "nueva_linea": "Ajouter comme nouvelle ligne à {tiempo}",
+      "sin_opciones": "Aucune ligne à moins d'une minute.",
+      "tras_exportar": "Déjà dans le fichier : visible après le prochain export.",
+      "pausa_exportar": "Une correction retirée est encore dans le fichier : jusqu'au prochain export, le lecteur affiche le fichier sans les nouvelles corrections.",
+      "reanclada": "Modification ré-ancrée.",
+      "sin_archivo": "Impossible de lire la transcription publiée de cette vidéo."
     }
   },
   "admin_item": {

@@ -458,6 +458,7 @@
     "pestanas": "Administrationens avdelningar",
     "tabs": {
       "cola": "Att granska",
+      "videos": "Videor",
       "cargar": "Lägg in uppgifter",
       "restringidos": "Begränsade",
       "usuarios": "Användare",
@@ -533,7 +534,8 @@
       "sin_archivo": "Vi kunde inte ladda ner originalfilen.",
       "derivados": "Vi kunde inte skapa bilderna i den här webbläsaren. Prova med en uppdaterad Chrome eller Firefox.",
       "sin_archivos": "Bilderna eller texten saknas i det begränsade lagret. Kör scripts/push_restricted.py och försök igen.",
-      "sin_cambios": "Markera minst en ändring att godkänna."
+      "sin_cambios": "Markera minst en ändring att godkänna.",
+      "no_aprobada": "Den här rättelsen är inte längre godkänd."
     },
     "ver_restringido": "Se dokumentet innan du publicerar det",
     "restringido_alt": "{titulo}, sida {n} (vy för administratörer)",
@@ -567,6 +569,26 @@
       "agregar": "Lägg till",
       "cambio_linea": "Raden har ändrats sedan den redigerades",
       "aprobar_sel": "Godkänn markerade"
+    },
+    "videos": {
+      "ayuda": "Godkända rättelser av transkriptioner, per video, nyast först. Att dra tillbaka en tar bort den ur spelaren direkt; nästa export tar bort den ur filen.",
+      "vacia": "Det finns inga godkända rättelser av transkriptioner.",
+      "aprobada": "Godkänd {fecha}",
+      "retirar": "Dra tillbaka",
+      "motivo": "Skäl till tillbakadragandet (den som skickade den ser det)",
+      "confirmar_retiro": "Bekräfta tillbakadragandet",
+      "retirada": "Rättelsen har dragits tillbaka.",
+      "sin_anclar": "Utan förankring ({n})",
+      "motivo_sin_linea": "Dess rad går inte längre att hitta.",
+      "motivo_idioma": "Språket hamnar inne i en sammanslagen rad som kan innehålla annat tal: välj raden det hör till.",
+      "reanclar": "Förankra om",
+      "elegir_linea": "Välj raden det hör till",
+      "nueva_linea": "Lägg till som ny rad vid {tiempo}",
+      "sin_opciones": "Det finns inga rader inom en minut.",
+      "tras_exportar": "Finns redan i filen: syns efter nästa export.",
+      "pausa_exportar": "En tillbakadragen rättelse finns kvar i filen: fram till nästa export visar spelaren filen utan de nya rättelserna.",
+      "reanclada": "Ändringen har förankrats om.",
+      "sin_archivo": "Vi kunde inte läsa den publicerade transkriptionen av den här videon."
     }
   },
   "admin_item": {

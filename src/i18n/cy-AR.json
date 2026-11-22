@@ -458,6 +458,7 @@
     "pestanas": "Adrannau gweinyddu",
     "tabs": {
       "cola": "I'w hadolygu",
+      "videos": "Fideos",
       "cargar": "Llwytho ffeithiau",
       "restringidos": "Cyfyngedig",
       "usuarios": "Defnyddwyr",
@@ -533,7 +534,8 @@
       "sin_archivo": "Methon ni â lawrlwytho'r ffeil wreiddiol.",
       "derivados": "Methon ni â chreu'r delweddau yn y porwr yma. Rhowch gynnig efo fersiwn ddiweddar o Chrome neu Firefox.",
       "sin_archivos": "Mae'r delweddau neu'r testun ar goll yn y storfa gyfyngedig. Rhedwch scripts/push_restricted.py a rhowch gynnig arall.",
-      "sin_cambios": "Ticiwch o leiaf un newid i'w gymeradwyo."
+      "sin_cambios": "Ticiwch o leiaf un newid i'w gymeradwyo.",
+      "no_aprobada": "Dydy'r cywiriad yma ddim wedi'i gymeradwyo bellach."
     },
     "ver_restringido": "Gweld y ddogfen cyn ei rhyddhau",
     "restringido_alt": "{titulo}, tudalen {n} (golwg gweinyddwyr)",
@@ -567,6 +569,26 @@
       "agregar": "Ychwanegu",
       "cambio_linea": "Mae'r llinell wedi newid ers iddi gael ei golygu",
       "aprobar_sel": "Cymeradwyo'r rhai a ddewiswyd"
+    },
+    "videos": {
+      "ayuda": "Cywiriadau trawsgrifiad a gymeradwywyd, fesul fideo, y mwyaf newydd yn gyntaf. Mae tynnu un yn ôl yn ei dynnu o'r chwaraewr ar unwaith; mae'r allforio nesaf yn ei dynnu o'r ffeil.",
+      "vacia": "Does dim cywiriadau trawsgrifiad wedi'u cymeradwyo.",
+      "aprobada": "Cymeradwywyd {fecha}",
+      "retirar": "Tynnu'n ôl",
+      "motivo": "Rheswm dros dynnu'n ôl (bydd y cyfrannwr yn ei weld)",
+      "confirmar_retiro": "Cadarnhau tynnu'n ôl",
+      "retirada": "Cywiriad wedi'i dynnu'n ôl.",
+      "sin_anclar": "Heb angor ({n})",
+      "motivo_sin_linea": "Does dim modd dod o hyd i'w linell bellach.",
+      "motivo_idioma": "Mae'r iaith o fewn llinell gyfun a allai gynnwys lleisiau eraill: dewiswch y llinell y mae'n perthyn iddi.",
+      "reanclar": "Ail-angori",
+      "elegir_linea": "Dewiswch y llinell y mae'n perthyn iddi",
+      "nueva_linea": "Ychwanegu fel llinell newydd am {tiempo}",
+      "sin_opciones": "Does dim llinellau o fewn munud.",
+      "tras_exportar": "Mae eisoes yn y ffeil: bydd i'w weld ar ôl yr allforio nesaf.",
+      "pausa_exportar": "Mae cywiriad a dynnwyd yn ôl yn dal yn y ffeil: tan yr allforio nesaf, mae'r chwaraewr yn dangos y ffeil heb y cywiriadau newydd.",
+      "reanclada": "Newid wedi'i ail-angori.",
+      "sin_archivo": "Doedd dim modd darllen trawsgrifiad cyhoeddedig y fideo yma."
     }
   },
   "admin_item": {

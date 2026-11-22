@@ -11,9 +11,11 @@ import {
   groupQueue,
   groupState,
   loadApprovedUploads,
+  loadApprovedVideoText,
   loadQueue,
   loadReleased,
   makeAdmin,
+  reanchor,
   recordApprovedUpload,
   reject,
   rejectAll,
@@ -24,6 +26,7 @@ import {
   searchUsers,
   signedUrl,
   textOnly,
+  withdrawContribution,
   type ApprovedLike,
   type GapChoice,
   type GapCtx,
@@ -34,14 +37,18 @@ import {
 } from '../lib/admin';
 import { currentProfile } from '../lib/auth';
 import type { Kind } from '../lib/contrib';
-import { keptCambios, videoCardRows } from '../lib/admin-video-card';
+import { keptCambios, videoCardRows, type VideoCardRow } from '../lib/admin-video-card';
+import {
+  canAddNew, groupByVideo, reanchorOptions, sinAnclarList, withdrawnInFile,
+  type ApprovedVideoText, type Eleccion, type SinAnclarItem, type VideoGroup,
+} from '../lib/admin-videos';
 import { fecha, fechaHora, relativa } from '../lib/dates';
 import type { FestivalSlug } from '../lib/types';
 import { renderStats } from './admin-stats';
 import { mountFactEditor } from './fact-editor';
 import { t } from '../lib/i18n';
 import { url } from '../lib/paths';
-import { asTranscript, fmtTime } from '../lib/video-transcript';
+import { asTranscript, fmtTime, type Transcript } from '../lib/video-transcript';
 import type { Cambio } from '../lib/video-corrections';
 import { getClient } from '../lib/supabase';
 import { videoThumb, videoUrl } from '../lib/videos';
@@ -140,14 +147,36 @@ function readable(c: Pending): HTMLElement {
   return box;
 }
 
-/** The published transcript lines of a video, or null when the file cannot be read. */
-async function publishedLines(id: string): Promise<[number, string][] | null> {
+/** The published transcript of a video (checked against the server, so a fresh export shows), or null when the file
+ * cannot be read. */
+async function publishedTranscript(id: string): Promise<Transcript | null> {
   try {
-    const r = await fetch(url(`transcripciones-video/${id}.json`));
-    return r.ok ? (asTranscript(await r.json())?.seg ?? null) : null;
+    const r = await fetch(url(`transcripciones-video/${id}.json`), { cache: 'no-cache' });
+    return r.ok ? asTranscript(await r.json()) : null;
   } catch {
     return null;
   }
+}
+
+/** The published transcript lines of a video, or null when the file cannot be read. */
+async function publishedLines(id: string): Promise<[number, string][] | null> {
+  return (await publishedTranscript(id))?.seg ?? null;
+}
+
+/** "1:15 Corregir · Idioma: cy", the time linked to that moment on YouTube. */
+function changeHead(r: VideoCardRow, into: HTMLElement): void {
+  into.append(el('a', { href: r.link, target: '_blank', rel: 'noopener noreferrer' }, fmtTime(r.t)), ` ${t(`admin.video.${r.kind}`)}`);
+  if (r.idioma) into.append(` · ${t('admin.video.idioma')}: ${r.idioma}`);
+}
+
+/** A change's words, struck and inserted (a language change: the line itself). All as text. */
+function changeWords(r: VideoCardRow): HTMLElement {
+  if (r.kind === 'idioma') return el('p', { class: 'small' }, r.antes);
+  const d = el('p', { class: 'small' });
+  for (const part of r.diff) {
+    d.append(part.op === 'same' ? document.createTextNode(`${part.text} `) : el(part.op === 'del' ? 'del' : 'ins', {}, part.text), ' ');
+  }
+  return d;
 }
 
 /** A video_text contribution: the video, then one ticked row per change (time, kind, before to after). Everything user
@@ -178,16 +207,9 @@ function videoChanges(c: Pending, onChange: () => void): { box: HTMLElement; kep
         onChange();
       });
       const lab = el('label', { for: cid, class: 'opt' });
-      lab.append(cb, el('a', { href: r.link, target: '_blank', rel: 'noopener noreferrer' }, fmtTime(r.t)), ` ${t(`admin.video.${r.kind}`)}`);
-      if (r.idioma) lab.append(` · ${t('admin.video.idioma')}: ${r.idioma}`);
-      li.append(lab);
-      if (r.kind !== 'idioma') {
-        const d = el('p', { class: 'small' });
-        for (const part of r.diff) {
-          d.append(part.op === 'same' ? document.createTextNode(`${part.text} `) : el(part.op === 'del' ? 'del' : 'ins', {}, part.text), ' ');
-        }
-        li.append(d);
-      } else li.append(el('p', { class: 'small' }, r.antes));
+      lab.append(cb);
+      changeHead(r, lab);
+      li.append(lab, changeWords(r));
       if (r.stale) li.append(el('p', { class: 'muted small', role: 'note' }, t('admin.video.cambio_linea')));
       list.append(li);
     }
@@ -448,6 +470,210 @@ function groupCard(state: ReturnType<typeof groupState>, cards: Map<string, HTML
   return { box, refresh };
 }
 
+/* ---------- Videos: approved transcript corrections ---------- */
+
+let formSeq = 0; // ids of the in-page forms (labels need unique ids)
+
+/** What one video's card needs from its parts: its rows, its published file once read, and how to redraw and report. */
+type VideoCtx = { g: VideoGroup; file: Transcript | null | undefined; redraw: () => void; say: (text: string) => void };
+
+async function renderVideos(): Promise<void> {
+  const list = $('a-videos');
+  const msg = $('a-videos-msg');
+  show(msg, t('admin.cargando'));
+  const r = await loadApprovedVideoText();
+  list.replaceChildren();
+  if (r.offline) return show(msg, t('estado.sin_conexion'));
+  const groups = groupByVideo(r.data);
+  show(msg, groups.length ? '' : t('admin.videos.vacia'));
+  // The files are read one after another, in the order shown, so a long list does not fetch them all at once.
+  let queue = Promise.resolve();
+  for (const g of groups) {
+    const { li, load } = videoCard(g);
+    list.append(li);
+    queue = queue.then(() => load().catch((e) => console.error(e))); // one video failing does not stop the others
+  }
+}
+
+/** One video: the changes the player does not show ("Sin anclar", once its file is read), then its approved
+ * corrections, newest first, each with Retirar. */
+function videoCard(g: VideoGroup): { li: HTMLLIElement; load: () => Promise<void> } {
+  const li = el('li', { class: 'admin-card' });
+  const h = el('h2');
+  h.append(el('a', { href: videoUrl(g.id), target: '_blank', rel: 'noopener noreferrer' }, g.title));
+  li.append(h);
+  if (g.festival && g.year) li.append(el('p', { class: 'muted small' }, t('admin.edicion', { festival: t(`festivales.${g.festival}`), year: g.year })));
+  const status = el('p', { class: 'contrib-ok', role: 'status', tabindex: '-1' });
+  status.hidden = true;
+  const sin = el('div', { class: 'admin-sin-anclar' });
+  const rows = el('ol', { class: 'admin-list' });
+  li.append(status, sin, rows);
+  const ctx: VideoCtx = {
+    g,
+    file: undefined,
+    redraw: () => {
+      drawSinAnclar(ctx, sin);
+      rows.replaceChildren(...g.rows.map((row) => correctionRow(ctx, row)));
+    },
+    say: (text) => {
+      status.textContent = text;
+      status.hidden = false;
+      status.focus();
+    },
+  };
+  ctx.redraw();
+  const load = async () => {
+    ctx.file = await publishedTranscript(g.id);
+    drawSinAnclar(ctx, sin);
+  };
+  return { li, load };
+}
+
+/** The unplaced changes of a video, in time order. Nothing until its file is read; a note when it cannot be. */
+function drawSinAnclar(ctx: VideoCtx, box: HTMLElement): void {
+  box.replaceChildren();
+  const file = ctx.file;
+  if (file === undefined || !ctx.g.rows.length) return;
+  if (file === null) {
+    box.append(el('p', { class: 'muted small' }, t('admin.videos.sin_archivo')));
+    return;
+  }
+  // A row the file holds was withdrawn: the player shows the file as it is, new corrections too wait for the export.
+  if (withdrawnInFile(file, ctx.g.rows)) box.append(el('p', { class: 'muted small', role: 'note' }, t('admin.videos.pausa_exportar')));
+  const { items, live } = sinAnclarList(file, ctx.g.rows);
+  if (!items.length) return;
+  const ol = el('ol', { class: 'admin-cambios' });
+  // A row the file holds is re-anchored against the file (what the export will have when it applies the row); any
+  // other against what the player shows, where its other changes and earlier rows already apply.
+  for (const item of items) ol.append(sinAnclarRow(ctx, item, item.baked ? file : live));
+  box.append(el('h3', {}, t('admin.videos.sin_anclar', { n: items.length })), ol);
+}
+
+function sinAnclarRow(ctx: VideoCtx, item: SinAnclarItem, view: Transcript): HTMLLIElement {
+  const row = ctx.g.rows.find((r) => r.id === item.row)!;
+  const li = el('li');
+  const [r] = videoCardRows(ctx.g.id, [item.cambio], null);
+  const head = el('p', { class: 'small' });
+  changeHead(r, head);
+  head.append(` · ${t('admin.de', { nombre: row.display_name || t('admin.sin_nombre') })}`);
+  li.append(head, changeWords(r), el('p', { class: 'muted small' },
+    item.motivo === 'idioma_en_linea_unida' ? t('admin.videos.motivo_idioma') : t('admin.videos.motivo_sin_linea')));
+  const actions = el('div', { class: 'acciones' });
+  const again = el('button', { type: 'button', class: 'btn' }, t('admin.videos.reanclar'));
+  const out = el('button', { type: 'button', class: 'btn btn-quiet' }, t('admin.videos.retirar'));
+  actions.append(again);
+  // The player treats a row the file holds as applied: a change of it re-anchored now shows after the next export.
+  if (item.baked) actions.append(el('span', { class: 'muted small' }, t('admin.videos.tras_exportar')));
+  actions.append(out);
+  const msg = el('p', { class: 'contrib-msg', role: 'alert' });
+  msg.hidden = true;
+  again.addEventListener('click', () => reanchorForm(ctx, row, item, view, actions, msg));
+  out.addEventListener('click', () => withdrawForm(ctx, row, actions, msg));
+  li.append(actions, msg);
+  return li;
+}
+
+/** An approved correction: who and when, its changes (folded), and Retirar. */
+function correctionRow(ctx: VideoCtx, row: ApprovedVideoText): HTMLLIElement {
+  const li = el('li', { class: 'admin-fila' });
+  li.append(el('p', { class: 'muted small' },
+    `${t('admin.de', { nombre: row.display_name || t('admin.sin_nombre') })} · ${t('admin.videos.aprobada', { fecha: fmtDate(row.reviewed_at) })}`));
+  const cambios = Array.isArray(row.payload?.cambios) ? row.payload.cambios : [];
+  const det = el('details');
+  det.append(el('summary', {}, t('admin.video.cambios', { n: cambios.length })));
+  const ol = el('ol', { class: 'admin-cambios' });
+  // Not checked against the file: an applied change no longer reads its antes there, and that is no warning.
+  for (const r of videoCardRows(ctx.g.id, cambios, null)) {
+    const item = el('li');
+    const head = el('p', { class: 'small' });
+    changeHead(r, head);
+    item.append(head, changeWords(r));
+    ol.append(item);
+  }
+  det.append(ol);
+  const actions = el('div', { class: 'acciones' });
+  const out = el('button', { type: 'button', class: 'btn btn-quiet' }, t('admin.videos.retirar'));
+  actions.append(out);
+  const msg = el('p', { class: 'contrib-msg', role: 'alert' });
+  msg.hidden = true;
+  out.addEventListener('click', () => withdrawForm(ctx, row, actions, msg));
+  li.append(det, actions, msg);
+  return li;
+}
+
+/** Retirar: the reason is asked in the page (never a browser prompt); withdrawn, the row leaves the card. */
+function withdrawForm(ctx: VideoCtx, row: ApprovedVideoText, slot: HTMLElement, msg: HTMLElement): void {
+  const form = el('form', { class: 'tarea-form', novalidate: '' });
+  const id = `retiro-${++formSeq}`;
+  const inp = el('input', { id, type: 'text', maxlength: '500', required: '' });
+  const go = el('button', { type: 'submit', class: 'btn' }, t('admin.videos.confirmar_retiro'));
+  const cancel = el('button', { type: 'button', class: 'btn btn-quiet' }, t('admin.cancelar'));
+  const buttons = el('div', { class: 'acciones' });
+  buttons.append(go, cancel);
+  form.append(el('label', { for: id }, t('admin.videos.motivo')), inp, buttons);
+  cancel.addEventListener('click', () => {
+    show(msg, '');
+    form.replaceWith(slot);
+  });
+  form.addEventListener('submit', async (ev) => {
+    ev.preventDefault();
+    if (!(await run([go, cancel], msg, () => withdrawContribution(row.id, inp.value)))) return;
+    ctx.g.rows = ctx.g.rows.filter((x) => x !== row);
+    ctx.redraw();
+    ctx.say(t('admin.videos.retirada'));
+  });
+  slot.replaceWith(form);
+  inp.focus();
+}
+
+/** Re-anclar: pick the line the change belongs to (within a minute of it, nearest first) or, when it has words of its
+ * own, a new line at its time. The row's changes are replaced with that one moved, the rest as they were. */
+function reanchorForm(ctx: VideoCtx, row: ApprovedVideoText, item: SinAnclarItem, view: Transcript, slot: HTMLElement, msg: HTMLElement): void {
+  const form = el('form', { class: 'tarea-form admin-reanclar', novalidate: '' });
+  const fs = el('fieldset');
+  fs.append(el('legend', {}, t('admin.videos.elegir_linea')));
+  const name = `reanclar-${++formSeq}`;
+  const picks: { input: HTMLInputElement; pick: Eleccion }[] = [];
+  const option = (text: string, pick: Eleccion) => {
+    const id = `${name}-${picks.length}`;
+    const input = el('input', { type: 'radio', name, id });
+    const lab = el('label', { for: id, class: 'opt' });
+    lab.append(input, el('span', {}, text));
+    fs.append(lab);
+    picks.push({ input, pick });
+  };
+  if (canAddNew(item.cambio, item.motivo)) option(t('admin.videos.nueva_linea', { tiempo: fmtTime(item.cambio.t) }), 'nueva');
+  for (const o of reanchorOptions(view, item.cambio.t)) option(`${fmtTime(o.t)} · ${o.text}`, { t: o.t, text: o.text });
+  if (!picks.length) fs.append(el('p', { class: 'muted small' }, t('admin.videos.sin_opciones')));
+  const go = el('button', { type: 'submit', class: 'btn' }, t('admin.videos.reanclar'));
+  go.disabled = !picks.length;
+  const cancel = el('button', { type: 'button', class: 'btn btn-quiet' }, t('admin.cancelar'));
+  const buttons = el('div', { class: 'acciones' });
+  buttons.append(go, cancel);
+  form.append(fs, buttons);
+  cancel.addEventListener('click', () => {
+    show(msg, '');
+    form.replaceWith(slot);
+  });
+  form.addEventListener('submit', async (ev) => {
+    ev.preventDefault();
+    const chosen = picks.find((p) => p.input.checked);
+    if (!chosen) return show(msg, t('admin.videos.elegir_linea'));
+    const sent: { cambios?: Cambio[] } = {};
+    const ok = await run([go, cancel], msg, async () => {
+      const r = await reanchor(row, item, chosen.pick);
+      if (r.ok) sent.cambios = r.cambios;
+      return r;
+    });
+    if (!ok || !sent.cambios) return;
+    row.payload = { ...row.payload, cambios: sent.cambios };
+    ctx.redraw();
+    ctx.say(item.baked ? `${t('admin.videos.reanclada')} ${t('admin.videos.tras_exportar')}` : t('admin.videos.reanclada'));
+  });
+  slot.replaceWith(form);
+  (picks[0]?.input ?? cancel).focus();
+}
+
 async function renderRestricted(): Promise<void> {
   const list = $('a-restr');
   const msg = $('a-restr-msg');
@@ -599,6 +825,10 @@ function selectTab(k: string): void {
     b.setAttribute('aria-selected', String(on));
     b.tabIndex = on ? 0 : -1;
     $(`apanel-${b.dataset.tab}`).hidden = !on;
+  }
+  if (k === 'videos' && !loaded.has(k)) {
+    loaded.add(k);
+    void renderVideos();
   }
   if (k === 'restringidos' && !loaded.has(k)) {
     loaded.add(k);

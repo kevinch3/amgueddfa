@@ -52,11 +52,11 @@ export function approvedCorrections(videoId: string, client: SupabaseClient | nu
 /** A change as the file's `sin_anclar` names it: its row, its time and its `antes` (none for an add). */
 const changeKey = (id: string, t: unknown, antes: unknown) => `${id}\u0000${t}\u0000${typeof antes === 'string' ? `=${antes}` : '+'}`;
 
-/** The file with the approved corrections it does not hold yet, and the names behind each line they changed. A row in
- * the file's `correcciones` is not applied again (it leaves its traces, so a later duplicate is reported, not landed on a
- * twin line); a change in its `sin_anclar` (same row, time and antes) is never applied: the export found no line for it.
- * A change an admin re-anchored since (new time or antes) applies at once. The file itself when nothing new applies. */
-export function withLiveCorrections(tr: Transcript, rows: CorrectionRow[]): { tr: Transcript; autores: Record<number, string[]> } {
+/** The approved rows as the player applies them on top of a file: a row in the file's `correcciones` as it is (it is not
+ * applied again, only the traces it left are read), any other without the changes the file's `sin_anclar` lists (same
+ * row, time and antes: the export found no line for them). `nuevos` when some change is left to apply. The admin's
+ * Videos tab runs the same rows, so its "Sin anclar" list is what the player leaves out. */
+export function liveRows(tr: Transcript, rows: CorrectionRow[]): { rows: CorrectionRow[]; nuevos: boolean } {
   const baked = new Set(tr.correcciones ?? []);
   const unplaced = new Set((tr.sin_anclar ?? []).map((u) => changeKey(u.id, u.t, u.antes)));
   let nuevos = false;
@@ -66,8 +66,32 @@ export function withLiveCorrections(tr: Transcript, rows: CorrectionRow[]): { tr
     nuevos ||= cambios.length > 0;
     return { ...r, payload: { ...r.payload, cambios } };
   });
-  if (!nuevos) return { tr, autores: {} };
-  const out = applyCorrections({ ...tr, fuentes: tr.fuentes ?? tr.seg.map(() => []) }, live, { baked });
+  return { rows: live, nuevos };
+}
+
+/** Whether the file holds a row (its `correcciones`) that is not among the approved `rows`: an admin withdrew it after
+ * the export. */
+export function withdrawnInFile(tr: Transcript, rows: { id: string }[]): boolean {
+  const approved = new Set(rows.map((r) => r.id));
+  return (tr.correcciones ?? []).some((id) => !approved.has(id));
+}
+
+/** `tr` with per-line sources, as applyCorrections reads them (every published file has them; an old one may not). */
+export const corregible = (tr: Transcript): Transcript & { fuentes: string[][] } => ({ ...tr, fuentes: tr.fuentes ?? tr.seg.map(() => []) });
+
+/** The file with the approved corrections it does not hold yet, and the names behind each line they changed. A row in
+ * the file's `correcciones` is not applied again (it leaves its traces, so a later duplicate is reported, not landed on a
+ * twin line); a change in its `sin_anclar` (same row, time and antes) is never applied: the export found no line for it.
+ * A change an admin re-anchored since (new time or antes) applies at once. The file itself when nothing new applies.
+ *
+ * A row the file holds that is no longer among the approved rows (an admin withdrew it) has left its text in the file
+ * but no traces to read, so a repeat of it would land on a twin line: until the next export takes it out, the file is
+ * shown as it is, with no live corrections. */
+export function withLiveCorrections(tr: Transcript, rows: CorrectionRow[]): { tr: Transcript; autores: Record<number, string[]> } {
+  if (withdrawnInFile(tr, rows)) return { tr, autores: {} };
+  const live = liveRows(tr, rows);
+  if (!live.nuevos) return { tr, autores: {} };
+  const out = applyCorrections(corregible(tr), live.rows, { baked: new Set(tr.correcciones ?? []) });
   return out.applied.length ? { tr: out.tr, autores: out.autores } : { tr, autores: {} };
 }
 

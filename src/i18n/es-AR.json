@@ -458,6 +458,7 @@
     "pestanas": "Secciones de administración",
     "tabs": {
       "cola": "Para revisar",
+      "videos": "Videos",
       "cargar": "Cargar datos",
       "restringidos": "Restringidos",
       "usuarios": "Usuarios",
@@ -533,7 +534,8 @@
       "sin_archivo": "No pudimos bajar el archivo original.",
       "derivados": "No pudimos generar las imágenes en este navegador. Probá con Chrome o Firefox actualizados.",
       "sin_archivos": "Faltan las imágenes o el texto en el depósito restringido. Corré scripts/push_restricted.py y probá de nuevo.",
-      "sin_cambios": "Marcá al menos un cambio para aprobar."
+      "sin_cambios": "Marcá al menos un cambio para aprobar.",
+      "no_aprobada": "Esta corrección ya no está aprobada."
     },
     "ver_restringido": "Ver el documento antes de liberarlo",
     "restringido_alt": "{titulo}, página {n} (vista para admins)",
@@ -567,6 +569,26 @@
       "agregar": "Agregar",
       "cambio_linea": "La línea cambió desde que se editó",
       "aprobar_sel": "Aprobar seleccionadas"
+    },
+    "videos": {
+      "ayuda": "Correcciones de transcripción aprobadas, por video, de la más nueva a la más vieja. Retirar una la saca del reproductor en el acto; la próxima exportación la quita del archivo.",
+      "vacia": "No hay correcciones de transcripción aprobadas.",
+      "aprobada": "Aprobada el {fecha}",
+      "retirar": "Retirar",
+      "motivo": "Motivo del retiro (lo ve quien la envió)",
+      "confirmar_retiro": "Confirmar el retiro",
+      "retirada": "Corrección retirada.",
+      "sin_anclar": "Sin anclar ({n})",
+      "motivo_sin_linea": "No encuentra su línea.",
+      "motivo_idioma": "El idioma cae dentro de una línea unida, que puede tener otras voces: elegí la línea a la que corresponde.",
+      "reanclar": "Re-anclar",
+      "elegir_linea": "Elegí la línea a la que corresponde",
+      "nueva_linea": "Agregar como línea nueva en {tiempo}",
+      "sin_opciones": "No hay líneas a menos de un minuto.",
+      "tras_exportar": "Ya está en el archivo: se verá después de la próxima exportación.",
+      "pausa_exportar": "Una corrección retirada sigue en el archivo: hasta la próxima exportación, el reproductor muestra el archivo sin las correcciones nuevas.",
+      "reanclada": "Cambio re-anclado.",
+      "sin_archivo": "No pudimos leer la transcripción publicada de este video."
     }
   },
   "admin_item": {

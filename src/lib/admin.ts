@@ -5,6 +5,7 @@ import { liveQuery } from './live';
 import { t } from './i18n';
 import { getClient } from './supabase';
 import type { FestivalSlug } from './types';
+import { reanchoredCambios, type ApprovedVideoText, type Eleccion, type Motivo } from './admin-videos';
 import type { Cambio } from './video-corrections';
 
 export type Result = { ok: true } | { ok: false; key: string };
@@ -104,9 +105,11 @@ export function recordApprovedUpload(c: Pending, ctx: GapCtx, choices: GapChoice
 export function mapRpcError(e: { message?: string } | null | undefined): Result {
   const m = e?.message ?? '';
   if (m.includes('not_pending')) return { ok: false, key: 'admin.error.ya_revisado' };
-  if (m.includes('not_admin')) return { ok: false, key: 'admin.error.no_admin' };
+  if (m.includes('not_approved')) return { ok: false, key: 'admin.error.no_aprobada' };
+  if (m.includes('not_admin') || m.includes('forbidden')) return { ok: false, key: 'admin.error.no_admin' };
   if (m.includes('not_found')) return { ok: false, key: 'admin.error.no_encontrado' };
-  if (m.includes('invalid_value') || m.includes('edition_required')) return { ok: false, key: 'admin.error.valor' };
+  // 'invalid' and 'wrong_type': the Videos tab's RPCs (an exact match: other errors that say "invalid" are not about the value).
+  if (m === 'invalid' || m.includes('invalid_value') || m.includes('edition_required') || m.includes('wrong_type')) return { ok: false, key: 'admin.error.valor' };
   return OFFLINE;
 }
 
@@ -318,6 +321,37 @@ export async function approveVideoText(c: Pending, kept: Cambio[], client: Supab
   return rpc(client, 'approve_contribution', { cid: c.id, fills_gap: false, payload_override: { cambios: kept } });
 }
 
+/** Withdraw an approved transcript correction (Videos tab): it becomes rejected with the reason, which its author sees
+ * on their profile, and its points go back. The player stops applying it at once; the next export takes it out. */
+export async function withdrawContribution(id: string, note: string, client: SupabaseClient | null = getClient()): Promise<Result> {
+  const reason = (note ?? '').trim();
+  if (!reason) return { ok: false, key: 'admin.error.motivo' };
+  if (!client) return OFFLINE;
+  return rpc(client, 'admin_withdraw_contribution', { cid: id, note: reason });
+}
+
+/** Replace the changes of an approved transcript correction (Re-anclar); author, credit and points stay. The database
+ * takes 1 to 200 changes. */
+export async function setVideoTextChanges(id: string, cambios: Cambio[], client: SupabaseClient | null = getClient()): Promise<Result> {
+  if (!Array.isArray(cambios) || cambios.length < 1 || cambios.length > 200) return { ok: false, key: 'admin.error.valor' };
+  if (!client) return OFFLINE;
+  return rpc(client, 'admin_set_video_text_changes', { cid: id, cambios });
+}
+
+/** Re-anclar: the row's changes with that one on the picked line (or as a new line), sent with setVideoTextChanges; the
+ * changes sent come back so the tab can show them. */
+export async function reanchor(
+  row: Pick<ApprovedVideoText, 'id' | 'payload'>,
+  item: { index: number; motivo: Motivo },
+  pick: Eleccion,
+  client: SupabaseClient | null = getClient(),
+): Promise<{ ok: true; cambios: Cambio[] } | { ok: false; key: string }> {
+  const next = reanchoredCambios(Array.isArray(row.payload?.cambios) ? row.payload.cambios : [], item, pick);
+  if (!next) return { ok: false, key: 'admin.error.valor' };
+  const r = await setVideoTextChanges(row.id, next, client);
+  return r.ok ? { ok: true, cambios: next } : r;
+}
+
 export async function reject(c: Pending, reason: string, client: SupabaseClient | null = getClient()): Promise<Result> {
   const note = (reason ?? '').trim();
   if (!note) return { ok: false, key: 'admin.error.motivo' };
@@ -452,6 +486,22 @@ export async function loadQueue(type: Kind | '' = '', client: SupabaseClient | n
     const { data, error } = await q.order('created_at', { ascending: true }).limit(200);
     const rows = (data ?? []).map((r: any) => ({ ...r, display_name: r.author?.display_name ?? null, author: undefined }));
     return { data: rows as Pending[], error };
+  }, [], 8000, client);
+}
+
+/** Every approved transcript correction (Videos tab), newest first, with its author's name. */
+export async function loadApprovedVideoText(client: SupabaseClient | null = getClient()) {
+  return liveQuery<ApprovedVideoText[]>(async (c) => {
+    const { data, error } = await c
+      .from('contributions')
+      .select('id, user_id, festival, year, payload, created_at, reviewed_at, author:profiles!contributions_user_id_fkey(display_name)')
+      .eq('status', 'approved')
+      .eq('type', 'video_text')
+      .order('reviewed_at', { ascending: false })
+      .order('id', { ascending: false })
+      .limit(2000);
+    const rows = (data ?? []).map((r: any) => ({ ...r, display_name: r.author?.display_name ?? null, author: undefined }));
+    return { data: rows as ApprovedVideoText[], error };
   }, [], 8000, client);
 }
 

@@ -295,6 +295,8 @@ export function uuid(): string {
 function mapInsertError(e: { message?: string; code?: string } | null | undefined): Result {
   const msg = e?.message ?? '';
   if (msg.includes('daily_limit')) return { ok: false, key: 'contrib.error.limite' };
+  // The database's check of a transcript correction (video_text_valid) refused what validation let through.
+  if (msg === 'invalid') return { ok: false, key: 'contrib.error.video_cambios' };
   if (e?.code === '42501' || /row-level security|JWT/i.test(msg)) return { ok: false, key: 'contrib.error.sesion' };
   return OFFLINE;
 }

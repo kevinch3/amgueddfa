@@ -444,4 +444,8 @@ describe('video_text', () => {
     expect(await submit('video_text', 'trevelin', 2001, null, { video, cambios: [ok] }, client)).toEqual({ ok: true });
     expect(inserts).toHaveLength(1);
   });
+  it("the database's own check refusing the changes is said as such, not as being offline", async () => {
+    const { client } = fakeClient({ insertError: { code: 'P0001', message: 'invalid' } });
+    expect(await submit('video_text', 'chubut', 2001, null, { video, cambios: [ok] }, client)).toEqual({ ok: false, key: 'contrib.error.video_cambios' });
+  });
 });

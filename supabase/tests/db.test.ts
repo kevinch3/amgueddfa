@@ -697,8 +697,131 @@ describe('video_text corrections', () => {
     await approve(admin, id);
     await expect(setChanges(admin, id, [])).rejects.toThrow(/invalid/);
     await expect(setChanges(admin, id, [{ t: 1, texto: 'x'.repeat(501) }])).rejects.toThrow(/invalid/);
+    // The same check as a new row (video_text_valid), not a lighter one of its own.
+    for (const [name, cambios] of junkCambios) {
+      await expect(setChanges(admin, id, cambios), name).rejects.toThrow(/invalid/);
+    }
+    await expect(setChanges(admin, id, 'x'), 'not a list').rejects.toThrow(/invalid/);
+    await expect(setChanges(admin, id, null), 'null').rejects.toThrow(/invalid/);
     await setChanges(admin, id, changes(2));
     const [r] = await t.q<{ n: number; p: number }>('postgres', "select jsonb_array_length(payload->'cambios') as n, points_awarded as p from public.contributions where id = $1", [id]);
     expect(r).toEqual({ n: 2, p: 6 });
+  });
+
+  // Changes validateVideoText (src/lib/contrib.ts) never builds: the database refuses them wherever they come from.
+  const junkCambios: [string, unknown[]][] = [
+    ['a null change', [null]],
+    ['a change that is a list', [[1, 'a']]],
+    ['negative t', [{ t: -3, texto: 'x', idioma: 'es' }]],
+    ['t a string', [{ t: '5', antes: 'a', texto: 'b' }]],
+    ['no t', [{ antes: 'a', texto: 'b' }]],
+    ['antes a number', [{ t: 1, antes: 5, texto: 'b' }]],
+    ['antes null', [{ t: 1, antes: null, texto: 'b' }]],
+    ['blank antes', [{ t: 1, antes: '  ', texto: 'b' }]],
+    ['antes over 2,000', [{ t: 1, antes: 'a'.repeat(2001), texto: 'b' }]],
+    ['texto over 500', [{ t: 1, antes: 'a', texto: 'Z'.repeat(501) }]],
+    ['blank texto', [{ t: 1, antes: 'a', texto: '   ' }]],
+    ['texto only spaces of other kinds', [{ t: 1, antes: 'a', texto: '\n 　\t' }]],
+    ['texto a number', [{ t: 1, antes: 'a', texto: 5 }]],
+    ['idioma en', [{ t: 1, antes: 'a', idioma: 'en' }]],
+    ['quitar "yes"', [{ t: 1, antes: 'a', quitar: 'yes' }]],
+    ['a change that does nothing', [{ t: 1, antes: 'a' }]],
+    ['quitar false and nothing else', [{ t: 1, antes: 'a', quitar: false }]],
+    ['an add without words', [{ t: 1, idioma: 'es' }]],
+    ['a removal without a line', [{ t: 1, quitar: true }]],
+    ['201 changes', Array.from({ length: 201 }, (_, i) => ({ t: i, antes: 'a', texto: 'b' }))],
+    ['one good, one junk', [{ t: 1, antes: 'a', texto: 'b' }, { t: 30, texto: 'Z'.repeat(5000), idioma: 'en' }]],
+  ];
+  const valid = {
+    video: { id: 'UW0GV9sicGs', title: 'Eisteddfod del Chubut - Sesión día sábado' },
+    base: '2026-11-22T10:05:00Z',
+    cambios: [
+      { t: 2664.0, antes: 'Benedicto de la Competencia Número noventa y ocho', texto: 'Veredicto de la Competencia Número noventa y ocho' },
+      { t: 3121.4, antes: '¡Suscríbete al canal!', quitar: true },
+      { t: 3300.2, antes: 'Diolch yn fawr i chi gyd', idioma: 'cy' },
+      { t: 3412.0, texto: 'Gracias a la comisión organizadora.', idioma: 'es' },
+      { t: 3500, antes: 'Hola', texto: 'Hola a todos', idioma: 'es' },
+    ],
+  };
+  const insert = (u: string, payload: unknown, festival = 'chubut') =>
+    contribute(u, { user_id: u, type: 'video_text', festival, payload: payload as Record<string, unknown> });
+
+  it('accepts a well-formed row with every kind of change, for Chubut and Trevelin', async () => {
+    const u = await t.createUser();
+    for (const f of ['chubut', 'trevelin']) {
+      const id = await insert(u, valid, f);
+      const rows = await t.q<{ status: string }>(u, 'select status from public.contributions where id = $1', [id]);
+      expect(rows).toEqual([{ status: 'pending' }]);
+    }
+    await insert(u, { video: { id: 'abcdef12' }, cambios: [{ t: 0, texto: 'x'.repeat(500) }] });
+  });
+
+  it('refuses a crafted row, so junk never reaches the queue (a lote to group it with others included)', async () => {
+    const u = await t.createUser();
+    const bad: [string, unknown, string?][] = [
+      ['a Juventud video', valid, 'juventud'],
+      ['a Mimosa video', valid, 'mimosa'],
+      ['no video', { cambios: valid.cambios }],
+      ['a video id that is a number', { ...valid, video: { id: 12345678 } }],
+      ['a video id that is not one', { ...valid, video: { id: 'a b"><' } }],
+      ['changes that are not a list', { ...valid, cambios: { t: 1 } }],
+      ['no changes', { ...valid, cambios: [] }],
+      ['a payload that is not an object', ['x']],
+      ['junk behind a lote', { ...valid, lote: 'L1', cambios: [{ t: 665, antes: 'x', texto: 'visible' }, { t: -3, texto: 'HIDDEN negative add' }] }],
+      ...junkCambios.map(([name, cambios]): [string, unknown] => [name, { ...valid, cambios }]),
+    ];
+    for (const [name, payload, festival] of bad) {
+      await expect(insert(u, payload, festival), name).rejects.toThrow(/invalid/);
+    }
+    expect(await t.q('postgres', "select id from public.contributions where type = 'video_text'")).toHaveLength(0);
+  });
+
+  it('no update stores junk in a video_text row either', async () => {
+    const u = await t.createUser();
+    const id = await vt(u);
+    await expect(t.q('postgres', `update public.contributions set payload = jsonb_set(payload, '{cambios}', '[{"t": -1, "texto": "x"}]') where id = $1`, [id]))
+      .rejects.toThrow(/invalid/);
+  });
+
+  it('approval refuses an override that leaves junk, and the row stays pending', async () => {
+    const admin = await t.createAdmin();
+    const u = await t.createUser();
+    const id = await vt(u, 3);
+    for (const [name, cambios] of [['none', []] as [string, unknown[]], ...junkCambios]) {
+      await expect(approve(admin, id, false, { cambios }), name).rejects.toThrow(/invalid/);
+    }
+    await expect(approve(admin, id, false, { video: { id: 5 } }), 'a bad video').rejects.toThrow(/invalid/);
+    await expect(approve(admin, id, false, ['x']), 'not an object').rejects.toThrow(/invalid/);
+    const [r] = await t.q('postgres', 'select status, points_awarded from public.contributions where id = $1', [id]);
+    expect(r).toEqual({ status: 'pending', points_awarded: 0 });
+    expect(await points(u)).toBe(0);
+    expect(await approve(admin, id, false, { cambios: changes(2) })).toBe(4);
+  });
+
+  it('withdraw needs a reason', async () => {
+    const admin = await t.createAdmin();
+    const u = await t.createUser();
+    const id = await vt(u);
+    await approve(admin, id);
+    await expect(withdraw(admin, id, '   ')).rejects.toThrow(/note_required/);
+    await expect(t.q(admin, 'select public.admin_withdraw_contribution($1, null)', [id])).rejects.toThrow(/note_required/);
+    const [r] = await t.q('postgres', 'select status, points_awarded from public.contributions where id = $1', [id]);
+    expect(r).toEqual({ status: 'approved', points_awarded: 6 });
+  });
+
+  it('who may run the new functions: the admin RPCs signed-in users only (they check for an admin), the checks nobody', async () => {
+    const can = async (role: string, fn: string) =>
+      (await t.q<{ ok: boolean }>('postgres', 'select has_function_privilege($1, $2, $3) as ok', [role, fn, 'execute']))[0].ok;
+    for (const fn of ['public.admin_withdraw_contribution(uuid, text)', 'public.admin_set_video_text_changes(uuid, jsonb)']) {
+      expect(await can('anon', fn), `anon: ${fn}`).toBe(false);
+      expect(await can('authenticated', fn), `authenticated: ${fn}`).toBe(true);
+    }
+    for (const fn of ['public.video_text_valid(text, jsonb)', 'public.check_video_text()']) {
+      expect(await can('anon', fn), `anon: ${fn}`).toBe(false);
+      expect(await can('authenticated', fn), `authenticated: ${fn}`).toBe(false);
+    }
+    const nobody = '00000000-0000-4000-8000-000000000000';
+    await expect(t.q('anon', 'select public.admin_withdraw_contribution($1, $2)', [nobody, 'x'])).rejects.toThrow(/permission denied/);
+    await expect(t.q('anon', 'select public.admin_set_video_text_changes($1, $2)', [nobody, '[]'])).rejects.toThrow(/permission denied/);
   });
 });

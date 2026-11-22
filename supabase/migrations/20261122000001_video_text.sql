@@ -238,8 +238,8 @@ begin
   if not public.is_admin() then
     raise exception 'forbidden' using errcode = 'P0001';
   end if;
-  -- Its author reads the reason on their profile: there is always one.
-  if coalesce(btrim(note, E' \t\n\r\u000B\u000C\u00A0'), '') = '' then
+  -- Its author reads the reason on their profile: there is always one, blank as the admin's form trims it (js_trim).
+  if coalesce(public.js_trim(note), '') = '' then
     raise exception 'note_required' using errcode = 'P0001';
   end if;
   select * into c from public.contributions where id = cid for update;

@@ -834,6 +834,33 @@ describe('video_text corrections', () => {
     ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '　', '﻿'];
   const NOT_BLANK = ['​', '‌', '‍', '⁠', '᠎', '\u0085', '­', '.'];
 
+  it('the same blank everywhere, as JavaScript trims: a reason of ideographic spaces is none', async () => {
+    expect(JS_BLANK.every((ch) => ch.repeat(3).trim() === '')).toBe(true);
+    expect(NOT_BLANK.every((ch) => ch.repeat(3).trim() !== '')).toBe(true);
+    const admin = await t.createAdmin();
+    const u = await t.createUser();
+    const id = await vt(u);
+    await approve(admin, id);
+    for (const ch of JS_BLANK) {
+      await expect(withdraw(admin, id, ch.repeat(3)), `U+${ch.codePointAt(0)!.toString(16)}`).rejects.toThrow(/note_required/);
+    }
+    await expect(withdraw(admin, id, ' 　\t  ')).rejects.toThrow(/note_required/);
+    expect((await t.q('postgres', 'select status from public.contributions where id = $1', [id]))[0]).toEqual({ status: 'approved' });
+    for (const ch of NOT_BLANK) {
+      const other = await vt(u);
+      await approve(admin, other);
+      await withdraw(admin, other, ch.repeat(3));
+      expect((await t.q('postgres', 'select status, review_note from public.contributions where id = $1', [other]))[0])
+        .toEqual({ status: 'rejected', review_note: ch.repeat(3) });
+    }
+    // A transcript change's words and line are blank by the same rule.
+    const ok = async (texto: string) =>
+      (await t.q<{ ok: boolean }>('postgres', 'select public.video_text_valid($1, $2::jsonb) as ok', ['chubut',
+        JSON.stringify({ video: { id: 'abcdef12' }, cambios: [{ t: 1, antes: texto, texto }] })]))[0].ok;
+    for (const ch of JS_BLANK) expect(await ok(ch.repeat(3)), `U+${ch.codePointAt(0)!.toString(16)}`).toBe(false);
+    for (const ch of NOT_BLANK) expect(await ok(ch.repeat(3)), `U+${ch.codePointAt(0)!.toString(16)}`).toBe(true);
+  });
+
   it('every payload validate() builds passes video_text_valid: a real batch is never refused', async () => {
     let seed = 20261123;
     const rnd = () => ((seed = (seed * 1103515245 + 12345) & 0x7fffffff) / 0x7fffffff);

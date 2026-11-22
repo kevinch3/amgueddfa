@@ -571,7 +571,7 @@
       "aprobar_sel": "Aprobar seleccionadas"
     },
     "videos": {
-      "ayuda": "Correcciones de transcripción aprobadas, por video, de la más nueva a la más vieja. Retirar una la saca del reproductor en el acto; la próxima exportación la quita del archivo.",
+      "ayuda": "Correcciones de transcripción aprobadas, por video, de la más nueva a la más vieja. Retirar una que todavía no está en el archivo la saca del reproductor en el acto. Una que ya está en el archivo sigue ahí hasta la próxima exportación, y mientras tanto ese video se ve sin correcciones en vivo.",
       "vacia": "No hay correcciones de transcripción aprobadas.",
       "aprobada": "Aprobada el {fecha}",
       "retirar": "Retirar",
@@ -588,7 +588,8 @@
       "tras_exportar": "Ya está en el archivo: se verá después de la próxima exportación.",
       "pausa_exportar": "Una corrección retirada sigue en el archivo: hasta la próxima exportación, el reproductor muestra el archivo sin las correcciones nuevas.",
       "reanclada": "Cambio re-anclado.",
-      "sin_archivo": "No pudimos leer la transcripción publicada de este video."
+      "sin_archivo": "No pudimos leer la transcripción publicada de este video.",
+      "sin_filas": "No queda ninguna corrección aprobada de este video."
     }
   },
   "admin_item": {

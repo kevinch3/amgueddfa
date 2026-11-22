@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { loadApprovedVideoText, reanchor, setVideoTextChanges, withdrawContribution } from '../src/lib/admin';
 import {
-  canAddNew, groupByVideo, reanchorOptions, reanchoredCambios, sinAnclarList, withdrawnInFile, type ApprovedVideoText,
+  canAddNew, cardNotes, groupByVideo, reanchorOptions, reanchoredCambios, sinAnclarList, withdrawnInFile, type ApprovedVideoText,
 } from '../src/lib/admin-videos';
 import type { Cambio } from '../src/lib/video-corrections';
 import { asTranscript, type Transcript } from '../src/lib/video-transcript';
@@ -208,6 +208,22 @@ describe('withdrawnInFile', () => {
     expect(withdrawnInFile(file(), [ana, eli, dora])).toBe(false);
     expect(withdrawnInFile(file(), [eli, dora])).toBe(true);
     expect(withdrawnInFile(asTranscript({ src: 'youtube', lang: 'es', seg: [[1, 'a']] })!, [])).toBe(false);
+  });
+});
+
+describe('cardNotes', () => {
+  it('nothing before the file is read while corrections are left; then the pause note while the file holds a withdrawn one', () => {
+    expect(cardNotes(undefined, [ana, eli, dora])).toEqual([]);
+    expect(cardNotes(file(), [ana, eli, dora])).toEqual([]);
+    expect(cardNotes(file(), [eli, dora])).toEqual(['pausa_exportar']);
+    expect(cardNotes(null, [ana])).toEqual(['sin_archivo']);
+  });
+
+  it('a card whose last correction was withdrawn is never empty: it says so, and that the file still holds it until the export', () => {
+    expect(cardNotes(undefined, [])).toEqual(['sin_filas']);
+    expect(cardNotes(file(), [])).toEqual(['sin_filas', 'pausa_exportar']);
+    expect(cardNotes(asTranscript({ src: 'youtube', lang: 'es', seg: [[1, 'a']] })!, [])).toEqual(['sin_filas']);
+    expect(cardNotes(null, [])).toEqual(['sin_filas', 'sin_archivo']);
   });
 });
 

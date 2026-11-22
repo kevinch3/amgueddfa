@@ -571,7 +571,7 @@
       "aprobar_sel": "Approve selected"
     },
     "videos": {
-      "ayuda": "Approved transcript corrections, by video, newest first. Withdrawing one takes it out of the player at once; the next export removes it from the file.",
+      "ayuda": "Approved transcript corrections, by video, newest first. Withdrawing one that is not in the file yet takes it out of the player at once. One already in the file stays there until the next export, and until then that video shows no live corrections.",
       "vacia": "There are no approved transcript corrections.",
       "aprobada": "Approved on {fecha}",
       "retirar": "Withdraw",
@@ -588,7 +588,8 @@
       "tras_exportar": "Already in the file: it will show after the next export.",
       "pausa_exportar": "A withdrawn correction is still in the file: until the next export, the player shows the file without the new corrections.",
       "reanclada": "Change re-anchored.",
-      "sin_archivo": "We couldn't read this video's published transcript."
+      "sin_archivo": "We couldn't read this video's published transcript.",
+      "sin_filas": "No approved corrections are left on this video."
     }
   },
   "admin_item": {

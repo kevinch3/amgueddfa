@@ -39,8 +39,8 @@ import { currentProfile } from '../lib/auth';
 import type { Kind } from '../lib/contrib';
 import { keptCambios, videoCardRows, type VideoCardRow } from '../lib/admin-video-card';
 import {
-  canAddNew, groupByVideo, reanchorOptions, sinAnclarList, withdrawnInFile,
-  type ApprovedVideoText, type Eleccion, type SinAnclarItem, type VideoGroup,
+  canAddNew, cardNotes, groupByVideo, reanchorOptions, sinAnclarList,
+  type ApprovedVideoText, type CardNote, type Eleccion, type SinAnclarItem, type VideoGroup,
 } from '../lib/admin-videos';
 import { fecha, fechaHora, relativa } from '../lib/dates';
 import type { FestivalSlug } from '../lib/types';
@@ -529,17 +529,16 @@ function videoCard(g: VideoGroup): { li: HTMLLIElement; load: () => Promise<void
   return { li, load };
 }
 
-/** The unplaced changes of a video, in time order. Nothing until its file is read; a note when it cannot be. */
+const cardNoteText = (n: CardNote): string =>
+  n === 'sin_filas' ? t('admin.videos.sin_filas') : n === 'sin_archivo' ? t('admin.videos.sin_archivo') : t('admin.videos.pausa_exportar');
+
+/** The card's notes (no correction left; the file cannot be read; a withdrawn one still in the file), then the unplaced
+ * changes of a video, in time order, once its file is read. */
 function drawSinAnclar(ctx: VideoCtx, box: HTMLElement): void {
   box.replaceChildren();
   const file = ctx.file;
-  if (file === undefined || !ctx.g.rows.length) return;
-  if (file === null) {
-    box.append(el('p', { class: 'muted small' }, t('admin.videos.sin_archivo')));
-    return;
-  }
-  // A row the file holds was withdrawn: the player shows the file as it is, new corrections too wait for the export.
-  if (withdrawnInFile(file, ctx.g.rows)) box.append(el('p', { class: 'muted small', role: 'note' }, t('admin.videos.pausa_exportar')));
+  for (const n of cardNotes(file, ctx.g.rows)) box.append(el('p', { class: 'muted small', role: 'note' }, cardNoteText(n)));
+  if (!file || !ctx.g.rows.length) return;
   const { items, live } = sinAnclarList(file, ctx.g.rows);
   if (!items.length) return;
   const ol = el('ol', { class: 'admin-cambios' });

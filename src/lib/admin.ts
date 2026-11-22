@@ -322,7 +322,9 @@ export async function approveVideoText(c: Pending, kept: Cambio[], client: Supab
 }
 
 /** Withdraw an approved transcript correction (Videos tab): it becomes rejected with the reason, which its author sees
- * on their profile, and its points go back. The player stops applying it at once; the next export takes it out. */
+ * on their profile, and its points go back. One the file does not hold yet leaves the player at once. One the file
+ * already holds (its `correcciones`) stays in the file's text until the next export takes it out, and meanwhile the
+ * player shows that video's file as it is, with no live corrections (lib/live-video-corrections.ts, withdrawnInFile). */
 export async function withdrawContribution(id: string, note: string, client: SupabaseClient | null = getClient()): Promise<Result> {
   const reason = (note ?? '').trim();
   if (!reason) return { ok: false, key: 'admin.error.motivo' };

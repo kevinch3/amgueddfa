@@ -5,6 +5,7 @@ import { corregible, liveRows } from './live-video-corrections';
 
 // The player shows such a file as it is until the next export; the tab says so.
 export { withdrawnInFile } from './live-video-corrections';
+import { withdrawnInFile } from './live-video-corrections';
 import { applyCorrections, type Cambio, type CorrectionRow } from './video-corrections';
 import type { Transcript } from './video-transcript';
 
@@ -91,6 +92,21 @@ export function sinAnclarList(file: Transcript, approved: ApprovedVideoText[]): 
   }
   items.sort((a, b) => a.cambio.t - b.cambio.t);
   return { items, live: out.tr };
+}
+
+/** A note at the top of a video's card (an admin.videos key). */
+export type CardNote = 'sin_filas' | 'sin_archivo' | 'pausa_exportar';
+
+/** The notes at the top of a video's card, in order: `sin_filas` once no approved correction is left on it (so the card
+ * never stands empty after the last Retirar); then, once its file is read, `sin_archivo` when it cannot be, or
+ * `pausa_exportar` while the file still holds a withdrawn correction: its text stays in the file until the next export,
+ * and the player shows that file as it is (no live corrections) meanwhile. */
+export function cardNotes(file: Transcript | null | undefined, rows: { id: string }[]): CardNote[] {
+  const out: CardNote[] = [];
+  if (!rows.length) out.push('sin_filas');
+  if (file === null) out.push('sin_archivo');
+  else if (file && withdrawnInFile(file, rows)) out.push('pausa_exportar');
+  return out;
 }
 
 /** The lines a change near `t` may belong to: within a minute of it, nearest first, never a lyric line. */

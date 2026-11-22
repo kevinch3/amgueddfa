@@ -571,7 +571,7 @@
       "aprobar_sel": "Cymeradwyo'r rhai a ddewiswyd"
     },
     "videos": {
-      "ayuda": "Cywiriadau trawsgrifiad a gymeradwywyd, fesul fideo, y mwyaf newydd yn gyntaf. Mae tynnu un yn ôl yn ei dynnu o'r chwaraewr ar unwaith; mae'r allforio nesaf yn ei dynnu o'r ffeil.",
+      "ayuda": "Cywiriadau trawsgrifiad a gymeradwywyd, fesul fideo, y mwyaf newydd yn gyntaf. Mae tynnu'n ôl un nad yw yn y ffeil eto yn ei dynnu o'r chwaraewr ar unwaith. Mae un sydd eisoes yn y ffeil yn aros yno tan yr allforio nesaf, a than hynny nid yw'r fideo hwnnw'n dangos cywiriadau byw.",
       "vacia": "Does dim cywiriadau trawsgrifiad wedi'u cymeradwyo.",
       "aprobada": "Cymeradwywyd {fecha}",
       "retirar": "Tynnu'n ôl",
@@ -588,7 +588,8 @@
       "tras_exportar": "Mae eisoes yn y ffeil: bydd i'w weld ar ôl yr allforio nesaf.",
       "pausa_exportar": "Mae cywiriad a dynnwyd yn ôl yn dal yn y ffeil: tan yr allforio nesaf, mae'r chwaraewr yn dangos y ffeil heb y cywiriadau newydd.",
       "reanclada": "Newid wedi'i ail-angori.",
-      "sin_archivo": "Doedd dim modd darllen trawsgrifiad cyhoeddedig y fideo yma."
+      "sin_archivo": "Doedd dim modd darllen trawsgrifiad cyhoeddedig y fideo yma.",
+      "sin_filas": "Does dim cywiriad wedi'i gymeradwyo ar ôl ar y fideo hwn."
     }
   },
   "admin_item": {

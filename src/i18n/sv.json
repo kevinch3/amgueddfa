@@ -571,7 +571,7 @@
       "aprobar_sel": "Godkänn markerade"
     },
     "videos": {
-      "ayuda": "Godkända rättelser av transkriptioner, per video, nyast först. Att dra tillbaka en tar bort den ur spelaren direkt; nästa export tar bort den ur filen.",
+      "ayuda": "Godkända rättelser av transkriptioner, per video, nyast först. Att dra tillbaka en som ännu inte finns i filen tar bort den ur spelaren direkt. En som redan finns i filen ligger kvar där till nästa export, och fram till dess visar den videon inga rättelser i realtid.",
       "vacia": "Det finns inga godkända rättelser av transkriptioner.",
       "aprobada": "Godkänd {fecha}",
       "retirar": "Dra tillbaka",
@@ -588,7 +588,8 @@
       "tras_exportar": "Finns redan i filen: syns efter nästa export.",
       "pausa_exportar": "En tillbakadragen rättelse finns kvar i filen: fram till nästa export visar spelaren filen utan de nya rättelserna.",
       "reanclada": "Ändringen har förankrats om.",
-      "sin_archivo": "Vi kunde inte läsa den publicerade transkriptionen av den här videon."
+      "sin_archivo": "Vi kunde inte läsa den publicerade transkriptionen av den här videon.",
+      "sin_filas": "Inga godkända rättelser finns kvar för den här videon."
     }
   },
   "admin_item": {

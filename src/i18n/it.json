@@ -571,7 +571,7 @@
       "aprobar_sel": "Approva le selezionate"
     },
     "videos": {
-      "ayuda": "Correzioni di trascrizione approvate, per video, dalla più recente alla più vecchia. Ritirarne una la toglie subito dal lettore; la prossima esportazione la toglie dal file.",
+      "ayuda": "Correzioni di trascrizione approvate, per video, dalla più recente alla più vecchia. Ritirarne una che non è ancora nel file la toglie subito dal lettore. Una già nel file ci resta fino alla prossima esportazione; fino ad allora quel video si vede senza correzioni dal vivo.",
       "vacia": "Non ci sono correzioni di trascrizione approvate.",
       "aprobada": "Approvata il {fecha}",
       "retirar": "Ritira",
@@ -588,7 +588,8 @@
       "tras_exportar": "È già nel file: si vedrà dopo la prossima esportazione.",
       "pausa_exportar": "Una correzione ritirata è ancora nel file: fino alla prossima esportazione, il lettore mostra il file senza le nuove correzioni.",
       "reanclada": "Modifica ri-ancorata.",
-      "sin_archivo": "Non siamo riusciti a leggere la trascrizione pubblicata di questo video."
+      "sin_archivo": "Non siamo riusciti a leggere la trascrizione pubblicata di questo video.",
+      "sin_filas": "Non resta nessuna correzione approvata per questo video."
     }
   },
   "admin_item": {

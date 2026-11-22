@@ -8,7 +8,7 @@
  * corrections the file does not hold yet applied live (lib/live-video-corrections.ts).
  */
 import { formatList, t } from '../lib/i18n';
-import { lineCredit, liveTranscript, type LiveTranscript } from '../lib/live-video-corrections';
+import { lineCredit, loadTranscriptLive, type LiveTranscript } from '../lib/live-video-corrections';
 import { url } from '../lib/paths';
 import { creditos, findLines, fmtTime, letraAt, lineAt, lineLang, type Transcript } from '../lib/video-transcript';
 import { parseVideoHash, videoHash } from '../lib/video-hash';
@@ -99,7 +99,8 @@ if (dialog) {
     });
   }
 
-  function setActive(i: number): void {
+  /** Mark line i as the one playing; `scroll` false keeps the list where the visitor has it. */
+  function setActive(i: number, scroll = true): void {
     if (i === active) return;
     lines.querySelector('.actual')?.classList.remove('actual');
     lines.querySelector('[aria-current]')?.removeAttribute('aria-current');
@@ -109,7 +110,7 @@ if (dialog) {
     li.classList.add('actual');
     li.querySelector('button')?.setAttribute('aria-current', 'true');
     // Follow the video unless the visitor turned it off or is reading elsewhere (scrolled in the last 4 s).
-    if (follow.checked && Date.now() - userScrolledAt > 4000) {
+    if (scroll && follow.checked && Date.now() - userScrolledAt > 4000) {
       li.scrollIntoView({ block: 'nearest', behavior: reduceMotion ? 'auto' : 'smooth' });
     }
   }
@@ -175,6 +176,25 @@ if (dialog) {
       frag.append(li);
     });
     lines.append(frag);
+  }
+
+  /** The same video's transcript again, now with the approved corrections it did not hold: the visitor keeps their
+   *  place in the list, the line playing and their search. Only the footer when the lines did not change. */
+  function refreshTranscript(shown: LiveTranscript): void {
+    if (shown.tr === current) {
+      renderFooter(shown.tr, shown.nombres);
+      return;
+    }
+    const top = lines.scrollTop;
+    const playing = active >= 0 ? current?.seg[active]?.[0] : undefined;
+    const q = search.value;
+    renderTranscript(shown);
+    lines.scrollTop = top;
+    if (playing !== undefined) setActive(lineAt(shown.tr.seg, playing), false);
+    if (q) {
+      search.value = q;
+      markHits(false);
+    }
   }
 
   /** The footer under the lines: the Whisper warning, one credit line per lyric (title, author, rights, source), and
@@ -259,15 +279,23 @@ if (dialog) {
     const token = ++loadToken;
     renderTranscript(null);
     $('[data-rep-vacio]')!.textContent = t('reproductor.cargando');
-    // The published file (null for a 404; offline or none: the panel says so), then the approved corrections it does
-    // not hold yet, asked only when there is a file; without an answer the file shows as it is.
-    const shown = await liveTranscript(id, async (v) => {
-      const r = await fetch(url(`transcripciones-video/${v}.json`));
-      return r.ok ? r.json() : null;
-    });
-    if (token !== loadToken) return; // the visitor moved to another video meanwhile
-    $('[data-rep-vacio]')!.textContent = t('reproductor.sin_transcripcion');
-    renderTranscript(shown);
+    // The published file at once (null for a 404; offline or none: the panel says so); then, if the approved
+    // corrections it does not hold yet change it, the corrected text in place. Never waits for the database.
+    await loadTranscriptLive(
+      id,
+      async (v) => {
+        const r = await fetch(url(`transcripciones-video/${v}.json`));
+        return r.ok ? r.json() : null;
+      },
+      (shown, update) => {
+        if (update) refreshTranscript(shown!);
+        else {
+          $('[data-rep-vacio]')!.textContent = t('reproductor.sin_transcripcion');
+          renderTranscript(shown);
+        }
+      },
+      { stale: () => token !== loadToken }, // the visitor moved to another video meanwhile
+    );
   }
 
   async function show(i: number, start = 0): Promise<void> {
@@ -383,18 +411,20 @@ if (dialog) {
     player.playVideo();
   });
 
-  search.addEventListener('input', () => {
+  /** Highlight the lines that match the search, and (`scroll`) bring the first one into view. */
+  function markHits(scroll: boolean): void {
     if (!current) return;
     const hits = new Set(findLines(current.seg, search.value));
     for (const [i, li] of [...lines.children].entries()) li.classList.toggle('coincide', hits.has(i));
     const n = $('[data-rep-n]')!;
     n.textContent = search.value.trim() ? (hits.size ? t('reproductor.coincidencias', { n: hits.size }) : t('reproductor.sin_coincidencias')) : '';
     const first = Math.min(...hits);
-    if (Number.isFinite(first)) {
+    if (scroll && Number.isFinite(first)) {
       userScrolledAt = Date.now();
       (lines.children[first] as HTMLElement).scrollIntoView({ block: 'center' });
     }
-  });
+  }
+  search.addEventListener('input', () => markHits(true));
 
   $('[data-rep-anterior]')?.addEventListener('click', () => void show(index - 1));
   $('[data-rep-siguiente]')?.addEventListener('click', () => void show(index + 1));

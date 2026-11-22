@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import {
-  approvedCorrections, correctionCredits, lineCredit, liveTranscript, withLiveCorrections,
+  approvedCorrections, correctionCredits, lineCredit, loadTranscriptLive, withLiveCorrections, type LiveTranscript,
 } from '../src/lib/live-video-corrections';
 import type { CorrectionRow } from '../src/lib/video-corrections';
 import { asTranscript, type Transcript } from '../src/lib/video-transcript';
@@ -14,7 +14,8 @@ const file = (): Transcript => asTranscript({
   seg: [[30, '¡Bravo!'], [33, 'Muy bien'], [60, '¡Bravo!'], [61, '¡Muy bien!']],
   fuentes: [['whisper_es'], ['whisper_es'], ['whisper_es'], ['whisper_es', 'colab']],
   correcciones: ['r1'], exportado: '2026-11-22T15:00:00+00:00',
-  sin_anclar: [{ id: 'r9', t: 33, antes: 'Muy bein', motivo: 'sin_linea' }],
+  // r9's change at 33 and r7's add at 45 found no line at the export (an add's antes is null).
+  sin_anclar: [{ id: 'r9', t: 33, antes: 'Muy bien', motivo: 'sin_linea' }, { id: 'r7', t: 45, antes: null, motivo: 'sin_linea' }],
 })!;
 const ana = row('r1', '10:00', 'Ana', [{ t: 31, antes: '¡Bravo!', quitar: true }, { t: 61, antes: '¡Bravo!', texto: '¡Muy bien!' }]);
 
@@ -90,11 +91,25 @@ describe('withLiveCorrections', () => {
   });
 
   it('never applies a change the export could not place', () => {
-    // r9's change is in the file's sin_anclar; from the file it would now land on line 33.
+    // r9's change at 33 is in the file's sin_anclar; from the file it would now land on line 33. So is r7's add.
     const r9 = row('r9', '11:00', 'Dora', [{ t: 33, antes: 'Muy bien', texto: 'Muy bien dicho' }, { t: 60, antes: '¡Bravo!', texto: '¡Bravo, bravo!' }]);
-    const out = withLiveCorrections(file(), [ana, r9]);
+    const r7 = row('r7', '11:30', 'Fede', [{ t: 45, texto: 'Aplausos' }]);
+    const out = withLiveCorrections(file(), [ana, r9, r7]);
     expect(out.tr.seg).toEqual([[30, '¡Bravo!'], [33, 'Muy bien'], [60, '¡Bravo, bravo!'], [61, '¡Muy bien!']]);
     expect(out.autores).toEqual({ 2: ['Dora'] });
+  });
+
+  it('applies at once a change an admin re-anchored after the export (same row and time, new antes or none)', () => {
+    // Task 8's re-anchor keeps the row id and replaces its changes: r9's listed change (t 33, antes "Muy bien") became
+    // an add at the same time ("agregar como línea nueva en t"), or a change of another part of the line.
+    const asAdd = withLiveCorrections(file(), [ana, row('r9', '11:00', 'Dora', [{ t: 33, texto: 'Muy bien dicho' }])]);
+    expect(asAdd.tr.seg).toEqual([[30, '¡Bravo!'], [33, 'Muy bien'], [33, 'Muy bien dicho'], [60, '¡Bravo!'], [61, '¡Muy bien!']]);
+    expect(asAdd.autores).toEqual({ 2: ['Dora'] });
+    const asRun = withLiveCorrections(file(), [ana, row('r9', '11:00', 'Dora', [{ t: 33, antes: 'bien', texto: 'bien dicho' }])]);
+    expect(asRun.tr.seg[1]).toEqual([33, 'Muy bien dicho']);
+    // r7's add, listed with antes null, stays out while it is the same add.
+    const r7 = withLiveCorrections(file(), [ana, row('r7', '11:30', 'Fede', [{ t: 45, texto: 'Aplausos' }])]);
+    expect(r7.tr).toEqual(file());
   });
 
   it('returns the file itself when nothing new applies', () => {
@@ -112,31 +127,84 @@ describe('withLiveCorrections', () => {
   });
 });
 
-describe('liveTranscript (what the player renders)', () => {
+describe('loadTranscriptLive (what the player renders)', () => {
   const published = () => JSON.parse(JSON.stringify(file()));
+  type Call = [LiveTranscript | null, boolean];
+  const carla = row('r3', '16:00', 'Carla', [{ t: 33, antes: 'Muy bien', texto: 'Muy bien, gracias' }]);
 
-  it('renders the file unchanged when the corrections cannot be read (Review Focus 4)', async () => {
-    const out = await liveTranscript('VID', async () => published(), async () => ({ rows: [], offline: true }));
-    expect(out?.tr).toEqual(file());
-    expect(out?.autores).toEqual({});
-    expect(out?.nombres).toEqual([]);
+  it('renders the file at once, without waiting for the corrections', async () => {
+    const calls: Call[] = [];
+    let rendered!: () => void;
+    const first = new Promise<void>((r) => (rendered = r));
+    void loadTranscriptLive('VID', async () => published(), (shown, update) => {
+      calls.push([shown, update]);
+      rendered();
+    }, { approved: () => new Promise(() => {}) }); // the database never answers
+    await first;
+    expect(calls).toEqual([[{ tr: file(), autores: {}, nombres: [] }, false]]);
+  });
+
+  it('renders again when the corrections arrive and change the text', async () => {
+    const calls: Call[] = [];
+    let answer!: (a: { rows: CorrectionRow[]; offline: boolean }) => void;
+    const done = loadTranscriptLive('VID', async () => published(), (shown, update) => calls.push([shown, update]),
+      { approved: () => new Promise((r) => (answer = r)) });
+    await new Promise((r) => setTimeout(r, 0));
+    expect(calls).toHaveLength(1);
+    answer({ rows: [ana, carla], offline: false });
+    await done;
+    expect(calls).toHaveLength(2);
+    const [shown, update] = calls[1];
+    expect(update).toBe(true);
+    expect(shown?.tr.seg[1]).toEqual([33, 'Muy bien, gracias']);
+    expect(shown?.autores).toEqual({ 1: ['Carla'] });
+    expect(shown?.nombres).toEqual(['Ana', 'Carla']);
+  });
+
+  it('renders the file only once when the corrections cannot be read or there are none (Review Focus 4)', async () => {
+    for (const a of [{ rows: [], offline: true }, { rows: [], offline: false }]) {
+      const calls: Call[] = [];
+      await loadTranscriptLive('VID', async () => published(), (s, u) => calls.push([s, u]), { approved: async () => a });
+      expect(calls).toEqual([[{ tr: file(), autores: {}, nombres: [] }, false]]);
+    }
+  });
+
+  it('with only rows the file holds, keeps the lines and adds their credit', async () => {
+    const calls: Call[] = [];
+    await loadTranscriptLive('VID', async () => published(), (s, u) => calls.push([s, u]),
+      { approved: async () => ({ rows: [ana], offline: false }) });
+    expect(calls).toHaveLength(2);
+    expect(calls[1][0]?.tr).toBe(calls[0][0]?.tr);
+    expect(calls[1][0]?.nombres).toEqual(['Ana']);
   });
 
   it('has nothing for a video without a file, and then does not ask for corrections', async () => {
     let asked = 0;
     const approved = async () => (asked++, { rows: [ana], offline: false });
-    expect(await liveTranscript('VID', async () => null, approved)).toBeNull(); // 404
-    expect(await liveTranscript('VID', async () => ({ error: 'not a transcript' }), approved)).toBeNull();
-    expect(await liveTranscript('VID', () => Promise.reject(new TypeError('Failed to fetch')), approved)).toBeNull();
+    for (const f of [async () => null, async () => ({ error: 'not a transcript' }), () => Promise.reject(new TypeError('Failed to fetch'))]) {
+      const calls: Call[] = [];
+      await loadTranscriptLive('VID', f, (s, u) => calls.push([s, u]), { approved });
+      expect(calls).toEqual([[null, false]]);
+    }
     expect(asked).toBe(0);
   });
 
-  it('applies the approved corrections the file does not hold yet, and credits everyone behind the text', async () => {
-    const carla = row('r3', '16:00', 'Carla', [{ t: 33, antes: 'Muy bien', texto: 'Muy bien, gracias' }]);
-    const out = await liveTranscript('VID', async () => published(), async () => ({ rows: [ana, carla], offline: false }));
-    expect(out?.tr.seg[1]).toEqual([33, 'Muy bien, gracias']);
-    expect(out?.autores).toEqual({ 1: ['Carla'] });
-    expect(out?.nombres).toEqual(['Ana', 'Carla']);
+  it('drops a reply for a video the visitor already left', async () => {
+    const calls: Call[] = [];
+    let left = true;
+    await loadTranscriptLive('VID', async () => published(), (s, u) => calls.push([s, u]),
+      { approved: async () => ({ rows: [ana, carla], offline: false }), stale: () => left });
+    expect(calls).toEqual([]);
+    // Left while the corrections were on their way: the file stays, the corrections are dropped.
+    let answer!: (a: { rows: CorrectionRow[]; offline: boolean }) => void;
+    left = false;
+    const done = loadTranscriptLive('VID', async () => published(), (s, u) => calls.push([s, u]),
+      { approved: () => new Promise((r) => (answer = r)), stale: () => left });
+    await new Promise((r) => setTimeout(r, 0));
+    left = true;
+    answer({ rows: [ana, carla], offline: false });
+    await done;
+    expect(calls).toHaveLength(1);
   });
 });
 

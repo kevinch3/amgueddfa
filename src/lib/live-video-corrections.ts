@@ -49,17 +49,20 @@ export function approvedCorrections(videoId: string, client: SupabaseClient | nu
   return asked;
 }
 
+/** A change as the file's `sin_anclar` names it: its row, its time and its `antes` (none for an add). */
+const changeKey = (id: string, t: unknown, antes: unknown) => `${id}\u0000${t}\u0000${typeof antes === 'string' ? `=${antes}` : '+'}`;
+
 /** The file with the approved corrections it does not hold yet, and the names behind each line they changed. A row in
  * the file's `correcciones` is not applied again (it leaves its traces, so a later duplicate is reported, not landed on a
- * twin line); a change in its `sin_anclar` is never applied: the export found no line for it. The file itself when
- * nothing new applies. */
+ * twin line); a change in its `sin_anclar` (same row, time and antes) is never applied: the export found no line for it.
+ * A change an admin re-anchored since (new time or antes) applies at once. The file itself when nothing new applies. */
 export function withLiveCorrections(tr: Transcript, rows: CorrectionRow[]): { tr: Transcript; autores: Record<number, string[]> } {
   const baked = new Set(tr.correcciones ?? []);
-  const unplaced = new Set((tr.sin_anclar ?? []).map((u) => `${u.id}\u0000${u.t}`));
+  const unplaced = new Set((tr.sin_anclar ?? []).map((u) => changeKey(u.id, u.t, u.antes)));
   let nuevos = false;
   const live = rows.map((r) => {
     if (baked.has(r.id)) return r;
-    const cambios = (Array.isArray(r.payload?.cambios) ? r.payload.cambios : []).filter((c) => !unplaced.has(`${r.id}\u0000${c?.t}`));
+    const cambios = (Array.isArray(r.payload?.cambios) ? r.payload.cambios : []).filter((c) => !unplaced.has(changeKey(r.id, c?.t, c?.antes)));
     nuevos ||= cambios.length > 0;
     return { ...r, payload: { ...r.payload, cambios } };
   });
@@ -91,22 +94,30 @@ export function lineCredit(fuentes: string[] | undefined, nombres: string[] | un
   return { colab: fu.includes('colab') || nombres !== undefined, title: parts.join(' + ') };
 }
 
-/** The transcript of video `id` as the player renders it, or null when it has none. `file` gives the published file's
- * JSON (null for a 404); the corrections are asked for only when there is a file, and without an answer the file shows
- * as it is. */
-export async function liveTranscript(
+/** Loads the transcript of video `id` into the player without ever making it wait for the database: `render` gets the
+ * published file at once (null when the video has none: a 404, a broken file, offline), and later, only when the
+ * approved corrections change what shows (the lines, or the credit), the corrected version with `update` true. The
+ * corrections are asked for only when there is a file; offline or none, nothing more happens. When `stale()` says the
+ * visitor moved to another video meanwhile, a reply is dropped. */
+export async function loadTranscriptLive(
   id: string,
   file: (id: string) => Promise<unknown>,
-  approved: (id: string) => Promise<Approved> = approvedCorrections,
-): Promise<LiveTranscript | null> {
+  render: (shown: LiveTranscript | null, update: boolean) => void,
+  opts: { approved?: (id: string) => Promise<Approved>; stale?: () => boolean } = {},
+): Promise<void> {
+  const stale = opts.stale ?? (() => false);
   let tr: Transcript | null = null;
   try {
     tr = asTranscript(await file(id));
   } catch {
     /* offline, or not a file: the panel says there is none */
   }
-  if (!tr) return null;
-  const { rows } = await approved(id);
+  if (stale()) return;
+  render(tr && { tr, autores: {}, nombres: [] }, false);
+  if (!tr) return;
+  const { rows, offline } = await (opts.approved ?? approvedCorrections)(id);
+  if (stale() || offline || !rows.length) return;
   const live = withLiveCorrections(tr, rows);
-  return { ...live, nombres: correctionCredits(tr, rows, live.autores) };
+  const nombres = correctionCredits(tr, rows, live.autores);
+  if (live.tr !== tr || nombres.length) render({ ...live, nombres }, true);
 }

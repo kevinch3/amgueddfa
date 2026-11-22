@@ -112,8 +112,8 @@ describe('catalog', () => {
   });
 
   it('serves catalog media from the bucket domain, or from the site when the base is empty', () => {
-    expect(MEDIA_BASE).toBe('https://amgueddfa-media.kevinroberts.ar');
-    expect(siteMedia('x/thumb.webp', undefined)).toBe('https://amgueddfa-media.kevinroberts.ar/media/x/thumb.webp');
+    expect(MEDIA_BASE).toBe('https://media.amgueddfa.org');
+    expect(siteMedia('x/thumb.webp', undefined)).toBe('https://media.amgueddfa.org/media/x/thumb.webp');
     expect(siteMedia('/x/p01.webp', 'https://cdn.example/')).toBe('https://cdn.example/media/x/p01.webp');
     expect(siteMedia('x/p01.webp', '')).toBe('/media/x/p01.webp');
   });

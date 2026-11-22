@@ -2,7 +2,7 @@
 """Scan the archive, write derivatives and src/data/catalog.json, upload public derivatives.
 
 Public derivatives go to media/ (git-ignored) and are mirrored to the R2 bucket
-served at amgueddfa-media.kevinroberts.ar (src/lib/paths.ts MEDIA_BASE) with
+served at media.amgueddfa.org (src/lib/paths.ts MEDIA_BASE) with
 rclone; restricted ones stay in .restricted/ and never leave this machine.
 """
 import argparse

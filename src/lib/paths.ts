@@ -48,7 +48,7 @@ export function alternates(pathname: string): { locale: Locale; href: string }[]
  * this domain (they no longer ship with the site, which is capped at 100 MB).
  * PUBLIC_MEDIA_BASE overrides it; set it to "" to serve /media/ from the site.
  */
-export const MEDIA_BASE = 'https://amgueddfa-media.kevinroberts.ar';
+export const MEDIA_BASE = 'https://media.amgueddfa.org';
 
 /** Public URL of a catalog derivative ("<id>/thumb.webp"). */
 export function siteMedia(path: string, base: string | undefined = import.meta.env.PUBLIC_MEDIA_BASE): string {

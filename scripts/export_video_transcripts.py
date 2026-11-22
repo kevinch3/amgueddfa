@@ -21,9 +21,11 @@ import json
 import re
 import sys
 import unicodedata
+from datetime import datetime, timezone
 from pathlib import Path
 
 from scripts.align_lyrics import LETRAS, apply as apply_lyrics, credit, spans_for
+from scripts.video_corrections import apply_corrections
 
 REPO = Path(__file__).resolve().parent.parent
 OUT = REPO / "public" / "transcripciones-video"
@@ -261,6 +263,7 @@ def glob_escape(name: str) -> str:
 
 
 RECON = REPO / "data" / "reconstruccion"
+APPROVED = REPO / "data" / "approved" / "contributions.json"
 
 
 # Joining caption fragments into sentences (issue #97). YouTube's captions come in 2-5 s chunks with no
@@ -409,13 +412,17 @@ def main_language(t: dict) -> str:
     return max(size, key=size.get) if any(size.values()) else t.get("lang", "es")
 
 
-def with_line_languages(t: dict) -> dict:
+def with_line_languages(t: dict, explicit: dict[int, str] | None = None) -> dict:
     """The transcript with `idiomas` (one per line) when the player's rule (a Welsh-model line is Welsh,
-    any other the transcript's language) would label some line wrongly; without it otherwise."""
+    any other the transcript's language) would label some line wrongly; without it otherwise.
+    `explicit` (line index -> language) are languages a collaborator's correction set: they win over the
+    recomputed ones."""
     langs = line_languages(t)
     t = {k: v for k, v in t.items() if k != "idiomas"}
     if langs is None:
         return t
+    for i, l in (explicit or {}).items():
+        langs[i] = l
     default = ["cy" if "cy" in f else t["lang"] for f in t["fuentes"]]
     lyric = ["letra" in f for f in t["fuentes"]]
     if any(l != d and not y for l, d, y in zip(langs, default, lyric)):
@@ -423,7 +430,40 @@ def with_line_languages(t: dict) -> dict:
     return t
 
 
-def export(backup: Path, videos: list[dict], out: Path = OUT, words: set[str] | None = None, recon: Path = RECON, letras: Path = LETRAS) -> dict:
+def approved_corrections(approved: Path) -> dict[str, list[dict]]:
+    """The approved video_text contributions by video id; no file, no corrections."""
+    if not approved.exists():
+        return {}
+    by_video: dict[str, list[dict]] = {}
+    for row in json.loads(approved.read_text(encoding="utf-8")):
+        if row.get("type") != "video_text":
+            continue
+        payload = row.get("payload")
+        video = payload.get("video") if isinstance(payload, dict) else None
+        vid = video.get("id") if isinstance(video, dict) else None
+        if isinstance(vid, str):
+            by_video.setdefault(vid, []).append(row)
+    return by_video
+
+
+def write_if_changed(p: Path, t: dict) -> None:
+    """Writes t with a fresh `exportado` only when the file's content, apart from its `exportado`, differs."""
+    body = json.dumps(t, ensure_ascii=False, separators=(",", ":"))
+    if p.exists():
+        try:
+            old = {k: v for k, v in json.loads(p.read_text(encoding="utf-8")).items() if k != "exportado"}
+            if json.dumps(old, ensure_ascii=False, separators=(",", ":")) == body:
+                return
+        except ValueError:
+            pass
+    stamp = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    p.write_text(json.dumps({**t, "exportado": stamp}, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+
+
+def export(backup: Path, videos: list[dict], out: Path = OUT, words: set[str] | None = None, recon: Path = RECON, letras: Path = LETRAS,
+           approved: Path = APPROVED) -> dict:
+    corrections = approved_corrections(approved)
+    sin_anclar_total = 0
     wanted = {v["id"] for v in videos if v["festival"] in FESTIVALS}
     with (backup / "INDEX.tsv").open(newline="", encoding="utf-8") as f:
         files = {r["id"]: r["file"] for r in csv.DictReader(f, delimiter="\t") if r.get("file")}
@@ -444,12 +484,28 @@ def export(backup: Path, videos: list[dict], out: Path = OUT, words: set[str] | 
                 continue  # only English was heard: the video has no text
             t = join_fragments(t, [(sp["desde"], sp["hasta"]) for sp in spans_for(vid, letras)])
             t = with_term_fixes(t)
+            explicit: dict[int, str] = {}
+            rows = corrections.get(vid)
+            if rows:
+                t = {k: v for k, v in t.items() if k != "idiomas"}
+                t, ids, unplaced = apply_corrections(t, rows)
+                if ids:
+                    t["correcciones"] = ids
+                if unplaced:
+                    t["sin_anclar"] = [{"id": u["id"], "t": u["cambio"].get("t") if isinstance(u["cambio"], dict) else None,
+                                        "antes": u["cambio"].get("antes") if isinstance(u["cambio"], dict) else None,
+                                        "motivo": u["motivo"]} for u in unplaced]
+                    for u in t["sin_anclar"]:
+                        print(f"sin anclar {vid} {u['t']} «{u['antes']}» (contribución {u['id']})")
+                    sin_anclar_total += len(unplaced)
+                if isinstance(t.get("idiomas"), list) and len(t["idiomas"]) == len(t["seg"]):
+                    # apply_corrections fills uncorrected lines with the default rule; what differs was set by a correction
+                    default = ["cy" if "cy" in f else t["lang"] for f in t["fuentes"]]
+                    explicit = {i: l for i, (l, d) in enumerate(zip(t["idiomas"], default)) if l != d}
             t["lang"] = main_language(t)
-            t = with_line_languages(t)
-            body = json.dumps(t, ensure_ascii=False, separators=(",", ":"))
+            t = with_line_languages(t, explicit)
             p = out / f"{vid}.json"
-            if not p.exists() or p.read_text(encoding="utf-8") != body:
-                p.write_text(body, encoding="utf-8")
+            write_if_changed(p, t)
             written.add(vid)
             counts["reconstruida"] = counts.get("reconstruida", 0) + 1
             continue
@@ -471,7 +527,7 @@ def export(backup: Path, videos: list[dict], out: Path = OUT, words: set[str] | 
         if p.stem not in written:
             p.unlink()
             removed += 1
-    return {"written": len(written), "removed": removed, **counts}
+    return {"written": len(written), "removed": removed, "sin_anclar": sin_anclar_total, **counts}
 
 
 if __name__ == "__main__":

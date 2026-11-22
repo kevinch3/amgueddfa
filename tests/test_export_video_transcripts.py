@@ -1,4 +1,6 @@
 import json
+import os
+import time
 
 import pytest
 
@@ -521,3 +523,37 @@ def test_export_keeps_a_correction_language_equal_to_the_default(tmp_path):
     export(b, vids, out, recon=recon, approved=approved)
     a = _read(out, "A")
     assert a["seg"][1][1].startswith("Diolch") and a["idiomas"] == ["es", "es"]
+
+
+STALE = "merge main before exporting video corrections"
+
+
+def _age(p, hours):
+    t = time.time() - hours * 3600
+    os.utime(p, (t, t))
+
+
+def test_export_warns_when_the_approved_data_is_over_a_day_old(tmp_path, capsys):
+    # A worktree with an old data/approved/ would bake corrections an admin withdrew since back into the files.
+    rows = [_row("r1", [{"t": 30, "antes": "Gracias por venir esta noche a todos ustedes.", "texto": "Gracias por venir."}])]
+    b, vids, recon, approved = _corrections_setup(tmp_path, rows)
+    stamp = approved.parent / "stamp.json"
+    stamp.write_text("{}", encoding="utf-8")
+    _age(stamp, 50)
+    export(b, vids, tmp_path / "out", recon=recon, approved=approved)
+    assert f"data/approved is 50 h old: {STALE}" in capsys.readouterr().out
+    _age(stamp, 3)  # merged main: fresh
+    export(b, vids, tmp_path / "out", recon=recon, approved=approved)
+    assert STALE not in capsys.readouterr().out
+
+
+def test_export_reads_the_contributions_file_age_when_there_is_no_stamp(tmp_path, capsys):
+    rows = [_row("r1", [{"t": 30, "antes": "Gracias por venir esta noche a todos ustedes.", "texto": "Gracias por venir."}])]
+    b, vids, recon, approved = _corrections_setup(tmp_path, rows)
+    export(b, vids, tmp_path / "out", recon=recon, approved=approved)
+    assert STALE not in capsys.readouterr().out
+    _age(approved, 30)
+    export(b, vids, tmp_path / "out", recon=recon, approved=approved)
+    assert f"data/approved is 30 h old: {STALE}" in capsys.readouterr().out
+    export(b, vids, tmp_path / "out", recon=recon, approved=tmp_path / "missing.json")  # no data at all: nothing to say
+    assert STALE not in capsys.readouterr().out

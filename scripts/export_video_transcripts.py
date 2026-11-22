@@ -20,6 +20,7 @@ import csv
 import json
 import re
 import sys
+import time
 import unicodedata
 from datetime import datetime, timezone
 from pathlib import Path
@@ -446,6 +447,23 @@ def approved_corrections(approved: Path) -> dict[str, list[dict]]:
     return by_video
 
 
+STALE_HOURS = 24  # data/approved older than this was not merged from main lately
+
+
+def stale_approved(approved: Path, now: float | None = None) -> str | None:
+    """A warning when the approved data the export bakes is over a day old in this checkout: data/approved/stamp.json's
+    age (the export workflow rewrites it with every change it commits to main), else the contributions file's. A
+    worktree that has not merged main lately would put corrections an admin withdrew since back into the files."""
+    stamp = approved.parent / "stamp.json"
+    src = stamp if stamp.exists() else approved
+    if not src.exists():
+        return None
+    hours = ((time.time() if now is None else now) - src.stat().st_mtime) / 3600
+    if hours <= STALE_HOURS:
+        return None
+    return f"warning: data/approved is {int(hours)} h old: merge main before exporting video corrections"
+
+
 def write_if_changed(p: Path, t: dict) -> None:
     """Writes t with a fresh `exportado` only when the file's content, apart from its `exportado`, differs."""
     body = json.dumps(t, ensure_ascii=False, separators=(",", ":"))
@@ -462,6 +480,9 @@ def write_if_changed(p: Path, t: dict) -> None:
 
 def export(backup: Path, videos: list[dict], out: Path = OUT, words: set[str] | None = None, recon: Path = RECON, letras: Path = LETRAS,
            approved: Path = APPROVED) -> dict:
+    warning = stale_approved(approved)
+    if warning:
+        print(warning)
     corrections = approved_corrections(approved)
     sin_anclar_total = 0
     wanted = {v["id"] for v in videos if v["festival"] in FESTIVALS}

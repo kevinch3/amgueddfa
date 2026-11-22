@@ -85,7 +85,7 @@ npm run build && npm test && python3 -m pytest -q tests
 | New Spanish-pass files imported (`import-es`) | those videos |
 | `prompt.md` or `schema.json` edited | everything (bump `PROMPT_VERSION` in `windows.py`) |
 | New video harvested | that video |
-| After any rebuild or export | open `/admin/` → Videos and look for approved corrections that lost their line (`sin anclar`): re-anchor or reject them |
+| Before an export, and after any rebuild or export | before: merge main first (the export bakes `data/approved/contributions.json`, and an old copy puts corrections withdrawn since back into the files; it warns when `data/approved` is over 24 h old); after: open `/admin/` → Videos and look for approved corrections that lost their line (`sin anclar`): re-anchor or reject them |
 
 Only windows whose inputs changed are asked again, because each window carries a hash of its inputs.
 

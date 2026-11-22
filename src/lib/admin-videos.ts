@@ -140,6 +140,9 @@ export type Aviso = 'reemplaza' | 'quita' | 'idioma' | 'larga';
 export type Vista = { antes: string; despues: string; diff: DiffPart[]; avisos: Aviso[]; idioma?: 'es' | 'cy' };
 
 const len = (s: string) => [...s].length;
+/** A change past what the database takes: a texto of more than 500 characters, an antes of more than 2,000. */
+const demasiadoLargo = (c: Cambio): boolean =>
+  (typeof c.texto === 'string' && len(c.texto) > VALUE_MAX) || (typeof c.antes === 'string' && len(c.antes) > ANTES_MAX);
 
 /** Change `c` put on the picked line, and what that line becomes. When the line holds the change's `antes` as a run of
  * whole words but is not that line alone (a rebuild joined fragments), the change becomes a WHOLE-LINE edit that keeps
@@ -172,18 +175,24 @@ function reanclar(cambios: Cambio[], item: { index: number; motivo: Motivo }, pi
   if (!isCambio(c)) return null;
   const vista = (antes: string, despues: string, avisos: Aviso[], idioma?: 'es' | 'cy'): Vista =>
     ({ antes, despues, diff: wordDiff(antes, despues), avisos, ...(idioma ? { idioma } : {}) });
+  // The database takes a texto of at most 500 characters and an antes of at most 2,000: no change past them is sent,
+  // whichever way it is re-anchored.
+  const larga = (antes: string, despues: string) => ({ cambios: [], vista: vista(antes, despues, ['larga']) });
   if (item.motivo === 'idioma_en_linea_unida') {
     if (pick === 'nueva' || !c.idioma) return null;
     const { idioma, ...words } = c;
     const keep = typeof words.texto === 'string' && words.texto.trim() !== '' ? [words] : [];
+    const linea: Cambio = { t: pick.t, antes: pick.text, idioma };
+    if ([...keep, linea].some(demasiadoLargo)) return larga(pick.text, pick.text);
     return {
-      cambios: [...cambios.slice(0, item.index), ...keep, ...cambios.slice(item.index + 1), { t: pick.t, antes: pick.text, idioma }],
+      cambios: [...cambios.slice(0, item.index), ...keep, ...cambios.slice(item.index + 1), linea],
       vista: vista(pick.text, pick.text, ['idioma'], idioma),
     };
   }
   if (pick === 'nueva') {
     if (!canAddNew(c, item.motivo)) return null;
     const { antes: _antes, quitar: _quitar, ...nueva } = c;
+    if (demasiadoLargo(nueva)) return larga('', nueva.texto ?? '');
     return { cambios: cambios.map((x, i) => (i === item.index ? nueva : x)), vista: vista('', nueva.texto ?? '', [], nueva.idioma) };
   }
   const { cambio, despues, parte } = enLinea(c, pick);
@@ -191,10 +200,7 @@ function reanclar(cambios: Cambio[], item: { index: number; motivo: Motivo }, pi
   if (cambio.quitar === true) avisos.push('quita');
   else if (!parte && typeof cambio.texto === 'string') avisos.push('reemplaza');
   if (cambio.idioma && cambio.quitar !== true) avisos.push('idioma');
-  // The database takes a texto of at most 500 characters and an antes of at most 2,000: no change past them is sent.
-  if ((typeof cambio.texto === 'string' && len(cambio.texto) > VALUE_MAX) || len(pick.text) > ANTES_MAX) {
-    return { cambios: [], vista: vista(pick.text, despues, ['larga']) };
-  }
+  if (demasiadoLargo(cambio)) return larga(pick.text, despues);
   return { cambios: cambios.map((x, i) => (i === item.index ? cambio : x)), vista: vista(pick.text, despues, avisos, cambio.idioma) };
 }
 

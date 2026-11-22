@@ -279,6 +279,22 @@ describe('Re-anclar onto a line a rebuild joined', () => {
     expect(reanchorPreview([{ t: 5, antes: 'coloros galices', texto: 'colonos galeses' }], { index: 0, motivo: 'sin_linea' }, long)?.avisos)
       .toEqual(['larga']);
   });
+
+  it('a language that fell inside a joined line is held to the same lengths (a line of at most 2,000, words of at most 500)', () => {
+    const item = { index: 0, motivo: 'idioma_en_linea_unida' as const };
+    const huge = { t: 90, text: `${'palabra '.repeat(250)}croeso i bawb`, idioma: 'es' as const }; // 2,013 characters
+    expect(reanchoredCambios(eli.payload.cambios, item, huge)).toBeNull();
+    expect(reanchorPreview(eli.payload.cambios, item, huge)?.avisos).toEqual(['larga']);
+    // The words it keeps are checked too (a row validation never built).
+    const wordy: Cambio[] = [{ t: 93, antes: 'croeso i bob', texto: 'Z'.repeat(501), idioma: 'cy' }];
+    const joined = { t: 90, text: 'Bienvenidos a todos, croeso i bawb', idioma: 'es' as const };
+    expect(reanchoredCambios(wordy, item, joined)).toBeNull();
+    expect(reanchorPreview(wordy, item, joined)?.avisos).toEqual(['larga']);
+    expect(reanchoredCambios(eli.payload.cambios, item, joined)).not.toBeNull();
+    // So is a new line's.
+    expect(reanchoredCambios([{ t: 5, antes: 'x', texto: 'Z'.repeat(501) }], { index: 0, motivo: 'sin_linea' }, 'nueva')).toBeNull();
+    expect(reanchorPreview([{ t: 5, antes: 'x', texto: 'Z'.repeat(501) }], { index: 0, motivo: 'sin_linea' }, 'nueva')?.avisos).toEqual(['larga']);
+  });
 });
 
 describe('reanchorPreview', () => {

@@ -419,7 +419,10 @@
       "objetivo": "'Dan ni ddim yn gwybod am beth mae'r adroddiad yma. Agorwch y ffurflen eto o'r fideo neu'r ddogfen.",
       "problema": "Dewiswch beth sy o'i le.",
       "texto_informe": "Sgwennwch rhwng 10 a 1000 nod.",
-      "arreglo": "Dywedwch wrthon ni i ba eisteddfod, blwyddyn neu adran mae'n perthyn (yn wahanol i ble mae hi rŵan)."
+      "arreglo": "Dywedwch wrthon ni i ba eisteddfod, blwyddyn neu adran mae'n perthyn (yn wahanol i ble mae hi rŵan).",
+      "video_cambios": "Rhaid i gywiriad gynnwys rhwng 1 a 200 o newidiadau.",
+      "video_texto": "Rhaid i bob llinell wedi'i chywiro fod rhwng 1 a 500 nod.",
+      "video_id": "Nid yw'r fideo'n cael ei adnabod. Agorwch ef eto o'i dudalen a rhowch gynnig arall arni."
     },
     "caracteres_transcripcion": "Rhwng 10 a 15000 nod.",
     "licencia": "Mae'r trawsgrifiadau a'r ffeithiau rydych chi'n eu cyfrannu'n cael eu cyhoeddi dan drwydded CC BY-SA 4.0.",
@@ -467,7 +470,8 @@
       "transcription": "Trawsgrifiad",
       "memory": "Atgof",
       "report": "Gwall wedi'i adrodd",
-      "note": "Gwybodaeth"
+      "note": "Gwybodaeth",
+      "video_text": "Cywiriad trawsgrifiad"
     },
     "vacia": "Does dim cyfraniadau'n aros.",
     "de": "Gan {nombre}",
@@ -662,7 +666,8 @@
       "transcription": "Trawsgrifiad",
       "memory": "Atgof",
       "report": "Gwall wedi'i adrodd",
-      "note": "Gwybodaeth"
+      "note": "Gwybodaeth",
+      "video_text": "Cywiriad trawsgrifiad"
     },
     "desde": "Gwlad: {pais}",
     "ajustes": {
@@ -723,7 +728,8 @@
       "transcription": "trawsgrifiodd ddogfen",
       "memory": "rhannodd atgof",
       "report": "adroddodd wall",
-      "note": "ychwanegodd wybodaeth at ddogfen"
+      "note": "ychwanegodd wybodaeth at ddogfen",
+      "video_text": "cywirodd drawsgrifiad fideo"
     },
     "ver_ranking": "Gweld y tabl cyfranwyr",
     "del": "o"

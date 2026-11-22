@@ -23,7 +23,7 @@ import { t } from '../lib/i18n';
 
   type Row = {
     id: string; type: Kind; festival: string | null; year: number | null; item_id: string | null;
-    status: Status; points_awarded?: number; created_at: string; reviewed_at: string | null; review_note?: string | null;
+    status: Status; payload?: Record<string, unknown>; points_awarded?: number; created_at: string; reviewed_at: string | null; review_note?: string | null;
   };
   type BadgeRow = { badge: string; awarded_at: string };
 
@@ -178,7 +178,7 @@ import { t } from '../lib/i18n';
       own
         ? liveQuery<Row[]>(
             (c) => c.from('contributions')
-              .select('id, type, festival, year, item_id, status, points_awarded, created_at, reviewed_at, review_note')
+              .select('id, type, festival, year, item_id, status, payload, points_awarded, created_at, reviewed_at, review_note')
               .eq('user_id', me!.id)
               .order('created_at', { ascending: false })
               .limit(500),

@@ -419,7 +419,10 @@
       "objetivo": "我们不清楚这份报告针对的是什么。请从视频或文献页面重新打开表单。",
       "problema": "请选择哪里有问题。",
       "texto_informe": "请写 10 到 1000 个字符。",
-      "arreglo": "请告诉我们它应属于哪个艺术节、年份或栏目（须与现在的位置不同）。"
+      "arreglo": "请告诉我们它应属于哪个艺术节、年份或栏目（须与现在的位置不同）。",
+      "video_cambios": "一次更正必须包含 1 到 200 处修改。",
+      "video_texto": "每一行更正后的文字必须为 1 到 500 个字符。",
+      "video_id": "无法识别该视频。请从视频页面重新打开后再试。"
     },
     "caracteres_transcripcion": "10 到 15000 个字符。",
     "licencia": "您贡献的转录和资料以 CC BY-SA 4.0 许可协议发布。",
@@ -467,7 +470,8 @@
       "transcription": "转录",
       "memory": "回忆",
       "report": "错误报告",
-      "note": "补充信息"
+      "note": "补充信息",
+      "video_text": "转录更正"
     },
     "vacia": "没有待审核的贡献。",
     "de": "来自 {nombre}",
@@ -662,7 +666,8 @@
       "transcription": "转录",
       "memory": "回忆",
       "report": "错误报告",
-      "note": "补充信息"
+      "note": "补充信息",
+      "video_text": "转录更正"
     },
     "desde": "来自{pais}",
     "ajustes": {
@@ -723,7 +728,8 @@
       "transcription": "转录了一份文献",
       "memory": "分享了一段回忆",
       "report": "报告了一处错误",
-      "note": "为一份文献补充了信息"
+      "note": "为一份文献补充了信息",
+      "video_text": "更正了一段视频的转录"
     },
     "ver_ranking": "查看排行榜",
     "del": "·"

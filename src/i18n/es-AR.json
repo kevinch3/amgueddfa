@@ -419,7 +419,10 @@
       "objetivo": "No sabemos de qué es este aviso. Volvé a abrir el formulario desde el video o el documento.",
       "problema": "Elegí qué está mal.",
       "texto_informe": "Escribí entre 10 y 1000 caracteres.",
-      "arreglo": "Decinos a qué eisteddfod, año o sección corresponde (distinto de donde está ahora)."
+      "arreglo": "Decinos a qué eisteddfod, año o sección corresponde (distinto de donde está ahora).",
+      "video_cambios": "Una corrección tiene que tener entre 1 y 200 cambios.",
+      "video_texto": "Cada línea corregida tiene que tener entre 1 y 500 caracteres.",
+      "video_id": "No se reconoce el video. Abrilo de nuevo desde su página y volvé a intentar."
     },
     "caracteres_transcripcion": "Entre 10 y 15000 caracteres.",
     "licencia": "Las transcripciones y los datos que aportás se publican bajo la licencia CC BY-SA 4.0.",
@@ -467,7 +470,8 @@
       "transcription": "Transcripción",
       "memory": "Recuerdo",
       "report": "Error informado",
-      "note": "Información"
+      "note": "Información",
+      "video_text": "Corrección de transcripción"
     },
     "vacia": "No hay aportes pendientes.",
     "de": "De {nombre}",
@@ -662,7 +666,8 @@
       "transcription": "Transcripción",
       "memory": "Recuerdo",
       "report": "Error informado",
-      "note": "Información"
+      "note": "Información",
+      "video_text": "Corrección de transcripción"
     },
     "desde": "Desde {pais}",
     "ajustes": {
@@ -723,7 +728,8 @@
       "transcription": "transcribió un documento",
       "memory": "contó un recuerdo",
       "report": "informó un error",
-      "note": "agregó información a un documento"
+      "note": "agregó información a un documento",
+      "video_text": "corrigió la transcripción de un video"
     },
     "ver_ranking": "Ver el ranking",
     "del": "del"

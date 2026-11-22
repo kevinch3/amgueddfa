@@ -419,7 +419,10 @@
       "objetivo": "Non sappiamo a cosa si riferisca questa segnalazione. Riapri il modulo dal video o dal documento.",
       "problema": "Scegli che cosa non va.",
       "texto_informe": "Scrivi tra 10 e 1000 caratteri.",
-      "arreglo": "Dicci a quale Eisteddfod, anno o sezione appartiene (diverso da dove si trova adesso)."
+      "arreglo": "Dicci a quale Eisteddfod, anno o sezione appartiene (diverso da dove si trova adesso).",
+      "video_cambios": "Una correzione deve contenere da 1 a 200 modifiche.",
+      "video_texto": "Ogni riga corretta deve essere lunga da 1 a 500 caratteri.",
+      "video_id": "Il video non è riconosciuto. Riaprilo dalla sua pagina e riprova."
     },
     "caracteres_transcripcion": "Tra 10 e 15000 caratteri.",
     "licencia": "Le trascrizioni e i dati che contribuisci sono pubblicati con licenza CC BY-SA 4.0.",
@@ -467,7 +470,8 @@
       "transcription": "Trascrizione",
       "memory": "Ricordo",
       "report": "Errore segnalato",
-      "note": "Informazione"
+      "note": "Informazione",
+      "video_text": "Correzione della trascrizione"
     },
     "vacia": "Non ci sono contributi in attesa.",
     "de": "Da {nombre}",
@@ -662,7 +666,8 @@
       "transcription": "Trascrizione",
       "memory": "Ricordo",
       "report": "Errore segnalato",
-      "note": "Informazione"
+      "note": "Informazione",
+      "video_text": "Correzione della trascrizione"
     },
     "desde": "Paese: {pais}",
     "ajustes": {
@@ -723,7 +728,8 @@
       "transcription": "ha trascritto un documento",
       "memory": "ha raccontato un ricordo",
       "report": "ha segnalato un errore",
-      "note": "ha aggiunto informazioni a un documento"
+      "note": "ha aggiunto informazioni a un documento",
+      "video_text": "ha corretto la trascrizione di un video"
     },
     "ver_ranking": "Vedi la classifica",
     "del": "–"

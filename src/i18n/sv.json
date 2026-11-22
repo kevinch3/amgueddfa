@@ -419,7 +419,10 @@
       "objetivo": "Vi vet inte vad den här rapporten gäller. Öppna formuläret igen från videon eller dokumentet.",
       "problema": "Välj vad som är fel.",
       "texto_informe": "Skriv mellan 10 och 1000 tecken.",
-      "arreglo": "Berätta vilken eisteddfod, vilket år eller vilken avdelning det hör till (inte där det ligger nu)."
+      "arreglo": "Berätta vilken eisteddfod, vilket år eller vilken avdelning det hör till (inte där det ligger nu).",
+      "video_cambios": "En korrigering måste innehålla mellan 1 och 200 ändringar.",
+      "video_texto": "Varje korrigerad rad måste vara mellan 1 och 500 tecken.",
+      "video_id": "Videon känns inte igen. Öppna den igen från dess sida och försök på nytt."
     },
     "caracteres_transcripcion": "Mellan 10 och 15000 tecken.",
     "licencia": "Transkriptionerna och uppgifterna du bidrar med publiceras under licensen CC BY-SA 4.0.",
@@ -467,7 +470,8 @@
       "transcription": "Transkription",
       "memory": "Minne",
       "report": "Rapporterat fel",
-      "note": "Upplysning"
+      "note": "Upplysning",
+      "video_text": "Korrigering av transkription"
     },
     "vacia": "Det finns inga bidrag som väntar.",
     "de": "Från {nombre}",
@@ -662,7 +666,8 @@
       "transcription": "Transkription",
       "memory": "Minne",
       "report": "Rapporterat fel",
-      "note": "Upplysning"
+      "note": "Upplysning",
+      "video_text": "Korrigering av transkription"
     },
     "desde": "Land: {pais}",
     "ajustes": {
@@ -723,7 +728,8 @@
       "transcription": "transkriberade ett dokument",
       "memory": "berättade ett minne",
       "report": "rapporterade ett fel",
-      "note": "lade till upplysningar om ett dokument"
+      "note": "lade till upplysningar om ett dokument",
+      "video_text": "korrigerade transkriptionen av en video"
     },
     "ver_ranking": "Se topplistan",
     "del": "–"

@@ -419,7 +419,10 @@
       "objetivo": "Nous ne savons pas à quoi se rapporte ce signalement. Rouvrez le formulaire depuis la vidéo ou le document.",
       "problema": "Choisissez ce qui ne va pas.",
       "texto_informe": "Écrivez entre 10 et 1000 caractères.",
-      "arreglo": "Dites-nous à quel eisteddfod, quelle année ou quelle rubrique il appartient (différent de l'emplacement actuel)."
+      "arreglo": "Dites-nous à quel eisteddfod, quelle année ou quelle rubrique il appartient (différent de l'emplacement actuel).",
+      "video_cambios": "Une correction doit comporter entre 1 et 200 modifications.",
+      "video_texto": "Chaque ligne corrigée doit comporter entre 1 et 500 caractères.",
+      "video_id": "La vidéo n'est pas reconnue. Rouvrez-la depuis sa page et réessayez."
     },
     "caracteres_transcripcion": "Entre 10 et 15000 caractères.",
     "licencia": "Les transcriptions et les informations que vous apportez sont publiées sous licence CC BY-SA 4.0.",
@@ -467,7 +470,8 @@
       "transcription": "Transcription",
       "memory": "Souvenir",
       "report": "Erreur signalée",
-      "note": "Complément"
+      "note": "Complément",
+      "video_text": "Correction de transcription"
     },
     "vacia": "Aucune contribution en attente.",
     "de": "De {nombre}",
@@ -662,7 +666,8 @@
       "transcription": "Transcription",
       "memory": "Souvenir",
       "report": "Erreur signalée",
-      "note": "Complément"
+      "note": "Complément",
+      "video_text": "Correction de transcription"
     },
     "desde": "Pays : {pais}",
     "ajustes": {
@@ -723,7 +728,8 @@
       "transcription": "a transcrit un document",
       "memory": "a raconté un souvenir",
       "report": "a signalé une erreur",
-      "note": "a complété les informations d'un document"
+      "note": "a complété les informations d'un document",
+      "video_text": "a corrigé la transcription d'une vidéo"
     },
     "ver_ranking": "Voir le classement",
     "del": "–"

@@ -3,8 +3,9 @@ import { formatDate, t } from './i18n';
 import { liveQuery } from './live';
 import { getClient } from './supabase';
 import type { CategorySlug, FestivalSlug } from './types';
+import type { Cambio } from './video-corrections';
 
-export type Kind = 'upload' | 'fact' | 'tag' | 'transcription' | 'memory' | 'report' | 'note';
+export type Kind = 'upload' | 'fact' | 'tag' | 'transcription' | 'memory' | 'report' | 'note' | 'video_text';
 export type Result = { ok: true } | { ok: false; key: string };
 export type Validation = { ok: true; payload: Record<string, unknown> } | { ok: false; key: string };
 
@@ -141,6 +142,56 @@ function videoCopy(v: unknown): Record<string, string> | null {
   return out;
 }
 
+/** Most changes one video_text contribution may carry. */
+export const MAX_CAMBIOS = 200;
+/** The festivals whose videos can be corrected. */
+const VIDEO_FESTIVALS: FestivalSlug[] = ['chubut', 'trevelin'];
+
+/**
+ * A transcript correction: changes to the lines of one video. A change whose texto equals its `antes` changes
+ * nothing and is dropped; a malformed one makes the whole contribution fail (video_cambios / video_texto).
+ */
+function validateVideoText(input: Record<string, unknown>): Validation {
+  const v = input.video as Record<string, unknown> | null | undefined;
+  const id = v && typeof v === 'object' ? str(v.id) : '';
+  if (!/^[\w-]{6,20}$/.test(id)) return fail('video_id');
+  const raw = Array.isArray(input.cambios) ? input.cambios : [];
+  if (raw.length > MAX_CAMBIOS) return fail('video_cambios');
+  const cambios: Cambio[] = [];
+  for (const r of raw) {
+    if (!r || typeof r !== 'object') return fail('video_cambios');
+    const o = r as Record<string, unknown>;
+    if (typeof o.t !== 'number' || !Number.isFinite(o.t) || o.t < 0) return fail('video_cambios');
+    if (o.idioma != null && o.idioma !== 'es' && o.idioma !== 'cy') return fail('video_cambios');
+    const c: Cambio = { t: o.t };
+    if (o.antes != null && str(o.antes)) {
+      if (len(str(o.antes)) > VALUE_MAX) return fail('video_texto');
+      c.antes = str(o.antes);
+    }
+    if (o.quitar === true) {
+      if (c.antes === undefined) return fail('video_cambios');
+      c.quitar = true;
+    } else {
+      const texto = str(o.texto);
+      if (!texto) return o.texto == null ? fail('video_cambios') : fail('video_texto');
+      if (len(texto) > VALUE_MAX) return fail('video_texto');
+      if (texto === c.antes) continue;
+      c.texto = texto;
+    }
+    if (o.idioma) c.idioma = o.idioma as 'es' | 'cy';
+    cambios.push(c);
+  }
+  if (cambios.length < 1) return fail('video_cambios');
+  const video: Record<string, string> = { id };
+  const title = str(v!.title);
+  if (title) video.title = [...title].slice(0, 300).join('');
+  const payload: Record<string, unknown> = { video };
+  const base = str(input.base);
+  if (base && len(base) <= 40 && !Number.isNaN(Date.parse(base))) payload.base = base;
+  payload.cambios = cambios;
+  return { ok: true, payload };
+}
+
 /**
  * A report: what it is about, what is wrong, why, and for "otra_edicion" the
  * fix (a video has no section, so its category is dropped). `actual` (where it
@@ -214,6 +265,8 @@ export function validate(kind: Kind, input: Record<string, unknown>): Validation
       if (len(text) < REPORT_MIN || len(text) > REPORT_MAX) return fail('texto_informe');
       return { ok: true, payload: { text } };
     }
+    case 'video_text':
+      return validateVideoText(input);
     default:
       return fail('campo');
   }
@@ -302,6 +355,8 @@ export async function submit(
 ): Promise<Result> {
   const v = validate(kind, input);
   if (!v.ok) return v;
+  // validate() does not see the edition: only Chubut and Trevelin videos can be corrected.
+  if (kind === 'video_text' && !VIDEO_FESTIVALS.includes(festival as FestivalSlug)) return fail('edicion');
   if (!client) return OFFLINE;
   const s = await signedInUid(client);
   if (s.offline) return OFFLINE;
@@ -447,6 +502,29 @@ export async function ownPending(festival: string, year: number, client: Supabas
         .eq('festival', festival)
         .eq('year', year)
         .in('type', ['fact', 'memory', 'upload'])
+        .order('created_at', { ascending: true })
+        .limit(100),
+    [],
+    6000,
+    client,
+  );
+  return rows.data;
+}
+
+/** The signed-in user's own pending video_text contributions for one video. [] when signed out, offline or on error. */
+export async function ownPendingVideo(videoId: string, client: SupabaseClient | null = getClient()): Promise<Contribution[]> {
+  if (!client) return [];
+  const session = await signedInUid(client);
+  const uid = session.data;
+  if (!uid) return [];
+  const rows = await liveQuery<Contribution[]>(
+    (c) =>
+      c.from('contributions')
+        .select('id, type, festival, year, item_id, payload, created_at, reviewed_at')
+        .eq('user_id', uid)
+        .eq('status', 'pending')
+        .eq('type', 'video_text')
+        .eq('payload->video->>id', videoId)
         .order('created_at', { ascending: true })
         .limit(100),
     [],

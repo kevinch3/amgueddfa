@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { taskQueue } from '../src/lib/tasks';
-import { latestApproved, pendingPoints, rankBy, statusOf, type LeaderRow } from '../src/lib/game';
+import { latestApproved, pendingPoints, pointsFor, rankBy, statusOf, type LeaderRow } from '../src/lib/game';
 import type { Item } from '../src/lib/types';
 
 function item(id: string, over: Partial<Item> = {}): Item {
@@ -79,6 +79,22 @@ describe('game helpers', () => {
       { type: 'fact', status: 'approved' },
       { type: 'fact', status: 'rejected' },
     ])).toBe(20 + 10 + 15 + 2 + 5);
+  });
+
+  it('pointsFor: 2 per change, capped at 30; other kinds their base', () => {
+    expect(pointsFor('video_text', { cambios: Array(3) })).toBe(6);
+    expect(pointsFor('video_text', { cambios: Array(20) })).toBe(30);
+    expect(pointsFor('video_text', {})).toBe(0);
+    expect(pointsFor('video_text')).toBe(0);
+    expect(pointsFor('fact', { cambios: Array(20) })).toBe(10);
+  });
+
+  it('pendingPoints uses pointsFor for video_text rows', () => {
+    expect(pendingPoints([
+      { type: 'video_text', status: 'pending', payload: { cambios: Array(4) } },
+      { type: 'video_text', status: 'approved', payload: { cambios: Array(4) } },
+      { type: 'fact', status: 'pending' },
+    ])).toBe(8 + 10);
   });
 
   it('statusOf maps to pill keys', () => {

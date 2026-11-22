@@ -419,7 +419,10 @@
       "objetivo": "We don't know what this report is about. Open the form again from the video or the document.",
       "problema": "Choose what's wrong.",
       "texto_informe": "Write between 10 and 1000 characters.",
-      "arreglo": "Tell us which eisteddfod, year or section it belongs to (different from where it is now)."
+      "arreglo": "Tell us which eisteddfod, year or section it belongs to (different from where it is now).",
+      "video_cambios": "A correction must have between 1 and 200 changes.",
+      "video_texto": "Each corrected line must be between 1 and 500 characters.",
+      "video_id": "The video is not recognised. Open it again from its page and try again."
     },
     "caracteres_transcripcion": "Between 10 and 15000 characters.",
     "licencia": "The transcriptions and facts you contribute are published under the CC BY-SA 4.0 licence.",
@@ -467,7 +470,8 @@
       "transcription": "Transcription",
       "memory": "Memory",
       "report": "Reported error",
-      "note": "Information"
+      "note": "Information",
+      "video_text": "Transcript correction"
     },
     "vacia": "There are no pending contributions.",
     "de": "From {nombre}",
@@ -662,7 +666,8 @@
       "transcription": "Transcription",
       "memory": "Memory",
       "report": "Reported error",
-      "note": "Information"
+      "note": "Information",
+      "video_text": "Transcript correction"
     },
     "desde": "From {pais}",
     "ajustes": {
@@ -723,7 +728,8 @@
       "transcription": "transcribed a document",
       "memory": "shared a memory",
       "report": "reported an error",
-      "note": "added information to a document"
+      "note": "added information to a document",
+      "video_text": "corrected the transcript of a video"
     },
     "ver_ranking": "See the leaderboard",
     "del": "for"

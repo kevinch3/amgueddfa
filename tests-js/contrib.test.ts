@@ -381,3 +381,49 @@ describe('splitFuente (#78)', () => {
     expect(splitFuente('Ver https://a.org y el libro')).toEqual({ label: 'Ver https://a.org y el libro' });
   });
 });
+
+describe('video_text', () => {
+  const video = { id: 'abcDEF123_-', title: 'Coro', extra: 'x' };
+  const ok = { t: 12, antes: 'hola', texto: 'hola, che' };
+  const many = (n: number) => Array.from({ length: n }, (_, i) => ({ t: i, texto: `linea ${i}` }));
+
+  it('accepts one change and keeps the video id and title only', () => {
+    const v = validate('video_text', { video, cambios: [ok], base: '2026-11-22T10:05:00Z' });
+    expect(v).toEqual({ ok: true, payload: { video: { id: 'abcDEF123_-', title: 'Coro' }, base: '2026-11-22T10:05:00Z', cambios: [ok] } });
+  });
+  it('rejects 0 and 201 changes, accepts 200', () => {
+    expect(validate('video_text', { video, cambios: [] })).toEqual({ ok: false, key: 'contrib.error.video_cambios' });
+    expect(validate('video_text', { video, cambios: many(201) })).toEqual({ ok: false, key: 'contrib.error.video_cambios' });
+    expect(validate('video_text', { video, cambios: many(200) }).ok).toBe(true);
+    expect(validate('video_text', { video })).toEqual({ ok: false, key: 'contrib.error.video_cambios' });
+  });
+  it('rejects a texto over 500 code points, counting code points', () => {
+    expect(validate('video_text', { video, cambios: [{ t: 1, texto: 'a'.repeat(501) }] })).toEqual({ ok: false, key: 'contrib.error.video_texto' });
+    expect(validate('video_text', { video, cambios: [{ t: 1, texto: '😀'.repeat(500) }] }).ok).toBe(true);
+    expect(validate('video_text', { video, cambios: [{ t: 1, texto: '  ' }] })).toEqual({ ok: false, key: 'contrib.error.video_texto' });
+  });
+  it('rejects a bad video id, time or language', () => {
+    expect(validate('video_text', { video: { id: 'a b' }, cambios: [ok] })).toEqual({ ok: false, key: 'contrib.error.video_id' });
+    expect(validate('video_text', { cambios: [ok] })).toEqual({ ok: false, key: 'contrib.error.video_id' });
+    expect(validate('video_text', { video, cambios: [{ t: -1, texto: 'x' }] })).toEqual({ ok: false, key: 'contrib.error.video_cambios' });
+    expect(validate('video_text', { video, cambios: [{ t: 1, texto: 'x', idioma: 'fr' }] })).toEqual({ ok: false, key: 'contrib.error.video_cambios' });
+  });
+  it('drops an edit whose texto equals antes; an all-dropped list is 0 changes', () => {
+    const v = validate('video_text', { video, cambios: [{ t: 1, antes: 'igual', texto: 'igual' }, ok] });
+    expect(v.ok && (v.payload.cambios as unknown[]).length).toBe(1);
+    expect(validate('video_text', { video, cambios: [{ t: 1, antes: 'igual', texto: 'igual' }] })).toEqual({ ok: false, key: 'contrib.error.video_cambios' });
+  });
+  it('keeps quitar and idioma; a change needs texto or quitar', () => {
+    const v = validate('video_text', { video, cambios: [{ t: 3, antes: 'ruido', quitar: true }, { t: 4, texto: 'ay', idioma: 'cy' }] });
+    expect(v).toMatchObject({ ok: true, payload: { cambios: [{ t: 3, antes: 'ruido', quitar: true }, { t: 4, texto: 'ay', idioma: 'cy' }] } });
+    expect(validate('video_text', { video, cambios: [{ t: 3, antes: 'x' }] })).toEqual({ ok: false, key: 'contrib.error.video_cambios' });
+  });
+  it('submit only takes chubut and trevelin editions', async () => {
+    const { client, inserts } = fakeClient();
+    expect(await submit('video_text', 'juventud', 2001, null, { video, cambios: [ok] }, client)).toEqual({ ok: false, key: 'contrib.error.edicion' });
+    expect(await submit('video_text', null, null, null, { video, cambios: [ok] }, client)).toEqual({ ok: false, key: 'contrib.error.edicion' });
+    expect(inserts).toHaveLength(0);
+    expect(await submit('video_text', 'trevelin', 2001, null, { video, cambios: [ok] }, client)).toEqual({ ok: true });
+    expect(inserts).toHaveLength(1);
+  });
+});

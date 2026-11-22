@@ -27,12 +27,20 @@ export const BADGES = [
 /**
  * Points an approved contribution earns. Uploads count the base 20 here: the
  * reviewer decides whether one fills a gap (50), so pending uploads may end up worth more.
+ * video_text is worth 2 per change here; pointsFor() is the real rule (it counts the changes and caps at 30).
  */
-export const POINTS: Record<Kind, number> = { upload: 20, fact: 10, transcription: 15, tag: 2, memory: 5, report: 10, note: 5 };
+export const POINTS: Record<Kind, number> = { upload: 20, fact: 10, transcription: 15, tag: 2, memory: 5, report: 10, note: 5, video_text: 2 };
+
+/** Points one contribution earns: video_text 2 per change, at most 30; every other kind its base in POINTS. */
+export function pointsFor(type: Kind, payload?: unknown): number {
+  if (type !== 'video_text') return POINTS[type] ?? 0;
+  const cambios = (payload as { cambios?: unknown } | null | undefined)?.cambios;
+  return Array.isArray(cambios) ? Math.min(2 * cambios.length, 30) : 0;
+}
 
 /** Points the user would get if every pending contribution were approved. */
-export function pendingPoints(rows: { type: Kind; status: Status }[]): number {
-  return rows.reduce((s, r) => s + (r.status === 'pending' ? POINTS[r.type] ?? 0 : 0), 0);
+export function pendingPoints(rows: { type: Kind; status: Status; payload?: unknown }[]): number {
+  return rows.reduce((s, r) => s + (r.status === 'pending' ? pointsFor(r.type, r.payload) : 0), 0);
 }
 
 /** i18n key of a contribution status pill. */

@@ -37,7 +37,7 @@ Cada página registra herramientas WebMCP (\`document.modelContext\`) en los nav
 
 ## De dónde salen los textos
 
-- Videos de Chubut y Trevelin: texto reconstruido a partir de los subtítulos de YouTube, Whisper (castellano) y el modelo de galés de la Universidad de Bangor (${VIDEOS[0].href}), más la letra de lo que se canta cuando la tenemos. Cada línea sale de lo que se escuchó en alguna fuente; ${MODELO_RECONSTRUCCION} (Anthropic) elige y corrige, y reglas propias comprueban cada respuesta. Cada archivo de texto indica la fuente de cada línea (\`fuentes\`).
+- Videos de Chubut y Trevelin: texto reconstruido a partir de los subtítulos de YouTube, Whisper (castellano) y el modelo de galés de la Universidad de Bangor (${VIDEOS[0].href}), más la letra de lo que se canta cuando la tenemos. Cada línea sale de lo que se escuchó en alguna fuente; ${MODELO_RECONSTRUCCION} (Anthropic) elige y corrige, y reglas propias comprueban cada respuesta. Cada archivo de texto indica la fuente de cada línea (\`fuentes\`) y, donde la fuente no basta para saberlo (castellano que oyó el modelo de galés), el idioma de cada línea (\`idiomas\`).
 - Documentos: transcripciones hechas por personas; aparte, texto automático sin revisar (${DOCUMENTOS.map((x) => x.nombre).join(', ')}).
 - Herramientas, recursos y licencias: ${absUrl('creditos/')} (${[...VIDEOS, ...SITIO].map((x) => x.nombre).join(', ')}).
 

@@ -83,7 +83,6 @@ _TAIL = re.compile(r"^(?:l|e|i|y|ei|is|es)?s{1,2}t[eai]+[dt]+[bvwfgp]")
 _EST = r"(?:[eiy]|ei|is|es|l)?s{1,2}t[eéaáií][^\W\d_]{0,9}"
 _AFTER = re.compile(r"(?i)\b((?:comisi[oó]n|corona|presidente|asociaci[oó]n|premio|sesi[oó]n|edici[oó]n|organizadora|plata|sill[oó]n)\s+(?:del?|de\s+la)\s+)(" + _EST + r")\b")
 _BEFORE = re.compile(r"(?i)(?<!santiago del )\b(" + _EST + r")(?=\s+(?:del\s+ch[iu]but|de\s+la\s+juventud|mimosa|trevelin)\b)")
-_SPLIT = re.compile(r"\b(?:[eiy]?s{1,2}t[ae]d|ist[ae]d)\s+[bv]o[tdl]?\b", re.I)
 _WORD = re.compile(r"\b[^\W\d_]{4,}\b(?!@)")
 _ENDINGS = [("s", ""), ("es", ""), ("os", "o"), ("as", "a"), ("ido", "er"), ("ido", "ir"), ("ado", "ar"), ("ando", "ar")]
 
@@ -233,16 +232,22 @@ def join_fragments(t: dict, spans: list[tuple[float, float]] | tuple = ()) -> di
 # English is never published (the site is Spanish and Welsh). Bangor's model is Welsh *and English*, so it
 # writes English songs sung in the hall as English: a Welsh-model line that reads as English is dropped.
 EN_WORDS = set("""the and you your you're you'll are is was were be been being am i'm i'll i've i'd me my mine we we're our us they they're them their he he's him his she her it it's its this that these those with have has had having will would can can't could should shall must may might do does did don't doesn't didn't won't isn't aren't wasn't not no yes of to in on at for from by as but or if so than then there here where when what who whom which why how all any some every each just like know love lord oh go going gonna come came see saw say said tell told take let get got make made way day night time down up out over into about only never ever always little old man men woman sky water heart sing song dance free""".split())
+# Common in English songs and speech, never Welsh or Spanish words (Chubut 2021 UW0GV9sicGs kept pop songs without them).
+EN_WORDS |= set("""cannot now own yet myself yourself even stop back eyes run dark want wanting need true best friend feel still give look baby cry life world dream light again away home alone around through gone much very really thing something nothing everything people think thought because""".split())
 CY_WORDS = set("""y yr ac yn ar am mae maen ein eich ei fy dy hi ni chi nhw efo gyda gan wedi bod roedd oedd hyn hon hwn sydd fel ond neu na nad dim mewn wrth dros heb rhwng hefyd iawn diolch croeso cymru cymraeg eisteddfod gorsedd""".split())
 WELSH_SPELL = re.compile(r"ll|dd|ch|rh|ff|[ŵŷâêîôû]|wy|yw")
 LATIN_WORD = re.compile(r"[a-zA-Zâêîôûŵŷ']+")
+ENGLISH_I = re.compile(r"(?<![\w'])I(?![\w'])")
 
 def is_english(text: str) -> bool:
     """True when a line is mostly English function words and shows little Welsh (words or spelling)."""
     w = LATIN_WORD.findall(text.lower())
     if len(w) < 4:
         return False
+    # "I" counts only as a capital: Welsh writes its "i" (to, me) in lower case. And only next to other English:
+    # Whisper capitalises the Welsh refrain "I Patagonia" too.
     en = sum(z in EN_WORDS for z in w)
+    en += len(ENGLISH_I.findall(text)) if en else 0
     cy = sum(z in CY_WORDS for z in w) + sum(1 for z in w if z not in EN_WORDS and WELSH_SPELL.search(z))
     return en / len(w) >= 0.35 and en > 2 * cy
 
@@ -256,18 +261,66 @@ def drop_english(t: dict) -> dict:
     return {**t, "seg": [t["seg"][i] for i in keep], "fuentes": [fu[i] for i in keep]}
 
 
-def main_language(t: dict) -> str:
-    """The language most of a reconstruction's text is in, by length: a line the Welsh model heard is
-    Welsh, any other Spanish. Counting source lines instead lets YouTube's many short "Spanish"
-    mishearings of Welsh outvote it (Chubut 2008 3u6cv4eV1IA was labelled castellano)."""
+# Telling a Welsh-model line's language from its words. The model writes Spanish speech as Spanish (Chubut
+# 2021 UW0GV9sicGs has only its text: Whisper took the session for Welsh), so "heard by the Welsh model"
+# is not "Welsh". Words both languages use (y, a, o, i, e, ni, un, da, pan, mi) and the ll/ch of Spanish spelling
+# tell nothing; ñ and the acute accents do.
+ES_WORDS = set("""el la los las lo le les de del que en por para con es son se no si sí al como más mas pero muy
+ya este esta esto estos estas ese esa eso está están estaba fue era ser hay porque cuando donde todo todos toda
+todas nos sobre entre hasta desde también tambien una unos unas su sus me te yo usted ustedes nosotros ahora
+entonces bueno bien gracias muchas mucho muchísimas buenas noches tardes señor señora vamos aquí aqui así asi
+qué cómo""".split())
+CY_MARKERS = CY_WORDS - {"y", "ni"}
+WELSH_ONLY_SPELL = re.compile(r"dd|ff|rh|[ŵŷâêîôû]|wy|yw")
+SPANISH_SPELL = re.compile(r"[ñáéíóú]")
+ANY_WORD = re.compile(r"[^\W\d_]+(?:'[^\W\d_]+)?")
+
+
+def line_language(text: str, fuentes: list[str]) -> str:
+    """A published line's language: a Spanish source's line is Spanish; a Welsh-model line is Spanish when
+    its Spanish words outnumber its Welsh ones (words or spelling), else Welsh."""
+    if "cy" not in fuentes:
+        return "es"
+    w = ANY_WORD.findall(text.lower())
+    es = sum(z in ES_WORDS or bool(SPANISH_SPELL.search(z)) for z in w)
+    cy = sum(z in CY_MARKERS or bool(WELSH_ONLY_SPELL.search(z)) for z in w)
+    return "es" if es > cy else "cy"
+
+
+def line_languages(t: dict) -> list[str] | None:
+    """Every line's language (a lyric's comes from its text file, so it is left as the line's source says)."""
     fu = t.get("fuentes")
     if not fu or len(fu) != len(t["seg"]):
+        return None
+    return [("cy" if "cy" in f else "es") if "letra" in f else line_language(x, f) for (_, x), f in zip(t["seg"], fu)]
+
+
+def main_language(t: dict) -> str:
+    """The language most of a reconstruction's text is in, by length of its lines (line_language).
+    Counting source lines instead lets YouTube's many short "Spanish" mishearings of Welsh outvote it
+    (Chubut 2008 3u6cv4eV1IA was labelled castellano)."""
+    langs = line_languages(t)
+    if langs is None:
         return t.get("lang", "es")
     size = {"cy": 0, "es": 0}
-    for (_, text), f in zip(t["seg"], fu):
+    for (_, text), f, lang in zip(t["seg"], t["fuentes"], langs):
         if "letra" not in f:
-            size["cy" if "cy" in f else "es"] += len(text)
+            size[lang] += len(text)
     return max(size, key=size.get) if any(size.values()) else t.get("lang", "es")
+
+
+def with_line_languages(t: dict) -> dict:
+    """The transcript with `idiomas` (one per line) when the player's rule (a Welsh-model line is Welsh,
+    any other the transcript's language) would label some line wrongly; without it otherwise."""
+    langs = line_languages(t)
+    t = {k: v for k, v in t.items() if k != "idiomas"}
+    if langs is None:
+        return t
+    default = ["cy" if "cy" in f else t["lang"] for f in t["fuentes"]]
+    lyric = ["letra" in f for f in t["fuentes"]]
+    if any(l != d and not y for l, d, y in zip(langs, default, lyric)):
+        t["idiomas"] = langs
+    return t
 
 
 def export(backup: Path, videos: list[dict], out: Path = OUT, words: set[str] | None = None, recon: Path = RECON, letras: Path = LETRAS) -> dict:
@@ -289,8 +342,9 @@ def export(backup: Path, videos: list[dict], out: Path = OUT, words: set[str] | 
             t = drop_english(t)
             if not t["seg"]:
                 continue  # only English was heard: the video has no text
-            t["lang"] = main_language(t)
             t = join_fragments(t, [(sp["desde"], sp["hasta"]) for sp in spans_for(vid, letras)])
+            t["lang"] = main_language(t)
+            t = with_line_languages(t)
             body = json.dumps(t, ensure_ascii=False, separators=(",", ":"))
             p = out / f"{vid}.json"
             if not p.exists() or p.read_text(encoding="utf-8") != body:

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { asTranscript, creditos, findLines, fmtTime, fold, letraAt, lineAt } from '../src/lib/video-transcript';
+import { asTranscript, creditos, findLines, fmtTime, fold, letraAt, lineAt, lineLang } from '../src/lib/video-transcript';
 
 const seg: [number, string][] = [[2, 'Galwn ar yr unawdwyr'], [10.5, 'Hyd fedd hi gâr yn gywir'], [24, 'Canción de Glyndŵr'], [38, 'Veredicto']];
 
@@ -40,6 +40,17 @@ describe('video transcript', () => {
     expect(tr.fuentes?.[2]).toEqual(['yt_es', 'whisper_es']);
     expect(asTranscript({ src: 'reconstruida', lang: 'es', seg, fuentes: [['yt_es']] })!.fuentes).toBeUndefined();
     expect(asTranscript({ src: 'inventada', lang: 'es', seg })).toBeNull();
+  });
+
+  it('gives each line its language: the lyric, then the export\'s idiomas, then the source', () => {
+    const fuentes = [['cy'], ['cy'], ['yt_es'], ['cy']];
+    const plain = asTranscript({ src: 'reconstruida', lang: 'es', seg, fuentes })!;
+    expect([0, 1, 2, 3].map((i) => lineLang(plain, i))).toEqual(['cy', 'cy', 'es', 'cy']);
+    const told = asTranscript({ src: 'reconstruida', lang: 'es', seg, fuentes, idiomas: ['es', 'cy', 'es', 'cy'] })!;
+    expect([0, 1, 2, 3].map((i) => lineLang(told, i))).toEqual(['es', 'cy', 'es', 'cy']);
+    expect(lineLang(told, 0, { desde: 0, hasta: 9, titulo: 'Rosa', autor: '', idioma: 'pt' })).toBe('pt');
+    expect(asTranscript({ src: 'reconstruida', lang: 'es', seg, fuentes, idiomas: ['es'] })!.idiomas).toBeUndefined();
+    expect(asTranscript({ src: 'reconstruida', lang: 'es', seg, fuentes, idiomas: ['es', 'cy', 'es', 7] })!.idiomas).toBeUndefined();
   });
 
   it('keeps the aligned lyric spans and finds the one a line is in', () => {

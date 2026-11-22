@@ -532,7 +532,8 @@
       "valor": "该值对这项贡献无效。",
       "sin_archivo": "无法下载原始文件。",
       "derivados": "无法在此浏览器中生成图片。请使用最新版的 Chrome 或 Firefox。",
-      "sin_archivos": "受限存储中缺少图片或文本。请运行 scripts/push_restricted.py 后重试。"
+      "sin_archivos": "受限存储中缺少图片或文本。请运行 scripts/push_restricted.py 后重试。",
+      "sin_cambios": "请至少勾选一项修改再批准。"
     },
     "ver_restringido": "公开前查看文献",
     "restringido_alt": "{titulo}，第 {n} 页（管理员视图）",
@@ -557,6 +558,15 @@
       "que_pasa": "通过后：{accion}",
       "explicacion": "说明（不公开）",
       "video": "视频"
+    },
+    "video": {
+      "cambios": "修改：{n}",
+      "corregir": "更正",
+      "quitar": "删除",
+      "idioma": "语言",
+      "agregar": "添加",
+      "cambio_linea": "这一行在被编辑之后已经变了",
+      "aprobar_sel": "批准所选"
     }
   },
   "admin_item": {

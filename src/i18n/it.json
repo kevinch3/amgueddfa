@@ -532,7 +532,8 @@
       "valor": "Il valore non è valido per questo contributo.",
       "sin_archivo": "Non siamo riusciti a scaricare il file originale.",
       "derivados": "Non siamo riusciti a generare le immagini in questo browser. Prova con Chrome o Firefox aggiornati.",
-      "sin_archivos": "Mancano le immagini o il testo nell'archivio riservato. Esegui scripts/push_restricted.py e riprova."
+      "sin_archivos": "Mancano le immagini o il testo nell'archivio riservato. Esegui scripts/push_restricted.py e riprova.",
+      "sin_cambios": "Seleziona almeno una modifica da approvare."
     },
     "ver_restringido": "Vedi il documento prima di pubblicarlo",
     "restringido_alt": "{titulo}, pagina {n} (vista per amministratori)",
@@ -557,6 +558,15 @@
       "que_pasa": "All'approvazione: {accion}",
       "explicacion": "Spiegazione (non viene pubblicata)",
       "video": "Video"
+    },
+    "video": {
+      "cambios": "Modifiche: {n}",
+      "corregir": "Correggere",
+      "quitar": "Rimuovere",
+      "idioma": "Lingua",
+      "agregar": "Aggiungere",
+      "cambio_linea": "La riga è cambiata dopo la modifica",
+      "aprobar_sel": "Approva le selezionate"
     }
   },
   "admin_item": {

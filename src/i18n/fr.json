@@ -532,7 +532,8 @@
       "valor": "La valeur n'est pas valable pour cette contribution.",
       "sin_archivo": "Impossible de télécharger le fichier original.",
       "derivados": "Impossible de générer les images dans ce navigateur. Essayez avec une version à jour de Chrome ou de Firefox.",
-      "sin_archivos": "Les images ou le texte manquent dans l'espace de stockage restreint. Lancez scripts/push_restricted.py et réessayez."
+      "sin_archivos": "Les images ou le texte manquent dans l'espace de stockage restreint. Lancez scripts/push_restricted.py et réessayez.",
+      "sin_cambios": "Cochez au moins une modification à approuver."
     },
     "ver_restringido": "Voir le document avant de le publier",
     "restringido_alt": "{titulo}, page {n} (vue administrateur)",
@@ -557,6 +558,15 @@
       "que_pasa": "À l'approbation : {accion}",
       "explicacion": "Explication (non publiée)",
       "video": "Vidéo"
+    },
+    "video": {
+      "cambios": "Modifications : {n}",
+      "corregir": "Corriger",
+      "quitar": "Supprimer",
+      "idioma": "Langue",
+      "agregar": "Ajouter",
+      "cambio_linea": "La ligne a changé depuis la modification",
+      "aprobar_sel": "Approuver la sélection"
     }
   },
   "admin_item": {

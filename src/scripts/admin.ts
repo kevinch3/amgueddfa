@@ -4,6 +4,7 @@ import {
   approve,
   approveAll,
   approveUpload,
+  approveVideoText,
   creditOptions,
   gapChoice,
   gapOverride,
@@ -33,12 +34,15 @@ import {
 } from '../lib/admin';
 import { currentProfile } from '../lib/auth';
 import type { Kind } from '../lib/contrib';
+import { keptCambios, videoCardRows } from '../lib/admin-video-card';
 import { fecha, fechaHora, relativa } from '../lib/dates';
 import type { FestivalSlug } from '../lib/types';
 import { renderStats } from './admin-stats';
 import { mountFactEditor } from './fact-editor';
 import { t } from '../lib/i18n';
 import { url } from '../lib/paths';
+import { asTranscript, fmtTime } from '../lib/video-transcript';
+import type { Cambio } from '../lib/video-corrections';
 import { getClient } from '../lib/supabase';
 import { videoThumb, videoUrl } from '../lib/videos';
 import { el, gate, loginHref } from './ui';
@@ -136,6 +140,63 @@ function readable(c: Pending): HTMLElement {
   return box;
 }
 
+/** The published transcript lines of a video, or null when the file cannot be read. */
+async function publishedLines(id: string): Promise<[number, string][] | null> {
+  try {
+    const r = await fetch(url(`transcripciones-video/${id}.json`));
+    return r.ok ? (asTranscript(await r.json())?.seg ?? null) : null;
+  } catch {
+    return null;
+  }
+}
+
+/** A video_text contribution: the video, then one ticked row per change (time, kind, before to after). Everything user
+ * written goes in as text. `onChange` runs after every tick; `kept()` is what approval sends. */
+function videoChanges(c: Pending, onChange: () => void): { box: HTMLElement; kept: () => Cambio[] } {
+  const p = c.payload ?? {};
+  const v = (p.video ?? {}) as { id?: string; title?: string };
+  const id = String(v.id ?? '');
+  const cambios: Cambio[] = Array.isArray(p.cambios) ? p.cambios : [];
+  const box = el('div', { class: 'admin-informe' });
+  const first = cambios[0];
+  const head = el('p');
+  const title = v.title || id;
+  head.append(id && first ? el('a', { href: videoUrl(id) + `&t=${Math.floor(first.t)}s`, target: '_blank', rel: 'noopener noreferrer' }, title) : title);
+  box.append(head, el('p', { class: 'muted small' }, t('admin.video.cambios', { n: cambios.length })));
+  const ticks = cambios.map(() => true);
+  const list = el('ol', { class: 'admin-cambios' });
+  box.append(list);
+  const draw = (seg: [number, string][] | null) => {
+    list.replaceChildren();
+    for (const r of videoCardRows(id, cambios, seg)) {
+      const li = el('li');
+      const cid = `cambio-${c.id}-${r.index}`;
+      const cb = el('input', { type: 'checkbox', id: cid });
+      cb.checked = ticks[r.index];
+      cb.addEventListener('change', () => {
+        ticks[r.index] = cb.checked;
+        onChange();
+      });
+      const lab = el('label', { for: cid, class: 'opt' });
+      lab.append(cb, el('a', { href: r.link, target: '_blank', rel: 'noopener noreferrer' }, fmtTime(r.t)), ` ${t(`admin.video.${r.kind}`)}`);
+      if (r.idioma) lab.append(` · ${t('admin.video.idioma')}: ${r.idioma}`);
+      li.append(lab);
+      if (r.kind !== 'idioma') {
+        const d = el('p', { class: 'small' });
+        for (const part of r.diff) {
+          d.append(part.op === 'same' ? document.createTextNode(`${part.text} `) : el(part.op === 'del' ? 'del' : 'ins', {}, part.text), ' ');
+        }
+        li.append(d);
+      } else li.append(el('p', { class: 'small' }, r.antes));
+      if (r.stale) li.append(el('p', { class: 'muted small', role: 'note' }, t('admin.video.cambio_linea')));
+      list.append(li);
+    }
+  };
+  draw(null);
+  if (id) void publishedLines(id).then((seg) => seg && draw(seg));
+  return { box, kept: () => keptCambios(cambios, ticks) };
+}
+
 function card(c: Pending, done: (key: string) => void): HTMLLIElement {
   const li = el('li', { class: 'admin-card' });
   const h = el('h2');
@@ -149,12 +210,17 @@ function card(c: Pending, done: (key: string) => void): HTMLLIElement {
     p.append(el('a', { href: url(`item/${c.item_id}/`) }, data.titles[c.item_id] ?? c.item_id));
     li.append(p);
   }
-  li.append(c.type === 'report' || c.type === 'note' ? readable(c) : el('pre', {}, JSON.stringify(editable(c), null, 2)));
+  let vt: ReturnType<typeof videoChanges> | null = null;
+  let syncOk = () => {};
+  if (c.type === 'video_text') {
+    vt = videoChanges(c, () => syncOk());
+    li.append(vt.box);
+  } else li.append(c.type === 'report' || c.type === 'note' ? readable(c) : el('pre', {}, JSON.stringify(editable(c), null, 2)));
 
   const msg = el('p', { class: 'contrib-msg', role: 'alert' });
   msg.hidden = true;
   const actions = el('div', { class: 'acciones' });
-  const ok = el('button', { type: 'button', class: 'btn' }, c.type === 'report' ? reportAction(c).aprobar : t('admin.aprobar'));
+  const ok = el('button', { type: 'button', class: 'btn' }, c.type === 'report' ? reportAction(c).aprobar : c.type === 'video_text' ? t('admin.video.aprobar_sel') : t('admin.aprobar'));
   const no = el('button', { type: 'button', class: 'btn btn-quiet' }, t('admin.rechazar'));
   const btns = [ok, no];
   let choice: GapChoice | null = null;
@@ -199,6 +265,12 @@ function card(c: Pending, done: (key: string) => void): HTMLLIElement {
     }
   }
   actions.append(ok, no);
+  if (vt) {
+    const picked = vt;
+    syncOk = () => {
+      ok.disabled = picked.kept().length === 0;
+    };
+  }
 
   if (c.type !== 'upload') {
     const edit = el('button', { type: 'button', class: 'btn btn-quiet' }, t('admin.editar_aprobar'));
@@ -237,7 +309,7 @@ function card(c: Pending, done: (key: string) => void): HTMLLIElement {
   ok.addEventListener('click', async () => {
     const fn = c.type === 'upload'
       ? () => approveUpload(c, { gap, fillsGap: choice ? gapOverride(choice) : undefined, flags: flags ?? undefined })
-      : () => approve(c, null);
+      : vt ? () => approveVideoText(c, vt!.kept()) : () => approve(c, null);
     if (await run(btns, msg, fn)) {
       if (c.type === 'upload') {
         choices = choices.filter((x) => x.g !== choice);

@@ -532,7 +532,8 @@
       "valor": "Värdet är inte giltigt för det här bidraget.",
       "sin_archivo": "Vi kunde inte ladda ner originalfilen.",
       "derivados": "Vi kunde inte skapa bilderna i den här webbläsaren. Prova med en uppdaterad Chrome eller Firefox.",
-      "sin_archivos": "Bilderna eller texten saknas i det begränsade lagret. Kör scripts/push_restricted.py och försök igen."
+      "sin_archivos": "Bilderna eller texten saknas i det begränsade lagret. Kör scripts/push_restricted.py och försök igen.",
+      "sin_cambios": "Markera minst en ändring att godkänna."
     },
     "ver_restringido": "Se dokumentet innan du publicerar det",
     "restringido_alt": "{titulo}, sida {n} (vy för administratörer)",
@@ -557,6 +558,15 @@
       "que_pasa": "Vid godkännande: {accion}",
       "explicacion": "Förklaring (publiceras inte)",
       "video": "Video"
+    },
+    "video": {
+      "cambios": "Ändringar: {n}",
+      "corregir": "Rätta",
+      "quitar": "Ta bort",
+      "idioma": "Språk",
+      "agregar": "Lägg till",
+      "cambio_linea": "Raden har ändrats sedan den redigerades",
+      "aprobar_sel": "Godkänn markerade"
     }
   },
   "admin_item": {

@@ -532,7 +532,8 @@
       "valor": "Dydy'r gwerth ddim yn ddilys i'r cyfraniad yma.",
       "sin_archivo": "Methon ni â lawrlwytho'r ffeil wreiddiol.",
       "derivados": "Methon ni â chreu'r delweddau yn y porwr yma. Rhowch gynnig efo fersiwn ddiweddar o Chrome neu Firefox.",
-      "sin_archivos": "Mae'r delweddau neu'r testun ar goll yn y storfa gyfyngedig. Rhedwch scripts/push_restricted.py a rhowch gynnig arall."
+      "sin_archivos": "Mae'r delweddau neu'r testun ar goll yn y storfa gyfyngedig. Rhedwch scripts/push_restricted.py a rhowch gynnig arall.",
+      "sin_cambios": "Ticiwch o leiaf un newid i'w gymeradwyo."
     },
     "ver_restringido": "Gweld y ddogfen cyn ei rhyddhau",
     "restringido_alt": "{titulo}, tudalen {n} (golwg gweinyddwyr)",
@@ -557,6 +558,15 @@
       "que_pasa": "Wrth gymeradwyo: {accion}",
       "explicacion": "Esboniad (heb ei gyhoeddi)",
       "video": "Fideo"
+    },
+    "video": {
+      "cambios": "Newidiadau: {n}",
+      "corregir": "Cywiro",
+      "quitar": "Dileu",
+      "idioma": "Iaith",
+      "agregar": "Ychwanegu",
+      "cambio_linea": "Mae'r llinell wedi newid ers iddi gael ei golygu",
+      "aprobar_sel": "Cymeradwyo'r rhai a ddewiswyd"
     }
   },
   "admin_item": {

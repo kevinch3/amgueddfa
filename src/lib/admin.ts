@@ -5,6 +5,7 @@ import { liveQuery } from './live';
 import { t } from './i18n';
 import { getClient } from './supabase';
 import type { FestivalSlug } from './types';
+import type { Cambio } from './video-corrections';
 
 export type Result = { ok: true } | { ok: false; key: string };
 
@@ -307,6 +308,14 @@ export async function approve(c: Pending, edited: Record<string, unknown> | null
   }
   if (!client) return OFFLINE;
   return rpc(client, 'approve_contribution', { cid: c.id, fills_gap: false, payload_override: override });
+}
+
+/** Approve a video_text contribution keeping only `kept` changes: the override replaces `cambios` (the database merges it
+ * shallowly and scores the kept list). Nothing kept is not an approval. */
+export async function approveVideoText(c: Pending, kept: Cambio[], client: SupabaseClient | null = getClient()): Promise<Result> {
+  if (!kept.length) return { ok: false, key: 'admin.error.sin_cambios' };
+  if (!client) return OFFLINE;
+  return rpc(client, 'approve_contribution', { cid: c.id, fills_gap: false, payload_override: { cambios: kept } });
 }
 
 export async function reject(c: Pending, reason: string, client: SupabaseClient | null = getClient()): Promise<Result> {

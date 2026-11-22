@@ -532,7 +532,8 @@
       "valor": "El valor no es válido para este aporte.",
       "sin_archivo": "No pudimos bajar el archivo original.",
       "derivados": "No pudimos generar las imágenes en este navegador. Probá con Chrome o Firefox actualizados.",
-      "sin_archivos": "Faltan las imágenes o el texto en el depósito restringido. Corré scripts/push_restricted.py y probá de nuevo."
+      "sin_archivos": "Faltan las imágenes o el texto en el depósito restringido. Corré scripts/push_restricted.py y probá de nuevo.",
+      "sin_cambios": "Marcá al menos un cambio para aprobar."
     },
     "ver_restringido": "Ver el documento antes de liberarlo",
     "restringido_alt": "{titulo}, página {n} (vista para admins)",
@@ -557,6 +558,15 @@
       "que_pasa": "Al aprobar: {accion}",
       "explicacion": "Explicación (no se publica)",
       "video": "Video"
+    },
+    "video": {
+      "cambios": "Cambios: {n}",
+      "corregir": "Corregir",
+      "quitar": "Quitar",
+      "idioma": "Idioma",
+      "agregar": "Agregar",
+      "cambio_linea": "La línea cambió desde que se editó",
+      "aprobar_sel": "Aprobar seleccionadas"
     }
   },
   "admin_item": {

@@ -532,7 +532,8 @@
       "valor": "The value isn't valid for this contribution.",
       "sin_archivo": "We couldn't download the original file.",
       "derivados": "We couldn't generate the images in this browser. Try an up-to-date Chrome or Firefox.",
-      "sin_archivos": "The images or text are missing from the restricted store. Run scripts/push_restricted.py and try again."
+      "sin_archivos": "The images or text are missing from the restricted store. Run scripts/push_restricted.py and try again.",
+      "sin_cambios": "Tick at least one change to approve."
     },
     "ver_restringido": "See the document before releasing it",
     "restringido_alt": "{titulo}, page {n} (admin view)",
@@ -557,6 +558,15 @@
       "que_pasa": "On approval: {accion}",
       "explicacion": "Explanation (not published)",
       "video": "Video"
+    },
+    "video": {
+      "cambios": "Changes: {n}",
+      "corregir": "Correct",
+      "quitar": "Remove",
+      "idioma": "Language",
+      "agregar": "Add",
+      "cambio_linea": "The line has changed since it was edited",
+      "aprobar_sel": "Approve selected"
     }
   },
   "admin_item": {

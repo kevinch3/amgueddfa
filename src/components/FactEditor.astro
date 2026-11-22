@@ -61,6 +61,7 @@ const MONTHS = Array.from({ length: 12 }, (_, i) => new Date(Date.UTC(2000, i, 1
   </div>
 
   <p><button type="button" class="btn btn-quiet" id={`${p}-agregar`}>{t('contrib.agregar_otro')}</button></p>
+  <p class="contrib-msg" id={`${p}-agregar-error`} role="alert" hidden></p>
 
   <div class="lista-datos" id={`${p}-lista-box`} hidden>
     <h3 class="small" id={`${p}-lista-titulo`}></h3>

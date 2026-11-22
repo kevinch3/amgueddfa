@@ -31,6 +31,13 @@ export function mountFactEditor(
   const listBox = $<HTMLDivElement>('lista-box');
   const listTitle = $<HTMLHeadingElement>('lista-titulo');
   const listEl = $<HTMLOListElement>('lista');
+  // "+ Agregar" errors show under the button: the form's message line can be off-screen on phones (#14).
+  const addError = $<HTMLParagraphElement>('agregar-error');
+  const sayAdd = (key: string | null): void => {
+    addError.hidden = !key;
+    addError.textContent = key ? t(key) : '';
+    if (key) addError.scrollIntoView({ block: 'nearest' });
+  };
   const list: Record<string, unknown>[] = [];
   const val = (name: string) => {
     const el = root.querySelector<HTMLInputElement>(`[name="${name}"]:not([type=radio]), [name="${name}"]:checked`);
@@ -95,11 +102,12 @@ export function mountFactEditor(
 
   $<HTMLButtonElement>('agregar').addEventListener('click', () => {
     opts.say(null);
-    if (!field.value) return opts.say('contrib.error.campo');
-    if (list.length >= max) return opts.say('contrib.error.demasiados');
+    sayAdd(null);
+    if (!field.value) return sayAdd('contrib.error.campo');
+    if (list.length >= max) return sayAdd('contrib.error.demasiados');
     const fact = readFact();
     const v = validate('fact', fact);
-    if (!v.ok) return opts.say(v.key);
+    if (!v.ok) return sayAdd(v.key);
     list.push(fact);
     renderList();
     clearEditor();
@@ -122,6 +130,7 @@ export function mountFactEditor(
       return { facts, fuente: fuente.value };
     },
     reset(): void {
+      sayAdd(null);
       list.length = 0;
       renderList();
       fuente.value = '';

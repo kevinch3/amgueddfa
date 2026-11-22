@@ -1,0 +1,21 @@
+{
+  "about": "Welsh circumflexes fold away: gŵr matches gwr, and a line written in decomposed form (o + U+0302) matches ô",
+  "transcript": {
+    "lang": "cy",
+    "seg": [[400.0, "diolch yn fawr i chi gwr"], [405.0, "Côr Meibion Gaiman"]],
+    "fuentes": [["cy"], ["cy"]]
+  },
+  "rows": [
+    {"id": "r-cy", "reviewed_at": "2026-11-22T10:05:00+00:00", "display_name": "Elin",
+     "payload": {"video": {"id": "TESTVIDEO01"}, "cambios": [
+       {"t": 400.4, "antes": "Diolch yn fawr i chi gŵr", "texto": "Diolch yn fawr i chi gyd"},
+       {"t": 405.0, "antes": "Côr Meibion Gaiman", "texto": "Côr Meibion y Gaiman"}]}}
+  ],
+  "expected": {
+    "seg": [[400.0, "Diolch yn fawr i chi gyd"], [405.0, "Côr Meibion y Gaiman"]],
+    "fuentes": [["cy", "colab"], ["cy", "colab"]]
+  },
+  "sinAnclar": [],
+  "applied": ["r-cy"],
+  "autores": {"0": ["Elin"], "1": ["Elin"]}
+}

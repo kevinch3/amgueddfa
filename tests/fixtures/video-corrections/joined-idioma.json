@@ -1,0 +1,21 @@
+{
+  "about": "An idioma change on a joined line is reported, not applied; the texto of the same change still replaces its run",
+  "transcript": {
+    "lang": "es",
+    "seg": [[200.0, "Croeso i bawb. Bienvenidos a todos"], [210.0, "Diolch yn fawr"]],
+    "fuentes": [["cy"], ["cy"]]
+  },
+  "rows": [
+    {"id": "r-ji", "reviewed_at": "2026-11-22T10:05:00+00:00", "display_name": "Dafydd",
+     "payload": {"video": {"id": "TESTVIDEO01"}, "cambios": [
+       {"t": 203.0, "antes": "Bienvenidos a todos", "idioma": "es"},
+       {"t": 200.0, "antes": "Croeso i bawb.", "texto": "Croeso cynnes i bawb.", "idioma": "cy"}]}}
+  ],
+  "expected": {
+    "seg": [[200.0, "Croeso cynnes i bawb. Bienvenidos a todos"], [210.0, "Diolch yn fawr"]],
+    "fuentes": [["cy", "colab"], ["cy"]]
+  },
+  "sinAnclar": [["r-ji", 203.0, "idioma_en_linea_unida"], ["r-ji", 200.0, "idioma_en_linea_unida"]],
+  "applied": ["r-ji"],
+  "autores": {"0": ["Dafydd"]}
+}

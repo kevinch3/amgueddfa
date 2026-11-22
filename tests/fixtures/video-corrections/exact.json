@@ -1,0 +1,26 @@
+{
+  "about": "An edit and a whole-line quitar at the very time of their lines; idiomas stay aligned",
+  "transcript": {
+    "lang": "es",
+    "seg": [[2655.2, "Buenas tardes a todos"], [2664.0, "Benedicto de la Competencia Número noventa y ocho"],
+            [2671.5, "¡Suscríbete al canal!"], [2680.0, "Primer premio para el coro de Gaiman"]],
+    "fuentes": [["yt_es"], ["yt_es"], ["whisper_es"], ["yt_es"]],
+    "idiomas": ["es", "es", "cy", "es"]
+  },
+  "rows": [
+    {"id": "r-exact", "reviewed_at": "2026-11-22T10:05:00+00:00", "display_name": "Ana",
+     "payload": {"video": {"id": "TESTVIDEO01"}, "cambios": [
+       {"t": 2664.0, "antes": "Benedicto de la Competencia Número noventa y ocho",
+        "texto": "Veredicto de la Competencia Número noventa y ocho"},
+       {"t": 2671.5, "antes": "¡Suscríbete al canal!", "quitar": true}]}}
+  ],
+  "expected": {
+    "seg": [[2655.2, "Buenas tardes a todos"], [2664.0, "Veredicto de la Competencia Número noventa y ocho"],
+            [2680.0, "Primer premio para el coro de Gaiman"]],
+    "fuentes": [["yt_es"], ["yt_es", "colab"], ["yt_es"]],
+    "idiomas": ["es", "es", "es"]
+  },
+  "sinAnclar": [],
+  "applied": ["r-exact"],
+  "autores": {"1": ["Ana"]}
+}

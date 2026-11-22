@@ -1,0 +1,23 @@
+{
+  "about": "A correction's language replaces the file's guess in idiomas; text and fuentes stay (no colab for a language alone)",
+  "transcript": {
+    "lang": "cy",
+    "seg": [[800.0, "Diolch yn fawr i chi gyd"], [805.0, "Muchas gracias a todos"], [810.0, "Galwn ar yr unawdwyr"]],
+    "fuentes": [["yt_es"], ["cy"], ["cy"]],
+    "idiomas": ["es", "cy", "cy"]
+  },
+  "rows": [
+    {"id": "r-override", "reviewed_at": "2026-11-22T10:05:00+00:00", "display_name": "Owain",
+     "payload": {"video": {"id": "TESTVIDEO01"}, "cambios": [
+       {"t": 800.0, "antes": "Diolch yn fawr i chi gyd", "idioma": "cy"},
+       {"t": 805.0, "antes": "Muchas gracias a todos", "idioma": "es"}]}}
+  ],
+  "expected": {
+    "seg": [[800.0, "Diolch yn fawr i chi gyd"], [805.0, "Muchas gracias a todos"], [810.0, "Galwn ar yr unawdwyr"]],
+    "fuentes": [["yt_es"], ["cy"], ["cy"]],
+    "idiomas": ["cy", "es", "cy"]
+  },
+  "sinAnclar": [],
+  "applied": ["r-override"],
+  "autores": {"0": ["Owain"], "1": ["Owain"]}
+}

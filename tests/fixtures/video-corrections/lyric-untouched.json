@@ -1,0 +1,21 @@
+{
+  "about": "Lyric lines are never candidates: an edit or quitar of a lyric line is not placed and the lyric stays",
+  "transcript": {
+    "lang": "cy",
+    "seg": [[500.0, "Arglwydd, dyma fi"], [504.0, "Ar dy alwad di"], [520.0, "Diolch i'r côr"]],
+    "fuentes": [["letra"], ["letra"], ["cy"]]
+  },
+  "rows": [
+    {"id": "r-lyric", "reviewed_at": "2026-11-22T10:05:00+00:00", "display_name": "Elin",
+     "payload": {"video": {"id": "TESTVIDEO01"}, "cambios": [
+       {"t": 500.0, "antes": "Arglwydd, dyma fi", "texto": "Arglwydd, dyma fi!"},
+       {"t": 504.0, "antes": "Ar dy alwad di", "quitar": true}]}}
+  ],
+  "expected": {
+    "seg": [[500.0, "Arglwydd, dyma fi"], [504.0, "Ar dy alwad di"], [520.0, "Diolch i'r côr"]],
+    "fuentes": [["letra"], ["letra"], ["cy"]]
+  },
+  "sinAnclar": [["r-lyric", 500.0, "sin_linea"], ["r-lyric", 504.0, "sin_linea"]],
+  "applied": [],
+  "autores": {}
+}

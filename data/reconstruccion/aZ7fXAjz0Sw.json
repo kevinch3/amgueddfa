@@ -14,6 +14,10 @@
   [
    79.4,
    "Dim yn ei blesu plîs, yng ngwely'r cron, sydd eto'n dal i gredu, mai Erys byw a chwi, ryw nofwy byr ar fy mys. Dwi'n gweld hi'n adeiladu halleluja halleluja."
+  ],
+  [
+   148.82,
+   "Pues escuchamos."
   ]
  ],
  "fuentes": [
@@ -25,12 +29,15 @@
   ],
   [
    "cy"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {
-  "total": 6,
-  "modelo": 2,
+  "total": 5,
+  "modelo": 3,
   "reglas": 0,
-  "vacias": 4
+  "vacias": 2
  }
 }

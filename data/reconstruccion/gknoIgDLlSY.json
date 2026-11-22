@@ -1,6 +1,6 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
@@ -9,43 +9,55 @@
   ],
   [
    60.0,
-   "Eleni, ddou caras de la misma manera, en cada uno de sus líneas, las"
+   "dos caras de la misma moneda con cada una de sus niñas"
   ],
   [
    66.34,
-   "imágenes que cuaban en sus sueños, su fe y lo fechó, su lucha cotidiana,"
+   "las imágenes que muevan sus sueños, su fe en lo bello, su lucha cotidiana."
   ],
   [
    73.42,
-   "encarnados todos en los versos, que vencieron al fin, para este Eisteddfod, la"
+   "encarnados todos en los versos que vencieron al fin para este Eisteddfod."
   ],
   [
    80.22,
-   "página en blanc, esta transfiguración, donde hablant y poeta fel jugar dou niveles,"
+   "La página en blanco, esa transfiguración donde el hablante poeta conjuga dos niveles."
   ],
   [
    87.74,
-   "uno d'estetiedigol, y uno d'interio genal."
+   "Uno de exterioridad y uno de interioridad."
   ],
   [
    91.94,
-   "Yn eich un nifell se logra, no'n solo transmitio unigrafs intrusiones individuales,"
+   "En estos niveles se logra no sólo transmitir nígidas intuiciones individuales,"
   ],
   [
    98.5,
-   "sin'o' que ademas, permite a'n ymdrever un universo rilico de alto poder suggestivo,"
+   "sino que además permiten emprender un universo lírico de alto poder sugestivo"
   ],
   [
    104.7,
-   "donde la propia poesia se hace tema objectivo, y a la vez se subjetiviza"
+   "donde la propia poesía se hace tema objetivo y a la vez se subjetiviza."
   ],
   [
    111.7,
-   "en la transformacion personal que el autor propone."
+   "en la transformación personal que el autor propone."
+  ],
+  [
+   115.42,
+   "Si el tono se encuentra en la sala, por favor, que se ponga de pie."
+  ],
+  [
+   175.42,
+   "Bueno, parece que sí, yo lo sabía."
+  ],
+  [
+   181.08,
+   "Bueno, muchas gracias. Son algunos años, pocos años, pero de una labor muy intensa y repetida en la policía."
   ],
   [
    235.42,
-   "Una lwm soledad, ym mynd i'r anadá, susurra'r ffendo a se'n mynd, enloqueciendo el color, y es una nostalgia, un adios."
+   "Una luz soledad de mi tierra natal Susurra el viento y se va Enloqueciendo el color Y es la nostalgia un adiós"
   ]
  ],
  "fuentes": [
@@ -53,40 +65,49 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {
   "total": 5,
-  "modelo": 3,
+  "modelo": 4,
   "reglas": 0,
-  "vacias": 2
+  "vacias": 1
  }
 }

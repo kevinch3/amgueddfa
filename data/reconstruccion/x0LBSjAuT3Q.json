@@ -1,29 +1,57 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   19.36,
+   "Que venía un rabo de nube, de nube Junto al regino en el cielo Y una gran ira que sube"
+  ],
+  [
+   49.36,
+   "Un amor de tristeza, un amor de tristeza, un amor ser humano, un amor ser humano, que en su amor siempre parezca nuestra esperanza."
+  ],
+  [
    71.84,
-   "Cwm ba ryddor de'r ffwrdd de'r tristesa, un a fo'ch ser- un a fo'ch sero'n fengansa, pe' cwando escampe paresca nwystra esperansa."
+   "Un barretor de tristeza, un aguacero en venganza, que cuando escape parezca nuestra esperanza."
+  ],
+  [
+   161.84,
+   "no arriesga nuestra esperanza."
+  ],
+  [
+   177.88,
+   "Un aguacero en venganza."
   ],
   [
    183.72,
-   "Que cuando escape parezca nuestra esperanza."
+   "que cuando escape parezca nuestra esperanza."
   ]
  ],
  "fuentes": [
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {
   "total": 4,
-  "modelo": 3,
+  "modelo": 4,
   "reglas": 0,
-  "vacias": 1
+  "vacias": 0
  }
 }

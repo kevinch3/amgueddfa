@@ -1,43 +1,50 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
-   53.58,
-   "Werth bod ti'n gadarn, ma'n drioed, mae'n gadal, wbath swn ti, Sam, mam a ddyn"
-  ],
-  [
    83.58,
-   "Ie, ond oce perbandaban, para curar ne' venido atran. La-ra-rai, la-ra-rai, la-ra-rai, la-ra-rai, la-ra-rai."
+   "Sabiendo que te levantabas para curarte el venido"
   ],
   [
    91.54,
-   "Pensando que no tendrías, me dio tuelo y traidor. La-ra-rai, la-ra-rai, la-ra-rai, la-ra-rai, la-ra-rai."
+   "Pensando que no tendrían, que yo te lo he traído"
   ],
   [
    99.46,
-   "A os nacen ca'l a'odas de hwyrna, oce ne' ddwelen i fyddan. La-ra-rai, la-ra-rai, la-ra-rai, la-ra-rai, la-ra-rai."
+   "Que laudante buena, porque te duele mi vida"
+  ],
+  [
+   107.98,
+   "Seguro esa mujer bruja ya también te brujería Déjame tocar tu cuerpo que el tibio lo hagas en mi agua Te rozas mis manos y te dejen en el calor frío ¡Vamos!"
+  ],
+  [
+   137.98,
+   "Esta rosa víctima también está los míos."
   ]
  ],
  "fuentes": [
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {
   "total": 3,
-  "modelo": 2,
+  "modelo": 3,
   "reglas": 0,
-  "vacias": 1
+  "vacias": 0
  }
 }

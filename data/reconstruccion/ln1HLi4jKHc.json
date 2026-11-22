@@ -1,37 +1,79 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
    60.0,
-   "Las horas flores que di, y desde el mar llegó un fantasma checho de cosas que a mi perdi."
+   "Las horas jóvenes que vi Y desde el mar llega un fantasma Checho de cosas que a mí perdí"
+  ],
+  [
+   78.34,
+   "Todo fue un sueño, un sueño que perdimos, como perdimos los pájaros y el mar. Un sueño breve y antiguo como el tiempo, que los espejos no pueden reflejar."
   ],
   [
    94.82,
-   "Des pues busqué perderte en tantas otras, ni aquella otra ni todas serán dos."
+   "Después busqué perderte en tantas otras, y aquella otra, y todas eran vos."
   ],
   [
    105.22,
-   "Al fin no me reconocé cuando un adiós, jesŵ, un adiós, la soledad me devorô, y fuimos dos."
+   "Al fin logre reconocer, cuando un adiós es un adiós, la soledad me devoró y fuimos dos."
   ],
   [
    123.22,
-   "Sur i sur un pachar oedd di, oh, e'n gwel' fe des, e'n gwel' fe des del mas allan, a confundise con un sieno, que nunca mas podre, recuperar."
+   "Soy sólo un pájaro perdido, que vuelve desde el más allá a confundirse con un cielo que nunca más podré recuperar."
+  ],
+  [
+   153.46,
+   "que vuelan ciegos por el mar."
+  ],
+  [
+   158.7,
+   "La noche entera es un espejo que me devuelve tu soledad."
+  ],
+  [
+   168.58,
+   "Soy solo un pájaro perdido"
+  ],
+  [
+   172.46,
+   "Que vuelve desde el más allá"
+  ],
+  [
+   176.58,
+   "A confundirse con los cielos"
   ]
  ],
  "fuentes": [
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {

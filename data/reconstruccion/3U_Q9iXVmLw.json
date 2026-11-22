@@ -46,6 +46,10 @@
   [
    511.0,
    "Os a'n ni."
+  ],
+  [
+   571.0,
+   "de música de Gaiman"
   ]
  ],
  "fuentes": [
@@ -81,12 +85,15 @@
   ],
   [
    "cy"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {
   "total": 10,
-  "modelo": 6,
+  "modelo": 7,
   "reglas": 0,
-  "vacias": 4
+  "vacias": 3
  }
 }

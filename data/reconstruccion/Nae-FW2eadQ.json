@@ -1,11 +1,23 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   60.0,
+   "Es Navidad. El que se me vive en el amor, es mensajero de gracia, amor,"
+  ],
+  [
+   90.0,
+   "Cuando sonríe, se hacen árboles, en sus brazos, en sus brazos, en su cano."
+  ],
+  [
    118.0,
-   "Mae'n cynnig synnwyr i ni, teg iawn sy'n fawr iawn."
+   "Mae'n cynnig synnwyr i ni, teg iawn sy'n fawr iawn"
+  ],
+  [
+   148.0,
+   "Cristo es la noche, el pueblo de la gloria, saludo sol."
   ],
   [
    194.0,
@@ -14,7 +26,16 @@
  ],
  "fuentes": [
   [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
    "cy"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
@@ -22,8 +43,8 @@
  ],
  "ventanas": {
   "total": 4,
-  "modelo": 3,
+  "modelo": 4,
   "reglas": 0,
-  "vacias": 1
+  "vacias": 0
  }
 }

@@ -1,63 +1,111 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
    0.0,
-   "Sosman bach yn peri ar y tân, sosman fawr yn peri am dawn, a dawn wedi sgrafo jolly bach."
+   "Sosban bach yn peri ar y tân, sosban fawr yn peri am dawn, a dawn wedi sgrafo jolly bach."
   ],
   [
    30.0,
    "Castellau Sant Degin, parti rif grân poblogaidd, yr un cefndar yn y castellau yma yw Côr Brwlew."
   ],
   [
+   46.0,
+   "Competencia número 71, Conjunto vocal libre con ensamble instrumental, música popular, primer participante, coro municipal de Trayuno."
+  ],
+  [
+   60.94,
+   "Sí, jurado Radejone, gracias. Escuchamos."
+  ],
+  [
+   118.0,
+   "Llyfyr i'r amlwgwyr, a'r llyfr i'r amlwgwyr a'r llyfr i'r amlwgwyr."
+  ],
+  [
+   362.2,
+   "No me llore mi vida, que su mamá la cuida y la aleja de ser mal. No le va a pasar nada, de noche la virgen, la bendice y la guarda."
+  ],
+  [
+   468.2,
+   "La noche la viste, la bendice, la guarda"
+  ],
+  [
    608.2,
    "O iawn ni'n gal ein mlaen drw'r amlwg at dda"
   ],
   [
+   630.2,
+   "Hwyl fawr iawn, hwyl fawr iawn, hwyl fawr iawn."
+  ],
+  [
+   642.68,
+   "Sé que estás acá mirándome, sé quitarme el alma y en cada lugar."
+  ],
+  [
+   663.4,
+   "Quiero encontrar ese dulce abrazo."
+  ],
+  [
    693.4,
-   "Nw'n nath de allan,"
+   "Nw'n nath de allan"
+  ],
+  [
+   723.4,
+   "Muchas gracias."
+  ],
+  [
+   753.4,
+   "tercero y cuarto año que también está listo aquí el escenario que eso nos va a interpretar río y marzo"
+  ],
+  [
+   783.4,
+   "Ando llorando pa' afuera, aunque me ría padre, así tengo yo que vivir esperando a que me muera. Le doy ventaja a los vientos, aunque no puede volar, hasta que agarró mi cama y la empezó a bailar."
+  ],
+  [
+   813.4,
+   "Y la saberte que se dirá, acá en el bosque de la vida, también es que nos vamos a más."
+  ],
+  [
+   826.06,
+   "¡Papre, solos de terreno! ¡Venga por tierra el viento en tu mano!"
+  ],
+  [
+   843.4,
+   "Yo te sigo por si acaso, no vas a tener un sexista, y me lleve a digerlo, con todas mis ovejitas."
+  ],
+  [
+   856.4,
+   "No sé si habrá otro mundo donde las almas suspiran. Yo vivo sobre la tierra, caminando con el chila."
+  ],
+  [
+   961.4,
+   "Se acerca ahora al escenario el Instituto de Formación Docente Artística número 805, conjunto vocal, Encontrarte."
+  ],
+  [
+   1021.4,
+   "¡Gracias!"
+  ],
+  [
+   1171.4,
+   "Las más salvajes que no vuelven a desgraciarnos, el claro que todos quieren estar."
   ],
   [
    1184.52,
    "Mi oedd hi'n dda, mi oedd hi'n dda yn chwarae'r ffordd. Mi oedd hi'n dda, mi oedd hi'n dda yn chwarae'r ffordd."
   ],
   [
-   1274.52,
-   "Shut up! Halleluja, a'r pres is all in it."
-  ],
-  [
-   1283.52,
-   "Amazing grace, how sweet the sound, the day that Mary died for me."
-  ],
-  [
-   1287.52,
-   "Her blood was gone, but now her soul was better now with me."
-  ],
-  [
-   1292.52,
-   "Jesus, Jesus, how I love you."
-  ],
-  [
-   1297.52,
-   "Shut up! Halleluja, a'r pres is all in it."
-  ],
-  [
-   1301.52,
-   "Sing to the power of the Lord's countdown, shout halleluja, praise his holy name."
-  ],
-  [
-   1349.52,
-   "Halleluja, praise his holy name, sing till the power of the Lord come down, shout halleluja, praise his holy name."
-  ],
-  [
    1365.52,
-   "Halleluja, praise his name, halleluja, our Lord praise his holy name halleluja,"
+   "Halleluja, praise his name, halleluja, our Lord praise his holy name halleluja"
   ],
   [
    1502.8,
-   "Ahora si, entonces, último participante de la competencia setenta y uno, Instituto Ochocientos Cinco, Guajira, el vaiver de Micarrega."
+   "Ahora sí entonces, último participante de la competencia 71, Instituto 805 Guajira, el vaivén de mi carreta."
+  ],
+  [
+   1567.8,
+   "¡Gracias!"
   ],
   [
    1582.28,
@@ -66,6 +114,10 @@
   [
    1620.28,
    "Ma' na ddawns i ennyn, ma' na ddawns i ennyn erbyn hwnnw. Ma' na ddawns i ennyn, ma' na ddawns i ennyn erbyn hwnnw."
+  ],
+  [
+   1650.28,
+   "Tuviste la vida del barallero, cantando en sus canciones reales, sabiendo que es un bonito de su destierro, salir a pasar a cantar."
   ]
  ],
  "fuentes": [
@@ -76,7 +128,19 @@
    "cy"
   ],
   [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
    "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
@@ -85,7 +149,43 @@
    "cy"
   ],
   [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
    "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
@@ -94,7 +194,10 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
@@ -103,25 +206,13 @@
    "cy"
   ],
   [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
+   "whisper_es"
   ]
  ],
  "ventanas": {
-  "total": 29,
-  "modelo": 17,
+  "total": 30,
+  "modelo": 20,
   "reglas": 0,
-  "vacias": 12
+  "vacias": 10
  }
 }

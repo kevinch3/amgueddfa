@@ -6,17 +6,24 @@
   [
    0.0,
    "Diolch yn fawr iawn i chi am ddod a'i chydig i'r cyngerdd hwnnw."
+  ],
+  [
+   150.0,
+   "Gracias."
   ]
  ],
  "fuentes": [
   [
    "cy"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {
   "total": 3,
-  "modelo": 1,
+  "modelo": 2,
   "reglas": 0,
-  "vacias": 2
+  "vacias": 1
  }
 }

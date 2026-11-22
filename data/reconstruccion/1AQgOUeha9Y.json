@@ -4,6 +4,14 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   230.56,
+   "Cuando la noche es tarde, cuando la noche es larga y la madurada está viejo, luchando durante largas horas,"
+  ],
+  [
+   260.56,
+   "Cierro es párrafo cuando la noche está y de la oscuridad negra veo tu cara y el miedo se va, desaparece el temor cuando la noche cambia la vida."
+  ],
+  [
    425.56,
    "Yna bwyd efo chdi, yna neb mwy derbyn, o'r geiria' a'r gafen, geiria' a'r gafen, o'r gorff o'r ffin."
   ],
@@ -14,6 +22,12 @@
  ],
  "fuentes": [
   [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
    "cy"
   ],
   [
@@ -22,8 +36,8 @@
  ],
  "ventanas": {
   "total": 9,
-  "modelo": 2,
+  "modelo": 4,
   "reglas": 0,
-  "vacias": 7
+  "vacias": 5
  }
 }

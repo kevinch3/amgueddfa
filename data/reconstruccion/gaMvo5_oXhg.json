@@ -1,43 +1,92 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
    98.88,
-   "Nadie que me digas si vives aun, donde estas."
+   "Nadie que me diga si vives aún, ¿dónde estás?"
+  ],
+  [
+   107.88,
+   "para decirte que hoy he vuelto arrepentido a buscar."
+  ],
+  [
+   137.88,
+   "¡Gracias!"
+  ],
+  [
+   224.46,
+   "¿Dónde estás?"
+  ],
+  [
+   228.26,
+   "para decirte que hoy he vuelto arrepentido a buscar tu amor."
+  ],
+  [
+   285.6,
+   "Llegué por la esquina buscando casa Que dirán buscando casa"
+  ],
+  [
+   301.56,
+   "La casa ya era de otro que mala paga, que digan que no era mayor, que digan ser caracunar, que el mandinel pidiendo por si sobraba, por si sobraba."
+  ],
+  [
+   325.22,
+   "Caramba yo, caramba usted, caramba yo, caramba con los panes siempre se acaban y se acabó."
+  ],
+  [
+   353.06,
+   "Los bandes son de trigo por las esquinas"
   ],
   [
    357.98,
-   "Ceir digon o'r esginas, ceir digon o'r siôn, ceir digon o'r stêl, ceir digon o'r siôn."
-  ],
-  [
-   368.98,
-   "Iesta casa es tu casa, y esta es la mina, ceir digon o'r esginas, ceir digon o'r siôn, ar y wahan o eira, ar y wahan o eira, ceir digon o'r stêl, ceir digon o'r eira."
+   "Que diga por las esquinas, que diga yo, que diga usted, que digo yo."
   ],
   [
    384.98,
-   "Ia, hi termina'r gwefn o Deodd o's modd o, Deodd o's modd o, Caramba su, Caramba su, Pan de las esquinitas es pan Deodd o's, Que Diw es el pan Deodd o's."
+   "Y aquí termina el juego, de todos modos, de todos modos. Caramba, yo, caramba usted, caramba, yo. Pan de las esquinitas, es pan de todos, que vivo es el pan de todos."
   ]
  ],
  "fuentes": [
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {
   "total": 7,
-  "modelo": 4,
+  "modelo": 7,
   "reglas": 0,
-  "vacias": 3
+  "vacias": 0
  }
 }

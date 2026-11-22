@@ -44,8 +44,12 @@
    "Dynion cryfion iawn iawn, lasci cas mwy mwy, maen nhw di aros, yn anolegu'ch arna ni, fel os mi estan ni'n andros."
   ],
   [
+   222.68,
+   "¡Pasamos! ¡Qué lejos!"
+  ],
+  [
    241.68,
-   "Buenos dias."
+   "¡Buenos días!"
   ],
   [
    246.68,
@@ -76,16 +80,12 @@
    "Wyt ti'n siarad Cymraeg?"
   ],
   [
-   271.68,
-   "Ablasbanuol."
-  ],
-  [
    277.68,
    "Pam ddeudon ni?"
   ],
   [
    280.68,
-   "Somos argentinos."
+   "¡Somos argentinos!"
   ],
   [
    294.68,
@@ -94,6 +94,10 @@
   [
    298.68,
    "Dyn Cymraeg."
+  ],
+  [
+   323.68,
+   "¡Ese es su propio espacio!"
   ],
   [
    357.68,
@@ -125,11 +129,11 @@
   ],
   [
    579.3,
-   "Ni chwilio am ddim byd o fwyd. Ha ha ha ha ha ha ha ha ha ha ha. Ni chwilio am ddim byd o fwyd."
+   "Ni chwilio am ddim byd o fwyd. Ni chwilio am ddim byd o fwyd."
   ],
   [
    596.9,
-   "Chicos y chicas de Gales. Chicos y chicas o Gymru, diolch i chi am gynradd yn y Eisteddfod Wladfa dwy fil a deuddeg. Graziad por participar yn y Eisteddfod."
+   "chicos y chicas de Gales chicos y chicas gracias por participar en este"
   ]
  ],
  "fuentes": [
@@ -164,7 +168,10 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
@@ -191,7 +198,16 @@
    "cy"
   ],
   [
+   "whisper_es"
+  ],
+  [
    "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
@@ -218,22 +234,13 @@
    "cy"
   ],
   [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
+   "whisper_es"
   ]
  ],
  "ventanas": {
   "total": 10,
-  "modelo": 9,
-  "reglas": 1,
+  "modelo": 10,
+  "reglas": 0,
   "vacias": 0
  }
 }

@@ -8,8 +8,32 @@
    "Er gwaetha mawr o bobl, be dwi'n ymddorol ydi."
   ],
   [
+   102.0,
+   "un árbol de changuito en mis sueños."
+  ],
+  [
+   108.0,
+   "Ararante novia y va cantando mi cantor En una copla sigue a la luna buscando la mañana ¡Gracias!"
+  ],
+  [
+   168.0,
+   "Yo soy cantor, mi dalderote, mi tierra santiagenia."
+  ],
+  [
    198.0,
-   "Swi'n ganddo'n mwsg o'r sol, fi'n galio'n bach o'r sielo, fi'n gadael y stad yn enamorada del grîtos at ei anenio."
+   "Soy cantor, busco el sol, vibralando hasta el cielo, mi caja está enamorada del grito santiagueño."
+  ],
+  [
+   228.0,
+   "Cuando muera, tal vez mezclara con la tierra, flores campañas de algoroba de alguna primavera."
+  ],
+  [
+   258.0,
+   "Canto, canto, siento que ese duende quicha que tira de mis venas Me hace ir a olvidar nuestra tristeza Sienta, yo soy bandor y al héroe de mi tierna santa genia"
+  ],
+  [
+   288.0,
+   "Muchas gracias."
   ],
   [
    468.0,
@@ -49,7 +73,11 @@
   ],
   [
    825.44,
-   "Mae'n mae'n i'r bont e, lle fflwyddaist e, to'dd o'n swnio'n gollol, nes de ne' se ffwyd, nes de ne' se ffwydde."
+   "Hay acá en el monte, que fundirá este, todos son de locos, desde que se fue, desde que se fue."
+  ],
+  [
+   885.44,
+   "de mi alma"
   ],
   [
    1061.44,
@@ -93,7 +121,25 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
@@ -123,7 +169,10 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
@@ -155,8 +204,8 @@
  ],
  "ventanas": {
   "total": 23,
-  "modelo": 15,
+  "modelo": 18,
   "reglas": 0,
-  "vacias": 8
+  "vacias": 5
  }
 }

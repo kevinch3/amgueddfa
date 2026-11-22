@@ -24,8 +24,12 @@
    "Interjectus gloria venus."
   ],
   [
+   311.44,
+   "Gracias."
+  ],
+  [
    368.88,
-   "Mae'r capten ar y bwrdd, cychwynnodd i drws."
+   "Mae'r capten ar y bwrdd, sydd geir llws, cychwynnodd i drws."
   ],
   [
    394.88,
@@ -90,6 +94,14 @@
   [
    1081.88,
    "Eladu Morgwy, eladu."
+  ],
+  [
+   1149.88,
+   "Bueno, somos el asamble Titoxque, de la asociación galesa Casatoxque, de Puerto Madryn. En esta formación, en esta oportunidad, elegimos un set llamado Inquit, una danza galesa que vamos a tener que intentar. En guitarra nos acompaña Eduardo Carvalho."
+  ],
+  [
+   1168.88,
+   "En Wistel, Pablo Pekolei, Biori, Michelle, Salem, y yo en producción, Santiago Pérez Padre. Bueno, espero que disfruten de esta pequeña pieza que nos hemos preparado."
   ]
  ],
  "fuentes": [
@@ -109,7 +121,7 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
    "cy"
@@ -158,12 +170,21 @@
   ],
   [
    "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {
   "total": 23,
-  "modelo": 12,
+  "modelo": 15,
   "reglas": 0,
-  "vacias": 11
+  "vacias": 8
  }
 }

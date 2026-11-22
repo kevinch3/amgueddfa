@@ -1,85 +1,148 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
    180.0,
-   "Alliando dentro misandir, tu sombra viene conmigo y no la puedo arrancar."
+   "Ardiendo dentro mi sangre, tu sombra viene conmigo y no la puedo arrancar."
   ],
   [
    187.8,
-   "Te llevo por los caminos con un abroco prendido, pendido a mi caminar."
+   "Te llevo por los caminos como un abrojo prendido, prendido a mi caminar."
   ],
   [
    197.7,
-   "Te llevo por los caminos con un abroco prendido, pendido a mi drefliar."
+   "Te llevo por los caminos, como un abrojo prendido, Digo a mi quitaria."
   ],
   [
    207.26,
-   "O'r ystafllamas del dydd, dwi'n gweld anwsian do' i'n pêl-dros, i'r alambres del dydd, o'r giron'n ystil soledad, se destun ato'r record, sabindo que estas muy lejos, y que ya no volveras."
+   "Por esas ramas del cielo, veo anunciando tu pelo, y en los alambres del cielo, o girones de soledad, se deseará el recuerdo, sabiendo que estás muy lejos, y que ya no volverás."
+  ],
+  [
+   228.26,
+   "Se desiralla el recuerdo sabiendo que estás muy lejos de aquella nuestra verdad, estremecidos del cielo."
   ],
   [
    243.14,
-   "Oh, yo vi tus ojos llorar La noche pide gritar La zamba busca el camino Y yo te quiero cantar La noche pide gritar La zamba busca el camino Yo no te puedo olvidar"
+   "Yo vi tus ojos llorar La noche pide guitarra La samba busca el olvido Y yo te quiero cantar La noche pide guitarra La samba busca el camino Yo no te puedo olvidar"
+  ],
+  [
+   288.14,
+   "Como un sutil alfarero, fui tallando mis sueños, al golpe de greda el fuego, a fuerza de tanto amor."
   ],
   [
    299.14,
-   "Yn y telau le yw'n coplero, te dibujé beso a beso, para no perderte más."
+   "Y en el telar de un copero te dibujé beso a beso para no perderte más."
   ],
   [
    308.94,
-   "Yn y telau le yw'n coplero, te dibujé beso a beso, para meterte a cantar."
+   "Y en el que era el león completo, te dibujé verso a verso, para besarte al cantar."
   ],
   [
    318.7,
-   "Aquella en una perdida Se como un capullo en el cielo Si me haces que es tu pañuelo En unas almas te vas Y en el pelor del lucero Como si guiando tu vuelo Mis pensamientos se van Y en el pelor del lucero Como si guiando tu vuelo Mi amor, mi amor te sale a buscá- ar."
+   "Aquella luna perdida se como un capullo en el cielo Se me hace que es tu pañuelo que en una zamba se va Y en el temblor del lucero como siguiendo tu vuelo Mis pensamientos se van Y en el temblor del lucero como siguiendo tu vuelo Mi amor, mi amor te sale a buscar"
   ],
   [
    348.0,
-   "Ystryfys i ddws i'r sieno, ddo' fi'n dyso fo siarad. La noche pide guitarra a samba buscar el olvido y yo te quiero cantar. La noche pide guitarra a samba buscar el camino, yo no te voy a olvidar."
+   "Estremes y luz del cielo Yo vi tus ojos llorar La noche pide guitarra La samba busca el olvido Y yo te quiero cantar La noche pide guitarra La samba busca el camino Yo no te voy a olvidar"
   ],
   [
    404.0,
-   "Deja que te cuelten el sueño, deja que me imaginas la gloria, el sueño que coja en la memoria, el viejo puente, el rio y cadancenas."
+   "Déjame que me cuente el reino, déjame que viva la gloria, el sueño que evoca en la memoria, el viejo fuerte, el río y la antena."
+  ],
+  [
+   431.0,
+   "Déjame tener buen rendimiento, ahora que aún perfume el recuerdo."
+  ],
+  [
+   442.0,
+   "Ahora que a un semestre justo el río, el viaje fuerte, el río y la piedra."
+  ],
+  [
+   489.0,
+   "Déjame que te cuente, te mando, hoy te deja que te viva, moreno, a pensar en el futuro."
+  ],
+  [
+   508.0,
+   "Si no leo la distancia de la gloria, abarca la contamina, matizando su hermosura."
+  ],
+  [
+   519.0,
+   "El monstruo de nuevo, el puente y el cabello de la lómena, que vio con las ganas de más caridad de la vida."
+  ],
+  [
+   540.0,
+   "Las miles en el cielo y cruzcas en la cara, hay muchas caminadas por la carrera. Arroes tu callas, tu vaso de pago, pero no van en eso que el pecho se va."
+  ],
+  [
+   559.0,
+   "Le vuelve a dar a ver el angelio, y ella lleva por la tierra que se espremece al ritmo de sus caderas. La renuncia a la risca de la risca del río, y al viento la lanzaba."
   ]
  ],
  "fuentes": [
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {
-  "total": 10,
-  "modelo": 5,
+  "total": 11,
+  "modelo": 8,
   "reglas": 0,
-  "vacias": 5
+  "vacias": 3
  }
 }

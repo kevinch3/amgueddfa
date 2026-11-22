@@ -4,12 +4,16 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   30.0,
+   "¡Gracias!"
+  ],
+  [
    120.0,
    "Mae ar rywbeth amdanat ti na' bendirau fi, yn fawr ddo."
   ],
   [
    130.0,
-   "Rywbeth andanat ti na' bendirau fi, yn fawr ddo."
+   "Todo no se puede."
   ],
   [
    140.0,
@@ -64,12 +68,40 @@
    "Un o'r rhif ddau ych chi a fod yn rhydd, dwi'n cymryd byddwch chi'n bod wedi parhau, ond cerddai fawr o brin parhau mewn ryddwydion yn tynnu gwlad fy mhen, yn tynnu gwlad fy mhen a fynd mewn i'r hefydion."
   ],
   [
+   531.0,
+   "Ya llegó la trago espermín que nos pide a enseñar que todos son las mutaciones que nos vamos a olvidar."
+  ],
+  [
    548.0,
-   "Wel, groeso, yn caraf groeso, gor-weithio i'r cwmni hi, a ni'n agor ein galon a'i legen, gyda'r thema ni."
+   "Wel, groeso, yn caraf groeso, gor-weithio i'r cwmni hi, a ni'n agor ein calon a'i legen, gyda'r thema ni."
+  ],
+  [
+   605.08,
+   "Quiero decirle al oído, cuantas cosas preciosas estoy sintiendo por ti."
+  ],
+  [
+   640.0,
+   "Es que es Juan Hala, la maestra nueva, y es tan linda, ¿viste?"
+  ],
+  [
+   648.0,
+   "A esa que te aparta de mí, que me roba tu tiempo, le goce la chacra. ¡Ve y dile!"
+  ],
+  [
+   659.0,
+   "Que venga, que venga valor, que me duerme la cara, que me duerme de fuerte si quiere su amor."
+  ],
+  [
+   735.0,
+   "Ya es tarde, salió Y aquí no hay más lugar que para nosotros dos"
+  ],
+  [
+   743.0,
+   "Yo sé que va a estar enojada Y ha llenado mi corazón, y a mí no me importaba Prefiero ir a la charla, prefiero ir a la charla"
   ],
   [
    755.0,
-   "Os ti isio priodi fi."
+   "Os ti isio priodi fi, os ti isio priodi fi, os ti isio priodi fi."
   ],
   [
    785.0,
@@ -80,8 +112,32 @@
    "Fod yr aros bai un yn wych, lle mae'n deimlo fod caerfawr i fod, lle mae'n mentyn yn canu, ie i fi, a'r ariaith yn byw o hyd."
   ],
   [
-   1033.0,
-   "Gan y ffôn dwi'n ecstasi, a'r ffôn dwi'n adeiladu, dwi'n sôn am fi."
+   1003.0,
+   "Tantas cosas preciosas que estoy sintiendo por ti."
+  ],
+  [
+   1063.0,
+   "¡Gracias!"
+  ],
+  [
+   1123.0,
+   "Como los unicornios al desapareciendo, amar y salvo hermoso, solo expresión del pezón, un amor como el nuestro, ¡Gloria de la vida!"
+  ],
+  [
+   1183.0,
+   "Un amor como el nuestro no se puede morirá."
+  ],
+  [
+   1273.0,
+   "Nosotros vivimos, hay que separarnos. Necesitamos las marinas, a la gente que viene aquí."
+  ],
+  [
+   1364.6,
+   "¡Gracias!"
+  ],
+  [
+   1470.64,
+   "¡Gracias!"
   ],
   [
    1507.84,
@@ -90,7 +146,13 @@
  ],
  "fuentes": [
   [
+   "whisper_es"
+  ],
+  [
    "cy"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
@@ -132,7 +194,28 @@
    "cy"
   ],
   [
+   "whisper_es"
+  ],
+  [
    "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
@@ -144,10 +227,25 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
@@ -155,8 +253,8 @@
  ],
  "ventanas": {
   "total": 26,
-  "modelo": 13,
+  "modelo": 24,
   "reglas": 1,
-  "vacias": 12
+  "vacias": 1
  }
 }

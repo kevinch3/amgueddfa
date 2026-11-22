@@ -12,8 +12,24 @@
    "Mae nawr galon i ar her seilio ar y llwyfan, os gwelwch yn dda."
   ],
   [
+   840.0,
+   "Hay otro capitán más valiente que tú."
+  ],
+  [
    890.8,
    "Diwrnod o'r blaen ma'n gwasanaeth negedd gŵn."
+  ],
+  [
+   1072.92,
+   "Truena el cañón, préstame tu fusil, que la revolución viene muriendo hasta aquí."
+  ],
+  [
+   1084.92,
+   "Tierra del sol, en el alnope, en el alnope, en el comuna, tu paz, tu luz."
+  ],
+  [
+   1099.76,
+   "De la sigla de la libertad quiero formar en tu escuadrón. Y a todos, vamos a atacar. Juana, su rueda, su rueda, su relojpe, su Texto No hay otro más aliente que tú."
   ],
   [
    1129.76,
@@ -28,7 +44,19 @@
    "cy"
   ],
   [
+   "whisper_es"
+  ],
+  [
    "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
@@ -36,8 +64,8 @@
  ],
  "ventanas": {
   "total": 20,
-  "modelo": 5,
+  "modelo": 7,
   "reglas": 0,
-  "vacias": 15
+  "vacias": 13
  }
 }

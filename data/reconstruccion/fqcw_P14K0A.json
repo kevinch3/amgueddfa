@@ -1,6 +1,6 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
@@ -18,6 +18,22 @@
   [
    111.3,
    "O'n i'n anferth i'r gartref ein Duw, mi gawn ni drog nw ynddo cam Dduw, i wylia diomder popeth yn dda."
+  ],
+  [
+   212.3,
+   "Oh, gratitud, canción alzar, hayas de lo que se nos dio."
+  ],
+  [
+   254.3,
+   "¡Gracias!"
+  ],
+  [
+   713.54,
+   "¡Gracias!"
+  ],
+  [
+   889.44,
+   "Muchas gracias, el título 805 de Sorrausan, y vamos a invitar al último grupo participante, se trata de El Matrero, con vota no teña."
   ]
  ],
  "fuentes": [
@@ -32,12 +48,24 @@
   ],
   [
    "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {
   "total": 20,
-  "modelo": 3,
+  "modelo": 6,
   "reglas": 0,
-  "vacias": 17
+  "vacias": 14
  }
 }

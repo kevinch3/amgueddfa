@@ -12,6 +12,10 @@
    "Mae'n rhan o'r ffordd byth yn cael ei ddynnu, ond mae'n rhan o'r ffordd byth yn cael ei ddynnu'n fawr."
   ],
   [
+   1003.0,
+   "Muchísimas gracias."
+  ],
+  [
    1031.0,
    "Siawn yw'r fôr, y sŵn, a'r chreni Siawn yw'r ŵr, y gwyn, a'r melyn Siawn yw'r boed, o ddail a'r cloddau Siawn yw'r cariad, a'i ddifinnau."
   ],
@@ -49,7 +53,7 @@
   ],
   [
    1302.62,
-   "Ydy'n recitatif lle ydy'n moment lle'n dangos fwy o fwy o fwy o lyfr, yym, a wedyn yy dechrau'r area'n si, sef yr ardal lle gallwch chi ymddangosi y teimladau yn y casgliad Susanna, sy'n yy yy y prif weinidog yr ardal. Iawn, diolch yn fawr."
+   "es un rechicativo, es un momento donde se expresa un tiempo más libre y luego comienza el área en sí, que es un espacio donde se pueden manifestar los sentimientos, en este caso de Susana, que es el principal de la aula. Bueno, muchas gracias."
   ],
   [
    1638.26,
@@ -68,7 +72,7 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
    "cy"
@@ -96,6 +100,9 @@
   ],
   [
    "cy"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
@@ -106,8 +113,8 @@
  ],
  "ventanas": {
   "total": 30,
-  "modelo": 11,
+  "modelo": 13,
   "reglas": 0,
-  "vacias": 19
+  "vacias": 17
  }
 }

@@ -1,57 +1,106 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   120.0,
+   "Gracias."
+  ],
+  [
    149.98,
-   "También forma part yn Anthologies, reunió en una suma selecta de la obra poética de Luis Fernando Macías, bajo el título de Todas las palabras reunidas, como siguen el silencio, participó de diversos encuentros y festivales en Colombia, Estados Unidos, Perú, Cuba, Espanya, Argentina y France, entre otros."
+   "También forma parte de antologías, reunió en una suma selecta la obra poética de Luis Fernando Macías, bajo el título Todas las palabras reunidas consiguen el silencio. Participó de diversos encuentros y festivales en Colombia, Estados Unidos, Perú, Cuba, España, Argentina y Francia, entre otros."
   ],
   [
    172.74,
-   "Fu inclwyd a'i oobrau yn ethologïedd yr Argentina, Colombia, Espanya, y Estados Unidos a Italia, presidiodd yn Emiratos Arabiaes Unidos, Suiza, Colombia y Uruguay, lle bydd yn actualiad."
+   "Fue incluida su obra en la antología de la Argentina, Colombia, España, Estados Unidos e Italia. Residió en Emiratos Árabes Unidos, Suiza, Colombia y Uruguay, donde vive en la actualidad."
+  ],
+  [
+   202.74,
+   "Y invitar a María Morí Joroden a que venga desde el fondo con la corona del planeta."
   ],
   [
    322.74,
-   "Pur lamenter cae'r universo, de un poeta gota a gota, y si o'th'r mwndo podri arseillase, hoi tan bia'n wytho'i o's, no es que el horneo sepa de nuestras coincidencias, de la pequeñez, del esfuerzo, lavoriosa la tarea de re-amanecer. No es que yo sea quien traiga la suerte, pero arno el nido como quien dice que"
+   "Por la ventana cae el universo de un poeta gota a gota. Ese otro mundo podría arcillarse hoy también ante mis ojos. No es que el hornero sepa de nuestras coincidencias, de la pequeñez, del esfuerzo, laboriosa la tarea de reamanecer. No es que yo sea quien traiga la suerte, pero arro el nido como quien dice"
+  ],
+  [
+   352.74,
+   "Amasar el pan La menta del frente esparce el aroma que es ahora la mañana Le hemos ganado al sol, que es adelantarse Él nos mira, tanto como se muestra Y el hornero y yo sentimos estere el remolino del triunfo"
+  ],
+  [
+   396.54,
+   "Se tributarán ahora los sonores al poeta."
   ],
   [
    410.36,
-   "Yn lejos i ase tiempo, is la samba de Armando Tejada Gomes y Egil Ramires, que va ser interpretada por Sonia Valiente, quien estaba acompañada por Alexis Tomares en guitarra, antusilva en bobo, y en to- arian mantonal al piano. La misma será bailada por Maria Fernanda Aguirre y Carlos Prieto."
+   "lejos y hace tiempo es la samba de Armando Tejada Gómez y Agel Ramírez, que va a ser interpretada por Sonia Valiente, quien está acompañada por Alexis Tomárez en guitarra, Antú Silva en bombo y Ariel Matornal al piano. La misma será bailada por María Fernanda Aguilera y Carlos Prieto."
   ],
   [
    483.2,
-   "Una dwi'n soledad, yn fy nghefn yna dwi'n siomad. Siempre yn fy sohad dwi'n siarad. Una dwi'n soledad, yn fy nghefn yna dwi'n siomad."
+   "Una luz soledad de mi tierra natal Siento en mis ojos brillar Una luz soledad de mi tierra natal"
   ],
   [
    502.56,
-   "Susurra y viento y se va, enloqueciendo el color."
+   "Susurra el viento y se va, enloqueciendo el color."
+  ],
+  [
+   514.56,
+   "Y es la nostalgia una dios, te amantó la torcada, mariposa y gorrión."
+  ],
+  [
+   536.96,
+   "Allá lejos de la patria nada, a su larga y al día, cielo allá y en playa, Un cuento limpio al asombro del sur, y por mi sangre una voz mandará."
+  ],
+  [
+   567.96,
+   "Nombre a la vida"
   ]
  ],
  "fuentes": [
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {
   "total": 10,
-  "modelo": 5,
+  "modelo": 8,
   "reglas": 0,
-  "vacias": 5
+  "vacias": 2
  }
 }

@@ -4,13 +4,20 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   150.0,
+   "Gracias. Quería, en nombre de Trevelin y Fetid Feeds, agradecer por estar acá, gracias a la Comisión del Eisteddfod, y quería agradecer en primer lugar a Jeremy Woods por el donativo que le hizo a la Asociación Patagonia Cédrica, con el cual pudimos adquirir nuestros zapatos de zapatea."
+  ],
+  [
    180.0,
-   "Yym, hwna'n hir permanente i'r grŵp, grâs i Amaru, sy'n byw'n dda yn ein prosiectau ni, yym a'n ni'n teimlo'n dda bod hwnna'n ocasiwn sbesial heddiw i'r grŵp, er mwyn i ni gallu darlunio yr amor gennyn ni am y musica. Yym, dwi'n teimlo'n dda bod hwnna'n ocasiwn wych, yym a'n ni'n dedigio'r par hir i'r grŵp. Diolch yn fawr."
+   "Un grazie permanente a Margarita, a la tía Marga, que siempre nos está apoyando en todos los proyectos que tenemos. Y también sentimos que era una vocación especial hoy para poder transmitirles el amor que tenemos nosotros por la música. Sentimos que era una vocación hermosa y les dedicamos este par de danzas. Bueno, muchas gracias."
   ]
  ],
  "fuentes": [
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {

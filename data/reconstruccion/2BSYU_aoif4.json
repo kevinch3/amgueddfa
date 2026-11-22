@@ -1,50 +1,29 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
-   44.88,
-   "Trando me'n sus besos, fue cuando dijo, te quiero, en la jaula de mi pecho, ay, ay, ay, ay, donde cantibas y hallaba, al saberse bien amada, que bonito me cantaba, los halagos que me has hecho, que mentiras has cumplido."
-  ],
-  [
    74.88,
-   "Hwnna mor dan-extremadol, heina fatha sy'n convertidol."
+   "Un amor tan extremado en nada se ha convertido."
   ],
   [
    81.66,
-   "La-la-la-la-la-la, la-la-la-la-la, la-la-la-la-la-la, la-la-la-la-la-la, hwnna mor dan-extremadol, heina fatha sy'n convertidol."
-  ],
-  [
-   134.88,
-   "Que bonito me cantaba, los halagos que me has hecho ay, ay, ay, ay, que mentiras has cumplido, un amor tan extremado, en nada se ha convertido."
-  ],
-  [
-   153.74,
-   "La-la-la-la-la-la-ira La-la-la-la-la-la-la-ira Un amor tan extremado, en nad a se'n convertido."
+   "Un amor tan extremado en nada se ha convertido"
   ]
  ],
  "fuentes": [
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
+   "whisper_es"
   ]
  ],
  "ventanas": {
-  "total": 4,
-  "modelo": 2,
-  "reglas": 1,
-  "vacias": 1
+  "total": 3,
+  "modelo": 1,
+  "reglas": 0,
+  "vacias": 2
  }
 }

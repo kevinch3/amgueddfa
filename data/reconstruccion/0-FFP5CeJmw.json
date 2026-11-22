@@ -1,11 +1,19 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
-   306.32,
-   "Si'n ofer bod o'n desbaru, lo mas gerdd oes gen ofynion, ai ai ai we-gei, ai ai ai we-gei, ai ai ai we-gei."
+   117.7,
+   "¡Gracias!"
+  ],
+  [
+   173.22,
+   "Amén."
+  ],
+  [
+   246.32,
+   "Adonde el cielo se me olvidó, se me olvidó, se me olvidó."
   ],
   [
    351.32,
@@ -13,20 +21,30 @@
   ],
   [
    530.78,
-   "Yn y llong de'r siennw sef drolfido, sef drolfido, sef drolfido."
+   "Yn y llong de'r siennw sef drolfido."
   ],
   [
-   658.78,
-   "A donnau'n siennog sef Ion Ringo, sef Ion Ringo, sef Ion Ringo."
+   732.36,
+   "¡Gracias!"
   ],
   [
    822.36,
-   "Dwi'm yn gwbod be dwi'n feddwl, ond dwi ddim yn gwbod be dwi'n feddwl."
+   "Tú no sabes que nadie, tú no sabes que nadie"
+  ],
+  [
+   912.36,
+   "las bolitas que han caído por la punta del rosal y de cartones de rizzo que llevo la clave invita a mí"
   ]
  ],
  "fuentes": [
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
@@ -35,16 +53,19 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {
-  "total": 17,
-  "modelo": 6,
+  "total": 18,
+  "modelo": 11,
   "reglas": 0,
-  "vacias": 11
+  "vacias": 7
  }
 }

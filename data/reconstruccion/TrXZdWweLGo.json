@@ -6,17 +6,24 @@
   [
    120.2,
    "wrth barwm yn barfu, wrth barwm yn barfu."
+  ],
+  [
+   180.2,
+   "Gracias."
   ]
  ],
  "fuentes": [
   [
    "cy"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {
   "total": 4,
-  "modelo": 2,
+  "modelo": 3,
   "reglas": 0,
-  "vacias": 2
+  "vacias": 1
  }
 }

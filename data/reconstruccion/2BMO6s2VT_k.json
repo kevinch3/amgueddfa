@@ -1,21 +1,14 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
-  [
-   0.0,
-   "Escwylwch yn dda, ga i grynpo."
-  ],
   [
    60.0,
    "i'n gwledd o fenyn, mae o'n wynd o arbennig, yn mynd ar ei chit, ar ei git, ar yr arddangade, a ddoth i fod i bennig, i fynnu at y bennig."
   ]
  ],
  "fuentes": [
-  [
-   "cy"
-  ],
   [
    "cy"
   ]

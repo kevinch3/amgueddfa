@@ -1,0 +1,36 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   224.0,
+   "donde priche la muerte la voy a esperar y cajoneando fuerte el bombo y el lago bailar Santa Maduca, llévatela"
+  ],
+  [
+   284.0,
+   "¡Gracias!"
+  ],
+  [
+   374.0,
+   "y ya está en el invierno donde es la ascensión, marcha y que por las noches sale el mejor, salva a un fiel, oh soy Señor."
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 7,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 3
+ }
+}

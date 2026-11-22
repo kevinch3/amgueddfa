@@ -1,0 +1,71 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "Rectores de olvido, coros serranos, Proversidad o piedras, carnavaliando."
+  ],
+  [
+   54.0,
+   "Por ver si mato me das carnavalhando"
+  ],
+  [
+   90.02,
+   "Y un empujón del diablo a enamorarte La chicha y la vaca llorando en el vino"
+  ],
+  [
+   113.02,
+   "Los caballos atados vuelven a la luna, al galope tendido. Los caballos atados vuelven a la luna, al galope tendido."
+  ],
+  [
+   233.02,
+   "¡Cállate canto, la chicha y la albahaca sonando el río!"
+  ],
+  [
+   244.06,
+   "Los trabajos atamos."
+  ],
+  [
+   248.78,
+   "Vuelven a la luna, a la noche del día."
+  ],
+  [
+   259.82,
+   "Vuelven a la luna y a lo que sentimos."
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

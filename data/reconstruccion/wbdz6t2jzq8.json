@@ -1,0 +1,36 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   148.74,
+   "Medio..."
+  ],
+  [
+   198.54,
+   "Es cuando se fue el carnaval Solita mi alma quedó De todas tus trenzas Como perduce a jazmín De tu boca roja como el piquillín"
+  ],
+  [
+   226.54,
+   "15 morenita, santiagueña mi bien Sueña mi guitarra, como volverte a ver"
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 5,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 3
+ }
+}

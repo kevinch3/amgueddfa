@@ -1,0 +1,85 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "¿Dónde estará la estrella azul, esa estrellita del alma? Mis ojos suelen brillar, perdidos en la inmensidad."
+  ],
+  [
+   49.02,
+   "A veces pienso que está aquí y se ilumina el camino Cuando aparece el fulgor cerquita de mi corazón ¿Dónde estará la estrella azul? Ya no podré con mi dolor En otro cielo brillará esa estrellita del amor"
+  ],
+  [
+   97.02,
+   "en una larga que tú hasta perderse el cielo"
+  ],
+  [
+   103.02,
+   "mi corazón se guardió atravesado de pena."
+  ],
+  [
+   112.86,
+   "A nadie puedo preguntar."
+  ],
+  [
+   118.38,
+   "Con las palabras del alma, es mi belleza un papel."
+  ],
+  [
+   125.66,
+   "Y el viento no deja caer, donde estará la estrella azul"
+  ],
+  [
+   131.46,
+   "Ya no podré con mi dolor, me enloquecié el llano"
+  ],
+  [
+   136.98,
+   "Esa estrella del amor, donde estará la estrella"
+  ],
+  [
+   142.38,
+   "Ya no podré con mi dolor, en otros cielos brillará."
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 3,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

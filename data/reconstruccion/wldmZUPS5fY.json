@@ -1,0 +1,36 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   240.96,
+   "¡Gracias!"
+  ],
+  [
+   300.96,
+   "Uy, me ha dado nada, vos santo no me encontró. Parece ser bien, le dejo un alma a vos. Salam, la boca lleva a Pedro. La herida, lo que resta su sol. Mancha de tiempo, las noches, sale mejor. Salam, aunque no soy Señor."
+  ],
+  [
+   360.96,
+   "¡Gracias!"
+  ]
+ ],
+ "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ]
+ ],
+ "ventanas": {
+  "total": 8,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 4
+ }
+}

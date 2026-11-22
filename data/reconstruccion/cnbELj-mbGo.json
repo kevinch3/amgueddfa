@@ -4,19 +4,19 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
-   117.7,
-   "The storm shall not wake me, nor shall you protect me, as with the others that the storm sweeps, as with the others."
+   180.0,
+   "Gracias."
   ]
  ],
  "fuentes": [
   [
-   "cy"
+   "whisper_es"
   ]
  ],
  "ventanas": {
-  "total": 5,
+  "total": 4,
   "modelo": 3,
   "reglas": 0,
-  "vacias": 2
+  "vacias": 1
  }
 }

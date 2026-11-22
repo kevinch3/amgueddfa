@@ -6,6 +6,7 @@ import { t } from './i18n';
 import { getClient } from './supabase';
 import type { FestivalSlug } from './types';
 import { reanchoredCambios, type ApprovedVideoText, type Eleccion, type Motivo } from './admin-videos';
+import { isCambio } from './admin-video-card';
 import type { Cambio } from './video-corrections';
 
 export type Result = { ok: true } | { ok: false; key: string };
@@ -297,9 +298,12 @@ async function removeQuietly(client: SupabaseClient, bucket: string, paths: stri
 /**
  * Approve a fact, tag, transcription or memory. `edited` (from "Editar y
  * aprobar") is validated like a new contribution and merged into the payload.
+ * A transcript correction approved as it is keeps only the changes the admin
+ * can read (its card's rule), never the stored payload as such.
  */
 export async function approve(c: Pending, edited: Record<string, unknown> | null, client: SupabaseClient | null = getClient()): Promise<Result> {
   if (c.type === 'upload') return { ok: false, key: 'admin.error.valor' };
+  if (c.type === 'video_text' && !edited) return approveVideoText(c, readableCambios(c), client);
   let override: Record<string, unknown> | null = null;
   if (edited) {
     const v = validate(c.type, edited);
@@ -312,6 +316,10 @@ export async function approve(c: Pending, edited: Record<string, unknown> | null
   if (!client) return OFFLINE;
   return rpc(client, 'approve_contribution', { cid: c.id, fills_gap: false, payload_override: override });
 }
+
+/** The changes of a video_text contribution the admin can read (lib/admin-video-card.ts, isCambio), in order. */
+const readableCambios = (c: { payload?: { cambios?: unknown } }): Cambio[] =>
+  (Array.isArray(c.payload?.cambios) ? c.payload.cambios : []).filter(isCambio);
 
 /** Approve a video_text contribution keeping only `kept` changes: the override replaces `cambios` (the database merges it
  * shallowly and scores the kept list). Nothing kept is not an approval. */
@@ -365,10 +373,6 @@ export async function reject(c: Pending, reason: string, client: SupabaseClient 
   return res;
 }
 
-/** Pending rows sent together (same payload.lote) shown as one group; others alone. */
-export type QueueGroup = { lote: string | null; items: Pending[] };
-
-/** Group the queue by `lote`, in queue order (a group sits where its first row was). */
 /** What `build` makes, or `fallback`'s stand-in when it throws: one card a crafted row breaks shows an error line, and
  * the rest of the queue still draws. */
 export function orFallback<T>(build: () => T, fallback: (e: unknown) => T): T {
@@ -379,16 +383,24 @@ export function orFallback<T>(build: () => T, fallback: (e: unknown) => T): T {
   }
 }
 
+/** Pending rows sent together (same payload.lote) shown as one group; others alone. */
+export type QueueGroup = { lote: string | null; items: Pending[] };
+
+/** The lote a row is grouped by: facts sent together carry one. A transcript correction is never grouped, whatever its
+ * payload says: it is approved from its own card, change by change ("Aprobar todos" would skip its ticks). */
+const loteOf = (c: Pending): string => (c.type !== 'video_text' && typeof c.payload?.lote === 'string' ? c.payload.lote : '');
+
+/** Group the queue by `lote`, in queue order (a group sits where its first row was). */
 export function groupQueue(list: Pending[]): QueueGroup[] {
   const count = new Map<string, number>();
   for (const c of list) {
-    const l = typeof c.payload?.lote === 'string' ? c.payload.lote : '';
+    const l = loteOf(c);
     if (l) count.set(l, (count.get(l) ?? 0) + 1);
   }
   const out: QueueGroup[] = [];
   const byLote = new Map<string, QueueGroup>();
   for (const c of list) {
-    const l = typeof c.payload?.lote === 'string' ? c.payload.lote : '';
+    const l = loteOf(c);
     if (!l || (count.get(l) ?? 0) < 2) {
       out.push({ lote: null, items: [c] });
       continue;
@@ -429,7 +441,8 @@ export function creditOptions(users: UserRow[], meId: string | null): CreditOpti
 
 export type BulkResult = { done: string[]; failed: { id: string; key: string }[] };
 
-/** Approve each row in turn (points and badges per row); one failure does not stop the rest. */
+/** Approve each row in turn (points and badges per row); one failure does not stop the rest. A transcript correction
+ * keeps only its readable changes (see approve). */
 export async function approveAll(items: Pending[], client: SupabaseClient | null = getClient()): Promise<BulkResult> {
   const out: BulkResult = { done: [], failed: [] };
   for (const c of items) {

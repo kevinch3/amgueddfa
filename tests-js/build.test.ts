@@ -609,6 +609,17 @@ describe('static build', () => {
     expect(page).toContain('id="no-contar"');
   });
 
+  it('the edition cover has its size, so the page does not jump while it loads (#5)', () => {
+    const tag = /<img class="tapa"[^>]*>/.exec(read('chubut/2024/index.html'))?.[0] ?? '';
+    expect(tag).toMatch(/ width="\d+"/);
+    expect(tag).toMatch(/ height="\d+"/);
+    // the size given is the one shown (inside the CSS max box), so a tall cover is never squashed
+    const tall = /<img class="tapa"[^>]*width="(\d+)" height="(\d+)"/.exec(read('chubut/2025/index.html'))!;
+    expect(Number(tall[1])).toBeLessThanOrEqual(256);
+    expect(Number(tall[2])).toBeLessThanOrEqual(352);
+    expect(Math.abs(Number(tall[1]) / Number(tall[2]) - 675 / 1200)).toBeLessThan(0.01);
+  });
+
   it('edition blocks open and close (details), long lists start closed, facts stay open (#78)', () => {
     const html = read('chubut/2024/index.html');
     const blocks = [...html.matchAll(/<details class="bloque"( open)?[^>]*>\s*<summary class="bloque-t"><h2 id="([^"]+)"/g)].map((m) => [m[2], Boolean(m[1])]);

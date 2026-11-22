@@ -298,4 +298,7 @@ def derive(item: Item, archive: Path, out_root: Path) -> Item:
     item.pages = len(pages)
     item.thumb = rel(thumb)
     item.page_paths = [rel(p) for p in pages]
+    if pages:
+        with Image.open(pages[0]) as im:  # reads the header only
+            item.page_size = list(im.size)
     return item

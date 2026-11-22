@@ -25,6 +25,10 @@
    "page_paths": [
     "84b01d326cbc/p01.webp"
    ],
+   "page_size": [
+    1000,
+    697
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -51,6 +55,10 @@
    "thumb": "2a8b39bdb8b7/thumb.webp",
    "page_paths": [
     "2a8b39bdb8b7/p01.webp"
+   ],
+   "page_size": [
+    1000,
+    693
    ],
    "text_excerpt": null,
    "table": null
@@ -79,6 +87,10 @@
    "page_paths": [
     "f54a19f2747e/p01.webp"
    ],
+   "page_size": [
+    750,
+    509
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -105,6 +117,10 @@
    "thumb": "53e5826d4409/thumb.webp",
    "page_paths": [
     "53e5826d4409/p01.webp"
+   ],
+   "page_size": [
+    1000,
+    677
    ],
    "text_excerpt": null,
    "table": null
@@ -133,6 +149,10 @@
    "page_paths": [
     "73afebadf114/p01.webp"
    ],
+   "page_size": [
+    960,
+    720
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -160,6 +180,10 @@
    "page_paths": [
     "3c77e79c7698/p01.webp"
    ],
+   "page_size": [
+    1000,
+    753
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -185,6 +209,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": "Reglamentos Reglamento del Eisteddfod de la Juventud Reglamento del Eisteddfod del Chubut Reglas y condiciones para las competencias Rheolau ac amodau cystadlu Las competencias son de carácter internacional y están abiertas a todos los niños y jóvenes interesados en este festival. Los trabajos de la secciones Literatura, Artes Visuales, Fotografía e Historieta deberán ser inéditos y no haber sido premiados en ningún otro evento. Todos los participantes, excepto los directores de coros, deben ser vocacionales. En el caso de edad estipulada, se deben respetar los siguientes términos: - “Para ...",
    "table": null
   },
@@ -211,6 +236,10 @@
    "thumb": "58897881813d/thumb.webp",
    "page_paths": [
     "58897881813d/p01.webp"
+   ],
+   "page_size": [
+    493,
+    750
    ],
    "text_excerpt": null,
    "table": null
@@ -239,6 +268,10 @@
    "page_paths": [
     "74ba4c04b85f/p01.webp"
    ],
+   "page_size": [
+    499,
+    750
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -265,6 +298,10 @@
    "thumb": "ed5ee85318fa/thumb.webp",
    "page_paths": [
     "ed5ee85318fa/p01.webp"
+   ],
+   "page_size": [
+    1000,
+    655
    ],
    "text_excerpt": null,
    "table": null
@@ -293,6 +330,10 @@
    "page_paths": [
     "e171d98b5f6a/p01.webp"
    ],
+   "page_size": [
+    730,
+    750
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -319,6 +360,10 @@
    "thumb": "a50e5a2ae934/thumb.webp",
    "page_paths": [
     "a50e5a2ae934/p01.webp"
+   ],
+   "page_size": [
+    709,
+    1000
    ],
    "text_excerpt": null,
    "table": null
@@ -347,6 +392,10 @@
    "page_paths": [
     "abc358fd3032/p01.webp"
    ],
+   "page_size": [
+    1200,
+    677
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -373,6 +422,10 @@
    "thumb": "dffd64fc1685/thumb.webp",
    "page_paths": [
     "dffd64fc1685/p01.webp"
+   ],
+   "page_size": [
+    1000,
+    671
    ],
    "text_excerpt": null,
    "table": null
@@ -401,6 +454,10 @@
    "page_paths": [
     "5e19fba9d7c8/p01.webp"
    ],
+   "page_size": [
+    512,
+    328
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -427,6 +484,10 @@
    "thumb": "3aa1a282168b/thumb.webp",
    "page_paths": [
     "3aa1a282168b/p01.webp"
+   ],
+   "page_size": [
+    1000,
+    694
    ],
    "text_excerpt": null,
    "table": null
@@ -455,6 +516,10 @@
    "page_paths": [
     "1795572ab9a2/p01.webp"
    ],
+   "page_size": [
+    1000,
+    699
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -481,6 +546,10 @@
    "thumb": "44e973cdd339/thumb.webp",
    "page_paths": [
     "44e973cdd339/p01.webp"
+   ],
+   "page_size": [
+    1000,
+    669
    ],
    "text_excerpt": null,
    "table": null
@@ -509,6 +578,10 @@
    "page_paths": [
     "eec04658df99/p01.webp"
    ],
+   "page_size": [
+    790,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -535,6 +608,10 @@
    "thumb": "631a6c2919f2/thumb.webp",
    "page_paths": [
     "631a6c2919f2/p01.webp"
+   ],
+   "page_size": [
+    790,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -563,6 +640,10 @@
    "page_paths": [
     "fb4a161a9f3b/p01.webp"
    ],
+   "page_size": [
+    790,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -589,6 +670,10 @@
    "thumb": "49a6d3c5a4e4/thumb.webp",
    "page_paths": [
     "49a6d3c5a4e4/p01.webp"
+   ],
+   "page_size": [
+    790,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -617,6 +702,10 @@
    "page_paths": [
     "772326d16a66/p01.webp"
    ],
+   "page_size": [
+    795,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -643,6 +732,10 @@
    "thumb": "e0bb42d8d45a/thumb.webp",
    "page_paths": [
     "e0bb42d8d45a/p01.webp"
+   ],
+   "page_size": [
+    795,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -671,6 +764,10 @@
    "page_paths": [
     "7dbb3c39a52e/p01.webp"
    ],
+   "page_size": [
+    795,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -697,6 +794,10 @@
    "thumb": "993dc874a2a8/thumb.webp",
    "page_paths": [
     "993dc874a2a8/p01.webp"
+   ],
+   "page_size": [
+    795,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -725,6 +826,10 @@
    "page_paths": [
     "f3d7c7ce425d/p01.webp"
    ],
+   "page_size": [
+    795,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -751,6 +856,10 @@
    "thumb": "584588fbb48c/thumb.webp",
    "page_paths": [
     "584588fbb48c/p01.webp"
+   ],
+   "page_size": [
+    795,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -779,6 +888,10 @@
    "page_paths": [
     "b18605528580/p01.webp"
    ],
+   "page_size": [
+    795,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -805,6 +918,10 @@
    "thumb": "a16103764194/thumb.webp",
    "page_paths": [
     "a16103764194/p01.webp"
+   ],
+   "page_size": [
+    795,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -833,6 +950,10 @@
    "page_paths": [
     "cf1eb353108f/p01.webp"
    ],
+   "page_size": [
+    795,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -859,6 +980,10 @@
    "thumb": "d417726a6560/thumb.webp",
    "page_paths": [
     "d417726a6560/p01.webp"
+   ],
+   "page_size": [
+    795,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -887,6 +1012,10 @@
    "page_paths": [
     "53bc2fa281f9/p01.webp"
    ],
+   "page_size": [
+    900,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -913,6 +1042,10 @@
    "thumb": "a40a67e2c51a/thumb.webp",
    "page_paths": [
     "a40a67e2c51a/p01.webp"
+   ],
+   "page_size": [
+    900,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -941,6 +1074,10 @@
    "page_paths": [
     "f2242aa764e9/p01.webp"
    ],
+   "page_size": [
+    1200,
+    677
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -967,6 +1104,10 @@
    "thumb": "d42a8b05f213/thumb.webp",
    "page_paths": [
     "d42a8b05f213/p01.webp"
+   ],
+   "page_size": [
+    800,
+    511
    ],
    "text_excerpt": null,
    "table": null
@@ -995,6 +1136,10 @@
    "page_paths": [
     "06ffc54404ab/p01.webp"
    ],
+   "page_size": [
+    1000,
+    669
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -1021,6 +1166,10 @@
    "thumb": "fbe6339de118/thumb.webp",
    "page_paths": [
     "fbe6339de118/p01.webp"
+   ],
+   "page_size": [
+    1000,
+    690
    ],
    "text_excerpt": null,
    "table": null
@@ -1049,6 +1198,10 @@
    "page_paths": [
     "58d5ef55dc35/p01.webp"
    ],
+   "page_size": [
+    1000,
+    672
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -1075,6 +1228,10 @@
    "thumb": "c7405e26517a/thumb.webp",
    "page_paths": [
     "c7405e26517a/p01.webp"
+   ],
+   "page_size": [
+    989,
+    679
    ],
    "text_excerpt": null,
    "table": null
@@ -1103,6 +1260,10 @@
    "page_paths": [
     "1ed746f08126/p01.webp"
    ],
+   "page_size": [
+    1200,
+    803
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -1129,6 +1290,10 @@
    "thumb": "6a85d2b780ab/thumb.webp",
    "page_paths": [
     "6a85d2b780ab/p01.webp"
+   ],
+   "page_size": [
+    1000,
+    668
    ],
    "text_excerpt": null,
    "table": null
@@ -1157,6 +1322,10 @@
    "page_paths": [
     "05d365c46a2b/p01.webp"
    ],
+   "page_size": [
+    1000,
+    666
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -1183,6 +1352,10 @@
    "thumb": "36bbb549b129/thumb.webp",
    "page_paths": [
     "36bbb549b129/p01.webp"
+   ],
+   "page_size": [
+    675,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -1211,6 +1384,10 @@
    "page_paths": [
     "4ed94ca1c034/p01.webp"
    ],
+   "page_size": [
+    1200,
+    675
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -1237,6 +1414,10 @@
    "thumb": "c47d844d5553/thumb.webp",
    "page_paths": [
     "c47d844d5553/p01.webp"
+   ],
+   "page_size": [
+    675,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -1265,6 +1446,10 @@
    "page_paths": [
     "217f4a984b42/p01.webp"
    ],
+   "page_size": [
+    720,
+    960
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -1291,6 +1476,10 @@
    "thumb": "88833f04f52d/thumb.webp",
    "page_paths": [
     "88833f04f52d/p01.webp"
+   ],
+   "page_size": [
+    720,
+    960
    ],
    "text_excerpt": null,
    "table": null
@@ -1319,6 +1508,10 @@
    "page_paths": [
     "7fcd935aaabb/p01.webp"
    ],
+   "page_size": [
+    720,
+    960
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -1345,6 +1538,10 @@
    "thumb": "e8f47bb7e17e/thumb.webp",
    "page_paths": [
     "e8f47bb7e17e/p01.webp"
+   ],
+   "page_size": [
+    720,
+    960
    ],
    "text_excerpt": null,
    "table": null
@@ -1373,6 +1570,10 @@
    "page_paths": [
     "450c6b48e2e6/p01.webp"
    ],
+   "page_size": [
+    720,
+    960
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -1399,6 +1600,10 @@
    "thumb": "ec13aef9e9c9/thumb.webp",
    "page_paths": [
     "ec13aef9e9c9/p01.webp"
+   ],
+   "page_size": [
+    720,
+    960
    ],
    "text_excerpt": null,
    "table": null
@@ -1427,6 +1632,10 @@
    "page_paths": [
     "fcb0d30de6eb/p01.webp"
    ],
+   "page_size": [
+    720,
+    960
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -1453,6 +1662,10 @@
    "thumb": "db92c2ebbe55/thumb.webp",
    "page_paths": [
     "db92c2ebbe55/p01.webp"
+   ],
+   "page_size": [
+    720,
+    960
    ],
    "text_excerpt": null,
    "table": null
@@ -1481,6 +1694,10 @@
    "page_paths": [
     "f5715cded7bc/p01.webp"
    ],
+   "page_size": [
+    720,
+    960
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -1507,6 +1724,10 @@
    "thumb": "0a03ba28b534/thumb.webp",
    "page_paths": [
     "0a03ba28b534/p01.webp"
+   ],
+   "page_size": [
+    720,
+    960
    ],
    "text_excerpt": null,
    "table": null
@@ -1535,6 +1756,10 @@
    "page_paths": [
     "c30ef6382761/p01.webp"
    ],
+   "page_size": [
+    720,
+    960
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -1561,6 +1786,10 @@
    "thumb": "f0bf76bbdf5b/thumb.webp",
    "page_paths": [
     "f0bf76bbdf5b/p01.webp"
+   ],
+   "page_size": [
+    720,
+    960
    ],
    "text_excerpt": null,
    "table": null
@@ -1589,6 +1818,10 @@
    "page_paths": [
     "7c7c684ff0ec/p01.webp"
    ],
+   "page_size": [
+    720,
+    960
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -1615,6 +1848,10 @@
    "thumb": "f3fe4a6a82a6/thumb.webp",
    "page_paths": [
     "f3fe4a6a82a6/p01.webp"
+   ],
+   "page_size": [
+    720,
+    960
    ],
    "text_excerpt": null,
    "table": null
@@ -1643,6 +1880,10 @@
    "page_paths": [
     "cff50bb5d037/p01.webp"
    ],
+   "page_size": [
+    720,
+    960
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -1668,6 +1909,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": null,
    "table": [
     {
@@ -2296,6 +2538,10 @@
    "page_paths": [
     "3be817d4332a/p01.webp"
    ],
+   "page_size": [
+    720,
+    960
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -2323,6 +2569,10 @@
    "page_paths": [
     "4224e265cba8/p01.webp"
    ],
+   "page_size": [
+    720,
+    960
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -2348,6 +2598,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": null,
    "table": [
     {
@@ -3546,6 +3797,10 @@
    "page_paths": [
     "5bebd88dc00a/p01.webp"
    ],
+   "page_size": [
+    720,
+    960
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -3573,6 +3828,10 @@
    "page_paths": [
     "ee3a9114febe/p01.webp"
    ],
+   "page_size": [
+    720,
+    960
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -3598,6 +3857,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": null,
    "table": [
     {
@@ -4206,6 +4466,10 @@
    "page_paths": [
     "95d1e8fa3a9a/p01.webp"
    ],
+   "page_size": [
+    720,
+    960
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -4232,6 +4496,10 @@
    "thumb": "70f6aba9613f/thumb.webp",
    "page_paths": [
     "70f6aba9613f/p01.webp"
+   ],
+   "page_size": [
+    720,
+    960
    ],
    "text_excerpt": null,
    "table": null
@@ -4260,6 +4528,10 @@
    "page_paths": [
     "a9983a758730/p01.webp"
    ],
+   "page_size": [
+    720,
+    960
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -4287,6 +4559,10 @@
    "page_paths": [
     "b6d56505956e/p01.webp"
    ],
+   "page_size": [
+    960,
+    720
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -4312,6 +4588,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": "Historia Gorsedd y Wladfa Eisteddfod 2006 Fotos Coros Fotos Solistas Fotos Varias Ganadores El Eisteddfod en el Chubut - año 2006 La edición del Eisteddfod del Chubut de éste año se inició el viernes 17 de Octubre a las 14:00 hs. tal cual estaba previsto en el gimnasio del Club Racing de la ciudad de Trelew y culmino en las primeras horas de la madrugada del dia domingo. La Medalla de Plata, premio de la Asociacion San David, fué otorgada a Arié Lloyd de Lewis a la mejor poesía en estilo clasico en esta primera parte del Eisteddfod. El Jurado estaba compuesto de la siguiente manera: Poesía Viv",
    "table": null
   },
@@ -4339,6 +4616,10 @@
    "page_paths": [
     "6f874755712d/p01.webp"
    ],
+   "page_size": [
+    960,
+    720
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -4364,6 +4645,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": null,
    "table": null
   },
@@ -4389,6 +4671,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": "Eisteddfod y Wladfa Patagonia 2007 Jurados del Eisteddfod del Chubut 2007 Mesa del Jurado durante el Eisteddfod 2007 POESIA Silvana Franzetti Ariel Williams PROSA Bruno Di Benedetto POESIA EN IDIOMA GALES Dafydd J. Pritchard PROSA EN IDIOMA GALES Dafydd Ifans MUSICA EN CASTELLANO, INTERNACIONAL E INSTRUMENTOS Diego Lenger MUSICA EN GALES Gwyn L. Williams RECITACION EN CASTELLANO Natalia Rodriguez RECITACION EN GALES Dafydd y Mery Griffiths ARTESANIAS Beatriz Barreiro de Gatica DISEÑO GRAFICO Fernando Torres FOTOGRAFIA Gaston Sriczman DANZA GALESA Huw John DANZA FOLKLORICA Y POPULAR Jorge Nancu",
    "table": null
   },
@@ -4416,6 +4699,10 @@
    "page_paths": [
     "962781ef2586/p01.webp"
    ],
+   "page_size": [
+    960,
+    720
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -4441,6 +4728,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": "EISTEDDFOD DEL CHUBUT EISTEDDFOD Y WLADFA TRELEW 2 y 3 de noviembre de 2007 comision del eisteddfod del chubut 2007 PWYLGOR EISTEDDFOD Presidente: Vocales Titulares: Daniel WILLIAMS Nivia OWEN Nadibel LAPORTE Vicepresidente: Federico HUMPHREYS Milton Oscar JUNYENT Vocales Suplentes: Secretaria: Eduardo MORGAN Helen Francis DAVIES Magali ROBERTS María Jesús CHACHERO Secretaria de Actas: Patricia PERROZZI HUMPHREYS Síndico Titular: John HUMPHREYS Tesorera: Delia WILLIAMS Síndico Suplente: Dora FELDMAN Protesorero: Rolando GRIFFITHS COORDINADORES EISTEDDFOD DEL CHUBUT Música en Castellano e Inter",
    "table": null
   },
@@ -4466,6 +4754,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": "EISTEDDFOD DEL CHUBUT 2007 PROGRAMA DEL DIA – RHAGLEN Y DYDD Día Viernes 02/Dydd Gwener 02, 18 horas PALABRAS DE APERTURA Y BIENVENIDA DE LOS LOCUTORES ORACIÓN INICIAL EN GALÉS Y CASTELLANO A CARGO DEL PASTOR W. J. EDWARDS DE LA CAPILLA TABERNACL DE TRELEW Y LA SRA. NELIA HUMPHREYS DE LA IGESIA METODISTA DE TRELEW ENTONACIÓN DEL HIMNO NACIONAL ARGENTINO (convocar al Jurado de Mósica en Castellano DIEGO LENGUER para que dirija el himno) MINUTO DE SILENCIO CUADRO DE APERTURA A CARGO DE JOSE LUIS ACUÑA (DIFERENTES ESTAMPAS DE TANGO ARGENTINO) DESIGNACIÓN DEL PRESIDENTE DE LA SESIÓN: Nació en Trev",
    "table": null
   },
@@ -4491,6 +4780,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": "COMPT.33 – Recitación ” Cnau Gaeaf” Al igual que la ardilla que atesora nueces y no teme el invierno yo atesoro recuerdos: el sol y los amigos en la Patagonia, el compañerismo sencillo, el eisteddfod, los poetas y amigos leales que reuní aquí y allá lejos. No temo al invierno, tengo a mano un tesoro de nueces. COMPT. 34 – Recitación “ Y Gennad” Me alejé del terruño, perdí la fe al luchar contra el engaño, sólo escuché el eco de mi voz. No valía la pena vivir, Dios era un espejismo. Pero una manito me acarició y una vocecita me llamó “Papá”. Aunque el cielo y la tierra enmudecen, Dios nos habla",
    "table": null
   },
@@ -4516,6 +4806,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": null,
    "table": null
   },
@@ -4541,6 +4832,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": null,
    "table": null
   },
@@ -4566,6 +4858,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": "EISTEDDFOD TC \"EISTEDDFOD \" DEL CHUBUT TC \"DEL CHUBUT\" Eisteddfod TC \"Eisteddfod \" y WLADFA TC \"y WLADFA\" TRELEW TC \"TRELEW\" TC \"\" 23, 24 y 25 de Octubre 2008 TC \"27 y 28 de Octubre 2006\" 23, 24 a’r 25 o Hydref 2008 PROGRAMA TC \"PROGRAMA\" RHAGLEN COMISION DEL EISTEDDFOD PWYLLGORGWAITH YR EISTEDDFOD Comisión Directiva – Pwyllgor Gwaith Presidente/Llywydd: Daniel Williams Vicepresidente/Is-lywydd: Milton Junyent Secretaria/Ysgrifennydd: Helen Davies Tesorera/Trysorydd: Delia Williams Pro-tesorero/Is-drysorydd: Rolando Griffiths Secretaria de Actas/Ysgrifennydd cofnodion: Patricia Perrozi Vocal t",
    "table": null
   },
@@ -4606,6 +4899,10 @@
     "57f64490e163/p13.webp",
     "57f64490e163/p14.webp"
    ],
+   "page_size": [
+    1200,
+    848
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -4636,6 +4933,10 @@
     "d659a6f206e9/p03.webp",
     "d659a6f206e9/p04.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -4664,6 +4965,10 @@
     "ab70debc7989/p01.webp",
     "ab70debc7989/p02.webp",
     "ab70debc7989/p03.webp"
+   ],
+   "page_size": [
+    848,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -4697,6 +5002,10 @@
     "04983e6660f9/p05.webp",
     "04983e6660f9/p06.webp"
    ],
+   "page_size": [
+    1200,
+    848
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -4724,6 +5033,10 @@
    "page_paths": [
     "1261ec8eb5c1/p01.webp"
    ],
+   "page_size": [
+    300,
+    120
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -4749,6 +5062,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": null,
    "table": null
   },
@@ -4774,6 +5088,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": null,
    "table": null
   },
@@ -4799,6 +5114,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": null,
    "table": null
   },
@@ -4827,6 +5143,10 @@
     "a74f2b4bd0ca/p01.webp",
     "a74f2b4bd0ca/p02.webp",
     "a74f2b4bd0ca/p03.webp"
+   ],
+   "page_size": [
+    1200,
+    848
    ],
    "text_excerpt": null,
    "table": null
@@ -4857,6 +5177,10 @@
     "d5e3725b7832/p02.webp",
     "d5e3725b7832/p03.webp",
     "d5e3725b7832/p04.webp"
+   ],
+   "page_size": [
+    1200,
+    848
    ],
    "text_excerpt": null,
    "table": null
@@ -4890,6 +5214,10 @@
     "6f56cf082831/p05.webp",
     "6f56cf082831/p06.webp"
    ],
+   "page_size": [
+    1200,
+    848
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -4918,6 +5246,10 @@
     "ba39fe2a3f18/p01.webp",
     "ba39fe2a3f18/p02.webp"
    ],
+   "page_size": [
+    1200,
+    848
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -4944,6 +5276,10 @@
    "thumb": "9e2bc07e61d7/thumb.webp",
    "page_paths": [
     "9e2bc07e61d7/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    848
    ],
    "text_excerpt": null,
    "table": null
@@ -4972,6 +5308,10 @@
    "page_paths": [
     "c83d074b6770/p01.webp"
    ],
+   "page_size": [
+    960,
+    720
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -4997,6 +5337,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": null,
    "table": null
   },
@@ -5022,6 +5363,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": null,
    "table": null
   },
@@ -5048,6 +5390,10 @@
    "thumb": "c77774dff131/thumb.webp",
    "page_paths": [
     "c77774dff131/p01.webp"
+   ],
+   "page_size": [
+    848,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -5076,6 +5422,10 @@
    "page_paths": [
     "9239ddcd359f/p01.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -5103,6 +5453,10 @@
    "page_paths": [
     "570e8c025526/p01.webp"
    ],
+   "page_size": [
+    927,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -5128,6 +5482,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": null,
    "table": null
   },
@@ -5154,6 +5509,10 @@
    "thumb": "d98c3c6684a6/thumb.webp",
    "page_paths": [
     "d98c3c6684a6/p01.webp"
+   ],
+   "page_size": [
+    960,
+    720
    ],
    "text_excerpt": null,
    "table": null
@@ -5182,6 +5541,10 @@
    "page_paths": [
     "8ca587d6de62/p01.webp"
    ],
+   "page_size": [
+    1200,
+    927
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -5208,6 +5571,10 @@
    "thumb": "1d95bec7e635/thumb.webp",
    "page_paths": [
     "1d95bec7e635/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    927
    ],
    "text_excerpt": null,
    "table": null
@@ -5236,6 +5603,10 @@
    "page_paths": [
     "cbad991bb105/p01.webp"
    ],
+   "page_size": [
+    1200,
+    927
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -5262,6 +5633,10 @@
    "thumb": "ebad08a57d62/thumb.webp",
    "page_paths": [
     "ebad08a57d62/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    927
    ],
    "text_excerpt": null,
    "table": null
@@ -5290,6 +5665,10 @@
    "page_paths": [
     "dbd6b80bd1d8/p01.webp"
    ],
+   "page_size": [
+    1200,
+    927
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -5316,6 +5695,10 @@
    "thumb": "e5dc8202dec8/thumb.webp",
    "page_paths": [
     "e5dc8202dec8/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    927
    ],
    "text_excerpt": null,
    "table": null
@@ -5345,6 +5728,10 @@
     "ff1cac4771d6/p01.webp",
     "ff1cac4771d6/p02.webp"
    ],
+   "page_size": [
+    1200,
+    927
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -5373,6 +5760,10 @@
     "9400fb787c2c/p01.webp",
     "9400fb787c2c/p02.webp"
    ],
+   "page_size": [
+    1200,
+    927
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -5400,6 +5791,10 @@
    "page_paths": [
     "5ccb3acfc092/p01.webp"
    ],
+   "page_size": [
+    960,
+    720
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -5425,6 +5820,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": "EISTEDDFOD DEL CHUBUT EISTEDDFOD Y WLADFA TRELEW 28 y 29 de octubre de 2011 comisiÓn del eisteddfod del chubut 2011 PWYLGOR EISTEDDFOD Y WLADFA 2011 Presidente: Milton Junyent. Vicepresidente: Nadibel Laporte. Secretaria: Helen Francis Davies. Secretaria de Actas: Silvina Fernández. Tesorera: Delia Williams. Protesorero: Marcela Alesanco. Vocales Titulares: Ana Ubaldi. Gastón Carabetta. Susana Celano. Vocales Suplentes: Miriam Roberts. Kevin Roberts. Nivia Owen. Síndico Titular: Magalí Roberts. Síndico Suplente: Rolando Griffiths. COORDINADORES EISTEDDFOD DEL CHUBUT 2011 Música en Castellano, ",
    "table": null
   },
@@ -5450,6 +5846,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": "EISTEDDFOD DEL CHUBUT / EISTEDDFOD Y WLADFA TRELEW 28 y 29 de octubre de 2011 PROGRAMA DEL DÍA – RHAGLEN Y DYDD Día Viernes 28/Dydd Gwener 28, 18 horas Palabras de apertura y bienvenida de los locutores. Oración inicial en galés y castellano a cargo del pastor Glyn Jones y de Estela Williams de Morgan. Entonación del Himno Nacional Argentino. Dirge: Diego Boero Al Piano: Alicia Ferrari Minuto de silencio. Cuadro de apertura: Trío compuesto por Norberto Arnaudo, Patricio Flores y Eduardo Castro. La memoria de lo cotidiano en el valle del Chubut nos remonta en el tiempo y como primer esfuerzo pa",
    "table": null
   },
@@ -5475,6 +5872,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": null,
    "table": null
   },
@@ -5500,6 +5898,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": null,
    "table": null
   },
@@ -5525,6 +5924,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": "Competencia 22 “ GOFUNED ” - Es extraño contemplar las olas golpeando las rocas, y no oír. Ver pero ser sordo. - Es extraño escuchar el tumulto de las avutardas en vuelo, y no verlas. Escuchar pero no ver. - Si puediera elegir un don para ejercitar toda mi vida, quisiera poder gozar como el sabio sordo y el ciego. Competencia 55 “ COFIO DY WYNEB ” Recuerdo tu rostro en la playa la luna y tu mano en la mía, en Benllech en verano, sin comprender que te perdía. No regresaré a Benllech , el verano terminó, tú no volverás pero lo que mejor recuerdo es tu rostro. Competencia 62 “ EIDDOT TI, O! DDUW,",
    "table": null
   },
@@ -5550,6 +5950,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": null,
    "table": [
     {
@@ -6576,6 +6977,10 @@
     "7c2dea604574/p38.webp",
     "7c2dea604574/p39.webp"
    ],
+   "page_size": [
+    997,
+    715
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -6601,6 +7006,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": "EISTEDDFOD DEL CHUBUT EISTEDDFOD Y WLADFA TRELEW 26 y 27 de octubre de 2012 comisiÓn del eisteddfod del chubut 2012 PWYLGOR EISTEDDFOD Y WLADFA 2012 Presidente: Milton Junyent. Vicepresidente: Nadibel Laporte. Secretaria: Helen Francis Davies. Secretaria de Actas: Silvina Fernández. Tesorera: Delia Williams. Protesorero: Rolando Griffiths. Vocales Titulares: Ana Ubaldi. Gastón Carabetta. Susana Celano. Vocales Suplentes: Miriam Roberts. Kevin Roberts. Nivia Owen. Síndico Titular: Magalí Roberts. Síndico Suplente: Marcela Alesanco. COORDINADORES EISTEDDFOD DEL CHUBUT 2012 Música en Castellano, ",
    "table": null
   },
@@ -6626,6 +7032,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": null,
    "table": null
   },
@@ -6651,6 +7058,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": null,
    "table": null
   },
@@ -6678,6 +7086,10 @@
    "page_paths": [
     "a259e9a77120/p01.webp"
    ],
+   "page_size": [
+    641,
+    910
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -6703,6 +7115,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": "PREMIOS EISTEDDFOD Nº DE COMPETENCIA DONADO POR 1 - SILLON DEL BARDO DIARIO EL CHUBUT. 7- CORONA DE PLATA MUNIC. TW. 8- MEDALLA DE PLATA ASOCIACIÓN SAN DAVID 22- RECITACIÓN PRINCIPAL EN GALÉS Escuela de Musica de Gaiman 31- RECITACIÓN EN C AST. VOZ FEMEN. JOYER ÍA BIANCHI BONNES 33- traducción del cast al galés YSGOL HENDRE 37- TRADUCCIÓN DEL I TALIANO AL CAST. SOC IEDAD ITALIANA 38- RTRADUCCIÓN DEL FRANCÉS AL CAST. ADRIANA KEIRAN 41- SOLO – HIMNO EN GALES DEWI MEPHIN JONES 42- CANCIÓN FOLK. EN GALÉS FAMILIA “MEILOR WILLIAMS” 43- UNAWD CAN YSGAFN PATRICIA PERROZZI 44- SOLO LIBRE FLORENCIA PAPA",
    "table": null
   },
@@ -6729,6 +7142,10 @@
    "thumb": "0579cd50afc0/thumb.webp",
    "page_paths": [
     "0579cd50afc0/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    848
    ],
    "text_excerpt": null,
    "table": null
@@ -6757,6 +7174,10 @@
    "page_paths": [
     "2bbcd8bdfb71/p01.webp"
    ],
+   "page_size": [
+    1200,
+    848
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -6784,6 +7205,10 @@
    "page_paths": [
     "fcaf70fb9bf4/p01.webp"
    ],
+   "page_size": [
+    846,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -6809,6 +7234,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": null,
    "table": [
     {
@@ -7928,6 +8354,10 @@
     "d185ebb7565a/p41.webp",
     "d185ebb7565a/p42.webp"
    ],
+   "page_size": [
+    997,
+    715
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -7953,6 +8383,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": "EISTEDDFOD DEL CHUBUT EISTEDDFOD Y WLADFA 2013 TRELEW 31 de octubre, 1 y 2 de noviembre de 2013 COMISIÓN DEL EISTEDDFOD DEL CHUBUT 2013 PWYLLGOR WAITH YR EISTEDDFOD Y WLADFA 2013 Presidente / Llywydd: Rolando Griffiths. Vicepresidente / Is-lywydd: Delia Williams. Secretaria / Ysgrifennydd: Sibyl Hughes. Tesorero / Trysorydd: Gastón Carabetta. Pro-tesorero / Is-drysorydd: Kevin W. Roberts. Secretaria de Actas / Ysgrifennydd cofnodion: Astrid D. A. Rhys. Vocales Titulares: Susana Celano Davies. Rodolfo Villoria. Ana Ubaldi. Vocales Suplentes: Rita Hughes. Nivia Owen. Wanda C. Jones. Síndico Titu",
    "table": null
   },
@@ -7979,6 +8410,10 @@
    "thumb": "bce9ad6ff669/thumb.webp",
    "page_paths": [
     "bce9ad6ff669/p01.webp"
+   ],
+   "page_size": [
+    842,
+    1189
    ],
    "text_excerpt": null,
    "table": null
@@ -8007,6 +8442,10 @@
    "page_paths": [
     "f5b9e6fafd81/p01.webp"
    ],
+   "page_size": [
+    994,
+    1189
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -8033,6 +8472,10 @@
    "thumb": "95b51e33c5ab/thumb.webp",
    "page_paths": [
     "95b51e33c5ab/p01.webp"
+   ],
+   "page_size": [
+    850,
+    1189
    ],
    "text_excerpt": null,
    "table": null
@@ -8061,6 +8504,10 @@
    "page_paths": [
     "84d0622b6687/p01.webp"
    ],
+   "page_size": [
+    858,
+    1189
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -8087,6 +8534,10 @@
    "thumb": "2477fd301166/thumb.webp",
    "page_paths": [
     "2477fd301166/p01.webp"
+   ],
+   "page_size": [
+    861,
+    1189
    ],
    "text_excerpt": null,
    "table": null
@@ -8115,6 +8566,10 @@
    "page_paths": [
     "bcfeee05fbcb/p01.webp"
    ],
+   "page_size": [
+    872,
+    960
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -8141,6 +8596,10 @@
    "thumb": "90b218232d00/thumb.webp",
    "page_paths": [
     "90b218232d00/p01.webp"
+   ],
+   "page_size": [
+    867,
+    960
    ],
    "text_excerpt": null,
    "table": null
@@ -8169,6 +8628,10 @@
    "page_paths": [
     "f320dd118bb2/p01.webp"
    ],
+   "page_size": [
+    683,
+    960
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -8195,6 +8658,10 @@
    "thumb": "5676e7f13431/thumb.webp",
    "page_paths": [
     "5676e7f13431/p01.webp"
+   ],
+   "page_size": [
+    683,
+    960
    ],
    "text_excerpt": null,
    "table": null
@@ -8223,6 +8690,10 @@
    "page_paths": [
     "451ba8394064/p01.webp"
    ],
+   "page_size": [
+    864,
+    960
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -8249,6 +8720,10 @@
    "thumb": "cf57a6c6a4aa/thumb.webp",
    "page_paths": [
     "cf57a6c6a4aa/p01.webp"
+   ],
+   "page_size": [
+    864,
+    960
    ],
    "text_excerpt": null,
    "table": null
@@ -8277,6 +8752,10 @@
    "page_paths": [
     "b29935a0deaf/p01.webp"
    ],
+   "page_size": [
+    842,
+    1189
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -8303,6 +8782,10 @@
    "thumb": "85f5f6c8b0f7/thumb.webp",
    "page_paths": [
     "85f5f6c8b0f7/p01.webp"
+   ],
+   "page_size": [
+    842,
+    1189
    ],
    "text_excerpt": null,
    "table": null
@@ -8331,6 +8814,10 @@
    "page_paths": [
     "b7a8a2845b75/p01.webp"
    ],
+   "page_size": [
+    900,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -8356,6 +8843,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": null,
    "table": null
   },
@@ -8381,6 +8869,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": null,
    "table": [
     {
@@ -9427,6 +9916,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": "EISTEDDFOD DEL CHUBUT Eisteddfod y WLADFA TRELEW 23, 24, 25 y 26 de Octubre 2014 PROGRAMA RHAGLEN COMISI Ó N DEL EISTEDDFOD – PWYLLGOR WAITH YR EISTEDDFOD Comisión Directiva – Pwyllgor Gwaith Presidente / Llywydd : Rolando Griffiths . Vicepresidente / Is- lywydd : Delia Williams. Secretaria / Ysgrifennydd : Sibyl A. Hughes. Tesorero / Trysorydd : Gastón Carabetta . Pro-tesorero / Is-drysorydd : Kevin W. Roberts. Secretaria de Actas / Ysgrifennydd cofnodion : Astrid D. A. Rhys . Vocales titulares: ……… Susana Celano Davies, Rodolfo Villoria , Ana Laura Ubaldi . Vocales suplentes: ………….…………………………",
    "table": null
   },
@@ -9454,6 +9944,10 @@
    "page_paths": [
     "b1c3b8e7f420/p01.webp"
    ],
+   "page_size": [
+    707,
+    1000
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -9479,6 +9973,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": null,
    "table": null
   },
@@ -9505,6 +10000,10 @@
    "thumb": "60cecc7b51db/thumb.webp",
    "page_paths": [
     "60cecc7b51db/p01.webp"
+   ],
+   "page_size": [
+    591,
+    472
    ],
    "text_excerpt": null,
    "table": null
@@ -9533,6 +10032,10 @@
    "page_paths": [
     "0d51c8ec3cb6/p01.webp"
    ],
+   "page_size": [
+    591,
+    472
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -9559,6 +10062,10 @@
    "thumb": "7a3867b6e6b0/thumb.webp",
    "page_paths": [
     "7a3867b6e6b0/p01.webp"
+   ],
+   "page_size": [
+    900,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -9587,6 +10094,10 @@
    "page_paths": [
     "55f5288e72b3/p01.webp"
    ],
+   "page_size": [
+    900,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -9612,6 +10123,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": "0 Preliminares Eisteddfod del Chubut 2015 Descargar Preliminares Eisteddfod del Chubut 2015",
    "table": null
   },
@@ -9686,6 +10198,10 @@
     "b6f264879a62/p47.webp",
     "b6f264879a62/p48.webp",
     "b6f264879a62/p49.webp"
+   ],
+   "page_size": [
+    1173,
+    935
    ],
    "text_excerpt": null,
    "table": null
@@ -9827,6 +10343,10 @@
     "78ea87ac8632/p98.webp",
     "78ea87ac8632/p99.webp"
    ],
+   "page_size": [
+    1200,
+    568
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -9852,6 +10372,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": "Descargar el programa del Eisteddfod 2015",
    "table": null
   },
@@ -9877,6 +10398,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": "2 Programacion definitiva Eisteddfod del Chubut Descargar la Programacion definitiva Eisteddfod del Chubut",
    "table": null
   },
@@ -9903,6 +10425,10 @@
    "thumb": "4ee8024042c1/thumb.webp",
    "page_paths": [
     "4ee8024042c1/p01.webp"
+   ],
+   "page_size": [
+    780,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -9931,6 +10457,10 @@
    "page_paths": [
     "8a5e0ec67196/p01.webp"
    ],
+   "page_size": [
+    667,
+    674
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -9956,6 +10486,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": "18 Programa Eisteddfod del Chubut 2016 Ver el Programa del Eisteddfod 2016",
    "table": null
   },
@@ -9982,6 +10513,10 @@
    "thumb": "cf13346f8db6/thumb.webp",
    "page_paths": [
     "cf13346f8db6/p01.webp"
+   ],
+   "page_size": [
+    679,
+    960
    ],
    "text_excerpt": null,
    "table": null
@@ -10010,6 +10545,10 @@
    "page_paths": [
     "8415166f5ff1/p01.webp"
    ],
+   "page_size": [
+    679,
+    960
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -10036,6 +10575,10 @@
    "thumb": "64ae1ed2f931/thumb.webp",
    "page_paths": [
     "64ae1ed2f931/p01.webp"
+   ],
+   "page_size": [
+    679,
+    960
    ],
    "text_excerpt": null,
    "table": null
@@ -10064,6 +10607,10 @@
    "page_paths": [
     "cf4d6221c645/p01.webp"
    ],
+   "page_size": [
+    679,
+    960
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -10090,6 +10637,10 @@
    "thumb": "c6f234e992bc/thumb.webp",
    "page_paths": [
     "c6f234e992bc/p01.webp"
+   ],
+   "page_size": [
+    679,
+    960
    ],
    "text_excerpt": null,
    "table": null
@@ -10118,6 +10669,10 @@
    "page_paths": [
     "564f4575737b/p01.webp"
    ],
+   "page_size": [
+    679,
+    960
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -10144,6 +10699,10 @@
    "thumb": "af3689660c01/thumb.webp",
    "page_paths": [
     "af3689660c01/p01.webp"
+   ],
+   "page_size": [
+    679,
+    960
    ],
    "text_excerpt": null,
    "table": null
@@ -10172,6 +10731,10 @@
    "page_paths": [
     "a641a781fe74/p01.webp"
    ],
+   "page_size": [
+    800,
+    581
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -10198,6 +10761,10 @@
    "thumb": "a18e3c6f810a/thumb.webp",
    "page_paths": [
     "a18e3c6f810a/p01.webp"
+   ],
+   "page_size": [
+    800,
+    581
    ],
    "text_excerpt": null,
    "table": null
@@ -10226,6 +10793,10 @@
    "page_paths": [
     "50dec406c04c/p01.webp"
    ],
+   "page_size": [
+    679,
+    960
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -10253,6 +10824,10 @@
    "page_paths": [
     "e6ae49f59d00/p01.webp"
    ],
+   "page_size": [
+    800,
+    581
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -10278,6 +10853,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": "0 Competencias de Danzas Gacetilla de Prensa EISTEDDFOD DEL CHUBUT COMPETENCIAS DANZAS Recordamos que para esta Edición 2017 del Eisteddfod del Chubut las competencias propuestas para Danzas: folklóricas y populares argentinas y galesas son las siguientes: DANZA FOLKLÓRICA Y POPULAR ARGENTINA Danza Tradicional para pareja independiente: La Zamba Tango de Salón. El reglamento será el correspondiente al Mundial de Tango Pista de la Argentina 2016. Se bailarán 2 tangos elegidos por el jurado: Tango de la Orquesta de Carlos Di Sarli. Tango de la Orquesta de Juan D’Arienzo. Tango Escenario. Libre. ",
    "table": null
   },
@@ -10303,6 +10879,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": "1 Competencias de Literatura Gacetilla de Prensa EISTEDDFOD DEL CHUBUT COMPETENCIAS LITERATURA Recordamos que para esta Edición 2017 del Eisteddfod del Chubut las competencias propuestas para Literatura – Poesía en castellano son las siguientes: CORONA DEL EISTEDDFOD: Premio Municipalidad de Trelew. Poema inédito, no premiado en otro concurso. Tema y estilo libres. Extensión máxima: 40 (cuarenta) versos. MEDALLA DE PLATA – Premio de la Asociación San David (otorgado desde 1994) – Poema inédito, no premiado en otro concurso. Tema libre y forma de estilo tradicional (métrica y rima) Romance de u",
    "table": null
   },
@@ -10330,6 +10907,10 @@
    "page_paths": [
     "719bff2f6ea5/p01.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -10355,6 +10936,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": "11 Programa Eisteddfod del Chubut 2017 Ver el Programa del Eisteddfod 2017",
    "table": null
   },
@@ -10381,6 +10963,10 @@
    "thumb": "31b2ea8bbff4/thumb.webp",
    "page_paths": [
     "31b2ea8bbff4/p01.webp"
+   ],
+   "page_size": [
+    848,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -10409,6 +10995,10 @@
    "page_paths": [
     "a384f530397b/p01.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -10435,6 +11025,10 @@
    "thumb": "a39a1d6b247b/thumb.webp",
    "page_paths": [
     "a39a1d6b247b/p01.webp"
+   ],
+   "page_size": [
+    848,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -10463,6 +11057,10 @@
    "page_paths": [
     "0cb6d0b5048e/p01.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -10489,6 +11087,10 @@
    "thumb": "d114654aed82/thumb.webp",
    "page_paths": [
     "d114654aed82/p01.webp"
+   ],
+   "page_size": [
+    848,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -10517,6 +11119,10 @@
    "page_paths": [
     "cb0b2cb8f238/p01.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -10543,6 +11149,10 @@
    "thumb": "5f1c61d72735/thumb.webp",
    "page_paths": [
     "5f1c61d72735/p01.webp"
+   ],
+   "page_size": [
+    848,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -10571,6 +11181,10 @@
    "page_paths": [
     "4e87bd74fa35/p01.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -10597,6 +11211,10 @@
    "thumb": "37f6f04fb056/thumb.webp",
    "page_paths": [
     "37f6f04fb056/p01.webp"
+   ],
+   "page_size": [
+    800,
+    581
    ],
    "text_excerpt": null,
    "table": null
@@ -10625,6 +11243,10 @@
    "page_paths": [
     "0d0dbd428dc8/p01.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -10651,6 +11273,10 @@
    "thumb": "e8b4f565f94d/thumb.webp",
    "page_paths": [
     "e8b4f565f94d/p01.webp"
+   ],
+   "page_size": [
+    800,
+    581
    ],
    "text_excerpt": null,
    "table": null
@@ -10679,6 +11305,10 @@
    "page_paths": [
     "935b50e36ef5/p01.webp"
    ],
+   "page_size": [
+    1200,
+    848
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -10705,6 +11335,10 @@
    "thumb": "55aba805baa0/thumb.webp",
    "page_paths": [
     "55aba805baa0/p01.webp"
+   ],
+   "page_size": [
+    800,
+    581
    ],
    "text_excerpt": null,
    "table": null
@@ -10733,6 +11367,10 @@
    "page_paths": [
     "8c1d95347416/p01.webp"
    ],
+   "page_size": [
+    567,
+    315
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -10760,6 +11398,10 @@
    "page_paths": [
     "4f2b04eae8c6/p01.webp"
    ],
+   "page_size": [
+    540,
+    960
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -10785,6 +11427,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": "0 Competencia Coros Presentamos las competencias de COROS – CORAU. La fecha límite de inscripción es hasta el viernes 5 de octubre a través de nuestro sitio web eisteddfodpatagonia.com/inscripcion ¡Sumáte al Eisteddfod del Chubut!",
    "table": null
   },
@@ -10810,6 +11453,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": "2 Competencias Fotografía y Diseño Gráfico Eisteddfod del Chubut 2018 Competencias: fotografía y diseño gráfico. Los trabajos de diseño gráfico se reciben hasta el día 24 de Agosto y los de fotografía hasta el 28 de Septiembre del corriente año. Más información en el Programa, disponible para su venta en San Martin 90 de Trelew o en nuestro sitio web.",
    "table": null
   },
@@ -10836,6 +11480,10 @@
    "thumb": "78d0472786de/thumb.webp",
    "page_paths": [
     "78d0472786de/p01.webp"
+   ],
+   "page_size": [
+    678,
+    960
    ],
    "text_excerpt": null,
    "table": null
@@ -10864,6 +11512,10 @@
    "page_paths": [
     "6c17e1bbb41a/p01.webp"
    ],
+   "page_size": [
+    678,
+    960
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -10889,6 +11541,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": "0 Semana del Eisteddfod – Preliminares GACETILLA DE PRENSA SEMANA DEL EISTEDDFOD PRELIMINARES La Comisión directiva de la Asociación Eisteddfod del Chubut dio a conocer el cronograma de las Preliminares, actividad previstas para la “Semana del Eisteddfod”. La misma tendrá lugar el jueves 26 de octubre de 2017. Jueves 26 de octubre Preliminares – Salón San David de Trelew. 17.00 h Salón Histórico San David Danzas ▪ Competencia Nº 84: Dawns Werin Canolog: danza nivel intermedio: Hanner Wyth – Aly Grogan. ▪ Competencia Nº 87: Danza Tradicional para pareja independiente: La Zamba. 18.00 h Salón Hi",
    "table": null
   },
@@ -10971,6 +11624,10 @@
     "1d933f777d08/p55.webp",
     "1d933f777d08/p56.webp"
    ],
+   "page_size": [
+    997,
+    715
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -10996,6 +11653,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": "10 Programa Eisteddfod del Chubut 2018 Ver el Programa del Eisteddfod 2018",
    "table": null
   },
@@ -11022,6 +11680,10 @@
    "thumb": "0e54fc66f0dc/thumb.webp",
    "page_paths": [
     "0e54fc66f0dc/p01.webp"
+   ],
+   "page_size": [
+    678,
+    960
    ],
    "text_excerpt": null,
    "table": null
@@ -11050,6 +11712,10 @@
    "page_paths": [
     "1a108e0c52ee/p01.webp"
    ],
+   "page_size": [
+    480,
+    480
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -11076,6 +11742,10 @@
    "thumb": "997c1f146272/thumb.webp",
    "page_paths": [
     "997c1f146272/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    848
    ],
    "text_excerpt": null,
    "table": null
@@ -11104,6 +11774,10 @@
    "page_paths": [
     "1779161a4b2f/p01.webp"
    ],
+   "page_size": [
+    480,
+    583
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -11130,6 +11804,10 @@
    "thumb": "f5be2847899f/thumb.webp",
    "page_paths": [
     "f5be2847899f/p01.webp"
+   ],
+   "page_size": [
+    480,
+    480
    ],
    "text_excerpt": null,
    "table": null
@@ -11158,6 +11836,10 @@
    "page_paths": [
     "2818cfcd21bb/p01.webp"
    ],
+   "page_size": [
+    480,
+    480
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -11183,6 +11865,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": "Saltar al contenido Chubut Cultural cultura EISTEDDFOD CHUBUT EDICIÓN 2019 21/10/2019 Por Juan Jose De Focatiis el intendente Adrián Maderna fue el encargado, de realizar el sábado por la noche, la entrega de la «Corona del Poeta», premio de la Municipalidad de Trelew, en el marco de la realización de la edición 2019 del Eisteddfod del Chubut, desarrollada en las instalaciones del Salón San David. PH EL REGIONAL La competencia número 7 representa la premiación más importante del certamen literario del Eisteddfod. Y sin dudas, parte importante de la simbología de la palabra Eisteddfod, cuyo sig",
    "table": null
   },
@@ -11209,6 +11892,10 @@
    "thumb": "8790e3532d51/thumb.webp",
    "page_paths": [
     "8790e3532d51/p01.webp"
+   ],
+   "page_size": [
+    480,
+    640
    ],
    "text_excerpt": null,
    "table": null
@@ -11237,6 +11924,10 @@
    "page_paths": [
     "46058c4ab9e8/p01.webp"
    ],
+   "page_size": [
+    480,
+    640
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -11264,6 +11955,10 @@
    "page_paths": [
     "b98f782955c6/p01.webp"
    ],
+   "page_size": [
+    480,
+    640
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -11290,6 +11985,10 @@
    "thumb": "19ede7db6589/thumb.webp",
    "page_paths": [
     "19ede7db6589/p01.webp"
+   ],
+   "page_size": [
+    480,
+    640
    ],
    "text_excerpt": null,
    "table": null
@@ -11372,6 +12071,10 @@
     "62d811125aa0/p54.webp",
     "62d811125aa0/p55.webp"
    ],
+   "page_size": [
+    997,
+    715
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -11398,6 +12101,10 @@
    "thumb": "ffa0c98c9f94/thumb.webp",
    "page_paths": [
     "ffa0c98c9f94/p01.webp"
+   ],
+   "page_size": [
+    480,
+    640
    ],
    "text_excerpt": null,
    "table": null
@@ -11426,6 +12133,10 @@
    "page_paths": [
     "721a64b39277/p01.webp"
    ],
+   "page_size": [
+    675,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -11452,6 +12163,10 @@
    "thumb": "4f9af816d8e9/thumb.webp",
    "page_paths": [
     "4f9af816d8e9/p01.webp"
+   ],
+   "page_size": [
+    900,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -11480,6 +12195,10 @@
    "page_paths": [
     "fa24bbb6b678/p01.webp"
    ],
+   "page_size": [
+    480,
+    853
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -11506,6 +12225,10 @@
    "thumb": "6e4e9eeff5b0/thumb.webp",
    "page_paths": [
     "6e4e9eeff5b0/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -11534,6 +12257,10 @@
    "page_paths": [
     "f37759076bf9/p01.webp"
    ],
+   "page_size": [
+    675,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -11560,6 +12287,10 @@
    "thumb": "83f22dfbd65f/thumb.webp",
    "page_paths": [
     "83f22dfbd65f/p01.webp"
+   ],
+   "page_size": [
+    675,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -11588,6 +12319,10 @@
    "page_paths": [
     "4cd7d7ecec26/p01.webp"
    ],
+   "page_size": [
+    675,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -11614,6 +12349,10 @@
    "thumb": "6b1b8228ea5c/thumb.webp",
    "page_paths": [
     "6b1b8228ea5c/p01.webp"
+   ],
+   "page_size": [
+    675,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -11642,6 +12381,10 @@
    "page_paths": [
     "aa6ad9c76597/p01.webp"
    ],
+   "page_size": [
+    960,
+    960
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -11668,6 +12411,10 @@
    "thumb": "105d6973885c/thumb.webp",
    "page_paths": [
     "105d6973885c/p01.webp"
+   ],
+   "page_size": [
+    960,
+    960
    ],
    "text_excerpt": null,
    "table": null
@@ -11696,6 +12443,10 @@
    "page_paths": [
     "b6231122dd86/p01.webp"
    ],
+   "page_size": [
+    1200,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -11722,6 +12473,10 @@
    "thumb": "69e7f342cbf7/thumb.webp",
    "page_paths": [
     "69e7f342cbf7/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -11750,6 +12505,10 @@
    "page_paths": [
     "5dffdf0c4153/p01.webp"
    ],
+   "page_size": [
+    900,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -11776,6 +12535,10 @@
    "thumb": "38eb7128f618/thumb.webp",
    "page_paths": [
     "38eb7128f618/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -11804,6 +12567,10 @@
    "page_paths": [
     "7e149b0df221/p01.webp"
    ],
+   "page_size": [
+    675,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -11830,6 +12597,10 @@
    "thumb": "4f673d48d45b/thumb.webp",
    "page_paths": [
     "4f673d48d45b/p01.webp"
+   ],
+   "page_size": [
+    480,
+    853
    ],
    "text_excerpt": null,
    "table": null
@@ -11858,6 +12629,10 @@
    "page_paths": [
     "e603912da61f/p01.webp"
    ],
+   "page_size": [
+    900,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -11884,6 +12659,10 @@
    "thumb": "0225a7a6f9ec/thumb.webp",
    "page_paths": [
     "0225a7a6f9ec/p01.webp"
+   ],
+   "page_size": [
+    900,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -11912,6 +12691,10 @@
    "page_paths": [
     "31937084ea9f/p01.webp"
    ],
+   "page_size": [
+    1200,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -11938,6 +12721,10 @@
    "thumb": "cbf5c3603b8c/thumb.webp",
    "page_paths": [
     "cbf5c3603b8c/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -11966,6 +12753,10 @@
    "page_paths": [
     "bb891adae284/p01.webp"
    ],
+   "page_size": [
+    1200,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -11992,6 +12783,10 @@
    "thumb": "3e34ee935c31/thumb.webp",
    "page_paths": [
     "3e34ee935c31/p01.webp"
+   ],
+   "page_size": [
+    960,
+    540
    ],
    "text_excerpt": null,
    "table": null
@@ -12020,6 +12815,10 @@
    "page_paths": [
     "ed70c2c09ded/p01.webp"
    ],
+   "page_size": [
+    960,
+    540
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -12046,6 +12845,10 @@
    "thumb": "63b4c9708524/thumb.webp",
    "page_paths": [
     "63b4c9708524/p01.webp"
+   ],
+   "page_size": [
+    960,
+    540
    ],
    "text_excerpt": null,
    "table": null
@@ -12074,6 +12877,10 @@
    "page_paths": [
     "53ecc566901e/p01.webp"
    ],
+   "page_size": [
+    960,
+    540
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -12100,6 +12907,10 @@
    "thumb": "7363f2c25530/thumb.webp",
    "page_paths": [
     "7363f2c25530/p01.webp"
+   ],
+   "page_size": [
+    960,
+    540
    ],
    "text_excerpt": null,
    "table": null
@@ -12128,6 +12939,10 @@
    "page_paths": [
     "8c2e0b336712/p01.webp"
    ],
+   "page_size": [
+    960,
+    540
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -12154,6 +12969,10 @@
    "thumb": "8fc23391a7f3/thumb.webp",
    "page_paths": [
     "8fc23391a7f3/p01.webp"
+   ],
+   "page_size": [
+    848,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -12182,6 +13001,10 @@
    "page_paths": [
     "7aebd295db52/p01.webp"
    ],
+   "page_size": [
+    1200,
+    675
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -12208,6 +13031,10 @@
    "thumb": "02e889601b55/thumb.webp",
    "page_paths": [
     "02e889601b55/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    675
    ],
    "text_excerpt": null,
    "table": null
@@ -12236,6 +13063,10 @@
    "page_paths": [
     "4b562389f000/p01.webp"
    ],
+   "page_size": [
+    1200,
+    675
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -12262,6 +13093,10 @@
    "thumb": "655731caa2f3/thumb.webp",
    "page_paths": [
     "655731caa2f3/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    675
    ],
    "text_excerpt": null,
    "table": null
@@ -12290,6 +13125,10 @@
    "page_paths": [
     "703ca09286de/p01.webp"
    ],
+   "page_size": [
+    849,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -12316,6 +13155,10 @@
    "thumb": "c35ebcee921b/thumb.webp",
    "page_paths": [
     "c35ebcee921b/p01.webp"
+   ],
+   "page_size": [
+    848,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -12344,6 +13187,10 @@
    "page_paths": [
     "8bfccf9d3659/p01.webp"
    ],
+   "page_size": [
+    679,
+    960
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -12370,6 +13217,10 @@
    "thumb": "71cee44374a2/thumb.webp",
    "page_paths": [
     "71cee44374a2/p01.webp"
+   ],
+   "page_size": [
+    960,
+    540
    ],
    "text_excerpt": null,
    "table": null
@@ -12398,6 +13249,10 @@
    "page_paths": [
     "07f920e58229/p01.webp"
    ],
+   "page_size": [
+    1200,
+    675
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -12424,6 +13279,10 @@
    "thumb": "3f787290e00c/thumb.webp",
    "page_paths": [
     "3f787290e00c/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    675
    ],
    "text_excerpt": null,
    "table": null
@@ -12452,6 +13311,10 @@
    "page_paths": [
     "feeddf29d484/p01.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -12478,6 +13341,10 @@
    "thumb": "05fc75d8dd23/thumb.webp",
    "page_paths": [
     "05fc75d8dd23/p01.webp"
+   ],
+   "page_size": [
+    848,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -12506,6 +13373,10 @@
    "page_paths": [
     "01fa2ffcb9ab/p01.webp"
    ],
+   "page_size": [
+    849,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -12533,6 +13404,10 @@
    "page_paths": [
     "fe2fa72d68b8/p01.webp"
    ],
+   "page_size": [
+    1200,
+    675
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -12559,6 +13434,10 @@
    "thumb": "97301819c768/thumb.webp",
    "page_paths": [
     "97301819c768/p01.webp"
+   ],
+   "page_size": [
+    848,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -12591,6 +13470,10 @@
     "3c898f83a199/p04.webp",
     "3c898f83a199/p05.webp"
    ],
+   "page_size": [
+    849,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -12617,6 +13500,10 @@
    "thumb": "d39c5cd8db8b/thumb.webp",
    "page_paths": [
     "d39c5cd8db8b/p01.webp"
+   ],
+   "page_size": [
+    960,
+    681
    ],
    "text_excerpt": null,
    "table": null
@@ -12645,6 +13532,10 @@
    "page_paths": [
     "42212c9aa649/p01.webp"
    ],
+   "page_size": [
+    960,
+    681
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -12671,6 +13562,10 @@
    "thumb": "5023d218e655/thumb.webp",
    "page_paths": [
     "5023d218e655/p01.webp"
+   ],
+   "page_size": [
+    960,
+    681
    ],
    "text_excerpt": null,
    "table": null
@@ -12699,6 +13594,10 @@
    "page_paths": [
     "ef8f852d282a/p01.webp"
    ],
+   "page_size": [
+    960,
+    681
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -12725,6 +13624,10 @@
    "thumb": "b8241835b77f/thumb.webp",
    "page_paths": [
     "b8241835b77f/p01.webp"
+   ],
+   "page_size": [
+    960,
+    681
    ],
    "text_excerpt": null,
    "table": null
@@ -12753,6 +13656,10 @@
    "page_paths": [
     "2f2da6ec4d69/p01.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -12779,6 +13686,10 @@
    "thumb": "d754ef91e4b9/thumb.webp",
    "page_paths": [
     "d754ef91e4b9/p01.webp"
+   ],
+   "page_size": [
+    848,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -12807,6 +13718,10 @@
    "page_paths": [
     "89634a8605db/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -12833,6 +13748,10 @@
    "thumb": "0002b499da6d/thumb.webp",
    "page_paths": [
     "0002b499da6d/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -12861,6 +13780,10 @@
    "page_paths": [
     "17f87b405502/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -12888,6 +13811,10 @@
    "page_paths": [
     "b05a444e1030/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -12914,6 +13841,10 @@
    "thumb": "807c29109582/thumb.webp",
    "page_paths": [
     "807c29109582/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -12944,6 +13875,10 @@
    "page_paths": [
     "03b01342a6c3/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -12973,6 +13908,10 @@
    "page_paths": [
     "f936f17fded4/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -12999,6 +13938,10 @@
    "thumb": "ec5f41cae903/thumb.webp",
    "page_paths": [
     "ec5f41cae903/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -13027,6 +13970,10 @@
    "page_paths": [
     "051dcca2abd4/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -13053,6 +14000,10 @@
    "thumb": "5480796bab8f/thumb.webp",
    "page_paths": [
     "5480796bab8f/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -13081,6 +14032,10 @@
    "page_paths": [
     "8ff4f8e0e52b/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -13107,6 +14062,10 @@
    "thumb": "486c5fd51089/thumb.webp",
    "page_paths": [
     "486c5fd51089/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -13135,6 +14094,10 @@
    "page_paths": [
     "c97811ec1a27/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -13161,6 +14124,10 @@
    "thumb": "15a53f1421af/thumb.webp",
    "page_paths": [
     "15a53f1421af/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -13189,6 +14156,10 @@
    "page_paths": [
     "a9df7cf9ef55/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -13215,6 +14186,10 @@
    "thumb": "f633469e0a50/thumb.webp",
    "page_paths": [
     "f633469e0a50/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -13243,6 +14218,10 @@
    "page_paths": [
     "20ef02c7a581/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -13269,6 +14248,10 @@
    "thumb": "381bf21a3b01/thumb.webp",
    "page_paths": [
     "381bf21a3b01/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -13297,6 +14280,10 @@
    "page_paths": [
     "807263a2cc5c/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -13323,6 +14310,10 @@
    "thumb": "233db782caa2/thumb.webp",
    "page_paths": [
     "233db782caa2/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -13351,6 +14342,10 @@
    "page_paths": [
     "15ecd9491e82/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -13377,6 +14372,10 @@
    "thumb": "46743713396c/thumb.webp",
    "page_paths": [
     "46743713396c/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -13405,6 +14404,10 @@
    "page_paths": [
     "41c81bd2775a/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -13431,6 +14434,10 @@
    "thumb": "dd852a538ea2/thumb.webp",
    "page_paths": [
     "dd852a538ea2/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -13459,6 +14466,10 @@
    "page_paths": [
     "27a18f5c9aed/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -13485,6 +14496,10 @@
    "thumb": "52892c2821f4/thumb.webp",
    "page_paths": [
     "52892c2821f4/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -13515,6 +14530,10 @@
    "page_paths": [
     "a2226717b4bd/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -13541,6 +14560,10 @@
    "thumb": "53cc6ac368ff/thumb.webp",
    "page_paths": [
     "53cc6ac368ff/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -13569,6 +14592,10 @@
    "page_paths": [
     "f25bbbdd7737/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -13595,6 +14622,10 @@
    "thumb": "ee9770ff12bf/thumb.webp",
    "page_paths": [
     "ee9770ff12bf/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -13623,6 +14654,10 @@
    "page_paths": [
     "c100fd27e1dc/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -13649,6 +14684,10 @@
    "thumb": "e6ed7fe6d2d8/thumb.webp",
    "page_paths": [
     "e6ed7fe6d2d8/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -13677,6 +14716,10 @@
    "page_paths": [
     "b328908ac41d/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -13703,6 +14746,10 @@
    "thumb": "369386a6dc1a/thumb.webp",
    "page_paths": [
     "369386a6dc1a/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -13731,6 +14778,10 @@
    "page_paths": [
     "8a87c9a062e9/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -13757,6 +14808,10 @@
    "thumb": "7af01248b701/thumb.webp",
    "page_paths": [
     "7af01248b701/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -13787,6 +14842,10 @@
    "page_paths": [
     "d290881d8812/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -13813,6 +14872,10 @@
    "thumb": "988030f9d58e/thumb.webp",
    "page_paths": [
     "988030f9d58e/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -13841,6 +14904,10 @@
    "page_paths": [
     "addf6e12f785/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -13867,6 +14934,10 @@
    "thumb": "a84bc25ea945/thumb.webp",
    "page_paths": [
     "a84bc25ea945/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -13895,6 +14966,10 @@
    "page_paths": [
     "7fdd81a82d5e/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -13921,6 +14996,10 @@
    "thumb": "bed9a17d64e3/thumb.webp",
    "page_paths": [
     "bed9a17d64e3/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -13949,6 +15028,10 @@
    "page_paths": [
     "9b87d044f93d/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -13975,6 +15058,10 @@
    "thumb": "5b5249ee9236/thumb.webp",
    "page_paths": [
     "5b5249ee9236/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -14003,6 +15090,10 @@
    "page_paths": [
     "1c0e995c03ea/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -14029,6 +15120,10 @@
    "thumb": "54bb203039c4/thumb.webp",
    "page_paths": [
     "54bb203039c4/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -14057,6 +15152,10 @@
    "page_paths": [
     "7308ac58a0c7/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -14084,6 +15183,10 @@
    "page_paths": [
     "ddff653c3d6a/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -14110,6 +15213,10 @@
    "thumb": "b3f1a5cbaa0f/thumb.webp",
    "page_paths": [
     "b3f1a5cbaa0f/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -14140,6 +15247,10 @@
    "page_paths": [
     "c611d386b92c/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -14166,6 +15277,10 @@
    "thumb": "1ed38ed379ab/thumb.webp",
    "page_paths": [
     "1ed38ed379ab/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -14194,6 +15309,10 @@
    "page_paths": [
     "268538860bf3/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -14220,6 +15339,10 @@
    "thumb": "bd890a5a74ed/thumb.webp",
    "page_paths": [
     "bd890a5a74ed/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -14250,6 +15373,10 @@
    "page_paths": [
     "01fd06d7a729/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -14278,6 +15405,10 @@
    "thumb": "2f9c78d4482b/thumb.webp",
    "page_paths": [
     "2f9c78d4482b/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -14308,6 +15439,10 @@
    "page_paths": [
     "5da0e6aba470/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -14334,6 +15469,10 @@
    "thumb": "d4f6dae10e91/thumb.webp",
    "page_paths": [
     "d4f6dae10e91/p01.webp"
+   ],
+   "page_size": [
+    720,
+    720
    ],
    "text_excerpt": null,
    "table": null
@@ -14362,6 +15501,10 @@
    "page_paths": [
     "1a3ec7ff439f/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -14388,6 +15531,10 @@
    "thumb": "0173dc740a4b/thumb.webp",
    "page_paths": [
     "0173dc740a4b/p01.webp"
+   ],
+   "page_size": [
+    848,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -14416,6 +15563,10 @@
    "page_paths": [
     "a0ffc3ab800c/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -14443,6 +15594,10 @@
    "page_paths": [
     "0f695c402139/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -14469,6 +15624,10 @@
    "thumb": "df8352bd3262/thumb.webp",
    "page_paths": [
     "df8352bd3262/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -14499,6 +15658,10 @@
    "page_paths": [
     "8c4bdbc7513e/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -14525,6 +15688,10 @@
    "thumb": "ffff27806339/thumb.webp",
    "page_paths": [
     "ffff27806339/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -14553,6 +15720,10 @@
    "page_paths": [
     "94ef5fc89c1c/p01.webp"
    ],
+   "page_size": [
+    720,
+    1018
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -14579,6 +15750,10 @@
    "thumb": "cad927ec8914/thumb.webp",
    "page_paths": [
     "cad927ec8914/p01.webp"
+   ],
+   "page_size": [
+    720,
+    720
    ],
    "text_excerpt": null,
    "table": null
@@ -14607,6 +15782,10 @@
    "page_paths": [
     "43f0b2ca5c47/p01.webp"
    ],
+   "page_size": [
+    720,
+    720
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -14633,6 +15812,10 @@
    "thumb": "fff7da80d1d8/thumb.webp",
    "page_paths": [
     "fff7da80d1d8/p01.webp"
+   ],
+   "page_size": [
+    940,
+    788
    ],
    "text_excerpt": null,
    "table": null
@@ -14661,6 +15844,10 @@
    "page_paths": [
     "385fc8b5c0de/p01.webp"
    ],
+   "page_size": [
+    940,
+    788
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -14687,6 +15874,10 @@
    "thumb": "463033c1a964/thumb.webp",
    "page_paths": [
     "463033c1a964/p01.webp"
+   ],
+   "page_size": [
+    940,
+    788
    ],
    "text_excerpt": null,
    "table": null
@@ -14715,6 +15906,10 @@
    "page_paths": [
     "8e149d3edf31/p01.webp"
    ],
+   "page_size": [
+    940,
+    788
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -14741,6 +15936,10 @@
    "thumb": "0f98dad28228/thumb.webp",
    "page_paths": [
     "0f98dad28228/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -14771,6 +15970,10 @@
    "page_paths": [
     "668fcfbadcbb/p01.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -14797,6 +16000,10 @@
    "thumb": "9296e2f4b068/thumb.webp",
    "page_paths": [
     "9296e2f4b068/p01.webp"
+   ],
+   "page_size": [
+    848,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -14827,6 +16034,10 @@
    "page_paths": [
     "7882a2bc7e68/p01.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -14853,6 +16064,10 @@
    "thumb": "0053f718e20c/thumb.webp",
    "page_paths": [
     "0053f718e20c/p01.webp"
+   ],
+   "page_size": [
+    848,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -14933,6 +16148,10 @@
     "f5598feba9aa/p52.webp",
     "f5598feba9aa/p53.webp"
    ],
+   "page_size": [
+    997,
+    715
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -14959,6 +16178,10 @@
    "thumb": "c15423e9208c/thumb.webp",
    "page_paths": [
     "c15423e9208c/p01.webp"
+   ],
+   "page_size": [
+    900,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -14987,6 +16210,10 @@
    "page_paths": [
     "3f3b4a6b1b64/p01.webp"
    ],
+   "page_size": [
+    1200,
+    851
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -15013,6 +16240,10 @@
    "thumb": "037d55b283ac/thumb.webp",
    "page_paths": [
     "037d55b283ac/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    851
    ],
    "text_excerpt": null,
    "table": null
@@ -15041,6 +16272,10 @@
    "page_paths": [
     "e49c26c600a8/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -15067,6 +16302,10 @@
    "thumb": "bd0e6bb57eaa/thumb.webp",
    "page_paths": [
     "bd0e6bb57eaa/p01.webp"
+   ],
+   "page_size": [
+    848,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -15095,6 +16334,10 @@
    "page_paths": [
     "a960aae9fe68/p01.webp"
    ],
+   "page_size": [
+    940,
+    788
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -15121,6 +16364,10 @@
    "thumb": "c7b32fe6ca49/thumb.webp",
    "page_paths": [
     "c7b32fe6ca49/p01.webp"
+   ],
+   "page_size": [
+    940,
+    788
    ],
    "text_excerpt": null,
    "table": null
@@ -15149,6 +16396,10 @@
    "page_paths": [
     "638fe46c2606/p01.webp"
    ],
+   "page_size": [
+    940,
+    788
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -15175,6 +16426,10 @@
    "thumb": "31eaf7833b2d/thumb.webp",
    "page_paths": [
     "31eaf7833b2d/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    676
    ],
    "text_excerpt": null,
    "table": null
@@ -15203,6 +16458,10 @@
    "page_paths": [
     "a2bc285b7cbd/p01.webp"
    ],
+   "page_size": [
+    940,
+    788
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -15229,6 +16488,10 @@
    "thumb": "46d1c9b21b69/thumb.webp",
    "page_paths": [
     "46d1c9b21b69/p01.webp"
+   ],
+   "page_size": [
+    940,
+    788
    ],
    "text_excerpt": null,
    "table": null
@@ -15257,6 +16520,10 @@
    "page_paths": [
     "0ae00010cf73/p01.webp"
    ],
+   "page_size": [
+    940,
+    788
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -15283,6 +16550,10 @@
    "thumb": "1eefa6da76b0/thumb.webp",
    "page_paths": [
     "1eefa6da76b0/p01.webp"
+   ],
+   "page_size": [
+    940,
+    788
    ],
    "text_excerpt": null,
    "table": null
@@ -15311,6 +16582,10 @@
    "page_paths": [
     "a16145246517/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -15337,6 +16612,10 @@
    "thumb": "da4ac7614e3e/thumb.webp",
    "page_paths": [
     "da4ac7614e3e/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -15365,6 +16644,10 @@
    "page_paths": [
     "86477dd42ac8/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -15391,6 +16674,10 @@
    "thumb": "105aa7e797f0/thumb.webp",
    "page_paths": [
     "105aa7e797f0/p01.webp"
+   ],
+   "page_size": [
+    940,
+    788
    ],
    "text_excerpt": null,
    "table": null
@@ -15419,6 +16706,10 @@
    "page_paths": [
     "b71a68a50b49/p01.webp"
    ],
+   "page_size": [
+    940,
+    788
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -15445,6 +16736,10 @@
    "thumb": "c7583896cb24/thumb.webp",
    "page_paths": [
     "c7583896cb24/p01.webp"
+   ],
+   "page_size": [
+    940,
+    788
    ],
    "text_excerpt": null,
    "table": null
@@ -15473,6 +16768,10 @@
    "page_paths": [
     "8aa11da1ba31/p01.webp"
    ],
+   "page_size": [
+    940,
+    788
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -15499,6 +16798,10 @@
    "thumb": "e405988c797e/thumb.webp",
    "page_paths": [
     "e405988c797e/p01.webp"
+   ],
+   "page_size": [
+    940,
+    788
    ],
    "text_excerpt": null,
    "table": null
@@ -15527,6 +16830,10 @@
    "page_paths": [
     "9e775561e043/p01.webp"
    ],
+   "page_size": [
+    940,
+    788
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -15553,6 +16860,10 @@
    "thumb": "a5882e51371e/thumb.webp",
    "page_paths": [
     "a5882e51371e/p01.webp"
+   ],
+   "page_size": [
+    940,
+    788
    ],
    "text_excerpt": null,
    "table": null
@@ -15581,6 +16892,10 @@
    "page_paths": [
     "99a72233b0e3/p01.webp"
    ],
+   "page_size": [
+    940,
+    788
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -15607,6 +16922,10 @@
    "thumb": "a66f5e2cf2cf/thumb.webp",
    "page_paths": [
     "a66f5e2cf2cf/p01.webp"
+   ],
+   "page_size": [
+    940,
+    788
    ],
    "text_excerpt": null,
    "table": null
@@ -15635,6 +16954,10 @@
    "page_paths": [
     "527dea0c8be8/p01.webp"
    ],
+   "page_size": [
+    940,
+    788
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -15661,6 +16984,10 @@
    "thumb": "bc5cc5533a50/thumb.webp",
    "page_paths": [
     "bc5cc5533a50/p01.webp"
+   ],
+   "page_size": [
+    940,
+    788
    ],
    "text_excerpt": null,
    "table": null
@@ -15689,6 +17016,10 @@
    "page_paths": [
     "fed9f5bd7e89/p01.webp"
    ],
+   "page_size": [
+    940,
+    788
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -15715,6 +17046,10 @@
    "thumb": "b4f5fbebdf70/thumb.webp",
    "page_paths": [
     "b4f5fbebdf70/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -15747,6 +17082,10 @@
    "page_paths": [
     "d4297c2364ae/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -15778,6 +17117,10 @@
    "page_paths": [
     "00a576adde89/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -15804,6 +17147,10 @@
    "thumb": "b3d8e417e201/thumb.webp",
    "page_paths": [
     "b3d8e417e201/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -15832,6 +17179,10 @@
    "page_paths": [
     "4e5ba96f5218/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -15858,6 +17209,10 @@
    "thumb": "783e2ed18d83/thumb.webp",
    "page_paths": [
     "783e2ed18d83/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -15886,6 +17241,10 @@
    "page_paths": [
     "ce3a2e4f7b77/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -15912,6 +17271,10 @@
    "thumb": "9525fcdd81d7/thumb.webp",
    "page_paths": [
     "9525fcdd81d7/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -15942,6 +17305,10 @@
    "page_paths": [
     "ca71f6db5958/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -15968,6 +17335,10 @@
    "thumb": "6beefa906242/thumb.webp",
    "page_paths": [
     "6beefa906242/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -16082,6 +17453,10 @@
     "aed82be96e78/p86.webp",
     "aed82be96e78/p87.webp"
    ],
+   "page_size": [
+    997,
+    715
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -16108,6 +17483,10 @@
    "thumb": "88266fdf6227/thumb.webp",
    "page_paths": [
     "88266fdf6227/p01.webp"
+   ],
+   "page_size": [
+    900,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -16136,6 +17515,10 @@
    "page_paths": [
     "43a33a7837a9/p01.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -16162,6 +17545,10 @@
    "thumb": "4729e23fb541/thumb.webp",
    "page_paths": [
     "4729e23fb541/p01.webp"
+   ],
+   "page_size": [
+    848,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -16190,6 +17577,10 @@
    "page_paths": [
     "3b5d463295ef/p01.webp"
    ],
+   "page_size": [
+    940,
+    788
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -16216,6 +17607,10 @@
    "thumb": "a1547a159200/thumb.webp",
    "page_paths": [
     "a1547a159200/p01.webp"
+   ],
+   "page_size": [
+    940,
+    788
    ],
    "text_excerpt": null,
    "table": null
@@ -16244,6 +17639,10 @@
    "page_paths": [
     "68b0e3bf875f/p01.webp"
    ],
+   "page_size": [
+    940,
+    788
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -16270,6 +17669,10 @@
    "thumb": "08e38f6aef3c/thumb.webp",
    "page_paths": [
     "08e38f6aef3c/p01.webp"
+   ],
+   "page_size": [
+    940,
+    788
    ],
    "text_excerpt": null,
    "table": null
@@ -16298,6 +17701,10 @@
    "page_paths": [
     "4874609ad0b2/p01.webp"
    ],
+   "page_size": [
+    940,
+    788
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -16324,6 +17731,10 @@
    "thumb": "3514511ae939/thumb.webp",
    "page_paths": [
     "3514511ae939/p01.webp"
+   ],
+   "page_size": [
+    940,
+    788
    ],
    "text_excerpt": null,
    "table": null
@@ -16352,6 +17763,10 @@
    "page_paths": [
     "f5f12ae23b62/p01.webp"
    ],
+   "page_size": [
+    940,
+    788
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -16378,6 +17793,10 @@
    "thumb": "923532f0ef6b/thumb.webp",
    "page_paths": [
     "923532f0ef6b/p01.webp"
+   ],
+   "page_size": [
+    940,
+    788
    ],
    "text_excerpt": null,
    "table": null
@@ -16406,6 +17825,10 @@
    "page_paths": [
     "b89c83bca874/p01.webp"
    ],
+   "page_size": [
+    940,
+    788
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -16432,6 +17855,10 @@
    "thumb": "4e7472cef9d3/thumb.webp",
    "page_paths": [
     "4e7472cef9d3/p01.webp"
+   ],
+   "page_size": [
+    940,
+    788
    ],
    "text_excerpt": null,
    "table": null
@@ -16460,6 +17887,10 @@
    "page_paths": [
     "39ceff1de1da/p01.webp"
    ],
+   "page_size": [
+    940,
+    788
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -16486,6 +17917,10 @@
    "thumb": "24293be312a3/thumb.webp",
    "page_paths": [
     "24293be312a3/p01.webp"
+   ],
+   "page_size": [
+    940,
+    788
    ],
    "text_excerpt": null,
    "table": null
@@ -16514,6 +17949,10 @@
    "page_paths": [
     "102c8ac1ddf3/p01.webp"
    ],
+   "page_size": [
+    940,
+    788
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -16540,6 +17979,10 @@
    "thumb": "797fb3a8aa6d/thumb.webp",
    "page_paths": [
     "797fb3a8aa6d/p01.webp"
+   ],
+   "page_size": [
+    940,
+    788
    ],
    "text_excerpt": null,
    "table": null
@@ -16568,6 +18011,10 @@
    "page_paths": [
     "fa7edc79fb2f/p01.webp"
    ],
+   "page_size": [
+    940,
+    788
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -16594,6 +18041,10 @@
    "thumb": "ff20ecaadcca/thumb.webp",
    "page_paths": [
     "ff20ecaadcca/p01.webp"
+   ],
+   "page_size": [
+    940,
+    788
    ],
    "text_excerpt": null,
    "table": null
@@ -16622,6 +18073,10 @@
    "page_paths": [
     "a0cfeb279369/p01.webp"
    ],
+   "page_size": [
+    940,
+    788
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -16648,6 +18103,10 @@
    "thumb": "c7de314b86fa/thumb.webp",
    "page_paths": [
     "c7de314b86fa/p01.webp"
+   ],
+   "page_size": [
+    940,
+    788
    ],
    "text_excerpt": null,
    "table": null
@@ -16676,6 +18135,10 @@
    "page_paths": [
     "978fc535f441/p01.webp"
    ],
+   "page_size": [
+    940,
+    788
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -16702,6 +18165,10 @@
    "thumb": "5ac9767d9adf/thumb.webp",
    "page_paths": [
     "5ac9767d9adf/p01.webp"
+   ],
+   "page_size": [
+    940,
+    788
    ],
    "text_excerpt": null,
    "table": null
@@ -16730,6 +18197,10 @@
    "page_paths": [
     "a16a81bc199e/p01.webp"
    ],
+   "page_size": [
+    940,
+    788
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -16756,6 +18227,10 @@
    "thumb": "948612f44c81/thumb.webp",
    "page_paths": [
     "948612f44c81/p01.webp"
+   ],
+   "page_size": [
+    940,
+    788
    ],
    "text_excerpt": null,
    "table": null
@@ -16784,6 +18259,10 @@
    "page_paths": [
     "1389e53aff00/p01.webp"
    ],
+   "page_size": [
+    940,
+    788
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -16811,6 +18290,10 @@
    "page_paths": [
     "0fa1b7b0d9ad/p01.webp"
    ],
+   "page_size": [
+    1200,
+    676
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -16837,6 +18320,10 @@
    "thumb": "8e59bf318ee4/thumb.webp",
    "page_paths": [
     "8e59bf318ee4/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    676
    ],
    "text_excerpt": null,
    "table": null
@@ -16867,6 +18354,10 @@
    "page_paths": [
     "a8b1158fff15/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -16896,6 +18387,10 @@
    "page_paths": [
     "81856d373798/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -16922,6 +18417,10 @@
    "thumb": "6cd5d2df39fb/thumb.webp",
    "page_paths": [
     "6cd5d2df39fb/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -16950,6 +18449,10 @@
    "page_paths": [
     "a90c6e4d40ba/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -16976,6 +18479,10 @@
    "thumb": "051d5cd88bad/thumb.webp",
    "page_paths": [
     "051d5cd88bad/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -17006,6 +18513,10 @@
    "page_paths": [
     "cdbe0f46bfac/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -17034,6 +18545,10 @@
    "thumb": "1449c71e050b/thumb.webp",
    "page_paths": [
     "1449c71e050b/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -17105,6 +18620,10 @@
     "676e06257514/p43.webp",
     "676e06257514/p44.webp"
    ],
+   "page_size": [
+    849,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -17131,6 +18650,10 @@
    "thumb": "ee3f14f29b10/thumb.webp",
    "page_paths": [
     "ee3f14f29b10/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    870
    ],
    "text_excerpt": null,
    "table": null
@@ -17159,6 +18682,10 @@
    "page_paths": [
     "2a55246506fd/p01.webp"
    ],
+   "page_size": [
+    1200,
+    1144
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -17185,6 +18712,10 @@
    "thumb": "6fd18f7c40b1/thumb.webp",
    "page_paths": [
     "6fd18f7c40b1/p01.webp"
+   ],
+   "page_size": [
+    720,
+    687
    ],
    "text_excerpt": null,
    "table": null
@@ -17213,6 +18744,10 @@
    "page_paths": [
     "48034b666bd1/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -17239,6 +18774,10 @@
    "thumb": "bba248ede02a/thumb.webp",
    "page_paths": [
     "bba248ede02a/p01.webp"
+   ],
+   "page_size": [
+    848,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -17267,6 +18806,10 @@
    "page_paths": [
     "ef6841d3417e/p01.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -17293,6 +18836,10 @@
    "thumb": "5fbed1e62c7a/thumb.webp",
    "page_paths": [
     "5fbed1e62c7a/p01.webp"
+   ],
+   "page_size": [
+    848,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -17321,6 +18868,10 @@
    "page_paths": [
     "e776f0a2d480/p01.webp"
    ],
+   "page_size": [
+    1200,
+    600
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -17347,6 +18898,10 @@
    "thumb": "dc37d75fa143/thumb.webp",
    "page_paths": [
     "dc37d75fa143/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    600
    ],
    "text_excerpt": null,
    "table": null
@@ -17375,6 +18930,10 @@
    "page_paths": [
     "cda25cb72c98/p01.webp"
    ],
+   "page_size": [
+    1200,
+    600
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -17401,6 +18960,10 @@
    "thumb": "54239285edb3/thumb.webp",
    "page_paths": [
     "54239285edb3/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    600
    ],
    "text_excerpt": null,
    "table": null
@@ -17431,6 +18994,10 @@
    "page_paths": [
     "f08b97c983cf/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -17457,6 +19024,10 @@
    "thumb": "93fe7655b877/thumb.webp",
    "page_paths": [
     "93fe7655b877/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    600
    ],
    "text_excerpt": null,
    "table": null
@@ -17485,6 +19056,10 @@
    "page_paths": [
     "e756ce20b19a/p01.webp"
    ],
+   "page_size": [
+    1200,
+    600
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -17511,6 +19086,10 @@
    "thumb": "a7656e9cbb98/thumb.webp",
    "page_paths": [
     "a7656e9cbb98/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    600
    ],
    "text_excerpt": null,
    "table": null
@@ -17539,6 +19118,10 @@
    "page_paths": [
     "8e94a249991b/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -17565,6 +19148,10 @@
    "thumb": "23fc47d354aa/thumb.webp",
    "page_paths": [
     "23fc47d354aa/p01.webp"
+   ],
+   "page_size": [
+    848,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -17593,6 +19180,10 @@
    "page_paths": [
     "9f7393e5097e/p01.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -17619,6 +19210,10 @@
    "thumb": "173b8c8b233a/thumb.webp",
    "page_paths": [
     "173b8c8b233a/p01.webp"
+   ],
+   "page_size": [
+    848,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -17647,6 +19242,10 @@
    "page_paths": [
     "468a633c4fb8/p01.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -17673,6 +19272,10 @@
    "thumb": "0f37555d6bc9/thumb.webp",
    "page_paths": [
     "0f37555d6bc9/p01.webp"
+   ],
+   "page_size": [
+    848,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -17703,6 +19306,10 @@
    "page_paths": [
     "529712dc463a/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -17729,6 +19336,10 @@
    "thumb": "870cfe3260d7/thumb.webp",
    "page_paths": [
     "870cfe3260d7/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    600
    ],
    "text_excerpt": null,
    "table": null
@@ -17757,6 +19368,10 @@
    "page_paths": [
     "3bb4578e9a19/p01.webp"
    ],
+   "page_size": [
+    1200,
+    600
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -17783,6 +19398,10 @@
    "thumb": "eff9da73fa2a/thumb.webp",
    "page_paths": [
     "eff9da73fa2a/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    600
    ],
    "text_excerpt": null,
    "table": null
@@ -17811,6 +19430,10 @@
    "page_paths": [
     "1624e32af4e6/p01.webp"
    ],
+   "page_size": [
+    1200,
+    600
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -17837,6 +19460,10 @@
    "thumb": "2e9bb931548b/thumb.webp",
    "page_paths": [
     "2e9bb931548b/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    600
    ],
    "text_excerpt": null,
    "table": null
@@ -17865,6 +19492,10 @@
    "page_paths": [
     "1159f9592a7f/p01.webp"
    ],
+   "page_size": [
+    1200,
+    600
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -17891,6 +19522,10 @@
    "thumb": "51dec865951c/thumb.webp",
    "page_paths": [
     "51dec865951c/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    600
    ],
    "text_excerpt": null,
    "table": null
@@ -17919,6 +19554,10 @@
    "page_paths": [
     "e97dc8059df9/p01.webp"
    ],
+   "page_size": [
+    1200,
+    600
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -17945,6 +19584,10 @@
    "thumb": "2314e7c07255/thumb.webp",
    "page_paths": [
     "2314e7c07255/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    600
    ],
    "text_excerpt": null,
    "table": null
@@ -17973,6 +19616,10 @@
    "page_paths": [
     "8d40710c5073/p01.webp"
    ],
+   "page_size": [
+    1200,
+    851
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -18000,6 +19647,10 @@
    "page_paths": [
     "05aa5f7ccd86/p01.webp"
    ],
+   "page_size": [
+    1200,
+    600
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -18026,6 +19677,10 @@
    "thumb": "f98430462a8e/thumb.webp",
    "page_paths": [
     "f98430462a8e/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    600
    ],
    "text_excerpt": null,
    "table": null
@@ -18056,6 +19711,10 @@
    "page_paths": [
     "ae99af07bc76/p01.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -18082,6 +19741,10 @@
    "thumb": "87a9310e53f0/thumb.webp",
    "page_paths": [
     "87a9310e53f0/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -18110,6 +19773,10 @@
    "page_paths": [
     "fd63ba3c7bdf/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -18136,6 +19803,10 @@
    "thumb": "3b5d7b0de82d/thumb.webp",
    "page_paths": [
     "3b5d7b0de82d/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -18164,6 +19835,10 @@
    "page_paths": [
     "961949abc99e/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -18190,6 +19865,10 @@
    "thumb": "ca408b435600/thumb.webp",
    "page_paths": [
     "ca408b435600/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -18218,6 +19897,10 @@
    "page_paths": [
     "fbff4a7f7398/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -18244,6 +19927,10 @@
    "thumb": "91fddab2a177/thumb.webp",
    "page_paths": [
     "91fddab2a177/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -18339,6 +20026,10 @@
     "0c1a1a86a85a/p67.webp",
     "0c1a1a86a85a/p68.webp"
    ],
+   "page_size": [
+    1024,
+    743
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -18365,6 +20056,10 @@
    "thumb": "ab429766e278/thumb.webp",
    "page_paths": [
     "ab429766e278/p01.webp"
+   ],
+   "page_size": [
+    675,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -18393,6 +20088,10 @@
    "page_paths": [
     "030e18cbadd5/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -18419,6 +20118,10 @@
    "thumb": "410b27f407b4/thumb.webp",
    "page_paths": [
     "410b27f407b4/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -18447,6 +20150,10 @@
    "page_paths": [
     "4ec5bbaf35bc/p01.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -18473,6 +20180,10 @@
    "thumb": "b3984d72d16f/thumb.webp",
    "page_paths": [
     "b3984d72d16f/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    600
    ],
    "text_excerpt": null,
    "table": null
@@ -18501,6 +20212,10 @@
    "page_paths": [
     "7283979dec00/p01.webp"
    ],
+   "page_size": [
+    1200,
+    600
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -18527,6 +20242,10 @@
    "thumb": "dae03dbdb021/thumb.webp",
    "page_paths": [
     "dae03dbdb021/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    600
    ],
    "text_excerpt": null,
    "table": null
@@ -18555,6 +20274,10 @@
    "page_paths": [
     "e331b0509176/p01.webp"
    ],
+   "page_size": [
+    1200,
+    600
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -18581,6 +20304,10 @@
    "thumb": "14f2f38e3c98/thumb.webp",
    "page_paths": [
     "14f2f38e3c98/p01.webp"
+   ],
+   "page_size": [
+    960,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -18609,6 +20336,10 @@
    "page_paths": [
     "c97a5c42595e/p01.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -18635,6 +20366,10 @@
    "thumb": "82bb89e40292/thumb.webp",
    "page_paths": [
     "82bb89e40292/p01.webp"
+   ],
+   "page_size": [
+    848,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -18663,6 +20398,10 @@
    "page_paths": [
     "94c65f35b5e7/p01.webp"
    ],
+   "page_size": [
+    675,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -18689,6 +20428,10 @@
    "thumb": "36fdaaf8ceda/thumb.webp",
    "page_paths": [
     "36fdaaf8ceda/p01.webp"
+   ],
+   "page_size": [
+    940,
+    788
    ],
    "text_excerpt": null,
    "table": null
@@ -18717,6 +20460,10 @@
    "page_paths": [
     "020126912c5c/p01.webp"
    ],
+   "page_size": [
+    960,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -18743,6 +20490,10 @@
    "thumb": "bd736cbf9da3/thumb.webp",
    "page_paths": [
     "bd736cbf9da3/p01.webp"
+   ],
+   "page_size": [
+    848,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -18771,6 +20522,10 @@
    "page_paths": [
     "0e936fe3a05c/p01.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -18797,6 +20552,10 @@
    "thumb": "c38a82cd7364/thumb.webp",
    "page_paths": [
     "c38a82cd7364/p01.webp"
+   ],
+   "page_size": [
+    848,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -18825,6 +20584,10 @@
    "page_paths": [
     "5865ab487f10/p01.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -18852,6 +20615,10 @@
    "page_paths": [
     "ebd83bf02fff/p01.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -18878,6 +20645,10 @@
    "thumb": "9653e87338e2/thumb.webp",
    "page_paths": [
     "9653e87338e2/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -18910,6 +20681,10 @@
    "page_paths": [
     "cd3f2568006a/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -18936,6 +20711,10 @@
    "thumb": "fd6cb0968f56/thumb.webp",
    "page_paths": [
     "fd6cb0968f56/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -18964,6 +20743,10 @@
    "page_paths": [
     "aa4e7125a32d/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -18990,6 +20773,10 @@
    "thumb": "648fc3879109/thumb.webp",
    "page_paths": [
     "648fc3879109/p01.webp"
+   ],
+   "page_size": [
+    848,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -19020,6 +20807,10 @@
    "page_paths": [
     "fe9b850c1cae/p01.webp"
    ],
+   "page_size": [
+    1200,
+    600
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -19049,6 +20840,10 @@
    "page_paths": [
     "9ce16cec1ae8/p01.webp"
    ],
+   "page_size": [
+    1200,
+    600
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -19075,6 +20870,10 @@
    "thumb": "ce65e7dbf52f/thumb.webp",
    "page_paths": [
     "ce65e7dbf52f/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    600
    ],
    "text_excerpt": null,
    "table": null
@@ -19103,6 +20902,10 @@
    "page_paths": [
     "4da89e511fef/p01.webp"
    ],
+   "page_size": [
+    1200,
+    600
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -19129,6 +20932,10 @@
    "thumb": "5acc4b37236f/thumb.webp",
    "page_paths": [
     "5acc4b37236f/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    600
    ],
    "text_excerpt": null,
    "table": null
@@ -19157,6 +20964,10 @@
    "page_paths": [
     "c7cffda2e153/p01.webp"
    ],
+   "page_size": [
+    1200,
+    600
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -19183,6 +20994,10 @@
    "thumb": "888f5df5d410/thumb.webp",
    "page_paths": [
     "888f5df5d410/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    600
    ],
    "text_excerpt": null,
    "table": null
@@ -19211,6 +21026,10 @@
    "page_paths": [
     "6eb1a2fb5350/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -19238,6 +21057,10 @@
    "page_paths": [
     "f0445c901f9f/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -19264,6 +21087,10 @@
    "thumb": "c631805d27af/thumb.webp",
    "page_paths": [
     "c631805d27af/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -19294,6 +21121,10 @@
    "page_paths": [
     "cce2d215d96c/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -19320,6 +21151,10 @@
    "thumb": "db71e01875e4/thumb.webp",
    "page_paths": [
     "db71e01875e4/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    600
    ],
    "text_excerpt": null,
    "table": null
@@ -19348,6 +21183,10 @@
    "page_paths": [
     "72557467cd02/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -19374,6 +21213,10 @@
    "thumb": "b195a94bc0d9/thumb.webp",
    "page_paths": [
     "b195a94bc0d9/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -19402,6 +21245,10 @@
    "page_paths": [
     "2c80e58412dc/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -19428,6 +21275,10 @@
    "thumb": "400c76a37f6f/thumb.webp",
    "page_paths": [
     "400c76a37f6f/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -19456,6 +21307,10 @@
    "page_paths": [
     "2d52eafb023f/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -19482,6 +21337,10 @@
    "thumb": "5a24af88dfb9/thumb.webp",
    "page_paths": [
     "5a24af88dfb9/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -19510,6 +21369,10 @@
    "page_paths": [
     "cbc71065217a/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -19536,6 +21399,10 @@
    "thumb": "067a95ecacce/thumb.webp",
    "page_paths": [
     "067a95ecacce/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -19564,6 +21431,10 @@
    "page_paths": [
     "ce22b4bbc6c3/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -19590,6 +21461,10 @@
    "thumb": "2b6258eb3912/thumb.webp",
    "page_paths": [
     "2b6258eb3912/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -19618,6 +21493,10 @@
    "page_paths": [
     "5135ea02eeb5/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -19644,6 +21523,10 @@
    "thumb": "297852a929dc/thumb.webp",
    "page_paths": [
     "297852a929dc/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -19672,6 +21555,10 @@
    "page_paths": [
     "02fa935f3ebf/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -19698,6 +21585,10 @@
    "thumb": "3093b9e8476b/thumb.webp",
    "page_paths": [
     "3093b9e8476b/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -19726,6 +21617,10 @@
    "page_paths": [
     "2992164a2fc7/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -19753,6 +21648,10 @@
    "page_paths": [
     "5c78b5a906cf/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -19779,6 +21678,10 @@
    "thumb": "21d3287739da/thumb.webp",
    "page_paths": [
     "21d3287739da/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -19809,6 +21712,10 @@
    "page_paths": [
     "f3af5e2bb96f/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -19837,6 +21744,10 @@
    "thumb": "ce55fe53c458/thumb.webp",
    "page_paths": [
     "ce55fe53c458/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -19868,6 +21779,10 @@
    "page_paths": [
     "7bff853d955c/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -19894,6 +21809,10 @@
    "thumb": "7780395cb8f4/thumb.webp",
    "page_paths": [
     "7780395cb8f4/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -19924,6 +21843,10 @@
    "page_paths": [
     "511060c9ca72/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -19953,6 +21876,10 @@
    "page_paths": [
     "752f70bb502a/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -19979,6 +21906,10 @@
    "thumb": "498503009947/thumb.webp",
    "page_paths": [
     "498503009947/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -20007,6 +21938,10 @@
    "page_paths": [
     "017a878f7584/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -20033,6 +21968,10 @@
    "thumb": "5a93b0bb1f4b/thumb.webp",
    "page_paths": [
     "5a93b0bb1f4b/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -20136,6 +22075,10 @@
     "9756b0afe5aa/p75.webp",
     "9756b0afe5aa/p76.webp"
    ],
+   "page_size": [
+    1024,
+    743
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -20162,6 +22105,10 @@
    "thumb": "7c02116f1bda/thumb.webp",
    "page_paths": [
     "7c02116f1bda/p01.webp"
+   ],
+   "page_size": [
+    900,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -20195,6 +22142,10 @@
     "d23889ccdb4f/p05.webp",
     "d23889ccdb4f/p06.webp"
    ],
+   "page_size": [
+    849,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -20221,6 +22172,10 @@
    "thumb": "86ae75caba4b/thumb.webp",
    "page_paths": [
     "86ae75caba4b/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -20249,6 +22204,10 @@
    "page_paths": [
     "7c98725ade18/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -20275,6 +22234,10 @@
    "thumb": "4d6256f94dce/thumb.webp",
    "page_paths": [
     "4d6256f94dce/p01.webp"
+   ],
+   "page_size": [
+    848,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -20303,6 +22266,10 @@
    "page_paths": [
     "0198ef7a4043/p01.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -20329,6 +22296,10 @@
    "thumb": "121a08444512/thumb.webp",
    "page_paths": [
     "121a08444512/p01.webp"
+   ],
+   "page_size": [
+    720,
+    960
    ],
    "text_excerpt": null,
    "table": null
@@ -20362,6 +22333,10 @@
     "d7feec8ed002/p03.webp",
     "d7feec8ed002/p04.webp",
     "d7feec8ed002/p05.webp"
+   ],
+   "page_size": [
+    867,
+    735
    ],
    "text_excerpt": null,
    "table": null
@@ -20400,6 +22375,10 @@
     "0a9d5cf9cfb3/p10.webp",
     "0a9d5cf9cfb3/p11.webp"
    ],
+   "page_size": [
+    867,
+    735
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -20434,6 +22413,10 @@
     "c621c9cf343b/p07.webp",
     "c621c9cf343b/p08.webp"
    ],
+   "page_size": [
+    867,
+    735
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -20467,6 +22450,10 @@
     "4897d8190b9e/p06.webp",
     "4897d8190b9e/p07.webp"
    ],
+   "page_size": [
+    867,
+    735
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -20499,6 +22486,10 @@
     "2bfff38ba18f/p05.webp",
     "2bfff38ba18f/p06.webp"
    ],
+   "page_size": [
+    867,
+    735
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -20525,6 +22516,10 @@
    "thumb": "3dd10fbb9451/thumb.webp",
    "page_paths": [
     "3dd10fbb9451/p01.webp"
+   ],
+   "page_size": [
+    314,
+    168
    ],
    "text_excerpt": null,
    "table": null
@@ -20564,6 +22559,10 @@
     "109e01776117/p11.webp",
     "109e01776117/p12.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -20589,6 +22588,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": null,
    "table": null
   },
@@ -20614,6 +22614,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": null,
    "table": null
   },
@@ -20639,6 +22640,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": null,
    "table": null
   },
@@ -20664,6 +22666,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": null,
    "table": null
   },
@@ -20689,6 +22692,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": null,
    "table": null
   },
@@ -20714,6 +22718,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": null,
    "table": null
   },
@@ -20739,6 +22744,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": null,
    "table": [
     {
@@ -21525,6 +23531,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": null,
    "table": null
   },
@@ -21550,6 +23557,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": null,
    "table": [
     {
@@ -22516,6 +24524,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": "Programa 2014 Eisteddfod de la Juventud ARTES VISUALES Expresión Plástica Infantil Los trabajos deberán ser inéditos, libres de estereotipos o copias. Cada trabajo debe tener en su reverso los siguientes datos: seudónimo y número de competencia. Adjuntar un sobre cerrado con los datos personales del autor. 106. Hasta 4 años. Tema:”A sí soy yo” . Técnica : Dibujo. M ateriales: se sugiere n crayones, marcadores, lápices, plasticola de color u otros . Soporte: Hoja de papel blanca o de color , tamaño N° 5. 107. De 5 a 6 años. Tema:” Quisiera transformarme en…”. Técnica : Dibujo. M ateriales: se s",
    "table": null
   },
@@ -22541,6 +24550,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": "LITERATURA – LLENYDDIAETH POESÍA - BARDDONIAETH • 1 - MEDALLA DEL EISTEDDFOD “PREMIO MUNICIPALIDAD DE GAIMAN”: Trabajo en verso, inédito, no premiado en otro concurso, tema y métrica libre. Extensión máxima sesenta (60) versos. Competencia hasta 25 años. Los trabajos serán presentados en original y dos fotocopias y no se admitirán más de cuatro trabajos por participante, firmados con el mismo seudónimo. PROSA - RHYDDIAITH Todos los trabajos de la sección Literatura se presentarán en original y dos fotocopias. En castellano • 6 - Hasta 8 años: DESCRIBO LA BIBLIOTECA DE MI BARRIO O ESCUELA • 7 -",
    "table": null
   },
@@ -22566,6 +24576,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": "EISTEDDFOD DE LA JUVENTUD 2014 LISTADO DE COMPETENCIAS Música - Cerddoriaeth Las obras de la sección música en idioma galés, serán ejecutadas en dicho idioma. Aclaración: para los ítems de música se permite cantar las obras para solistas, dúos y conjuntos hasta 13 años en la tonalidad más adecuada a las posibilidades vocales de los niños. SOLOS - UNAWDAU En castellano • 52 - Hasta 4 años: CARACOLES – Hugo Figueras • 53 - Para 5 años: DEDO DEDO – Gabriela Carel – CD Canciones para el Jardín • 54 - Para 6 años: YO SOY EL VIENTO – Edith Esther Albain - El Gato Colifato • 55 - Para 7 y 8 años: SAP",
    "table": null
   },
@@ -22591,6 +24602,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": "PROGRAMA EISTEDDFOD DE LA JUVENTUD 2014 SECCION MUSICA EN GALES RHAGLEN EISTEDDFOD Y BOBL IFANC 2014 ADRAN CERDDORIAETH UNAWDAU - Hyd 4 oed : “Y BAND” - Falyri Jenkins 5 oed : “CAN SYMUD ” - Jennie Gordon 6 oed : “ Y SGIWYR” - E. Olwen Jones 7 a 8 oed : “ DAWNSIO DISGO” - E. Olwen Jones 9 a 10 oed : “ Y CARIBI” - E. Olwen Jones 11 a 12 oed : “DO, RE, MI ” - D. Roberts/D. Roberts/S. Webb 13 hyd 15 oed : “ CAN Y BUGEILIAID ” - R. Arwyn 16 hyd 20 oed : CAN YSGAFN HUNANDDEWISIAD 21 hyd 25 oed : CAN WERIN HUNANDDEWISIAD Hyd 25 oed : CAN ACADEMAIDD HUNANDDEWISIAD . PARTION Deuawd dwbl hyd 16 oed : “",
    "table": null
   },
@@ -22616,6 +24628,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": "Adrodd yn Gymraeg -Recitacion en Galés Y Piwma gan Tegid Roberts Rwyt ti’n hardd, Rwyt ti’n chwim, Rwyt ti’n heliwr medrus, Wyt- i’r dim! Amser te gan Lois Dafydd Teisen hufen a theisen fach, T eis en siocled a theisen ddu. Ffrois a sgons a theisen blât... Waw! Ydy’r rhain I GYD i mi?! Gwynt yr Hydref gan Nant Roberts ‘ Dewch ‘, meddai’r gwynt wrth y dil, un dydd. ‘Awn draw i’r caeau i chwarae’n rhydd. Gwisgwch eich cotiau amdanoch cyn cychwyn, Cotiau coch ac oren, porffor a melyn. Mae’r haf wedi mynd, ac wedi dweud “Hwyl fawr!” Bydd y dyddiau yn dechrau oeri yn awr.’ M ydi! Gan Esyllt Roberts",
    "table": null
   },
@@ -22641,6 +24654,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": null,
    "table": null
   },
@@ -22666,6 +24680,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": null,
    "table": null
   },
@@ -22691,6 +24706,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": null,
    "table": null
   },
@@ -22764,6 +24780,10 @@
     "dcb2e247b966/p46.webp",
     "dcb2e247b966/p47.webp"
    ],
+   "page_size": [
+    1173,
+    935
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -22790,6 +24810,10 @@
    "thumb": "8b5ed0f99136/thumb.webp",
    "page_paths": [
     "8b5ed0f99136/p01.webp"
+   ],
+   "page_size": [
+    842,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -22818,6 +24842,10 @@
    "page_paths": [
     "28b7d2906038/p01.webp"
    ],
+   "page_size": [
+    1200,
+    1182
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -22844,6 +24872,10 @@
    "thumb": "e042f1211307/thumb.webp",
    "page_paths": [
     "e042f1211307/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -22872,6 +24904,10 @@
    "page_paths": [
     "6d4ae2b23e1a/p01.webp"
    ],
+   "page_size": [
+    550,
+    369
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -22898,6 +24934,10 @@
    "thumb": "0ac4f6c68bed/thumb.webp",
    "page_paths": [
     "0ac4f6c68bed/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    900
    ],
    "text_excerpt": null,
    "table": null
@@ -22926,6 +24966,10 @@
    "page_paths": [
     "365b1da09a0c/p01.webp"
    ],
+   "page_size": [
+    1200,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -22952,6 +24996,10 @@
    "thumb": "0b58d42fac02/thumb.webp",
    "page_paths": [
     "0b58d42fac02/p01.webp"
+   ],
+   "page_size": [
+    927,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -22980,6 +25028,10 @@
    "page_paths": [
     "2f41ac6b0671/p01.webp"
    ],
+   "page_size": [
+    927,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -23006,6 +25058,10 @@
    "thumb": "b195b6f3f6a7/thumb.webp",
    "page_paths": [
     "b195b6f3f6a7/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -23034,6 +25090,10 @@
    "page_paths": [
     "7b78a0bbfd34/p01.webp"
    ],
+   "page_size": [
+    1200,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -23060,6 +25120,10 @@
    "thumb": "3ce1061f7c2b/thumb.webp",
    "page_paths": [
     "3ce1061f7c2b/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -23088,6 +25152,10 @@
    "page_paths": [
     "f8ffdcf6197d/p01.webp"
    ],
+   "page_size": [
+    1200,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -23114,6 +25182,10 @@
    "thumb": "b49c2a9ddf45/thumb.webp",
    "page_paths": [
     "b49c2a9ddf45/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -23142,6 +25214,10 @@
    "page_paths": [
     "6a0d216e272c/p01.webp"
    ],
+   "page_size": [
+    964,
+    794
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -23168,6 +25244,10 @@
    "thumb": "020c2176e93f/thumb.webp",
    "page_paths": [
     "020c2176e93f/p01.webp"
+   ],
+   "page_size": [
+    849,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -23196,6 +25276,10 @@
    "page_paths": [
     "f7d4dc279405/p01.webp"
    ],
+   "page_size": [
+    849,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -23222,6 +25306,10 @@
    "thumb": "a21f400dcd02/thumb.webp",
    "page_paths": [
     "a21f400dcd02/p01.webp"
+   ],
+   "page_size": [
+    720,
+    900
    ],
    "text_excerpt": null,
    "table": null
@@ -23250,6 +25338,10 @@
    "page_paths": [
     "c94a1be4ece4/p01.webp"
    ],
+   "page_size": [
+    960,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -23276,6 +25368,10 @@
    "thumb": "cfbc38797e4e/thumb.webp",
    "page_paths": [
     "cfbc38797e4e/p01.webp"
+   ],
+   "page_size": [
+    682,
+    960
    ],
    "text_excerpt": null,
    "table": null
@@ -23304,6 +25400,10 @@
    "page_paths": [
     "75b12e3ab809/p01.webp"
    ],
+   "page_size": [
+    768,
+    960
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -23330,6 +25430,10 @@
    "thumb": "a28c6017364b/thumb.webp",
    "page_paths": [
     "a28c6017364b/p01.webp"
+   ],
+   "page_size": [
+    844,
+    960
    ],
    "text_excerpt": null,
    "table": null
@@ -23358,6 +25462,10 @@
    "page_paths": [
     "6ee6974160ab/p01.webp"
    ],
+   "page_size": [
+    960,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -23384,6 +25492,10 @@
    "thumb": "5a8eb3d285c4/thumb.webp",
    "page_paths": [
     "5a8eb3d285c4/p01.webp"
+   ],
+   "page_size": [
+    960,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -23412,6 +25524,10 @@
    "page_paths": [
     "4e2d6dd512cf/p01.webp"
    ],
+   "page_size": [
+    766,
+    960
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -23438,6 +25554,10 @@
    "thumb": "14d9aac2ac1e/thumb.webp",
    "page_paths": [
     "14d9aac2ac1e/p01.webp"
+   ],
+   "page_size": [
+    750,
+    918
    ],
    "text_excerpt": null,
    "table": null
@@ -23466,6 +25586,10 @@
    "page_paths": [
     "8c9fdb63913c/p01.webp"
    ],
+   "page_size": [
+    638,
+    960
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -23492,6 +25616,10 @@
    "thumb": "e03b3ddd30f3/thumb.webp",
    "page_paths": [
     "e03b3ddd30f3/p01.webp"
+   ],
+   "page_size": [
+    738,
+    618
    ],
    "text_excerpt": null,
    "table": null
@@ -23520,6 +25648,10 @@
    "page_paths": [
     "9e4535f73f13/p01.webp"
    ],
+   "page_size": [
+    1200,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -23546,6 +25678,10 @@
    "thumb": "3c22136563b9/thumb.webp",
    "page_paths": [
     "3c22136563b9/p01.webp"
+   ],
+   "page_size": [
+    960,
+    960
    ],
    "text_excerpt": null,
    "table": null
@@ -23574,6 +25710,10 @@
    "page_paths": [
     "731cc3b6ea94/p01.webp"
    ],
+   "page_size": [
+    960,
+    960
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -23600,6 +25740,10 @@
    "thumb": "964d03fac53f/thumb.webp",
    "page_paths": [
     "964d03fac53f/p01.webp"
+   ],
+   "page_size": [
+    960,
+    960
    ],
    "text_excerpt": null,
    "table": null
@@ -23628,6 +25772,10 @@
    "page_paths": [
     "b3e012ebecd8/p01.webp"
    ],
+   "page_size": [
+    1200,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -23654,6 +25802,10 @@
    "thumb": "c8a1e4d6297d/thumb.webp",
    "page_paths": [
     "c8a1e4d6297d/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -23682,6 +25834,10 @@
    "page_paths": [
     "7ed35ad0b04e/p01.webp"
    ],
+   "page_size": [
+    1200,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -23708,6 +25864,10 @@
    "thumb": "ca5ce0d61a2c/thumb.webp",
    "page_paths": [
     "ca5ce0d61a2c/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -23736,6 +25896,10 @@
    "page_paths": [
     "7365be86aa70/p01.webp"
    ],
+   "page_size": [
+    1200,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -23762,6 +25926,10 @@
    "thumb": "d4f0405b067a/thumb.webp",
    "page_paths": [
     "d4f0405b067a/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -23790,6 +25958,10 @@
    "page_paths": [
     "14c0c0cea587/p01.webp"
    ],
+   "page_size": [
+    1200,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -23816,6 +25988,10 @@
    "thumb": "44ba26a5485f/thumb.webp",
    "page_paths": [
     "44ba26a5485f/p01.webp"
+   ],
+   "page_size": [
+    668,
+    802
    ],
    "text_excerpt": null,
    "table": null
@@ -23844,6 +26020,10 @@
    "page_paths": [
     "2fc4cf983311/p01.webp"
    ],
+   "page_size": [
+    1200,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -23870,6 +26050,10 @@
    "thumb": "36b40fc08e0c/thumb.webp",
    "page_paths": [
     "36b40fc08e0c/p01.webp"
+   ],
+   "page_size": [
+    960,
+    960
    ],
    "text_excerpt": null,
    "table": null
@@ -23898,6 +26082,10 @@
    "page_paths": [
     "99d3f274d13a/p01.webp"
    ],
+   "page_size": [
+    1200,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -23924,6 +26112,10 @@
    "thumb": "cf5c3cc724b3/thumb.webp",
    "page_paths": [
     "cf5c3cc724b3/p01.webp"
+   ],
+   "page_size": [
+    674,
+    874
    ],
    "text_excerpt": null,
    "table": null
@@ -23952,6 +26144,10 @@
    "page_paths": [
     "06f0a680900d/p01.webp"
    ],
+   "page_size": [
+    720,
+    960
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -23978,6 +26174,10 @@
    "thumb": "b35342bb717d/thumb.webp",
    "page_paths": [
     "b35342bb717d/p01.webp"
+   ],
+   "page_size": [
+    720,
+    960
    ],
    "text_excerpt": null,
    "table": null
@@ -24006,6 +26206,10 @@
    "page_paths": [
     "157c62baa8be/p01.webp"
    ],
+   "page_size": [
+    720,
+    960
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -24032,6 +26236,10 @@
    "thumb": "319b834d89e8/thumb.webp",
    "page_paths": [
     "319b834d89e8/p01.webp"
+   ],
+   "page_size": [
+    720,
+    960
    ],
    "text_excerpt": null,
    "table": null
@@ -24060,6 +26268,10 @@
    "page_paths": [
     "2d62bb6a9dad/p01.webp"
    ],
+   "page_size": [
+    720,
+    960
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -24086,6 +26298,10 @@
    "thumb": "0efc22a2c171/thumb.webp",
    "page_paths": [
     "0efc22a2c171/p01.webp"
+   ],
+   "page_size": [
+    720,
+    960
    ],
    "text_excerpt": null,
    "table": null
@@ -24114,6 +26330,10 @@
    "page_paths": [
     "4682009e7a35/p01.webp"
    ],
+   "page_size": [
+    1200,
+    675
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -24140,6 +26360,10 @@
    "thumb": "649a788c55fd/thumb.webp",
    "page_paths": [
     "649a788c55fd/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    675
    ],
    "text_excerpt": null,
    "table": null
@@ -24168,6 +26392,10 @@
    "page_paths": [
     "c4c4a929ee13/p01.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -24194,6 +26422,10 @@
    "thumb": "01614a47ed92/thumb.webp",
    "page_paths": [
     "01614a47ed92/p01.webp"
+   ],
+   "page_size": [
+    848,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -24222,6 +26454,10 @@
    "page_paths": [
     "155f3b3c3bd8/p01.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -24248,6 +26484,10 @@
    "thumb": "dfea74b87ecd/thumb.webp",
    "page_paths": [
     "dfea74b87ecd/p01.webp"
+   ],
+   "page_size": [
+    848,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -24276,6 +26516,10 @@
    "page_paths": [
     "de8f9a9b65ee/p01.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -24302,6 +26546,10 @@
    "thumb": "ba6fcb9fe880/thumb.webp",
    "page_paths": [
     "ba6fcb9fe880/p01.webp"
+   ],
+   "page_size": [
+    848,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -24330,6 +26578,10 @@
    "page_paths": [
     "2a970975c66b/p01.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -24356,6 +26608,10 @@
    "thumb": "77ff002139f4/thumb.webp",
    "page_paths": [
     "77ff002139f4/p01.webp"
+   ],
+   "page_size": [
+    848,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -24384,6 +26640,10 @@
    "page_paths": [
     "a5ac2d7bbe85/p01.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -24410,6 +26670,10 @@
    "thumb": "cc7d1b0a5795/thumb.webp",
    "page_paths": [
     "cc7d1b0a5795/p01.webp"
+   ],
+   "page_size": [
+    848,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -24438,6 +26702,10 @@
    "page_paths": [
     "4865aa974d46/p01.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -24464,6 +26732,10 @@
    "thumb": "bf92fcd6da8d/thumb.webp",
    "page_paths": [
     "bf92fcd6da8d/p01.webp"
+   ],
+   "page_size": [
+    848,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -24492,6 +26764,10 @@
    "page_paths": [
     "30cf7899059b/p01.webp"
    ],
+   "page_size": [
+    912,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -24518,6 +26794,10 @@
    "thumb": "c5df2175ace2/thumb.webp",
    "page_paths": [
     "c5df2175ace2/p01.webp"
+   ],
+   "page_size": [
+    928,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -24546,6 +26826,10 @@
    "page_paths": [
     "793b23d179cd/p01.webp"
    ],
+   "page_size": [
+    925,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -24572,6 +26856,10 @@
    "thumb": "4f3ca2466dbe/thumb.webp",
    "page_paths": [
     "4f3ca2466dbe/p01.webp"
+   ],
+   "page_size": [
+    919,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -24600,6 +26888,10 @@
    "page_paths": [
     "5948e6205d17/p01.webp"
    ],
+   "page_size": [
+    923,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -24626,6 +26918,10 @@
    "thumb": "0a40c3035300/thumb.webp",
    "page_paths": [
     "0a40c3035300/p01.webp"
+   ],
+   "page_size": [
+    848,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -24654,6 +26950,10 @@
    "page_paths": [
     "487163f5c1f0/p01.webp"
    ],
+   "page_size": [
+    854,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -24680,6 +26980,10 @@
    "thumb": "7b78973f05ee/thumb.webp",
    "page_paths": [
     "7b78973f05ee/p01.webp"
+   ],
+   "page_size": [
+    848,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -24708,6 +27012,10 @@
    "page_paths": [
     "24fd44914331/p01.webp"
    ],
+   "page_size": [
+    851,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -24734,6 +27042,10 @@
    "thumb": "e535002762cd/thumb.webp",
    "page_paths": [
     "e535002762cd/p01.webp"
+   ],
+   "page_size": [
+    851,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -24764,6 +27076,10 @@
    "page_paths": [
     "cc4ed3f1f10c/p01.webp"
    ],
+   "page_size": [
+    851,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -24790,6 +27106,10 @@
    "thumb": "684c5980a5b4/thumb.webp",
    "page_paths": [
     "684c5980a5b4/p01.webp"
+   ],
+   "page_size": [
+    851,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -24818,6 +27138,10 @@
    "page_paths": [
     "555d55f08cda/p01.webp"
    ],
+   "page_size": [
+    851,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -24844,6 +27168,10 @@
    "thumb": "03addc91b772/thumb.webp",
    "page_paths": [
     "03addc91b772/p01.webp"
+   ],
+   "page_size": [
+    851,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -24872,6 +27200,10 @@
    "page_paths": [
     "ec16b0edc416/p01.webp"
    ],
+   "page_size": [
+    851,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -24899,6 +27231,10 @@
    "page_paths": [
     "0032fe0ad5b9/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1142
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -24925,6 +27261,10 @@
    "thumb": "6aef0820a554/thumb.webp",
    "page_paths": [
     "6aef0820a554/p01.webp"
+   ],
+   "page_size": [
+    601,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -24962,6 +27302,10 @@
     "6c3353dedaae/p09.webp",
     "6c3353dedaae/p10.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -24993,6 +27337,10 @@
     "efbc7ed88777/p04.webp",
     "efbc7ed88777/p05.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -25019,6 +27367,10 @@
    "thumb": "9de3f6886e51/thumb.webp",
    "page_paths": [
     "9de3f6886e51/p01.webp"
+   ],
+   "page_size": [
+    851,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -25047,6 +27399,10 @@
    "page_paths": [
     "fd8d591bbaa0/p01.webp"
    ],
+   "page_size": [
+    675,
+    960
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -25073,6 +27429,10 @@
    "thumb": "5d75fe9198c9/thumb.webp",
    "page_paths": [
     "5d75fe9198c9/p01.webp"
+   ],
+   "page_size": [
+    822,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -25101,6 +27461,10 @@
    "page_paths": [
     "c2d31a9fc9ab/p01.webp"
    ],
+   "page_size": [
+    870,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -25127,6 +27491,10 @@
    "thumb": "32415ecea5a5/thumb.webp",
    "page_paths": [
     "32415ecea5a5/p01.webp"
+   ],
+   "page_size": [
+    860,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -25155,6 +27523,10 @@
    "page_paths": [
     "3af002accb85/p01.webp"
    ],
+   "page_size": [
+    843,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -25181,6 +27553,10 @@
    "thumb": "4e783b9716f5/thumb.webp",
    "page_paths": [
     "4e783b9716f5/p01.webp"
+   ],
+   "page_size": [
+    848,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -25209,6 +27585,10 @@
    "page_paths": [
     "4402d896989e/p01.webp"
    ],
+   "page_size": [
+    851,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -25235,6 +27615,10 @@
    "thumb": "4b4046b01e76/thumb.webp",
    "page_paths": [
     "4b4046b01e76/p01.webp"
+   ],
+   "page_size": [
+    851,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -25263,6 +27647,10 @@
    "page_paths": [
     "14c563d64462/p01.webp"
    ],
+   "page_size": [
+    851,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -25289,6 +27677,10 @@
    "thumb": "132f8233ea54/thumb.webp",
    "page_paths": [
     "132f8233ea54/p01.webp"
+   ],
+   "page_size": [
+    851,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -25317,6 +27709,10 @@
    "page_paths": [
     "f44d4f408076/p01.webp"
    ],
+   "page_size": [
+    851,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -25343,6 +27739,10 @@
    "thumb": "e09ebc0b07b2/thumb.webp",
    "page_paths": [
     "e09ebc0b07b2/p01.webp"
+   ],
+   "page_size": [
+    851,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -25371,6 +27771,10 @@
    "page_paths": [
     "632245e4519b/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -25397,6 +27801,10 @@
    "thumb": "cd58a1274874/thumb.webp",
    "page_paths": [
     "cd58a1274874/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -25425,6 +27833,10 @@
    "page_paths": [
     "bb0e209ee393/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -25451,6 +27863,10 @@
    "thumb": "b62537afb425/thumb.webp",
    "page_paths": [
     "b62537afb425/p01.webp"
+   ],
+   "page_size": [
+    604,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -25479,6 +27895,10 @@
    "page_paths": [
     "0d54210a4144/p01.webp"
    ],
+   "page_size": [
+    720,
+    502
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -25505,6 +27925,10 @@
    "thumb": "4579cb0f9ead/thumb.webp",
    "page_paths": [
     "4579cb0f9ead/p01.webp"
+   ],
+   "page_size": [
+    640,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -25533,6 +27957,10 @@
    "page_paths": [
     "4ec7c3d4a1f1/p01.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -25559,6 +27987,10 @@
    "thumb": "ea650bd238f0/thumb.webp",
    "page_paths": [
     "ea650bd238f0/p01.webp"
+   ],
+   "page_size": [
+    940,
+    788
    ],
    "text_excerpt": null,
    "table": null
@@ -25587,6 +28019,10 @@
    "page_paths": [
     "d516669c7b2d/p01.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -25613,6 +28049,10 @@
    "thumb": "56ba47427a7a/thumb.webp",
    "page_paths": [
     "56ba47427a7a/p01.webp"
+   ],
+   "page_size": [
+    848,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -25641,6 +28081,10 @@
    "page_paths": [
     "b281ccdcb875/p01.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -25667,6 +28111,10 @@
    "thumb": "01f5b21c4596/thumb.webp",
    "page_paths": [
     "01f5b21c4596/p01.webp"
+   ],
+   "page_size": [
+    848,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -25695,6 +28143,10 @@
    "page_paths": [
     "79ccdcc47e61/p01.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -25721,6 +28173,10 @@
    "thumb": "eb380637fa6f/thumb.webp",
    "page_paths": [
     "eb380637fa6f/p01.webp"
+   ],
+   "page_size": [
+    848,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -25749,6 +28205,10 @@
    "page_paths": [
     "912c7ca96f01/p01.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -25775,6 +28235,10 @@
    "thumb": "62accecbbe28/thumb.webp",
    "page_paths": [
     "62accecbbe28/p01.webp"
+   ],
+   "page_size": [
+    848,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -25829,6 +28293,10 @@
     "c98fb6c657cf/p26.webp",
     "c98fb6c657cf/p27.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -25855,6 +28323,10 @@
    "thumb": "c916ece7444a/thumb.webp",
    "page_paths": [
     "c916ece7444a/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -25883,6 +28355,10 @@
    "page_paths": [
     "37f26b666d13/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -25909,6 +28385,10 @@
    "thumb": "56789aa41764/thumb.webp",
    "page_paths": [
     "56789aa41764/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -25937,6 +28417,10 @@
    "page_paths": [
     "5bcd2201eda4/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -25963,6 +28447,10 @@
    "thumb": "85b889c5d759/thumb.webp",
    "page_paths": [
     "85b889c5d759/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -25991,6 +28479,10 @@
    "page_paths": [
     "16b90031642b/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -26017,6 +28509,10 @@
    "thumb": "ba9d13d8540e/thumb.webp",
    "page_paths": [
     "ba9d13d8540e/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -26047,6 +28543,10 @@
    "page_paths": [
     "23ff0d5ecd07/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -26073,6 +28573,10 @@
    "thumb": "0a8f81360d32/thumb.webp",
    "page_paths": [
     "0a8f81360d32/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -26101,6 +28605,10 @@
    "page_paths": [
     "1ab14d97b4c5/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -26127,6 +28635,10 @@
    "thumb": "fae5e1f50f75/thumb.webp",
    "page_paths": [
     "fae5e1f50f75/p01.webp"
+   ],
+   "page_size": [
+    960,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -26155,6 +28667,10 @@
    "page_paths": [
     "051c5bcb342f/p01.webp"
    ],
+   "page_size": [
+    960,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -26181,6 +28697,10 @@
    "thumb": "c63554e531c7/thumb.webp",
    "page_paths": [
     "c63554e531c7/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -26209,6 +28729,10 @@
    "page_paths": [
     "8052bd08bb21/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -26235,6 +28759,10 @@
    "thumb": "adaf33976d2a/thumb.webp",
    "page_paths": [
     "adaf33976d2a/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -26263,6 +28791,10 @@
    "page_paths": [
     "d733b794fbbd/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -26289,6 +28821,10 @@
    "thumb": "cac482e442cb/thumb.webp",
    "page_paths": [
     "cac482e442cb/p01.webp"
+   ],
+   "page_size": [
+    848,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -26317,6 +28853,10 @@
    "page_paths": [
     "847252821744/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -26343,6 +28883,10 @@
    "thumb": "6f41d36dd2bf/thumb.webp",
    "page_paths": [
     "6f41d36dd2bf/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -26371,6 +28915,10 @@
    "page_paths": [
     "bd83d8acf56d/p01.webp"
    ],
+   "page_size": [
+    1080,
+    1080
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -26397,6 +28945,10 @@
    "thumb": "402b1c8235da/thumb.webp",
    "page_paths": [
     "402b1c8235da/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -26457,6 +29009,10 @@
     "9514d3a65b74/p32.webp",
     "9514d3a65b74/p33.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -26483,6 +29039,10 @@
    "thumb": "5a3c85886fba/thumb.webp",
    "page_paths": [
     "5a3c85886fba/p01.webp"
+   ],
+   "page_size": [
+    848,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -26511,6 +29071,10 @@
    "page_paths": [
     "44cd085c77fc/p01.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -26537,6 +29101,10 @@
    "thumb": "4a2f7c44e854/thumb.webp",
    "page_paths": [
     "4a2f7c44e854/p01.webp"
+   ],
+   "page_size": [
+    848,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -26565,6 +29133,10 @@
    "page_paths": [
     "2561beee4d48/p01.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -26591,6 +29163,10 @@
    "thumb": "9e529560d128/thumb.webp",
    "page_paths": [
     "9e529560d128/p01.webp"
+   ],
+   "page_size": [
+    848,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -26619,6 +29195,10 @@
    "page_paths": [
     "c6b1cfcaef8d/p01.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -26645,6 +29225,10 @@
    "thumb": "ac0c159d7e13/thumb.webp",
    "page_paths": [
     "ac0c159d7e13/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
    ],
    "text_excerpt": null,
    "table": null
@@ -26673,6 +29257,10 @@
    "page_paths": [
     "b855c10d87c0/p01.webp"
    ],
+   "page_size": [
+    1200,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -26699,6 +29287,10 @@
    "thumb": "e2e539191a95/thumb.webp",
    "page_paths": [
     "e2e539191a95/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -26727,6 +29319,10 @@
    "page_paths": [
     "173c15873439/p01.webp"
    ],
+   "page_size": [
+    849,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -26753,6 +29349,10 @@
    "thumb": "da32dd2d0bb2/thumb.webp",
    "page_paths": [
     "da32dd2d0bb2/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -26781,6 +29381,10 @@
    "page_paths": [
     "05f01a444d17/p01.webp"
    ],
+   "page_size": [
+    1200,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -26807,6 +29411,10 @@
    "thumb": "5cc8f7ea763c/thumb.webp",
    "page_paths": [
     "5cc8f7ea763c/p01.webp"
+   ],
+   "page_size": [
+    800,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -26835,6 +29443,10 @@
    "page_paths": [
     "02d11eeb6919/p01.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -26861,6 +29473,10 @@
    "thumb": "8abd86b74618/thumb.webp",
    "page_paths": [
     "8abd86b74618/p01.webp"
+   ],
+   "page_size": [
+    800,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -26889,6 +29505,10 @@
    "page_paths": [
     "cb788642fefe/p01.webp"
    ],
+   "page_size": [
+    800,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -26915,6 +29535,10 @@
    "thumb": "f0dfdd29336a/thumb.webp",
    "page_paths": [
     "f0dfdd29336a/p01.webp"
+   ],
+   "page_size": [
+    960,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -26963,6 +29587,10 @@
     "1ee32b96e417/p20.webp",
     "1ee32b96e417/p21.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -26989,6 +29617,10 @@
    "thumb": "a52bdfbc54a3/thumb.webp",
    "page_paths": [
     "a52bdfbc54a3/p01.webp"
+   ],
+   "page_size": [
+    916,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -27017,6 +29649,10 @@
    "page_paths": [
     "e3157bc5f05c/p01.webp"
    ],
+   "page_size": [
+    903,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -27043,6 +29679,10 @@
    "thumb": "1943fe9d6e45/thumb.webp",
    "page_paths": [
     "1943fe9d6e45/p01.webp"
+   ],
+   "page_size": [
+    914,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -27071,6 +29711,10 @@
    "page_paths": [
     "6c0838c8e9c6/p01.webp"
    ],
+   "page_size": [
+    881,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -27097,6 +29741,10 @@
    "thumb": "23c4ed51c27c/thumb.webp",
    "page_paths": [
     "23c4ed51c27c/p01.webp"
+   ],
+   "page_size": [
+    916,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -27125,6 +29773,10 @@
    "page_paths": [
     "8cdf0b14eafd/p01.webp"
    ],
+   "page_size": [
+    926,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -27150,6 +29802,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": "La Asociación del Eisteddfod Mimosa Porth Madryn es una asociación sin fines de lucro y financia el festival con el aporte de donaciones y el valor de la entrada. Es de suma importancia leer detenidamente el programa anual antes de la inscripción del participante, ya que se informará debidamente, en todas las competencias, cuáles son sus características y reglas para poder participar. No se aceptarán trabajos que no cumplan con los requisitos mínimos indicados en este programa. Asimismo, la dirección de recepción de los trabajos deberá respetarse. En caso de que los participantes no puedan ent",
    "table": null
   },
@@ -27175,6 +29828,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": "La Asociación del Eisteddfod Mimosa Porth Madryn es una asociación sin fines de lucro y financia el festival con el aporte de donaciones y el valor de la entrada. Es de suma importancia leer detenidamente el programa anual antes de la inscripción del participante, a fin de informarse de todas las competencias, características y normas del evento. No se aceptarán trabajos que no cumplan con los requisitos mínimos indicados en este programa. Asimismo, la dirección de recepción de los trabajos deberá respetarse. En caso de que los participantes no puedan entregarlos personalmente en esa dirección",
    "table": null
   },
@@ -27200,6 +29854,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": "Literatura | Traducciones | Recitación | Música | Danzas | Artes Plásticas | Artesanías Literatura - Llenyddiaeth Forma de presentación de los trabajos: hoja tamaño A4, por duplicado, tipeados en computadora y con seudónimo y número de competencia al pie. Si se trata de niños, indicar también la edad. Datos personales: nombre y apellido, DNI, dirección y teléfono en sobre cerrado, con seudónimo y número de competencia en su cara anterior. No se aceptarán más de tres (3) trabajos por autor. 1.- Penillion syml: \"Ar lan y môr\". 2.- Adroddiad addas i ddysgwyr dan 8 oed. 3.- Adroddiad addas i ddysg",
    "table": null
   },
@@ -27225,6 +29880,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": "Literatura | Traducciones | Recitación | Música | Danzas | Artes Plásticas y Artesanías Literatura - Llenyddiaeth Forma de presentación de los trabajos: hoja tamaño A4, por duplicado, escritos en letra de imprenta clara o tipeados en computadora, y con seudónimo y número de competencia al pie. Si se trata de niños, indicar también la edad. Datos personales: nombre y apellido, DNI, dirección y teléfono en sobre cerrado, con seudónimo y número de competencia en su cara anterior. No se aceptarán más de tres (3) trabajos por autor. 1.- Dan 10 oed: penillion syml (mesur rydd) \"Y morfil\". 2.- Dan 18",
    "table": null
   },
@@ -27250,6 +29906,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": "Literatura | Traducciones | Música | Recitación | Danzas | Artes Visuales | Artesanías Literatura - Llenyddiaeth Forma de presentación de los trabajos: hoja tamaño A4, por duplicado, escritos en letra de imprenta clara o tipeados en computadora, y con seudónimo y número de competencia al pie. Si se trata de niños, indicar también la edad. Datos personales: nombre y apellido, DNI, dirección y teléfono en sobre cerrado, con seudónimo y número de competencia en su cara anterior. No se aceptarán más de tres (3) trabajos por autor. Cymraeg 1.- Hyd 10 oed: penillion syml (mesur rydd) \"Y morfil\". 2.-",
    "table": null
   },
@@ -27275,6 +29932,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": "Literatura | Traducciones | Música | Recitación | Danzas | Artes Visuales | Artesanías Literatura - Llenyddiaeth Forma de presentación de los trabajos: hoja tamaño A4, por duplicado, escritos en letra de imprenta clara o tipeados en computadora, y con seudónimo y número de competencia al pie. Si se trata de niños, indicar también la edad. Datos personales: nombre y apellido, DNI, dirección y teléfono en sobre cerrado, con seudónimo y número de competencia en su cara anterior. No se aceptarán más de tres (3) trabajos por autor. Cymraeg 1.- Hyd 10 oed: penillion syml (mesur rydd) \"Y morfil\". 2.-",
    "table": null
   },
@@ -27300,6 +29958,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": "Literatura | Traducciones | Música | Recitación | Danzas | Artes Visuales | Artesanías | Cocina Literatura - Llenyddiaeth Forma de presentación de los trabajos: hoja tamaño A4, por duplicado, escritos en letra de imprenta clara o tipeados en computadora, y con seudónimo y número de competencia al pie. Si se trata de niños, indicar también la edad. Datos personales: nombre y apellido, DNI, dirección y teléfono en sobre cerrado, con seudónimo y número de competencia en su cara anterior. No se aceptarán más de tres (3) trabajos por autor. Cymraeg 1.- Hyd 10 oed: Disgrifiwch eich ardal. 2.- Hyd 18",
    "table": null
   },
@@ -27331,6 +29990,10 @@
     "1171343ca9b2/p04.webp",
     "1171343ca9b2/p05.webp"
    ],
+   "page_size": [
+    927,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -27356,6 +30019,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": "El Eisteddfod Mimosa de Pto. Madryn 2011 Eisteddfod Mimosa 2011 www.vistasdelvalle.com.ar Durante este fin de semana se llevo a cabo en Puerto Madryn el Eisteddfod Mimosa, tradicional certamen de origen gales que se realiza anualmente en ésta ciudad donde las distintas competencias literarias, musical, coral, danzas, recitacion y otros géneros, convoca sobre el escenario a lo mas destacado en las distintas categorias de toda la provincia. El evento se realizó en las instalaciones del SUM de la Escuela Nº 736 donde se dió cita una gran concurrencia que siguió de cerca este gran despliegue cultu",
    "table": null
   },
@@ -27381,6 +30045,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": "Saltar al contenido Chubut Cultural cultura Programa del Eistedffod 29/06/2011 Por Juan Jose De Focatiis El siguiente es el programa del Eisteddfod Mimosa Porth Madryn, del día 2 de julio a partir de las 13.45 horas. Rhaglen y Dydd: Oración Inicial en galés y castellano Entonación de HIMNO NACIONAL ARGENTINO Dirige: Jorge Dutto Acompaña: Jesica Aguirre Distinción a presidente de sesión 1 Comp. 39.- Solo hasta 6 años: “Cállate grillito” Esther Schneider. 2 Comp. 22.- Unawd (solo) 3-4 oed: “Clap Clap Un, Dau, Tri”, Falyri Jenkins. 3 Comp. 65.- Recitación hasta 5 años: “Muy amarillas”, Isabel Muñ",
    "table": null
   },
@@ -27406,6 +30071,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": null,
    "table": null
   },
@@ -27431,6 +30097,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": "Literatura | Traducciones | Música | Recitación | Danzas | Artes Visuales | Artesanías Literatura - Llenyddiaeth Forma de presentación de los trabajos: hoja tamaño A4, por duplicado, escritos en letra de imprenta clara o tipeados en computadora, y con seudónimo y número de competencia al pie. Si se trata de niños, indicar también la edad. Datos personales: nombre y apellido, DNI, dirección, correo electrónico y teléfono (si se envía desde una escuela agregar Sala/Curso, Turno y Docente) en sobre cerrado. Anotar seudónimo y número de competencia en la cara anterior del sobre. No se aceptarán má",
    "table": null
   },
@@ -27456,6 +30123,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": null,
    "table": null
   },
@@ -27481,6 +30149,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": "Literatura | Traducciones | Música | Recitación | Danzas | Artes Visuales | Artesanías | Cocina Literatura - Llenyddiaeth Forma de presentación de los trabajos: hoja tamaño A4, por duplicado, escritos en letra de imprenta clara o tipeados en computadora, y con seudónimo y número de competencia al pie. Si se trata de niños, indicar también la edad. No se aceptarán más de tres (3) trabajos por autor en cada competencia. Datos personales: nombre y apellido, DNI, dirección, correo electrónico y teléfono (si se enví­a desde una escuela agregar Sala/Curso, Turno y Docente) en sobre cerrado. Anotar s",
    "table": null
   },
@@ -27516,6 +30185,10 @@
     "ff04e7f88f2e/p08.webp",
     "ff04e7f88f2e/p09.webp"
    ],
+   "page_size": [
+    927,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -27541,6 +30214,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": "Literatura | Traducciones | Música | Recitación | Danzas | Artes Visuales | Artesanías | Cocina Literatura - Llenyddiaeth Forma de presentación de los trabajos: hoja tamaño A4, por duplicado, escritos en letra de imprenta clara o tipeados en computadora, y con seudónimo y número de competencia al pie. Si se trata de niños, indicar también la edad. No se aceptarán más de tres (3) trabajos por autor en cada competencia. Datos personales: nombre y apellido, DNI, dirección, correo electrónico y teléfono (si se enví­a desde una escuela agregar Sala/Curso, Turno y Docente) en sobre cerrado. Anotar s",
    "table": null
   },
@@ -27580,6 +30254,10 @@
     "c54663a8a84f/p12.webp",
     "c54663a8a84f/p13.webp"
    ],
+   "page_size": [
+    927,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -27605,6 +30283,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": "Saltar al contenido Chubut Cultural cultura PRELIMINARES EISTEDDFOD MIMOSA 2017 18/07/2017 Por Juan Jose De Focatiis Desde la organización del eisteddfod Informan que el sábado 29 de julio 2017, en la Escuela 193 (San Martín 1904 e/ Azcuénaga y Dorrego), se llevará a cabo la instancia preliminar para las siguientes competencias. EISTEDDFOD MIMOSA PORTH MADRYN Recitación en castellano 08.30 hs Comp.86.- Recitación para 12 y 13 años: “Cosas pequeñas”, Armando Tejada Gómez. (09) 09.00 hs Comp.85.- Recitación para 10 y 11 años: “Orquesta”, Laura Witner. (32) 10.00 hs Comp. 84.- Recitación para 8 y",
    "table": null
   },
@@ -27630,6 +30309,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": "Literatura | Traducciones | Música | Recitación | Danzas | Artes Visuales | Artesanías | Cocina Literatura - Llenyddiaeth Forma de presentación de los trabajos: hoja tamaño A4, por duplicado, escritos en letra de imprenta clara o tipeados en computadora, y con seudónimo y número de competencia al pie. Si se trata de niños, indicar también la edad. No se aceptarán más de tres (3) trabajos por autor en cada competencia. Datos personales: nombre y apellido, DNI, dirección, correo electrónico y teléfono (si se enví­a desde una escuela agregar Sala/Curso, Turno y Docente) en sobre cerrado. Anotar s",
    "table": null
   },
@@ -27655,6 +30335,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": null,
    "table": null
   },
@@ -27688,6 +30369,10 @@
     "4d88278eaff1/p06.webp",
     "4d88278eaff1/p07.webp"
    ],
+   "page_size": [
+    927,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -27714,6 +30399,10 @@
    "thumb": "5ba8a8bb8bbf/thumb.webp",
    "page_paths": [
     "5ba8a8bb8bbf/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    575
    ],
    "text_excerpt": null,
    "table": null
@@ -27761,6 +30450,10 @@
     "f0a4611068a8/p19.webp",
     "f0a4611068a8/p20.webp"
    ],
+   "page_size": [
+    767,
+    932
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -27789,6 +30482,10 @@
     "e0578ea58f88/p01.webp",
     "e0578ea58f88/p02.webp",
     "e0578ea58f88/p03.webp"
+   ],
+   "page_size": [
+    848,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -27824,6 +30521,10 @@
     "0afda9ec6e4a/p07.webp",
     "0afda9ec6e4a/p08.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -27850,6 +30551,10 @@
    "thumb": "6e9489f921d3/thumb.webp",
    "page_paths": [
     "6e9489f921d3/p01.webp"
+   ],
+   "page_size": [
+    720,
+    405
    ],
    "text_excerpt": null,
    "table": null
@@ -27878,6 +30583,10 @@
    "page_paths": [
     "83e2043ae3a1/p01.webp"
    ],
+   "page_size": [
+    1200,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -27904,6 +30613,10 @@
    "thumb": "04cb68ce44df/thumb.webp",
    "page_paths": [
     "04cb68ce44df/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    851
    ],
    "text_excerpt": null,
    "table": null
@@ -27932,6 +30645,10 @@
    "page_paths": [
     "f08af856d562/p01.webp"
    ],
+   "page_size": [
+    1200,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -27958,6 +30675,10 @@
    "thumb": "c2064ca34973/thumb.webp",
    "page_paths": [
     "c2064ca34973/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    851
    ],
    "text_excerpt": null,
    "table": null
@@ -28007,6 +30728,10 @@
     "889fb13d57db/p21.webp",
     "889fb13d57db/p22.webp"
    ],
+   "page_size": [
+    849,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -28040,6 +30765,10 @@
     "7a78374d6b64/p06.webp",
     "7a78374d6b64/p07.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -28066,6 +30795,10 @@
    "thumb": "6bb86ee827e8/thumb.webp",
    "page_paths": [
     "6bb86ee827e8/p01.webp"
+   ],
+   "page_size": [
+    852,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -28094,6 +30827,10 @@
    "page_paths": [
     "c88be50991ed/p01.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -28120,6 +30857,10 @@
    "thumb": "da258bb1d5a9/thumb.webp",
    "page_paths": [
     "da258bb1d5a9/p01.webp"
+   ],
+   "page_size": [
+    870,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -28148,6 +30889,10 @@
    "page_paths": [
     "395b30cffa15/p01.webp"
    ],
+   "page_size": [
+    846,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -28174,6 +30919,10 @@
    "thumb": "c4b400e58cbf/thumb.webp",
    "page_paths": [
     "c4b400e58cbf/p01.webp"
+   ],
+   "page_size": [
+    843,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -28202,6 +30951,10 @@
    "page_paths": [
     "6caeec54b4e3/p01.webp"
    ],
+   "page_size": [
+    850,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -28229,6 +30982,10 @@
    "page_paths": [
     "62ee57c1d13b/p01.webp"
    ],
+   "page_size": [
+    843,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -28255,6 +31012,10 @@
    "thumb": "d09a46925282/thumb.webp",
    "page_paths": [
     "d09a46925282/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -28300,6 +31061,10 @@
     "f14bf7c0361a/p17.webp",
     "f14bf7c0361a/p18.webp"
    ],
+   "page_size": [
+    927,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -28326,6 +31091,10 @@
    "thumb": "9159f469215d/thumb.webp",
    "page_paths": [
     "9159f469215d/p01.webp"
+   ],
+   "page_size": [
+    1199,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -28354,6 +31123,10 @@
    "page_paths": [
     "b7d08ef39676/p01.webp"
    ],
+   "page_size": [
+    1200,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -28380,6 +31153,10 @@
    "thumb": "4a3355537d6e/thumb.webp",
    "page_paths": [
     "4a3355537d6e/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -28408,6 +31185,10 @@
    "page_paths": [
     "f4c1b871f71c/p01.webp"
    ],
+   "page_size": [
+    1200,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -28434,6 +31215,10 @@
    "thumb": "e76b0659d32b/thumb.webp",
    "page_paths": [
     "e76b0659d32b/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -28462,6 +31247,10 @@
    "page_paths": [
     "c8cbbc4aadcd/p01.webp"
    ],
+   "page_size": [
+    1200,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -28488,6 +31277,10 @@
    "thumb": "57a8392f0960/thumb.webp",
    "page_paths": [
     "57a8392f0960/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -28516,6 +31309,10 @@
    "page_paths": [
     "faa59ed6e5a7/p01.webp"
    ],
+   "page_size": [
+    1200,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -28542,6 +31339,10 @@
    "thumb": "06ed02e8721c/thumb.webp",
    "page_paths": [
     "06ed02e8721c/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -28570,6 +31371,10 @@
    "page_paths": [
     "a0fc02ac96f7/p01.webp"
    ],
+   "page_size": [
+    1200,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -28597,6 +31402,10 @@
    "page_paths": [
     "d32dd8775cf7/p01.webp"
    ],
+   "page_size": [
+    1200,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -28622,6 +31431,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": "Saltar al contenido Chubut Cultural cultura EISTEDDFOD MIMOSA “PORTH MADRYN” 26/07/2024 Por Juan Jose De Focatiis La 18° edición del Eisteddfod Mimosa «Porth Madryn», se llevará a cabo, el día sábado 10 de agosto, en instalaciones de la Escuela N° 789, (Villarino 900), en dos sesiones: la primera comienza a las 13,30 hs y la segunda a las 18,30 hs. Invitamos a toda la comunidad a compartir una preciosa jornada de despliegue artístico en el marco de los Festejos por el aniversario de la ciudad. Este año el Eisteddfod Porth Madryn, cumple 20 años, ya que la primera edición se llevó a cabo en el ",
    "table": null
   },
@@ -28665,6 +31475,10 @@
     "4d3f1caa92cd/p16.webp",
     "4d3f1caa92cd/p17.webp"
    ],
+   "page_size": [
+    849,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -28691,6 +31505,10 @@
    "thumb": "3d7ed023d2a6/thumb.webp",
    "page_paths": [
     "3d7ed023d2a6/p01.webp"
+   ],
+   "page_size": [
+    848,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -28719,6 +31537,10 @@
    "page_paths": [
     "82a50ebe6dc0/p01.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -28746,6 +31568,10 @@
    "page_paths": [
     "cfc6d83718f9/p01.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -28772,6 +31598,10 @@
    "thumb": "d902342082c6/thumb.webp",
    "page_paths": [
     "d902342082c6/p01.webp"
+   ],
+   "page_size": [
+    848,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -28811,6 +31641,10 @@
     "d94341d1046a/p11.webp",
     "d94341d1046a/p12.webp"
    ],
+   "page_size": [
+    927,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -28837,6 +31671,10 @@
    "thumb": "7c4819bda0f9/thumb.webp",
    "page_paths": [
     "7c4819bda0f9/p01.webp"
+   ],
+   "page_size": [
+    854,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -28865,6 +31703,10 @@
    "page_paths": [
     "a0466155a854/p01.webp"
    ],
+   "page_size": [
+    960,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -28891,6 +31733,10 @@
    "thumb": "f7c3ad472190/thumb.webp",
    "page_paths": [
     "f7c3ad472190/p01.webp"
+   ],
+   "page_size": [
+    1084,
+    1086
    ],
    "text_excerpt": null,
    "table": null
@@ -28919,6 +31765,10 @@
    "page_paths": [
     "be16691400af/p01.webp"
    ],
+   "page_size": [
+    1084,
+    1086
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -28945,6 +31795,10 @@
    "thumb": "d038e36cdbd8/thumb.webp",
    "page_paths": [
     "d038e36cdbd8/p01.webp"
+   ],
+   "page_size": [
+    1084,
+    1086
    ],
    "text_excerpt": null,
    "table": null
@@ -28973,6 +31827,10 @@
    "page_paths": [
     "79e70ca71ac6/p01.webp"
    ],
+   "page_size": [
+    1083,
+    1086
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -28999,6 +31857,10 @@
    "thumb": "77e5a316ed8f/thumb.webp",
    "page_paths": [
     "77e5a316ed8f/p01.webp"
+   ],
+   "page_size": [
+    1084,
+    1086
    ],
    "text_excerpt": null,
    "table": null
@@ -29027,6 +31889,10 @@
    "page_paths": [
     "889bd82c6cb8/p01.webp"
    ],
+   "page_size": [
+    1084,
+    1086
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -29053,6 +31919,10 @@
    "thumb": "df567e52167b/thumb.webp",
    "page_paths": [
     "df567e52167b/p01.webp"
+   ],
+   "page_size": [
+    1084,
+    1086
    ],
    "text_excerpt": null,
    "table": null
@@ -29081,6 +31951,10 @@
    "page_paths": [
     "163e314aa1c3/p01.webp"
    ],
+   "page_size": [
+    960,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -29107,6 +31981,10 @@
    "thumb": "4af46a7a9ebf/thumb.webp",
    "page_paths": [
     "4af46a7a9ebf/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    848
    ],
    "text_excerpt": null,
    "table": null
@@ -29135,6 +32013,10 @@
    "page_paths": [
     "cc1171b6475f/p01.webp"
    ],
+   "page_size": [
+    1075,
+    1083
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -29162,6 +32044,10 @@
    "page_paths": [
     "8e4ca1e80fb9/p01.webp"
    ],
+   "page_size": [
+    1075,
+    1083
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -29188,6 +32074,10 @@
    "thumb": "d415c26aae09/thumb.webp",
    "page_paths": [
     "d415c26aae09/p01.webp"
+   ],
+   "page_size": [
+    927,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -29237,6 +32127,10 @@
     "9d2131be5cd9/p21.webp",
     "9d2131be5cd9/p22.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -29270,6 +32164,10 @@
     "8ff9518bdeaa/p06.webp",
     "8ff9518bdeaa/p07.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -29296,6 +32194,10 @@
    "thumb": "4cbdec62c738/thumb.webp",
    "page_paths": [
     "4cbdec62c738/p01.webp"
+   ],
+   "page_size": [
+    927,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -29336,6 +32238,10 @@
     "294863d2bc03/p12.webp",
     "294863d2bc03/p13.webp",
     "294863d2bc03/p14.webp"
+   ],
+   "page_size": [
+    927,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -29383,6 +32289,10 @@
     "0870a3d9c1f6/p19.webp",
     "0870a3d9c1f6/p20.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -29409,6 +32319,10 @@
    "thumb": "3e73069259ca/thumb.webp",
    "page_paths": [
     "3e73069259ca/p01.webp"
+   ],
+   "page_size": [
+    927,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -29437,6 +32351,10 @@
    "page_paths": [
     "6e97e272c765/p01.webp"
    ],
+   "page_size": [
+    927,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -29463,6 +32381,10 @@
    "thumb": "a3c1a9fdd873/thumb.webp",
    "page_paths": [
     "a3c1a9fdd873/p01.webp"
+   ],
+   "page_size": [
+    927,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -29491,6 +32413,10 @@
    "page_paths": [
     "747e43ca20b7/p01.webp"
    ],
+   "page_size": [
+    927,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -29517,6 +32443,10 @@
    "thumb": "049af8f78212/thumb.webp",
    "page_paths": [
     "049af8f78212/p01.webp"
+   ],
+   "page_size": [
+    927,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -29545,6 +32475,10 @@
    "page_paths": [
     "bab3f7adba28/p01.webp"
    ],
+   "page_size": [
+    927,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -29571,6 +32505,10 @@
    "thumb": "39dc0d74ad57/thumb.webp",
    "page_paths": [
     "39dc0d74ad57/p01.webp"
+   ],
+   "page_size": [
+    927,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -29599,6 +32537,10 @@
    "page_paths": [
     "ae5f23fdd548/p01.webp"
    ],
+   "page_size": [
+    927,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -29625,6 +32567,10 @@
    "thumb": "792aab940d83/thumb.webp",
    "page_paths": [
     "792aab940d83/p01.webp"
+   ],
+   "page_size": [
+    927,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -29653,6 +32599,10 @@
    "page_paths": [
     "cc4f4877e634/p01.webp"
    ],
+   "page_size": [
+    927,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -29679,6 +32629,10 @@
    "thumb": "243f0a0ce514/thumb.webp",
    "page_paths": [
     "243f0a0ce514/p01.webp"
+   ],
+   "page_size": [
+    927,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -29708,6 +32662,10 @@
     "94f173b7b5d9/p01.webp",
     "94f173b7b5d9/p02.webp"
    ],
+   "page_size": [
+    927,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -29734,6 +32692,10 @@
    "thumb": "31b995e60646/thumb.webp",
    "page_paths": [
     "31b995e60646/p01.webp"
+   ],
+   "page_size": [
+    1075,
+    1083
    ],
    "text_excerpt": null,
    "table": null
@@ -29762,6 +32724,10 @@
    "page_paths": [
     "58aca902ec52/p01.webp"
    ],
+   "page_size": [
+    540,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -29788,6 +32754,10 @@
    "thumb": "9268ef507794/thumb.webp",
    "page_paths": [
     "9268ef507794/p01.webp"
+   ],
+   "page_size": [
+    960,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -29816,6 +32786,10 @@
    "page_paths": [
     "9531364dcddd/p01.webp"
    ],
+   "page_size": [
+    960,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -29842,6 +32816,10 @@
    "thumb": "86a6714467b0/thumb.webp",
    "page_paths": [
     "86a6714467b0/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -29870,6 +32848,10 @@
    "page_paths": [
     "1d2478822bc6/p01.webp"
    ],
+   "page_size": [
+    1200,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -29896,6 +32878,10 @@
    "thumb": "61f537738420/thumb.webp",
    "page_paths": [
     "61f537738420/p01.webp"
+   ],
+   "page_size": [
+    927,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -29957,6 +32943,10 @@
     "b89007946f25/p33.webp",
     "b89007946f25/p34.webp"
    ],
+   "page_size": [
+    758,
+    932
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -29983,6 +32973,10 @@
    "thumb": "c0192cfd95e8/thumb.webp",
    "page_paths": [
     "c0192cfd95e8/p01.webp"
+   ],
+   "page_size": [
+    928,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -30017,6 +33011,10 @@
     "8283220809d0/p06.webp",
     "8283220809d0/p07.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -30042,6 +33040,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": "Eisteddfod Trevelin Una milenaria tradición Galesa permanece viva en la Patagonia. El Eisteddfod (pronúnciese Eistedvod) es un tradicional festival cultural galés cuyos primeros registros escritos datan del año 1.171 en Aberteifi, ciudad del centro-oeste de Gales que está hermanada con la localidad de Trevelin. El vocablo Eisteddfod significa “permanecer sentado” y hace referencia a una tradición de los antiguos celtas, los cuales se reunían y escuchaban con gran respeto a los druidas y poetas mientras éstos recitaban sus poesías. Esta milenaria tradición llegó a la provincia de Chubut con los",
    "table": null
   },
@@ -30088,6 +33087,10 @@
     "531a06488812/p19.webp",
     "531a06488812/p20.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -30113,6 +33116,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": null,
    "table": null
   },
@@ -30139,6 +33143,10 @@
    "thumb": "77145a982e8b/thumb.webp",
    "page_paths": [
     "77145a982e8b/p01.webp"
+   ],
+   "page_size": [
+    500,
+    300
    ],
    "text_excerpt": null,
    "table": null
@@ -30204,6 +33212,10 @@
     "93e32c7f34e9/p37.webp",
     "93e32c7f34e9/p38.webp"
    ],
+   "page_size": [
+    927,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -30229,6 +33241,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": "HEN WLAD FY NHADAU Mae hen wlad fy nhadau yn annwyl i mi Gwlad beirdd a chantorion enwogion o fri Ei gwrol ryfelwyr, gwlad garwyr tra mâ d Tros ryddyd collasant eu gwaed Gwlad, Gwlad, Pleidiol wyf i’m gwlad, tra môr yn fur, i´r bur hoffbau O bydded i´r hen iaith barhau EISTEDDFOD TREVELIN 2013 Programa del día Rhaglen y dydd Viernes 22 y sábado 23 de noviembre PROGRAMA DEL DÍA – viernes 22 de noviembre Himno Nacional Argentino Palabras de bienvenida a cargo de Alberto Williams. Invitación a presidir la sesión . Apertura del día. Coro “Valle nuevo” de la localidad Del Bolsón con su director Adr",
    "table": null
   },
@@ -30254,6 +33267,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": "EISTEDDFOD TREVELIN 2014 TREVELIN 2 y 3 de Mayo de 2014 EISTEDDFOD TREVELIN 2014 Durante los días 2 y 3 de Mayo de 2014 se realiza en Trevelin una nueva edición del Eisteddfod, un certamen cultural – literario, musical principalmente – que tiene sus orígenes en el Siglo XVIII. La palabra Eisteddfod significa “estar sentado”. Allí, el autor del mejor poema es premiado, escoltado hasta el sillón bárdico, siendo coronado como un soberano, recibiendo el máximo honor entre los presentes. El Eisteddfod se realiza en Gales y en la Patagonia Argentina desde 1865, cuando llegaron los primeros galeses a",
    "table": null
   },
@@ -30279,6 +33293,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": null,
    "table": null
   },
@@ -30348,6 +33363,10 @@
     "324b38b9d4d0/p42.webp",
     "324b38b9d4d0/p43.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -30374,6 +33393,10 @@
    "thumb": "04dce74d11e9/thumb.webp",
    "page_paths": [
     "04dce74d11e9/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    900
    ],
    "text_excerpt": null,
    "table": null
@@ -30402,6 +33425,10 @@
    "page_paths": [
     "027eeb5b3467/p01.webp"
    ],
+   "page_size": [
+    1200,
+    900
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -30428,6 +33455,10 @@
    "thumb": "1c437e11bdf1/thumb.webp",
    "page_paths": [
     "1c437e11bdf1/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    904
    ],
    "text_excerpt": null,
    "table": null
@@ -30508,6 +33539,10 @@
     "3a13ac85dbd5/p52.webp",
     "3a13ac85dbd5/p53.webp"
    ],
+   "page_size": [
+    848,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -30534,6 +33569,10 @@
    "thumb": "d28522b3d88e/thumb.webp",
    "page_paths": [
     "d28522b3d88e/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -30562,6 +33601,10 @@
    "page_paths": [
     "781736fad120/p01.webp"
    ],
+   "page_size": [
+    540,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -30588,6 +33631,10 @@
    "thumb": "9cba683a0840/thumb.webp",
    "page_paths": [
     "9cba683a0840/p01.webp"
+   ],
+   "page_size": [
+    899,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -30662,6 +33709,10 @@
     "4766e5b22d49/p46.webp",
     "4766e5b22d49/p47.webp"
    ],
+   "page_size": [
+    927,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -30687,6 +33738,7 @@
    "pages": 0,
    "thumb": null,
    "page_paths": [],
+   "page_size": null,
    "text_excerpt": null,
    "table": null
   },
@@ -30749,6 +33801,10 @@
     "2b36b8738541/p35.webp",
     "2b36b8738541/p36.webp"
    ],
+   "page_size": [
+    927,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -30775,6 +33831,10 @@
    "thumb": "5a1f5618e2fe/thumb.webp",
    "page_paths": [
     "5a1f5618e2fe/p01.webp"
+   ],
+   "page_size": [
+    640,
+    640
    ],
    "text_excerpt": null,
    "table": null
@@ -30847,6 +33907,10 @@
     "38381815de4e/p44.webp",
     "38381815de4e/p45.webp"
    ],
+   "page_size": [
+    927,
+    1200
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -30874,6 +33938,10 @@
    "page_paths": [
     "21fc0ceefa68/p01.webp"
    ],
+   "page_size": [
+    640,
+    640
+   ],
    "text_excerpt": null,
    "table": null
   },
@@ -30900,6 +33968,10 @@
    "thumb": "cf43937ab65b/thumb.webp",
    "page_paths": [
     "cf43937ab65b/p01.webp"
+   ],
+   "page_size": [
+    640,
+    640
    ],
    "text_excerpt": null,
    "table": null
@@ -30965,6 +34037,10 @@
     "e69909990a66/p37.webp",
     "e69909990a66/p38.webp",
     "e69909990a66/p39.webp"
+   ],
+   "page_size": [
+    848,
+    1200
    ],
    "text_excerpt": null,
    "table": null

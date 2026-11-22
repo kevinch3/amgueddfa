@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, it } from 'vitest';
 import {
   editionState, mostWanted, pageUrls, setItems, thumbUrl, yearRange, editionItems, festivals,
-  firstMaterialYear, editionYears, YEAR_FLOOR, undocumented, editionCover, items, allItems,
+  firstMaterialYear, editionYears, YEAR_FLOOR, undocumented, editionCover, coverBox, items, allItems,
 } from '../src/lib/catalog';
 import type { Item } from '../src/lib/types';
 import { MEDIA_BASE, siteMedia } from '../src/lib/paths';
@@ -116,6 +116,16 @@ describe('catalog', () => {
     expect(siteMedia('x/thumb.webp', undefined)).toBe('https://media.amgueddfa.org/media/x/thumb.webp');
     expect(siteMedia('/x/p01.webp', 'https://cdn.example/')).toBe('https://cdn.example/media/x/p01.webp');
     expect(siteMedia('x/p01.webp', '')).toBe('/media/x/p01.webp');
+  });
+
+  describe('coverBox (#5)', () => {
+    it('fits the cover inside the 16rem × 22rem box, keeping its proportions', () => {
+      expect(coverBox([675, 1200])).toEqual({ width: 198, height: 352 }); // tall: the height limits it
+      expect(coverBox([720, 960])).toEqual({ width: 256, height: 341 });
+      expect(coverBox([960, 720])).toEqual({ width: 256, height: 192 });
+      expect(coverBox([100, 120])).toEqual({ width: 100, height: 120 }); // never enlarged
+      expect(coverBox(null)).toEqual({});
+    });
   });
 
   describe('editionCover', () => {

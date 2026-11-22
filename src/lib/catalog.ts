@@ -112,7 +112,19 @@ export function undocumented(f: FestivalSlug, year: number, approved: DatedLike[
 const TAPA_TITLE = /\b(tapa|portada)\b/i;
 
 /** An edition's cover: a large page image (year header) and a thumbnail (timeline). */
-export type Cover = { page: string; thumb: string };
+/** The edition cover's largest box in CSS px (global.css .tapa: max-width 16rem, max-height 22rem). */
+const COVER_MAX = [256, 352] as const;
+
+/** The size a cover of `size` pixels is shown at: inside COVER_MAX, proportions kept, never enlarged.
+ *  Given as the img's width/height, the browser reserves exactly that box before the image loads (#5). */
+export function coverBox(size: [number, number] | null | undefined): { width?: number; height?: number } {
+  if (!size || !(size[0] > 0) || !(size[1] > 0)) return {};
+  const k = Math.min(COVER_MAX[0] / size[0], COVER_MAX[1] / size[1], 1);
+  return { width: Math.round(size[0] * k), height: Math.round(size[1] * k) };
+}
+
+/** width/height: the size the cover is shown at, when known (catalog covers), so the layout does not jump while it loads. */
+export type Cover = { page: string; thumb: string; width?: number; height?: number };
 
 /** Cover from an approved upload's derivatives in the media bucket; null without page images. */
 function uploadCover(c: UploadLike, base: string | undefined): Cover | null {
@@ -149,7 +161,7 @@ export function editionCover(
     ?? list.find((i) => i.category === 'programa' && i.kind === 'pdf');
   if (fromCatalog) {
     const page = pageUrls(fromCatalog)[0];
-    return { page, thumb: thumbUrl(fromCatalog) ?? page };
+    return { page, thumb: thumbUrl(fromCatalog) ?? page, ...coverBox(fromCatalog.page_size) };
   }
   for (const c of mine.filter((x) => x.payload?.complete === true)) {
     const cover = uploadCover(c, mediaBase);

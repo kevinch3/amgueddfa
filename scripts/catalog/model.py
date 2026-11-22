@@ -24,5 +24,6 @@ class Item:
     pages: int = 0
     thumb: str | None = None
     page_paths: list[str] = field(default_factory=list)
+    page_size: list[int] | None = None  # [width, height] of page 1, for the cover's width/height attributes
     text_excerpt: str | None = None
     table: list[dict] | None = None

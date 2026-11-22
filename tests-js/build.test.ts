@@ -609,6 +609,13 @@ describe('static build', () => {
     expect(page).toContain('id="no-contar"');
   });
 
+  it('a "+ Agregar" error shows next to its button, not only at the top of the form (#14)', () => {
+    for (const [page, p] of [['contribuir/index.html', 'c'], ['admin/index.html', 'a']] as const) {
+      const html = read(page);
+      expect(html, page).toMatch(new RegExp(`id="${p}-agregar"[^>]*>[^<]*</button></p>\\s*<p[^>]*id="${p}-agregar-error"[^>]*role="alert"[^>]*hidden`));
+    }
+  });
+
   it('the edition cover has its size, so the page does not jump while it loads (#5)', () => {
     const tag = /<img class="tapa"[^>]*>/.exec(read('chubut/2024/index.html'))?.[0] ?? '';
     expect(tag).toMatch(/ width="\d+"/);

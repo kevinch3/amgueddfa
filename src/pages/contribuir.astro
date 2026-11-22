@@ -182,6 +182,8 @@ const firsts = Object.fromEntries(festivals().map((f) => [f.slug, yearRange(f.sl
   function say(key: string | null) {
     msg.hidden = !key;
     msg.textContent = key ? t(key) : '';
+    // On a phone the message line (above the tabs) is often off-screen when "Enviar" is pressed.
+    if (key) msg.scrollIntoView({ block: 'nearest' });
   }
 
   function select(tab: string, focus = false) {

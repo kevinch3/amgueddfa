@@ -5,46 +5,148 @@
  "seg": [
   [
    30.0,
-   "na'r byd, a lle oedd maith y nef yn rhedeg arno ei bryd, dy ddawn a thrasath gariad ryd sy'n llanw'r nef, yn llanw'r nef."
+   "O nefol addfwyn Oen,"
+  ],
+  [
+   30.0,
+   "Sy'n llawer gwell na'r byd,"
+  ],
+  [
+   39.2,
+   "A lluoedd maith y nef"
+  ],
+  [
+   46.8,
+   "Yn rhedeg arno'u bryd,"
+  ],
+  [
+   57.5,
+   "Dy ddawn a'th ras a'th gariad drud"
+  ],
+  [
+   69.7,
+   "Sy'n llanw'r nef, yn llanw'r byd."
+  ],
+  [
+   78.8,
+   "Noddfa pechadur trist"
   ],
   [
    88.0,
-   "Pob drylliedig fryw, a phwys eiogrwydd llym, yn unig yw fy niw."
+   "Dan bob drylliedig friw"
+  ],
+  [
+   95.1,
+   "A phwys euogrwydd llym"
+  ],
+  [
+   101.1,
+   "Yn unig yw fy Nuw;"
   ],
   [
    108.24,
-   "Does enw'i gael o dan yn ef, yn unig ond ei enw ef."
+   "'Does enw i'w gael o dan y nef"
+  ],
+  [
+   124.2,
+   "Yn unig ond ei enw ef."
   ],
   [
    138.24,
-   "Ymgrymed pawb i lawr, I enw'r addfwynnoyn, Yr enw mwyaf mawr, Erioed a glywyd sôn."
+   "Ymgrymed pawb i lawr"
+  ],
+  [
+   146.8,
+   "I enw'r addfwyn Oen,"
+  ],
+  [
+   154.0,
+   "Yr enw mwyaf mawr"
+  ],
+  [
+   159.7,
+   "Erioed a glywyd sôn:"
   ],
   [
    168.24,
-   "Y clod, y mawl, y parch, a'r brifo byth ei enw'n harglwydd ni."
+   "Y clod, y mawl, y parch a'r bri"
+  ],
+  [
+   170.4,
+   "Fo byth i enw'n Harglwydd ni."
   ]
  ],
  "fuentes": [
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ]
+ ],
+ "letras": [
+  {
+   "desde": 20,
+   "hasta": 200.5,
+   "titulo": "O nefol addfwyn Oen",
+   "autor": "William Williams, Pantycelyn (1717-1791)",
+   "idioma": "cy",
+   "derechos": "Texto de dominio público",
+   "fuente": "https://gobaith.cymru/angelfire/O%20nefol%20addfwyn%20Oen.html, Emynau a Thonau (gobaith.cymru), versión «1,5,6»; cotejado con el escaneo de Llyfr Emynau y Methodistiaid Calfinaidd a Wesleaidd 1930, emyn 159 (Wikimedia Commons), obtenido por el archivo"
+  }
  ],
  "ventanas": {
   "total": 4,
-  "modelo": 3,
+  "modelo": 4,
   "reglas": 0,
-  "vacias": 1
+  "vacias": 0
  }
 }

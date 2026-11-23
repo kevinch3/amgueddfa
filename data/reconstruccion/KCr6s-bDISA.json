@@ -5,46 +5,162 @@
  "seg": [
   [
    0.0,
-   "Y Deryn Prif ar adain y wasg fydd hi'n mynd wast i brydau, o bras y gwres at y dde lle fydd ei fysedd yn cael ei chosi ati gwyrdd i wrthi, neu mwy ar dŵr."
+   "Y 'Deryn pur a'r adain las,"
+  ],
+  [
+   5.3,
+   "Bydd imi'n was dibryder,"
+  ],
+  [
+   10.0,
+   "O brysia'n brysur at y ferch"
+  ],
+  [
+   15.3,
+   "Lle rhois i'm serch yn gynar;"
+  ],
+  [
+   20.0,
+   "Dos di ati, dywed wrthi"
+  ],
+  [
+   24.7,
+   "Fy mod i'n wylo dw'r yn heli,"
   ],
   [
    30.0,
-   "yng Nghefndir, mod i'n ei radda yn ei gwylad, ar ôl ei chariad yn ffair Bethelda, odi fyddai o'i fath yn ei hun, ond wedi dim o'i galad."
+   "Fy mod i'n irad am gael ei gweled"
+  ],
+  [
+   37.2,
+   "Ac o'i chariad yn ffaelu a cherdded;"
+  ],
+  [
+   45.2,
+   "O! Duw faddeuo i'r hardd ei llun"
+  ],
+  [
+   50.9,
+   "Am boeni'r dyn mor galed."
   ],
   [
    56.0,
-   "Pan o'n i'n hapus iawn dyddiw, dyw arno dwi'n byw. Candlen yfed i'r anafioedd, yr ysgafn drôl i fy nghofio."
+   "Pan o'wn i'n hoenus iawn fy hwyl"
+  ],
+  [
+   61.5,
+   "Ddiwrnod gwyl yn rhodio,"
+  ],
+  [
+   65.7,
+   "Canfyddais fenyw lana 'rioed"
+  ],
+  [
+   71.2,
+   "Ar ysgafn droed yn rhodio;"
   ],
   [
    76.0,
-   "Pan welais, sydd yn sefais, yma'n hafon mi o ddyddias, weledd y mas lan ar y deyrnas, a'i gwen yn hardd i'r oll o'i chwmpas, i fyrs gredu'r un dydd i fi."
+   "Pan y gwelais, 'syth mi sefais,"
+  ],
+  [
+   81.7,
+   "Ac yn fy nghalon mi feddyliais,"
+  ],
+  [
+   88.1,
+   "Wele'r ddynes lana'r deyrnas,"
+  ],
+  [
+   93.9,
+   "A'i gwedd yn harddu oll o'i chwmpas,"
+  ],
+  [
+   101.0,
+   "Ni fyn'swn gredu un dyn byw"
   ],
   [
    106.0,
-   "Nad oedd hi'n rhyddid i'r blaen yn yr oes."
+   "Nad oedd hi ryw angyles."
   ]
  ],
  "fuentes": [
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ]
  ],
+ "letras": [
+  {
+   "desde": 0,
+   "hasta": 110,
+   "titulo": "Y Deryn Pur",
+   "autor": "Tradicional galesa (colección de Miss Williams, Aberpergwm)",
+   "idioma": "cy",
+   "derechos": "Texto de dominio público",
+   "fuente": "https://cy.wikisource.org/wiki/Cerddi%27r_Eryri/Deryn_Pur, Cerddi'r Eryri (Gwilym Cowlyd), obtenido por el archivo"
+  }
+ ],
  "ventanas": {
-  "total": 2,
+  "total": 3,
   "modelo": 2,
   "reglas": 0,
-  "vacias": 0
+  "vacias": 1
  }
 }

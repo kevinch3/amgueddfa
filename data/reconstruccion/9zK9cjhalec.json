@@ -4,89 +4,226 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
-   48.0,
-   "Callé en perdida, dejó un pedazo de vida y se marchó."
+   20.0,
+   "Era más blanda que el agua,"
   ],
   [
-   65.4,
-   "Primero hay que saber sufrir, después amar, después partir, y al fin andar sin pensamientos."
+   27.0,
+   "que el agua blanda,"
   ],
   [
-   76.6,
-   "Perffumes d'aranjou en fflôr, promesas fanas o un amôr, que se escaparon con el viento."
+   31.7,
+   "era más fresca que el río,"
   ],
   [
-   84.6,
-   "Después, qué importará el después, toda mi vida es el ayer, que me detiene en el pasado."
+   38.0,
+   "naranjo en flor."
   ],
   [
-   94.6,
-   "Eterna y vieja juventud, que me ha dejado acobardado."
+   41.9,
+   "Y en esa calle de estío,"
+  ],
+  [
+   49.0,
+   "calle perdida,"
+  ],
+  [
+   52.9,
+   "dejó un pedazo de vida"
+  ],
+  [
+   59.9,
+   "y se marchó."
+  ],
+  [
+   63.1,
+   "Primero hay que saber sufrir,"
+  ],
+  [
+   70.1,
+   "después amar, después partir"
+  ],
+  [
+   76.4,
+   "y al fin andar sin pensamiento."
+  ],
+  [
+   84.2,
+   "Perfume de naranjo en flor,"
+  ],
+  [
+   91.2,
+   "promesas vanas de un amor"
+  ],
+  [
+   98.3,
+   "que se escaparon con el viento."
   ],
   [
    102.6,
    "Como un pajaro sin luz, que le habrán hecho mis manos, que le habrán hecho para dejarle en el pecho tanto ddolor, ddolor de vieja arboleda."
   ],
   [
-   132.6,
-   "de canción de esquina con un pedaso de vida, un aranjo en flor."
+   106.1,
+   "Después, ¿qué importa del después?"
   ],
   [
-   148.6,
-   "Primero hay que saber sufrir, después amar, después partir, y al final andar sin pensamientos."
+   113.2,
+   "Toda mi vida es el ayer"
   ],
   [
-   158.6,
-   "Perffume d'aranjou en fflon, promesas fanas de un amor, que se escaparon con el viento."
+   119.4,
+   "que me detiene en el pasado,"
   ],
   [
-   166.6,
-   "Después, qué importará el después, toda mi vida es el ayer, que me detiene en el pasado."
+   127.2,
+   "eterna y vieja juventud"
   ],
   [
-   176.6,
-   "Eternau vieja cuentum, que me ha dejado acubadado, como un pájaro sin luz."
+   134.3,
+   "que me ha dejado acobardado"
+  ],
+  [
+   142.9,
+   "como un pájaro sin luz."
+  ],
+  [
+   149.2,
+   "¿Qué le habrán hecho mis manos?"
+  ],
+  [
+   156.2,
+   "¿Qué le habrán hecho"
+  ],
+  [
+   160.9,
+   "para dejarme en el pecho"
+  ],
+  [
+   168.0,
+   "tanto dolor?"
+  ],
+  [
+   171.1,
+   "Dolor de vieja arboleda,"
+  ],
+  [
+   178.1,
+   "canción de esquina"
+  ],
+  [
+   182.8,
+   "con un pedazo de vida,"
+  ],
+  [
+   189.1,
+   "naranjo en flor."
   ]
  ],
  "fuentes": [
   [
-   "cy"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ],
   [
    "cy"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ]
+ ],
+ "letras": [
+  {
+   "desde": 20,
+   "hasta": 193,
+   "titulo": "Naranjo en Flor",
+   "autor": "",
+   "idioma": "es",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
+  }
  ],
  "ventanas": {
   "total": 4,
-  "modelo": 4,
-  "reglas": 0,
+  "modelo": 3,
+  "reglas": 1,
   "vacias": 0
  }
 }

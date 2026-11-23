@@ -4,14 +4,95 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
-   66.76,
-   "Arise, arise my lady sweet, arise, arise, arise my lady sweet, arise."
+   0.0,
+   "Hark, hark! the lark at heaven's gate sings,"
+  ],
+  [
+   10.6,
+   "And Phoebus 'gins arise,"
+  ],
+  [
+   18.0,
+   "His steeds to water at those springs"
+  ],
+  [
+   27.5,
+   "On chaliced flowers that lies;"
+  ],
+  [
+   36.0,
+   "And winking Mary-buds begin"
+  ],
+  [
+   44.4,
+   "To ope their golden eyes:"
+  ],
+  [
+   51.8,
+   "With every thing that pretty is,"
+  ],
+  [
+   61.3,
+   "My lady sweet, arise:"
+  ],
+  [
+   68.7,
+   "With every thing that pretty is,"
+  ],
+  [
+   78.3,
+   "My lady sweet, arise:"
+  ],
+  [
+   85.7,
+   "Arise, arise."
   ]
  ],
  "fuentes": [
   [
-   "cy"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ]
+ ],
+ "letras": [
+  {
+   "desde": 0,
+   "hasta": 92,
+   "titulo": "Hark, hark! the lark",
+   "autor": "William Shakespeare (Cymbeline, II.3); música de Franz Schubert (Ständchen, D 889)",
+   "idioma": "en",
+   "derechos": "Texto de dominio público",
+   "fuente": "https://standardebooks.org/ebooks/william-shakespeare/cymbeline/text/act-2, Standard Ebooks (Cymbeline, acto II, escena 3), con los dos versos que Schubert repite escritos como se cantan, obtenido por el archivo"
+  }
  ],
  "ventanas": {
   "total": 3,

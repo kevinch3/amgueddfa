@@ -4,26 +4,128 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
-   71.4,
-   "Bweles yr arwyddwr na'r asgwrs ddansa, golau'r gatre' ma, nes i'n ddesgansa."
+   6.0,
+   "La pastorella si leva per tempo,"
   ],
   [
-   87.4,
-   "Nes i'n ddesgansa'n rydd y santella, perwn i bansa leia trebella, go sila pastorella, pasa i'r tempo."
+   12.4,
+   "Menando le caprette a pascer fora."
+  ],
+  [
+   19.4,
+   "Di fora fora la traditora"
+  ],
+  [
+   25.3,
+   "Co' suoi begli occhi la m'innamora,"
+  ],
+  [
+   31.7,
+   "E fa di mezza notte apparir giorno."
+  ],
+  [
+   38.7,
+   "E qualche volta in sur un verde prato"
+  ],
+  [
+   45.7,
+   "La tesse ghirlandette oh de' bei fiori;"
+  ],
+  [
+   52.7,
+   "Oh de' bei fiori; de' bei colori:"
+  ],
+  [
+   58.6,
+   "Così le ninfe con gli pastori;"
+  ],
+  [
+   64.4,
+   "E tutti imparan dalla pastorella."
+  ],
+  [
+   71.4,
+   "Poi la sera ritorna alla sua stanza,"
+  ],
+  [
+   78.5,
+   "Con la vincastra in man, discinta e scalza:"
+  ],
+  [
+   86.1,
+   "Discinta e scalza"
+  ],
+  [
+   89.6,
+   "Ride e saltella per ogni balza."
+  ],
+  [
+   96.0,
+   "Così la pastorella passa il tempo."
   ]
  ],
  "fuentes": [
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ]
+ ],
+ "letras": [
+  {
+   "desde": 6,
+   "hasta": 103,
+   "titulo": "La pastorella si leva per tempo",
+   "autor": "anónimo del siglo XV (canzone a ballo florentina; texto atribuido a veces a Angelo Poliziano)",
+   "idioma": "it",
+   "derechos": "Texto de dominio público",
+   "fuente": "https://it.wikisource.org/wiki/La_pastorella_si_leva_per_tempo, The Oxford Book of Italian Verse (ed. St. John Lucas, Oxford, 1910), pp. 206-207, en Wikisource; estrofas 1, 5 y 6 (las que se cantan); cotejado con The Liberal, vol. 1 (Londres, 1822), pp. 161-162 (https://archive.org/details/sim_liberal-verse-and-prose-from-the-south_1822_1_1-2), obtenido por el archivo"
+  }
  ],
  "ventanas": {
   "total": 2,
-  "modelo": 1,
+  "modelo": 2,
   "reglas": 0,
-  "vacias": 1
+  "vacias": 0
  }
 }

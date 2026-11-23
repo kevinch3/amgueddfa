@@ -5,48 +5,136 @@
  "seg": [
   [
    0.0,
-   "Dan y carreg mas ar y blaen dau cesg aber o'r dyfain."
+   "Tan y garreg las a'r blodau,"
+  ],
+  [
+   18.5,
+   "Cysga, berl dy fam;"
   ],
   [
    30.0,
-   "Gwybod mai dy dad a minnau na ddorben i gael, gwn nad oes un byddrod bychan heb ei angal gwyn."
+   "Gwybod mae dy dad a minnau"
+  ],
+  [
+   39.0,
+   "Na dderbyni gam:"
+  ],
+  [
+   44.6,
+   "Gwn nad oes un beddrod bychan"
+  ],
+  [
+   52.4,
+   "Heb ei angel gwyn;"
   ],
   [
    58.0,
-   "Cwsg am Llentyn, am Athinon, cwsg o ranwywyd."
+   "Cwsg, fy mhlentyn, yma'th hunan-"
+  ],
+  [
+   70.5,
+   "Cwsg, Goronwy Wyn."
+  ],
+  [
+   77.6,
+   "Tan y garreg las, Goronwy,—"
+  ],
+  [
+   91.8,
+   "Cysga beth yn hwy;"
   ],
   [
    100.74,
-   "Rhaid i'w dweud, nos da, goronwy, minnau thad o'r ôl."
+   "Rhaid yw dweud \"Nos da,\" Goronwy,"
+  ],
+  [
+   109.4,
+   "Mynd a'th ado'r wy':"
   ],
   [
    114.74,
-   "Nid oes eisiau llaw i'r seiglau yn dy newydd gryd."
+   "Nid oes eisiau llaw i'th siglo"
+  ],
+  [
+   123.6,
+   "Yn dy newydd grud;"
   ],
   [
    129.14,
-   "Cwsg nes gweld ein gilydd eto, cwsg y gwin y byd."
+   "Cwsg, nes gweld ein gilydd eto,"
+  ],
+  [
+   131.0,
+   "Cwsg, a gwyn dy fyd."
+  ],
+  [
+   132.1,
+   "Cwsg, Goronwy Wyn."
   ]
  ],
  "fuentes": [
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ]
+ ],
+ "letras": [
+  {
+   "desde": 0,
+   "hasta": 204,
+   "titulo": "Sul y Blodau",
+   "autor": "Owen Williams; geiriau Eifion Wyn («Hwiangerdd Sul y Blodau»)",
+   "idioma": "cy",
+   "derechos": "Texto de dominio público",
+   "fuente": "https://cy.wikisource.org/wiki/Telynegion_Maes_a_M%C3%B4r/Hwiangerdd_Sul_y_Blodau (revid 32688), Eifion Wyn, Telynegion Maes a Môr (1906), obtenido por el archivo"
+  }
  ],
  "ventanas": {
   "total": 4,

@@ -5,62 +5,185 @@
  "seg": [
   [
    0.0,
-   "Iesu, Iesu, rwyt yn ddigon, rwyt yn llawer mwy na'r byd."
+   "Iesu, Iesu, 'rwyt ti'n ddigon,"
+  ],
+  [
+   13.9,
+   "'Rwyt ti'n llawer mwy na'r byd;"
   ],
   [
    26.0,
-   "Mwy ddrysorau sy'n dy enw na ddrysorau India i gyd. O Llangyfan, o Llangyfan, daeth i meddiant gyda'r dyn."
+   "Mwy trysorau sy'n dy enw"
+  ],
+  [
+   30.3,
+   "Na thrysorau'r India i gyd:"
+  ],
+  [
+   35.2,
+   "Oll yn gyfan"
+  ],
+  [
+   37.7,
+   "Ddaeth i'm meddiant gyda'm Duw."
   ],
   [
    42.0,
-   "A mae gwêr dy wyneb grasal yn rhagori llawer iawn, ar popeth a welodd y llygad, ar hyd wyneb a dau ar lawn, rhosyn saron, rhosyn saron, tyw tegwch neb yn neb."
+   "Y mae gwedd dy wyneb grasol"
+  ],
+  [
+   48.2,
+   "Yn rhagori llawer iawn"
+  ],
+  [
+   53.5,
+   "Ar bob peth a welodd llygad"
+  ],
+  [
+   59.7,
+   "Ar hyd wyneb daear lawn:"
+  ],
+  [
+   64.3,
+   "Rhosyn Saron"
+  ],
+  [
+   67.4,
+   "Ti yw tegwch nef y nef."
   ],
   [
    72.0,
-   "O sancteiddia fe wnaid arglwydd Ym mhob nwydd ag ym mhob dawn,"
+   "O sancteiddia f'enaid, Arglwydd,"
+  ],
+  [
+   79.7,
+   "Ym mhob nwyd ac ym mhob dawn;"
   ],
   [
    86.48,
-   "Rho egwyddor y byr a nefoedd Yn fy ysbryd llesgen llawn."
+   "Rho egwyddor bur y nefoedd"
+  ],
+  [
+   90.6,
+   "Yn fy ysbryd llesg yn llawn;"
   ],
   [
    94.24,
-   "Na ddim grwydro, na ddim grwydro, draw nag yma fyth o'm lle."
+   "Na fi grwydro"
+  ],
+  [
+   99.7,
+   "Draw nac yma o fy lle."
   ],
   [
    109.24,
-   "Mae dy enw mor ardderchog, fel yn grym y storm gref, llais ar gwyntoedd, llais ar y tonnau."
+   "Mae dy enw mor ardderchog,"
+  ],
+  [
+   113.1,
+   "Fel, yn ngrym y storom gref,"
+  ],
+  [
+   116.9,
+   "Llaesa'r gwyntoedd, llaesa'r tònau"
   ],
   [
    121.24,
-   "Dim ond dim ei enw ef nadd fa gadarn, nadd fa gadarn, i wneuth a fy grym y dŵr."
+   "Dim ond imi ei enwi Ef;"
+  ],
+  [
+   123.0,
+   "Noddfa gadarn"
+  ],
+  [
+   123.9,
+   "Yw yn eithaf grym y dŵr."
   ]
  ],
  "fuentes": [
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ]
+ ],
+ "letras": [
+  {
+   "desde": 0,
+   "hasta": 135,
+   "titulo": "Yr Iesu'n ddigon (cerdd dant)",
+   "autor": "William Williams, Pantycelyn (1717-1791): tres estrofas de un himno y una de otro, en el orden en que se cantan",
+   "idioma": "cy",
+   "derechos": "Texto de dominio público",
+   "fuente": "https://gobaith.cymru/angelfire/Iesu%20Iesu%20rwyt%20tin%20ddigon.html y https://gobaith.cymru/angelfire/O%20sancteiddia.html, Emynau a Thonau (gobaith.cymru), en el orden en que se canta, obtenido por el archivo"
+  }
  ],
  "ventanas": {
   "total": 3,

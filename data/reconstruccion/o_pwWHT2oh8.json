@@ -5,76 +5,213 @@
  "seg": [
   [
    0.0,
-   "Hen ferch eto'n wedi colli chariad, ffaldir aldir alal, ffaldir aldiro. Cael un arall, dyna oedd ei bwriad, ffaldir aldir alal, ffaldir aldiro. Ond nid oedd un o lanciau'r pentre ffaldir aldir aldiro."
+   "Hen ferchetan wedi colli'i chariad"
+  ],
+  [
+   5.2,
+   "Ffol-di rol-di rol-lol ffol-di rol-di ro"
+  ],
+  [
+   10.5,
+   "Cael un arall, dyna oedd ei bwriad"
+  ],
+  [
+   14.8,
+   "Ffol-di rol-di rol-lol ffol-di rol-di ro"
+  ],
+  [
+   20.0,
+   "Ond nid oedd un o lanciau'r pentre"
+  ],
+  [
+   24.3,
+   "Ffol-di rol-dol-di rol-di ro"
   ],
   [
    28.1,
-   "Ambrio, dilys a fach yr Hendre, ffaldir al dir al al, ffaldir al dir o."
+   "Am briodi Lisa fach yr Hendre"
   ],
   [
    36.38,
-   "Hen ferch etan sydd yn dal i drio, ffaldir al dir al al, ffaldir al dir o."
+   "Hen ferchetan sydd yn dal i dreio"
+  ],
+  [
+   39.7,
+   "Ffol-di rol-di rol-lol ffol-di rol-di ro"
   ],
   [
    43.74,
-   "Gwisgo lasus, sidan ac yn fincio, ffaldir al dir al al, ffaldir al dir o."
+   "Gwisgo lasys sidan ac ymbincio"
+  ],
+  [
+   47.8,
+   "Ffol-di rol-di rol-lol ffol-di rol-di ro"
   ],
   [
    52.22,
-   "Ond er bod bron i bob bron yn rhywle ffaldiroldiroldiro."
+   "Ond er bod brân i bob brân yn rhywle"
+  ],
+  [
+   57.7,
+   "Ffol-di rol-dol-di rol-di ro"
   ],
   [
    62.0,
-   "Nid oes neb i lys a fach yr Hendre ffaldiroldirolol ffaldiroldiro."
+   "Nid oes neb i Lisa fach yr Hendre"
   ],
   [
    71.6,
-   "Hen ferched tan, bron a thorri chalon, ffaldiroldirolol ffaldiroldiro."
+   "Hen ferchetan bron â thori'i chalon"
+  ],
+  [
+   76.4,
+   "Ffol-di rol-di rol-lol ffol-di rol-di ro"
   ],
   [
    81.22,
-   "Mynd i'r llamau pawb o'u hen gariadon. Ffaldir Aldir Olal Ffaldir Aldiro. Bydd tatws newydd ar ben fale. Ffaldir Aldir Aldiro. Cyn briod eith Lisa Fach yr Hendere. Ffaldir Aldir Olal Ffaldir Aldiro."
+   "Mynd i'r llan mae pawb o'i hen gariadon"
+  ],
+  [
+   87.4,
+   "Ffol-di rol-di rol-lol ffol-di rol-di ro"
+  ],
+  [
+   93.6,
+   "Bydd tatws newydd ar bren 'falau"
+  ],
+  [
+   98.1,
+   "Ffol-di rol-dol-di rol-di ro"
+  ],
+  [
+   102.6,
+   "Cyn priodith Lisa fach yr Hendre"
   ],
   [
    107.7,
-   "Hen ferch etan, aeth i ffair y Bala, ffaldiraldiralalfaldiraldiro. Gweld Siôn Prys yn fachgen digon smale, ffaldiraldiralalfaldiraldiro. Gair a ddywedodd wrth fynd adre, ffaldiraldiraldiru."
+   "Hen ferchetan aeth i Ffair y Bala"
+  ],
+  [
+   111.9,
+   "Ffol-di rol-di rol-lol ffol-di rol-di ro"
+  ],
+  [
+   116.6,
+   "Gweld Siôn Prys yn fachgen digon smala"
+  ],
+  [
+   120.8,
+   "Ffol-di rol-di rol-lol ffol-di rol-di ro"
+  ],
+  [
+   125.4,
+   "Gair a ddywedodd wrth fynd adre'"
+  ],
+  [
+   128.8,
+   "Ffol-di rol-dol-di rol-di ro"
   ],
   [
    132.2,
-   "Cododd galon Lisa fach yr Hendre, Ffaldir Aldirol, Ffaldir Aldirol."
+   "Gododd galon Lisa fach yr Hendre"
   ]
  ],
  "fuentes": [
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ]
+ ],
+ "letras": [
+  {
+   "desde": 0,
+   "hasta": 143,
+   "titulo": "Hen Ferchetan",
+   "autor": "Tradicional galesa",
+   "idioma": "cy",
+   "derechos": "Texto tradicional (dominio público)",
+   "fuente": "Aportado por Kevin Roberts (estribillo escrito como se canta en cada estrofa)"
+  }
  ],
  "ventanas": {
   "total": 3,

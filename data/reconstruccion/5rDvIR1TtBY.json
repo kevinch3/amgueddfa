@@ -5,31 +5,91 @@
  "seg": [
   [
    30.0,
-   "Rectores de olvido, coros serranos, Proversidad o piedras, carnavaliando."
+   "Vengo desde el olvido,"
+  ],
+  [
+   44.8,
+   "toro serrano,"
   ],
   [
    54.0,
-   "Por ver si mato me das carnavalhando"
+   "pa' ver si mato penas"
+  ],
+  [
+   66.6,
+   "carnavaleando."
+  ],
+  [
+   75.6,
+   "Me anda faltando plata,"
   ],
   [
    90.02,
-   "Y un empujón del diablo a enamorarte La chicha y la vaca llorando en el vino"
+   "chicha y coraje"
+  ],
+  [
+   93.2,
+   "y un empujón del diablo"
+  ],
+  [
+   97.5,
+   "pa' enamorarte."
+  ],
+  [
+   100.7,
+   "Carnavales carperos:"
+  ],
+  [
+   104.5,
+   "la copla y la albahaca"
+  ],
+  [
+   109.3,
+   "llorando en el vino."
   ],
   [
    113.02,
-   "Los caballos atados vuelven a la luna, al galope tendido. Los caballos atados vuelven a la luna, al galope tendido."
+   "Los caballos atados"
+  ],
+  [
+   139.3,
+   "vuelven a la luna,"
+  ],
+  [
+   161.8,
+   "a galope tendido."
+  ],
+  [
+   188.0,
+   "Quiero bailar la zamba"
+  ],
+  [
+   214.3,
+   "los dos solitos,"
   ],
   [
    233.02,
-   "¡Cállate canto, la chicha y la albahaca sonando el río!"
+   "para trampearte el alma"
+  ],
+  [
+   236.6,
+   "con mi gualicho."
+  ],
+  [
+   238.8,
+   "Tu pañuelito blanco"
+  ],
+  [
+   241.9,
+   "busca consuelo;"
   ],
   [
    244.06,
-   "Los trabajos atamos."
+   "mi corazón lo sigue,"
   ],
   [
    248.78,
-   "Vuelven a la luna, a la noche del día."
+   "de vuelo en vuelo."
   ],
   [
    259.82,
@@ -38,34 +98,90 @@
  ],
  "fuentes": [
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ],
   [
    "whisper_es"
   ]
  ],
+ "letras": [
+  {
+   "desde": 25,
+   "hasta": 272,
+   "titulo": "Zamba del carnaval",
+   "autor": "Cuchi Leguizamón, versión coral Pablo D. Roberto",
+   "idioma": "es",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
+  }
+ ],
  "ventanas": {
   "total": 5,
-  "modelo": 4,
+  "modelo": 5,
   "reglas": 0,
-  "vacias": 1
+  "vacias": 0
  }
 }

@@ -64,32 +64,72 @@
    "deatoro"
   ],
   [
+   71.2,
+   "Dyma gariad fel y moroedd,"
+  ],
+  [
+   71.2,
+   "Tosturiaethau fel y lli:"
+  ],
+  [
    71.24,
-   "Marw'i brenin bywyd ddi, bwy all fudd i'w gofio amdano, bwy all fudd i'w ganu glwad, dyma cariad nad anangof,"
+   "Twysog Bywyd pur yn marw -"
+  ],
+  [
+   75.3,
+   "Marw i brynu'n bywyd ni."
+  ],
+  [
+   79.4,
+   "Pwy all beidio â chofio amdano?"
+  ],
+  [
+   85.3,
+   "Pwy all beidio â thraethu'i glod?"
+  ],
+  [
+   90.6,
+   "Dyma gariad nad â'n angof"
   ],
   [
    95.24,
-   "dra bore nef oedd wen yn bod."
+   "Tra fo nefoedd wen yn bod."
   ],
   [
    108.24,
-   "A'r galfariau'r ymrwygodd, hoffyn nhw na'r ddyfndir mawr."
+   "Ar Galfaria yr ymrwygodd"
+  ],
+  [
+   114.6,
+   "Holl ffynhonnau'r dyfnder mawr;"
   ],
   [
    120.24,
-   "Dŵr o'dd holl ar y gae a'r nef oedd, oedd yn cyfain hyd yn awr."
+   "Torrodd holl argaeau'r nefoedd"
+  ],
+  [
+   126.2,
+   "Oedd yn gyfain hyd yn awr:"
   ],
   [
    132.24,
-   "Gras a chariad megis di, yn ymdywodd dy mynid, a chyfiawn derbyn a heddwch yn gyson ei heugfyd."
+   "Gras â chariad megis dilyw"
+  ],
+  [
+   143.1,
+   "Yn ymdywallt ymâ 'nghyd,"
+  ],
+  [
+   152.7,
+   "A chyfiawnder pur â heddwch"
   ],
   [
    162.24,
-   "A myn- a myn- dyma, caria, fel y môr oedd, draf o'r nef oedd wel yn fwyd."
+   "Yn cusanu euog fyd."
   ],
   [
-   162.8,
-   "Amen."
+   185.6,
+   "Oh."
   ],
   [
    192.24,
@@ -143,22 +183,52 @@
    "yt_es"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ],
   [
    "yt_es"
@@ -166,6 +236,17 @@
   [
    "cy"
   ]
+ ],
+ "letras": [
+  {
+   "desde": 46,
+   "hasta": 190,
+   "titulo": "Dyma gariad fel y moroedd",
+   "autor": "William Rees, Gwilym Hiraethog (1802-1883)",
+   "idioma": "cy",
+   "derechos": "Texto de dominio público",
+   "fuente": "https://gobaith.cymru/angelfire/Dyma%20Gariad.html, Emynau a Thonau (gobaith.cymru), estrofas 1-2 (las de Gwilym Hiraethog); estrofa 1 cotejada con https://cy.wikisource.org/wiki/Dyma_gariad_fel_y_moroedd (Llyfr Emynau MC a MW 1930, n.º 213), obtenido por el archivo"
+  }
  ],
  "ventanas": {
   "total": 4,

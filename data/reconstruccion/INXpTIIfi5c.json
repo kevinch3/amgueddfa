@@ -5,81 +5,148 @@
  "seg": [
   [
    0.0,
-   "Diwmawr ddod a'i gwaith, ddoni'n pob y pan o'r gwaith."
+   "Duw mawr y rhyfeddodau maith,"
+  ],
+  [
+   13.5,
+   "Rhyfeddol yw pob rhan o'th waith,"
   ],
   [
    27.0,
-   "Ond y dwylo ledas mwyren ydyw, na ffordd oedd y dderyn oedd o bob ryw."
+   "Ond dwyfol ras, mwy rhyfedd yw"
+  ],
+  [
+   35.5,
+   "Na'th holl weithredoedd o bob rhyw:"
   ],
   [
    44.0,
-   "Cadw sy'n maddau fel tydi, yn nhat ein holl gyflogau ni."
+   "Pa dduw sy'n maddau fel tydi"
+  ],
+  [
+   51.5,
+   "Yn rhad ein holl bechodau ni?"
   ],
   [
    59.0,
-   "Pan i'w sinema dda i fyta di, ych a'n crât, ych a'n holl, ych a bod o i mi."
+   "O! maddau'r holl gamweddau mawr"
   ],
   [
    76.0,
-   "O fath oed efo o llangennau mawr, ac ar y mater o'r uwch o'r llawr."
+   "Ac arbed euog lwch y llawr;"
   ],
   [
    94.0,
-   "T'od i yn unig yn fela de'r frawdd, ag yn uch na'i fy nhad, yr addasiad mowr enghlawdd."
+   "Tydi yn unig fedd yr hawl"
   ],
   [
    110.0,
-   "Pa ddyw sy'n maddau fel y ta dwi, yn nhat ein holl gyfforddau ni."
+   "Ac ni chaiff arall ran o'r mawl:"
+  ],
+  [
+   113.8,
+   "Pa dduw sy'n maddau fel tydi"
+  ],
+  [
+   117.5,
+   "Yn rhad ein holl bechodau ni?"
+  ],
+  [
+   121.2,
+   "Rhyfeddol yw'th drugaredd hael,"
   ],
   [
    125.0,
-   "A fu'r sinema dda i fyta di, o'n i'n blât, o'n i'n hoff gwrdda i ni."
+   "A'th gariad pur i'n natur wael,"
+  ],
+  [
+   142.0,
+   "Yn agor ffynnon i'n glanhau,"
   ],
   [
    159.0,
-   "Car y ffyrdd yn ôl i'r eglanau hau, pan golech chi ddim byd byd o ddiwrnod pen bai."
+   "A'n golchi'n bur oddi wrth ein bai:"
   ],
   [
    175.0,
-   "Yn cadw sy'n maddau fel tydi, yn nhat ein holl gyhoeddau ni."
+   "Pa dduw sy'n maddau fel tydi"
+  ],
+  [
+   177.0,
+   "Yn rhad ein holl bechodau ni?"
   ]
  ],
  "fuentes": [
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ]
+ ],
+ "letras": [
+  {
+   "desde": 0,
+   "hasta": 205,
+   "titulo": "Duw mawr y rhyfeddodau maith",
+   "autor": "Samuel Davies (Great God of wonders); versión galesa de John R. Jones, Ramoth (1765-1822) y Joseph Harris, Gomer (1773-1825), 1805",
+   "idioma": "cy",
+   "derechos": "Texto de dominio público",
+   "fuente": "https://gobaith.cymru/angelfire/Duw%20mawr%20y%20rhyfeddodau.html, Emynau a Thonau (gobaith.cymru), estrofas 1-3 con el estribillo escrito como se canta, obtenido por el archivo"
+  }
  ],
  "ventanas": {
   "total": 4,
-  "modelo": 4,
+  "modelo": 3,
   "reglas": 0,
-  "vacias": 0
+  "vacias": 1
  }
 }

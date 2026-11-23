@@ -4,40 +4,450 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
-   54.0,
-   "La cancion que canta, la cancion que canta en Alfonsina y el mar, la caracula."
+   0.0,
+   "Por la blanda arena"
   ],
   [
-   64.0,
-   "Vivas al pensil, y pensil sonando, y con el pensil nos fuiste a buscá, un agos antig, un agos antig."
+   3.7,
+   "Que lame el mar"
   ],
   [
-   120.82,
-   "I nos habitantes de mar, pronto a tu lado, bajame la lampara un poco mas, deja que duerma tu triste paz."
+   6.4,
+   "Su pequeña huella"
   ],
   [
-   142.82,
-   "I sy lla ma' ef, no le digas genst oed inne cê a'r consina no gwele."
+   9.6,
+   "No vuelve más"
+  ],
+  [
+   11.7,
+   "Un sendero solo"
+  ],
+  [
+   14.9,
+   "De pena y silencio llegó"
+  ],
+  [
+   19.7,
+   "Hasta el agua profunda"
+  ],
+  [
+   24.0,
+   "Un sendero solo"
+  ],
+  [
+   27.2,
+   "De penas mudas llegó"
+  ],
+  [
+   30.9,
+   "Hasta la espuma."
+  ],
+  [
+   34.1,
+   "Sabe Dios qué angustia"
+  ],
+  [
+   37.9,
+   "Te acompañó"
+  ],
+  [
+   40.5,
+   "Qué dolores viejos"
+  ],
+  [
+   43.7,
+   "Calló tu voz"
+  ],
+  [
+   45.9,
+   "Para recostarte"
+  ],
+  [
+   49.1,
+   "Arrullada en el canto"
+  ],
+  [
+   53.3,
+   "De las caracolas marinas"
+  ],
+  [
+   58.1,
+   "La canción que canta"
+  ],
+  [
+   61.3,
+   "En el fondo oscuro del mar"
+  ],
+  [
+   66.1,
+   "La caracola."
+  ],
+  [
+   68.8,
+   "Te vas Alfonsina"
+  ],
+  [
+   72.0,
+   "Con tu soledad"
+  ],
+  [
+   74.7,
+   "¿Qué poemas nuevos"
+  ],
+  [
+   77.3,
+   "Fuíste a buscar?"
+  ],
+  [
+   80.0,
+   "Una voz antigüa"
+  ],
+  [
+   83.2,
+   "De viento y de sal"
+  ],
+  [
+   86.4,
+   "Te requiebra el alma"
+  ],
+  [
+   90.1,
+   "Y la está llevando"
+  ],
+  [
+   93.9,
+   "Y te vas hacia allá"
+  ],
+  [
+   97.6,
+   "Como en sueños"
+  ],
+  [
+   100.3,
+   "Dormida, Alfonsina"
+  ],
+  [
+   104.0,
+   "Vestida de mar."
+  ],
+  [
+   106.7,
+   "Cinco sirenitas"
+  ],
+  [
+   109.9,
+   "Te llevarán"
+  ],
+  [
+   112.0,
+   "Por caminos de algas"
+  ],
+  [
+   115.7,
+   "Y de coral"
+  ],
+  [
+   117.9,
+   "Y fosforescentes"
+  ],
+  [
+   121.1,
+   "Caballos marinos harán"
+  ],
+  [
+   125.3,
+   "Una ronda a tu lado"
+  ],
+  [
+   129.6,
+   "Y los habitantes"
+  ],
+  [
+   132.8,
+   "Del agua van a jugar"
+  ],
+  [
+   136.5,
+   "Pronto a tu lado."
+  ],
+  [
+   139.7,
+   "Bájame la lámpara"
+  ],
+  [
+   143.5,
+   "Un poco más"
+  ],
+  [
+   145.6,
+   "Déjame que duerma"
+  ],
+  [
+   148.8,
+   "Nodriza, en paz"
+  ],
+  [
+   151.5,
+   "Y si llama él"
+  ],
+  [
+   154.1,
+   "No le digas nunca que estoy"
+  ],
+  [
+   158.9,
+   "Di que me he ido."
+  ],
+  [
+   162.1,
+   "Te vas Alfonsina"
+  ],
+  [
+   165.3,
+   "Con tu soledad"
+  ],
+  [
+   168.0,
+   "¿Qué poemas nuevos"
+  ],
+  [
+   170.7,
+   "Fueste a buscar?"
+  ],
+  [
+   173.3,
+   "Una voz antigüa"
+  ],
+  [
+   176.5,
+   "De viento y de sal"
+  ],
+  [
+   179.7,
+   "Te requiebra el alma"
+  ],
+  [
+   183.5,
+   "Y la está llevando"
+  ],
+  [
+   187.2,
+   "Y te vas hacia allá"
+  ],
+  [
+   190.9,
+   "Como en sueños"
+  ],
+  [
+   193.6,
+   "Dormida, Alfonsina"
+  ],
+  [
+   197.3,
+   "Vestida de mar."
   ]
  ],
  "fuentes": [
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ]
+ ],
+ "letras": [
+  {
+   "desde": 0,
+   "hasta": 200,
+   "titulo": "Alfonsina y el mar",
+   "autor": "Ariel Ramírez; texto de Félix Luna; versión coral de C. Jones",
+   "idioma": "es",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "https://cancioneroweb.com/cancion.php?id=2096, aportado por Kevin Roberts"
+  }
  ],
  "ventanas": {
   "total": 4,
-  "modelo": 3,
+  "modelo": 4,
   "reglas": 0,
-  "vacias": 1
+  "vacias": 0
  }
 }

@@ -2089,15 +2089,19 @@
   ],
   [
    4538.4,
-   "Gurisito mío,"
-  ],
-  [
-   4538.4,
    "Niño, mi niño,"
   ],
   [
    4538.4,
-   "Y aunque nazcas pobre,"
+   "vendrás en primavera,"
+  ],
+  [
+   4538.4,
+   "te traeré."
+  ],
+  [
+   4538.4,
+   "Gurisito mío,"
   ],
   [
    4538.4,
@@ -2109,15 +2113,11 @@
   ],
   [
    4538.4,
-   "te traeré."
+   "Y aunque nazcas pobre,"
   ],
   [
    4538.4,
    "te traigo también:"
-  ],
-  [
-   4538.4,
-   "vendrás en primavera,"
   ],
   [
    4540.7,
@@ -2208,8 +2208,8 @@
    "y del mismo pan."
   ],
   [
-   4633.8,
-   "Cada niño un poco,"
+   4629.9,
+   "y del mismo pan"
   ],
   [
    4655.7,
@@ -2273,7 +2273,7 @@
   ],
   [
    4730.2,
-   "altos del salón San David un no son"
+   "altos del Salón San David un no son"
   ],
   [
    4733.8,
@@ -12651,7 +12651,7 @@
    "letra"
   ],
   [
-   "letra"
+   "yt_es"
   ],
   [
    "yt_es"
@@ -19244,17 +19244,19 @@
  ],
  "letras": [
   {
-   "desde": 4525,
-   "hasta": 4841,
+   "desde": 4499,
+   "hasta": 4683,
    "titulo": "Gurisito",
    "autor": "candombe con percusión corporal, Daniel Viglietti, versión coral Pablo D. Roberto",
-   "idioma": "es"
+   "idioma": "es",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
   }
  ],
  "ventanas": {
   "total": 335,
-  "modelo": 260,
-  "reglas": 5,
+  "modelo": 261,
+  "reglas": 4,
   "vacias": 70
  }
 }

@@ -5,10 +5,14 @@
  "seg": [
   [
    0.0,
+   "En los brazos de la luna he estado en mi cito el sol."
+  ],
+  [
+   18.0,
    "En los brazos de la luna"
   ],
   [
-   9.0,
+   18.0,
    "Está dormidito el sol"
   ],
   [
@@ -54,6 +58,9 @@
  ],
  "fuentes": [
   [
+   "whisper_es"
+  ],
+  [
    "letra"
   ],
   [
@@ -92,8 +99,8 @@
  ],
  "letras": [
   {
-   "desde": 0,
-   "hasta": 84,
+   "desde": 4,
+   "hasta": 93,
    "titulo": "En los brazos de la luna",
    "autor": "Alfonso Letelier",
    "idioma": "es",

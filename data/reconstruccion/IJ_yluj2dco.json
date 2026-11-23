@@ -16,12 +16,20 @@
    "máxima 40 versos"
   ],
   [
+   30.0,
+   "Mwy bwna tarddis, para tos, pnawn da i chi gyd, ni wedi cerddad, mewn foment arbennig, yn y Eisteddfod Wlad y Mhen, yn y Llyfrgell, yn y Pwyllgor's College, yn y M-C-S-B-C-I-A-C-L-L-L-L-L-M-L-M-N-G-I-E-D-I-D-I-E-D-I-D-I-D-I-D-I-D-I-D-I-D-I-D-I-D-I-D-I-D-I-D-I-D-I-D-I-D-I-D-I-D-I-D-I-D-I-D-I-D-I-D-I-D-I-D-I-D-I-D-I-"
+  ],
+  [
    49.2,
    "Muy buenas tardes"
   ],
   [
    51.7,
    "para todos"
+  ],
+  [
+   53.4,
+   "Mountain University"
   ],
   [
    65.0,
@@ -253,7 +261,7 @@
   ],
   [
    297.2,
-   "nos dijo Virgilio zampini en una de sus"
+   "nos dijo Virgilio Zampini en una de sus"
   ],
   [
    300.4,
@@ -273,7 +281,7 @@
   ],
   [
    309.8,
-   "de venir a los Estados y recuerdo y"
+   "de venir a los Eisteddfod y recuerdo y"
   ],
   [
    313.4,
@@ -985,15 +993,19 @@
   ],
   [
    871.7,
-   "Por segunda vez sonará la trompeta"
+   "por segunda vez sonará la trompeta"
   ],
   [
    875.3,
    "invitando a Malena a ponerse de pie"
   ],
   [
+   879.64,
+   "El poeta está entre nosotros y por tercera vez, para darse a conocer, sonará la trompeta y Malena se pondrá de pie en este esterno."
+  ],
+  [
    893.3,
-   "El poeta está entre nosotros y por"
+   "el poeta está entre nosotros y por"
   ],
   [
    897.0,
@@ -1100,6 +1112,10 @@
    "entregará a luen"
   ],
   [
+   1196.64,
+   "Da ni gyda Alwyn, i Alwyn, coronad ar, a nwyth tro bywyd."
+  ],
+  [
    1201.7,
    "y algo en coronará"
   ],
@@ -1186,6 +1202,10 @@
   [
    1303.4,
    "más hasta que sea puro sueño la muerte"
+  ],
+  [
+   1325.86,
+   "Samba para no morir, letra de James Lim Quintana, música de Norberto Ambros y Hector Rosales, interpretada por Laura Texido, acompañada por Titu Ruti en piano, Carolina Torres en percusión, y bailada por Maria Fernanda Aguilera y Carlos Priet."
   ],
   [
    1333.0,
@@ -1443,6 +1463,12 @@
    "yt_es"
   ],
   [
+   "cy"
+  ],
+  [
+   "yt_es"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -2175,6 +2201,9 @@
    "yt_es"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -2254,6 +2283,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -2320,6 +2352,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -2507,8 +2542,8 @@
  ],
  "ventanas": {
   "total": 30,
-  "modelo": 26,
-  "reglas": 2,
+  "modelo": 25,
+  "reglas": 3,
   "vacias": 2
  }
 }

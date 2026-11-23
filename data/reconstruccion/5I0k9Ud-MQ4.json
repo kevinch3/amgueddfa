@@ -4,6 +4,26 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Dwyt ti'm yn cofio Macsen, does neb yn ei nabod o. Mae mil a chwe chant o flynyddoedd yn amser hir i'r co."
+  ],
+  [
+   11.8,
+   "Maximus"
+  ],
+  [
+   24.5,
+   "Ond wnaeth Magnws Maximus o Gymru ar y blwyddyn tri chant wyth tri gan gadael yng Nghefndir gofal, ac heddiw wedi myn' i ymholi, er mwyn ca'l amal popeth."
+  ],
+  [
+   54.5,
+   "Ffarmwr o'r popeth fi'n ffarmwr i, fi'n ffarmwr i."
+  ],
+  [
+   65.5,
+   "Gwahoddwn i'r awdurdodau ar hyn o cyfrwng sian yn y seremoniau i ddod i'r llwyfan wrth y llwyfan."
+  ],
+  [
    74.6,
    "vamos a lar al escenario a todosos"
   ],
@@ -660,6 +680,10 @@
    "pedirle que se ponga de pie y se conocer"
   ],
   [
+   656.56,
+   "Andres, os ydych chdi'n gwybod os ydych chdi'n casáu'r corffor, fedrwn ni eich gweld chi."
+  ],
+  [
    673.3,
    "andtes si te encuentras en esta sala por"
   ],
@@ -1012,6 +1036,18 @@
    "entronización del poeta"
   ],
   [
+   1181.28,
+   "Pan gadair yn cenedl gofal, ma' heriwn wedi'i fwyn."
+  ],
+  [
+   1187.88,
+   "Fi'n iawn ma' o'n i. Er gwaetha ma' o'n wbath popeth."
+  ],
+  [
+   1238.78,
+   "sy'n rhan o Gymuned Gymraeg yn Llundain, ac mae'n ni wedi darganfod barddoniaeth at ennill coronau a chadeiriau mewn eisteddfodau lleol yn Nghymru. Mae hi'n trefnu clwb barddoniaeth ers blynyddoedd, mae'n un o feirdd barddas sy wedi cyfrannu i'r cylchgrawn ac wedi cymryd rhan mewn rhai o gynllunio barddas. Mae hi'n aelod o Bwyllgor Gwaith Barddas ac Ymgydlynydd Cynllun Bardd y Mis ar WDDF Radio Cymru."
+  ],
+  [
    1267.9,
    "para que sepan la jurada es Jo que es"
   ],
@@ -1060,12 +1096,92 @@
    "coordinadora del proyecto del mes en"
   ],
   [
+   1306.8,
+   "elc de"
+  ],
+  [
+   1311.2,
+   "G y"
+  ],
+  [
+   1327.78,
+   "Mae'n bleser gofynion beiriannau cyffrediniau i'w gadair, cerdd a'r testun heddwch. Dyma etholiad a gyn y ddywedodd dro haid am y cefndir a ddaeth hi mewn. Diolch yn fawr i'r pwyllgor deithydd am ei cefndir hollol hyfryd. Mae'n rhaid i ni ddechrau ar gyfer pob un ohonoch am eich ymdrech a'ch ymdrech diwethaf"
+  ],
+  [
+   1357.78,
+   "yn y stori unigryw ydych wedi hadrodd wrth lunio'r her a'i heddwch. Rwy'n gobeithio y byddwch chi hyd yn oed yn parhau i farfodyn. Roedd e'n hyfryd gweld yr amrywiaeth o ddullion a strychuron, ac wynech chi wedi creu delweddau effeithiol iawn, gan barch bach o fyngor i bob un ohonyn nhw. Rhowch eich terfyn i'r naill ochr i ddoi'n iawn serj i gyfnod gwaith pan eich bod yn gallu gwirio nad oes truchiadau bach. Efallai gofynwch i rywun bod gorfod drosglwyd, dim newid y garwad, na fyddai'r"
+  ],
+  [
+   1387.78,
+   "Wrth gwrs, ond jyst i ddynnu eich sylw a'r petha allai gau yn eu cywiro, mae gwaith gyda chi i dwytio a chwynnu cyn bwysiged ar y creu. Ond, wedi dweud hynny, heddiw, rwyf yn dymuno canolbwyntio ar naw ffordd englyn eich heddiw hyfryd. Mae'n blesu boddwedd yn ystyr o hanes de Cymdeithas ym Mhant y Mhoed. Cawsom ni rod yn raddau'r bardd glwyf mewn gwahanol ieithoedd a chaem croeso'n un hawdd, mwynheuaeth frawddeg hyffrydd i roddiad blesu'r pennaeth."
+  ],
+  [
+   1417.78,
+   "Gyda'r olwg yna na ryw fym ar y siop, ac mae brytho'r gerdd ar sawl ffasiwn yn ychwanegu diddordeb, cerdd gynnes iawn sydd yn dangos i heddwch newydd y dydd, da iawn, da iawn."
+  ],
+  [
+   1429.78,
+   "Heg o hir sydd gan heg i'r llyfrau, syniad ddiddorol yda fi ysgai i'r gosod yr haen dros bob ynaed astudiaethau gydigol, mae yna rei yn ddiddorol a gweirion i'r gerdd hon. Mae'r barn wedi nodi'r is-deitl hen ddamleth ac mae'n mynd i sawl cyfeiriad, mae yna gyfeiriad is-fygan, hen haf, sefyllfa o'r cyfeiriad daith Cymreigion i Batagonia, mae geiriaisons newydd wedi dod i hefyd. Pella ŵan fod barn wedi mwynhau defnyddio cyfathrebu eu plantegion, mae'n gallu bod yn dechra'"
+  ],
+  [
+   1459.78,
+   "mae'n effeithiol iawn, ond dach chi'n meddwl rhagormon rhagormon efallai. Diolch yn fawr am Ger, sydd wedi wneud i fi feddwl yn dwys, mae'n ddynnu gwreiddiol iawn iawn fan hyn. Gan Oswell, atgofio'r tynedd yr ardd mewn tyndod a deuthed yn nain ar ben y taith, ac wedyn mae'n cyfeirio'r storm golledd ar ganar. Mae'r bardd yn mynd nôl i henwch y gorffennol, ac eto mae'n teimlo fod nwy lle yn ychwanegu i gyd-mewn atgofion, mae'n gerdd deimladwy am gobeithio."
+  ],
+  [
+   1489.78,
+   "Ma' hi'n tŷ'n cyfriwthol yn ei llyfr ac yn trechiol i'w parhau'n ymgellau, a hefyd cyfrifiadau cyngorol wedi eistedd yn yr eginer yn dechrau, ac arbennig amser oedd hi o'n ofn yn y saws ydi o'n mynd i awgrymo'n bersonol bod y stori yn ddefnyddio tŷ a'r siâp yn ffeithiol, ac mae'r fab wedi dangos eithaf gais wrth gwrs ei gynhanedd, ac mae llais cryf yn ei gardd hon da iawn."
+  ],
+  [
+   1512.78,
+   "Hefyd, ysgrifiad o'r un ddiwedd i'r heneiddil, a'r llif mwy braidd amseroedd, ac oed yr adnabod y bydd yr enghraifft i'w mwynhau. Gwn nhw ddim prif gymeriad, ychwanegu lle i weithredodd, a choddi o hen hanedd, mae'n ymgymysgu ag ydy gwladau gan gynnwys hiraeth, ganas, a heddwch. Mae'r barn yn ymddangos stori'r ddiarddef yn gryf, ac yn ddiwgyrchol, ac mae ddim yn gallu llenwi'r dylsder yr hiraeth, a hefyd rhyw factor wrth i'r barn ail hwyl a'i atgofio."
+  ],
+  [
+   1540.78,
+   "Un peth bach, efallai dewch yn ymwybodol bod yn gynnydd gyda'r ansoddeiriau, ond cyrraedd da iawn diolch, caradog. Dwi'm yn hoffi'r cynnydd ma'n hyn yn barod am fod yma'r farn yn gwneud unrhyw gref o'n cychwyn, ma'r symlrwydd yn talu am ei le i'r holl, ac ma'r neges yn glir, efallai bod y cychwyn yn fymryn yn fwy cyflefydd na'r diwedd, ond nid yw hynny'n tynnu dim byd oddi wrth gwynhad y ddarllen."
+  ],
+  [
+   1567.78,
+   "allan, efallai y gallai'r bardd gael cip ar amseroedd y berfau, jyst nes gysondeb bod peth bach yn ddiddorol. Felly, y pêm cerdd hardd a llacus, a gyfer farch o gyhoeddi bod, ti fynd not, am y stori i'w laddwyd, Siân, a cilymdod llefydd y disgybliadau, a camgyfuno'r cysyniad o henw'r lle a henwch mewnol, hoffwn fodd roi o gan noswaith. Ga i'w gyfarch y bardd yn brysac?"
+  ],
+  [
+   1609.78,
+   "Felly gan bod teiml yndods, dach chi'n mynd i wahodd i'r bar gwyddigol, sefyll ar ei draed neu ar ei ffraed, a'r sŵn yy sax heno os gwelwch yn dda. Os ydy yn gyrfa noswenn yn y neall efo ni heno."
+  ],
+  [
+   1626.78,
+   "plîs sefwch ar eich traed."
+  ],
+  [
+   1645.78,
+   "Os ydy ger noswen y ddaear efo ni heno, os gwelwch yn fawr a'i chdi, neu bo' sefyll ar ei draed neu'i thraed."
+  ],
+  [
+   1656.78,
+   "Am y tro olaf, os ydy e'n noswen efo ni heno, plis newch chi sefyll ar eich traed."
+  ],
+  [
+   1746.78,
+   "Mae'r bardd sydd wedi cael ei arwyddo i'r llwyfan gan Milo Iesu Ffwrdd yr Un, Ieuenictad Marty Hopkins, rhongwyd y gadair hyfryd gan gyngor y dref, felly bydd Mair y dref, Hector Ingham, yn ei cyflwyno i'r bardd. Gwnaicwyd y gadair gan y creffdwr lleol, Marianne Thomas, gyda thren o'r ardal."
+  ],
+  [
+   1776.78,
+   "Ac felly enw ein barn heno ydy Alan Giorando Rees, gwahoddwn yw ei ddi-eistedd yn ein cadair."
+  ],
+  [
+   1817.78,
+   "i chi'n deud hynny, fel oedolyn, ond roedden ni'n benderfynol o ddysgu cymaint â posib, felly ar ôl wneud yr holl gyrsiau i oedolion yn dychryn, gwnaethon ni radd ar-lein gyda'r Brifysgol Llanderedd Pontsteffan, wedyn gwnaethon ni wrth gwrs ôl-radd yy am dwy'r tadau mewn Brifysgol yy Twystyn Llanfair o Monasirlis. Yn ogystal â hyn, mae'n diwrnod Cymraeg i oedolion yn hir lew ers deunaw mlynedd,"
+  ],
+  [
+   1847.78,
+   "ac mi hanfai hi am bwyllgor Cyl Cymraeg Trevelin ers blynyddoedd, ac yn gynrychioli cyfreithlon ysgol ym Mhentre Trevelin, mae hi'n rhedeg Tee Tay Cymreig glas y boed yn y caneuon."
+  ],
+  [
    1861.7,
    "nació y se creó en la plata pero sus"
   ],
   [
    1864.2,
-   "raíces están en el valle de Chubut a pesar"
+   "raíces están en el valle de chos a pesar"
   ],
   [
    1867.5,
@@ -1117,11 +1233,15 @@
   ],
   [
    1905.8,
-   "es miembro de la comisión del estado de"
+   "es miembro de la comisión del Eisteddfod de"
+  ],
+  [
+   1908.0,
+   "Chubut"
   ],
   [
    1908.9,
-   "y de ch y baila danzas galesas con el"
+   "y de Chubut y baila danzas galesas con el"
   ],
   [
    1912.8,
@@ -1132,8 +1252,20 @@
    "casa de de la familia"
   ],
   [
+   1923.88,
+   "Diolch yn fawr."
+  ],
+  [
+   1939.88,
+   "Dwi'n gwbod y ddadau mawr i'r Anna, ac rŵan mae anrhegion i fi."
+  ],
+  [
    1949.0,
    "a continuación la seora"
+  ],
+  [
+   1974.88,
+   "Yr un ar nôl, yr un ar dwy, am ddwy, i ddwy, un yn ôl, un ar ôl, yn fan dim nôl."
   ],
   [
    2009.7,
@@ -1180,8 +1312,24 @@
    "propia laes la poesía"
   ],
   [
-   2371.9,
-   "al"
+   2101.88,
+   "Mae'n gorffen mynd yn dod, glanied drwyr a hafod, ac wrth fynd cartref weddwch, dim ond byth a heddwch."
+  ],
+  [
+   2109.88,
+   "Ac erbyn y dydd heiddiw, fydd yn ddiwrnod fawr o'n chofio, cochant i fi rhag ofn beiriau'n ddywedus yng Nghaerfyrddin, ac sy'n enaist yn hen ddeir Harfeinion, gwelidai dau deg person braf a'i bartender yn yr haearn."
+  ],
+  [
+   2146.88,
+   "Nid gydwedodd y ffyrdd heddychlon bod y trafodaeth nôl yn eu creuol i gasglu ngogledd-feilio a'i rhoi yn uchel ar y frydryd. Dim ar un o'r cyd-glercheddwch, dim ar lef a menynion y ferwch, dim yn y ffrydryd yn ddiogel, dim ar lef, dim ar lefogolau."
+  ],
+  [
+   2176.88,
+   "Diolch yn fawr, ac rŵan dan ni'n symud ymlaen i dawns y flodau i anrhydeddu ein beirdd gynnigol heno. Dyma nhw."
+  ],
+  [
+   2206.88,
+   "Guyanes yw Nos y Frida, Iasmin Rojas y Porti. Cafodd merched yma sy'n mynegi mynachdy ysgol Cwm, ysgol Cant mwy deg chwech, ysgol pum deg saith, ac ysgol tri deg saith ei hyfforddi gan yr athrawon Jessica Jones a Carragherys."
   ],
   [
    2531.5,
@@ -1196,12 +1344,46 @@
    "mares de"
   ],
   [
-   2669.0,
-   "Mali mil Mali"
+   2623.88,
+   "Evry nabod o, mai mil a chwe chant o flynyddoedd, yn amser hi hir i'r to."
+  ],
+  [
+   2634.12,
+   "Ond naeth Magnos Maximus o Gymru, yn y flwyddyn tri chant wyth tri, yn gadair yn weded i'w gofal, ac erioed wedi'i ffyni arna o hyd."
+  ],
+  [
+   2651.72,
+   "Dwi'n iawn, ma' o'n i."
+  ],
+  [
+   2656.22,
+   "Er gwaetha mawr ma'n ffodfedd. Dwi'n iawn, ma' o'n i."
+  ],
+  [
+   2670.22,
+   "Dwi'n iawn, ma' o'n i. Er gwaetha mawr ma'n ffodfedd."
   ]
  ],
  "fuentes": [
   [
+   "cy"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "yt_es"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -1689,6 +1871,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -1953,6 +2138,15 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -1995,8 +2189,62 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -2052,9 +2300,18 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -2088,6 +2345,21 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -2097,6 +2369,21 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ]
  ],
  "ventanas": {

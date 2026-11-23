@@ -4,6 +4,14 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   134.74,
+   "Pingo a ddaria, pingo a ddaria, gyrraeddau ar y wgwm fyny."
+  ],
+  [
+   179.74,
+   "Yn Calfaria, yn Calfaria, dri fynag rai ffwrdd o hyn."
+  ],
+  [
    181.2,
    "en calvaria"
   ],
@@ -26,6 +34,10 @@
   [
    307.8,
    "Alleluja"
+  ],
+  [
+   337.22,
+   "Dwi'n meddwl yr arholwyd ei molwm ddigyffyrddol, wrth roi o'i lan yn y ffordd drafwydol, ar feddylia'i roi, wrth gwrdd â'i farddwm, i'w roi hi ar forewgraff elfennau molwm."
   ],
   [
    344.7,
@@ -376,6 +388,10 @@
    "por esta elora."
   ],
   [
+   784.56,
+   "Naci'n ientos, gened- genedigaethau, a ddes i ddim mlaen naci'n ientos ystod ddeud y gwir. Wel, no, na'i gyrru gwbath i'r deilad, na'i gyrru gadael mwy o gwbath i'r sallanwyr, a'i gyrru gwbath yn eisteddfod, a siarad fwy am bwrpas."
+  ],
+  [
    793.8,
    "Nacimientos."
   ],
@@ -402,6 +418,10 @@
   [
    812.9,
    "ya habrá tiempo después."
+  ],
+  [
+   814.56,
+   "Ia, chdi'n garedigaethau pawb yn rhy brysur yn ymddiddan at yr Eisteddfod, mi fyndicwm lan sydd ar ôl yr Eisteddfod."
   ],
   [
    831.0,
@@ -585,7 +605,7 @@
   ],
   [
    1004.0,
-   "Sí, fue toda una aventura."
+   "Sí, fue toda una aventura. Tiga."
   ],
   [
    1006.8,
@@ -620,6 +640,10 @@
    "que justamente venía para la emisora."
   ],
   [
+   1047.58,
+   "Diolch, diolch, dwi isie diflifo am ffeindio fy het ar y bôn i Lawson, diolch."
+  ],
+  [
    1058.3,
    "Ahora"
   ],
@@ -633,7 +657,11 @@
   ],
   [
    1073.1,
-   "La escuchamos, señor operador. He."
+   "La escuchamos, señor operador."
+  ],
+  [
+   1167.58,
+   "Woo hoo!"
   ],
   [
    1276.4,
@@ -681,7 +709,7 @@
   ],
   [
    1308.2,
-   "ser presentado en el Eisteddfod nacional de"
+   "ser presentado en el exterbo nacional de"
   ],
   [
    1311.0,
@@ -698,6 +726,10 @@
   [
    1321.6,
    "este país."
+  ],
+  [
+   1331.26,
+   "Ma'r drefniad yn meddwl fod y grŵp yn lle- yn haeddu lleia o iwban i'r Eisteddfod yn y drethwr y flwyddyn nesa."
   ],
   [
    1343.2,
@@ -838,6 +870,12 @@
  ],
  "fuentes": [
   [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -856,6 +894,9 @@
    "yt_es"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -1115,6 +1156,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -1138,6 +1182,9 @@
    "yt_es"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -1298,6 +1345,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -1312,6 +1362,9 @@
    "yt_es"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -1358,6 +1411,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -1464,8 +1520,8 @@
  ],
  "ventanas": {
   "total": 27,
-  "modelo": 25,
+  "modelo": 27,
   "reglas": 0,
-  "vacias": 2
+  "vacias": 0
  }
 }

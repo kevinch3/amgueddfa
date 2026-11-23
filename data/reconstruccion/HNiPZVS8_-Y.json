@@ -4,12 +4,16 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   60.0,
+   "Gweillad mawr a goffedd, gweillad mawr a goffedd, gweillad mawr a goffedd sy'n ymladd o'r dydd."
+  ],
+  [
    74.6,
-   "Ahora sí, recitación en castellano."
+   "Ahora sí recitación en castellano"
   ],
   [
    77.6,
-   "Recitación libre, texto, un poema o un"
+   "recitación libre texto un poema o un"
   ],
   [
    81.4,
@@ -17,31 +21,31 @@
   ],
   [
    84.2,
-   "autoridad. Si el jurado está listo, la"
+   "autoridad si el Jurado está listo la"
   ],
   [
    87.4,
-   "primera participante es Betina Grossman."
+   "primera participante es Betina Grossman"
   ],
   [
    93.1,
-   "Artista de mi autoría."
+   "artista de mi autoría"
   ],
   [
    97.2,
-   "En realidad"
+   "en realidad"
   ],
   [
    99.3,
-   "mi tía Dora no era mi tía, era la tía"
+   "mi tía Dora no era mi tía era la tía"
   ],
   [
    104.9,
-   "menor de mi mamá, pero como no seguía a"
+   "menor de mi mamá pero como no seguía a"
   ],
   [
    108.7,
-   "conocer a mis abuelas, ella vino a cubrir"
+   "conocer a mis abuelas Ella vino a cubrir"
   ],
   [
    112.3,
@@ -432,16 +436,24 @@
    "aparecen ellos"
   ],
   [
-   918.9,
-   "y"
+   912.92,
+   "Hallelujah, i gorfod atgyfnerthu'r â'"
   ],
   [
-   921.2,
-   "calvarios primero"
+   923.92,
+   "Hallelujah, i barhau dros ei ofyn"
   ],
   [
-   929.5,
-   "por nosotros señor"
+   932.92,
+   "Halleluja, ro'dd eiddo'r blod i gyd, halleluja."
+  ],
+  [
+   979.92,
+   "Halleluja, teilwng drwy'r tocyn gwlad môr. Halleluja, llaw effeithiol yn y byd yma nawr. Halleluja, teilwng drwy'r tocyn gwlad môr."
+  ],
+  [
+   1009.92,
+   "Alleluia!"
   ],
   [
    1049.4,
@@ -488,6 +500,10 @@
    "palabras de vida"
   ],
   [
+   1116.88,
+   "Nes yw ista'n ngwrdd odda, nes i'r sbalanau ddim bydda. O, Jesus, ddylse fo ffordd dda, nes i'r sbalanau dim bydda. O, na fysa'r fesurfa ffïa'n sgil y fesurfa."
+  ],
+  [
    1118.5,
    "Jesucristo a todas"
   ],
@@ -522,6 +538,10 @@
   [
    1155.8,
    "palabras seguimos"
+  ],
+  [
+   1159.88,
+   "Drafft o'r cantig o'n sonan nhw'n gweithio'n sbonanau gerddina. Rho'n nhw'n sbrydian nhw'n sbardonan nhw'n gweithio'n sbonanau gerddina."
   ],
   [
    1165.4,
@@ -646,6 +666,10 @@
   [
    1357.0,
    "Aleluya estoy mirando por mi Dios"
+  ],
+  [
+   1360.88,
+   "Estoi'n fien, estoi'n fien, ond fyddio, ond fyddio, yn gopas, yn isel, flori a di lot."
   ],
   [
    1362.5,
@@ -982,7 +1006,7 @@
  ],
  "fuentes": [
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -1306,12 +1330,21 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -1343,6 +1376,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -1372,6 +1408,9 @@
    "yt_es"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -1463,6 +1502,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -1715,9 +1757,9 @@
   ]
  ],
  "ventanas": {
-  "total": 31,
-  "modelo": 22,
+  "total": 30,
+  "modelo": 24,
   "reglas": 0,
-  "vacias": 9
+  "vacias": 6
  }
 }

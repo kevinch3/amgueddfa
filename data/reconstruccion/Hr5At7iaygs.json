@@ -4,6 +4,14 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Diolch yn fawr iawn i bawb sy'n ymuno a thrysio'r bleidlais, ac wrth gwrs i bawb sy'n ymuno a thrysio'r bleidlais, dwi'n ymuno a thrysio'r bleidlais."
+  ],
+  [
+   30.0,
+   "Pnawn da i chi i gyd, ni wedi cyrraedd y foment arbennig yn y Eisteddfod Wladfa dwy fil a dau ddeg dau yn y seremoni y coron."
+  ],
+  [
    42.0,
    "Ha llegado uno de los momentos más importantes del Eisteddfod del Chubut."
   ],
@@ -84,8 +92,16 @@
    "Al trompetista del Eisteddfod David Almonacid, a María Fernanda Aguilera y Carlos Prieto,"
   ],
   [
+   144.5,
+   "A Maria Fernanda Aguilera y Carlos Prieto, directores artisticos del Ballet Folclorico Pismaiquen."
+  ],
+  [
    147.9,
    "directores artísticos del ballet folclórico Pilmaiken, a los escoltas Violeta Parise, Ramiro Jones,"
+  ],
+  [
+   152.5,
+   "A los escoltas, Violeta Parise, Ramiro Jones, Avi de Mayo Almeida, Alejo Schans León."
   ],
   [
    160.5,
@@ -94,6 +110,10 @@
   [
    165.8,
    "Asimismo, invito a los poetas galardonados en ediciones anteriores"
+  ],
+  [
+   169.5,
+   "Asimismo, invito a los poetas galaronados en ediciones anteriores de este Eisteddfod, Eisteddfod Mimosa, Eisteddfod Trevelin, que se acerquen al escenario precedido por la presidenta del Circulo Bardico del Chubut, Alwyn Green."
   ],
   [
    179.3,
@@ -352,6 +372,10 @@
    "para que resuene mejor en nuestros sentidos y en nuestra alma. Y el poeta ha cantado,"
   ],
   [
+   563.2,
+   "Y el poeta ha cantado, ha decidido participar, compartir su creación con cada uno de nosotros."
+  ],
+  [
    566.5,
    "ha decidido participar, compartir su creación con cada uno de nosotros. Siempre la palabra"
   ],
@@ -544,6 +568,10 @@
    "Por segunda vez sonará la trompeta invitando a Malena a ponerse de pie."
   ],
   [
+   846.52,
+   "Por segunda vez sonará la trompeta invitando a Malena a ponerse de pie."
+  ],
+  [
    856.5,
    "El poeta está entre nosotros y por tercera vez para darse a conocer"
   ],
@@ -596,6 +624,10 @@
    "Lisset acerca la corona al Intendente"
   ],
   [
+   1160.52,
+   "Lyset a selca la corona a'l intendente quien se la entregará a Alwyn Green, Presidente del Circo Bardico,"
+  ],
+  [
    1166.7,
    "quien se la entregará a Alwen Green"
   ],
@@ -610,6 +642,10 @@
   [
    1174.5,
    "Y Alwen coronará a nuestra poeta"
+  ],
+  [
+   1202.52,
+   "Aplaus"
   ],
   [
    1214.1,
@@ -712,10 +748,6 @@
    "Y bailada por María Fernanda Aguilera y Carlos Prieto"
   ],
   [
-   1329.5,
-   "Amén."
-  ],
-  [
    1359.5,
    "Romperá la tarde mi voz hasta el eco de ayer"
   ],
@@ -808,6 +840,10 @@
    "Y cada vez que culmina una ceremonia en un Eisteddfod,"
   ],
   [
+   1636.9,
+   "Ac bob tro mae'n culmino'n seremoni mewn steddfod, r'yn ni'n teimlo'r un peth,"
+  ],
+  [
    1642.5,
    "sentimos lo mismo, porque siempre, eternamente siempre,"
   ],
@@ -870,10 +906,10 @@
  ],
  "fuentes": [
   [
-   "whisper_es"
+   "cy"
   ],
   [
-   "whisper_es"
+   "cy"
   ],
   [
    "whisper_es"
@@ -936,10 +972,13 @@
    "whisper_es"
   ],
   [
-   "whisper_es"
+   "cy"
   ],
   [
    "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
@@ -948,6 +987,7 @@
    "whisper_es"
   ],
   [
+   "cy",
    "whisper_es"
   ],
   [
@@ -1143,6 +1183,9 @@
    "whisper_es"
   ],
   [
+   "cy"
+  ],
+  [
    "whisper_es"
   ],
   [
@@ -1287,6 +1330,9 @@
    "whisper_es"
   ],
   [
+   "cy"
+  ],
+  [
    "whisper_es"
   ],
   [
@@ -1324,6 +1370,9 @@
   ],
   [
    "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
@@ -1336,6 +1385,9 @@
   ],
   [
    "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
@@ -1363,8 +1415,20 @@
   ],
   [
    "whisper_es"
+  ],
+  [
+   "whisper_es",
+   "cy"
   ],
   [
+   "whisper_es",
+   "cy"
+  ],
+  [
+   "whisper_es",
+   "cy"
+  ],
+  [
    "whisper_es"
   ],
   [
@@ -1471,6 +1535,9 @@
   ],
   [
    "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
@@ -1520,8 +1587,8 @@
  ],
  "ventanas": {
   "total": 31,
-  "modelo": 30,
-  "reglas": 0,
+  "modelo": 27,
+  "reglas": 3,
   "vacias": 1
  }
 }

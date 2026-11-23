@@ -8,15 +8,15 @@
    "Duw mawr y rhyfeddodau maith,"
   ],
   [
-   13.5,
+   9.0,
    "Rhyfeddol yw pob rhan o'th waith,"
   ],
   [
-   27.0,
+   18.0,
    "Ond dwyfol ras, mwy rhyfedd yw"
   ],
   [
-   35.5,
+   27.0,
    "Na'th holl weithredoedd o bob rhyw:"
   ],
   [
@@ -40,27 +40,27 @@
    "Tydi yn unig fedd yr hawl"
   ],
   [
-   110.0,
+   102.0,
    "Ac ni chaiff arall ran o'r mawl:"
   ],
   [
-   113.8,
+   110.0,
    "Pa dduw sy'n maddau fel tydi"
   ],
   [
-   117.5,
+   113.8,
    "Yn rhad ein holl bechodau ni?"
   ],
   [
-   121.2,
+   117.5,
    "Rhyfeddol yw'th drugaredd hael,"
   ],
   [
-   125.0,
+   121.2,
    "A'th gariad pur i'n natur wael,"
   ],
   [
-   142.0,
+   125.0,
    "Yn agor ffynnon i'n glanhau,"
   ],
   [
@@ -72,7 +72,7 @@
    "Pa dduw sy'n maddau fel tydi"
   ],
   [
-   177.0,
+   185.8,
    "Yn rhad ein holl bechodau ni?"
   ]
  ],
@@ -145,8 +145,8 @@
  ],
  "ventanas": {
   "total": 4,
-  "modelo": 3,
+  "modelo": 4,
   "reglas": 0,
-  "vacias": 1
+  "vacias": 0
  }
 }

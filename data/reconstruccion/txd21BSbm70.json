@@ -52,11 +52,11 @@
    "Traigo esta canción, mapudugum la voz."
   ],
   [
-   113.8,
+   103.4,
    "Mi abuelo me enseñó, con piñones de un Pehúen,"
   ],
   [
-   122.4,
+   113.8,
    "A contar hasta diez, y sembrarlo después."
   ],
   [
@@ -100,27 +100,23 @@
    "Mari, mari, mari y volver a nacer."
   ],
   [
-   222.0,
+   226.9,
    "Mari, mari, mari piñones de un pehuén."
-  ],
-  [
-   223.9,
-   "Lairalara, lairailara"
-  ],
-  [
-   225.1,
-   "Mi abuelo me enseñó, con piñones de un “Pehúen”,"
   ],
   [
    230.9,
    "entender que nuestro hermano"
   ],
   [
-   243.4,
-   "hasta el buena"
+   234.2,
+   "Lairalara, lairailara"
   ],
   [
-   254.2,
+   238.7,
+   "Mi abuelo me enseñó, con piñones de un “Pehúen”,"
+  ],
+  [
+   259.2,
    "A contar hasta diez, y sembrarlo después."
   ],
   [
@@ -141,27 +137,31 @@
   ],
   [
    307.8,
-   "Mi abuelo me enseñó, con piñones de un “Pehúen”,"
+   "Mari, mari, mari piñones de un pehuén,"
+  ],
+  [
+   313.9,
+   "Mari, mari, mari y volver a nacer."
   ],
   [
    319.5,
-   "A contar hasta diez, y sembrarlo después."
+   "Mari, mari, mari piñones de un pehuén."
+  ],
+  [
+   355.46,
+   "Cyn i ni i'w ddydd a'i. Cyn i ni i'w dydd a'i. Cyn i ni i'w ddau a'i. Dau a'i. Dau a'i. Dau a'i."
   ],
   [
    358.5,
-   "Kiñe- epú- kula: son uno, dos y tres."
+   "la"
   ],
   [
-   360.9,
-   "Meli- Kechu- Kayu: son cuatro, cinco, seis."
+   364.0,
+   "Lairalara, lairailara"
   ],
   [
-   363.1,
-   "Regle- pura- ailla: siete, ocho, nueve."
-  ],
-  [
-   365.4,
-   "Y para terminar, diez pehuenes nacerán."
+   375.0,
+   "[Música]"
   ]
  ],
  "fuentes": [
@@ -241,15 +241,6 @@
    "letra"
   ],
   [
-   "letra"
-  ],
-  [
-   "letra"
-  ],
-  [
-   "yt_es"
-  ],
-  [
    "yt_es"
   ],
   [
@@ -283,7 +274,16 @@
    "letra"
   ],
   [
+   "cy"
+  ],
+  [
+   "yt_es"
+  ],
+  [
    "letra"
+  ],
+  [
+   "yt_es"
   ]
  ],
  "letras": [

@@ -525,39 +525,39 @@
   ],
   [
    3618.0,
-   "Se ben crw dde le, mi ffailan gwir, sempre fe dde le, ti fo liw amal."
+   "Sebben crudele, mi ffailan gwir, sempre fe dde le, ti fo liw amal."
+  ],
+  [
+   3629.1,
+   "sempre fedele ti voglio amar."
   ],
   [
    3634.5,
-   "Se ben crudele mi ffaila'n gwir, sempre feddele ti fo' io a mar."
-  ],
-  [
-   3647.9,
-   "sempre fedele ti voglio amar."
+   "Sebben crudele mi ffaila'n gwir, sempre feddele ti fo' io a mar."
   ],
   [
    3652.0,
    "Co' la longuetta del mio serpente, la tua fieretta, la tua fieretta sa prosta in car."
   ],
   [
+   3661.5,
+   "Con la lunghezza del mio servir"
+  ],
+  [
+   3690.7,
+   "la tua fierezza saprò stancar."
+  ],
+  [
    3698.48,
    "Sempre feddele, sempre feddele, ti fo' Ioana."
   ],
   [
-   3701.1,
+   3719.8,
    "Sebben, crudele, mi fai languir,"
   ],
   [
    3748.98,
    "sempre fedele ti voglio amar."
-  ],
-  [
-   3750.4,
-   "Con la lunghezza del mio servir"
-  ],
-  [
-   3751.7,
-   "la tua fierezza saprò stancar."
   ],
   [
    3769.48,
@@ -4343,9 +4343,6 @@
    "cy"
   ],
   [
-   "cy"
-  ],
-  [
    "letra"
   ],
   [
@@ -4359,6 +4356,9 @@
   ],
   [
    "letra"
+  ],
+  [
+   "cy"
   ],
   [
    "letra"
@@ -6921,8 +6921,8 @@
  ],
  "ventanas": {
   "total": 374,
-  "modelo": 307,
-  "reglas": 6,
+  "modelo": 308,
+  "reglas": 5,
   "vacias": 61
  }
 }

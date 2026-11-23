@@ -1,0 +1,54 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   30.0,
+   "Ombra mai fù"
+  ],
+  [
+   47.6,
+   "Di vegetabile,"
+  ],
+  [
+   74.0,
+   "Cara ed amabile"
+  ],
+  [
+   104.8,
+   "Soave più."
+  ]
+ ],
+ "fuentes": [
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ]
+ ],
+ "letras": [
+  {
+   "desde": 30,
+   "hasta": 118,
+   "titulo": "Ombra mai fu",
+   "autor": "George Frideric Handel (Serse, 1738); texto de Silvio Stampiglia, según Nicolò Minato",
+   "idioma": "it",
+   "derechos": "Texto de dominio público",
+   "fuente": "https://www.cpdl.org/wiki/index.php/Ombra_mai_fu_(George_Frideric_Handel), texto original del aria en ChoralWiki (CPDL), sin el recitativo «Frondi tenere», que no se canta en el video, obtenido por el archivo"
+  }
+ ],
+ "ventanas": {
+  "total": 3,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 1
+ }
+}

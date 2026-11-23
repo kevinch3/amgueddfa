@@ -5,23 +5,7 @@
  "seg": [
   [
    0.0,
-   "Bydda i'n canu demacariad fel y morioed, ar dôn dim ond Iesu, er gof am waith canu arbennig Annie Davis yn ystod y digwyddiad ffydd mawr yy yn Nghemru dros cant ar hicain o flynyddoedd yn ôl nawr, ddeudia que voy a cantar este himno, que se m- m- m- m- m- m- m- m- m- m- m- m- m- m- m- m- m- t- t- t- t- t- t- t- t- t- t- t- t- t- t- t- m- m- m- m- m- m- m- m- m- m- m- m- m- m- m- m- m- m- m- m- m- m- m- m- m- m- m- m- m- m- m"
-  ],
-  [
-   1.4,
-   "deademoroid"
-  ],
-  [
-   9.1,
-   "an daavis"
-  ],
-  [
-   11.0,
-   "en esto de"
-  ],
-  [
-   13.4,
-   "maur en hobbler"
+   "Bydda i'n canu demacariad fel y morioed, ar dôn dim ond Iesu, er gof am waith canu arbennig Annie Davis yn ystod y digwyddiad ffydd mawr yn Nghemru dros cant ar hicain o flynyddoedd yn ôl nawr"
   ],
   [
    20.1,
@@ -56,19 +40,11 @@
    "hace 120 años, un poquito más ya."
   ],
   [
-   44.2,
-   "Diol"
-  ],
-  [
-   54.4,
-   "deatoro"
-  ],
-  [
-   71.2,
+   59.7,
    "Dyma gariad fel y moroedd,"
   ],
   [
-   71.2,
+   65.8,
    "Tosturiaethau fel y lli:"
   ],
   [
@@ -165,24 +141,6 @@
    "yt_es"
   ],
   [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
    "letra"
   ],
   [
@@ -250,8 +208,8 @@
  ],
  "ventanas": {
   "total": 4,
-  "modelo": 3,
-  "reglas": 1,
+  "modelo": 4,
+  "reglas": 0,
   "vacias": 0
  }
 }

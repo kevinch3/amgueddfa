@@ -4,8 +4,16 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   286.8,
+   "In your eyes."
+  ],
+  [
    286.9,
    "llorar"
+  ],
+  [
+   291.8,
+   "Lady, hear me tonight."
   ],
   [
    366.9,
@@ -62,6 +70,14 @@
   [
    429.4,
    "la vendimia"
+  ],
+  [
+   778.94,
+   "Like a record baby right round round round"
+  ],
+  [
+   964.68,
+   "Freed from desire, mind and senses purified."
   ],
   [
    1116.9,
@@ -144,6 +160,18 @@
    "tener la oración inicial para nosotros"
   ],
   [
+   1332.68,
+   "Arglwydd Dduw, ein tad nefol, diolch i ti am y cyfle i'n cwrdd yma heddiw. Arglwydd, ti sydd wedi bod yn noddfa i ni ar hyd y flynyddoedd. Duw ein rhieni, Duw ein teitiau, rydyn ni'n galw arnat ti heddiw, rydyn ni'n ceisio dy bresenoldeb sanctaidd yn ein plith wrth i ni ddechrau sesiwn hon o Eisteddfod Chubut dwy fil a ddau ddeg dau."
+  ],
+  [
+   1362.68,
+   "Diolch hwn am y ddoniau wnaeth di roid i ni, yn arbennig i bob un. Diolch hwn am y gelfyddydau, am y gerddoriaeth a'r gair. Diolchwn i ti, Arglwydd, am dy gariad sy'n ei rhwymo fel teulu mewn gyfeillgarwch a sy'n helpu i ni ddod yn nes at ein gilydd."
+  ],
+  [
+   1382.68,
+   "Boed i bob un ohonom mwynhau'r amser bendigedig hwn, byddet ti ein gysgodi ni dan dy adenydd, a rhoi i ni dy heddwch. Gadw ni yn dy gariad, trwy'r Iesu Grist ein hawlgrwyd anwaredw, amen."
+  ],
+  [
    1404.3,
    "padre nuestro que estás en los cielos te"
   ],
@@ -169,11 +197,11 @@
   ],
   [
    1421.7,
-   "al iniciar esta sesión de laicester Ball"
+   "al iniciar esta sesión de Eisteddfod"
   ],
   [
    1424.6,
-   "del chubut 2022 te damos gracias por los"
+   "del Chubut 2022 te damos gracias por los"
   ],
   [
    1428.7,
@@ -220,12 +248,8 @@
    "Señor y Salvador amén"
   ],
   [
-   1475.6,
-   "Y que juan bedonia en"
-  ],
-  [
-   1480.0,
-   "carne"
+   1463.96,
+   "I gychwyn byddwn i yn gofyn i chi sefyll ar eich draed er mwyn canu anthem genedlaethol y wlad."
   ],
   [
    1483.9,
@@ -285,7 +309,7 @@
   ],
   [
    1760.2,
-   "Jenkins a conducir este momento en el"
+   "jenkins a conducir este momento en el"
   ],
   [
    1765.4,
@@ -305,27 +329,51 @@
   ],
   [
    1778.1,
-   "morbauruichi y a Kevin Handley que va a"
+   "morbauruichi y a Kevin handley que va a"
   ],
   [
    1782.1,
    "ser el acompañante en el piano"
   ],
   [
-   1785.4,
-   "también indicó vio na ahorro"
+   1793.08,
+   "Ac felly dan ni'n mynd i ofyn i Noé Sanchez-Jenkins i ddod ar y llwyfan ac i Andres Evans i ganu yr emyn Mor Fawr Wyt Ti bydd cyfyn Chandler yn cyfeilio ar y piano."
   ],
   [
    1796.7,
-   "Sánchez Jenkins y total es Iván aquí"
+   "Sánchez jenkins y total es Iván aquí"
   ],
   [
    1800.7,
    "Andrés Evans y Kany Element mordaud"
   ],
   [
-   1806.9,
-   "en que bello arpiano"
+   1823.08,
+   "Peidiwch â gofyn i mi pwy ydw i, neu os oedd yn weddi fy adnabod, y freudwydion roedden nhw isio byddai'n yn tyfu, er nad ydw i fan hyn."
+  ],
+  [
+   1833.08,
+   "Nid yw fe'n fyw mwyach, ond rhwyngdân yn bresennol yn yr hyn yr oedden nhw'n freudwydio, a rhai sy'n dal i cerdded byddai'n gwneud i rosod eraill tyfu. Yn enw'r bethau hynny bydd pawb yn fy enwi."
+  ],
+  [
+   1851.08,
+   "Distaw, tawel, mae sŵn y ddistawrwydd yn curo meddyliau, mae pawb yn dechrau meddwl am rhywun tra fod mynynt yn mynd heibio. Traddodiad agos ato ni gyd ond nid i'w bobl Cymraeg o arferion tawel. Dan ni'n canu, dan ni'n canu pan dan ni'n dathlu, pan dan ni'n hapus, pan dan ni'n trist. Dan ni'n canu ffarwelio ffrindiau achos mae ddistawrwydd yn frys."
+  ],
+  [
+   1881.08,
+   "fo pan dawodd cofion i'r meddwl. Llawer o luniau yn troi ffilmiau mewn munud yn eu cof, sŵn lleisiau rhai yr ydym neu- sŵn lleisiau rhai yr ydym yn eu caru yn dod at ein clustiau i sibrwd y ffarwel. Daw distawrwyd enelyn i rai sy'n teimlo'n boen, awn i ddathlu bywydau yn cofio am yr hyn sydd gwnaethon nhw."
+  ],
+  [
+   1911.08,
+   "achos eraill yn gadawodd gorffwys oddi wrth ei llafur, ond ei weithredoedd yn ei canlyn hwnt."
+  ],
+  [
+   1919.56,
+   "Cân, fe enaidd, cân, gadewch i ni ei cofio tra'n lleisiau bownsio oddi ar ei waeliau, mewn undef, mewn parch, er cof amdanyn."
+  ],
+  [
+   1933.48,
+   "Mor fawr ydyn nhw, mor fawr wyr yw'r atgofion, can, bydd y delais yn offerin i waredi poen o denaidd."
   ],
   [
    1944.4,
@@ -341,7 +389,7 @@
   ],
   [
    1955.3,
-   "vivo pero voy en lo que Andaba soñando y"
+   "vivo pero voy en lo que andaba soñando y"
   ],
   [
    1959.0,
@@ -498,6 +546,26 @@
   [
    2063.7,
    "dolor"
+  ],
+  [
+   2087.48,
+   "Yn hanser, ar rheadr yn y ddofn, dryg yn ead off, drym a gwelaf y byd."
+  ],
+  [
+   2103.48,
+   "Canf y naid a ganf ar eglwyddydd Dduw i ti, mor y fawr wyt ti, mor y fawr wyt ti."
+  ],
+  [
+   2119.34,
+   "Can y fenydd, can y fenydd, a'r egwydd Dduw i ti, mor yn fawr wyt ti, mor yn fawr wyt ti."
+  ],
+  [
+   2135.34,
+   "Hanneddil y Crist, afloedd a fuddugoliaeth, am y dwy neu dreth mor llawn y fyddaf i, am y grymu yn ofnaf mewn parchedigaeth, gan y ddatgan y pyth, hynny yw mor fawr wyt ti."
+  ],
+  [
+   2165.34,
+   "Can y fynadd, can y fynadd, ar eglwyddedd Dduw i ti, mor y fawr wyt ti, mor y fawr wyt ti."
   ],
   [
    2217.8,
@@ -697,7 +765,7 @@
   ],
   [
    2393.8,
-   "ejemplo de colaboración, amor y servicio"
+   "ejemplo de colaboración amor y servicio"
   ],
   [
    2398.6,
@@ -721,7 +789,7 @@
   ],
   [
    2411.7,
-   "Comienzan sus días agradeciendo a Dios"
+   "comienzan sus días Agradeciendo a Dios"
   ],
   [
    2415.0,
@@ -733,11 +801,11 @@
   ],
   [
    2422.6,
-   "servicio del Señor"
+   "Servicio del señor"
   ],
   [
    2425.1,
-   "Después del presente escrito debemos"
+   "después del presente escrito debemos"
   ],
   [
    2427.9,
@@ -753,19 +821,19 @@
   ],
   [
    2440.0,
-   "Ellos son"
+   "ellos son"
   ],
   [
    2442.2,
-   "Albina Real y Mauricio Mulhol, más"
+   "albina real y Mauricio mulhol más"
   ],
   [
    2446.6,
-   "conocido como Becho"
+   "conocido como becho"
   ],
   [
    2449.8,
-   "Los recibimos con un cálido aplauso. Los"
+   "los recibimos con un cálido aplauso los"
   ],
   [
    2454.1,
@@ -792,12 +860,28 @@
    "presente"
   ],
   [
+   2481.52,
+   "Renovemos nuestro aplauso."
+  ],
+  [
    2491.9,
    "Aunque Sí y albina real a Mauricio"
   ],
   [
+   2496.52,
+   "Diolch yn fawr, mwya cherasias. Byddwn ni yn weld nawr ar y llwyfan y seremoni agoriadol, yy dawns a chan, felly dan ni'n gofyn i Tomas Jancaffil, diolch yn fawr."
+  ],
+  [
    2512.9,
    "Muchas gracias"
+  ],
+  [
+   2526.52,
+   "Williams i ddod ar y llwyfan ac i Kevin Hanlen sy'n mynd i gyfeilio ar y piano a Helen Green efo'r delyn."
+  ],
+  [
+   2538.52,
+   "Hefyd byddwn i'n gweld y criw Pan Am Bi yn dawnsio ar y llwyfan, Jorge a Montserrat."
   ],
   [
    2543.8,
@@ -832,36 +916,28 @@
    "deleitarnos con él"
   ],
   [
-   2612.0,
-   "señor"
+   2606.52,
+   "Ar lan y môr mae'r lili sgwenion, ar lan y môr mae'n hariad i nos a chodi'r bore."
   ],
   [
-   2614.4,
-   "Marley Liz sueño"
+   2636.52,
+   "Ar lan y môr mae cerrig gleision. Ar lan y môr mae blodau'r meibion."
   ],
   [
-   2627.9,
-   "por él"
+   2661.52,
+   "Ar lan y môr mae pob dim o'i ddau. Ar lan y môr mae'n nhariad i nai."
   ],
   [
-   2644.6,
-   "harla de amor"
+   2680.52,
+   "Ar lan y môr mae'r rhosys cochion. Ar lan y môr mae'r lili sgwynion. Ar lan y môr mae'n hariad i neb."
   ],
   [
-   2648.5,
-   "Ay qué rico yo"
-  ],
-  [
-   2654.2,
-   "jarlan Limón"
+   2706.88,
+   "Yn cysgu'r nos a chodi'r bore."
   ],
   [
    2713.3,
    "acudir por él en que"
-  ],
-  [
-   2724.1,
-   "no"
   ],
   [
    2725.5,
@@ -912,6 +988,10 @@
    "tamboril"
   ],
   [
+   2830.76,
+   "A gwyda'r rîo, camino de piedra, fe cadda' gefrada, se jefa' wnna benna."
+  ],
+  [
    2832.1,
    "agüita del río"
   ],
@@ -948,6 +1028,10 @@
    "no sé ni para dónde voy"
   ],
   [
+   2875.76,
+   "Traigo de los valles un trist cantar, lo aprendi del rio que canta y que pasa por el pedregal."
+  ],
+  [
    2881.5,
    "traigo de los valles"
   ],
@@ -962,6 +1046,10 @@
   [
    2899.3,
    "porque"
+  ],
+  [
+   2901.0,
+   "pedreja"
   ],
   [
    2903.8,
@@ -1024,6 +1112,14 @@
    "no sé ni para dónde voy"
   ],
   [
+   2985.84,
+   "Diolch yn fawr."
+  ],
+  [
+   3001.4,
+   "Ar ran Cyngor Trelew, rydyn ni'n mynd i ofyn i Misys Olga Aydeg o Ddoe, Gynghorydd y Dref, i gyflwyno present i Rodolfo Bissagra, Gadeirydd Pwyllgor yr Eisteddfod."
+  ],
+  [
    3016.0,
    "invitamos a la concejal de Trelew Señora"
   ],
@@ -1061,7 +1157,7 @@
   ],
   [
    3082.7,
-   "Ahora sí. Entonces vamos a comenzar"
+   "Ahora sí Entonces vamos a comenzar"
   ],
   [
    3086.5,
@@ -1069,7 +1165,7 @@
   ],
   [
    3089.8,
-   "competencia número 29, Fernando saldivia"
+   "competencia número 29 Fernando saldivia"
   ],
   [
    3092.2,
@@ -1078,6 +1174,10 @@
   [
    3095.3,
    "bandoneón de Mario Pérez"
+  ],
+  [
+   3095.8,
+   "donion de Mario Benedetti. Byddwn ni'n dechrau nawr efo gystadleuaeth gyda adrodd yn y Sbaeneg i llais dynion yy dan ni'n galw Fernando Saldivia mae o'n mynd i adrodd banddonion de gan Mario Benedetti."
   ],
   [
    3105.8,
@@ -1096,12 +1196,20 @@
    "Mario Benedetti"
   ],
   [
+   3115.64,
+   "Os gwelwch yn dda, dwi'n cau'r bleidlais."
+  ],
+  [
    3121.1,
    "si el Jurado de recitación así lo"
   ],
   [
    3123.7,
    "dispone"
+  ],
+  [
+   3125.64,
+   "Diolch yn fawr."
   ],
   [
    3125.9,
@@ -1425,7 +1533,7 @@
   ],
   [
    3437.6,
-   "femenino de Analía Sepúlveda de Trelew a"
+   "femenino de Analía Sepúlveda de trelew a"
   ],
   [
    3441.8,
@@ -1454,6 +1562,18 @@
   [
    3470.5,
    "Kevin handley y Dodgers"
+  ],
+  [
+   3474.54,
+   "dau ddeuawd yy chemisg yn Sbaeneg. Competencia número ciento dos, dŵr o foses"
+  ],
+  [
+   3474.6,
+   "cantaday"
+  ],
+  [
+   3477.4,
+   "theyouts en Spanic"
   ],
   [
    3480.3,
@@ -1620,6 +1740,10 @@
    "piano que no lo escuchamos"
   ],
   [
+   3692.16,
+   "Ffantastig. M-hm. Ffantastig."
+  ],
+  [
    3693.3,
    "ahora"
   ],
@@ -1768,6 +1892,14 @@
    "para que aprendas a cantar"
   ],
   [
+   3910.6,
+   "Que ser humilde y muy pobre petisa,"
+  ],
+  [
+   3916.2,
+   "nunca debia vergonzar."
+  ],
+  [
    3922.5,
    "sino de adentro es grande guagüita"
   ],
@@ -1812,8 +1944,28 @@
    "cantautor galés Ryan Davis que se llama"
   ],
   [
-   4042.3,
-   "tía de Doña tú y tus dones"
+   4049.64,
+   "O ble ges di'r ddawn o dorri galone O ble ges di'r ddawn o dweud dy"
+  ],
+  [
+   4096.78,
+   "Ond yr hyn rwyf yn gwybod yn awr, dywed i mi, o dywed i mi, ble ges i'r ddawn."
+  ],
+  [
+   4112.78,
+   "Dwi'n cofio, fel ddoe, ti yn t'weud, Caraf un naw, a minnau yna, te fel hyn, Caraf di naw, ond mae ddoe wedi mynd, a daeth heddiw yn greulon."
+  ],
+  [
+   4137.78,
+   "Ac o ble, ac o ble, lewyt ti, os mai hyn oedd dy fwriaeth i'w gwneud, hyn ffŵl gweld o mil lwyddaeth mil lwyddaeth yn llawn, ond yr hyn rwydd â mwy bod yn hawdd."
+  ],
+  [
+   4167.78,
+   "Dwed i mi, o, dwed i mi, ble gest ti'r ddawn, os neu hun oedd dy fwriad i'w gwneud i yn ffwl, wel, o, mi lwyddaist, mi lwyddaist yn llawn, ond yr hyn rwyf yn gwybod yn hawn."
+  ],
+  [
+   4197.78,
+   "Dwed i mi, o dwed i mi, ble ges i'r ddawn, ble ges i'r ddawn, ble ges i'r ddawn."
   ],
   [
    4232.2,
@@ -1884,6 +2036,10 @@
    "Gracias lo escuchamos"
   ],
   [
+   4279.78,
+   "Gratias, l'escuchamos."
+  ],
+  [
    4282.8,
    "micrófono para el Jurado por favor"
   ],
@@ -1917,7 +2073,7 @@
   ],
   [
    4314.2,
-   "un Eisteddfod y ante la calidad de"
+   "un estado y ante la calidad de"
   ],
   [
    4317.4,
@@ -2060,10 +2216,6 @@
    "competencia Muchas gracias"
   ],
   [
-   4436.8,
-   "[Aplausos]"
-  ],
-  [
    4441.6,
    "Muchas gracias al Jurado entonces de"
   ],
@@ -2088,31 +2240,31 @@
    "disponible coro municipal de Trelew"
   ],
   [
-   4538.4,
+   4508.9,
    "Niño, mi niño,"
   ],
   [
-   4538.4,
+   4512.9,
    "vendrás en primavera,"
   ],
   [
-   4538.4,
+   4518.5,
    "te traeré."
   ],
   [
-   4538.4,
+   4520.8,
    "Gurisito mío,"
   ],
   [
-   4538.4,
+   4524.8,
    "lugar de madreselvas"
   ],
   [
-   4538.4,
+   4530.4,
    "te daré."
   ],
   [
-   4538.4,
+   4532.8,
    "Y aunque nazcas pobre,"
   ],
   [
@@ -2209,31 +2361,19 @@
   ],
   [
    4629.9,
-   "y del mismo pan"
-  ],
-  [
-   4655.7,
-   "Pobrecito mío lugar de madres selva"
-  ],
-  [
-   4660.0,
-   "negra"
+   "Y aunque nazcas pobre,"
   ],
   [
    4665.9,
-   "pobre te traigo también"
+   "te traigo también:"
   ],
   [
    4669.5,
-   "se precisa amigos para amanecer siempre"
-  ],
-  [
-   4675.0,
-   "precisa mío"
+   "se precisan niños"
   ],
   [
    4678.4,
-   "para amanecer"
+   "para amanecer."
   ],
   [
    4702.1,
@@ -2245,11 +2385,11 @@
   ],
   [
    4707.9,
-   "próxima competencia acercarse"
+   "próxima competencia hercidiol acercarse"
   ],
   [
    4710.8,
-   "al escenario y le vamos a pedir a"
+   "al escenario y le vamos a pedir a cuanon"
   ],
   [
    4713.7,
@@ -2332,12 +2472,8 @@
    "Eisteddfod"
   ],
   [
-   4780.5,
-   "reduigües y"
-  ],
-  [
-   4782.9,
-   "no son lawen Arely Pretty"
+   4778.64,
+   "Yy dwi wedi ysbysebu bod yna noson lawen ar yr un pryd i'r Eisteddfod yma yn y Neuan, Neuadd Ifenni Gymdeithas Dewi Sant, gyda meicroffon ar agor ar pawb sy isio cyfrannu addonau. Mae yy docyn radd tag am ddim, felly croeso i bawb mynd unrhyw bryd yn ystod yr achlysur yma."
   ],
   [
    4832.5,
@@ -2516,6 +2652,14 @@
    "con nosotros"
   ],
   [
+   5073.8,
+   "Diolch."
+  ],
+  [
+   5373.04,
+   "Y siriol yr ail grŵp sydd efo ni heno yr un cystadleuaeth yw Gwanwyn Porthor, rhif wyth maen nhw'n mynd i dawnsio. Yr sefnd grŵp yw Gwanwyn Porthor, rywun yn mynd i dael rhif wyth."
+  ],
+  [
    5383.8,
    "el segundo grupo es Warning porfort y"
   ],
@@ -2536,6 +2680,14 @@
    "escenario para la ocasión voy a"
   ],
   [
+   5439.62,
+   "Rhowch cymeradwyaeth plîs."
+  ],
+  [
+   5443.62,
+   "Mae hi wedi ysgrifennu calon ar daith a gweddisiau melys mam. Yy ella gan o yn un competensia de literatura yym ysgrifennu un yy un poema corto yym i bwyno ysgrifennu calon ar daith a gweddisiau melys mam i gan o."
+  ],
+  [
    5451.7,
    "ella ganó en una competencia de"
   ],
@@ -2549,19 +2701,19 @@
   ],
   [
    5461.5,
-   "y bueno escribió Canon artais y webiside"
+   "y bueno escribió"
   ],
   [
    5467.7,
-   "melismán y ganó primero y segundo premio"
+   "y ganó primero y segundo premio"
   ],
   [
    5471.2,
    "con el mismo seudónimo felicitaciones"
   ],
   [
-   5474.4,
-   "Virginia tío El Salvador antes caddy"
+   5480.74,
+   "Mae efo ni ar y llwyfan felly er mwyn yr un gystadleuaeth, wyth deg un, ddawns, Gwanwyn Borffor."
   ],
   [
    5492.6,
@@ -2570,6 +2722,10 @@
   [
    5495.3,
    "comenzamos"
+  ],
+  [
+   5499.62,
+   "A, we, ok, shit, pensé que ya estaban. Están con- yy conectando los instrumentos,"
   ],
   [
    5506.8,
@@ -2756,6 +2912,10 @@
    "Javier Ramos Paterson"
   ],
   [
+   6092.44,
+   "Mae'n rhan o'r grŵp arbennig yng Nghaerfyrddin"
+  ],
+  [
    6322.1,
    "el estado acompañando a un amigo para"
   ],
@@ -2769,7 +2929,7 @@
   ],
   [
    6403.4,
-   "que este Eisteddfod es organizado por"
+   "que este no son Lauren es organizado por"
   ],
   [
    6406.6,
@@ -2856,8 +3016,40 @@
    "agradecemos gracias Daniel"
   ],
   [
+   6537.54,
+   "Felly os ydy'r beirniad yn barod, diolch ysgol Cerdd Gaeman."
+  ],
+  [
+   6567.54,
+   "Cael i'w bap ac adael i ni ddod."
+  ],
+  [
+   6577.82,
+   "Llawn ni'r côr y swm a chregi,"
+  ],
+  [
+   6581.46,
+   "llawn ni'r ŵr i'r wyn a'r melyn,"
+  ],
+  [
+   6585.1,
+   "llawn ni'r fwyd o ddail a flodau,"
+  ],
+  [
+   6588.66,
+   "llawn o'r gariad y dwy finnau."
+  ],
+  [
+   6597.54,
+   "Maent yn gweddill ac yn sôn, mod i'n caru yn Sir Fôn, minnau sydd yn caru ffynnon dros y ffôn, yn Sir Gaernarfon."
+  ],
+  [
+   6627.54,
+   "Diolch yn fawr iawn i Ysgol Gerdd y Gaiman, bendigedig."
+  ],
+  [
    6635.4,
-   "tío Jorge va abrión y score de Gaiman"
+   "tío Jorge va abrión y score de gaiman"
   ],
   [
    6646.6,
@@ -2884,12 +3076,12 @@
    "luego lo hará frío y En tercer lugar"
   ],
   [
-   6679.1,
-   "bien corregimos primero timeberjett"
+   6664.34,
+   "ar Team y Ferched."
   ],
   [
-   6683.2,
-   "segundo gendre tercero free India"
+   6679.34,
+   "Bien, corrigimos, prifero Team y Ferched, segundo Gendre, tercero Ffrindiau ar gyfer y gydadrodd."
   ],
   [
    6687.8,
@@ -2941,7 +3133,7 @@
   ],
   [
    6727.1,
-   "ciudad de Rawson y el segundo premio"
+   "ciudad de rawson y el segundo premio"
   ],
   [
    6728.9,
@@ -2964,8 +3156,20 @@
    "el premio correspondiente"
   ],
   [
-   6806.1,
-   "tenía raíz"
+   6747.26,
+   "Nesa gestaliaeth dau deg pump cyd-adrodd, coch gan Gasi Wyn. Y criw cynta sy'n gesta- gestalu yw Tîm y Ddarched, felly os ydy y beirniad?"
+  ],
+  [
+   6766.26,
+   "Yn barod Bethan, tîm y ferched."
+  ],
+  [
+   6796.26,
+   "Goch yw'r angerdd sy'n cennau ein tan. Goch sy'n garlamu, goch sy'n cyffroi, goch sydd yn denu a choch sydd yn troi. Ond gochach na'r rain yw'r goch ar ein crys, goch sydd yn gariad yn ferw o chwys. Dyma goch Cymru yn weillio'n i gyd, goch sydd yn gael bod nhw yn wba yn y byd!"
+  ],
+  [
+   6826.26,
+   "Diolch yn fawr felly i d- y ferched yn ail, Henre."
   ],
   [
    6858.0,
@@ -3128,12 +3332,16 @@
    "desarrollado"
   ],
   [
-   6992.2,
-   "que se leáis"
+   7003.88,
+   "Coch lliw y waldion, coch lliw y draig, coch lliw y rhosyn sy'n tyfu drwy'r gaig, coch lliw y galon, coch lliw y can, coch lliw yr angerdd sy'n cynnau ein tan, coch sy'n garlannu, coch sy'n cyffroi, coch sydd yn tynnu a choch sydd yn rhoi."
+  ],
+  [
+   7033.88,
+   "Ond cochach na'r rhain yw'r coch ar ein crys, coch sydd yn gariad, yn dderw o chwys. Dyma goch Cymru yn ein wreichio'n gyd, yn y coch a'n harweiniau at gwban y byd."
   ],
   [
    7070.6,
-   "le vamos a recordar a los participantes"
+   "Le vamos a recordar a los participantes"
   ],
   [
    7073.1,
@@ -3148,12 +3356,20 @@
    "para que sea todo mucho más ágil"
   ],
   [
-   7083.8,
-   "Entre 10 hay que ver el que se lees"
+   7093.88,
+   "Coch gan casiwyr."
   ],
   [
-   7087.6,
-   "entre"
+   7100.88,
+   "Coch yw y gwawrio, coch yw y ddraig, coch yw'r rhosyn sy'n tyfu drwy'r graig, coch yw y galon, coch yw y gân, coch yw'r angerdd sy'n cynnau ein tan."
+  ],
+  [
+   7118.88,
+   "Coch sy'n carlamu, coch sy'n cyffroi, coch sydd yn tynnu a choch sydd yn rhoi, ond cochach na'r rhain ryw goch ar ein crys, coch sydd ein cariad yn ferw o chwys. Dyma goch Cymru, ein wreichion i gyd, y coch a'n harweinia at gwban y byd!"
+  ],
+  [
+   7178.88,
+   "Cerddoriaeth yn Gymraeg am yy beirniadaeth Casaleiaeth pum deg tri, parti cerddant. Ydi o'n barod? Staria listo'r beredict o'r competensia pum deg tri. L'escucham."
   ],
   [
    7192.1,
@@ -3172,8 +3388,28 @@
    "lo escuchamos"
   ],
   [
+   7200.0,
+   "Wel diolch yn fawr iawn. Yym yn y lle cynta yym hoffwn i ddiolch o galon am y gwahoddiad i feirniadu yn yr Eisteddfod eleni. Yym mae wir yn anrhydedd fawr cael bod yma yn eich plith chi. Dyma'r tro cynta i fi a'r teulu i fod yn y wladfa yym a mae'n fraint fawr bod yma. Mae'r profiad hyd yn hyn wedi bod yn anhygoel. Yym ni fel rhai o'n i wedi cael fy nghyfathrebu yn y wladfa yn cael fy nghyfathrebu yn y wladfa yn cael fy nghyfathrebu yn yr Eisteddfod eleni. Mae wir yn anrhydedd fawr cael bod yma yn eich plith chi. Dyma'r tro"
+  ],
+  [
    7201.6,
    "Hola partido"
+  ],
+  [
+   7230.0,
+   "i di wneud ffrindiau da mewn amser byr. Ni di bod yma ers wythnos a ni'n teimlo bo' ni di wneud ffrindiau yma yn barod. Chi'n bobl caredig a chyfeillgar iawn yn y wladfa. Diolch yn fawr iawn i chi gyd. Wel y gystadleuaeth parti cerdd dant yy canu wnaf a bod yn llawen. Un yn cystadlu un parti sef ysgol gerdd y Gaeman ond dwi'n siŵr bo' chi'n gyd yn cytuno yy bo' nhw wedi rhoi perfformiad."
+  ],
+  [
+   7260.0,
+   "hyfryd iawn i ni, perfformiad o safon uchel. O'dd dehongliad y geiriau yn arbennig, o'n nw'n lliwio'r geiriau'n dda, fel cariad a llawen yym ag ar y cyfan o'n i'n teimlo bod y cyd-symud rhwng y delyn a'r lleisie yn yy yn dda ar y cyfan. Yym wrth gwrs ma' cerdd dant yn draddodiad sydd yn mynd nôl yn bell iawn gyda ni yng Nghymru a dyw e ddim yn rhwydd, ma'r cyd-symud yn bwysig iawn rhwng y delyn a'r canran. Yym so o'n i'n deimlo bod y cyd-symud rhwng y delyn a'r lleisie yn dda ar y cy"
+  ],
+  [
+   7290.0,
+   "canu wrth gwrs felly llongyfarchiadau iddyn nhw am am eu gwaith yym o'n nhw'n canu oedd lleisiau swynol yn y parti yma a o'n i'n teimlo bod yna asiad lleisiol hyfryd yma hefyd felly llongyfarchiadau mawr i Ysgol Gerdd y Gaiman, maen nhw'n haeddu'r wobr gynta, llongyfarchiadau."
+  ],
+  [
+   7310.0,
+   "Beredicto de la competencia cincuenta y tres a cargo nuestra jurado Meini Jones Parry,"
   ],
   [
    7317.5,
@@ -3225,7 +3461,7 @@
   ],
   [
    7352.6,
-   "competencia 53 Conjunto ker dand a"
+   "competencia 53 conjunto ker dand a"
   ],
   [
    7356.8,
@@ -3313,7 +3549,7 @@
   ],
   [
    7412.2,
-   "general no. Además la poesía, el texto"
+   "general no Además la poesía el texto"
   ],
   [
    7415.5,
@@ -3349,7 +3585,7 @@
   ],
   [
    7437.0,
-   "el texto con un tiempo adecuado. Así que"
+   "el texto con un tiempo adecuado Así que"
   ],
   [
    7439.6,
@@ -3364,16 +3600,16 @@
    "primer premio"
   ],
   [
+   7454.78,
+   "Fawr iawn meinir a diolch i Nansi Jones am cyfieithu, ac wrth gwrs dan ni'n wahodd yym i y criw yma i ddod yn ôl y wobr."
+  ],
+  [
    7457.7,
    "Nancy Jones"
   ],
   [
    7462.1,
    "Daniel"
-  ],
-  [
-   7468.0,
-   "creo mamá"
   ],
   [
    7472.7,
@@ -3398,6 +3634,10 @@
   [
    7491.3,
    "de repertorio académico a elección"
+  ],
+  [
+   7502.78,
+   "iaith unawd hunandwysiad, llais merch neu bechgyn. Ma' Mariana, Marcos a Magdalena yn mynd i gystadlu. Dyn nhw'n gwahodd nhw i ddod ar y llwyfan."
   ],
   [
    7512.0,
@@ -3588,6 +3828,10 @@
    "fin que lo haría en curiberú Nuevo Mundo"
   ],
   [
+   7781.5,
+   "Gwy mor y môr a'i rws i gysgu'r salwra, cegw goll y swswr o'i goristawra."
+  ],
+  [
    7787.9,
    "fui"
   ],
@@ -3608,8 +3852,20 @@
    "corriste hombre dolor"
   ],
   [
+   7806.5,
+   "Dwy rydd o nof, i ffio'r ydyl erfau ffresa, a'i piacerydd y môr dwyt tŵa destra."
+  ],
+  [
+   7826.98,
+   "Biani bambio, dram ond cwestiws cwsig, biani biani, ti fo' laff ronde i'n coronet."
+  ],
+  [
    7870.0,
    "llevo las flores fueron hombres"
+  ],
+  [
+   7916.98,
+   "Muchas gracias Marianna, diolch yn fawr, a nawr ni'n mynd i ennill Markos o'i lle mewn i'r escenariwm."
   ],
   [
    7931.9,
@@ -3692,8 +3948,8 @@
    "con ticos creativos"
   ],
   [
-   8016.6,
-   "Wow México"
+   8028.48,
+   "chwech naw ddeg pump yym mae can y dôn hefyd gyda seiniad a dafarn hanesyddol yn Nghaerdydd o'r enw The Red House sydd bellach wedi ei ddymchwel o'n un waith yn aelod drw' genwod y Ffrengwyr dafarni Gaerdydd ond dwi'n siŵr yym yr oedd cwrw da yno yym"
   ],
   [
    8055.0,
@@ -3722,6 +3978,14 @@
   [
    8072.7,
    "cerveza ahí bien"
+  ],
+  [
+   8088.44,
+   "yn addas ac roedd yn amlwg bod nhw'n mwynharddawn sy'n fawr iawn."
+  ],
+  [
+   8095.24,
+   "Fe buodd e'n pleser mawr, clywodd y cerddoriaeth ar y llwyfan hefyd."
   ],
   [
    8099.7,
@@ -3768,8 +4032,16 @@
    "seguir por ese camino"
   ],
   [
+   8138.24,
+   "Lle byddwn i'n rhif wyth Gwanwyn Porthor un o'r dawnsiau Llanofer wedi'i casglu am y tro cyntaf yn mil naw dau deg chwech gan Griffith Richard roedd y geograffi yn glir iawn i'w ddeall ar y papur unwaith eto cael band i gyfeilio ar dawnswyr yn bleser i'w glywed roedden nhw'n cyd-fynd â'r gerddoriaeth er bod gweithiau'r"
+  ],
+  [
    8138.9,
    "luego tuvimos"
+  ],
+  [
+   8168.22,
+   "roedd ambell lun a thrafferts. Roedd y dillad yn addas ac roedd yn amlwg bod pawb yn mwynhau'r ddawns."
   ],
   [
    8176.0,
@@ -3820,8 +4092,16 @@
    "porque"
   ],
   [
-   8222.7,
-   "en español"
+   8210.0,
+   "cuandoria es waltz en cal y"
+  ],
+  [
+   8214.1,
+   "hanigann"
+  ],
+  [
+   8218.0,
+   "Suite lo de coreografía"
   ],
   [
    8240.4,
@@ -3948,6 +4228,10 @@
    "que será la número 52"
   ],
   [
+   8345.5,
+   "penn"
+  ],
+  [
    8362.2,
    "Perdón un segundito por favor"
   ],
@@ -4061,11 +4345,15 @@
   ],
   [
    8631.0,
-   "recitación en conjunto Así que la"
+   "recitación en conjunto cog Así que la"
   ],
   [
    8635.4,
    "escuchamos"
+  ],
+  [
+   8636.62,
+   "Yym wel diolch o galon am y gwahoddiad i feirniadu'r adrodd yn y Eisteddfod siŵr o fod. Ma'n fraint ac yn anrhydedd i pwedd o amlar yn poker esbonio yn Dundee's. Na iawn bechad."
   ],
   [
    8658.0,
@@ -4088,6 +4376,10 @@
    "Es un honor"
   ],
   [
+   8677.1,
+   "te March mi voz"
+  ],
+  [
    8684.5,
    "Es la primera vez que estoy en el"
   ],
@@ -4098,6 +4390,10 @@
   [
    8691.2,
    "vez que ustedes escuchan mis palabras"
+  ],
+  [
+   8696.62,
+   "Dwi'n cofio'r wefr ges i o wylio fideo o Eisteddfod flynyddoedd yn ôl a grŵp ar ôl grŵp yn cyd-adrodd cerdd gen i, roedd gwyrddol a emosiwn alfer elfydio de los grŵpas, ceres y taban, una pobresia, mïa. Yy, yn pan addas do lafod, ro'n i wedi gwirioni, estaba en cantada."
   ],
   [
    8708.3,
@@ -4112,6 +4408,10 @@
    "empanadas dorados"
   ],
   [
+   8726.62,
+   "Yym a dyma fi wedi dod yn ôl i flasu nid yn unig yr empanaddas ond yr Eisteddfod yn y cnawd."
+  ],
+  [
    8734.5,
    "y acá estoy he vuelto para degustar no"
   ],
@@ -4121,7 +4421,11 @@
   ],
   [
    8744.0,
-   "Gracias, gracias."
+   "gracias gracias"
+  ],
+  [
+   8745.28,
+   "Iawn, le competentia ar y gystadleuaeth coch wedi'i sgwennu gan fardd plant Cymru, Cassie Wyn, efo criw o blant ysgol. Nes i tsiecio hi ar Twitter, felly dwi'n gwybod."
   ],
   [
    8761.3,
@@ -4137,11 +4441,11 @@
   ],
   [
    8779.5,
-   "es una poesía sencilla,"
+   "es una poesía sencilla"
   ],
   [
    8783.5,
-   "alegre y nacionalista,"
+   "alegre y nacionalista"
   ],
   [
    8796.5,
@@ -4149,11 +4453,11 @@
   ],
   [
    8800.2,
-   "y pasión para alentar al equipo de"
+   "Y pasión para alentar al equipo de"
   ],
   [
    8803.6,
-   "fútbol de Gales en Qatar"
+   "fútbol de gales en Qatar"
   ],
   [
    8811.8,
@@ -4164,8 +4468,16 @@
    "Y por supuesto significa rojo"
   ],
   [
-   8839.3,
-   "y creía moriría esa notadito"
+   8821.26,
+   "Reit, dyma'r ddirniadaeth."
+  ],
+  [
+   8826.96,
+   "Yn gynta welson ni tîm y merched. Ro'n i'n hoffi eich arddull chi'n arw,"
+  ],
+  [
+   8832.8,
+   "dramatig ac wedi llwyddo i greu amrywiaeth achos mae'n anodd yn y gerdd yma i greu amrywiaeth yn y deud oherwydd yr ail adrodd."
   ],
   [
    8842.5,
@@ -4190,6 +4502,10 @@
   [
    8872.1,
    "confusión del final"
+  ],
+  [
+   8872.76,
+   "Roeddech chi'n well yn y rhagbrawf, doeddech. Roedd eich Cymraeg chi'n glir ac yn gywir hefyd. Felly, ffelistiaeth onest, dwi methu deud ffelistiaeth onest, wna i gael o yn y diwedd. Wedi'n hendre, roedd eich lleisiau chi'n isel iawn i ddechrau, dewch yn nes at y meic"
   ],
   [
    8877.7,
@@ -4244,6 +4560,10 @@
    "coordinación sin errores"
   ],
   [
+   8951.24,
+   "yn Taunasys, felisidiaethionnes, gair trydydd tro, a wedyn yn drydydd, ffrindiau, lleisiau yn asio yn hyfryd, so os foses a mal- dwi'n licio hwn, a mal- gamaban, o trydydd, so os foses a malgamaban, ermoso, ag ro'n i'n teimlo'r angerdd yn berwi drwy'r llaw."
+  ],
+  [
    8970.0,
    "otra vez sus voces"
   ],
@@ -4260,12 +4580,28 @@
    "mejor hoy que ayer en los preliminares"
   ],
   [
+   8997.14,
+   "felly yn doddes mae'r wobr gynta fel primer premiwm yn mynd i ffrindiau."
+  ],
+  [
    9003.2,
    "Entonces"
   ],
   [
    9007.0,
    "el primer premio"
+  ],
+  [
+   9011.24,
+   "Ag yn ail, segundo, Hendre. Ag yn drydydd, tersero, tîm y merched a llongyfarchiadau pawb."
+  ],
+  [
+   9022.24,
+   "Diolch, diolch yn fawr iawn i Llubethan a llongyfarchiadau i dri grŵp."
+  ],
+  [
+   9032.24,
+   "Gristaleiaeth pum deg dau pedwar awt Pentarn gan Dilys Thomas yr un cynta ar y llwyfan yw Bod eglur felly os ydi'r beirniad yn barod, ddaw ni am beidio trwy'r silenci, os gwelwch yn dda."
   ],
   [
    9045.1,
@@ -4277,7 +4613,7 @@
   ],
   [
    9053.2,
-   "la Jurado Ya está lista y el grupo"
+   "la Jurado ya está lista y el grupo"
   ],
   [
    9057.3,
@@ -4286,6 +4622,18 @@
   [
    9059.2,
    "los disfrutamos"
+  ],
+  [
+   9082.24,
+   "ar ôl farnom ni dynom, ag e's gorlonodd i'w fod, i os barw drosom ni, dw'm ni yn dy fanwes di."
+  ],
+  [
+   9109.24,
+   "Arglwydd Iesu'r ydi gael mwyn, sydd â ni yn cerdyn dwyn, ma' dda i'n holl beth o'dd ein rhan, o'dd ni'n mynd y gwerth o'r waed, yna cam da fo."
+  ],
+  [
+   9139.24,
+   "Diolch yn fawr bod eglur dan ni wahodd nawr yr ail criw, sef Thomas i asosiadws."
   ],
   [
    9166.3,
@@ -4316,6 +4664,10 @@
    "recitación para voz femenina"
   ],
   [
+   9198.24,
+   "Iawn? Felly, domas i asosiados."
+  ],
+  [
    9199.6,
    "Tomás y Asociados"
   ],
@@ -4324,8 +4676,16 @@
    "Maldito amor"
   ],
   [
-   9250.6,
-   "Algún trozo Manía"
+   9253.76,
+   "O beirdd y dyfynwes gi, a'r ryddys hir i fi gael mwyn, sydd â ni yn llwyddyn dwyn, mae'n nhw'r pechodau'n rhad."
+  ],
+  [
+   9282.4,
+   "Gawn ni mewn darwedd fawr yw'r oed, a na cawn dafwn i bri, canwn nant yng Nghael Bari."
+  ],
+  [
+   9642.4,
+   "Reflectante, sensación de alma viva y poras negras, medio tu hueso amalgi."
   ],
   [
    9646.9,
@@ -4664,12 +5024,52 @@
    "al coro municipal de Trelew"
   ],
   [
+   10065.7,
+   "Wel diolch yn fawr iawn. Cystadleuaeth pedwarawd yr emyn-dôn Pen-sarn gan Dilys Thomas."
+  ],
+  [
+   10072.7,
+   "Dau yn y gystadleuaeth dau pedwarawd yym bod eglur a dwi ddim yn siŵr fod dwi'n mynd i ynganu hwn yn iawn. Thomas i asosiadodd ie? yym felly diolch yn fawr i'r ddau am yym ymdrechu ac am ddysgu mor dda."
+  ],
+  [
    10077.0,
    "voy a leer"
   ],
   [
    10082.7,
    "asociados corazón"
+  ],
+  [
+   10090.7,
+   "Mae'n emyn do yn hyfryd, mae yna eiriau yym sensitif yma felly mae yna yy gyfle yma i ganu yn dawel ac yn sensitif ond hefyd yym wrth edrych ar y geiriau yn fanylach, mae yna gyfle i agor allan hefyd a cael bach mwy o gadernid hefyd yn y canu. Yy wrth gwrs oedd y ddau yn canu'n ddigyfeiliant felly ma' rywun yn edrych wrth gwrs am yy donyddiaeth sicr a fe gethon ni donyddiaeth sicr."
+  ],
+  [
+   10120.7,
+   "yn sicr gan y y ddau bedwarod yma. Ma' iddi alaw hyfryd, felly o'n i'n yn edrych am soprano gadarn i gynnal yr alaw yma, a hefyd ma' yna leisiau mewnol, ma' yna linellau diddorol yym a harmonïau diddorol yn yr emyn yma hefyd. Felly oedd tipyn o bethau o'n i'n chwilio amdano. Yym y parti cynta y be- y pedwarod cynta bod eglur, dyma bedwar thais hyfryd, a fel wnes i weld yn fan hyn, oedd y pedwarod cynta'n mynd i fod yn hyfryd, felly o'n i'n meddwl bod y pedwarod cynta'n mynd i fod yn hyfryd, ond felly oedd y pedwarod"
+  ],
+  [
+   10150.7,
+   "Dweud oedd y donyddiaeth yn sicr, roedd yna gydsymyd da iawn ac fe gafwyd canu hynod o addfwyn a theimladwy yy ar y cyfan roedd y geirio yn glir a gofalus. Yym byddem wedi hoffi ychydig mwy o alto ar brydie. Yym o'n i'n teimlo bod ni'n colli y llinell yr alto jyst ryw ychydig yy o bryd i'w gilydd ond fe gafwyd naws arbennig. Yym hefyd falle."
+  ],
+  [
+   10180.7,
+   "Bydden ni wedi hoffi mwy o amrywiaeth deynameg er mwyn cael ychydig bach mwy o ddiddordeb cerddorol yym i'r perfformiad, ond yym arbennig o dda, yym ymdrech dda iawn i ddehongli'r emyn yma. Diolch yn fawr iawn i chi."
+  ],
+  [
+   10196.2,
+   "Yy a wedyn, wnawn ni ymlaen i Thomas Thomas i asosiados. Yym lleisiau cyfoethog iawn, eto yn canu'n ddigyfeiliant ar donyddiaeth yn sicr. Agoriad hyderus iawn o'n i'n teimlo o'r nodyn cyntaf. Yym o'n i'n hoffi'r canu tawel, biost farw dros omni, canu ystyrlon. A o'n i'n teimlo bod pob llais yn gadarn yn y pedwarawd yma. Yym o'n nhw'n gryf ac o'n nhw'n yy drwy'r drwy'r grŵp yma. Yym felly yna."
+  ],
+  [
+   10226.2,
+   "gydol y perfformiad. O'n i'n hoffi'r adeiladwaith cerddorol, y canu tawel yn agor allan yn hyfryd iawn i'r fforte. Felly, o'ch chi wedi mynd o dan groen y geiriau, o'n i'n teimlo. Oedd yna ddechrau a diweddglo cadarn iawn. A diolch i chi am eich dehongliad cerddorol a sensitif. Mae'n agos iawn, ond yym ma'r wobr gynta yn mynd i Tomasi a Sosiados, a ma'r ail wobr yn agos iawn iawn i"
+  ],
+  [
+   10256.2,
+   "yn mynd i bod eglur. Diolch yn fawr iawn i'r ddau."
+  ],
+  [
+   10259.2,
+   "Sion cyfarchiadau i ddau grŵp,"
   ],
   [
    10265.2,
@@ -4976,6 +5376,14 @@
    "si lo dispone coro municipal de Trelew"
   ],
   [
+   10581.8,
+   "Pinie ce pwpwla, pinie ce pwpwla, son un o dos i tri, son un o dos i tri, peri ce chwc a j, peri ce chwc a j, son chwar o sim o seis, chwar o sim o seis, peri e mwla a ia."
+  ],
+  [
+   10608.8,
+   "Sifilwch o'r wefen, i'r gwarter finnau, i'r steddfeydd naceran, Mari, Mari, Mari, dignores bewn bewen, Mari, Mari, Mari, mi folteran nacer, Mari, Mari, Mari, dignores bewn beuen."
+  ],
+  [
    10740.7,
    "son cuatro cinco seis cuatro cinco seis"
   ],
@@ -4990,6 +5398,10 @@
   [
    10757.4,
    "para terminar"
+  ],
+  [
+   10761.3,
+   "Ni es pe hwyr nes naseran, mari mari mari, dignones mewn perwen, mari mari mari, i foddera naser, mari mari mari, dignones mewn perwen."
   ],
   [
    10761.4,
@@ -5008,6 +5420,10 @@
    "y volve"
   ],
   [
+   10830.0,
+   "Muchas gracias Andrea y Coro Municipal de Trelew."
+  ],
+  [
    10854.9,
    "Muchas gracias Andrea y coro municipal"
   ],
@@ -5021,7 +5437,7 @@
   ],
   [
    10864.5,
-   "si estaría listo El veredicto de la"
+   "si estaría listo el veredicto de la"
   ],
   [
    10866.9,
@@ -5033,19 +5449,15 @@
   ],
   [
    10873.9,
-   "vamos a leer El veredicto de la"
+   "vamos a leer el veredicto de la"
   ],
   [
    10876.4,
    "competencia número 10 radiaz emson"
   ],
   [
-   10893.9,
-   "wikipenderry Green de borda Aunque"
-  ],
-  [
-   10896.8,
-   "variada"
+   10886.5,
+   "Wedi penderfynu bod yy wobor gynta yn mynd i Rhwng Môr a Mynydd, sef Mary Green ddifordda, llongyfarchiada mawr."
   ],
   [
    10901.8,
@@ -5057,7 +5469,7 @@
   ],
   [
    10908.7,
-   "10 prosa en galés en son craz le vamos a"
+   "10 prosa en galés, le vamos a"
   ],
   [
    10913.6,
@@ -5109,7 +5521,7 @@
   ],
   [
    10951.5,
-   "competencia 83 Pareja de danza"
+   "competencia 83 pareja de danza"
   ],
   [
    10953.9,
@@ -5128,6 +5540,22 @@
    "argentinas primera parte"
   ],
   [
+   11002.46,
+   "A'm byd sŵn a sa mor amigrai."
+  ],
+  [
+   11004.46,
+   "La-ra-lai la-ra-lai la-rai la-rai lai lai lai lai."
+  ],
+  [
+   11008.5,
+   "Rhem yn dyw pan ma' na'n pen car, dyw pan o'ch a pan ma' na'n amigrai."
+  ],
+  [
+   11016.5,
+   "Ma' fel tsiecin ma'n digon a cwy, i naid i dymuno swng ffitrai."
+  ],
+  [
    11016.7,
    "va a ver Shakira"
   ],
@@ -5142,6 +5570,10 @@
   [
    11029.1,
    "azul"
+  ],
+  [
+   11058.5,
+   "Castilla! Castilla la segunda, compadre."
   ],
   [
    11071.9,
@@ -5186,10 +5618,6 @@
   [
    11119.1,
    "manos que viene en el descanso frío"
-  ],
-  [
-   11126.1,
-   "animal prefieren escalofrío"
   ],
   [
    11150.9,
@@ -5264,20 +5692,52 @@
    "idioma galés que se le"
   ],
   [
-   11506.6,
-   "atroz tasuni on"
-  ],
-  [
-   11510.1,
-   "can't Will Lewis Eren y King stadly you"
-  ],
-  [
    11514.5,
    "Virginia steincamp"
   ],
   [
+   11520.9,
+   "Felly, os ydi'r beirniad yn barod, diolch yn fawr, esgwysiamos."
+  ],
+  [
    11526.8,
    "la escuchamos"
+  ],
+  [
+   11527.9,
+   "Taswn i, ond, gan Llyr Gwyn Lewis Taswn i, ond, medru fforddio fan, cawn cysgu llymynwn, a theithio i bob man."
+  ],
+  [
+   11545.9,
+   "Taswn i ond yn cael ffon femryn gwell, gysylltôn â'm ffrindiau, dim bwys pa mor bell."
+  ],
+  [
+   11554.9,
+   "Taswn i ond yn diffodd y we, ac wneud diwrnod o waith, sa bob dim yn ocê."
+  ],
+  [
+   11562.9,
+   "Taswn i'n ond yn cael mynd am dro, a dysgu'r adar ar fy ngho, neu taswn i'n codi efo'r wawr, mi allwn gyflawni petha mawr."
+  ],
+  [
+   11575.9,
+   "Taswn i, ond, heb siomi'r rhieni, a taswn i'n hapus efo'r hi sy' gen i."
+  ],
+  [
+   11584.3,
+   "Taswn i'n medru siarad yn gall, nid bod i â sgrolio drwy'r ffôn yn dall, a taswn i'n hapus â'n hi, mond bod to ac ambell i'w ffenest ynddo fo."
+  ],
+  [
+   11597.8,
+   "Taswn i ond yn fwy heini, dwi'n deud wrtha chi, ond dydw i ddim a dyna ni. Neu'n bwyta'n well ac yn yfed llai, ond sa' rywbeth yn bownt o gael y bai."
+  ],
+  [
+   11611.3,
+   "Taswn i ond yn filiwner, ac amser i breni s- ac amser i'w breni i syllu ar sêr. Taswn i'n medru cysgu'r nos, a fywyd yn stopio bod yn bôs."
+  ],
+  [
+   11627.8,
+   "Taswn i ond yn ddifyr i nod ddŵr. Fodlonwn ni wedyn? Dwi ddim mor siŵr. Mi fydda i, un dydd, yn llonydd, yn llwyr, yn rhyw fath a'r fodlon, yn llawer rhy hwyr."
   ],
   [
    11648.9,
@@ -5289,7 +5749,7 @@
   ],
   [
    11662.1,
-   "Marta si tienen listo el veredicto de la"
+   "Marta si tienen listo El veredicto de la"
   ],
   [
    11664.4,
@@ -5305,7 +5765,7 @@
   ],
   [
    11677.3,
-   "Bueno, buenas tardes"
+   "Bueno buenas tardes"
   ],
   [
    11679.7,
@@ -5612,6 +6072,10 @@
    "próxima competencia la número 44"
   ],
   [
+   11948.6,
+   "cuatro ynaut gan Esgafn Hinnan Dewisiad."
+  ],
+  [
    11953.2,
    "mientras se termina de preparar"
   ],
@@ -5664,36 +6128,48 @@
    "comidas y bebidas"
   ],
   [
+   12002.7,
+   "Dan ni'n gwrando di."
+  ],
+  [
+   12012.7,
+   "Ti a dy foniau."
+  ],
+  [
    12013.1,
-   "Sí"
+   "sí"
   ],
   [
-   12137.5,
-   "y una"
+   12032.7,
+   "O ble gest ti'r ddawn, o dorri calonnau. O ble gest ti'r ddawn, o ddweud y celwyddau. Ac o ble gest ti'r wen, ar ddail y gaed bach tanner. Ac o ble gest ti'r tinc yn dy laen?"
   ],
   [
-   12142.5,
-   "iríase"
+   12062.7,
+   "Os mai hyn oedd y fwriad i'w wneud i yn ffwl, weld o, mi lwyddaist, mi lwyddaist yn llawn, ond yr hyn rwyf am wybod yn awr."
   ],
   [
-   12144.5,
-   "miluida y están"
+   12086.7,
+   "Dŵad i mi o dŵad i mi ble gest ti'r ddawn? Rwy'n cofio fel ddoe ti yn dweud caraf fi nawr a minnau yn ateb fel hyn caraf ydi nawr."
   ],
   [
-   12150.3,
-   "andar sin Rueda muy bota"
+   12116.7,
+   "Ond mae ei ddoe wedi mynd a ddaeth heddiw yn greulon, ac o ble, ac o ble, ble rwyt ti?"
   ],
   [
-   12174.0,
-   "iríais diluida"
+   12132.7,
+   "Os mai hi'n oedd y fwriad i'w wneud i yn ffwl, weld o, mi lwyddaist, mi lwyddaist yn llawn, ond yr hi'n rwyf a mwy bod yn awr."
   ],
   [
-   12177.6,
-   "estanzada"
+   12156.7,
+   "Dywed i mi, o dywed i mi, ble gest ti'r ddawn, os mai hi'n oed y fwriad i'w wneud i yn ffwl weld o, mi lwyddaist, mi lwyddaist yn llawn, ond yr hi'n rwyf am wybod yna."
   ],
   [
-   12180.7,
-   "andar fin nueva muy bonita"
+   12186.7,
+   "Dwed i mi, o dwed i mi, ble gest ti'r ddawns."
+  ],
+  [
+   12195.7,
+   "Dwed i mi, o dwed i mi, ble gest ti'r ddawns."
   ],
   [
    12226.0,
@@ -5708,8 +6184,12 @@
    "Emily"
   ],
   [
+   12234.5,
+   "Sun arquirding"
+  ],
+  [
    12239.6,
-   "mientras Nancy Se acerca al escenario y"
+   "mientras Nancy se acerca al escenario y"
   ],
   [
    12243.1,
@@ -5717,7 +6197,7 @@
   ],
   [
    12247.0,
-   "estaría disponible El veredicto de la"
+   "estaría disponible el veredicto de la"
   ],
   [
    12249.4,
@@ -5733,7 +6213,7 @@
   ],
   [
    12261.1,
-   "favor Gracias a ustedes bien primero"
+   "favor. Gracias a ustedes bien primero"
   ],
   [
    12264.7,
@@ -5749,7 +6229,7 @@
   ],
   [
    12274.0,
-   "patagónica La verdad un placer escuchar"
+   "patagónica la verdad un placer escuchar"
   ],
   [
    12276.7,
@@ -5900,68 +6380,64 @@
    "Hola"
   ],
   [
-   12398.6,
-   "en tiempo por él"
+   12396.9,
+   "Sŵn y glaw am bump y bore. Ww."
   ],
   [
-   12404.7,
-   "es una sertiva"
+   12404.9,
+   "Sŵn y ser ar ddiwedd siwrne. Ww."
   ],
   [
-   12418.8,
-   "atrás"
+   12412.6,
+   "Sŵn gyfarfod a chyfadrach."
   ],
   [
-   12440.3,
-   "es una escalar en el calor"
+   12420.2,
+   "Sŵn yr oes, y ddydd a'r yma, byllach."
+  ],
+  [
+   12447.2,
+   "Sŵn y drên a sŵn hen ddynion, ww, sŵn y tafodau yn dod i."
   ],
   [
    12459.9,
    "en tu día"
   ],
   [
+   12462.6,
+   "Sŵn y taw ar ddiwedd stori, sŵn y bitos, sŵn barddoniaid, ww, sŵn caneuon a chwedloniaid."
+  ],
+  [
    12469.9,
    "son hechos"
+  ],
+  [
+   12492.6,
+   "O, dyma'r sŵn sy'n gyrru rywun, camanes tuag at y dipyn."
   ],
   [
    12497.9,
    "de amores son singular"
   ],
   [
-   12516.9,
-   "a ti"
+   12522.6,
+   "Ie, dyma'r sŵn sy'n gyrru rywun, cam ynys tuag at y di- bi."
   ],
   [
-   12524.1,
-   "Yo te amo Jesús"
+   12574.7,
+   "Sŵn yr enfys ar ein gorwedd, sŵn y blant sy'n bwyntio'r dŵr, sŵn y hedyn cerdded."
   ],
   [
-   12528.1,
-   "Sin sangre"
+   12604.7,
+   "yn i'r dyffryn, ww, swng ffeindelyn ar ein brenin, ww, swng awtomatyn rownd y gornel."
   ],
   [
-   12543.4,
-   "a ti"
+   12624.7,
+   "Sŵn y sŵs o dan groes y dde. Ied yma'r sŵn sy'n codi'n ysbryd."
   ],
   [
-   12549.9,
-   "a veces aunque te impost Orlando"
-  ],
-  [
-   12559.2,
-   "es una país o dan"
-  ],
-  [
-   12566.7,
-   "es un cinto relata en"
-  ],
-  [
-   12576.3,
-   "sonar antes"
-  ],
-  [
-   12632.2,
-   "son de Jesús"
+   12684.7,
+   "El próximo y último participante será Andrés Evans, a quien invitamos a ubicarse en el escenario."
   ],
   [
    12693.2,
@@ -5976,12 +6452,12 @@
    "ubicarse en el escenario"
   ],
   [
-   12709.0,
-   "Elías rihanón delan a Morgan en dominó"
+   12703.7,
+   "Dan ni di cael cyfarchion o Gymru sy'n dweud fel hyn."
   ],
   [
-   12724.5,
-   "atelice Elías rihannonar plant and View"
+   12743.7,
+   "Mae o'n mynd i ganu chwarae dron chwerw."
   ],
   [
    12745.2,
@@ -5996,28 +6472,52 @@
    "estás leyendo"
   ],
   [
-   12758.5,
-   "Andrés Evans mayo"
+   12773.7,
+   "Mae eich bywyd di yn ddydwyd, rwyt ti'n moddlon ar ôl dy fyd, ond mae yna rhywbeth bach yn ei hen dibyn sy'n dy boeni di o hyd."
   ],
   [
-   12821.3,
-   "entrando"
+   12793.7,
+   "Ti'n syrthio mewn i'r fagel, gan gwybod be ydy be, a do's dim ar ôl yn un syniad ffwl, yr yneud popeth yn ôl i'w le, ac mae'n chwarae'n twyn chwerw, mae'r gwyn yn troi sur, mae'r gwen yn troi ddagrau, a'r gwefn yn troi'i gur."
   ],
   [
-   12838.2,
-   "de ideas"
+   12817.7,
+   "Ac os wyt ti rywle yn gwrando ar Efenhan, cofiaf oedd chwarae'n trin chwerw wrth chwarae efo tân."
   ],
   [
-   12850.3,
-   "achico potencia"
+   12831.1,
+   "Ac yna bob yn dipyn mae ei darnau dod yn hyd, ti'n dod i ddeall sut mae cael y gorau o ddau byd."
   ],
   [
-   12857.1,
-   "en juego"
+   12844.6,
+   "Mae'n dod i Howstate celwydd sy'n swnio fel y gwir. A ti'n gwybod yn iawn bod y cwpan yn llawn a'r ffordd o flaen yn glir. Ac mae'n chwarae'n troi'n chwynw, mae'r gwin yn troi sur mae'r gwen yn troi dda a grau a'r gwef yn troi'i gur."
   ],
   [
-   12870.7,
-   "en grandes área"
+   12867.8,
+   "Ac os wyt ti rywle yn gwrando ar y fynhan, cofia fod chwarae'n trin chwerw wrth chwarae botan."
+  ],
+  [
+   12880.2,
+   "Mae ddywydd yn rhy fyr, ac amser yn munud yn fryn, ti'n ymladd a thgydd gwybot, ond dyna foddlon i weddio ar y ddim."
+  ],
+  [
+   12903.2,
+   "Ti'n trio peidio gwrando ar y geiriau yn dy ben, sy'n cyffwrdd â'r gwirionedd sy'n gyda ti o lyfr i llyn."
+  ],
+  [
+   12916.9,
+   "Ti'n trio cael dy lecaid ar y pethau sy' ta phwy, a ti'n gweld yn glir y bobl ddim yn wir, a bod y gwir yn frifo mwy."
+  ],
+  [
+   12928.9,
+   "Ac mae'n chwarae'n trwy'n chwerw, ar y gwin yn troi'i sur. Mae'r gwen yn troi dda, a grai ar y gwef yn troi'i gur."
+  ],
+  [
+   12941.2,
+   "Ac os wyt ti rhywle yn gwrando ar Efenhan, cofia fod chwarae'n trwyn chwerw, wrth chwarae efo tân."
+  ],
+  [
+   12971.2,
+   "Bendigedig, gwych. Diolch yn fawr i chi gyd."
   ],
   [
    12975.7,
@@ -6048,6 +6548,10 @@
    "todos los participantes"
   ],
   [
+   13001.2,
+   "Ydy beirniaid y cystadleuaeth adrodd taswn i ond yn barod? Diolch yn fawr iawn, Bethan. Esgwtsiamos el veredicto de la competencia en recitacion. Iawn, taswn i ond gan Llyr Gwyn Lewis."
+  ],
+  [
    13022.0,
    "escuchamos El veredicto de la"
   ],
@@ -6058,6 +6562,10 @@
   [
    13027.1,
    "Argentina"
+  ],
+  [
+   13030.2,
+   "Yy dyma i chi gerdd am y natur ddynol, am wneud esgusodion yn lle jyst gwneud o, am fethu bod yn fodlon efo'r hyn ydan ni a'r hyn sydd gennyn ni a dwi wrth fy modd efo hi. Yym, si solo, dyna di taswn i ynde, si solo. O na poesïa sobre la naturaleza humana sobre tener excusas en lugar de solo a ser"
   ],
   [
    13045.9,
@@ -6112,6 +6620,10 @@
    "con tu perro hermanos"
   ],
   [
+   13116.86,
+   "a dy acen yn wych. Mi wnes di redeg brawddegau lle roedd angen yn hynod naturiol. Estovisteseg ura, tu pronunciacion y tu acento fueron excelentes. Conil minw. Sori. Na. Dwi jyst yn joked. Yy perfformiad campys yn llawn haeddu'r wobor gynta a llongyfarchiadau."
+  ],
+  [
    13124.3,
    "estuviste segura"
   ],
@@ -6124,8 +6636,20 @@
    "excelentes"
   ],
   [
+   13152.86,
+   "Ond ga i jyst deud hynna'n Sbaeneg, achos dwi'n licio'r frawddeg."
+  ],
+  [
+   13157.86,
+   "Hei, o ma' ni."
+  ],
+  [
    13161.7,
    "desempeñaste admirablemente"
+  ],
+  [
+   13165.9,
+   "Pŵ! Iawn."
   ],
   [
    13169.2,
@@ -6134,6 +6658,10 @@
   [
    13173.0,
    "felicitaciones"
+  ],
+  [
+   13174.9,
+   "Da iawn. Da iawn. Llongyfarchiadau i di, Firlinia, a llongyfarchiadau i chi, Bethan. Ar ddiwedd yr Eisteddfod, mi fyddwch chi'n dweud ffelicitaciynau yn ardderchog, diolch o galon."
   ],
   [
    13192.9,
@@ -6161,7 +6689,7 @@
   ],
   [
    13216.7,
-   "y ahora voy a leer el veredicto de la"
+   "y ahora voy a leer El veredicto de la"
   ],
   [
    13220.6,
@@ -6368,12 +6896,16 @@
    "competencia número 50 que está"
   ],
   [
+   13422.1,
+   "Solo libre yn Sbaeneg, rock, rock nacional, Jamila Gauna."
+  ],
+  [
    13423.2,
-   "rock nacional"
+   "rock rock nacional"
   ],
   [
    13426.9,
-   "Camila gauna"
+   "Camila Gauna"
   ],
   [
    13447.9,
@@ -6924,6 +7456,10 @@
    "de la mar"
   ],
   [
+   14157.3,
+   "De la mar, la voz serena que te adormece de la mar."
+  ],
+  [
    14164.0,
    "la voz"
   ],
@@ -6973,11 +7509,11 @@
   ],
   [
    14230.2,
-   "Y ahora es el turno de Sandra Elizabeth"
+   "y ahora es el turno de Sandra Elizabeth"
   ],
   [
    14234.8,
-   "Mientras Sandra se prepara vamos a leer"
+   "mientras Sandra se prepara vamos a leer"
   ],
   [
    14237.6,
@@ -7058,6 +7594,10 @@
   [
    14300.4,
    "barro tal vez"
+  ],
+  [
+   14319.7,
+   "Si no canto lo que siento, me voy a morir por dentro. He de gritarle a los"
   ],
   [
    14330.0,
@@ -7257,7 +7797,7 @@
   ],
   [
    14602.7,
-   "Eisteddfod nacional de gales del 2022"
+   "Eisteddfod nacional de Gales del 2022"
   ],
   [
    14605.8,
@@ -7404,24 +7944,20 @@
    "hoy puedo morir de amor"
   ],
   [
-   14760.6,
-   "rescata mi corazón"
+   14759.6,
+   "Rescata mi corazón, quédate conmigo."
   ],
   [
-   14764.8,
-   "Quédate conmigo"
+   14760.6,
+   "rescata mi corazón"
   ],
   [
    14770.5,
    "hoy puedo morir de amor"
   ],
   [
-   14775.6,
-   "rescata mi corazón"
-  ],
-  [
-   14779.8,
-   "Quédate conmigo"
+   14774.6,
+   "Rescata mi corazón, quédate conmigo."
   ],
   [
    14782.6,
@@ -7494,6 +8030,30 @@
   [
    14860.4,
    "se leáis"
+  ],
+  [
+   14872.9,
+   "Does yn hir yn fy nghof i. Yym nes i ddim sgrifennu lot a gweud y gwir. Nes i'm sgrifennu llawer pan yym ddaeth Alejandro Jones yy i ganu Ti a dy Ddoniau am berfformiad hollol hyfryd ac am lais arbennig yym llawn angerdd ac emosiwn. Yym o'n i'n hoffi'r trefniant yy llais a'r gitâr yy a mae e'n ganwr yym arbennig iawn ac yn leisiwr da. Hefyd yn offerynwr da mae'n amlwg yn yym."
+  ],
+  [
+   14902.9,
+   "yn fedrus iawn ar y gitâr roedd ias yn mynd lawr yng nghefn wrth wrando arnoch chi Alexandro bydd y perfformiad ma'n aros yn hir iawn yn fy nghof i diolch yn fawr iawn i chi. Nancy Jones wedyn yn canu cân llai cyfarwydd i fi, sŵn ar gerdyn post ond am gân hyfryd geiriau Twm Morris llais hyfryd a swynol gyda Nancy a fe gafwyd dehongliad sensitif a thawel ar y gitar."
+  ],
+  [
+   14932.9,
+   "a thynner a oedd hi'n cyfathrebu yn arbennig o dda gyda ni'r gynulleidfa, oedd hi'n geirio'n glir a diolch i Nansi am ychwanegu geiriau yn sôn am y Wladfa am y paith ac am y tywydd a'r gwynt ac yn y blaen felly syniad hyfryd i gyfuno geiriau o Gymru a geiriau o'r Wladfa diolch yn fawr a bydd eich canu sensitif chi Nansi yn aros yn y cof hefyd i fi."
+  ],
+  [
+   14959.9,
+   "Andreas Evans wedyn yn cloi'r gystadleuaeth gyda Chwarain Troen Chwerw, un o ganeuon poblogaidd ni yng Nghymru, cân gan Caryl Parry-Jones, dewis hyfryd, llais cyfoethog, fi'n siŵr bod chi i gyd yn cytuno ac yn cyfathrebu yn glir gyda'r gynulleidfa. Diolch am y cyfeiliant hyfryd hefyd ar y piano, o'n i'n hoffi'r arddull jazz yy yn y piano hefyd. Diolch i chi am ynganu'r geiriau mor dda, ond o'n i'n teimlo heddiw falle bo' chi'n ychwanegu un."
+  ],
+  [
+   14989.9,
+   "Ychydig bach yn rhy gaeth falle i'r copi yy a a a colli'r cyfathrebu falle jyst ryw fymryn, ond perfformiad safonol iawn eto. Wel yn cael y wobr gynta yym heb os heddi, ma' Alejandro Alejandro Jones, llongyfarchiadau iddo fe am gael y wobr gynta yy a be sy'n meddwl yym am ryw ddeg munud."
+  ],
+  [
+   15019.9,
+   "bach o'n i'n claddu pen rhwng pwy sy'n dod yn ail a pwy sy'n dod yn drydydd. Ond dwi wedi mynd am y canu sensitif heddi, ma' hi sy'n dod yn ail, Nancy Jones sy'n dod yn ail a ma' Andreas Evans yn dod yn drydydd agos iawn. Llongyfarchiadau i'r tri. Diolch."
   ],
   [
    15041.3,
@@ -7844,6 +8404,10 @@
    "metele plomo no manche gente pues"
   ],
   [
+   15533.2,
+   "Me te le plomo tan besito, que en este tiro ser etero, me juego el rancho y la pero, y si con eso no alcanza, el corazon de la que alegra mis dias en el trovero."
+  ],
+  [
    15543.4,
    "me juego el rancho El apero si con eso"
   ],
@@ -7920,8 +8484,12 @@
    "una zamba"
   ],
   [
+   15728.6,
+   "Mi oeddwn i'n meddwl bod y cyngor yn cael ei ddisgwyl, ond doeddwn i ddim yn meddwl bod y cyngor yn cael ei ddisgwyl."
+  ],
+  [
    15882.4,
-   "Muchas gracias, los despedimos con un"
+   "Muchas gracias los despedimos con un"
   ],
   [
    15884.6,
@@ -7933,7 +8501,7 @@
   ],
   [
    15890.2,
-   "folclórica Argentina. Vamos a invitar al"
+   "folclórica Argentina vamos a invitar al"
   ],
   [
    15893.3,
@@ -7949,7 +8517,7 @@
   ],
   [
    15899.6,
-   "59. Reitero el llamado al escenario a"
+   "59 reitero el llamado al escenario a"
   ],
   [
    15905.8,
@@ -8500,6 +9068,10 @@
    "invitamos a retirar sus premios"
   ],
   [
+   16283.44,
+   "Rhywle gyda'r hwyr, yr unig un sy'n gystadlu yw Locus Amoenus Vocal de Camara."
+  ],
+  [
    16293.0,
    "locus amoedus vocal de cámara"
   ],
@@ -8544,8 +9116,24 @@
    "si el Jurado así lo dispone"
   ],
   [
+   16426.0,
+   "Mi wlech chafre ffreni, phen rhyw lech gadair ffwrdd, hyd yn o'd sy'n parampar, i ni hyd yn o'd sy'n llwyr."
+  ],
+  [
+   16506.9,
+   "Mi o'n e gafrit hynny, yn rhywle gyda'r gŵn, hyd yn oed sy'n ffor' am half. I ni hyd nos hyd glŵn."
+  ],
+  [
+   16554.7,
+   "Mi o'dd na chaf y cwmni yn un myrcle yn hŵr, nad fyddai'n gweud y geiriau, nad oedd hwnna'n fawr, i ni fydd nos i'r llwyr."
+  ],
+  [
    16615.2,
    "para que lo vaya perfecto"
+  ],
+  [
+   16644.7,
+   "Meiniir. Dyw hwnna'n bosib? Diolch yn fawr. Felly, aprofiwch ein bod y côr yma ar y llysennau i ni i am amser ar y nesaf gompetensiwn, y nesaf y cysylltiad yw numero sesant a seis. Cysylltiad chwe deg chwech, côr gemesg. Bydd ddau parti yn y cystadleuaeth hon, sef locws a moenws, a hefyd côr cerddorol."
   ],
   [
    16646.5,
@@ -8574,6 +9162,10 @@
   [
    16667.2,
    "hay party en"
+  ],
+  [
+   16670.7,
+   "locus amovens Core"
   ],
   [
    16677.9,
@@ -8640,6 +9232,10 @@
    "comisión y está acá con nosotros"
   ],
   [
+   16744.4,
+   "Mwy'n ŵan, ag yr aethon ni i'r silensio. Cysylltiad i chwe deg chwech, côr cymysg. Yr un gyntaf felly i'w gystadlu yw locws a moenws. Dy'r beirniad yn barod? Diolch yn fawr Meinir."
+  ],
+  [
    16750.6,
    "muy bien"
   ],
@@ -8649,11 +9245,23 @@
   ],
   [
    16760.3,
-   "que se le dejó de juez"
+   "que se le dejó de juez cor qué máscara"
+  ],
+  [
+   16764.7,
+   "intenta ver si encantar Lee you looks"
   ],
   [
    16771.2,
    "que mejor"
+  ],
+  [
+   16804.4,
+   "Diolch yn fawr."
+  ],
+  [
+   16872.9,
+   "Nad o'dd gwefen oedd ofn brif, a'r un sy'n madde'i fer teg i, ein rad, ein holl, ein holl, dau dyn, ein rad, ein holl, ein holl, dau dyn."
   ],
   [
    16924.2,
@@ -8789,7 +9397,7 @@
   ],
   [
    17043.4,
-   "Club Trelew"
+   "Club trelew"
   ],
   [
    17045.1,
@@ -8805,11 +9413,11 @@
   ],
   [
    17053.7,
-   "juventud banco del Chubut sociedad"
+   "juventud banco del chubut sociedad"
   ],
   [
    17056.0,
-   "anónima lotería del Chubut y secretaría"
+   "anónima lotería del chubut y secretaría"
   ],
   [
    17059.3,
@@ -8821,7 +9429,7 @@
   ],
   [
    17065.5,
-   "Chubut"
+   "chubut"
   ],
   [
    17086.0,
@@ -8904,6 +9512,10 @@
    "me llevan"
   ],
   [
+   17148.4,
+   "Mae efo ni ar y llwyfan côr Ysgol Cerdd y Gaiman, Ysgolheadd y Mwsica y Gaiman, ar gyfer yr un cystadleuaeth, chwe deg chwech. Barod Marvin?"
+  ],
+  [
    17151.6,
    "con es cualquier de Gaiman escuela de"
   ],
@@ -8916,8 +9528,32 @@
    "le hace"
   ],
   [
+   17162.4,
+   "Felly, os ydy Meinir yn barod, os ydy'r beirniad yn barod, diolch."
+  ],
+  [
+   17262.4,
+   "Yn rhan ein bod, beth odd ein ni."
+  ],
+  [
+   17269.4,
+   "Nad yw sim ond ein beth, tydi."
+  ],
+  [
+   17275.4,
+   "Yn llawn ein bod, beth odd ein ni."
+  ],
+  [
+   17281.4,
+   "Yn rhan ein bod, beth odd ein ni."
+  ],
+  [
+   17292.4,
+   "Amen."
+  ],
+  [
    17318.8,
-   "Gaiman"
+   "Caimán"
   ],
   [
    17322.1,
@@ -8994,6 +9630,10 @@
   [
    17379.2,
    "Chubut año 2022"
+  ],
+  [
+   17381.4,
+   "Diolch yn fawr iawn i bawb sy'n ymuno'n gyda ni, a diolch yn fawr iawn i'r holl gynghorau am eu cefnogaeth."
   ],
   [
    17386.4,
@@ -9457,7 +10097,7 @@
   ],
   [
    17737.3,
-   "puesta en escena a elección si el"
+   "o puesta en escena a elección si el"
   ],
   [
    17741.3,
@@ -9592,6 +10232,10 @@
    "tejernos"
   ],
   [
+   18000.8,
+   "como"
+  ],
+  [
    18022.3,
    "una estatua después se disfraza por la"
   ],
@@ -9701,7 +10345,7 @@
   ],
   [
    18233.5,
-   "invitar ahora a tomar su lugar en el"
+   "invitar Ahora a tomar su lugar en el"
   ],
   [
    18235.9,
@@ -9710,6 +10354,10 @@
   [
    18237.0,
    "arraigue vocal femenino"
+  ],
+  [
+   18239.0,
+   "Mae'n dras drafod y reigiau yn paratoi ar y llwyfan, dwi'n mynd i gofyn i meirnir os ydy beirniadaeth gystadleuaeth chwe deg chwech côr cymysg Hyddersfield yn barod. Na, ddim eto. A beth am?"
   ],
   [
    18288.9,
@@ -9972,6 +10620,14 @@
    "morir y no no ni"
   ],
   [
+   18677.8,
+   "Sy'n mynd o'r hosan agro gandda."
+  ],
+  [
+   18688.8,
+   "Arirang, arirang, ararigo."
+  ],
+  [
    18856.0,
    "agradecemos a las chicas Sí y les damos"
   ],
@@ -10080,6 +10736,38 @@
    "favor"
   ],
   [
+   18976.3,
+   "Meini, ydi o'n bosib cael y beirniadaeth ystoliaeth gan ysgafn?"
+  ],
+  [
+   18985.3,
+   "Os ydi'r lle- os ydi'r llall yn barod hefyd, croeso i chi."
+  ],
+  [
+   18989.3,
+   "chi fynd ymlaen. Reit cystadleuaeth pump deg naw y parti hyd at un deg chwech mewn nifer. Rhywle gyda'r hwyr oedd y darn gan Tudur Dylan Jones a Hector MacDonald. Un parti yn anffodus oedd wedi cystadlu ond fe wnaethon nhw eu gwaith yn arbennig o dda yr parti oedd locws a moenws yym mae'n ddarn hyfryd motto ecsbresifo yym ac yn sicr fod yr"
+  ],
+  [
+   19019.3,
+   "Fe gethon ni yr teimlad yym a'r yym yr expressivo yma fel mae'r cyfansoddwr yn gofyn am gyda'r parti yma."
+  ],
+  [
+   19028.5,
+   "Gwyliwch y diweddebau. Yym o'n i'n colli'r cyd-symud a'r brydiau ar ddiwedd brawddegau yym a oedd hyn yn digwydd yym pan oedd na ral pan o'ch chi'n arafu felly mae isie canolbwyntio mwy falle edrych m- yym fwy craff ar yr arweinydd o ran y diweddebau a gwrando."
+  ],
+  [
+   19049.3,
+   "eich gilydd yn fwy falle ond fe yn sicr fe wnaethoch chi greu'r"
+  ],
+  [
+   19054.3,
+   "tannerwch yn arbennig iawn i ni ac yn effeithiol dros ben a oedd y bar ola yr triple pee ar y diwedd yn arbennig arbennig o effeithiol gyda chi. Chi'n llawn haeddu'r wobr gynta. Diolch yn fawr iawn."
+  ],
+  [
+   19068.3,
+   "Competencia cincuenta y nueve para conjunto coro, canción popular o melódica."
+  ],
+  [
    19074.9,
    "competencia 59 para conjunto coro"
   ],
@@ -10137,7 +10825,7 @@
   ],
   [
    19113.3,
-   "cuidado con los finales de frase se"
+   "Cuidado con los finales de frase se"
   ],
   [
    19116.1,
@@ -10188,20 +10876,68 @@
    "plenamente el primer premio"
   ],
   [
+   19147.3,
+   "Ydi hi'n bosib cael beirniadaeth gystadleuaeth chwe deg chwech mewn i'r Dim problem o gwbl. Yym cystadleuaeth chwech deg chwech, y côr cymysg a'r darn, os y'ch chi'n cofio, fi'n siŵr bod chi'n cofio, hyder's field. Mae'n ddarn yym rhythmig yy ac ma' isie digon o nerth."
+  ],
+  [
    19157.5,
    "te dije imposible"
+  ],
+  [
+   19177.34,
+   "a chryfder i ddehongli y yym y darn yma. Yym oedd yna ddau gôr, yr y côr cynta nath berfformio yy oedd Locws a Moenws, a gobeithio bo' fi'n ynganu pethe ynweddol yma, yym agoriad hyderus iawn a chylleis- lleisiau cyfoethog gyda'r côr yma, ac o'n i'n teimlo bod y pedwar llais yn asio yn hyfryd, oedd dim un llais yn ceisio boddi y lleisiau eraill. O'n i'n hoffi'r yy asiad sypranol yna, yym o'n i'n teimlo bod y pedwar llais yn asio yn hyfryd, oedd dim un llais yn ceisio boddi y lleisiau eraill, o'n i'"
   ],
   [
    19186.1,
    "hoy locus amorenos"
   ],
   [
+   19207.34,
+   "Anno ag Alto pan o'n nhw'n canu y trydyddau yym oedd yna gyferbyniad da iawn rhwng yr adran maes toso a'r adran alegro a fe wnaethoch roi'r egni cerddorol i ni yn yr adran gyflym pa Dduw sy'n maddau yy oedd y contrast cerddorol yn arbennig dach chi da iawn baswyr yn y rhed- yn yr hediadau y cweferi yym ma' rheina'n gallu bod yn anodd ond fe wnaethoch chi yym job arbennig o dda."
+  ],
+  [
    19211.6,
    "nada que ver aún es un gran maestro"
   ],
   [
+   19217.3,
+   "abre un hijo de Rolling en patio"
+  ],
+  [
+   19230.0,
+   "Marina casi por enanos"
+  ],
+  [
+   19234.86,
+   "Diolch i chi am berfformio'n ddigyfeiliant. A ma' rhaid cofio hyn, bo' ni wedi cael dau gôr, un yn canu'n ddigyfeiliant a'r côr arall yn canu gyda chyfeiliant piano. Felly ma' raid cofio hyn wrth geisio penderfynu pwy sydd yn mynd ar wobr gynta. Roedd tiwnio y côr yma yn arbennig o dda gan ystyried bod nhw yn canu'n ddigyfeiliant. Fe wnaethon nhw rhoi dehongliad disgybledig iawn i ni, felly diolch i'r côr cynta yna."
+  ],
+  [
+   19263.24,
+   "Ac yn ail wedyn yn cloi'r gystadleuaeth oedd côr ysgol gerdd y Gaeman, côr mawr, côr anferth yym a fe gethon ni'r sain cyfoethog yma gyda nhw."
+  ],
+  [
    19267.4,
-   "Gaiman"
+   "Caimán"
+  ],
+  [
+   19274.24,
+   "Fel o'n i'n dweud oedd yna gyfeiliant piano yn tipyn o help i'r tiwnio yn yn y fan yma ond fe gethon ni ddarlleniad gofalus a rhythmig ac eto fel y côr cyntaf roedd yr asiad soprano ag alto yn hyfryd iawn."
+  ],
+  [
+   19289.2,
+   "Teimlais ar adege bod na ambell i falle lais unigol yn y sopranos a oedd hwn yn effeithio falle'r sain o bryd i'w gilydd. Yym ond dyma berfformiad egniol iawn a llongyfarchiadau i chi am ddysgu eich gwaith mor dda. Chi'n dangos brwdfrydedd ac egni yn sicr i ni. Yym fi'n siŵr bo' chi wedi dod i'r casgliad bo' fi'n mynd i roi'r wobr gynta heno i'r côr mwya disgybledig falle oedd wedi canu'n ddigyfeiliad. Yym."
+  ],
+  [
+   19319.2,
+   "gyda tiwnio arbennig yy ac am eu cynildeb dwi'n rhoi'r wobr gynta i Locws Amo Enws."
+  ],
+  [
+   19337.2,
+   "A llongyfarchiadau mawr i Côr Ysgol Gerdd y Gaiman am ddod yn ail llongyfarchiadau."
+  ],
+  [
+   19341.2,
+   "Llongyfarchiadau."
   ],
   [
    19348.7,
@@ -10289,7 +11025,7 @@
   ],
   [
    19418.0,
-   "escuchamos al Coro de Gaiman este sí que"
+   "escuchamos al coro de Gaiman este sí que"
   ],
   [
    19422.1,
@@ -10385,15 +11121,11 @@
   ],
   [
    19505.3,
-   "muchísimas gracias Dios ojo Mauri aún me"
-  ],
-  [
-   19509.1,
-   "hiner a Mary a Nancy a"
+   "muchísimas gracias"
   ],
   [
    19513.9,
-   "jungkovernos felicitaciones chicos los"
+   "felicitaciones chicos los"
   ],
   [
    19517.4,
@@ -10761,7 +11493,7 @@
   ],
   [
    19790.8,
-   "el segundo puesto azul. Muchísimas"
+   "el segundo puesto azul Muchísimas"
   ],
   [
    19793.4,
@@ -10781,7 +11513,7 @@
   ],
   [
    19808.4,
-   "estamos llegando al final. Como lo"
+   "estamos llegando al final Como lo"
   ],
   [
    19810.4,
@@ -10797,7 +11529,7 @@
   ],
   [
    19819.7,
-   "Dios quiere, 14 horas, perfecto. Los"
+   "Dios quiere 14 horas perfecto los"
   ],
   [
    19822.9,
@@ -10836,6 +11568,10 @@
    "aquí o con Astrid Rees al 284 30 89 22"
   ],
   [
+   19870.1,
+   "Rydym yn diolch i bob un ohonoch sy wedi bod efo ni fel cynulleidfa heddiw."
+  ],
+  [
    19897.0,
    "a Kevin handley y que beilio arpiano"
   ],
@@ -10849,7 +11585,11 @@
   ],
   [
    19909.1,
-   "Kevin a acompañar en el piano a rewind"
+   "Kevin a acompañar en el piano a"
+  ],
+  [
+   19917.2,
+   "Gofiwch ddod yn ôl fory am ddau o'r gloch yn brydlon byddwn ni'n cychwyn."
   ],
   [
    20034.0,
@@ -10998,13 +11738,13 @@
  ],
  "fuentes": [
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -11049,10 +11789,10 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -11115,13 +11855,13 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -11181,7 +11921,7 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -11247,7 +11987,7 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -11256,7 +11996,25 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -11386,6 +12144,21 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -11607,10 +12380,22 @@
    "yt_es"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -11635,8 +12420,23 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -11676,6 +12476,9 @@
    "yt_es"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -11701,6 +12504,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -11761,6 +12567,12 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -11805,6 +12617,9 @@
    "yt_es"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -11815,12 +12630,18 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -12087,6 +12908,9 @@
    "yt_es"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -12216,6 +13040,9 @@
    "yt_es"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -12325,6 +13152,12 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -12358,8 +13191,26 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -12409,6 +13260,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -12651,16 +13505,16 @@
    "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
   ],
   [
    "yt_es"
@@ -12735,7 +13589,7 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -12870,10 +13724,10 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -12891,10 +13745,10 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -12915,7 +13769,7 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -12924,7 +13778,7 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -13065,7 +13919,7 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -13143,28 +13997,28 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -13188,10 +14042,10 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -13248,16 +14102,16 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -13380,10 +14234,10 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -13398,16 +14252,16 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -13422,22 +14276,22 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -13581,7 +14435,7 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -13608,7 +14462,7 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -13752,7 +14606,7 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -13770,16 +14624,16 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -13842,7 +14696,7 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -13866,10 +14720,10 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -13905,12 +14759,15 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -14142,6 +14999,9 @@
    "yt_es"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -14167,6 +15027,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -14176,6 +15039,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -14185,6 +15051,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -14215,6 +15084,15 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -14235,6 +15113,9 @@
    "yt_es"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -14274,6 +15155,9 @@
    "yt_es"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -14284,12 +15168,24 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -14305,8 +15201,17 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -14326,14 +15231,26 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -14584,12 +15501,42 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -14818,8 +15765,14 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -14832,6 +15785,9 @@
    "yt_es"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -14842,6 +15798,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -14866,6 +15825,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -14926,6 +15888,18 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -14940,6 +15914,9 @@
    "yt_es"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -15030,7 +16007,37 @@
    "yt_es"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -15280,6 +16287,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -15319,9 +16329,39 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -15478,17 +16518,53 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -15496,6 +16572,12 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -15505,6 +16587,42 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -15526,6 +16644,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -15535,6 +16656,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -15576,6 +16700,9 @@
    "yt_es"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -15583,17 +16710,29 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
    "yt_es"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -15766,6 +16905,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -16183,6 +17325,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -16287,6 +17432,9 @@
    "yt_es"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -16543,6 +17691,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -16551,6 +17702,7 @@
    "yt_es"
   ],
   [
+   "cy",
    "yt_es"
   ],
   [
@@ -16606,8 +17758,26 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -16869,6 +18039,9 @@
    "yt_es"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -16924,6 +18097,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -17359,6 +18535,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -17392,9 +18571,21 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -17467,6 +18658,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -17482,6 +18676,12 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -17668,6 +18868,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -17677,8 +18880,26 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -17737,6 +18958,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -18091,6 +19315,10 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "yt_es",
+   "cy"
   ],
   [
    "yt_es"
@@ -18276,6 +19504,9 @@
    "yt_es"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -18469,6 +19700,12 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -18550,8 +19787,32 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -18631,14 +19892,23 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -18646,11 +19916,32 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -19120,6 +20411,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -19132,6 +20426,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -19254,9 +20551,9 @@
   }
  ],
  "ventanas": {
-  "total": 335,
-  "modelo": 261,
-  "reglas": 4,
-  "vacias": 70
+  "total": 339,
+  "modelo": 287,
+  "reglas": 22,
+  "vacias": 30
  }
 }

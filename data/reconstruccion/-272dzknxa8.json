@@ -37,30 +37,34 @@
   ],
   [
    212.2,
+   "Amén."
+  ],
+  [
+   215.2,
    "He llegado hasta tu casa"
   ],
   [
-   212.2,
+   219.2,
    "¡Yo no sé cómo he podido!"
   ],
   [
-   212.2,
+   223.1,
    "Si me han dicho que no estás,"
   ],
   [
-   218.3,
+   227.0,
    "que ya nunca volverás"
   ],
   [
-   223.1,
+   230.0,
    "¡Si me han dicho que te has ido!"
   ],
   [
-   229.9,
+   234.4,
    "¡Cuánta nieve hay en mi alma!"
   ],
   [
-   236.1,
+   238.3,
    "¡Qué silencio hay en tu puerta!"
   ],
   [
@@ -84,27 +88,27 @@
    "Sólo telarañas que teje el yuyal."
   ],
   [
-   262.9,
+   261.3,
    "El rosal tampoco existe"
   ],
   [
-   266.1,
+   263.2,
    "y es seguro que se ha muerto al irte tú"
   ],
   [
-   272.0,
+   266.1,
    "¡Todo es una cruz!"
   ],
   [
-   274.5,
+   269.6,
    "Nada, nada más que tristeza y quietud."
   ],
   [
-   279.5,
+   276.5,
    "Nadie que me diga si vives aún"
   ],
   [
-   283.7,
+   282.3,
    "¿Dónde estás, para decirte"
   ],
   [
@@ -112,47 +116,47 @@
    "que hoy he vuelto arrepentido a buscar tu amor?"
   ],
   [
-   334.6,
+   294.5,
+   "Mamá"
+  ],
+  [
+   306.5,
    "Ya me alejo de tu casa"
   ],
   [
-   361.1,
+   317.3,
    "y me voy ya ni sé donde"
   ],
   [
-   377.5,
-   "Vuelto al miércoles tú, todo es una cruz."
-  ],
-  [
-   384.7,
+   326.8,
    "Sin querer te digo adiós"
   ],
   [
-   388.6,
+   336.3,
    "y hasta el eco de tu voz"
   ],
   [
-   393.1,
+   347.0,
    "de la nada me responde."
   ],
   [
-   397.0,
+   356.5,
    "En la cruz de tu candado"
   ],
   [
-   397.8,
+   366.1,
    "por tu pena yo he rezado"
   ],
   [
-   398.7,
+   376.8,
    "y ha rodado en tu portón"
   ],
   [
-   399.5,
+   387.5,
    "una lágrima hecha flor"
   ],
   [
-   400.3,
+   397.0,
    "de mi pobre corazón."
   ]
  ],
@@ -182,10 +186,7 @@
    "cy"
   ],
   [
-   "letra"
-  ],
-  [
-   "letra"
+   "whisper_es"
   ],
   [
    "letra"
@@ -246,6 +247,12 @@
   ],
   [
    "whisper_es"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ],
   [
    "letra"
@@ -285,8 +292,8 @@
  ],
  "ventanas": {
   "total": 8,
-  "modelo": 8,
+  "modelo": 7,
   "reglas": 0,
-  "vacias": 0
+  "vacias": 1
  }
 }

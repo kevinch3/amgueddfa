@@ -65,16 +65,40 @@ for the export (`/run/media/kevinch3/4eff8b2b-…/amgueddfa-backup`).
 
    Stanza two…
    ```
-   Stanzas separated by blank lines (the aligner repeats whole stanzas when the choir does).
-   One file per piece, reused by every video where it is sung.
-4. **Find the span** (seconds) where the piece is sung in each video:
-   - single-competition clip: from the first sung line after the announcement to the applause;
-   - long session: from the competition's chapter (`public/marcadores-video/<id>.json`, or the
-     time in the pending list) to the next chapter or the applause;
-   - two pieces in one competition: one span each, split at the applause or silence between them.
+   Stanzas separated by blank lines: the aligner finds a stanza sung again, right after itself or
+   later (a refrain after each verse, a da capo), where most of it is heard. A whole line such as
+   `(Estribillo)` heads a stanza and is not shown. One file per piece, reused by every video where it is sung.
+4. **Find the span** (seconds) where the piece is sung in each video. `desde` is the first sung
+   moment (the intro's first note at the earliest, never the announcement) and `hasta` the last
+   sung moment (the held final chord, before the applause): never the next chapter, the jury or
+   the next announcement. A span that runs on over speech is what put lyric lines on announcers.
+   - single-competition clip: from the first sung note after the announcement to the last one;
+   - long session: find the competition by its chapter (`public/marcadores-video/<id>.json`, or
+     the time in the pending list), then mark the singing inside it, not the chapter's ends;
+   - two pieces in one competition: one span each, split at the applause or silence between them;
+   - a performance cut short, a false start or a stopped backing track: one span per take, each
+     ending where its singing stops (the aligner leaves out the lines that were not sung);
+   - nothing of the text sung in the span (narration, another piece): no span, a `huecos.json` entry.
 5. **Preview:** `python3 -m scripts.align_lyrics <video> <slug> <desde> <hasta>`. Fix the span or
-   the text until there are no `WARN` lines. Lines under 1 s apart mean invented repeats or a
-   span that is too short; a first line long after `desde` means the span starts too early.
+   the text until there are no `WARN` lines you can't explain. Lines under 1 s apart mean invented
+   repeats or a span that is too short; a first line long after `desde` means the span starts too
+   early. The lyric runs only from its first to its last *anchored* line (one heard with at least
+   two matched words, or most of a short line); lines outside those are placed at the pace they
+   were sung, only while they fit inside the span and before speech heard there. `N lines not placed
+   at the end, from stanza S line L on` means the text is longer than what was sung (a truncated
+   performance, a shorter version) or `hasta` cuts the singing: listen, then move `hasta`, accept it,
+   or give the order sung (below). `not placed at the start` is the same before the first anchored
+   line (sung before the recording or `desde`, or right after the announcer); lines before it that
+   were heard in the same long segment (a Welsh-model block) start with that segment instead. Lines
+   that run only a little past the span are squeezed in, and lines after the last anchored one follow
+   the singing still heard after it. `no line heard clearly enough to anchor it` spreads every line
+   evenly over the span: mark `desde` and `hasta` on the singing exactly, or log a gap. `placed on
+   single words heard` (a recogniser that hears another language) is rough timing: check it by ear.
+   `stanzas sung: 1 2 3 2` is the order the aligner found when it is not the text's: check it too.
+   **The order sung**, when the aligner can't find it (a stanza skipped, part of one sung again):
+   add `"estrofas"` to the span, stanza numbers from 1 in the order sung, `"n:a-b"` for lines a to b
+   of stanza n: `{"letra": "…", "desde": 14, "hasta": 254, "estrofas": [1, 2, 3, "1:3-4", 2, 2]}`.
+   Preview it with `--estrofas 1,2,3,1:3-4,2,2`. The aligner then takes that order as it is.
    The rebuilt text (`video-reconstruction`) aligns from the raw sources instead: a Welsh piece from
    the Welsh model's lines above its confidence filter, any other from the Spanish sources only. Preview
    that too when the video will be rebuilt, and watch for lines piled at the start (the first line heard
@@ -91,7 +115,8 @@ for the export (`/run/media/kevinch3/4eff8b2b-…/amgueddfa-backup`).
    that has an entry, take it out of the entry: the report raises on entries for aligned videos,
    and on any slug, title, video or code it doesn't know. In a video already aligned, an entry whose
    `desde` falls outside the aligned span records another performance of the piece there. A sung
-   stanza missing from the text, or one the singers skip, is `texto_distinto` or `estrofa_omitida`.
+   stanza missing from the text is `texto_distinto`; a stanza the singers skip can now be aligned with
+   `"estrofas"` (step 5), so `estrofa_omitida` is only for one not yet measured.
 7. **Export and check:** `python3 -m scripts.export_video_transcripts` (about 5 s; rewrites only
    changed files). `git status` must show only the expected `public/transcripciones-video/*.json`.
    Then `python3 -m scripts.letras_pendientes`, `npm run build`, `npm test`, `python3 -m pytest -q tests`.

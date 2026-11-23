@@ -210,6 +210,16 @@ def _align(seg: list, stanzas: list[list[str]], desde: float, hasta: float) -> t
     _, _, lines, where, anchors, weak = cur
     out: list = [None] * len(lines)
     kept = _kept(anchors)
+    if kept:
+        # A long heard segment (the Welsh model's are up to 30 s) can hold the first lines with the first
+        # anchored one, at the segment's time. Lines before that anchor matched in the same segment, even on
+        # weak evidence, were heard there: the lyric starts on the earliest of them, and the anchored line
+        # is spread after it (cwm-rhondda in K3uYyZGC68o, 2026-11: lines 1-2 were left out).
+        first = min(kept)
+        shared = [k for k in range(first) if weak.get(k) == kept[first]]
+        if shared:
+            kept[min(shared)] = kept.pop(first)
+            kept = dict(sorted(kept.items()))
     info["anchored"] = len(kept)
     if not kept:  # nothing heard well enough: the span is all there is
         _spread(lines, [(-1, float(desde)), (len(lines), float(hasta))], out)

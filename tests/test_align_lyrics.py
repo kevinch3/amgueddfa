@@ -149,3 +149,13 @@ def test_a_recording_that_starts_after_the_first_lines():
     out, warn = preview(seg, stanzas(), 0, 26)
     assert out[0] == [0.0, "Lindo río que se va"]
     assert any("not placed at the start" in w for w in warn), warn
+
+
+def test_a_segment_that_holds_the_first_lines_places_them_all():
+    # One long heard segment at the start of the span holds a weak echo of line 1 ("de la") and line 2:
+    # line 1 starts with the segment and line 2 follows it, instead of line 1 being left out.
+    seg = [[0.0, "de la lindo rio que seba"]] + [[t - 14, x] for t, x in SEG[3:8]]
+    out, warn = preview(seg, stanzas(), 0, 26)
+    assert out[0] == [0.0, "Verde campo de la sierra"]
+    assert out[1][1] == "Lindo río que se va" and 0.0 < out[1][0] < 6.0
+    assert not any("not placed at the start" in w for w in warn), warn

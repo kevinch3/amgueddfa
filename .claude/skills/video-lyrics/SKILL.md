@@ -87,8 +87,9 @@ for the export (`/run/media/kevinch3/4eff8b2b-…/amgueddfa-backup`).
    at the end, from stanza S line L on` means the text is longer than what was sung (a truncated
    performance, a shorter version) or `hasta` cuts the singing: listen, then move `hasta` or accept
    it (and note a skipped stanza as `estrofa_omitida`). `not placed at the start` is the same before
-   the first anchored line (sung before the recording or `desde`, or right after the announcer).
-   `no line heard clearly enough to anchor it` spreads every line evenly over the span: mark
+   the first anchored line (sung before the recording or `desde`, or right after the announcer);
+   lines before it that were heard in the same long segment (a Welsh-model block) start with that
+   segment instead. `no line heard clearly enough to anchor it` spreads every line evenly over the span: mark
    `desde` and `hasta` on the singing exactly, or log a gap.
    The rebuilt text (`video-reconstruction`) aligns from the raw sources instead: a Welsh piece from
    the Welsh model's lines above its confidence filter, any other from the Spanish sources only. Preview

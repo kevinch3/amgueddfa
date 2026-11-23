@@ -21,8 +21,8 @@
  "BFkVC4Xe7RA": [
   {
    "letra": "en-los-brazos-de-la-luna",
-   "desde": 0,
-   "hasta": 84
+   "desde": 4,
+   "hasta": 93
   }
  ],
  "cLZdGxOA1TE": [
@@ -43,7 +43,7 @@
   {
    "letra": "el-abuelo-y-el-pehuen",
    "desde": 70,
-   "hasta": 407
+   "hasta": 385.5
   }
  ],
  "tbDh70HXvDY": [
@@ -71,50 +71,45 @@
   },
   {
    "letra": "oro-y-plata",
-   "desde": 37794,
-   "hasta": 38056
+   "desde": 37806,
+   "hasta": 37997
   },
   {
    "letra": "oro-y-plata",
-   "desde": 38412,
-   "hasta": 38726
+   "desde": 38424,
+   "hasta": 38605
   },
   {
    "letra": "coplas-para-la-tejedora",
-   "desde": 3720,
-   "hasta": 3947
+   "desde": 3706,
+   "hasta": 3870
   },
   {
    "letra": "coplas-para-la-tejedora",
-   "desde": 4061,
-   "hasta": 4398
+   "desde": 4046,
+   "hasta": 4221
   },
   {
    "letra": "coplas-para-la-tejedora",
-   "desde": 4407,
-   "hasta": 4636
-  },
-  {
-   "letra": "coplas-para-la-tejedora",
-   "desde": 5209,
-   "hasta": 5517
+   "desde": 4400,
+   "hasta": 4559
   },
   {
    "letra": "rie-chinito",
-   "desde": 31480,
-   "hasta": 31846
+   "desde": 31495,
+   "hasta": 31740
   },
   {
    "letra": "desencuentro",
-   "desde": 24472,
-   "hasta": 24668
+   "desde": 24488.5,
+   "hasta": 24628
   }
  ],
  "kHsF8eQ1L6Y": [
   {
    "letra": "claros-y-frescos-rios",
-   "desde": 12,
-   "hasta": 137
+   "desde": 3,
+   "hasta": 133
   }
  ],
  "fpNpqWUJ5GM": [
@@ -134,57 +129,42 @@
  "0X83qrUotz0": [
   {
    "letra": "gurisito",
-   "desde": 4525,
-   "hasta": 4841
+   "desde": 4499,
+   "hasta": 4683
   }
  ],
  "VDCKHPXzibM": [
   {
    "letra": "juana-azurduy",
-   "desde": 400,
-   "hasta": 637
+   "desde": 403,
+   "hasta": 531
   },
   {
    "letra": "an-die-musik",
    "desde": 2530,
-   "hasta": 2698
+   "hasta": 2684
   },
   {
    "letra": "la-finadita",
-   "desde": 9583,
-   "hasta": 9818
+   "desde": 9586,
+   "hasta": 9718
   }
  ],
  "SQHehsJfn1w": [
   {
    "letra": "miedo",
    "desde": 0,
-   "hasta": 170
+   "hasta": 155
   }
  ],
  "-272dzknxa8": [
   {
    "letra": "nada",
-   "desde": 229,
-   "hasta": 412
+   "desde": 210.5,
+   "hasta": 425
   }
  ],
  "eNmj-1_HlIk": [
-  {
-   "letra": "la-vieja",
-   "desde": 3798,
-   "hasta": 4003
-  },
-  {
-   "letra": "la-vieja",
-   "desde": 4048,
-   "hasta": 4234
-  },
-  {
-   "letra": "la-vieja",
-   "desde": 4274,
-   "hasta": 4472
-  },
   {
    "letra": "pater-noster",
    "desde": 5611,
@@ -192,8 +172,8 @@
   },
   {
    "letra": "rabo-de-nube",
-   "desde": 12462,
-   "hasta": 12564
+   "desde": 12447,
+   "hasta": 12655
   },
   {
    "letra": "alla-lejos-y-hace-tiempo",
@@ -219,8 +199,8 @@
   },
   {
    "letra": "zamba-del-carnaval",
-   "desde": 29594,
-   "hasta": 29911
+   "desde": 29582,
+   "hasta": 29845
   },
   {
    "letra": "ave-maria-valva",
@@ -231,68 +211,56 @@
  "cDpe89FFjOA": [
   {
    "letra": "canto-versos",
-   "desde": 9542,
-   "hasta": 9849
+   "desde": 9592,
+   "hasta": 9810
   },
   {
    "letra": "canto-versos",
-   "desde": 9844,
-   "hasta": 10135
+   "desde": 9856,
+   "hasta": 10064
   },
   {
    "letra": "canto-versos",
-   "desde": 10137,
-   "hasta": 10463
-  },
-  {
-   "letra": "canto-versos",
-   "desde": 11160,
-   "hasta": 11837
-  },
-  {
-   "letra": "canto-versos",
-   "desde": 12610,
-   "hasta": 13147
+   "desde": 10149,
+   "hasta": 10350
   },
   {
    "letra": "desarma-y-sangra",
-   "desde": 7223,
-   "hasta": 7520
-  }
- ],
- "GmJvkuTeNdc": [
+   "desde": 7278,
+   "hasta": 7336
+  },
   {
-   "letra": "ahicito",
-   "desde": 26,
-   "hasta": 296
+   "letra": "desarma-y-sangra",
+   "desde": 7369,
+   "hasta": 7603
   }
  ],
  "Tjs4Lw93v5I": [
   {
    "letra": "ambar-violeta",
-   "desde": 0,
-   "hasta": 171
+   "desde": 13.5,
+   "hasta": 142
   }
  ],
  "gu761qYfevg": [
   {
    "letra": "baguala-del-viento",
-   "desde": 12,
-   "hasta": 223
+   "desde": 22.5,
+   "hasta": 222.5
   }
  ],
  "KTNvEcE5bNs": [
   {
    "letra": "canto-al-rio-uruguay",
-   "desde": 0,
-   "hasta": 244
+   "desde": 14,
+   "hasta": 254
   }
  ],
  "QuOfBRbUpKQ": [
   {
    "letra": "la-tristecita",
-   "desde": 75,
-   "hasta": 318
+   "desde": 94.5,
+   "hasta": 301
   }
  ],
  "xO9Sdkfw1bo": [
@@ -310,8 +278,8 @@
   },
   {
    "letra": "naranjo-en-flor",
-   "desde": 20927,
-   "hasta": 21205
+   "desde": 20948,
+   "hasta": 21161
   },
   {
    "letra": "tamquam-agnus",
@@ -446,7 +414,7 @@
  "SvBTOh3OlMg": [
   {
    "letra": "ave-maria-jenkins",
-   "desde": 11647,
+   "desde": 11662,
    "hasta": 11839
   },
   {
@@ -513,8 +481,8 @@
   },
   {
    "letra": "cinema-paradiso-se",
-   "desde": 1532,
-   "hasta": 1712
+   "desde": 1517,
+   "hasta": 1713
   }
  ],
  "MIW7333GiIY": [

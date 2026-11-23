@@ -11,10 +11,27 @@ piece; with its text, `scripts/align_lyrics.py` puts each line at the moment it 
 
 ## The rule
 
-**Never type, recall or complete lyrics yourself**, not even "well-known" or public-domain ones.
-The text comes from the maintainer (pasted, or a file they point to). If asked for the words, give
-the title, author and where to find them (e.g. oxfordsong.org, a hymnal, the choir's score).
-Translations have their own copyright: store only the original-language text.
+The maintainer's instruction: "Make any effort if you found that the song or the context is known or
+can be get, then take the chance to do it." So when a piece is known, or can be found out (the
+programa, the announcement, the video title, what was heard), go and get its text, within these limits:
+
+- **Never type, recall or complete lyrics yourself**, not even "well-known" ones. Every word comes
+  from a source: the maintainer, or a fetched public page.
+- **Public domain** (authors and translators dead before 1956, traditional, liturgical, the 1620 Bible):
+  fetch the text from a cited public source (Wikisource, a hymnal scan, gobaith.cymru, CPDL, Project
+  Gutenberg…), copy it from the fetched page by script, never retyped, and check it against what is
+  sung before saving: same stanzas, same wording, refrains written out as sung. Front matter:
+  `derechos: Texto de dominio público` and `fuente: <URL>, <edition>, obtenido por el archivo`. Check the
+  death dates yourself; a translation has its own copyright.
+- **Copyrighted** texts come only from the maintainer (pasted, or a file they point to). If asked for
+  the words, give the title, author and where to find them (e.g. oxfordsong.org, a hymnal, the score).
+- Store only the original-language text.
+- **Which piece a performance is** («a elección», free repertoire, a clip with no competition) goes to
+  `data/letras/identificaciones.json`, keyed by video: `t` (seconds, in a session), `titulo`, `autoria`
+  (author, or tune), `confianza` (alta / media / baja), `evidencia` (announcement, title, what the
+  recognisers heard: never quote what is sung), `derechos` (dominio_publico / con_derechos /
+  sin_confirmar), `letra` when the text is saved, `nota` for what stays in doubt. An identified piece
+  with no text stays a gap («falta el texto»), listed in «Obras identificadas, sin texto».
 
 ## Steps
 
@@ -23,8 +40,10 @@ for the export (`/run/media/kevinch3/4eff8b2b-…/amgueddfa-backup`).
 
 1. **What's needed:** `python3 -m scripts.letras_pendientes` regenerates `docs/letras-pendientes.md`
    (pieces by priority, videos and times; "a elección" ones to identify; why each gap is open).
-   Ask the maintainer for the texts of the top rows, as sung (refrains written out), in the
-   original language. Not every piece will get a text, and that is fine: the gaps are documented.
+   For the top rows, fetch the public-domain texts (see the rule) and ask the maintainer for the
+   copyrighted ones, as sung (refrains written out), in the original language; identify the «a
+   elección» performances you can. Not every piece will get a text, and that is fine: the gaps are
+   documented.
 2. **Check the text is the right piece** before anything else: compare it with what YouTube heard
    in the video (`python3 -c` over the segments in the span of `data/reconstruccion/<id>.json`, or
    `public/transcripciones-video/<id>.json` when there is no reconstruction: the published text joins
@@ -38,8 +57,8 @@ for the export (`/run/media/kevinch3/4eff8b2b-…/amgueddfa-backup`).
    titulo: Bonita rama de sauce
    autor: Carlos Guastavino; texto de Arturo Vázquez
    idioma: es            # cy, pt, la, en… (sets the lines' language in the player)
-   derechos: Derechos confirmados por el mantenedor del archivo   # or "Texto tradicional (dominio público)"
-   fuente: <where the text came from>, aportado por <who>
+   derechos: Derechos confirmados por el mantenedor del archivo   # or "Texto de dominio público"
+   fuente: <where the text came from>, aportado por <who>   # or "<URL>, <edition>, obtenido por el archivo"
    ---
    Stanza one, line one
    …
@@ -56,6 +75,11 @@ for the export (`/run/media/kevinch3/4eff8b2b-…/amgueddfa-backup`).
 5. **Preview:** `python3 -m scripts.align_lyrics <video> <slug> <desde> <hasta>`. Fix the span or
    the text until there are no `WARN` lines. Lines under 1 s apart mean invented repeats or a
    span that is too short; a first line long after `desde` means the span starts too early.
+   The rebuilt text (`video-reconstruction`) aligns from the raw sources instead: a Welsh piece from
+   the Welsh model's lines above its confidence filter, any other from the Spanish sources only. Preview
+   that too when the video will be rebuilt, and watch for lines piled at the start (the first line heard
+   comes late) or at the end (the last heard segment holds a whole stanza): a pile of a few lines is
+   approximate timing, a whole stanza piled is a gap (`alineador` or `gales_insuficiente`).
 6. **Add the span** to `data/letras/videos.json`: `"<video>": [{"letra": "<slug>", "desde": 95, "hasta": 292}]`
    (append to the video's list if it already has one).
    **If it can't be placed** (the text differs from what is sung, the Welsh model heard too little,
@@ -65,7 +89,9 @@ for the export (`/run/media/kevinch3/4eff8b2b-…/amgueddfa-backup`).
    link points), `motivo` (a code of `MOTIVOS` in `scripts/letras_pendientes.py`) and a
    one-sentence Spanish `detalle` that never quotes what is sung. When you later place a video
    that has an entry, take it out of the entry: the report raises on entries for aligned videos,
-   and on any slug, title, video or code it doesn't know.
+   and on any slug, title, video or code it doesn't know. In a video already aligned, an entry whose
+   `desde` falls outside the aligned span records another performance of the piece there. A sung
+   stanza missing from the text, or one the singers skip, is `texto_distinto` or `estrofa_omitida`.
 7. **Export and check:** `python3 -m scripts.export_video_transcripts` (about 5 s; rewrites only
    changed files). `git status` must show only the expected `public/transcripciones-video/*.json`.
    Then `python3 -m scripts.letras_pendientes`, `npm run build`, `npm test`, `python3 -m pytest -q tests`.
@@ -82,7 +108,9 @@ for the export (`/run/media/kevinch3/4eff8b2b-…/amgueddfa-backup`).
 
 | Mistake | Fix |
 |---|---|
-| Writing lyrics from memory to "save time" | Never; ask for the text |
+| Writing lyrics from memory to "save time" | Never; fetch a public-domain text from a cited source, or ask for it |
+| A public-domain text saved without checking it against the singing | Compare stanzas and wording with what was heard; a different version is a gap (`texto_distinto`) |
+| Quoting sung words in an identification or a gap entry | Describe where the evidence comes from, never what is sung |
 | Storing the translation next to the original | Original only |
 | Span covering the announcer's introduction | Start at the first sung line; the speech stays as YouTube heard it |
 | Text as printed when the choir repeats a refrain many times inside a stanza | Write the refrain out as sung, or accept approximate times for those lines |

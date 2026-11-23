@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Yn barod, felly, Ysgol yr Henwe."
+  ],
+  [
    202.3,
    "Muchas gracias"
   ],
@@ -49,15 +53,23 @@
   ],
   [
    236.6,
-   "realización del 2009"
+   "realización del 2009 vendo"
+  ],
+  [
+   240.0,
+   "yy bod yn dan ni'n dod allan yn fyw, mae'n debyg, trwy'r prengrwydd, drwy'r internet, felly yy dan ni'n hapus iawn bod bobol o Gymru yn gallu yy ymweld yy yr ystyrfod yma yn fyw."
+  ],
+  [
+   256.0,
+   "nid dim ond pobol o Fymru achos ma' pobol o fan hyn sydd draw ar hyn o bryd hefyd yn gallu weld ni yy no' solamente la gente de Irales, sino los huracán que están en Irales y nos pueden ver y compartir con nosotros y estamos, yy fyddai'n neud un e-mail a proposito de esto, Kathleen Morris y Milton Junction, para la comisio nes- nes- nes- nes- nes- nes- nes- nes- nes- nes- nes- nes- nes- nes- nes- nes- nes- nes- nes- nes- nes- nes- nes- nes- nes- nes- nes- nes- nes- nes- nes- nes- nes- nes- nes- nes- nes-"
   ],
   [
    264.6,
-   "No solamente la gente, los de acá"
+   "No solamente la gente deales los de acá"
   ],
   [
    268.1,
-   "y nos pueden ver y"
+   "que está enales y nos pueden ver y"
   ],
   [
    271.0,
@@ -69,11 +81,11 @@
   ],
   [
    278.6,
-   "propósito de esto"
+   "propósito de esto cathin Morris y Milton"
   ],
   [
    282.5,
-   "para la comisión del Eisteddfod cuando"
+   "junchen para la comisión del stb cuando"
   ],
   [
    287.2,
@@ -81,7 +93,11 @@
   ],
   [
    290.5,
-   "a la memoria el primer Eisteddfod al que"
+   "a la memoria el primer stb al que"
+  ],
+  [
+   293.0,
+   "concurrí en compañía de mi fue a finales"
   ],
   [
    297.2,
@@ -101,11 +117,11 @@
   ],
   [
    312.8,
-   "la imagen de las antiguas estufas"
+   "la imagen de las antiguas estufas domec"
   ],
   [
    316.4,
-   "calentando el salón y un escenario"
+   "aela calentando el salón y un escenario"
   ],
   [
    320.4,
@@ -125,7 +141,7 @@
   ],
   [
    335.0,
-   "social nos estaba esperando Aunque"
+   "social nos estaba esperando Aunque a na"
   ],
   [
    339.0,
@@ -153,11 +169,11 @@
   ],
   [
    358.5,
-   "cuenta que muchos años han pasado"
+   "cuenta ar que muchos años han pasado"
   ],
   [
    362.0,
-   "desde la primera vez que concurrí"
+   "desde la primera vez que concurrí con en"
   ],
   [
    365.3,
@@ -189,12 +205,12 @@
   ],
   [
    388.4,
-   "espíritu"
+   "espíritu m"
   ]
  ],
  "fuentes": [
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -225,6 +241,18 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -337,8 +365,8 @@
  ],
  "ventanas": {
   "total": 7,
-  "modelo": 7,
-  "reglas": 0,
+  "modelo": 6,
+  "reglas": 1,
   "vacias": 0
  }
 }

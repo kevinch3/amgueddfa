@@ -8,6 +8,10 @@
    "Bésame, bésame mucho, como si fuera esta noche la última vez."
   ],
   [
+   16.88,
+   "Bresa'me. Bresa'me. Bresa'me mwch, o, o, o, o, o, o'n i'n gofyn i efo."
+  ],
+  [
    52.1,
    "Bésame, bésame mucho, que tengo miedo, que tengo miedo, después, después."
   ],
@@ -32,8 +36,16 @@
    "Piensa que tal vez mañana yo ya estaré lejos, muy lejos de aquí."
   ],
   [
+   142.58,
+   "Besame mucho, besame mucho, como si fuera esta noche la ultima vez, la ultima, besame, besame, besame mucho, besame, que tengo miedo, que tengo miedo, besame, besame."
+  ],
+  [
    165.7,
    "¡Ay, besame, besame mucho!"
+  ],
+  [
+   172.58,
+   "Besame, besame, ay besame, besame mucho."
   ]
  ],
  "fuentes": [
@@ -41,7 +53,7 @@
    "whisper_es"
   ],
   [
-   "whisper_es"
+   "cy"
   ],
   [
    "whisper_es"
@@ -60,6 +72,15 @@
   ],
   [
    "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
   ]
  ],
  "ventanas": {

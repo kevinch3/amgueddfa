@@ -8,6 +8,10 @@
    "Gloria"
   ],
   [
+   30.0,
+   "I be' sy'n dod ia?"
+  ],
+  [
    121.8,
    "a enseñar"
   ],
@@ -18,6 +22,10 @@
   [
    129.5,
    "olvidar"
+  ],
+  [
+   130.68,
+   "Dweud croeso amdanat croeso, mae'n wneud siwt o ffyni di, dan ni'n agor ein galonau mae gen ti gater bambi."
   ],
   [
    191.9,
@@ -52,6 +60,18 @@
    "que me roba tu tiempo valor"
   ],
   [
+   250.24,
+   "Ar y llifau bydd y ffrindiau'n symud yn y tŵa holl."
+  ],
+  [
+   255.24,
+   "Rilon noson, rilon noson, y ddoi i'r berthyn ar y nôd."
+  ],
+  [
+   266.24,
+   "Y nôl yn dy wyrau, y nôl yn dy freithiau, y ddoi i'r berthyn ar y nôd."
+  ],
+  [
    299.2,
    "quería que está buscando"
   ],
@@ -76,8 +96,20 @@
    "importara"
   ],
   [
+   395.38,
+   "yn gallu byw efo'i gilydd ar y ffarm neu yn Cymru."
+  ],
+  [
+   425.38,
+   "Fel mae'n deimlo bod haulau i fod, fel mae'n bentyn yn canu, ie i, a'r alliaith yn byw o hyd."
+  ],
+  [
+   485.38,
+   "Desde chica ya tenia en el mirar Esa loca fantasia de soñar"
+  ],
+  [
    490.0,
-   "desde Chica ya"
+   "Desde chica ya"
   ],
   [
    496.2,
@@ -136,6 +168,10 @@
    "no sé si me falló la fe la voluntad"
   ],
   [
+   594.58,
+   "Yn amores solo tuve decepcion Regale por no vender mi corazon"
+  ],
+  [
    600.0,
    "en amores solo tuve decepción"
   ],
@@ -154,6 +190,10 @@
   [
    618.8,
    "mejor y abriendo heridas Ay"
+  ],
+  [
+   624.94,
+   "Hoy me aterra este cansallio sin final, y se te risa mi sonrisa de gritar."
   ],
   [
    634.6,
@@ -284,8 +324,16 @@
    "gente que sabe de esto y mucho es un"
   ],
   [
+   989.26,
+   "Diolch yn fawr am y tro hwnna."
+  ],
+  [
    989.8,
    "placer tenerlas"
+  ],
+  [
+   995.26,
+   "Diolch yn fawr am y tro hwnna."
   ],
   [
    1022.5,
@@ -309,6 +357,9 @@
    "yt_es"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -316,6 +367,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -340,8 +394,17 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -358,8 +421,17 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -403,6 +475,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -420,6 +495,9 @@
    "yt_es"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -514,9 +592,15 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -532,9 +616,9 @@
   ]
  ],
  "ventanas": {
-  "total": 20,
-  "modelo": 16,
-  "reglas": 0,
-  "vacias": 4
+  "total": 21,
+  "modelo": 14,
+  "reglas": 2,
+  "vacias": 5
  }
 }

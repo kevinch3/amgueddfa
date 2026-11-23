@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Yr un sy'n gwneud gitarra, mae'n canu na, na, na, na."
+  ],
+  [
    18.0,
    "Soy de un lugar que huele a besos"
   ],
@@ -101,6 +105,9 @@
   ]
  ],
  "fuentes": [
+  [
+   "cy"
+  ],
   [
    "whisper_es"
   ],

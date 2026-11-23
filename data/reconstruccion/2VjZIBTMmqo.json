@@ -50,6 +50,10 @@
   [
    72.5,
    "Cuando el sol sus rayos vierte?"
+  ],
+  [
+   88.88,
+   "Diolch yn fawr."
   ]
  ],
  "fuentes": [
@@ -88,6 +92,9 @@
   ],
   [
    "letra"
+  ],
+  [
+   "cy"
   ]
  ],
  "letras": [
@@ -96,7 +103,9 @@
    "hasta": 78,
    "titulo": "En los brazos de la luna",
    "autor": "Alfonso Letelier",
-   "idioma": "es"
+   "idioma": "es",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "https://recursocoral.com.ar/archivos/en-los-brazos-de-la-luna/, aportado por Kevin Roberts"
   }
  ],
  "ventanas": {

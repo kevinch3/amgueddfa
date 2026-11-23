@@ -12,6 +12,10 @@
    "Dime el camino para llegar, niña bonita de Paraná."
   ],
   [
+   30.0,
+   "Llunia bonita de baranon, que a Jesus nino bengo adoron."
+  ],
+  [
    36.2,
    "Que a Jesús niño vengo a adorar"
   ],
@@ -56,6 +60,9 @@
    "whisper_es"
   ],
   [
+   "cy"
+  ],
+  [
    "whisper_es"
   ],
   [
@@ -85,8 +92,8 @@
  ],
  "ventanas": {
   "total": 3,
-  "modelo": 2,
-  "reglas": 0,
+  "modelo": 1,
+  "reglas": 1,
   "vacias": 1
  }
 }

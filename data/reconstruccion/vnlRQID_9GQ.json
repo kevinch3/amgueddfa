@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "I Patagonia, i Patagonia, i Patagonia."
+  ],
+  [
    57.3,
    "bandoñón de mayores de"
   ],
@@ -336,6 +340,10 @@
    "nunca nadie me esperó"
   ],
   [
+   577.8,
+   "Parisien de Cécilia Kahneman, invadida de poesia de la afuera y de la adegro, sube la palabra, sube por el aljibe de mi alma, se remaza por el cantal del cuerpo, buscan colores, sonidos, y el"
+  ],
+  [
    582.8,
    "pasión de Cecilia"
   ],
@@ -514,6 +522,10 @@
   [
    779.1,
    "de Thomas"
+  ],
+  [
+   947.24,
+   "Drw ddim stor, drw ddim dref, neith mi fodd to dy dref. Dydd ma' ddim, pryd di'r gloi, neith mi fodd, drw ddim stor, drw ddim dref, neith mi fodd to dy dref."
   ],
   [
    1013.9,
@@ -1029,11 +1041,18 @@
   ],
   [
    1503.9,
-   "Muchas gracias Qué lindo abuelo"
+   "Muchas gracias. Qué lindo, abuelo."
+  ],
+  [
+   1514.9,
+   "Diolch am wrando."
   ]
  ],
  "fuentes": [
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -1281,6 +1300,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -1418,6 +1440,9 @@
    "yt_es"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -1803,12 +1828,15 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ]
  ],
  "ventanas": {
   "total": 26,
-  "modelo": 19,
+  "modelo": 20,
   "reglas": 1,
-  "vacias": 6
+  "vacias": 5
  }
 }

@@ -8,8 +8,16 @@
    "Un cielo donde los rojos al violeta van entrando"
   ],
   [
+   23.0,
+   "Quietos y abiertos los ojos, el guanaco está olvidando, que nunca el delito perde, una mutara leía, lo que de noche se pierde, afanece por el día."
+  ],
+  [
    53.0,
    "Fue la loma, fue la loma, el solcito está bajando y en el cuello de balón sus colores van cambiando."
+  ],
+  [
+   60.0,
+   "Pinto ystá bajando, y en el muello del balón, sus colores van cambiando. Y en el muello del balón, sus colores van cambiando."
   ],
   [
    75.2,
@@ -18,6 +26,10 @@
   [
    86.2,
    "El galafate que fiesta, me pinto toda la cara"
+  ],
+  [
+   108.1,
+   "Mi perro dada y protesta, de cada escopo sagrada"
   ],
   [
    117.4,
@@ -47,6 +59,15 @@
    "whisper_es"
   ],
   [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
    "whisper_es"
   ],
   [
@@ -64,8 +85,8 @@
  ],
  "ventanas": {
   "total": 3,
-  "modelo": 3,
-  "reglas": 0,
+  "modelo": 2,
+  "reglas": 1,
   "vacias": 0
  }
 }

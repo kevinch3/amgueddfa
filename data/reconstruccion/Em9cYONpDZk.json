@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   5.2,
+   "vos"
+  ],
+  [
    7.0,
    "sabes de Silvia Noemí vilar de"
   ],
@@ -68,6 +72,10 @@
    "Estrellas de las sombras en el cielo sin"
   ],
   [
+   67.2,
+   "fantasmas vos"
+  ],
+  [
    69.8,
    "sabes de los intentos perdidos del"
   ],
@@ -92,11 +100,24 @@
    "ocultos mandatos"
   ],
   [
+   91.7,
+   "vos"
+  ],
+  [
    93.9,
    "sabes vos sabes cuánto te amo"
   ]
  ],
  "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],

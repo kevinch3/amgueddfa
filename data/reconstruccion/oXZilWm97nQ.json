@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Bach o'r bwrw'n a wella'n dde mwy arriwla."
+  ],
+  [
    4.3,
    "Bajo por una"
   ],
@@ -22,6 +26,10 @@
   [
    21.7,
    "estrellas. Traigo alegría."
+  ],
+  [
+   28.7,
+   "Fengo de las estrellas, traigo alegrías."
   ],
   [
    33.8,
@@ -158,7 +166,7 @@
  ],
  "fuentes": [
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -171,6 +179,12 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -274,8 +288,8 @@
  ],
  "ventanas": {
   "total": 4,
-  "modelo": 4,
-  "reglas": 0,
+  "modelo": 3,
+  "reglas": 1,
   "vacias": 0
  }
 }

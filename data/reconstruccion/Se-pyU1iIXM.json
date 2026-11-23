@@ -12,12 +12,20 @@
    "Me pareció escuchar tu nombre en el último intento de la Margarita."
   ],
   [
+   18.12,
+   "intento de la margarita. Pero, ¿qué es eso? Últimamente le presto poca"
+  ],
+  [
    22.0,
    "Pero, qué sé yo, últimamente le presto poca atención."
   ],
   [
    27.4,
    "tan pendular ella, tan blanco-negro, y tan convincente siempre, incapaz de argumentar en contra."
+  ],
+  [
+   33.84,
+   "siempre, incapaz de argumentar en contra. Y si, no. Y otra vez, no me"
   ],
   [
    39.6,
@@ -38,6 +46,10 @@
   [
    62.1,
    "revertir la tendencia o advertir un matiz, una esperanza,"
+  ],
+  [
+   66.08,
+   "Un matis, una esperanza, algún petalito blanco, en blanco, algún impugnado, o tu nombre, tal vez me pareció, pero no hubo fraude, y otra vez, no me quiere."
   ],
   [
    71.1,
@@ -84,8 +96,16 @@
    "qué flor resentida, a mí no me engaña, se arroga saberes de amor para llamar la atención,"
   ],
   [
+   153.52,
+   "Que flor resentida, a mi no me engana, se arroga saberes de amor para llamar la atencion,"
+  ],
+  [
    166.5,
    "complejo de inferioridad hasta en el nombre, esa condena insoportable del diminutivo eterno,"
+  ],
+  [
+   170.52,
+   "esa condena insoportable del diminutivo eterno,"
   ],
   [
    175.2,
@@ -132,6 +152,10 @@
    "Ya lo sé, incluso antes de la Margarita, y ella todavía se burla haciéndome creer que es tu nombre."
   ],
   [
+   234.24,
+   "todavía se burla, haciéndome creer que tu nombre, pero a este, a este me"
+  ],
+  [
    242.3,
    "Pero a este, a este me lo quedo, sin pétalo final no hay conclusión."
   ],
@@ -142,6 +166,10 @@
   [
    262.4,
    "Me guardo el no me quiere en el bolsillo y te nombro yo, te invoco, me vuelvo una flor que sabe y que desea."
+  ],
+  [
+   274.6,
+   "Y que desea es condolno, me arranco del pecho las tristezas y los pétalos de a uno, y ahora si, me quiere, me quiere, me quiere, me quiere."
   ],
   [
    278.8,
@@ -160,7 +188,34 @@
    "whisper_es"
   ],
   [
+   "cy"
+  ],
+  [
    "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
@@ -196,7 +251,13 @@
    "whisper_es"
   ],
   [
+   "cy"
+  ],
+  [
    "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
@@ -232,7 +293,7 @@
    "whisper_es"
   ],
   [
-   "whisper_es"
+   "cy"
   ],
   [
    "whisper_es"
@@ -244,19 +305,7 @@
    "whisper_es"
   ],
   [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
+   "cy"
   ],
   [
    "whisper_es"
@@ -267,8 +316,8 @@
  ],
  "ventanas": {
   "total": 6,
-  "modelo": 5,
-  "reglas": 0,
+  "modelo": 3,
+  "reglas": 2,
   "vacias": 1
  }
 }

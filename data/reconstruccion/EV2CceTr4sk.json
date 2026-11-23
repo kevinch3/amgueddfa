@@ -72,6 +72,10 @@
    "¿Cuántas noches pasarás desesperando y a la hora del naufragio y a la de la oscuridad alguien te rescatará para ir cantando, cantando al sol como la cigarra."
   ],
   [
+   106.9,
+   "Ie, la hura del naufragio, ie la de la oscuridad, alguien te rescatará, para ir cantando, cantando al sol como la cigarra."
+  ],
+  [
    127.6,
    "Después de un año bajo la tierra, igual que el sobreviviente, que vuelve de la guerra, cantando al sol como la cigarra."
   ],
@@ -236,6 +240,10 @@
    "Tantas charlas, tanta vida"
   ],
   [
+   556.62,
+   "Tantas charlas, tanta vida Tanto anochecer, con olor a comida"
+  ],
+  [
    567.4,
    "Tanto anochecer con olor a comida"
   ],
@@ -281,7 +289,7 @@
   ],
   [
    680.0,
-   "Y ella nos va a interpretar Campana de Palo."
+   "y ella nos va a interpretar Campana de Palo."
   ],
   [
    770.0,
@@ -332,12 +340,20 @@
    "Soy la maestra argentina"
   ],
   [
+   858.3,
+   "Soy la maestra Argentina, la que esta sola y espera."
+  ],
+  [
    863.8,
    "La que está sola y espera"
   ],
   [
    868.4,
    "Vivo surciendo penurias y consolando miserias, vivo surciendo penurias y consolando miserias."
+  ],
+  [
+   880.3,
+   "Vivo surseando penurias y consolando miserias."
   ],
   [
    889.4,
@@ -376,6 +392,10 @@
    "Hasta aquí llegó mi amor"
   ],
   [
+   951.66,
+   "Diolch yn fawr iawn i'r holl gynghorau am eu cefnogaeth."
+  ],
+  [
    969.5,
    "Muchas gracias, de esta manera culminábamos con esta competencia"
   ],
@@ -412,16 +432,16 @@
    "El 1 Cerdant, en anffodus, no hay un 1.0 que ha estado en el Gostadlai, pero diolch a Eirgain amfetro el Lluyfan y sicur que el greff y unigryw y unigryw y unigryw en caer llé teilung a el Lluyfan en el Eisteddfod."
   ],
   [
+   1011.66,
+   "am fentro i'r llwyfan a sicrhau bod y grefft unigryw a'r traddodiad unigryw o gerdant yn cael lled teilwng ar lwyfan yr Eisteddfod yma. Roedd y dewis, ddewisodd eirgain yn heriol, pum pennill hir ac wrth gwrs cyfalaw y llais yn wahanol ym mhob p- ym mhob un, llongyfarchiadau ar y gosodiad yym a oedd ar y cyfan nad lywyrchu'r geiriau ac yn gorwedd yn gyffyrddus o fewn ystod llais eiriaidd."
+  ],
+  [
    1021.9,
    "Rhoedd y dewis, ddiwisodd Eirgain en heriol, 5 penny llir ac, of course, cifalaw y llais en wahanol ym'hob un."
   ],
   [
-   1032.6,
-   "Llongefarchiadau ar y gosodiad, aodd ar y cyfan nadlywarchi'r geiria ac en gorwedd en gyffyrddis o fewn ystod llais Eirgain."
-  ],
-  [
-   1042.6,
-   "Ca fwyd geirio clir, pob gair yn glir ac ambell brawdeg yn cael selw da, er enghraifft y gerdvinen grín."
+   1041.66,
+   "Cafwyd geirio clir pob gair yn glir ac ambell brawddeg yn cael sylw da er enghraifft y gerddinen grin. Ar y cyfan yn y dyfodol fyswn i'n dweud bod angen gwell rheolaeth ar yr anadlu er mwyn cynnal y llais a chynnal y brawddegau hefyd. Fe hoffais un arbennig y canu tawel ym mhenill pump ond da iawn e'r gain rwyt ti'n hollol deilwng o'r wobr gynta."
   ],
   [
    1050.3,
@@ -440,12 +460,16 @@
    "on da yawnergain rwyt ti'n hollol deilung o'r Wobrgynta."
   ],
   [
+   1071.66,
+   "Competencia cuarenta y cuatro, solo a elección cerddant."
+  ],
+  [
    1075.3,
    "Competencia 44."
   ],
   [
    1077.3,
-   "Solo a elección Kerr Dant."
+   "solo a elección Kerr Dant."
   ],
   [
    1082.0,
@@ -465,7 +489,7 @@
   ],
   [
    1098.1,
-   "en este Eisteddfod."
+   "en este East Edmund."
   ],
   [
    1100.6,
@@ -565,7 +589,7 @@
    "whisper_es"
   ],
   [
-   "whisper_es"
+   "cy"
   ],
   [
    "whisper_es"
@@ -691,6 +715,7 @@
    "whisper_es"
   ],
   [
+   "cy",
    "whisper_es"
   ],
   [
@@ -764,6 +789,9 @@
   ],
   [
    "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
@@ -772,6 +800,9 @@
    "whisper_es"
   ],
   [
+   "cy"
+  ],
+  [
    "whisper_es"
   ],
   [
@@ -797,6 +828,9 @@
   ],
   [
    "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
@@ -824,11 +858,17 @@
   ],
   [
    "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
   ],
   [
+   "cy"
+  ],
+  [
    "whisper_es"
   ],
   [
@@ -839,6 +879,9 @@
   ],
   [
    "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
@@ -897,8 +940,8 @@
  ],
  "ventanas": {
   "total": 19,
-  "modelo": 19,
-  "reglas": 0,
-  "vacias": 0
+  "modelo": 14,
+  "reglas": 4,
+  "vacias": 1
  }
 }

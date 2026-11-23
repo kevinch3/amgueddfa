@@ -8,6 +8,10 @@
    "Solo, como al aclarar hasta el lucero, como el ojo palito del cielo va girando en la órbita lunar."
   ],
   [
+   18.82,
+   "Como el copaldo del cielo, va girando en la órbita lunar, solo como el primer hombre de la tierra, como el último lobo de Inglaterra, como el viejo más viejo del lugar."
+  ],
+  [
    30.0,
    "Sólo como el primer hombre de la tierra, como el último lomo de la tierra, como el viejo más viejo del lugar."
   ],
@@ -64,6 +68,10 @@
    "Amén."
   ],
   [
+   142.82,
+   "Como el rio colore sona pura y pinto los cuernos y antiga."
+  ],
+  [
    153.6,
    "Solo como está en su mundo cada muerto"
   ],
@@ -82,6 +90,10 @@
   [
    181.1,
    "Solo, solo como el atento, la luz de un patrón, o el último me nota el amor."
+  ],
+  [
+   185.82,
+   "Mae'n hollol ddifrifol, mae'n hollol ddifrifol."
   ],
   [
    194.1,
@@ -292,6 +304,10 @@
    "que nunca nadie previó, pero existe uno tan bello, del que no quisiera tomar posesión."
   ],
   [
+   727.32,
+   "Pero existe uno tan bello, del que no quisieran tomar posesión."
+  ],
+  [
    738.4,
    "Y no solo gusta el vacío, me duele ponerlo de nuevo a viajar,"
   ],
@@ -366,6 +382,10 @@
   [
    873.6,
    "En su coraza cristal está la clave que hace a tu alma tu amor."
+  ],
+  [
+   928.32,
+   "Diolch yn fawr iawn."
   ]
  ],
  "fuentes": [
@@ -373,6 +393,9 @@
    "whisper_es"
   ],
   [
+   "cy"
+  ],
+  [
    "whisper_es"
   ],
   [
@@ -415,6 +438,9 @@
    "whisper_es"
   ],
   [
+   "cy"
+  ],
+  [
    "whisper_es"
   ],
   [
@@ -428,6 +454,9 @@
   ],
   [
    "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
@@ -584,6 +613,9 @@
   ],
   [
    "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
@@ -641,12 +673,15 @@
   ],
   [
    "whisper_es"
+  ],
+  [
+   "cy"
   ]
  ],
  "ventanas": {
   "total": 16,
-  "modelo": 15,
+  "modelo": 16,
   "reglas": 0,
-  "vacias": 1
+  "vacias": 0
  }
 }

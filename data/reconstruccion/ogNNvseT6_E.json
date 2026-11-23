@@ -60,12 +60,32 @@
    "Anteanoche me confesé con el cura de Santa Clara"
   ],
   [
+   97.0,
+   "¡A adentro!"
+  ],
+  [
+   98.0,
+   "Anteanoche me confesé"
+  ],
+  [
    102.9,
    "Y me dio de penitencia que la firmeza bailara"
   ],
   [
+   107.0,
+   "Y me dió de penitencia"
+  ],
+  [
+   109.0,
+   "Que la firmesa bailara"
+  ],
+  [
    112.9,
    "Darás una vuelta con tu compañera"
+  ],
+  [
+   117.0,
+   "Daras una vuelta"
   ],
   [
    121.9,
@@ -78,6 +98,10 @@
   [
    131.4,
    "Con ese modito, ponele el codito, ponele el oído, también los sentidos, como corresponde, una mano al hombro, retírate un paso, dámele un abrazo, otro poquitito, tírale un besito."
+  ],
+  [
+   149.0,
+   "Gapel le un abraso, otro poquitito, y dale un besito, ay no no no no, que me da vergüenza, tapate la cara, que te doy licencia, alla va mi corazon, dirigido en un papel, llorando gotas de sangre, por una ingrata mujer."
   ],
   [
    164.9,
@@ -128,7 +152,25 @@
    "whisper_es"
   ],
   [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
    "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
@@ -140,7 +182,7 @@
    "whisper_es"
   ],
   [
-   "whisper_es"
+   "cy"
   ],
   [
    "whisper_es"

@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Jalando repasos de"
+  ],
+  [
    3.2,
    "Jalando repasos de Owen Tydur"
   ],
@@ -37,7 +41,7 @@
   ],
   [
    28.6,
-   "paz de el poema en paz de Amado"
+   "paz del poema en paz de Amado"
   ],
   [
    33.8,
@@ -113,7 +117,23 @@
   ],
   [
    105.6,
-   "jalando repasos"
+   "jalando repasos como ataje"
+  ],
+  [
+   111.7,
+   "Botero hoy es"
+  ],
+  [
+   115.5,
+   "domingo"
+  ],
+  [
+   117.0,
+   "arpe el viento en la arborea"
+  ],
+  [
+   120.5,
+   "estola que Abriga el cuello del"
   ],
   [
    125.7,
@@ -140,6 +160,10 @@
    "luna se Irán"
   ],
   [
+   151.5,
+   "se"
+  ],
+  [
    152.8,
    "irá mi sombra y tu"
   ],
@@ -154,7 +178,7 @@
  ],
  "fuentes": [
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -224,6 +248,25 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es",
+   "cy"
   ],
   [
    "yt_es"

@@ -8,8 +8,12 @@
    "Muy buenas noches, es un gusto enorme para mí reencontrarme con ustedes para compartir"
   ],
   [
+   15.0,
+   "Es un gusto enorme para mi reencontrarme con ustedes para compartir uno de los momentos más emblemáticos del Esterdo del Chulo, como lo es la coronación del poeta y la presentación del poema ganador de el teatro, es por eso que voy a invitar a que me acompañen en el senario, al Presidente de la Comisión del Estadio, señor Ronaldinho, al Presidente de la Ciudad del Leo,"
+  ],
+  [
    20.2,
-   "uno de los momentos más emblemáticos del Eisteddfod del Chubut, como lo es la coronación"
+   "uno de los momentos más emblemáticos del estético del Chubut, como lo es la coronación"
   ],
   [
    27.1,
@@ -21,7 +25,7 @@
   ],
   [
    41.5,
-   "Ligis, al señor intendente de la Ciudad de Trelew, señor Máximo Turchacán, a los"
+   "Ligis, al señor intendente de la Ciudad de Atendejo, señor Máximo Turchacán, a los"
   ],
   [
    48.0,
@@ -336,8 +340,16 @@
    "Si Aimé está en la sala, le pedimos por favor que se ponga de pie."
   ],
   [
+   548.4,
+   "Si Aime ydi yma o'r ysgafn, dwi'n gofyn i siarad efo hi, os gwelwch yn dda."
+  ],
+  [
    566.1,
    "Le solicito al poeta cuyo seudónimo es Aimé, si está en la sala que se ponga en pie."
+  ],
+  [
+   576.4,
+   "Le solicito a la poeta, cuyo pseudonymo es Ayme, si esta en la sala que se ponga de pie."
   ],
   [
    716.1,
@@ -580,6 +592,10 @@
    "Soledad ya te vuelvo a pensar"
   ],
   [
+   1107.48,
+   "Solidaria te cuelgo a pensar pura luz del pasmí."
+  ],
+  [
    1114.6,
    "Pura luz del jazmín"
   ],
@@ -656,6 +672,10 @@
    "también hará un reconocimiento a la poeta."
   ],
   [
+   1288.48,
+   "invitar a'r senior gofernador de la provincia del Chubut, Doctor Martin Bussi, a que también haga entrega del Premio del la Provincia del Chubut a la poeta."
+  ],
+  [
    1294.4,
    "a que también haga entrega del premio de la provincia del Chubut a la poeta."
   ],
@@ -684,8 +704,16 @@
    "el doctor César Gustavo Macarty."
   ],
   [
+   1371.92,
+   "Ymm."
+  ],
+  [
    1378.2,
    "Voy a pedirle que también, por favor, haga entrega del premio otorgado por el Senado de la Nación"
+  ],
+  [
+   1381.56,
+   "Voy a pedirle que también, por favor, haga entrega del premio otorgado por el Senado de la Nación, que le han solicitado al señor go- a vicegobernador de la provincia que haga entrega del mismo."
   ],
   [
    1389.8,
@@ -741,7 +769,7 @@
    "whisper_es"
   ],
   [
-   "whisper_es"
+   "cy"
   ],
   [
    "whisper_es"
@@ -988,11 +1016,17 @@
   ],
   [
    "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
   ],
   [
+   "cy"
+  ],
+  [
    "whisper_es"
   ],
   [
@@ -1171,6 +1205,9 @@
   ],
   [
    "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
@@ -1230,6 +1267,9 @@
    "whisper_es"
   ],
   [
+   "cy"
+  ],
+  [
    "whisper_es"
   ],
   [
@@ -1249,11 +1289,17 @@
   ],
   [
    "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
   ],
   [
+   "cy"
+  ],
+  [
    "whisper_es"
   ],
   [
@@ -1264,6 +1310,10 @@
   ],
   [
    "whisper_es"
+  ],
+  [
+   "whisper_es",
+   "cy"
   ],
   [
    "whisper_es"
@@ -1289,8 +1339,8 @@
  ],
  "ventanas": {
   "total": 26,
-  "modelo": 25,
-  "reglas": 0,
+  "modelo": 23,
+  "reglas": 2,
   "vacias": 1
  }
 }

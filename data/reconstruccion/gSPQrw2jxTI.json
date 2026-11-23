@@ -4,24 +4,8 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
-   9.5,
-   "la quiero porque si es así con su"
-  ],
-  [
-   12.9,
-   "corazón de gris o le gusta lo mismo que"
-  ],
-  [
-   16.6,
-   "a mí el café y el cigarrillo sentarme la"
-  ],
-  [
-   20.8,
-   "mesa de un mar y sin plata caminar así"
-  ],
-  [
-   25.1,
-   "como es rebelde y angelical así como es"
+   0.0,
+   "La Quiero por que ella es asi, con su corazón de grillo, le gusta lo mismo que a mi, el café y el cigarrillo, sentarme en la mesa de un bar, y sin plata caminar, asi, como es rebelde y angelical, asi, como ella es."
   ],
   [
    31.0,
@@ -146,20 +130,15 @@
   [
    143.8,
    "pimienta y sal"
+  ],
+  [
+   146.9,
+   "gracias"
   ]
  ],
  "fuentes": [
   [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"

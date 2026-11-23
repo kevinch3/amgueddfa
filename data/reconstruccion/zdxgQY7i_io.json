@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Me a cobardó la soledad y el miedo enorme de morir lejos de ti"
+  ],
+  [
    11.8,
    "me acobardé"
   ],
@@ -28,6 +32,10 @@
    "realidad"
   ],
   [
+   32.1,
+   "y el corazón te suplico que te buscará y"
+  ],
+  [
    38.4,
    "que le dieran tu querer"
   ],
@@ -40,12 +48,24 @@
    "busqué"
   ],
   [
+   47.0,
+   "creciendo de mi salvación"
+  ],
+  [
    50.4,
    "y ahora que estoy"
   ],
   [
    53.7,
    "frente a ti"
+  ],
+  [
+   56.2,
+   "parecemos esa vez dos extraños lección"
+  ],
+  [
+   61.2,
+   "que por fin a pérez"
   ],
   [
    64.9,
@@ -96,6 +116,10 @@
    "terminó"
   ],
   [
+   117.5,
+   "llegará terror"
+  ],
+  [
    120.0,
    "volverte a ver"
   ],
@@ -125,7 +149,7 @@
   ],
   [
    144.2,
-   "parecemos esa vez dos extraños"
+   "parecemos esa vez dos extraños flexión"
   ],
   [
    149.4,
@@ -134,6 +158,14 @@
   [
    151.6,
    "aprendí como"
+  ],
+  [
+   155.5,
+   "tras los años algún día de saber muertas"
+  ],
+  [
+   160.4,
+   "ya de la ilusión y la fe perdón si me"
   ],
   [
    166.8,
@@ -149,10 +181,34 @@
   ],
   [
    178.2,
-   "muchas gracias"
+   "muchas gracias sector del topo"
   ]
  ],
  "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],
@@ -267,8 +323,8 @@
  ],
  "ventanas": {
   "total": 4,
-  "modelo": 4,
-  "reglas": 0,
+  "modelo": 3,
+  "reglas": 1,
   "vacias": 0
  }
 }

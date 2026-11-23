@@ -38,6 +38,10 @@
   [
    117.6,
    "Amén."
+  ],
+  [
+   133.4,
+   "Diolch yn fawr."
   ]
  ],
  "fuentes": [
@@ -67,12 +71,15 @@
   ],
   [
    "whisper_es"
+  ],
+  [
+   "cy"
   ]
  ],
  "ventanas": {
   "total": 3,
-  "modelo": 2,
+  "modelo": 3,
   "reglas": 0,
-  "vacias": 1
+  "vacias": 0
  }
 }

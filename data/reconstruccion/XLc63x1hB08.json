@@ -4,8 +4,16 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   3.0,
+   "y"
+  ],
+  [
+   8.0,
+   "aquí"
+  ],
+  [
    10.5,
-   "nacimos a la intemperie"
+   "nacimos a la intemperie declara bailar"
   ],
   [
    13.7,
@@ -113,6 +121,12 @@
   ]
  ],
  "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],

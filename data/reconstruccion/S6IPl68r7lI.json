@@ -29,7 +29,11 @@
   ],
   [
    20.2,
-   "del Chubut el"
+   "Bárdico del Chubut el"
+  ],
+  [
+   22.5,
+   "Gorsedd este"
   ],
   [
    25.2,
@@ -45,7 +49,7 @@
   ],
   [
    34.6,
-   "invitamos"
+   "invitamos invitamos"
   ],
   [
    37.3,
@@ -53,7 +57,7 @@
   ],
   [
    41.4,
-   "la decisiónes del Jurado Terwyn"
+   "Bárdico la decisiónes del Jurado Terwyn"
   ],
   [
    44.8,
@@ -64,8 +68,16 @@
    "premio a fria"
   ],
   [
+   72.0,
+   "Yym, dwi'n mynd i fanteisio ar y cyfle yma i roi ryw fymryn o newyddion i chi."
+  ],
+  [
+   101.96,
+   "A yn ystod y pedair yy eisteddfod diwetha ydw i wedi yy cydweithio â'r eisteddfod fel arweinydd yr orsedd yym drwy ryfedd lwc eleni y mae rywun wedi cael ei ethol yn fy lle. Felly, mi fydda i mi fydda i'n falch iawn o drosglwyddo arweinyddiaeth yr orsedd i Bennet Jones, a'r enw fewn yr orsedd yw Bennet."
+  ],
+  [
    136.3,
-   "Durante los últimos 4 años he"
+   "Ben Durante los últimos 4 años he"
   ],
   [
    140.6,
@@ -132,6 +144,10 @@
    "Gorsedd siga con su función de promocionar"
   ],
   [
+   190.5,
+   "elbot en todos sus aspectos Así que si"
+  ],
+  [
    193.7,
    "bennet quiere venir a hacerse cargo del"
   ],
@@ -161,7 +177,7 @@
   ],
   [
    235.6,
-   "galés premio otorgado por el círculo bár"
+   "galés premio otorgado por el círculo Bárdico"
   ],
   [
    238.8,
@@ -173,11 +189,19 @@
   ],
   [
    243.7,
-   "de coro en idioma galés para el"
+   "de coro en idioma galés para el Core"
   ],
   [
    254.1,
-   "vamos a invitar"
+   "egan vamos a invitar"
+  ],
+  [
+   261.9,
+   "entonces marle"
+  ],
+  [
+   269.48,
+   "Y aplauso para Marley y cada uno de los integrantes del coro que hace tantos anos que participan en el Eisteddfod del Chubut."
   ],
   [
    280.8,
@@ -224,6 +248,14 @@
    "David Jones"
   ],
   [
+   341.3,
+   "Yr un awdurd yn yr iaith, iaith Gymraeg, Dafydd Jones o'r Griw yr Urdd."
+  ],
+  [
+   354.3,
+   "Distincion especial a la mejor interpretación choral de una obra Argentina, premio otorgado por Adicora y el Mef."
+  ],
+  [
    366.8,
    "distinción especial a la mejor"
   ],
@@ -234,6 +266,14 @@
   [
    371.7,
    "Argentina premio otorgado por adicora y"
+  ],
+  [
+   375.0,
+   "el"
+  ],
+  [
+   377.2,
+   "mef en esta"
   ],
   [
    379.4,
@@ -250,6 +290,10 @@
   [
    386.8,
    "Argentina es para"
+  ],
+  [
+   390.8,
+   "locos"
   ],
   [
    392.5,
@@ -278,6 +322,10 @@
   [
    411.6,
    "parte de el museo"
+  ],
+  [
+   441.9,
+   "Enrique mu"
   ],
   [
    457.5,
@@ -325,11 +373,15 @@
   ],
   [
    505.3,
-   "benedictus"
+   "benedictus jurados que vamos a"
   ],
   [
    524.2,
    "Bravo"
+  ],
+  [
+   530.3,
+   "[Aplausos]"
   ]
  ],
  "fuentes": [
@@ -382,7 +434,10 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -478,10 +533,46 @@
    "yt_es"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
    "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -582,8 +673,8 @@
  ],
  "ventanas": {
   "total": 10,
-  "modelo": 10,
-  "reglas": 0,
+  "modelo": 9,
+  "reglas": 1,
   "vacias": 0
  }
 }

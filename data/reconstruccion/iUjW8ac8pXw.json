@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "A mezes cuando siento que todo está perdido, voy hacia una de las formas de la muerte. Me pego un tiro con una palabra, que alguna vez me cuentan transparente."
+  ],
+  [
    5.0,
    "y todo esto"
   ],
@@ -97,6 +101,9 @@
   ]
  ],
  "fuentes": [
+  [
+   "cy"
+  ],
   [
    "yt_es"
   ],

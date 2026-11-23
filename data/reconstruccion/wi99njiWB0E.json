@@ -76,6 +76,10 @@
    "es así"
   ],
   [
+   108.0,
+   "A'r anrhegys yn y ffech o de la bargarida, su' rumur de nina bailando, su' rumur de ni llorando."
+  ],
+  [
    114.0,
    "porque de verdad"
   ],
@@ -84,24 +88,16 @@
    "bien"
   ],
   [
-   124.3,
-   "a mí"
-  ],
-  [
    129.3,
    "no sé qué"
   ],
   [
+   133.6,
+   "musiquita después que se suicida"
+  ],
+  [
    145.4,
    "para nada"
-  ],
-  [
-   152.9,
-   "a mí"
-  ],
-  [
-   155.3,
-   "sí"
   ]
  ],
  "fuentes": [
@@ -160,10 +156,7 @@
    "yt_es"
   ],
   [
-   "yt_es"
-  ],
-  [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -182,9 +175,9 @@
   ]
  ],
  "ventanas": {
-  "total": 4,
+  "total": 3,
   "modelo": 3,
   "reglas": 0,
-  "vacias": 1
+  "vacias": 0
  }
 }

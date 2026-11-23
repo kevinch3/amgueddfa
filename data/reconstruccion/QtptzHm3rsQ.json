@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.7,
+   "Sandra y Marta están listas, ¿qué?"
+  ],
+  [
    5.4,
    "La enredadera de Juana de Ibarbourou"
   ],
@@ -22,6 +26,10 @@
   [
    30.0,
    "Y se abran las campanillas, como puñados de cielo."
+  ],
+  [
+   36.4,
+   "¡Alfa mía! ¿Quién pudiera vestirte de tu veadera?"
   ],
   [
    45.1,
@@ -81,6 +89,12 @@
   ]
  ],
  "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
   [
    "whisper_es"
   ],

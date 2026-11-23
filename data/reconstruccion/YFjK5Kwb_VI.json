@@ -4,12 +4,24 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Gloria Deus in nomibus populis, mia mia Deuus, mia mia Deuus, mia mia Deuus."
+  ],
+  [
    1.1,
    "Gloria"
   ],
   [
    4.4,
    "deus"
+  ],
+  [
+   9.1,
+   "iulis mirus"
+  ],
+  [
+   30.0,
+   "Mientras se aproxima Zoraja para la próxima competencia voy a pedir el"
   ],
   [
    42.5,
@@ -34,6 +46,10 @@
   [
    65.5,
    "y lo"
+  ],
+  [
+   66.52,
+   "Helo, dwi'n meddwl bod o'n un o'n beredictau diwethaf mewn recitio, felly dwi'n ddeud yn awgrymu efo fy nghyfeilliant, ein bod ni wedi mynd trwy ddau dydd hapus, ein gwrthod nhw gyda phobl sydd wedi bod yn bwysig yn ein bywyd ni, yma fy maestr o'r ysgolion cymdeithasol, er enghraifft"
   ],
   [
    70.9,
@@ -276,8 +292,28 @@
    "dado su timo Vero en recitación"
   ],
   [
+   264.86,
+   "March glas ym mhont y pridd, Si Hei Luli Mabi, siberniad yn barod, yn gyntaf, ar llwyfan Swarajah Griffiths."
+  ],
+  [
    283.6,
    "griffit mar"
+  ],
+  [
+   321.84,
+   "Si heul ŵl ym mwabi, ma'r siwngon yn mynd i'r ffwrdd. Si heul ŵl ym mwabi, y gwynt o'r dwyrain chwith."
+  ],
+  [
+   351.84,
+   "Sy fy mab i lwli mae'r wylan ar ei nydd."
+  ],
+  [
+   365.82,
+   "Si heulw lywly llos, cysga cysga mab i dros. Si heilw lywly mab i, y gwynt o'r y dwyrain chwerth."
+  ],
+  [
+   395.82,
+   "Diolch yn fawr sylwais i ia, nawr mae yn barod Cyndia Samarrenio."
   ],
   [
    417.9,
@@ -286,6 +322,26 @@
   [
    423.1,
    "escuchamos en la competencia 47 a Cintia"
+  ],
+  [
+   453.3,
+   "Yn yr y bwrdd sy heulw lino'l i lws cysga cysga ma' bit lws."
+  ],
+  [
+   476.92,
+   "Sy heulw lyb a bu, mae'r llwnd yn mynd i ffwrdd."
+  ],
+  [
+   493.42,
+   "Sy heulwlu mab i y gwynt o'r dwyrain chwith."
+  ],
+  [
+   508.9,
+   "Sydd fy mab i'n lwlu. Mae'r wylan ar ei nydd."
+  ],
+  [
+   523.38,
+   "Si heilŵl i lôn i lws. Cesgam cesgam a fi dws. Si heilŵl i mab i. Y gwynt o'r y dwyn."
   ],
   [
    576.8,
@@ -304,8 +360,24 @@
    "cas Lisa H"
   ],
   [
+   610.7,
+   "Mae'r capten ar y bwrdd sy'n ei lwlu lwlu lws cysga cysga mabit lws."
+  ],
+  [
+   633.7,
+   "Si heul ŵl i mabi, mae'r llong yn mynd i ffwrdd. Si heil ŵl i mabi, y gwynt o'r dwyrain chwith."
+  ],
+  [
+   662.1,
+   "Sy fy mab i lw lu, mae'r wylan ar ei nydd. Sy ei lw lu, lw lu lws. Cysga, cysga mab i tlws."
+  ],
+  [
+   692.1,
+   "Os, sy heulwly mab i, y gwynt o'r dŵr a'i chwith."
+  ],
+  [
    722.5,
-   "mientras se aproxima Yamila le vamos a"
+   "mientras se aproxima yamila le vamos a"
   ],
   [
    724.3,
@@ -328,12 +400,36 @@
    "número"
   ],
   [
+   736.1,
+   "Y diwedd cloc y se leia i hon, Jamila Gauna, ym hon to bridd."
+  ],
+  [
    742.8,
    "72 última participante para la"
   ],
   [
    745.2,
-   "competencia 47 Jamila"
+   "competencia 47 jamila"
+  ],
+  [
+   781.06,
+   "Ym mhant y bryd ma'n cariad ym mhant y bryd ma' Ebrill y fflam a'i haul a phlan ei ffeiriad a'i haul a phlan ei ffeiriad."
+  ],
+  [
+   807.14,
+   "Mi hela chydig i'n swllt Mi hela boreidda i'n swllt Mi hela gogledd bychan i'n mam Mi ddreia gormod i'n swllt Mi ddreia gormod i'n swllt."
+  ],
+  [
+   837.14,
+   "Mi glywais lawer caniat, mi welais lawer bwriad, mi welais lawer beniwmlan,"
+  ],
+  [
+   855.14,
+   "O nef yn lan anghariad o nef mor lan anghariad."
+  ],
+  [
+   868.62,
+   "Mae mwthyn gyda'r afon mae gennyf gwers y gwlithion mae gwenig ffordd ar lan"
   ],
   [
    908.8,
@@ -342,10 +438,19 @@
  ],
  "fuentes": [
   [
+   "cy"
+  ],
+  [
+   "yt_es"
+  ],
+  [
    "yt_es"
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -364,6 +469,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -546,15 +654,45 @@
    "yt_es"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -565,6 +703,18 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -583,12 +733,30 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -596,8 +764,8 @@
  ],
  "ventanas": {
   "total": 16,
-  "modelo": 16,
-  "reglas": 0,
+  "modelo": 15,
+  "reglas": 1,
   "vacias": 0
  }
 }

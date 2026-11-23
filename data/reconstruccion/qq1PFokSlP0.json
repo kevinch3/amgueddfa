@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   7.2,
+   "tanto"
+  ],
+  [
    8.5,
    "al puerto de la música por Sergio Pravaz"
   ],
@@ -65,6 +69,9 @@
   ]
  ],
  "fuentes": [
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],

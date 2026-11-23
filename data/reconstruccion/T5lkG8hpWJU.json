@@ -4,24 +4,12 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
-   54.8,
-   "vivo"
+   45.0,
+   "Diolch am fod i'n gwyno, na phasad gofal dim, a'i gair ei nesip ddim o, gan daw'r gweddill."
   ],
   [
-   56.7,
-   "pasa"
-  ],
-  [
-   60.5,
-   "bueno"
-  ],
-  [
-   64.5,
-   "andar"
-  ],
-  [
-   85.4,
-   "no no no"
+   69.0,
+   "Diolch am gau ein malwod, a diolch byth o'r lle, wrth i ni ddau i Iesu sydd ar ben ein wenie. Amen, amen, amen."
   ],
   [
    112.3,
@@ -90,19 +78,10 @@
  ],
  "fuentes": [
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"

@@ -36,6 +36,10 @@
    "invitan a matear y traigo mil canciones"
   ],
   [
+   62.0,
+   "invitan a"
+  ],
+  [
    63.6,
    "matiar y divise tu rancho a orillas del"
   ],
@@ -188,6 +192,10 @@
    "que me besa y se"
   ],
   [
+   236.0,
+   "va"
+  ],
+  [
    238.7,
    "gracias"
   ]
@@ -333,12 +341,18 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
   ]
  ],
  "ventanas": {
   "total": 5,
-  "modelo": 4,
-  "reglas": 1,
+  "modelo": 5,
+  "reglas": 0,
   "vacias": 0
  }
 }

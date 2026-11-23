@@ -48,12 +48,24 @@
    "estás ahora mi ser te añora"
   ],
   [
+   56.5,
+   "conen todo te recuer a mi dulce amor"
+  ],
+  [
    62.5,
    "junto al Agua Azul de impacar ahí todo"
   ],
   [
+   67.0,
+   "Te"
+  ],
+  [
    67.8,
    "recuerda mi voz te llama cuñataí"
+  ],
+  [
+   75.8,
+   "Una noce tibia nos gonosimos Una noce tibia nos gonosimos"
   ],
   [
    79.3,
@@ -145,7 +157,7 @@
   ],
   [
    199.0,
-   "junto al Lago azul"
+   "junto al Lago azul de I"
   ],
   [
    204.6,
@@ -161,7 +173,7 @@
   ],
   [
    238.7,
-   "mientras sube Valentina"
+   "con mientras sube Valentina"
   ]
  ],
  "fuentes": [
@@ -203,6 +215,15 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -288,8 +309,8 @@
  ],
  "ventanas": {
   "total": 4,
-  "modelo": 4,
-  "reglas": 0,
+  "modelo": 3,
+  "reglas": 1,
   "vacias": 0
  }
 }

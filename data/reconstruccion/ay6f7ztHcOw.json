@@ -4,8 +4,12 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Los Heraldos Negros de Cesar Vallejo Hay golpes en la vida tan fuertes, yo no sé, golpes como del odio de Dios, como si ante ellos la resaca de todo lo sufrido se emposara en el alma."
+  ],
+  [
    4.0,
-   "Los heraldos negros, de César Vallejo"
+   "los heraldos negros de césar vallejo"
   ],
   [
    10.7,
@@ -30,6 +34,10 @@
   [
    28.6,
    "impulsará en el alma"
+  ],
+  [
+   31.3,
+   "conoce"
   ],
   [
    34.1,
@@ -126,9 +134,22 @@
   [
    111.4,
    "tan fuertes"
+  ],
+  [
+   114.0,
+   "chance"
   ]
  ],
  "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],
@@ -225,8 +246,8 @@
  ],
  "ventanas": {
   "total": 3,
-  "modelo": 3,
-  "reglas": 0,
+  "modelo": 2,
+  "reglas": 1,
   "vacias": 0
  }
 }

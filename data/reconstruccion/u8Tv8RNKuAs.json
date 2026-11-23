@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "...segunda competencia, Herr Williard Heil, en Eisteddfod, Corkemisk, Escolger de Cayman, Arquídeca Sarie, Jueveguiz."
+  ],
+  [
    12.1,
    "Veredicto, competencia número 111, fotografía a nivel experimentado, tema un libro."
   ],
@@ -12,12 +16,24 @@
    "Se otorga una primera mención al seudónimo Morocha, una segunda mención al seudónimo Liza y una tercera mención al seudónimo Corintos."
   ],
   [
+   28.5,
+   "La primera mención corresponde a Marlene Williams de Esquel, la segunda mención para Marlene Williams de Esquel y la tercera mención para Marlene Williams de Esquel."
+  ],
+  [
+   39.96,
+   "Yn yr uned mensiwn yw i Sylwina Sartor. Ydy'r mensiwn yw i Valentina a Eve gyda oriau o'r remanswm."
+  ],
+  [
    43.1,
    "Firma el jurado Silvina Sartor."
   ],
   [
    49.2,
    "Están listas entonces Valentina y Eve con oración del remanso."
+  ],
+  [
+   58.48,
+   "So i fe lawr isio braf a dde lawr a dŵr wi a'i lawr go rentada."
   ],
   [
    87.1,
@@ -40,6 +56,10 @@
    "Tengo el color del río, su misma voz en mi canto cío"
   ],
   [
+   114.58,
+   "Tengo el color del rio, su misma voz en mi cantosillo, el agua mansa y su suave dansa del corazón."
+  ],
+  [
    120.9,
    "El agua mansa y su suave danza del corazón"
   ],
@@ -48,12 +68,24 @@
    "Pero a veces oscura va turbulenta en la ciega hondura"
   ],
   [
+   129.98,
+   "Pero a veces oscura va turbulenta en las ciegas, ond un arisia se frio en este cochillo de pescador."
+  ],
+  [
    136.7,
    "Se brilló en este cuchillo de pescador"
   ],
   [
    143.3,
    "Cristo de las redes"
+  ],
+  [
+   152.7,
+   "Nos abandoné"
+  ],
+  [
+   159.7,
+   "Hielos espineles, déjanos tus dores."
   ],
   [
    176.2,
@@ -76,6 +108,10 @@
    "Llevo mi sombra alerta sobre la escama del agua abierta"
   ],
   [
+   211.26,
+   "Llefo mi sombra alerta sobre las camas del agua abierta y en el reposo vertiginoso de les vine."
+  ],
+  [
    219.3,
    "Y en el reposo vertiginoso del despine"
   ],
@@ -96,6 +132,14 @@
    "Dile a mi amada que estás penada esperando"
   ],
   [
+   255.6,
+   "A ver, que ando pensando en ella mientras voy va,"
+  ],
+  [
+   263.4,
+   "viando las estrellas que restauramos, y estoy cansado para volver."
+  ],
+  [
    272.1,
    "Cristo de las redes, no los abandones."
   ],
@@ -104,8 +148,16 @@
    "No pienses que nos perdiste"
   ],
   [
+   304.26,
+   "No pienses que no perdiste. Es que la pureza nos pone tristes, la sangre tensa, y uno no piensa mas que en morir."
+  ],
+  [
    307.7,
    "Es que la pobreza nos pone triste"
+  ],
+  [
+   311.6,
+   "La sangre te ensayuna"
   ],
   [
    314.6,
@@ -136,6 +188,18 @@
    "Para vivir"
   ],
   [
+   371.26,
+   "Gedan onse entradas para el asado de manana en el clwb draig goch."
+  ],
+  [
+   394.8,
+   "en el Club Dreykoj."
+  ],
+  [
+   402.1,
+   "Después del Gemán Bagani."
+  ],
+  [
    404.8,
    "No se quejen después que no había más entrada."
   ],
@@ -152,8 +216,20 @@
    "interpretando María Ba."
   ],
   [
+   445.26,
+   "Diolch yn fawr iawn i chi am wneud y cyfnod yma, a wrth gwrs, diolch yn fawr iawn i chi am wneud y cyfnod yma."
+  ],
+  [
    504.8,
    "Mirar rasgado patitas chuecas, María va, pisando a penas la arena ardiente, María va."
+  ],
+  [
+   519.7,
+   "Calcina el monte un sol del fuego, María va, te porco un vero, palmar y estero, María va."
+  ],
+  [
+   527.26,
+   "Yn Porthymerwm ar y mari estero Maria fa- Maria fa- quiso la siesta a ponerle a un niño a su soledad. De trigo y luna y de su mano Maria fa-"
   ],
   [
    532.5,
@@ -170,6 +246,10 @@
   [
    579.9,
    "Andando el verano de sol y chicharra"
+  ],
+  [
+   583.02,
+   "Andando al verano, de sol y chicharra, a flores del monte, María, olia a tu pueblo."
   ],
   [
    589.3,
@@ -213,7 +293,7 @@
   ],
   [
    629.4,
-   "Por el tabacal, tu paso María va"
+   "Por el tabacal, tu paso María va, y si se ve el sol que huele a parte,"
   ]
  ],
  "fuentes": [
@@ -230,7 +310,43 @@
    "whisper_es"
   ],
   [
+   "cy"
+  ],
+  [
    "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
@@ -260,7 +376,7 @@
    "whisper_es"
   ],
   [
-   "whisper_es"
+   "cy"
   ],
   [
    "whisper_es"
@@ -290,7 +406,7 @@
    "whisper_es"
   ],
   [
-   "whisper_es"
+   "cy"
   ],
   [
    "whisper_es"
@@ -320,7 +436,7 @@
    "whisper_es"
   ],
   [
-   "whisper_es"
+   "cy"
   ],
   [
    "whisper_es"
@@ -341,6 +457,31 @@
    "whisper_es"
   ],
   [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy",
    "whisper_es"
   ],
   [
@@ -379,8 +520,8 @@
  ],
  "ventanas": {
   "total": 12,
-  "modelo": 12,
-  "reglas": 0,
+  "modelo": 10,
+  "reglas": 2,
   "vacias": 0
  }
 }

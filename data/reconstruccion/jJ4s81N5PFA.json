@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "No es que esté aburrida, no es que esté estresada, no, no, no es que ya no lo quiera ser, lo que pasa es que no puedo despejar mis dedos de este maldito piano."
+  ],
+  [
    7.9,
    "Lo que pasa es que no puedo despegar mis dedos de este maldito piano"
   ],
@@ -73,6 +77,9 @@
   ]
  ],
  "fuentes": [
+  [
+   "cy"
+  ],
   [
    "whisper_es"
   ],

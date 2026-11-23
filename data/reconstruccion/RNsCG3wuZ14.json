@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Que todo mi cantar me justifique de Maria Julia Aleman de Brandt."
+  ],
+  [
    5.8,
    "que todo mi cantar me justifique"
   ],
@@ -140,6 +144,14 @@
    "yo te amé"
   ],
   [
+   130.8,
+   "tierra sur amet o viento"
+  ],
+  [
+   135.1,
+   "la arisca de nu desde tu montaña"
+  ],
+  [
    138.8,
    "el bosque con el árbol en su entraña y"
   ],
@@ -201,6 +213,15 @@
   ]
  ],
  "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],
@@ -351,8 +372,8 @@
  ],
  "ventanas": {
   "total": 4,
-  "modelo": 4,
-  "reglas": 0,
+  "modelo": 3,
+  "reglas": 1,
   "vacias": 0
  }
 }

@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   6.2,
+   "me quedo"
+  ],
+  [
    9.3,
    "casado soy como un niño dormido que"
   ],
@@ -189,6 +193,9 @@
   ]
  ],
  "fuentes": [
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],

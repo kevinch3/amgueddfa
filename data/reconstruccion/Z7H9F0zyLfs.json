@@ -20,6 +20,14 @@
    "No hay porteros ni vecinos"
   ],
   [
+   20.0,
+   "Adentro, hotel y amor"
+  ],
+  [
+   24.0,
+   "Visito que al piso humamble"
+  ],
+  [
    28.0,
    "Mi alma estera y velador, un teléfono que contesta, una vitrola que llora,"
   ],
@@ -29,11 +37,11 @@
   ],
   [
    47.6,
-   "Y todo a media luz, a media luz los besos, a media luz los dos,"
+   "Y todo a media luz, Jesús fue el amor, a media luz los besos, a media luz los dos,"
   ],
   [
    55.5,
-   "y todo a media luz, la media luz de amor."
+   "y todo a media luz, crefúsculo interior, es lo de tercio pelo, la media luz de amor."
   ],
   [
    72.2,
@@ -62,9 +70,22 @@
   [
    120.5,
    "Y todo a media luz, crepúsculo interior"
+  ],
+  [
+   124.8,
+   "Es suave tercio, pero la media luz de amor"
   ]
  ],
  "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
   [
    "whisper_es"
   ],

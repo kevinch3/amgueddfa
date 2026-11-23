@@ -4,8 +4,24 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Bydda i'n canu demacariad fel y morioed, ar dôn dim ond Iesu, er gof am waith canu arbennig Annie Davis yn ystod y digwyddiad ffydd mawr yy yn Nghemru dros cant ar hicain o flynyddoedd yn ôl nawr, ddeudia que voy a cantar este himno, que se m- m- m- m- m- m- m- m- m- m- m- m- m- m- m- m- m- t- t- t- t- t- t- t- t- t- t- t- t- t- t- t- m- m- m- m- m- m- m- m- m- m- m- m- m- m- m- m- m- m- m- m- m- m- m- m- m- m- m- m- m- m- m"
+  ],
+  [
+   1.4,
+   "deademoroid"
+  ],
+  [
+   9.1,
+   "an daavis"
+  ],
+  [
    11.0,
    "en esto de"
+  ],
+  [
+   13.4,
+   "maur en hobbler"
   ],
   [
    20.1,
@@ -40,17 +56,49 @@
    "hace 120 años, un poquito más ya."
   ],
   [
-   99.7,
-   "Buen"
+   44.2,
+   "Diol"
+  ],
+  [
+   54.4,
+   "deatoro"
+  ],
+  [
+   71.24,
+   "Marw'i brenin bywyd ddi, bwy all fudd i'w gofio amdano, bwy all fudd i'w ganu glwad, dyma cariad nad anangof,"
+  ],
+  [
+   95.24,
+   "dra bore nef oedd wen yn bod."
+  ],
+  [
+   108.24,
+   "A'r galfariau'r ymrwygodd, hoffyn nhw na'r ddyfndir mawr."
+  ],
+  [
+   120.24,
+   "Dŵr o'dd holl ar y gae a'r nef oedd, oedd yn cyfain hyd yn awr."
+  ],
+  [
+   132.24,
+   "Gras a chariad megis di, yn ymdywodd dy mynid, a chyfiawn derbyn a heddwch yn gyson ei heugfyd."
+  ],
+  [
+   162.24,
+   "A myn- a myn- dyma, caria, fel y môr oedd, draf o'r nef oedd wel yn fwyd."
   ],
   [
    162.8,
    "Amen."
+  ],
+  [
+   192.24,
+   "Diolch yn fawr."
   ]
  ],
  "fuentes": [
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -81,12 +129,48 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "cy"
   ]
  ],
  "ventanas": {
   "total": 4,
-  "modelo": 4,
-  "reglas": 0,
+  "modelo": 3,
+  "reglas": 1,
   "vacias": 0
  }
 }

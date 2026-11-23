@@ -4,12 +4,28 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
-   216.7,
-   "is made"
+   56.3,
+   "O ddiwrnod nawr, mor bell ar wanwyn na gaeaf dŷr, mor bell ar môr heb gyrraedd y dir, mor bell ar wc yn ceisio troi yn wen, mor bell ar bwlch rhwng ifainc a hen, mor bell ar bwlch rhwng gorffrit a gwaed."
   ],
   [
-   232.1,
-   "of mor"
+   86.3,
+   "mor bell i ffwrdd â chylwydd a haint, mor bell a iâ yn derwythder, mor bell ag ennill a hollu'r gerdd."
+  ],
+  [
+   104.1,
+   "Wyth mil o filltiroedd rhwng fan draw a fan hyn, ar un iaith i'w glywed yn y gwledydd hyn, un galon i'w guro, yn teulu, un iaith, yn pob deffro i amhennydd, pob pant a pob pai."
+  ],
+  [
+   132.1,
+   "Mor agos i fyny, mor agos o hyd, ac nid i'r pwll yn bell derbyn."
+  ],
+  [
+   192.1,
+   "Fodd bysa'r bwch yn ceisio troi'n wir, fodd bysa'r bwch rhwng ifanc a hir, fodd bysa'r bwch rhwng gorffwys a gwaith, fodd bys i ffwrdd a chyrrwyd at bai, fodd bysa'r dda yn ddefnyddio'r de, fodd bysa hyn yn gallu achosi'r gêm."
+  ],
+  [
+   215.1,
+   "Wyth mil o fethig oedd rhwng fan law a fan hyn, a un iaith ddim clwed yn y gwledydd hyn, un tad, un hir, un teulu, un iaith, mor gyffryn a menyw, pob pant a pob haic, mor agos i'w byd, mor agos o hyd, ac nid yw'r bwlch yn bell y dydd."
   ],
   [
    289.0,
@@ -354,10 +370,22 @@
  ],
  "fuentes": [
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"

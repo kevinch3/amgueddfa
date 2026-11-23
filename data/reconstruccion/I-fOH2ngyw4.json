@@ -4,6 +4,14 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   30.0,
+   "Mae'n amish yn soes, mae'n amish yn soes, pan gofyn su' geirios be' amami."
+  ],
+  [
+   44.0,
+   "Mae'n amish yn soes, mae'n amish yn soes, pan gofyn su' geirios be' amami."
+  ],
+  [
    60.0,
    "Maravilla de un sol que se oculta, maravilla la aurora que vi,"
   ],
@@ -14,6 +22,10 @@
   [
    86.4,
    "Maravilloso es, maravilloso es"
+  ],
+  [
+   90.0,
+   "Maravillous oedd, maravillous oedd, pan dwi'n meddwl bod God yn alw ni, maravillous oedd, maravillous oedd, pan dwi'n meddwl bod God yn alw ni."
   ],
   [
    94.5,
@@ -46,13 +58,22 @@
  ],
  "fuentes": [
   [
-   "whisper_es"
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
   ],
   [
    "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"

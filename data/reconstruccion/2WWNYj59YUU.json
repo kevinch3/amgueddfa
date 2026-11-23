@@ -94,6 +94,10 @@
   [
    214.4,
    "Esta es mi corteza, donde el hacha golpeará, donde el río secará, para callar, para callar."
+  ],
+  [
+   226.0,
+   "Bod y golau, bod y golau."
   ]
  ],
  "fuentes": [
@@ -165,6 +169,9 @@
   ],
   [
    "whisper_es"
+  ],
+  [
+   "cy"
   ]
  ],
  "ventanas": {

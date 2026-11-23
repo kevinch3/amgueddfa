@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Sueño alfarero de Carlos Dante Ferrari."
+  ],
+  [
    7.6,
    "Sueño alfarero de Carlos Dante Ferrari"
   ],
@@ -26,6 +30,10 @@
   [
    25.4,
    "discreto y voluptuoso juego"
+  ],
+  [
+   27.9,
+   "ocultó con los dedos la dosis larga masa"
   ],
   [
    30.4,
@@ -52,8 +60,16 @@
    "el amasijo mientras sus Palmas batían la"
   ],
   [
+   49.4,
+   "Silla complaciente con el susurro de un"
+  ],
+  [
    52.4,
    "silbo acompasado"
+  ],
+  [
+   54.0,
+   "así"
   ],
   [
    55.6,
@@ -156,6 +172,10 @@
    "y pudo descansar"
   ],
   [
+   133.6,
+   "como si fuera el sacro vía séptimo"
+  ],
+  [
    137.1,
    "soñando que jugaba a ser el creador"
   ],
@@ -165,6 +185,21 @@
   ]
  ],
  "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],

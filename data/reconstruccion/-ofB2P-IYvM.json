@@ -4,8 +4,12 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "El amor loco, de Cristian Aliaga."
+  ],
+  [
    4.4,
-   "El amor loco de Cristian"
+   "el amor loco de Cristian"
   ],
   [
    9.1,
@@ -97,6 +101,9 @@
   ]
  ],
  "fuentes": [
+  [
+   "cy"
+  ],
   [
    "yt_es"
   ],

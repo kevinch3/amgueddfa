@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "De Lidia Ester Romero."
+  ],
+  [
    10.9,
    "de Lidia Romero"
   ],
@@ -52,6 +56,14 @@
    "volaba"
   ],
   [
+   50.8,
+   "hastadita Los antojos de mi mente que"
+  ],
+  [
+   53.5,
+   "hoy te nombra"
+  ],
+  [
    55.1,
    "preguntando por tu magia que no está"
   ],
@@ -97,7 +109,7 @@
   ],
   [
    90.2,
-   "abrazadas para siempre"
+   "abrazadas para siempre Te queremos"
   ],
   [
    94.7,
@@ -137,6 +149,15 @@
   ]
  ],
  "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],

@@ -4,12 +4,8 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
-   22.2,
-   "en el hacedor"
-  ],
-  [
-   47.6,
-   "benjamín ruiz caudales luis hay tablet a"
+   0.0,
+   "Mae'r esgid bach yn gwasgu, pe fyddai'n haelwn i'n cwch, cael yn chwilio o'r llwch, yn ôl at y ddôl, a mor segu, doba doba,"
   ],
   [
    55.2,
@@ -42,10 +38,7 @@
  ],
  "fuentes": [
   [
-   "yt_es"
-  ],
-  [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"

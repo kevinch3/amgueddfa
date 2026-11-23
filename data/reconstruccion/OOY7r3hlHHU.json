@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Mae'n iawn."
+  ],
+  [
    3.1,
    "hoy la casita"
   ],
@@ -77,6 +81,9 @@
   ]
  ],
  "fuentes": [
+  [
+   "cy"
+  ],
   [
    "yt_es"
   ],

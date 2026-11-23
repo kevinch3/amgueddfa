@@ -4,6 +4,14 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.9,
+   "de"
+  ],
+  [
+   5.2,
+   "roca"
+  ],
+  [
    7.0,
    "ellos a mis"
   ],
@@ -30,6 +38,10 @@
   [
    23.9,
    "incansables pintando paredes con trazos"
+  ],
+  [
+   27.4,
+   "de"
   ],
   [
    29.0,
@@ -82,9 +94,26 @@
   [
    71.6,
    "años aparecen"
+  ],
+  [
+   85.3,
+   "ellos"
   ]
  ],
  "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es",
+   "cy"
+  ],
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],

@@ -5,7 +5,7 @@
  "seg": [
   [
    0.0,
-   "Cân actol, thema Cariad"
+   "...Cân actol, thema Cariad, harinik, mikasaleiai, ama, yuklesiar kum."
   ],
   [
    18.0,
@@ -32,8 +32,12 @@
    "¿Seguro?"
   ],
   [
-   40.8,
-   "César cum"
+   60.0,
+   "Ar we fe arwy'n llyniau, yr ymwlydd a'r farwelyd."
+  ],
+  [
+   69.0,
+   "Rwy'n mynd i'w wlad e gawntio, dros mor a thul a phai, i helpu chwerthu'r fflamau sy'n dal i gadw'r iau."
   ],
   [
    87.6,
@@ -44,12 +48,8 @@
    "cómo son las mutaciones que nos vamos a olvidar."
   ],
   [
-   104.3,
-   "Huelta cruzo, anjada cruzo, mordes y una cognitiva."
-  ],
-  [
-   112.5,
-   "Caminago rey calona y maigéntica te van yin"
+   134.0,
+   "Ar y greigiau geirwr mae hen awyr yn grwyno, a fyren wen, wen, wen."
   ],
   [
    164.5,
@@ -72,8 +72,16 @@
    "A esa que te aparta de mí, que me roba tu tiempo lejos de la chacra, ve y dile."
   ],
   [
+   205.0,
+   "A hesa, gei di abadda fi, gei di roi dy dir o lewodd yn y chakra, meiddid."
+  ],
+  [
    215.9,
    "Que venga, que tenga valor, que rompe la carne, que rompe la carne, que quede tu amor."
+  ],
+  [
+   229.0,
+   "Dim ond noson, dim ond noson, ne fo' ni'm yn mynd ar ben ôl. Yn ôl ein dyddweddau, yn ôl ein derbyddiau, ne fo' ni'm yn mynd ar ben ôl."
   ],
   [
    258.5,
@@ -86,6 +94,10 @@
   [
    266.5,
    "Ya es tarde, salió, y aquí no hay más lugar que para nosotros dos."
+  ],
+  [
+   273.0,
+   "Mam o'n estai'n ochanan, ti a'i lefad o'n lico'n gasoni, a mi do'n i'm mhortan anan, drefdiad o'n i'n yfed o'n chakra, cefndar i'n ddelechanan, os ti'n teimlo, byddai'n ddolor, ddim byd mai gyd o'n i'n gwybod."
   ],
   [
    274.5,
@@ -104,40 +116,32 @@
    "Si te va a cerrar en un dolor que jamás conocí."
   ],
   [
+   292.8,
+   "Si te va a cerrar en un dolor que jamás conocí."
+  ],
+  [
    303.0,
    "Si me lo ha fatto imáginando a te."
   ],
   [
-   315.5,
-   "Cosiri plant"
+   317.0,
+   "Colli'r eu plant a colli cariad. Colli? Na colli. Mam, ti ddim wedi colli fi. Na ti."
   ],
   [
-   321.5,
-   "A cosi Cariad"
+   333.0,
+   "Dan ni'n gallu byw efo'i gilydd ar y ffarm. Neu yn Cymru. Yn Cymru."
   ],
   [
-   326.5,
-   "Cosi"
+   341.0,
+   "Os ddarniad byd sydd fel y dydd, yn man a dram o tri. Tri! Tri!"
   ],
   [
-   328.5,
-   "Mam, tu no di cosi fi"
+   356.0,
+   "O, dwi arfer os ma'n hir, mae o'n wir, ple dwi'n teimlo fod haul yma i fod, ple mae'r deintydd yn canu, ie i ni, a mae'r iaith yn fyw o frig."
   ],
   [
-   332.5,
-   "Da'n ni'n gallu byw of y gilydd ar y farm"
-  ],
-  [
-   335.5,
-   "Neu en Cymru"
-  ],
-  [
-   336.5,
-   "En Cymru"
-  ],
-  [
-   338.5,
-   "Cos Cariad"
+   416.0,
+   "Diolch yn fawr."
   ]
  ],
  "fuentes": [
@@ -163,7 +167,55 @@
    "whisper_es"
   ],
   [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
    "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
@@ -184,70 +236,25 @@
    "whisper_es"
   ],
   [
-   "whisper_es"
+   "cy"
   ],
   [
-   "whisper_es"
+   "cy"
   ],
   [
-   "whisper_es"
+   "cy"
   ],
   [
-   "whisper_es"
+   "cy"
   ],
   [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
+   "cy"
   ]
  ],
  "ventanas": {
-  "total": 7,
-  "modelo": 6,
+  "total": 8,
+  "modelo": 8,
   "reglas": 0,
-  "vacias": 1
+  "vacias": 0
  }
 }

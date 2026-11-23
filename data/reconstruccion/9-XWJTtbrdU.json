@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Retrato de señora que hace dulce de María Elena Walsh. Hago esto en memoria tuya,"
+  ],
+  [
    6.9,
    "retrato de señora que hace dulces de"
   ],
@@ -13,11 +17,23 @@
   ],
   [
    11.3,
-   "walsh hago esto en memoria"
+   "Walsh hago esto en memoria"
   ],
   [
    15.8,
    "tuya cuando llega el otoño pelo fruta y"
+  ],
+  [
+   20.8,
+   "rodeada de pellejos vierto en heredado"
+  ],
+  [
+   25.5,
+   "recipiente pulpas"
+  ],
+  [
+   27.8,
+   "filosofales algún caroo"
   ],
   [
    30.6,
@@ -34,6 +50,14 @@
   [
    42.8,
    "aroma Y aunque es"
+  ],
+  [
+   45.6,
+   "fruta"
+  ],
+  [
+   47.3,
+   "itinerante y no de vuerta"
   ],
   [
    50.7,
@@ -76,6 +100,14 @@
    "obro por reverencia y no de"
   ],
   [
+   85.7,
+   "ver para que mueras"
+  ],
+  [
+   88.9,
+   "menos y"
+  ],
+  [
    91.2,
    "sientas pobre ausente que hago un reino"
   ],
@@ -114,6 +146,10 @@
   [
    124.6,
    "cuchara de madera a ordenar la"
+  ],
+  [
+   128.4,
+   "subterráneas para que tomen"
   ],
   [
    131.6,
@@ -162,9 +198,43 @@
   [
    173.6,
    "reparto"
+  ],
+  [
+   178.8,
+   "pereceréis"
   ]
  ],
  "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],

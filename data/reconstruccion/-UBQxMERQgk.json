@@ -24,6 +24,14 @@
    "Llegó mi canción hacia el corazón"
   ],
   [
+   79.2,
+   "Vientos de castellanos"
+  ],
+  [
+   90.0,
+   "A mis hermanos se están matando"
+  ],
+  [
    95.5,
    "Llevaré el canto suave de la tierra y su latín"
   ],
@@ -88,12 +96,18 @@
   ],
   [
    "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {
   "total": 4,
-  "modelo": 3,
+  "modelo": 4,
   "reglas": 0,
-  "vacias": 1
+  "vacias": 0
  }
 }

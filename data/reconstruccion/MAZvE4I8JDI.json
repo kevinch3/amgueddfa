@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Tardé de te de María Julia Guzmán. Junto aquellas primas con arrugas, y algunos diantes menos, que rían alocadas de papelones drásticos, anécdotas pasadas, y dolores maduros, llenan los dios muertos a compartir la rueda."
+  ],
+  [
    3.8,
    "tarde de té de María Julia"
   ],
@@ -50,6 +54,9 @@
  ],
  "fuentes": [
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -85,8 +92,8 @@
  ],
  "ventanas": {
   "total": 1,
-  "modelo": 1,
-  "reglas": 0,
+  "modelo": 0,
+  "reglas": 1,
   "vacias": 0
  }
 }

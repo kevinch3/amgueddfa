@@ -4,8 +4,12 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   1.1,
+   "cazador de José"
+  ],
+  [
    3.3,
-   "la nube desabrocha su corpeño"
+   "pedroni la nube desabrocha su corpeño"
   ],
   [
    6.6,
@@ -18,6 +22,10 @@
   [
    11.3,
    "laguna boca arriba en la hierba espero"
+  ],
+  [
+   15.3,
+   "La"
   ],
   [
    16.2,
@@ -61,6 +69,12 @@
   ]
  ],
  "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],

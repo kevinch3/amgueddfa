@@ -1,0 +1,744 @@
+{
+ "nota": "Qué obra se canta en cada actuación que el programa no nombra (obras «a elección», repertorios libres, actuaciones sin competencia), por video; 't' son los segundos donde empieza la actuación cuando el video tiene más de una. 'confianza': alta, media o baja; 'derechos': dominio_publico, con_derechos o sin_confirmar (del texto, no de la música); 'letra' es el slug de data/letras cuando el texto está guardado; 'evidencia' dice de dónde sale la identificación (anuncio, título, lo que oyeron los reconocedores) y 'nota', lo que queda en duda. Nunca se cita nada de lo que se canta. Lo lee scripts/letras_pendientes.py: una obra identificada sin texto sigue siendo un hueco («falta el texto»).",
+ "identificaciones": {
+  "-xFt_5ZLcLk": [
+   {
+    "titulo": "Hiraeth",
+    "autoria": "tradicional galesa (recogida en Anglesey por J. Lloyd Williams)",
+    "confianza": "alta",
+    "derechos": "dominio_publico",
+    "evidencia": "El título del video la nombra; el reconocedor galés oye las tres estrofas.",
+    "letra": "hiraeth"
+   }
+  ],
+  "0KGzTyN3mjc": [
+   {
+    "t": 50,
+    "titulo": "Zamba para olvidar",
+    "autoria": "Daniel Toro y Julio César Bissio",
+    "confianza": "alta",
+    "derechos": "con_derechos",
+    "evidencia": "El título del video la nombra y los subtítulos de YouTube oyen el texto guardado.",
+    "letra": "zamba-para-olvidar"
+   }
+  ],
+  "0qqaiN722C0": [
+   {
+    "titulo": "Colli Iaith",
+    "autoria": "Harri Webb (1920-1994), 1966; música de Meredydd Evans",
+    "confianza": "alta",
+    "derechos": "con_derechos",
+    "evidencia": "El reconocedor galés oye la canción; los autores se confirmaron en la web."
+   }
+  ],
+  "26IzyQkuOCI": [
+   {
+    "titulo": "Paid â deud",
+    "autoria": "tonada tradicional; autor de estas palabras sin confirmar",
+    "confianza": "media",
+    "derechos": "sin_confirmar",
+    "evidencia": "El título del video la nombra y el reconocedor galés oye el estribillo.",
+    "nota": "No se sabe si las palabras son tradicionales."
+   }
+  ],
+  "2uELnKwPGfo": [
+   {
+    "t": 30,
+    "titulo": "Mein Herr Marquis (Die Fledermaus)",
+    "autoria": "Johann Strauss II; libreto de Carl Haffner y Richard Genée",
+    "confianza": "media",
+    "derechos": "dominio_publico",
+    "evidencia": "El título del video la nombra; el reconocedor galés oye la canción de la risa en alemán.",
+    "nota": "No se obtuvo un libreto digital fiable para cotejar."
+   }
+  ],
+  "4DWCOQ_d42g": [
+   {
+    "t": 30,
+    "titulo": "An Irish Blessing (arreglo sin identificar)",
+    "autoria": "bendición tradicional irlandesa; compositor no identificado",
+    "confianza": "media",
+    "derechos": "sin_confirmar",
+    "evidencia": "El título del video la nombra y los reconocedores oyen la bendición.",
+    "nota": "La segunda estrofa no es la bendición tradicional: parece de un arreglo moderno."
+   }
+  ],
+  "5bvgxlW38jw": [
+   {
+    "titulo": "Paid â deud",
+    "autoria": "tonada tradicional; autor de estas palabras sin confirmar",
+    "confianza": "media",
+    "derechos": "sin_confirmar",
+    "evidencia": "El reconocedor galés oye el estribillo.",
+    "nota": "No se sabe si las palabras son tradicionales."
+   }
+  ],
+  "5G_NHhXz3fo": [
+   {
+    "titulo": "La grata nueva escucha hoy (Ven a Cristo)",
+    "autoria": "John H. Stockton (1813-1877); traducción de H. G. Jackson (1838-1914)",
+    "confianza": "media",
+    "derechos": "dominio_publico",
+    "evidencia": "Whisper oye el himno; hymnary.org da el autor y el traductor.",
+    "nota": "No se pudo bajar una fuente digital del texto (hymnary.org bloquea la descarga automática)."
+   }
+  ],
+  "5H0rNCosoSk": [
+   {
+    "t": 20,
+    "titulo": "Ave verum corpus (arreglo sin identificar)",
+    "autoria": "himno eucarístico latino; música de autor no identificado",
+    "confianza": "media",
+    "derechos": "dominio_publico",
+    "evidencia": "El título del video la nombra y Whisper oye partes del himno.",
+    "nota": "El arreglo no está identificado: lo que se oye no coincide del todo con la variante guardada para otro arreglo y sigue una coda; no hay texto hasta saber qué arreglo es."
+   }
+  ],
+  "5rDvIR1TtBY": [
+   {
+    "titulo": "Zamba del carnaval",
+    "autoria": "Cuchi Leguizamón, versión coral de Pablo D. Roberto",
+    "confianza": "media",
+    "derechos": "con_derechos",
+    "evidencia": "El título del video la nombra y Whisper oye el texto guardado.",
+    "letra": "zamba-del-carnaval"
+   }
+  ],
+  "5W8lfQJNmcA": [
+   {
+    "t": 20,
+    "titulo": "Mi luna cautiva",
+    "autoria": "Chango Rodríguez",
+    "confianza": "alta",
+    "derechos": "con_derechos",
+    "evidencia": "La anuncian con su autor y Whisper oye la canción."
+   }
+  ],
+  "77ryTxS6J0Q": [
+   {
+    "titulo": "Ffarwél i Stesion Strata",
+    "autoria": "probablemente Tecwyn Ifan",
+    "confianza": "media",
+    "derechos": "con_derechos",
+    "evidencia": "El título del video la nombra y el reconocedor galés oye el estribillo.",
+    "nota": "Otro programa (Chubut 2022, comp. 55) acredita una obra del mismo título a Tecwyn Ifan; raro en una competencia de himnos."
+   }
+  ],
+  "7XosfJ41KsI": [
+   {
+    "titulo": "Hark, hark! the lark",
+    "autoria": "Shakespeare (Cymbeline, II.3); música de Franz Schubert (D 889)",
+    "confianza": "alta",
+    "derechos": "dominio_publico",
+    "evidencia": "El título del video la nombra; el reconocedor galés oye la canción en inglés.",
+    "letra": "hark-hark-the-lark"
+   }
+  ],
+  "83Ju-97Zndg": [
+   {
+    "titulo": "Yr afon a lifodd rhwng nefoedd a llawr",
+    "autoria": "William Williams, Pantycelyn (1717-1791), según gobaith.cymru",
+    "confianza": "alta",
+    "derechos": "dominio_publico",
+    "evidencia": "El reconocedor galés y Whisper oyen el himno entero.",
+    "nota": "La versión que se canta difiere en cuatro de sus doce versos de las cinco que publica gobaith.cymru: no hay texto guardado hasta tener el que se canta."
+   }
+  ],
+  "8IQJGDgLfBQ": [
+   {
+    "titulo": "Molwn enw'r Arglwydd",
+    "autoria": "John James Williams (1869-1954)",
+    "confianza": "alta",
+    "derechos": "dominio_publico",
+    "evidencia": "El reconocedor galés oye las tres estrofas del texto guardado.",
+    "letra": "molwn-enwr-arglwydd"
+   }
+  ],
+  "8SOiU_lopa0": [
+   {
+    "titulo": "Open thou mine eyes",
+    "autoria": "John Rutter; texto según Lancelot Andrewes (Preces privatae)",
+    "confianza": "alta",
+    "derechos": "sin_confirmar",
+    "evidencia": "El título del video la nombra y se oye el texto en inglés.",
+    "nota": "La oración de Andrewes es de dominio público, pero no se encontró la fuente de la redacción inglesa que usa Rutter."
+   }
+  ],
+  "9EO6zk3LqAk": [
+   {
+    "titulo": "Santiano (versión galesa)",
+    "autoria": "tonada de saloma marinera; autor de la letra galesa no identificado",
+    "confianza": "media",
+    "derechos": "sin_confirmar",
+    "evidencia": "El título del video la nombra y el reconocedor galés oye la letra galesa."
+   }
+  ],
+  "9zK9cjhalec": [
+   {
+    "t": 40,
+    "titulo": "Naranjo en flor",
+    "autoria": "Virgilio y Homero Expósito",
+    "confianza": "alta",
+    "derechos": "con_derechos",
+    "evidencia": "El título del video la nombra; lo que oyen los reconocedores coincide con el texto guardado.",
+    "letra": "naranjo-en-flor"
+   }
+  ],
+  "AEdUFmf6rjw": [
+   {
+    "titulo": "'Does destyn gwiw i'm cân (Iddo Ef)",
+    "autoria": "John Blackwell, Alun (1797-1840); tôn Moscow, Felice de Giardini",
+    "confianza": "alta",
+    "derechos": "dominio_publico",
+    "evidencia": "El título del video nombra la tonada y el reconocedor galés oye las dos estrofas.",
+    "letra": "does-destyn-gwiw-im-can"
+   }
+  ],
+  "b8-YOLtDus4": [
+   {
+    "t": 13,
+    "titulo": "Quel fior che all'alba ride",
+    "autoria": "Georg Friedrich Händel (dúo HWV 192 o HWV 200); texto italiano anónimo",
+    "confianza": "media",
+    "derechos": "dominio_publico",
+    "evidencia": "El título del video la nombra; el reconocedor galés oye solo fragmentos.",
+    "letra": "quel-fior-che-allalba-ride",
+    "nota": "Händel tiene dos dúos con este texto; los tiempos son aproximados."
+   }
+  ],
+  "BC61L8txOaQ": [
+   {
+    "t": 32450,
+    "titulo": "Bonita rama de sauce",
+    "autoria": "Carlos Guastavino; texto de Arturo Vázquez",
+    "confianza": "alta",
+    "derechos": "con_derechos",
+    "evidencia": "Obra a elección de la comp. 75: Whisper oye versos del texto guardado.",
+    "letra": "bonita-rama-de-sauce"
+   }
+  ],
+  "biKtvTMA3_Q": [
+   {
+    "t": 40,
+    "titulo": "Mawr oedd Crist yn nhragwyddoldeb",
+    "autoria": "Titus Lewis (1773-1811) y Casgliad D. Jones (1810); tôn Bryn Myrddin, J. Morgan Nicholas",
+    "confianza": "alta",
+    "derechos": "dominio_publico",
+    "evidencia": "El locutor anuncia la tonada Bryn Myrddin y el reconocedor galés oye las tres estrofas en orden.",
+    "letra": "mawr-oedd-crist-yn-nhragwyddoldeb"
+   }
+  ],
+  "bYwLD_A8i-A": [
+   {
+    "titulo": "'Rwy'n gweld o bell y dydd yn dod",
+    "autoria": "Watcyn Wyn (1844-1905)",
+    "confianza": "alta",
+    "derechos": "dominio_publico",
+    "evidencia": "Whisper y el reconocedor galés oyen la segunda estrofa con claridad; la primera, mal.",
+    "letra": "rwyn-gweld-o-bell"
+   }
+  ],
+  "cCrdI-dzfZQ": [
+   {
+    "titulo": "Duw mawr y rhyfeddodau maith",
+    "autoria": "Samuel Davies; versión galesa de Ramoth y Gomer (1805)",
+    "confianza": "alta",
+    "derechos": "dominio_publico",
+    "evidencia": "El reconocedor galés oye la primera estrofa y el estribillo, dos o tres veces; las otras estrofas no se cantan.",
+    "letra": "duw-mawr-y-rhyfeddodau"
+   }
+  ],
+  "cNJvd6c6B4E": [
+   {
+    "titulo": "Hen Ferchetan",
+    "autoria": "tradicional galesa",
+    "confianza": "alta",
+    "derechos": "dominio_publico",
+    "evidencia": "El título del video la nombra; el reconocedor galés oye las estrofas en orden.",
+    "letra": "hen-ferchetan"
+   }
+  ],
+  "cqp_VwkQIbc": [
+   {
+    "t": 4,
+    "titulo": "O nefol addfwyn Oen",
+    "autoria": "William Williams, Pantycelyn (1717-1791)",
+    "confianza": "alta",
+    "derechos": "dominio_publico",
+    "evidencia": "El reconocedor galés oye las tres estrofas en orden.",
+    "letra": "o-nefol-addfwyn-oen"
+   }
+  ],
+  "D39FKqeFJeg": [
+   {
+    "titulo": "Si hei lwli 'mabi",
+    "autoria": "canción de cuna tradicional galesa",
+    "confianza": "alta",
+    "derechos": "dominio_publico",
+    "evidencia": "El reconocedor galés oye la canción.",
+    "nota": "La única fuente hallada (O. M. Edwards, Yr Hwiangerddi) tiene solo la primera cuarteta y se cantan más versos."
+   }
+  ],
+  "DW0s3oGilUo": [
+   {
+    "titulo": "Hen Ferchetan",
+    "autoria": "tradicional galesa",
+    "confianza": "alta",
+    "derechos": "dominio_publico",
+    "evidencia": "El reconocedor galés oye las estrofas en orden.",
+    "letra": "hen-ferchetan"
+   }
+  ],
+  "ePtCfKzpd2U": [
+   {
+    "t": 20,
+    "titulo": "La última curda",
+    "autoria": "Aníbal Troilo; letra de Cátulo Castillo",
+    "confianza": "alta",
+    "derechos": "con_derechos",
+    "evidencia": "El título del video la nombra y Whisper oye el tango."
+   }
+  ],
+  "eviefVEVksk": [
+   {
+    "titulo": "Hen Ferchetan",
+    "autoria": "tradicional galesa",
+    "confianza": "alta",
+    "derechos": "dominio_publico",
+    "evidencia": "El título del video la nombra; el reconocedor galés oye las estrofas en orden.",
+    "letra": "hen-ferchetan"
+   }
+  ],
+  "eYr4bFtriWw": [
+   {
+    "t": 115,
+    "titulo": "Duw mawr y rhyfeddodau maith",
+    "autoria": "Samuel Davies; versión galesa de Ramoth y Gomer (1805); tôn Huddersfield, J. Newton",
+    "confianza": "media",
+    "derechos": "dominio_publico",
+    "evidencia": "La obra de confronte de la comp. 66 es la tonada Huddersfield, que gobaith.cymru da para este himno; el reconocedor galés oye la primera estrofa y el estribillo dos veces.",
+    "letra": "duw-mawr-y-rhyfeddodau"
+   }
+  ],
+  "fBuwFDzNr4E": [
+   {
+    "t": 1000,
+    "titulo": "Como la cigarra",
+    "autoria": "María Elena Walsh",
+    "confianza": "alta",
+    "derechos": "con_derechos",
+    "evidencia": "Comp. 49, homenaje a María Elena Walsh: Whisper oye el estribillo tres veces."
+   }
+  ],
+  "Fkm05yVVzBY": [
+   {
+    "t": 30,
+    "titulo": "Rumbo al cerro",
+    "autoria": "Alejandro Maldino / Mario Díaz",
+    "confianza": "alta",
+    "derechos": "con_derechos",
+    "evidencia": "El título del video la nombra y Whisper oye versos del texto guardado.",
+    "letra": "rumbo-al-cerro"
+   }
+  ],
+  "GJbGEB4UWao": [
+   {
+    "t": 30,
+    "titulo": "Zamba de usted",
+    "autoria": "Ariel Ramírez; letra de Félix Luna",
+    "confianza": "media",
+    "derechos": "con_derechos",
+    "evidencia": "La cantante la presenta con sus autores; del canto se oye muy poco."
+   }
+  ],
+  "gSPQrw2jxTI": [
+   {
+    "t": 10,
+    "titulo": "Azúcar, pimienta y sal",
+    "confianza": "media",
+    "derechos": "con_derechos",
+    "evidencia": "El título del video la nombra y Whisper oye el estribillo.",
+    "nota": "Autor sin confirmar."
+   }
+  ],
+  "HnVmmnyjBU4": [
+   {
+    "titulo": "De quien pagó mi redención",
+    "autoria": "himno, anónimo",
+    "confianza": "alta",
+    "derechos": "sin_confirmar",
+    "evidencia": "Whisper oye el himno; el cuarteto canta las estrofas 1, 3 y 4.",
+    "letra": "de-quien-pago-mi-redencion"
+   }
+  ],
+  "IEDbMUkzDYs": [
+   {
+    "titulo": "Bring Him Home (Les Misérables)",
+    "autoria": "Claude-Michel Schönberg; letra en inglés de Herbert Kretzmer",
+    "confianza": "alta",
+    "derechos": "con_derechos",
+    "evidencia": "Los reconocedores oyen la canción en inglés."
+   }
+  ],
+  "INXpTIIfi5c": [
+   {
+    "titulo": "Duw mawr y rhyfeddodau maith",
+    "autoria": "Samuel Davies; versión galesa de Ramoth y Gomer (1805)",
+    "confianza": "alta",
+    "derechos": "dominio_publico",
+    "evidencia": "El reconocedor galés oye las tres estrofas, con el estribillo dos veces después de cada una.",
+    "letra": "duw-mawr-y-rhyfeddodau"
+   }
+  ],
+  "ISN-Qjkt8Lk": [
+   {
+    "t": 30,
+    "titulo": "Trwy'r Drysni",
+    "autoria": "canción tradicional galesa",
+    "confianza": "alta",
+    "derechos": "dominio_publico",
+    "evidencia": "El título del video la nombra y el reconocedor galés oye las estrofas.",
+    "nota": "No se encontró una fuente digital del texto."
+   }
+  ],
+  "ixnMBU-jGSI": [
+   {
+    "titulo": "Cân yr Arad Goch",
+    "autoria": "Ceiriog (1832-1887), de «Alun Mabon»",
+    "confianza": "alta",
+    "derechos": "dominio_publico",
+    "evidencia": "El reconocedor galés oye las dos estrofas, cada una con el estribillo.",
+    "letra": "can-yr-arad-goch"
+   }
+  ],
+  "J3-drpsAHnU": [
+   {
+    "t": 100,
+    "titulo": "Mi glywaf dyner lais (Arglwydd, dyma fi)",
+    "autoria": "versión galesa de Ieuan Gwyllt (1822-1877)",
+    "confianza": "alta",
+    "derechos": "dominio_publico",
+    "evidencia": "El reconocedor galés oye el final de la estrofa 1 y, en orden, los estribillos y las estrofas 2 y 5.",
+    "letra": "mi-glywaf-dyner-lais"
+   }
+  ],
+  "jNt92b9X0M0": [
+   {
+    "t": 12,
+    "titulo": "Salve Regina (arreglo sin identificar)",
+    "autoria": "antífona mariana; música de autor no identificado",
+    "confianza": "alta",
+    "derechos": "dominio_publico",
+    "evidencia": "El título del video la nombra; Whisper y el reconocedor galés oyen la antífona entera, en orden.",
+    "letra": "salve-regina"
+   }
+  ],
+  "k14zxxGpcV0": [
+   {
+    "t": 8,
+    "titulo": "Doña Ubenza (carnavalito)",
+    "autoria": "Chacho Echenique",
+    "confianza": "media",
+    "derechos": "con_derechos",
+    "evidencia": "El título del video la nombra.",
+    "nota": "Las coplas que oyó Whisper no se cotejaron con esa canción."
+   }
+  ],
+  "KCr6s-bDISA": [
+   {
+    "titulo": "Y Deryn Pur",
+    "autoria": "tradicional galesa",
+    "confianza": "alta",
+    "derechos": "dominio_publico",
+    "evidencia": "El reconocedor galés oye las dos estrofas.",
+    "letra": "y-deryn-pur"
+   }
+  ],
+  "LZPnp7YyOQY": [
+   {
+    "t": 30,
+    "titulo": "Hallelujah",
+    "autoria": "Leonard Cohen",
+    "confianza": "alta",
+    "derechos": "con_derechos",
+    "evidencia": "El título del video la nombra y se oye el estribillo."
+   }
+  ],
+  "mU3n3wyWRPY": [
+   {
+    "titulo": "Hen Wlad fy Nhadau",
+    "autoria": "Evan James (1809-1878); música de James James",
+    "confianza": "alta",
+    "derechos": "dominio_publico",
+    "evidencia": "El título del video la nombra (himno de Gales en la Gorsedd); lo que oye el reconocedor galés está muy desfigurado.",
+    "letra": "hen-wlad-fy-nhadau"
+   }
+  ],
+  "o_pwWHT2oh8": [
+   {
+    "titulo": "Hen Ferchetan",
+    "autoria": "tradicional galesa",
+    "confianza": "alta",
+    "derechos": "dominio_publico",
+    "evidencia": "El reconocedor galés oye las estrofas en orden.",
+    "letra": "hen-ferchetan"
+   }
+  ],
+  "Oev0xyrE5bY": [
+   {
+    "titulo": "Newyddion braf",
+    "autoria": "Ron Jones / J. Dafydd – E. Lewys",
+    "confianza": "alta",
+    "derechos": "con_derechos",
+    "evidencia": "El reconocedor galés oye versos y el estribillo del texto guardado.",
+    "letra": "newyddion-braf"
+   }
+  ],
+  "ojLWWOfFWW8": [
+   {
+    "t": 5,
+    "titulo": "Calon Lân",
+    "autoria": "Daniel James, Gwyrosydd (1847-1920); tôn John Hughes",
+    "confianza": "alta",
+    "derechos": "dominio_publico",
+    "evidencia": "El título del video la nombra; el reconocedor galés oye el estribillo y la segunda estrofa.",
+    "letra": "calon-lan"
+   }
+  ],
+  "omuyPAg3iqo": [
+   {
+    "titulo": "'Rwy'n gweld o bell y dydd yn dod",
+    "autoria": "Watcyn Wyn (1844-1905); tôn Pembroke, James Foster",
+    "confianza": "alta",
+    "derechos": "dominio_publico",
+    "evidencia": "El título del video nombra la tonada y el reconocedor galés oye las dos estrofas, con el último pareado repetido.",
+    "letra": "rwyn-gweld-o-bell"
+   }
+  ],
+  "P1UDkhDczBA": [
+   {
+    "t": 44,
+    "titulo": "Dyma gariad fel y moroedd",
+    "autoria": "William Rees, Gwilym Hiraethog (1802-1883)",
+    "confianza": "media",
+    "derechos": "dominio_publico",
+    "evidencia": "La cantante presenta el himno y lo dedica a Annie Davies; los subtítulos de YouTube y el reconocedor galés oyen partes de las dos estrofas.",
+    "letra": "dyma-gariad-fel-y-moroedd",
+    "nota": "La identificación descansa sobre todo en la presentación."
+   }
+  ],
+  "q2NS3HP13-k": [
+   {
+    "titulo": "Alfonsina y el mar",
+    "autoria": "Ariel Ramírez / Félix Luna",
+    "confianza": "alta",
+    "derechos": "con_derechos",
+    "evidencia": "Whisper oye el texto guardado de principio a fin.",
+    "letra": "alfonsina-y-el-mar"
+   }
+  ],
+  "QHT2dhP9mDI": [
+   {
+    "t": 20,
+    "titulo": "Cant a Hanner",
+    "autoria": "letra anunciada como de Nantlais Evans; tôn Llanuwchllyn",
+    "confianza": "media",
+    "derechos": "con_derechos",
+    "evidencia": "La cantante anuncia la letra y la tonada; el reconocedor galés oye la canción, escrita para los 150 años de la colonia.",
+    "nota": "El autor sale solo del anuncio y no está confirmado."
+   }
+  ],
+  "qtFGkYN7FyQ": [
+   {
+    "t": 52,
+    "titulo": "Nada",
+    "autoria": "José Dames / Horacio Sanguinetti",
+    "confianza": "alta",
+    "derechos": "con_derechos",
+    "evidencia": "El título del video la nombra y Whisper oye el texto guardado, después de una introducción hablada.",
+    "letra": "nada"
+   }
+  ],
+  "rCj9gEkRwxo": [
+   {
+    "t": 14,
+    "titulo": "Yuyo verde",
+    "autoria": "Domingo Federico; letra de Homero Expósito",
+    "confianza": "alta",
+    "derechos": "con_derechos",
+    "evidencia": "El título del video la nombra y Whisper oye el tango."
+   }
+  ],
+  "rSrdEUTAZmU": [
+   {
+    "titulo": "Caed baban bach mewn preseb (Drosom ni)",
+    "autoria": "Howell Elvet Lewis, Elfed (1860-1953)",
+    "confianza": "alta",
+    "derechos": "dominio_publico",
+    "evidencia": "El reconocedor galés oye las dos estrofas.",
+    "letra": "caed-baban-mewn-preseb"
+   }
+  ],
+  "RXHTDhpgFeI": [
+   {
+    "titulo": "Aberdaron",
+    "autoria": "Cynan (1895-1970); música de Meirion Williams",
+    "confianza": "media",
+    "derechos": "con_derechos",
+    "evidencia": "El programa pide una obra de Meirion Williams y el reconocedor galés oye la canción."
+   }
+  ],
+  "ryen1FgSQXQ": [
+   {
+    "t": 19,
+    "titulo": "Tuag adref 'r wyf yn teithio",
+    "autoria": "Owen Rhys Owen (1854-1908); tôn Regent Square, Henry Smart",
+    "confianza": "alta",
+    "derechos": "dominio_publico",
+    "evidencia": "El cantante anuncia el himno y la tonada; el reconocedor galés oye las tres estrofas.",
+    "letra": "tuag-adref"
+   }
+  ],
+  "sEOsT2JKAfQ": [
+   {
+    "titulo": "Nada",
+    "autoria": "José Dames / Horacio Sanguinetti",
+    "confianza": "alta",
+    "derechos": "con_derechos",
+    "evidencia": "Whisper oye el texto guardado de principio a fin.",
+    "letra": "nada"
+   }
+  ],
+  "sV0n9xD1M_8": [
+   {
+    "titulo": "Molwn enw'r Arglwydd",
+    "autoria": "John James Williams (1869-1954); tôn Newark, Caradog Roberts",
+    "confianza": "alta",
+    "derechos": "dominio_publico",
+    "evidencia": "El título del video nombra la tonada; el reconocedor galés oye la estrofa 1 y la 4 del himno.",
+    "letra": "molwn-enwr-arglwydd"
+   }
+  ],
+  "SvBTOh3OlMg": [
+   {
+    "t": 7604,
+    "titulo": "Alfonsina y el mar",
+    "autoria": "Ariel Ramírez / Félix Luna",
+    "confianza": "alta",
+    "derechos": "con_derechos",
+    "evidencia": "La cantante la anuncia en la comp. 48 y Whisper oye el texto guardado.",
+    "letra": "alfonsina-y-el-mar"
+   }
+  ],
+  "tHqnCKQuHdw": [
+   {
+    "titulo": "Hay un canto en mi alma hoy",
+    "confianza": "baja",
+    "derechos": "sin_confirmar",
+    "evidencia": "Whisper oye el himno; un cancionero en archive.org tiene esos versos sin título ni autor.",
+    "nota": "Título y autor sin confirmar."
+   }
+  ],
+  "tzkyy9DDn2o": [
+   {
+    "titulo": "Yr Iesu'n ddigon (cerdd dant)",
+    "autoria": "William Williams, Pantycelyn (1717-1791): dos himnos",
+    "confianza": "alta",
+    "derechos": "dominio_publico",
+    "evidencia": "El título del video la nombra; Whisper y el reconocedor galés oyen las estrofas en el orden del texto guardado.",
+    "letra": "yr-iesun-ddigon"
+   }
+  ],
+  "uBo5bZPuCJk": [
+   {
+    "t": 10,
+    "titulo": "Pétalo de sal",
+    "autoria": "Fito Páez y Luis Alberto Spinetta",
+    "confianza": "alta",
+    "derechos": "con_derechos",
+    "evidencia": "La anuncian en la sesión eNmj-1_HlIk y Whisper oye la canción."
+   }
+  ],
+  "utHSvsjwvwo": [
+   {
+    "t": 19490,
+    "titulo": "De quien pagó mi redención",
+    "autoria": "himno, anónimo",
+    "confianza": "alta",
+    "derechos": "sin_confirmar",
+    "evidencia": "La misma actuación que el clip HnVmmnyjBU4, dentro de la sesión.",
+    "letra": "de-quien-pago-mi-redencion"
+   }
+  ],
+  "wjYvCn8uVms": [
+   {
+    "titulo": "Mi glywaf dyner lais (Arglwydd, dyma fi)",
+    "autoria": "versión galesa de Ieuan Gwyllt (1822-1877)",
+    "confianza": "alta",
+    "derechos": "dominio_publico",
+    "evidencia": "El reconocedor galés oye los estribillos y las estrofas 2 y 5.",
+    "letra": "mi-glywaf-dyner-lais"
+   }
+  ],
+  "x4u77VKMhak": [
+   {
+    "titulo": "Mi glywaf dyner lais (Arglwydd, dyma fi)",
+    "autoria": "versión galesa de John Roberts, Ieuan Gwyllt (1822-1877), del himno de Lewis Hartsough",
+    "confianza": "alta",
+    "derechos": "dominio_publico",
+    "evidencia": "El reconocedor galés oye en orden las estrofas 1, 2 y 5, cada una con su estribillo.",
+    "letra": "mi-glywaf-dyner-lais"
+   }
+  ],
+  "x8RR_Qe4sSA": [
+   {
+    "t": 30,
+    "titulo": "Grito santiagueño",
+    "autoria": "Jacinto Piedra",
+    "confianza": "alta",
+    "derechos": "con_derechos",
+    "evidencia": "El locutor la anuncia y Whisper oye la canción."
+   }
+  ],
+  "Xvh01H_O9iY": [
+   {
+    "t": 7,
+    "titulo": "Zamba de Juan Panadero",
+    "autoria": "Cuchi Leguizamón; letra de Manuel J. Castilla",
+    "confianza": "alta",
+    "derechos": "con_derechos",
+    "evidencia": "La cantante la anuncia con sus autores y Whisper oye la zamba."
+   }
+  ],
+  "z2674igx7I0": [
+   {
+    "t": 20,
+    "titulo": "La última curda",
+    "autoria": "Aníbal Troilo; letra de Cátulo Castillo",
+    "confianza": "alta",
+    "derechos": "con_derechos",
+    "evidencia": "Whisper oye el tango."
+   }
+  ],
+  "Z_QPMRk-ek0": [
+   {
+    "titulo": "Mawr oedd Crist yn nhragwyddoldeb",
+    "autoria": "Titus Lewis (1773-1811) y Casgliad D. Jones (1810)",
+    "confianza": "alta",
+    "derechos": "dominio_publico",
+    "evidencia": "El reconocedor galés oye en orden la estrofa 1 y la 3; la 2 no se canta.",
+    "letra": "mawr-oedd-crist-yn-nhragwyddoldeb"
+   }
+  ],
+  "ZiTKAU44dr4": [
+   {
+    "t": 30,
+    "titulo": "Grito santiagueño",
+    "autoria": "Jacinto Piedra",
+    "confianza": "alta",
+    "derechos": "con_derechos",
+    "evidencia": "El título del video la nombra y Whisper oye la canción."
+   }
+  ]
+ }
+}

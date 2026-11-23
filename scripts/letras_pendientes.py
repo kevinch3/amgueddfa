@@ -80,11 +80,15 @@ MOTIVOS = {
     "texto_distinto": ("el texto no coincide con lo que se canta",
                        "El mantenedor revisa la fuente y manda el texto tal como se canta "
                        "(estrofas que faltan, estribillos escritos donde se repiten)."),
+    "texto_incompleto": ("el texto no tiene una parte que se canta",
+                         "El mantenedor manda la parte que falta (un estribillo, una estrofa) tal como se canta; mientras "
+                         "tanto el video queda alineado con el texto que hay."),
     "por_confirmar": ("motivo por confirmar",
                       "El mantenedor confirma lo que el detalle deja abierto; después la entrada pasa al motivo "
                       "que corresponda."),
     "estrofa_omitida": ("se canta sin una estrofa",
-                        "Que el alineador acepte, por tramo, qué estrofas se cantan (#129)."),
+                        "Medir el tramo sobre el audio y darle `\"estrofas\"` con las que se cantan (skill "
+                        "`video-lyrics`); después, sacar el video de la entrada."),
     "gales_insuficiente": ("el reconocedor galés oyó muy poco",
                            "Reintentar {pasada}; si sigue igual, probar un filtro de confianza más bajo dentro "
                            "de los tramos con letra (#129)."),
@@ -92,8 +96,8 @@ MOTIVOS = {
                   "Escuchar el video para fijar el tramo (y, si hace falta, los tiempos de los versos): lo que oyeron "
                   "YouTube, Whisper y el modelo galés no alcanza para que el alineador ubique las líneas (#129)."),
     "alineador": ("el alineador amontona las líneas",
-                  "Que el alineador no se ancle en palabras sueltas o mal oídas, por ejemplo repartiendo "
-                  "desde el inicio del tramo cuando lo oído es poco (#129)."),
+                  "Medir el tramo sobre la voz y darle `\"repartir\": true` (y `\"estrofas\"` si repite versos), "
+                  "skill `video-lyrics`; después, sacar el video de la entrada."),
     "ubicable_desde_clip": ("se puede ubicar ya desde un clip alineado",
                             "Correr el tramo del clip ya alineado por el desfase que da el detalle y agregarlo "
                             "a este video (skill `video-lyrics`); después, sacar el video de la entrada, o dejarlo "
@@ -566,7 +570,7 @@ def assess(data: dict) -> dict:
 
     def new_row(**kw) -> dict:
         return {"where": [], "videos": [], "state": {}, "sin_texto": [], "extra": False, "instrumental": None,
-                "otras": [], **kw}
+                "otras": [], "incompleto": [], **kw}
 
     # One row per setting: credits that differ only in spelling or initials, or an empty one, are the same piece.
     notext_keys = [(fold(t), fold(c)) for a in data.get("sin_texto", []) for t, c in pieces(a["line"])]
@@ -741,6 +745,19 @@ def assess(data: dict) -> dict:
             raise ValueError(f"{at}: 'desde' es {{video: segundos}}, con segundos >= 0")
         cover = sorted(set(vids or known))
         done = [v for v in cover if any(placed(r["slug"], v) for r in targets)]
+        if code == "texto_incompleto":  # aligned, with a text that lacks a part sung: a note, not a gap per video
+            if "letra" not in e or not vids:
+                raise ValueError(f"{at}: 'texto_incompleto' va con 'letra' y 'videos' (los videos alineados con ese texto)")
+            if desde:
+                raise ValueError(f"{at}: 'texto_incompleto' no lleva 'desde': vale para todo el tramo alineado")
+            if len(done) < len(cover):
+                raise ValueError(f"{at}: {name} no está alineada en {[v for v in cover if v not in done][0]}: "
+                                 "'texto_incompleto' es para un video ya alineado")
+            for r in targets:
+                r["incompleto"] += [v for v in cover if placed(r["slug"], v)]
+            entries.append({"name": name, "code": code, "detalle": e["detalle"].strip(), "targets": targets,
+                            "videos": cover, "tiempos": {}})
+            continue
         # Another performance in a video already aligned: its 'desde' falls outside the text's spans there.
         otra = [v for v in done if v in desde and not any(a <= desde[v] <= b for r in targets if r["slug"]
                                                          for a, b in span_rangos.get(v, {}).get(r["slug"], []))]
@@ -872,6 +889,9 @@ def assess(data: dict) -> dict:
         for o in r["otras"]:  # another performance in a video already aligned
             counts[o["code"]][0].add(r["id"])
             counts[o["code"]][1].add(o["video"])
+        for v in r["incompleto"]:
+            counts["texto_incompleto"][0].add(r["id"])
+            counts["texto_incompleto"][1].add(v)
     counts["a_eleccion"][1].update(c["video"] for c in choice)
     sin_marcar = list(data.get("sin_marcar", []))
     counts["titulo_sin_marcar"][1].update(a["video"] for a in sin_marcar)
@@ -915,9 +935,11 @@ def link(video: str, t: float | None) -> str:
 def estado(r: dict) -> str:
     otras = r.get("otras", [])
     more = ""
+    if r.get("incompleto"):
+        more = f"; {MOTIVOS['texto_incompleto'][0]} en {plural(len(r['incompleto']), 'video', 'videos')}"
     if otras:  # another performance in a video already aligned
-        more = (f"; {plural(len(otras), 'actuación más sin alinear', 'actuaciones más sin alinear')}: "
-                + "; ".join(MOTIVOS[c][0] for c in MOTIVOS if c in {o["code"] for o in otras}))
+        more += (f"; {plural(len(otras), 'actuación más sin alinear', 'actuaciones más sin alinear')}: "
+                 + "; ".join(MOTIVOS[c][0] for c in MOTIVOS if c in {o["code"] for o in otras}))
     states = [r["state"][v] for v in r["videos"]]
     if not states:
         return f"texto guardado, sin alinear: {MOTIVOS['sin_alinear'][0]}"
@@ -1150,7 +1172,8 @@ if __name__ == "__main__":
     d = collect()
     OUT.write_text(render(d), encoding="utf-8")
     a = assess(d)
-    pending = sum(any(s != "ok" for s in r["state"].values()) or bool(r["otras"]) for r in a["rows"])
+    pending = sum(any(s != "ok" for s in r["state"].values()) or bool(r["otras"]) or bool(r["incompleto"])
+                  for r in a["rows"])
     print(f"{OUT.relative_to(REPO)}: {len(a['rows'])} pieces, {pending} with a gap, {len(a['entries'])} documented, "
           f"{len(a['choice'])} a elección, {a['counts']['sin_texto_video'][1]} videos without text, "
           f"{a['counts']['edicion_sin_programa'][1]} in editions without programa, "

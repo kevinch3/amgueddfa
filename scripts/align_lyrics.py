@@ -20,7 +20,9 @@ Choirs repeat stanzas: a stanza is taken as sung again (up to 3 times in all), r
 itself or later (a refrain after the next verse, a da capo), only when the extra pass matches
 at least half its lines to words heard outside speech. A span can give the order instead
 ("estrofas": [1, 3, "1:3-4"], stanza numbers from 1, or lines 3 to 4 of stanza 1): for a
-stanza left out, part of one sung again, or an order the heard words cannot show.
+stanza left out, part of one sung again, or an order the heard words cannot show. A span with
+"repartir": true spreads its lines evenly by syllables and leaves the heard words aside, for a
+language no recogniser hears (the words it "hears" are coincidences; maintainer, 2026-11-23).
 
 Used by export_video_transcripts and the reconstruction (a re-export keeps the
 result). Lyrics are supplied by the maintainer, who confirms their rights.
@@ -213,16 +215,22 @@ def _spread(lines: list[str], pts: list[tuple[int, float]], out: list) -> None:
             acc += _syllables(lines[k])
 
 
-def _pass(stanzas: list[list[str]], seq: list, heard: list):
-    """The alignment with the stanzas sung in the order `seq` (0-based stanza indices, or (index, first line,
-    end line) for part of one): score, number of lines matched (kept), the lines, each line's (stanza, line)
-    number, the anchors (evidence), the other lines' earliest match, and the lines matched counted as for a
-    stanza sung again later."""
+def _lines(stanzas: list[list[str]], seq: list) -> tuple[list[str], list[tuple[int, int]]]:
+    """The lines sung in the order `seq` (0-based stanza indices, or (index, first line, end line) for part of
+    one), and each line's (stanza, line) number."""
     lines, where = [], []
     for item in seq:
         si, a, b = item if isinstance(item, tuple) else (item, 0, len(stanzas[item]))
         lines += stanzas[si][a:b]
         where += [(si + 1, li + 1) for li in range(a, b)]
+    return lines, where
+
+
+def _pass(stanzas: list[list[str]], seq: list, heard: list):
+    """The alignment with the stanzas sung in the order `seq` (see _lines): score, number of lines matched
+    (kept), the lines, each line's (stanza, line) number, the anchors (evidence), the other lines' earliest
+    match, and the lines matched counted as for a stanza sung again later."""
+    lines, where = _lines(stanzas, seq)
     score, matches = _dp([(w, k) for k, l in enumerate(lines) for w in _words(l)], heard)
     anchors, weak = {}, {}
     for k, mt in matches.items():
@@ -285,14 +293,27 @@ def _given(estrofas: list, stanzas: list[list[str]]) -> list:
     return out
 
 
+def _numbers(seq: list) -> list:
+    """`seq` (see _lines) as a span's "estrofas" writes it."""
+    return [f"{e[0] + 1}:{e[1] + 1}-{e[2]}" if isinstance(e, tuple) else e + 1 for e in seq]
+
+
 def _align(seg: list, stanzas: list[list[str]], desde: float, hasta: float,
-           estrofas: list | None = None) -> tuple[list[list], dict]:
-    """align() and how it went: {"anchored": n, "weak": placed on single words only, "estrofas": the order sung,
-    "start": [(stanza, line), ...] not placed at the start, "end": [...] at the end}."""
-    info: dict = {"anchored": 0, "weak": False, "estrofas": [], "start": [], "end": []}
+           estrofas: list | None = None, repartir: bool = False) -> tuple[list[list], dict]:
+    """align() and how it went: {"anchored": n, "weak": placed on single words only, "repartido": spread evenly
+    as the span asked, "estrofas": the order sung, "start": [(stanza, line), ...] not placed at the start,
+    "end": [...] at the end}."""
+    info: dict = {"anchored": 0, "weak": False, "repartido": repartir, "estrofas": [], "start": [], "end": []}
     inside = [(float(t), x) for t, x in seg if desde <= t < hasta and _words(x)]
     if not stanzas:
         return [], info
+    if repartir:  # the span says no recogniser hears this text: its words "heard" are coincidences
+        seq = _given(estrofas, stanzas) if estrofas else list(range(len(stanzas)))
+        info["estrofas"] = _numbers(seq)
+        lines, _ = _lines(stanzas, seq)
+        out: list = [None] * len(lines)
+        _spread(lines, [(-1, float(desde)), (len(lines), float(hasta))], out)
+        return [[t, l] for t, l in zip(out, lines)], info
     speech = _speech(inside, stanzas)
     heard = [(w, t, i) for i, (t, x) in enumerate(inside) if i not in speech for w in _words(x)]  # speech is never matched
     if estrofas:
@@ -300,9 +321,9 @@ def _align(seg: list, stanzas: list[list[str]], desde: float, hasta: float,
         cur = _pass(stanzas, seq, heard)
     else:
         seq, cur = _order(stanzas, heard)
-    info["estrofas"] = [f"{e[0] + 1}:{e[1] + 1}-{e[2]}" if isinstance(e, tuple) else e + 1 for e in seq]
+    info["estrofas"] = _numbers(seq)
     _, _, lines, where, anchors, weak, _ = cur
-    out: list = [None] * len(lines)
+    out = [None] * len(lines)
     kept = _kept(anchors)
     if kept:
         # A long heard segment (the Welsh model's are up to 30 s) can hold the first lines with the first
@@ -406,10 +427,11 @@ def _align(seg: list, stanzas: list[list[str]], desde: float, hasta: float,
 
 
 def align(seg: list, stanzas: list[list[str]], desde: float, hasta: float,
-          estrofas: list | None = None) -> list[list]:
+          estrofas: list | None = None, repartir: bool = False) -> list[list]:
     """Lyric lines as [[time, line], ...] for the part of `seg` in [desde, hasta); `estrofas`, the order sung
-    when the span gives it (stanza numbers from 1, or "n:a-b" for lines a to b of stanza n)."""
-    return _align(seg, stanzas, desde, hasta, estrofas)[0]
+    when the span gives it (stanza numbers from 1, or "n:a-b" for lines a to b of stanza n); `repartir`, the
+    lines spread evenly over the span by syllables, the heard words left aside, when the span asks it."""
+    return _align(seg, stanzas, desde, hasta, estrofas, repartir)[0]
 
 
 def apply(t: dict, spans: list[dict], letras: Path = LETRAS) -> dict:
@@ -420,7 +442,7 @@ def apply(t: dict, spans: list[dict], letras: Path = LETRAS) -> dict:
     info = []
     for sp in spans:
         meta, stanzas = parse_letra((letras / f"{sp['letra']}.md").read_text(encoding="utf-8"))
-        lyric = align(seg, stanzas, sp["desde"], sp["hasta"], sp.get("estrofas"))
+        lyric = align(seg, stanzas, sp["desde"], sp["hasta"], sp.get("estrofas"), sp.get("repartir", False))
         seg = [s for s in seg if not sp["desde"] <= s[0] < sp["hasta"]] + lyric
         info.append(lyric_info(sp, meta))
     return {**t, "seg": sorted(seg, key=lambda s: s[0]), "letras": info}
@@ -450,13 +472,15 @@ def spans_for(video_id: str, letras: Path = LETRAS) -> list[dict]:
 
 
 def preview(seg: list, stanzas: list[list[str]], desde: float, hasta: float,
-            estrofas: list | None = None) -> tuple[list[list], list[str]]:
+            estrofas: list | None = None, repartir: bool = False) -> tuple[list[list], list[str]]:
     """The aligned lines and warnings worth a look before publishing."""
-    out, info = _align(seg, stanzas, desde, hasta, estrofas)
+    out, info = _align(seg, stanzas, desde, hasta, estrofas, repartir)
     warn = []
     for (a, la), (b, _) in zip(out, out[1:]):
         if b - a < 1.0:
             warn.append(f"{a:.1f}s «{la}»: next line under 1 s later (too many repeats, or the span is too short?)")
+    if repartir:
+        return out, warn
     if out and out[0][0] - desde > 30:
         warn.append(f"first line {out[0][0] - desde:.0f} s after 'desde': the span may start too early")
     heard = any(_words(x) for t, x in seg if desde <= t < hasta)
@@ -488,8 +512,10 @@ if __name__ == "__main__":
     ap.add_argument("desde", type=float)
     ap.add_argument("hasta", type=float)
     ap.add_argument("--estrofas", help="the order sung, as the span's \"estrofas\": stanza numbers from 1, n:a-b for lines a to b of stanza n (e.g. 1,2,1:3-4)")
+    ap.add_argument("--repartir", action="store_true", help="spread the lines evenly over the span, as the span's \"repartir\": true")
     a = ap.parse_args()
     order = [int(n) if n.isdigit() else n for n in a.estrofas.split(",")] if a.estrofas else None
+    even = a.repartir
     # The reconstruction keeps the fragment timing; the published text joins fragments into sentences (#97),
     # which would pile verses onto one line's time. Preview against the reconstruction when there is one.
     rec = REPO / "data" / "reconstruccion" / f"{a.video}.json"
@@ -497,8 +523,8 @@ if __name__ == "__main__":
     if tr.get("letras"):
         print("note: this file already carries aligned lyrics; preview the raw text by re-exporting without the span")
     _, st = parse_letra((LETRAS / f"{a.letra}.md").read_text(encoding="utf-8"))
-    lines, warnings = preview(tr["seg"], st, a.desde, a.hasta, order)
-    sung = _align(tr["seg"], st, a.desde, a.hasta, order)[1]["estrofas"]
+    lines, warnings = preview(tr["seg"], st, a.desde, a.hasta, order, even)
+    sung = _align(tr["seg"], st, a.desde, a.hasta, order, even)[1]["estrofas"]
     if sung != list(range(1, len(st) + 1)):
         print("stanzas sung:", " ".join(map(str, sung)), "" if order else "(found from the heard words; give \"estrofas\" in the span if wrong)")
     for t, l in lines:

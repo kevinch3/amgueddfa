@@ -107,5 +107,5 @@ def load_sources(stem: Path, video_id: str, letras: Path = LETRAS) -> list[Line]
         # A Welsh song is timed from what the Welsh model heard; anything else from the Spanish sources.
         heard = heard_cy if meta.get("idioma") == "cy" and heard_cy else heard_es
         out += [Line(float(t), x, "letra", meta.get("idioma", ""))
-                for t, x in align(heard, stanzas, sp["desde"], sp["hasta"], sp.get("estrofas"))]
+                for t, x in align(heard, stanzas, sp["desde"], sp["hasta"], sp.get("estrofas"), sp.get("repartir", False))]
     return sorted(out, key=lambda l: (l.t, l.src))

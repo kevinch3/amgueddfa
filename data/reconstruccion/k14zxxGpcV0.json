@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Ando llorando pa adentro, aunque me ria pa afuera, asi tengo yo que vivir, esperando a que me muera, le doy ventaja a los vientos,"
+  ],
+  [
    8.4,
    "ando llorando para dentro Aunque me ría"
   ],
@@ -18,6 +22,26 @@
   [
    24.4,
    "los vientos porque no puedo"
+  ],
+  [
+   28.4,
+   "volar hasta que agarro mi caja y la"
+  ],
+  [
+   33.4,
+   "empiezo a"
+  ],
+  [
+   35.2,
+   "balear mi raza rea que pedirá allá en el"
+  ],
+  [
+   40.5,
+   "Monte de Caridad no tiene tiempo ya no"
+  ],
+  [
+   45.0,
+   "va más reza que Reza por"
   ],
   [
    53.7,
@@ -73,7 +97,7 @@
   ],
   [
    108.9,
-   "día"
+   "día ves sonoro de"
   ],
   [
    112.6,
@@ -85,7 +109,7 @@
   ],
   [
    121.0,
-   "puro es mi corazón"
+   "puro es mi corazón vle sonoros de"
   ],
   [
    125.5,
@@ -105,6 +129,24 @@
   ]
  ],
  "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],

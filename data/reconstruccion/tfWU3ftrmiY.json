@@ -4,8 +4,12 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Noswaith dda i bawb a mae'n bleser i fi cyflwyno feirniadaeth Castellauaidd rhif saith meddal arian sy'n ca'l ei geni gan gamdeithas Dewi Sant bydd y seremoni hon yn ca'l ei cyflwyno yn yr iaith Sbaeneg. Mwy blynyddoches i bawb mae'n bleser i fi cyflwyno seremoni gompetensiwm nwmerodd sieth meddallad y plata premiwm association San David."
+  ],
+  [
    14.6,
-   "Muy buenas noches para todos, es un"
+   "muy buenas noches para todos es un"
   ],
   [
    18.2,
@@ -13,7 +17,7 @@
   ],
   [
    21.3,
-   "competencia número s Medalla de plata"
+   "competencia número s medalla de plata"
   ],
   [
    25.6,
@@ -21,7 +25,7 @@
   ],
   [
    27.3,
-   "Asociación San David"
+   "asociación San David"
   ],
   [
    32.0,
@@ -29,7 +33,7 @@
   ],
   [
    34.0,
-   "Asociación San David de Trevelin a partir"
+   "asociación San David de treleu a partir"
   ],
   [
    36.3,
@@ -37,15 +41,15 @@
   ],
   [
    38.3,
-   "1994. Es decir, desde hace 18 años se"
+   "1994 Es decir desde hace 18 años se"
   ],
   [
    42.5,
-   "otorga en cada Eisteddfod del Chubut al mejor"
+   "otorga en cada Eisteddfod del chubut al mejor"
   ],
   [
    45.1,
-   "poema en idioma castellano que responda"
+   "poema en idioma Castellano Que responda"
   ],
   [
    47.9,
@@ -53,7 +57,7 @@
   ],
   [
    49.4,
-   "características: poesía en estilo"
+   "características poesía en estilo"
   ],
   [
    51.8,
@@ -61,7 +65,7 @@
   ],
   [
    55.5,
-   "tema libre. La medalla íntegramente de"
+   "tema libre la medalla íntegramente de"
   ],
   [
    59.5,
@@ -440,6 +444,10 @@
    "a conocer entre todos los presentes"
   ],
   [
+   446.16,
+   "Eliana Virginia Austin y Gonzalo Lizama y compania' na sŵr atal esenariw."
+  ],
+  [
    458.8,
    "Eliana Virginia Austin y Gonzalo"
   ],
@@ -454,6 +462,10 @@
   [
    528.3,
    "Sur es nuestra querida Ariel hoy de"
+  ],
+  [
+   533.16,
+   "Arieloy."
   ],
   [
    533.6,
@@ -477,7 +489,7 @@
   ],
   [
    560.8,
-   "Trelew a colocar la Medalla arie"
+   "Trevelin a colocar la medalla arie"
   ],
   [
    574.7,
@@ -672,6 +684,10 @@
    "amaa có puedes tu"
   ],
   [
+   844.24,
+   "Fy mabwngwlad, fy mabwngwlad,"
+  ],
+  [
    848.0,
    "vivir tan"
   ],
@@ -762,6 +778,9 @@
  ],
  "fuentes": [
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -1087,6 +1106,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -1101,6 +1123,9 @@
    "yt_es"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -1261,6 +1286,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -1331,8 +1359,8 @@
  ],
  "ventanas": {
   "total": 18,
-  "modelo": 18,
-  "reglas": 0,
+  "modelo": 17,
+  "reglas": 1,
   "vacias": 0
  }
 }

@@ -4,8 +4,12 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Estampas, de Lidia Ester Romero. He salido, amigos, a recorrer el valle, y encontré el otoño metido entre los arboles, en un charco muy quieto, paraíso de ranas, el ramaje de un sauce se mesilla y cantaba, verdes, mustios, castaños, amarillos, dorados, murmuraban recuerdos de sueños."
+  ],
+  [
    3.9,
-   "estampas de Lidia Ester Romero"
+   "estampas de Lidia Esther Romero"
   ],
   [
    8.2,
@@ -22,6 +26,10 @@
   [
    18.7,
    "de ranas el ramaje de un sauce se"
+  ],
+  [
+   22.4,
+   "semesilla y cantaba verde mustios"
   ],
   [
    26.0,
@@ -130,6 +138,12 @@
  ],
  "fuentes": [
   [
+   "cy"
+  ],
+  [
+   "yt_es"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -225,8 +239,8 @@
  ],
  "ventanas": {
   "total": 2,
-  "modelo": 2,
-  "reglas": 0,
+  "modelo": 1,
+  "reglas": 1,
   "vacias": 0
  }
 }

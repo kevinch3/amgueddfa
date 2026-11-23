@@ -4,13 +4,17 @@
  * a jump to its moment). The card keeps its plain link to YouTube for no-JS, middle
  * click and modified clicks. YouTube's code loads only when a visitor opens a video.
  * The address carries the open video (#v=<id>&t=<seconds>, lib/video-hash.ts), so a moment can be linked.
- * Transcriptions: public/transcripciones-video/<id>.json (scripts/export_video_transcripts.py).
+ * Transcriptions: public/transcripciones-video/<id>.json (scripts/export_video_transcripts.py), with the approved
+ * corrections the file does not hold yet applied live (lib/live-video-corrections.ts).
+ * Chubut and Trevelin collaborators can correct the text here (edit mode, scripts/editor-transcripcion.ts).
  */
-import { t } from '../lib/i18n';
+import { formatList, t } from '../lib/i18n';
+import { lineCredit, loadTranscriptLive, type LiveTranscript } from '../lib/live-video-corrections';
 import { url } from '../lib/paths';
-import { asTranscript, creditos, findLines, fmtTime, letraAt, lineAt, lineLang, type Transcript } from '../lib/video-transcript';
+import { creditos, findLines, fmtTime, letraAt, lineAt, lineLang, type Transcript } from '../lib/video-transcript';
 import { parseVideoHash, videoHash } from '../lib/video-hash';
 import { videoUrl } from '../lib/videos';
+import { ASENTADA_EVENT, EDITANDO, LINEAS_EVENT, wireEditor, type EditorVideo } from './editor-transcripcion';
 
 type YTPlayer = {
   loadVideoById(id: string): void;
@@ -19,6 +23,7 @@ type YTPlayer = {
   playVideo(): void;
   stopVideo(): void;
   getCurrentTime(): number;
+  getDuration(): number;
   getPlayerState(): number;
 };
 declare global {
@@ -66,6 +71,8 @@ if (dialog) {
   /** The second the open video must start at, until it has really played from there. Safari and phones
    *  block autoplay: YouTube then only cues the video, and its own play button may ignore `start`. */
   let pendingStart = 0;
+  /** The open video cannot play in the site (YouTube's onError: embedding disabled, removed): its player has no time. */
+  let failed = false;
 
   /** Put the video at its moment (when it is ready, and again when it first plays). */
   function honourStart(playing: boolean): void {
@@ -97,7 +104,8 @@ if (dialog) {
     });
   }
 
-  function setActive(i: number): void {
+  /** Mark line i as the one playing; `scroll` false keeps the list where the visitor has it. */
+  function setActive(i: number, scroll = true): void {
     if (i === active) return;
     lines.querySelector('.actual')?.classList.remove('actual');
     lines.querySelector('[aria-current]')?.removeAttribute('aria-current');
@@ -105,9 +113,10 @@ if (dialog) {
     const li = i >= 0 ? (lines.children[i] as HTMLElement | undefined) : undefined;
     if (!li) return;
     li.classList.add('actual');
-    li.querySelector('button')?.setAttribute('aria-current', 'true');
-    // Follow the video unless the visitor turned it off or is reading elsewhere (scrolled in the last 4 s).
-    if (follow.checked && Date.now() - userScrolledAt > 4000) {
+    li.querySelector('button[data-i]')?.setAttribute('aria-current', 'true');
+    // Follow the video unless the visitor turned it off, is reading elsewhere (scrolled in the last 4 s) or is
+    // correcting a line (edit mode: the line being edited stays where it is).
+    if (scroll && follow.checked && !lines.hasAttribute(EDITANDO) && Date.now() - userScrolledAt > 4000) {
       li.scrollIntoView({ block: 'nearest', behavior: reduceMotion ? 'auto' : 'smooth' });
     }
   }
@@ -124,13 +133,21 @@ if (dialog) {
     }
   }
 
-  function renderTranscript(tr: Transcript | null): void {
+  /** Draw the lines, then tell the edit mode (it puts its controls and marks back on the new lines). */
+  function renderTranscript(shown: LiveTranscript | null): void {
+    drawTranscript(shown);
+    dialog!.dispatchEvent(new CustomEvent(LINEAS_EVENT));
+  }
+
+  function drawTranscript(shown: LiveTranscript | null): void {
+    const tr = shown?.tr ?? null;
+    const autores = shown?.autores ?? {};
     current = tr;
     active = -1;
     lines.replaceChildren();
     $('[data-rep-vacio]')!.hidden = !!tr;
     $('[data-rep-buscador]')!.hidden = !tr;
-    renderFooter(tr);
+    renderFooter(tr, shown?.nombres ?? []);
     const badge = $('[data-rep-fuente]')!;
     badge.hidden = !tr;
     search.value = '';
@@ -162,8 +179,10 @@ if (dialog) {
         time.dataset.lang = lang;
       }
       b.setAttribute('aria-label', `${t('reproductor.ir_a', { tiempo: fmtTime(start) })}: ${text}`);
-      const fu = tr.fuentes?.[i];
-      if (fu?.length) b.title = fu.map((x) => t(`reproductor.origen.${x}`)).join(' + ');
+      // Its sources, and who corrected it: a corrected or added line keeps its look plus a small mark.
+      const cred = lineCredit(tr.fuentes?.[i], autores[i]);
+      if (cred.title) b.title = cred.title;
+      if (cred.colab) li.dataset.colab = '';
       b.append(time, words);
       li.append(b);
       frag.append(li);
@@ -171,12 +190,35 @@ if (dialog) {
     lines.append(frag);
   }
 
-  /** The footer under the lines: the Whisper warning, and one credit line per lyric (title, author, rights, source). */
-  function renderFooter(tr: Transcript | null): void {
+  /** The same video's transcript again, now with the approved corrections it did not hold: the visitor keeps their
+   *  place in the list, the line playing and their search. Only the footer when the lines did not change. */
+  function refreshTranscript(shown: LiveTranscript): void {
+    if (shown.tr === current) {
+      renderFooter(shown.tr, shown.nombres);
+      return;
+    }
+    const top = lines.scrollTop;
+    const playing = active >= 0 ? current?.seg[active]?.[0] : undefined;
+    const q = search.value;
+    renderTranscript(shown);
+    lines.scrollTop = top;
+    if (playing !== undefined) setActive(lineAt(shown.tr.seg, playing), false);
+    if (q) {
+      search.value = q;
+      markHits(false);
+    }
+  }
+
+  /** The footer under the lines: the Whisper warning, one credit line per lyric (title, author, rights, source), and
+   *  the collaborators whose approved corrections are in the text. */
+  function renderFooter(tr: Transcript | null, nombres: string[]): void {
     const whisper = tr?.src === 'whisper';
     const cred = tr ? creditos(tr) : [];
     $('[data-rep-nota]')!.hidden = !whisper;
     $('[data-rep-creditos]')!.hidden = !cred.length;
+    const colab = $('[data-rep-colab]')!;
+    colab.hidden = !nombres.length;
+    colab.textContent = nombres.length ? t('reproductor.correcciones_de', { nombres: formatList(nombres) }) : '';
     // Always there under a transcript: at least the link to how its text is produced (/creditos/#videos).
     $('[data-rep-pie]')!.hidden = !tr;
     const ul = $('[data-rep-creditos-lista]')!;
@@ -249,16 +291,26 @@ if (dialog) {
     const token = ++loadToken;
     renderTranscript(null);
     $('[data-rep-vacio]')!.textContent = t('reproductor.cargando');
-    let tr: Transcript | null = null;
-    try {
-      const r = await fetch(url(`transcripciones-video/${id}.json`));
-      if (r.ok) tr = asTranscript(await r.json());
-    } catch {
-      /* offline or none: the panel says so */
-    }
-    if (token !== loadToken) return; // the visitor moved to another video meanwhile
-    $('[data-rep-vacio]')!.textContent = t('reproductor.sin_transcripcion');
-    renderTranscript(tr);
+    // The published file at once (null for a 404; offline or none: the panel says so); then, if the approved
+    // corrections it does not hold yet change it, the corrected text in place. Never waits for the database.
+    await loadTranscriptLive(
+      id,
+      async (v) => {
+        const r = await fetch(url(`transcripciones-video/${v}.json`));
+        return r.ok ? r.json() : null;
+      },
+      (shown, update) => {
+        if (update) refreshTranscript(shown!);
+        else {
+          $('[data-rep-vacio]')!.textContent = t('reproductor.sin_transcripcion');
+          renderTranscript(shown);
+        }
+      },
+      {
+        stale: () => token !== loadToken, // the visitor moved to another video meanwhile
+        settled: () => dialog!.dispatchEvent(new CustomEvent(ASENTADA_EVENT)), // the text is final: edit mode may start
+      },
+    );
   }
 
   async function show(i: number, start = 0): Promise<void> {
@@ -273,6 +325,7 @@ if (dialog) {
     ($('[data-rep-anterior]') as HTMLButtonElement).disabled = index === 0;
     ($('[data-rep-siguiente]') as HTMLButtonElement).disabled = index === list.length - 1;
     $('[data-rep-error]')!.hidden = true;
+    failed = false;
     $('[data-rep-copiado]')!.textContent = '';
     $('.rep-marco')!.hidden = false;
     // The address names the open video; no history entry, so "back" still leaves the page.
@@ -299,6 +352,7 @@ if (dialog) {
         },
         // 2, 5, 100, 101, 150: bad id, HTML5 error, removed, embedding not allowed.
         onError: () => {
+          failed = true;
           $('.rep-marco')!.hidden = true;
           $('[data-rep-error]')!.hidden = false;
         },
@@ -374,18 +428,20 @@ if (dialog) {
     player.playVideo();
   });
 
-  search.addEventListener('input', () => {
+  /** Highlight the lines that match the search, and (`scroll`) bring the first one into view. */
+  function markHits(scroll: boolean): void {
     if (!current) return;
     const hits = new Set(findLines(current.seg, search.value));
     for (const [i, li] of [...lines.children].entries()) li.classList.toggle('coincide', hits.has(i));
     const n = $('[data-rep-n]')!;
     n.textContent = search.value.trim() ? (hits.size ? t('reproductor.coincidencias', { n: hits.size }) : t('reproductor.sin_coincidencias')) : '';
     const first = Math.min(...hits);
-    if (Number.isFinite(first)) {
+    if (scroll && Number.isFinite(first)) {
       userScrolledAt = Date.now();
       (lines.children[first] as HTMLElement).scrollIntoView({ block: 'center' });
     }
-  });
+  }
+  search.addEventListener('input', () => markHits(true));
 
   $('[data-rep-anterior]')?.addEventListener('click', () => void show(index - 1));
   $('[data-rep-siguiente]')?.addEventListener('click', () => void show(index + 1));
@@ -416,6 +472,33 @@ if (dialog) {
     dialog.close();
     btn?.click();
   });
+  /** The video open now, with its edition (the card's section), for the edit mode. */
+  function openVideo(): EditorVideo | null {
+    const li = list[index];
+    if (!li) return null;
+    const sec = li.closest<HTMLElement>('[data-videos]');
+    return { id: li.dataset.video ?? '', title: li.dataset.title ?? '', festival: sec?.dataset.festival ?? '', year: Number(sec?.dataset.year) || 0 };
+  }
+  /** A number the player gives, or null: no player, not ready yet, or a video that cannot play here (failed). */
+  const fromPlayer = (read: (p: YTPlayer) => number): number | null => {
+    if (!player || failed) return null;
+    try {
+      const x = read(player);
+      return Number.isFinite(x) ? x : null;
+    } catch {
+      return null;
+    }
+  };
+  wireEditor(dialog, () => ({
+    tr: current,
+    video: openVideo(),
+    currentTime: () => fromPlayer((p) => p.getCurrentTime()),
+    duration: () => {
+      const d = fromPlayer((p) => p.getDuration());
+      return d !== null && d > 0 ? d : null;
+    },
+  }));
+
   dialog.addEventListener('close', () => {
     window.clearInterval(timer);
     if (parseVideoHash(location.hash)) history.replaceState(history.state, '', location.pathname + location.search);

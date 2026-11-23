@@ -82,3 +82,24 @@ describe('lyric credits', () => {
     expect(creditos(asTranscript({ src: 'youtube', lang: 'es', seg: [[1, 'x']] })!)).toEqual([]);
   });
 });
+
+describe('what the export says about corrections', () => {
+  const base = { src: 'reconstruida', lang: 'es', seg };
+  it('keeps the corrections it applied, when it ran, and the changes it could not place', () => {
+    const tr = asTranscript({ ...base, correcciones: ['r1', 'r2'], exportado: '2026-11-22T15:00:00+00:00',
+      sin_anclar: [{ id: 'r3', t: 61, antes: '¡Bravo!', motivo: 'sin_linea' }] })!;
+    expect(tr.correcciones).toEqual(['r1', 'r2']);
+    expect(tr.exportado).toBe('2026-11-22T15:00:00+00:00');
+    expect(tr.sin_anclar).toEqual([{ id: 'r3', t: 61, antes: '¡Bravo!', motivo: 'sin_linea' }]);
+  });
+
+  it('drops what is malformed and keeps what can still be matched', () => {
+    const tr = asTranscript({ ...base, correcciones: 'r1', exportado: 1763823600, sin_anclar: { id: 'r3', t: 61 } })!;
+    expect('correcciones' in tr || 'exportado' in tr || 'sin_anclar' in tr).toBe(false);
+    // The export writes t null for a change without a time: nothing to match it by.
+    const some = asTranscript({ ...base, correcciones: ['r1', 7, null], sin_anclar: [{ id: 'r3', t: null }, { id: 4, t: 2 }, null, { id: 'r5', t: 9 }] })!;
+    expect(some.correcciones).toEqual(['r1']);
+    expect(some.sin_anclar).toEqual([{ id: 'r5', t: 9 }]);
+    expect('correcciones' in asTranscript({ ...base, correcciones: [7] })!).toBe(false);
+  });
+});

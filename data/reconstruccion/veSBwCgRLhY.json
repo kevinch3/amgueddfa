@@ -5,7 +5,7 @@
  "seg": [
   [
    3.4,
-   "Los heraldos negros"
+   "Los heraldos negros, de César Vallejo"
   ],
   [
    7.2,
@@ -118,7 +118,8 @@
  ],
  "fuentes": [
   [
-   "yt_es"
+   "yt_es",
+   "cy"
   ],
   [
    "yt_es"

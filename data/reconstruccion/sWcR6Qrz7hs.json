@@ -20,6 +20,14 @@
    "para el mundo en el barcafón,"
   ],
   [
+   60.0,
+   "O. Cyn denw i a brin o'r cyfleus, cyn denw i a brin o'r o'r bydleswyr, ar y llwyre i."
+  ],
+  [
+   140.0,
+   "Cynt enwig y brifodd, o bydd raswellt ar y llwybrau is. Cynt enwig y frawddeg ffordd."
+  ],
+  [
    166.0,
    "María Julia me mandará a mí, soy del sur."
   ],
@@ -142,6 +150,12 @@
    "whisper_es"
   ],
   [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
    "whisper_es"
   ],
   [
@@ -225,8 +239,8 @@
  ],
  "ventanas": {
   "total": 9,
-  "modelo": 6,
+  "modelo": 8,
   "reglas": 0,
-  "vacias": 3
+  "vacias": 1
  }
 }

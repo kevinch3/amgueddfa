@@ -40,6 +40,10 @@
    "A tu olvido iré por Santa Fe, sé que en nuestra esquina vos ya estás,"
   ],
   [
+   88.98,
+   "Sé che en nuestra esquina vos ya estás, toda de tristezas de los pies."
+  ],
+  [
    94.6,
    "toda de tristeza hasta los pies."
   ],
@@ -78,6 +82,10 @@
   [
    157.5,
    "Se me irán los recuerdos en puntitas, en puntitas de pie"
+  ],
+  [
+   166.86,
+   "Moriré en Buenos Aires, será de madrugada, guardaré mansamente las cosas de vivir, mi pequeña poesia de adioses y de balas, mi tabaco, mi tango, mi puñado de spleen."
   ],
   [
    171.2,
@@ -141,7 +149,7 @@
    "whisper_es"
   ],
   [
-   "whisper_es"
+   "cy"
   ],
   [
    "whisper_es"
@@ -169,6 +177,12 @@
   ],
   [
    "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
@@ -197,8 +211,8 @@
  ],
  "ventanas": {
   "total": 5,
-  "modelo": 4,
-  "reglas": 0,
+  "modelo": 3,
+  "reglas": 1,
   "vacias": 1
  }
 }

@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Ynys Môn byddai'n ystod y cyfnod cyfla ym mis Ebrill."
+  ],
+  [
    30.0,
    "En los momentos de dolor, hasta la muerte Cristo está, nuestra esperanza y nuestra fe."
   ],
@@ -45,6 +49,9 @@
   ]
  ],
  "fuentes": [
+  [
+   "cy"
+  ],
   [
    "whisper_es"
   ],

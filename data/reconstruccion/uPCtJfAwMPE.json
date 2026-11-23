@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "A continuacion, byddwn i'n ychwanegu'r distingsion sbesial i'r mewnfa Castellnau, Premiwn y Ffundacia Museum Elidio Feruglio, Fernando Roca yw ymddangos y distingsion yntau yn nôl y Fundacia Maria Esther Evans."
+  ],
+  [
    1.7,
    "a continuación vamos"
   ],
@@ -48,8 +52,16 @@
    "ahí viene María est"
   ],
   [
+   53.0,
+   "Con su fotograff o bersonol tambien, Alejandro, muchas gracias, muchas"
+  ],
+  [
    73.5,
    "con su fotógrafo personal también"
+  ],
+  [
+   76.4,
+   "Alejandro Muchas"
   ],
   [
    81.4,
@@ -66,6 +78,10 @@
   [
    92.8,
    "y Sara McDonald le vamos a pedir a"
+  ],
+  [
+   95.6,
+   "Héctor"
   ],
   [
    97.5,
@@ -88,6 +104,14 @@
    "Argentina premio que otorga a"
   ],
   [
+   158.0,
+   "dicora la mejor"
+  ],
+  [
+   160.8,
+   "interpretación es"
+  ],
+  [
    163.6,
    "para el coro femenino de la escuela de"
   ],
@@ -100,12 +124,20 @@
    "plumita invitamos a"
   ],
   [
+   181.2,
+   "femo la distinción de adicora que"
+  ],
+  [
    183.6,
    "entrega la profesora Andrea"
   ],
   [
+   187.8,
+   "El Rotary Club Trelew, en manos de Silvio Barroso y Silvia Bussi, en esta"
+  ],
+  [
    205.5,
-   "el Rotary Club Trelew"
+   "freer el Rotary Club Trelew"
   ],
   [
    210.3,
@@ -145,7 +177,7 @@
   ],
   [
    252.9,
-   "interpretación musical premio rotary"
+   "interpretación musical premio Rotary"
   ],
   [
    255.2,
@@ -153,7 +185,7 @@
   ],
   [
    261.3,
-   "Trevelin se trata de la última obra que"
+   "Trelew se trata de la última obra que"
   ],
   [
    264.4,
@@ -161,11 +193,11 @@
   ],
   [
    279.4,
-   "Liliana Merino entregará el premio"
+   "Liliana Merino entregará el premio bian"
   ],
   [
    282.0,
-   "a la mejor interpretación de"
+   "chib Bones a la mejor interpretación de"
   ],
   [
    284.2,
@@ -184,6 +216,10 @@
    "para jamila gauna"
   ],
   [
+   345.8,
+   "marle piw de villoria va a entregar a"
+  ],
+  [
    348.7,
    "continuación por el círculo báo del"
   ],
@@ -198,6 +234,14 @@
   [
    357.0,
    "galés esta noche esta distinción es para"
+  ],
+  [
+   361.9,
+   "Santiago pz"
+  ],
+  [
+   374.08,
+   "Por ultimo, el premio a la mejor interpretacion de danza galesa, premio que entregará la señora Delia Williams al Escolgar y Gaiman."
   ],
   [
    390.3,
@@ -221,11 +265,15 @@
   ],
   [
    403.4,
-   "premio a la mejor interpretación"
+   "aliman premio a la mejor interpretación"
   ],
   [
    407.3,
    "de danza"
+  ],
+  [
+   416.4,
+   "gala Ariela va a recibir"
   ],
   [
    426.4,
@@ -320,24 +368,49 @@
    "Chubut es un trabajo de todo"
   ],
   [
-   556.2,
-   "vamos a"
+   524.08,
+   "Dwi'n ddiwahodd Rhiannon Lewis o Gymru i arwain ni yn yr hewlwlad fynhadau ac wrth gwrs sector ariel Magdalen."
   ],
   [
-   557.4,
-   "invitar"
+   554.08,
+   "dona'r cefeilio ar y piano. Vamos a invitar a Rhiannon a Hector Ariel, juntos, i todd o juntos, par serrar y besio y Eisteddfod, cantar juntos, Hewlwad Fenhadau."
   ],
   [
    559.8,
-   "juntos y todos juntos para cerrar"
+   "y todos juntos para cerrar"
   ],
   [
    564.6,
    "este Vamos a cantar juntos"
+  ],
+  [
+   658.6,
+   "bueno"
   ]
  ],
  "fuentes": [
   [
+   "cy"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -353,6 +426,9 @@
    "yt_es"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -408,6 +484,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -488,6 +567,9 @@
    "yt_es"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -507,6 +589,10 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "yt_es",
+   "cy"
   ],
   [
    "yt_es"
@@ -576,6 +662,12 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -589,8 +681,8 @@
  ],
  "ventanas": {
   "total": 11,
-  "modelo": 11,
-  "reglas": 0,
+  "modelo": 10,
+  "reglas": 1,
   "vacias": 0
  }
 }

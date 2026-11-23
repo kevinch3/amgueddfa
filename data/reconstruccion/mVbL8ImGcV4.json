@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "A mi sombra de Lidia Romero, cuando niña me encantaba hacer rondas con mi sombra, ir a veces pequeñita bajo el sol del mediodía."
+  ],
+  [
    10.2,
    "a mi sombra de Lidia"
   ],
@@ -174,9 +178,19 @@
   [
    169.2,
    "bailarte mis"
+  ],
+  [
+   178.8,
+   "rondas"
   ]
  ],
  "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],

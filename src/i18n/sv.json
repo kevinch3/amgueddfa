@@ -419,7 +419,12 @@
       "objetivo": "Vi vet inte vad den här rapporten gäller. Öppna formuläret igen från videon eller dokumentet.",
       "problema": "Välj vad som är fel.",
       "texto_informe": "Skriv mellan 10 och 1000 tecken.",
-      "arreglo": "Berätta vilken eisteddfod, vilket år eller vilken avdelning det hör till (inte där det ligger nu)."
+      "arreglo": "Berätta vilken eisteddfod, vilket år eller vilken avdelning det hör till (inte där det ligger nu).",
+      "video_cambios": "En korrigering måste innehålla mellan 1 och 200 ändringar.",
+      "video_texto": "Varje korrigerad rad måste vara mellan 1 och 500 tecken.",
+      "video_id": "Videon känns inte igen. Öppna den igen från dess sida och försök på nytt.",
+      "video_repetido": "Det finns två ändringar för samma rad; behåll bara en.",
+      "video_antes": "Den raden är för lång för att korrigeras härifrån; meddela oss via «Rapportera ett fel»."
     },
     "caracteres_transcripcion": "Mellan 10 och 15000 tecken.",
     "licencia": "Transkriptionerna och uppgifterna du bidrar med publiceras under licensen CC BY-SA 4.0.",
@@ -453,6 +458,7 @@
     "pestanas": "Administrationens avdelningar",
     "tabs": {
       "cola": "Att granska",
+      "videos": "Videor",
       "cargar": "Lägg in uppgifter",
       "restringidos": "Begränsade",
       "usuarios": "Användare",
@@ -467,7 +473,8 @@
       "transcription": "Transkription",
       "memory": "Minne",
       "report": "Rapporterat fel",
-      "note": "Upplysning"
+      "note": "Upplysning",
+      "video_text": "Korrigering av transkription"
     },
     "vacia": "Det finns inga bidrag som väntar.",
     "de": "Från {nombre}",
@@ -517,6 +524,7 @@
     "hecho_admin": "Nu är personen administratör.",
     "error": {
       "motivo": "Skriv skälet till avvisningen.",
+      "motivo_retiro": "Skriv skälet till återkallelsen.",
       "algunos": "{n} kunde inte bearbetas; läs meddelandet för var och en.",
       "acreditar": "Välj vem uppgifterna ska tillskrivas.",
       "json": "Innehållet är inte giltig JSON.",
@@ -526,7 +534,10 @@
       "valor": "Värdet är inte giltigt för det här bidraget.",
       "sin_archivo": "Vi kunde inte ladda ner originalfilen.",
       "derivados": "Vi kunde inte skapa bilderna i den här webbläsaren. Prova med en uppdaterad Chrome eller Firefox.",
-      "sin_archivos": "Bilderna eller texten saknas i det begränsade lagret. Kör scripts/push_restricted.py och försök igen."
+      "sin_archivos": "Bilderna eller texten saknas i det begränsade lagret. Kör scripts/push_restricted.py och försök igen.",
+      "sin_cambios": "Markera minst en ändring att godkänna.",
+      "no_aprobada": "Den här rättelsen är inte längre godkänd.",
+      "tarjeta": "Bidraget kunde inte visas ({id}): dess data går inte att läsa."
     },
     "ver_restringido": "Se dokumentet innan du publicerar det",
     "restringido_alt": "{titulo}, sida {n} (vy för administratörer)",
@@ -551,6 +562,46 @@
       "que_pasa": "Vid godkännande: {accion}",
       "explicacion": "Förklaring (publiceras inte)",
       "video": "Video"
+    },
+    "video": {
+      "cambios": "Ändringar: {n}",
+      "corregir": "Rätta",
+      "quitar": "Ta bort",
+      "idioma": "Språk",
+      "agregar": "Lägg till",
+      "cambio_linea": "Raden har ändrats sedan den redigerades",
+      "ilegibles": "Oläsliga ändringar, utelämnade: {n}",
+      "aprobar_sel": "Godkänn markerade"
+    },
+    "videos": {
+      "ayuda": "Godkända rättelser av transkriptioner, per video, nyast först. Att dra tillbaka en som ännu inte finns i filen tar bort den ur spelaren direkt. En som redan finns i filen ligger kvar där till nästa export, och fram till dess visar den videon inga rättelser i realtid.",
+      "vacia": "Det finns inga godkända rättelser av transkriptioner.",
+      "aprobada": "Godkänd {fecha}",
+      "retirar": "Dra tillbaka",
+      "retirar_toda": "Dra tillbaka hela bidraget ({n} ändringar)",
+      "retirar_toda_uno": "Dra tillbaka bidraget (1 ändring)",
+      "motivo": "Skäl till tillbakadragandet (den som skickade den ser det)",
+      "confirmar_retiro": "Bekräfta tillbakadragandet",
+      "retirada": "Rättelsen har dragits tillbaka.",
+      "sin_anclar": "Utan förankring ({n})",
+      "motivo_sin_linea": "Dess rad går inte längre att hitta.",
+      "motivo_idioma": "Språket hamnar inne i en sammanslagen rad som kan innehålla annat tal: välj raden det hör till.",
+      "reanclar": "Förankra om",
+      "elegir_linea": "Välj raden det hör till",
+      "nueva_linea": "Lägg till som ny rad vid {tiempo}",
+      "sin_opciones": "Det finns inga rader inom en minut.",
+      "vista": "Så här blir raden:",
+      "aviso_reemplaza": "Hela raden ersätts.",
+      "aviso_quita": "Hela raden tas bort.",
+      "aviso_idioma": "Hela raden blir {idioma}.",
+      "aviso_larga": "Raden skulle bli längre än 500 tecken: välj en annan.",
+      "aviso_mismo_texto": "Raden säger redan det, inget skulle ändras: välj en annan.",
+      "aviso_mismo_idioma": "Raden är redan på {idioma}, inget skulle ändras: välj en annan.",
+      "tras_exportar": "Finns redan i filen: syns efter nästa export.",
+      "pausa_exportar": "En tillbakadragen rättelse finns kvar i filen: fram till nästa export visar spelaren filen utan de nya rättelserna.",
+      "reanclada": "Ändringen har förankrats om.",
+      "sin_archivo": "Vi kunde inte läsa den publicerade transkriptionen av den här videon.",
+      "sin_filas": "Inga godkända rättelser finns kvar för den här videon."
     }
   },
   "admin_item": {
@@ -662,7 +713,8 @@
       "transcription": "Transkription",
       "memory": "Minne",
       "report": "Rapporterat fel",
-      "note": "Upplysning"
+      "note": "Upplysning",
+      "video_text": "Korrigering av transkription"
     },
     "desde": "Land: {pais}",
     "ajustes": {
@@ -723,7 +775,8 @@
       "transcription": "transkriberade ett dokument",
       "memory": "berättade ett minne",
       "report": "rapporterade ett fel",
-      "note": "lade till upplysningar om ett dokument"
+      "note": "lade till upplysningar om ett dokument",
+      "video_text": "korrigerade transkriptionen av en video"
     },
     "ver_ranking": "Se topplistan",
     "del": "–"
@@ -788,6 +841,7 @@
       "tz_para": "Visa datum i tidszonen från din profil.",
       "nocontar_para": "Komma ihåg att du inte vill att vi räknar dina besök.",
       "lectura_para": "Komma ihåg dina läsinställningar (textstorlek, kontrast, avstånd, typsnitt, animationer och länkar).",
+      "borrador_para": "Spara rättelser av en videos transkription som du ännu inte har skickat, så att de inte försvinner om du stänger spelaren eller fliken.",
       "tipo_necesaria": "Nödvändig",
       "tipo_preferencia": "Inställning",
       "dura_sesion": "Tills du loggar ut.",
@@ -795,6 +849,7 @@
       "dura_tz": "Tills du loggar ut.",
       "dura_nocontar": "Tills du slår på räkningen igen.",
       "dura_lectura": "Tills du återställer dem.",
+      "dura_borrador": "Tills du skickar eller kastar rättelserna.",
       "necesarias": "Eftersom de behövs för att webbplatsen ska fungera, eller är ditt eget val, behöver vi inte be om lov för att spara dem. Du kan radera dem när du vill i webbläsarens inställningar; om du raderar sessionen måste du logga in igen.",
       "analitica_titulo": "Räkning av besök",
       "analitica_1": "För att veta vilka upplagor som läses och var besökarna kommer ifrån använder vi Cloudflare Web Analytics. Det använder inga kakor och sparar ingenting i din webbläsare, och det identifierar dig inte eller följer dig mellan webbplatser.",
@@ -1016,9 +1071,49 @@
       "yt_es": "YouTube automatisk",
       "whisper_es": "Whisper",
       "cy": "taligenkänning för walesiska",
-      "letra": "verkets sångtext"
+      "letra": "verkets sångtext",
+      "colab": "korrigering av bidragsgivare"
     },
+    "corregida_por": "Korrigerad av {nombres}",
+    "correcciones_de": "Korrigeringar av {nombres}",
     "como_se_produce": "Hur den här texten tas fram"
+  },
+  "editor": {
+    "editar": "Redigera transkriptionen",
+    "editar_linea": "Rätta raden vid {tiempo}",
+    "ayuda": "Tryck på ✎ för att rätta en rad, ta bort den eller byta dess språk. För att lägga till något som saknas, pausa videon där det börjar och tryck på ”Lägg till”. Allt skickas tillsammans och publiceras efter granskning.",
+    "como_funciona": "Så fungerar det",
+    "texto": "Text",
+    "quitar": "Ta bort den här raden",
+    "idioma": "Språk",
+    "es": "Español",
+    "cy": "Cymraeg",
+    "idioma_nombre": {
+      "es": "spanska",
+      "cy": "kymriska"
+    },
+    "idioma_cambio": "Språk: {antes} → {despues}",
+    "idioma_nuevo": "Språk: {idioma}",
+    "ok": "OK",
+    "deshacer": "Ångra",
+    "agregar": "+ Lägg till en rad vid {tiempo}",
+    "nueva": "Ny rad vid {tiempo}",
+    "momento": "Tidpunkt (min:sek)",
+    "error_tiempo": "Skriv tidpunkten som minuter:sekunder, till exempel 12:05.",
+    "error_tiempo_fin": "Videon är {duracion} lång: välj en tidpunkt före slutet.",
+    "cambios": "{n} ändringar",
+    "un_cambio": "1 ändring",
+    "enviar": "Skicka {n} rättelser",
+    "limite": "Ett bidrag rymmer högst {max} ändringar: skicka dessa och fortsätt sedan i ett nytt.",
+    "enviar_una": "Skicka 1 rättelse",
+    "cancelar": "Avbryt",
+    "confirmar_cancelar": "Kasta alla ändringar utan att skicka dem?",
+    "descartar": "Ja, kasta",
+    "seguir": "Nej, fortsätt redigera",
+    "letra": "Den här raden är en del av en sångtext; använd ”Rapportera ett fel” för att rätta den.",
+    "pendiente": "Väntar på granskning: {cambio}",
+    "ingresar": "Logga in för att rätta transkriptionen",
+    "descartados": "Några sparade ändringar stämmer inte längre med transkriptionen och har kastats: {n}."
   },
   "buscar": {
     "titulo": "Sök i arkivet",

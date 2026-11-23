@@ -28,6 +28,14 @@
    "dirigido por el profesor Chachi Domínguez."
   ],
   [
+   60.0,
+   "Ar lan y môr mae'r rosys cochion Ar lan y môr mae'r lili sgwenion"
+  ],
+  [
+   106.0,
+   "Ar lan y môr mae cerrig gleision. Ar lan y môr mae blodau'r meibion."
+  ],
+  [
    135.0,
    "Arlanemor, ma'u pobringweddai Arlanemor, ma'u nechariadinau"
   ],
@@ -36,12 +44,20 @@
    "Arlan amor, ma'i rosís cojión, Arlan amor, ma'i lilís coñón,"
   ],
   [
+   183.34,
+   "A chodi'r bore, yn cysgu'r un nos, a chodi'r bore."
+  ],
+  [
    259.0,
    "Vengo desde el olvido, toro serrano"
   ],
   [
+   271.38,
+   "Doros serrano, pa fersi mato penas, carina baliando."
+  ],
+  [
    276.1,
-   "Pa' ver si mato penas"
+   "Pa' ver si mato penas, Karen avaliando, pa' ver si mato penas, Karen avaliando,"
   ],
   [
    299.7,
@@ -62,6 +78,10 @@
   [
    345.7,
    "Los caballos atados vuelven a la luna al galope tendido"
+  ],
+  [
+   348.88,
+   "Los caballos atados, vuelven a la luna al galote tendido, y un empopón del diablo, me anda faltando."
   ],
   [
    358.0,
@@ -114,6 +134,10 @@
   [
    504.6,
    "Claro que sí, el aplauso para Tomás, Kevin, Helen, Abril y Ariel."
+  ],
+  [
+   521.14,
+   "Claro que si, el aplauso para Tomas, Kevin, Helen, Abril y Ariel."
   ]
  ],
  "fuentes": [
@@ -136,7 +160,46 @@
    "whisper_es"
   ],
   [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
    "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
@@ -178,34 +241,13 @@
    "whisper_es"
   ],
   [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
+   "cy"
   ]
  ],
  "ventanas": {
   "total": 10,
-  "modelo": 8,
+  "modelo": 10,
   "reglas": 0,
-  "vacias": 2
+  "vacias": 0
  }
 }

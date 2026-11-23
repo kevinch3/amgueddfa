@@ -4,6 +4,38 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Firmeza"
+  ],
+  [
+   22.0,
+   "Pero nadie está obligado a guardar correspondencia."
+  ],
+  [
+   30.0,
+   "Vuelta."
+  ],
+  [
+   36.0,
+   "Con la tras trasera, con la delantera,"
+  ],
+  [
+   41.0,
+   "Por este costado, por el otro lado,"
+  ],
+  [
+   46.0,
+   "Gon e se moddito, pon e le'l codito, pon e le'l oedo, dame los sentidos, como corresponde, una mano al hombro, retirate un paso, dame le un abrazo, otro poquitito, tira le un besito, ay no no no no, que me da vergüenza, tapate el ojo."
+  ],
+  [
+   60.0,
+   "Retírate un paso, dámele un abrazo"
+  ],
+  [
+   65.1,
+   "Otro poquitito, tírale un besito"
+  ],
+  [
    74.4,
    "Tápate la cara, que te doy licencia"
   ],
@@ -18,6 +50,10 @@
   [
    90.0,
    "Anteanoche me confesé con el cura de Santa Clara"
+  ],
+  [
+   100.8,
+   "Adentro. Ante anoche me confese, con el cura de Santa"
   ],
   [
    110.4,
@@ -66,6 +102,10 @@
   [
    172.5,
    "Llorando gotas de sangre por una ingrata mujer"
+  ],
+  [
+   184.04,
+   "Diolch yn fawr."
   ]
  ],
  "fuentes": [
@@ -73,7 +113,40 @@
    "whisper_es"
   ],
   [
+   "cy"
+  ],
+  [
    "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
@@ -112,16 +185,13 @@
    "whisper_es"
   ],
   [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
+   "cy"
   ]
  ],
  "ventanas": {
   "total": 4,
-  "modelo": 3,
+  "modelo": 4,
   "reglas": 0,
-  "vacias": 1
+  "vacias": 0
  }
 }

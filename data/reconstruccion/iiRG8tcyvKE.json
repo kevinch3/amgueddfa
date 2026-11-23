@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   162.0,
+   "Pan mae llecaid yn llosgi tyllau'n dy gefn, a mna heddi dy seil di yn siwtio ei drem, a'i geiriau yn gellu llystraeon y stryd, yn nhyfeir iawn o'r gwir, ond yn hir yn ei hun."
+  ],
+  [
    168.4,
    "también se cuiden"
   ],
@@ -20,109 +24,37 @@
    "hay que ir y alentar las traiciones reír"
   ],
   [
-   182.6,
-   "en le diría un no recogieron de elegir a"
+   229.0,
+   "Pan mae'r nosau yn mestyn a chysgu ymhell, a ffana fydd yfory yn edrych ddim gwell, mi nath ymdrech yn fethiant a bywyd yn glwy, a ffonaeth ei gennau yn goegu timl."
   ],
   [
-   188.4,
-   "también wind el centro de palma en"
+   281.0,
+   "Nawdd yn ei nodau rhag y dyrnodau alffan yn ysbryd y gan."
   ],
   [
-   204.4,
-   "de encarga de ti"
-  ],
-  [
-   212.2,
-   "si me llena tu y donde hay más"
-  ],
-  [
-   217.0,
-   "no del reino"
-  ],
-  [
-   233.8,
-   "al menos alguien más"
-  ],
-  [
-   238.2,
-   "en la vida"
-  ],
-  [
-   240.8,
-   "triste"
-  ],
-  [
-   243.4,
-   "y nos entreguen la paciencia para evitar"
-  ],
-  [
-   247.1,
-   "que hoy con raíces y que nadie hoy"
-  ],
-  [
-   262.9,
-   "cuando entréis de vida jorge y beber"
-  ],
-  [
-   308.5,
-   "escribe"
+   291.0,
+   "Bryd hynny ti angen y gan, sydd yn cynnal y dwy odiau man."
   ],
   [
    321.1,
    "van a seguir"
   ],
   [
-   338.2,
-   "no huele hasta que tu índice del rencor"
+   330.0,
+   "Ie!"
   ],
   [
-   342.6,
-   "te duelen ari behn luego expresó poco a"
+   373.0,
+   "Y mwnci bach o lun a aeth i dynnu lun, edrychodd yn sin a chwerddodd yn hun hi hi hi hi hi hi."
   ],
   [
-   346.4,
-   "poco"
-  ],
-  [
-   356.0,
-   "y vuelve a ser buena"
-  ],
-  [
-   359.1,
-   "divertida el cuerpo de san josé de presa"
-  ],
-  [
-   373.5,
-   "tengo aquí bajo"
-  ],
-  [
-   376.2,
-   "en el link el trabajo de encina"
-  ],
-  [
-   389.4,
-   "y en el stand hito pero dijo no y bueno"
-  ],
-  [
-   396.0,
-   "si más puedo dejarlo poco a poco"
-  ],
-  [
-   413.2,
-   "bueno me imaginaría mensajes etc"
-  ],
-  [
-   425.4,
-   "me vuela y saque todo en ese momento"
-  ],
-  [
-   439.4,
-   "no"
+   420.0,
+   "Ni welais ag eto, a'i naes e ddarpentô, hedwen ar ei ben a dwy goes bren, ho ho ho ho ho, hedwen ar ei ben a dwy goes bren, ho ho ho ho ho ho, hei!"
   ]
  ],
  "fuentes": [
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -137,82 +69,31 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
+   "cy"
   ]
  ],
  "ventanas": {
-  "total": 8,
+  "total": 9,
   "modelo": 7,
   "reglas": 0,
-  "vacias": 1
+  "vacias": 2
  }
 }

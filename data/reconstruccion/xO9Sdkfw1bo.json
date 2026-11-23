@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Sier o abis môr, môr llwyr,"
+  ],
+  [
    26.5,
    "Cielo abismal,"
   ],
@@ -157,6 +161,9 @@
   ]
  ],
  "fuentes": [
+  [
+   "cy"
+  ],
   [
    "letra"
   ],

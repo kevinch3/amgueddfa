@@ -1,0 +1,29 @@
+{
+  "about": "A rebuild joined fragments: texto replaces only its run (with the fragment's own end mark), quitar removes only its run, and the line once nothing is left",
+  "transcript": {
+    "lang": "es",
+    "seg": [[95.0, "Damos la bienvenida a todos"],
+            [100.0, "Suscríbete al canal. Comienza la competencia número 98 para coros."],
+            [110.0, "Felicitaciones a los participantes"],
+            [120.0, "Hasta la próxima. ¡Gracias por ver!"],
+            [130.0, "Primer premio"]],
+    "fuentes": [["yt_es"], ["whisper_es"], ["yt_es"], ["whisper_es"], ["yt_es"]]
+  },
+  "rows": [
+    {"id": "r-joined", "reviewed_at": "2026-11-22T10:05:00+00:00", "display_name": "Carla",
+     "payload": {"video": {"id": "TESTVIDEO01"}, "cambios": [
+       {"t": 102.4, "antes": "Comienza la competencia número 98 para coros.",
+        "texto": "Comienza la competencia número 99 para coros."},
+       {"t": 100.0, "antes": "¡Suscríbete al canal!", "quitar": true},
+       {"t": 122.0, "antes": "¡Gracias por ver!", "quitar": true},
+       {"t": 116.5, "antes": "Hasta la próxima.", "quitar": true}]}}
+  ],
+  "expected": {
+    "seg": [[95.0, "Damos la bienvenida a todos"], [100.0, "Comienza la competencia número 99 para coros."],
+            [110.0, "Felicitaciones a los participantes"], [130.0, "Primer premio"]],
+    "fuentes": [["yt_es"], ["whisper_es", "colab"], ["yt_es"], ["yt_es"]]
+  },
+  "sinAnclar": [],
+  "applied": ["r-joined"],
+  "autores": {"1": ["Carla"]}
+}

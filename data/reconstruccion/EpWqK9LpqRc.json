@@ -32,6 +32,10 @@
    "A ti la victoria, gran libertador, libre de penas nuestro Rey Jesús, rompe las tabelas de la escritura."
   ],
   [
+   123.66,
+   "Llifre de penas nuestro rey Jesus rompe las cadenas de la esclavitud. Con resucitado se a lo morirá."
+  ],
+  [
    140.6,
    "Oh, resucitado, salió morirá, quien muera el pecado, en Dios vivirá."
   ],
@@ -63,6 +67,9 @@
    "whisper_es"
   ],
   [
+   "cy"
+  ],
+  [
    "whisper_es"
   ],
   [
@@ -71,8 +78,8 @@
  ],
  "ventanas": {
   "total": 4,
-  "modelo": 3,
-  "reglas": 0,
+  "modelo": 2,
+  "reglas": 1,
   "vacias": 1
  }
 }

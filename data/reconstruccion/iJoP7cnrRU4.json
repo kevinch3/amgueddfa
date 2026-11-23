@@ -8,6 +8,30 @@
    "presente de la"
   ],
   [
+   13.0,
+   "Os ma' na rhei anon yn barod, y drefdydd i'r gastad ni, drip Richard Glyn Berwyn."
+  ],
+  [
+   17.0,
+   "Asociación Rich"
+  ],
+  [
+   57.0,
+   "Yr i ni weld, o'r glwydda'r gwaith y gloywi, dan newid draws yr byd."
+  ],
+  [
+   74.0,
+   "Tir datom ni, o lein i'r hogr i'w harddwch, gloi i ddoniau fflam."
+  ],
+  [
+   89.0,
+   "Ti'n rian o fi a fi'n yfad yn y dŵr lle mae'n drafwyddo da."
+  ],
+  [
+   107.0,
+   "Tyr y datam y gyd, a'r gweinydd perifinol, y gwlith a'r llesant, tygu dy hun, sy'n troes y gwaith dwi'n addo."
+  ],
+  [
    183.4,
    "Ramos el aplauso para este grupo que"
   ],
@@ -77,7 +101,7 @@
   ],
   [
    253.8,
-   "ustedes van Gaiman van a ver un"
+   "ustedes van aiman van a ver un"
   ],
   [
    255.9,
@@ -96,16 +120,32 @@
    "comunican arario que la mano todos ven"
   ],
   [
-   268.7,
-   "ah má 16"
-  ],
-  [
    273.0,
    "entradas el domingo cómodo"
   ],
   [
+   276.84,
+   "'Dan ni'n cario mlaen efo'r gastaleuau chwedeg, parti neu gôr capel hunanddewisiad. Yr un olaf sy'n mynd i gastradd yn y gastaleuau holl, côr capel brinc crwn, mae geisia di bob awr."
+  ],
+  [
+   336.84,
+   "Mae deisiaid i bobl ddeamwyr ni, dal heddwch gyda'r naill ffor' efo'r ni."
+  ],
+  [
+   406.36,
+   "Mae'n beision, mae'n beision, go rown, mae e'n beision, lefydd iawn i lefydd Ia, lefydd iawn i lefydd Ia."
+  ],
+  [
    528.1,
    "mientras los chicos bascan del escenario"
+  ],
+  [
+   536.12,
+   "bedwarawd, Lleuododa, tris grŵp sy'n mynd i gastawni, Daily Hughes bedwarawd Moria un a bedwarawd Moria dau."
+  ],
+  [
+   543.4,
+   "mor"
   ],
   [
    547.1,
@@ -128,8 +168,28 @@
    "también hay que felicitar"
   ],
   [
+   562.58,
+   "Dwi ddim yn ffeilinigol, dwi'n ffeilin dwi'n ffehenol. Dwi'n gwbo be' dach chi'n ddeud."
+  ],
+  [
+   567.46,
+   "Dan ni dan ni'n gwrando, diolch yn fawr yy iawn, diolch yn fawr iawn."
+  ],
+  [
+   570.98,
+   "Cynhawn da bawb, gwenwstardus, mae'n braf bod nôl yn y neuadd yma ar gyfer cystadlu'r cynhawn, ac os ydy'r cystadlu heddiw gystal ag oed y neithiwr, ma' na wledd o'n blannu i ni mor"
+  ],
+  [
+   584.7,
+   "ffodus ca'l ran rhydedd o fod yma diolch i chi gyd. Y gystadleuaeth gynta'n pnawn ma' oedd gystadleuaeth pum deg pedwar, pedwarant i ganu eiriau Emyn Jay Vernon Lewis, gwawr wedi hymnos, cân wedi loes, ar y dôn ffïodorau, eirie a thôn sy'n cyd-fynd yn berffeth. Ma' na nawsweddiga ar yr emyn, a phob llinell yn symud o'r lled y ffyrllon, ac yn adeiladu i'r halyw."
+  ],
+  [
    596.7,
    "lewi"
+  ],
+  [
+   614.7,
+   "Clod i Dduw yn y pennill golau. Mae'n ennydd sydd llawn emosiwn, a llawn cyfarchiadau i'r tri pedwarawd am ganu ddigyfeiriad."
   ],
   [
    628.3,
@@ -197,7 +257,22 @@
    "yt_es"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -269,7 +344,19 @@
    "yt_es"
   ],
   [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -288,6 +375,24 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -336,9 +441,9 @@
   ]
  ],
  "ventanas": {
-  "total": 11,
+  "total": 12,
   "modelo": 11,
-  "reglas": 0,
+  "reglas": 1,
   "vacias": 0
  }
 }

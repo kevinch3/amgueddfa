@@ -419,7 +419,12 @@
       "objetivo": "我们不清楚这份报告针对的是什么。请从视频或文献页面重新打开表单。",
       "problema": "请选择哪里有问题。",
       "texto_informe": "请写 10 到 1000 个字符。",
-      "arreglo": "请告诉我们它应属于哪个艺术节、年份或栏目（须与现在的位置不同）。"
+      "arreglo": "请告诉我们它应属于哪个艺术节、年份或栏目（须与现在的位置不同）。",
+      "video_cambios": "一次更正必须包含 1 到 200 处修改。",
+      "video_texto": "每一行更正后的文字必须为 1 到 500 个字符。",
+      "video_id": "无法识别该视频。请从视频页面重新打开后再试。",
+      "video_repetido": "同一行有两处修改；请只保留一处。",
+      "video_antes": "这一行太长，无法在此更正；请通过“报告错误”告诉我们。"
     },
     "caracteres_transcripcion": "10 到 15000 个字符。",
     "licencia": "您贡献的转录和资料以 CC BY-SA 4.0 许可协议发布。",
@@ -453,6 +458,7 @@
     "pestanas": "管理栏目",
     "tabs": {
       "cola": "待审核",
+      "videos": "视频",
       "cargar": "录入资料",
       "restringidos": "受限文献",
       "usuarios": "用户",
@@ -467,7 +473,8 @@
       "transcription": "转录",
       "memory": "回忆",
       "report": "错误报告",
-      "note": "补充信息"
+      "note": "补充信息",
+      "video_text": "转录更正"
     },
     "vacia": "没有待审核的贡献。",
     "de": "来自 {nombre}",
@@ -517,6 +524,7 @@
     "hecho_admin": "已设为管理员。",
     "error": {
       "motivo": "请填写拒绝理由。",
+      "motivo_retiro": "请填写撤回理由。",
       "algunos": "有 {n} 项无法处理，请查看每项的提示。",
       "acreditar": "请选择资料的积分归属。",
       "json": "内容不是有效的 JSON。",
@@ -526,7 +534,10 @@
       "valor": "该值对这项贡献无效。",
       "sin_archivo": "无法下载原始文件。",
       "derivados": "无法在此浏览器中生成图片。请使用最新版的 Chrome 或 Firefox。",
-      "sin_archivos": "受限存储中缺少图片或文本。请运行 scripts/push_restricted.py 后重试。"
+      "sin_archivos": "受限存储中缺少图片或文本。请运行 scripts/push_restricted.py 后重试。",
+      "sin_cambios": "请至少勾选一项修改再批准。",
+      "no_aprobada": "这项更正已不再处于批准状态。",
+      "tarjeta": "无法显示此投稿（{id}）：其数据无法读取。"
     },
     "ver_restringido": "公开前查看文献",
     "restringido_alt": "{titulo}，第 {n} 页（管理员视图）",
@@ -551,6 +562,46 @@
       "que_pasa": "通过后：{accion}",
       "explicacion": "说明（不公开）",
       "video": "视频"
+    },
+    "video": {
+      "cambios": "修改：{n}",
+      "corregir": "更正",
+      "quitar": "删除",
+      "idioma": "语言",
+      "agregar": "添加",
+      "cambio_linea": "这一行在被编辑之后已经变了",
+      "ilegibles": "无法读取、已略去的修改：{n}",
+      "aprobar_sel": "批准所选"
+    },
+    "videos": {
+      "ayuda": "已批准的文字稿更正，按视频分组，最新的在前。撤回一项尚未写入文件的更正，会立即从播放器中去掉。已写入文件的更正会保留到下一次导出；在此之前，该视频不显示实时更正。",
+      "vacia": "没有已批准的文字稿更正。",
+      "aprobada": "批准于 {fecha}",
+      "retirar": "撤回",
+      "retirar_toda": "撤回整项投稿（{n} 处更改）",
+      "retirar_toda_uno": "撤回该投稿（1 处更改）",
+      "motivo": "撤回理由（提交者会看到）",
+      "confirmar_retiro": "确认撤回",
+      "retirada": "更正已撤回。",
+      "sin_anclar": "未定位（{n}）",
+      "motivo_sin_linea": "找不到它对应的那一行。",
+      "motivo_idioma": "语言落在一行合并的文字中，其中可能还有别人的话：请选择它所属的那一行。",
+      "reanclar": "重新定位",
+      "elegir_linea": "选择它所属的那一行",
+      "nueva_linea": "在 {tiempo} 处添加为新的一行",
+      "sin_opciones": "一分钟以内没有任何行。",
+      "vista": "这一行将变为：",
+      "aviso_reemplaza": "整行将被替换。",
+      "aviso_quita": "整行将被删除。",
+      "aviso_idioma": "整行将改为{idioma}。",
+      "aviso_larga": "这一行将超过 500 个字符：请另选一行。",
+      "aviso_mismo_texto": "这一行已经是这样写的，不会有任何改变：请另选一行。",
+      "aviso_mismo_idioma": "这一行已经是{idioma}，不会有任何改变：请另选一行。",
+      "tras_exportar": "已在文件中：下一次导出后才会显示。",
+      "pausa_exportar": "一项已撤回的更正仍在文件中：在下一次导出之前，播放器显示的文件不含新的更正。",
+      "reanclada": "修改已重新定位。",
+      "sin_archivo": "无法读取这个视频已发布的文字稿。",
+      "sin_filas": "此视频已没有已批准的更正。"
     }
   },
   "admin_item": {
@@ -662,7 +713,8 @@
       "transcription": "转录",
       "memory": "回忆",
       "report": "错误报告",
-      "note": "补充信息"
+      "note": "补充信息",
+      "video_text": "转录更正"
     },
     "desde": "来自{pais}",
     "ajustes": {
@@ -723,7 +775,8 @@
       "transcription": "转录了一份文献",
       "memory": "分享了一段回忆",
       "report": "报告了一处错误",
-      "note": "为一份文献补充了信息"
+      "note": "为一份文献补充了信息",
+      "video_text": "更正了一段视频的转录"
     },
     "ver_ranking": "查看排行榜",
     "del": "·"
@@ -788,6 +841,7 @@
       "tz_para": "按您主页设置的时区显示日期。",
       "nocontar_para": "记住您不希望我们统计您的访问。",
       "lectura_para": "记住您的阅读设置（文字大小、对比度、间距、字体、动画和链接）。",
+      "borrador_para": "保存您尚未发送的视频文字稿更正，以免关闭播放器或标签页时丢失。",
       "tipo_necesaria": "必要",
       "tipo_preferencia": "偏好",
       "dura_sesion": "直到您退出账户。",
@@ -795,6 +849,7 @@
       "dura_tz": "直到您退出账户。",
       "dura_nocontar": "直到您重新开启统计。",
       "dura_lectura": "直到您恢复默认。",
+      "dura_borrador": "直到您发送或放弃这些更正。",
       "necesarias": "这些内容要么是网站运行所必需的，要么是您自己的选择，因此保存前无需征得您的同意。您可以随时在浏览器设置中删除它们；如果删除了登录信息，就需要重新登录。",
       "analitica_titulo": "访问统计",
       "analitica_1": "为了了解大家查看哪些届次、从哪里来访，我们使用 Cloudflare Web Analytics。它不使用 Cookie，也不在您的浏览器中保存任何内容，不会识别您的身份，也不会跨网站追踪您。",
@@ -1016,9 +1071,49 @@
       "yt_es": "YouTube 自动字幕",
       "whisper_es": "Whisper",
       "cy": "威尔士语语音识别",
-      "letra": "作品歌词"
+      "letra": "作品歌词",
+      "colab": "贡献者更正"
     },
+    "corregida_por": "由 {nombres} 更正",
+    "correcciones_de": "更正者：{nombres}",
     "como_se_produce": "此文本是如何生成的"
+  },
+  "editor": {
+    "editar": "编辑文字稿",
+    "editar_linea": "更正 {tiempo} 处的这一行",
+    "ayuda": "点按 ✎ 可更正某一行、删除它或更改它的语言。要添加缺少的内容，请在它开始的地方暂停视频，然后点按“添加”。所有更改会一起发送，审核后发布。",
+    "como_funciona": "使用说明",
+    "texto": "文本",
+    "quitar": "删除这一行",
+    "idioma": "语言",
+    "es": "Español",
+    "cy": "Cymraeg",
+    "idioma_nombre": {
+      "es": "西班牙语",
+      "cy": "威尔士语"
+    },
+    "idioma_cambio": "语言：{antes} → {despues}",
+    "idioma_nuevo": "语言：{idioma}",
+    "ok": "确定",
+    "deshacer": "撤销",
+    "agregar": "+ 在 {tiempo} 处添加一行",
+    "nueva": "{tiempo} 处的新行",
+    "momento": "时间点（分:秒）",
+    "error_tiempo": "请按“分:秒”填写时间，例如 12:05。",
+    "error_tiempo_fin": "视频时长为 {duracion}：请选择结束前的时间点。",
+    "cambios": "{n} 处更改",
+    "un_cambio": "1 处更改",
+    "enviar": "发送 {n} 处更正",
+    "limite": "一次提交最多包含 {max} 处更改：请先提交这些，再在新的提交中继续。",
+    "enviar_una": "发送 1 处更正",
+    "cancelar": "取消",
+    "confirmar_cancelar": "放弃所有更改而不发送吗？",
+    "descartar": "是，放弃",
+    "seguir": "否，继续编辑",
+    "letra": "这一行是歌词的一部分；如需更正，请使用“报告错误”。",
+    "pendiente": "等待审核：{cambio}",
+    "ingresar": "登录后更正文字稿",
+    "descartados": "部分已保存的更改与当前文字稿不再一致，已被放弃：{n}。"
   },
   "buscar": {
     "titulo": "搜索档案",

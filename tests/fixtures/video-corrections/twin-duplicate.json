@@ -1,0 +1,28 @@
+{
+  "about": "A second row repeats an approved quitar or texto on one of two twin lines (1 s apart, or at the very same time): it is not placed, and the twin is left alone",
+  "transcript": {
+    "lang": "es",
+    "seg": [[30.0, "¡Bravo!"], [31.0, "¡Bravo!"], [33.0, "Muy bien"], [60.0, "¡Bravo!"], [61.0, "¡Bravo!"],
+            [90.0, "¡Bravo!"], [90.0, "¡Bravo!"]],
+    "fuentes": [["whisper_es"], ["whisper_es"], ["whisper_es"], ["whisper_es"], ["whisper_es"], ["whisper_es"], ["whisper_es"]]
+  },
+  "rows": [
+    {"id": "r2", "reviewed_at": "2026-11-22T11:00:00+00:00", "display_name": "Bruno",
+     "payload": {"video": {"id": "TESTVIDEO01"}, "cambios": [
+       {"t": 31.0, "antes": "¡Bravo!", "quitar": true},
+       {"t": 61.0, "antes": "¡Bravo!", "texto": "¡Excelente!"},
+       {"t": 90.0, "antes": "¡Bravo!", "quitar": true}]}},
+    {"id": "r1", "reviewed_at": "2026-11-22T10:00:00+00:00", "display_name": "Ana",
+     "payload": {"video": {"id": "TESTVIDEO01"}, "cambios": [
+       {"t": 31.0, "antes": "¡Bravo!", "quitar": true},
+       {"t": 61.0, "antes": "¡Bravo!", "texto": "¡Muy bien!"},
+       {"t": 90.0, "antes": "¡Bravo!", "quitar": true}]}}
+  ],
+  "expected": {
+    "seg": [[30.0, "¡Bravo!"], [33.0, "Muy bien"], [60.0, "¡Bravo!"], [61.0, "¡Muy bien!"], [90.0, "¡Bravo!"]],
+    "fuentes": [["whisper_es"], ["whisper_es"], ["whisper_es"], ["whisper_es", "colab"], ["whisper_es"]]
+  },
+  "sinAnclar": [["r2", 31.0, "sin_linea"], ["r2", 61.0, "sin_linea"], ["r2", 90.0, "sin_linea"]],
+  "applied": ["r1"],
+  "autores": {"3": ["Ana"]}
+}

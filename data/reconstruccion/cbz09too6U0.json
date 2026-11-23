@@ -369,7 +369,7 @@
   ],
   [
    537.6,
-   "Digo o no lo digo. Lo digo o no lo digo."
+   "digo o no lo digo. Lo digo o no lo digo."
   ],
   [
    543.2,
@@ -854,8 +854,8 @@
   ]
  ],
  "ventanas": {
-  "total": 15,
-  "modelo": 14,
+  "total": 14,
+  "modelo": 13,
   "reglas": 0,
   "vacias": 1
  }

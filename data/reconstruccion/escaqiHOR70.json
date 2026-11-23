@@ -30,6 +30,10 @@
   [
    58.3,
    "Las campanas doblan triunfo, cántalo hasta el amor, todo el mundo se hermana, nuestro es el porvenir."
+  ],
+  [
+   88.0,
+   "Diolch yn fawr."
   ]
  ],
  "fuentes": [
@@ -53,6 +57,9 @@
   ],
   [
    "whisper_es"
+  ],
+  [
+   "cy"
   ]
  ],
  "ventanas": {

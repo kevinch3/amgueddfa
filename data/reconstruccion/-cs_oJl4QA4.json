@@ -28,6 +28,10 @@
    "Y deberás amar"
   ],
   [
+   59.0,
+   "I debyras amar, amar, amar hasta morir. I debyras creser, sabiendo reir i llorar."
+  ],
+  [
    66.0,
    "Amar, amar hasta morir"
   ],
@@ -52,6 +56,10 @@
    "De ti saldrá la luz"
   ],
   [
+   111.52,
+   "Na ti saldra la luz, tan solo asi seras felis, y deberas luchar, si quieres descubrir la fe."
+  ],
+  [
    117.0,
    "Tan solo así serás feliz"
   ],
@@ -62,6 +70,10 @@
   [
    140.5,
    "La lluvia borra la maldad y lava todas las heridas de tu alma"
+  ],
+  [
+   171.52,
+   "la fuerza del ffuego, la voz que responde por ti, por mi."
   ],
   [
    179.1,
@@ -96,7 +108,7 @@
    "whisper_es"
   ],
   [
-   "whisper_es"
+   "cy"
   ],
   [
    "whisper_es"
@@ -117,10 +129,19 @@
    "whisper_es"
   ],
   [
+   "cy"
+  ],
+  [
    "whisper_es"
   ],
   [
    "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
@@ -134,8 +155,8 @@
  ],
  "ventanas": {
   "total": 4,
-  "modelo": 4,
-  "reglas": 0,
+  "modelo": 3,
+  "reglas": 1,
   "vacias": 0
  }
 }

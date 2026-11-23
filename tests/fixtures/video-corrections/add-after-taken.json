@@ -1,0 +1,25 @@
+{
+  "about": "A repeated add of a line that a later approved change already rewrote is reported, not put back as a second copy",
+  "transcript": {
+    "lang": "es",
+    "seg": [[10.0, "Buenas tardes"], [20.0, "Comienza la competencia"]],
+    "fuentes": [["yt_es"], ["yt_es"]]
+  },
+  "rows": [
+    {"id": "r1", "reviewed_at": "2026-11-22T10:00:00+00:00", "display_name": "Fede",
+     "payload": {"video": {"id": "TESTVIDEO01"}, "cambios": [{"t": 15.0, "texto": "Gracias a la comisión", "idioma": "es"}]}},
+    {"id": "r2", "reviewed_at": "2026-11-22T11:00:00+00:00", "display_name": "Gwen",
+     "payload": {"video": {"id": "TESTVIDEO01"}, "cambios": [
+       {"t": 15.0, "antes": "Gracias a la comisión", "texto": "Gracias a la comisión organizadora"}]}},
+    {"id": "r3", "reviewed_at": "2026-11-22T12:00:00+00:00", "display_name": "Hebe",
+     "payload": {"video": {"id": "TESTVIDEO01"}, "cambios": [{"t": 15.0, "texto": "Gracias a la comisión", "idioma": "es"}]}}
+  ],
+  "expected": {
+    "seg": [[10.0, "Buenas tardes"], [15.0, "Gracias a la comisión organizadora"], [20.0, "Comienza la competencia"]],
+    "fuentes": [["yt_es"], ["colab"], ["yt_es"]],
+    "idiomas": ["es", "es", "es"]
+  },
+  "sinAnclar": [["r3", 15.0, "sin_linea"]],
+  "applied": ["r1", "r2"],
+  "autores": {"1": ["Fede", "Gwen"]}
+}

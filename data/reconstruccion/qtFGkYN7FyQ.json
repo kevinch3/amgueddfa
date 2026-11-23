@@ -191,10 +191,12 @@
    "whisper_es"
   ],
   [
-   "whisper_es"
+   "whisper_es",
+   "cy"
   ],
   [
-   "whisper_es"
+   "whisper_es",
+   "cy"
   ],
   [
    "whisper_es"
@@ -253,8 +255,8 @@
  ],
  "ventanas": {
   "total": 5,
-  "modelo": 5,
+  "modelo": 4,
   "reglas": 0,
-  "vacias": 0
+  "vacias": 1
  }
 }

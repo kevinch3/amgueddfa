@@ -4,6 +4,14 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "hoy quise escuchar por jorge alberto"
+  ],
+  [
+   3.0,
+   "valdez"
+  ],
+  [
    5.9,
    "hoy quise escuchar tu voz y ya no estaba"
   ],
@@ -57,6 +65,12 @@
   ]
  ],
  "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],

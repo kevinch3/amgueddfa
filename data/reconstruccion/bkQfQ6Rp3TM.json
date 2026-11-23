@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Noswaith dda i bawb, ma'n bleser i gyflwyno ffyniadau astudiaeth llin-nawn, seremoni gyda laddiant sy'n gael ei ganu gan y Gymdeithas Dewi Sant, bydd y seremoni yn lonydd gan gyflwyno llenyddiaeth Sbaeneg."
+  ],
+  [
    30.0,
    "competencia número 9"
   ],
@@ -428,6 +432,10 @@
    "Amén."
   ],
   [
+   817.32,
+   "Ia i'r sawl, a'r sicr a'r basiwn, ia i'r ddawns i'r pêl, a'r gweisys, a'r seigr, a'r iawnseigr, a'r mwc a'r haen, a'r son, a'r senario, a'r diwyll, a'r asedd, a'r adlon, a'r ffrwyth, a'r adrodd, a'r anaddau, a'r haelais, a'r seigr, a'r wein, a'r adrodd, a'r haelais, a seigr, a'r wein."
+  ],
+  [
    833.1,
    "fue el cargador"
   ],
@@ -548,6 +556,22 @@
    "Amigo, jugar conmigo, pero yo solo espero que esté mi amigo, que esté mi amigo, mi amigo,"
   ],
   [
+   1102.32,
+   "ar gwympido."
+  ],
+  [
+   1105.32,
+   "Pero yo solo espero"
+  ],
+  [
+   1109.32,
+   "que esté mi amigo,"
+  ],
+  [
+   1113.32,
+   "que esté mi amigo,"
+  ],
+  [
    1119.4,
    "Que esté mi amigo, que esté mi amigo"
   ],
@@ -618,6 +642,9 @@
  ],
  "fuentes": [
   [
+   "cy"
+  ],
+  [
    "whisper_es"
   ],
   [
@@ -934,6 +961,9 @@
   ],
   [
    "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
@@ -1024,6 +1054,18 @@
   ],
   [
    "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"

@@ -321,7 +321,7 @@
   ],
   [
    215.5,
-   "estero de nuestro presidente bailarín"
+   "Eisteddfod de nuestro presidente bailarín"
   ],
   [
    217.7,
@@ -361,15 +361,15 @@
   ],
   [
    276.2,
-   "otorgado por los descendientes de Héctor"
+   "otorgado por los descendientes de héctor"
   ],
   [
    278.6,
-   "y Sara Macdonald lo va a entregar"
+   "y sara macdonald lo va a entregar"
   ],
   [
    281.1,
-   "electoral y el Mcdonald y es para Karen"
+   "electoral y el mcdonald y es para karen"
   ],
   [
    285.1,
@@ -413,7 +413,7 @@
   ],
   [
    371.9,
-   "profesor Diego la bolsa"
+   "profesor diego la bolsa"
   ],
   [
    400.7,
@@ -421,11 +421,11 @@
   ],
   [
    404.2,
-   "por el Rotary Club pero el ego"
+   "por el rotary club pero el ego"
   ],
   [
    409.2,
-   "en esta oportunidad es para Alejandro"
+   "en esta oportunidad es para alejandro"
   ],
   [
    413.6,
@@ -433,7 +433,7 @@
   ],
   [
    415.5,
-   "entrega el señor Silvio Barroso"
+   "entrega el señor silvio barroso"
   ],
   [
    449.0,
@@ -512,6 +512,10 @@
    "en escena real unión entrega y con owen"
   ],
   [
+   552.42,
+   "Vamos a invitar a los directores de los grupos, a los directores de coro,"
+  ],
+  [
    568.5,
    "vamos a invitar a los directores de los"
   ],
@@ -580,6 +584,10 @@
    "para que esto sea una realidad"
   ],
   [
+   616.1,
+   "[Aplausos]"
+  ],
+  [
    626.5,
    "algunos a noventa y dos escalones pero"
   ],
@@ -590,6 +598,14 @@
   [
    631.0,
    "suelo"
+  ],
+  [
+   669.38,
+   "Diolch yn fawr."
+  ],
+  [
+   703.7,
+   "Felly diolch yn fawr iawn i bawb sy'n ymuno'n gyda ni, a diolch yn fawr iawn i bawb sy'n ymuno'n gyda ni am y cysylltiaeth yma."
   ],
   [
    722.0,
@@ -668,8 +684,8 @@
    "electoral y abandonar a bovinos"
   ],
   [
-   818.3,
-   "de los 30 de la tarde de la cuesta"
+   893.7,
+   "Ran, ran, rei o'r lwyddi'n ran, tan o feddyg byddi i fod lan, o feddyg byddi'n iau."
   ],
   [
    921.8,
@@ -1059,7 +1075,7 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -1125,7 +1141,10 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -1177,6 +1196,15 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -1184,8 +1212,8 @@
  ],
  "ventanas": {
   "total": 16,
-  "modelo": 14,
-  "reglas": 1,
+  "modelo": 15,
+  "reglas": 0,
   "vacias": 1
  }
 }

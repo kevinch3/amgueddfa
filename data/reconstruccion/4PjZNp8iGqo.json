@@ -20,6 +20,10 @@
    "¿Cómo dice que le anda?"
   ],
   [
+   13.1,
+   "¿Mda, mda, comadre?"
+  ],
+  [
    15.9,
    "¡Ay! Vengo de la chapel, mira."
   ],
@@ -34,6 +38,10 @@
   [
    25.9,
    "Llegué medio, ¿viste?"
+  ],
+  [
+   28.1,
+   "Tranquil."
   ],
   [
    28.5,
@@ -200,8 +208,16 @@
    "Con la rueda despareja, fíjense lo que pasó"
   ],
   [
+   212.7,
+   "Con las muedas despareja,"
+  ],
+  [
    216.8,
    "El dueño de la pavita se va uno y toma dos"
+  ],
+  [
+   221.7,
+   "Y a la loja que se calle la chapa le combinó"
   ],
   [
    226.6,
@@ -310,6 +326,10 @@
   [
    340.6,
    "Me cambiaré, que el mate está lavado, que el mate está lavado, compadre"
+  ],
+  [
+   356.6,
+   "Que el mate está lavado"
   ]
  ],
  "fuentes": [
@@ -453,6 +473,21 @@
   ],
   [
    "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"

@@ -60,12 +60,28 @@
    "Si no te miro, porque tú siempre existes donde quiera, pero existes mejor donde te quiero."
   ],
   [
+   116.2,
+   "porque tu siempre existes donde quiera,"
+  ],
+  [
+   121.0,
+   "pero existes mejor donde te quiero,"
+  ],
+  [
    129.7,
    "Porque tu boca es sangre y tienes frío, tengo que amarte, amor, tengo que amarte."
   ],
   [
+   134.28,
+   "Tengo que amarte, amor, tengo que amarte, aunque esta herida duela como dos."
+  ],
+  [
    138.5,
    "Aunque esta herida duela como dos, aunque te busque y no te encuentre,"
+  ],
+  [
+   149.72,
+   "Aunque te busque y no te encuentre, y aunque la noche pase y yo, te tendo a morir."
   ],
   [
    155.5,
@@ -116,10 +132,22 @@
    "whisper_es"
   ],
   [
-   "whisper_es"
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
@@ -127,8 +155,8 @@
  ],
  "ventanas": {
   "total": 4,
-  "modelo": 3,
-  "reglas": 0,
+  "modelo": 2,
+  "reglas": 1,
   "vacias": 1
  }
 }

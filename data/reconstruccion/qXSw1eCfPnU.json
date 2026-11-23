@@ -4,12 +4,16 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Recordación. Puerto Madryn. Madrugada. Pálido sol de invierno. Mar encrespado, acunado por granidos de gaviotas, y viento. Viento patagónico, potro salvaje del desierto, indomable, insaciable de distancias, como el vuelo."
+  ],
+  [
    3.9,
    "recordación"
   ],
   [
    6.0,
-   "Puerto Madryn madrugada cálido sol de"
+   "puerto madryn madrugada cálido sol de"
   ],
   [
    10.3,
@@ -17,7 +21,7 @@
   ],
   [
    14.2,
-   "nidos de gaviotas y viento viento"
+   "grass nidos de gaviotas y viento viento"
   ],
   [
    18.7,
@@ -146,6 +150,9 @@
  ],
  "fuentes": [
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -253,8 +260,8 @@
  ],
  "ventanas": {
   "total": 3,
-  "modelo": 3,
-  "reglas": 0,
+  "modelo": 2,
+  "reglas": 1,
   "vacias": 0
  }
 }

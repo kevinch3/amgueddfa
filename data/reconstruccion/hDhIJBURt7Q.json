@@ -4,12 +4,24 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "la olla"
+  ],
+  [
+   1.4,
+   "por ver una aviación"
+  ],
+  [
    5.2,
    "en aquellos años"
   ],
   [
    8.3,
    "las grises nubes consolaban a la luna"
+  ],
+  [
+   12.6,
+   "la etapa sonriente me lo dio al timón"
   ],
   [
    17.2,
@@ -53,6 +65,15 @@
   ]
  ],
  "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],

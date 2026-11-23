@@ -1,0 +1,27 @@
+{
+  "about": "Adds go in time order (after lines at the same time) with fuentes colab and their language; the same text added again within 2 s is skipped",
+  "transcript": {
+    "lang": "es",
+    "seg": [[10.0, "Buenas tardes"], [20.0, "Comienza la competencia"], [30.0, "Diolch yn fawr"]],
+    "fuentes": [["yt_es"], ["yt_es"], ["cy"]],
+    "idiomas": ["es", "es", "cy"]
+  },
+  "rows": [
+    {"id": "r-add-2", "reviewed_at": "2026-11-22T11:00:00+00:00", "display_name": "Gwen",
+     "payload": {"video": {"id": "TESTVIDEO01"}, "cambios": [
+       {"t": 16.5, "texto": "gracias a la comision organizadora", "idioma": "es"}]}},
+    {"id": "r-add-1", "reviewed_at": "2026-11-22T10:00:00+00:00", "display_name": "Fede",
+     "payload": {"video": {"id": "TESTVIDEO01"}, "cambios": [
+       {"t": 15.0, "texto": "Gracias a la comisión organizadora.", "idioma": "es"},
+       {"t": 20.0, "texto": "Croeso i bawb", "idioma": "cy"}]}}
+  ],
+  "expected": {
+    "seg": [[10.0, "Buenas tardes"], [15.0, "Gracias a la comisión organizadora."], [20.0, "Comienza la competencia"],
+            [20.0, "Croeso i bawb"], [30.0, "Diolch yn fawr"]],
+    "fuentes": [["yt_es"], ["colab"], ["yt_es"], ["colab"], ["cy"]],
+    "idiomas": ["es", "es", "es", "cy", "cy"]
+  },
+  "sinAnclar": [],
+  "applied": ["r-add-1"],
+  "autores": {"1": ["Fede"], "3": ["Fede"]}
+}

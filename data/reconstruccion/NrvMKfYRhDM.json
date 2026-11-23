@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "competencia número ocho, ceremonia medalla de plata,"
+  ],
+  [
    6.2,
    "competencia número 8 ceremonia medalla"
   ],
@@ -620,6 +624,10 @@
    "a ponerse de pie"
   ],
   [
+   515.16,
+   "Llamamos por segunda vez a quien escribió el poema invierno en la chakra, que firma bajo el pseudónimo Peretir, a ponerse de pie."
+  ],
+  [
    523.1,
    "llamamos por segunda vez a quien"
   ],
@@ -832,6 +840,10 @@
    "no se ha salido"
   ],
   [
+   923.64,
+   "Ym Mhobolam, ym Mhobolam, com o'r bweddest ti'n byw, tan sôn am."
+  ],
+  [
    929.8,
    "cómo"
   ],
@@ -848,6 +860,10 @@
    "igual que abajo"
   ],
   [
+   979.64,
+   "Am y bore, ddim byd sim am y bore, noson wastad yn grando, ia, am y bore, am y bore, am y bore, am y bore."
+  ],
+  [
    981.5,
    "todos"
   ],
@@ -862,6 +878,10 @@
   [
    1074.5,
    "la entrega de un obsequio al poeta"
+  ],
+  [
+   1099.64,
+   "Diolch yn fawr."
   ],
   [
    1107.5,
@@ -926,6 +946,9 @@
  ],
  "fuentes": [
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -1388,6 +1411,9 @@
    "yt_es"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -1545,6 +1571,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -1557,6 +1586,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -1569,6 +1601,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -1618,8 +1653,8 @@
  ],
  "ventanas": {
   "total": 20,
-  "modelo": 19,
-  "reglas": 0,
+  "modelo": 18,
+  "reglas": 1,
   "vacias": 1
  }
 }

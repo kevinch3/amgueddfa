@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   30.0,
+   "Mi'n ondra'n recordar, mi'n ondra'n sentimental, otros y quejan llorando, y yo canto pa' no llorar, tu amor se seco"
+  ],
+  [
    34.8,
    "mi nombre para recordar su vida"
   ],
@@ -66,11 +70,15 @@
   [
    178.8,
    "qué risa pero tus pies"
+  ],
+  [
+   193.58,
+   "Mi oeddwn i'n meddwl bod o'n mynd i fod yn ystod y cyfnod yma, ond mi oeddwn i ddim yn meddwl bod o'n mynd i fod yn ystod y cyfnod yma."
   ]
  ],
  "fuentes": [
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -116,12 +124,18 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "cy"
   ]
  ],
  "ventanas": {
   "total": 4,
-  "modelo": 3,
+  "modelo": 4,
   "reglas": 0,
-  "vacias": 1
+  "vacias": 0
  }
 }

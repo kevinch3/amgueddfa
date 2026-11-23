@@ -1,0 +1,26 @@
+{
+  "about": "Two approved rows change one line: they apply in reviewed_at order (not list order), so the later one wins",
+  "transcript": {
+    "lang": "es",
+    "seg": [[600.0, "Benedicto de la competencia número 98"], [606.0, "Primer premio"]],
+    "fuentes": [["yt_es"], ["yt_es"]]
+  },
+  "rows": [
+    {"id": "r-late", "reviewed_at": "2026-11-22T12:00:00.5+00:00", "display_name": "Iwan",
+     "payload": {"video": {"id": "TESTVIDEO01"}, "cambios": [
+       {"t": 600.0, "antes": "Veredicto de la competencia número 98",
+        "texto": "Veredicto de la competencia número noventa y ocho", "idioma": "es"}]}},
+    {"id": "r-early", "reviewed_at": "2026-11-22T12:00:00+00:00", "display_name": "Hebe",
+     "payload": {"video": {"id": "TESTVIDEO01"}, "cambios": [
+       {"t": 600.0, "antes": "Benedicto de la competencia número 98",
+        "texto": "Veredicto de la competencia número 98", "idioma": "cy"}]}}
+  ],
+  "expected": {
+    "seg": [[600.0, "Veredicto de la competencia número noventa y ocho"], [606.0, "Primer premio"]],
+    "fuentes": [["yt_es", "colab"], ["yt_es"]],
+    "idiomas": ["es", "es"]
+  },
+  "sinAnclar": [],
+  "applied": ["r-early", "r-late"],
+  "autores": {"0": ["Hebe", "Iwan"]}
+}

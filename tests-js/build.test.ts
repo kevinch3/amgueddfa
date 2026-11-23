@@ -187,6 +187,26 @@ describe('static build', () => {
     expect(html).toContain('name="date_month"');
   });
 
+  it('video corrections: admin Videos tab; edit control on Chubut but not Juventud or Mimosa', () => {
+    const admin = read('admin/index.html');
+    expect(admin).toContain('id="atab-videos"');
+    expect(admin).toContain('id="apanel-videos"');
+    expect(read('chubut/2024/index.html')).toContain('data-rep-editar');
+    for (const f of ['juventud', 'mimosa']) {
+      for (const y of readdirSync(join(DIST, f))) {
+        const p = `${f}/${y}/index.html`;
+        if (existsSync(join(DIST, p))) expect(read(p), p).not.toContain('data-rep-editar');
+      }
+    }
+  });
+
+  it('perfil links video corrections to the moment', () => {
+    const dir = join(DIST, '_astro');
+    const js = readdirSync(dir).filter((n) => n.startsWith('perfil.astro') && n.endsWith('.js')).map((n) => readFileSync(join(dir, n), 'utf8')).join('');
+    expect(js).toContain('video_text');
+    expect(js).toMatch(/video-hash\.[\w-]+\.js/);
+  });
+
   it('admin has a tab to load facts directly, credited to someone', () => {
     const html = read('admin/index.html');
     expect(html).toContain('Cargar datos');
@@ -712,7 +732,8 @@ describe('static build', () => {
     for (const f of ['index.html', 'chubut/2024/index.html']) expect(read(f)).not.toContain('patrocinio-kr.svg');
     expect(read('derechos/index.html')).toContain('11.723');
     expect(read('privacidad/index.html')).toContain('25.326');
-    for (const p of pages) expect(read(`${p}/index.html`)).not.toMatch(/borrador|revisión con las asociaciones/i);
+    // No legal text marked as a draft (the storage key amg:borrador-video:<video> on /cookies/ is a name, not prose).
+    for (const p of pages) expect(read(`${p}/index.html`)).not.toMatch(/(?<!amg:)borrador|revisión con las asociaciones/i);
     const contrib = read('contribuir/index.html');
     expect(contrib).toContain('CC BY-SA 4.0');
     expect(contrib).toMatch(/href="[^"]*\/derechos\/?"/);

@@ -4,8 +4,12 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "De Fieda Non, Owens de Medina, La Alianza de los Tiempos."
+  ],
+  [
    3.7,
-   "de Fieda Non Owens de Medina La"
+   "de Fieda Non Owens de Medina la"
   ],
   [
    7.5,
@@ -66,9 +70,19 @@
   [
    60.7,
    "aventura"
+  ],
+  [
+   75.1,
+   "recibimos ahora área de arroz"
   ]
  ],
  "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],

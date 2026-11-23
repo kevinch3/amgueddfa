@@ -4,44 +4,8 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
-   8.0,
-   "aquí"
-  ],
-  [
-   12.4,
-   "course de humble can karen owen"
-  ],
-  [
-   16.4,
-   "hai para bingo york sede común"
-  ],
-  [
-   19.8,
-   "el típico centro de gil a mai meneses"
-  ],
-  [
-   24.9,
-   "louis dijo"
-  ],
-  [
-   26.7,
-   "de los párpados"
-  ],
-  [
-   30.1,
-   "tu escenario superior sede común"
-  ],
-  [
-   34.0,
-   "la guardia ambos en el camino"
-  ],
-  [
-   44.6,
-   "tú snet con chrome de google"
-  ],
-  [
-   49.6,
-   "timón y copa sin agua del río"
+   0.0,
+   "Gorsedd y Cwmwn gan Garen Owen. Chai bawb i'n dringo i orsedd y cwmwn, a chei di byth fendro dy hun, a mai mynedi reol a gwyllt ydi hwn, nid bag bach i denu llun."
   ],
   [
    56.3,
@@ -66,34 +30,7 @@
  ],
  "fuentes": [
   [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"

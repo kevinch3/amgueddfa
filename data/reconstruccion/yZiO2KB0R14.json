@@ -120,28 +120,16 @@
    "cara"
   ],
   [
-   120.4,
-   "al día"
+   125.98,
+   "Diwrnod mair yn y byd ydyw a methu byth fynd yn fy gryf i, achos gai bethau na'i ddangos fi heb gwybod bod Iesu yn brwydro'r sgrid."
   ],
   [
-   125.3,
-   "hola"
+   173.98,
+   "Cadw ben fi mewn i'w bresen gwaed."
   ],
   [
-   127.5,
-   "mira"
-  ],
-  [
-   140.8,
-   "no"
-  ],
-  [
-   152.8,
-   "sí"
-  ],
-  [
-   163.4,
-   "para ti"
+   185.98,
+   "Coddiwch sy'n fêl, cenfadde ar ffôn, mae'n canu fwy mor eledu'naint i ffôn, a pan na'n ni'n canu mwy i'n lle, mae'n gwell gwareddwr yn ôl, mae'n well, mae'n gwell."
   ],
   [
    195.2,
@@ -158,6 +146,14 @@
   [
    229.4,
    "a tener"
+  ],
+  [
+   230.98,
+   "Daeth bendant â Chaerfyrddin yn flaen, ond heno yn llwys Caerdydd ei haen."
+  ],
+  [
+   240.14,
+   "Seiniwn ei salmau, fel rhan o'r glân, mae heddi glên yn ei ddwy o glân."
   ]
  ],
  "fuentes": [
@@ -249,7 +245,13 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -264,25 +266,16 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
+   "cy"
   ]
  ],
  "ventanas": {
   "total": 5,
-  "modelo": 4,
+  "modelo": 5,
   "reglas": 0,
-  "vacias": 1
+  "vacias": 0
  }
 }

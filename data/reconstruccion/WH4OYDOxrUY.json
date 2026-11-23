@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   3.3,
+   "adante para mirar"
+  ],
+  [
    50.2,
    "Ya"
   ],
@@ -13,7 +17,7 @@
   ],
   [
    53.7,
-   "amanece cantame un tango más"
+   "amanece polaco go cantame un tango más"
   ],
   [
    60.8,
@@ -44,8 +48,20 @@
    "viejo"
   ],
   [
+   88.8,
+   "abando ca garganta con arena tu voz"
+  ],
+  [
    93.7,
    "tiene la pena que Malena no"
+  ],
+  [
+   97.4,
+   "cantó canta que juarz de condena a"
+  ],
+  [
+   102.3,
+   "lastimar tu pena con su blanco"
   ],
   [
    106.2,
@@ -62,6 +78,10 @@
   [
    120.0,
    "Debajo de tu almohada algún verso te"
+  ],
+  [
+   124.24,
+   "Cantor, di un tango elgo insolente, hiciste que a la gente le duela tu dolor, cantor, di un tango equilibrista, mas que cantor-artista con vicio."
   ],
   [
    136.3,
@@ -146,6 +166,14 @@
   [
    208.7,
    "verso"
+  ],
+  [
+   211.6,
+   "te"
+  ],
+  [
+   230.6,
+   "dejó"
   ]
  ],
  "fuentes": [
@@ -187,6 +215,27 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"

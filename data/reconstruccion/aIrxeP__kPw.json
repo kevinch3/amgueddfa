@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Plegaria para un niño dormido, de Luis Alberto Spinetta."
+  ],
+  [
    12.1,
    "Plegaria para un niño dormido de Luis"
   ],
@@ -13,7 +17,7 @@
   ],
   [
    17.1,
-   "Plegaria para un niño dormido quizá"
+   "plegaria para un niño dormido quizá"
   ],
   [
    19.9,
@@ -76,12 +80,20 @@
    "déjenlo que siga soñando felicidad"
   ],
   [
+   59.4,
+   "destruyendo trapos de ilustradas"
+  ],
+  [
    62.1,
    "alejándose de la maldad"
   ],
   [
    65.2,
    "se ríe el niño dormido quizás se sienta"
+  ],
+  [
+   68.8,
+   "corrió en esta vez jugueteando inquieto"
   ],
   [
    71.5,
@@ -93,7 +105,7 @@
   ],
   [
    75.7,
-   "Plegaria para un niño dormido"
+   "plegaria para el niño dormido"
   ],
   [
    78.6,
@@ -113,6 +125,15 @@
   ]
  ],
  "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],

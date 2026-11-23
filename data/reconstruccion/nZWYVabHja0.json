@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Con el silencio de todos, Gary Piu."
+  ],
+  [
    12.3,
    "Las tardecitas de Buenos Aires tienen ese..."
   ],
@@ -44,6 +48,10 @@
    "Vení, que así, medio bailando y medio volando, me saco el melón para saludarte, te regalo una banderita y te digo."
   ],
   [
+   81.0,
+   "Piantao, piantao, no ves que va la luna en rodando por callado?"
+  ],
+  [
    84.5,
    "No ves que va la luna rodando por callao"
   ],
@@ -56,8 +64,24 @@
    "Me baila alrededor, baila, vení, volá"
   ],
   [
+   99.0,
+   "Volar. Ya se que estoy piantao, piantao, piantao."
+  ],
+  [
+   104.9,
+   "Yo miro a Buenos Aires del nido de un borrío"
+  ],
+  [
+   109.3,
+   "Y a vos te vi tan triste que me nívolas en ti"
+  ],
+  [
    114.4,
    "El loco berretín que tengo para vos"
+  ],
+  [
+   120.0,
+   "Loco, loco, loco, cuando anocheca en tu portenia soledad, por la ribera de tu sabana vendré, con un poema y un trombón, a desvelarte el corazón."
   ],
   [
    124.2,
@@ -74,6 +98,10 @@
   [
    136.1,
    "A desvelarte el corazón"
+  ],
+  [
+   140.0,
+   "Loco, loco, loco, como un acrobata demente saltaré sobre el abismon de tu esgote hasta sentir enloquecid tu corazón de libertad, ya vas a ver."
   ],
   [
    143.7,
@@ -108,6 +136,10 @@
    "Con una golondrina en el motor"
   ],
   [
+   169.7,
+   "Del viste nos aplauden"
+  ],
+  [
    171.6,
    "¡Viva!"
   ],
@@ -140,12 +172,24 @@
    "Provoco campanarios con la risa y al fin te miro y canto a media voz"
   ],
   [
+   199.0,
+   "Quere me asi piantao, piantao, piantao, tan tan tan."
+  ],
+  [
    205.7,
    "La ternura de locos que hay en mí"
   ],
   [
    210.2,
    "Ponete esta peluca de alondra así volá, volá conmigo ya"
+  ],
+  [
+   215.24,
+   "vola conmigo ya, larái larái larái, que no me hace piantao, piantao, piantao."
+  ],
+  [
+   224.6,
+   "Te empate a esta ternura de luz que hay en mí"
   ],
   [
    247.8,
@@ -239,7 +283,46 @@
    "whisper_es"
   ],
   [
+   "cy"
+  ],
+  [
    "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
@@ -293,7 +376,7 @@
    "whisper_es"
   ],
   [
-   "whisper_es"
+   "cy"
   ],
   [
    "whisper_es"
@@ -302,13 +385,7 @@
    "whisper_es"
   ],
   [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
+   "cy"
   ],
   [
    "whisper_es"
@@ -358,8 +435,8 @@
  ],
  "ventanas": {
   "total": 6,
-  "modelo": 6,
-  "reglas": 0,
+  "modelo": 5,
+  "reglas": 1,
   "vacias": 0
  }
 }

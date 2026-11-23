@@ -4,12 +4,28 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   7.8,
+   "señora que hace dulces de maría elena"
+  ],
+  [
+   10.2,
+   "walsh"
+  ],
+  [
    12.6,
    "esto en memoria tuya"
   ],
   [
    14.8,
    "cuando llega el otoño pelo fruta y"
+  ],
+  [
+   18.8,
+   "rodeada de pellejos abierto en heredado"
+  ],
+  [
+   22.8,
+   "recipiente pulpa filosofal"
   ],
   [
    26.7,
@@ -30,6 +46,10 @@
   [
    41.8,
    "huerta propia"
+  ],
+  [
+   43.7,
+   "bastante bien parodia aquella alquimia"
   ],
   [
    47.6,
@@ -58,6 +78,14 @@
   [
    66.0,
    "empezado hace tantas"
+  ],
+  [
+   69.9,
+   "o grupo reverencia y no deber para que"
+  ],
+  [
+   74.3,
+   "muera menos y sientas pobre ausente qué"
   ],
   [
    79.6,
@@ -137,6 +165,27 @@
   ]
  ],
  "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],

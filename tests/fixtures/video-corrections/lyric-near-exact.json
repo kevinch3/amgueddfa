@@ -1,0 +1,24 @@
+{
+  "about": "An equal line within 2 s still takes its change when a lyric line is as near or nearer (speech over a song, or the same line moved a little by a rebuild)",
+  "transcript": {
+    "lang": "es",
+    "seg": [[3940.0, "Y a continuación"], [3945.1, "y rescoldo de las coplas"], [3945.1, "Vamos a tener a la Escuela de Música de Gaiman"],
+            [3951.3, "que cantaron mis abuelos."], [3953.0, "Mientras se acomoda el coro"]],
+    "fuentes": [["whisper_es"], ["letra"], ["whisper_es"], ["letra"], ["whisper_es"]]
+  },
+  "rows": [
+    {"id": "r-cerca", "reviewed_at": "2026-11-22T10:05:00+00:00", "display_name": "Bruno",
+     "payload": {"video": {"id": "TESTVIDEO01"}, "cambios": [
+       {"t": 3945.1, "antes": "Vamos a tener a la Escuela de Música de Gaiman",
+        "texto": "Ahora vamos a escuchar a la Escuela de Música de Gaiman"},
+       {"t": 3952.0, "antes": "Mientras se acomoda el coro", "texto": "Mientras se acomoda la escuela"}]}}
+  ],
+  "expected": {
+    "seg": [[3940.0, "Y a continuación"], [3945.1, "y rescoldo de las coplas"], [3945.1, "Ahora vamos a escuchar a la Escuela de Música de Gaiman"],
+            [3951.3, "que cantaron mis abuelos."], [3953.0, "Mientras se acomoda la escuela"]],
+    "fuentes": [["whisper_es"], ["letra"], ["whisper_es", "colab"], ["letra"], ["whisper_es", "colab"]]
+  },
+  "sinAnclar": [],
+  "applied": ["r-cerca"],
+  "autores": {"2": ["Bruno"], "4": ["Bruno"]}
+}

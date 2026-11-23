@@ -4,8 +4,24 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
-   127.6,
-   "tanto tanto"
+   0.0,
+   "I Patagonia, i Patagonia, i Patagonia."
+  ],
+  [
+   59.9,
+   "Er gwaetha mawr o bobl, dwi'n ymladd ynddi."
+  ],
+  [
+   89.9,
+   "Mor ysgafn ydi hwyl y llong, yng nghalon i mor drong, mor drong."
+  ],
+  [
+   119.9,
+   "Mae'n siddo yn araf, dan y don, mor ysgafn y diwrnod llong."
+  ],
+  [
+   149.9,
+   "Ma'r dyddiau'n gwybio heibio ar fy ngwaetha, ac mae'r fod yn dal i droi i'r drafferth, a ma' hyn a'r fath yn hadau, ond diodde'r newiddiadau'n darnau."
   ],
   [
    156.6,
@@ -412,24 +428,68 @@
    "una canción"
   ],
   [
-   586.8,
-   "mentalito"
+   581.74,
+   "Ac mae'r hen hen atgofion, yn dal i dorri'n nghalon, ac mae'r hen hen hiraeth yn dod yn ôl."
   ],
   [
-   696.9,
-   "Dios con Cristo y Colón no y wildo hoy"
+   596.22,
+   "Ac mae'r hen, hen ddagrau yn dal i losgi'n nghriddiau wrth i'n gerdded ag i'n hen, hen wlybrau i'n dŵr."
   ],
   [
-   703.1,
-   "voy"
+   627.7,
+   "Ac mae'r hen hen ddagrau yn dal i losgi'n ngryddiau wrth i'n gerdded ar hyd hen hen lwybrau y ddô."
   ],
   [
-   715.0,
-   "contigo"
+   657.7,
+   "Baban bach, y ganwyd gweinidies yn Baban bach, y cadarndaeth o bosna, y delwyd cynta'r Sina, yn iogaid ar y galf arian yn Baban bach, Baban bach."
   ],
   [
-   725.2,
-   "derretirme mis vídeos hoy mismo"
+   687.7,
+   "Yn sygno bron Maria'n baban bach, bu i osgo clust ei goron o'i gwyrddodd, o'i gwyrddodd, er mwyn coron i seion o'i gwyrddodd, i bled i bendi harodd."
+  ],
+  [
+   717.7,
+   "O dan y gorwm dreiniodd, eiliodd ef dyrneiddiog, o'i wyrddodd, o'i wyrddodd, er codi penereio, o'i wyrddodd."
+  ],
+  [
+   741.7,
+   "Pan hyn, bechadir, bresia felerwyt, felerwyt, i mofyn ymenodda, felerwyt, i tir agorwyd ffynon, a i'r creglwyfau diom, felerwyt."
+  ],
+  [
+   771.7,
+   "Fel eir a gwyn yn salvon, fel yr wyt, fel yr wyt, ym mhennu tyrd yn graddlon, fel yr wyt."
+  ],
+  [
+   801.7,
+   "Ar gyfer heddiw'r bore'n ffafr bach, ffafr bach, ganwyd gwreiddiau jyst yn ffafr bach."
+  ],
+  [
+   818.7,
+   "Yr hadar gaeth ap os radd, yr edmwl yn gynt a'i sila, yr iawn gaeth dal galw arian baban fach, baban fach. Yr esbigno brawdd yr iawn baban fach."
+  ],
+  [
+   848.7,
+   "Caid miwion o bresencil ar ei wmair, ar ei wmair, a gwir byseuant yn ei afael ei wmair."
+  ],
+  [
+   866.7,
+   "Caid bachgen doedd eseia, rhodd newid ynoed i yma, er na barwigo ar ei wmair, ar ei wmair, mewn colwm o ddim diwda, ar ei wmair."
+  ],
+  [
+   896.7,
+   "Diwthodd Christ ei goron o'i wirfodd, o'i wirfodd, er mwyn coron iselion o'i wirfodd."
+  ],
+  [
+   915.7,
+   "I fflag y pen dihanog, o yndan agoron ddreiniog, iddi o fynd i'r byd llidiwg, o'i wirfodd, o'i wirfodd, er bod i'w pennau oedd o'i wirfodd."
+  ],
+  [
+   945.7,
+   "On' pin dy chadir bresia' fel yr oed, fel yr oed, i babi'n ymenodd fab fel yr oed."
+  ],
+  [
+   964.7,
+   "Nid i'r agorwyd gwenhon o, a'ilch dy glwyfau duon, fel rei ymwenent salmon, fel yr oed, fel yr oed, a'm mhenynt herden frydlen, fel yr oed."
   ],
   [
    966.2,
@@ -453,6 +513,10 @@
   ],
   [
    1024.7,
+   "Mae'n cadw i begyn i'n deud ma-fam-fam, neu cadarnais o'r holl dda, neu o'r fwy hyn neu'r sy'n dda, neu yw'r ddau ddau yn barod ma-fam-fam, ma-fam-fam."
+  ],
+  [
+   1024.7,
    "tiene una"
   ],
   [
@@ -460,53 +524,33 @@
    "librerías"
   ],
   [
-   1034.7,
-   "cercanas creer"
+   1072.7,
+   "A chwi'r fese ia dawn yn arlun mae."
   ],
   [
-   1052.2,
-   "mamá mamá"
+   1145.7,
+   "Hini oedd yr un neis neidio o'i gwirfodd, o'i gwirfodd, er bod hi'n gadeirio o'i gwirfodd."
   ],
   [
-   1055.8,
-   "en el siglo"
-  ],
-  [
-   1063.8,
-   "hasta aquí en la"
-  ],
-  [
-   1069.4,
-   "rimar"
-  ],
-  [
-   1071.6,
-   "para animar"
-  ],
-  [
-   1074.4,
-   "a hundirme"
-  ],
-  [
-   1082.8,
-   "el parque dulce señor"
+   1166.7,
+   "Am gyn metaf i'r bresiaf elenwyd, elenwyd, i bob un a ddenw, a ddenywyd, i ni ragorwydd ddenw, a i'r deilwyd."
   ]
  ],
  "fuentes": [
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -812,33 +856,54 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -852,18 +917,30 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ]
  ],
  "ventanas": {
   "total": 21,
-  "modelo": 16,
+  "modelo": 20,
   "reglas": 0,
-  "vacias": 5
+  "vacias": 1
  }
 }

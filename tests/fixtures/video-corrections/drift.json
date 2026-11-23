@@ -1,0 +1,22 @@
+{
+  "about": "A rebuild moved the line 1.8 s later; the line now at the old time holds the same words inside a longer text, and the equal line still wins",
+  "transcript": {
+    "lang": "es",
+    "seg": [[100.0, "Gracias. Comienza la competencia número 71 en breve"], [101.8, "Comienza la competencia número 71"],
+            [104.0, "Para coros mixtos"]],
+    "fuentes": [["yt_es"], ["yt_es"], ["yt_es"]]
+  },
+  "rows": [
+    {"id": "r-drift", "reviewed_at": "2026-11-22T10:05:00+00:00", "display_name": "Bruno",
+     "payload": {"video": {"id": "TESTVIDEO01"}, "cambios": [
+       {"t": 100.0, "antes": "Comienza la competencia número 71", "texto": "Comienza la competencia número 72"}]}}
+  ],
+  "expected": {
+    "seg": [[100.0, "Gracias. Comienza la competencia número 71 en breve"], [101.8, "Comienza la competencia número 72"],
+            [104.0, "Para coros mixtos"]],
+    "fuentes": [["yt_es"], ["yt_es", "colab"], ["yt_es"]]
+  },
+  "sinAnclar": [],
+  "applied": ["r-drift"],
+  "autores": {"1": ["Bruno"]}
+}

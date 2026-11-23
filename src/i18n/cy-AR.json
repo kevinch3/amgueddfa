@@ -419,7 +419,12 @@
       "objetivo": "'Dan ni ddim yn gwybod am beth mae'r adroddiad yma. Agorwch y ffurflen eto o'r fideo neu'r ddogfen.",
       "problema": "Dewiswch beth sy o'i le.",
       "texto_informe": "Sgwennwch rhwng 10 a 1000 nod.",
-      "arreglo": "Dywedwch wrthon ni i ba eisteddfod, blwyddyn neu adran mae'n perthyn (yn wahanol i ble mae hi rŵan)."
+      "arreglo": "Dywedwch wrthon ni i ba eisteddfod, blwyddyn neu adran mae'n perthyn (yn wahanol i ble mae hi rŵan).",
+      "video_cambios": "Rhaid i gywiriad gynnwys rhwng 1 a 200 o newidiadau.",
+      "video_texto": "Rhaid i bob llinell wedi'i chywiro fod rhwng 1 a 500 nod.",
+      "video_id": "Nid yw'r fideo'n cael ei adnabod. Agorwch ef eto o'i dudalen a rhowch gynnig arall arni.",
+      "video_repetido": "Mae dau newid ar gyfer yr un llinell; gadewch un yn unig.",
+      "video_antes": "Mae'r llinell honno'n rhy hir i'w chywiro o'r fan hon; rhowch wybod i ni drwy «Rhoi gwybod am wall»."
     },
     "caracteres_transcripcion": "Rhwng 10 a 15000 nod.",
     "licencia": "Mae'r trawsgrifiadau a'r ffeithiau rydych chi'n eu cyfrannu'n cael eu cyhoeddi dan drwydded CC BY-SA 4.0.",
@@ -453,6 +458,7 @@
     "pestanas": "Adrannau gweinyddu",
     "tabs": {
       "cola": "I'w hadolygu",
+      "videos": "Fideos",
       "cargar": "Llwytho ffeithiau",
       "restringidos": "Cyfyngedig",
       "usuarios": "Defnyddwyr",
@@ -467,7 +473,8 @@
       "transcription": "Trawsgrifiad",
       "memory": "Atgof",
       "report": "Gwall wedi'i adrodd",
-      "note": "Gwybodaeth"
+      "note": "Gwybodaeth",
+      "video_text": "Cywiriad trawsgrifiad"
     },
     "vacia": "Does dim cyfraniadau'n aros.",
     "de": "Gan {nombre}",
@@ -517,6 +524,7 @@
     "hecho_admin": "Mae'n weinyddwr rŵan.",
     "error": {
       "motivo": "Sgwennwch y rheswm dros wrthod.",
+      "motivo_retiro": "Sgwennwch y rheswm dros ei thynnu'n ôl.",
       "algunos": "Methwyd â phrosesu {n}; edrychwch ar neges pob un.",
       "acreditar": "Dewiswch i bwy i briodoli'r ffeithiau.",
       "json": "Dydy'r cynnwys ddim yn JSON dilys.",
@@ -526,7 +534,10 @@
       "valor": "Dydy'r gwerth ddim yn ddilys i'r cyfraniad yma.",
       "sin_archivo": "Methon ni â lawrlwytho'r ffeil wreiddiol.",
       "derivados": "Methon ni â chreu'r delweddau yn y porwr yma. Rhowch gynnig efo fersiwn ddiweddar o Chrome neu Firefox.",
-      "sin_archivos": "Mae'r delweddau neu'r testun ar goll yn y storfa gyfyngedig. Rhedwch scripts/push_restricted.py a rhowch gynnig arall."
+      "sin_archivos": "Mae'r delweddau neu'r testun ar goll yn y storfa gyfyngedig. Rhedwch scripts/push_restricted.py a rhowch gynnig arall.",
+      "sin_cambios": "Ticiwch o leiaf un newid i'w gymeradwyo.",
+      "no_aprobada": "Dydy'r cywiriad yma ddim wedi'i gymeradwyo bellach.",
+      "tarjeta": "Methwyd dangos y cyfraniad hwn ({id}): ni ellir darllen ei ddata."
     },
     "ver_restringido": "Gweld y ddogfen cyn ei rhyddhau",
     "restringido_alt": "{titulo}, tudalen {n} (golwg gweinyddwyr)",
@@ -551,6 +562,46 @@
       "que_pasa": "Wrth gymeradwyo: {accion}",
       "explicacion": "Esboniad (heb ei gyhoeddi)",
       "video": "Fideo"
+    },
+    "video": {
+      "cambios": "Newidiadau: {n}",
+      "corregir": "Cywiro",
+      "quitar": "Dileu",
+      "idioma": "Iaith",
+      "agregar": "Ychwanegu",
+      "cambio_linea": "Mae'r llinell wedi newid ers iddi gael ei golygu",
+      "ilegibles": "Newidiadau na ellir eu darllen, wedi'u gadael allan: {n}",
+      "aprobar_sel": "Cymeradwyo'r rhai a ddewiswyd"
+    },
+    "videos": {
+      "ayuda": "Cywiriadau trawsgrifiad a gymeradwywyd, fesul fideo, y mwyaf newydd yn gyntaf. Mae tynnu'n ôl un nad yw yn y ffeil eto yn ei dynnu o'r chwaraewr ar unwaith. Mae un sydd eisoes yn y ffeil yn aros yno tan yr allforio nesaf, a than hynny nid yw'r fideo hwnnw'n dangos cywiriadau byw.",
+      "vacia": "Does dim cywiriadau trawsgrifiad wedi'u cymeradwyo.",
+      "aprobada": "Cymeradwywyd {fecha}",
+      "retirar": "Tynnu'n ôl",
+      "retirar_toda": "Tynnu'r cyfraniad cyfan yn ôl ({n} newid)",
+      "retirar_toda_uno": "Tynnu'r cyfraniad yn ôl (1 newid)",
+      "motivo": "Rheswm dros dynnu'n ôl (bydd y cyfrannwr yn ei weld)",
+      "confirmar_retiro": "Cadarnhau tynnu'n ôl",
+      "retirada": "Cywiriad wedi'i dynnu'n ôl.",
+      "sin_anclar": "Heb angor ({n})",
+      "motivo_sin_linea": "Does dim modd dod o hyd i'w linell bellach.",
+      "motivo_idioma": "Mae'r iaith o fewn llinell gyfun a allai gynnwys lleisiau eraill: dewiswch y llinell y mae'n perthyn iddi.",
+      "reanclar": "Ail-angori",
+      "elegir_linea": "Dewiswch y llinell y mae'n perthyn iddi",
+      "nueva_linea": "Ychwanegu fel llinell newydd am {tiempo}",
+      "sin_opciones": "Does dim llinellau o fewn munud.",
+      "vista": "Fel hyn y bydd y llinell:",
+      "aviso_reemplaza": "Mae'r llinell gyfan yn cael ei disodli.",
+      "aviso_quita": "Mae'r llinell gyfan yn cael ei thynnu.",
+      "aviso_idioma": "Mae'r llinell gyfan yn troi'n {idioma}.",
+      "aviso_larga": "Byddai gan y llinell fwy na 500 nod: dewiswch un arall.",
+      "aviso_mismo_texto": "Mae'r llinell yn dweud hynny'n barod, felly ni fyddai dim yn newid: dewiswch un arall.",
+      "aviso_mismo_idioma": "{idioma} yw iaith y llinell yn barod, felly ni fyddai dim yn newid: dewiswch un arall.",
+      "tras_exportar": "Mae eisoes yn y ffeil: bydd i'w weld ar ôl yr allforio nesaf.",
+      "pausa_exportar": "Mae cywiriad a dynnwyd yn ôl yn dal yn y ffeil: tan yr allforio nesaf, mae'r chwaraewr yn dangos y ffeil heb y cywiriadau newydd.",
+      "reanclada": "Newid wedi'i ail-angori.",
+      "sin_archivo": "Doedd dim modd darllen trawsgrifiad cyhoeddedig y fideo yma.",
+      "sin_filas": "Does dim cywiriad wedi'i gymeradwyo ar ôl ar y fideo hwn."
     }
   },
   "admin_item": {
@@ -662,7 +713,8 @@
       "transcription": "Trawsgrifiad",
       "memory": "Atgof",
       "report": "Gwall wedi'i adrodd",
-      "note": "Gwybodaeth"
+      "note": "Gwybodaeth",
+      "video_text": "Cywiriad trawsgrifiad"
     },
     "desde": "Gwlad: {pais}",
     "ajustes": {
@@ -723,7 +775,8 @@
       "transcription": "trawsgrifiodd ddogfen",
       "memory": "rhannodd atgof",
       "report": "adroddodd wall",
-      "note": "ychwanegodd wybodaeth at ddogfen"
+      "note": "ychwanegodd wybodaeth at ddogfen",
+      "video_text": "cywirodd drawsgrifiad fideo"
     },
     "ver_ranking": "Gweld y tabl cyfranwyr",
     "del": "o"
@@ -788,6 +841,7 @@
       "tz_para": "Dangos dyddiadau yng nghylchfa amser eich proffil.",
       "nocontar_para": "Cofio nad ydych chi isio i ni gyfrif eich ymweliadau.",
       "lectura_para": "Cofio'ch gosodiadau darllen (maint y testun, cyferbyniad, bylchau, ffont, animeiddio a dolenni).",
+      "borrador_para": "Cadw'r cywiriadau i drawsgrifiad fideo nad ydych chi wedi'u gyrru eto, rhag iddyn nhw fynd ar goll os byddwch chi'n cau'r chwaraewr neu'r tab.",
       "tipo_necesaria": "Angenrheidiol",
       "tipo_preferencia": "Dewis",
       "dura_sesion": "Nes i chi allgofnodi.",
@@ -795,6 +849,7 @@
       "dura_tz": "Nes i chi allgofnodi.",
       "dura_nocontar": "Nes i chi droi'r cyfrif yn ôl ymlaen.",
       "dura_lectura": "Nes i chi eu hailosod.",
+      "dura_borrador": "Nes i chi eu gyrru neu eu taflu.",
       "necesarias": "Gan eu bod nhw'n angenrheidiol i'r wefan weithio, neu'n ddewis gennych chi, does dim rhaid gofyn eich caniatâd i'w cadw. Mi fedrwch chi eu dileu unrhyw bryd yng ngosodiadau eich porwr; os dilëwch chi'r sesiwn, mi fydd rhaid i chi fewngofnodi eto.",
       "analitica_titulo": "Cyfrif ymweliadau",
       "analitica_1": "I wybod pa eisteddfodau mae pobl yn edrych arnyn nhw ac o ble maen nhw'n dod, 'dan ni'n defnyddio Cloudflare Web Analytics. Dydy o ddim yn defnyddio cwcis nac yn cadw dim yn eich porwr, a dydy o ddim yn eich adnabod nac yn eich dilyn o wefan i wefan.",
@@ -1016,9 +1071,49 @@
       "yt_es": "YouTube awtomatig",
       "whisper_es": "Whisper",
       "cy": "adnabod lleferydd Cymraeg",
-      "letra": "geiriau'r darn"
+      "letra": "geiriau'r darn",
+      "colab": "cywiriad gan gyfranwyr"
     },
+    "corregida_por": "Cywirwyd gan {nombres}",
+    "correcciones_de": "Cywiriadau gan {nombres}",
     "como_se_produce": "Sut mae'r testun yma'n cael ei greu"
+  },
+  "editor": {
+    "editar": "Golygu'r trawsgrifiad",
+    "editar_linea": "Cywiro'r llinell am {tiempo}",
+    "ayuda": "Pwyswch ✎ i gywiro llinell, i'w thynnu neu i newid ei hiaith. I ychwanegu rhywbeth sydd ar goll, rhowch saib ar y fideo lle mae'n dechrau a phwyswch «Ychwanegu». Mae popeth yn cael ei yrru efo'i gilydd ac yn cael ei gyhoeddi ar ôl ei adolygu.",
+    "como_funciona": "Sut mae'n gweithio",
+    "texto": "Testun",
+    "quitar": "Tynnu'r llinell yma",
+    "idioma": "Iaith",
+    "es": "Español",
+    "cy": "Cymraeg",
+    "idioma_nombre": {
+      "es": "Sbaeneg",
+      "cy": "Cymraeg"
+    },
+    "idioma_cambio": "Iaith: {antes} → {despues}",
+    "idioma_nuevo": "Iaith: {idioma}",
+    "ok": "Iawn",
+    "deshacer": "Dadwneud",
+    "agregar": "+ Ychwanegu llinell am {tiempo}",
+    "nueva": "Llinell newydd am {tiempo}",
+    "momento": "Amser (mun:eil)",
+    "error_tiempo": "Sgwennwch yr amser fel munudau:eiliadau, er enghraifft 12:05.",
+    "error_tiempo_fin": "Mae'r fideo yn para {duracion}: dewiswch amser cyn y diwedd.",
+    "cambios": "{n} newid",
+    "un_cambio": "1 newid",
+    "enviar": "Gyrru {n} cywiriad",
+    "limite": "Mae un anfoniad yn dal hyd at {max} newid: anfonwch y rhain, yna daliwch ati mewn un newydd.",
+    "enviar_una": "Gyrru 1 cywiriad",
+    "cancelar": "Canslo",
+    "confirmar_cancelar": "Taflu'r holl newidiadau heb eu gyrru?",
+    "descartar": "Ie, taflu",
+    "seguir": "Na, dal i olygu",
+    "letra": "Mae'r llinell yma'n rhan o eiriau cân; i'w chywiro, defnyddiwch «Adrodd gwall».",
+    "pendiente": "Yn aros am adolygiad: {cambio}",
+    "ingresar": "Mewngofnodwch i gywiro'r trawsgrifiad",
+    "descartados": "Dydy rhai newidiadau a gadwyd ddim yn cyfateb i'r trawsgrifiad bellach, felly maen nhw wedi'u taflu: {n}."
   },
   "buscar": {
     "titulo": "Chwilio'r archif",

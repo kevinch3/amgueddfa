@@ -66,6 +66,10 @@
   [
    138.4,
    "Amén."
+  ],
+  [
+   245.0,
+   "sy'n iawn ag os yw'n angen ca'l. Lle ma' n'w'n ysgafn ar ben y cas, jy mi allwch chi fod o'n feddwl."
   ]
  ],
  "fuentes": [
@@ -116,12 +120,15 @@
   ],
   [
    "whisper_es"
+  ],
+  [
+   "cy"
   ]
  ],
  "ventanas": {
   "total": 5,
-  "modelo": 3,
+  "modelo": 4,
   "reglas": 0,
-  "vacias": 2
+  "vacias": 1
  }
 }

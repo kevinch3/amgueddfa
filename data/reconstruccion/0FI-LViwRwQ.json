@@ -34,6 +34,10 @@
   [
    113.9,
    "Y la abuelito no deja de soñar y será un modelo de soñar."
+  ],
+  [
+   118.0,
+   "Mae'n debyg i'n son iawn, dwi'n siŵr, ond mae'n debyg i'n son iawn."
   ]
  ],
  "fuentes": [
@@ -60,12 +64,15 @@
   ],
   [
    "whisper_es"
+  ],
+  [
+   "cy"
   ]
  ],
  "ventanas": {
   "total": 4,
-  "modelo": 3,
+  "modelo": 4,
   "reglas": 0,
-  "vacias": 1
+  "vacias": 0
  }
 }

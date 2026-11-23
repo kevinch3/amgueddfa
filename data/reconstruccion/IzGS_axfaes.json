@@ -4,12 +4,16 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Con la presentacion de los atributos comenzó el Eisteddfod, tendra actividades durante toda la semana y culminara este fin de semana aquí en Trelo, algunas de las actividades se harán en distintos sectores, por lo que, para conocer la agenda, charlamos con el presidente de esta actividad, quien nos comentó todo lo que se viene para la semana."
+  ],
+  [
    5.6,
    "con la presentación de los atributos"
   ],
   [
    7.5,
-   "comenzó el Eisteddfod tendrá actividades"
+   "comenzó el stb tendrá actividades"
   ],
   [
    9.6,
@@ -69,7 +73,11 @@
   ],
   [
    44.3,
-   "otorgada por la asociación San David"
+   "otorgada por la asociación Sand davir"
+  ],
+  [
+   47.0,
+   "después está el sillón báo que es a la"
   ],
   [
    50.4,
@@ -78,6 +86,10 @@
   [
    53.1,
    "este caso este año es internacional por"
+  ],
+  [
+   56.4,
+   "eso el sillón bico era un tamaño"
   ],
   [
    58.9,
@@ -125,11 +137,19 @@
   ],
   [
    89.9,
-   "bien San David entrega la medalla"
+   "también San David entrega la medalla"
   ],
   [
    91.9,
    "del poeta medalla de plata perdón a la"
+  ],
+  [
+   94.5,
+   "comisión y el sillón báo que en este"
+  ],
+  [
+   97.3,
+   "caso siempre es por lo general el bista"
   ],
   [
    100.9,
@@ -137,7 +157,7 @@
   ],
   [
    103.8,
-   "Bueno es un acto muy sencillo"
+   "sillón bár Bueno es un acto muy sencillo"
   ],
   [
    106.1,
@@ -184,6 +204,10 @@
    "miércoles empieza lentamente esta"
   ],
   [
+   135.5,
+   "Eisteddfod"
+  ],
+  [
    137.6,
    "perdón el día miércoles empieza labor"
   ],
@@ -217,14 +241,32 @@
   ],
   [
    162.7,
-   "que viene de gales y que es nuestro"
+   "que viene de Gales y que es nuestro"
   ],
   [
    165.0,
-   "Jurado de música en gales"
+   "Jurado de música en Gales"
   ]
  ],
  "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],
@@ -393,8 +435,8 @@
  ],
  "ventanas": {
   "total": 3,
-  "modelo": 3,
-  "reglas": 0,
+  "modelo": 2,
+  "reglas": 1,
   "vacias": 0
  }
 }

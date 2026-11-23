@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   54.4,
+   "Oh"
+  ],
+  [
    113.9,
    "geometría de"
   ],
@@ -69,6 +73,9 @@
   ]
  ],
  "fuentes": [
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],

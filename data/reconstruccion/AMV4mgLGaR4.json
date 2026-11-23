@@ -12,6 +12,10 @@
    "O dolor de tu martir, o billeto del tu amor, ma se pensi que son letto, io ti deparío mal."
   ],
   [
+   52.0,
+   "Pastorello, sei soggetto, facilmente o ti'n gangar."
+  ],
+  [
    78.2,
    "Bella rusa borborina, oggi Silvia Ceglierà, con la scusa e la spina, doman poi la sprezzerà, doman poi la sprezzerà."
   ],
@@ -26,6 +30,14 @@
   [
    147.2,
    "Un dolor de tu muerte, un ileto de tu amor, más se pensé que es soleto y útil de tu amor."
+  ],
+  [
+   172.0,
+   "Pastorello, sei soggetto, ffagilmente a ti'n ganae."
+  ],
+  [
+   202.0,
+   "Diolch yn fawr."
   ]
  ],
  "fuentes": [
@@ -36,7 +48,7 @@
    "whisper_es"
   ],
   [
-   "whisper_es"
+   "cy"
   ],
   [
    "whisper_es"
@@ -46,12 +58,21 @@
   ],
   [
    "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ]
  ],
  "ventanas": {
   "total": 4,
-  "modelo": 3,
+  "modelo": 4,
   "reglas": 0,
-  "vacias": 1
+  "vacias": 0
  }
 }

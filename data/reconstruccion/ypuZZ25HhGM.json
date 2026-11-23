@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.2,
+   "del mismo profe."
+  ],
+  [
    2.0,
    "Firmeza"
   ],
@@ -149,7 +153,7 @@
   ],
   [
    147.2,
-   "una mano Mano al hombro. Retírate un"
+   "una mano. Mano al hombro. Retírate un"
   ],
   [
    150.6,
@@ -169,7 +173,7 @@
   ],
   [
    168.2,
-   "Allá va mi corazón. dirigido en un papel"
+   "Allá va mi corazón, dirigido en un papel"
   ],
   [
    172.7,
@@ -181,6 +185,9 @@
   ]
  ],
  "fuentes": [
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],

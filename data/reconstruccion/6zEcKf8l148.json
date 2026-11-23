@@ -24,6 +24,10 @@
    "En un círculo de 100.000 kilómetros"
   ],
   [
+   113.0,
+   "Yn un circlwm o 100,000 cilometr, nadwch yn y môr o starau fflodion, gwelwch y Llwyn o'r Oes a'r Sol yn y Wysg."
+  ],
+  [
    116.6,
    "Nadas en un mar de estrellas fugaces"
   ],
@@ -68,12 +72,44 @@
    "Y ahora, dentro de un círculo de 10.000 millones de años luz"
   ],
   [
+   165.0,
+   "Y ahora, dentro de un círculo de diez mil millones de años de luz, se desmorona toda noción de tiempo y espacio, y de nuevo te sientas."
+  ],
+  [
+   171.9,
+   "Se desmorona toda noción de tiempo y espacio"
+  ],
+  [
+   178.0,
+   "Y de nuevo te sientas y horas y cantas"
+  ],
+  [
+   182.0,
+   "Te sientas, lloras y cantas."
+  ],
+  [
+   186.2,
+   "Te sientas y horas"
+  ],
+  [
+   191.7,
+   "y cantas"
+  ],
+  [
+   221.7,
+   "Amén."
+  ],
+  [
+   242.0,
+   "Ari ran gogerw nôl ydan da, Ari ran Ari ran arall i hwyl, Ari ran gogerw nôl ydan da."
+  ],
+  [
    270.0,
    "Amén."
   ],
   [
-   390.0,
-   "Amén."
+   311.4,
+   "Ar i ran, ar i ran, ar i go. Ar i ran, gogedd o logan da."
   ]
  ],
  "fuentes": [
@@ -93,7 +129,7 @@
    "whisper_es"
   ],
   [
-   "whisper_es"
+   "cy"
   ],
   [
    "whisper_es"
@@ -129,13 +165,40 @@
    "whisper_es"
   ],
   [
+   "cy"
+  ],
+  [
    "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
   ]
  ],
  "ventanas": {
-  "total": 8,
+  "total": 9,
   "modelo": 6,
-  "reglas": 0,
+  "reglas": 1,
   "vacias": 2
  }
 }

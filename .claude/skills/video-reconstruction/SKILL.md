@@ -59,7 +59,7 @@ Work in a worktree (`../amgueddfa-wt-*`), with the backup disk mounted (`/run/me
 ```bash
 python3 -m scripts.reconstruct_videos --dry-run --ids <id> [<id> …]   # windows per video, how many to ask
 python3 -m scripts.reconstruct_videos --ids <id> [<id> …]             # ask, check, write data/reconstruccion/<id>.json
-python3 -m scripts.export_video_transcripts                            # public/transcripciones-video/ prefers the reconstruction
+python3 -m scripts.export_video_transcripts                            # public/transcripciones-video/ prefers the reconstruction; also bakes approved collaborator corrections (`correcciones`, `sin_anclar` in each file)
 npm run build && npm test && python3 -m pytest -q tests
 ```
 
@@ -85,6 +85,7 @@ npm run build && npm test && python3 -m pytest -q tests
 | New Spanish-pass files imported (`import-es`) | those videos |
 | `prompt.md` or `schema.json` edited | everything (bump `PROMPT_VERSION` in `windows.py`) |
 | New video harvested | that video |
+| Before an export, and after any rebuild or export | before: merge main first (the export bakes `data/approved/contributions.json`, and an old copy puts corrections withdrawn since back into the files; it warns when `data/approved` is over 24 h old); after: open `/admin/` → Videos and look for approved corrections that lost their line (`sin anclar`): re-anchor or reject them |
 
 Only windows whose inputs changed are asked again, because each window carries a hash of its inputs.
 

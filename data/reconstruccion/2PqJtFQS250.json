@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Dene'r pobremes ond eleniwch, cwmpo arni i'w chyswllt, cwmpo arni i'w chyswllt."
+  ],
+  [
    2.2,
    "en el"
   ],
@@ -66,10 +70,6 @@
   [
    56.9,
    "de como"
-  ],
-  [
-   60.9,
-   "bruja"
   ],
   [
    62.5,
@@ -265,7 +265,7 @@
   ],
   [
    463.9,
-   "estet el primer premio es para el"
+   "el primer premio es para el"
   ],
   [
    466.5,
@@ -280,6 +280,14 @@
    "el seudónimo amancay que eso"
   ],
   [
+   479.26,
+   "Un aplauso para ellos."
+  ],
+  [
+   486.04,
+   "Dwi'n mynd i gofyn i Jennifer os- dim eto, a- le'n staw por preguntar si'n stafall listo el benedicto de la competencia de danza, me dice que todavia no, asi que, continuamos con la y- competencia numero cuarenta y cinco, cuarenta y cinco, que esta leia is rif pedwar deg pump."
+  ],
+  [
    491.1,
    "y"
   ],
@@ -289,7 +297,7 @@
   ],
   [
    497.3,
-   "estaba listo. El veredicto de la"
+   "estaba listo El veredicto de la"
   ],
   [
    498.5,
@@ -297,7 +305,7 @@
   ],
   [
    500.3,
-   "no. Así"
+   "no Así"
   ],
   [
    501.6,
@@ -317,7 +325,11 @@
   ],
   [
    531.0,
-   "cañón. Siempre"
+   "cañón Siempre"
+  ],
+  [
+   535.04,
+   "Sungo'r participantes, bump sy'n mynd i'r gastadleu- yn y gastadleuaeth hwn, cyntaf Nansi, ail eirgan y dredid Lisa Hughes, bedwerydd Alejandro Jones, ac yn olaf Andres Evans."
   ],
   [
    535.2,
@@ -336,16 +348,92 @@
    "Jones Andrés Evans"
   ],
   [
-   589.8,
-   "Hola"
+   594.52,
+   "A'r haul yn dawn siwm ar y dwrnau'r y llyn."
+  ],
+  [
+   603.2,
+   "Mae drws yr eglwys wedi clwng a glas y ddwrnod wedi ffwng."
+  ],
+  [
+   616.64,
+   "Mae'r blant yn gadael am y dre, mae'r blant yn gadael am y dre, ond mae'n nwyen yn hen ac mae'r lleuad yn wen ac mae rywbeth o'i le yn y dre."
+  ],
+  [
+   644.64,
+   "Ond mae'r nwyen yn hen, ac mae'r lleuad yn wen, ac mae rywbeth o'i le yn y drefn."
+  ],
+  [
+   658.96,
+   "Dlaw yn ddisgyn, dagrau o aur."
+  ],
+  [
+   670.6,
+   "Sŵn tywellwch, adfeurai ddau."
+  ],
+  [
+   678.44,
+   "Mae'r ysgol fechan yn chyfeillion."
+  ],
+  [
+   684.44,
+   "Teg ar ei bren yn deillio o'm ma' ma'r plant yn gadael am y drê ma'r"
+  ],
+  [
+   698.96,
+   "plant yn gadael am y drê ac mae nwyen yn hen ac mae lleuad yn wen ac mae rywbeth"
+  ],
+  [
+   713.88,
+   "o'i le yn y dre."
+  ],
+  [
+   719.16,
+   "Mae nwy yn y nen, ac mae lleuad yn wen, ac mae rywbeth o'i le yn y dre."
+  ],
+  [
+   773.88,
+   "Ma'r blant yn dod yn ôl i'r wlad, ma'r blant yn rhedeg nôl i'r wlad."
+  ],
+  [
+   785.88,
+   "Ac mae nhw yn y ne, ac mae'r lleuad yn wen, ac mae rywbeth o'i le yn y dref."
+  ],
+  [
+   800.28,
+   "Mae nwy yn y ne ac mae lleuad yn wen ac mae rywbeth rywbeth o'i le yn y dref."
+  ],
+  [
+   814.3,
+   "rup"
+  ],
+  [
+   815.9,
+   "en TR"
+  ],
+  [
+   830.28,
+   "Diolch yn fawr iawn i Nansi, ail yn Gastadlu, Eirgan, bleidwyddo."
+  ],
+  [
+   847.4,
+   "n en"
+  ],
+  [
+   852.28,
+   "Mientras eirgan acomoda' la gitara, le'n ni'n gofyn i Lisa Hughes, Alejandro"
   ],
   [
    858.7,
-   "mientras acomoda la guitarra le vamos"
+   "C mientras acomoda la guitarra le vamos"
   ],
   [
    862.8,
    "a pedir"
+  ],
+  [
+   865.2,
+   "Jones, Andres Evans, y Zoraja Griffiths, por favor, i fynd i'r senario."
   ],
   [
    869.6,
@@ -390,6 +478,38 @@
   [
    911.0,
    "entonces er"
+  ],
+  [
+   963.98,
+   "Yn su o'i fiwsig ar ei hynt."
+  ],
+  [
+   971.86,
+   "Breuddwyd diwrnodd am wlad dros y llu."
+  ],
+  [
+   975.82,
+   "Rhyw ynys fechan ond y ti a fi."
+  ],
+  [
+   982.66,
+   "Popeth hardd o'm hamgylch sy'n ffug."
+  ],
+  [
+   993.98,
+   "Yn gwneud i'n feddwl yn nos a dydd, amdanat ti fy machgen hardd, yr wyt fel blodyn yn yr ardd."
+  ],
+  [
+   1005.58,
+   "La la la la, la la la la la, breuddwyd yma fel mwla dros y llu, ryw ynys fechan ond y ti a fi."
+  ],
+  [
+   1019.98,
+   "La la la la, la la la la la, breuddwydio ma' fa'm mwla dros y llu, ryw ynys fechan ond y ti a, ynys fechan ond y ti a, ynys fechan ond y ti, ti a fi."
+  ],
+  [
+   1049.98,
+   "Bien, mientas se pe- prepara Lisa, te invito, tengo una invitacion para"
   ],
   [
    1061.6,
@@ -457,15 +577,15 @@
   ],
   [
    1110.4,
-   "minutos la Asociación escuela galesa de"
+   "minutos la asociación escuela galesa de"
   ],
   [
    1113.1,
-   "Trevelin es colec Saluda a la comisión"
+   "trevelin es colec Saluda a la comisión"
   ],
   [
    1115.8,
-   "del Eisteddfod del Chubut deseándoles que el"
+   "del Eisteddfod del chubut deseándoles que el"
   ],
   [
    1118.4,
@@ -501,7 +621,67 @@
   ],
   [
    1139.4,
-   "de Trevelin fuerte aplauso para la gente"
+   "de trevel fuerte aplauso para la gente"
+  ],
+  [
+   1157.6,
+   "deum Lis"
+  ],
+  [
+   1157.84,
+   "Felly, Lisa."
+  ],
+  [
+   1187.84,
+   "Dwi'n ama bod diwrnod ydwn i fydd yn byd."
+  ],
+  [
+   1201.84,
+   "Mae gofid yn fy mywyd a'n calon yn fy mhen."
+  ],
+  [
+   1215.84,
+   "Colli cyfle, colli rynaid, i ti a'th galw'n brin."
+  ],
+  [
+   1229.84,
+   "Bond pam, pam nag a'i weld o'n glir, fel lenaid llud, pe bod yn gaeth o hyd i'r byd a'i boen."
+  ],
+  [
+   1257.84,
+   "Ond mae'r ysbryd yn wan a'r galw'n fach yn torri o ddwedi a troi i ffwrdd."
+  ],
+  [
+   1269.84,
+   "Dim llonydd, dim amser, mae'r gorwyd yn fy mhen."
+  ],
+  [
+   1291.52,
+   "Rhaid a chyf dy hunan, daw'r poen dod nyth i ben."
+  ],
+  [
+   1304.88,
+   "A weithiau dwn siwt brwng dawel, dyw gobaith ddim yn pell."
+  ],
+  [
+   1319.04,
+   "A wedyn dal llais bach arall am cloi nôl yn fy mhell."
+  ],
+  [
+   1331.32,
+   "Ond pam, pam nag o'i weld yn glir, fel lenaid rhyd, heb fod yn gaeth o hyd i'r byd a'i bod."
+  ],
+  [
+   1358.3,
+   "Ond mae'r ysbryd yn wan a'r galw'n fach yn torri oedd wedi yn troi. Ond pam, pam nag a'i ward yn glir fel enaid rhydd, heb fod yn gaeth o hyd i'r byd?"
+  ],
+  [
+   1388.3,
+   "I gael ei boen, ond mae'r ysbryd yn wan, yn galw'n fach, yn troi o weddi, yn troi i ffwrdd, i ffwrdd, yn troi i ffwrdd."
+  ],
+  [
+   1423.8,
+   "Waw, be' trabajo le toca'r juriadur nawr, achos ma' Alejandro yn dod o ben Elisa, ma' Alejandro yn dod."
   ],
   [
    1445.8,
@@ -520,6 +700,10 @@
    "Alejandro Aaron Lisa"
   ],
   [
+   1453.8,
+   "Ar ôl Lisa, Alejandro Sons yn mynd i gastadlu, mientras Rhiannon sy'n agomodda. Dwi'n mynd i darllen gyfellion gan Cymru, llongyfarchiadau a dymunau gorau ar gyfer y Eisteddfod dwy fil a dau ddeg tri, bod llwyddiant Delyth, Camwy, Meleri, gennau'n holl teulu elfi Macdonald o Nghemru."
+  ],
+  [
    1460.8,
    "Alejandro"
   ],
@@ -534,6 +718,12 @@
  ],
  "fuentes": [
   [
+   "cy"
+  ],
+  [
+   "yt_es"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -730,6 +920,15 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -760,6 +959,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -772,21 +974,72 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -820,8 +1073,32 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -907,8 +1184,50 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -919,6 +1238,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -932,8 +1254,8 @@
  ],
  "ventanas": {
   "total": 25,
-  "modelo": 25,
-  "reglas": 0,
+  "modelo": 22,
+  "reglas": 3,
   "vacias": 0
  }
 }

@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Y botwm de la esquina de casa, cuando salgo a barrer la vereda, me se acerca el canalla y me dice"
+  ],
+  [
    18.0,
    "el botón de la esquina de casa cuando"
   ],
@@ -22,6 +26,10 @@
   [
    32.5,
    "pipistrela tengo un cozo al mercado que"
+  ],
+  [
+   35.9,
+   "me mira es un Tano engrupido de CR yo yo"
   ],
   [
    41.4,
@@ -133,6 +141,12 @@
   ]
  ],
  "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],

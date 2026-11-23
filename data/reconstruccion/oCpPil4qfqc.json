@@ -4,8 +4,12 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "El arpa de Irma Hughes de Jones. Rima siete de Gustavo Adolfo Bécquer."
+  ],
+  [
    9.1,
-   "El arpa de Irma Hughes de Jones Rima VII"
+   "El arpa de Irma Hughes de Jones, Rima VII"
   ],
   [
    13.6,
@@ -29,7 +33,7 @@
   ],
   [
    30.2,
-   "llegan Cerca o lejos melodías"
+   "llegan cerca o lejos melodías"
   ],
   [
    35.1,
@@ -80,6 +84,10 @@
    "una muchacha"
   ],
   [
+   70.6,
+   "Brasil es manos por las tensas cuerdas"
+  ],
+  [
    73.9,
    "hace tiempo tenían el arpa las voces que"
   ],
@@ -105,6 +113,12 @@
   ]
  ],
  "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],

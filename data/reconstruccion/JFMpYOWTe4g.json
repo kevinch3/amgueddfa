@@ -4,8 +4,12 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Sueño alfarero de Carlos Dante Ferrari, undio las manos en el barro con ademán seguro y demorado."
+  ],
+  [
    12.4,
-   "sueño alfarero de Carlos Dante Ferrari"
+   "Sueño alfarero de Carlos Dante Ferrari"
   ],
   [
    21.2,
@@ -62,6 +66,10 @@
   [
    78.3,
    "vino luego el paciente laboreo de unir"
+  ],
+  [
+   83.2,
+   "en la más hijo mientras"
   ],
   [
    86.1,
@@ -205,10 +213,16 @@
   ],
   [
    235.7,
-   "Sueño El alfarero"
+   "Sueño alfarero"
   ]
  ],
  "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],

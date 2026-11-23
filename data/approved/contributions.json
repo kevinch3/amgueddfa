@@ -5219,6 +5219,19 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "9d09f740-e949-491e-a7ec-969444069a09",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 1886,
+    "item_id": "74ba4c04b85f",
+    "payload": {
+      "year": 1886
+    },
+    "created_at": "2026-11-23T16:16:53.0288+00:00",
+    "reviewed_at": "2026-11-23T16:16:53.0288+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "9d196d22-8c99-438a-9d1a-1d4321a2cec6",
     "type": "tag",
     "festival": "chubut",

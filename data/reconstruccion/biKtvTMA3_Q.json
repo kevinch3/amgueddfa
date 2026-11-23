@@ -17,27 +17,75 @@
   ],
   [
    52.88,
-   "Mawr yn ei gwisgo'n natur ei dyn, mawr yn ei marw ar ei galafaria, mawr yn ei maeddi a'i hun."
+   "Mawr yn gwisgo natur dyn,"
+  ],
+  [
+   52.9,
+   "Mawr oedd Crist yn nhragwyddoldeb,"
+  ],
+  [
+   60.4,
+   "Mawr yn marw ar Galfaria,"
+  ],
+  [
+   67.9,
+   "Mawr yn maeddu angau'i hun;"
+  ],
+  [
+   76.5,
+   "Hynod fawr yw yn awr,"
   ],
   [
    82.88,
-   "efo dau ar e lawr. Mawr oedd Iesu yn yr arefaeth, mawr yn y cyfamodd e, mawr yn meddwl yma chalefaria, mawr yn dod i'r elaf."
+   "Brenin nef a daear lawr."
+  ],
+  [
+   87.9,
+   "Mawr oedd Iesu yn yr arfaeth,"
+  ],
+  [
+   94.5,
+   "Mawr yn y cyfamod hedd,"
+  ],
+  [
+   100.4,
+   "Mawr ym Methlem a Chalfaria,"
+  ],
+  [
+   107.0,
+   "Mawr yn dod i'r lan o'r bedd;"
   ],
   [
    112.88,
-   "Mawr iawn y bydd, heb'r rhydd o ddydd, pan addad y gudd i'r pethau gyd."
+   "Mawr iawn fydd ef ryw ddydd"
+  ],
+  [
+   121.2,
+   "Pan ddatguddir pethau cudd."
   ],
   [
    130.88,
-   "Mawr oedd Iesu yn ei berson, mawr fel y Duw, a mawr fel y dyn."
+   "Mawr yw Iesu yn ei Berson,"
+  ],
+  [
+   138.3,
+   "Mawr fel Duw, a mawr fel dyn,"
   ],
   [
    144.88,
-   "Mawr oedd ei decwch, a'i haddegarwch, gwin ag rytoc, teg ei lun."
+   "Mawr ei degwch a'i hawddgarwch,"
+  ],
+  [
+   151.9,
+   "Gwyn a gwridog, teg ei lun;"
   ],
   [
    158.88,
-   "Mawr yw ef, hyn yn ef, a hara iawn yw'r seddegau darn y gref."
+   "Mawr yw ef yn y nef"
+  ],
+  [
+   160.7,
+   "Ar ei orsedd gadarn, gref."
   ]
  ],
  "fuentes": [
@@ -51,23 +99,70 @@
    "cy"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ]
+ ],
+ "letras": [
+  {
+   "desde": 47,
+   "hasta": 178,
+   "titulo": "Mawr oedd Crist yn nhragwyddoldeb",
+   "autor": "Titus Lewis (1773-1811) y Casgliad D. Jones 1810 (atribuido también a Thomas Lewis)",
+   "idioma": "cy",
+   "derechos": "Texto de dominio público",
+   "fuente": "https://gobaith.cymru/angelfire/Mawr%20oedd%20Crist%20yn%20nhragwyddoldeb.html, Emynau a Thonau (gobaith.cymru), estrofas 1-3, obtenido por el archivo"
+  }
  ],
  "ventanas": {
   "total": 4,

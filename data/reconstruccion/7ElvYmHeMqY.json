@@ -4,19 +4,51 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
-   46.0,
-   "Caro mio ben, senesavit elangwys ei gôr."
+   20.0,
+   "Caro mio ben, credimi almen,"
+  ],
+  [
+   62.9,
+   "senza di te languisce il cor."
+  ],
+  [
+   105.9,
+   "Il tuo fedel sospira ognor."
+  ],
+  [
+   148.8,
+   "Cessa, crudel, tanto rigor!"
   ]
  ],
  "fuentes": [
   [
-   "cy"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ]
+ ],
+ "letras": [
+  {
+   "desde": 20,
+   "hasta": 187,
+   "titulo": "Caro mio ben",
+   "autor": "Giuseppe Giordani (o Tommaso Giordani), c. 1783; texto anónimo",
+   "idioma": "it",
+   "derechos": "Texto de dominio público",
+   "fuente": "https://www.cpdl.org/wiki/index.php/Caro_mio_ben_(Giuseppe_Giordani), texto original de ChoralWiki (CPDL #17672; Anthology of Italian Song, libro 2, n.º 29, 1890), obtenido por el archivo"
+  }
  ],
  "ventanas": {
   "total": 4,
-  "modelo": 1,
+  "modelo": 3,
   "reglas": 0,
-  "vacias": 3
+  "vacias": 1
  }
 }

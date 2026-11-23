@@ -9,19 +9,99 @@
   ],
   [
    28.0,
-   "Serch hwnna wnaeth ddansodd cawer mhen ag y ddawn, ne' rhodd neb yn ymddangos neu dŵr yn fy mawn, mond hwn enw raddw sant a'i ddiwedd e."
+   "Molwn enw'r Arglwydd,"
+  ],
+  [
+   28.0,
+   "Brenin mawr y nef;"
+  ],
+  [
+   31.4,
+   "Crëwr a Chynhaliwr"
+  ],
+  [
+   34.7,
+   "Bywyd ydyw ef:"
+  ],
+  [
+   38.1,
+   "Llechwn yn ei gysgod"
+  ],
+  [
+   41.5,
+   "Pa beth bynnag ddaw,"
+  ],
+  [
+   44.9,
+   "Nerthoedd nef a daear"
+  ],
+  [
+   48.2,
+   "Geidw yn ei law."
+  ],
+  [
+   50.9,
+   "Molwn enw'r Arglwydd,"
+  ],
+  [
+   53.6,
+   "Sanctaidd yw efe,"
   ],
   [
    57.0,
-   "Lle wyrch ei gwynebid I'w goleu ddeud, Enryneb ei ars-gwyd I sancteiddio dyn, Nes fod aur yn y man, Fel aneb ei hun."
+   "Llewyrch ei wynepryd"
+  ],
+  [
+   62.6,
+   "Yw goleuni'r ne';"
+  ],
+  [
+   67.3,
+   "Enfyn ef ei Ysbryd"
+  ],
+  [
+   72.9,
+   "I sancteiddio dyn,"
+  ],
+  [
+   77.6,
+   "Nes bod daear gyfan"
+  ],
+  [
+   82.3,
+   "Fel y nef ei hun."
   ],
   [
    87.0,
-   "Nôl nw'n enw'r ardd, ffurf ddim ei ras, teuluw ei grug arren, cyrraedd y ddau ar y mas."
+   "Molwn enw'r Arglwydd,"
+  ],
+  [
+   90.8,
+   "Rhyfedd yw ei ras;"
+  ],
+  [
+   95.5,
+   "Lleinw ei drugaredd"
+  ],
+  [
+   100.2,
+   "Gyrrau'r ddaear las:"
   ],
   [
    104.0,
-   "Pan fyrhau hwnt adref, draw ti hwnt i'r llyn, o'r lŵn yn ôl oedd llynydde oedd y wên."
+   "Pan gyrhaeddwn adref"
+  ],
+  [
+   105.1,
+   "Draw tu hwnt i'r llen,"
+  ],
+  [
+   106.0,
+   "Molwn enw'r Arglwydd"
+  ],
+  [
+   106.9,
+   "Yn y nefoedd wen."
   ],
   [
    134.0,
@@ -33,20 +113,91 @@
    "cy"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ],
   [
    "cy"
   ]
+ ],
+ "letras": [
+  {
+   "desde": 10,
+   "hasta": 129,
+   "titulo": "Molwn enw'r Arglwydd",
+   "autor": "John James Williams (1869-1954)",
+   "idioma": "cy",
+   "derechos": "Texto de dominio público",
+   "fuente": "https://gobaith.cymru/angelfire/M%28molwn%29.html, Emynau a Thonau (gobaith.cymru; Y Caniedydd Cynulleidfaol Newydd 1921), estrofas 1, 2 y 4, obtenido por el archivo"
+  }
  ],
  "ventanas": {
   "total": 3,

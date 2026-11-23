@@ -4,19 +4,93 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
-   90.0,
-   "Ni ddaeth yr anwyddedd, ni ddaeth yr anwyddedd."
+   0.0,
+   "Ciego quisiera haber sido,"
+  ],
+  [
+   12.7,
+   "mi vida, para no verte,"
+  ],
+  [
+   24.0,
+   "porque de verte me nace"
+  ],
+  [
+   35.2,
+   "la inclinación al quererte."
+  ],
+  [
+   47.9,
+   "La inclinación al quererte"
+  ],
+  [
+   60.6,
+   "me tiene fuera de sí;"
+  ],
+  [
+   70.5,
+   "quisiera saber de cierto"
+  ],
+  [
+   81.8,
+   "si has nacido para mí."
+  ],
+  [
+   93.0,
+   "Ciego quisiera haber sido,"
+  ],
+  [
+   105.7,
+   "mi vida, para no verte."
   ]
  ],
  "fuentes": [
   [
-   "cy"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ]
  ],
+ "letras": [
+  {
+   "desde": 0,
+   "hasta": 117,
+   "titulo": "Ciego quisiera haber sido",
+   "autor": "Carlos Guastavino – Eduardo Falú",
+   "idioma": "es",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Canciones Populares Argentinas (1960), aportado por Kevin Roberts"
+  }
+ ],
  "ventanas": {
-  "total": 2,
+  "total": 3,
   "modelo": 2,
   "reglas": 0,
-  "vacias": 0
+  "vacias": 1
  }
 }

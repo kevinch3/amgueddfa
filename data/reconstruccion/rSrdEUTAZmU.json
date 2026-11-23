@@ -5,46 +5,162 @@
  "seg": [
   [
    0.0,
-   "Caed baban bach mewn presep, dros om ni, dros om ni. Ag o lai Duw yn wyneb, dros om ni."
+   "Caed baban bach mewn preseb"
+  ],
+  [
+   9.8,
+   "Drosom ni,"
+  ],
+  [
+   14.0,
+   "A golau Duw'n ei ŵyneb"
+  ],
+  [
+   23.8,
+   "Drosom ni:"
   ],
   [
    28.0,
-   "Mae gwyrddiau Galilea ar y syched yn Samaria ar y dagrau yn Methania drosom ni, drosom ni. Mae'r llawf yn torri'r bara drosom ni."
+   "Mae gwyrthiau Galilea,"
+  ],
+  [
+   33.5,
+   "A'r syched yn Samaria,"
+  ],
+  [
+   39.8,
+   "A'r dagrau ym Methania"
+  ],
+  [
+   46.2,
+   "Drosom ni;"
+  ],
+  [
+   48.9,
+   "Mae'r llaw fu'n torri'r bara"
+  ],
+  [
+   55.3,
+   "Drosom ni."
   ],
   [
    58.0,
-   "Mae'r geiriau pur lefarodd dros omni, dros omni. Mae'r dirmiau gaddi oedd efodd dros omni."
+   "Mae'r geiriau pur lefarodd"
+  ],
+  [
+   66.8,
+   "Drosom ni,"
+  ],
+  [
+   70.5,
+   "Mae'r dirmyg a ddioddefodd"
+  ],
+  [
+   79.2,
+   "Drosom ni:"
   ],
   [
    83.0,
-   "Mae gwerth y cyfiawn hwnnw, ar y groes yr hoelion carw, ar y chwban chwerw, chwerw drosom ni, drosom ni."
+   "Mae gwerth y Cyfiawn hwnnw,"
+  ],
+  [
+   88.5,
+   "A'r groes a'r hoelion garw,"
+  ],
+  [
+   95.1,
+   "A'r cwpan chwerw, chwerw"
+  ],
+  [
+   99.5,
+   "Drosom ni;"
   ],
   [
    102.8,
-   "Mae y gwaed yr ŵyn fi farw dros ofn ni."
+   "Mae gwaed yr Oen fu farw"
+  ],
+  [
+   105.5,
+   "Drosom ni."
   ]
  ],
  "fuentes": [
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ]
  ],
+ "letras": [
+  {
+   "desde": 0,
+   "hasta": 112,
+   "titulo": "Caed baban bach mewn preseb (Drosom ni)",
+   "autor": "Howell Elvet Lewis, Elfed (1860-1953)",
+   "idioma": "cy",
+   "derechos": "Texto de dominio público",
+   "fuente": "https://gobaith.cymru/angelfire/Caed%20baban%20mewn%20preseb.html, Emynau a Thonau (gobaith.cymru; Y Caniedydd Cynulleidfaol 1895), estrofas 1-2, obtenido por el archivo"
+  }
+ ],
  "ventanas": {
-  "total": 3,
-  "modelo": 0,
-  "reglas": 2,
-  "vacias": 1
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
  }
 }

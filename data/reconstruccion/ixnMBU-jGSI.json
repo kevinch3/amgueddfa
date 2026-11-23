@@ -5,67 +5,239 @@
  "seg": [
   [
    0.0,
-   "Os hoffech wybod sut mae dyn fel fi yn byw, mi ddysgais gan fy nhadwedd gyntaf dynol ryw."
+   "Os hoffech wybod sut"
+  ],
+  [
+   6.0,
+   "Mae dyn fel fi yn byw,"
+  ],
+  [
+   12.0,
+   "Mi ddysgais gan fy nhad"
+  ],
+  [
+   18.0,
+   "Grefft gyntaf dynol ryw;"
   ],
   [
    24.0,
-   "Mi ddysgais wneud y gors yn wyrddlo ffrwythlon i, i godi deu ar las a rwy'n eban i aaldir. Rwy'n y gorwedd efo'r hwyr ac yn codi efo'r wawr. Rwy'n gorwedd efo'r hwyr ac yn codi efo'r wawr. I ddilyn yr og ar ochr y glog, a chanlyn yn aros."
+   "Mi ddysgais wneyd y gors"
+  ],
+  [
+   26.8,
+   "Yn weirglodd ffrwythlon ir,"
+  ],
+  [
+   29.5,
+   "I godi daear las"
+  ],
+  [
+   31.8,
+   "Ar wyneb anial dir."
+  ],
+  [
+   34.6,
+   "'Rwy'n gorwedd efo'r hwyr,"
+  ],
+  [
+   37.4,
+   "Ac yn codi efo'r wawr,"
+  ],
+  [
+   40.6,
+   "'Rwy'n gorwedd efo'r hwyr,"
+  ],
+  [
+   43.4,
+   "Ac yn codi efo'r wawr,"
+  ],
+  [
+   46.6,
+   "I ddilyn yr ôg, ar ochr y Glôg,"
+  ],
+  [
+   50.8,
+   "A chanlyn yr arad goch"
   ],
   [
    54.0,
-   "a goch ar ben y mynydd mawr."
+   "Ar ben y mynydd mawr."
   ],
   [
    62.0,
-   "Cyn poddio ar eich byd pa grefftwyr bynnag fowch,"
+   "Cyn boddio ar eich byd,"
+  ],
+  [
+   66.0,
+   "Pa grefftwyr bynnag foch,"
   ],
   [
    70.0,
-   "chwyddolech ddod am dro rhwng Gyrn yr Araf Goch,"
+   "Chwi ddylech ddod am dro"
+  ],
+  [
+   74.4,
+   "Rhwng cyrn yr arad goch;"
   ],
   [
    78.0,
-   "A pheidiwch meddwl fod pob pleser a mwynhad yn aros bydd heb fod i bryniau ucha'r wlad."
+   "A pheidiwch meddwl fod"
+  ],
+  [
+   80.5,
+   "Pob pleser a mwynhad"
+  ],
+  [
+   83.5,
+   "Yn aros byth heb ddod"
+  ],
+  [
+   86.5,
+   "I fryniau ucha'r wlad."
   ],
   [
    89.5,
-   "Rwy'n gorwedd efo'r hwyr ac yn codi efo'r wawr. Rwy'n gorwedd efo'r hwyr ac yn codi efo'r wawr. I dilyn yr ogar ochr y glog, a chanlyn yr ara goch ar y ben."
+   "'Rwy'n gorwedd efo'r hwyr,"
+  ],
+  [
+   92.3,
+   "Ac yn codi efo'r wawr,"
+  ],
+  [
+   95.6,
+   "'Rwy'n gorwedd efo'r hwyr,"
+  ],
+  [
+   98.4,
+   "Ac yn codi efo'r wawr,"
+  ],
+  [
+   101.7,
+   "I ddilyn yr ôg, ar ochr y Glôg,"
+  ],
+  [
+   105.9,
+   "A chanlyn yr arad goch"
   ],
   [
    108.0,
    "Ym mynydd mawr."
+  ],
+  [
+   109.2,
+   "Ar ben y mynydd mawr."
   ]
  ],
  "fuentes": [
   [
-   "cy"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ],
   [
    "cy"
   ],
   [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
+   "letra"
   ]
+ ],
+ "letras": [
+  {
+   "desde": 0,
+   "hasta": 125,
+   "titulo": "Cân yr Arad Goch",
+   "autor": "Idris Lewis; geiriau Ceiriog (o «Alun Mabon»)",
+   "idioma": "cy",
+   "derechos": "Texto de dominio público",
+   "fuente": "https://www.gutenberg.org/ebooks/3500 (Ceiriog, gol. Owen M. Edwards, Cyfres y Fil, 1902; «Alun Mabon», III), obtenido por el archivo"
+  }
  ],
  "ventanas": {
   "total": 3,
-  "modelo": 2,
+  "modelo": 3,
   "reglas": 0,
-  "vacias": 1
+  "vacias": 0
  }
 }

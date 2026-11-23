@@ -24,48 +24,104 @@
    "Cerro, cerro de mi Patagonia, no sabes, Chaltén, cuánto te hago a mi bien, y cuánto se desploma la nevada, y canta los vientos en tus fiestas."
   ],
   [
-   328.42,
-   "Por ver si mató de las carnaval."
+   328.4,
+   "Vengo desde el olvido,"
   ],
   [
-   340.42,
-   "Bwrw fersi madw penas gair nabod iawn."
+   328.4,
+   "toro serrano,"
+  ],
+  [
+   328.42,
+   "pa' ver si mato penas"
+  ],
+  [
+   339.3,
+   "carnavaleando."
+  ],
+  [
+   347.1,
+   "Me anda faltando plata,"
+  ],
+  [
+   359.6,
+   "chicha y coraje"
+  ],
+  [
+   369.0,
+   "y un empujón del diablo"
   ],
   [
    381.44,
-   "¡A enamorarte, carnavales!"
+   "pa' enamorarte."
+  ],
+  [
+   389.4,
+   "Carnavales carperos:"
   ],
   [
    398.6,
-   "Los caballos atados vuelven a la luna, al galope tendido."
+   "la copla y la albahaca"
   ],
   [
-   422.26,
-   "Yr oes caballau bantadau, yn mynd i'r lun, ar galopau tendryd."
+   413.6,
+   "llorando en el vino."
+  ],
+  [
+   425.3,
+   "Los caballos atados"
+  ],
+  [
+   436.9,
+   "vuelven a la luna,"
+  ],
+  [
+   446.9,
+   "a galope tendido."
   ],
   [
    458.6,
-   "Para trantear el alma conmigo ha dicho"
+   "Quiero bailar la zamba"
+  ],
+  [
+   465.6,
+   "los dos solitos,"
   ],
   [
    470.6,
-   "Para trampear el alma conmigo ha dicho"
+   "para trampearte el alma"
   ],
   [
    482.6,
    "Un marido blanco, un sereno."
   ],
   [
+   486.0,
+   "con mi gualicho."
+  ],
+  [
    495.6,
-   "Mi corazón los sigue, de pueblo en pueblo, mi corazón los sigue, de pueblo en pueblo."
+   "Tu pañuelito blanco"
+  ],
+  [
+   509.3,
+   "busca consuelo;"
+  ],
+  [
+   519.0,
+   "mi corazón lo sigue,"
   ],
   [
    528.9,
    "Los caballos atados vuelven a la luna al galope tendido."
   ],
   [
+   532.7,
+   "de vuelo en vuelo."
+  ],
+  [
    540.36,
-   "Los caballos andados vuelven a la luna el galope encendido"
+   "Los caballos andados Vuelven a la luna el galope encendido"
   ]
  ],
  "fuentes": [
@@ -85,38 +141,91 @@
    "whisper_es"
   ],
   [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
    "whisper_es"
   ],
   [
-   "cy"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ],
   [
    "whisper_es"
   ],
   [
-   "whisper_es"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
+   "letra"
   ],
   [
    "whisper_es"
   ]
+ ],
+ "letras": [
+  {
+   "desde": 310,
+   "hasta": 560,
+   "titulo": "Zamba del carnaval",
+   "autor": "Cuchi Leguizamón, versión coral Pablo D. Roberto",
+   "idioma": "es",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
+  }
  ],
  "ventanas": {
   "total": 10,

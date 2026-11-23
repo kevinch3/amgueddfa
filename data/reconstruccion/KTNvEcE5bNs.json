@@ -5,6 +5,10 @@
  "seg": [
   [
    0.0,
+   "Uruguay"
+  ],
+  [
+   30.0,
    "Uruguay, misionero y trepador,"
   ],
   [
@@ -110,6 +114,9 @@
  ],
  "fuentes": [
   [
+   "whisper_es"
+  ],
+  [
    "letra"
   ],
   [
@@ -190,8 +197,8 @@
  ],
  "letras": [
   {
-   "desde": 0,
-   "hasta": 244,
+   "desde": 14,
+   "hasta": 254,
    "titulo": "Canto al Río Uruguay",
    "autor": "Ramón Ayala",
    "idioma": "es",

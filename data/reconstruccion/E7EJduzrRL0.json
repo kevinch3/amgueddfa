@@ -4,75 +4,156 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Atentamente a Billy"
+  ],
+  [
    30.0,
    "Aros mae'r mynyddau mawr,"
   ],
   [
    38.0,
-   "Ffrae o drostynt mae y gwydyd."
+   "Rhuo trostynt mae y gwynt;"
   ],
   [
    68.0,
-   "Clywir yto gyd-ar-wawr, gan bu geiriau megis gyd."
+   "Clywir eto gyda'r wawr,"
+  ],
+  [
+   74.0,
+   "Gân bugeiliaid megis cynt."
   ],
   [
    80.0,
-   "Eto, tyfar y llygad y dydd, o gylchgraidd y graig, ar y brin."
+   "Eto tyfa'r llygad dydd,"
+  ],
+  [
+   86.0,
+   "Ogylch traed y graig a'r bryn;"
   ],
   [
    92.0,
-   "Ond bu geiriaid newydd, sydd ar yr hen fynadd, oedd hi."
+   "Ond bugeiliaid newydd sydd"
+  ],
+  [
+   107.0,
+   "Ar yr hen fynyddoedd hyn."
   ],
   [
    122.0,
-   "O'r arferion Cymru i gyd, newydd daeth o rod i rod."
+   "Ar arferion Cymru gynt,"
+  ],
+  [
+   132.5,
+   "Newid ddaeth o rod i rod;"
   ],
   [
    143.0,
-   "Mae gynhedlaeth wedi mynd, a chenhedlaeth wedi dod, wedi oes a meslog y hir, a Lyn Mabon mwyn i Duw."
+   "Mae cenedlaeth wedi mynd,"
+  ],
+  [
+   150.5,
+   "A chenedlaeth wedi dod."
+  ],
+  [
+   158.0,
+   "Wedi oes dymestlog hir,"
+  ],
+  [
+   165.5,
+   "Alun Mabon mwy nid yw;"
   ],
   [
    173.0,
-   "Ond mae'r hen iaith yn y tir, a'r alawon hen yn fyw."
+   "Ond mae'r heniaith yn y tir,"
+  ],
+  [
+   181.5,
+   "A'r alawon hen yn fyw."
   ],
   [
    190.0,
-   "Ond mae'r hen iaith yn y tir, a'r alawon hen yn fyw."
+   "Ond mae'r heniaith yn y tir,"
+  ],
+  [
+   192.0,
+   "A'r alawon hen yn fyw."
   ]
  ],
  "fuentes": [
   [
-   "cy"
+   "whisper_es"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ]
  ],
+ "letras": [
+  {
+   "desde": 25,
+   "hasta": 205,
+   "titulo": "Aros mae'r Mynyddau Mawr",
+   "autor": "Meirion Williams; geiriau Ceiriog (o «Alun Mabon»)",
+   "idioma": "cy",
+   "derechos": "Texto de dominio público",
+   "fuente": "https://www.gutenberg.org/ebooks/3500 (Ceiriog, gol. Owen M. Edwards, Cyfres y Fil, 1902; «Alun Mabon», XXVI), obtenido por el archivo"
+  }
+ ],
  "ventanas": {
-  "total": 5,
+  "total": 4,
   "modelo": 4,
   "reglas": 0,
-  "vacias": 1
+  "vacias": 0
  }
 }

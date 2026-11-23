@@ -152,12 +152,16 @@
    "Kiñe- epú- kula: son uno, dos y tres."
   ],
   [
-   369.8,
+   360.9,
    "Meli- Kechu- Kayu: son cuatro, cinco, seis."
   ],
   [
-   380.2,
+   363.1,
    "Regle- pura- ailla: siete, ocho, nueve."
+  ],
+  [
+   365.4,
+   "Y para terminar, diez pehuenes nacerán."
   ]
  ],
  "fuentes": [
@@ -277,12 +281,15 @@
   ],
   [
    "letra"
+  ],
+  [
+   "letra"
   ]
  ],
  "letras": [
   {
    "desde": 70,
-   "hasta": 407,
+   "hasta": 385.5,
    "titulo": "El abuelo y el pehuén",
    "autor": "Rubén Patagonia, Jeremías Chauque y Fabián Vejar; versión coral de Sergio Rodrigo Seballos",
    "idioma": "es",

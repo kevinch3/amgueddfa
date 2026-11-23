@@ -6897,15 +6897,31 @@
   ],
   [
    36920.1,
-   "competencia principal para coro mixto, mínimo 20 integrantes."
+   "Competencia Principal para coro mixto, mínimo 20 integrantes."
   ],
   [
    36926.1,
-   "una obra impuesta y un arreglo de música popular argentina a capella."
+   "Una obra impuesta y un arreglo de música popular argentina a capella."
   ],
   [
    36935.1,
    "En esta oportunidad, único participante, Locus Amoenus."
+  ],
+  [
+   37014.0,
+   "O bone Jesu, miserere nobis,"
+  ],
+  [
+   37035.3,
+   "quia tu creasti nos,"
+  ],
+  [
+   37045.0,
+   "tu redemisti nos sanguine"
+  ],
+  [
+   37062.4,
+   "tuo pretiosissimo."
   ],
   [
    37282.9,
@@ -12612,6 +12628,18 @@
    "whisper_es"
   ],
   [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
    "whisper_es"
   ],
   [
@@ -13005,10 +13033,21 @@
    "whisper_es"
   ]
  ],
+ "letras": [
+  {
+   "desde": 37014,
+   "hasta": 37074,
+   "titulo": "O bone Jesu – Lux Aeterna",
+   "autor": "Fernando Moruja; texto litúrgico latino (solo la primera parte, «O bone Jesu»)",
+   "idioma": "la",
+   "derechos": "Texto de dominio público",
+   "fuente": "https://www.cpdl.org/wiki/index.php/O_bone_Jesu,_miserere_nobis, texto latino en ChoralWiki (CPDL), solo la primera parte (falta la segunda, «Lux aeterna», cuyo texto exacto en esta obra no se pudo confirmar), obtenido por el archivo"
+  }
+ ],
  "ventanas": {
   "total": 675,
-  "modelo": 545,
+  "modelo": 546,
   "reglas": 15,
-  "vacias": 115
+  "vacias": 114
  }
 }

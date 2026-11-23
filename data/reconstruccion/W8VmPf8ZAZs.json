@@ -4,12 +4,32 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
-   31.84,
-   "Nid yw'r ŵn i'n eri gŵt, ni'n eri gŵt, ni'n eri gŵt."
+   0.0,
+   "Ave Maria, gratia plena, Dominus tecum;"
   ],
   [
-   87.34,
-   "Nw'm credu non amordis nos ef, nw'm credu non amordis nos ef."
+   25.8,
+   "benedicta tu in mulieribus,"
+  ],
+  [
+   45.6,
+   "et benedictus fructus ventris tui, Jesus."
+  ],
+  [
+   69.4,
+   "Sancta Maria, Mater Dei,"
+  ],
+  [
+   83.3,
+   "ora pro nobis peccatoribus,"
+  ],
+  [
+   103.2,
+   "nunc et in hora mortis nostrae."
+  ],
+  [
+   121.0,
+   "Amen."
   ],
   [
    357.34,
@@ -22,10 +42,25 @@
  ],
  "fuentes": [
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ],
   [
    "cy"
@@ -34,10 +69,21 @@
    "cy"
   ]
  ],
+ "letras": [
+  {
+   "desde": 0,
+   "hasta": 125,
+   "titulo": "Ave María",
+   "autor": "Heitor Villa-Lobos; texto: oración latina tradicional (Lucas 1, 28 y 42)",
+   "idioma": "la",
+   "derechos": "Texto de dominio público",
+   "fuente": "https://www.cpdl.org/wiki/index.php/Ave_Maria, oración católica tradicional en ChoralWiki (CPDL), obtenido por el archivo"
+  }
+ ],
  "ventanas": {
   "total": 9,
-  "modelo": 4,
+  "modelo": 5,
   "reglas": 0,
-  "vacias": 5
+  "vacias": 4
  }
 }

@@ -4,12 +4,16 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
-   11.6,
-   "hola"
+   27.2,
+   "Sebben, crudele, mi fai languir,"
+  ],
+  [
+   34.5,
+   "sempre fedele ti voglio amar."
   ],
   [
    42.7,
-   "y bien"
+   "Sebben, crudele, mi fai languir,"
   ],
   [
    58.0,
@@ -20,8 +24,24 @@
    "Gon y longaets a d'elmio serbyr, la toffiai'r eits a la toffiai'r eits a sa brosto'n ffarm. La toffiai'r eits a sa brosto'n ffarm."
   ],
   [
-   136.0,
-   "Sy'm yn crwdd yn y meffolia'n gweil, sy'n brethed yn y Tifol Ionw."
+   97.8,
+   "sempre fedele ti voglio amar."
+  ],
+  [
+   123.8,
+   "Sebben, crudele, mi fai languir,"
+  ],
+  [
+   133.3,
+   "sempre fedele ti voglio amar."
+  ],
+  [
+   143.9,
+   "Con la lunghezza del mio servir"
+  ],
+  [
+   153.5,
+   "la tua fierezza saprò stancar."
   ],
   [
    164.9,
@@ -30,23 +50,49 @@
  ],
  "fuentes": [
   [
-   "yt_es"
+   "letra"
   ],
   [
-   "yt_es"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "cy"
   ],
   [
    "cy"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ],
   [
    "yt_es"
   ]
+ ],
+ "letras": [
+  {
+   "desde": 20,
+   "hasta": 163,
+   "titulo": "Sebben, crudele",
+   "autor": "Antonio Caldara; texto anónimo (aria de La costanza in amor vince l'inganno, 1710)",
+   "idioma": "it",
+   "derechos": "Texto de dominio público",
+   "fuente": "https://www.cpdl.org/wiki/index.php/Sebben,_crudele_(Antonio_Caldara), texto original de ChoralWiki (CPDL #17510; Anthology of Italian Song, libro 1, n.º 12, 1885), obtenido por el archivo"
+  }
  ],
  "ventanas": {
   "total": 4,

@@ -521,15 +521,19 @@
   ],
   [
    3600.0,
-   "Fedele, siempre fedele, te voglio amor."
+   "Sebben, crudele, mi fai languir,"
   ],
   [
    3618.0,
-   "Sebben crudele, mi ffailan gwir, sempre fe dde le, ti fo liw amal."
+   "Se ben crw dde le, mi ffailan gwir, sempre fe dde le, ti fo liw amal."
   ],
   [
    3634.5,
-   "Sebben crudele mi ffaila'n gwir, sempre feddele ti fo' io a mar."
+   "Se ben crudele mi ffaila'n gwir, sempre feddele ti fo' io a mar."
+  ],
+  [
+   3647.9,
+   "sempre fedele ti voglio amar."
   ],
   [
    3652.0,
@@ -540,8 +544,20 @@
    "Sempre feddele, sempre feddele, ti fo' Ioana."
   ],
   [
+   3701.1,
+   "Sebben, crudele, mi fai languir,"
+  ],
+  [
    3748.98,
-   "Sebben crudele ti voglio amar"
+   "sempre fedele ti voglio amar."
+  ],
+  [
+   3750.4,
+   "Con la lunghezza del mio servir"
+  ],
+  [
+   3751.7,
+   "la tua fierezza saprò stancar."
   ],
   [
    3769.48,
@@ -4321,7 +4337,7 @@
    "whisper_es"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
    "cy"
@@ -4330,13 +4346,25 @@
    "cy"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
    "cy"
   ],
   [
-   "whisper_es"
+   "cy"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ],
   [
    "whisper_es"
@@ -6880,10 +6908,21 @@
    "whisper_es"
   ]
  ],
+ "letras": [
+  {
+   "desde": 3590,
+   "hasta": 3764,
+   "titulo": "Sebben, crudele",
+   "autor": "Antonio Caldara; texto anónimo (aria de La costanza in amor vince l'inganno, 1710)",
+   "idioma": "it",
+   "derechos": "Texto de dominio público",
+   "fuente": "https://www.cpdl.org/wiki/index.php/Sebben,_crudele_(Antonio_Caldara), texto original de ChoralWiki (CPDL #17510; Anthology of Italian Song, libro 1, n.º 12, 1885), obtenido por el archivo"
+  }
+ ],
  "ventanas": {
   "total": 374,
-  "modelo": 308,
-  "reglas": 5,
+  "modelo": 307,
+  "reglas": 6,
   "vacias": 61
  }
 }

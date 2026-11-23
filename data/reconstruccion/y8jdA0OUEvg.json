@@ -9,31 +9,71 @@
   ],
   [
    30.0,
-   "Y dda. Gwybod mai dy dad am un ai na dderbyn i ga'l. Gŵn nad oes i'n beddrod bychan heib ei"
+   "Tan y garreg las a'r blodau,"
+  ],
+  [
+   35.6,
+   "Cysga, berl dy fam;"
+  ],
+  [
+   39.1,
+   "Gwybod mae dy dad a minnau"
+  ],
+  [
+   44.7,
+   "Na dderbyni gam:"
+  ],
+  [
+   48.2,
+   "Gwn nad oes un beddrod bychan"
+  ],
+  [
+   53.1,
+   "Heb ei angel gwyn;"
   ],
   [
    56.56,
-   "Iawn i'r bryn, cwsg fy mhlentyn, a ma'r finnan, cwsg fy moron, wy win."
+   "Cwsg, fy mhlentyn, yma'th hunan-"
+  ],
+  [
+   75.7,
+   "Cwsg, Goronwy Wyn."
   ],
   [
    86.56,
-   "Darn y garreg lasgoronwy, casgabith yn hŵn, braid i'w dweud noslogoronwy,"
+   "Tan y garreg las, Goronwy,—"
+  ],
+  [
+   98.0,
+   "Cysga beth yn hwy;"
+  ],
+  [
+   105.1,
+   "Rhaid yw dweud \"Nos da,\" Goronwy,"
   ],
   [
    116.56,
-   "Mynd a thad o rŵn."
+   "Mynd a'th ado'r wy':"
   ],
   [
    124.56,
-   "Nid oes eisiau llawysiglo,"
+   "Nid oes eisiau llaw i'th siglo"
   ],
   [
    130.56,
-   "pan y dy newydd grêt."
+   "Yn dy newydd grud;"
   ],
   [
    137.56,
-   "Cwsg yn ei sgwennu'n gilydd eto, Cswsg, a gwi'n dyfu'n cwsg."
+   "Cwsg, nes gweld ein gilydd eto,"
+  ],
+  [
+   139.4,
+   "Cwsg, a gwyn dy fyd."
+  ],
+  [
+   140.5,
+   "Cwsg, Goronwy Wyn."
   ]
  ],
  "fuentes": [
@@ -41,26 +81,67 @@
    "cy"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ]
+ ],
+ "letras": [
+  {
+   "desde": 10,
+   "hasta": 209,
+   "titulo": "Sul y Blodau",
+   "autor": "Owen Williams; geiriau Eifion Wyn («Hwiangerdd Sul y Blodau»)",
+   "idioma": "cy",
+   "derechos": "Texto de dominio público",
+   "fuente": "https://cy.wikisource.org/wiki/Telynegion_Maes_a_M%C3%B4r/Hwiangerdd_Sul_y_Blodau (revid 32688), Eifion Wyn, Telynegion Maes a Môr (1906), obtenido por el archivo"
+  }
  ],
  "ventanas": {
   "total": 4,

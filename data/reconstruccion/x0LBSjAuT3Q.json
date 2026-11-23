@@ -5,48 +5,101 @@
  "seg": [
   [
    19.36,
-   "Que venía un rabo de nube, de nube Junto al regino en el cielo Y una gran ira que sube"
+   "Si me dijeran pide un deseo,"
+  ],
+  [
+   27.3,
+   "preferiría un rabo de nube,"
+  ],
+  [
+   35.1,
+   "un torbellino en el suelo"
+  ],
+  [
+   42.3,
+   "y una gran ira que sube."
   ],
   [
    49.36,
-   "Un amor de tristeza, un amor de tristeza, un amor ser humano, un amor ser humano, que en su amor siempre parezca nuestra esperanza."
+   "Un barredor de tristezas,"
   ],
   [
    71.84,
-   "Un barretor de tristeza, un aguacero en venganza, que cuando escape parezca nuestra esperanza."
+   "un aguacero en venganza"
   ],
   [
-   161.84,
-   "no arriesga nuestra esperanza."
+   111.6,
+   "que cuando escampe parezca"
+  ],
+  [
+   151.4,
+   "nuestra esperanza."
   ],
   [
    177.88,
-   "Un aguacero en venganza."
+   "Si me dijeran pide un deseo,"
+  ],
+  [
+   180.8,
+   "preferiría un rabo de nube,"
   ],
   [
    183.72,
-   "que cuando escape parezca nuestra esperanza."
+   "que se llevara lo feo"
+  ],
+  [
+   185.5,
+   "y nos dejara el querube."
   ]
  ],
  "fuentes": [
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ]
+ ],
+ "letras": [
+  {
+   "desde": 15,
+   "hasta": 200,
+   "titulo": "Rabo de nube",
+   "autor": "Silvio Rodríguez, arr. César A. Carrillo",
+   "idioma": "es",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
+  }
  ],
  "ventanas": {
   "total": 4,

@@ -6516,14 +6516,6 @@
    "¿Qué le habrán hecho mis manos?"
   ],
   [
-   21115.4,
-   "Perfume de naranjo en flor"
-  ],
-  [
-   21119.8,
-   "Promesas vanas de un amor"
-  ],
-  [
    21122.8,
    "¿Qué le habrán hecho"
   ],
@@ -6540,12 +6532,16 @@
    "Dolor de vieja arboleda,"
   ],
   [
-   21141.2,
-   "Que me ha dejado acobardado"
+   21141.3,
+   "canción de esquina"
   ],
   [
    21145.9,
-   "canción de esquina"
+   "con un pedazo de vida,"
+  ],
+  [
+   21148.4,
+   "naranjo en flor."
   ],
   [
    21171.2,
@@ -16322,12 +16318,6 @@
    "letra"
   ],
   [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
    "letra"
   ],
   [
@@ -16340,7 +16330,10 @@
    "letra"
   ],
   [
-   "whisper_es"
+   "letra"
+  ],
+  [
+   "letra"
   ],
   [
    "letra"
@@ -20023,8 +20016,8 @@
    "fuente": "Aportado por Kevin Roberts"
   },
   {
-   "desde": 20927,
-   "hasta": 21205,
+   "desde": 20948,
+   "hasta": 21161,
    "titulo": "Naranjo en Flor",
    "autor": "",
    "idioma": "es",

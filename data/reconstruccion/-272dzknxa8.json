@@ -37,34 +37,30 @@
   ],
   [
    212.2,
-   "Amén."
-  ],
-  [
-   242.2,
    "He llegado hasta tu casa"
   ],
   [
-   242.2,
+   212.2,
    "¡Yo no sé cómo he podido!"
   ],
   [
-   242.2,
+   212.2,
    "Si me han dicho que no estás,"
   ],
   [
-   242.2,
+   218.3,
    "que ya nunca volverás"
   ],
   [
-   242.2,
+   223.1,
    "¡Si me han dicho que te has ido!"
   ],
   [
-   242.2,
+   229.9,
    "¡Cuánta nieve hay en mi alma!"
   ],
   [
-   242.2,
+   236.1,
    "¡Qué silencio hay en tu puerta!"
   ],
   [
@@ -186,9 +182,6 @@
    "cy"
   ],
   [
-   "whisper_es"
-  ],
-  [
    "letra"
   ],
   [
@@ -281,8 +274,8 @@
  ],
  "letras": [
   {
-   "desde": 229,
-   "hasta": 412,
+   "desde": 210.5,
+   "hasta": 425,
    "titulo": "Nada",
    "autor": "tango, José Dames – Horacio Sanguinetti, arr. Eduardo Ferraudi",
    "idioma": "es",

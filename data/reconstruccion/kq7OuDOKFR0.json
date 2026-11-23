@@ -4,26 +4,51 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
-   30.0,
-   "Sef yn grwdd yn ym mifoedd longwyr, sef yn brethyn di-folio yma."
+   0.0,
+   "Sebben, crudele, mi fai languir,"
   ],
   [
-   71.68,
-   "Arnan wnaetha, fel mi o's erbyn, gwlad a fi eretha, gwlad a fi eretha, ta bros angan."
+   44.8,
+   "sempre fedele ti voglio amar."
+  ],
+  [
+   94.5,
+   "Con la lunghezza del mio servir"
+  ],
+  [
+   139.2,
+   "la tua fierezza saprò stancar."
   ]
  ],
  "fuentes": [
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ]
+ ],
+ "letras": [
+  {
+   "desde": 0,
+   "hasta": 184,
+   "titulo": "Sebben, crudele",
+   "autor": "Antonio Caldara; texto anónimo (aria de La costanza in amor vince l'inganno, 1710)",
+   "idioma": "it",
+   "derechos": "Texto de dominio público",
+   "fuente": "https://www.cpdl.org/wiki/index.php/Sebben,_crudele_(Antonio_Caldara), texto original de ChoralWiki (CPDL #17510; Anthology of Italian Song, libro 1, n.º 12, 1885), obtenido por el archivo"
+  }
  ],
  "ventanas": {
   "total": 4,
-  "modelo": 2,
+  "modelo": 3,
   "reglas": 0,
-  "vacias": 2
+  "vacias": 1
  }
 }

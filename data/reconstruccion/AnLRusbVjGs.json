@@ -104,16 +104,40 @@
    "Bod e'n wlad yn Wembro, bod e'n wlad yn Wembro."
   ],
   [
-   1064.88,
-   "Eladu Morgwy, eladu."
+   958.5,
+   "Beati mortui in Domino morientes,"
   ],
   [
-   1075.88,
-   "Eladu Morgwy, eladu."
+   974.3,
+   "beati mortui, beati in Domino morientes deinceps,"
   ],
   [
-   1081.88,
-   "Eladu Morgwy, eladu."
+   995.8,
+   "beati, beati!"
+  ],
+  [
+   1001.6,
+   "Dicit enim spiritus, ut requiescant a laboribus suis,"
+  ],
+  [
+   1026.0,
+   "dicit enim spiritus, ut requiescant a laboribus suis"
+  ],
+  [
+   1050.4,
+   "et opera illorum sequuntur ipsos, sequuntur ipsos."
+  ],
+  [
+   1074.8,
+   "Beati mortui in Domino morientes,"
+  ],
+  [
+   1090.6,
+   "beati mortui, beati, beati mortui deinceps,"
+  ],
+  [
+   1107.9,
+   "beati mortui deinceps."
   ],
   [
    1149.88,
@@ -201,13 +225,31 @@
    "cy"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ],
   [
    "whisper_es"
@@ -225,12 +267,21 @@
    "idioma": "la",
    "derechos": "Derechos confirmados por el mantenedor del archivo",
    "fuente": "Aportado por Kevin Roberts"
+  },
+  {
+   "desde": 958.5,
+   "hasta": 1116.5,
+   "titulo": "Beati mortui",
+   "autor": "Felix Mendelssohn (op. 115 n.º 1, 1837); texto: Apocalipsis 14, 13 (Vulgata)",
+   "idioma": "la",
+   "derechos": "Texto de dominio público",
+   "fuente": "https://www.cpdl.org/wiki/index.php/Beati_mortui,_Op._115,_No._1_(Felix_Mendelssohn), texto latino como se canta en la voz superior de la edición CPDL #46600 (según Breitkopf & Härtel, 1874-82); mismo texto en https://www.lieder.net/lieder/get_text.html?TextId=58788, obtenido por el archivo"
   }
  ],
  "ventanas": {
   "total": 23,
-  "modelo": 15,
+  "modelo": 17,
   "reglas": 0,
-  "vacias": 8
+  "vacias": 6
  }
 }

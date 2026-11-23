@@ -5,19 +5,71 @@
  "seg": [
   [
    0.0,
-   "Y Eisteddfod felly petha bach o'r camera a ma' na pâr o sanau hefyd ma' hwn yn ddiddorol iawn."
+   "Y Steddfod felly petha bach o'r camera a ma' na pâr o sanau hefyd ma' hwn yn ddiddorol iawn."
   ],
   [
    10.82,
-   "Valle Casaleya, juez de Xay, el Prif Casaleya, côr Drostri de Goliciay. Arrini, sin Casaldria Mayu, côr Camis Escolquer de Gaiman. O si perni a tambarot, jurado así lo dispone, entonces."
+   "Prif, côr de Gaiman. Jurado así lo dispone, entonces."
   ],
   [
    30.0,
    "Mucho placer, escuchamos al coro mixto de la Escuela de Música de Gaiman, Gweddi'r Arglwydd."
   ],
   [
+   104.5,
+   "Ein Tad, yr hwn wyt yn y nefoedd,"
+  ],
+  [
+   109.6,
+   "Sancteiddier dy enw."
+  ],
+  [
+   112.8,
+   "Deled dy deyrnas."
+  ],
+  [
+   116.1,
+   "Gwneler dy ewyllys,"
+  ],
+  [
+   119.9,
+   "Megis yn y nef, felly ar y ddaear hefyd."
+  ],
+  [
+   127.6,
+   "Dyro i ni heddiw ein bara beunyddiol."
+  ],
+  [
+   135.3,
+   "A maddau i ni ein dyledion,"
+  ],
+  [
+   141.1,
+   "Fel y maddeuwn ninnau i'n dyledwyr."
+  ],
+  [
+   147.5,
+   "Ac nac arwain ni i brofedigaeth;"
+  ],
+  [
+   153.9,
+   "Eithr gwared ni rhag drwg."
+  ],
+  [
+   157.2,
+   "Canys eiddot ti yw'r deyrnas,"
+  ],
+  [
+   162.3,
+   "A'r nerth, a'r gogoniant,"
+  ],
+  [
+   166.1,
+   "Yn oes oesoedd. Amen."
+  ],
+  [
    236.0,
-   "Felly ar y dda yn y byd, dyro i ni heddiw ein marw ein heddiw, a maddau ni ein dylen ni fod."
+   "Felly ar y dda yn y byd, dyrru i ni heddiw ein marw ein heddiw, a naddau ni ein dylen ni fod."
   ],
   [
    259.0,
@@ -43,6 +95,45 @@
    "whisper_es"
   ],
   [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
    "cy"
   ],
   [
@@ -55,10 +146,21 @@
    "cy"
   ]
  ],
+ "letras": [
+  {
+   "desde": 104.5,
+   "hasta": 170,
+   "titulo": "Gweddi'r Arglwydd",
+   "autor": "Mathew 6:9–13 (Beibl 1620); gosodiadau C. Roberts ac E. Jones",
+   "idioma": "cy",
+   "derechos": "Texto de dominio público",
+   "fuente": "https://cy.wikisource.org/wiki/Beibl_(1620)/Sant_Mathew (revid 9018), Y Beibl Cymraeg 1620, Mathew 6:9–13, obtenido por el archivo"
+  }
+ ],
  "ventanas": {
   "total": 6,
-  "modelo": 3,
+  "modelo": 5,
   "reglas": 0,
-  "vacias": 3
+  "vacias": 1
  }
 }

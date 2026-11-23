@@ -4,26 +4,72 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
-   99.0,
-   "i'r gwaelodd bwrdd i'n ôl."
+   0.0,
+   "Ave Maria, gratia plena, Dominus tecum;"
   ],
   [
-   105.0,
-   "Cwm Pethig o'r am- Cwm Pethig o'r amor, plis."
+   31.6,
+   "benedicta tu in mulieribus,"
+  ],
+  [
+   55.9,
+   "et benedictus fructus ventris tui, Jesus."
+  ],
+  [
+   85.0,
+   "Sancta Maria, Mater Dei,"
+  ],
+  [
+   102.0,
+   "ora pro nobis peccatoribus,"
+  ],
+  [
+   126.3,
+   "nunc et in hora mortis nostrae."
+  ],
+  [
+   148.1,
+   "Amen."
   ]
  ],
  "fuentes": [
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ]
+ ],
+ "letras": [
+  {
+   "desde": 0,
+   "hasta": 153,
+   "titulo": "Ave María",
+   "autor": "Dante Andreo; texto: oración latina tradicional (Lucas 1, 28 y 42)",
+   "idioma": "la",
+   "derechos": "Texto de dominio público",
+   "fuente": "https://www.cpdl.org/wiki/index.php/Ave_Maria, oración católica tradicional en ChoralWiki (CPDL), obtenido por el archivo"
+  }
  ],
  "ventanas": {
   "total": 3,
-  "modelo": 2,
+  "modelo": 3,
   "reglas": 0,
-  "vacias": 1
+  "vacias": 0
  }
 }

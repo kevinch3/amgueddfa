@@ -44,7 +44,7 @@
    "capullo de luz"
   ],
   [
-   117.0,
+   115.4,
    "que quiere ser sol"
   ],
   [
@@ -84,10 +84,6 @@
    "murmuro al cañ"
   ],
   [
-   178.8,
-   "verá"
-  ],
-  [
    199.7,
    "El viento la trae,"
   ],
@@ -100,7 +96,7 @@
    "sueño en el trigal"
   ],
   [
-   212.6,
+   219.8,
    "y sobre el sauzal,"
   ],
   [
@@ -238,9 +234,6 @@
    "yt_es"
   ],
   [
-   "yt_es"
-  ],
-  [
    "letra"
   ],
   [
@@ -309,10 +302,10 @@
  ],
  "letras": [
   {
-   "desde": 75,
-   "hasta": 318,
+   "desde": 94.5,
+   "hasta": 301,
    "titulo": "La tristecita",
-   "autor": "Ariel Ramírez, with lyrics by María Elena Espiro",
+   "autor": "Ariel Ramírez, letra de María Elena Espiro",
    "idioma": "es",
    "derechos": "Derechos confirmados por el mantenedor del archivo",
    "fuente": "Aportado por Kevin Roberts"
@@ -320,8 +313,8 @@
  ],
  "ventanas": {
   "total": 6,
-  "modelo": 5,
-  "reglas": 1,
+  "modelo": 6,
+  "reglas": 0,
   "vacias": 0
  }
 }

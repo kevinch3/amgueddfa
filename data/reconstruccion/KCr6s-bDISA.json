@@ -8,39 +8,39 @@
    "Y 'Deryn pur a'r adain las,"
   ],
   [
-   5.3,
+   4.4,
    "Bydd imi'n was dibryder,"
   ],
   [
-   10.0,
+   8.2,
    "O brysia'n brysur at y ferch"
   ],
   [
-   15.3,
+   12.5,
    "Lle rhois i'm serch yn gynar;"
   ],
   [
-   20.0,
+   16.4,
    "Dos di ati, dywed wrthi"
   ],
   [
-   24.7,
+   20.2,
    "Fy mod i'n wylo dw'r yn heli,"
   ],
   [
-   30.0,
+   24.5,
    "Fy mod i'n irad am gael ei gweled"
   ],
   [
-   37.2,
+   30.0,
    "Ac o'i chariad yn ffaelu a cherdded;"
   ],
   [
-   45.2,
+   41.0,
    "O! Duw faddeuo i'r hardd ei llun"
   ],
   [
-   50.9,
+   49.0,
    "Am boeni'r dyn mor galed."
   ],
   [
@@ -159,8 +159,8 @@
  ],
  "ventanas": {
   "total": 3,
-  "modelo": 2,
+  "modelo": 3,
   "reglas": 0,
-  "vacias": 1
+  "vacias": 0
  }
 }

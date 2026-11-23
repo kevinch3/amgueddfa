@@ -5,14 +5,14 @@
  "seg": [
   [
    0.0,
-   "En los brazos de la luna he estado en mi cito el sol."
-  ],
-  [
-   18.0,
    "En los brazos de la luna"
   ],
   [
-   18.0,
+   4.0,
+   "En los brazos de la luna"
+  ],
+  [
+   11.0,
    "Está dormidito el sol"
   ],
   [
@@ -52,7 +52,7 @@
    "¿Acaso duermen las aves"
   ],
   [
-   78.0,
+   82.8,
    "Cuando el sol sus rayos vierte?"
   ]
  ],

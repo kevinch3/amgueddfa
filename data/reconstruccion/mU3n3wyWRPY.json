@@ -1,0 +1,75 @@
+{
+ "src": "reconstruida",
+ "lang": "es",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   0.0,
+   "Mae hen wlad fy nhadau yn annwyl i mi,"
+  ],
+  [
+   15.4,
+   "Gwlad beirdd a chantorion, enwogion o fri;"
+  ],
+  [
+   30.7,
+   "Ei gwrol ryfelwyr, gwladgarwyr tra mad,"
+  ],
+  [
+   44.7,
+   "Dros ryddid collasant eu gwaed."
+  ],
+  [
+   55.9,
+   "Gwlad, Gwlad, pleidiol wyf i'm gwlad,"
+  ],
+  [
+   65.7,
+   "Tra môr yn fur i'r bur hoff bau,"
+  ],
+  [
+   76.8,
+   "O bydded i'r heniaith barhau."
+  ]
+ ],
+ "fuentes": [
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ]
+ ],
+ "letras": [
+  {
+   "desde": 0,
+   "hasta": 88,
+   "titulo": "Hen Wlad fy Nhadau",
+   "autor": "Evan James (1809-1878); música de James James",
+   "idioma": "cy",
+   "derechos": "Texto de dominio público",
+   "fuente": "https://cy.wikisource.org/wiki/Hen_wlad_fy_nhadau, Wicidestun, estrofa 1 y estribillo, obtenido por el archivo"
+  }
+ ],
+ "ventanas": {
+  "total": 2,
+  "modelo": 2,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

@@ -28,27 +28,31 @@
    "un aguacero en venganza"
   ],
   [
-   111.6,
+   91.6,
    "que cuando escampe parezca"
   ],
   [
-   151.4,
+   111.3,
    "nuestra esperanza."
   ],
   [
-   177.88,
+   124.5,
    "Si me dijeran pide un deseo,"
   ],
   [
-   180.8,
+   146.4,
    "preferiría un rabo de nube,"
   ],
   [
-   183.72,
+   168.4,
    "que se llevara lo feo"
   ],
   [
-   185.5,
+   177.88,
+   "Un aguacero en venganza."
+  ],
+  [
+   183.72,
    "y nos dejara el querube."
   ]
  ],
@@ -87,6 +91,9 @@
    "letra"
   ],
   [
+   "whisper_es"
+  ],
+  [
    "letra"
   ]
  ],
@@ -102,9 +109,9 @@
   }
  ],
  "ventanas": {
-  "total": 4,
+  "total": 5,
   "modelo": 4,
   "reglas": 0,
-  "vacias": 0
+  "vacias": 1
  }
 }

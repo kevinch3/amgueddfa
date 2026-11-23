@@ -24,11 +24,11 @@
    "Cerro, cerro de mi Patagonia, no sabes, Chaltén, cuánto te hago a mi bien, y cuánto se desploma la nevada, y canta los vientos en tus fiestas."
   ],
   [
-   328.4,
+   310.0,
    "Vengo desde el olvido,"
   ],
   [
-   328.4,
+   321.3,
    "toro serrano,"
   ],
   [
@@ -56,27 +56,27 @@
    "pa' enamorarte."
   ],
   [
-   389.4,
+   385.0,
    "Carnavales carperos:"
   ],
   [
-   398.6,
+   389.1,
    "la copla y la albahaca"
   ],
   [
-   413.6,
+   394.5,
    "llorando en el vino."
   ],
   [
-   425.3,
+   398.6,
    "Los caballos atados"
   ],
   [
-   436.9,
+   419.6,
    "vuelven a la luna,"
   ],
   [
-   446.9,
+   437.6,
    "a galope tendido."
   ],
   [
@@ -92,36 +92,48 @@
    "para trampearte el alma"
   ],
   [
-   482.6,
-   "Un marido blanco, un sereno."
-  ],
-  [
-   486.0,
+   478.0,
    "con mi gualicho."
   ],
   [
-   495.6,
+   482.6,
    "Tu pañuelito blanco"
   ],
   [
-   509.3,
+   490.2,
    "busca consuelo;"
   ],
   [
-   519.0,
+   495.6,
    "mi corazón lo sigue,"
   ],
   [
-   528.9,
-   "Los caballos atados vuelven a la luna al galope tendido."
-  ],
-  [
-   532.7,
+   502.1,
    "de vuelo en vuelo."
   ],
   [
+   507.6,
+   "Carnavales carperos:"
+  ],
+  [
+   514.1,
+   "la copla y la albahaca"
+  ],
+  [
+   522.4,
+   "llorando en el vino."
+  ],
+  [
+   528.9,
+   "Los caballos atados"
+  ],
+  [
+   535.1,
+   "vuelven a la luna,"
+  ],
+  [
    540.36,
-   "Los caballos andados Vuelven a la luna el galope encendido"
+   "a galope tendido."
   ]
  ],
  "fuentes": [
@@ -192,7 +204,16 @@
    "letra"
   ],
   [
-   "whisper_es"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ],
   [
    "letra"
@@ -207,13 +228,13 @@
    "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
    "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ]
  ],
  "letras": [
@@ -229,8 +250,8 @@
  ],
  "ventanas": {
   "total": 10,
-  "modelo": 7,
+  "modelo": 9,
   "reglas": 0,
-  "vacias": 3
+  "vacias": 1
  }
 }

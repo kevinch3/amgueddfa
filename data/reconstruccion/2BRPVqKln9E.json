@@ -36,24 +36,72 @@
    "lejos y hace tiempo es la samba de Armando Tejada Gómez y Agel Ramírez, que va a ser interpretada por Sonia Valiente, quien está acompañada por Alexis Tomárez en guitarra, Antú Silva en bombo y Ariel Matornal al piano. La misma será bailada por María Fernanda Aguilera y Carlos Prieto."
   ],
   [
+   468.7,
+   "Lejos, muy lejos del sol"
+  ],
+  [
+   472.9,
+   "vuelve el recuerdo de allá,"
+  ],
+  [
+   478.4,
+   "siento en mis ojos brillar"
+  ],
+  [
    483.2,
-   "Una luz soledad de mi tierra natal Siento en mis ojos brillar Una luz soledad de mi tierra natal"
+   "el azul soledad de mi tierra natal."
+  ],
+  [
+   490.5,
+   "siento en mis ojos brillar"
+  ],
+  [
+   495.3,
+   "el azul soledad de mi tierra natal."
   ],
   [
    502.56,
-   "Susurra el viento y se va, enloqueciendo el color."
+   "Susurra el viento y se va"
+  ],
+  [
+   508.9,
+   "enloqueciendo el color"
   ],
   [
    514.56,
-   "Y es la nostalgia una dios, te amantó la torcada, mariposa y gorrión."
+   "y es la nostalgia un adiós"
+  ],
+  [
+   523.0,
+   "de amapola y torcaz, mariposa y gorrión."
   ],
   [
    536.96,
-   "Allá lejos de la patria nada, a su larga y al día, cielo allá y en playa, Un cuento limpio al asombro del sur, y por mi sangre una voz mandará."
+   "Allá lejos la Patria andaba,"
+  ],
+  [
+   543.8,
+   "azulando el día"
+  ],
+  [
+   548.0,
+   "cielo allá"
+  ],
+  [
+   550.7,
+   "tiempo allá,"
+  ],
+  [
+   553.5,
+   "vuelvo niño al asombro del sur"
+  ],
+  [
+   560.4,
+   "y por mi sangre una voz maternal"
   ],
   [
    567.96,
-   "Nombre a la vida"
+   "nombra la vida."
   ]
  ],
  "fuentes": [
@@ -82,20 +130,67 @@
    "whisper_es"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ]
+ ],
+ "letras": [
+  {
+   "desde": 467,
+   "hasta": 576,
+   "titulo": "Allá lejos y hace tiempo",
+   "autor": "Ariel Ramírez; texto de Armando Tejada Gómez; arreglo de Néstor Zadoff",
+   "idioma": "es",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "https://www.folkloredelnorte.com.ar/cancionero/a/allalejosyhacetiempo.html, aportado por Kevin Roberts"
+  }
  ],
  "ventanas": {
   "total": 10,

@@ -5,50 +5,50 @@
  "seg": [
   [
    0.0,
-   "Dwi am ganu, fel yr enillwn hwy ar dôn Rhydyn Square."
+   "Dwi am ganu, yym, fel yr enillwn hwy ar dôn Rhydyn Square."
   ],
   [
    19.0,
    "Tuag adref 'r wyf yn teithio,"
   ],
   [
-   25.8,
+   24.9,
    "Tuag adref at fy Nhad:"
   ],
   [
-   31.7,
+   30.0,
    "Hoffai'm hysbryd hedeg yno"
   ],
   [
-   39.5,
+   36.7,
    "Heb ymdroi mewn anial wlad:"
   ],
   [
-   46.3,
+   42.6,
    "Ymfoddlonaf,"
   ],
   [
-   50.2,
+   46.0,
    "Mwy o waith fel hyn a wnaf."
   ],
   [
-   57.0,
+   51.9,
    "Dwedaf wrth bob un a gwrddaf -"
   ],
   [
-   61.1,
+   57.0,
    "\"Dewch, heb oedi, gyda mi;"
   ],
   [
-   65.9,
+   62.9,
    "Parod yw fy Nhad i'ch derbyn,"
   ],
   [
-   71.4,
+   69.7,
    "Cartref ganddo sydd i chwi:\""
   ],
   [
-   76.2,
+   75.6,
    "Ennill rhywrai"
   ],
   [
@@ -72,16 +72,12 @@
    "Nid oes neb ond Duw a ŵyr:"
   ],
   [
-   115.0,
+   117.5,
    "Ennill rhywrai"
   ],
   [
-   119.5,
-   "A felywsa'r daith i gyd."
-  ],
-  [
    123.48,
-   "Venith ryw rai, venith ryw rai, a fela saradaith i gyd."
+   "A felywsa'r daith i gyd."
   ]
  ],
  "fuentes": [
@@ -141,9 +137,6 @@
   ],
   [
    "letra"
-  ],
-  [
-   "cy"
   ]
  ],
  "letras": [

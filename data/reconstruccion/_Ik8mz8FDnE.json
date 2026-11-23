@@ -1,0 +1,89 @@
+{
+ "src": "reconstruida",
+ "lang": "cy",
+ "modelo": "claude-sonnet-5-5",
+ "seg": [
+  [
+   29.0,
+   "Oh! hush thee, my baby, the night is behind us,"
+  ],
+  [
+   51.3,
+   "And black are the waters that sparkled so green."
+  ],
+  [
+   73.5,
+   "The moon, o'er the combers, looks downward to find us"
+  ],
+  [
+   97.6,
+   "At rest in the hollows that rustle between."
+  ],
+  [
+   118.0,
+   "Where billow meets billow, there soft be thy pillow;"
+  ],
+  [
+   144.0,
+   "Ah, weary wee flipperling, curl at thy ease!"
+  ],
+  [
+   166.2,
+   "The storm shall not wake thee, nor shark overtake thee."
+  ],
+  [
+   192.2,
+   "Asleep in the arms of the slow-swinging seas."
+  ],
+  [
+   212.6,
+   "Asleep in the arms of the slow-swinging seas."
+  ]
+ ],
+ "fuentes": [
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ]
+ ],
+ "letras": [
+  {
+   "desde": 29,
+   "hasta": 233,
+   "titulo": "The Seal Lullaby",
+   "autor": "Eric Whitacre; texto de Rudyard Kipling («Seal Lullaby», The Jungle Book, 1894)",
+   "idioma": "en",
+   "derechos": "Texto de dominio público",
+   "fuente": "https://en.wikisource.org/wiki/The_Jungle_Book_(Century_edition)/The_White_Seal, The Jungle Book (The Century Co., 1894), «The White Seal», en Wikisource (último verso repetido como se canta), obtenido por el archivo"
+  }
+ ],
+ "ventanas": {
+  "total": 4,
+  "modelo": 4,
+  "reglas": 0,
+  "vacias": 0
+ }
+}

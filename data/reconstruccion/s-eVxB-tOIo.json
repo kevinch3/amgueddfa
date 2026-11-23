@@ -4,11 +4,7 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
-   22.0,
-   "No sé para qué volviste, si ya empezaba a olvidar."
-  ],
-  [
-   26.1,
+   20.9,
    "No sé para qué volviste"
   ],
   [
@@ -68,15 +64,15 @@
    "Solo una pobre canción"
   ],
   [
-   103.4,
+   100.8,
    "Da vueltas por mi guitarra"
   ],
   [
-   112.6,
+   103.4,
    "Y hace rato que te extraña"
   ],
   [
-   124.2,
+   120.1,
    "Mi zamba para olvidar"
   ],
   [
@@ -132,30 +128,27 @@
    "Qué pena me da saber que al final"
   ],
   [
-   209.7,
+   208.8,
    "De este amor ya no queda nada"
   ],
   [
-   214.4,
+   212.4,
    "Solo una pobre canción"
   ],
   [
-   217.7,
+   215.1,
    "Da vueltas por mi guitarra"
   ],
   [
-   221.1,
+   217.8,
    "Y hace rato que te extraña"
   ],
   [
-   223.3,
+   221.1,
    "Mi zamba para olvidar"
   ]
  ],
  "fuentes": [
-  [
-   "cy"
-  ],
   [
    "letra"
   ],

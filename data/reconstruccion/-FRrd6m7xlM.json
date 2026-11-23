@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   15.2,
+   "yo me lo gano"
+  ],
+  [
    17.3,
    "ruedas embarradas del último organito"
   ],
@@ -113,6 +117,9 @@
   ]
  ],
  "fuentes": [
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],

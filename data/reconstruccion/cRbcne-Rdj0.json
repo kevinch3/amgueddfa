@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Ceremonia medalla de plata, Premio Asociacion San David, Competencia numero ocho, Poesia Estilo Tradicional, Rima y Ritmo, Tema Libre, dice el veredicto."
+  ],
+  [
    7.0,
    "la ceremonia medalla de plata premio"
   ],
@@ -128,8 +132,12 @@
    "responde al seudónimo sueños de timonel"
   ],
   [
+   122.82,
+   "Sueños de Timonel es nuestro querido y conocido Jorge Alberto Baudés Rawsom Playa Union."
+  ],
+  [
    130.3,
-   "sueños de timonel en nuestro querido y"
+   "Sueños de Timonel en nuestro querido y"
   ],
   [
    135.2,
@@ -276,6 +284,10 @@
    "el resto"
   ],
   [
+   290.92,
+   "Fel du a serredo'n ddiablo, yn y crystale ddylai sero, a sŵn y serres gondïon, conferddus y primofero."
+  ],
+  [
    293.7,
    "nuevo"
   ],
@@ -286,6 +298,10 @@
   [
    306.1,
    "reserva"
+  ],
+  [
+   316.92,
+   "Dechra ba ddŵr a ddwela o'i de, la luz que el monte ilumina, gozaban el sol y sal oscuro, la vid a mas del salino."
   ],
   [
    370.0,
@@ -338,6 +354,9 @@
  ],
  "fuentes": [
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -429,6 +448,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -542,6 +564,9 @@
    "yt_es"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -549,6 +574,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"

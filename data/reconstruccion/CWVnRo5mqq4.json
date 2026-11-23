@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Llegaste como un rayo de ilumbrante de luz,"
+  ],
+  [
    16.6,
    "llegaste como un rayo deslumbrante de"
   ],
@@ -44,8 +48,16 @@
    "palpito mi corazón"
   ],
   [
+   54.0,
+   "tú"
+  ],
+  [
    56.1,
    "con La magia de tu amor y tu bondad en"
+  ],
+  [
+   61.5,
+   "tu"
   ],
   [
    62.3,
@@ -68,6 +80,10 @@
    "en el mar al llegar la luz del sol"
   ],
   [
+   84.9,
+   "tú"
+  ],
+  [
    88.5,
    "milagrosa musiquita de cristal"
   ],
@@ -88,6 +104,10 @@
    "morir cansado de mis penas y me ha sido"
   ],
   [
+   114.9,
+   "y de esos viejos"
+  ],
+  [
    118.8,
    "recuerdos en mi Dios tus besos tus"
   ],
@@ -105,7 +125,7 @@
   ],
   [
    142.9,
-   "con La magia de tu amor y tu bondad"
+   "con la magia de tu amor y tu bondad"
   ],
   [
    150.2,
@@ -117,7 +137,7 @@
   ],
   [
    159.4,
-   "final de Mi desesperación"
+   "final de mi desesperación"
   ],
   [
    164.2,
@@ -141,6 +161,21 @@
   ]
  ],
  "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],

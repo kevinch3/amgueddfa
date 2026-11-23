@@ -4,10 +4,6 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
-   0.0,
-   "Adentro"
-  ],
-  [
    24.0,
    "Soy tu amante probador, que a ti se enamoró, buscando la felicidad"
   ],
@@ -109,16 +105,16 @@
    "whisper_es"
   ],
   [
-   "whisper_es"
+   "whisper_es",
+   "cy"
   ],
   [
-   "whisper_es"
+   "whisper_es",
+   "cy"
   ],
   [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
+   "whisper_es",
+   "cy"
   ],
   [
    "whisper_es"

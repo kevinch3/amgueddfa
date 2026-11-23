@@ -28,6 +28,10 @@
    "Hay tres bols de macachín"
   ],
   [
+   90.0,
+   "Mae'n treble de macachi de tres corazones hechos. Te pido cuando florezcas que descanses en mi pecho. Te pido cuando florezcas que descanses en mi pecho."
+  ],
+  [
    95.4,
    "De tres corazones hechos"
   ],
@@ -40,12 +44,20 @@
    "Que descanses en mi pecho"
   ],
   [
+   107.1,
+   "Te pido cuando florezcas que descanses en mi pecho"
+  ],
+  [
    117.3,
    "Trébol, trébol, macachín"
   ],
   [
    128.3,
    "El rosa del alba pura y el verde sin fin"
+  ],
+  [
+   136.3,
+   "El rosa del alba pura y el verde sin fin."
   ]
  ],
  "fuentes": [
@@ -60,6 +72,15 @@
   ],
   [
    "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"

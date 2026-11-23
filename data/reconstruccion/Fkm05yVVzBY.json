@@ -52,12 +52,16 @@
    "Viento, viento"
   ],
   [
+   81.5,
+   "Róbal el olvido"
+  ],
+  [
    84.4,
    "Acompáñala en su soledad"
   ],
   [
    92.2,
-   "Viento, viento"
+   "Viento, viento, cómale el olvido"
   ],
   [
    99.5,
@@ -65,7 +69,11 @@
   ],
   [
    114.4,
-   "Regresa una pastorcita con su llama"
+   "Regresa una pastorcita con su llama junto al cerdo"
+  ],
+  [
+   122.72,
+   "Regresa' una pastosita, con su llama junto al cerco. Es una flor que se mueve, como una sombra en vuelo. Regresa una pastosita, solita en el silencio."
   ],
   [
    134.0,
@@ -153,6 +161,12 @@
    "whisper_es"
   ],
   [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
    "whisper_es"
   ],
   [
@@ -175,9 +189,9 @@
   ]
  ],
  "ventanas": {
-  "total": 4,
-  "modelo": 4,
-  "reglas": 0,
-  "vacias": 0
+  "total": 5,
+  "modelo": 3,
+  "reglas": 1,
+  "vacias": 1
  }
 }

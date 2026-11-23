@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Ffurioso petalo de sal, la misma call, el mismo bar. Nada te importa en la ciudad, si nadi esperas."
+  ],
+  [
    13.9,
    "furioso pétalo de sal"
   ],
@@ -21,7 +25,7 @@
   ],
   [
    33.2,
-   "baires o madrid nada te importa en la"
+   "baires o madrid' nada te importa en la"
   ],
   [
    38.2,
@@ -50,6 +54,10 @@
   [
    68.4,
    "podrías darme fe"
+  ],
+  [
+   73.0,
+   "Ffwrio so peth a lo de sal, la misma call y el mismo bar, nad a te importa la ciudad si na' y espera, y no es tan tragico mi amor, es este sueño, es este sol, que ayer parecio tan exuberante."
   ],
   [
    77.2,
@@ -118,7 +126,7 @@
  ],
  "fuentes": [
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -152,6 +160,12 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"

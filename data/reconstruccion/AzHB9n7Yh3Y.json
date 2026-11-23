@@ -5,7 +5,7 @@
  "seg": [
   [
    30.0,
-   "Amén."
+   "Sy'n gwahanol, a dwi'n meddwl, ges i'r eglwys am alw, ond dwi'n meddwl, dwi'n meddwl, sy'n gwahanol."
   ],
   [
    120.0,
@@ -50,7 +50,7 @@
  ],
  "fuentes": [
   [
-   "whisper_es"
+   "cy"
   ],
   [
    "whisper_es"

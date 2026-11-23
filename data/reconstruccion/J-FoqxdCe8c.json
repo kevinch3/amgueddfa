@@ -12,6 +12,10 @@
    "Gloria cru"
   ],
   [
+   163.3,
+   "Gwenna'r gwynt, gwelwch ni, gwenna'r dde ddwy i ni, pwy ffwrdd o gamon, caer o'i gamon, ac o'r nos yn byd."
+  ],
+  [
    270.2,
    "que"
   ],
@@ -472,8 +476,8 @@
    "chiquitos del pueblo"
   ],
   [
-   1246.7,
-   "yado de lases que se"
+   1205.04,
+   "Dwi'n teimlo'n dda, dwi'n teimlo'n dda, dwi'n teimlo'n dda."
   ],
   [
    1258.9,
@@ -496,16 +500,20 @@
    "pueblo porque"
   ],
   [
-   1292.1,
-   "de la"
-  ],
-  [
    1300.8,
    "por porque quieren"
   ],
   [
    1310.2,
    "almas hacia al"
+  ],
+  [
+   1340.2,
+   "por"
+  ],
+  [
+   1342.5,
+   "esada la"
   ],
   [
    1345.0,
@@ -562,6 +570,10 @@
   [
    1411.5,
    "solent cruza las nubes hacia el alturos"
+  ],
+  [
+   1480.16,
+   "Felly, diolch yn fawr iawn i chi am ddigwydd."
   ]
  ],
  "fuentes": [
@@ -572,7 +584,7 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -699,6 +711,10 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "yt_es",
+   "cy"
   ],
   [
    "yt_es"
@@ -917,6 +933,9 @@
    "yt_es"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -984,6 +1003,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ]
  ],
  "ventanas": {

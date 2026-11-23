@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.4,
+   "de Isabel puncel de du Mery poesía"
+  ],
+  [
    4.4,
    "cotidiana"
   ],
@@ -81,6 +85,9 @@
   ]
  ],
  "fuentes": [
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],

@@ -181,7 +181,7 @@
   ],
   [
    200.2,
-   "galesa en distintos Eisteddfod que Se"
+   "galesa en distintos Eisteddfod que se"
   ],
   [
    202.9,
@@ -237,7 +237,11 @@
   ],
   [
    237.0,
-   "provincia tales como el Eisteddfod y de la"
+   "provincia tales como el Ed rvot y de la"
+  ],
+  [
+   240.0,
+   "obra ardid amor de linette Morgan a la"
   ],
   [
    243.2,
@@ -320,6 +324,10 @@
    "Trevelin todos los días Owen prende su"
   ],
   [
+   299.1,
+   "comp"
+  ],
+  [
    300.9,
    "escribe Lee revisa sus escritos los"
   ],
@@ -352,6 +360,10 @@
    "gracias"
   ],
   [
+   339.16,
+   "Un miembro de la Comision, en este caso Telia Williams, le hace entrega de un presente a Owen T. Jones."
+  ],
+  [
    349.6,
    "un miembro de la"
   ],
@@ -361,7 +373,11 @@
   ],
   [
    356.0,
-   "hace entrega de un presente a"
+   "hace entrega de un presente a ow"
+  ],
+  [
+   369.16,
+   "Le vamos a pedir al Presidente de la Asociación del Eisteddfod del Chubut que se acerque para sacarse una foto."
   ],
   [
    373.8,
@@ -420,6 +436,10 @@
    "Muchísimas"
   ],
   [
+   428.16,
+   "Diolch yn fawr iawn Owen d- David Jones, diolch yn fawr."
+  ],
+  [
    440.8,
    "gracias ahora le voy a preguntar a"
   ],
@@ -430,6 +450,10 @@
   [
    445.0,
    "momento"
+  ],
+  [
+   446.2,
+   "no"
   ]
  ],
  "fuentes": [
@@ -701,7 +725,19 @@
    "yt_es"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -741,6 +777,12 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -757,8 +799,8 @@
  ],
  "ventanas": {
   "total": 8,
-  "modelo": 8,
-  "reglas": 0,
+  "modelo": 7,
+  "reglas": 1,
   "vacias": 0
  }
 }

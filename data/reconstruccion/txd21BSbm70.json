@@ -5,7 +5,7 @@
  "seg": [
   [
    0.6,
-   "competencia número 60 conjunto vocal"
+   "competencia número 60 Conjunto vocal"
   ],
   [
    4.4,
@@ -292,7 +292,9 @@
    "hasta": 407,
    "titulo": "El abuelo y el pehuén",
    "autor": "Rubén Patagonia, Jeremías Chauque y Fabián Vejar; versión coral de Sergio Rodrigo Seballos",
-   "idioma": "es"
+   "idioma": "es",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "https://www.cancioneros.com/letras/cancion/2136322/el-abuelo-y-el-pehuen-ruben-patagonia, aportado por Kevin Roberts"
   }
  ],
  "ventanas": {

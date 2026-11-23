@@ -56,6 +56,14 @@
    "Del perdón"
   ],
   [
+   112.0,
+   "¿Dónde estás? ¿Dónde estás? ¿A dónde te has ido?"
+  ],
+  [
+   119.5,
+   "Donde estas, donde estas, a donde te has iddo."
+  ],
+  [
    129.4,
    "¿Dónde están las plumas de mi nido, la emoción de haber vivido"
   ],
@@ -66,6 +74,10 @@
   [
    146.4,
    "y los dos perdidos de la mano bajo un cieno de verano que partió."
+  ],
+  [
+   165.5,
+   "Diolch yn fawr."
   ]
  ],
  "fuentes": [
@@ -73,7 +85,8 @@
    "whisper_es"
   ],
   [
-   "whisper_es"
+   "whisper_es",
+   "cy"
   ],
   [
    "whisper_es"
@@ -112,16 +125,25 @@
    "whisper_es"
   ],
   [
+   "cy"
+  ],
+  [
    "whisper_es"
   ],
   [
    "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
   ]
  ],
  "ventanas": {
   "total": 3,
-  "modelo": 3,
-  "reglas": 0,
+  "modelo": 2,
+  "reglas": 1,
   "vacias": 0
  }
 }

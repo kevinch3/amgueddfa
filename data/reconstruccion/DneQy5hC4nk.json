@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   24.0,
+   "Gan ddolor de' puertas serranas, gan ddolor o cewnilla,"
+  ],
+  [
    30.0,
    "Pero en tu piecita regata esa musiquita"
   ],
@@ -81,6 +85,9 @@
   ]
  ],
  "fuentes": [
+  [
+   "cy"
+  ],
   [
    "whisper_es"
   ],

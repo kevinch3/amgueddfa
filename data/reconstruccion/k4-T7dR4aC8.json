@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Cada ffebrero vuelve a renacer, De las cenizas de la soledad."
+  ],
+  [
    16.3,
    "cada febrero vuelve a"
   ],
@@ -72,6 +76,10 @@
    "tú carnaval"
   ],
   [
+   116.88,
+   "Cada ffebrero vuelve a despertar, la copla que dormia tras el sol, ansias de libertad queman mi corazon, ya vuelve a enamorarme en tu carnaval."
+  ],
+  [
    123.4,
    "vuelve a ti"
   ],
@@ -138,7 +146,7 @@
  ],
  "fuentes": [
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -187,6 +195,12 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -239,8 +253,8 @@
  ],
  "ventanas": {
   "total": 4,
-  "modelo": 4,
-  "reglas": 0,
+  "modelo": 3,
+  "reglas": 1,
   "vacias": 0
  }
 }

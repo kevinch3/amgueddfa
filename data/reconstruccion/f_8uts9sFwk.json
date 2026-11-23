@@ -4,8 +4,16 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "De Raúl Ardola, con cuerda larga y mucho espacio, con cuerda larga y mucho espacio, solo ladro en ocasiones importantes, en cadenada y con bozal, me revolvo, echo espuma por la boca, enfuresgo por acoso de los gatos."
+  ],
+  [
    3.3,
    "de raúl artola con cuerda larga y mucho"
+  ],
+  [
+   7.4,
+   "espacio"
   ],
   [
    9.7,
@@ -54,6 +62,12 @@
  ],
  "fuentes": [
   [
+   "cy"
+  ],
+  [
+   "yt_es"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -92,8 +106,8 @@
  ],
  "ventanas": {
   "total": 1,
-  "modelo": 1,
-  "reglas": 0,
+  "modelo": 0,
+  "reglas": 1,
   "vacias": 0
  }
 }

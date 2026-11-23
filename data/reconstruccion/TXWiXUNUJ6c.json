@@ -24,6 +24,14 @@
    "mirada"
   ],
   [
+   50.0,
+   "Para luchar el peligro, para ochenta camas finas"
+  ],
+  [
+   56.0,
+   "Pan a phaswn i'n destun, pan ath e'n awrgrifiedo, gofyn ca'l dorri gormido, para inventar la pasiwn, para sonarte contigo."
+  ],
+  [
    87.6,
    "y yo somos"
   ],
@@ -121,6 +129,12 @@
    "yt_es"
   ],
   [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -182,8 +196,8 @@
   ]
  ],
  "ventanas": {
-  "total": 5,
-  "modelo": 5,
+  "total": 4,
+  "modelo": 4,
   "reglas": 0,
   "vacias": 0
  }

@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "i'r Marianin. Dyma ni de blaen benllanw'r adran lefaru gyda detholiad o y breuddwyd capel Engedu Cernarfon mil wyth pump chwech. Roedd yn galondid mawr i weld bod na naw wedi rhoi eu henwau i fewn a chafwyd rhagbrawf diddorol nos Iau. Ma' na ddigon o le i amrywio yn y detholiad hwn ar ôl gosod y cwestiyne agoriadol."
+  ],
+  [
    43.3,
    "esta es la principal competencia de"
   ],
@@ -17,7 +21,7 @@
   ],
   [
    55.9,
-   "irma news the johns después de una"
+   "después de una"
   ],
   [
    58.7,
@@ -301,6 +305,9 @@
   ]
  ],
  "fuentes": [
+  [
+   "cy"
+  ],
   [
    "yt_es"
   ],

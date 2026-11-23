@@ -36,6 +36,10 @@
    "Ya es hora de volver a casa."
   ],
   [
+   78.2,
+   "Alombramiento de Chagatín Macbobre."
+  ],
+  [
    81.2,
    "Esa noche el crespar de sus alas presagió mi soledad en silencio"
   ],
@@ -65,6 +69,9 @@
   ]
  ],
  "fuentes": [
+  [
+   "whisper_es"
+  ],
   [
    "whisper_es"
   ],

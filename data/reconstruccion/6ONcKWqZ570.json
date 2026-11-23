@@ -28,12 +28,32 @@
    "en el cierre"
   ],
   [
+   48.02,
+   "Nid o'dd yr amlwg na ffafr nôl, Clwyd yr amlwg na ffafr nôl."
+  ],
+  [
    56.1,
    "Hello, hello."
   ],
   [
+   69.6,
+   "¡Key! ¡Sítos!"
+  ],
+  [
+   72.0,
+   "¡Ay en Sanos!"
+  ],
+  [
+   73.9,
+   "¡Ooo!"
+  ],
+  [
    75.1,
    "¡Vamos!"
+  ],
+  [
+   128.02,
+   "Diolch yn fawr iawn, diolch yn fawr iawn, diolch yn fawr iawn i chi i ddod yma. Croeso, croeso Cymru Ia. So ma' cwestiwn di barod, ma' cwestiwn di barod, is- is- is- isi barod, diolch yn fawr iawn, diolch yn fawr iawn. A beth ydach chi di neud ers i chi ddod ymlaen? Wel yy, dwi wedi bod yn Cymru."
   ],
   [
    135.1,
@@ -42,6 +62,10 @@
   [
    137.1,
    "¿Qué es eso?"
+  ],
+  [
+   141.1,
+   "¿Qué es la UK?"
   ],
   [
    143.1,
@@ -60,12 +84,28 @@
    "A la niña de Reut, a la niña de voz, en la calmaña, en la palestra."
   ],
   [
+   185.1,
+   "¡A la vista!"
+  ],
+  [
    191.6,
    "¡No, no!"
   ],
   [
    193.7,
    "¡Sí, yo con la charla de mamie!"
+  ],
+  [
+   225.02,
+   "Dwi'n esbon un dau tri, tŵ ar ei ben o adena ni."
+  ],
+  [
+   233.02,
+   "Sbïo mewn rhyw ffenestr wewn i, plant bach yn dysgu sh- pa i."
+  ],
+  [
+   277.5,
+   "y dale una buena receta."
   ],
   [
    298.7,
@@ -86,6 +126,26 @@
   [
    317.3,
    "Bueno, sí, lo encontré, lo encontré, chao"
+  ],
+  [
+   353.02,
+   "Yym. Ag os ddengwch, ew! Dwi'n deall fel menter Prys a Gwoniag ydach chi ar y tro, so fel arni. Hey, mentor! Yeah, yeah. Croeso gyda ti, Siôn. Diolch yn fawr iawn. Allwch chi ddeutha fi be' yn union dach chi'n wneud fel mentor Prys a Gwoniag? Wel, dwi ddim yn gwybod, dwi'n gwybod."
+  ],
+  [
+   362.7,
+   "¿Qué es el chute? ¿Qué es el chute?"
+  ],
+  [
+   364.7,
+   "¡Hey, red tail!"
+  ],
+  [
+   425.02,
+   "Neuadd Mali, er mwyn gamal a phopeth."
+  ],
+  [
+   501.02,
+   "Er mwyn ca'l amlwg o foment yr ia ma'n bydd."
   ]
  ],
  "fuentes": [
@@ -108,7 +168,25 @@
    "whisper_es"
   ],
   [
+   "cy"
+  ],
+  [
    "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
@@ -141,6 +219,18 @@
    "whisper_es"
   ],
   [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
    "whisper_es"
   ],
   [
@@ -151,12 +241,27 @@
   ],
   [
    "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ]
  ],
  "ventanas": {
   "total": 9,
   "modelo": 8,
-  "reglas": 0,
-  "vacias": 1
+  "reglas": 1,
+  "vacias": 0
  }
 }

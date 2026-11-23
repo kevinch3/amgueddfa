@@ -4,8 +4,12 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
-   68.0,
-   "un"
+   60.0,
+   "Diolch yn fawr iawn i chi am ddod a'ch gael i'r cyngerdd hwnnw. Os gwelwch yn dda diolch yn fawr iawn i ti am ddod a'ch gael i'r cyngerdd hwnnw."
+  ],
+  [
+   248.0,
+   "Diolch yn fawr am ddod."
   ],
   [
    351.0,
@@ -21,7 +25,7 @@
   ],
   [
    361.7,
-   "comienzo al Eisteddfod del Chubut 2024"
+   "comienzo al Eisteddfod del chubut 2024"
   ],
   [
    407.4,
@@ -29,11 +33,15 @@
   ],
   [
    411.0,
-   "nosotros poder compartir este año"
+   "nosotros para m poder compartir este año"
   ],
   [
    416.4,
-   "2024 aquí en la ciudad de Trevelin"
+   "2024 aquí en la ciudad de TR"
+  ],
+  [
+   419.7,
+   "Para darinicio esta primer sesion del Eisteddfod del dia Viernes,"
   ],
   [
    431.0,
@@ -60,12 +68,28 @@
    "al"
   ],
   [
+   451.7,
+   "I dechra dan ni'n mynd i gwahod a Marilyn Ellis a Sylvia James y Rhyw Bendith i ni. Diolch."
+  ],
+  [
    456.9,
    "escenario"
   ],
   [
    459.0,
    "marl a Silvia"
+  ],
+  [
+   481.7,
+   "Gwledd un calon anhysbrid, yr adrodd cerddoriaeth, llenyddiaeth, crefft a chelf, yr holl weithgareddau, gofynnwn dy fendith a pob un fydd yn cystadlu ac i'r beirniaid fod yn deg yn wneud dyfarniad, diolch i'r pwyllgor sydd yn gweithio'n galed ar hyd y flwyddyn a rai sydd yn helpu yn ddienw, bendithia hefyd a rai sydd yn teithio o bell i fod yma heddiw."
+  ],
+  [
+   510.7,
+   "Mae ein calonnau yn hiraethu am yr rhai sydd wedi'u gadael ond fel dywedodd yr emynydd ei henwau peroglusydd a'i hun mor awyru. Pryd ydan ni yn y yn ystod yr penwythnos blasu'r yma gofynwn ein oll yn enw ein arglwydd Iesu Grist, amen."
+  ],
+  [
+   529.7,
+   "Oremos, nuestro padre celestial, nuevamente nos encontramos en medio de esta fiesta del Eisteddfod,"
   ],
   [
    539.6,
@@ -128,6 +152,10 @@
    "Matías hctor"
   ],
   [
+   642.7,
+   "Felly, diolch yn fawr iawn i bawb sy'n gwneud y cyfnod yma, a diolch yn fawr iawn i bawb sy'n gwneud y cyfnod yma."
+  ],
+  [
    655.6,
    "sagrad verdad libertad"
   ],
@@ -160,16 +188,20 @@
    "grande"
   ],
   [
+   709.1,
+   "ti y"
+  ],
+  [
    711.5,
    "loses del mundo"
   ],
   [
    755.0,
-   "Gloria con Gloria a"
+   "gloria con Gloria a"
   ],
   [
    760.2,
-   "Gloria a"
+   "tios Gloria a"
   ],
   [
    781.0,
@@ -196,6 +228,10 @@
    "McDonald y"
   ],
   [
+   898.1,
+   "Hen redid i bobol sy ddim yn gallu fod yn bresennol a dan ni wedi colli yn ystod de- diweddar. Dan ni'n mynd i ofyn i dawelwch os gwelwch yn dda."
+  ],
+  [
    919.0,
    "este será un homenaje aenes ya no"
   ],
@@ -204,20 +240,36 @@
    "encuentran entre nosotros"
   ],
   [
-   963.9,
-   "tit o gre Ur"
+   948.1,
+   "Ti'r datwn i, o grew'r pob goleuni, trodi ei nos ym mhrifysgol Llanegryn."
   ],
   [
-   983.5,
-   "tros par"
+   958.1,
+   "Ti'r datwn i, o grew'r pob goleuni, trodi ei nos ym mhrifysgol Langanyn."
   ],
   [
-   1014.6,
-   "leas titum"
+   968.1,
+   "goleuni, trodi ei nos yn ddu."
+  ],
+  [
+   984.1,
+   "Paru ni weld holl lwybrau'r dda yn gloywi,"
+  ],
+  [
+   1037.1,
+   "Ydi dy hun sy'n tywys trwy'r treianon o derbyn ein mawrhad?"
+  ],
+  [
+   1067.1,
+   "I'r datwn ni o dade ein harglwyd Iesu i'n harwain ato ef."
+  ],
+  [
+   1087.1,
+   "Canolwng bydd yr hwn sydd â'n ngwaredi, bendigaid fab hynny."
   ],
   [
    1116.8,
-   "amen"
+   "amén"
   ],
   [
    1149.2,
@@ -241,7 +293,7 @@
   ],
   [
    1164.8,
-   "sesión nacida entre leu pero con raíces"
+   "sesión nacida entre Trelew pero con raíces"
   ],
   [
    1168.8,
@@ -265,7 +317,7 @@
   ],
   [
    1181.9,
-   "escuela número 100 en gaiman y sus"
+   "escuela número 100 en Gaiman y sus"
   ],
   [
    1184.3,
@@ -281,7 +333,7 @@
   ],
   [
    1192.3,
-   "treleu en la carrera de profesorado de"
+   "Trelew en la carrera de profesorado de"
   ],
   [
    1195.2,
@@ -301,7 +353,7 @@
   ],
   [
    1210.6,
-   "1987 en la escuela 100 de gaiman el"
+   "1987 en la escuela 100 de Gaiman el"
   ],
   [
    1213.8,
@@ -361,7 +413,7 @@
   ],
   [
    1253.3,
-   "iglesia metodista de cuarto Madryn donde"
+   "iglesia metodista de cuarto madri donde"
   ],
   [
    1255.4,
@@ -409,7 +461,11 @@
   ],
   [
    1284.6,
-   "de ser presidente del de puer Madryn la"
+   "de ser presidente del de puer madre la"
+  ],
+  [
+   1287.68,
+   "Madre en la actualidad, integra aquella primer comisiwn, que este"
   ],
   [
    1291.1,
@@ -422,6 +478,10 @@
   [
    1300.2,
    "Air esta són del a la profesora willams"
+  ],
+  [
+   1327.46,
+   "ca'l penblwydd arbennig eleni wedi dallu ugain blynedd chware teg diolch yn fawr iawn."
   ],
   [
    1347.5,
@@ -470,10 +530,10 @@
  ],
  "fuentes": [
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -497,7 +557,7 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -516,12 +576,24 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -567,6 +639,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -621,12 +696,36 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -774,6 +873,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -783,6 +885,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -820,8 +925,8 @@
  ],
  "ventanas": {
   "total": 24,
-  "modelo": 19,
+  "modelo": 22,
   "reglas": 1,
-  "vacias": 4
+  "vacias": 1
  }
 }

@@ -4,6 +4,18 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Un bandoneon, con su resuello tristón, la noche en el cristal, de la copa y del bar, y del viento que pasó."
+  ],
+  [
+   15.0,
+   "un"
+  ],
+  [
+   18.8,
+   "Bandon con su resuello"
+  ],
+  [
    22.2,
    "tristón la noche en el cristal de la"
   ],
@@ -12,12 +24,28 @@
    "copa y del bar y del viento que pasó"
   ],
   [
+   30.0,
+   "Mi corasol, con su borracha emoción, y en otra voz, la voz de la Estonia vulgar, dice mi vulgar dolor."
+  ],
+  [
+   33.3,
+   "mi"
+  ],
+  [
    37.0,
    "corazón con su borracha emoción y en"
   ],
   [
    41.4,
    "otra voz la voz de la historia vulgar"
+  ],
+  [
+   46.0,
+   "dice mi vulgar"
+  ],
+  [
+   49.6,
+   "dolor"
   ],
   [
    51.4,
@@ -84,6 +112,10 @@
    "vendrás mi corazón te ve pero habrá que"
   ],
   [
+   118.2,
+   "beber mucho pero mucho"
+  ],
+  [
    124.6,
    "mariposita muchachita de mi barrio te"
   ],
@@ -129,6 +161,30 @@
   ]
  ],
  "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],
@@ -225,8 +281,8 @@
  ],
  "ventanas": {
   "total": 3,
-  "modelo": 3,
-  "reglas": 0,
+  "modelo": 2,
+  "reglas": 1,
   "vacias": 0
  }
 }

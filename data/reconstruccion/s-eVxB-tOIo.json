@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   22.0,
+   "No sé para qué volviste, si ya empezaba a olvidar."
+  ],
+  [
    26.1,
    "No sé para qué volviste"
   ],
@@ -149,6 +153,9 @@
   ]
  ],
  "fuentes": [
+  [
+   "cy"
+  ],
   [
    "letra"
   ],

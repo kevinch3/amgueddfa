@@ -400,6 +400,10 @@
    "en el paisage."
   ],
   [
+   508.44,
+   "Cesteliaid pedwar deg wyth, Unawd cerdd dant, Beca Flîr ac Andres Evans. Byddan ni'n wahodd iddyn nhw ddod ar y llwyfan os gwelwch yn dda, Beca Flîr, Pen y Graig, ac Andres, Dyffryn Camog."
+  ],
+  [
    515.0,
    "Continuamos."
   ],
@@ -432,6 +436,26 @@
    "Si el jurado así lo dispone"
   ],
   [
+   566.2,
+   "Mae'n ddrwm i'r sir fod yr athro'n y droed i'n denu hunan-drefn, denu hunan-yng ngwlad y ddau a'i siwrn fel canwys-drefn, i gyd-fod yr athro'n sgern i'w adio i'w gilydd."
+  ],
+  [
+   596.2,
+   "Ddiffygodd fflam meys mwy na'i gyd."
+  ],
+  [
+   612.2,
+   "Nid roedd llai o gwmpasaf o'r dechnoleg y byd, ym mhyder dwi'n cyd."
+  ],
+  [
+   644.2,
+   "Pan feidia'r byd a chwar'ir I fy nhw atgof i'r fabr ffyrdd,"
+  ],
+  [
+   664.2,
+   "Pan fedri arw can llafur i, y bydd hi'n ddrangwyd golwyr, oherwydd amser fel y fflam yn y noed, a'i fod wedi'i gwyneb hiau."
+  ],
+  [
    702.5,
    "Vamos a invitar al segundo participante,"
   ],
@@ -442,6 +466,10 @@
   [
    709.2,
    "Divin Camil."
+  ],
+  [
+   724.2,
+   "ôl y wefan gwrth y gilydd, ar y gwyn am y drist a'r gwaeth, mae'n eithro rhwng y bore a'r mynydd, y bore nesaf i ddeheuraeth, ond llefydd arall ar y tŷ, mewn ffrwyngodd y gwan, yn enwodd y dydd."
   ],
   [
    885.7,
@@ -474,6 +502,38 @@
   [
    910.6,
    "Cursiman."
+  ],
+  [
+   918.2,
+   "Wel, be' dilyniwch, ti'n gwbod be' dilyniwch. Be' dilyniwch yw, ca'l neuadd mab, derbyn teulu, beth yw adnabod, ga'l un neu ddau canu caneuon, beth yw drefn, gwarchod drefn yn ystod y derbyn, beth ma'n ddeud, ca'l ffordd drwy'r ddau na'r holl gwartheg neu beth yw canu, ca'l rai o'r drefn yn ystod y drefn a'r drefn."
+  ],
+  [
+   948.2,
+   "Beth yw gweithio hwnne i gân mor boeth a gwenith? Beth yw drefn teyrnas? Beth sy'n eto'n codfia? Rhoi ceffyll yn llaw bara? Beth yw bod yn genedl? Law menynw fel yr awr? Beth yw wladgarw? Cawn i mewn fŵn feshiwn?"
+  ],
+  [
+   978.2,
+   "Beth yw'r byd i berthyn mawr, gul hen Dreiglo? Beth yw'r byd i blant a'u llaw, hir yn sicr?"
+  ],
+  [
+   1038.2,
+   "Nes i'n tirio'n hwyl i'r drosodd ar hyd y nos, ro'dd y freiciau'n dim amdano ar hyd y nos."
+  ],
+  [
+   1057.2,
+   "Cerch y blant a bydd yn ddyhan, ciwch y blas a'r golffyn bychan, go iawn menion bwyl i ni gyrffan ar hyd y nos."
+  ],
+  [
+   1077.2,
+   "Cofia pnawn fydd allan heno ar hyd y nos, glwyd y doriau hir yn llwyddo ar hyd y nos, cofia môr y mŵr a'r ansonau, cofia crwydrîn yn ein garbiau a'r robin goch yn wneud y canau ar hyd y nos."
+  ],
+  [
+   1107.2,
+   "Gofiant byd yn mynd neu'n ddagrau ar hyd y nos, gofiant a sydd yn mynd, mwy na'n ar hyd y nos."
+  ],
+  [
+   1173.3,
+   "Ah."
   ]
  ],
  "fuentes": [
@@ -775,7 +835,7 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -802,7 +862,31 @@
    "yt_es"
   ],
   [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
    "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -827,6 +911,27 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -834,8 +939,8 @@
  ],
  "ventanas": {
   "total": 21,
-  "modelo": 19,
+  "modelo": 20,
   "reglas": 0,
-  "vacias": 2
+  "vacias": 1
  }
 }

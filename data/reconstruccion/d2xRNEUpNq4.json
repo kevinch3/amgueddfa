@@ -4,8 +4,16 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   1.7,
+   "fuga de Graciela"
+  ],
+  [
    5.6,
-   "de qué bolsillo de la memoria se"
+   "genta de qué bolsillo de la memoria se"
+  ],
+  [
+   9.5,
+   "fó mi"
   ],
   [
    12.6,
@@ -48,6 +56,10 @@
    "muñeca"
   ],
   [
+   53.0,
+   "nada en qué huell del ritual enfermo he"
+  ],
+  [
    57.0,
    "perdido niños y palabras"
   ],
@@ -65,6 +77,15 @@
   ]
  ],
  "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],

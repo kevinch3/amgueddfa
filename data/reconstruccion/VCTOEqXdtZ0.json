@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Gustavo García Saraví, Memorándum."
+  ],
+  [
    2.5,
    "de Gustavo García Saraví"
   ],
@@ -41,7 +45,7 @@
   ],
   [
    37.4,
-   "le puse aceite al auto"
+   "vanas le puse aceite al auto"
   ],
   [
    41.6,
@@ -96,6 +100,10 @@
    "que comeré el domingo"
   ],
   [
+   88.8,
+   "ah"
+  ],
+  [
    90.7,
    "Claro que me olvidé de ir a la misa que"
   ],
@@ -117,7 +125,7 @@
   ],
   [
    111.6,
-   "inolvidable aniversario de"
+   "inolvidable inolvidable aniversario de"
   ],
   [
    115.0,
@@ -129,6 +137,12 @@
   ]
  ],
  "fuentes": [
+  [
+   "cy"
+  ],
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],

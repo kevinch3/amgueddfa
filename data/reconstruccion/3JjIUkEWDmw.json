@@ -4,8 +4,16 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
-   147.8,
-   "ya la"
+   0.0,
+   "Braf yw medru chwarae'n nig a chyfri,"
+  ],
+  [
+   25.0,
+   "Braf i'w medru chwerthin am ei phen Smalio nad yw bywyd, ond noson lawen hir Ac esgus nad oes cŵl yn y nen."
+  ],
+  [
+   46.0,
+   "Hyfryd ydyw drimo ysgol gyrfa, a phluo'r nyth yn gynnes ac yn glir, rhoi croes wrth enw Cymru ac eistedd nôl yn braf, ac esgus mai digysgod yw ein ddu."
   ],
   [
    162.4,
@@ -45,7 +53,7 @@
   ],
   [
    235.2,
-   "van recibir"
+   "niñ van recibir"
   ],
   [
    238.7,
@@ -65,7 +73,7 @@
   ],
   [
    326.6,
-   "comisión presidente de la itiva de la"
+   "comisión presidente de la de la"
   ],
   [
    330.1,
@@ -94,6 +102,10 @@
   [
    358.5,
    "emocionante"
+  ],
+  [
+   371.0,
+   "Diolch yn fawr am ymgynghori'r Pobl Cymdeithas Cymru er mwyn cael amser i ddarllen y llyfr."
   ],
   [
    375.8,
@@ -478,6 +490,10 @@
   [
    1087.4,
    "la sin"
+  ],
+  [
+   1128.28,
+   "Poema Lorciano para mi abuela Onise fue la poesia ganadora del Eisteddfod dos mil quince y su autora es Vilma yy Nancy Vilma Jones de Rawson."
   ],
   [
    1135.4,
@@ -922,7 +938,13 @@
  ],
  "fuentes": [
   [
-   "yt_es"
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -989,6 +1011,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -1277,6 +1302,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"

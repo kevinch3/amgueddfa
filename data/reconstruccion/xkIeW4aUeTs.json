@@ -4,8 +4,16 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   25.0,
+   "Si no canto lo que siento Me voy a morir por dentro"
+  ],
+  [
    30.0,
    "Me voy a morir por dentro, he de gritarle a los vientos hasta reventar, aunque solo quede tiempo en mi lugar."
+  ],
+  [
+   42.16,
+   "Aunque solo quede tiempo en mi lugar Si, quiero meterme en el mar."
   ],
   [
    46.5,
@@ -110,7 +118,13 @@
  ],
  "fuentes": [
   [
+   "cy"
+  ],
+  [
    "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"

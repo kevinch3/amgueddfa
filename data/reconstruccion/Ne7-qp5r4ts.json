@@ -4,8 +4,12 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   1.3,
+   "fuga de Graciela"
+  ],
+  [
    5.5,
-   "de qué bolsillo de la memoria se"
+   "genta de qué bolsillo de la memoria se"
   ],
   [
    9.1,
@@ -77,6 +81,9 @@
   ]
  ],
  "fuentes": [
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],

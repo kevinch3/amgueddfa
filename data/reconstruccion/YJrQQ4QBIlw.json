@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Meic a Ches yn gyhoeddi bod y bobol yn hir at ei gilydd er mwyn rhannu a llysu'r peffroes, ac yn ocê ddawns, achos ma'r gên o llestai draddodiadol efo'u tangos a swrolys a ranchuras wedi bod yn rhan o'u rywyddaen nhw, a hefyd mae'n siŵr bod o'n wedi helpu poblogi'r rhethrin a ma' ag ma' nhw'n dalio iddi hynny hyd heddiw."
+  ],
+  [
    29.0,
    "a apertura de esta edición a cargo delge"
   ],
@@ -76,6 +80,14 @@
    "enamorado"
   ],
   [
+   148.8,
+   "bien"
+  ],
+  [
+   162.5,
+   "la"
+  ],
+  [
    165.6,
    "música tengo algo que"
   ],
@@ -90,6 +102,10 @@
   [
    175.3,
    "luna si me permite mosita no la cambio"
+  ],
+  [
+   178.82,
+   "cambio pob un."
   ],
   [
    179.0,
@@ -294,7 +310,7 @@
  ],
  "fuentes": [
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -358,6 +374,18 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -512,8 +540,8 @@
  ],
  "ventanas": {
   "total": 10,
-  "modelo": 9,
-  "reglas": 1,
+  "modelo": 10,
+  "reglas": 0,
   "vacias": 0
  }
 }

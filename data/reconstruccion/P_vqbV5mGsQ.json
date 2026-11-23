@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Alza su sombra en hoy, boncho de la dimensidad"
+  ],
+  [
    14.7,
    "Y es mi lejano país, una dulce raíz que no sabe olvidar"
   ],
@@ -24,6 +28,10 @@
    "Y se me da por pensar que el recuerdo de allá se me ha vuelto a canción."
   ],
   [
+   71.3,
+   "Allá lejos la patria andaba, azulando el día, cielo ya, tiempo allá, vuelvo y al asombro del sur."
+  ],
+  [
    95.1,
    "Y por mi sangre una voz materna, nombra Argentina."
   ],
@@ -36,12 +44,20 @@
    "hará entrega de un ramo de flores a la poeta."
   ],
   [
+   145.0,
+   "Ww!"
+  ],
+  [
    155.1,
    "También, en representación de la senadora Nancy González, harán entrega de una plaqueta donada por el Senado de la Nación."
   ],
   [
    185.1,
    "Y ahora sí, ya finalizando esta ceremonia, voy a solicitarle al presidente del círculo"
+  ],
+  [
+   205.0,
+   "ia finalisando esta ceremonia voy a solicitarle al Presidente del Circulo Vardico, señor Benito Jones, que inicie el regreso a nuestros lugares descendiendo del Senado."
   ],
   [
    211.0,
@@ -84,6 +100,18 @@
    "whisper_es"
   ],
   [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
    "whisper_es"
   ],
   [
@@ -92,8 +120,8 @@
  ],
  "ventanas": {
   "total": 5,
-  "modelo": 4,
-  "reglas": 0,
+  "modelo": 3,
+  "reglas": 1,
   "vacias": 1
  }
 }

@@ -4,12 +4,16 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
-   119.0,
-   "oke"
+   0.0,
+   "Sosban bach yn berwi ar y tân, sosban fawr yn berwi am dawn, a dawn wedi sgrafo joli bach."
+  ],
+  [
+   120.0,
+   "Yn ystod y momentau y coronhaeth y poet, mae'n un o'r rhan fwyaf importantau y festival yma, ac mae'n golygu pwrpas lle, o'r silenciau y seremoni, gallem ni gwybod y nofel newydd a'i nofel newydd."
   ],
   [
    123.2,
-   "Este momento de la coronación del poeta"
+   "este momento de la coronación del poeta"
   ],
   [
    126.4,
@@ -33,7 +37,7 @@
   ],
   [
    139.1,
-   "poeta. La importancia que adquiere el"
+   "poeta la importancia que adquiere el"
   ],
   [
    141.7,
@@ -53,7 +57,7 @@
   ],
   [
    153.8,
-   "tradiciones, historias, creencias que aún"
+   "tradiciones historias creencias que aún"
   ],
   [
    157.8,
@@ -61,7 +65,7 @@
   ],
   [
    160.0,
-   "sostienen. Sin dudas que honrar y"
+   "sostienen sin dudas que honrar y"
   ],
   [
    163.8,
@@ -69,7 +73,7 @@
   ],
   [
    166.4,
-   "la voz, la memoria, el corazón. Es"
+   "la voz la memoria El corazón es"
   ],
   [
    171.1,
@@ -85,11 +89,11 @@
   ],
   [
    181.1,
-   "y es el poeta quien busca esas palabras,"
+   "y es el poeta quien busca esas palabras"
   ],
   [
    184.9,
-   "las trabaja, las esculpe y las libera. Es"
+   "las trabaja las esculpe y las libera es"
   ],
   [
    189.7,
@@ -536,6 +540,10 @@
    "poeta"
   ],
   [
+   827.18,
+   "Yym, dwi'n mynd i roi llaw i'r gân, ac os gwelwch yn dda, dwi'n mynd i roi llaw i'r gân."
+  ],
+  [
    833.5,
    "voy a dar lectura a continuación al"
   ],
@@ -950,7 +958,10 @@
  ],
  "fuentes": [
   [
-   "yt_es"
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -1347,6 +1358,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"

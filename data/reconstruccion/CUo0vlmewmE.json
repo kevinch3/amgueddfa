@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Capilla Bézel."
+  ],
+  [
    30.0,
    "De paz inundada mi senda esté, o la rubra un ar de aflicción."
   ],
@@ -12,8 +16,24 @@
    "Mi suerte cualquiera que sea libre, estoy bien, tengo paz con mi Dios, estoy bien con mi Dios, tengo paz en mi ser, gloria a Dios."
   ],
   [
+   60.0,
+   "A ges e a ddire esdo i bien, tengo pas con mi Dios."
+  ],
+  [
+   70.0,
+   "Esdo i bien. Esdo i bien. Con mi Dios. Con mi Dios."
+  ],
+  [
+   77.28,
+   "Tengo pas en mi ser, gloria a Dios."
+  ],
+  [
    85.4,
    "Feliz yo me siento al saber que Jesús me libra de todo temor."
+  ],
+  [
+   90.0,
+   "Felis yo me siento al saber que Jesús me libra de todo temor."
   ],
   [
    102.0,
@@ -24,8 +44,20 @@
    "Estoy bien, estoy bien, con mi Dios, tengo paz en mi ser, gloria a Dios."
   ],
   [
+   119.12,
+   "con mi dios con mi dios."
+  ],
+  [
+   122.6,
+   "Tengo paz en mi ser, gloria a dios."
+  ],
+  [
    128.0,
    "La fe será siempre una gran realidad"
+  ],
+  [
+   133.84,
+   "La fe serasiempreuna gran realidad,"
   ],
   [
    139.7,
@@ -54,6 +86,10 @@
   [
    179.2,
    "Tengo paz en mi ser, gloria a Dios. Estoy bien con mi Dios. Tengo paz en mi ser, gloria a Dios."
+  ],
+  [
+   185.16,
+   "Estoy bien, estoy bien, con mi Dios, con mi Dios."
   ]
  ],
  "fuentes": [
@@ -67,7 +103,37 @@
    "whisper_es"
   ],
   [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
    "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
@@ -91,16 +157,13 @@
    "whisper_es"
   ],
   [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
+   "cy"
   ]
  ],
  "ventanas": {
   "total": 4,
-  "modelo": 4,
-  "reglas": 0,
+  "modelo": 2,
+  "reglas": 2,
   "vacias": 0
  }
 }

@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Memorándum de Gustavo García Saraví."
+  ],
+  [
    3.5,
    "Memorándum de Gustavo García"
   ],
@@ -29,7 +33,7 @@
   ],
   [
    24.1,
-   "tiene música funcional."
+   "tiene música funcional. Ey, qué vanas."
   ],
   [
    29.5,
@@ -89,10 +93,13 @@
   ],
   [
    85.4,
-   "aniversario de su muerte."
+   "inolvidable aniversario de su muerte."
   ]
  ],
  "fuentes": [
+  [
+   "cy"
+  ],
   [
    "yt_es"
   ],

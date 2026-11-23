@@ -37,6 +37,10 @@
   ],
   [
    113.0,
+   "Ti'n gwybod be dwi'n feddwl?"
+  ],
+  [
+   113.0,
    "Chocolate, chocolate"
   ],
   [
@@ -46,6 +50,10 @@
   [
    122.7,
    "Un chocolate, un chocolate, desde México al mundo es lo que hicieron regalos."
+  ],
+  [
+   129.0,
+   "Nes y Mexico a'r Mundo es lo que quiera que quiera. Y llaco a'r ffordd, y llango a'r ffordd, y llango a'r ffordd."
   ],
   [
    133.7,
@@ -86,13 +94,19 @@
    "whisper_es"
   ],
   [
-   "whisper_es"
+   "cy"
   ],
   [
    "whisper_es"
   ],
   [
    "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
@@ -106,8 +120,8 @@
  ],
  "ventanas": {
   "total": 5,
-  "modelo": 5,
-  "reglas": 0,
+  "modelo": 4,
+  "reglas": 1,
   "vacias": 0
  }
 }

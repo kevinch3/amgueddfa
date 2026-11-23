@@ -32,6 +32,14 @@
    "Después que fuiste mi sueño de cantor"
   ],
   [
+   58.9,
+   "Quien te ha oído sonar papa y melodiosa"
+  ],
+  [
+   63.7,
+   "No dice que sos la diosa de mi pobre corazón"
+  ],
+  [
    70.1,
    "Es que la gola se va y la fama es puro cuento"
   ],
@@ -85,6 +93,12 @@
   ]
  ],
  "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
   [
    "whisper_es"
   ],

@@ -206,6 +206,10 @@
   [
    283.0,
    "altas por el cielo van."
+  ],
+  [
+   300.18,
+   "Ia."
   ]
  ],
  "fuentes": [
@@ -361,6 +365,9 @@
   ],
   [
    "letra"
+  ],
+  [
+   "cy"
   ]
  ],
  "letras": [
@@ -369,14 +376,18 @@
    "hasta": 72,
    "titulo": "Rosa Amarela",
    "autor": "Tradicional brasileña; arreglo coral de Heitor Villa-Lobos",
-   "idioma": "pt"
+   "idioma": "pt",
+   "derechos": "Texto tradicional (dominio público)",
+   "fuente": "Kevin Roberts"
   },
   {
    "desde": 95,
    "hasta": 292,
    "titulo": "Bonita rama de sauce",
    "autor": "Carlos Guastavino; texto de Arturo Vázquez",
-   "idioma": "es"
+   "idioma": "es",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Texto de Oxford Song (oxfordsong.org/song/bonita-rama-de-sauce), aportado por Kevin Roberts"
   }
  ],
  "ventanas": {

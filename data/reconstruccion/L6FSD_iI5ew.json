@@ -4,8 +4,12 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
-   174.6,
-   "la tu"
+   172.76,
+   "Yn amlin, dwy arfer sydd, wyth eich gormod yn hŷn, mae'n dyfu dros y dydd."
+  ],
+  [
+   200.76,
+   "Llange fi, i'r tro, a'i fwyd, ia, a'i llaw, i fyny, y llefydd, a'r y ffordd, i'r ffordd."
   ],
   [
    353.7,
@@ -406,11 +410,30 @@
   [
    786.2,
    "niños que de eso se trata esta canción"
+  ],
+  [
+   812.0,
+   "i'r hagen y dydd, torrodd y fawr i'r ddodd y dydd, a'i chwardir i'r ddydd y dydd."
+  ],
+  [
+   831.0,
+   "A hwn yn y swydd gyda her enghraifft y carddor yn fyw iddi hi, mae Cymru yn gallu fathre ffwrdd o'r ffordd y maen nhw'n ei ddefnydd."
+  ],
+  [
+   857.0,
+   "Dyna'r gilydd a'r lladdwyd, dyna'r gilydd a'r lladdwyd, dros ein iau, dros ein bach, dros ein bôn, dros ein bont, dyna'r gilydd a'r lladdwyd."
+  ],
+  [
+   944.0,
+   "Cynnau gyr y sawl un, cynnau gyr y sawl un, dros ein iau, dros ein tân, dros ein ffordd, dros ein plant. Cynnau gyr y sawl un."
   ]
  ],
  "fuentes": [
   [
-   "yt_es"
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -711,12 +734,24 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ]
  ],
  "ventanas": {
-  "total": 19,
+  "total": 18,
   "modelo": 18,
   "reglas": 0,
-  "vacias": 1
+  "vacias": 0
  }
 }

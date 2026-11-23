@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "no tenemos las carpetas, no tenemos la obra,"
+  ],
+  [
    24.5,
    "no tenemos las carpetas"
   ],
@@ -42,6 +46,10 @@
   [
    57.7,
    "no sé"
+  ],
+  [
+   59.08,
+   "Pennawd, pennawd, pennawd arall."
   ],
   [
    59.8,
@@ -504,36 +512,8 @@
    "al sur"
   ],
   [
-   523.7,
-   "no"
-  ],
-  [
-   527.2,
-   "dónde"
-  ],
-  [
-   529.3,
-   "no"
-  ],
-  [
-   532.8,
-   "el bocón"
-  ],
-  [
-   544.0,
-   "aquí"
-  ],
-  [
-   551.6,
-   "no"
-  ],
-  [
-   554.5,
-   "y botas"
-  ],
-  [
-   566.8,
-   "no lo tiene"
+   548.26,
+   "Segiwch o'r ap aloma, segiwch a'r a- a- a- a- obiwces a'r fo- a'r lo- obiwces, segiwch o'r ap aloma."
   ],
   [
    595.5,
@@ -566,19 +546,7 @@
  ],
  "fuentes": [
   [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -611,10 +579,7 @@
    "yt_es"
   ],
   [
-   "yt_es"
-  ],
-  [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -962,7 +927,7 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"

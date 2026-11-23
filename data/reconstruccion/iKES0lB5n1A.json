@@ -4,8 +4,20 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Buenas, chicas."
+  ],
+  [
    30.0,
    "Mientras terminamos de acomodar los micrófonos, tenemos más salutaciones."
+  ],
+  [
+   39.84,
+   "Mi yn dras terminamos de agomodar ls microffon teneb more salutations."
+  ],
+  [
+   44.48,
+   "hoffwn i lloi l- longyfair i pwyllgor y Eisteddfod y Wladfa am trefnu hwyl unwaith eto eleni, gobeithio, gobeithio bydd pawb yn rhannu yn fawr."
   ],
   [
    60.0,
@@ -41,7 +53,7 @@
   ],
   [
    90.0,
-   "Ahora sí, entonces, si el jurado de música en castellano está listo,"
+   "Ahora sí, entonces, si el jurado de música en castellano está listo, Brin Krun."
   ],
   [
    107.8,
@@ -60,6 +72,10 @@
    "Ah, yo en ellas mi gozo y luz, bellas palabras de vida."
   ],
   [
+   154.7,
+   "Sí, de luz y guía, son sus de mi guía."
+  ],
+  [
    162.9,
    "Qué bellas son, qué bellas son, bellas palabras de vida."
   ],
@@ -76,12 +92,20 @@
    "¡Oye su dulce voz mortal! ¡Bellas palabras de vida!"
   ],
   [
+   196.9,
+   "Pónganos lo que llamo, y al cielo que llamo,"
+  ],
+  [
    206.1,
    "¡qué bellas son, qué bellas son, bellas palabras de vida!"
   ],
   [
    213.3,
    "¡Qué bellas son, qué bellas son, bellas palabras de vida!"
+  ],
+  [
+   221.4,
+   "Cuando el cantito sonará"
   ],
   [
    227.4,
@@ -94,6 +118,10 @@
   [
    235.4,
    "Bellas palabras de vida"
+  ],
+  [
+   239.3,
+   "Solo Cristo redirme"
   ],
   [
    243.4,
@@ -113,6 +141,27 @@
   ]
  ],
  "fuentes": [
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
   [
    "whisper_es"
   ],
@@ -197,8 +246,8 @@
  ],
  "ventanas": {
   "total": 6,
-  "modelo": 5,
-  "reglas": 0,
+  "modelo": 4,
+  "reglas": 1,
   "vacias": 1
  }
 }

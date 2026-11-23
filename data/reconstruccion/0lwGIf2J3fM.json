@@ -13,7 +13,7 @@
   ],
   [
    19.5,
-   "Al señor Gustavo Macarty, intendente de la ciudad de Trelew."
+   "Al señor Gustavo Macarty, intendente de la ciudad de Trevelin."
   ],
   [
    24.7,
@@ -24,8 +24,16 @@
    "a los músicos Alicia Ferrari, Kevin Handley, Julieta Giancafini y Sonia Valiente"
   ],
   [
+   40.98,
+   "Julieta Yancafí, y Sonia Valiente, al dúo integrado por Marcelo Griffiths"
+  ],
+  [
    46.5,
    "al dúo integrado por Marcelo Griffiths y Santiago Palacios Zampini"
+  ],
+  [
+   49.98,
+   "y Sant Iago Palacio Sant' Pini."
   ],
   [
    52.4,
@@ -36,8 +44,16 @@
    "A Marita y Lito Aguilera del ballet folclórico Pilma y Ken"
   ],
   [
+   65.48,
+   "A Marita y Lido Aguilera del balet folclorico Pima y Queni."
+  ],
+  [
    70.2,
    "A los escoltas, Agustina Campos Oller, Diego Gimberna y Rupé Mesa White."
+  ],
+  [
+   75.36,
+   "A los escoltas, Agustina Campos Oler, Diego Gimberna y Lupe Meza White."
   ],
   [
    87.5,
@@ -60,8 +76,20 @@
    "y a su presidente, Geraint Edmunds."
   ],
   [
+   122.4,
+   "Amén."
+  ],
+  [
+   152.4,
+   "Amén."
+  ],
+  [
    182.4,
    "A continuación, invitamos al profesor Omar Llovie, miembro del jurado que tuvo a cargo"
+  ],
+  [
+   194.36,
+   "A continuación, invitamos al Profesor Omar Jolie, miembro del jurado que tuvo a cargo la responsabilidad de evaluar los trabajos presentados, a dar lectura del veredicto."
   ],
   [
    204.5,
@@ -70,6 +98,10 @@
   [
    212.4,
    "Bueno, leo a continuación lo que nosotros como jurado consideramos necesario explicar"
+  ],
+  [
+   224.36,
+   "como jurado, consideramos necesario picar, que son presupuestos de lectura para, y justificarlo, en primer lugar, y lo volver a editar."
   ],
   [
    227.4,
@@ -164,12 +196,20 @@
    "ha llegado el momento"
   ],
   [
+   372.7,
+   "A lligodd y moment, y moment gwyn anteri ystanoed."
+  ],
+  [
    389.9,
    "el momento culminante de esta noche"
   ],
   [
    393.0,
    "Se invita al poeta o a la poeta ganador o ganadora"
+  ],
+  [
+   399.7,
+   "Se invita a al poeta o a la poeta, ganador o ganadora, que responde al seudónimo de Tehuel a ponerse de pie al toque de la trompeta."
   ],
   [
    406.1,
@@ -184,6 +224,10 @@
    "Vuelvo a preguntar, ¿se encuentra en este salón él o la poeta cuyo seudónimo es Tehuel?"
   ],
   [
+   429.7,
+   "Vuelvo a preguntar, se encuentre en este salón el o la poeta cuyo seudónimo es Tehuel, lo invitamos a que se ponga de pie."
+  ],
+  [
    439.9,
    "Lo invitamos a que se ponga de pie."
   ],
@@ -194,6 +238,10 @@
   [
    467.9,
    "por favor, lo invitamos a que se ponga de pie."
+  ],
+  [
+   525.34,
+   "Diolch yn fawr iawn."
   ]
  ],
  "fuentes": [
@@ -213,7 +261,64 @@
    "whisper_es"
   ],
   [
+   "cy"
+  ],
+  [
    "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
@@ -285,7 +390,16 @@
    "whisper_es"
   ],
   [
+   "cy"
+  ],
+  [
    "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
@@ -297,7 +411,7 @@
    "whisper_es"
   ],
   [
-   "whisper_es"
+   "cy"
   ],
   [
    "whisper_es"
@@ -309,43 +423,13 @@
    "whisper_es"
   ],
   [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
+   "cy"
   ]
  ],
  "ventanas": {
   "total": 10,
-  "modelo": 8,
+  "modelo": 10,
   "reglas": 0,
-  "vacias": 2
+  "vacias": 0
  }
 }

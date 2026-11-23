@@ -364,20 +364,8 @@
    "tiempo atardecer"
   ],
   [
-   303.7,
-   "en otras"
-  ],
-  [
    306.0,
    "un día aprendo salvador de alterna en"
-  ],
-  [
-   310.3,
-   "relación"
-  ],
-  [
-   312.5,
-   "y elisa"
   ],
   [
    314.0,
@@ -388,20 +376,8 @@
    "con todos los puertos y por los asientos"
   ],
   [
-   321.7,
-   "traseros y los"
-  ],
-  [
-   323.7,
-   "costos"
-  ],
-  [
    331.6,
    "al mover mi lado o medio"
-  ],
-  [
-   335.1,
-   "lo mismo"
   ],
   [
    339.7,
@@ -438,10 +414,6 @@
   [
    590.4,
    "traiga la corona del fondo de mi salón"
-  ],
-  [
-   611.3,
-   "ah"
   ],
   [
    697.0,
@@ -684,18 +656,6 @@
    "ballet americano"
   ],
   [
-   906.6,
-   "aquí"
-  ],
-  [
-   911.4,
-   "tú"
-  ],
-  [
-   915.2,
-   "no"
-  ],
-  [
    922.9,
    "tú"
   ],
@@ -722,6 +682,14 @@
   [
    963.1,
    "pues"
+  ],
+  [
+   972.8,
+   "sí"
+  ],
+  [
+   978.3,
+   "y mucho"
   ],
   [
    1049.1,
@@ -1415,36 +1383,12 @@
   ],
   [
    "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
   ]
  ],
  "ventanas": {
   "total": 24,
-  "modelo": 23,
+  "modelo": 22,
   "reglas": 0,
-  "vacias": 1
+  "vacias": 2
  }
 }

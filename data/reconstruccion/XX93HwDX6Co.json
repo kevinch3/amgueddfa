@@ -4,6 +4,38 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   60.0,
+   "Dywedwn i'r lais yn gadw arna i i ddod a golchi neu' a'i gyd yn addo'n galfa ni."
+  ],
+  [
+   78.0,
+   "Ar gloyn dy nglaw i, ar y de-alwad i, canna mynaid yn y gwael ag awydd ar y galwad i."
+  ],
+  [
+   96.0,
+   "Yr Iesu sy'n myngwladd, i ddere fi'n gynnau Saint, ffydd yn gompau cariad pur a hyn, a phob rhyw mewn braint."
+  ],
+  [
+   120.0,
+   "Born yn oed yma fi, ar y de-alwad i, tan am y naid yn y gwael ag aid ar galar i."
+  ],
+  [
+   140.0,
+   "Cof o gofn iawn sbïwch am drefn, y cerdd o ddau phlanhoy, yr efeniawn Iesu fel yr wyf, a chanadd am y gwaed."
+  ],
+  [
+   164.0,
+   "O'r glwyd yma fi, ar dy alwad i, a nad ynaid yn y gloi, a ga'l i ddargofani."
+  ],
+  [
+   184.0,
+   "Ar y glwydd dyna fi, ar dy alwad i, canaf yna'i dyna fo i, ag aith ar y galwad i."
+  ],
+  [
+   215.0,
+   "Diolch yn fawr iawn."
+  ],
+  [
    244.5,
    "buenas noches a"
   ],
@@ -52,12 +84,28 @@
    "de la señora irena rises de drad"
   ],
   [
+   302.78,
+   "Ni glywai nais er ie, sy'n dweud syniad ta fydd e'n dda, flind yn ogyn, ceir ar fembron, rhoi pwys efo'n i law."
+  ],
+  [
+   330.78,
+   "Mi ddeth ddim at yr Iesu ci yn shifft o glanfa'n swydd, ond llwyth a gefais yn gofyn at e dwi'n deud swydd dwi'n ddweud."
+  ],
+  [
+   360.78,
+   "Ni glywais na'i seriau, sy'n dweud mai gen i yn rhan,"
+  ],
+  [
+   372.78,
+   "y teimlo'n dim, sef y cherddi cyn o'i brofi gwefan,"
+  ],
+  [
    484.3,
-   "Muchas gracias Lucas Muchas gracias"
+   "Muchas gracias Lucas. Muchas gracias."
   ],
   [
    508.4,
-   "Arturo Oh"
+   "Arturo"
   ],
   [
    768.3,
@@ -76,6 +124,10 @@
    "sentio me tantos latios y y ya no puedo"
   ],
   [
+   816.92,
+   "Gyda'n sownd efo'i gweiriau, astudia dim bod e'n wneud synnwyr na mas."
+  ],
+  [
    818.7,
    "quee hoy no es"
   ],
@@ -90,6 +142,10 @@
   [
    834.4,
    "veneno"
+  ],
+  [
+   837.2,
+   "se y"
   ],
   [
    840.2,
@@ -116,12 +172,20 @@
    "real hace ya tiempo"
   ],
   [
+   890.0,
+   "impos no me sirve"
+  ],
+  [
    919.3,
-   "Bravo"
+   "repente Bravo"
   ],
   [
    930.4,
    "Bravo"
+  ],
+  [
+   931.92,
+   "So, diolch yn fawr."
   ],
   [
    961.6,
@@ -198,6 +262,18 @@
   [
    1033.7,
    "Vita mi salud"
+  ],
+  [
+   1091.7,
+   "John moris"
+  ],
+  [
+   1099.28,
+   "Dagrau ddawn yn hynt, wrth y ffenestr yn gwynbanus yr ochneidia'r gwynt, godirais yn awr ag wylo, beichio wylonai, a adegwyd yr hyrddiau dadiau yn eglwysai'r gwaed."
+  ],
+  [
+   1123.28,
+   "Pan fyddai'n wynt i wylo ar fy ffenestri, dywed i'm pa gollais tithau i'n mathgarau di."
   ],
   [
    1177.5,
@@ -374,7 +450,142 @@
  ],
  "fuentes": [
   [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
    "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -437,88 +648,10 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -651,9 +784,9 @@
   ]
  ],
  "ventanas": {
-  "total": 24,
-  "modelo": 24,
+  "total": 23,
+  "modelo": 22,
   "reglas": 0,
-  "vacias": 0
+  "vacias": 1
  }
 }

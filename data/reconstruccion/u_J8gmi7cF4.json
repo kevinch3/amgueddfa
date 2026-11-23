@@ -588,6 +588,10 @@
    "Carmen adelante niña por favor"
   ],
   [
+   1058.18,
+   "Diolch am wneud eich gwasanaethau. Rwy'n ymladd ym mhrofiadau chi, ac rwy'n ymladd y ffordd bynnag sy'n cael ei chyfathrebu a'i chyfathrebu efo chi."
+  ],
+  [
    1203.0,
    "culminar esta ceremonia invitamos al"
   ],
@@ -1060,6 +1064,9 @@
    "yt_es"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -1086,8 +1093,8 @@
  ],
  "ventanas": {
   "total": 21,
-  "modelo": 13,
+  "modelo": 15,
   "reglas": 0,
-  "vacias": 8
+  "vacias": 6
  }
 }

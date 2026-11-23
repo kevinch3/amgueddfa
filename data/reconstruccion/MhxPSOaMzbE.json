@@ -4,28 +4,12 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
-   26.4,
-   "ya no"
+   0.0,
+   "Hei, wnawn ni render y cenedl jôcs."
   ],
   [
-   27.9,
-   "yo soy y"
-  ],
-  [
-   31.6,
-   "sin que dios"
-  ],
-  [
-   41.1,
-   "por si estás ahora dejando ganar"
-  ],
-  [
-   48.9,
-   "sí"
-  ],
-  [
-   55.7,
-   "yo viví mi miseria"
+   56.0,
+   "Drwy'r niwl, mae'r golau'n y pellter drwy'r niwl. Mae'r ynys a'r tan drwy'r niwl. Mae'i geiriau yn ein galw ni i symud ymlaen, o, symud ymlaen."
   ],
   [
    66.0,
@@ -36,8 +20,24 @@
    "y también"
   ],
   [
+   86.0,
+   "Mor gynest y lais sy'n sychu y dagrau ar dy foch."
+  ],
+  [
    98.3,
    "y muchas gracias"
+  ],
+  [
+   108.0,
+   "O mor dyner i'r glaw sy'n disgyn yn adaw gwmwl coch i ie ie."
+  ],
+  [
+   123.48,
+   "Drwy'r niwl mae golau'n y peth drwy'r niwl. Mae'r enfys a'r tân drwy'r niwl. Mae geiriau yn ein galw ni i symud i'r nôl."
+  ],
+  [
+   124.2,
+   "jordi"
   ],
   [
    126.5,
@@ -46,11 +46,68 @@
   [
    131.0,
    "a mí no me quería y anelka lo vi y"
+  ],
+  [
+   137.4,
+   "sonido"
+  ],
+  [
+   138.0,
+   "Ymlaen o symud ymlaen."
+  ],
+  [
+   148.62,
+   "O, o, o, o, o, o, o, o, o, o, o, drwy'r niwl, er golau na'n pethau'r grynul."
+  ],
+  [
+   151.1,
+   "ah"
+  ],
+  [
+   154.8,
+   "o no"
+  ],
+  [
+   162.2,
+   "i"
+  ],
+  [
+   165.5,
+   "1er"
+  ],
+  [
+   168.0,
+   "Mae'r enfys a'r tad trwy'r niw, mae lleisiau yn ein galw ni, i symud ymlaen, o symud ymlaen, o symud ymlaen."
+  ],
+  [
+   173.3,
+   "i"
   ]
  ],
  "fuentes": [
   [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
    "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -65,7 +122,10 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -78,6 +138,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -85,8 +148,8 @@
  ],
  "ventanas": {
   "total": 4,
-  "modelo": 4,
-  "reglas": 0,
+  "modelo": 3,
+  "reglas": 1,
   "vacias": 0
  }
 }

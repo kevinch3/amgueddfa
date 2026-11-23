@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Yn un tecst wnaeth ffilosof Martin Heidegger ddweud am yr oerfedd o Holdergin, a'r esensiwn o fyd-destun, mae'n ymateb i'r valwyr y sŵn. Mae'n dweud fod y sŵn yn dda i'r bobl, nid dim only oherwydd fod o'n gallu i'w gysylltu a'i meddwl a bywydau, ond hefyd o'i grisio, mae'r bobl yn cael ei rectifeio a'i lwca."
+  ],
+  [
    3.6,
    "en un texto que escribió el reconocido"
   ],
@@ -485,7 +489,7 @@
   ],
   [
    600.8,
-   "eliana austin es que importa la Corona"
+   "Eliana Austin es que importa la Corona"
   ],
   [
    604.3,
@@ -494,6 +498,10 @@
   [
    653.6,
    "aquí"
+  ],
+  [
+   690.1,
+   "Daré lectura a continuación del poema ganador, Corona."
   ],
   [
    698.8,
@@ -505,7 +513,7 @@
   ],
   [
    703.8,
-   "Gorsedd"
+   "Corona"
   ],
   [
    705.8,
@@ -576,6 +584,10 @@
    "puntualmente cuando la piedra cante"
   ],
   [
+   772.68,
+   "Tributaremos ahora los honores que le corresponden al poeta Soledad Navarro interpretara perfume de carnaval, samba de peteco carabajal, que será bailada por Marita y Lito Aguilera, director e integrante del ballet folclorico pilmaiquen de nuestra ciudad, acompañan al piano Hector Ariel MacDonald, en guitarra Jorge Vega."
+  ],
+  [
    776.4,
    "tributar hemos ahora los honores que le"
   ],
@@ -638,10 +650,6 @@
   [
    846.7,
    "bailando una vieja"
-  ],
-  [
-   850.8,
-   "yo"
   ],
   [
    856.8,
@@ -708,10 +716,6 @@
    "mira el baile"
   ],
   [
-   962.9,
-   "viví"
-  ],
-  [
    969.4,
    "es decir"
   ],
@@ -776,6 +780,10 @@
    "coronada poeta"
   ],
   [
+   1077.86,
+   "Ar a' lo proffiwch tan bien, un miembr o'r Circulo Vartico, yn manwch y Presidenta, Senora Yvonne Owen."
+  ],
+  [
    1080.9,
    "ahora los propios también un miembro del"
   ],
@@ -801,7 +809,7 @@
   ],
   [
    1120.2,
-   "chubut será entregado por el"
+   "Chubut será entregado por el"
   ],
   [
    1123.1,
@@ -830,15 +838,11 @@
   [
    1174.3,
    "siguientes miembros"
-  ],
-  [
-   1201.6,
-   "nunca"
   ]
  ],
  "fuentes": [
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -1210,7 +1214,7 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -1273,7 +1277,7 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -1418,6 +1422,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -1464,8 +1471,8 @@
  ],
  "ventanas": {
   "total": 21,
-  "modelo": 20,
-  "reglas": 1,
+  "modelo": 19,
+  "reglas": 2,
   "vacias": 0
  }
 }

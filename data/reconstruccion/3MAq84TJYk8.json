@@ -260,6 +260,10 @@
    "Si se encuentra Craig entre nosotros, voy a solicitarle por favor que se levante."
   ],
   [
+   447.52,
+   "Yn y tro cyntaf, byddwn i'n gofyn i'r poet Craig fod, os o'n nhw'n gyd-destun, i ddeud wrthyn nhw'n hollol."
+  ],
+  [
    459.0,
    "En el tercer llamado voy a solicitarle al poeta Craig"
   ],
@@ -268,16 +272,16 @@
    "que si se encuentra entre nosotros, por favor se ponga de pie."
   ],
   [
+   597.52,
+   "Cyn respondio i'r pseudonym Craig ydy'r Syr Pedro Andrés Tagliabueo o siwedd Gaiman."
+  ],
+  [
    606.7,
    "de la ciudad de Gaiman."
   ],
   [
    626.6,
    "Hornela Verona Bragoli traerá la corona para el poeta desde el fondo del salón."
-  ],
-  [
-   636.7,
-   "Amén."
   ],
   [
    696.4,
@@ -336,8 +340,16 @@
    "ese frío de la infancia."
   ],
   [
+   779.7,
+   "Craig."
+  ],
+  [
    784.3,
    "A continuación se tributarán los honores al poeta."
+  ],
+  [
+   801.6,
+   "Yn nesaf, bydd y triw- bydd y triwtaniaethau i'r poet yn cael eu triwt."
   ],
   [
    806.7,
@@ -358,6 +370,10 @@
   [
    824.3,
    "a la par que será bailada por María Fernanda Aguilera y Carlos Prieto"
+  ],
+  [
+   831.6,
+   "La noche va juntando estrellas sorminas y dibinda la aurora a sus rojas mequillas"
   ],
   [
    836.7,
@@ -457,7 +473,11 @@
   ],
   [
    1088.5,
-   "También recibió un obsequio de la representante del Círculo Várdico del Chubut, Gorsedd Egruadva, por parte de la señora Cecilia Glansman."
+   "También recibió un obsequio de la representante del Círculo Várdico del Chubut, Gorset Egruadva, por parte de la señora Cecilia Glansman."
+  ],
+  [
+   1099.76,
+   "Tambien recibio un obsegio de- yym de la representante del Circulo Bardico del Chubut, Gorset Eglwadba, por parte de la señora Cecilia Glansman."
   ],
   [
    1110.5,
@@ -484,8 +504,16 @@
    "del Círculo Várdico, Benito Jones, va a invitar al poeta a descender del escenario"
   ],
   [
+   1173.76,
+   "va a invitar al poeta a descender del escenario, y lo seguirán a continuación los miembros y presentes que han acompañado esta ceremonia."
+  ],
+  [
    1178.2,
    "y lo seguirán a continuación los miembros y presentes que han acompañado esta ceremonia."
+  ],
+  [
+   1203.76,
+   "Toc, toc, toc."
   ]
  ],
  "fuentes": [
@@ -682,7 +710,91 @@
    "whisper_es"
   ],
   [
+   "cy"
+  ],
+  [
    "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
@@ -760,7 +872,7 @@
    "whisper_es"
   ],
   [
-   "whisper_es"
+   "cy"
   ],
   [
    "whisper_es"
@@ -781,82 +893,19 @@
    "whisper_es"
   ],
   [
-   "whisper_es"
+   "cy"
   ],
   [
    "whisper_es"
   ],
   [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
+   "cy"
   ]
  ],
  "ventanas": {
   "total": 21,
-  "modelo": 18,
-  "reglas": 0,
-  "vacias": 3
+  "modelo": 19,
+  "reglas": 1,
+  "vacias": 1
  }
 }

@@ -4,8 +4,8 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
-   100.6,
-   "y"
+   90.0,
+   "Mae'n siŵr y byddai'r llawysgrif yn cael ei ddisgwyl yn ystod y cyfnod cyntaf y cyfnod diwethaf."
   ],
   [
    101.8,
@@ -46,6 +46,10 @@
   [
    141.7,
    "graznido"
+  ],
+  [
+   150.0,
+   "Persigan la danza de sus remolinos cuando ande el viento por las huellas sur,"
   ],
   [
    154.1,
@@ -426,7 +430,7 @@
  ],
  "fuentes": [
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -457,6 +461,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"

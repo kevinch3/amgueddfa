@@ -9,7 +9,7 @@
   ],
   [
    8.8,
-   "solo libre, género, canción de autor argentino,"
+   "Solo libre, género, canción de autor argentino,"
   ],
   [
    15.3,
@@ -17,7 +17,7 @@
   ],
   [
    21.0,
-   "Yamila Gauna, ella nos va a interpretar"
+   "Yamila Gauna, ella nos va a interpretar Promesa sobre el bidet."
   ],
   [
    25.5,
@@ -40,8 +40,12 @@
    "Competencia número 50"
   ],
   [
+   64.3,
+   "Rock"
+  ],
+  [
    64.8,
-   "Rock Nacional"
+   "Rock nacional"
   ],
   [
    66.8,
@@ -50,6 +54,10 @@
   [
    83.6,
    "Buenas."
+  ],
+  [
+   111.0,
+   "Por favor no hagas promesas sobre el vide, por favor no me hagas mal los sobres, por favor yo te prometo te esperare, si es que paro de correr."
   ],
   [
    116.6,
@@ -104,6 +112,10 @@
    "Por favor, no hagas promesas"
   ],
   [
+   193.2,
+   "Por favor no hagas promesas, por favor no me abran mas los ores, por favor yo te prometo te esperare si es que para de llover, por favor sigue la sombra de mi bebe."
+  ],
+  [
    196.3,
    "Por favor, no me abran más los ojos"
   ],
@@ -154,6 +166,10 @@
   [
    256.1,
    "De acuerdo, de acuerdo, de acuerdo"
+  ],
+  [
+   281.28,
+   "Diolch yn fawr."
   ]
  ],
  "fuentes": [
@@ -173,7 +189,32 @@
    "whisper_es"
   ],
   [
+   "whisper_es",
+   "cy"
+  ],
+  [
    "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
@@ -215,7 +256,7 @@
    "whisper_es"
   ],
   [
-   "whisper_es"
+   "cy"
   ],
   [
    "whisper_es"
@@ -257,25 +298,13 @@
    "whisper_es"
   ],
   [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
+   "cy"
   ]
  ],
  "ventanas": {
   "total": 5,
-  "modelo": 5,
-  "reglas": 0,
+  "modelo": 4,
+  "reglas": 1,
   "vacias": 0
  }
 }

@@ -5,15 +5,15 @@
  "seg": [
   [
    0.0,
-   "Gracias a la vida"
+   "gracias a la vida"
   ],
   [
    2.3,
-   "de Violeta Parra"
+   "de violeta parra"
   ],
   [
    7.3,
-   "Gracias a la vida que me ha dado tanto"
+   "gracias a la vida que me ha dado tanto"
   ],
   [
    13.2,
@@ -33,7 +33,7 @@
   ],
   [
    33.6,
-   "Gracias a la vida que me ha dado tanto"
+   "gracias a la vida que me ha dado tanto"
   ],
   [
    39.3,
@@ -48,8 +48,12 @@
    "pillos turbinas ladridos chubascos y a"
   ],
   [
+   57.4,
+   "boost antier de mi bien amado"
+  ],
+  [
    64.3,
-   "gracias a la vida"
+   "Gracias a la vida"
   ],
   [
    67.5,
@@ -65,7 +69,7 @@
   ],
   [
    78.9,
-   "las palabras que pienso y declaró"
+   "las palabras que pienso y declaro"
   ],
   [
    84.4,
@@ -145,7 +149,7 @@
   ],
   [
    173.3,
-   "así yo distingo de ya de quebranto"
+   "así yo distingo de ya de quebranto los"
   ],
   [
    179.8,
@@ -161,6 +165,9 @@
   ]
  ],
  "fuentes": [
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],

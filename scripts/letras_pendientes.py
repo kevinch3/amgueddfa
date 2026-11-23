@@ -12,18 +12,26 @@ Crosses three things the repo already has:
     (public/marcadores-video/);
   - the lyrics: the texts (data/letras/*.md) and where each is aligned (data/letras/videos.json).
 
-One row per piece, with every video where it is sung, so one text serves them all. A video reaches
-a piece through a competition of its title or chapters, through a span of the piece's text, or
-because its title names a saved text (word for word, and only when no other text or programa
-setting shares that title). A video counts as done only when it has a span of that piece's text;
-a saved text with no span is a gap. "a elección" pieces, and competitions that offer alternatives
-(«A», «B» o «C»), are listed apart: someone has to say which piece was sung. A clip with a single
-performance leaves that list once its piece is known (a span, a gap entry or its title).
+A competition is sung when it sits in a music section (also "### Adran gerddoriaeth" inside a
+language section, or "## Solos · Unawdau") and its line names no instrument, dance or recitation
+outside a title or an accompaniment; a cân actol and a choir with an instrumental ensemble are sung.
+
+One row per piece, with every video where it is sung, so one text serves them all; credits that
+differ only in spelling or initials, or an empty one, are the same row. A video reaches a piece
+through a competition of its title or chapters, through a span of the piece's text, or because its
+title names a saved text (word for word, and only when no other text or programa setting shares that
+title). A video counts as done only when it has a span of that piece's text; a saved text with no
+span is a gap. "a elección" pieces, competitions that offer alternatives («A», «B» o «C») and free
+repertoires whose line names no piece ("Solo libre: música rock o blues") are listed apart: someone
+has to say which piece was sung. A clip with a single performance leaves that list once its piece is
+known (a span, a gap entry or its title); a session keeps it, with the texts aligned in its chapter.
+A line that names its piece without «» is counted apart too, until the transcription marks it.
 
 The table leaves some videos out, and the report counts them: sung competitions whose videos have
-no published text, videos of editions with no programa transcribed, and performances that nobody
-has placed in a competition (with or without text: giving a video text does not place it).
-The texts themselves always come from the maintainer (skill: video-lyrics).
+no published text, videos of editions with no programa transcribed, performances that nobody has
+placed in a competition (with or without text: giving a video text does not place it), and clips
+whose title says they are not sung. The texts themselves always come from the maintainer (skill:
+video-lyrics).
 
 Why a gap stays open is curated in data/letras/huecos.json (see MOTIVOS): one entry per piece
 or per video, keyed by the text's slug when the text exists, else by the programa title. The
@@ -75,7 +83,8 @@ MOTIVOS = {
                   "desde el inicio del tramo cuando lo oído es poco (#129)."),
     "ubicable_desde_clip": ("se puede ubicar ya desde un clip alineado",
                             "Correr el tramo del clip ya alineado por el desfase que da el detalle y agregarlo "
-                            "a este video (skill `video-lyrics`); después, sacar el video de la entrada."),
+                            "a este video (skill `video-lyrics`); después, sacar el video de la entrada, o dejarlo "
+                            "para otra actuación del mismo video con `desde` fuera del tramo."),
     "no_esta_en_video": ("no se canta en ese video",
                          "Nada que alinear ahí: hace falta otra grabación de esa actuación, o corregir a qué "
                          "competencia apunta el video."),
@@ -85,7 +94,12 @@ MOTIVOS = {
     "instrumental": ("instrumental, sin letra", "No es un hueco de letra: no se cuenta."),
     "a_eleccion": ("obra «a elección» sin identificar",
                    "Escuchar el anuncio o el video para saber qué obra se cantó (o cuál de las alternativas del "
-                   "programa); con el título, la letra se pide como cualquier otra ({n} apariciones, lista al final)."),
+                   "programa; en un repertorio libre, la línea del programa no nombra ninguna); con el título, la letra "
+                   "se pide como cualquier otra ({n} apariciones, lista al final)."),
+    "titulo_sin_marcar": ("el programa no marca el título",
+                          "La transcripción del programa nombra la obra sin «»: marcar el título (skill "
+                          "`programa-transcription`) para que la obra entre en la tabla. Lista en "
+                          "[Obras sin marcar en el programa](#obras-sin-marcar-en-el-programa)."),
     "sin_texto_video": ("el video no tiene texto publicado",
                         "Que el video tenga texto publicado (subtítulos, Whisper o reconstrucción: "
                         "`scripts/export_video_transcripts.py`); entonces entra en la tabla con sus obras. Lista en "
@@ -101,7 +115,7 @@ MOTIVOS = {
                                   "no alcanza: un video entra en la tabla solo cuando su título, sus capítulos o una "
                                   "letra alineada lo llevan a una competencia cantada."),
 }
-COMPUTED = {"falta_texto", "sin_alinear", "a_eleccion", "sin_texto_video", "edicion_sin_programa",
+COMPUTED = {"falta_texto", "sin_alinear", "a_eleccion", "titulo_sin_marcar", "sin_texto_video", "edicion_sin_programa",
             "actuacion_sin_identificar"}
 ENTRY_KEYS = {"letra", "obra", "autoria", "videos", "desde", "motivo", "detalle"}
 NOT_PERFORMANCE = {"ceremonia", "noticia"}  # video kinds that are not a competition performance
@@ -118,9 +132,44 @@ def cierre(code: str, **fill) -> str:
 
 VOCAL = re.compile(r"\b(coros?|c[oô]r|corau|parti|part[iï]on|unawd|solos?|solista|d[uú]o|deuawd|tr[ií]o|triawd|cuarteto|pedwarawd|"
                    r"conjunto vocal|ensamble vocal|voz|voces|lleisiau|canto|canu|c[aâ]n|emyn|himno|cerdd dant|lied|lírico)\b", re.I)
-NOT_SUNG = re.compile(r"\b(instrumental|instrumento|piano solo|guitarra|viol[ií]n|flauta|arpa|telyn|teclado|recitaci[oó]n|adrodd|"
-                      r"danza|dawns|teatro|comedia musical|c[aâ]n actol|cocina|fotograf)", re.I)
-CHOICE = re.compile(r"a elecci[oó]n|hunanddewisiad|libre elecci[oó]n|de libre|a escoger", re.I)
+# Words of something that is not sung: an instrument, a dance, a recitation… A cân actol (action song) and a
+# comedia musical are sung.
+NOT_SUNG = re.compile(r"\b(instrumental|instrumento|piano solo|guitarra|guitar\b|viol[ií]n|flauta|arpa|telyn|delyn|teclado|banjo|"
+                      r"chwibanogl|crwth|recitaci[oó]n|adrodd|danza|dawns|teatro|cocina|fotograf)", re.I)
+# Words that only a sung competition has; they win over NOT_SUNG ("Coro … y conjunto instrumental").
+VOICE = re.compile(r"\b(coros?|c[oô]r|g[oô]r|corau|vocal(?:es)?|canto|c[aâ]n|gân|caneuon|emyn(?:au)?|himnos?|cerdd dant|lleisiau|"
+                   r"lleisiol|cantautor|penillion)\b", re.I)
+# An accompaniment is not the performance: "con acompañamiento instrumental", "gyda chyfeiliant telyn", "con guitarra
+# o laúd", "Kevin Handley al piano".
+_INSTR = r"(?:instrumental|instrumentos?|guitarra|guitar|piano|arpa|la[uú]d|telyn|delyn|percusi[oó]n)"
+ACCOMP = re.compile(rf"\b(?:con|sin|al|gyda(?:['’]r)?|i|heb)\s+(?:o\s+sin\s+)?(?:(?:acompa[ñn]amiento|ensamble|chyfeiliant|gyfeiliant|"
+                    rf"cyfeiliant)\s+)?(?:(?:de|o)\s+)?{_INSTR}(?:\s+(?:o|y|u|neu|a)\s+{_INSTR})?", re.I)
+CHOICE = re.compile(r"a elecci[oó]n|hunan\w*wisiad|libre elecci[oó]n|de libre|a escoger", re.I)
+# Section headings: the music of a programa can sit under a language section ("## Programa en idioma galés",
+# "### Adran gerddoriaeth", with its mutation) or under one heading per kind of group ("## Solos · Unawdau").
+HEAD_INSTRUMENTAL = re.compile(r"instrumental|offerynnol", re.I)
+HEAD_MUSIC = re.compile(r"m[uú]sica|[cg]erddoriaeth|canto|\bcoros?\b|\bcorau\b|\bsolos\b|unawdau|\bconjuntos\b|part[iï]on|"
+                        r"\bd[uú]os\b|deuawdau|cerdd dant", re.I)
+HEAD_OTHER = re.compile(r"literatura|enyddiaeth|poes[ií]a|barddoniaeth|prosa|rhyddiaith|escritura|recitaci|adrodd|expresi[oó]n|"
+                        r"iaith lafar|dramatizaci|traducci|cyfieith|danza|dawns|dibujo|dise[ñn]o|\bartes?\b|artesan|celf|"
+                        r"gwaith llaw|fotograf|ffotograff|audiovisual|gweledol|tejido|cocina|premios|gwobr|notas|nodiadau|"
+                        r"jurados|beirniaid", re.I)
+
+
+def not_sung(text: str, pattern: re.Pattern = NOT_SUNG) -> bool:
+    """Whether a programa line (or a video title) names something that is not sung. Words inside «…» belong to a
+    title and an accompaniment is not the performance; a word only a sung competition has wins."""
+    t = ACCOMP.sub(" ", QUOTE_ANY.sub(" ", text))
+    return bool(pattern.search(t)) and not VOICE.search(t)
+
+
+def heading_kind(line: str) -> str | None:
+    """"instrumental", "music", "other" (literature, recitation, dance, crafts…) or None (a language or an age group)."""
+    if HEAD_INSTRUMENTAL.search(line):
+        return "instrumental"
+    if HEAD_MUSIC.search(line):
+        return "music"
+    return "other" if HEAD_OTHER.search(line) else None
 # Words that are usually free to publish: liturgical Latin, traditional texts, poets and composers
 # dead long ago. A hint for ordering the list, not a rights decision (the maintainer confirms).
 FREE_TEXT = re.compile(r"tradicional|traddodiadol|traditional|an[oó]nim|siglo x[vi]|ave mar[ií]a|ubi caritas|cantate domino|"
@@ -128,11 +177,22 @@ FREE_TEXT = re.compile(r"tradicional|traddodiadol|traditional|an[oó]nim|siglo x
                        r"let all mortal flesh|es ist ein ros|h[aä]ndel|schubert|praetorius|hass?ler|mozart|bach|brahms|"
                        r"mendelssohn|joseph parry|ieuan gwyllt|pantycelyn|ann griffiths", re.I)
 QUOTE = re.compile(r"«([^»]+)»")
+QUOTE_ANY = re.compile(r"«[^»]*»")
 # The word right before a nickname inside a name: Gustavo «Cuchi» Leguizamón, obra de «Cuchi» Leguizamón.
 NAME_BEFORE = re.compile(r"(?:^|\s)(?:[A-ZÁÉÍÓÚÑ][a-záéíóúñü]+|de|del)\s$")
-ALT_SEP = re.compile(r"^\s*,?\s*(?:o|u|neu|or)\s*$")  # «A» o «B», «A», «B» neu «C»: one of them is sung
+# «A» o «B», «A», «B» neu «C», «A», Franz Schubert, o «B»: one of them is sung.
+ALT_SEP = re.compile(r"^(?:\s*,?|[^;«»]*,)\s*(?:o|u|neu|or)\s*$")
 LIST_SEP = re.compile(r"^\s*,\s*$")
 JOINERS = {"a", "y", "e", "and", "o", "u", "neu", "or"}
+# The larger work or collection a piece comes from: serie «Flores argentinas», (o'r sioe gerdd «Heledd»), del ciclo «…».
+MAYOR_WORD = r"(?:serie|sioe gerdd|ciclo|suite|[aá]lbum|cantata|[oó]pera|oratorio|colecci[oó]n|casgliad)"
+# A quoted title that names a book of songs, right after a piece: «Ar Gyfer Heddiw'r Bore» (…), «Caneuon Llafar Gwlad».
+COLLECTION = re.compile(r"^(?:caneuon|casgliad|cancionero|canciones|alawon|emynau)\b", re.I)
+# A theme, not a piece: thema «Taith», tema «160 aniversario…»; a cân actol (action song) names its theme.
+THEME_BEFORE = re.compile(r"\b(?:thema|tema)\s*:?\s*$", re.I)
+ACTION_SONG = re.compile(r"\bc[aâ]n act(?:ol|io)\b", re.I)
+# First words of a description of the repertoire, not of a title: "Solo Libre: Obra cantada a estrenar".
+GENERIC_START = {"obra", "obras", "arreglo", "repertorio", "libre", "tema"}
 
 
 def fold(s: str) -> str:
@@ -150,37 +210,54 @@ def front_items(text: str, stem: str) -> list[str]:
 
 
 def sung_competitions(text: str) -> dict[int, str]:
-    """Numbered lines of the music section that are sung (not instrumental), {number: line}."""
+    """Numbered lines of the music sections that are sung (not instrumental), {number: line}.
+
+    A "## " heading sets the section; a "### " heading of music, instrumental or another art narrows it, and any
+    other "### " (a language, an age group) goes back to the section's. Where no heading says, by the line's words."""
     out: dict[int, str] = {}
-    music: bool | None = None  # None until the first "## " section
-    instrumental = False
+    section: tuple[bool | None, bool] = (None, False)  # (music, instrumental); music None: no heading says
+    music, instrumental = section
     for line in text.splitlines():
-        if line.startswith("## "):
-            music = bool(re.search(r"m[uú]sica|cerddoriaeth|canto|coros", line, re.I))
-            instrumental = False
-        elif line.startswith("### "):
-            instrumental = bool(re.search(r"instrumental|offerynnol|recitaci|adrodd|danza|dawns", line, re.I))
+        if line.startswith(("## ", "### ")):
+            kind = heading_kind(line)
+            if line.startswith("## "):
+                section = {"instrumental": (True, True), "music": (True, False), "other": (False, False)}.get(kind, (None, False))
+                music, instrumental = section
+            elif kind == "instrumental":
+                instrumental = True
+            elif kind == "music":
+                music, instrumental = True, False
+            elif kind == "other":
+                music, instrumental = False, False
+            else:
+                music, instrumental = section
         m = re.match(r"^(\d{1,3})\.\s+(.*)", line)
         if not m:
             continue
         n, body = int(m.group(1)), m.group(2).strip()
-        # Inside a music section, unless instrumental; with no sections at all, by its words.
-        sung = (music and not instrumental) if music is not None else bool(VOCAL.search(body))
-        if sung and not NOT_SUNG.search(body):
+        sung = False if instrumental else music if music is not None else bool(VOCAL.search(body))
+        if sung and not not_sung(body):
             out.setdefault(n, body)
     return out
 
 
 def _quotes(line: str) -> list[tuple[re.Match, str]]:
-    """Each «…» of a programa line with its role: "obra" (a piece), "apodo" (a one-word nickname inside a
-    name: Gustavo «Cuchi» Leguizamón, obra de «Cuchi» Leguizamón) or "mayor" (the larger work a piece
-    comes from, right after it: del «Stabat Mater», (de «Xerxes»)); those two are part of a credit."""
+    """Each «…» of a programa line with its role: "obra" (a piece); "tema" (the theme of a cân actol, or after
+    thema/tema); "apodo" (a one-word nickname inside a name: Gustavo «Cuchi» Leguizamón, obra de «Cuchi»
+    Leguizamón); or "mayor" (the larger work or collection a piece comes from: del «Stabat Mater», (de «Xerxes»),
+    serie «Flores argentinas», (o'r sioe gerdd «Heledd»), «Caneuon Llafar Gwlad»). Apodo and mayor are part of a credit."""
     out: list[tuple[re.Match, str]] = []
+    action_song = bool(ACTION_SONG.search(QUOTE_ANY.sub(" ", line)))
     for m in QUOTE.finditer(line):
-        before, after = line[:m.start()], line[m.end():]
-        if " " not in m.group(1).strip() and re.match(r" [A-ZÁÉÍÓÚÑ]", after) and NAME_BEFORE.search(before):
+        before, after, title = line[:m.start()], line[m.end():], m.group(1).strip()
+        prior = any(r == "obra" for _, r in out)
+        ends = re.match(r"\)?\s*(?:[,.;]|$)", after)
+        if action_song or THEME_BEFORE.search(before):
+            role = "tema"
+        elif " " not in title and re.match(r" [A-ZÁÉÍÓÚÑ]", after) and NAME_BEFORE.search(before):
             role = "apodo"
-        elif any(r == "obra" for _, r in out) and re.search(r"\bdel?\s$", before) and re.match(r"\)?\s*(?:[,.;]|$)", after):
+        elif ends and (re.search(rf"\b{MAYOR_WORD}\s*$", before, re.I)
+                       or prior and (re.search(r"(?:\bdel?|\bo['’]r)\s$", before) or COLLECTION.match(title))):
             role = "mayor"
         else:
             role = "obra"
@@ -206,7 +283,9 @@ def _parse(line: str) -> tuple[list[tuple[str, str]], list[list[str]]]:
         if m.start() in in_alt:
             continue
         rest = line[m.end():obras[i + 1].start() if i + 1 < len(obras) else len(line)]
-        rest = re.sub(r"\(\s*(del?\s+«[^»]+»)\s*\)", r"\1", rest)  # (de «Xerxes») -> de «Xerxes»
+        # (de «Xerxes») -> de «Xerxes»; (o'r sioe gerdd «Heledd») -> o'r sioe gerdd «Heledd»
+        rest = re.sub(rf"\(\s*((?:(?:del?|o['’]r)\s+)?(?:(?:la|el)\s+)?(?:{MAYOR_WORD}\s+)?«[^»]+»)\s*\)", r"\1", rest, flags=re.I)
+        rest = re.sub(r"^\s*\([^()«»]*\)", "", rest)  # a note right after the title: «La finadita» (chacarera), arr. …
         credit = re.split(r";|\(|\[|\s[a-d]\)", rest.strip(" ,:"), maxsplit=1)[0].strip(" ,.:")
         credit = re.sub(r"\s+(?:o|u|neu|or)$", "", re.sub(r"^(?:de|gan|y|e)\s+(?!«)", "", credit))
         out.append((m.group(1).strip(), "" if credit.lower() in JOINERS else credit))
@@ -219,9 +298,23 @@ def pieces(line: str) -> list[tuple[str, str]]:
     return _parse(line)[0]
 
 
+def unmarked_title(line: str) -> bool:
+    """Whether the line names its piece without «»: "Pedwarawd: Ar hyd y nos." The report cannot read that piece,
+    and it is not a free choice either: what follows the label starts with a capital, as a title does."""
+    if QUOTE.search(line) or CHOICE.search(line) or ACTION_SONG.search(line):
+        return False
+    m = re.search(r":|\s[-–]\s", line)
+    if not m or THEME_BEFORE.search(line[:m.start()]):
+        return False
+    rest = line[m.end():].lstrip(" -–:")
+    return rest[:1].isupper() and fold(rest.split(" ", 1)[0]).strip(".,;") not in GENERIC_START
+
+
 def is_choice(line: str) -> bool:
-    """Whether someone has to say which piece was sung: «a elección», or alternatives to pick from."""
-    return bool(CHOICE.search(line)) or bool(_parse(line)[1])
+    """Whether someone has to say which piece was sung: «a elección», alternatives to pick from, or a free
+    repertoire whose line names no piece ("Solo libre: música rock o blues", "emyn neu gân Gristnogol")."""
+    set_pieces, alternatives = _parse(line)
+    return bool(CHOICE.search(line) or alternatives or (not set_pieces and not unmarked_title(line)))
 
 
 PROGRAMA_REF = re.compile(r"^\s*(\w+)\s+(\d{4})\s+comp\.?\s*(\d{1,3})\b", re.I)
@@ -247,6 +340,12 @@ def title_competitions(title: str) -> list[int]:
 
 # A clip whose title says it is not a song (for the count of performances nobody has identified).
 NOT_A_SONG = re.compile(NOT_SUNG.pattern + r"|\bsolo guitarra|\bpiano\b|\bmalambo|\bzapateo|\bbaile", re.I)
+
+
+def not_a_song(title: str) -> bool:
+    """Whether a video's title says it is not sung: "Solo de guitarra", "Malambo"; not "Cân Actol" nor
+    "Unawd Cerdd Dant/Arpa"."""
+    return not_sung(title, NOT_A_SONG)
 
 
 def load_huecos(path: Path = HUECOS) -> list:
@@ -286,28 +385,34 @@ def collect(repo: Path = REPO) -> dict:
     spans_raw = json.loads(span_file.read_text(encoding="utf-8")) if span_file.exists() else {}
     spans = {v: sorted({s["letra"] for s in ss}) for v, ss in spans_raw.items()}
     span_t: dict[str, dict[str, float]] = defaultdict(dict)
+    span_rangos: dict[str, dict[str, list[list[float]]]] = defaultdict(lambda: defaultdict(list))
     for v, ss in spans_raw.items():
         for sp in ss:
             span_t[v][sp["letra"]] = min(sp["desde"], span_t[v].get(sp["letra"], sp["desde"]))
+            span_rangos[v][sp["letra"]].append([sp["desde"], sp.get("hasta", sp["desde"])])
 
-    def competitions(v: dict) -> list[tuple[int, float | None]]:
+    def competitions(v: dict) -> tuple[list[tuple[int, float | None]], list[float]]:
+        """The competitions a video reaches, with the chapter's start, and the start of every chapter."""
         comps: list[tuple[int, float | None]] = [(n, None) for n in title_competitions(v["title"])]
+        marks: list[float] = []
         mk = repo / "public/marcadores-video" / f"{v['id']}.json"
         if mk.exists():
             for sec, n, *_ in json.loads(mk.read_text(encoding="utf-8")).get("markers", []):
+                marks.append(float(sec))
                 if str(n).isdigit():
                     comps.append((int(n), float(sec)))
-        return comps
+        return comps, sorted(marks)
 
     by_piece: dict[tuple[str, str], dict] = {}
     choice: list[dict] = []
+    sin_marcar: list[dict] = []  # sung competitions whose programa line names its piece without «»
     sin_texto: list[dict] = []  # sung competitions reached by a video with no published text
     titulos: list[dict] = []  # every video's title, for the texts it names
     fuera: list[dict] = []  # Chubut / Trevelin performances that reach no sung competition
     otros: list[str] = []  # Juventud / Mimosa videos that reach one: those are not transcribed (#29)
     for v in all_videos:
         key = (v["festival"], int(v["year"]))
-        comps = competitions(v)
+        comps, marks = competitions(v)
         texto = v["id"] in have
         alcance = v["festival"] in FESTIVALS
         titulos.append({"video": v["id"], "title": v["title"], "festival": key[0], "year": key[1],
@@ -318,12 +423,13 @@ def collect(repo: Path = REPO) -> dict:
                 otros.append(v["id"])
             continue
         if not sung:
-            if v["kind"] not in NOT_PERFORMANCE and not NOT_A_SONG.search(v["title"]):
-                estado = ("sin_programa" if key not in numbers
+            if v["kind"] not in NOT_PERFORMANCE:
+                estado = ("no_es_canto" if not_a_song(v["title"]) else "sin_programa" if key not in numbers
                           else "no_cantada" if any(n in numbers[key] for n, _ in comps) else "sin_identificar")
                 fuera.append({"video": v["id"], "festival": key[0], "year": key[1], "texto": texto, "estado": estado})
             continue
-        single = v["kind"] == "actuacion" and len({n for n, _ in comps}) == 1  # a clip of one performance
+        nums = {n for n, _ in comps}
+        single = v["kind"] == "actuacion" and len(nums) == 1  # a clip of one performance
         for n, sec, line in sung:
             where = {"video": v["id"], "t": sec, "festival": key[0], "year": key[1], "comp": n}
             if not texto:
@@ -335,14 +441,50 @@ def collect(repo: Path = REPO) -> dict:
                                               "free": bool(FREE_TEXT.search(f"{title} {credit}")), "where": []})
                 row["where"].append(where)
             if is_choice(line):
-                choice.append({**where, "line": line, "single": single and sec is None})
+                # where this competition is in the video: its chapter, or the whole video when it has no other
+                rango = ((sec, next((t for t in marks if t > sec), None)) if sec is not None
+                         else (0.0, None) if nums == {n} else None)
+                choice.append({**where, "line": line, "single": single and sec is None, "rango": rango})
+            elif unmarked_title(line):
+                sin_marcar.append({**where, "line": line})
     return {"pieces": by_piece, "choice": choice, "letras": letras, "spans": spans, "span_t": dict(span_t),
+            "span_rangos": {v: dict(r) for v, r in span_rangos.items()},
             "videos": {v["id"] for v in all_videos}, "huecos": load_huecos(letras_dir / "huecos.json"),
-            "titulos": titulos, "sin_texto": sin_texto, "fuera": fuera, "otros": otros}
+            "titulos": titulos, "sin_texto": sin_texto, "sin_marcar": sin_marcar, "fuera": fuera, "otros": otros}
 
 
 def _authors(s: str) -> set[str]:
     return set(re.findall(r"[a-z]{4,}", fold(s)))
+
+
+GENERIC_NAMES = {"coral", "version", "musica", "letra", "texto", "arreglo", "tradicional", "traddodiadol", "carol",
+                 "himno", "anonimo", "trefniant", "serie", "hermanos", "geiriau", "alaw"}
+
+
+def same_setting(a: str, b: str) -> bool:
+    """Two programa credits of one title name the same setting, apart only in spelling or initials:
+    Olwen Jones / E. Olwen Jones; Hermanos Díaz, arr. Vivian Tabush / Hernán Díaz, arr. Vivian Tabbush."""
+    return fold(a) == fold(b) or len((_authors(a) & _authors(b)) - GENERIC_NAMES) >= 2
+
+
+def settings_of(keys) -> dict[tuple[str, str], tuple[str, str]]:
+    """The setting of each (folded title, folded credit), named by its first key. Credits of one title that name
+    the same people are one setting; an empty credit joins the title's only setting (with two, it stays apart)."""
+    by_title: dict[str, list] = defaultdict(list)
+    for k in sorted(set(keys)):
+        by_title[k[0]].append(k)
+    canon = {}
+    for ks in by_title.values():
+        groups: list[list] = []
+        for k in (k for k in ks if k[1]):
+            near = [g for g in groups if any(same_setting(k[1], o[1]) for o in g)]
+            groups = [g for g in groups if g not in near] + [sorted([k] + [o for g in near for o in g])]
+        for g in groups:
+            for k in g:
+                canon[k] = g[0]
+        for k in (k for k in ks if not k[1]):
+            canon[k] = groups[0][0] if len(groups) == 1 else k
+    return canon
 
 
 def text_for(title: str, credit: str, letras: dict) -> str | None:
@@ -361,24 +503,40 @@ def assess(data: dict) -> dict:
 
     Raises ValueError for a huecos.json entry the report cannot place."""
     letras, spans, span_t = data["letras"], data["spans"], data.get("span_t", {})
+    span_rangos = data.get("span_rangos", {})
     meta = {t["video"]: t for t in data.get("titulos", [])}
 
     def placed(slug, v):
         return bool(slug) and slug in spans.get(v, ())
 
     def new_row(**kw) -> dict:
-        return {"where": [], "videos": [], "state": {}, "sin_texto": [], "extra": False, "instrumental": None, **kw}
+        return {"where": [], "videos": [], "state": {}, "sin_texto": [], "extra": False, "instrumental": None,
+                "otras": [], **kw}
 
+    # One row per setting: credits that differ only in spelling or initials, or an empty one, are the same piece.
+    notext_keys = [(fold(t), fold(c)) for a in data.get("sin_texto", []) for t, c in pieces(a["line"])]
+    canon = settings_of(list(data["pieces"]) + notext_keys)
+    grouped: dict[tuple[str, str], list[dict]] = defaultdict(list)
+    for k, p in sorted(data["pieces"].items()):
+        grouped[canon[k]].append(p)
     rows = []
-    for _, p in sorted(data["pieces"].items()):
-        slug = text_for(p["title"], p["credit"], letras)
-        vids = sorted({w["video"] for w in p["where"]})
-        rows.append(new_row(**{**p, "where": [dict(w) for w in p["where"]], "slug": slug, "videos": vids,
-                               "state": {v: "ok" if placed(slug, v) else None for v in vids}}))
-    by_key = {(fold(r["title"]), fold(r["credit"])): r for r in rows}
+    for c, ps in sorted(grouped.items()):
+        credits: list[str] = []
+        for p in ps:
+            if p["credit"] and fold(p["credit"]) not in {fold(x) for x in credits}:
+                credits.append(p["credit"])
+        # shown once each; a credit inside a fuller one gives way (Olwen Jones, E. Olwen Jones)
+        credits = sorted((x for x in credits if not any(fold(x) in fold(y) and fold(x) != fold(y) for y in credits)), key=fold)
+        slug = next((s for s in (text_for(ps[0]["title"], cr, letras) for cr in credits or [""]) if s), None)
+        where = [dict(w) for p in ps for w in p["where"]]
+        vids = sorted({w["video"] for w in where})
+        rows.append(new_row(title=ps[0]["title"], credit=" · ".join(credits), credits=[p["credit"] for p in ps],
+                            free=any(p["free"] for p in ps), where=where, slug=slug, videos=vids, id=c,
+                            state={v: "ok" if placed(slug, v) else None for v in vids}))
+    by_id = {r["id"]: r for r in rows}
     used = {r["slug"] for r in rows if r["slug"]}
-    extra = {s: new_row(title=letras[s]["titulo"], credit=letras[s]["autor"], programa=letras[s]["programa"],
-                        free=False, slug=s, extra=True)
+    extra = {s: new_row(title=letras[s]["titulo"], credit=letras[s]["autor"], credits=[letras[s]["autor"]],
+                        programa=letras[s]["programa"], free=False, slug=s, extra=True, id=("letra", s))
              for s in sorted(set(letras) - used)}  # texts whose piece is not in the table («a elección», no chapter…)
     by_slug: dict[str, list[dict]] = defaultdict(list)
     for r in rows:
@@ -404,10 +562,10 @@ def assess(data: dict) -> dict:
     notext: dict[tuple[str, str], list[dict]] = defaultdict(list)
     for a in data.get("sin_texto", []):
         for title, credit in pieces(a["line"]):
-            notext[(fold(title), fold(credit))].append(a)
+            notext[canon[(fold(title), fold(credit))]].append(a)
     for k, apps in notext.items():
-        if k in by_key:
-            by_key[k]["sin_texto"] = apps
+        if k in by_id:
+            by_id[k]["sin_texto"] = apps
     sin_texto = list(data.get("sin_texto", []))
 
     # A span of a text reaches its video.
@@ -421,7 +579,7 @@ def assess(data: dict) -> dict:
 
     # A title that names a saved text reaches its video, unless the title is shared.
     settings = defaultdict(int)
-    for t, _ in set(data["pieces"]) | set(notext):
+    for t, _ in set(canon.values()):
         settings[t] += 1
     by_title: dict[str, list[str]] = defaultdict(list)
     for s, m in sorted(letras.items()):
@@ -445,6 +603,13 @@ def assess(data: dict) -> dict:
                 r["sin_texto"] = r["sin_texto"] + [where]
                 sin_texto.append({**where, "line": f"«{letras[s]['titulo']}» (nombrada en el título del video)",
                                   "nombrada": s})
+
+    # Where in a video a text is known to be sung: the middle of each span (a span can start a few seconds
+    # before its chapter's marker) and the time a gap entry gives.
+    puntos: dict[str, dict[str, list[float]]] = defaultdict(lambda: defaultdict(list))
+    for v, by_slug_t in span_rangos.items():
+        for s, rs in by_slug_t.items():
+            puntos[v][s].extend((a + b) / 2 for a, b in rs)
 
     entries = []
     for i, e in enumerate(data["huecos"], 1):
@@ -473,10 +638,10 @@ def assess(data: dict) -> dict:
         else:
             obra, autoria = e["obra"], e.get("autoria")
             targets = [r for r in rows if fold(r["title"]) == fold(obra)
-                       and (autoria is None or fold(r["credit"]) == fold(autoria))]
+                       and (autoria is None or fold(autoria) in {fold(c) for c in r["credits"]})]
             if not targets:
                 raise ValueError(f"{at}: obra desconocida {obra!r}" + (f" con autoría {autoria!r}" if autoria else "")
-                                 + ": se escribe como en la tabla (título y autoría del programa)")
+                                 + ": se escribe como en la tabla (título y una autoría del programa)")
             with_text = sorted({r["slug"] for r in targets if r["slug"]})
             if with_text and autoria is None and any(not r["slug"] for r in targets):
                 raise ValueError(f"{at}: varias obras se llaman {obra!r} y alguna tiene texto: agregar 'autoria'")
@@ -496,19 +661,26 @@ def assess(data: dict) -> dict:
             raise ValueError(f"{at}: {name} no está en la tabla del programa: hace falta 'videos'")
         if code == "instrumental" and vids:
             raise ValueError(f"{at}: 'instrumental' vale para la obra entera, sin 'videos'")
-        cover = sorted(set(vids or known))
-        done = [v for v in cover if any(placed(r["slug"], v) for r in targets)]
-        if vids and done:
-            raise ValueError(f"{at}: {name} ya está alineada en {done[0]}: sacar ese video de la entrada")
-        if len(done) == len(cover):
-            raise ValueError(f"{at}: {name} ya está alineada en todos sus videos: borrar la entrada")
-        gaps = [v for v in cover if v not in done]
         desde = e.get("desde", {})
         if not isinstance(desde, dict) or not all(isinstance(t, (int, float)) and t >= 0 for t in desde.values()):
             raise ValueError(f"{at}: 'desde' es {{video: segundos}}, con segundos >= 0")
+        cover = sorted(set(vids or known))
+        done = [v for v in cover if any(placed(r["slug"], v) for r in targets)]
+        # Another performance in a video already aligned: its 'desde' falls outside the text's spans there.
+        otra = [v for v in done if v in desde and not any(a <= desde[v] <= b for r in targets if r["slug"]
+                                                         for a, b in span_rangos.get(v, {}).get(r["slug"], []))]
+        stale = [v for v in done if v not in otra]
+        if vids and stale:
+            raise ValueError(f"{at}: {name} ya está alineada en {stale[0]}: sacar ese video de la entrada (si es otra "
+                             "actuación del mismo video, su 'desde' va fuera del tramo alineado)")
+        if len(done) == len(cover) and not otra:
+            raise ValueError(f"{at}: {name} ya está alineada en todos sus videos: borrar la entrada")
+        gaps = [v for v in cover if v not in done]
         for v in desde:
-            if v not in gaps:
+            if v not in gaps and v not in otra:
                 raise ValueError(f"{at}: 'desde' de {v!r}, que no es un video sin alinear de la entrada")
+            if "letra" in e:
+                puntos[v][e["letra"]].append(float(desde[v]))
         for r in targets:
             if is_extra:
                 for v in cover:
@@ -520,12 +692,16 @@ def assess(data: dict) -> dict:
                 if r["state"][v] is not None:
                     raise ValueError(f"{at}: {name} en {v} ya tiene motivo {r['state'][v]!r} (una entrada por video)")
                 r["state"][v] = code
+            for v in otra:
+                if placed(r["slug"], v):
+                    r["otras"].append({"video": v, "t": float(desde[v]), "code": code})
             for w in r["where"]:
-                if w["video"] in desde:
+                if w["video"] in desde and w["video"] not in otra:
                     w["t"] = float(desde[w["video"]])
             if code == "instrumental":
                 r["instrumental"] = e["detalle"].strip()
-        entries.append({"name": name, "code": code, "detalle": e["detalle"].strip(), "targets": targets, "videos": gaps})
+        entries.append({"name": name, "code": code, "detalle": e["detalle"].strip(), "targets": targets,
+                        "videos": sorted(gaps + otra), "tiempos": {v: float(desde[v]) for v in otra}})
 
     every = rows + list(extra.values())
     for r in every:
@@ -533,25 +709,42 @@ def assess(data: dict) -> dict:
             if r["state"][v] is None:
                 r["state"][v] = "sin_alinear" if r["slug"] else "falta_texto"
     instrumental = [r for r in every if r["instrumental"] is not None]
-    no_lyric = {(fold(r["title"]), fold(r["credit"])) for r in instrumental}
+    no_lyric = {r["id"] for r in instrumental}
     rows = [r for r in rows if r["instrumental"] is None]
     extra_rows = [r for r in extra.values() if r["instrumental"] is None]
 
     # «a elección» appearances: a clip of one performance leaves the list once its piece is known
     # (a span, an entry or its title: any text of that video but the competition's set pieces);
-    # in a long session the appearance stays, with the texts whose `programa` names that competition.
+    # in a long session the appearance stays, with what is already known there: texts whose `programa`
+    # names that competition, and texts sung inside its chapter (or anywhere, in a video of that
+    # competition alone), by a span or a gap entry's time.
     videos_of: dict[str, set[str]] = defaultdict(set)
     for r in rows + extra_rows:
         if r["slug"]:
             videos_of[r["slug"]].update(r["videos"])
     refs = {s: programa_ref(m["programa"]) for s, m in letras.items()}
+
+    def inside(slug: str, c: dict) -> bool:
+        if not c.get("rango"):
+            return False
+        start, end = c["rango"]
+        return any(start <= t and (end is None or t < end) for t in puntos.get(c["video"], {}).get(slug, []))
+
+    set_for: dict[tuple[str, str], set[int]] = defaultdict(set)  # (video, text): competitions that set it there
+    for r in rows:
+        for w in r["where"]:
+            if r["slug"] and w["comp"]:
+                set_for[(w["video"], r["slug"])].add(w["comp"])
+
     choice = []
     for c in data["choice"]:
         fixed = {text_for(t, cr, letras) for t, cr in pieces(c["line"])}
         here = {s for s, vs in videos_of.items() if c["video"] in vs and s not in fixed}
         if c.get("single") and here:
             continue
-        ids = sorted(letras[s]["titulo"] for s in here if refs[s] == (fold(c["festival"]), c["year"], c["comp"]))
+        # the set piece of another competition is not this one's free piece, even when a chapter is misplaced
+        ids = sorted(letras[s]["titulo"] for s in here if not set_for[(c["video"], s)] - {c["comp"]}
+                     and (refs[s] == (fold(c["festival"]), c["year"], c["comp"]) or inside(s, c)))
         choice.append({**c, "identificadas": ids})
 
     reached = {v for r in every for v in r["videos"]} | {w["video"] for r in every for w in r["sin_texto"]}
@@ -561,30 +754,35 @@ def assess(data: dict) -> dict:
     for r in rows + extra_rows:
         codes = set(r["state"].values()) if r["videos"] else {"sin_alinear"}
         for c in codes - {"ok"}:
-            counts[c][0].add((r["title"], r["credit"], r["slug"]))
+            counts[c][0].add(r["id"])
         for v, c in r["state"].items():
             if c != "ok":
                 counts[c][1].add(v)
+        for o in r["otras"]:  # another performance in a video already aligned
+            counts[o["code"]][0].add(r["id"])
+            counts[o["code"]][1].add(o["video"])
     counts["a_eleccion"][1].update(c["video"] for c in choice)
+    sin_marcar = list(data.get("sin_marcar", []))
+    counts["titulo_sin_marcar"][1].update(a["video"] for a in sin_marcar)
     for a in sin_texto:
         if a.get("nombrada"):  # its piece is counted with its row, below
             counts["sin_texto_video"][1].add(a["video"])
             continue
-        ps = [k for k in ((fold(t), fold(cr)) for t, cr in pieces(a["line"])) if k not in no_lyric]
+        ps = [k for k in (canon[(fold(t), fold(cr))] for t, cr in pieces(a["line"])) if k not in no_lyric]
         counts["sin_texto_video"][0].update(ps)
         if ps or is_choice(a["line"]) or not pieces(a["line"]):  # not when all its pieces are instrumental
             counts["sin_texto_video"][1].add(a["video"])
     for r in rows + extra_rows:
         if r["sin_texto"]:
-            counts["sin_texto_video"][0].add((fold(r["title"]), fold(r["credit"])))
+            counts["sin_texto_video"][0].add(r["id"])
     for f in fuera:
         if f["estado"] == "sin_programa":
             counts["edicion_sin_programa"][1].add(f["video"])
         elif f["estado"] == "sin_identificar":
             counts["actuacion_sin_identificar"][1].add(f["video"])
-    solo_sin_texto = len({k for k in notext if k not in by_key and k not in no_lyric})
+    solo_sin_texto = len({k for k in notext if k not in by_id and k not in no_lyric})
     return {"rows": rows, "extra": extra_rows, "instrumental": instrumental, "entries": entries, "choice": choice,
-            "sin_texto": [a for a in sin_texto if a["video"] in counts["sin_texto_video"][1]],
+            "sin_texto": [a for a in sin_texto if a["video"] in counts["sin_texto_video"][1]], "sin_marcar": sin_marcar,
             "solo_sin_texto": solo_sin_texto, "fuera": fuera, "otros": sorted(otros),
             "counts": {c: (len(p), len(v)) for c, (p, v) in counts.items()}}
 
@@ -601,15 +799,20 @@ def link(video: str, t: float | None) -> str:
 
 
 def estado(r: dict) -> str:
+    otras = r.get("otras", [])
+    more = ""
+    if otras:  # another performance in a video already aligned
+        more = (f"; {plural(len(otras), 'actuación más sin alinear', 'actuaciones más sin alinear')}: "
+                + "; ".join(MOTIVOS[c][0] for c in MOTIVOS if c in {o["code"] for o in otras}))
     states = [r["state"][v] for v in r["videos"]]
     if not states:
         return f"texto guardado, sin alinear: {MOTIVOS['sin_alinear'][0]}"
     ok = states.count("ok")
     labels = "; ".join(MOTIVOS[c][0] for c in MOTIVOS if c in states)
     if ok == len(states):
-        return "✅ alineada"
+        return "✅ alineada" + more
     if ok:
-        return f"✅ {ok} de {len(states)} videos; sin alinear en {len(states) - ok}: {labels}"
+        return f"✅ {ok} de {len(states)} videos; sin alinear en {len(states) - ok}: {labels}" + more
     return f"texto guardado, sin alinear: {labels}" if r["slug"] else labels
 
 
@@ -715,7 +918,11 @@ def render(data: dict) -> str:
         out += [f"Ediciones sin programa transcripto, con sus videos ({con} con texto publicado): "
                 + ", ".join(f"{edition(*k)} ({n})" for k, n in eds) + ".", ""]
     no_cantada = sum(f["estado"] == "no_cantada" for f in fuera)
+    no_es_canto = sum(f["estado"] == "no_es_canto" for f in fuera)
     aparte = []
+    if no_es_canto:
+        aparte.append(f"{plural(no_es_canto, 'video', 'videos')} cuyo título dice que no se canta (instrumento, danza, "
+                      "recitación)")
     if no_cantada:
         aparte.append(f"{plural(no_cantada, 'video', 'videos')} cuyo título o capítulos nombran una competencia que este "
                       "informe no lee como cantada (recitación, danza, instrumental)")
@@ -765,6 +972,14 @@ def render(data: dict) -> str:
         for c in sorted(a["sin_texto"], key=lambda c: (c["festival"], c["year"], c["comp"] or 0, c["video"], c["t"] or 0)):
             line = c["line"] if len(c["line"]) <= 110 else c["line"][:107] + "…"
             out.append(f"| {c['festival']} {c['year']} | {c['comp'] or '—'} | {line} | {link(c['video'], c['t'])} |")
+    if a["sin_marcar"]:
+        out += ["", "## Obras sin marcar en el programa", "",
+                "Competencias cantadas cuya línea del programa nombra la obra sin «»: el informe no puede leer qué obra "
+                "es hasta que la transcripción marque el título; entonces entra en la tabla de arriba.", "",
+                "| Edición | Comp. | Programa | Video |", "|---|---|---|---|"]
+        for c in sorted(a["sin_marcar"], key=lambda c: (c["festival"], c["year"], c["comp"], c["video"], c["t"] or 0)):
+            line = c["line"] if len(c["line"]) <= 110 else c["line"][:107] + "…"
+            out.append(f"| {c['festival']} {c['year']} | {c['comp']} | {line} | {link(c['video'], c['t'])} |")
     out += ["", "## Detalle de los huecos documentados", "",
             "Lo anotado en `data/letras/huecos.json`, por motivo; cada video enlazado es uno sin alinear.", ""]
     for c, (label, _) in MOTIVOS.items():
@@ -775,7 +990,8 @@ def render(data: dict) -> str:
         for e in es:
             ws = one_per_video(sorted((w for r in e["targets"] for w in r["where"] if w["video"] in e["videos"]),
                                       key=lambda w: (w["video"], w["t"] or 0)))
-            line = f"- {e['name']}: {' '.join(link(w['video'], w['t']) for w in ws)}. {e['detalle']}"
+            line = (f"- {e['name']}: {' '.join(link(w['video'], e['tiempos'].get(w['video'], w['t'])) for w in ws)}. "
+                    f"{e['detalle']}")
             sin = one_per_video(sorted((w for r in e["targets"] for w in r["sin_texto"]), key=lambda w: (w["video"], w["t"] or 0)))
             if sin:
                 line += (f" Además, {plural(len(sin), 'video sin texto publicado', 'videos sin texto publicado')}: "
@@ -783,8 +999,10 @@ def render(data: dict) -> str:
             out.append(line)
         out.append("")
     out += ["## Obras «a elección» (identificar primero cuál se cantó)", "",
-            "Escuchar el video o leer el anuncio; con el título, la letra se pide como cualquier otra. Un clip con una sola "
-            "actuación sale de la lista cuando se sabe qué obra es; en una sesión larga queda, con lo ya identificado.", "",
+            "Escuchar el video o leer el anuncio; con el título, la letra se pide como cualquier otra. También están las "
+            "competencias de repertorio libre, cuya línea del programa da un género o un tema y no una obra. Un clip con "
+            "una sola actuación sale de la lista cuando se sabe qué obra es; en una sesión larga queda, con lo ya "
+            "identificado (un texto alineado dentro del capítulo de esa competencia, o cuyo `programa` la nombra).", "",
             "| Edición | Comp. | Programa | Video |", "|---|---|---|---|"]
     for c in sorted(a["choice"], key=lambda c: (c["festival"], c["year"], c["comp"], c["video"])):
         line = c["line"] if len(c["line"]) <= 110 else c["line"][:107] + "…"
@@ -797,7 +1015,7 @@ if __name__ == "__main__":
     d = collect()
     OUT.write_text(render(d), encoding="utf-8")
     a = assess(d)
-    pending = sum(any(s != "ok" for s in r["state"].values()) for r in a["rows"])
+    pending = sum(any(s != "ok" for s in r["state"].values()) or bool(r["otras"]) for r in a["rows"])
     print(f"{OUT.relative_to(REPO)}: {len(a['rows'])} pieces, {pending} with a gap, {len(a['entries'])} documented, "
           f"{len(a['choice'])} a elección, {a['counts']['sin_texto_video'][1]} videos without text, "
           f"{a['counts']['edicion_sin_programa'][1]} in editions without programa, "

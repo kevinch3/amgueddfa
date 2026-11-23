@@ -21,6 +21,86 @@ def test_only_sung_competitions():
     assert sorted(sung_competitions(PROGRAMA)) == [47, 68, 70, 71]
 
 
+# Trevelin: a language section ("Programa en idioma galés") with the music inside a "###" heading,
+# Welsh mutations included (Adran gerddoriaeth, Yr adran lenyddiaeth).
+TREVELIN = """## Programa en idioma galés · Rhaglen yn yr iaith Gymraeg
+### Yr adran lenyddiaeth
+1. Cân i blant: «Y Ffin».
+### Adran adrodd
+10. Adrodd i blant: «Y Gath».
+### Adran gerddoriaeth · Oedolion
+40. Unawd i ferched: «Gwcw fach».
+### Dawns werin Gymreig · Danzas galesas
+50. Parti dawns: «Y Gelynnen».
+## Programa en castellano
+### Música: adultos
+60. Coro mixto: «Dos palomitas», Manuel Gómez Carrillo.
+### Instrumental
+61. Solo: obra a elección.
+### Traducción
+70. Traducir una canción.
+"""
+# Chubut 2021: no "Música" heading, one section per kind of group.
+CHUBUT_2021 = """## Recitación · Adrodd
+### Yn Gymraeg
+1. Adrodd: «Y Môr».
+## Solos · Unawdau
+### Yn Gymraeg
+10. Unawd: «Calon Lân».
+## Conjuntos · Partïon
+### En castellano y otros idiomas, excepto galés
+20. Conjunto vocal: «Esta tierra», Javi Busto.
+## Instrumental · Offerynnol
+### Yn Gymraeg
+30. Unawd: «Llwyn Onn».
+"""
+
+
+def test_music_sections_inside_other_headings():
+    assert sorted(sung_competitions(TREVELIN)) == [40, 60]
+    assert sorted(sung_competitions(CHUBUT_2021)) == [10, 20]
+
+
+@pytest.mark.parametrize("line", [
+    "Conjunto vocal hasta 12 integrantes con acompañamiento instrumental opcional: «Tu traditora», Orlando de Lassus.",
+    "Conjunto o coro familiar: obra a capella o con acompañamiento instrumental, a elección.",
+    "Coro de formación libre y conjunto instrumental de formación libre: obra a elección.",
+    "Unawd cerdd dant: hunanddewisiad gyda chyfeiliant telyn.",
+    "Cân actol: «Y Môr».",
+    "Parti neu gôr cân actol: hunanddewisiad.",
+    "Competencia especial. Comedia musical: tema «160 aniversario del arribo».",
+    "Contralto: «Y Pennill Adroddai fy Nhad», E. D. Lloyd.",  # a word of the title
+    "Solo hasta 25 años, con guitarra o laúd: «La partida».",
+    "Cystadlu canu penillion gyda'r delyn.",
+])
+def test_sung_lines_that_name_an_instrument(line):
+    assert sung_competitions(f"## Música · Cerddoriaeth\n1. {line}\n") == {1: line}
+
+
+@pytest.mark.parametrize("line", [
+    "Instrumental. Solo instrumental: obra a elección.",
+    "Conjunto instrumental hasta 25 años: obra a elección.",
+    "Dúo instrumental (violín, cello o flauta y piano): «Salut d'amour», op. 12, Edward Elgar.",
+    "Unawd telyn: «Llwyn Onn».",
+    "Unawd ar y banjo.",
+    "Deuawd: y delyn a chwibanogl.",
+])
+def test_instrumental_lines_are_not_sung(line):
+    assert sung_competitions(f"## Música · Cerddoriaeth\n1. {line}\n") == {}
+
+
+@pytest.mark.parametrize("title, song", [
+    ('[CH2008071] Cân Actol - "Côr Cymraeg Trelew"', True),
+    ("[CH2008049] Unawd Cerdd Dant/Arpa - Nancy Wright", True),
+    ('Eisteddfod mayor de Trevelin 2012 -"Can Actol"', True),
+    ('Eisteddfod del Chubut 2023, día viernes. "Himno", Andrés Evans. Kevin Handley al piano', True),
+    ("Solo de guitarra - Juan Pérez", False),
+    ("Malambo - Eisteddfod 2016", False),
+])
+def test_titles_that_are_not_songs(title, song):
+    assert lp.not_a_song(title) is (not song)
+
+
 def test_pieces_and_credits():
     c = sung_competitions(PROGRAMA)
     assert pieces(c[70]) == [("Anfonaf Angel", "")]
@@ -45,22 +125,24 @@ def piece(title, credit, *videos, comp=76):
 
 
 def data(pieces_, letras=(), spans=None, huecos=(), choice=(), videos=(), titulos=(), sin_texto=(), fuera=(),
-         otros=(), span_t=None):
+         otros=(), span_t=None, span_rangos=None, sin_marcar=()):
     ps = dict(pieces_)
     known = ({w["video"] for p in ps.values() for w in p["where"]} | set(videos) | {t["video"] for t in titulos}
-             | {a["video"] for a in sin_texto} | {c["video"] for c in choice})
-    return {"pieces": ps, "choice": [{"single": False, **c} for c in choice],
+             | {a["video"] for a in sin_texto} | {c["video"] for c in choice} | {a["video"] for a in sin_marcar})
+    return {"pieces": ps, "choice": [{"single": False, "rango": None, **c} for c in choice],
             "letras": {x[0]: {"titulo": x[1], "autor": x[2], "programa": x[3] if len(x) > 3 else ""} for x in letras},
-            "spans": spans or {}, "span_t": span_t or {}, "huecos": list(huecos), "videos": known,
-            "titulos": list(titulos), "sin_texto": list(sin_texto), "fuera": list(fuera), "otros": list(otros)}
+            "spans": spans or {}, "span_t": span_t or {}, "span_rangos": span_rangos or {}, "huecos": list(huecos),
+            "videos": known, "titulos": list(titulos), "sin_texto": list(sin_texto), "fuera": list(fuera),
+            "otros": list(otros), "sin_marcar": list(sin_marcar)}
 
 
 def titulo(video, title, comp=None, year=2023, texto=True, festival="chubut"):
     return {"video": video, "title": title, "festival": festival, "year": year, "comp": comp, "texto": texto}
 
 
-def appearance(video, line, comp=76, year=2023, t=None, single=False):
-    return {"video": video, "t": t, "festival": "chubut", "year": year, "comp": comp, "line": line, "single": single}
+def appearance(video, line, comp=76, year=2023, t=None, single=False, rango=None):
+    return {"video": video, "t": t, "festival": "chubut", "year": year, "comp": comp, "line": line, "single": single,
+            "rango": rango}
 
 
 def row(md, title):
@@ -343,9 +425,63 @@ def test_an_already_identified_clip_leaves_a_eleccion():
      [("Pen Rhaw", ""), ("Serch hudol", ""), ("Codiad yr ehedydd", "")]),
     ("Prif gystadleuaeth: a) «Gweddi'r Arglwydd», C. Roberts; b) «Gweddi'r Arglwydd», E. Jones.",
      [("Gweddi'r Arglwydd", "C. Roberts"), ("Gweddi'r Arglwydd", "E. Jones")]),
+    # the larger work or collection a piece comes from is part of its credit
+    ("Conjunto masculino: «Cortadera, plumerito», serie «Flores argentinas», Carlos Guastavino.",
+     [("Cortadera, plumerito", "serie «Flores argentinas», Carlos Guastavino")]),
+    ("Parti neu gôr cân ysgafn: «Eryr Pengwern» (o'r sioe gerdd «Heledd»), L. Gittins – D. Williams – P. Roberts.",
+     [("Eryr Pengwern", "o'r sioe gerdd «Heledd», L. Gittins – D. Williams – P. Roberts")]),
+    ("Unawd cân ysgafn: «Weithia» (sioe gerdd «3-2-1»), Gareth Glyn.",
+     [("Weithia", "sioe gerdd «3-2-1», Gareth Glyn")]),
+    ("Solo tenor: «La tejedora de matras», del ciclo «Quiero darte mi canto», María Julia Alemán de Brandt.",
+     [("La tejedora de matras", "del ciclo «Quiero darte mi canto», María Julia Alemán de Brandt")]),
+    ("Triawd: «Ar Gyfer Heddiw'r Bore» (trefniant plygain), «Caneuon Llafar Gwlad», Roy Saer.",
+     [("Ar Gyfer Heddiw'r Bore", "«Caneuon Llafar Gwlad», Roy Saer")]),
+    ("Hasta 25 años, música popular: canción del álbum «Navega», de Jorge Fandermole, a elección.", []),
+    # a note in parentheses right after the title is not where the credit ends
+    ("Conjunto vocal hasta 24 integrantes: «La finadita» (chacarera), arr. Grupo Vocal Argentino.",
+     [("La finadita", "arr. Grupo Vocal Argentino")]),
+    # alternatives with a credit between them
+    ("Solo libre, música de cámara: «An die Musik», Franz Schubert, o «Canción de cuna india», Gilardo Gilardi.", []),
+    # a cân actol (action song) names its theme, not a piece; so does «tema»
+    ("Cân actol: «Y Môr».", []),
+    ("Cân actol, thema: «Cariad».", []),
+    ("Competencia especial. Comedia musical: tema «160 aniversario del arribo».", []),
 ])
 def test_programa_parser_artefacts(line, expected):
     assert pieces(line) == expected
+
+
+@pytest.mark.parametrize("line", [
+    "Solo libre: música rock o blues, homenaje a Luis Spinetta y Pappo Napolitano.",
+    "Coro de formación libre: arreglo de música popular argentina o latinoamericana.",
+    "Parti neu gôr capel: emyn neu gân Gristnogol.",
+    "Competencia especial del Sesquicentenario: relato sonoro de temática regional con dos canciones y un poema.",
+    "Unawd i gantorion newydd.",
+    "Unawd hyd at 20 oed: Hunandewisiad.",
+    "Cân actol: thema «Taith».",
+    "Cân actol: «Y Môr».",
+    "Solo libre, música de cámara: «An die Musik», Franz Schubert, o «Canción de cuna india», Gilardo Gilardi.",
+])
+def test_free_repertoire_is_identified_first_like_a_eleccion(line):
+    """A sung line that names no piece: someone has to say which one was sung."""
+    assert is_choice(line)
+    assert not lp.unmarked_title(line)
+
+
+@pytest.mark.parametrize("line", ["Pedwarawd: Ar hyd y nos.", "Unawd i blant Bl 5 a Bl 6:Tair hwyaden lew."])
+def test_a_title_the_programa_does_not_mark(line):
+    """The transcription names the piece without «»: not a free choice, and not a piece the report can read."""
+    assert pieces(line) == [] and not is_choice(line) and lp.unmarked_title(line)
+
+
+def test_unmarked_titles_are_counted_and_listed():
+    d = data([piece("Cwm Rhondda", "John Hughes", "v1")],
+             sin_marcar=[{"video": "vP", "t": None, "festival": "trevelin", "year": 2025, "comp": 58,
+                          "line": "Pedwarawd: Ar hyd y nos."}])
+    md = render(d)
+    assert "| el programa no marca el título | — | 1 |" in section(md, "Huecos documentados")
+    lista = section(md, "Obras sin marcar en el programa")
+    assert "| trevelin 2025 | 58 | Pedwarawd: Ar hyd y nos. | [vP]" in lista
 
 
 def test_alternative_pieces_are_identified_first_like_a_eleccion():
@@ -400,3 +536,120 @@ def test_new_reason_codes(code, label):
     md = render(d)
     assert f"| {label} | 1 | 1 |" in section(md, "Huecos documentados")
     assert label in row(md, "Angor")
+
+
+# --- one row per piece ------------------------------------------------------------------------
+
+def test_one_row_per_piece_when_credits_differ_in_spelling():
+    d = data([piece("Rhyddid", "Olwen Jones", "v1", "v2"), piece("Rhyddid", "E. Olwen Jones", "v3"),
+              piece("Cwsg Osian", "Cleif Harpwood / Alun Sbardun Huws", "v4"), piece("Cwsg Osian", "", "v5", comp=60),
+              piece("La vieja", "Hermanos Díaz, arr. Vivian Tabush", "v6"),
+              piece("La vieja", "Hernán Díaz, arr. Vivian Tabbush", "v7"),
+              # not the same piece: two set settings of one competition, and one shared surname
+              piece("Gweddi'r Arglwydd", "C. Roberts", "v8"), piece("Gweddi'r Arglwydd", "E. Jones", "v8"),
+              piece("Nansi", "E. Jones", "v9"), piece("Nansi", "R. Jones", "v10"),
+              # an empty credit with two settings to choose from stays apart
+              piece("Ave María", "Karl Jenkins", "v11"), piece("Ave María", "Dante Andreo", "v12"),
+              piece("Ave María", "", "v13")])
+    md = render(d)
+
+    def rows(title):
+        return [line for line in md.splitlines() if line.startswith(f"| {title} |")]
+    assert len(rows("Rhyddid")) == 1 and "| 3 |" in rows("Rhyddid")[0]
+    assert "| E. Olwen Jones |" in rows("Rhyddid")[0]  # a credit inside a fuller one gives way
+    assert len(rows("Cwsg Osian")) == 1 and "| Cleif Harpwood / Alun Sbardun Huws |" in rows("Cwsg Osian")[0]
+    assert len(rows("La vieja")) == 1 and "Hermanos Díaz" in rows("La vieja")[0] and "Hernán Díaz" in rows("La vieja")[0]
+    assert len(rows("Gweddi'r Arglwydd")) == 2
+    assert len(rows("Nansi")) == 2
+    assert len(rows("Ave María")) == 3
+    assert "video transcripto: **10**" in md
+    assert "| falta el texto | 10 | 13 |" in section(md, "Huecos documentados")
+
+
+def test_merged_row_takes_a_gap_entry_by_any_of_its_credits():
+    d = data([piece("Rhyddid", "Olwen Jones", "v1"), piece("Rhyddid", "E. Olwen Jones", "v2")],
+             huecos=[{"obra": "Rhyddid", "autoria": "Olwen Jones", "motivo": "version_por_confirmar", "detalle": "x"}])
+    assert row(render(d), "Rhyddid").endswith("| versión por confirmar |")
+
+
+def test_no_text_videos_join_the_merged_row():
+    d = data([piece("Rhyddid", "Olwen Jones", "v1")],
+             sin_texto=[appearance("vN", "Triawd: «Rhyddid», E. Olwen Jones.", comp=51, year=2019)])
+    md = render(d)
+    assert "| 1 (+1 sin texto) |" in row(md, "Rhyddid")
+    assert "(0)" in md.split("## Huecos documentados")[0]  # no piece sung only in videos without text
+
+
+# --- what a session already identifies --------------------------------------------------------
+
+def test_session_note_from_aligned_spans():
+    d = data([piece("Cwm Rhondda", "John Hughes", "v1")],
+             letras=[("bonita-rama", "Bonita rama de sauce", "Carlos Guastavino"), ("gurisito", "Gurisito", "Daniel Viglietti"),
+                     ("otra", "Otra obra", "Anónimo")],
+             spans={"vS": ["bonita-rama"], "vM": ["gurisito", "otra"]},
+             span_rangos={"vS": {"bonita-rama": [[95, 292]]}, "vM": {"gurisito": [[1500, 1800]], "otra": [[2500, 2600]]}},
+             choice=[appearance("vS", "Solo libre: obra a elección de Carlos Guastavino.", comp=75, year=2025, rango=(0, None)),
+                     appearance("vM", "Coro: obra a elección.", comp=73, t=1000, rango=(1000, 2000)),
+                     appearance("vM", "Dúo: a elección.", comp=74, t=2000, rango=(2000, 2400))])
+    sec = section(render(d), "Obras «a elección» (identificar primero cuál se cantó)")
+    lines = {(line.split(" | ")[1], line.split(" | ")[3].split("]")[0]): line for line in sec.splitlines()
+             if line.startswith("| chubut")}
+    assert "ya identificada aquí: «Bonita rama de sauce»" in lines[("75", "[vS")]
+    assert "«Gurisito»" in lines[("73", "[vM 16:40")] and "Otra obra" not in lines[("73", "[vM 16:40")]
+    assert "ya identificada" not in lines[("74", "[vM 33:20")]  # the span at 2500 s is past this chapter's end
+
+
+def test_session_note_by_the_middle_of_a_span_and_by_an_entry_time():
+    d = data([piece("Cwm Rhondda", "John Hughes", "v1"), piece("Pam Fod Eira yn Wyn?", "Tradicional", "vM", comp=62)],
+             letras=[("naranjo", "Naranjo en flor", "Homero Expósito"), ("himno", "Himno de la sesión", "Anónimo"), PAM],
+             spans={"vM": ["naranjo", "pam-fod-eira"]},
+             span_rangos={"vM": {"naranjo": [[1995, 2300]],  # starts 5 s before its chapter
+                                 "pam-fod-eira": [[2100, 2200]]}},  # set piece of comp. 62: a misplaced chapter
+             videos=["vM"],
+             huecos=[{"letra": "himno", "videos": ["vM"], "desde": {"vM": 1200}, "motivo": "estrofa_omitida", "detalle": "x"}],
+             choice=[appearance("vM", "Cuarteto: himno a elección.", comp=55, t=1000, rango=(1000, 2000)),
+                     appearance("vM", "Solo libre: tango a elección.", comp=49, t=2000, rango=(2000, 2400))])
+    sec = section(render(d), "Obras «a elección» (identificar primero cuál se cantó)")
+    c55 = next(line for line in sec.splitlines() if "| 55 |" in line)
+    c49 = next(line for line in sec.splitlines() if "| 49 |" in line)
+    assert "«Himno de la sesión»" in c55 and "Naranjo" not in c55
+    assert "«Naranjo en flor»" in c49 and "Himno" not in c49.split("|")[4]
+    assert "Pam Fod" not in c49  # the set piece of another competition is not this one's free piece
+
+
+# --- a second performance in a video already aligned ------------------------------------------
+
+PAM = ("pam-fod-eira", "Pam Fod Eira yn Wyn?", "Tradicional")
+
+
+def second_performance(desde):
+    return data([piece("Pam Fod Eira yn Wyn?", "Tradicional", "vC", "vS")], letras=[PAM],
+                spans={"vC": ["pam-fod-eira"], "vS": ["pam-fod-eira"]},
+                span_rangos={"vC": {"pam-fod-eira": [[0, 260]]}, "vS": {"pam-fod-eira": [[10449, 10709]]}},
+                huecos=[{"letra": "pam-fod-eira", "videos": ["vS"], "desde": {"vS": desde},
+                         "motivo": "gales_insuficiente", "detalle": "La segunda actuación de la sesión."}])
+
+
+def test_a_second_performance_in_an_aligned_video_keeps_its_entry():
+    md = render(second_performance(10844))
+    r = row(md, "Pam Fod Eira yn Wyn?")
+    assert "✅ alineada" in r and "1 actuación más sin alinear: el reconocedor galés oyó muy poco" in r
+    assert "| el reconocedor galés oyó muy poco | 1 | 1 |" in section(md, "Huecos documentados")
+    detail = section(md, "Detalle de los huecos documentados")
+    assert "[vS 3:00:44](https://www.youtube.com/watch?v=vS&t=10844s)" in detail
+    assert "t=10844s" not in r  # the table does not point at the other performance
+
+
+def test_an_entry_inside_the_aligned_span_raises():
+    with pytest.raises(ValueError, match="vS"):
+        assess(second_performance(10500))
+
+
+# --- what is left out, said ------------------------------------------------------------------
+
+def test_clips_whose_title_is_not_a_song_are_counted():
+    d = data([piece("Cwm Rhondda", "John Hughes", "v1")],
+             fuera=[{"video": f"g{i}", "festival": "chubut", "year": 2019, "texto": True, "estado": "no_es_canto"}
+                    for i in range(3)])
+    huecos = section(render(d), "Huecos documentados")
+    assert "3 videos cuyo título dice que no se canta (instrumento, danza, recitación)" in huecos

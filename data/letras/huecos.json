@@ -1,5 +1,5 @@
 {
-  "nota": "Por qué no hay letra alineada para una obra del programa, o para uno de sus videos. Lo lee scripts/letras_pendientes.py y lo muestra docs/letras-pendientes.md. Cada entrada lleva 'letra' (slug de data/letras, cuando el texto existe) u 'obra' (título como en la tabla, más 'autoria' si varias obras lo comparten); 'videos' es opcional (sin él, vale para todos los videos sin alinear); 'desde' es opcional, {video: segundos}, el momento al que apunta el enlace de ese video; 'motivo' es un código de MOTIVOS en el script; 'detalle' es una oración neutra. Nunca se cita nada de lo que se canta: las letras vienen solo del mantenedor.",
+  "nota": "Por qué no hay letra alineada para una obra del programa, o para uno de sus videos. Lo lee scripts/letras_pendientes.py y lo muestra docs/letras-pendientes.md. Cada entrada lleva 'letra' (slug de data/letras, cuando el texto existe) u 'obra' (título como en la tabla, más 'autoria' si varias obras lo comparten); 'videos' es opcional (sin él, vale para todos los videos sin alinear); 'desde' es opcional, {video: segundos}, el momento al que apunta el enlace de ese video (en un video ya alineado, un 'desde' fuera del tramo anota otra actuación de la obra en ese video); 'motivo' es un código de MOTIVOS en el script; 'detalle' es una oración neutra. Nunca se cita nada de lo que se canta: las letras vienen solo del mantenedor.",
   "huecos": [
     {"letra": "o-deuwch-ir-dyfroedd", "motivo": "texto_distinto",
      "detalle": "El texto guardado parece ser el de otro himno de título parecido: casi nada de lo que se oye cantar está en él (utHSvsjwvwo contiene la misma actuación que el clip pOQSuZMyuaI), así que hay que revisar la fuente."},
@@ -7,10 +7,10 @@
      "detalle": "Se cantan las dos primeras estrofas del texto guardado, después una estrofa que no está en él, y no las otras tres; hace falta el texto tal como lo canta este grupo (utHSvsjwvwo es la misma actuación que el clip pOQSuZMyuaI y además no tiene fuente en galés)."},
     {"letra": "ysbryd-rebeca", "motivo": "texto_distinto",
      "detalle": "El texto guardado tiene solo el estribillo, que vuelve unas tres veces entre estrofas que no están en él; además el video no tiene fuente en galés."},
-    {"letra": "si-llega-a-ser-tucumana", "motivo": "texto_distinto",
-     "detalle": "Revisado por el mantenedor el 2026-11-21: el texto guardado no coincide con lo que se oye cantar en estos videos, así que queda afuera hasta revisar la fuente."},
-    {"letra": "cachilo-dormido", "videos": ["cDpe89FFjOA"], "motivo": "texto_distinto",
-     "detalle": "Revisado por el mantenedor el 2026-11-21: el texto guardado no coincide con lo que se oye cantar (Chubut 2026, comp. 71). Además, a los marcadores de la sesión les falta el capítulo de esa competencia, por eso la obra no aparece en la tabla del programa."},
+    {"letra": "si-llega-a-ser-tucumana", "motivo": "por_confirmar",
+     "detalle": "El mantenedor la dejó afuera el 2026-11-21 sin anotar por qué: falta confirmar si el texto guardado no coincide con lo que se canta en estos videos o si la obra no está en ellos."},
+    {"letra": "cachilo-dormido", "videos": ["cDpe89FFjOA"], "motivo": "por_confirmar",
+     "detalle": "El mantenedor la dejó afuera el 2026-11-21 sin anotar por qué (Chubut 2026, comp. 71): falta confirmar si el texto guardado no coincide con lo que se canta o si la obra no está en la sesión. Además, a los marcadores de la sesión les falta el capítulo de esa competencia, por eso la obra no aparece en la tabla del programa."},
     {"letra": "rumbo-al-cerro", "videos": ["Fkm05yVVzBY"], "motivo": "por_confirmar",
      "detalle": "El mantenedor la dejó afuera el 2026-11-21; una pasada anterior no encontró la actuación en el clip (Chubut 2012, comp. 45, obra a elección): falta confirmar si el texto no coincide o si la obra no está."},
 

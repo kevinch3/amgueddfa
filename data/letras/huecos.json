@@ -131,6 +131,11 @@
      "detalle": "La tonada se canta con un himno de Pantycelyn, de dominio público, que gobaith.cymru publica en varias versiones (https://gobaith.cymru/angelfire/G%28gwaed%20%282%29%29.html): lo que se oye coincide con su primera estrofa, y falta confirmar qué versión se canta en las demás antes de guardar el texto."},
 
     {"obra": "La muerte del ángel", "motivo": "instrumental",
-     "detalle": "Según el mantenedor (2026-11-20), el arreglo no tiene letra."}
+     "detalle": "Según el mantenedor (2026-11-20), el arreglo no tiene letra."},
+
+    {"letra": "ahicito", "videos": ["GmJvkuTeNdc"], "desde": {"GmJvkuTeNdc": 20}, "motivo": "texto_distinto",
+     "detalle": "En este clip (Chubut 2014, comp. 47) se canta otro texto: ninguna de las líneas que se oyen está en el guardado, así que el tramo se quitó (2026-11-23) hasta tener el texto que se canta."},
+    {"letra": "la-vieja", "videos": ["eNmj-1_HlIk"], "desde": {"eNmj-1_HlIk": 3809}, "motivo": "texto_distinto",
+     "detalle": "Los tres grupos que la cantan en esta sesión (Chubut 2018, viernes, desde 1:03:29, 1:07:28 y 1:11:07) usan otra versión de la letra, que casi no coincide con el texto guardado (el que se canta en adFH5gX0z80): los tramos se quitaron el 2026-11-23 hasta tener esa versión."}
   ]
 }

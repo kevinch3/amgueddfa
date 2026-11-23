@@ -3793,6 +3793,19 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "7387ee09-3532-42ca-8398-97c7653d26ce",
+    "type": "transcription",
+    "festival": "chubut",
+    "year": 2019,
+    "item_id": "5f3f43a489cb",
+    "payload": {
+      "text": "el intendente Adrián Maderna fue el encargado, de realizar el sábado por la noche, la entrega de la «Corona del Poeta», premio de la Municipalidad de Trelew, en el marco de la realización de la edición 2019 del Eisteddfod del Chubut, desarrollada en las instalaciones del Salón San David.\n\nPH EL REGIONAL\n\nLa competencia número 7 representa la premiación más importante del certamen literario del Eisteddfod. Y sin dudas, parte importante de la simbología de la palabra Eisteddfod, cuyo significado general es el de Estar Sentado. El trono aparece en esta ceremonia como el sentido propio y la celebración. La premiación debe ser cuidadosamente elegida, para que quien la reciba, la merezca, junto con los valores de la tradición que la ofrecen.\n\nPH EL REGIONAL\n\nUn poema en este certamen es apreciado como tal. Más de 8o poemas se presentaron en esta competencia. Y el ganador se caracterizó por su vocabulario poco común, porque se estructura como un espejo con dos partes contrapuestas. Repitiendo los elementos, aunque en oposición. El día es el mismo, un domingo.\n\nPH EL REGIONAL\n\nY el escenario parece ser el mismo, aunque cuenta con deslizamientos sutiles. Y la temporalidad transcurre en un tiempo bien pergeniado. La composición le da una impronta original a un tema clásico como el de sueños compartidos. La corona del Eisteddfod correspondió esta noche al poema «Jalando Repasas», cuyo seudónimo firma Maxel.\n\nPH EL REGIONAL\n\nY la velada se tornó aún más emotiva al solicitarse la presencia del autor entre los presentes mediante el sonido de las trompetas, que escoltaron entre aplausos, al escritor Owen Tudor Jones. La Corona del Poeta del Eisteddfod del Chubut, legado de nuestros colonos galeses, fue elaborada por el Taller Municipal de Orfebrería que lleva adelante el profesor Julio García Dusse."
+    },
+    "created_at": "2026-11-23T10:42:32.726662+00:00",
+    "reviewed_at": "2026-11-23T10:42:32.726662+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "743af07e-da43-4686-86ec-3aaa40d39059",
     "type": "fact",
     "festival": "chubut",
@@ -4556,6 +4569,19 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "8e1d45b0-c3b1-4e86-bddc-74ed8a6eaea7",
+    "type": "tag",
+    "festival": "trevelin",
+    "year": 2025,
+    "item_id": "5a1f5618e2fe",
+    "payload": {
+      "year": 2025
+    },
+    "created_at": "2026-11-23T10:48:32.65232+00:00",
+    "reviewed_at": "2026-11-23T10:48:32.65232+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "8e5eb8d0-980f-4a55-9797-fd7e13ded071",
     "type": "tag",
     "festival": "chubut",
@@ -5219,6 +5245,19 @@
     },
     "created_at": "2026-11-14T14:13:09.505018+00:00",
     "reviewed_at": "2026-11-14T14:13:09.505018+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "9e6243a5-2340-493d-b852-51db903b4577",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 2019,
+    "item_id": "5f3f43a489cb",
+    "payload": {
+      "year": 2019
+    },
+    "created_at": "2026-11-23T10:42:36.620093+00:00",
+    "reviewed_at": "2026-11-23T10:42:36.620093+00:00",
     "display_name": "Kevin Roberts"
   },
   {

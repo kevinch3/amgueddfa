@@ -284,3 +284,14 @@ def test_stanza_headings_are_not_lyric_lines():
     # alla-lejos-y-hace-tiempo: '(Estribillo)' heads the refrain; nobody sings it.
     meta, st = parse_letra(VUELTA.replace("Canta el gallo", "(Estribillo)\nCanta el gallo"))
     assert st == stanzas(VUELTA)
+
+
+def test_a_span_can_spread_its_lines_evenly():
+    # ta-na-solbici (maintainer, 2026-11-23): no recogniser hears the language, so words "heard" are
+    # coincidences; the lines are spread by syllables over the span, whatever was heard.
+    out = align(SEG, stanzas(), 10, 30, repartir=True)
+    assert [x for _, x in out] == [x for _, x in SUNG[:4]]
+    assert out[0][0] == 10.0 and out[1][0] == 15.2 and out[-1][0] < 30.0  # 8 of 31 syllables in
+    # with the order sung, as for an aria that repeats its lines (Quae moerebat, from the score)
+    out = align(SEG, stanzas(), 10, 30, estrofas=[1, "2:1-1", 2], repartir=True)
+    assert [x for _, x in out][2:4] == ["Llueve mucho sobre el valle"] * 2 and len(out) == 5

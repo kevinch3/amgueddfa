@@ -328,7 +328,8 @@
   {
    "letra": "ta-na-solbici",
    "desde": 882,
-   "hasta": 1048
+   "hasta": 1048,
+   "repartir": true
   }
  ],
  "adFH5gX0z80": [
@@ -502,7 +503,8 @@
   {
    "letra": "ta-na-solbici",
    "desde": 311,
-   "hasta": 477
+   "hasta": 477,
+   "repartir": true
   },
   {
    "letra": "cinema-paradiso-se",
@@ -933,6 +935,22 @@
    "letra": "calon-lan",
    "desde": 8,
    "hasta": 105
+  }
+ ],
+ "h3uIDhOeVyc": [
+  {
+   "letra": "quae-moerebat-et-dolebat",
+   "desde": 20.5,
+   "hasta": 139,
+   "estrofas": [
+    "1:1-3",
+    "1:2-3",
+    "1:2-3",
+    "1:1-2",
+    "1:2-3",
+    "1:2-3"
+   ],
+   "repartir": true
   }
  ]
 }

@@ -99,6 +99,11 @@ for the export (`/run/media/kevinch3/4eff8b2b-…/amgueddfa-backup`).
    add `"estrofas"` to the span, stanza numbers from 1 in the order sung, `"n:a-b"` for lines a to b
    of stanza n: `{"letra": "…", "desde": 14, "hasta": 254, "estrofas": [1, 2, 3, "1:3-4", 2, 2]}`.
    Preview it with `--estrofas 1,2,3,1:3-4,2,2`. The aligner then takes that order as it is.
+   **A language no recogniser hears** (Resian, Latin heard by YouTube's Spanish): the single words it
+   "hears" are coincidences, so don't let them time the lines (maintainer, 2026-11-23). Add
+   `"repartir": true` to the span: the lines are spread evenly over it by syllables. Mark `desde` and
+   `hasta` on the voice exactly, and give `"estrofas"` when the piece repeats its lines (an aria: take
+   the order from the score). Preview with `--repartir`.
    The rebuilt text (`video-reconstruction`) aligns from the raw sources instead: a Welsh piece from
    the Welsh model's lines above its confidence filter, any other from the Spanish sources only. Preview
    that too when the video will be rebuilt, and watch for lines piled at the start (the first line heard

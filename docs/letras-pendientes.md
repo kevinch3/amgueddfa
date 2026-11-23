@@ -2,7 +2,7 @@
 
 Generado por `python3 -m scripts.letras_pendientes`: no editar a mano. Cómo cargar una letra: skill `video-lyrics`. Los motivos de cada hueco: `data/letras/huecos.json`; qué obra es cada actuación que el programa no nombra: `data/letras/identificaciones.json`.
 
-Obras cantadas con título en el programa y video transcripto: **131** (32 alineadas en todos sus videos, 20 en parte, 18 con texto guardado sin alinear, 61 sin texto). Esa cuenta deja afuera las obras que solo se cantan en videos sin texto publicado (5) y los videos de ediciones sin programa transcripto: los dos están en «Huecos documentados». Obras «a elección» por identificar: **344** apariciones. Actuaciones sin identificar: **288** videos.
+Obras cantadas con título en el programa y video transcripto: **131** (33 alineadas en todos sus videos, 20 en parte, 18 con texto guardado sin alinear, 60 sin texto). Esa cuenta deja afuera las obras que solo se cantan en videos sin texto publicado (5) y los videos de ediciones sin programa transcripto: los dos están en «Huecos documentados». Obras «a elección» por identificar: **344** apariciones. Actuaciones sin identificar: **288** videos.
 
 ## Huecos documentados
 
@@ -10,7 +10,7 @@ No todas las letras van a llegar; cada hueco queda anotado con su motivo. Los mo
 
 | Motivo | Obras | Videos | Qué lo cierra |
 |---|---|---|---|
-| falta el texto | 81 | 120 | El texto tal como se canta, en su idioma: si es de dominio público, de una fuente pública citada; si no, del mantenedor (skill `video-lyrics`). |
+| falta el texto | 80 | 119 | El texto tal como se canta, en su idioma: si es de dominio público, de una fuente pública citada; si no, del mantenedor (skill `video-lyrics`). |
 | el texto no coincide con lo que se canta | 9 | 10 | El mantenedor revisa la fuente y manda el texto tal como se canta (estrofas que faltan, estribillos escritos donde se repiten). |
 | motivo por confirmar | 3 | 4 | El mantenedor confirma lo que el detalle deja abierto; después la entrada pasa al motivo que corresponda. |
 | se canta sin una estrofa | 5 | 6 | Que el alineador acepte, por tramo, qué estrofas se cantan (#129). |
@@ -91,7 +91,6 @@ Primero las de texto probablemente libre (litúrgico, tradicional, autores antig
 | Laudamus | Pantecelyn – William Owen | verificar derechos | 1 | chubut 2015 comp. 74<br>[RVs3i42XPWY](https://www.youtube.com/watch?v=RVs3i42XPWY) | versión por confirmar |
 | Myrddin | R. Arwyn – R. Llwyd | verificar derechos | 1 | chubut 2012 comp. 52<br>[ehqxCSs0UZ0](https://www.youtube.com/watch?v=ehqxCSs0UZ0) | falta el texto |
 | Popule meus | Leonardo San Juan | verificar derechos | 1 | chubut 2024 comp. 72<br>[W1z_1ulc_lY](https://www.youtube.com/watch?v=W1z_1ulc_lY) | falta el texto |
-| Quae moerebat et dolebat | del «Stabat Mater», Giambattista Pergolesi | verificar derechos | 1 | chubut 2008 comp. 52<br>[h3uIDhOeVyc](https://www.youtube.com/watch?v=h3uIDhOeVyc) | falta el texto |
 | Si a mí me hubieran dicho | Beatriz Corona | verificar derechos | 1 | chubut 2025 comp. 67<br>[BC61L8txOaQ 6:40:29](https://www.youtube.com/watch?v=BC61L8txOaQ&t=24029s) | falta el texto |
 | Stesion Strata | Tecwyn Ifan, trefniant Euros Rhys Evans | verificar derechos | 1 | chubut 2022 comp. 55<br>[jwdDEPP-Pd0](https://www.youtube.com/watch?v=jwdDEPP-Pd0) | falta el texto |
 | Suo-Gân | — | verificar derechos | 1 | trevelin 2026 comp. 51<br>[IaNz9fMsg68](https://www.youtube.com/watch?v=IaNz9fMsg68) | falta el texto |
@@ -169,6 +168,7 @@ Primero las de texto probablemente libre (litúrgico, tradicional, autores antig
 | La finadita | arr. Grupo Vocal Argentino | verificar derechos | 1 | chubut 2024 comp. 63<br>[VDCKHPXzibM 2:32:16](https://www.youtube.com/watch?v=VDCKHPXzibM&t=9136s) | ✅ alineada |
 | O llefara addfwyn Iesu | — | verificar derechos | 1 | chubut 2025 comp. 59<br>[_75BiKuifoQ](https://www.youtube.com/watch?v=_75BiKuifoQ) | texto guardado, sin alinear: el reconocedor galés oyó muy poco |
 | Pistyll y Llan | — | verificar derechos | 1 | chubut 2025 comp. 43<br>[_75BiKuifoQ](https://www.youtube.com/watch?v=_75BiKuifoQ) | texto guardado, sin alinear: el reconocedor galés oyó muy poco |
+| Quae moerebat et dolebat | del «Stabat Mater», Giambattista Pergolesi | verificar derechos | 1 | chubut 2008 comp. 52<br>[h3uIDhOeVyc](https://www.youtube.com/watch?v=h3uIDhOeVyc) | ✅ alineada |
 | Wrth fynd efo Deio i Dywyn | — | verificar derechos | 1 | chubut 2025 comp. 45<br>[C20iW5Fuac8](https://www.youtube.com/watch?v=C20iW5Fuac8) | texto guardado, sin alinear: el reconocedor galés oyó muy poco |
 | Ysbryd Rebeca | Tecwyn Ifan | verificar derechos | 1 | chubut 2026 comp. 65<br>[cDpe89FFjOA 5:32:48](https://www.youtube.com/watch?v=cDpe89FFjOA&t=19968s) | texto guardado, sin alinear: el texto no coincide con lo que se canta |
 

@@ -24,14 +24,22 @@ title). A video counts as done only when it has a span of that piece's text; a s
 span is a gap. "a elección" pieces, competitions that offer alternatives («A», «B» o «C») and free
 repertoires whose line names no piece ("Solo libre: música rock o blues") are listed apart: someone
 has to say which piece was sung. A clip with a single performance leaves that list once its piece is
-known (a span, a gap entry or its title); a session keeps it, with the texts aligned in its chapter.
-A line that names its piece without «» is counted apart too, until the transcription marks it.
+known (a span, a gap entry, its title or an identification); a session keeps it, with the texts aligned
+in its chapter and the identifications timed inside it. A line that names its piece without «» is
+counted apart too, until the transcription marks it.
+
+Identifications (data/letras/identificaciones.json, keyed by video, with `t` in a session) say which
+piece a performance is: title, author or tune, confidence, evidence (never quoting what is sung) and
+rights. One with a saved text (`letra`) brings its video to that text, which is then a gap until it has
+a span; one without is a row of its own ("Obras identificadas, sin texto"), counted as «falta el
+texto», and its video leaves «actuación sin identificar». An identification also stops a video title
+from tying the video to a saved text of another setting with the same title.
 
 The table leaves some videos out, and the report counts them: sung competitions whose videos have
 no published text, videos of editions with no programa transcribed, performances that nobody has
 placed in a competition (with or without text: giving a video text does not place it), and clips
-whose title says they are not sung. The texts themselves always come from the maintainer (skill:
-video-lyrics).
+whose title says they are not sung. The texts come from the maintainer, or, when public domain, from a
+cited public source, checked against what is sung (skill: video-lyrics).
 
 Why a gap stays open is curated in data/letras/huecos.json (see MOTIVOS): one entry per piece
 or per video, keyed by the text's slug when the text exists, else by the programa title. The
@@ -53,6 +61,7 @@ from scripts.export_video_transcripts import FESTIVALS
 REPO = Path(__file__).resolve().parent.parent
 OUT = REPO / "docs" / "letras-pendientes.md"
 HUECOS = REPO / "data" / "letras" / "huecos.json"
+IDENTIFICACIONES = REPO / "data" / "letras" / "identificaciones.json"
 
 # The Welsh model pass over every published video (on KPC) is running; set to False when it ends,
 # in the commit that retries the «gales_insuficiente» pieces.
@@ -63,7 +72,8 @@ GALES_EN_CURSO = True
 # come from data/letras/huecos.json. The last three count videos that are not in the programa table.
 MOTIVOS = {
     "falta_texto": ("falta el texto",
-                    "El mantenedor consigue el texto tal como se canta, en su idioma (skill `video-lyrics`)."),
+                    "El texto tal como se canta, en su idioma: si es de dominio público, de una fuente pública citada; "
+                    "si no, del mantenedor (skill `video-lyrics`)."),
     "sin_alinear": ("sin motivo registrado",
                     "Hay texto pero no tramo ni motivo anotado: una pasada de alineación (skill `video-lyrics`); "
                     "si no se puede alinear, anotar el motivo en `data/letras/huecos.json`."),
@@ -78,6 +88,9 @@ MOTIVOS = {
     "gales_insuficiente": ("el reconocedor galés oyó muy poco",
                            "Reintentar {pasada}; si sigue igual, probar un filtro de confianza más bajo dentro "
                            "de los tramos con letra (#129)."),
+    "poco_oido": ("los reconocedores oyeron muy poco del canto",
+                  "Escuchar el video para fijar el tramo (y, si hace falta, los tiempos de los versos): lo que oyeron "
+                  "YouTube, Whisper y el modelo galés no alcanza para que el alineador ubique las líneas (#129)."),
     "alineador": ("el alineador amontona las líneas",
                   "Que el alineador no se ancle en palabras sueltas o mal oídas, por ejemplo repartiendo "
                   "desde el inicio del tramo cuando lo oído es poco (#129)."),
@@ -95,7 +108,7 @@ MOTIVOS = {
     "a_eleccion": ("obra «a elección» sin identificar",
                    "Escuchar el anuncio o el video para saber qué obra se cantó (o cuál de las alternativas del "
                    "programa; en un repertorio libre, la línea del programa no nombra ninguna); con el título, la letra "
-                   "se pide como cualquier otra ({n} apariciones, lista al final)."),
+                   "se pide como cualquier otra ({n} apariciones, {k} con alguna obra ya identificada ahí; lista al final)."),
     "titulo_sin_marcar": ("el programa no marca el título",
                           "La transcripción del programa nombra la obra sin «»: marcar el título (skill "
                           "`programa-transcription`) para que la obra entre en la tabla. Lista en "
@@ -118,6 +131,10 @@ MOTIVOS = {
 COMPUTED = {"falta_texto", "sin_alinear", "a_eleccion", "titulo_sin_marcar", "sin_texto_video", "edicion_sin_programa",
             "actuacion_sin_identificar"}
 ENTRY_KEYS = {"letra", "obra", "autoria", "videos", "desde", "motivo", "detalle"}
+# Which piece a performance is, when its programa line does not say (data/letras/identificaciones.json).
+IDENT_KEYS = {"t", "titulo", "autoria", "confianza", "evidencia", "derechos", "letra", "nota"}
+CONFIANZA = ("alta", "media", "baja")
+DERECHOS = {"dominio_publico": "dominio público", "con_derechos": "con derechos", "sin_confirmar": "derechos sin confirmar"}
 NOT_PERFORMANCE = {"ceremonia", "noticia"}  # video kinds that are not a competition performance
 
 
@@ -360,6 +377,23 @@ def load_huecos(path: Path = HUECOS) -> list:
     return doc.get("huecos", [])
 
 
+def load_identificaciones(path: Path = IDENTIFICACIONES) -> dict:
+    """{video: [identification, ...]}: the piece each performance is, keyed by video (and `t` in a session)."""
+    if not path.exists():
+        return {}
+    doc = json.loads(path.read_text(encoding="utf-8"))
+    bad = sorted(set(doc) - {"nota", "identificaciones"}) if isinstance(doc, dict) else ["(no es un objeto)"]
+    if bad:
+        raise ValueError(f"{path.name}: clave desconocida {bad}; se esperaba 'nota' e 'identificaciones'")
+    ids = doc.get("identificaciones", {})
+    if not isinstance(ids, dict):
+        raise ValueError(f"{path.name}: 'identificaciones' es {{video: [identificaciones]}}")
+    for v, es in ids.items():
+        if not isinstance(es, list) or not all(isinstance(e, dict) for e in es):
+            raise ValueError(f"{path.name}: {v!r} lleva una lista de identificaciones")
+    return ids
+
+
 def collect(repo: Path = REPO) -> dict:
     cat = {i["id"]: i for i in json.loads((repo / "src/data/catalog.json").read_text(encoding="utf-8"))["items"]}
     programa: dict[tuple[str, int], dict[int, str]] = defaultdict(dict)
@@ -450,6 +484,7 @@ def collect(repo: Path = REPO) -> dict:
     return {"pieces": by_piece, "choice": choice, "letras": letras, "spans": spans, "span_t": dict(span_t),
             "span_rangos": {v: dict(r) for v, r in span_rangos.items()},
             "videos": {v["id"] for v in all_videos}, "huecos": load_huecos(letras_dir / "huecos.json"),
+            "identificaciones": load_identificaciones(letras_dir / "identificaciones.json"),
             "titulos": titulos, "sin_texto": sin_texto, "sin_marcar": sin_marcar, "fuera": fuera, "otros": otros}
 
 
@@ -495,6 +530,26 @@ def text_for(title: str, credit: str, letras: dict) -> str | None:
     score = {s: len(_authors(credit) & _authors(letras[s]["autor"])) for s in cands}
     best = [s for s in cands if score[s] == max(score.values())]
     return best[0] if len(best) == 1 and score[best[0]] else None
+
+
+def check_ident(e: dict, at: str, video: str, videos: set, letras: dict) -> None:
+    """Raises ValueError for an identification the report cannot read."""
+    if video not in videos:
+        raise ValueError(f"{at}: video desconocido {video!r}")
+    bad = sorted(set(e) - IDENT_KEYS)
+    if bad:
+        raise ValueError(f"{at}: campo desconocido {bad}")
+    for k in ("titulo", "evidencia"):
+        if not isinstance(e.get(k), str) or not e[k].strip():
+            raise ValueError(f"{at}: falta {k!r} (la evidencia, sin citar nada de lo que se canta)")
+    if e.get("confianza") not in CONFIANZA:
+        raise ValueError(f"{at}: 'confianza' es una de {', '.join(CONFIANZA)}")
+    if e.get("derechos") not in DERECHOS:
+        raise ValueError(f"{at}: 'derechos' es uno de {', '.join(DERECHOS)}")
+    if "t" in e and not (isinstance(e["t"], (int, float)) and e["t"] >= 0):
+        raise ValueError(f"{at}: 't' son los segundos del video donde empieza la actuación (>= 0)")
+    if "letra" in e and e["letra"] not in letras:
+        raise ValueError(f"{at}: letra desconocida {e['letra']!r}: no existe data/letras/{e['letra']}.md")
 
 
 def assess(data: dict) -> dict:
@@ -577,7 +632,25 @@ def assess(data: dict) -> dict:
                     {"video": v, "t": span_t.get(v, {}).get(s), "festival": m.get("festival", ""),
                      "year": m.get("year", ""), "comp": None})
 
-    # A title that names a saved text reaches its video, unless the title is shared.
+    # An identification names the piece a performance is: with a saved text, it reaches its video like a span
+    # (and the video is a gap until it has one); without one, the piece is a row of its own, apart from the table.
+    idents = data.get("identificaciones", {})
+    for v, es in sorted(idents.items()):
+        for i, e in enumerate(es, 1):
+            check_ident(e, f"identificaciones.json, {v} n.º {i}", v, data["videos"], letras)
+            m = meta.get(v, {})
+            where = {"video": v, "t": e.get("t"), "festival": m.get("festival", ""), "year": m.get("year", ""), "comp": None}
+            if "letra" not in e:
+                continue
+            r = target(e["letra"], v, m.get("festival"), m.get("year"))
+            if m.get("texto", True) or placed(e["letra"], v):
+                add(r, where)
+            elif not any(w["video"] == v for w in r["sin_texto"]):
+                r["sin_texto"] = r["sin_texto"] + [where]
+                sin_texto.append({**where, "line": f"«{letras[e['letra']]['titulo']}» (identificada)", "nombrada": e["letra"]})
+
+    # A title that names a saved text reaches its video, unless the title is shared, or the video's identification
+    # says it is another piece (another setting of the same title).
     settings = defaultdict(int)
     for t, _ in set(canon.values()):
         settings[t] += 1
@@ -595,9 +668,11 @@ def assess(data: dict) -> dict:
             if not t.get("alcance", True):
                 otros.add(t["video"])
                 continue
+            if t["video"] in idents and s not in {e.get("letra") for e in idents[t["video"]]}:
+                continue
             r = target(s, t["video"], t["festival"], t["year"])
             where = {"video": t["video"], "t": None, "festival": t["festival"], "year": t["year"], "comp": t["comp"]}
-            if t["texto"]:
+            if t["texto"] or placed(s, t["video"]):  # a span: the rebuild publishes the text with the lyric
                 add(r, where)
             elif not any(w["video"] == t["video"] for w in r["sin_texto"]):
                 r["sin_texto"] = r["sin_texto"] + [where]
@@ -703,6 +778,30 @@ def assess(data: dict) -> dict:
         entries.append({"name": name, "code": code, "detalle": e["detalle"].strip(), "targets": targets,
                         "videos": sorted(gaps + otra), "tiempos": {v: float(desde[v]) for v in otra}})
 
+    identified: dict[str, dict] = {}
+    for v, es in sorted(idents.items()):
+        m = meta.get(v, {})
+        for e in es:
+            if "letra" in e:
+                continue
+            k = fold(e["titulo"])
+            r = identified.setdefault(k, new_row(title=e["titulo"], credit=e.get("autoria", ""), credits=[], slug=None,
+                                                 free=False, extra=True, id=("identificada", k), idents=[]))
+            r["idents"].append({"video": v, **e})
+            if e.get("autoria") and e["autoria"] not in r["credits"]:
+                r["credits"].append(e["autoria"])
+            where = {"video": v, "t": e.get("t"), "festival": m.get("festival", ""), "year": m.get("year", ""), "comp": None}
+            if m.get("texto", True):
+                if v not in r["videos"]:
+                    r["where"].append(where)
+                    r["videos"] = sorted({*r["videos"], v})
+                    r["state"][v] = "falta_texto"
+            elif not any(w["video"] == v for w in r["sin_texto"]):
+                r["sin_texto"].append(where)
+    ident_rows = sorted(identified.values(), key=lambda r: fold(r["title"]))
+    for r in ident_rows:
+        r["credit"] = " · ".join(r["credits"])
+
     every = rows + list(extra.values())
     for r in every:
         for v in r["videos"]:
@@ -736,23 +835,35 @@ def assess(data: dict) -> dict:
             if r["slug"] and w["comp"]:
                 set_for[(w["video"], r["slug"])].add(w["comp"])
 
+    def ident_inside(e: dict, c: dict) -> bool:
+        if not c.get("rango"):
+            return False
+        start, end = c["rango"]
+        t = e.get("t", 0.0 if c["rango"] == (0.0, None) else None)
+        return t is not None and start <= t and (end is None or t < end)
+
     choice = []
     for c in data["choice"]:
         fixed = {text_for(t, cr, letras) for t, cr in pieces(c["line"])}
         here = {s for s, vs in videos_of.items() if c["video"] in vs and s not in fixed}
-        if c.get("single") and here:
+        if c.get("single") and (here or any("letra" not in e for e in idents.get(c["video"], []))):
             continue
         # the set piece of another competition is not this one's free piece, even when a chapter is misplaced
         ids = sorted(letras[s]["titulo"] for s in here if not set_for[(c["video"], s)] - {c["comp"]}
                      and (refs[s] == (fold(c["festival"]), c["year"], c["comp"]) or inside(s, c)))
-        choice.append({**c, "identificadas": ids})
+        ids += [e["titulo"] for e in idents.get(c["video"], []) if "letra" not in e and ident_inside(e, c)
+                and fold(e["titulo"]) not in {fold(x) for x in ids}]
+        choice.append({**c, "identificadas": sorted(ids, key=fold)})
 
-    reached = {v for r in every for v in r["videos"]} | {w["video"] for r in every for w in r["sin_texto"]}
+    reached = ({v for r in every + ident_rows for v in r["videos"]}
+               | {w["video"] for r in every + ident_rows for w in r["sin_texto"]})
     fuera = [f for f in data.get("fuera", []) if f["video"] not in reached]
 
     counts: dict[str, tuple[set, set]] = {c: (set(), set()) for c in MOTIVOS}
-    for r in rows + extra_rows:
-        codes = set(r["state"].values()) if r["videos"] else {"sin_alinear"}
+    for r in rows + extra_rows + ident_rows:
+        # a saved text with no video yet is a text to place; an identified piece only in videos without text is
+        # counted with those videos
+        codes = set(r["state"].values()) if r["videos"] else {"sin_alinear"} if r["slug"] else set()
         for c in codes - {"ok"}:
             counts[c][0].add(r["id"])
         for v, c in r["state"].items():
@@ -772,16 +883,19 @@ def assess(data: dict) -> dict:
         counts["sin_texto_video"][0].update(ps)
         if ps or is_choice(a["line"]) or not pieces(a["line"]):  # not when all its pieces are instrumental
             counts["sin_texto_video"][1].add(a["video"])
-    for r in rows + extra_rows:
+    for r in rows + extra_rows + ident_rows:
         if r["sin_texto"]:
             counts["sin_texto_video"][0].add(r["id"])
+    for r in ident_rows:
+        counts["sin_texto_video"][1].update(w["video"] for w in r["sin_texto"])
     for f in fuera:
         if f["estado"] == "sin_programa":
             counts["edicion_sin_programa"][1].add(f["video"])
         elif f["estado"] == "sin_identificar":
             counts["actuacion_sin_identificar"][1].add(f["video"])
     solo_sin_texto = len({k for k in notext if k not in by_id and k not in no_lyric})
-    return {"rows": rows, "extra": extra_rows, "instrumental": instrumental, "entries": entries, "choice": choice,
+    return {"rows": rows, "extra": extra_rows, "identificadas": ident_rows, "instrumental": instrumental,
+            "entries": entries, "choice": choice,
             "sin_texto": [a for a in sin_texto if a["video"] in counts["sin_texto_video"][1]], "sin_marcar": sin_marcar,
             "solo_sin_texto": solo_sin_texto, "fuera": fuera, "otros": sorted(otros),
             "counts": {c: (len(p), len(v)) for c, (p, v) in counts.items()}}
@@ -869,7 +983,8 @@ def render(data: dict) -> str:
         "# Letras pendientes",
         "",
         "Generado por `python3 -m scripts.letras_pendientes`: no editar a mano. Cómo cargar una letra: skill `video-lyrics`. "
-        "Los motivos de cada hueco: `data/letras/huecos.json`.",
+        "Los motivos de cada hueco: `data/letras/huecos.json`; qué obra es cada actuación que el programa no nombra: "
+        "`data/letras/identificaciones.json`.",
         "",
         f"Obras cantadas con título en el programa y video transcripto: **{len(rows)}** "
         f"({n_ok} alineadas en todos sus videos, {n_part} en parte, {n_saved} con texto guardado sin alinear, "
@@ -889,7 +1004,7 @@ def render(data: dict) -> str:
         "| Motivo | Obras | Videos | Qué lo cierra |",
         "|---|---|---|---|",
     ]
-    fill = {"a_eleccion": {"n": len(a["choice"])},
+    fill = {"a_eleccion": {"n": len(a["choice"]), "k": sum(bool(c["identificadas"]) for c in a["choice"])},
             "actuacion_sin_identificar": {"con": sum(f["texto"] for f in sin_id), "sin": sum(not f["texto"] for f in sin_id)}}
     for c, (label, _) in MOTIVOS.items():
         n_p, n_v = counts[c]
@@ -964,6 +1079,24 @@ def render(data: dict) -> str:
         for r in sorted(a["extra"], key=lambda r: (fold(r["title"]), r["slug"])):
             ws = sorted(r["where"], key=lambda w: w["video"])
             out.append(f"| {r['title']} | {r['credit'] or '—'} | {r['programa'] or '—'} | {links(r, ws) or '—'} | {estado(r)} |")
+    if a["identificadas"]:
+        out += ["", "## Obras identificadas, sin texto", "",
+                "Actuaciones «a elección» (o sin competencia) cuya obra ya se sabe, por el anuncio, el título o lo que se oye "
+                "(`data/letras/identificaciones.json`), pero que no tienen texto guardado: siguen siendo un hueco de «falta el "
+                "texto». Con derechos, el texto lo da el mantenedor; de dominio público, puede venir de una fuente pública "
+                "citada (skill `video-lyrics`).", "",
+                "| Obra | Autoría | Derechos | Confianza | Dónde | Evidencia |", "|---|---|---|---|---|---|"]
+        for r in a["identificadas"]:
+            es = r["idents"]
+            derechos = " / ".join(dict.fromkeys(DERECHOS[e["derechos"]] for e in es))
+            confianza = " / ".join(dict.fromkeys(e["confianza"] for e in sorted(es, key=lambda e: CONFIANZA.index(e["confianza"]))))
+            ws = sorted(r["where"] + r["sin_texto"], key=lambda w: w["video"])
+            sin = {w["video"] for w in r["sin_texto"]}
+            donde = " ".join(link(w["video"], w["t"]) + (" (sin texto publicado)" if w["video"] in sin else "")
+                             for w in one_per_video(ws))
+            evid = " ".join(dict.fromkeys(" ".join(x for x in (e["evidencia"].strip(), e.get("nota", "").strip()) if x)
+                                          for e in es))
+            out.append(f"| {r['title']} | {r['credit'] or '—'} | {derechos} | {confianza} | {donde} | {evid} |")
     if a["sin_texto"]:
         out += ["", "## Obras en videos sin texto publicado", "",
                 "Competencias cantadas del programa (y obras con texto guardado que el título nombra) cuyos videos todavía "
@@ -1001,8 +1134,10 @@ def render(data: dict) -> str:
     out += ["## Obras «a elección» (identificar primero cuál se cantó)", "",
             "Escuchar el video o leer el anuncio; con el título, la letra se pide como cualquier otra. También están las "
             "competencias de repertorio libre, cuya línea del programa da un género o un tema y no una obra. Un clip con "
-            "una sola actuación sale de la lista cuando se sabe qué obra es; en una sesión larga queda, con lo ya "
-            "identificado (un texto alineado dentro del capítulo de esa competencia, o cuyo `programa` la nombra).", "",
+            "una sola actuación sale de la lista cuando se sabe qué obra es (un texto, una entrada de huecos, su título o "
+            "una identificación en `data/letras/identificaciones.json`); en una sesión larga queda, con lo ya "
+            "identificado (un texto alineado dentro del capítulo de esa competencia o cuyo `programa` la nombra, o una "
+            "identificación con su tiempo dentro del capítulo).", "",
             "| Edición | Comp. | Programa | Video |", "|---|---|---|---|"]
     for c in sorted(a["choice"], key=lambda c: (c["festival"], c["year"], c["comp"], c["video"])):
         line = c["line"] if len(c["line"]) <= 110 else c["line"][:107] + "…"

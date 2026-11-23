@@ -125,15 +125,16 @@ def piece(title, credit, *videos, comp=76):
 
 
 def data(pieces_, letras=(), spans=None, huecos=(), choice=(), videos=(), titulos=(), sin_texto=(), fuera=(),
-         otros=(), span_t=None, span_rangos=None, sin_marcar=()):
+         otros=(), span_t=None, span_rangos=None, sin_marcar=(), identificaciones=None):
     ps = dict(pieces_)
     known = ({w["video"] for p in ps.values() for w in p["where"]} | set(videos) | {t["video"] for t in titulos}
-             | {a["video"] for a in sin_texto} | {c["video"] for c in choice} | {a["video"] for a in sin_marcar})
+             | {a["video"] for a in sin_texto} | {c["video"] for c in choice} | {a["video"] for a in sin_marcar}
+             | {f["video"] for f in fuera} | set(spans or {}))
     return {"pieces": ps, "choice": [{"single": False, "rango": None, **c} for c in choice],
             "letras": {x[0]: {"titulo": x[1], "autor": x[2], "programa": x[3] if len(x) > 3 else ""} for x in letras},
             "spans": spans or {}, "span_t": span_t or {}, "span_rangos": span_rangos or {}, "huecos": list(huecos),
             "videos": known, "titulos": list(titulos), "sin_texto": list(sin_texto), "fuera": list(fuera),
-            "otros": list(otros), "sin_marcar": list(sin_marcar)}
+            "otros": list(otros), "sin_marcar": list(sin_marcar), "identificaciones": identificaciones or {}}
 
 
 def titulo(video, title, comp=None, year=2023, texto=True, festival="chubut"):
@@ -529,6 +530,7 @@ def test_entry_time_gives_the_link_its_t():
 @pytest.mark.parametrize("code, label", [
     ("por_confirmar", "motivo por confirmar"),
     ("ubicable_desde_clip", "se puede ubicar ya desde un clip alineado"),
+    ("poco_oido", "los reconocedores oyeron muy poco del canto"),
 ])
 def test_new_reason_codes(code, label):
     d = data([piece("Angor", "Tudur Huws Jones", "vidF")], letras=[ANGOR],
@@ -653,3 +655,131 @@ def test_clips_whose_title_is_not_a_song_are_counted():
                     for i in range(3)])
     huecos = section(render(d), "Huecos documentados")
     assert "3 videos cuyo título dice que no se canta (instrumento, danza, recitación)" in huecos
+
+
+# --- identifications (data/letras/identificaciones.json) --------------------------------------
+
+def ident(titulo, autoria="Autor", t=None, letra=None, confianza="alta", derechos="con_derechos"):
+    e = {"titulo": titulo, "autoria": autoria, "confianza": confianza, "derechos": derechos,
+         "evidencia": "Lo anuncia la cantante y lo confirma lo que oyó Whisper."}
+    if t is not None:
+        e["t"] = t
+    if letra:
+        e["letra"] = letra
+    return e
+
+
+CHOICE_SEC = "Obras «a elección» (identificar primero cuál se cantó)"
+IDENT_SEC = "Obras identificadas, sin texto"
+
+
+def test_an_identified_clip_leaves_a_eleccion_and_its_piece_stays_a_gap():
+    d = data([piece("Cwm Rhondda", "John Hughes", "v1")],
+             choice=[appearance("vC", "Solo libre: tango a elección.", comp=46, year=2012, single=True),
+                     appearance("vD", "Solo libre: tango a elección.", comp=46, year=2012, single=True),
+                     appearance("vE", "Solo libre: tango a elección.", comp=46, year=2012, single=True)],
+             identificaciones={"vC": [ident("La última curda", "Aníbal Troilo; letra de Cátulo Castillo", t=20)],
+                               "vD": [ident("La última curda", "Aníbal Troilo; letra de Cátulo Castillo")]})
+    md = render(d)
+    sec = section(md, CHOICE_SEC)
+    assert "[vC" not in sec and "[vD" not in sec and "[vE" in sec
+    assert "por identificar: **1** apariciones" in md
+    r = row(section(md, IDENT_SEC), "La última curda")
+    assert "Aníbal Troilo; letra de Cátulo Castillo" in r and "con derechos" in r and "alta" in r
+    assert "[vC 0:20](https://www.youtube.com/watch?v=vC&t=20s)" in r and "[vD](" in r
+    assert "Lo anuncia la cantante" in r
+    huecos = section(md, "Huecos documentados")
+    assert "| falta el texto | 2 | 3 |" in huecos  # Cwm Rhondda (v1) and the identified piece (vC, vD)
+    assert "| obra «a elección» sin identificar | — | 1 |" in huecos
+
+
+def test_an_identification_in_a_session_is_context_for_its_chapter():
+    d = data([piece("Cwm Rhondda", "John Hughes", "v1")],
+             choice=[appearance("vM", "Solo libre: tango a elección.", comp=49, t=1000, rango=(1000, 2000)),
+                     appearance("vM", "Dúo: a elección.", comp=50, t=2000, rango=(2000, 3000))],
+             identificaciones={"vM": [ident("Yuyo verde", t=1500)]})
+    sec = section(render(d), CHOICE_SEC)
+    c49 = next(line for line in sec.splitlines() if "| 49 |" in line)
+    c50 = next(line for line in sec.splitlines() if "| 50 |" in line)
+    assert "«Yuyo verde»" in c49 and "Yuyo" not in c50  # a session keeps its appearance: others sing there too
+    assert "(2 apariciones, 1 con alguna obra ya identificada ahí; lista al final)" in section(render(d), "Huecos documentados")
+
+
+def test_an_identification_with_a_saved_text_brings_its_video_to_the_text():
+    d = data([piece("Cwm Rhondda", "John Hughes", "v1")],
+             letras=[("hen-ferchetan", "Hen Ferchetan", "Tradicional galesa")],
+             spans={"vA": ["hen-ferchetan"]}, videos=["vB"],
+             identificaciones={"vA": [ident("Hen Ferchetan", letra="hen-ferchetan", derechos="dominio_publico")],
+                               "vB": [ident("Hen Ferchetan", letra="hen-ferchetan", derechos="dominio_publico")]})
+    md = render(d)
+    r = row(section(md, "Textos guardados fuera de la tabla"), "Hen Ferchetan")
+    assert "✅ [vA]" in r and "✗ [vB]" in r and "sin motivo registrado" in r
+    assert "Hen Ferchetan" not in section(md, "Huecos documentados").split(IDENT_SEC)[0].split("| Obra |")[0]
+    assert IDENT_SEC not in md  # no identified piece without text
+
+
+def test_an_identification_wins_over_a_title_that_names_another_setting():
+    d = data([piece("Ave verum corpus", "Francis Poulenc", "vP", comp=89)],
+             letras=[("ave-verum-poulenc", "Ave verum corpus", "Francis Poulenc")],
+             titulos=[titulo("vQ", "[CH2014054] Ave Verum Corpus - Cuarteto", comp=54)],
+             identificaciones={"vQ": [ident("Ave verum corpus (arreglo sin identificar)", derechos="sin_confirmar",
+                                            confianza="media")]})
+    md = render(d)
+    assert "[vQ" not in row(md, "Ave verum corpus")
+    assert "[vQ" in row(section(md, IDENT_SEC), "Ave verum corpus (arreglo sin identificar)")
+
+
+def test_an_identified_performance_is_no_longer_unidentified():
+    d = data([piece("Cwm Rhondda", "John Hughes", "v1")],
+             fuera=[{"video": f"u{i}", "festival": "chubut", "year": 2014, "texto": True, "estado": "sin_identificar"}
+                    for i in range(3)],
+             identificaciones={"u0": [ident("Bring Him Home")]})
+    md = render(d)
+    assert "| actuación sin identificar | — | 2 |" in section(md, "Huecos documentados")
+    assert "[u0" in row(section(md, IDENT_SEC), "Bring Him Home")
+
+
+@pytest.mark.parametrize("entry, message", [
+    ({"vX": [ident("Obra")]}, "vX"),  # unknown video
+    ({"v1": [ident("Obra", letra="no-existe")]}, "no-existe"),
+    ({"v1": [ident("Obra", confianza="segura")]}, "confianza"),
+    ({"v1": [ident("Obra", derechos="libre")]}, "derechos"),
+    ({"v1": [{**ident("Obra"), "evidencia": " "}]}, "evidencia"),
+    ({"v1": [{**ident("Obra"), "letras": "x"}]}, "letras"),
+    ({"v1": [{**ident("Obra"), "t": -3}]}, "'t'"),
+])
+def test_an_identification_the_report_cannot_read_raises(entry, message):
+    with pytest.raises(ValueError, match=message):
+        assess(data([piece("Cwm Rhondda", "John Hughes", "v1")], identificaciones=entry))
+
+
+def test_identifications_file_is_read(tmp_path):
+    p = tmp_path / "identificaciones.json"
+    p.write_text('{"nota": "x", "identificaciones": {"v1": [{"titulo": "Obra", "confianza": "alta", '
+                 '"derechos": "con_derechos", "evidencia": "El anuncio."}]}}', encoding="utf-8")
+    assert lp.load_identificaciones(p) == {"v1": [{"titulo": "Obra", "confianza": "alta", "derechos": "con_derechos",
+                                                   "evidencia": "El anuncio."}]}
+    p.write_text('{"identificaciones": {"v1": {"titulo": "Obra"}}}', encoding="utf-8")
+    with pytest.raises(ValueError, match="lista"):
+        lp.load_identificaciones(p)
+    assert lp.load_identificaciones(tmp_path / "no-hay.json") == {}
+
+
+def test_an_identified_piece_in_a_video_without_text_is_counted_there():
+    d = data([piece("Cwm Rhondda", "John Hughes", "v1")],
+             titulos=[titulo("vN", "Competencia principal - Open thou mine eyes", texto=False)],
+             identificaciones={"vN": [ident("Open thou mine eyes", "John Rutter", derechos="sin_confirmar")]})
+    md = render(d)
+    huecos = section(md, "Huecos documentados")
+    assert "sin motivo registrado" not in huecos.split("Cada caso")[1]
+    assert "| el video no tiene texto publicado | 1 | 1 |" in huecos
+    assert "[vN](https://www.youtube.com/watch?v=vN) (sin texto publicado)" in row(section(md, IDENT_SEC), "Open thou mine eyes")
+
+
+def test_a_video_with_a_span_but_no_text_yet_is_not_listed_as_without_text():
+    d = data([piece("Cwm Rhondda", "John Hughes", "v1")], letras=[("hen-wlad", "Hen Wlad fy Nhadau", "Evan James")],
+             spans={"vG": ["hen-wlad"]},
+             titulos=[titulo("vG", "Gorsedd 2014: Himno galés Hen Wlad fy Nhadau", texto=False)])
+    md = render(d)
+    assert "✅ alineada" in row(section(md, "Textos guardados fuera de la tabla"), "Hen Wlad fy Nhadau")
+    assert "Obras en videos sin texto publicado" not in md  # its rebuild will publish the text with the lyric

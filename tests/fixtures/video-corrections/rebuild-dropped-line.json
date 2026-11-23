@@ -1,0 +1,21 @@
+{
+  "about": "A rebuild dropped the short lines two changes were made on: neither is looked for as a run in a longer line nor on an equal line 2-5 s away, and the neighbours keep their words",
+  "transcript": {
+    "lang": "es",
+    "seg": [[47.0, "Muchas gracias al jurado"], [53.5, "Gracias"], [60.0, "Primer premio para el coro"]],
+    "fuentes": [["yt_es"], ["whisper_es"], ["yt_es"]]
+  },
+  "rows": [
+    {"id": "r-caida", "reviewed_at": "2026-11-22T10:05:00+00:00", "display_name": "Carla",
+     "payload": {"video": {"id": "TESTVIDEO01"}, "cambios": [
+       {"t": 50.0, "antes": "Gracias.", "quitar": true},
+       {"t": 57.0, "antes": "Gracias", "texto": "Gracias, Gaiman"}]}}
+  ],
+  "expected": {
+    "seg": [[47.0, "Muchas gracias al jurado"], [53.5, "Gracias"], [60.0, "Primer premio para el coro"]],
+    "fuentes": [["yt_es"], ["whisper_es"], ["yt_es"]]
+  },
+  "sinAnclar": [["r-caida", 50.0, "sin_linea"], ["r-caida", 57.0, "sin_linea"]],
+  "applied": [],
+  "autores": {}
+}

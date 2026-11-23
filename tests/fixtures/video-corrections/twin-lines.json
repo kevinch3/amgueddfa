@@ -1,0 +1,19 @@
+{
+  "about": "Two identical lines 1 s apart: a quitar of the second removes only it",
+  "transcript": {
+    "lang": "es",
+    "seg": [[30.0, "¡Bravo!"], [31.0, "¡Bravo!"], [33.0, "Muy bien"]],
+    "fuentes": [["whisper_es"], ["whisper_es"], ["whisper_es"]]
+  },
+  "rows": [
+    {"id": "r-twin", "reviewed_at": "2026-11-22T10:05:00+00:00", "display_name": "Ana",
+     "payload": {"video": {"id": "TESTVIDEO01"}, "cambios": [{"t": 31.0, "antes": "¡Bravo!", "quitar": true}]}}
+  ],
+  "expected": {
+    "seg": [[30.0, "¡Bravo!"], [33.0, "Muy bien"]],
+    "fuentes": [["whisper_es"], ["whisper_es"]]
+  },
+  "sinAnclar": [],
+  "applied": ["r-twin"],
+  "autores": {}
+}

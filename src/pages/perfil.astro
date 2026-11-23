@@ -18,12 +18,13 @@ import { t } from '../lib/i18n';
   import { countryName } from '../lib/places';
   import { countryLabel, nameField, placeFields } from '../scripts/profile-form';
   import { url } from '../lib/paths';
+  import { videoTextFila } from '../lib/perfil';
   import { getClient } from '../lib/supabase';
   import { el } from '../scripts/ui';
 
   type Row = {
     id: string; type: Kind; festival: string | null; year: number | null; item_id: string | null;
-    status: Status; points_awarded?: number; created_at: string; reviewed_at: string | null; review_note?: string | null;
+    status: Status; payload?: Record<string, unknown>; points_awarded?: number; created_at: string; reviewed_at: string | null; review_note?: string | null;
   };
   type BadgeRow = { badge: string; awarded_at: string };
 
@@ -69,9 +70,13 @@ import { t } from '../lib/i18n';
     const ul = el('ul', { class: 'perfil-aportes' });
     for (const r of rows) {
       const li = el('li');
-      li.append(el('span', { class: `pill pill-${r.status}` }, t(statusOf(r.status))), ' ', el('strong', {}, t(`perfil.tipos.${r.type}`)), ' ');
-      if (r.festival && r.year) li.append(el('a', { href: url(`${r.festival}/${r.year}/`) }, `${t(`festivales.${r.festival}`)} ${r.year}`));
-      else li.append(el('span', { class: 'muted' }, t('perfil.sin_edicion')));
+      li.append(el('span', { class: `pill pill-${r.status}` }, t(statusOf(r.status))), ' ', el('strong', {}, t(`perfil.tipos.${r.type}`)));
+      // A video correction names its video and how many changes it has, and opens the player at its first change.
+      const vt = r.type === 'video_text' ? videoTextFila(r.payload) : null;
+      li.append(vt?.resumen ? `${vt.resumen} · ` : ' ');
+      if (r.festival && r.year) {
+        li.append(el('a', { href: url(`${r.festival}/${r.year}/`) + (vt?.hash ?? '') }, `${t(`festivales.${r.festival}`)} ${r.year}`));
+      } else li.append(el('span', { class: 'muted' }, t('perfil.sin_edicion')));
       if (r.item_id && /^[0-9a-f]{12}$/.test(r.item_id)) li.append(' · ', el('a', { href: url(`item/${r.item_id}/`) }, t('perfil.documento')));
       const when = r.reviewed_at ?? r.created_at;
       const f = relativa(when);
@@ -178,7 +183,7 @@ import { t } from '../lib/i18n';
       own
         ? liveQuery<Row[]>(
             (c) => c.from('contributions')
-              .select('id, type, festival, year, item_id, status, points_awarded, created_at, reviewed_at, review_note')
+              .select('id, type, festival, year, item_id, status, payload, points_awarded, created_at, reviewed_at, review_note')
               .eq('user_id', me!.id)
               .order('created_at', { ascending: false })
               .limit(500),

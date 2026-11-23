@@ -121,6 +121,20 @@ describe('translations', () => {
   });
 });
 
+describe('one name per language in the player', () => {
+  // The source badge (reproductor.idiomas) and the editor's language names (editor.idioma_nombre: "Idioma: galés →
+  // castellano", the admin's warnings) name Spanish and Welsh with the same word, in every language of the site.
+  for (const l of LOCALES) {
+    it(LOCALE_INFO[l].tag, () => {
+      const own = flat(JSON.parse(readFileSync(file(l), 'utf8')) as Tree);
+      for (const x of ['es', 'cy']) expect(own.get(`editor.idioma_nombre.${x}`), x).toBe(own.get(`reproductor.idiomas.${x}`));
+    });
+  }
+  it('Spanish is «castellano», the word the source badge uses', () => {
+    expect(spanish.get('editor.idioma_nombre.es')).toBe('castellano');
+  });
+});
+
 describe('language helpers', () => {
   it('maps tags to site languages, Spanish when unknown', () => {
     expect(localeFromTag('cy-AR')).toBe('cy');

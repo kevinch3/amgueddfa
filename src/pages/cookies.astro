@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import TranslationNote from '../components/TranslationNote.astro';
 import { OPT_OUT_KEY } from '../lib/consent';
 import { LECTURA_KEY } from '../lib/lectura';
+import { DRAFT_KEY } from '../lib/transcript-draft';
 import { t } from '../lib/i18n';
 import { url } from '../lib/paths';
 
@@ -14,6 +15,7 @@ const rows = [
   { key: 'amg:tz', para: 'tz_para', tipo: 'tipo_preferencia', dura: 'dura_tz' },
   { key: OPT_OUT_KEY, para: 'nocontar_para', tipo: 'tipo_preferencia', dura: 'dura_nocontar' },
   { key: LECTURA_KEY, para: 'lectura_para', tipo: 'tipo_preferencia', dura: 'dura_lectura' },
+  { key: `${DRAFT_KEY}<video>`, para: 'borrador_para', tipo: 'tipo_necesaria', dura: 'dura_borrador' },
 ];
 const c = (k: string) => t(`legal.cookies.${k}`);
 ---

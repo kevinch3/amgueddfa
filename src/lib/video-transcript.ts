@@ -7,10 +7,17 @@ export type TranscriptSource = 'subida' | 'youtube' | 'whisper' | 'reconstruida'
 export type Letra = { desde: number; hasta: number; titulo: string; autor: string; idioma: string; derechos?: string; fuente?: string };
 /** How the player credits a lyric: one line per piece. `fuente` is the file's "url, aportado por …" split. */
 export type Credito = { titulo: string; autor: string; derechos: string; fuente: { href?: string; host?: string; texto: string } };
+/** A collaborator's change the export could not place on a line (the player never applies it live). */
+export type SinAnclarArchivo = { id: string; t: number; antes?: string; motivo?: string };
 export type Transcript = {
   src: TranscriptSource; lang: string; seg: [number, string][]; letras?: Letra[]; fuentes?: string[][];
   /** One language per line, written by the export only where the source would mislead (the Welsh model heard Spanish). */
   idiomas?: string[];
+  /** The approved corrections (contribution ids) the export applied to this file, so the player does not apply them again. */
+  correcciones?: string[];
+  /** When the export wrote this file (ISO time). */
+  exportado?: string;
+  sin_anclar?: SinAnclarArchivo[];
 };
 
 /** The lyric span a line starting at `t` belongs to, or null. */
@@ -93,8 +100,18 @@ export function asTranscript(data: unknown): Transcript | null {
     ? (f as string[][]) : null;
   const g = (d as { idiomas?: unknown }).idiomas;
   const idiomas = Array.isArray(g) && g.length === seg.length && g.every((x) => typeof x === 'string') ? (g as string[]) : null;
+  // What the export says about collaborators' corrections: each entry that can still be matched is kept.
+  const c = (d as { correcciones?: unknown }).correcciones;
+  const correcciones = (Array.isArray(c) ? c : []).filter((x): x is string => typeof x === 'string');
+  const e = (d as { exportado?: unknown }).exportado;
+  const u = (d as { sin_anclar?: unknown }).sin_anclar;
+  const sinAnclar = (Array.isArray(u) ? u : []).filter(
+    (x): x is SinAnclarArchivo => !!x && typeof x.id === 'string' && typeof x.t === 'number' && Number.isFinite(x.t),
+  ).map((x) => ({ id: x.id, t: x.t, ...(typeof x.antes === 'string' ? { antes: x.antes } : {}),
+    ...(typeof x.motivo === 'string' ? { motivo: x.motivo } : {}) }));
   return { src: d.src as TranscriptSource, lang: String(d.lang ?? ''), seg, ...(letras.length ? { letras } : {}), ...(fuentes ? { fuentes } : {}),
-    ...(idiomas ? { idiomas } : {}) };
+    ...(idiomas ? { idiomas } : {}), ...(correcciones.length ? { correcciones } : {}), ...(typeof e === 'string' ? { exportado: e } : {}),
+    ...(sinAnclar.length ? { sin_anclar: sinAnclar } : {}) };
 }
 
 /** The language of line i: a lyric's own, else the export's `idiomas`, else Welsh for a line the Welsh model heard,

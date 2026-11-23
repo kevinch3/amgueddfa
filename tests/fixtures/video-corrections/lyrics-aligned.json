@@ -1,0 +1,24 @@
+{
+  "about": "Lyrics aligned over a song replaced the lines changes were made on: a change whose nearest line within 2 s is a lyric line, or whose time falls between two consecutive lyric lines, is reported and never looked for in the presenter's line nearby",
+  "transcript": {
+    "lang": "es",
+    "seg": [[97.0, "Muchas gracias al coro de Gaiman"], [99.5, "Calon lân yn llawn daioni"], [104.5, "Tecach yw na'r lili dlos"],
+            [112.0, "Primer premio para el coro"]],
+    "fuentes": [["yt_es"], ["letra"], ["letra"], ["yt_es"]]
+  },
+  "rows": [
+    {"id": "r-letra", "reviewed_at": "2026-11-22T10:05:00+00:00", "display_name": "Ana",
+     "payload": {"video": {"id": "TESTVIDEO01"}, "cambios": [
+       {"t": 100.0, "antes": "Gracias.", "quitar": true},
+       {"t": 100.5, "antes": "gracias al coro", "quitar": true},
+       {"t": 102.0, "antes": "Muchas gracias al coro de Gaiman", "quitar": true}]}}
+  ],
+  "expected": {
+    "seg": [[97.0, "Muchas gracias al coro de Gaiman"], [99.5, "Calon lân yn llawn daioni"], [104.5, "Tecach yw na'r lili dlos"],
+            [112.0, "Primer premio para el coro"]],
+    "fuentes": [["yt_es"], ["letra"], ["letra"], ["yt_es"]]
+  },
+  "sinAnclar": [["r-letra", 100.0, "sin_linea"], ["r-letra", 100.5, "sin_linea"], ["r-letra", 102.0, "sin_linea"]],
+  "applied": [],
+  "autores": {}
+}

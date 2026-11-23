@@ -1,0 +1,25 @@
+{
+  "about": "A second row repeats changes to the original text after the first row kept those words in a longer line, or took them out of a joined line: not placed, never merged into the first row's text or moved to a twin",
+  "transcript": {
+    "lang": "es",
+    "seg": [[50.0, "Gracias a todos"], [100.0, "Suscríbete al canal. Comienza la competencia"], [103.0, "Suscríbete al canal"]],
+    "fuentes": [["yt_es"], ["whisper_es"], ["whisper_es"]]
+  },
+  "rows": [
+    {"id": "r1", "reviewed_at": "2026-11-22T10:00:00+00:00", "display_name": "Carla",
+     "payload": {"video": {"id": "TESTVIDEO01"}, "cambios": [
+       {"t": 50.0, "antes": "Gracias a todos", "texto": "Gracias a todos los coros"},
+       {"t": 100.0, "antes": "Suscríbete al canal", "quitar": true}]}},
+    {"id": "r2", "reviewed_at": "2026-11-22T11:00:00+00:00", "display_name": "Dafydd",
+     "payload": {"video": {"id": "TESTVIDEO01"}, "cambios": [
+       {"t": 50.0, "antes": "Gracias a todos", "texto": "Gracias a todas"},
+       {"t": 100.0, "antes": "Suscríbete al canal", "quitar": true}]}}
+  ],
+  "expected": {
+    "seg": [[50.0, "Gracias a todos los coros"], [100.0, "Comienza la competencia"], [103.0, "Suscríbete al canal"]],
+    "fuentes": [["yt_es", "colab"], ["whisper_es", "colab"], ["whisper_es"]]
+  },
+  "sinAnclar": [["r2", 50.0, "sin_linea"], ["r2", 100.0, "sin_linea"]],
+  "applied": ["r1"],
+  "autores": {"0": ["Carla"], "1": ["Carla"]}
+}

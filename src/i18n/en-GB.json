@@ -419,7 +419,12 @@
       "objetivo": "We don't know what this report is about. Open the form again from the video or the document.",
       "problema": "Choose what's wrong.",
       "texto_informe": "Write between 10 and 1000 characters.",
-      "arreglo": "Tell us which eisteddfod, year or section it belongs to (different from where it is now)."
+      "arreglo": "Tell us which eisteddfod, year or section it belongs to (different from where it is now).",
+      "video_cambios": "A correction must have between 1 and 200 changes.",
+      "video_texto": "Each corrected line must be between 1 and 500 characters.",
+      "video_id": "The video is not recognised. Open it again from its page and try again.",
+      "video_repetido": "There are two changes for the same line; keep only one.",
+      "video_antes": "That line is too long to correct from here; tell us with “Report an error”."
     },
     "caracteres_transcripcion": "Between 10 and 15000 characters.",
     "licencia": "The transcriptions and facts you contribute are published under the CC BY-SA 4.0 licence.",
@@ -453,6 +458,7 @@
     "pestanas": "Administration sections",
     "tabs": {
       "cola": "To review",
+      "videos": "Videos",
       "cargar": "Load facts",
       "restringidos": "Restricted",
       "usuarios": "Users",
@@ -467,7 +473,8 @@
       "transcription": "Transcription",
       "memory": "Memory",
       "report": "Reported error",
-      "note": "Information"
+      "note": "Information",
+      "video_text": "Transcript correction"
     },
     "vacia": "There are no pending contributions.",
     "de": "From {nombre}",
@@ -517,6 +524,7 @@
     "hecho_admin": "They're now an admin.",
     "error": {
       "motivo": "Write the reason for rejecting it.",
+      "motivo_retiro": "Write the reason for withdrawing it.",
       "algunos": "{n} couldn't be processed; check each one's message.",
       "acreditar": "Choose who to credit the facts to.",
       "json": "The content isn't valid JSON.",
@@ -526,7 +534,10 @@
       "valor": "The value isn't valid for this contribution.",
       "sin_archivo": "We couldn't download the original file.",
       "derivados": "We couldn't generate the images in this browser. Try an up-to-date Chrome or Firefox.",
-      "sin_archivos": "The images or text are missing from the restricted store. Run scripts/push_restricted.py and try again."
+      "sin_archivos": "The images or text are missing from the restricted store. Run scripts/push_restricted.py and try again.",
+      "sin_cambios": "Tick at least one change to approve.",
+      "no_aprobada": "This correction is no longer approved.",
+      "tarjeta": "This contribution could not be shown ({id}): its data cannot be read."
     },
     "ver_restringido": "See the document before releasing it",
     "restringido_alt": "{titulo}, page {n} (admin view)",
@@ -551,6 +562,46 @@
       "que_pasa": "On approval: {accion}",
       "explicacion": "Explanation (not published)",
       "video": "Video"
+    },
+    "video": {
+      "cambios": "Changes: {n}",
+      "corregir": "Correct",
+      "quitar": "Remove",
+      "idioma": "Language",
+      "agregar": "Add",
+      "cambio_linea": "The line has changed since it was edited",
+      "ilegibles": "Unreadable changes, left out: {n}",
+      "aprobar_sel": "Approve selected"
+    },
+    "videos": {
+      "ayuda": "Approved transcript corrections, by video, newest first. Withdrawing one that is not in the file yet takes it out of the player at once. One already in the file stays there until the next export, and until then that video shows no live corrections.",
+      "vacia": "There are no approved transcript corrections.",
+      "aprobada": "Approved on {fecha}",
+      "retirar": "Withdraw",
+      "retirar_toda": "Withdraw the whole contribution ({n} changes)",
+      "retirar_toda_uno": "Withdraw the contribution (1 change)",
+      "motivo": "Reason for withdrawing (the contributor will see it)",
+      "confirmar_retiro": "Confirm withdrawal",
+      "retirada": "Correction withdrawn.",
+      "sin_anclar": "Not anchored ({n})",
+      "motivo_sin_linea": "Its line can no longer be found.",
+      "motivo_idioma": "The language falls inside a joined line that may hold other speech: choose the line it belongs to.",
+      "reanclar": "Re-anchor",
+      "elegir_linea": "Choose the line it belongs to",
+      "nueva_linea": "Add as a new line at {tiempo}",
+      "sin_opciones": "There are no lines within a minute.",
+      "vista": "The line will read:",
+      "aviso_reemplaza": "The whole line is replaced.",
+      "aviso_quita": "The whole line is removed.",
+      "aviso_idioma": "The whole line becomes {idioma}.",
+      "aviso_larga": "The line would be longer than 500 characters: choose another.",
+      "aviso_mismo_texto": "The line already says that, so nothing would change: choose another.",
+      "aviso_mismo_idioma": "The line is already in {idioma}, so nothing would change: choose another.",
+      "tras_exportar": "Already in the file: it will show after the next export.",
+      "pausa_exportar": "A withdrawn correction is still in the file: until the next export, the player shows the file without the new corrections.",
+      "reanclada": "Change re-anchored.",
+      "sin_archivo": "We couldn't read this video's published transcript.",
+      "sin_filas": "No approved corrections are left on this video."
     }
   },
   "admin_item": {
@@ -662,7 +713,8 @@
       "transcription": "Transcription",
       "memory": "Memory",
       "report": "Reported error",
-      "note": "Information"
+      "note": "Information",
+      "video_text": "Transcript correction"
     },
     "desde": "From {pais}",
     "ajustes": {
@@ -723,7 +775,8 @@
       "transcription": "transcribed a document",
       "memory": "shared a memory",
       "report": "reported an error",
-      "note": "added information to a document"
+      "note": "added information to a document",
+      "video_text": "corrected the transcript of a video"
     },
     "ver_ranking": "See the leaderboard",
     "del": "for"
@@ -788,6 +841,7 @@
       "tz_para": "Showing dates in your profile's time zone.",
       "nocontar_para": "Remembering that you don't want us to count your visits.",
       "lectura_para": "Remembering your reading settings (text size, contrast, spacing, typeface, animations and links).",
+      "borrador_para": "Keeping the corrections to a video's transcript that you haven't sent yet, so they aren't lost if you close the player or the tab.",
       "tipo_necesaria": "Necessary",
       "tipo_preferencia": "Preference",
       "dura_sesion": "Until you sign out.",
@@ -795,6 +849,7 @@
       "dura_tz": "Until you sign out.",
       "dura_nocontar": "Until you turn counting back on.",
       "dura_lectura": "Until you reset them.",
+      "dura_borrador": "Until you send or discard those corrections.",
       "necesarias": "Because they're needed for the site to work, or are your own choice, we don't need to ask your permission to store them. You can delete them whenever you like from your browser's settings; if you delete the session, you'll have to sign in again.",
       "analitica_titulo": "Counting visits",
       "analitica_1": "To find out which eisteddfodau people look at and where they come from, we use Cloudflare Web Analytics. It doesn't use cookies or store anything in your browser, and it doesn't identify you or follow you from site to site.",
@@ -1016,9 +1071,49 @@
       "yt_es": "YouTube automatic",
       "whisper_es": "Whisper",
       "cy": "Welsh speech recognition",
-      "letra": "the piece's lyrics"
+      "letra": "the piece's lyrics",
+      "colab": "contributors' correction"
     },
+    "corregida_por": "Corrected by {nombres}",
+    "correcciones_de": "Corrections by {nombres}",
     "como_se_produce": "How this text is produced"
+  },
+  "editor": {
+    "editar": "Edit transcript",
+    "editar_linea": "Correct the line at {tiempo}",
+    "ayuda": "Press ✎ to correct a line, remove it or change its language. To add something that's missing, pause the video where it starts and press “Add”. Everything is sent together and published once it has been reviewed.",
+    "como_funciona": "How it works",
+    "texto": "Text",
+    "quitar": "Remove this line",
+    "idioma": "Language",
+    "es": "Español",
+    "cy": "Cymraeg",
+    "idioma_nombre": {
+      "es": "Spanish",
+      "cy": "Welsh"
+    },
+    "idioma_cambio": "Language: {antes} → {despues}",
+    "idioma_nuevo": "Language: {idioma}",
+    "ok": "OK",
+    "deshacer": "Undo",
+    "agregar": "+ Add a line at {tiempo}",
+    "nueva": "New line at {tiempo}",
+    "momento": "Time (min:sec)",
+    "error_tiempo": "Write the time as minutes:seconds, for example 12:05.",
+    "error_tiempo_fin": "The video lasts {duracion}: choose a time before the end.",
+    "cambios": "{n} changes",
+    "un_cambio": "1 change",
+    "enviar": "Send {n} corrections",
+    "limite": "One submission holds up to {max} changes: send these, then carry on in a new one.",
+    "enviar_una": "Send 1 correction",
+    "cancelar": "Cancel",
+    "confirmar_cancelar": "Discard all your changes without sending them?",
+    "descartar": "Yes, discard",
+    "seguir": "No, keep editing",
+    "letra": "This line is part of a song's lyrics; to correct it, use “Report an error”.",
+    "pendiente": "Awaiting review: {cambio}",
+    "ingresar": "Sign in to correct the transcript",
+    "descartados": "Some saved changes no longer match the transcript and were discarded: {n}."
   },
   "buscar": {
     "titulo": "Search the archive",

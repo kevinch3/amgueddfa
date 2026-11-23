@@ -1,0 +1,25 @@
+{
+  "about": "Two rows approved at the same instant change one line: the tie goes by id (whatever order the caller lists them in), so the player, the admin's Videos tab and the export apply the same one",
+  "transcript": {
+    "lang": "es",
+    "seg": [[600.0, "Benedicto de la competencia número 98"], [606.0, "Primer premio"]],
+    "fuentes": [["yt_es"], ["yt_es"]]
+  },
+  "rows": [
+    {"id": "ffffffff-0000-4000-8000-000000000000", "reviewed_at": "2026-11-22T20:00:00+00:00", "display_name": "Bruno",
+     "payload": {"video": {"id": "TESTVIDEO01"}, "cambios": [
+       {"t": 600.0, "antes": "Benedicto de la competencia número 98",
+        "texto": "Veredicto de la competencia número noventa y ocho"}]}},
+    {"id": "aaaaaaaa-0000-4000-8000-000000000000", "reviewed_at": "2026-11-22T20:00:00+00:00", "display_name": "Ana",
+     "payload": {"video": {"id": "TESTVIDEO01"}, "cambios": [
+       {"t": 600.0, "antes": "Benedicto de la competencia número 98",
+        "texto": "Veredicto de la competencia número 98"}]}}
+  ],
+  "expected": {
+    "seg": [[600.0, "Veredicto de la competencia número 98"], [606.0, "Primer premio"]],
+    "fuentes": [["yt_es", "colab"], ["yt_es"]]
+  },
+  "sinAnclar": [["ffffffff-0000-4000-8000-000000000000", 600.0, "sin_linea"]],
+  "applied": ["aaaaaaaa-0000-4000-8000-000000000000"],
+  "autores": {"0": ["Ana"]}
+}

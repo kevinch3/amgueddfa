@@ -1,10 +1,15 @@
 ---
 import { t } from '../lib/i18n';
 import { url } from '../lib/paths';
+import { EDITABLE_FESTIVALS } from '../lib/transcript-draft';
 
 // One player dialog per edition page; scripts/reproductor.ts opens it from any video card
 // (the card's link to YouTube stays for no-JS, middle click and "open in new tab").
 // YouTube's no-cookie player is created only when a visitor opens a video.
+// Chubut and Trevelin pages also carry the edit mode (scripts/editor-transcripcion.ts): collaborators correct the
+// transcript line by line and send it as one contribution. No other festival's page has it (#29).
+interface Props { festival?: string }
+const editable = (EDITABLE_FESTIVALS as readonly string[]).includes(Astro.props.festival ?? '');
 ---
 <dialog id="reproductor" class="reproductor" aria-labelledby="rep-titulo">
   <div class="rep-head">
@@ -27,12 +32,14 @@ import { url } from '../lib/paths';
         <ol class="rep-cap-lista" data-rep-cap-lista></ol>
         <p class="muted small">{t('reproductor.nota_capitulos')}</p>
       </section>
-      <p class="rep-acciones small">
+      <div class="rep-acciones small">
         <a data-rep-yt rel="noopener" target="_blank">{t('reproductor.ver_youtube')}</a>
         <button type="button" class="btn-link small" data-rep-copiar>{t('reproductor.copiar_enlace')}</button>
         <button type="button" class="btn-link small" data-rep-informar>{t('informar.titulo')}</button>
+        {editable && <button type="button" class="btn-link small" data-rep-editar hidden>{t('editor.editar')}</button>}
+        {editable && <div class="rep-editar-gate" data-rep-editar-gate hidden></div>}
         <span class="muted" data-rep-copiado role="status"></span>
-      </p>
+      </div>
     </div>
     <section class="rep-tr" aria-labelledby="rep-tr-t">
       <div class="rep-tr-head">
@@ -50,6 +57,30 @@ import { url } from '../lib/paths';
         </div>
         <p class="muted small" data-rep-n aria-live="polite"></p>
       </div>
+      {editable && (
+        <section class="rep-editor" data-rep-editor hidden tabindex="-1" aria-label={t('editor.editar')}>
+          {/* A compact bar first, so the panel leaves the list its room (B9: on a phone it squeezed the list to 8 px);
+              the help folds away under «Cómo funciona», folded each time edit mode starts. */}
+          <div class="rep-ed-barra">
+            <p class="rep-ed-n" data-editor-n aria-live="polite"></p>
+            <button type="button" class="btn" data-editor-enviar disabled></button>
+            <button type="button" class="btn btn-quiet" data-editor-cancelar>{t('editor.cancelar')}</button>
+            <button type="button" class="btn-link small" data-editor-agregar></button>
+            <button type="button" class="btn-link small rep-ed-como" data-editor-como aria-expanded="false" aria-controls="rep-ed-ayuda">{t('editor.como_funciona')}</button>
+          </div>
+          <p class="muted small rep-ed-ayuda" id="rep-ed-ayuda" data-editor-ayuda hidden>{t('editor.ayuda')}</p>
+          <div data-editor-nueva hidden></div>
+          <div class="rep-ed-confirmar" data-editor-confirmar hidden>
+            <p>{t('editor.confirmar_cancelar')}</p>
+            <p class="tarea-acciones">
+              <button type="button" class="btn" data-editor-descartar>{t('editor.descartar')}</button>
+              <button type="button" class="btn btn-quiet" data-editor-seguir>{t('editor.seguir')}</button>
+            </p>
+          </div>
+          <p class="contrib-msg" role="alert" data-editor-msg></p>
+        </section>
+        <div class="rep-ed-estado" data-editor-estado></div>
+      )}
       <p class="muted small" data-rep-vacio>{t('reproductor.sin_transcripcion')}</p>
       <ol class="rep-lineas" data-rep-lineas></ol>
       <footer class="rep-pie" data-rep-pie hidden>
@@ -58,6 +89,7 @@ import { url } from '../lib/paths';
           <p id="rep-cred-t">{t('reproductor.letras_titulo')}</p>
           <ul class="rep-creditos" data-rep-creditos-lista aria-labelledby="rep-cred-t"></ul>
         </div>
+        <p data-rep-colab hidden></p>
         <p><a href={url('creditos#videos')}>{t('reproductor.como_se_produce')}</a></p>
       </footer>
     </section>

@@ -1,0 +1,21 @@
+{
+  "about": "A file without idiomas gets one for every line once a language is corrected: cy where the Welsh model heard it, else the file's lang",
+  "transcript": {
+    "lang": "es",
+    "seg": [[700.0, "Diolch yn fawr i chi gyd"], [705.0, "Galwn ar yr unawdwyr"], [710.0, "Primer premio"]],
+    "fuentes": [["yt_es"], ["cy"], ["yt_es"]]
+  },
+  "rows": [
+    {"id": "r-default", "reviewed_at": "2026-11-22T10:05:00+00:00", "display_name": "Nia",
+     "payload": {"video": {"id": "TESTVIDEO01"}, "cambios": [
+       {"t": 700.0, "antes": "Diolch yn fawr i chi gyd", "idioma": "cy"}]}}
+  ],
+  "expected": {
+    "seg": [[700.0, "Diolch yn fawr i chi gyd"], [705.0, "Galwn ar yr unawdwyr"], [710.0, "Primer premio"]],
+    "fuentes": [["yt_es"], ["cy"], ["yt_es"]],
+    "idiomas": ["cy", "cy", "es"]
+  },
+  "sinAnclar": [],
+  "applied": ["r-default"],
+  "autores": {"0": ["Nia"]}
+}

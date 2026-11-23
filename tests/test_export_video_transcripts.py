@@ -1,4 +1,6 @@
 import json
+import os
+import time
 
 import pytest
 
@@ -57,7 +59,7 @@ def test_export_picks_source_and_skips_children_festivals(tmp_path):
     (out).mkdir()
     (out / "ZZZZZZZZZZZ.json").write_text("{}")  # a video that left the list
     r = export(b, videos, out)
-    assert r == {"written": 3, "removed": 1, "subida": 1, "youtube": 1, "whisper": 1}
+    assert r == {"written": 3, "removed": 1, "sin_anclar": 0, "subida": 1, "youtube": 1, "whisper": 1}
     a = json.loads((out / ("A" * 11 + ".json")).read_text())
     assert a["src"] == "youtube" and a["lang"] == "es" and a["seg"][0] == [1.4, "buenas noches a todos"]
     b_ = json.loads((out / ("B" * 11 + ".json")).read_text())
@@ -430,3 +432,128 @@ def test_export_fixes_terms_in_spanish_lines_only(tmp_path):
 def test_term_fixes_in_context(heard, right, monkeypatch):
     monkeypatch.setitem(export_module.TERM_FIXES, "cintia", ("Cinthia", True))  # only for this test
     assert export_module.fix_terms(heard) == right
+
+
+def _corrections_setup(tmp_path, rows, seg=None, fuentes=None, lang="es"):
+    b = tmp_path / "backup"
+    _video(b, "C/2021/a_AAAAAAAAAAA.mp4", {"es-orig": YT_AUTO})
+    _video(b, "C/2021/b_BBBBBBBBBBB.mp4", {"es-orig": YT_AUTO})
+    (b / "INDEX.tsv").write_text("id\tfile\n" + f"{'A' * 11}\tC/2021/a_AAAAAAAAAAA.mp4\n{'B' * 11}\tC/2021/b_BBBBBBBBBBB.mp4\n", encoding="utf-8")
+    recon = tmp_path / "recon"
+    recon.mkdir()
+    seg = seg or [[0, "Buenas noches a todos, bienvenidos a la última sesión."], [30, "Gracias por venir esta noche a todos ustedes."]]
+    t = {"src": "reconstruida", "lang": lang, "fuentes": fuentes or [["yt_es"], ["yt_es"]], "seg": seg}
+    for v in "AB":
+        (recon / f"{v * 11}.json").write_text(json.dumps(t), encoding="utf-8")
+    approved = tmp_path / "contributions.json"
+    approved.write_text(json.dumps(rows), encoding="utf-8")
+    vids = [{"id": "A" * 11, "festival": "chubut"}, {"id": "B" * 11, "festival": "chubut"}]
+    return b, vids, recon, approved
+
+
+def _row(id, cambios, vid="A" * 11, type="video_text", at="2026-11-22T10:00:00+00:00"):
+    return {"id": id, "type": type, "reviewed_at": at, "display_name": "x", "payload": {"video": {"id": vid}, "cambios": cambios}}
+
+
+def _read(out, v):
+    return json.loads((out / (v * 11 + ".json")).read_text())
+
+
+def test_export_applies_approved_video_corrections(tmp_path):
+    rows = [_row("r1", [{"t": 30, "antes": "Gracias por venir esta noche a todos ustedes.", "texto": "Gracias por venir esta noche."}])]
+    b, vids, recon, approved = _corrections_setup(tmp_path, rows)
+    out = tmp_path / "out"
+    r = export(b, vids, out, recon=recon, approved=approved)
+    a = _read(out, "A")
+    assert a["seg"][1][1] == "Gracias por venir esta noche."
+    assert "colab" in a["fuentes"][1] and a["correcciones"] == ["r1"] and "exportado" in a
+    assert r["sin_anclar"] == 0 and "sin_anclar" not in a
+    assert "correcciones" not in _read(out, "B")  # pending/other videos untouched
+
+
+def test_export_keeps_a_correction_language(tmp_path):
+    rows = [_row("r1", [{"t": 30, "antes": "Gracias por venir esta noche a todos ustedes.", "texto": "Diolch yn fawr iawn i chi", "idioma": "cy"}])]
+    b, vids, recon, approved = _corrections_setup(tmp_path, rows)
+    out = tmp_path / "out"
+    export(b, vids, out, recon=recon, approved=approved)
+    a = _read(out, "A")
+    assert a["idiomas"][1] == "cy"
+
+
+def test_export_reports_unanchored_corrections(tmp_path, capsys):
+    rows = [_row("r1", [{"t": 500, "antes": "Nada de esto", "texto": "Otra cosa"}])]
+    b, vids, recon, approved = _corrections_setup(tmp_path, rows)
+    out = tmp_path / "out"
+    r = export(b, vids, out, recon=recon, approved=approved)
+    a = _read(out, "A")
+    assert r["sin_anclar"] == 1
+    assert a["sin_anclar"] == [{"id": "r1", "t": 500, "antes": "Nada de esto", "motivo": "sin_linea"}]
+    assert "correcciones" not in a and a["seg"][1][1].startswith("Gracias")
+    assert f"sin anclar {'A' * 11} 500 «Nada de esto» (contribución r1)" in capsys.readouterr().out
+
+
+def test_export_ignores_pending_and_other_videos(tmp_path):
+    ch = [{"t": 30, "antes": "Gracias por venir esta noche a todos ustedes.", "texto": "Otra"}]
+    rows = [_row("r1", ch, type="video_lyrics"), _row("r2", ch, vid="Z" * 11)]
+    b, vids, recon, approved = _corrections_setup(tmp_path, rows)
+    out = tmp_path / "out"
+    export(b, vids, out, recon=recon, approved=approved)
+    assert _read(out, "A")["seg"][1][1].startswith("Gracias")
+    export(b, vids, out, recon=recon, approved=tmp_path / "missing.json")  # no file: no corrections
+
+
+def test_export_leaves_an_unchanged_file_alone(tmp_path):
+    rows = [_row("r1", [{"t": 30, "antes": "Gracias por venir esta noche a todos ustedes.", "texto": "Gracias."}])]
+    b, vids, recon, approved = _corrections_setup(tmp_path, rows)
+    out = tmp_path / "out"
+    export(b, vids, out, recon=recon, approved=approved)
+    p = out / ("A" * 11 + ".json")
+    first = p.read_text()
+    export(b, vids, out, recon=recon, approved=approved)
+    assert p.read_text() == first
+
+
+def test_export_keeps_a_correction_language_equal_to_the_default(tmp_path):
+    # The file's language is es, so "es" is the line's default; the corrected text reads Welsh to the recomputation
+    # (line_language would say cy). The collaborator's "es" must still win, whatever main_language and the rule say.
+    seg = [[0, "Buenas noches a todos, bienvenidos a la última sesión de hoy."], [30, "Una frase corta."]]
+    rows = [_row("r1", [{"t": 30, "antes": "Una frase corta.", "texto": "Diolch yn fawr iawn i chi am ddod heddiw", "idioma": "es"}])]
+    b, vids, recon, approved = _corrections_setup(tmp_path, rows, seg=seg, fuentes=[["yt_es"], ["yt_es"]], lang="es")
+    out = tmp_path / "out"
+    export(b, vids, out, recon=recon, approved=approved)
+    a = _read(out, "A")
+    assert a["seg"][1][1].startswith("Diolch") and a["idiomas"] == ["es", "es"]
+
+
+STALE = "merge main before exporting video corrections"
+
+
+def _age(p, hours):
+    t = time.time() - hours * 3600
+    os.utime(p, (t, t))
+
+
+def test_export_warns_when_the_approved_data_is_over_a_day_old(tmp_path, capsys):
+    # A worktree with an old data/approved/ would bake corrections an admin withdrew since back into the files.
+    rows = [_row("r1", [{"t": 30, "antes": "Gracias por venir esta noche a todos ustedes.", "texto": "Gracias por venir."}])]
+    b, vids, recon, approved = _corrections_setup(tmp_path, rows)
+    stamp = approved.parent / "stamp.json"
+    stamp.write_text("{}", encoding="utf-8")
+    _age(stamp, 50)
+    export(b, vids, tmp_path / "out", recon=recon, approved=approved)
+    assert f"data/approved is 50 h old: {STALE}" in capsys.readouterr().out
+    _age(stamp, 3)  # merged main: fresh
+    export(b, vids, tmp_path / "out", recon=recon, approved=approved)
+    assert STALE not in capsys.readouterr().out
+
+
+def test_export_reads_the_contributions_file_age_when_there_is_no_stamp(tmp_path, capsys):
+    rows = [_row("r1", [{"t": 30, "antes": "Gracias por venir esta noche a todos ustedes.", "texto": "Gracias por venir."}])]
+    b, vids, recon, approved = _corrections_setup(tmp_path, rows)
+    export(b, vids, tmp_path / "out", recon=recon, approved=approved)
+    assert STALE not in capsys.readouterr().out
+    _age(approved, 30)
+    export(b, vids, tmp_path / "out", recon=recon, approved=approved)
+    assert f"data/approved is 30 h old: {STALE}" in capsys.readouterr().out
+    export(b, vids, tmp_path / "out", recon=recon, approved=tmp_path / "missing.json")  # no data at all: nothing to say
+    assert STALE not in capsys.readouterr().out

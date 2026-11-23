@@ -1,0 +1,22 @@
+{
+  "about": "Three words or more still land as a run inside a longer line and on an equal line 2-5 s away; two words in the same joined line are not placed",
+  "transcript": {
+    "lang": "es",
+    "seg": [[70.0, "Buenas noches. Suscríbete al canal. Comienza la competencia"], [80.0, "Muchas gracias Trelew"]],
+    "fuentes": [["whisper_es"], ["yt_es"]]
+  },
+  "rows": [
+    {"id": "r-run", "reviewed_at": "2026-11-22T10:05:00+00:00", "display_name": "Ana",
+     "payload": {"video": {"id": "TESTVIDEO01"}, "cambios": [
+       {"t": 72.0, "antes": "Suscríbete al canal.", "quitar": true},
+       {"t": 70.0, "antes": "Buenas noches.", "quitar": true},
+       {"t": 83.5, "antes": "Muchas gracias Trelew", "texto": "Muchas gracias, Trelew"}]}}
+  ],
+  "expected": {
+    "seg": [[70.0, "Buenas noches. Comienza la competencia"], [80.0, "Muchas gracias, Trelew"]],
+    "fuentes": [["whisper_es", "colab"], ["yt_es", "colab"]]
+  },
+  "sinAnclar": [["r-run", 70.0, "sin_linea"]],
+  "applied": ["r-run"],
+  "autores": {"0": ["Ana"], "1": ["Ana"]}
+}

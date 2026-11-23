@@ -447,6 +447,42 @@ describe('fact groups in the queue', () => {
     ]);
   });
 
+  it('never groups transcript corrections: each gets its own card with its ticks, even sharing a lote', () => {
+    const vt = (id: string, lote: string): Pending => ({
+      id, user_id: 'u1', type: 'video_text', festival: 'chubut', year: 2014, item_id: null, created_at: '',
+      payload: { lote, video: { id: 'abcdef12' }, cambios: [{ t: 1, antes: 'a', texto: 'b' }] },
+    } as Pending);
+    const [a, b, c, d] = [vt('a', 'L'), vt('b', 'L'), fact('c', 'L'), fact('d', 'L')];
+    expect(groupQueue([a, b, c, d])).toEqual([
+      { lote: null, items: [a] },
+      { lote: null, items: [b] },
+      { lote: 'L', items: [c, d] },
+    ]);
+    // One fact left beside them is a card of its own too.
+    expect(groupQueue([a, c])).toEqual([{ lote: null, items: [a] }, { lote: null, items: [c] }]);
+  });
+
+  it('approving a transcript correction without its card sends only the changes the admin can read, never the raw payload', async () => {
+    const calls: any[] = [];
+    const client: any = { rpc: async (fn: string, args: any) => (calls.push([fn, args]), { data: 2, error: null }) };
+    const good = { t: 665, antes: 'x', texto: 'visible' };
+    const crafted = {
+      id: 'v1', user_id: 'u1', type: 'video_text', festival: 'chubut', year: 2014, item_id: null, created_at: '',
+      payload: { lote: 'L1', video: { id: 'abcdef12' }, cambios: [good, null, { t: -3, texto: 'HIDDEN negative add' }, { t: 30, texto: 5 }] },
+    } as Pending;
+    const unreadableOnly = { ...crafted, id: 'v2', payload: { ...crafted.payload, cambios: [null, { t: -1, texto: 'x' }] } } as Pending;
+    const r = await approveAll([crafted, unreadableOnly, fact('f', 'L1')], client);
+    expect(r.done).toEqual(['v1', 'f']);
+    expect(r.failed).toEqual([{ id: 'v2', key: 'admin.error.sin_cambios' }]);
+    expect(calls).toEqual([
+      ['approve_contribution', { cid: 'v1', fills_gap: false, payload_override: { cambios: [good] } }],
+      ['approve_contribution', { cid: 'f', fills_gap: false, payload_override: null }],
+    ]);
+    calls.length = 0;
+    expect(await approve(crafted, null, client)).toEqual({ ok: true });
+    expect(calls[0][1].payload_override).toEqual({ cambios: [good] });
+  });
+
   it('approveAll approves each and keeps going after a failure', async () => {
     let n = 0;
     const calls: any[] = [];

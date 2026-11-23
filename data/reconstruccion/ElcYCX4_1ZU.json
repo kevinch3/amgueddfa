@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Sosman bach yn peri ar y tân, sosman fawr yn peri ar y ddawn, a da wedi sgrafo Johnny Barr."
+  ],
+  [
    33.4,
    "vamos a convocar profes"
   ],
@@ -34,6 +38,14 @@
   [
    55.8,
    "ritmo"
+  ],
+  [
+   60.0,
+   "yn cyflwyno wobor y prif bythoriaeth meddal anian wobor Cymdeithas Dewi Sant. Diolch yn fawr."
+  ],
+  [
+   90.0,
+   "Noswaith dda i chi i gyd, Casalei Eryri yw wyth, seremoni meddal, Arian, Gwlad Cymdeithas Dewi Sant yw trefn, competensia nwmer ocê, seremoni am uddase plata, premiwm awdurgadol gan Asociación San Dafydd dydd Trefn."
   ],
   [
    106.6,
@@ -920,12 +932,12 @@
    "lectura al poema"
   ],
   [
-   970.2,
-   "elegir"
+   967.02,
+   "Espera, no estaré para ver esa rutina de lombrices y pozos en el patio cuando benzan el cerco las gallinas,"
   ],
   [
-   972.3,
-   "espera no estaré para ver esa rutina de"
+   970.2,
+   "elegir"
   ],
   [
    976.4,
@@ -1354,7 +1366,7 @@
  ],
  "fuentes": [
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -1379,8 +1391,14 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -2042,6 +2060,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"

@@ -128,6 +128,10 @@
    "que a partir de ahora convocará a otros hombres, a otros nombres, a participar de su destino."
   ],
   [
+   177.18,
+   "Dwi'n mynd i roi llaw i'r benedict, y ffurfio'r siaradwyr Susana Medrano, Hugo Covaro a Sylvia Vita, ac yn dweud hynny, premiwm Medalla de Plata, Asosiacion San David, competensia numero och."
+  ],
+  [
    181.3,
    "Voy a dar lectura del veredicto, el cual firman los jurados Susana Medrano, Hugo Cobaro y Silvia Vita."
   ],
@@ -172,6 +176,10 @@
    "Firma Susana Medrano, Hugo Cobaro y Silvia Vitar."
   ],
   [
+   260.36,
+   "Mae'n deud ein bod ni nawr gyda'r poet a'i boem e. Byddwn i'n awgrymu'r person sy'n ffurfio'r poem gyda'r sowndonim sur i fynd i fyny."
+  ],
+  [
    263.4,
    "Es decir, que ahora tenemos al poeta y su poema."
   ],
@@ -188,12 +196,20 @@
    "Por segunda vez invito a la persona que escribe el poema Catherine"
   ],
   [
+   290.36,
+   "Po'r seconda bes, invito a la persona que escribe el poema Catherine y que firma con el pseudonimo sur, a que se ponga de pie."
+  ],
+  [
    303.3,
    "y que firma con el seudónimo Sur a que se ponga de pie"
   ],
   [
    309.5,
    "Llamo por tercera vez"
+  ],
+  [
+   314.36,
+   "Llamo por tercera vez a Sur, que firma el poema con ese pseudonimo y su poema es Catrin. Llamamos a Sur para que se ponga de pie y se de a conocer."
   ],
   [
    320.0,
@@ -238,6 +254,10 @@
   [
    489.5,
    "Voy a dar lectura a este bellísimo poema"
+  ],
+  [
+   494.36,
+   "Dwi'n mynd i roi llyriad i'r poema pwysig, Catherine."
   ],
   [
    502.5,
@@ -408,6 +428,10 @@
    "Amén."
   ],
   [
+   1051.14,
+   "Yn fy mynd i fyny, yn fy mynd i fyny, i'r bws i fynd efo dy elynor, dy elynor yn fy mynd i fyny, yn fy mynd i fyny, i'r bws i fynd efo dy elynor."
+  ],
+  [
    1075.7,
    "Amén."
   ],
@@ -420,8 +444,32 @@
    "Amén."
   ],
   [
+   1254.0,
+   "Yn drefn o'r bendiged i, y bendiged i, i'r lwc sydd yndda fo, yn drefn o'r bendiged."
+  ],
+  [
+   1255.7,
+   "Amén."
+  ],
+  [
+   1284.0,
+   "Os a'n nhw yn y gorina, os ydyn nhw yn y gorina, os ydyn nhw, os ydyn nhw yn y gorina."
+  ],
+  [
    1315.7,
    "Amén."
+  ],
+  [
+   1344.0,
+   "Bendiged i'r frown sydd ynddo fo'n y penwylio, i'r frown sydd ynddo fo'n y penwylio."
+  ],
+  [
+   1537.48,
+   "Straight through the rough places straight"
+  ],
+  [
+   1543.0,
+   "En de rach, Jesus mío, en de rach, Jesus mío."
   ],
   [
    1554.0,
@@ -579,6 +627,15 @@
    "whisper_es"
   ],
   [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
    "whisper_es"
   ],
   [
@@ -604,6 +661,9 @@
   ],
   [
    "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
@@ -616,12 +676,18 @@
   ],
   [
    "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
   ],
   [
    "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
@@ -655,6 +721,9 @@
   ],
   [
    "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
@@ -783,6 +852,9 @@
    "whisper_es"
   ],
   [
+   "cy"
+  ],
+  [
    "whisper_es"
   ],
   [
@@ -790,12 +862,24 @@
   ],
   [
    "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
@@ -848,8 +932,8 @@
  ],
  "ventanas": {
   "total": 31,
-  "modelo": 27,
-  "reglas": 0,
+  "modelo": 26,
+  "reglas": 1,
   "vacias": 4
  }
 }

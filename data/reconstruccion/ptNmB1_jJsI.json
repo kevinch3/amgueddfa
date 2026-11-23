@@ -152,8 +152,12 @@
    "Y esta propaganda dice lo siguiente."
   ],
   [
-   520.3,
-   "Maris"
+   494.16,
+   "Yym bydd y noson yn ca'l eu gyflwyno gan Siân Domos ac yno adloniant gan Elidir Glyn o griw Wngarth, un a ddau prif ddau gwrs adloniant ocsiwn o dresorau a di cloi dwmbath dawnswyr dalog a fwy o wybodaeth gysylltwch ag Anne-Marie Lewis, Siân Domos ac Swyn Dafydd."
+  ],
+  [
+   524.16,
+   "Ma' tair ohonyn nw wedi bod yma yn Matagonia. Felly cofiwch, un deg pump wth deg chwech yn Aberaeron, bydd y noson arbennig yma i godi ariant i agor ysgolion yma, a dan ni'n gwbod bod Eluned Jones sy wedi cyfla i Matagonia yn barod yy yn gwerthu y tocynnau yma. Felly diolch yn fawr iawn."
   ],
   [
    552.6,
@@ -172,12 +176,52 @@
    "Griffit."
   ],
   [
+   584.16,
+   "Na fo, na fo wir, welsoch chi'm o'r afon teimlu'n llifo'n araf drwy y cwm, welsoch chi'm o ddod ar ei llyn ar y llathrau yn gapel trwm, a fi'n un yn y Swistir, na fo, na, nac yn yr Eidal chwaith, ond ni ddim yn gwmall caban yn Nyhefyn lawer gwaith, gwelai llynnoedd mwy'n celeddu yn Iwerddon."
+  ],
+  [
+   614.16,
+   "Nabod ni, tra bu rhai yn llwydro'r blenydd ar ysgatre o lesu, ewch ewch i'r Swistir ac i'r Eidal, neu i Werbon eryll tro, ewch i'r Alban, y mae yno golygfeydd gwneud mewn sbôr, ond i fi, rowch cwm alltafan, pan fod haf yn blasu'r byd, yno mae'r olygfa orau, a chwech gadw lleill i gyd."
+  ],
+  [
+   643.06,
+   "Welsoch chi mewn gwmall tafarn, lle mae'n coed a'r afon gofyn, ewch dach chi i gwmall tafarn, peidiwch oedi hwy, rhag ofn."
+  ],
+  [
+   651.7,
+   "Ganz"
+  ],
+  [
+   673.06,
+   "Yr ail yn ymestyniaeth yma yw Sara Bodlemyn, ymestyniaeth dau ddeg pedwar adrodd Cwm Alltcafan."
+  ],
+  [
+   703.06,
+   "Naddo, naddo wir. Ro'soch chi'n meddwl tei fi'n llifu'n ffôn ar drwy'r cwm, roesoch chi'n meddwl flodau'n aethu ar llyfre garped drwm, a ddim un yn Swistir. Naddo, na, nac yn yr Eidal chwaith, ond mi fydd yr hwm a'r llafan yn Mehefin lawar gwaeth."
+  ],
+  [
+   733.06,
+   "Gweles llynno er mwyn cilio arni yn Iwerddon, nad o'n i, tra bu rhai yn crwydro'r gwledydd aros gartref amest."
+  ],
+  [
+   746.6,
+   "Ewch i'r Swyddfyr ac Ileidarn neu Iwerddon ar eich tro, ewch i'r Alban, yma yw'r noddau greig godidog sbon."
+  ],
+  [
+   759.16,
+   "Ond i mi, rhowch Gwm Alltcafan pan mae'r Haf yn nes i'r byd, yn oer yn y gorau, a chewch gadw'r lleill i fyd."
+  ],
+  [
+   775.14,
+   "Waethoch chi'm o Cwm Alltcafan, cynnau'r coed, yr afon Dom, ewch dach chi i Cwm Alltcafan, peidiwch oddi mwy rhag ofn."
+  ],
+  [
    807.2,
    "Muchas gracias. Próxima competencia, la"
   ],
   [
    809.2,
-   "número 77, Coro de formación libre,"
+   "número 77, coro de formación libre,"
   ],
   [
    811.6,
@@ -484,10 +528,6 @@
    "escenario el municipal de Alz."
   ],
   [
-   1377.9,
-   "por"
-  ],
-  [
    1403.2,
    "Al sol de la tambor y la salente"
   ],
@@ -665,7 +705,10 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -680,7 +723,34 @@
    "yt_es"
   ],
   [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -967,8 +1037,8 @@
  ],
  "ventanas": {
   "total": 28,
-  "modelo": 26,
-  "reglas": 0,
+  "modelo": 25,
+  "reglas": 1,
   "vacias": 2
  }
 }

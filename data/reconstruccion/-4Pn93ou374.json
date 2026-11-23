@@ -4,6 +4,22 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   24.5,
+   "Ni'n mellt yn dôn iawn Ni'n mellt yn dôn iawn"
+  ],
+  [
+   54.5,
+   "Dydd Iau o'dd o'r dydd, er gwaetha mawr o'r popeth, er gwaetha mawr o'r popeth, er gwaetha mawr o'r popeth, dydd Iau o'dd o'r dydd."
+  ],
+  [
+   114.5,
+   "Arwydd Iesu, byddai'r ddwyn sydd â ni yn cerdyn llwyn, yna'n gorffen fodd ein llan, fodd ni yn dy werthfawr oer, yna camdafol."
+  ],
+  [
+   205.5,
+   "Cafwyd Iesu'r dydd a'i mwy, sydd â fi yn cyd-am y mwy."
+  ],
+  [
    253.6,
    "la enredadera de Juana de Borbón"
   ],
@@ -248,16 +264,44 @@
    "niña que puso"
   ],
   [
+   557.5,
+   "Ie ie."
+  ],
+  [
+   558.5,
+   "Ie ie."
+  ],
+  [
+   559.5,
+   "Mae'n fwy iawn."
+  ],
+  [
    559.8,
    "son uno dos"
+  ],
+  [
+   560.5,
+   "So nw'r o'dd o's i sôn."
   ],
   [
    563.7,
    "los fósiles en ti que"
   ],
   [
+   567.5,
+   "Ydi ceb chwca ie."
+  ],
+  [
+   568.3,
+   "chucarelli"
+  ],
+  [
    570.8,
    "sola tras cinco o seis años se corriente"
+  ],
+  [
+   575.5,
+   "Yn nebw'r a ia."
   ],
   [
    577.8,
@@ -276,12 +320,8 @@
    "nacerá arriba arriba"
   ],
   [
-   605.9,
-   "Ay Ay Ay"
-  ],
-  [
-   608.8,
-   "señor señor"
+   605.5,
+   "Mae'n un, mae'n un, mae'n un, ti'n iawn ers ryw, ryw we."
   ],
   [
    641.8,
@@ -308,12 +348,12 @@
    "quién llegue"
   ],
   [
-   709.5,
-   "en mí que tu calle"
+   702.7,
+   "son uno dos y seis sientes"
   ],
   [
-   720.1,
-   "bailes"
+   709.5,
+   "en mí que tu calle"
   ],
   [
    723.1,
@@ -328,48 +368,52 @@
    "piensa igual en nuestra señora Mari Pari"
   ],
   [
-   743.0,
-   "Marimar"
-  ],
-  [
    744.7,
    "y volve"
   ],
   [
-   960.4,
-   "sí amigo"
+   984.26,
+   "A dorri galone O ble gest ti'r law, a dweud y clwydde? Ac o ble gest ti'r wen, ar y ddaidd y gaedd y bachde? Ac o ble gest ti'r tin, cyn dy ddaeth?"
   ],
   [
-   983.1,
-   "izquierda"
-  ],
-  [
-   985.7,
-   "otro origami"
-  ],
-  [
-   989.3,
-   "o poder que se cierra hoy"
-  ],
-  [
-   999.3,
-   "juegas igual"
-  ],
-  [
-   1002.8,
-   "vas a tener"
-  ],
-  [
-   1006.7,
-   "que escribir"
+   1010.46,
+   "Os mai hi oedd y fwriad i'w wneud i yn full, wel, do, mi lwyddais, mi lwyddais yn llawn, ond yr hi, rwyf am ei bodd yn aml."
   ],
   [
    1020.6,
    "cuando Mi luna está"
   ],
   [
+   1034.46,
+   "Dywed i mi, o dywed i mi, be ges di'n dda. Rwy'n cofio fel roedd ti yn dweud caraf fi nawr, a wyna i yn ateb fel hyn caraf fi nawr."
+  ],
+  [
    1037.5,
    "allí estirada"
+  ],
+  [
+   1064.46,
+   "Ond mae'r oer wedi mynd a ddaeth heddiw yn greulog, ac o ble, ac o ble, ddyrwyt ti, os mae'i hun yn y bwriad, bydd i'w wneud hi yn tro, wel, do, mi lwyddaeth, mi lwyddaeth, ma'n llo."
+  ],
+  [
+   1094.46,
+   "iawn, ond ar hyn rwyf am wneud bod o'n ddawn. Dwed i mi, o dwed i mi, dy neges di'r dda, os mai ei hun oedd ar fwriad, fydd wneud hi'n trw, wel, ddo, mi lwyddais, mi lwyddais yn llawn."
+  ],
+  [
+   1124.46,
+   "Ond yr un, rwyf am wybod na. Dwed i mi, o dwed i mi, ble gest ti'r dda. Dwed i mi, o dwed i mi, ble gest ti'r dda."
+  ],
+  [
+   1182.46,
+   "Ww, sŵn y ser ar ddiwedd siomed. Ww, sŵn cyfarfod a chyfadrad."
+  ],
+  [
+   1201.46,
+   "Sŵn yr oes y dyddfa'n byllach."
+  ],
+  [
+   1218.46,
+   "Sŵn y galar yn y galon, ww. Sŵn y drena, sŵn y ddynion, ww. Sŵn y tafodau'n fynd oddi."
   ],
   [
    1223.4,
@@ -380,68 +424,28 @@
    "es una Tren Azul solito"
   ],
   [
-   1258.3,
-   "por mí"
+   1248.46,
+   "'Swn eto ar ddiwedd stori'n swn ebinod swn barddoniaeth ww swn caneuon a chwedloniaeth ww."
   ],
   [
-   1263.6,
-   "son evitas es un pardoñas"
+   1278.46,
+   "Dyma'r sŵn sy'n gyrru rywun, cyfnest tuag at y GP."
   ],
   [
-   1270.6,
-   "es un camello najotroñal"
+   1302.46,
+   "Ie, dim yr y sŵn sy'n derbyn rywun, commoners tuag at y difyrn."
   ],
   [
-   1297.7,
-   "allí"
+   1340.46,
+   "Swn y baeth oddan fy nhamau, ww"
   ],
   [
-   1306.2,
-   "yo temor azul"
+   1347.46,
+   "Swn y gwynt sy'n torri'r adain, ww"
   ],
   [
-   1309.5,
-   "sin que ríe"
-  ],
-  [
-   1320.3,
-   "como"
-  ],
-  [
-   1324.6,
-   "a ti"
-  ],
-  [
-   1331.3,
-   "A ver aunque te impost Orlando"
-  ],
-  [
-   1340.6,
-   "es una"
-  ],
-  [
-   1342.9,
-   "paizon"
-  ],
-  [
-   1348.2,
-   "es un"
-  ],
-  [
-   1350.6,
-   "relato"
-  ],
-  [
-   1358.3,
-   "sonorables"
-  ],
-  [
-   1361.1,
-   "ahora en"
-  ],
-  [
-   1371.6,
-   "gourmelló"
+   1355.46,
+   "Sŵn yr emysg o'r engwrwyr, sŵn y blwb sy'n bwyntio'r dŵr, sŵn yr hedyn."
   ],
   [
    1383.6,
@@ -452,26 +456,70 @@
    "su gente libertad de emprender"
   ],
   [
+   1423.36,
+   "Ie, dyma'r y sŵn sy'n codi'n ysbryd, gomonas tuag at y dydd."
+  ],
+  [
    1443.0,
    "comunes llegó"
   ],
   [
    1446.4,
    "a ti"
+  ],
+  [
+   1483.36,
+   "Faint ma' rywun i yn dy dwyt, wyt ti modd dod ar y dy gyd? Ond mae yna rywbeth bach neu hen diwedd sy'n dy boeni di wyth. Ti'n syrthio mewn i'r fagon gan gwybod be ydy be."
+  ],
+  [
+   1504.36,
+   "Ac os ti'n marw, dwi'n syniad fod yr eglwys yn olio fe, ac mae'n chwarae'n trwy'r gwerw, mae'n ei win yn troi'n sudd, mae'n ei wên troi'n dda, ac yr arian y gwefn yn troi'n gul."
+  ],
+  [
+   1522.36,
+   "Ac wrth symud i'r newydd, yn gwrando ar efyn han, cofio'r orffan ein trin gwerw, wrth chwarae botan."
+  ],
+  [
+   1536.36,
+   "Ac yna bob wenty, mae ei darnau'n dod yn hir, yn tudoddi ddeall sut mae cael mae oedd o i ddaru byd."
+  ],
+  [
+   1549.36,
+   "Mae'n dod i haws neid celyd, sy'n swnio fel y gwydd, a ti'n gwybod yn iawn bod y cwpled yn llawn ar ffordd y mae'n mynd, ac mae'n parhau trwy'r gwyn, mae'r gwydd yn troi'n syth, mae'r gwen yn troi'n agau a'r gwyn yn troi'n hŷn, ac os wyt ti'n rhywle yn gwrando mewn y benhaf, ti'n gwbod be dwi'n feddwl."
+  ],
+  [
+   1579.36,
+   "Cofia bod chwarae'n trin gwerw, wrth chwarae botan. Mae'n myrwydd ar y fi, a'r canser yn mynd yn y dyn."
+  ],
+  [
+   1596.36,
+   "Ti'n ymladd ac yn ddwywod, ond dyna fyddwn ni wedi."
+  ],
+  [
+   1607.36,
+   "Ti'n trio peidio gwrando ar y geirie a'r dyfel, sy'n cyffwrdd a'r engwylion e, sy'n gin ti ôl i enill e."
+  ],
+  [
+   1621.36,
+   "Ti'n trio cau dy legate, yn y bedd a'r sit a phwy, a ti'n gweld y byd bod ddim yn wir, a bod y wyneb yn ei bomby, ac mae'n chwarae'n trin chwedl, a'r gwin yn troi'n sir, mae'r gwen yn troi'n dda a'r gair, a'r gwen yn troi'n hir."
+  ],
+  [
+   1645.36,
+   "Ac os wyt ti'n hwyl e, yn gwrando ar ei ben han, cofia fo'n chwarae'r trên gwerw, wrth chwarae'r Efo tan."
   ]
  ],
  "fuentes": [
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -657,25 +705,25 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -684,7 +732,7 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -699,7 +747,7 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -738,37 +786,37 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -777,19 +825,22 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -798,16 +849,49 @@
    "yt_es"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ]
  ],
  "ventanas": {
   "total": 29,
-  "modelo": 19,
+  "modelo": 26,
   "reglas": 0,
-  "vacias": 10
+  "vacias": 3
  }
 }

@@ -44,12 +44,16 @@
    "lugar sobre el escenario."
   ],
   [
+   121.0,
+   "A, yr holl seremoni angl- angliaidd, Sbaeneg."
+  ],
+  [
    127.0,
    "competencia número 8 ceremonia Medalla"
   ],
   [
    129.7,
-   "de Plata, premio otorgado por la"
+   "de Plata, Premio otorgado por la"
   ],
   [
    131.9,
@@ -133,7 +137,7 @@
   ],
   [
    197.4,
-   "de hablar. Y así es como lo canta Ariet"
+   "de hablar. Y así es como lo canta Arié"
   ],
   [
    200.2,
@@ -185,7 +189,7 @@
   ],
   [
    234.3,
-   "Y es el sted precisamente esto, un"
+   "Y es el Eisteddfod precisamente esto, un"
   ],
   [
    238.2,
@@ -605,7 +609,7 @@
   ],
   [
    623.7,
-   "entre Trelew Chubut."
+   "entre Leum Chubut."
   ],
   [
    626.0,
@@ -625,7 +629,7 @@
   ],
   [
    637.4,
-   "delgo del Chubut, integrado por Angelina"
+   "Eisteddfod del Chubut, integrado por Angelina"
   ],
   [
    641.5,
@@ -969,7 +973,7 @@
   ],
   [
    933.6,
-   "al finalizar el poema, el memorioso"
+   "al finalizar el poema, El memorioso"
   ],
   [
    937.4,
@@ -1077,7 +1081,7 @@
   ],
   [
    1177.7,
-   "que coloca Medalla Premio Asociación San"
+   "que coloca medalla Premio Asociación San"
   ],
   [
    1180.2,
@@ -1161,7 +1165,7 @@
   ],
   [
    1309.6,
-   "canción de Frug, una obra"
+   "canción music de Frug, una obra"
   ],
   [
    1313.1,
@@ -1172,12 +1176,16 @@
    "música."
   ],
   [
-   1374.0,
-   "tu"
+   1380.92,
+   "A stwyd yn eich e-bystiau yn y byd, yn eich e-bystiau yn y byd."
   ],
   [
    1400.8,
    "en ti."
+  ],
+  [
+   1464.92,
+   "O Holy Ghost, dwi'n dal i dy hunanbwynt, O Holy Ghost, dwi'n dal i dy hunanbwynt."
   ],
   [
    1527.3,
@@ -1206,6 +1214,10 @@
   [
    1790.3,
    "delante"
+  ],
+  [
+   1794.92,
+   "John Daniel, Alejandro Jones, nos muestras que nunca hay temas agotados en la poesia."
   ],
   [
    1816.6,
@@ -1330,14 +1342,6 @@
   [
    1960.8,
    "Alicia Cristina"
-  ],
-  [
-   1963.8,
-   "multiemiada."
-  ],
-  [
-   1993.9,
-   "Ah."
   ]
  ],
  "fuentes": [
@@ -1372,7 +1376,7 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -2221,13 +2225,13 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -2249,6 +2253,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"
@@ -2345,9 +2352,9 @@
   ]
  ],
  "ventanas": {
-  "total": 34,
-  "modelo": 30,
-  "reglas": 1,
-  "vacias": 3
+  "total": 35,
+  "modelo": 31,
+  "reglas": 0,
+  "vacias": 4
  }
 }

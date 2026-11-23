@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   30.0,
+   "Rector Torres se encuentra en la sala del trompetista de la ceremonia, le vamos a pedir por favor que venga al pie del escenario."
+  ],
+  [
    36.8,
    "Héctor Torres"
   ],
@@ -256,6 +260,10 @@
    "várdico del Chubut."
   ],
   [
+   342.56,
+   "El verso ha de ser como una espada reluciente que deja a los espectadores la memoria de un guerrero que va a camino al cielo y al envainarla en el sol se rompe en alas."
+  ],
+  [
    357.5,
    "El verso ha de ser como una espada"
   ],
@@ -269,7 +277,7 @@
   ],
   [
    367.0,
-   "al cielo y Al envainarla en el sol se"
+   "al cielo y al envainarla en el sol se"
   ],
   [
    371.1,
@@ -1168,24 +1176,8 @@
    "ponerse de pie."
   ],
   [
-   1133.3,
-   "Por tercera y última vez y ante la"
-  ],
-  [
-   1135.6,
-   "intriga que genera este momento y al"
-  ],
-  [
-   1138.3,
-   "sonido de nuestra última trompeta, pido"
-  ],
-  [
-   1142.0,
-   "que Ayeres"
-  ],
-  [
-   1144.1,
-   "se de a conocer."
+   1129.28,
+   "Por tercera y última vez, y ante la intriga que genera este momento, y al sonido de nuestra última trompeta, pido que Ayeres se de a conocer."
   ],
   [
    1220.2,
@@ -1202,6 +1194,10 @@
   [
    1229.8,
    "acompañan al poeta Tak."
+  ],
+  [
+   1279.28,
+   "Arié Lloyd"
   ],
   [
    1298.4,
@@ -1229,7 +1225,7 @@
   ],
   [
    1417.0,
-   "ciudad de Trelew. La va a entregar a"
+   "ciudad de Trevelin. La va a entregar a"
   ],
   [
    1418.7,
@@ -1242,6 +1238,10 @@
   [
    1422.3,
    "quien coronará"
+  ],
+  [
+   1425.28,
+   "A'r bwyd."
   ],
   [
    1425.3,
@@ -1430,6 +1430,10 @@
   [
    1633.8,
    "Carlos"
+  ],
+  [
+   1652.18,
+   "Me ddashon ni rastra, ond siapia o despula."
   ],
   [
    1665.0,
@@ -1676,6 +1680,10 @@
    "presente para Ayeres. Arié Lloyd."
   ],
   [
+   1963.96,
+   "Applaus"
+  ],
+  [
    1977.7,
    "Ocurre que un nombre como una nube se"
   ],
@@ -1766,7 +1774,7 @@
  ],
  "fuentes": [
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -1958,7 +1966,7 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -2645,6 +2653,7 @@
    "yt_es"
   ],
   [
+   "cy",
    "yt_es"
   ],
   [
@@ -2660,7 +2669,7 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -2693,7 +2702,7 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
    "yt_es"
@@ -2837,6 +2846,9 @@
    "yt_es"
   ],
   [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -3018,6 +3030,9 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "cy"
   ],
   [
    "yt_es"

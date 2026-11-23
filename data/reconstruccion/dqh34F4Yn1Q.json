@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Llawn dda i chi gyd, a chroeso gynnes iawn i Eisteddfod y Wladfa dwy fil ac deg ddeg ddwy. Mae e'n bleser gennyn ni eich croesawu chi gyd yma, ac yn arbennig i rai sy wedi deithio o bell. Mae gennyn ni yn ein plith llawer iawn o ffrindiau o'r hen wlad, a mae e'n bleser wir cael chi efo ni yn ystod yr achlysur yma."
+  ],
+  [
    30.0,
    "a todos. Sean muy bienvenidos"
   ],
@@ -48,6 +52,10 @@
    "cada uno de ustedes."
   ],
   [
+   52.0,
+   "I ddechrau, dyna ni i gofyn i Judith Jones ac i Lucas Gibon i weddïo droson ni."
+  ],
+  [
    60.0,
    "Para comenzar vamos a pedirle a Lucas Gibbon y a Judith Jones"
   ],
@@ -56,20 +64,32 @@
    "tener la oración inicial para nosotros."
   ],
   [
-   102.4,
-   "Di wein rieni, di wein teidiau, rydinim galo arna ti heddiw, rydinim ceisio dy bresenoldeb sanctaidd yn ein glidd wrth i ni ddechrau sesiwn hon o Eisteddfod Chubut 2022."
+   82.0,
+   "Gweddïwn, Arglwydd Dduw ein tad nefol, diolch i ti am y cyfle i'n cwrdd yma heddiw, Arglwydd ti sydd wedi bod yn noddfa i ni ar hyd y flynyddoedd, Duw ein rhieni, Duw ein teitiau, rydym ni'n galw arnot ti heddiw, rydyn ni'n ceisio dy bresenoldeb sanctaidd, a'n ymateb diolch i ti am y cyfle i'n cwrdd yma heddiw."
   ],
   [
-   119.0,
-   "Diolchwn am y ddoniai wnais di roed i ni, en arbenig i bob un. Diolchwn am y celfeddedau, am y gerddoriaeth a'r gair."
+   112.0,
+   "yn ein gilydd, wrth i ni ddechrau sesiwn hon o Eisteddfod Chubut dwy fil a ddau ddeg dau, diolchwn am y ddoniau wnaeth di roid i ni, yn arbennig i bob un, diolchwn am y gelf- gelfyddydau, am y gerddoriaeth a'r gair, diolchwn i ti, Arglwydd, am dy gariad sy'n ein rhwymo fel teulu mewn gyfeillgarwch a sy'n helpu i ni ddod yn nes at ein gilydd, boed i bob un ohonom mwynhau'r amser bendigedig, diolch i ti, Arglwydd, am dy gariad sy'n ein rhwymo fel teulu mewn gyfeillgarwch a sy'n helpu i ni ddod yn nes at ein gilydd, boed i bob"
   ],
   [
    128.1,
    "Diolchmete argluyb a emdygariat"
   ],
   [
+   131.8,
+   "Sin enrhymo felseili"
+  ],
+  [
    133.4,
    "Mewn gefeilgaru"
+  ],
+  [
+   134.9,
+   "A sin helpi a emi d Lean"
+  ],
+  [
+   136.9,
+   "Nes at yêu"
   ],
   [
    137.9,
@@ -80,8 +100,20 @@
    "Buynhaer amserbendigetic hwn"
   ],
   [
+   142.9,
+   "Bedet i engesgotin i"
+  ],
+  [
+   145.5,
+   "Da'n detenid"
+  ],
+  [
    146.5,
    "Arroi i ni de heduch"
+  ],
+  [
+   148.8,
+   "Gatujn i en dagariat"
   ],
   [
    151.0,
@@ -164,6 +196,10 @@
    "Amén"
   ],
   [
+   219.0,
+   "I gychwyn byddwn ni yn gofyn i chi sefyll ar eich draed er mwyn ganu anthem cenedlaethol y wlad."
+  ],
+  [
    245.6,
    "Y vamos a invitar al señor Juan Staffaroni, el jurado de música en castellano e internacional, a dirigirnos."
   ],
@@ -212,16 +248,32 @@
    "que va a entonar el himno Mor Vaur Uiti y a Kevin Handley que va a ser el acompañante en el piano."
   ],
   [
+   541.06,
+   "Dan ni'n mynd i gofio nawr, i'r rhai sy wedi ymgadael ni yn ddiweddar. Ag felly dan ni'n mynd i ofyn i Noe Sanchez-Jenkins i ddod ar y llwyfan, ac i Andres Evans i ganu yr emyn Mor fawr wyt ti? Bydd cefyn Handley."
+  ],
+  [
    560.7,
    "Bid Kevin Handley en cabello aripiano."
+  ],
+  [
+   593.02,
+   "presennol yn yr hun yr oedden nhw'n breuddwydio, a rhai sy'n dal i cerdded fydden nhw'n gwneud i rosod eraill tefu, yn enw'r pethau hynny bydd pawb yn fy enwi, distaw tawel, mae sŵn y ddistawrwyd yn curo meddyliau, mae pawb yn dechrau meddwl am rywun tra fod mynydd yn mynd heibio, traddodiad agos ato ni cyd ond nid i'w bobl Cymraeg oedd,"
   ],
   [
    620.7,
    "que se le puso a un río que le puso a un árbol."
   ],
   [
-   632.8,
-   "Pero no lo puso, no lo puso, porque me distrajo y me livo cuando la cueva y la medulla."
+   650.9,
+   "endóta te enklistiai i síbrut e faruel."
+  ],
+  [
+   655.4,
+   "Dau distauruit en ellin i raí sin temlon poin."
+  ],
+  [
+   660.2,
+   "Aún idáthli beguitai en covio amerhín sitgun aethonú,"
   ],
   [
    666.3,
@@ -252,6 +304,10 @@
    "No me pregunten quién soy, ni si me habían conocido."
   ],
   [
+   699.98,
+   "No me pregúnten quién soy, ni si me habían conocido, los sueños que"
+  ],
+  [
    705.2,
    "Los sueños que había querido crecerán, aunque no estoy."
   ],
@@ -266,6 +322,10 @@
   [
    718.7,
    "rosas. En el nombre de esas cosas, todos me estarán nombrando. Calma, quietud. El silencio"
+  ],
+  [
+   725.14,
+   "Calma, quietud."
   ],
   [
    728.4,
@@ -360,16 +420,28 @@
    "Drwy'r creador, derim a welaf y bu"
   ],
   [
-   858.2,
-   "Can y fena'i ddecan, y fahr a'r lwyddeddiw i ti"
+   859.1,
+   "Canf y naid a ganf ar eglwyddydd Dduw i ti, mor y fawr wyt ti, mor y fawr wyt ti."
   ],
   [
-   896.1,
-   "Y me'n gyro mi hyn, awnaf mewn parchedigaeth, gan y dat canepith, d'o'n i'w mor bawr w'i tí."
+   874.96,
+   "Canfynaidd a ganfa ar eglwyddedd Dduw i ti, mor y fawr wyt ti, mor y fawr wyt ti."
+  ],
+  [
+   890.96,
+   "Pan ddylai Crist afloi fy fuddugoliaeth am y dwy neu dreth mor llawn y fyddaf i, yn mynd yn grymu yn ofnaf mewn parchedigaeth, gan ddatgan y peth hynny yw mor fawr wyt ti."
+  ],
+  [
+   920.96,
+   "Can y fynadd, can y fynadd, ar eglwyddedd Dduw i ti, mor y fawr wyt ti, mor y fawr wyt ti."
   ],
   [
    951.1,
    "Soy ti."
+  ],
+  [
+   974.88,
+   "Nesa fydden ni yn cyflwyno yy bobl sy'n mynd i gadeirio y rhan yma o'r Eisteddfod."
   ],
   [
    981.1,
@@ -516,6 +588,14 @@
    "Renovemos nuestro aplauso."
   ],
   [
+   1247.62,
+   "Llongyfarchiadau mawr, felly, i Alwina Real a Mawrisio Mwynhol."
+  ],
+  [
+   1268.34,
+   "Diolch yn fawr, muchach rasias."
+  ],
+  [
    1271.4,
    "Bedo'n ni en gweld nawr ar el lluvian,"
   ],
@@ -548,12 +628,20 @@
    "a Helen Green e Bordelin."
   ],
   [
+   1291.94,
+   "Hefyd byddwn ni'n gweld y criw Pan Am Bi yn dawnsio ar y llwyfan, Jorge a Montserrat."
+  ],
+  [
    1294.1,
    "Hebit, bedo'n ni'n gweld"
   ],
   [
    1295.6,
    "Vamos ahora a compartir el cuadro de apertura de este Eisteddfod del Chubut 2022,"
+  ],
+  [
+   1301.94,
+   "Byddwn ni nawr yn gysylltu'r gwelliant o ddechrau'r Eisteddfod Chubut 2022, gwelliant o ddans a siarad."
   ],
   [
    1310.6,
@@ -580,8 +668,16 @@
    "Arlan amor, main haria dine, en que skire nos a jodir por e."
   ],
   [
+   1391.94,
+   "Har lan y môr mae cerrig gleision. Har lan y môr mae blodau'r meibion."
+  ],
+  [
    1403.1,
    "Arlan y mor, mai caricletion, arlan y mor, mai plodair meibion, arlan y mor, mai pechimoedai."
+  ],
+  [
+   1421.94,
+   "Ar lan y môr mae pob lliw a'i ddau. Ar lan y môr mae'n nhariad i nai."
   ],
   [
    1431.0,
@@ -592,8 +688,20 @@
    "Arlanemor, ma'u rosis cocheon"
   ],
   [
+   1440.94,
+   "Ar lan y môr mae'r rhosys cochion. Ar lan y môr mae'r lili sgwynion. Ar lan y môr mae'n hariad i neb."
+  ],
+  [
    1449.7,
    "Arlanemor, ma'u rlulis gwenion"
+  ],
+  [
+   1467.02,
+   "Yn cysgu'r nos a chodi'r bore."
+  ],
+  [
+   1476.3,
+   "Yn cysgu'r nos a chodi'r bore."
   ],
   [
    1517.7,
@@ -604,12 +712,24 @@
    "Valles, un triste cantar, lo aprendí del río que canta y que pasa por el pedregal."
   ],
   [
+   1557.02,
+   "L'o aprendi nel rio che canta y che passa por del pedregal, del rio che passa, so canto aprendi."
+  ],
+  [
    1566.7,
    "Del río que pasa, su canto aprendí, lo vengo trayendo, prendido en el parche de mi tamborín."
   ],
   [
+   1578.02,
+   "Lo vengo trayendo, prendido en el parche de mi tamborí."
+  ],
+  [
    1590.7,
    "Agüita del río, camino de piedra, de cada quebrada, se lleva una pena."
+  ],
+  [
+   1608.02,
+   "Sa i efo'n abena a gwaeda del rio, lo mismito soy, no se de ond y fengo, no se, no se, ni pad donde voy."
   ],
   [
    1611.3,
@@ -632,6 +752,10 @@
    "Ni pa' dónde voy"
   ],
   [
+   1638.02,
+   "Traigo de los valles un trist cantar, lo aprendi del rio que canta y que pasa por el pedregal."
+  ],
+  [
    1641.3,
    "Traigo de los valles un triste cantar"
   ],
@@ -642,6 +766,10 @@
   [
    1662.3,
    "El río que pasa, su canto aprendí, lo vengo trayendo, prendido en el parche de mi tamboril."
+  ],
+  [
+   1675.1,
+   "Lo vengo trayendo, prendido en el parche de mi tamboril."
   ],
   [
    1685.7,
@@ -672,12 +800,24 @@
    "Amén."
   ],
   [
+   1746.1,
+   "Diolch yn fawr."
+  ],
+  [
+   1761.78,
+   "Ar ranc cyngor trylawd, rydan ni'n mynd i ofyn i Misys Olga Aydeg o Ddoe, Gynghorydd y Dref, i gyflwyno present i Rodolfo Bissagra, Gadeirydd Pwyllgor yr Eisteddfod."
+  ],
+  [
    1765.5,
    "Gracias Olga Aidegodoy, que en Jury de Trev y que Bluino present y Rodolfo Villagra, que te iris publicar el Eisteddfod."
   ],
   [
    1776.4,
    "Invitamos a la concejal de Trelew, señora Olga Aidegodoy, a hacer entrega al presidente de la Asociación de la Eisteddfod del Chubut, señor Rodolfo Villagra,"
+  ],
+  [
+   1783.06,
+   "la entrega al Presidente de la Asociación del Eisteddfod del Chubut, señor Rodolfo"
   ],
   [
    1790.0,
@@ -694,6 +834,18 @@
  ],
  "fuentes": [
   [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
    "whisper_es"
   ],
   [
@@ -716,6 +868,9 @@
   ],
   [
    "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
@@ -724,6 +879,12 @@
    "whisper_es"
   ],
   [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
    "whisper_es"
   ],
   [
@@ -815,6 +976,13 @@
   ],
   [
    "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es",
+   "cy"
   ],
   [
    "whisper_es"
@@ -848,9 +1016,15 @@
   ],
   [
    "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
@@ -884,6 +1058,9 @@
   ],
   [
    "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
@@ -898,6 +1075,9 @@
    "whisper_es"
   ],
   [
+   "cy"
+  ],
+  [
    "whisper_es"
   ],
   [
@@ -965,9 +1145,24 @@
   ],
   [
    "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
@@ -1076,6 +1271,12 @@
   ],
   [
    "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
@@ -1100,6 +1301,9 @@
   ],
   [
    "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
@@ -1108,6 +1312,9 @@
    "whisper_es"
   ],
   [
+   "cy"
+  ],
+  [
    "whisper_es"
   ],
   [
@@ -1124,30 +1331,54 @@
   ],
   [
    "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
   ],
   [
+   "cy"
+  ],
+  [
    "whisper_es"
   ],
   [
    "whisper_es"
   ],
   [
+   "cy"
+  ],
+  [
    "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
   ],
   [
    "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
@@ -1165,6 +1396,9 @@
    "whisper_es"
   ],
   [
+   "cy"
+  ],
+  [
    "whisper_es"
   ],
   [
@@ -1174,6 +1408,9 @@
    "whisper_es"
   ],
   [
+   "cy"
+  ],
+  [
    "whisper_es"
   ],
   [
@@ -1193,12 +1430,21 @@
   ],
   [
    "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
   ],
   [
    "whisper_es"
+  ],
+  [
+   "cy"
   ],
   [
    "whisper_es"
@@ -1212,8 +1458,8 @@
  ],
  "ventanas": {
   "total": 31,
-  "modelo": 30,
-  "reglas": 1,
+  "modelo": 26,
+  "reglas": 5,
   "vacias": 0
  }
 }

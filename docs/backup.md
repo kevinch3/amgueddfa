@@ -95,6 +95,7 @@ python3 scripts/backup/videos.py import-whisper /tmp/whisper-out
 
 **Welsh, Bangor's model (2026-11-20).**
 - `run_cy.py` transcribes the Chubut and Trevelin videos that have no published text (`cy-ids.txt`, 1,002 ids, shortest first) with `techiaith/whisper-large-ft-cy-en-ct2`, in one-hour chunks, into `out-cy/<id>.json`. Start it with `start_cy.sh`; the log is `cy.log`.
+- **Shared queue (since 2026-11-23):** `run_cy.py` claims each id in `claims/<id>` before working on it, so a second worker can share a list. The laptop's CPU was measured at 2.4× slower than the P4000 on long sessions; see `docs/research/2026-11-23-whisper-laptop-vs-p4000.md`.
 - Missing audio tracks were cut from the backup (`ffmpeg -vn -c:a copy`) into `audio/`. Then:
 
 ```bash

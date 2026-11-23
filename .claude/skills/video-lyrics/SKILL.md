@@ -67,14 +67,29 @@ for the export (`/run/media/kevinch3/4eff8b2b-…/amgueddfa-backup`).
    ```
    Stanzas separated by blank lines (the aligner repeats whole stanzas when the choir does).
    One file per piece, reused by every video where it is sung.
-4. **Find the span** (seconds) where the piece is sung in each video:
-   - single-competition clip: from the first sung line after the announcement to the applause;
-   - long session: from the competition's chapter (`public/marcadores-video/<id>.json`, or the
-     time in the pending list) to the next chapter or the applause;
-   - two pieces in one competition: one span each, split at the applause or silence between them.
+4. **Find the span** (seconds) where the piece is sung in each video. `desde` is the first sung
+   moment (the intro's first note at the earliest, never the announcement) and `hasta` the last
+   sung moment (the held final chord, before the applause): never the next chapter, the jury or
+   the next announcement. A span that runs on over speech is what put lyric lines on announcers.
+   - single-competition clip: from the first sung note after the announcement to the last one;
+   - long session: find the competition by its chapter (`public/marcadores-video/<id>.json`, or
+     the time in the pending list), then mark the singing inside it, not the chapter's ends;
+   - two pieces in one competition: one span each, split at the applause or silence between them;
+   - a performance cut short, a false start or a stopped backing track: one span per take, each
+     ending where its singing stops (the aligner leaves out the lines that were not sung);
+   - nothing of the text sung in the span (narration, another piece): no span, a `huecos.json` entry.
 5. **Preview:** `python3 -m scripts.align_lyrics <video> <slug> <desde> <hasta>`. Fix the span or
-   the text until there are no `WARN` lines. Lines under 1 s apart mean invented repeats or a
-   span that is too short; a first line long after `desde` means the span starts too early.
+   the text until there are no `WARN` lines you can't explain. Lines under 1 s apart mean invented
+   repeats or a span that is too short; a first line long after `desde` means the span starts too
+   early. The lyric runs only from its first to its last *anchored* line (one heard with at least
+   two matched words, or most of a short line); lines outside those are placed at the pace they
+   were sung, only while they fit inside the span and before speech heard there. `N lines not placed
+   at the end, from stanza S line L on` means the text is longer than what was sung (a truncated
+   performance, a shorter version) or `hasta` cuts the singing: listen, then move `hasta` or accept
+   it (and note a skipped stanza as `estrofa_omitida`). `not placed at the start` is the same before
+   the first anchored line (sung before the recording or `desde`, or right after the announcer).
+   `no line heard clearly enough to anchor it` spreads every line evenly over the span: mark
+   `desde` and `hasta` on the singing exactly, or log a gap.
    The rebuilt text (`video-reconstruction`) aligns from the raw sources instead: a Welsh piece from
    the Welsh model's lines above its confidence filter, any other from the Spanish sources only. Preview
    that too when the video will be rebuilt, and watch for lines piled at the start (the first line heard

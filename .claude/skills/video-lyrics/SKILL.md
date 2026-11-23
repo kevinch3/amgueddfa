@@ -120,7 +120,8 @@ for the export (`/run/media/kevinch3/4eff8b2b-…/amgueddfa-backup`).
    that has an entry, take it out of the entry: the report raises on entries for aligned videos,
    and on any slug, title, video or code it doesn't know. In a video already aligned, an entry whose
    `desde` falls outside the aligned span records another performance of the piece there. A sung
-   stanza missing from the text is `texto_distinto`; a stanza the singers skip can now be aligned with
+   stanza missing from the text is `texto_distinto` (or, in a video aligned anyway with the text there is,
+   `texto_incompleto`: `letra` and `videos`, no `desde`); a stanza the singers skip can now be aligned with
    `"estrofas"` (step 5), so `estrofa_omitida` is only for one not yet measured.
 7. **Export and check:** `python3 -m scripts.export_video_transcripts` (about 5 s; rewrites only
    changed files). `git status` must show only the expected `public/transcripciones-video/*.json`.

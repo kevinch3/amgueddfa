@@ -647,6 +647,39 @@ def test_an_entry_inside_the_aligned_span_raises():
         assess(second_performance(10500))
 
 
+def incomplete(**entry):
+    return data([piece("Ubi caritas", "Gjeilo", "vidA", "vidB")], letras=[UBI],
+                spans={"vidA": ["ubi-caritas"], "vidB": ["ubi-caritas"]},
+                huecos=[{"letra": "ubi-caritas", "videos": ["vidA"], "motivo": "texto_incompleto",
+                         "detalle": "El coro canta un estribillo que el texto guardado no tiene.", **entry}])
+
+
+def test_an_aligned_video_whose_text_lacks_a_part_sung():
+    # newyddion-braf in Oev0xyrE5bY (maintainer, 2026-11-23): keep the span, note that the text lacks the refrain.
+    md = render(incomplete())
+    r = row(md, "Ubi caritas")
+    assert "✅ alineada; el texto no tiene una parte que se canta en 1 video" in r
+    assert "| el texto no tiene una parte que se canta | 1 | 1 |" in section(md, "Huecos documentados")
+    assert "estribillo que el texto guardado no tiene" in section(md, "Detalle de los huecos documentados")
+
+
+@pytest.mark.parametrize("entry, word", [
+    ({"videos": ["vidC"]}, "vidC"),            # not a video of the piece
+    ({"desde": {"vidA": 30}}, "desde"),        # no time: the whole aligned span is meant
+])
+def test_an_incomplete_text_entry_must_name_aligned_videos(entry, word):
+    with pytest.raises(ValueError, match=word):
+        assess(incomplete(**entry))
+
+
+def test_an_incomplete_text_entry_needs_an_aligned_video():
+    d = data([piece("Ubi caritas", "Gjeilo", "vidA", "vidB")], letras=[UBI], spans={"vidA": ["ubi-caritas"]},
+             huecos=[{"letra": "ubi-caritas", "videos": ["vidB"], "motivo": "texto_incompleto",
+                      "detalle": "Falta una estrofa que se canta."}])
+    with pytest.raises(ValueError, match="vidB"):
+        assess(d)
+
+
 # --- what is left out, said ------------------------------------------------------------------
 
 def test_clips_whose_title_is_not_a_song_are_counted():

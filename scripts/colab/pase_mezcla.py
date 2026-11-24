@@ -104,8 +104,39 @@ def done(out, vid):
     return all((out / f"{vid}.{k}.json").exists() for k in KINDS)
 
 
+def preload_cuda12():
+    """CTranslate2 4.9 opens CUDA 12's cuBLAS and cuDNN by name. A runtime on a newer CUDA (Colab) lacks them, so
+    load the pip wheels' copies (nvidia-cublas-cu12, nvidia-cudnn-cu12) first; later opens by name find them.
+    Libraries that need another one are retried until nothing more loads. Returns how many were loaded."""
+    import ctypes
+    import glob
+    import importlib.util
+    libs = []
+    for pkg in ("nvidia.cublas", "nvidia.cudnn"):
+        try:
+            spec = importlib.util.find_spec(pkg)
+        except ModuleNotFoundError:
+            spec = None
+        for root in (spec.submodule_search_locations if spec else []):
+            libs += sorted(glob.glob(os.path.join(root, "lib", "*.so*")))
+    loaded, pending = 0, libs
+    while pending:
+        failed = []
+        for lib in pending:
+            try:
+                ctypes.CDLL(lib, mode=ctypes.RTLD_GLOBAL)
+                loaded += 1
+            except OSError:
+                failed.append(lib)
+        if len(failed) == len(pending):
+            break
+        pending = failed
+    return loaded
+
+
 def run(audio_dir, out, until=None, compute_type="int8", only=None):
     """Process every audio file in audio_dir (or only the ids in `only`) that isn't done yet."""
+    log(f"CUDA 12 libraries preloaded: {preload_cuda12()}")
     from faster_whisper import WhisperModel
     audio_dir, out = Path(audio_dir), Path(out)
     out.mkdir(parents=True, exist_ok=True)

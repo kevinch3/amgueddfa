@@ -5,7 +5,8 @@ import json
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-PINS = "faster-whisper==1.2.1 ctranslate2==4.9.0 av==17.1.0"  # the versions on KPC, so both runs give the same results
+PINS = ("faster-whisper==1.2.1 ctranslate2==4.9.0 av==17.1.0 "
+        "nvidia-cublas-cu12==12.9.3.13 nvidia-cudnn-cu12==9.28.1.4")  # the versions on KPC, so both runs give the same results
 
 INTRO = """# Mixed Welsh/Spanish pass (Amgueddfa)
 

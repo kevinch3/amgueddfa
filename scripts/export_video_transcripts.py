@@ -397,7 +397,9 @@ def line_languages(t: dict) -> list[str] | None:
     fu = t.get("fuentes")
     if not fu or len(fu) != len(t["seg"]):
         return None
-    mezcla = t.get("mezcla")  # Welsh and Spanish passes compared in the rebuild: a Bangor line there won as Welsh
+    # Welsh and Spanish passes compared in the rebuild: a Bangor line there won as Welsh. Its Bangor segments
+    # without word times are taken as Welsh too, though they were not decided (rare: no words to compare).
+    mezcla = t.get("mezcla")
     return [("cy" if "cy" in f else "es") if "letra" in f else "cy" if mezcla and f == ["cy"] else line_language(x, f)
             for (_, x), f in zip(t["seg"], fu)]
 

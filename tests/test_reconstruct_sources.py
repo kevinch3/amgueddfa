@@ -375,3 +375,36 @@ def test_row_at_a_segment_boundary_takes_the_later_segment(tmp_path):
         (tmp_path / str(words)).mkdir()
         stem, letras = _mezcla_fixture(tmp_path / str(words), segs, [music, speech])
         assert [(l.t, l.conf) for l in load_sources(stem, "vid", letras) if l.src == "cy"] == [(402.0, 0.9)]
+
+
+def test_overlap_counts_the_union_of_decided_lines():
+    # Two decided lines each cover 47 % of a YouTube cue (101-104): together 93 %, so it is the same speech.
+    cue = sources.Line(101.0, "gracias", "yt_es", "es", None, 104.0)
+    decided = [sources.Line(100.0, "diolch", "cy", "cy", 0.9, 102.4), sources.Line(102.6, "yn fawr", "cy", "cy", 0.9, 105.0)]
+    assert sources._overlapped(cue, decided)
+    # overlapping decided lines are not counted twice: 101-102.4 twice is still 47 %
+    assert not sources._overlapped(cue, [decided[0], decided[0]._replace(t=100.5)])
+
+
+def test_first_whisper_pass_gives_way_to_turbo_long_form(tmp_path):
+    # Both are whisper_es: where turbo's long form has the speech, the first pass's line of it is left out.
+    longform = {"s": 30.5, "e": 32.5, "text": "muchas gracias por estar aquí esta tarde", "lp": -0.2, "words": []}
+    stem, letras = _mezcla_fixture(tmp_path, [], [], turbo=[longform])  # first pass: 30-32, 33-35, ...
+    got = [(l.t, l.text) for l in load_sources(stem, "vid", letras) if l.src == "whisper_es" and l.t < 36]
+    assert got == [(30.5, "muchas gracias por estar aquí esta tarde"), (33.0, "muchas gracias a todos por venir hoy")]
+
+
+def test_lines_differing_only_in_confidence_sort(tmp_path):
+    # A row whose segment has no confidence and a bare segment with one, same start and text: sorting whole
+    # tuples compared None with a float.
+    row = _row(500.0, "pnawn da i bawb")
+    seg = {k: v for k, v in _seg(row).items() if k != "lp"}
+    bare = {**_seg(row), "words": []}
+    stem, letras = _mezcla_fixture(tmp_path, [seg, bare], [row])
+    assert [l.conf for l in load_sources(stem, "vid", letras) if l.src == "cy"] in ([None, 0.9], [0.9, None])
+
+
+def test_word_confidence_index_keeps_the_first_segment():
+    w = [1.0, 1.5, "gair", 0.9]
+    segments = [{"words": [w]}, {"words": [list(w)]}, {"words": []}]
+    assert sources._word_conf(segments, [(0, 2, 0.8), (0, 2, 0.4), (2, 3, 0.5)]) == {tuple(w): 0.8}

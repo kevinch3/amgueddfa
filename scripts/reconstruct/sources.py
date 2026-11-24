@@ -63,22 +63,36 @@ def _span(ln: Line) -> tuple[float, float]:
 
 
 def _overlapped(ln: Line, decided: list[Line]) -> bool:
-    """A decided line covers at least OVERLAP of this line's own length."""
+    """The decided lines, together, cover at least OVERLAP of this line's own length (their union is measured,
+    so two lines covering 47 % each are 94 %, and lines overlapping each other are not counted twice)."""
     a, b = _span(ln)
-    return any(min(b, e) - max(a, t) >= OVERLAP * (b - a) for t, e in map(_span, decided))
+    covered, reach = 0.0, a
+    for t, e in sorted((max(t, a), min(e, b)) for t, e in map(_span, decided) if t < b and e > a):
+        if e > reach:
+            covered += e - max(t, reach)
+            reach = e
+    return covered >= OVERLAP * (b - a)
 
 
 def _welsh_ok(conf: float | None, text: str) -> bool:
     return (conf is None or conf >= MIN_CY_CONF) and not is_english(text)
 
 
-def _row_conf(r: dict, segments: list[dict], seg_conf: list[tuple]) -> float | None:
-    """The confidence of the Bangor segment a row was cut from: the one holding its first word, else by time,
-    half-open (segments touch: a row starting at one's end is the next one's)."""
-    first = r["cy_words"][0] if r.get("cy_words") else None
+def _word_conf(segments: list[dict], seg_conf: list[tuple]) -> dict[tuple, float | None]:
+    """Each Bangor word (as a tuple) to its segment's confidence; a word in two segments keeps the first's."""
+    out: dict[tuple, float | None] = {}
     for g, (_, _, c) in zip(segments, seg_conf):
-        if first is not None and first in (g.get("words") or []):
-            return c
+        for w in g.get("words") or []:
+            out.setdefault(tuple(w), c)
+    return out
+
+
+def _row_conf(r: dict, word_conf: dict[tuple, float | None], seg_conf: list[tuple]) -> float | None:
+    """The confidence of the Bangor segment a row was cut from: the one holding its first word (word_conf, from
+    _word_conf), else by time, half-open (segments touch: a row starting at one's end is the next one's)."""
+    first = tuple(r["cy_words"][0]) if r.get("cy_words") else None
+    if first is not None and first in word_conf:
+        return word_conf[first]
     for s, e, c in seg_conf:
         if s - EPS <= r["s"] < e:
             return c
@@ -92,9 +106,9 @@ def _decided(stem: Path) -> list[Line]:
     read = lambda x: json.loads(stem.with_name(f"{stem.name}{x}").read_text(encoding="utf-8"))
     segments = read(".cy-palabras.json")["segments"]
     seg_conf = [(float(g["s"]), float(g["e"]), math.exp(g["lp"]) if "lp" in g else None) for g in segments]
-    rows, conf = [], {}
+    rows, conf, word_conf = [], {}, _word_conf(segments, seg_conf)
     for r in read(".es-lineas.json")["lines"]:
-        c = _row_conf(r, segments, seg_conf)
+        c = _row_conf(r, word_conf, seg_conf)
         if not _welsh_ok(c, r["cy"]):
             continue
         rows.append(r)
@@ -124,22 +138,29 @@ def load_sources(stem: Path, video_id: str, letras: Path = LETRAS) -> list[Line]
                     for t, e, x in parse_vtt_timed(vtts[k].read_text(encoding="utf-8"))]
     if "es-orig" in vtts:
         out += [Line(float(t), x, "yt_es", "es", None, float(e)) for t, e, x in parse_vtt_timed(vtts["es-orig"].read_text(encoding="utf-8"))]
+    first_pass: list[Line] = []
     w = stem.with_name(f"{stem.name}.whisper.json")
     if w.exists():
         d = json.loads(w.read_text(encoding="utf-8"))
         if d.get("language") == "es":
-            out += [Line(float(t), x, "whisper_es", "es", None, float(e)) for t, e, x in clean_whisper_timed(d.get("segments", []))]
+            first_pass = [Line(float(t), x, "whisper_es", "es", None, float(e)) for t, e, x in clean_whisper_timed(d.get("segments", []))]
+    if mezcla:
+        # Turbo's long-form Spanish (mixed-language pass). It is whisper_es too: where it covers OVERLAP of a first
+        # Whisper pass line, that line is the same speech and is left out, so it is not in two whisper_es streams.
+        turbo = json.loads(stem.with_name(f"{stem.name}.es-turbo.json").read_text(encoding="utf-8"))
+        longform = [Line(float(t), x, "whisper_es", "es", None, float(e))
+                    for t, e, x in clean_whisper_timed([[g["s"], g["e"], g["text"]] for g in turbo.get("segments", [])])]
+        first_pass = [l for l in first_pass if not _overlapped(l, longform)]
+    out += first_pass
     # The Spanish pass (#112, KPC run_es.py): for videos Whisper took for Welsh, every Bangor segment's
     # language, and Spanish Whisper's text for the Spanish ones. There the Bangor line is left out below.
     spanish_segments: set[float] = set()
     es = stem.with_name(f"{stem.name}.whisper-es.json")
     if mezcla:
         # Mixed-language pass: turbo's long-form Spanish, then the decided Bangor lines; the other Spanish
-        # sources' lines (yt_es, whisper_es) stay only where no decided line covers OVERLAP of them (#112's pass
-        # is superseded).
-        turbo = json.loads(stem.with_name(f"{stem.name}.es-turbo.json").read_text(encoding="utf-8"))
-        out += [Line(float(t), x, "whisper_es", "es", None, float(e))
-                for t, e, x in clean_whisper_timed([[g["s"], g["e"], g["text"]] for g in turbo.get("segments", [])])]
+        # sources' lines (yt_es, whisper_es) stay only where the decided lines do not cover OVERLAP of them (#112's
+        # pass is superseded).
+        out += longform
         decided = _decided(stem)
         # The uploader's subtitles (subida) are never dropped: the most reliable source.
         out = [l for l in out if l.src == "subida" or not _overlapped(l, decided)] + decided
@@ -175,8 +196,9 @@ def load_sources(stem: Path, video_id: str, letras: Path = LETRAS) -> list[Line]
             bangor = [l.t for l in out if l.src == "cy"]
             out = [l for l in out if not (l.src in ("yt_es", "whisper_es") and line_language(l.text, [l.src]) == "cy"
                                           and any(abs(l.t - t) <= SAME_SPEECH for t in bangor))]
-    heard_es = [[l.t, l.text] for l in sorted(out) if l.src in ("subida", "yt_es", "whisper_es")]
-    heard_cy = [[l.t, l.text] for l in sorted(out) if l.src == "cy"]
+    by_time = sorted(out, key=lambda l: (l.t, l.src))  # whole tuples would compare None with a float (conf, e)
+    heard_es = [[l.t, l.text] for l in by_time if l.src in ("subida", "yt_es", "whisper_es")]
+    heard_cy = [[l.t, l.text] for l in by_time if l.src == "cy"]
     for sp in spans_for(video_id, letras):
         meta, stanzas = parse_letra((letras / f"{sp['letra']}.md").read_text(encoding="utf-8"))
         # A Welsh song is timed from what the Welsh model heard; anything else from the Spanish sources.

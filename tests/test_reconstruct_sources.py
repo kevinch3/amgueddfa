@@ -408,3 +408,16 @@ def test_word_confidence_index_keeps_the_first_segment():
     w = [1.0, 1.5, "gair", 0.9]
     segments = [{"words": [w]}, {"words": [list(w)]}, {"words": []}]
     assert sources._word_conf(segments, [(0, 2, 0.8), (0, 2, 0.4), (2, 3, 0.5)]) == {tuple(w): 0.8}
+
+
+def test_same_start_lines_of_different_sources_reach_the_aligner_in_text_order(tmp_path, monkeypatch):
+    stem, letras = _fixture(tmp_path)
+    _vtt_cue(stem, 100.0, 102.0, "alfa inicial")                     # yt_es
+    (stem.parent / f"{stem.name}.whisper.json").write_text(json.dumps(
+        {"language": "es", "segments": [[100.0, 102.0, "zeta final"]] + WHISPER["segments"]}), encoding="utf-8")
+    (letras / "videos.json").write_text(json.dumps({"vid": [{"letra": "prueba", "desde": 90, "hasta": 110}]}), encoding="utf-8")
+    seen = []
+    monkeypatch.setattr(sources, "align", lambda heard, *a, **k: seen.append(heard) or [])
+    load_sources(stem, "vid", letras)
+    same = [x for t, x in seen[0] if t == 100.0]
+    assert same == sorted(same) and len(same) == 2

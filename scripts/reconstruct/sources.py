@@ -196,7 +196,7 @@ def load_sources(stem: Path, video_id: str, letras: Path = LETRAS) -> list[Line]
             bangor = [l.t for l in out if l.src == "cy"]
             out = [l for l in out if not (l.src in ("yt_es", "whisper_es") and line_language(l.text, [l.src]) == "cy"
                                           and any(abs(l.t - t) <= SAME_SPEECH for t in bangor))]
-    by_time = sorted(out, key=lambda l: (l.t, l.src))  # whole tuples would compare None with a float (conf, e)
+    by_time = sorted(out, key=lambda l: (l.t, l.text))  # main sorted whole tuples; heard_* keep only [t, text], and None never meets a float
     heard_es = [[l.t, l.text] for l in by_time if l.src in ("subida", "yt_es", "whisper_es")]
     heard_cy = [[l.t, l.text] for l in by_time if l.src == "cy"]
     for sp in spans_for(video_id, letras):

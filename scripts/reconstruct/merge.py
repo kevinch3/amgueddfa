@@ -35,10 +35,22 @@ def rules_lines(w: Window, mezcla: bool = False) -> list[OutLine]:
     span = (min(l.t for l in lyrics), max(l.t for l in lyrics) + LYRIC_TAIL) if lyrics else None
     src = next((s for s in PREFERENCE if s != "cy" and any(l.src == s for l in own)), None)
     out = [OutLine(l.t, l.text, l.lang, (l.src,)) for l in lyrics]
-    chosen = [l for l in own if l.src == src]
-    out += [OutLine(l.t, l.text, l.lang, (l.src,)) for l in own
-            if (l.src in (src, "cy") or (mezcla and l.src != "letra" and not _overlapped(l, chosen)))
-            and not (span and span[0] <= l.t <= span[1])]
+    if not mezcla:
+        out += [OutLine(l.t, l.text, l.lang, (l.src,)) for l in own
+                if l.src in (src, "cy") and not (span and span[0] <= l.t <= span[1])]
+        return sorted(out, key=lambda l: l.t)  # by time only: same-second lines keep their source order
+    # Chosen lines that start before t0 but reach into the window still count as covering it.
+    chosen = [l for l in w.lines if l.src == src and l.t < w.t1 and tokens(_strip_tags(l.text))]
+    kept = [l for l in own if l.src in (src, "cy")]
+    covering = [l for l in chosen]
+    for s in PREFERENCE:  # the other Spanish sources, most reliable first; each tested against what is already kept
+        if s in ("cy", src):
+            continue
+        for l in own:
+            if l.src == s and not _overlapped(l, covering):
+                kept.append(l)
+                covering.append(l)
+    out += [OutLine(l.t, l.text, l.lang, (l.src,)) for l in kept if not (span and span[0] <= l.t <= span[1])]
     return sorted(out, key=lambda l: l.t)  # by time only: same-second lines keep their source order
 
 

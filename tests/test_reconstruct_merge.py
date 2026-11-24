@@ -83,3 +83,24 @@ def test_rules_without_the_mixed_pass_are_unchanged():
     expected = [(10.0, ("yt_es",)), (30.0, ("cy",))]
     assert [(l.t, l.fuentes) for l in rules_lines(win(0, 60, MIXED))] == expected
     assert [(l.t, l.fuentes) for l in rules_lines(win(0, 60, MIXED), mezcla=False)] == expected
+
+
+def test_rules_on_a_mixed_video_keep_one_of_two_other_sources_that_hear_the_same_speech():
+    # subida is chosen but silent at 20: yt_es and whisper_es both heard the same speech there; one is kept.
+    w = win(0, 60, [
+        Line(5.0, "buenas tardes a todos", "subida", "es", None, 7.0),
+        Line(20.0, "y ahora pasamos al tercer punto", "yt_es", "es", None, 23.0),
+        Line(20.2, "y ahora pasamos al tercer punto", "whisper_es", "es", None, 23.1),
+    ])
+    out = rules_lines(w, mezcla=True)
+    assert [(l.t, l.fuentes) for l in out] == [(5.0, ("subida",)), (20.0, ("yt_es",))]
+
+
+def test_rules_on_a_mixed_video_count_a_chosen_line_that_starts_before_the_window():
+    w = win(10, 60, [
+        Line(9.0, "buenas tardes a todos", "subida", "es", None, 12.0),   # starts before t0, covers 10-12
+        Line(10.0, "buenas tardes", "whisper_es", "es", None, 12.0),
+        Line(30.0, "gracias", "subida", "es", None, 31.0),
+    ])
+    out = rules_lines(w, mezcla=True)
+    assert [(l.t, l.fuentes) for l in out] == [(30.0, ("subida",))]

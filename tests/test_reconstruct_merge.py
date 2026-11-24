@@ -63,3 +63,23 @@ def test_rules_keep_the_welsh_model_beside_the_spanish_source():
 def test_rules_keep_welsh_that_spanish_whisper_wrote_when_it_is_the_only_text():
     w = win(300, 360, [Line(337.5, "Iagor o ddebod, bydd William Windy en un harwain i ganu", "whisper_es", "es")])
     assert [l.t for l in rules_lines(w)] == [337.5]
+
+
+# A mixed-language video: decided Spanish lines (whisper_es) replaced Bangor where it heard Spanish.
+MIXED = [
+    Line(10.0, "buenas tardes a todos", "yt_es", "es", None, 12.0),
+    Line(10.5, "buenas tardes a todos ustedes", "whisper_es", "es", None, 12.0),  # 1.5 of 1.5 s under yt_es
+    Line(20.0, "y ahora pasamos al tercer punto", "whisper_es", "es", None, 23.0),  # no YouTube line there
+    Line(30.0, "diolch yn fawr", "cy", "cy", 0.9, 32.0),
+]
+
+
+def test_rules_on_a_mixed_video_keep_spanish_lines_the_chosen_source_lacks():
+    out = rules_lines(win(0, 60, MIXED), mezcla=True)
+    assert [(l.t, l.fuentes) for l in out] == [(10.0, ("yt_es",)), (20.0, ("whisper_es",)), (30.0, ("cy",))]
+
+
+def test_rules_without_the_mixed_pass_are_unchanged():
+    expected = [(10.0, ("yt_es",)), (30.0, ("cy",))]
+    assert [(l.t, l.fuentes) for l in rules_lines(win(0, 60, MIXED))] == expected
+    assert [(l.t, l.fuentes) for l in rules_lines(win(0, 60, MIXED), mezcla=False)] == expected

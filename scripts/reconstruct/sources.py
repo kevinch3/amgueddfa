@@ -38,6 +38,7 @@ SAME_SPEECH = 10.0  # s: a Spanish recogniser's Welsh line this close to a Bango
 # line overlaps at least OVERLAP of its own length; a line without an end counts UNKNOWN_SPAN s long.
 OVERLAP = 0.5
 UNKNOWN_SPAN = 1.0
+FRAGMENT_GAP = 2.0  # s: a Bangor fragment of Spanish speech this close to a Spanish line holding its words is that speech
 EPS = 0.01  # s: float noise when a line's start is matched to its Bangor segment
 
 
@@ -78,19 +79,20 @@ def _overlapped(ln: Line, decided: list[Line]) -> bool:
     return covered >= OVERLAP * (b - a)
 
 
-def _near(ln: Line, d: Line) -> bool:
-    """A decided line d overlaps this line's span; a line without an end is near within SAME_SPEECH s."""
+def _near(ln: Line, d: Line, pad: float = 0.0) -> bool:
+    """A decided line d overlaps this line's span, widened by pad s each side; a line without an end is near
+    within SAME_SPEECH s."""
     if ln.e is None or ln.e <= ln.t:
         return abs(d.t - ln.t) <= SAME_SPEECH
     a, b = _span(ln)
     da, db = _span(d)
-    return da < b and db > a
+    return da < b + pad and db > a - pad
 
 
-def _repeats(ln: Line, decided: list[Line]) -> bool:
+def _repeats(ln: Line, decided: list[Line], pad: float = 0.0) -> bool:
     """At least SAME_WORDS of this line's words are in the decided lines near it: the same speech written again,
     even where a stretched span (a segment without word times) is mostly outside them."""
-    near = [w for d in decided if _near(ln, d) for w in tokens(d.text)]
+    near = [w for d in decided if _near(ln, d, pad) for w in tokens(d.text)]
     return bool(near) and share_of_words(tokens(ln.text), near) >= SAME_WORDS
 
 
@@ -206,7 +208,11 @@ def load_sources(stem: Path, video_id: str, letras: Path = LETRAS) -> list[Line]
                 kept.append(l)
             elif (p := _welsh_partner(l, decided)) is not None:
                 kept.append(l._replace(alt=p.t))
-        out = kept + decided
+        # The other way round: a Bangor line that won on confidence but wrote Spanish speech, whose words a kept
+        # Spanish line near it already has (with more), is that speech again, written worse (#164 follow-up).
+        spanish = [l for l in kept + decided if l.src in ("subida", "yt_es", "whisper_es") and l.alt is None]
+        out = kept + [d for d in decided if not (d.src == "cy" and line_language(d.text, ["cy"]) == "es"
+                                                 and _repeats(d, spanish, FRAGMENT_GAP))]
     elif es.exists():
         for seg in json.loads(es.read_text(encoding="utf-8"))["segments"]:
             if "text" in seg:

@@ -459,3 +459,24 @@ def test_spanish_is_decided_before_the_confidence_floor(tmp_path):
     stem, letras = _mezcla_fixture(tmp_path, [_seg(es, lp=-0.82), _seg(cy, lp=-0.82), _seg(ok)], [es, cy, ok])
     got = [(l.t, l.src, l.text) for l in load_sources(stem, "vid", letras) if 190 < l.t < 300]
     assert got == [(200.0, "whisper_es", "buenas tardes a todos"), (240.0, "cy", "croeso i bawb yma heddiw")]
+
+
+def test_bangor_fragment_of_spanish_speech_gives_way_to_turbo(tmp_path):
+    # Bangor won on confidence but wrote the Spanish speech; turbo's long-form line holds those words and more.
+    frag = _row(498.6, "muchas gracias señores")                     # 498.6-500.1, reads as Spanish
+    welsh = _row(520.0, "diolch yn fawr iawn")                       # Welsh: never dropped this way
+    longform = {"s": 498.4, "e": 503.0, "text": "muchas gracias señores por estar aquí hoy", "lp": -0.2, "words": []}
+    near_cy = {"s": 520.2, "e": 524.0, "text": "diolch yn fawr iawn a buenas noches", "lp": -0.2, "words": []}
+    stem, letras = _mezcla_fixture(tmp_path, [_seg(frag), _seg(welsh)], [frag, welsh], turbo=[longform, near_cy])
+    got = [(l.t, l.src) for l in load_sources(stem, "vid", letras) if 490 < l.t < 530 and l.alt is None]
+    assert (498.6, "cy") not in got and (498.4, "whisper_es") in got
+    assert (520.0, "cy") in got
+
+
+def test_bangor_fragment_gives_way_to_a_decided_spanish_line(tmp_path):
+    # The Spanish line next to the fragment is itself decided (turbo won its own Bangor row).
+    frag = _row(600.0, "buenas noches")                                              # 600.0-601.0, Spanish
+    es = _row(601.2, "bwenas nochess a todos", es="buenas noches a todos los presentes", cy_p=0.3, es_p=0.9)
+    stem, letras = _mezcla_fixture(tmp_path, [_seg(frag), _seg(es)], [frag, es])
+    got = [(l.t, l.src) for l in load_sources(stem, "vid", letras) if 590 < l.t < 610]
+    assert got == [(601.2, "whisper_es")]

@@ -13,6 +13,7 @@ from pathlib import Path
 from typing import NamedTuple
 
 from scripts.align_lyrics import LETRAS, align, parse_letra, spans_for
+from scripts.backup.videos import MEZCLA_SUFFIXES
 from scripts.export_video_transcripts import LOOP, MARKER, STOCK, clean_whisper_timed, glob_escape, is_english, line_language, parse_vtt_timed
 
 # The Welsh model, as the suffix of its file next to the video (<stem>.<WELSH_SOURCE>.json,
@@ -31,6 +32,12 @@ SPANISH_NEAR = 3.0  # seconds: a Welsh line this close to a Spanish line is take
 # spelling or even translates it ("Aquí ha sido un placer" -> "Dwi'n meddwl bod o'n pleser").
 SPANISH_SPEECH_WORDS = 5
 SAME_SPEECH = 10.0  # s: a Spanish recogniser's Welsh line this close to a Bangor line is the same speech
+# Mixed-language videos (the three MEZCLA_SUFFIXES files beside the video): every Bangor line's language is
+# decided (scripts/reconstruct/mezcla.py), and another Spanish source's line is the same speech when a decided
+# line overlaps at least OVERLAP of its own length; a line without an end counts UNKNOWN_SPAN s long.
+OVERLAP = 0.5
+UNKNOWN_SPAN = 1.0
+EPS = 0.01  # s: float noise when a line's start is matched to its Bangor segment
 
 
 class Line(NamedTuple):
@@ -46,9 +53,51 @@ def _vtts(stem: Path) -> dict[str, Path]:
     return {p.name[len(stem.name) + 1:-4]: p for p in stem.parent.glob(f"{glob_escape(stem.name)}.*.vtt")}
 
 
+def has_mezcla(stem: Path) -> bool:
+    """The mixed-language pass left all three of its files beside the video."""
+    return all(stem.with_name(f"{stem.name}{x}").exists() for x in MEZCLA_SUFFIXES)
+
+
+def _span(ln: Line) -> tuple[float, float]:
+    return ln.t, ln.e if ln.e is not None and ln.e > ln.t else ln.t + UNKNOWN_SPAN
+
+
+def _overlapped(ln: Line, decided: list[Line]) -> bool:
+    """A decided line covers at least OVERLAP of this line's own length."""
+    a, b = _span(ln)
+    return any(min(b, e) - max(a, t) >= OVERLAP * (b - a) for t, e in map(_span, decided))
+
+
+def _welsh_ok(conf: float | None, text: str) -> bool:
+    return (conf is None or conf >= MIN_CY_CONF) and not is_english(text)
+
+
+def _decided(stem: Path) -> list[Line]:
+    """The Bangor lines of a mixed-language video, each as Welsh or Spanish (design step 2), plus its segments
+    without word times as plain Welsh lines; below MIN_CY_CONF or English, left out."""
+    from scripts.reconstruct.mezcla import decide  # mezcla imports Line from here
+    read = lambda x: json.loads(stem.with_name(f"{stem.name}{x}").read_text(encoding="utf-8"))
+    segments = read(".cy-palabras.json")["segments"]
+    seg_conf = [(float(g["s"]), float(g["e"]), math.exp(g["lp"]) if "lp" in g else None) for g in segments]
+    rows, conf = [], {}
+    for r in read(".es-lineas.json")["lines"]:
+        c = next((c for s, e, c in seg_conf if s - EPS <= r["s"] <= e + EPS), None)
+        if not _welsh_ok(c, r["cy"]):
+            continue
+        rows.append(r)
+        if c is not None:
+            conf[r["s"]] = round(c, 2)  # keyed on the row's own start: decide looks it up exactly
+    out = decide(rows, conf)
+    for g, (s, e, c) in zip(segments, seg_conf):
+        if not g.get("words") and g["text"] and _welsh_ok(c, g["text"]):
+            out.append(Line(s, g["text"], "cy", "cy", round(c, 2) if c is not None else None, e))
+    return out
+
+
 def load_sources(stem: Path, video_id: str, letras: Path = LETRAS) -> list[Line]:
     """All timed lines of one backed-up video (its path without suffix), sorted by time."""
     out: list[Line] = []
+    mezcla = has_mezcla(stem)
     vtts = _vtts(stem)
     try:
         info = json.loads(stem.with_name(f"{stem.name}.info.json").read_text(encoding="utf-8"))
@@ -71,7 +120,15 @@ def load_sources(stem: Path, video_id: str, letras: Path = LETRAS) -> list[Line]
     # language, and Spanish Whisper's text for the Spanish ones. There the Bangor line is left out below.
     spanish_segments: set[float] = set()
     es = stem.with_name(f"{stem.name}.whisper-es.json")
-    if es.exists():
+    if mezcla:
+        # Mixed-language pass: turbo's long-form Spanish, then the decided Bangor lines; the other sources'
+        # lines stay only where no decided line covers OVERLAP of them (#112's pass is superseded).
+        turbo = json.loads(stem.with_name(f"{stem.name}.es-turbo.json").read_text(encoding="utf-8"))
+        out += [Line(float(t), x, "whisper_es", "es", None, float(e))
+                for t, e, x in clean_whisper_timed([[g["s"], g["e"], g["text"]] for g in turbo.get("segments", [])])]
+        decided = _decided(stem)
+        out = [l for l in out if not _overlapped(l, decided)] + decided
+    elif es.exists():
         for seg in json.loads(es.read_text(encoding="utf-8"))["segments"]:
             if "text" in seg:
                 spanish_segments.add(round(float(seg["s"]), 2))
@@ -79,7 +136,7 @@ def load_sources(stem: Path, video_id: str, letras: Path = LETRAS) -> list[Line]
                 if text and not STOCK.search(text) and not LOOP.search(text):
                     out.append(Line(float(seg["s"]), text, "whisper_es", "es", None,
                                     float(seg["e"]) if "e" in seg else None))
-    if WELSH_SOURCE:
+    if WELSH_SOURCE and not mezcla:
         cy = stem.with_name(f"{stem.name}.{WELSH_SOURCE}.json")
         if cy.exists():
             # Next to Spanish speech the Welsh model's line is that speech again (in Spanish, Welsh spelling or a

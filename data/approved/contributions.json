@@ -7740,6 +7740,31 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "e3777f3f-f6fc-48ac-a87b-1bb85d71396d",
+    "type": "video_text",
+    "festival": "chubut",
+    "year": 2018,
+    "item_id": null,
+    "payload": {
+      "base": "2026-11-24T07:46:26Z",
+      "cambios": [
+        {
+          "antes": "Muchas gracias, Teorfen Baur. Felicitaciones, Shonka Bergeatay y Daigroup.",
+          "idioma": "cy",
+          "t": 305.9,
+          "texto": "Muchas gracias, Diolch yn fawr. Felicitaciones, Llongyfarchiadau I'r ddau grŵp."
+        }
+      ],
+      "video": {
+        "id": "utHSvsjwvwo",
+        "title": "Eisteddfod del Chubut 2018 - En Vivo 3, día sábado"
+      }
+    },
+    "created_at": "2026-11-24T10:37:53.654929+00:00",
+    "reviewed_at": "2026-11-24T10:37:53.654929+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "e3bc7b97-b30a-40c5-84f0-6cabefe2206a",
     "type": "tag",
     "festival": "chubut",

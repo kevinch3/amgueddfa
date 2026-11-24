@@ -80,8 +80,16 @@ def test_no_duplicate_with_ends():
     assert r == {"over": False, "short": True, "same": True, "outside": True}
 
 
-def test_no_duplicate_reconstruccion_uses_next_start():
-    doc = {"seg": [[1, "a"], [2, "b"], [9, "c"]], "fuentes": [["cy"], ["yt_es"], ["cy"]]}
+def _recon_dup(fu1, fu2, x1="buenas tardes a todos", x2="buenas tardes a todos"):
+    doc = {"seg": [[1, x1], [2, x2]], "fuentes": [fu1, fu2]}
     rows = casos.lines_from_reconstruccion(doc)
-    assert [x.e for x in rows] == [2, 9, 10.0]
-    assert dict(casos.check([{"kind": "no_duplicate", "name": "n", "from": 0, "to": 20}], rows)) == {"n": True}
+    return dict(casos.check([{"kind": "no_duplicate", "name": "n", "from": 0, "to": 20}], rows))["n"]
+
+
+def test_no_duplicate_reconstruccion_compares_words():
+    assert _recon_dup(["cy"], ["whisper_es"]) is False
+    assert _recon_dup(["cy"], ["whisper_es"], x2="Buenas tardes, a todos!") is False
+    assert _recon_dup(["cy"], ["whisper_es"], x2="diolch yn fawr i bawb") is True
+    assert _recon_dup(["cy"], ["cy"]) is True
+    assert _recon_dup(["cy"], ["whisper_es"], "buenas tardes", "buenas tardes") is True  # under 3 words
+    assert _recon_dup(["cy"], ["whisper_es"], "buenas tardes a todos ustedes y diolch", "buenas tardes a todos") is False

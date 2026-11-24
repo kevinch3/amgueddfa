@@ -12,7 +12,8 @@ The cases file is a list of objects, kept outside the repo when its words are pr
       no line from `src` starting in [from, to) matches the regex (on folded text);
   {"kind": "no_duplicate", "name", "from", "to"}
       no two lines starting in [from, to) from different sources overlap by more than 0.5 s.
-A line lasts to its end, or to the next line's start (the player's way); the last one 1 s.
+      A reconstruction has no line ends, so there two lines of 3+ words from different fuentes are
+      duplicates when 60% of the shorter one's words (a multiset) are in the other.
 By default the lines are load_sources's; with --reconstruccion, those of data/reconstruccion/<id>.json.
 """
 from __future__ import annotations
@@ -22,6 +23,7 @@ import json
 import re
 import sys
 import unicodedata
+from collections import Counter
 from pathlib import Path
 from typing import NamedTuple
 
@@ -36,7 +38,7 @@ class Row(NamedTuple):
     text: str  # folded
     srcs: frozenset
     lang: str | None
-    e: float = 0.0
+    e: float | None = None  # end; None for a reconstruction's lines (they have none)
 
 
 def fold(s: str) -> str:
@@ -46,6 +48,8 @@ def fold(s: str) -> str:
 
 
 OVERLAP_MIN = 0.5  # s
+SAME_WORDS = 0.6  # share of the shorter line's words found in the other one: a repeated line
+MIN_WORDS = 3
 
 
 def _ends(ts: list[float], es: list[float | None]) -> list[float]:
@@ -61,8 +65,7 @@ def lines_from_sources(lines: list[Line]) -> list[Row]:
 def lines_from_reconstruccion(doc: dict) -> list[Row]:
     langs = line_languages(doc) or [None] * len(doc["seg"])
     fu = doc.get("fuentes") or [[]] * len(doc["seg"])
-    ends = _ends([t for t, _ in doc["seg"]], [None] * len(doc["seg"]))
-    return [Row(t, fold(x), frozenset(f), lang, e) for (t, x), f, lang, e in zip(doc["seg"], fu, langs, ends)]
+    return [Row(t, fold(x), frozenset(f), lang) for (t, x), f, lang in zip(doc["seg"], fu, langs)]
 
 
 def load_lines(video_id: str, reconstruccion: bool) -> list[Row]:
@@ -80,6 +83,16 @@ def _has(row: Row, case: dict) -> bool:
     return all(fold(w) in row.text for w in case["words"])
 
 
+def _duplicates(x: Row, y: Row) -> bool:
+    if x.srcs == y.srcs:
+        return False
+    if x.e is not None and y.e is not None:
+        return min(x.e, y.e) - max(x.t, y.t) > OVERLAP_MIN
+    a, b = sorted((Counter(x.text.split()), Counter(y.text.split())), key=lambda c: sum(c.values()))
+    n = sum(a.values())
+    return n >= MIN_WORDS and sum((a & b).values()) >= SAME_WORDS * n
+
+
 def check_case(case: dict, rows: list[Row]) -> bool:
     kind = case["kind"]
     if kind == "present":
@@ -93,8 +106,7 @@ def check_case(case: dict, rows: list[Row]) -> bool:
         pat = re.compile(case["pattern"])
         return not any(case["src"] in r.srcs and pat.search(r.text) for r in win)
     if kind == "no_duplicate":
-        return not any(x.srcs != y.srcs and min(x.e, y.e) - max(x.t, y.t) > OVERLAP_MIN
-                       for i, x in enumerate(win) for y in win[i + 1:])
+        return not any(_duplicates(x, y) for i, x in enumerate(win) for y in win[i + 1:])
     raise ValueError(f"unknown case kind: {kind}")
 
 

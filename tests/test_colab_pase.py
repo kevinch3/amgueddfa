@@ -1,3 +1,4 @@
+import pytest
 from pathlib import Path
 
 from scripts.colab import make_notebook
@@ -45,3 +46,11 @@ def test_write_is_atomic_and_done_needs_all_three(tmp_path):
 def test_notebook_is_built_from_the_module():
     nb = Path(make_notebook.__file__).with_name("pase_mezcla.ipynb").read_text(encoding="utf-8")
     assert nb == make_notebook.build(), "run python3 scripts/colab/make_notebook.py"
+
+
+def test_match_words_by_time_not_position():
+    from scripts.colab.pase_mezcla import match_words
+    a = [w(0, 1, "extra"), w(1, 2, "Diolch"), w(2, 3, "fawr.")]
+    b = [w(1.1, 2, "diolch"), w(2.0, 3, "fawr")]
+    assert match_words(a, b) == [0.0, pytest.approx(0.1)]
+    assert match_words(a, [w(5, 6, "diolch")]) == []

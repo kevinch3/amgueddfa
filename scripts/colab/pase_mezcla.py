@@ -177,32 +177,67 @@ def side(r, clear=0.10):
     return "cy" if gap >= clear or not r["es_words"] else "es" if gap <= -clear else "mixed"
 
 
+def _fold(w):
+    import unicodedata
+    w = unicodedata.normalize("NFD", w.lower())
+    return "".join(c for c in w if c.isalnum())
+
+
+def match_words(a, b, tol=1.0):
+    """Words [[s, e, w, p], ...] of two runs, matched by time: each word of b takes an unused word of a with the
+    same folded text starting within tol s. Returns the start-time shifts of the matched pairs."""
+    by = {}
+    for i, w in enumerate(a):
+        by.setdefault(_fold(w[2]), []).append(i)
+    used, shifts = set(), []
+    for w in b:
+        best = min((i for i in by.get(_fold(w[2]), []) if i not in used and abs(a[i][0] - w[0]) <= tol),
+                   key=lambda i: abs(a[i][0] - w[0]), default=None)
+        if best is not None:
+            used.add(best)
+            shifts.append(abs(a[best][0] - w[0]))
+    return sorted(shifts)
+
+
+def timeline(lines, step=0.5):
+    """Which side wins at each step of time, from es-lines rows: {t: "cy" | "es" | "mixed"}."""
+    out = {}
+    for r in lines:
+        t = round(r["s"] / step) * step
+        while t <= r["e"]:
+            out[t] = side(r)
+            t = round((t + step) / step) * step
+    return out
+
+
 def compare(out, ref, vid):
-    """Compare this runtime's files for vid with another machine's (e.g. KPC's pilot); returns printable lines."""
+    """Compare this runtime's files for vid with another machine's (e.g. KPC's pilot), matching by time, not by
+    position (one extra segment early on would shift every later pair). Returns printable lines."""
     load = lambda d, k: json.loads((Path(d) / f"{vid}.{k}.json").read_text(encoding="utf-8"))
+    words = lambda segs: [w for s in segs for w in s["words"]]
     rep = []
-    a, b = load(out, "words")["segments"], load(ref, "words")["segments"]
-    same = sum(x["text"] == y["text"] for x, y in zip(a, b))
-    wa = [w for s in a for w in s["words"]]
-    wb = [w for s in b for w in s["words"]]
-    shift = sorted(abs(x[0] - y[0]) for x, y in zip(wa, wb) if x[2] == y[2])
-    rep.append(f"Bangor segments: {len(a)} here, {len(b)} there; {same} with the same text")
-    if shift:
-        rep.append(f"Bangor words: {len(wa)} here, {len(wb)} there; same word at the same place: {len(shift)}, "
-                   f"start time differs by median {shift[len(shift) // 2]:.2f} s, max {shift[-1]:.2f} s")
+    for kind, label in (("words", "Bangor"), ("es-words", "turbo long-form")):
+        a, b = words(load(out, kind)["segments"]), words(load(ref, kind)["segments"])
+        sh = match_words(a, b)
+        med = f", start shift median {sh[len(sh) // 2]:.2f} s, 90% within {sh[int(len(sh) * 0.9)]:.2f} s" if sh else ""
+        rep.append(f"{label} words: {len(a)} here, {len(b)} there; {len(sh)} of there's ({len(sh) / max(len(b), 1):.0%}) "
+                   f"found here, same word within 1 s{med}")
     la, lb = load(out, "es-lines")["lines"], load(ref, "es-lines")["lines"]
-    pairs = [(x, y) for x, y in zip(la, lb) if (x["s"], x["e"], x["cy"]) == (y["s"], y["e"], y["cy"])]
-    agree = sum(side(x) == side(y) for x, y in pairs)
-    rep.append(f"lines: {len(la)} here, {len(lb)} there; {len(pairs)} identical Bangor lines; "
-               f"same winner (cy / es / mixed) on {agree} of them; same turbo text on "
-               f"{sum(x['es'] == y['es'] for x, y in pairs)}")
-    for x, y in pairs:
-        if side(x) != side(y):
-            rep.append(f"  differs at {x['s']:.1f} s: here {side(x)} ({x['cy_p']} vs {x['es_p']}), "
-                       f"there {side(y)} ({y['cy_p']} vs {y['es_p']})")
-    ea, eb = load(out, "es-words")["segments"], load(ref, "es-words")["segments"]
-    rep.append(f"turbo long-form: {len(ea)} segments here, {len(eb)} there; "
-               f"{sum(x['text'] == y['text'] for x, y in zip(ea, eb))} with the same text")
+    ta, tb = timeline(la), timeline(lb)
+    both = [t for t in tb if t in ta]
+    agree = [t for t in both if ta[t] == tb[t]]
+    rep.append(f"language per half second (cy / es / mixed): {len(agree)} of {len(both)} "
+               f"({len(agree) / max(len(both), 1):.0%}) agree where both runs have a Bangor line")
+    runs, cur = [], None
+    for t in sorted(both):
+        if ta[t] != tb[t]:
+            if cur and t - cur[1] <= 1.0:
+                cur[1] = t
+            else:
+                cur = [t, t, ta[t], tb[t]]
+                runs.append(cur)
+    for s, e, x, y in runs:
+        rep.append(f"  {int(s) // 60}:{s % 60:04.1f}-{int(e) // 60}:{e % 60:04.1f}: here {x}, there {y}")
     return rep
 
 

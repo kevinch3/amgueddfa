@@ -54,6 +54,14 @@ def test_load_sources_reads_youtube_whisper_and_lyrics(tmp_path):
     assert [l.text for l in lines if l.src == "letra"] == ["Verde campo de la sierra", "Llueve mucho sobre el valle"]
 
 
+def test_spanish_lines_carry_their_end(tmp_path):
+    stem, letras = _fixture(tmp_path)
+    lines = load_sources(stem, "vid", letras)
+    assert [l.e for l in lines if l.src == "yt_es" and l.t == 1.0] == [3.0]
+    assert [(l.t, l.e) for l in lines if l.src == "whisper_es"] == [(30.0 + 3 * i, 32.0 + 3 * i) for i in range(8)]
+    assert all(l.e is None for l in lines if l.src == "letra")
+
+
 def test_welsh_lines_come_from_the_bangor_file(tmp_path):
     stem, letras = _fixture(tmp_path, cy=True)
     assert sources.WELSH_SOURCE == "cy-techiaith"  # chosen 2026-11-20 after the A/B review

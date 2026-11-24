@@ -4,7 +4,7 @@ import time
 
 import pytest
 
-from scripts.export_video_transcripts import export, parse_vtt
+from scripts.export_video_transcripts import export, parse_vtt, parse_vtt_timed
 
 YT_AUTO = """WEBVTT
 Kind: captions
@@ -26,6 +26,11 @@ comienza<00:00:04.000><c> la</c><00:00:04.200><c> competencia</c>
 
 def test_parse_vtt_drops_tags_and_repeated_lines():
     assert parse_vtt(YT_AUTO) == [[1.4, "buenas noches a todos"], [3.6, "comienza la competencia"]]
+
+
+def test_parse_vtt_timed_keeps_cue_end():
+    # a line repeated in rolling cues keeps the end of the cue where it first appears
+    assert parse_vtt_timed(YT_AUTO) == [[1.4, 3.6, "buenas noches a todos"], [3.6, 6.0, "comienza la competencia"]]
 
 
 WHISPER_SEGS = [[2.0 + 4 * i, 5.0 + 4 * i, "Hyd fedd hi gâr yn gywir ei chalon"] for i in range(8)]

@@ -184,7 +184,7 @@ def fix_terms(text: str) -> str:
     return _TERM.sub(one, text)
 
 
-TS = re.compile(r"(?:(\d+):)?(\d{1,2}):(\d{2})[.,](\d{3})\s+-->")
+TS = re.compile(r"(?:(\d+):)?(\d{1,2}):(\d{2})[.,](\d{3})\s+-->(?:\s*(?:(\d+):)?(\d{1,2}):(\d{2})[.,](\d{3}))?")
 TAG = re.compile(r"<[^>]+>")
 
 
@@ -192,29 +192,35 @@ def seconds(h: str | None, m: str, s: str, ms: str) -> float:
     return int(h or 0) * 3600 + int(m) * 60 + int(s) + int(ms) / 1000
 
 
-def parse_vtt(text: str) -> list[list]:
-    """Cues as [[start, line], ...]: tags stripped, each line once.
+def parse_vtt_timed(text: str) -> list[list]:
+    """Cues as [[start, end, line], ...]: tags stripped, each line once.
 
     YouTube's automatic captions repeat the previous line in every cue (rolling
     two-line display) and carry per-word timing tags; a line is kept the first
-    time it appears, with the start of the cue it first appears in.
+    time it appears, with the start and end of the cue it first appears in.
     """
     out: list[list] = []
     recent: list[str] = []
-    start = None
+    start = end = None
     for raw in text.replace("\r", "").split("\n"):
         if "-->" in raw:
             m = TS.search(raw)
-            start = round(seconds(*m.groups()), 1) if m else None
+            start = round(seconds(*m.groups()[:4]), 1) if m else None
+            end = round(seconds(*m.groups()[4:]), 1) if m and m.group(6) else start
             continue
         if start is None:
             continue  # header (WEBVTT, Kind, Language) or a cue id
         line = re.sub(r"\s+", " ", TAG.sub("", raw)).strip()
         if not line or line in recent:
             continue
-        out.append([start, line])
+        out.append([start, end, line])
         recent = (recent + [line])[-2:]  # the rolling display repeats the last two lines
     return out
+
+
+def parse_vtt(text: str) -> list[list]:
+    """Cues as [[start, line], ...]: parse_vtt_timed without the end."""
+    return [[s, line] for s, _, line in parse_vtt_timed(text)]
 
 
 def pick(stem: Path) -> dict | None:
@@ -243,8 +249,8 @@ def pick(stem: Path) -> dict | None:
     return None
 
 
-def clean_whisper(segments: list) -> list:
-    """Whisper's [start, end, text] segments worth publishing, as [start, text]; [] when too little is left."""
+def clean_whisper_timed(segments: list) -> list:
+    """Whisper's [start, end, text] segments worth publishing, as [start, end, text]; [] when too little is left."""
     out = []
     for start, end, text in segments:
         text = text.strip()
@@ -253,10 +259,15 @@ def clean_whisper(segments: list) -> list:
             continue
         if end - start >= 25 and words / (end - start) < 0.5:
             continue
-        out.append([round(float(start), 1), text])
-    if len(out) < MIN_LINES or sum(len(t.split()) for _, t in out) < MIN_WORDS:
+        out.append([round(float(start), 1), round(float(end), 1), text])
+    if len(out) < MIN_LINES or sum(len(t.split()) for _, _, t in out) < MIN_WORDS:
         return []
     return out
+
+
+def clean_whisper(segments: list) -> list:
+    """Whisper's [start, end, text] segments worth publishing, as [start, text]; [] when too little is left."""
+    return [[s, t] for s, _, t in clean_whisper_timed(segments)]
 
 
 def glob_escape(name: str) -> str:

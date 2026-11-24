@@ -13,7 +13,7 @@ from pathlib import Path
 from typing import NamedTuple
 
 from scripts.align_lyrics import LETRAS, align, parse_letra, spans_for
-from scripts.export_video_transcripts import LOOP, MARKER, STOCK, clean_whisper, glob_escape, is_english, line_language, parse_vtt
+from scripts.export_video_transcripts import LOOP, MARKER, STOCK, clean_whisper_timed, glob_escape, is_english, line_language, parse_vtt_timed
 
 # The Welsh model, as the suffix of its file next to the video (<stem>.<WELSH_SOURCE>.json,
 # segments [{"s": start, "text": ...}]). Bangor University's techiaith/whisper-large-ft-cy-en,
@@ -39,6 +39,7 @@ class Line(NamedTuple):
     src: str
     lang: str
     conf: float | None = None  # the model's own confidence (0-1), Welsh lines only
+    e: float | None = None  # end of the cue or segment (Spanish sources), when known
 
 
 def _vtts(stem: Path) -> dict[str, Path]:
@@ -57,14 +58,15 @@ def load_sources(stem: Path, video_id: str, letras: Path = LETRAS) -> list[Line]
     langs = {"es"} | ({"cy"} if WELSH_SOURCE else set())
     for k in (info.get("subtitles") or {}):
         if k != "live_chat" and k in vtts and k.split("-")[0] in langs:
-            out += [Line(float(t), x, "subida", k.split("-")[0]) for t, x in parse_vtt(vtts[k].read_text(encoding="utf-8"))]
+            out += [Line(float(t), x, "subida", k.split("-")[0], None, float(e))
+                    for t, e, x in parse_vtt_timed(vtts[k].read_text(encoding="utf-8"))]
     if "es-orig" in vtts:
-        out += [Line(float(t), x, "yt_es", "es") for t, x in parse_vtt(vtts["es-orig"].read_text(encoding="utf-8"))]
+        out += [Line(float(t), x, "yt_es", "es", None, float(e)) for t, e, x in parse_vtt_timed(vtts["es-orig"].read_text(encoding="utf-8"))]
     w = stem.with_name(f"{stem.name}.whisper.json")
     if w.exists():
         d = json.loads(w.read_text(encoding="utf-8"))
         if d.get("language") == "es":
-            out += [Line(float(t), x, "whisper_es", "es") for t, x in clean_whisper(d.get("segments", []))]
+            out += [Line(float(t), x, "whisper_es", "es", None, float(e)) for t, e, x in clean_whisper_timed(d.get("segments", []))]
     # The Spanish pass (#112, KPC run_es.py): for videos Whisper took for Welsh, every Bangor segment's
     # language, and Spanish Whisper's text for the Spanish ones. There the Bangor line is left out below.
     spanish_segments: set[float] = set()
@@ -75,7 +77,8 @@ def load_sources(stem: Path, video_id: str, letras: Path = LETRAS) -> list[Line]
                 spanish_segments.add(round(float(seg["s"]), 2))
                 text = seg["text"].strip()
                 if text and not STOCK.search(text) and not LOOP.search(text):
-                    out.append(Line(float(seg["s"]), text, "whisper_es", "es"))
+                    out.append(Line(float(seg["s"]), text, "whisper_es", "es", None,
+                                    float(seg["e"]) if "e" in seg else None))
     if WELSH_SOURCE:
         cy = stem.with_name(f"{stem.name}.{WELSH_SOURCE}.json")
         if cy.exists():

@@ -227,3 +227,35 @@ def test_remove_deletes_the_kept_versions_too(tmp_path):
     assert cmd_remove(root, "AAAAAAAAAAA", "test") == 0
     assert list((root / "versiones/C/2025").glob("a_AAAAAAAAAAA.*")) == []
     assert (root / "versiones/C/2025/b_BBBBBBBBBBB.cy-techiaith.2026-11-01T0000.json").exists()
+
+
+MEZCLA_FILES = {"AAAAAAAAAAA.words.json": ".cy-palabras.json",
+                "AAAAAAAAAAA.es-lines.json": ".es-lineas.json",
+                "AAAAAAAAAAA.es-words.json": ".es-turbo.json"}
+
+
+def test_import_mezcla_copies_all_three_and_keeps_earlier(tmp_path, capsys):
+    from scripts.backup.videos import cmd_import_mezcla
+    root, src = _one_video(tmp_path)
+    for name in MEZCLA_FILES:
+        (src / name).write_text('{"t": "uno"}', encoding="utf-8")
+    assert cmd_import_mezcla(root, src) == 0
+    assert "imported 1 " in capsys.readouterr().out
+    folder = root / "videos/C/2025"
+    for suffix in MEZCLA_FILES.values():
+        assert (folder / f"a_AAAAAAAAAAA{suffix}").read_text() == '{"t": "uno"}'
+    for name in MEZCLA_FILES:
+        (src / name).write_text('{"t": "dos"}', encoding="utf-8")
+    assert cmd_import_mezcla(root, src) == 0
+    for suffix in MEZCLA_FILES.values():
+        assert (folder / f"a_AAAAAAAAAAA{suffix}").read_text() == '{"t": "dos"}'
+    assert len(list((root / "versiones/C/2025").glob("*.json"))) == 3
+
+
+def test_import_mezcla_skips_incomplete_ids(tmp_path, capsys):
+    from scripts.backup.videos import cmd_import_mezcla
+    root, src = _one_video(tmp_path)
+    (src / "AAAAAAAAAAA.words.json").write_text("{}", encoding="utf-8")
+    assert cmd_import_mezcla(root, src) == 0
+    assert "imported 0 " in capsys.readouterr().out
+    assert not list((root / "videos/C/2025").glob("*.cy-palabras.json"))

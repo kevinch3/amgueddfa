@@ -54,6 +54,14 @@ def test_load_sources_reads_youtube_whisper_and_lyrics(tmp_path):
     assert [l.text for l in lines if l.src == "letra"] == ["Verde campo de la sierra", "Llueve mucho sobre el valle"]
 
 
+def test_spanish_lines_carry_their_end(tmp_path):
+    stem, letras = _fixture(tmp_path)
+    lines = load_sources(stem, "vid", letras)
+    assert [l.e for l in lines if l.src == "yt_es" and l.t == 1.0] == [3.0]
+    assert [(l.t, l.e) for l in lines if l.src == "whisper_es"] == [(30.0 + 3 * i, 32.0 + 3 * i) for i in range(8)]
+    assert all(l.e is None for l in lines if l.src == "letra")
+
+
 def test_welsh_lines_come_from_the_bangor_file(tmp_path):
     stem, letras = _fixture(tmp_path, cy=True)
     assert sources.WELSH_SOURCE == "cy-techiaith"  # chosen 2026-11-20 after the A/B review
@@ -202,3 +210,214 @@ def test_welsh_that_spanish_whisper_wrote_gives_way_to_bangor(tmp_path):
     lines = load_sources(stem, "vid", letras)
     assert [l.t for l in lines if l.src == "cy"] == [60.4]
     assert [l.t for l in lines if l.src == "whisper_es" and l.t > 60] == [150.0]
+
+
+# The mixed-language pass (design 2026-11-24-gales-castellano-mezclados): three files beside the video.
+TURBO_FILLER = [{"s": 1000.0 + 3 * i, "e": 1002.0 + 3 * i, "text": "buenas tardes a todos los presentes hoy", "lp": -0.2,
+                 "words": []} for i in range(8)]
+
+
+def _words(s, text, step=0.5, p=0.9):
+    return [[round(s + step * i, 2), round(s + step * (i + 1), 2), w, p] for i, w in enumerate(text.split())]
+
+
+def _row(s, cy, es="", cy_p=0.9, es_p=0.3):
+    cw, ew = _words(s, cy, p=cy_p), _words(s, es, p=es_p) if es else []
+    return {"s": cw[0][0], "e": cw[-1][1], "cy": cy, "cy_p": cy_p, "cy_words": cw, "es": es, "es_p": es_p, "es_words": ew}
+
+
+def _mezcla_fixture(tmp_path, segments, rows, turbo=(), parts=("cy-palabras", "es-lineas", "es-turbo")):
+    """The base fixture (yt_es at 1, 10, 20 s; whisper_es 30-51 s) plus the mixed pass's files, no lyric spans."""
+    stem, letras = _fixture(tmp_path)
+    (letras / "videos.json").write_text("{}", encoding="utf-8")
+    docs = {"cy-palabras": {"segments": segments}, "es-lineas": {"lines": rows},
+            "es-turbo": {"language": "es", "segments": list(turbo) + TURBO_FILLER}}
+    for k in parts:
+        (stem.parent / f"{stem.name}.{k}.json").write_text(json.dumps(docs[k]), encoding="utf-8")
+    return stem, letras
+
+
+def _seg(row, lp=-0.1, text=None):
+    return {"s": row["s"], "e": row["e"], "text": text or row["cy"], "lp": lp, "ns": 0.0, "cr": 1.0, "words": row["cy_words"]}
+
+
+def test_has_mezcla_needs_all_three_files(tmp_path):
+    stem, _ = _mezcla_fixture(tmp_path, [], [], parts=("cy-palabras", "es-lineas"))
+    assert not sources.has_mezcla(stem)
+    (stem.parent / f"{stem.name}.es-turbo.json").write_text("{}", encoding="utf-8")
+    assert sources.has_mezcla(stem)
+    assert (sources.OVERLAP, sources.UNKNOWN_SPAN) == (0.5, 1.0)
+
+
+def test_welsh_kept_next_to_spanish_garble(tmp_path):
+    # 5:21: clear Welsh, and Spanish Whisper's garble of it starting 1 s later, overlapping it for 0.4 of its length.
+    row = _row(321.0, "diolch yn fawr i chi gyd")              # 321.0-324.0
+    garble = {"s": 322.0, "e": 327.0, "text": "dio jen ba ri chi cid", "lp": -0.5, "words": []}  # 2 of its 5 s overlap
+    stem, letras = _mezcla_fixture(tmp_path, [_seg(row)], [row], turbo=[garble])
+    got = [(l.t, l.src, l.text) for l in load_sources(stem, "vid", letras) if 300 < l.t < 400]
+    assert got == [(321.0, "cy", "diolch yn fawr i chi gyd"), (322.0, "whisper_es", "dio jen ba ri chi cid")]
+
+
+def test_spanish_line_before_welsh_segment_is_kept(tmp_path):
+    # 7:34: Spanish speech that ends before Bangor's line starts is other speech.
+    row = _row(454.0, "croeso cynnes i bawb yma")
+    before = {"s": 450.0, "e": 453.9, "text": "y ahora pasamos a la siguiente", "lp": -0.2, "words": []}
+    stem, letras = _mezcla_fixture(tmp_path, [_seg(row)], [row], turbo=[before])
+    got = [(l.t, l.src) for l in load_sources(stem, "vid", letras) if 400 < l.t < 500]
+    assert got == [(450.0, "whisper_es"), (454.0, "cy")]
+
+
+def _vtt_cue(stem, t, e, text):
+    vtt = stem.parent / f"{stem.name}.es-orig.vtt"
+    ts = lambda x: f"00:{int(x // 60):02d}:{x % 60:06.3f}"
+    vtt.write_text(vtt.read_text(encoding="utf-8") + f"\n{ts(t)} --> {ts(e)} align:start position:0%\n{text}\n", encoding="utf-8")
+
+
+def test_duplicate_spanish_line_dropped_by_overlap(tmp_path):
+    # 7:45: YouTube's line of the speech a decided line already has; dropped from half its own length overlapped.
+    row = _row(465.0, "el número siete del programa", es="el número siete del programa", cy_p=0.3, es_p=0.9)  # 465-467.5
+    stem, letras = _mezcla_fixture(tmp_path, [_seg(row)], [row])
+    _vtt_cue(stem, 466.0, 468.5, "el número siete")                 # 1.5 of its 2.5 s overlap: 60 %
+    _vtt_cue(stem, 466.5, 469.0, "siete del programa")              # 1.0 of 2.5 s: 40 %
+    got = [(l.t, l.src) for l in load_sources(stem, "vid", letras) if 400 < l.t < 500]
+    assert got == [(465.0, "whisper_es"), (466.5, "yt_es")]
+
+
+def test_unknown_end_counts_one_second(tmp_path):
+    row = _row(100.0, "diolch yn fawr iawn")  # 100.0-102.0
+    stem, letras = _mezcla_fixture(tmp_path, [_seg(row)], [row])
+    decided = [l for l in load_sources(stem, "vid", letras) if l.src == "cy"]
+    near = sources.Line(101.4, "gracias", "yt_es", "es")  # no end: 101.4-102.4, 0.6 of 1 s overlapped
+    far = sources.Line(101.6, "gracias", "yt_es", "es")   # 101.6-102.6: 0.4
+    assert sources._overlapped(near, decided) and not sources._overlapped(far, decided)
+
+
+def test_incomplete_pass_keeps_todays_rules(tmp_path):
+    stem, letras = _fixture(tmp_path)
+    (letras / "videos.json").write_text("{}", encoding="utf-8")
+    (stem.parent / f"{stem.name}.cy-techiaith.json").write_text(json.dumps({"segments": [
+        {"s": 30.5, "text": "nonsens dros sbaeneg"},          # next to Spanish speech: dropped (SPANISH_NEAR)
+        {"s": 70.0, "text": "Croeso i Eisteddfod y Wladfa"}]}), encoding="utf-8")
+    before = load_sources(stem, "vid", letras)
+    row = _row(70.0, "croeso i eisteddfod y wladfa")
+    (stem.parent / f"{stem.name}.cy-palabras.json").write_text(json.dumps({"segments": [_seg(row)]}), encoding="utf-8")
+    after = load_sources(stem, "vid", letras)
+    assert after == before
+    assert [l.t for l in after if l.src == "cy"] == [70.0]
+
+
+def test_segment_without_words_is_kept(tmp_path):
+    row = _row(200.0, "diolch yn fawr")
+    bare = lambda lp: {"s": 210.0, "e": 213.0, "text": "pnawn da i bawb", "lp": lp, "ns": 0.0, "cr": 1.0, "words": []}
+    stem, letras = _mezcla_fixture(tmp_path, [_seg(row), bare(-0.223)], [row])  # exp(-0.223) = 0.80
+    cy = [(l.t, l.text, l.conf, l.e) for l in load_sources(stem, "vid", letras) if l.src == "cy"]
+    assert cy == [(200.0, "diolch yn fawr", 0.9, 201.5), (210.0, "pnawn da i bawb", 0.8, 213.0)]
+    (stem.parent / f"{stem.name}.cy-palabras.json").write_text(
+        json.dumps({"segments": [_seg(row), bare(-0.693)]}), encoding="utf-8")  # 0.50: below MIN_CY_CONF
+    assert [l.t for l in load_sources(stem, "vid", letras) if l.src == "cy"] == [200.0]
+
+
+def test_low_confidence_and_english_rows_are_dropped(tmp_path):
+    low, eng, ok = (_row(200.0, "diolch am y cofio"), _row(220.0, "wade in the water children oh my god"),
+                    _row(240.0, "croeso i bawb yma heddiw"))
+    stem, letras = _mezcla_fixture(tmp_path, [_seg(low, lp=-0.82), _seg(eng), _seg(ok)], [low, eng, ok])
+    assert [l.t for l in load_sources(stem, "vid", letras) if l.src == "cy"] == [240.0]
+
+
+def test_confidence_follows_the_row_into_its_segment(tmp_path):
+    # Two lines cut from one Bangor segment both take its confidence; the second row starts inside the segment.
+    a, b = _row(300.0, "diolch yn fawr"), _row(302.5, "croeso i bawb")  # 300-301.5, 302.5-304.0
+    seg = {"s": 300.0, "e": 304.0, "text": "diolch yn fawr croeso i bawb", "lp": -0.105, "ns": 0.0, "cr": 1.0,
+           "words": a["cy_words"] + b["cy_words"]}
+    stem, letras = _mezcla_fixture(tmp_path, [seg], [a, b])
+    assert [(l.t, l.conf) for l in load_sources(stem, "vid", letras) if l.src == "cy"] == [(300.0, 0.9), (302.5, 0.9)]
+
+
+def test_whisper_es_pass_ignored_when_mezcla(tmp_path):
+    row = _row(300.0, "diolch yn fawr i chi")
+    stem, letras = _mezcla_fixture(tmp_path, [_seg(row)], [row])
+    (stem.parent / f"{stem.name}.whisper-es.json").write_text(json.dumps({"segments": [
+        {"s": 300.0, "e": 302.5, "es": 0.99, "cy": 0.0, "text": "esto no debe salir"},
+        {"s": 600.0, "e": 602.0, "es": 0.99, "cy": 0.0, "text": "esto tampoco"}]}), encoding="utf-8")
+    lines = load_sources(stem, "vid", letras)
+    assert not any("esto" in l.text for l in lines)
+    assert [l.t for l in lines if l.src == "cy"] == [300.0]
+
+
+def test_welsh_lyric_timed_from_decided_lines(tmp_path):
+    a, b = _row(104.0, "pnawn da i bawb sydd yma"), _row(121.0, "diolch yn fawr am ddod heno")
+    stem, letras = _mezcla_fixture(tmp_path, [_seg(a), _seg(b)], [a, b])
+    (letras / "can.md").write_text("---\ntitulo: Prawf\nidioma: cy\n---\nPnawn da i bawb sydd yma\n\nDiolch yn fawr am ddod heno\n",
+                                   encoding="utf-8")
+    (letras / "videos.json").write_text(json.dumps({"vid": [{"letra": "can", "desde": 100, "hasta": 140}]}), encoding="utf-8")
+    lyr = [(l.t, l.text) for l in load_sources(stem, "vid", letras) if l.src == "letra"]
+    assert lyr == [(104.0, "Pnawn da i bawb sydd yma"), (121.0, "Diolch yn fawr am ddod heno")]
+
+
+def test_uploaded_subtitles_are_never_dropped_by_overlap(tmp_path):
+    # The uploader's subtitles are the most reliable source: a decided line covering one does not remove it.
+    row = _row(100.0, "diolch yn fawr iawn i chi")  # 100.0-103.0
+    stem, letras = _mezcla_fixture(tmp_path, [_seg(row)], [row])
+    (stem.parent / f"{stem.name}.es.vtt").write_text(
+        "WEBVTT\n\n00:01:40.500 --> 00:01:42.500\nmuchas gracias a ustedes\n", encoding="utf-8")
+    (stem.parent / f"{stem.name}.info.json").write_text(json.dumps({"subtitles": {"es": []}}), encoding="utf-8")
+    got = [(l.t, l.src) for l in load_sources(stem, "vid", letras) if 90 < l.t < 110]
+    assert got == [(100.0, "cy"), (100.5, "subida")]
+
+
+def test_row_at_a_segment_boundary_takes_the_later_segment(tmp_path):
+    # Bangor's segments touch (e1 == s2): a row starting at s2 is the second segment's, not the first's.
+    music, speech = _row(400.0, "la la la la"), _row(402.0, "croeso i bawb yma")  # 400-402, 402-404
+    seg1 = {**_seg(music, lp=-0.82), "e": 402.0}                                     # conf 0.44: background
+    seg2 = _seg(speech, lp=-0.105)                                                   # conf 0.90
+    for words in (True, False):  # matched by the row's first word, then by time alone
+        segs = [seg1, seg2] if words else [{**g, "words": [[0, 0, "x", 0]]} for g in (seg1, seg2)]
+        (tmp_path / str(words)).mkdir()
+        stem, letras = _mezcla_fixture(tmp_path / str(words), segs, [music, speech])
+        assert [(l.t, l.conf) for l in load_sources(stem, "vid", letras) if l.src == "cy"] == [(402.0, 0.9)]
+
+
+def test_overlap_counts_the_union_of_decided_lines():
+    # Two decided lines each cover 47 % of a YouTube cue (101-104): together 93 %, so it is the same speech.
+    cue = sources.Line(101.0, "gracias", "yt_es", "es", None, 104.0)
+    decided = [sources.Line(100.0, "diolch", "cy", "cy", 0.9, 102.4), sources.Line(102.6, "yn fawr", "cy", "cy", 0.9, 105.0)]
+    assert sources._overlapped(cue, decided)
+    # overlapping decided lines are not counted twice: 101-102.4 twice is still 47 %
+    assert not sources._overlapped(cue, [decided[0], decided[0]._replace(t=100.5)])
+
+
+def test_first_whisper_pass_gives_way_to_turbo_long_form(tmp_path):
+    # Both are whisper_es: where turbo's long form has the speech, the first pass's line of it is left out.
+    longform = {"s": 30.5, "e": 32.5, "text": "muchas gracias por estar aquí esta tarde", "lp": -0.2, "words": []}
+    stem, letras = _mezcla_fixture(tmp_path, [], [], turbo=[longform])  # first pass: 30-32, 33-35, ...
+    got = [(l.t, l.text) for l in load_sources(stem, "vid", letras) if l.src == "whisper_es" and l.t < 36]
+    assert got == [(30.5, "muchas gracias por estar aquí esta tarde"), (33.0, "muchas gracias a todos por venir hoy")]
+
+
+def test_lines_differing_only_in_confidence_sort(tmp_path):
+    # A row whose segment has no confidence and a bare segment with one, same start and text: sorting whole
+    # tuples compared None with a float.
+    row = _row(500.0, "pnawn da i bawb")
+    seg = {k: v for k, v in _seg(row).items() if k != "lp"}
+    bare = {**_seg(row), "words": []}
+    stem, letras = _mezcla_fixture(tmp_path, [seg, bare], [row])
+    assert [l.conf for l in load_sources(stem, "vid", letras) if l.src == "cy"] in ([None, 0.9], [0.9, None])
+
+
+def test_word_confidence_index_keeps_the_first_segment():
+    w = [1.0, 1.5, "gair", 0.9]
+    segments = [{"words": [w]}, {"words": [list(w)]}, {"words": []}]
+    assert sources._word_conf(segments, [(0, 2, 0.8), (0, 2, 0.4), (2, 3, 0.5)]) == {tuple(w): 0.8}
+
+
+def test_same_start_lines_of_different_sources_reach_the_aligner_in_text_order(tmp_path, monkeypatch):
+    stem, letras = _fixture(tmp_path)
+    _vtt_cue(stem, 100.0, 102.0, "alfa inicial")                     # yt_es
+    (stem.parent / f"{stem.name}.whisper.json").write_text(json.dumps(
+        {"language": "es", "segments": [[100.0, 102.0, "zeta final"]] + WHISPER["segments"]}), encoding="utf-8")
+    (letras / "videos.json").write_text(json.dumps({"vid": [{"letra": "prueba", "desde": 90, "hasta": 110}]}), encoding="utf-8")
+    seen = []
+    monkeypatch.setattr(sources, "align", lambda heard, *a, **k: seen.append(heard) or [])
+    load_sources(stem, "vid", letras)
+    same = [x for t, x in seen[0] if t == 100.0]
+    assert same == sorted(same) and len(same) == 2

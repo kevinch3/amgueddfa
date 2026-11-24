@@ -2,7 +2,7 @@ import pytest
 from pathlib import Path
 
 from scripts.colab import make_notebook
-from scripts.colab.pase_mezcla import done, mean_p, split_lines, write
+from scripts.colab.pase_mezcla import done, mean_p, side, split_lines, write
 
 
 def w(s, e, text, p=0.9):
@@ -54,3 +54,16 @@ def test_match_words_by_time_not_position():
     b = [w(1.1, 2, "diolch"), w(2.0, 3, "fawr")]
     assert match_words(a, b) == [0.0, pytest.approx(0.1)]
     assert match_words(a, [w(5, 6, "diolch")]) == []
+
+
+def test_gpu_name_without_nvidia_smi(monkeypatch):
+    import shutil
+    from scripts.colab import pase_mezcla
+    monkeypatch.setattr(shutil, "which", lambda *_a, **_k: None)
+    assert pase_mezcla.gpu_name() == "unknown"
+
+
+def test_side_counts_a_gap_of_exactly_clear():
+    assert side({"cy_p": 0.912, "es_p": 0.812, "es_words": [w(0, 1, "hola")]}) == "cy"
+    assert side({"cy_p": 0.812, "es_p": 0.912, "es_words": [w(0, 1, "hola")]}) == "es"
+    assert side({"cy_p": 0.85, "es_p": 0.8, "es_words": [w(0, 1, "hola")]}) == "mixed"

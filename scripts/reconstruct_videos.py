@@ -27,7 +27,7 @@ from scripts.reconstruct.checker import check_window
 from scripts.reconstruct.context import video_context
 from scripts.reconstruct.merge import merge, reply_lines, rules_lines
 from scripts.reconstruct.model import MODEL, ModelError, ask as ask_claude
-from scripts.reconstruct.sources import WELSH_SOURCE, load_sources
+from scripts.reconstruct.sources import WELSH_SOURCE, has_mezcla, load_sources
 from scripts.reconstruct.windows import make_windows, needs_model
 
 REPO = Path(__file__).resolve().parent.parent
@@ -44,9 +44,9 @@ def _backup_files(backup: Path) -> dict[str, str]:
         return {r["id"]: r["file"] for r in csv.DictReader(f, delimiter="\t") if r.get("file")}
 
 
-def _fallback(w, fix_text: Callable[[str], str]) -> list:
+def _fallback(w, fix_text: Callable[[str], str], mezcla: bool = False) -> list:
     """Rules lines, with the same spelling fixes the export gives automatic text ("Stedbot" -> "Eisteddfod")."""
-    return [l if "letra" in l.fuentes else l._replace(text=fix_text(l.text)) for l in rules_lines(w)]
+    return [l if "letra" in l.fuentes else l._replace(text=fix_text(l.text)) for l in rules_lines(w, mezcla=mezcla)]
 
 
 def _duration(stem: Path, lines: list) -> float:
@@ -96,6 +96,7 @@ def reconstruct_video(repo: Path, backup: Path, video: dict, ask=ask_claude, rep
     if not in_scope(repo, video, stem):
         return None
     letras = repo / "data" / "letras"
+    mezcla = has_mezcla(stem)
     lines = load_sources(stem, video["id"], letras)
     if not lines:
         return None
@@ -141,7 +142,7 @@ def reconstruct_video(repo: Path, backup: Path, video: dict, ask=ask_claude, rep
             if state["streak"] >= MAX_ERRORS_IN_A_ROW:
                 raise TooManyErrors(str(reply)) from reply
             counts["reglas"] += 1
-            per_window.append(_fallback(w, fix_text))
+            per_window.append(_fallback(w, fix_text, mezcla))
             continue
         if asked_now:
             state["streak"] = 0
@@ -149,7 +150,7 @@ def reconstruct_video(repo: Path, backup: Path, video: dict, ask=ask_claude, rep
         if errors:
             print(f"  {video['id']} {w.t0:g}s: rules ({errors[0]})", file=sys.stderr)
             counts["reglas"] += 1
-            per_window.append(_fallback(w, fix_text))
+            per_window.append(_fallback(w, fix_text, mezcla))
         else:
             counts["modelo"] += 1
             per_window.append(reply_lines(reply))
@@ -161,6 +162,7 @@ def reconstruct_video(repo: Path, backup: Path, video: dict, ask=ask_claude, rep
     spoken = Counter(l.lang for l in lines if l.src != "letra")
     result = {"src": "reconstruida", "lang": spoken.most_common(1)[0][0] if spoken else "es", "modelo": MODEL,
               "seg": [[l.t, l.text] for l in out_lines], "fuentes": [list(l.fuentes) for l in out_lines],
+              **({"mezcla": True} if mezcla else {}),
               **({"letras": letras_info} if letras_info else {}), "ventanas": counts}
     dest = repo / "data" / "reconstruccion" / f"{video['id']}.json"
     if not out_lines:

@@ -72,6 +72,19 @@ def _welsh_ok(conf: float | None, text: str) -> bool:
     return (conf is None or conf >= MIN_CY_CONF) and not is_english(text)
 
 
+def _row_conf(r: dict, segments: list[dict], seg_conf: list[tuple]) -> float | None:
+    """The confidence of the Bangor segment a row was cut from: the one holding its first word, else by time,
+    half-open (segments touch: a row starting at one's end is the next one's)."""
+    first = r["cy_words"][0] if r.get("cy_words") else None
+    for g, (_, _, c) in zip(segments, seg_conf):
+        if first is not None and first in (g.get("words") or []):
+            return c
+    for s, e, c in seg_conf:
+        if s - EPS <= r["s"] < e:
+            return c
+    return next((c for s, e, c in reversed(seg_conf) if s - EPS <= r["s"] <= e + EPS), None)
+
+
 def _decided(stem: Path) -> list[Line]:
     """The Bangor lines of a mixed-language video, each as Welsh or Spanish (design step 2), plus its segments
     without word times as plain Welsh lines; below MIN_CY_CONF or English, left out."""
@@ -81,7 +94,7 @@ def _decided(stem: Path) -> list[Line]:
     seg_conf = [(float(g["s"]), float(g["e"]), math.exp(g["lp"]) if "lp" in g else None) for g in segments]
     rows, conf = [], {}
     for r in read(".es-lineas.json")["lines"]:
-        c = next((c for s, e, c in seg_conf if s - EPS <= r["s"] <= e + EPS), None)
+        c = _row_conf(r, segments, seg_conf)
         if not _welsh_ok(c, r["cy"]):
             continue
         rows.append(r)

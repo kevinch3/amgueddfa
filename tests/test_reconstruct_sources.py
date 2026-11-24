@@ -363,3 +363,15 @@ def test_uploaded_subtitles_are_never_dropped_by_overlap(tmp_path):
     (stem.parent / f"{stem.name}.info.json").write_text(json.dumps({"subtitles": {"es": []}}), encoding="utf-8")
     got = [(l.t, l.src) for l in load_sources(stem, "vid", letras) if 90 < l.t < 110]
     assert got == [(100.0, "cy"), (100.5, "subida")]
+
+
+def test_row_at_a_segment_boundary_takes_the_later_segment(tmp_path):
+    # Bangor's segments touch (e1 == s2): a row starting at s2 is the second segment's, not the first's.
+    music, speech = _row(400.0, "la la la la"), _row(402.0, "croeso i bawb yma")  # 400-402, 402-404
+    seg1 = {**_seg(music, lp=-0.82), "e": 402.0}                                     # conf 0.44: background
+    seg2 = _seg(speech, lp=-0.105)                                                   # conf 0.90
+    for words in (True, False):  # matched by the row's first word, then by time alone
+        segs = [seg1, seg2] if words else [{**g, "words": [[0, 0, "x", 0]]} for g in (seg1, seg2)]
+        (tmp_path / str(words)).mkdir()
+        stem, letras = _mezcla_fixture(tmp_path / str(words), segs, [music, speech])
+        assert [(l.t, l.conf) for l in load_sources(stem, "vid", letras) if l.src == "cy"] == [(402.0, 0.9)]

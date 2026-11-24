@@ -13,6 +13,7 @@ written under a temporary name and then renamed, so a runtime that disconnects l
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -134,6 +135,19 @@ def preload_cuda12():
     return loaded
 
 
+def gpu_name():
+    """The GPU this pass ran on (first line of nvidia-smi), or "unknown"."""
+    if not shutil.which("nvidia-smi"):
+        return "unknown"
+    try:
+        out = subprocess.run(["nvidia-smi", "--query-gpu=name", "--format=csv,noheader"],
+                             capture_output=True, text=True, timeout=30).stdout
+    except (OSError, subprocess.SubprocessError):
+        return "unknown"
+    lines = out.strip().splitlines()
+    return lines[0].strip() if lines and lines[0].strip() else "unknown"
+
+
 def run(audio_dir, out, until=None, compute_type="int8", only=None):
     """Process every audio file in audio_dir (or only the ids in `only`) that isn't done yet."""
     log(f"CUDA 12 libraries preloaded: {preload_cuda12()}")
@@ -147,7 +161,7 @@ def run(audio_dir, out, until=None, compute_type="int8", only=None):
         return
     cy = WhisperModel(CY_MODEL, device="cuda", compute_type=compute_type)
     es = WhisperModel(ES_MODEL, device="cuda", compute_type=compute_type)
-    meta = {"until": until, "compute_type": compute_type}
+    meta = {"until": until, "compute_type": compute_type, "machine": gpu_name()}
     for p in todo:
         vid, t0 = p.stem, time.time()
         audio = load_audio(p, until)

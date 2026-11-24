@@ -121,10 +121,12 @@ python3 scripts/backup/videos.py import-es /tmp/out-es
 
 Where a segment was found Spanish, the reconstruction takes Spanish Whisper's text (`whisper_es`) and leaves the Bangor line out.
 
-**Earlier versions are kept (2026-11-24).** `import-whisper`, `import-cy` and `import-es` never overwrite
+**Earlier versions are kept (2026-11-24).** `import-whisper`, `import-cy`, `import-es` and `import-mezcla` never overwrite
 a different file: the one already there moves to `versiones/` (same folders as `videos/`), its name
 stamped with when it arrived (UTC), e.g. `…_utHSvsjwvwo.cy-techiaith.2026-11-24T0635.json`. An identical
-file is left alone. The reconstruction reads only `videos/`. `remove` deletes a video's kept versions too.
+file is left alone. The reconstruction reads only `videos/`.
+`import-mezcla <src>` does the same for the mixed-language pass (`<id>.words.json`, `.es-lines.json`,
+`.es-words.json`), as `<stem>.cy-palabras.json`, `.es-lineas.json`, `.es-turbo.json`, only for ids with all three. `remove` deletes a video's kept versions too.
 
 Each run checks, cheaply, that every saved video is still on YouTube, so
 `gone_kept` shows up within a month of a video disappearing.

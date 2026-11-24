@@ -469,6 +469,12 @@ def keep_earlier(root: Path, src: Path, dest: Path) -> None:
     shutil.copyfile(src, dest)
 
 
+# What `import-mezcla` leaves beside each video (the mixed-language pass, Colab or KPC); the
+# reconstruction reads these (scripts/reconstruct/sources.py imports this tuple).
+MEZCLA_SUFFIXES = ('.cy-palabras.json', '.es-lineas.json', '.es-turbo.json')
+_MEZCLA_SOURCES = ('.words.json', '.es-lines.json', '.es-words.json')
+
+
 def _import_beside(root: Path, src: Path, suffix: str) -> int:
     """Copy src/<id>.json next to the backed-up video <id> as <stem><suffix>; how many."""
     idx = read_index(root)
@@ -487,6 +493,28 @@ def cmd_import_cy(root: Path, src: Path) -> int:
     """Copy Bangor's Welsh transcriptions (src/<id>.json, KPC out-cy/) next to their videos
     as <stem>.cy-techiaith.json; the reconstruction reads them (WELSH_SOURCE)."""
     print(f'imported {_import_beside(root, src, ".cy-techiaith.json")} Welsh (techiaith) results')
+    return 0
+
+
+def cmd_import_mezcla(root: Path, src: Path) -> int:
+    """Copy the mixed-language pass (src/<id>.words.json, .es-lines.json, .es-words.json) next to
+    each video as <stem>.cy-palabras.json, .es-lineas.json, .es-turbo.json. An id imports only when
+    all three exist: the reconstruction needs them together."""
+    idx = read_index(root)
+    n = 0
+    for words in sorted(src.glob('*.words.json')):
+        vid = words.name[: -len('.words.json')]
+        row = idx.get(vid)
+        if not row or not row.get('file'):
+            continue
+        parts = [src / f'{vid}{s}' for s in _MEZCLA_SOURCES]
+        if not all(p.exists() for p in parts):
+            continue
+        dest = root / 'videos' / row['file']
+        for part, suffix in zip(parts, MEZCLA_SUFFIXES):
+            keep_earlier(root, part, dest.with_suffix(suffix))
+        n += 1
+    print(f'imported {n} mixed-language results')
     return 0
 
 
@@ -547,6 +575,8 @@ def main(argv: list[str] | None = None) -> int:
     c.add_argument('src', type=Path)
     e = sub.add_parser('import-es', help='copy the Spanish pass (#112) next to their videos')
     e.add_argument('src', type=Path)
+    m = sub.add_parser('import-mezcla', help='copy the mixed-language pass next to their videos')
+    m.add_argument('src', type=Path)
     a = ap.parse_args(argv)
     if not a.root.parent.is_dir():
         # An external disk that is not plugged in: never create the tree somewhere else.
@@ -565,6 +595,8 @@ def main(argv: list[str] | None = None) -> int:
         return cmd_import_cy(a.root, a.src)
     if a.cmd == 'import-es':
         return cmd_import_es(a.root, a.src)
+    if a.cmd == 'import-mezcla':
+        return cmd_import_mezcla(a.root, a.src)
     return cmd_index(a.root)
 
 

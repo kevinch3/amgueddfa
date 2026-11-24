@@ -44,6 +44,12 @@ Bangor rows under `MIN_CY_CONF` (0.6) are removed *before* the language is decid
 
 The rows removed as English (6, all on utHSvsjwvwo) were never Spanish.
 
+**Decided (maintainer, 2026-11-24): decide first, then filter.** An unsure row keeps the Spanish turbo heard in it, and never its Welsh. The unsure rows are decided apart, so their Welsh is never joined to a sure line.
+- Turbo's Spanish lines from those rows that reach the output: 50 of 52 on MVjm5Hj4_k4, 45 of 50 on utHSvsjwvwo. The rest are covered by other Spanish lines.
+- The seconds in the table above overstated the loss: most of those rows are long, and turbo heard speech in only part of them.
+
+**Also decided:** CLEAR stays at 0.10, and the full-length passes run on Colab.
+
 ## Same audio, two machines
 
 | Session | Bangor words matched | Turbo words matched | Language per half second agrees |

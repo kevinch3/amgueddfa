@@ -449,3 +449,13 @@ def test_spanish_reading_line_under_decided_welsh_is_no_alternative(tmp_path):
     _vtt_cue(stem, 454.2, 457.0, "que se acerquen todos por favor")
     got = [(l.t, l.src) for l in load_sources(stem, "vid", letras) if 400 < l.t < 500]
     assert got == [(454.0, "cy")]
+
+
+def test_spanish_is_decided_before_the_confidence_floor(tmp_path):
+    # Bangor unsure (0.44) over Spanish speech turbo heard clearly: the Spanish stays; Bangor's unsure Welsh doesn't.
+    es = _row(200.0, "bwenas tardes a todos", es="buenas tardes a todos", cy_p=0.4, es_p=0.9)
+    cy = _row(220.0, "diolch am y cofio")
+    ok = _row(240.0, "croeso i bawb yma heddiw")
+    stem, letras = _mezcla_fixture(tmp_path, [_seg(es, lp=-0.82), _seg(cy, lp=-0.82), _seg(ok)], [es, cy, ok])
+    got = [(l.t, l.src, l.text) for l in load_sources(stem, "vid", letras) if 190 < l.t < 300]
+    assert got == [(200.0, "whisper_es", "buenas tardes a todos"), (240.0, "cy", "croeso i bawb yma heddiw")]

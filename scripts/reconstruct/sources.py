@@ -134,20 +134,23 @@ def _row_conf(r: dict, word_conf: dict[tuple, float | None], seg_conf: list[tupl
 
 def _decided(stem: Path) -> list[Line]:
     """The Bangor lines of a mixed-language video, each as Welsh or Spanish (design step 2), plus its segments
-    without word times as plain Welsh lines; below MIN_CY_CONF or English, left out."""
+    without word times as plain Welsh lines. English rows are left out; a row below MIN_CY_CONF keeps only its
+    Spanish lines."""
     from scripts.reconstruct.mezcla import decide  # mezcla imports Line from here
     read = lambda x: json.loads(stem.with_name(f"{stem.name}{x}").read_text(encoding="utf-8"))
     segments = read(".cy-palabras.json")["segments"]
     seg_conf = [(float(g["s"]), float(g["e"]), math.exp(g["lp"]) if "lp" in g else None) for g in segments]
-    rows, conf, word_conf = [], {}, _word_conf(segments, seg_conf)
+    rows, unsure, conf, word_conf = [], [], {}, _word_conf(segments, seg_conf)
     for r in read(".es-lineas.json")["lines"]:
         c = _row_conf(r, word_conf, seg_conf)
-        if not _welsh_ok(c, r["cy"]):
+        if is_english(r["cy"]):
             continue
-        rows.append(r)
+        (rows if _welsh_ok(c, r["cy"]) else unsure).append(r)
         if c is not None:
             conf[r["s"]] = round(c, 2)  # keyed on the row's own start: decide looks it up exactly
-    out = decide(rows, conf)
+    # The language is decided before the floor (maintainer, 2026-11-24): a row Bangor was unsure of keeps the
+    # Spanish turbo heard in it, never its Welsh. Decided apart, so its Welsh is never joined to a sure line's.
+    out = decide(rows, conf) + [ln for ln in decide(unsure, conf) if ln.src != "cy"]
     for g, (s, e, c) in zip(segments, seg_conf):
         if not g.get("words") and g["text"] and _welsh_ok(c, g["text"]):
             out.append(Line(s, g["text"], "cy", "cy", round(c, 2) if c is not None else None, e))

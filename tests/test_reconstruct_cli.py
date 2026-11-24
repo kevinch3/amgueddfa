@@ -176,3 +176,14 @@ def test_a_video_with_only_a_lyric_span_is_reconstructed(tmp_path):
     res = reconstruct_video(repo, backup, video, ask=echo_model([]), replies=tmp_path / "replies")
     assert res is not None and [x for _, x in res["seg"]] == ["Ave verum corpus", "natum de Maria", "Vere passum", "immolatum"]
     assert all(f == ["letra"] for f in res["fuentes"]) and 10 <= res["seg"][0][0] < res["seg"][-1][0] < 90
+
+
+def test_cli_marks_mezcla(tmp_path, monkeypatch):
+    import scripts.reconstruct_videos as rv
+    repo, backup, video = _setup(tmp_path)
+    monkeypatch.setattr(rv, "has_mezcla", lambda stem: True)
+    res = reconstruct_video(repo, backup, video, ask=echo_model([]), replies=tmp_path / "replies")
+    assert res["mezcla"] is True
+    assert json.loads((repo / "data/reconstruccion/vid.json").read_text())["mezcla"] is True
+    monkeypatch.setattr(rv, "has_mezcla", lambda stem: False)
+    assert "mezcla" not in reconstruct_video(repo, backup, video, ask=echo_model([]), replies=tmp_path / "replies")

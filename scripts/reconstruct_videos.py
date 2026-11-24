@@ -27,7 +27,7 @@ from scripts.reconstruct.checker import check_window
 from scripts.reconstruct.context import video_context
 from scripts.reconstruct.merge import merge, reply_lines, rules_lines
 from scripts.reconstruct.model import MODEL, ModelError, ask as ask_claude
-from scripts.reconstruct.sources import WELSH_SOURCE, load_sources
+from scripts.reconstruct.sources import WELSH_SOURCE, has_mezcla, load_sources
 from scripts.reconstruct.windows import make_windows, needs_model
 
 REPO = Path(__file__).resolve().parent.parent
@@ -161,6 +161,7 @@ def reconstruct_video(repo: Path, backup: Path, video: dict, ask=ask_claude, rep
     spoken = Counter(l.lang for l in lines if l.src != "letra")
     result = {"src": "reconstruida", "lang": spoken.most_common(1)[0][0] if spoken else "es", "modelo": MODEL,
               "seg": [[l.t, l.text] for l in out_lines], "fuentes": [list(l.fuentes) for l in out_lines],
+              **({"mezcla": True} if has_mezcla(stem) else {}),
               **({"letras": letras_info} if letras_info else {}), "ventanas": counts}
     dest = repo / "data" / "reconstruccion" / f"{video['id']}.json"
     if not out_lines:

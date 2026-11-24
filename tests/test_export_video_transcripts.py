@@ -359,6 +359,30 @@ def test_main_language_counts_spanish_the_welsh_model_heard_as_spanish():
     assert main_language(t) == "es"
 
 
+def test_mezcla_bangor_line_is_welsh_even_with_spanish_words():
+    from scripts.export_video_transcripts import line_languages
+    t = {"lang": "es", "seg": [[0, "Así que le vamos a dar el paso a ella para que lea."]], "fuentes": [["cy"]]}
+    assert line_languages(t) == ["es"]
+    assert line_languages({**t, "mezcla": True}) == ["cy"]
+    other = {**t, "mezcla": True, "fuentes": [["yt_es"]]}
+    assert line_languages(other) == ["es"]
+
+
+def test_mezcla_flag_not_published(tmp_path):
+    b = tmp_path / "backup"
+    _video(b, "C/2021/a_AAAAAAAAAAA.mp4", {"es-orig": YT_AUTO})
+    (b / "INDEX.tsv").write_text("id\tfile\n" + f"{'A' * 11}\tC/2021/a_AAAAAAAAAAA.mp4\n", encoding="utf-8")
+    recon = tmp_path / "recon"
+    recon.mkdir()
+    t = {"src": "reconstruida", "lang": "cy", "mezcla": True, "fuentes": [["cy"], ["cy"]],
+         "seg": [[0, "Así que le vamos a dar el paso a ella para que lea el próximo veredicto."], [30, "Diolch yn fawr iawn i chi am ddod heddiw"]]}
+    (recon / f"{'A' * 11}.json").write_text(json.dumps(t), encoding="utf-8")
+    out = tmp_path / "out"
+    export(b, [{"id": "A" * 11, "festival": "chubut"}], out, recon=recon)
+    a = json.loads((out / ("A" * 11 + ".json")).read_text())
+    assert "mezcla" not in a and a["lang"] == "cy" and "idiomas" not in a
+
+
 def test_export_writes_line_languages_only_where_the_source_would_mislead(tmp_path):
     b = tmp_path / "backup"
     _video(b, "C/2021/a_AAAAAAAAAAA.mp4", {"es-orig": YT_AUTO})

@@ -397,7 +397,9 @@ def line_languages(t: dict) -> list[str] | None:
     fu = t.get("fuentes")
     if not fu or len(fu) != len(t["seg"]):
         return None
-    return [("cy" if "cy" in f else "es") if "letra" in f else line_language(x, f) for (_, x), f in zip(t["seg"], fu)]
+    mezcla = t.get("mezcla")  # Welsh and Spanish passes compared in the rebuild: a Bangor line there won as Welsh
+    return [("cy" if "cy" in f else "es") if "letra" in f else "cy" if mezcla and f == ["cy"] else line_language(x, f)
+            for (_, x), f in zip(t["seg"], fu)]
 
 
 def with_term_fixes(t: dict) -> dict:
@@ -534,7 +536,7 @@ def export(backup: Path, videos: list[dict], out: Path = OUT, words: set[str] | 
                 # indices of the lines whose language a correction set (side channel of apply_corrections)
                 explicit = {i: t["idiomas"][i] for i in corregidas}
             t["lang"] = main_language(t)
-            t = with_line_languages(t, explicit)
+            t = {k: v for k, v in with_line_languages(t, explicit).items() if k != "mezcla"}
             p = out / f"{vid}.json"
             write_if_changed(p, t)
             written.add(vid)

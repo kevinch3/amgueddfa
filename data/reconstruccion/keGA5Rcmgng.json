@@ -4,204 +4,196 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
-   11.1,
-   "Wow."
-  ],
-  [
    28.1,
    "El sillón ha sido diseñado y construido"
   ],
   [
-   31.0,
-   "por el artista local Mariano Thomas con"
+   29.78,
+   "por el artista"
   ],
   [
-   34.6,
-   "madera de alerse y acavia de la zona y"
+   31.98,
+   "local, Mariano Tomos, con madera"
   ],
   [
-   39.3,
-   "ha sido gentilmente donado por la"
+   35.02,
+   "de alersi y arbaria de la zona,"
   ],
   [
-   42.0,
-   "municipalidad de Trevelin."
+   38.32,
+   "Y ha sido gentilmente llonado por la Municipalidad de Trevelin. El Gorsedd del Chubut"
   ],
   [
-   45.0,
-   "El Gorsedd delibuts también dona como"
+   46.72,
+   "también donan como presente una cuchara de madera confeccionada por la artesana local."
   ],
   [
-   48.3,
-   "presente una cuchara de madera"
-  ],
-  [
-   51.2,
-   "confeccionada por la artesana local"
-  ],
-  [
-   54.0,
+   54.04,
    "Marilyn Jones."
   ],
   [
-   56.6,
-   "La corona ha sido confeccionado por el"
+   54.94,
+   "La corona ha sido confeccionada por el oferente Fernando Genzi de la ciudad de Puerto Madryn."
   ],
   [
-   59.6,
-   "Fedre Fernando GI de la ciudad de Puerto"
+   63.08,
+   "Puerto Madryn, y"
   ],
   [
-   63.5,
-   "Mar y ha sido donado por la Asociación"
+   64.76,
+   "sido donado por la Asociación GANES de 16 de Ojo."
   ],
   [
-   66.5,
-   "Galesa 16 de octubre y la familia de"
+   67.42,
+   "de octubre y la familia de Oscar Candles Jones."
   ],
   [
-   70.0,
-   "Óscar Clas Jones."
+   72.16,
+   "En primer lugar, celebraremos en idioma galés la ceremonia del sillón bárbico."
   ],
   [
-   73.2,
-   "En primer lugar celebraremos en idioma"
+   80.6,
+   "Y a continuación, en castellano, la ceremonia de la corona."
   ],
   [
-   76.6,
-   "Galés la ceremonia del sillón várdico y"
+   87.62,
+   "Invitamos entonces al escenario a quienes participarán de ambos premios."
   ],
   [
-   81.0,
-   "a continuación en castellano la"
+   95.28,
+   "Cadeirydd Pwyllgor yr Eisteddfod, Caren Evans,"
   ],
   [
-   84.2,
-   "ceremonia de la corona."
+   100.1,
+   "presidenta de la Comisión del Eisteddfod."
   ],
   [
-   86.9,
-   "Invitamos"
+   102.6,
+   "de Trevelin. Cadeirydd"
   ],
   [
-   88.8,
-   "entonces al escenario a quienes"
+   105.28,
+   "Cymdeithas Gymraeg Rhwng Hyfryd, Maria Esther Evans, presidenta de"
   ],
   [
-   91.1,
-   "participarán de ambos premiaciones,"
+   111.06,
+   "Asociación Galesa 16 de octubre."
   ],
   [
-   95.54,
-   "Cadeirydd Pwyllgor yr Eisteddfod, Caren Evans."
+   113.26,
+   "hwnnw."
   ],
   [
-   100.0,
-   "la presidenta de la comisión del"
+   114.24,
+   "Awdurdod - awdurdodau 'r dre, y mae, cadeirydd y cyngor, ac ysgrifennydd diwylliant ac"
   ],
   [
-   104.42,
-   "Cadeirydd Cymdeithas Gymraeg rhwng hyfryd Maria Esther Evans."
+   123.72,
+   "addysg Trevelin."
   ],
   [
-   110.2,
-   "presidenta de la asociación 16 de"
+   126.52,
+   "Autoridades Municipales. Intendente, el señor Héctor Ingram."
   ],
   [
-   113.1,
-   "octubre."
+   131.18,
+   "Presidenta del Honorable Consejo de Liberante, Señora Claudia Capitano."
   ],
   [
-   114.98,
-   "Awdurdodau'r dre, y mae, cadeirydd y cyngor, ac ysgrifennydd diwylliant ac addysg Trevelin."
+   137.56,
+   "de Cultura y Educación de Trevelin, señor Gustavo de Vega."
   ],
   [
-   126.4,
-   "Autoridades municipales, intendente el"
-  ],
-  [
-   129.2,
-   "señor Héctor Ingram, presidenta del"
-  ],
-  [
-   132.4,
-   "honorable Consejo Deliberante, señora"
-  ],
-  [
-   135.0,
-   "Claudia Citano, secretario de cultura y"
-  ],
-  [
-   138.3,
-   "educación de señor Gustavo de Vera."
-  ],
-  [
-   141.3,
-   "Invitamos"
+   141.4,
+   "Byddwn ni hefyd yn gwahodd aelodau Gorsedd y Wladfa i ddod ar y swyddfa."
   ],
   [
    148.8,
    "también alario a los integrantes del"
   ],
   [
-   151.2,
-   "círculo de"
+   153.34,
+   "Bydd Berwyn Evans yn galw 'r beirdd gyda 'i offeryn."
   ],
   [
-   158.2,
-   "señor"
+   158.08,
+   "Bydd senior Berwyn Evans, ar ôl aral a"
   ],
   [
-   160.6,
-   "la llamada a los"
+   161.18,
+   "a los poentes."
   ],
   [
-   166.86,
-   "Lawns, Caethanol Miles Gomez, yn dod â beirdd i'r swyddfa. Los Ninos, Laiana Williams-Joyce, Igaethanol Miles Gomez, Bwsgarana Bwsgwetha Seintiwyr Pwmpigol. Bydd Arturo Lawns yn cyfeirio ar y piano. Y senior Arturo Lawns ac ogion y acwmpaniara yn y piano. Bydd Karen Evans ac Arturo Lawns yn anrhydeddyn beirdd gyda emyn. Y senior Karen"
+   163.26,
+   "Bydd y plant,"
   ],
   [
-   172.4,
-   "Los niños Williams Jones y Caitano Gómez"
+   165.36,
+   "Rhiannon Williams Jones, Kate Annon Miles Gomez yn dod ar beirdd i 'r swyddfa."
   ],
   [
-   177.5,
-   "buscarán a los público."
+   172.62,
+   "niños, Laiana Williams -Jones y Caetano"
   ],
   [
-   196.54,
-   "Evans yw'r seigniwr Arthur Rowlands, hono'r arran ar y toetas Cymru. Bydd Josefina Linares Ferarda yn dod ar gorfod i'r llwyfan, a chofyn Josefina Linares Ferarda droi'r af at coronel Eglada chwaraewr Gweta Ganadora Cenedigion Marc Castellano. Erbyn y diwadd, bydd y plant wedi'u hyfforddi gan Jessica Jones a Carrel Evans yn gwneud dawns y blodau ar y llwyfan. I Asir y Grinald yw ambasador"
+   175.76,
+   "Maes Gomez bwsgaran"
   ],
   [
-   200.0,
-   "a poetas"
+   178.04,
+   "a las puertas entre"
   ],
   [
-   207.3,
-   "la joven jose"
+   179.08,
+   "Gracias."
   ],
   [
-   209.8,
-   "traerá la corona de plata para el poeta"
+   180.44,
+   "Bydd Arturo Lownes yn cyfeirio ar y piano, y senior Arturo Lownes ac ogion"
   ],
   [
-   213.0,
-   "ganadora idioma castellan"
+   186.42,
+   "y acwmpaniara yn y piano."
   ],
   [
-   224.6,
-   "y así Final de ambas ceremonías"
+   189.92,
+   "Bydd Karen Evans ac Arturo Lownes yn anrhydeddu 'r beirdd gyda emyn, y senior"
   ],
   [
-   228.2,
-   "subirán las niñas que bailarán la danza"
+   196.08,
+   "Karen Evans i 'r senior Arturo Lownes honoraran a 'r ysbwyetas Cymru."
+  ],
+  [
+   202.04,
+   "Bydd Josefina Winares Berada yn dod ar y gorfod i 'r llwyfan, a chofio"
+  ],
+  [
+   207.56,
+   "El joven Josefina Linares Ferrarata traerá la corona de plata para el poeta ganadora en el idioma."
+  ],
+  [
+   214.32,
+   "Omar Castellano."
+  ],
+  [
+   215.74,
+   "Erbyn y diwedd, bydd y plant wedi 'u hyfforddi gan Jessica Jones a Carrel"
+  ],
+  [
+   220.64,
+   "Evans, yn gwneud dawns y flodau a 'r llwyfan."
+  ],
+  [
+   224.34,
+   "Y así al final de ambas ceremonias,"
+  ],
+  [
+   228.0,
+   "Subirán las niñas que bailarán la danza de las..."
   ],
   [
    231.2,
-   "de las flores preparados por Jessica"
-  ],
-  [
-   233.7,
-   "Jones y Evans y ellas son Carmela"
+   "de las flores, preparadas por Jessica Jones y Karen Evans y ellas son Carmela"
   ],
   [
    238.0,
@@ -220,316 +212,700 @@
    "Emilia Victoria Jones, Elena"
   ],
   [
-   248.8,
-   "y Handola."
+   247.06,
+   "Elena Goff -Nuñez y Hanna Grandes de Oro."
   ],
   [
-   252.5,
-   "A partir de este momento, la ceremonia"
+   251.42,
+   "A partir de este momento,"
   ],
   [
-   256.1,
-   "continua en idioma."
+   254.82,
+   "La ceremonia continúa en idioma calés."
   ],
   [
-   262.66,
-   "Mae'n bleser ac yn fraint cael cyflwyno gwobr cadair yr Eisteddfod am gerdd Gymraeg a saith ymgais a dderbyniwyd eleni."
+   262.04,
+   "Mae 'n bleser ac yn fraint cael cyflwyno gwobr cadair yr Eisteddfod am gerdd"
   ],
   [
-   273.96,
-   "Gwneillpwyd y gadair hon gyda phrenn o'r ardal gan Creffrwyd lleol, Mariannwg Tomos, ac mae'n ho'dd gan Gyngor y Dre. Cystadleuaeth rhif un, cefn ar y testun etifeddiaeth. Doctor Aneurin Paradog oedd y beirniad eleni, a dyma ddetholiad o'i feirniadaeth."
+   269.04,
+   "Gymraeg, a saith dymgais a dderbyniwyd eleni."
   ],
   [
-   279.3,
-   "mar"
+   273.9,
+   "Gwneillpwyd y gadair hon gyda chyfren o 'r ardal gan ceffyl lleol Mariannwg Thomas,"
   ],
   [
-   299.84,
-   "Gosodlwyd etiferiaeth fel testun eleni, ac mae na un sy'n canu clychau yn meddwl pawb sy'n gyfarwydd â barddoniaeth Gymraeg, o'r ganrif gwaethaf hyd heddiw. Yng nghyd-destun Patagonia, mae na un sy'n car- cario ystyrol bwysig wrth ystyriedd hanes y wladfa, a chynreig Dodd yn y dwfn hwn."
+   280.74,
+   "ac mae 'n ho'dd gan Gyngor y Dre."
   ],
   [
-   322.84,
-   "Roedden ni'n llwyr disgwyl felly derbyn rhai cerddi ond ein trin a thrafod hyn, ond yn y gystadleuaeth hon, y rhai sy'n mynd i ganu am etifeddiaeth mew- mewn ffordd annisgwyl, sy'n cyrraedd y brig."
+   284.58,
+   "Cystadleuaeth rhif un,"
   ],
   [
-   339.84,
-   "Gosodam saith barn ag ystafellion mewn tri dosbarth, yn y trydydd mae seirog ag alaw caeth, mae gan seirog gallu ddefnyddio iaith mewn ffordd flodeuog hyfryd, a hefyd yn llwyddo i'w berfonu mewn ffordd dirieithiol, ond yr hyn sy'n rhwystredigaeth yn y gerdd yw patrwm mudrau ac odli."
+   287.12,
+   "cefn ar y testun etifeddiaeth."
   ],
   [
-   365.84,
-   "Nid oes odl ba- nid oes i'r odl batrwm cyson drwy'r gerdd. Tra fod iaith teyrnog yn gywir yn gyffredinol, mae rhai, efallai, mae gystrawen alwmpaig yn galw am edrych eto arni. Mae o'n ddiddleu dilys a hel atgofion melys, ond mae angen cywiro'r ramadeg ar gystrawen."
+   291.94,
+   "Doctor, yn eiryn paradog oedd y beirniad eleni, a dyma 'r ddetholiad o 'i"
   ],
   [
-   391.84,
-   "Dewn i dir llawer uwch wrth gyrraedd yr ail dosbarth, mae Arianrhod yn dangos ei fod e neu hi yn medru gosod strwythur pendant ei gerdd."
+   297.62,
+   "feirniadaeth .Gosodlwyd"
   ],
   [
-   404.84,
-   "Ffarm sy'n cynnig map wrth i'r gerdd gael ei chreu, mae yn y gerdd hon elfennau lleisio, elfen o ddatgan ac atain, ac mae'r dŵr yn dynn."
+   300.84,
+   "etiferiaeth fel testun eleni, ac mae naews i pan clychau y meddwl pawb sy"
   ],
   [
-   418.84,
-   "Yr hyn sydd yn y pen draw sy'n gwanhau y gerdd yw'r union beth a apeliodd ar y dechrau, sef ei strwythur. Byddai'n well gynnig pe byddai bawb wedi dewis delwedd a datblygu'r delwedd ohono er mwyn cyfleu eu neges. Mae paith lais yn defnyddio strwythur tebyg ond yn cadw at un syniad canolog a'i datblygu."
+   306.46,
+   "'n gyfarwydd â barddoniaeth Gymraeg o 'r ganrif ddiwethaf hyd heddiw."
   ],
   [
-   448.84,
-   "Sef hunaniaeth y bardd, dw i'n gyfrwng dylanwadau rhieni a diwylliant Cymreig ac achentau. Mae llwyddo i blethu hynny gyda chyfeiriadau at orsedd y beirdd ac i greu per gyfoethog, hoffais gerdd gwgarw didafa yn fawr, canol armesur y soned Shakespeareaidd ac mae mudr a codly- codlau yn dim a phersaidd."
+   311.32,
+   "Yng nghyd -destun Patagonia, mae 'n air sy 'n car - cario ystyrol bwysig"
   ],
   [
-   478.84,
-   "Ond nid dim teimlo fel soned arbennol, lle mae pediad y soned yn torri wedi'r wythawd cyntaf, ac nid peth gwael ydy hynny. Un peth efallai i ochel cacro, sef osgoi swnio'n hen ffasiwn neu'n danfonllyd. Cyfleu'r aruchel wedi gyfrwng iaith bob dydd i'w i'w un o gyfriniadau'r grefft."
+   317.7,
+   "wrth ystyried hanes y wladfa, a chymreig Dodd yn y dyffwr hwn."
   ],
   [
-   508.84,
-   "o farddoni yn Gymraeg. Wedyn, fe gyrhaeddwn y dosbarth cyntaf. Mae ar law wedi cystadlu gyda cherdd lle mae'r rhan fwyaf o'r llinellau'n cynganeddu. Mae'n braf cael croesawu cerdd gaeth i'r gystadleuaeth. Mae'n ychwanegu at wead teuluogaeth sy'n sôn am gynheswyr cyfeillach a chymreigrod trwy gyfrwng cyd-yfed"
+   323.66,
+   "Roeddwn i 'n llwyr disgwyl felly derbyn rhai cerddi ond a 'i trin a"
   ],
   [
-   538.72,
-   "paned. Mae delweddau yma hefyd yn llwyddo i gyfleu cynhesrwydd mewn ffordd y gallwn ni weld, heb fod yn ornostalgaidd. Ond mae un ar ôl, sef Iâs. Dyma'r gerdd a ddaeth i gyfeiriad gwahanol, ac fe ddewisiodd y bardd ganu am yr golch be ddes ddafodd a'i holl ganlyniadau yn yr un naw saith dega."
+   328.0,
+   "thrafod hyn,"
   ],
   [
-   568.72,
-   "Mae yna gofio, gobeithio, talu teipgar ac edrych ymlaen, gan hefyd gweud delweddau cymdeithog a chyfeiriadau lenyddol, grwpasol ac effeithiol."
+   329.6,
+   "ond yn y gystadleuaeth hon,"
   ],
   [
-   582.74,
-   "Dewisiodd y bardd ddefnyddio gerdd etifeddiaeth gan Gerall Lloyd Owen, ac fe ymlwyddodd hefyd i droi'r gyfeiriadau tuag at ei ddefnydd a'i grwpas ei hun, wrth glynu geriau Gerall gyda chyd"
+   331.82,
+   "y rhai sy 'n mynd i ganu am etifeddiad mewn ffordd yn annisgwyl sy"
   ],
   [
-   598.54,
-   "destun newydd. Mae'r gerdd mewn dwy ran, gan ddechrau yn mil naw saith chwech, lle cawn drama ag wrthdaro yn y gerdd rhwng y sodlau treuliedig a'r rhes o lwc sy'n gwylio, y merched a'i cadallau gwyn sy'n drech yn y diwedd, a'r hadau o ryddid a rheinwyd yn y rhan gyntaf, wewn cyfres o gwestiynau yn y presennol."
+   337.76,
+   "'n cyrraedd y brig."
   ],
   [
-   628.54,
-   "yn ein hanfai'n atbennill olaf grymus y gân, sy'n diferu a chyfeiriad at gerallt."
+   340.42,
+   "Gosodaw saith fawr ag ystafelloedd mewn tri dosbarth, yn y trydydd mae seirog ag"
   ],
   [
-   637.24,
-   "Cawsom blagur i'w gadw, blagur sy'n ddys, ei bod wedi mynnu fyw. Mae mae hyn yn hoedro'n dyfnder ac ys- ac ystyr y gwedd i'r darllenydd, ac yn cyfrannu at greu gerdd rywiol."
+   348.32,
+   "alaw caeth."
   ],
   [
-   658.54,
-   "a fydd yn sicr o siarad gyda'r gynulleidfa. Mae Ias, felly, yn llwyr deilyngyr gadair eleni. Diolch yn fawr ag ysdadlodd."
+   350.16,
+   "Mae gan seirog y gallu i ddefnyddio iaith mewn ffordd flodeuog hyfryd, a hefyd"
   ],
   [
-   672.54,
-   "A wna i Ias, a Ias yn unig, sefyll ar ei thraed neu ar ei draed, os gwelwch yn dda."
+   356.14,
+   "yn llwyddo i 'w berfonu mewn ffordd dirieithol."
   ],
   [
-   702.54,
-   "Awnâ Iars, a Iars yn unig, sefyll ar ei ddraed neu ar ei thraed os gwelwch yn dda."
+   359.96,
+   "Ond yr hyn sy 'n rhwystredigaeth yn y gerdd yw patrwm mudrau ac odlyg."
   ],
   [
-   732.54,
-   "Am y trydydd tro, awnâ Ias, a Ias yn unig, sefyll ar ei thraed neu ar ei draed, os gwelwch yn dda."
+   365.76,
+   "Nid oes odl ba - nid oes i 'r odl batrwm cyson drwy 'r"
   ],
   [
-   832.54,
-   "Mae'n bleser cyhoeddi mai Sara Borda Green yw Ias, llongyfarchiadau gwresog, gwahoddwn hi i eistedd yn y Gadair."
+   371.78,
+   "gerdd."
   ],
   [
-   848.2,
-   "Sara"
+   372.98,
+   "Tra bod iaith teyrnog yn gywir yn gyffredinol, mae rhai, efallai, mae gystrawen alwmpaig"
   ],
   [
-   892.54,
-   "eithoedd modern. Mae hi hefyd yn athrawes Cymraeg, Saesneg a Sbaeneg fel ail iaith, ac yn gweithio yn Ysgol y Cwm Uchradd ac yn Ysgol y Feli. Cafodd ei gwaith ymchwil gyhoeddi yng Ngwennos Iris a Llymru."
+   380.2,
+   "yn galw am edrych eto arni."
   ],
   [
-   912.04,
-   "Rhaid cerddi yng Nghymru, hefyd, a'i chyfieithiad Isbeirneg o Lyfr Glas Nebo, gan Wasg Seis Baral yn Sbaen. Ma' hi wedi cymryd rhan yn gwahanol eisteddfodau ers yn blentyn ac yn cydweithio â pwyllgorau eisteddfodau'r dalaith."
+   383.08,
+   "Mae o 'n fuddwennu dilys a hel atgofion melys, ond mae angen cywiro 'r"
   ],
   [
-   933.78,
-   "Enillodd Gadair Eisteddfod y Wladfa dwywaith yn nwy fil ac un deg saith ac yn dwy fil a dau ddeg pump, a chipiodd yn Aber yn Eisteddfod Mimosa Porthmadryn yn nwy fil ac un deg saith."
+   389.26,
+   "ramadeg ar gystrawen."
   ],
   [
-   951.78,
-   "Dyma ei thrydydd cadair yn ei Eisteddfod Bro Hydref, Trevelin dwy fil ac un deg saith, dwy fil a un deg wyth, ac eleni yn nwy fil a dau ddeg chwech."
+   392.88,
+   "Dewn i di 'r llafur uwch wrth gyrraedd yr ail dosbarth, mae arianrhod yn"
   ],
   [
-   978.78,
-   "Gwahoddwn Gadeirydd y Pwyllgor, Caren Evans, i gyflwyno rhodd o flodau i'r Bar, i'r Maedd, Hector Ingram, i gyfarch y Bar, ac i Aelod yr Orsedd, Alwyn Pennant, i gyflwyno rhodd."
+   398.74,
+   "dangos ei fod e neu hi yn medru gosod strwythur pendant ei gerdd Ffarm"
   ],
   [
-   1008.78,
-   "Mae'n amser bellach i fwynhau'r gerdd wleidigol, sy'n cael ei darllen gan Sara ei hun, mewn meidio."
+   406.04,
+   "sy 'n cynnig map wrth i 'r gerdd gael ei chreu."
   ],
   [
-   1030.4,
-   "sinó"
+   409.72,
+   "Mae yn y gerdd hon elfennau lleisiol elfen o ddatgan ac atan, ac mae"
   ],
   [
-   1044.9,
-   "de florecerán"
+   416.84,
+   "'r dŵr yn dynn."
   ],
   [
-   1048.3,
-   "miles de fuego."
+   418.04,
+   "Yr hyn sy 'n y pen draws i glanhau y gerdd yw 'r union"
   ],
   [
-   1067.78,
-   "nhw i'w gwylio. Methodd y gyfieithwyr atal i gryf mor wyt ti'n ferched, y cadachau hwy, hyd heddiw cofiwyd maer, wymon o ddynion wedi'i twy, y rhai ffwrdd, y rhai erbyn. Rwy'n bydd a dau chwech. Os dyna'r fair ar ôl dwy deunydd, gyfran pedi beic ei hŷn, holi'n daer, lle mae hi? Lle?"
+   423.6,
+   "beth a apeliodd at ar y dechrau, sef ei strwythur."
   ],
   [
-   1097.78,
-   "hanner gam o'r gwyn, eginodd hadau cadach y gwyn, a calodd drip ei glywydd un eto eto lliw."
+   429.3,
+   "Byddai 'n well gynnig pe byddai bawb wedi dewis delwedd a datblygu 'r delwedd"
   ],
   [
-   1109.78,
-   "Efo plant mae'n ysgol bell mewn trefi gwrthwynebau cychwynch, awgrymu'r glan diwydiwn sir, holl wirionedd cyfiawnder, gwewn llwyr hir i'r llawr nad yw'r nôl, cawsom blaid i'w gadw, bladau sy'n ffisg er bod nhw ddim yn ei magu."
+   435.68,
+   "ohono er mwyn cyfleu eu neges."
   ],
   [
-   1139.78,
-   "A dyma'r cyfieithiad i'r Sbaeneg o'r gerdd fuddugol, gan y bardd ei hun."
+   440.14,
+   "Mae paith lais yn defnyddio strwythur tebyg ond yn cadw at un syniad canolog"
+  ],
+  [
+   446.92,
+   "a 'i datblygu."
+  ],
+  [
+   448.04,
+   "Sef hunaniaeth y bardd, dwi 'n gyfrwng dylanwadau rhieni a diwylliant Cymreig ac achentau."
+  ],
+  [
+   457.6,
+   "Mae llwyddo i plethu hynny gyda chyfeiriadaeth at orsedd y beirdd ac i greu"
+  ],
+  [
+   464.42,
+   "pêr gyfoethog,"
+  ],
+  [
+   466.44,
+   "hoffais gerdd gwgarwydafa yn fawr,"
+  ],
+  [
+   471.22,
+   "canol arfesur y soned Shakespeareaidd, ac mae mydr a codlau yn dim"
+  ],
+  [
+   477.5,
+   "a ffentastig."
+  ],
+  [
+   479.82,
+   "Ond nid i 'w teimlo fel soned arferol,"
+  ],
+  [
+   484.56,
+   "lle mae 'r heddiad y soned yn torri wedi 'r wythawd cyntaf, ac nid"
+  ],
+  [
+   489.46,
+   "peth gwael ydy hynny."
+  ],
+  [
+   492.18,
+   "Un peth efallai ei ochelgag fo, sef osgoi swnio 'n hen ffasiwn neu 'n"
+  ],
+  [
+   499.36,
+   "danfonllyd."
+  ],
+  [
+   501.8,
+   "Cyfleun aruchel i gyfrwng iaith bob dydd yw un o gyfriniaethau 'r gradd"
+  ],
+  [
+   508.04,
+   "o farddoni yn Gymraeg."
+  ],
+  [
+   512.68,
+   "Wedyn, fe gyrhaeddwn y dosbarth cyntaf."
+  ],
+  [
+   516.6,
+   "Mae ar law wedi cystadlu gyda cherdd lle mae 'r rhan fwyaf o 'r"
+  ],
+  [
+   520.88,
+   "llinellau 'n cynganeddu."
+  ],
+  [
+   523.08,
+   "Mae 'n braf cael croesawu cerdd gae i 'r gystadleuaeth."
+  ],
+  [
+   528.32,
+   "Mae 'n ychwanegu at weafr teindergerdd sy 'n sôn am gynheswyr cyfeillach a chymreigrod"
+  ],
+  [
+   536.46,
+   "trwy gyfrwng cy - a - a - i - i - i -"
+  ],
+  [
+   538.02,
+   "yfed paned."
+  ],
+  [
+   540.14,
+   "Mae delweddau yma hefyd yn llwyddo i gyfleu cynhestrwydd mewn ffordd y gallwn ni"
+  ],
+  [
+   545.84,
+   "weld, heb fod yn or -hostalgaidd."
+  ],
+  [
+   551.2,
+   "Ond mae un ar ôl, sef Iâs."
+  ],
+  [
+   555.7,
+   "Dyma 'r gerdd y ddaeth i gyfeiriad gwahanol, ac fe ddewisiodd y bardd ganu"
+  ],
+  [
+   561.66,
+   "am yr golpau de -estadol a 'i holl ganlyniadau yn yr un naw saith"
+  ],
+  [
+   567.22,
+   "dega."
+  ],
+  [
+   569.78,
+   "Mae yna gofio, gobeithio, talu teipgar ac edrych ymlaen, gan hefyd gweud delweddau cyfoethog"
+  ],
+  [
+   578.16,
+   "a chyfeiriadau lenyddol, grwpasol ac effeithiol."
+  ],
+  [
+   583.3,
+   "Dewisiodd Bar ddefnyddio gerdd etifeddiaeth gan Gerall Lloyd Owen, ac fe wrthodd hefyd i"
+  ],
+  [
+   590.54,
+   "droi 'r cymeriadau tuag at ei ddefnydd a 'i gwmpas ei hun wrth glynu"
+  ],
+  [
+   596.16,
+   "geriau Gerall gyda chyd -destun newydd."
+  ],
+  [
+   600.68,
+   "Mae 'r gerdd mewn dwy ran,"
+  ],
+  [
+   603.82,
+   "gan ddechrau yn mil naw saith chwech, lle cawn drama ag wrthdaro yn y"
+  ],
+  [
+   610.82,
+   "gerdd rhwng y sodlau treuliedig a 'r rhes o lws yn gwylio,"
+  ],
+  [
+   616.94,
+   "y merched a 'r cadallau gwyn sy 'n drech yn y diwedd, a 'r"
+  ],
+  [
+   621.96,
+   "hadau o ryddid a rheinwyd yn y rhan gyntaf, wedi cyfres o gwestiynau yn"
+  ],
+  [
+   627.64,
+   "presennol,"
+  ],
+  [
+   629.04,
+   "yn ein hanwau 'n dda."
+  ],
+  [
+   629.88,
+   "atbennill olaf grymus y gân, sy 'n diferu a chyfeiriad at gerall."
+  ],
+  [
+   638.9,
+   "Cawsom flagur i 'w gadw,"
+  ],
+  [
+   641.94,
+   "flagur sy 'n ddys,"
+  ],
+  [
+   644.3,
+   "ein bod wedi mynnu fyw."
+  ],
+  [
+   647.62,
+   "Mae mae hyn yn hoedro 'n dyfnder ac ys - ac ystyr y gwedd"
+  ],
+  [
+   652.46,
+   "gyda llenydd,"
+  ],
+  [
+   654.58,
+   "ac yn cyfrannu at greu gerdd grymus a fydd yn sicr yn cael ei"
+  ],
+  [
+   659.86,
+   "o siarad gyda 'i chynulleidfa."
+  ],
+  [
+   663.04,
+   "Mae Ias, felly, yn llwyr, deilyngyr, gadair eleni."
+  ],
+  [
+   669.36,
+   "Diolch yn fawr ac ysdadlodd."
+  ],
+  [
+   684.16,
+   "A wna i Ias, a Ias yn unig, sefyll ar ei thraed neu ar"
+  ],
+  [
+   686.3,
+   "araba"
+  ],
+  [
+   690.56,
+   "ei draed, os gwelwch yn dda."
+  ],
+  [
+   702.06,
+   "A wna i Ars, a Ars yn unig, sefyll ar ei thraed neu ar"
+  ],
+  [
+   706.1,
+   "seš arra"
+  ],
+  [
+   708.48,
+   "ei thraed os gwelwch yn dda?"
+  ],
+  [
+   731.9,
+   "Am y trydydd tro,"
+  ],
+  [
+   734.64,
+   "awnâ Ias, a Ias yn unig, sefyll ar ei thraed neu ar ei draed,"
+  ],
+  [
+   741.62,
+   "os gwelwch yn dda."
+  ],
+  [
+   759.2,
+   "Gracias."
+  ],
+  [
+   790.9,
+   "Gracias."
+  ],
+  [
+   813.6,
+   "Gracias."
+  ],
+  [
+   825.44,
+   "Gracias."
+  ],
+  [
+   845.2,
+   "¡Gracias!"
+  ],
+  [
+   850.48,
+   "llongyfelliadau bresog,"
+  ],
+  [
+   853.94,
+   "gwahoddodd hi i eistedd yn y gadair."
+  ],
+  [
+   872.4,
+   "Gracias."
+  ],
+  [
+   878.56,
+   "Sara Borda Green o Trevelin yw Ias,"
+  ],
+  [
+   883.06,
+   "mae ganddi radd mewn gwyddorau cyfathrebu,"
+  ],
+  [
+   886.24,
+   "Em A mewn astudiaetha Cymreig a Cheltaidd, a doethuriaeth mewn ieithoedd modern."
+  ],
+  [
+   894.44,
+   "Mae hi hefyd yn adrawes Cymraeg, Saesneg a Sbaeneg fel ail iaith, ac yn"
+  ],
+  [
+   900.44,
+   "gweithio yn Ysgol y Cwm Uchradd ac yn Ysgol y Feli."
+  ],
+  [
+   905.7,
+   "Cafodd ei gwaith ymchwil gyhoeddi yng Ngwynos Iris a Llymru."
+  ],
+  [
+   910.3,
+   "Rhaid cerddi yng Nghymru hefyd a 'i chyfieithiad Isbaeneg o lyfr glas nebodd gan"
+  ],
+  [
+   919.44,
+   "Wasg Seis Baral yn Sbaen."
+  ],
+  [
+   923.88,
+   "Mae hi wedi cymryd rhan yn gwahanol eisteddfodau ers yn blentyn ac yn cydweithio"
+  ],
+  [
+   929.68,
+   "â phwyllgorau eisteddfodau 'r dalaith."
+  ],
+  [
+   933.68,
+   "Enillodd Gadair Eisteddfod y Wladfa dwywaith yn nwy fil ac un deg saith ac"
+  ],
+  [
+   941.3,
+   "yn dwy fil a dau ddeg pump,"
+  ],
+  [
+   944.74,
+   "a chipiodd yn Wobr yn Eisteddfod Mimosa Porthmadryn yn nwy fil ac un deg"
+  ],
+  [
+   951.36,
+   "saith."
+  ],
+  [
+   952.9,
+   "Dyma ei thrydydd cadair yn ei Eisteddfod Bro Hydref, Trefeli dwy fil ac un"
+  ],
+  [
+   959.62,
+   "deg saith, dwy fil ac un deg wyth, ac eleni yn nwy fil a"
+  ],
+  [
+   965.3,
+   "dau ddeg chwech."
+  ],
+  [
+   979.5,
+   "Gwahoddwn Gadeirydd y Pwyllgor,"
+  ],
+  [
+   982.48,
+   "Caren Evans, i gyflwyno hof ddodau i 'r Bar, i 'r Maedd, Hector Ingram,"
+  ],
+  [
+   988.1,
+   "i gyfarch y Bar, ac i Aelod yr Orsedd, Alwyn Pennant, i gyflwyno hof."
+  ],
+  [
+   998.6,
+   "Gracias."
+  ],
+  [
+   1025.46,
+   "Mae 'n amser bellach i fwynhau 'r gerdd fuddugol,"
+  ],
+  [
+   1030.2,
+   "sy 'n cael ei darllen gan Sara ei hun,"
+  ],
+  [
+   1034.66,
+   "mewn fideo."
+  ],
+  [
+   1054.42,
+   "yn Llanfair, yn torri rhyddhad dda o concrisiwyl, heb wybod, ath o 'r cam,"
+  ],
+  [
+   1062.3,
+   "rhiant harddai ddod a rhiant,"
+  ],
+  [
+   1065.14,
+   "er, tu ôl i 'r ffenest beic, na rhed y cŵn sy 'n gwylio,"
+  ],
+  [
+   1070.24,
+   "nid oedd y gyfeillion yn atal i gryf mor wyt ti 'n ferched, y"
+  ],
+  [
+   1074.5,
+   "cadachau hwy,"
+  ],
+  [
+   1076.24,
+   "hyd heddiw cofio 'r maer, wymon a ddynion wedi 'i twy,"
+  ],
+  [
+   1081.06,
+   "y rhai ffwrdd, y rhai a fi."
+  ],
+  [
+   1085.82,
+   "Rwy 'n bydd a dau chwech."
+  ],
+  [
+   1088.88,
+   "Os dyna 'r fair a roddwyd i ni, byddwn yn peth i beth ei"
+  ],
+  [
+   1093.2,
+   "hun, holi 'n daer, lle mae hi,"
+  ],
+  [
+   1097.14,
+   "ble ydach chi,"
+  ],
+  [
+   1099.48,
+   "hanner ganrif wedi, eginodd hadau cadach y gwyn, ac roedd drip yn glywydd, un"
+  ],
+  [
+   1106.84,
+   "eto, hŷn."
+  ],
+  [
+   1110.54,
+   "Efo plant mae 'n ysgol bell"
+  ],
+  [
+   1117.56,
+   "y wastad glan dwi 'n gwthio 'r holl wirionedd cyfiawn, felly trwy 'r hir"
+  ],
+  [
+   1125.74,
+   "i 'r llawr na 'r awyr yma."
+  ],
+  [
+   1146.5,
+   "¡Gracias!"
+  ],
+  [
+   1159.0,
+   "A dyma 'r gyfeiliad i 'r Sbaeneg o 'r gerdd unigol, gan y fardd"
+  ],
+  [
+   1164.4,
+   "ei hun."
   ],
   [
    1167.2,
    "Herencia"
   ],
   [
-   1169.4,
-   "florestarán panuelos"
+   1169.26,
+   "Flores Sarrán Panuelos, 1976."
   ],
   [
-   1173.4,
-   "1976"
+   1175.64,
+   "Los tacones bajos castados trazan un círculo bajo la lluvia."
   ],
   [
-   1176.7,
-   "los tacones bajos"
+   1183.94,
+   "Dibujan un surco en el cemento gris de la plaza."
   ],
   [
-   1179.1,
-   "Castados trazan un círculo bajo la"
+   1189.82,
+   "sin saberlo en cada paso"
   ],
   [
-   1182.1,
-   "lluvia,"
+   1193.56,
+   "Sueltan semisos de futuro y libertad, aunque detrás de la vida."
   ],
   [
-   1184.1,
-   "dibujan un surco en el cemento gris de"
+   1199.56,
+   "de la ventana rosada una fila de botas"
   ],
   [
-   1187.5,
-   "la plaza."
+   1204.74,
+   "Pero las armas largas no pudieron con la fuerza de una ronda de panduelos blancos. y mujeres entre las maduras."
   ],
   [
-   1190.5,
-   "Sin saberlo, en cada paso sueltan"
+   1216.12,
+   "No olvidamos que"
   ],
   [
-   1194.5,
-   "semillas de futuro y libertad,"
+   1218.0,
+   "cobardes, los de uniforme, eran hombres de uniforme, hombres alta."
   ],
   [
-   1198.7,
-   "aunque detrás de la ventana rozada una"
+   1230.16,
+   "Si esta carga nos han impuesto esta..."
   ],
   [
-   1201.6,
-   "fila de botas observa,"
+   1234.58,
+   "sin embargo, es nuestra herencia."
   ],
   [
-   1205.6,
-   "pero las armas largas no pudieron con la"
+   1238.08,
+   "Preguntar con existencia."
   ],
   [
-   1208.6,
-   "fuerza de una ronda de panuelos blancos"
+   1241.72,
+   "a dónde se va a llevar?"
   ],
   [
-   1212.0,
-   "y mujeres entre las aguas."
+   1244.28,
+   "Donde está ella?"
   ],
   [
-   1216.4,
-   "No olvidamos que los cobardes,"
+   1248.0,
+   "Medio siglo después, las semillas han florecido y por las calles se escucha nunca más."
   ],
   [
-   1219.6,
-   "los de uniforme eran hombres en forma,"
+   1256.2,
+   "Nunca más en la escuela de un pueblo negro."
   ],
   [
-   1224.0,
-   "hombres al"
-  ],
-  [
-   1231.1,
-   "Si esa carga nos han impuesto esta sin"
-  ],
-  [
-   1235.0,
-   "embargo es nuestra herencia"
-  ],
-  [
-   1238.4,
-   "preguntar con insistencia"
-  ],
-  [
-   1242.1,
-   "a dónde se los llevaron. ¿Dónde está"
-  ],
-  [
-   1245.8,
-   "ella?"
-  ],
-  [
-   1248.6,
-   "Media siglo después, las semillas han"
-  ],
-  [
-   1252.2,
-   "florecido y por los calles se escucha"
-  ],
-  [
-   1255.9,
-   "nunca más."
-  ],
-  [
-   1260.3,
-   "En la escuela de un pueblo lejano"
-  ],
-  [
-   1264.0,
+   1262.98,
    "en el otoño de 26"
   ],
   [
-   1266.9,
-   "sobre una ficha pintamos el grito"
+   1266.58,
+   "Sobre una ficha y tamo se ha escrito, memoria."
   ],
   [
-   1270.9,
-   "memoria,"
+   1272.22,
+   "Verdad y justicia."
   ],
   [
-   1272.7,
-   "verdad y justicia."
+   1275.78,
+   "Una ofrenda de paz."
   ],
   [
-   1276.6,
-   "Una ofrenda de paz"
+   1279.38,
+   "para aquellos que no volverán."
   ],
   [
-   1280.0,
-   "para aquellos que no."
+   1284.6,
+   "Heredamos retornos para cuidar."
   ],
   [
-   1285.2,
-   "Heredamos retoños para cuidar."
-  ],
-  [
-   1289.7,
-   "redondos que atestigan"
-  ],
-  [
-   1293.0,
-   "que hemos existido"
-  ],
-  [
-   1295.9,
-   "en vivir."
+   1289.36,
+   "Retornos que atestigan que hemos existido en vivir."
   ],
   [
    1329.2,
@@ -540,320 +916,240 @@
    "es de acá de Trevelin. Ella es"
   ],
   [
-   1334.9,
-   "licenciada en ciencias de la"
+   1332.1,
+   "Gracias."
   ],
   [
-   1336.6,
-   "comunicación, magistral en estudios"
+   1335.78,
+   "ciencias de la comunicación."
   ],
   [
-   1339.8,
-   "calistas y y celtas y doctora en lenguas"
+   1337.88,
+   "Magistral en Estudios Calistas y Celtas"
   ],
   [
-   1344.4,
-   "modernas. Además es profesor de galés,"
+   1341.48,
+   "y Celta, y"
   ],
   [
-   1348.1,
-   "inglés y español como segunda lengua y"
+   1343.62,
+   "en Lenguas Modernas."
+  ],
+  [
+   1345.62,
+   "Además, es profesor de Galés, Inglés y Español como señor del"
+  ],
+  [
+   1350.2,
+   "Llena, y se"
   ],
   [
    1351.3,
-   "se desempeña como docente en la escuela"
+   "Y se desempeña como docente en la escuela secundaria de la School"
   ],
   [
-   1353.8,
-   "secundariacom"
+   1354.8,
+   "Gwyl Cwm, i yn l"
   ],
   [
-   1355.8,
-   "y en la escuela de molino en sus"
+   1356.02,
+   "en la Escuela de los Molinos en febrero."
   ],
   [
-   1359.3,
-   "trabajos de investigación han sido"
+   1357.9,
+   "Sus trabajos de investigación han sido publicados en Buenos Aires y en el..."
   ],
   [
-   1361.7,
-   "publicados en Buenos Aires y en el país"
+   1363.66,
+   "y Paes Vegas,"
   ],
   [
-   1364.2,
-   "legales y su traducción al castellano de"
+   1365.26,
+   "y su traducción al castellano de Chéver Blas Nebo fue publicado en dos años."
   ],
   [
-   1368.0,
-   "Chever Glass Nev fue publicado en 2018"
+   1370.54,
+   "en 2018 por el editorial Españolas de"
   ],
   [
-   1371.7,
-   "por el editorial español 6."
+   1373.74,
+   "Seis Paras."
   ],
   [
-   1375.7,
-   "participa en los Eisteddfod desde los 3 años y"
+   1375.48,
+   "Participan desde los tres años y colaboran todos los años."
   ],
   [
-   1380.5,
-   "colabora todos los años con las diversas"
-  ],
-  [
-   1383.5,
-   "ediciones que tienen lugar en la"
-  ],
-  [
-   1385.5,
-   "provincia."
+   1382.42,
+   "con las diversas elecciones que tienen lugar en la provincia."
   ],
   [
    1387.0,
-   "Sus poías han sido publicados en Gales y"
-  ],
-  [
-   1390.3,
-   "en dos oportunidades 2017 y 2025 han"
+   "Sus poesías han sido publicadas en Gales y en dos oportunidades, 2017 y 2017."
   ],
   [
    1395.2,
    "sido merecedoras del sillón bárbico del"
   ],
   [
-   1398.4,
-   "estado,"
+   1397.4,
+   "bárbico del Eisteddfod de Chubut Central Health, así como del premio Terren del Eisteddfod Mimosa"
   ],
   [
-   1401.0,
-   "así como del premio Terin del estado"
+   1401.24,
+   "como el premio TEDEN del"
   ],
   [
-   1403.8,
-   "Memosa para la madre de 2017."
+   1404.18,
+   "Gracias."
   ],
   [
-   1407.4,
-   "Esta es su tercer sillón bártico"
+   1404.3,
+   "para la Madre en 2017."
   ],
   [
-   1410.0,
-   "otorgado por el Eisteddfod."
+   1407.0,
+   "Esta es su tercer sillón párpico, otorgado por el destino."
   ],
   [
-   1414.1,
-   "habiendo sido merecedora de este premio"
+   1413.82,
+   "habiendo sido merecedora de este premio en 2016."
   ],
   [
-   1417.0,
-   "en 2017 y 2018."
+   1417.44,
+   "2017 y 2018."
   ],
   [
-   1442.3,
-   "Y ahora es momento de dar inicio a la"
+   1428.8,
+   "¡Gracias!"
   ],
   [
-   1445.1,
-   "ceremonía Premio Corona de Plata Eisteddfod"
+   1441.6,
+   "Y ahora es momento de dar inicio a la ceremonia Premio Corona de Plata de Cervo Trevelin."
   ],
   [
-   1448.5,
-   "Trevelin 2026."
+   1448.86,
+   "en 2026."
   ],
   [
-   1451.4,
-   "Como hemos mencionado, la corona de"
+   1451.78,
+   "Hemos mencionado la corona de plata confeccionada por Eonor Ferre y Fernando Vietzi de la ciudad de"
   ],
   [
-   1453.6,
-   "plata confeccionada por el Fernando Gi"
+   1457.4,
+   "en la ciudad de Puerto Madryn, distingue al poema ganador en el idioma castellano."
   ],
   [
-   1457.3,
-   "de la ciudad de Puerto Madryn designe al"
+   1463.48,
+   "Se trata de la competencia número 78, trabajo inédito."
   ],
   [
-   1460.7,
-   "poema ganador en idioma castellano."
+   1468.68,
+   "con tema y métrica libres sin superar los 60 versos."
   ],
   [
-   1464.0,
-   "Se trata de la competencia número 78,"
+   1474.78,
+   "Y vamos a compartir un fragmento del verbo."
   ],
   [
-   1467.5,
-   "trabajo inédito con tema y métrica"
-  ],
-  [
-   1470.4,
-   "libres, sin superar los 60 versos."
-  ],
-  [
-   1475.0,
-   "Y vamos a compartir un fragmento del"
-  ],
-  [
-   1477.2,
-   "verdicto."
-  ],
-  [
-   1479.0,
+   1478.18,
    "Este año se han presentado 29 trabajos."
   ],
   [
-   1484.0,
-   "El jurado, luego de un intenso proceso"
+   1483.22,
+   "El jurado, luego de un intenso proceso de selección y análisis,"
   ],
   [
-   1487.2,
-   "de selección y análisis encuentra que"
+   1489.32,
+   "encuentra que cuatro sobresalen por su morfología y otorga"
   ],
   [
-   1490.6,
-   "cuatro sobresalen por su morfología y"
+   1494.96,
+   "una mención especial a Patria, cuyo poema desarrolla la noción territorial de héroe."
   ],
   [
-   1494.8,
-   "otorga una mención espacial a Patria,"
+   1501.62,
+   "Otorga un tercer premio asigurado."
   ],
   [
-   1498.0,
-   "cuyo poema desarrolla la noción"
+   1506.66,
+   "Una hermosa descripción de la vocación docente y un segundo premio alumbre."
   ],
   [
-   1500.3,
-   "territorial de héroe."
+   1514.28,
+   "un típico de singular belleza que demuestra que la palabra puede sangrar."
   ],
   [
-   1503.3,
-   "otorga un tercer premio así durat una"
+   1520.0,
+   "Sin embargo"
   ],
   [
-   1507.2,
-   "hermosa descripción de la vocación"
+   1522.88,
+   "Entre ellos, un poema en particular se destaca por alcanzar un equilibrio notable en general."
   ],
   [
-   1510.1,
-   "docente"
+   1530.82,
+   "un alwres formal y densidad emosional,"
   ],
   [
-   1511.7,
-   "y un segundo premio a lumbre un típico"
+   1534.88,
+   "Ambos cualidades esperables y deseables en una competencia de estas características."
   ],
   [
-   1515.4,
-   "de singular belleza que demuestra que la"
+   1545.14,
+   "Se trata de una obra colectiva, territorial."
   ],
   [
-   1518.5,
-   "palabra puede sangrar."
+   1549.48,
+   "y nostalgia."
   ],
   [
-   1521.8,
-   "Sin embargo, entre ellos, un poema en"
+   1551.3,
+   "Con reminiscencias a la tierra propia, se vale del humor y la sociedad."
   ],
   [
-   1525.4,
-   "particular se destaca por alcanzar un"
+   1556.98,
+   "y las zozobran como parte del paisaje que representan a través de imágenes pintadas por... medio de la palabra, en versos como los bordes polígicos,"
   ],
   [
-   1528.9,
-   "equilibrio notable entre formal y"
+   1568.64,
+   "y de la ruta."
   ],
   [
-   1532.7,
-   "densidad emocional,"
+   1569.86,
+   "o los chicos de a caballo."
   ],
   [
-   1535.2,
-   "ambos cualidades esperables y deseables"
+   1573.6,
+   "Se trata de poesía patagonica y de pertenencia."
   ],
   [
-   1540.6,
-   "en una competencia competencia de estas"
+   1578.96,
+   "El cierre de motivo es muy preciso. Si al final..."
   ],
   [
-   1543.3,
-   "características."
+   1584.08,
+   "La ruta es el sube y baja de la vida."
   ],
   [
-   1545.8,
-   "Se trata de una obra colectiva,"
+   1587.58,
+   "La pluralidad es en un modo incompleto."
   ],
   [
-   1548.5,
-   "territorial y nostálgica."
+   1591.42,
+   "Por lo expuesto, este poema representa cabalmente el nivel de excelencia"
   ],
   [
-   1551.9,
-   "Con remencencias a la tierra propia se"
+   1597.06,
+   "que el Estado de Washington, 16 de octubre, busca saturar y promover."
   ],
   [
-   1555.4,
-   "vale del humor y la sosobra como parte"
+   1603.26,
+   "o 'n ymddwynid, yw 'r poema 'n cael ei ddifro fel un o 'r"
   ],
   [
-   1558.6,
-   "del paisaje que representa a través de"
-  ],
-  [
-   1562.3,
-   "imágenes pintados por medio de la"
-  ],
-  [
-   1565.1,
-   "palabra en versos como los bordi de"
-  ],
-  [
-   1569.0,
-   "Naruto o los chicos de Acabajo. Eso es"
-  ],
-  [
-   1572.7,
-   "de boina."
-  ],
-  [
-   1574.7,
-   "Se trata de poesía patagónica y de"
-  ],
-  [
-   1577.4,
-   "pertenencia."
-  ],
-  [
-   1579.3,
-   "El cierre emotivo es muy preciso."
-  ],
-  [
-   1583.0,
-   "Si al final la ruta es el sub baja de la"
-  ],
-  [
-   1586.5,
-   "vida, la ruralidad es el módico precio."
-  ],
-  [
-   1592.0,
-   "Por lo expuesto, este poema representa"
-  ],
-  [
-   1594.7,
-   "cabalmente el nivel de excelencia que el"
-  ],
-  [
-   1597.7,
-   "Eisteddfod de 16 de octubre busca celebrar y"
-  ],
-  [
-   1601.9,
-   "promover."
-  ],
-  [
-   1603.4,
-   "Por lo que estejado otorga con"
-  ],
-  [
-   1606.1,
-   "satisfacción el premio Corona debot al"
+   1606.36,
+   "fathau fwyafaf arferol o 'r ystafell arferol."
   ],
   [
    1610.3,
@@ -864,280 +1160,264 @@
    "Austrocedius."
   ],
   [
-   1614.8,
-   "Este jurado tiene además la intención de"
+   1614.7,
+   "Este jurado tiene además la intención de felicitar enormemente a... todos los lectores, ha sido un placer leer."
   ],
   [
-   1617.2,
-   "felicitar enormemente a todos los"
+   1622.48,
+   "a leerlos y disfrutar de cada uno de sus obras."
   ],
   [
-   1620.5,
-   "autores. Ha sido un placer leerlos y"
+   1627.24,
+   "la de Víctor, la profesora Andrea Tomás."
   ],
   [
-   1623.8,
-   "disfrutar de cada una de sus obras."
+   1640.0,
+   "Ar esgyrn eira, y welis di flodau a daiw."
   ],
   [
-   1626.7,
-   "Firma este veredicto la profesora Andrea"
+   1645.22,
+   "Dŵan rhai cynta, y welis di lantais o wair."
   ],
   [
-   1629.3,
-   "Tomás."
+   1649.88,
+   "A 'r twelen ola, y welis di bysder haul."
   ],
   [
-   1631.0,
-   "Invitamos"
+   1657.2,
+   "Invitamos entonces a Austrocedrus a ponerse de pie."
   ],
   [
-   1643.36,
-   "Dau a dail, dŵan rwy'n cynta, a welis di lantas o wair. O'r twel e'r ola, a welis di bysder haul."
+   1669.72,
+   "Por segunda vez, invitamos a Austrocedrus."
   ],
   [
-   1658.5,
-   "entonces a Austrus"
+   1678.5,
+   "y hacemos el tercer y último llamado a austrocebios"
   ],
   [
-   1661.7,
-   "a ponerse de pie."
+   1701.36,
+   "Gracias."
   ],
   [
-   1670.6,
-   "Por segunda vez invitamos a Austrus"
+   1710.2,
+   "Gracias."
   ],
   [
-   1680.0,
-   "y hacemos el tercer y último llamada a"
+   1757.18,
+   "Es un placer revelar que el suelo me..."
   ],
   [
-   1683.8,
-   "Austrus."
+   1759.6,
+   "Gracias."
   ],
   [
-   1757.5,
-   "Es un placer revelar que elónimo Austr"
+   1761.26,
+   "corresponde a Alejandra Vilela."
   ],
   [
-   1761.4,
-   "corresponda a Alejandra Vilela."
+   1778.62,
+   "Y Alejandra es investigadora del CONICET, se dedica al desarrollo de..."
   ],
   [
-   1779.4,
-   "Y Alejandra es investigadora del"
+   1787.12,
+   "Participa hace varios años en el estudio de Trelew y de Trelew en prosa."
   ],
   [
-   1782.0,
-   "CONISET, se dedica al desarrollo de"
+   1793.44,
+   "y artesanías en madera, dibujo y pintura."
   ],
   [
-   1787.4,
-   "Participa hace varios años en el Eisteddfod"
+   1798.88,
+   "Vecina ora de los Ipresos"
   ],
   [
-   1790.6,
-   "de Trelew y de Trevelin en prosa y artesanías"
+   1801.28,
+   "desde hace seis años."
   ],
   [
-   1795.5,
-   "en madera, dibujo y pintura."
+   1803.54,
+   "Este es nuestro poeta Alejandra Vilela."
   ],
   [
-   1798.9,
-   "vecina ahora de loses desde hace 6 años."
-  ],
-  [
-   1803.8,
-   "Esa es nuestro poeta Alejandra Vilela."
-  ],
-  [
-   1821.3,
-   "Y ahora desde el fondo del salón se"
-  ],
-  [
-   1823.7,
-   "acerca la joven Josefina Linares Serrada"
+   1820.8,
+   "Y ahora desde el fondo del salón se acerca la joven Josefina Linares Peraza con la Corona"
   ],
   [
    1827.4,
    "con la corona de plata."
   ],
   [
+   1828.3,
+   "de Plaza."
+  ],
+  [
+   1829.2,
+   "Premio a ser su hija local esta 16 de octubre."
+  ],
+  [
+   1844.5,
+   "¡Gracias!"
+  ],
+  [
    1861.4,
    "Aleluya. Ah."
   ],
   [
-   1916.2,
-   "Las señoras Karen Evans y"
+   1876.12,
+   "Dwi 'n siŵr y byddai 'n rhan o 'r brofiad, ond dwi 'n siŵr"
   ],
   [
-   1918.4,
-   "Maronarán"
+   1879.68,
+   "y byddai 'n rhan o 'r brofiad, ond dwi 'n siŵr y byddai 'n"
   ],
   [
-   1920.8,
-   "a poeta ganadora."
+   1901.52,
+   "rhan o 'r brofiad."
   ],
   [
-   1926.9,
-   "Ok."
+   1915.52,
+   "Las señoras Karen Evans y María Esther Evans, coronagrán la poeta ganadora. Gracias."
   ],
   [
-   1927.36,
-   "Diolch yn fawr iawn, diolch yn fawr iawn, diolch yn fawr iawn."
+   1954.14,
+   "Gracias."
   ],
   [
-   1955.6,
-   "Y ahora vamos a compartir un video de la"
+   1955.54,
+   "Y ahora vamos a compartir un video de la poesía ganadora."
   ],
   [
-   1958.7,
-   "poesía ganadora."
+   1967.7,
+   "Veinticuatro kilómetros de ripio falso. Calculo unos cuarenta y ocho mil pozos. Parece mucho, pero yo los conozco. Son como los border collies de la ruta, que te esperan escondidos y en la vida, para salir disparados a tus muertos. La gente protesta. Está mala la vida."
   ],
   [
-   1967.8,
-   "24 km de ritio falta."
+   1989.84,
+   "Pero, ¿qué será de nosotros"
   ],
   [
-   1971.1,
-   "Calculo unos 48,000 pozos."
+   1991.82,
+   "si esto cambia?"
   ],
   [
-   1975.4,
-   "Parecen muchos, pero yo los conozco. Son"
+   1993.52,
+   "¿Cómo marcharán los ríos a la de la nave?"
   ],
   [
-   1978.9,
-   "como los border colis de la ruta que te"
+   1996.38,
+   "y los chicos de caballos?"
   ],
   [
-   1981.4,
-   "esperan escondidos bien ladinos para"
+   1998.56,
+   "Digo, eso de boi, na, que no alcanzan ysgrifo."
   ],
   [
-   1984.1,
-   "salir disparados a tu puebas. La gente"
+   2002.26,
+   "¿Dónde irán los puentes de una mano y el ritual de ceder por cortesino?"
   ],
   [
-   1987.3,
-   "protesta está mala la ruta. Pero, ¿qué"
+   2007.54,
+   "La gente protesta, es tan mala la duda."
   ],
   [
-   1991.0,
-   "será de nosotros si esto cambio? ¿Cómo"
+   2010.96,
+   "Pero, ¿qué será de nosotros si esto cambia?"
   ],
   [
-   1993.6,
-   "marcharán los arreos a la veranada y los"
+   2014.18,
+   "Será tal vez como mirar un paisaje desde un tren externo."
   ],
   [
-   1996.8,
-   "chicos de caballo? Digo eso de bóina que"
+   2016.7,
+   "tren expreso, no perder el tiempo mirando el arroyo, ni pensarse a lo que se ha hecho."
   ],
   [
-   2000.2,
-   "no alcanzan al escribo. ¿Dónde irán los"
+   2021.62,
+   "Amarillas serán todas amarillas."
   ],
   [
-   2003.0,
-   "puentes de una mano y el ritual de ceder"
-  ],
-  [
-   2006.0,
-   "por cortesía? La gente protesta. Está"
-  ],
-  [
-   2009.8,
-   "mala la ruta. Pero, ¿qué será de"
-  ],
-  [
-   2012.5,
-   "nosotros si esto cambia? Será tal vez"
-  ],
-  [
-   2015.2,
-   "como mirar el paisaje de un tren"
-  ],
-  [
-   2017.0,
-   "expreso, no perder el tiempo mirando el"
-  ],
-  [
-   2020.1,
-   "arroyo, ni pensar se habrá llevado"
-  ],
-  [
-   2022.6,
-   "arriba. Amarillas. Serán todas amarillas"
-  ],
-  [
-   2026.3,
-   "las retas. Si no hay tiempo de buscar"
+   2025.68,
+   "Todas son malignas retantes si no hay tiempo de buscar el acranaje."
   ],
   [
    2028.8,
    "las granadas,"
   ],
   [
-   2030.5,
-   "la gente protesta. Está mala la ruta."
+   2030.32,
+   "La gente protesta."
   ],
   [
-   2034.4,
-   "Pero, ¿qué será de nosotros si esto"
+   2032.08,
+   "Está mala la bruna, pero ¿qué será de nosotros?"
   ],
   [
-   2036.6,
-   "cambia? Si al final las rutas es el su"
+   2037.62,
+   "Os ydi 'r"
+  ],
+  [
+   2038.16,
+   "final la ruta es el subibajo."
+  ],
+  [
+   2039.58,
+   "'r Llywodraeth yn mynd"
   ],
   [
    2039.8,
-   "baja de la vida. Si mejora sube las"
+   "i fynd i fyny,"
   ],
   [
-   2043.0,
-   "prisas, los precios y esa levedad de la"
+   2040.08,
+   "la vida, si mejora"
   ],
   [
-   2046.1,
-   "mirada que no mide. ¿Y qué baja cuando"
+   2042.56,
+   "de las prensas, los precios, quise revelar de la mirada enorme."
   ],
   [
-   2048.8,
-   "suben las? Poca cosa. La ruralidad es el"
+   2047.7,
+   "¿Y qué vale cuando suben"
   ],
   [
-   2052.9,
-   "módico precio que se paga."
+   2050.18,
+   "Poca cosa, la ruralidad es el módico precio que se paga."
   ],
   [
-   2082.6,
-   "Y Karen antes de cantar Aleta va a"
+   2082.14,
+   "Y Karen, antes de cantar, el poeta va a entregar por nosotros."
   ],
   [
-   2085.8,
-   "entregar por los"
+   2110.5,
+   "Gracias."
   ],
   [
-   2104.36,
-   "Dyna ni, dan ni'n gwahodd Karen Evans i anrhydeddu'r beirdd gyda gennyn, gyda'r ffurf lawr sy'n cyfeilio ar y piano."
+   2116.44,
+   "¡Gracias!"
   ],
   [
-   2135.4,
-   "amor"
+   2137.1,
+   "er i 'n marwyd farwyd, yr oeddwn i 'n mynd yn ôl i 'r"
   ],
   [
-   2137.4,
-   "de"
+   2153.46,
+   "fwrdd a 'n mynd nôl."
+  ],
+  [
+   2159.2,
+   "¡Gracias!"
+  ],
+  [
+   2166.5,
+   "Amén."
   ],
   [
    2170.3,
    "Celestial"
   ],
   [
-   2173.8,
-   "oye"
+   2173.02,
+   "¡Gracias!"
   ],
   [
    2175.4,
@@ -1148,16 +1428,20 @@
    "adoración."
   ],
   [
+   2181.04,
+   "¡Gracias!"
+  ],
+  [
    2184.4,
    "Todo"
   ],
   [
    2186.0,
-   "mal"
+   "mal [música]"
   ],
   [
    2188.2,
-   "por tu excelta"
+   "por tu excelta [canto]"
   ],
   [
    2192.2,
@@ -1168,27 +1452,75 @@
    "Amen."
   ],
   [
-   2213.2,
-   "Amen."
+   2206.1,
+   "Amén."
   ],
   [
-   2239.7,
-   "Ahora es el momento de invitar al"
+   2212.06,
+   "Amén."
   ],
   [
-   2241.4,
-   "escenario a las niñas que bailarán la"
+   2239.2,
+   "Ahora es el momento de invitar a la escenario a las niñas."
   ],
   [
-   2244.6,
-   "danza de los flores. Gracias."
+   2243.36,
+   "bailarán la danza de los títulos."
   ],
   [
-   2512.24,
-   "I gloi'r seremoni heno, dan ni'n gwahodd pawb a fu cymryd rhan i gerdded oddi ar y sgrinion, heb stopio hyd at gerdd yn yr eang. Bydd y beirdd yn cychwyn, a'i dilyn gan yr orsedd."
+   2246.94,
+   "rhan fwyaf o 'r alwysmeriaid yn y byddai 'r rhan fwyaf"
   ],
   [
-   2542.24,
+   2309.46,
+   "Dwi 'n siŵr y byddai dyna 'r un peth sydd wedi digwydd, ond dwi"
+  ],
+  [
+   2314.44,
+   "'n siŵr y byddai dyna 'r un peth sydd wedi digwydd, ond dyna 'r"
+  ],
+  [
+   2318.92,
+   "un peth sydd wedi digwydd."
+  ],
+  [
+   2343.2,
+   "Amén."
+  ],
+  [
+   2380.1,
+   "Amén."
+  ],
+  [
+   2443.9,
+   "¡Gracias!"
+  ],
+  [
+   2471.64,
+   "¡Gracias!"
+  ],
+  [
+   2501.4,
+   "¡Gracias!"
+  ],
+  [
+   2526.16,
+   "I gloi 'r seremoni heno, dan ni 'n gwerthfawr pawb a bu cymryd rhan."
+  ],
+  [
+   2532.28,
+   "i gerdded oddi ar y sgrinion, heb stopio hyd at gerdd yn yr eang."
+  ],
+  [
+   2537.96,
+   "Bydd y beirdd yn cychwyn,"
+  ],
+  [
+   2540.5,
+   "a 'i dilyn gan yr orsedd."
+  ],
+  [
+   2543.22,
    "Wedyn bydd y rhai wedi panu ac yn dawnsio, ac yn olaf yr awdurdodau."
   ],
   [
@@ -1197,7 +1529,7 @@
   ],
   [
    2552.7,
-   "ceremon ía. Vamos a invitar que los"
+   "ceremonía. Vamos a invitar que los"
   ],
   [
    2555.1,
@@ -1208,44 +1540,116 @@
    "siguiente manera con primero dejar lugar"
   ],
   [
-   2561.4,
-   "para los poetas, las poetas ganadoras,"
+   2560.1,
+   "para los poetas"
   ],
   [
-   2564.8,
-   "después el círculo bártico y después los"
+   2562.28,
+   "las, las vueltas ganadoras,"
   ],
   [
-   2568.0,
-   "artistas y por último las autoridades"
+   2565.18,
+   "del Círculo Bárbico"
   ],
   [
-   2570.9,
-   "municipales y institucionales."
+   2566.04,
+   "barico, y despues las artistas, y"
+  ],
+  [
+   2569.46,
+   "último las autoridades municipales."
+  ],
+  [
+   2571.32,
+   "y institucionales."
+  ],
+  [
+   2573.28,
+   "Diolch yn fawr iawn, muchos gracias."
   ],
   [
    2575.2,
    "Muchas gracias."
   ],
   [
-   2632.24,
-   "Dwi di gweld y byd, a'i gi. Dwi di gweld nhw'n heidio heibio'r tŷ. I'r gemau mawr, aras. I'r trefi pell llawn hogiau cae."
+   2652.28,
+   "Ti i 'r gemau mawr,"
   ],
   [
-   2662.24,
-   "O cliw, o cliw, sŵn e'n mynd drwy e'n niw. O cliw, o cliw, o'r teras fynydd Dduw. O cliw."
+   2656.2,
+   "ar ras i 'r trefi pell llawn hogiau cas."
   ],
   [
-   2685.24,
-   "Welis di bys yr haul ar esgyrn eira. Welis di flodau a dail dŵan ryw cynta. Welis di lotas o wair a'r twelen ola. Welis di bys yr haul ar esgyrn eira."
+   2663.54,
+   "O cliw, o cliw,"
   ],
   [
-   2707.24,
-   "Dwi'n gweld y byd, fel ti, pob gwyn a du, pob gwyn a du. Dwi'n gweld pob dawn, yng nghof tas. Dwi'n gweld pob graen, mewn gynnoedd glas."
+   2668.04,
+   "sŵn e mynd drwy eni."
   ],
   [
-   2728.24,
-   "Welis di bys yr haul, yr esgyrn eira. Welis di flodau a dail, dywanwyr cynta. Welis di lontas o wair, o'r twel ar ola. Welis di bys yr haul, yr esgyrn eira."
+   2672.24,
+   "O cliw, o cliw, o 'r teras fyny i Dduw."
+  ],
+  [
+   2682.28,
+   "o 'r cliw."
+  ],
+  [
+   2687.99,
+   "On' welis di bys yr haul, ar esgyrn eira."
+  ],
+  [
+   2692.66,
+   "On' welis di flodau a dail, dŵan weicenta."
+  ],
+  [
+   2697.5,
+   "On' welis di lantas o wair, a 'r twelen ola."
+  ],
+  [
+   2702.14,
+   "On' welis di bys yr haul,"
+  ],
+  [
+   2705.3,
+   "ar esgyrn eira."
+  ],
+  [
+   2707.62,
+   "Dwi 'n gweld y byd, fel ti,"
+  ],
+  [
+   2712.82,
+   "pob gwyn a du, pob gwyn a du."
+  ],
+  [
+   2717.56,
+   "Dwi 'n gweld pob dawn,"
+  ],
+  [
+   2720.22,
+   "yng nghob tas."
+  ],
+  [
+   2722.38,
+   "Dwi 'n gweld pob graen, mewn gynnoedd glas."
+  ],
+  [
+   2730.58,
+   "Welis di bys yr haul, yr esgyrn eira!"
+  ],
+  [
+   2735.44,
+   "Welis di flodau a dail, dywanwyr cynta!"
+  ],
+  [
+   2740.62,
+   "Welis di lontas o wair, o 'r twel ar ola!"
+  ],
+  [
+   2745.3,
+   "Welis di bys yr haul, yr esgyrn eira!"
   ]
  ],
  "fuentes": [
@@ -1253,67 +1657,76 @@
    "yt_es"
   ],
   [
-   "yt_es"
+   "whisper_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "whisper_es"
   ],
   [
-   "yt_es"
+   "whisper_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "whisper_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "whisper_es"
   ],
   [
-   "yt_es"
+   "whisper_es"
   ],
   [
-   "yt_es"
+   "whisper_es"
   ],
   [
-   "yt_es"
+   "whisper_es"
   ],
   [
-   "yt_es"
+   "whisper_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "whisper_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "whisper_es"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
@@ -1325,100 +1738,10 @@
    "cy"
   ],
   [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
    "cy"
   ],
   [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
+   "whisper_es"
   ],
   [
    "cy"
@@ -1427,7 +1750,73 @@
    "cy"
   ],
   [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
    "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
@@ -1493,6 +1882,955 @@
    "cy"
   ],
   [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy",
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es",
+   "yt_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es",
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es",
+   "whisper_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
    "yt_es"
   ],
   [
@@ -1514,13 +2852,16 @@
    "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
   ],
   [
-   "yt_es"
+   "cy"
+  ],
+  [
+   "cy"
   ],
   [
    "cy"
@@ -1535,637 +2876,7 @@
    "cy"
   ],
   [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
    "cy"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
   ],
   [
    "cy"
@@ -2183,10 +2894,11 @@
    "cy"
   ]
  ],
+ "mezcla": true,
  "ventanas": {
-  "total": 46,
-  "modelo": 40,
-  "reglas": 2,
-  "vacias": 4
+  "total": 47,
+  "modelo": 39,
+  "reglas": 8,
+  "vacias": 0
  }
 }

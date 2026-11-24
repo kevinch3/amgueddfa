@@ -287,8 +287,8 @@ def test_unknown_end_counts_one_second(tmp_path):
     row = _row(100.0, "diolch yn fawr iawn")  # 100.0-102.0
     stem, letras = _mezcla_fixture(tmp_path, [_seg(row)], [row])
     decided = [l for l in load_sources(stem, "vid", letras) if l.src == "cy"]
-    near = sources.Line(101.4, "gracias", "subida", "es")  # 101.4-102.4: 0.6 of 1 s overlapped
-    far = sources.Line(101.6, "gracias", "subida", "es")   # 101.6-102.6: 0.4
+    near = sources.Line(101.4, "gracias", "yt_es", "es")  # no end: 101.4-102.4, 0.6 of 1 s overlapped
+    far = sources.Line(101.6, "gracias", "yt_es", "es")   # 101.6-102.6: 0.4
     assert sources._overlapped(near, decided) and not sources._overlapped(far, decided)
 
 
@@ -352,3 +352,14 @@ def test_welsh_lyric_timed_from_decided_lines(tmp_path):
     (letras / "videos.json").write_text(json.dumps({"vid": [{"letra": "can", "desde": 100, "hasta": 140}]}), encoding="utf-8")
     lyr = [(l.t, l.text) for l in load_sources(stem, "vid", letras) if l.src == "letra"]
     assert lyr == [(104.0, "Pnawn da i bawb sydd yma"), (121.0, "Diolch yn fawr am ddod heno")]
+
+
+def test_uploaded_subtitles_are_never_dropped_by_overlap(tmp_path):
+    # The uploader's subtitles are the most reliable source: a decided line covering one does not remove it.
+    row = _row(100.0, "diolch yn fawr iawn i chi")  # 100.0-103.0
+    stem, letras = _mezcla_fixture(tmp_path, [_seg(row)], [row])
+    (stem.parent / f"{stem.name}.es.vtt").write_text(
+        "WEBVTT\n\n00:01:40.500 --> 00:01:42.500\nmuchas gracias a ustedes\n", encoding="utf-8")
+    (stem.parent / f"{stem.name}.info.json").write_text(json.dumps({"subtitles": {"es": []}}), encoding="utf-8")
+    got = [(l.t, l.src) for l in load_sources(stem, "vid", letras) if 90 < l.t < 110]
+    assert got == [(100.0, "cy"), (100.5, "subida")]

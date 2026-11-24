@@ -121,13 +121,15 @@ def load_sources(stem: Path, video_id: str, letras: Path = LETRAS) -> list[Line]
     spanish_segments: set[float] = set()
     es = stem.with_name(f"{stem.name}.whisper-es.json")
     if mezcla:
-        # Mixed-language pass: turbo's long-form Spanish, then the decided Bangor lines; the other sources'
-        # lines stay only where no decided line covers OVERLAP of them (#112's pass is superseded).
+        # Mixed-language pass: turbo's long-form Spanish, then the decided Bangor lines; the other Spanish
+        # sources' lines (yt_es, whisper_es) stay only where no decided line covers OVERLAP of them (#112's pass
+        # is superseded).
         turbo = json.loads(stem.with_name(f"{stem.name}.es-turbo.json").read_text(encoding="utf-8"))
         out += [Line(float(t), x, "whisper_es", "es", None, float(e))
                 for t, e, x in clean_whisper_timed([[g["s"], g["e"], g["text"]] for g in turbo.get("segments", [])])]
         decided = _decided(stem)
-        out = [l for l in out if not _overlapped(l, decided)] + decided
+        # The uploader's subtitles (subida) are never dropped: the most reliable source.
+        out = [l for l in out if l.src == "subida" or not _overlapped(l, decided)] + decided
     elif es.exists():
         for seg in json.loads(es.read_text(encoding="utf-8"))["segments"]:
             if "text" in seg:

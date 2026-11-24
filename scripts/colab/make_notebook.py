@@ -37,6 +37,14 @@ importlib.reload(pase_mezcla)
 pase_mezcla.run(f'{BASE}/audio', f'{BASE}/out', until=UNTIL, compute_type=COMPUTE, only=ONLY)"""
 
 
+COMPARE = """# Only for the comparison test: KPC's files for the same audio in amgueddfa-colab/kpc/. Prints how close the runs are.
+import os
+ids = sorted({f.split('.')[0] for f in os.listdir(f'{BASE}/kpc')}) if os.path.isdir(f'{BASE}/kpc') else []
+for vid in ids:
+    print(vid)
+    print('\\n'.join(pase_mezcla.compare(f'{BASE}/out', f'{BASE}/kpc', vid)))"""
+
+
 def cell(kind, src):
     c = {"cell_type": kind, "metadata": {}, "source": src.splitlines(keepends=True)}
     if kind == "code":
@@ -47,7 +55,7 @@ def cell(kind, src):
 def build():
     module = (HERE / "pase_mezcla.py").read_text(encoding="utf-8")
     cells = [cell("markdown", INTRO), cell("code", SETUP), cell("code", CONFIG),
-             cell("code", "%%writefile pase_mezcla.py\n" + module), cell("code", RUN)]
+             cell("code", "%%writefile pase_mezcla.py\n" + module), cell("code", RUN), cell("code", COMPARE)]
     nb = {"cells": cells, "nbformat": 4, "nbformat_minor": 5,
           "metadata": {"accelerator": "GPU", "colab": {"provenance": [], "gpuType": "T4"},
                        "kernelspec": {"name": "python3", "display_name": "Python 3"}}}

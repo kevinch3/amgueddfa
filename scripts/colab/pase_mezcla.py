@@ -140,5 +140,40 @@ def run(audio_dir, out, until=None, compute_type="int8", only=None):
             f"turbo long-form {t3 - t2:.0f} s; {(t3 - t0) / secs:.2f} s per s of audio")
 
 
+def side(r, clear=0.10):
+    """Which model wins a line, as in the design's step 2: cy, es, or mixed (decided word by word)."""
+    gap = r["cy_p"] - r["es_p"]
+    return "cy" if gap >= clear or not r["es_words"] else "es" if gap <= -clear else "mixed"
+
+
+def compare(out, ref, vid):
+    """Compare this runtime's files for vid with another machine's (e.g. KPC's pilot); returns printable lines."""
+    load = lambda d, k: json.loads((Path(d) / f"{vid}.{k}.json").read_text(encoding="utf-8"))
+    rep = []
+    a, b = load(out, "words")["segments"], load(ref, "words")["segments"]
+    same = sum(x["text"] == y["text"] for x, y in zip(a, b))
+    wa = [w for s in a for w in s["words"]]
+    wb = [w for s in b for w in s["words"]]
+    shift = sorted(abs(x[0] - y[0]) for x, y in zip(wa, wb) if x[2] == y[2])
+    rep.append(f"Bangor segments: {len(a)} here, {len(b)} there; {same} with the same text")
+    if shift:
+        rep.append(f"Bangor words: {len(wa)} here, {len(wb)} there; same word at the same place: {len(shift)}, "
+                   f"start time differs by median {shift[len(shift) // 2]:.2f} s, max {shift[-1]:.2f} s")
+    la, lb = load(out, "es-lines")["lines"], load(ref, "es-lines")["lines"]
+    pairs = [(x, y) for x, y in zip(la, lb) if (x["s"], x["e"], x["cy"]) == (y["s"], y["e"], y["cy"])]
+    agree = sum(side(x) == side(y) for x, y in pairs)
+    rep.append(f"lines: {len(la)} here, {len(lb)} there; {len(pairs)} identical Bangor lines; "
+               f"same winner (cy / es / mixed) on {agree} of them; same turbo text on "
+               f"{sum(x['es'] == y['es'] for x, y in pairs)}")
+    for x, y in pairs:
+        if side(x) != side(y):
+            rep.append(f"  differs at {x['s']:.1f} s: here {side(x)} ({x['cy_p']} vs {x['es_p']}), "
+                       f"there {side(y)} ({y['cy_p']} vs {y['es_p']})")
+    ea, eb = load(out, "es-words")["segments"], load(ref, "es-words")["segments"]
+    rep.append(f"turbo long-form: {len(ea)} segments here, {len(eb)} there; "
+               f"{sum(x['text'] == y['text'] for x, y in zip(ea, eb))} with the same text")
+    return rep
+
+
 if __name__ == "__main__":
     run(sys.argv[1], sys.argv[2], float(sys.argv[3]) if len(sys.argv) > 3 else None)

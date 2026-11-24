@@ -432,7 +432,10 @@ def cmd_remove(root: Path, vid: str, reason: str) -> int:
     row = idx.get(vid)
     if row and row['file']:
         stem = (root / 'videos' / row['file']).with_suffix('')
-        for p in stem.parent.glob(stem.name + '.*'):
+        for p in stem.parent.glob(glob_escape(stem.name) + '.*'):
+            p.unlink()
+        kept = root / 'versiones' / stem.parent.relative_to(root / 'videos')
+        for p in kept.glob(glob_escape(stem.name) + '.*'):
             p.unlink()
     p = root / 'removed.tsv'
     new_file = not p.exists()
@@ -448,6 +451,24 @@ def cmd_remove(root: Path, vid: str, reason: str) -> int:
     return 0
 
 
+def keep_earlier(root: Path, src: Path, dest: Path) -> None:
+    """Copy src over dest, first moving a different dest to versiones/ (same folders as videos/), its name
+    stamped with when that version arrived (its mtime, UTC): a rerun never loses the earlier transcription.
+    An identical file is left as it is."""
+    if dest.exists():
+        if dest.read_bytes() == src.read_bytes():
+            return
+        stamp = datetime.fromtimestamp(dest.stat().st_mtime, timezone.utc).strftime('%Y-%m-%dT%H%M')
+        folder = root / 'versiones' / dest.parent.relative_to(root / 'videos')
+        folder.mkdir(parents=True, exist_ok=True)
+        base, ext = dest.name[: -len(dest.suffix)], dest.suffix
+        old, n = folder / f'{base}.{stamp}{ext}', 2
+        while old.exists():
+            old, n = folder / f'{base}.{stamp}-{n}{ext}', n + 1
+        shutil.move(str(dest), old)
+    shutil.copyfile(src, dest)
+
+
 def _import_beside(root: Path, src: Path, suffix: str) -> int:
     """Copy src/<id>.json next to the backed-up video <id> as <stem><suffix>; how many."""
     idx = read_index(root)
@@ -457,7 +478,7 @@ def _import_beside(root: Path, src: Path, suffix: str) -> int:
         if not row or not row.get('file'):
             continue
         dest = root / 'videos' / row['file']
-        shutil.copyfile(j, dest.with_suffix(suffix))
+        keep_earlier(root, j, dest.with_suffix(suffix))
         n += 1
     return n
 
@@ -487,10 +508,10 @@ def cmd_import_whisper(root: Path, src: Path) -> int:
             continue
         dest = root / 'videos' / row['file']
         data = json.loads(j.read_text(encoding='utf-8'))
-        shutil.copyfile(j, dest.with_suffix('.whisper.json'))
+        keep_earlier(root, j, dest.with_suffix('.whisper.json'))
         vtt = j.with_suffix('.vtt')
         if vtt.exists():
-            shutil.copyfile(vtt, dest.with_suffix(f".{data.get('language', 'und')}-whisper.vtt"))
+            keep_earlier(root, vtt, dest.with_suffix(f".{data.get('language', 'und')}-whisper.vtt"))
         row['captions'] = caption_state(dest)
         n += 1
     write_index(root, list(idx.values()))

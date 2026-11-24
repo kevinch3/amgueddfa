@@ -45,7 +45,9 @@ def make_windows(lines: list[Line], duration: float, context_for: Callable[[floa
     for a, b in zip(cuts, cuts[1:]):
         inside = tuple(l for l in lines if a - overlap <= l.t < b + overlap)
         ctx = with_glossary(context_for(a, b), inside, glossary)
-        key = json.dumps([a, b, [list(l) for l in inside], ctx.text, PROMPT_VERSION], ensure_ascii=False, sort_keys=True)
+        # The fields the model sees, never a line's end (e): adding it to Line must not re-ask every window.
+        seen = [[l.t, l.text, l.src, l.lang, l.conf] for l in inside]
+        key = json.dumps([a, b, seen, ctx.text, PROMPT_VERSION], ensure_ascii=False, sort_keys=True)
         out.append(Window(a, b, inside, ctx, hashlib.sha256(key.encode("utf-8")).hexdigest()[:16]))
     return out
 

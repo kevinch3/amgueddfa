@@ -48,3 +48,19 @@ def test_glossary_hint_only_in_windows_with_the_misheard_word(tmp_path):
     ws = make_windows(ls, 130, lambda a, b: CTX, glossary=ctxmod.load_glossary(g))
     assert "dewenllys → Tehuelches" in ws[0].context.text and "tehuelches" in ws[0].context.words
     assert "Tehuelches" not in ws[1].context.text and ws[1].context == CTX
+
+
+def test_hash_ignores_line_ends_and_matches_the_five_field_form():
+    # Line gained an end ("e"): hashing whole tuples would change every cached window. The model never sees e.
+    import hashlib
+    import json
+
+    from scripts.reconstruct.windows import PROMPT_VERSION
+    ls = lines_every(3, 200)
+    for w in make_windows(ls, 200, lambda x, y: CTX):
+        key = json.dumps([w.t0, w.t1, [[l.t, l.text, l.src, l.lang, l.conf] for l in w.lines], w.context.text,
+                          PROMPT_VERSION], ensure_ascii=False, sort_keys=True)
+        assert w.hash == hashlib.sha256(key.encode("utf-8")).hexdigest()[:16]
+    with_ends = [l._replace(e=l.t + 2.0) for l in ls]
+    assert [w.hash for w in make_windows(with_ends, 200, lambda x, y: CTX)] == \
+        [w.hash for w in make_windows(ls, 200, lambda x, y: CTX)]

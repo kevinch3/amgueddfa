@@ -54,3 +54,34 @@ def test_cli_exit_code(tmp_path, capsys, monkeypatch):
     assert casos.main(["vid", str(f)]) == 1
     out = capsys.readouterr().out
     assert "FAIL n" in out and "0/1 pass" in out
+
+
+def test_pattern_and_src_on_present():
+    r = run([
+        {"kind": "present", "name": "a", "t": 20, "tol": 1, "pattern": "fawr|nada", "src": "cy"},
+        {"kind": "present", "name": "b", "t": 20, "tol": 1, "pattern": "fawr|nada", "src": "whisper_es"},
+        {"kind": "present", "name": "c", "t": 20, "tol": 2, "pattern": "nada|noche"},
+        {"kind": "once", "name": "d", "from": 0, "to": 15, "pattern": "tard|noch"},
+    ])
+    assert r == {"a": True, "b": False, "c": False, "d": True}
+
+
+def test_no_duplicate_with_ends():
+    lines = [Line(10.0, "uno", "cy", "cy", 0.9, 13.0), Line(11.0, "dos", "whisper_es", "es", None, 12.0),
+             Line(30.0, "tres", "cy", "cy", 0.9, 31.0), Line(30.6, "cuatro", "yt_es", "es", None, 31.6),
+             Line(50.0, "cinco", "cy", "cy", 0.9, 51.0), Line(50.1, "seis", "cy", "cy", 0.9, 51.1)]
+    rows = casos.lines_from_sources(lines)
+    r = dict(casos.check([
+        {"kind": "no_duplicate", "name": "over", "from": 0, "to": 20},
+        {"kind": "no_duplicate", "name": "short", "from": 25, "to": 40},
+        {"kind": "no_duplicate", "name": "same", "from": 45, "to": 60},
+        {"kind": "no_duplicate", "name": "outside", "from": 11.5, "to": 20},
+    ], rows))
+    assert r == {"over": False, "short": True, "same": True, "outside": True}
+
+
+def test_no_duplicate_reconstruccion_uses_next_start():
+    doc = {"seg": [[1, "a"], [2, "b"], [9, "c"]], "fuentes": [["cy"], ["yt_es"], ["cy"]]}
+    rows = casos.lines_from_reconstruccion(doc)
+    assert [x.e for x in rows] == [2, 9, 10.0]
+    assert dict(casos.check([{"kind": "no_duplicate", "name": "n", "from": 0, "to": 20}], rows)) == {"n": True}

@@ -16,79 +16,135 @@
    "Y wraig a'i chasaleuon yw Er Silion. Yn y barod, Er Silion."
   ],
   [
-   399.0,
+   400.0,
    "Ubi caritas et amor, Deus ibi est."
   ],
   [
-   446.4,
+   417.2,
    "Congregavit nos in unum Christi amor."
   ],
   [
-   493.8,
+   434.5,
+   "Ubi caritas et amor, Deus ibi est."
+  ],
+  [
+   456.5,
+   "Congregavit nos in unum Christi amor."
+  ],
+  [
+   478.5,
    "Exsultemus, et in ipso jucundemur."
   ],
   [
-   537.5,
-   "medres o'r nefydd i lanw nos ym Mhenfro."
-  ],
-  [
-   541.2,
+   511.5,
    "Timeamus, et amemus Deum vivum."
   ],
   [
-   580.7,
+   539.0,
    "Et ex corde diligamus nos sincero."
   ],
   [
-   628.1,
+   553.8,
+   "Et ex corde diligamus nos sincero."
+  ],
+  [
+   568.5,
+   "Ubi caritas et amor, Deus ibi est."
+  ],
+  [
+   591.8,
+   "Congregavit nos in unum Christi amor."
+  ],
+  [
+   615.0,
    "Amen."
   ],
   [
-   857.0,
+   857.5,
    "Ubi caritas et amor, Deus ibi est."
   ],
   [
-   892.4,
+   869.5,
    "Congregavit nos in unum Christi amor."
   ],
   [
-   927.8,
+   881.5,
+   "Ubi caritas et amor, Deus ibi est."
+  ],
+  [
+   897.5,
+   "Congregavit nos in unum Christi amor."
+  ],
+  [
+   913.5,
    "Exsultemus, et in ipso jucundemur."
   ],
   [
-   963.2,
+   937.8,
    "Timeamus, et amemus Deum vivum."
   ],
   [
-   992.7,
+   958.0,
    "Et ex corde diligamus nos sincero."
   ],
   [
-   1028.1,
+   971.0,
+   "Et ex corde diligamus nos sincero."
+  ],
+  [
+   984.0,
+   "Ubi caritas et amor, Deus ibi est."
+  ],
+  [
+   1001.2,
+   "Congregavit nos in unum Christi amor."
+  ],
+  [
+   1018.5,
    "Amen."
   ],
   [
-   1294.0,
+   1295.0,
    "Ubi caritas et amor, Deus ibi est."
   ],
   [
-   1330.2,
+   1308.0,
    "Congregavit nos in unum Christi amor."
   ],
   [
-   1366.4,
+   1321.0,
+   "Ubi caritas et amor, Deus ibi est."
+  ],
+  [
+   1337.2,
+   "Congregavit nos in unum Christi amor."
+  ],
+  [
+   1353.5,
    "Exsultemus, et in ipso jucundemur."
   ],
   [
-   1402.6,
+   1377.8,
    "Timeamus, et amemus Deum vivum."
   ],
   [
-   1432.8,
+   1398.0,
    "Et ex corde diligamus nos sincero."
   ],
   [
-   1469.0,
+   1410.2,
+   "Et ex corde diligamus nos sincero."
+  ],
+  [
+   1422.5,
+   "Ubi caritas et amor, Deus ibi est."
+  ],
+  [
+   1441.0,
+   "Congregavit nos in unum Christi amor."
+  ],
+  [
+   1459.5,
    "Amen."
   ],
   [
@@ -116,7 +172,49 @@
    "letra"
   ],
   [
-   "cy"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ],
   [
    "letra"
@@ -169,8 +267,8 @@
  ],
  "letras": [
   {
-   "desde": 399,
-   "hasta": 636,
+   "desde": 400,
+   "hasta": 434.5,
    "titulo": "Ubi caritas",
    "autor": "Gjeilo",
    "idioma": "la",
@@ -178,8 +276,8 @@
    "fuente": "Aportado por Kevin Roberts"
   },
   {
-   "desde": 857,
-   "hasta": 1034,
+   "desde": 434.5,
+   "hasta": 478.5,
    "titulo": "Ubi caritas",
    "autor": "Gjeilo",
    "idioma": "la",
@@ -187,8 +285,143 @@
    "fuente": "Aportado por Kevin Roberts"
   },
   {
-   "desde": 1294,
-   "hasta": 1475,
+   "desde": 478.5,
+   "hasta": 539,
+   "titulo": "Ubi caritas",
+   "autor": "Gjeilo",
+   "idioma": "la",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
+  },
+  {
+   "desde": 539,
+   "hasta": 568.5,
+   "titulo": "Ubi caritas",
+   "autor": "Gjeilo",
+   "idioma": "la",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
+  },
+  {
+   "desde": 568.5,
+   "hasta": 615,
+   "titulo": "Ubi caritas",
+   "autor": "Gjeilo",
+   "idioma": "la",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
+  },
+  {
+   "desde": 615,
+   "hasta": 635,
+   "titulo": "Ubi caritas",
+   "autor": "Gjeilo",
+   "idioma": "la",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
+  },
+  {
+   "desde": 857.5,
+   "hasta": 881.5,
+   "titulo": "Ubi caritas",
+   "autor": "Gjeilo",
+   "idioma": "la",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
+  },
+  {
+   "desde": 881.5,
+   "hasta": 913.5,
+   "titulo": "Ubi caritas",
+   "autor": "Gjeilo",
+   "idioma": "la",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
+  },
+  {
+   "desde": 913.5,
+   "hasta": 958,
+   "titulo": "Ubi caritas",
+   "autor": "Gjeilo",
+   "idioma": "la",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
+  },
+  {
+   "desde": 958,
+   "hasta": 984,
+   "titulo": "Ubi caritas",
+   "autor": "Gjeilo",
+   "idioma": "la",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
+  },
+  {
+   "desde": 984,
+   "hasta": 1018.5,
+   "titulo": "Ubi caritas",
+   "autor": "Gjeilo",
+   "idioma": "la",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
+  },
+  {
+   "desde": 1018.5,
+   "hasta": 1034.5,
+   "titulo": "Ubi caritas",
+   "autor": "Gjeilo",
+   "idioma": "la",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
+  },
+  {
+   "desde": 1295,
+   "hasta": 1321,
+   "titulo": "Ubi caritas",
+   "autor": "Gjeilo",
+   "idioma": "la",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
+  },
+  {
+   "desde": 1321,
+   "hasta": 1353.5,
+   "titulo": "Ubi caritas",
+   "autor": "Gjeilo",
+   "idioma": "la",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
+  },
+  {
+   "desde": 1353.5,
+   "hasta": 1398,
+   "titulo": "Ubi caritas",
+   "autor": "Gjeilo",
+   "idioma": "la",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
+  },
+  {
+   "desde": 1398,
+   "hasta": 1422.5,
+   "titulo": "Ubi caritas",
+   "autor": "Gjeilo",
+   "idioma": "la",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
+  },
+  {
+   "desde": 1422.5,
+   "hasta": 1459.5,
+   "titulo": "Ubi caritas",
+   "autor": "Gjeilo",
+   "idioma": "la",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
+  },
+  {
+   "desde": 1459.5,
+   "hasta": 1474,
    "titulo": "Ubi caritas",
    "autor": "Gjeilo",
    "idioma": "la",

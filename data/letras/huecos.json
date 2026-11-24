@@ -24,17 +24,10 @@
     {"letra": "rumbo-al-cerro", "videos": ["Fkm05yVVzBY"], "motivo": "por_confirmar",
      "detalle": "El mantenedor la dejó afuera el 2026-11-21; una pasada anterior no encontró la actuación en el clip (Chubut 2012, comp. 45, obra a elección), y la pasada de identificación del 2026-11-23 sí la reconoce por lo que se oye: falta confirmar si el texto no coincide o si hay otro motivo."},
 
-    {"letra": "de-quien-pago-mi-redencion", "videos": ["HnVmmnyjBU4", "utHSvsjwvwo"], "desde": {"utHSvsjwvwo": 19490}, "motivo": "estrofa_omitida",
-     "detalle": "Chubut 2018, comp. 55 (himno a elección): el cuarteto canta las estrofas 1, 3 y 4 y saltea la 2 (la sesión, hacia 5:24:50, tiene la misma actuación que el clip), y el alineador todavía no puede saltear una estrofa."},
-
-    {"letra": "mawr-oedd-crist-yn-nhragwyddoldeb", "videos": ["Z_QPMRk-ek0"], "motivo": "estrofa_omitida",
-     "detalle": "El solista (Chubut 2008, comp. 48, himno a elección) canta las estrofas 1 y 3 y saltea la 2, y el alineador todavía no puede saltear una estrofa."},
-    {"letra": "duw-mawr-y-rhyfeddodau", "videos": ["cCrdI-dzfZQ", "eYr4bFtriWw"], "desde": {"eYr4bFtriWw": 115}, "motivo": "estrofa_omitida",
-     "detalle": "Se canta solo la primera de las tres estrofas guardadas, con su estribillo (en cCrdI-dzfZQ, el estribillo dos o tres veces; en eYr4bFtriWw, Chubut 2022 comp. 66, con la tonada Huddersfield, de 1:55 a 3:25)."},
-    {"obra": "Huddersfield", "videos": ["eYr4bFtriWw"], "desde": {"eYr4bFtriWw": 115}, "motivo": "estrofa_omitida",
-     "detalle": "El coro canta esta tonada con las palabras de «Duw mawr y rhyfeddodau maith», ya guardadas (duw-mawr-y-rhyfeddodau), pero solo la primera estrofa y su estribillo (de 1:55 a 3:25); el segundo coro de la competencia no está en los videos."},
-    {"letra": "molwn-enwr-arglwydd", "videos": ["sV0n9xD1M_8"], "motivo": "estrofa_omitida",
-     "detalle": "Se cantan la primera y la tercera estrofa del texto guardado (la 1 y la 4 del himno) y se saltea la segunda; 8IQJGDgLfBQ canta las tres y ya está alineado."},
+    {"letra": "duw-mawr-y-rhyfeddodau", "videos": ["eYr4bFtriWw"], "desde": {"eYr4bFtriWw": 129}, "motivo": "gales_insuficiente",
+     "detalle": "Chubut 2022, comp. 66 (tonada Huddersfield): el coro canta solo la primera estrofa, con la cuarta y la sexta línea dos veces, y un amén (de 2:09 a 3:27), pero el modelo galés pasa su filtro de confianza recién desde 2:50, así que el alineador dejaría las tres primeras líneas hasta 24 s tarde."},
+    {"obra": "Huddersfield", "videos": ["eYr4bFtriWw"], "desde": {"eYr4bFtriWw": 129}, "motivo": "gales_insuficiente",
+     "detalle": "El coro canta esta tonada con el texto guardado en duw-mawr-y-rhyfeddodau (la primera estrofa con su estribillo y un amén, de 2:09 a 3:27), pero el modelo galés oye muy poco del canto por encima de su filtro de confianza para alinearla; el segundo coro de la competencia no está en los videos."},
 
     {"letra": "angor", "videos": ["Fh7i29-94XY"], "motivo": "gales_insuficiente",
      "detalle": "El reconocedor galés oye la obra, pero casi todas sus líneas quedan bajo el filtro de confianza y el final del texto se amontona en pocos segundos."},
@@ -79,11 +72,6 @@
      "detalle": "El título del capítulo la nombra, pero en lo oído no se reconoce: el video termina poco después de la comp. 45, y de 19:06 al final no hay palabras reconocibles."},
     {"letra": "gurisito", "videos": ["FR9inQWeGI8"], "motivo": "poco_oido",
      "detalle": "Solo el modelo galés oye algo del canto (de 1:22 a 2:12), y el alineador no lo usa para una obra en castellano; además, después de 3:09 sigue la percusión corporal y no se sabe hasta dónde llega el texto."},
-
-    {"letra": "es-ist-ein-ros-entsprungen", "motivo": "alineador",
-     "detalle": "Los dos videos tienen la misma actuación (comp. 54) y el tramo está ubicado, pero los reconocedores oyeron solo palabras sueltas o espurias y el alineador amontona el texto en pocos segundos."},
-    {"letra": "in-stiller-nacht", "motivo": "alineador",
-     "detalle": "Dos coros la cantan en la comp. 79 y los dos tramos están ubicados, pero el alineador se ancla en palabras sueltas mal oídas (su normalización además pierde la ß) y amontona las líneas."},
 
     {"letra": "can-yr-arad-goch", "videos": ["N33ihYcQHEk", "0ah0WrQLEa4", "8dpPe64kDpo"], "motivo": "alineador",
      "detalle": "El reconocedor galés oye cada estrofa o estribillo en un solo segmento largo, y el alineador amontona el último estribillo en los cuatro segundos que siguen al último segmento (en 0ah0WrQLEa4 y 8dpPe64kDpo, también el comienzo, que nadie oyó)."},
@@ -138,6 +126,8 @@
     {"letra": "la-vieja", "videos": ["eNmj-1_HlIk"], "desde": {"eNmj-1_HlIk": 3809}, "motivo": "texto_distinto",
      "detalle": "Los tres grupos que la cantan en esta sesión (Chubut 2018, viernes, desde 1:03:29, 1:07:28 y 1:11:07) usan otra versión de la letra, que casi no coincide con el texto guardado (el que se canta en adFH5gX0z80): los tramos se quitaron el 2026-11-23 hasta tener esa versión."},
     {"letra": "newyddion-braf", "videos": ["Oev0xyrE5bY"], "motivo": "texto_incompleto",
-     "detalle": "El coro canta un estribillo que el texto guardado no tiene, y el alineador lo toma por una segunda vuelta de la estrofa 2."}
+     "detalle": "El coro canta un estribillo que el texto guardado no tiene, y el alineador lo toma por una segunda vuelta de la estrofa 2."},
+    {"letra": "oro-y-plata", "videos": ["hVtD63KLlsw"], "motivo": "texto_incompleto",
+     "detalle": "Chubut 2026: la primera de las dos actuaciones termina con una coda (de 10:32:46 a 10:33:16) que repite en otro orden palabras de las estrofas 3 y 5 y no está en el texto guardado; falta confirmar en la partitura del arreglo cómo la escribe."}
   ]
 }

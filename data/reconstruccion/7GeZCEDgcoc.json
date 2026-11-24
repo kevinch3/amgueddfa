@@ -52,31 +52,47 @@
    "Locus Amoenus."
   ],
   [
-   251.9,
+   178.5,
    "Ubi caritas et amor, Deus ibi est."
   ],
   [
-   260.9,
+   190.5,
    "Congregavit nos in unum Christi amor."
   ],
   [
-   269.9,
+   202.5,
+   "Ubi caritas et amor, Deus ibi est."
+  ],
+  [
+   218.2,
+   "Congregavit nos in unum Christi amor."
+  ],
+  [
+   234.0,
    "Exsultemus, et in ipso jucundemur."
   ],
   [
-   278.9,
+   258.5,
    "Timeamus, et amemus Deum vivum."
   ],
   [
-   286.4,
+   279.0,
    "Et ex corde diligamus nos sincero."
   ],
   [
-   302.56,
-   "Ubi arid nased amor, wrth ddews i fi est. Cwmfryd arafid nos i nŵn, Cristi a mor. Cristi a mor."
+   291.8,
+   "Et ex corde diligamus nos sincero."
   ],
   [
-   329.2,
+   304.5,
+   "Ubi caritas et amor, Deus ibi est."
+  ],
+  [
+   322.0,
+   "Congregavit nos in unum Christi amor."
+  ],
+  [
+   339.5,
    "Amen."
   ]
  ],
@@ -133,7 +149,19 @@
    "letra"
   ],
   [
-   "cy"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ],
   [
    "letra"
@@ -141,7 +169,52 @@
  ],
  "letras": [
   {
-   "desde": 178,
+   "desde": 178.5,
+   "hasta": 202.5,
+   "titulo": "Ubi caritas",
+   "autor": "Gjeilo",
+   "idioma": "la",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
+  },
+  {
+   "desde": 202.5,
+   "hasta": 234,
+   "titulo": "Ubi caritas",
+   "autor": "Gjeilo",
+   "idioma": "la",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
+  },
+  {
+   "desde": 234,
+   "hasta": 279,
+   "titulo": "Ubi caritas",
+   "autor": "Gjeilo",
+   "idioma": "la",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
+  },
+  {
+   "desde": 279,
+   "hasta": 304.5,
+   "titulo": "Ubi caritas",
+   "autor": "Gjeilo",
+   "idioma": "la",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
+  },
+  {
+   "desde": 304.5,
+   "hasta": 339.5,
+   "titulo": "Ubi caritas",
+   "autor": "Gjeilo",
+   "idioma": "la",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
+  },
+  {
+   "desde": 339.5,
    "hasta": 355,
    "titulo": "Ubi caritas",
    "autor": "Gjeilo",
@@ -152,8 +225,8 @@
  ],
  "ventanas": {
   "total": 11,
-  "modelo": 3,
+  "modelo": 5,
   "reglas": 1,
-  "vacias": 7
+  "vacias": 5
  }
 }

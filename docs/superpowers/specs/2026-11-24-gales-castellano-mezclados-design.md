@@ -1,6 +1,6 @@
 # Mixed Welsh and Spanish speech in the reconstruction
 
-**Status:** draft for the maintainer's review (2026-11-24). Nothing here is built yet.
+**Status:** approved by the maintainer (2026-11-24). Nothing here is built yet.
 
 ## Intent
 
@@ -132,9 +132,19 @@ Of 298 Bangor lines, 120 are clearly Welsh, 124 clearly Spanish and 54 close or 
 
 ## Left to the builder
 
-- Thresholds (pause 0.6 s, clear gap 0.10, minimum run 3 words, overlap half), set on the pilot. Check them on two more sessions before the full pass: one mostly Spanish and one mostly Welsh.
+- Thresholds (pause 0.6 s, clear gap 0.10, minimum run 3 words, overlap half), set on the pilot. Check them on two more sessions before the full pass: one mostly Spanish and one mostly Welsh. Check them on output from both KPC and Colab (see below).
 - How the rebuild's model window and checker see the new lines. They are still lines from a named source, so the checker's rule (every word heard, at its time) applies unchanged.
 
-## Open for the maintainer
+## Decided by the maintainer (2026-11-24)
 
-- **Where to run the full pass** (about a week of GPU). KPC alone, one job at a time; or helped by Google Colab, which means uploading the private backup audio to Google.
+- **Where the full pass runs: KPC and Colab together.**
+  - KPC stays one job at a time.
+  - Colab runs the notebook from #154 on a GPU runtime that Claude drives through Google's hosted Colab MCP server.
+  - The audio goes from KPC to the runtime and the results come back to KPC. They are imported with versions kept (#151), and the runtime is deleted when the batch is done.
+  - Uploading the private backup audio to Google is accepted.
+- **Machines don't give identical text.** In the test on utHSvsjwvwo (0:00–30:00, #154), a Colab T4 and KPC's P4000 got the same audio:
+  - only 52% of Bangor's words matched between the two runs;
+  - the language decision matched on 68% of the half seconds;
+  - both still passed all 9 of the maintainer's cases.
+
+  So each video records which machine transcribed it, and the threshold check above covers both machines.

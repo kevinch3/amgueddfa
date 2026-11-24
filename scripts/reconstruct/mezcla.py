@@ -42,7 +42,8 @@ def _labels(cy: list, es: list) -> list[str]:
 
 
 def _runs(labels: list[str]) -> list[list]:
-    """[[label, first index, end index], ...], with runs shorter than MIN_RUN given the longer neighbour's label."""
+    """[[label, first index, end index], ...], with runs shorter than MIN_RUN given the longer neighbour's label
+    (the only one's at an edge; the left one's on a tie), shortest first, interior before edge."""
     runs = []
     for i, lab in enumerate(labels):
         if runs and runs[-1][0] == lab:
@@ -50,9 +51,12 @@ def _runs(labels: list[str]) -> list[list]:
         else:
             runs.append([lab, i, i + 1])
     while len(runs) > 1:
-        short = next((k for k, r in enumerate(runs) if r[2] - r[1] < MIN_RUN), None)
-        if short is None:
+        # the shortest short run first, interior runs before edge ones, so a lone word inside a run joins it
+        # instead of an edge run growing into it
+        short = [k for k, r in enumerate(runs) if r[2] - r[1] < MIN_RUN]
+        if not short:
             break
+        short = min(short, key=lambda k: (k in (0, len(runs) - 1), runs[k][2] - runs[k][1], k))
         near = [runs[k] for k in (short - 1, short + 1) if 0 <= k < len(runs)]
         runs[short][0] = max(near, key=lambda r: r[2] - r[1])[0]
         runs = _merge(runs)

@@ -56,6 +56,25 @@ def test_short_run_takes_neighbours_language():
     assert (out[0].src, out[0].text) == ("cy", " ".join(w[2] for w in cy))
 
 
+def labelled(labels):
+    cy = [[i * 0.5, i * 0.5 + 0.4, f"gair{i}", 0.9 if lab == "cy" else 0.3] for i, lab in enumerate(labels.split())]
+    es = [[i * 0.5, i * 0.5 + 0.4, f"palabra{i}", 0.3 if lab == "cy" else 0.9] for i, lab in enumerate(labels.split())]
+    r = row(cy, es)
+    r["cy_p"] = r["es_p"] = 0.6
+    return r
+
+
+def test_lone_word_inside_a_run_joins_it_before_an_edge_run_grows():
+    out = decide([labelled("cy cy es cy cy es es es")], {})
+    assert [(ln.src, ln.text) for ln in out] == [("cy", "gair0 gair1 gair2 gair3 gair4"),
+                                                 ("whisper_es", "palabra5 palabra6 palabra7")]
+
+
+def test_short_run_between_one_language_takes_it():
+    out = decide([labelled("cy es es cy cy cy")], {})
+    assert [(ln.src, ln.text) for ln in out] == [("cy", " ".join(f"gair{i}" for i in range(6)))]
+
+
 def test_stock_phrase_cannot_win():
     r = row(words("diolch yn fawr i chi", 3.0, 0.70), words("gracias por ver el video", 3.0, 0.95))
     out = decide([r], {3.0: 0.8})

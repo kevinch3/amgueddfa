@@ -44,6 +44,8 @@ amgueddfa-backup/
   lists/          extra lists (VIDEOS.tsv) and the last copy of the site's list
   videos/<Festival>/<year>/<year>_<code or kind>_<title>_<id>.mp4
                   + .info.json (YouTube's metadata) + .<lang>.vtt (transcriptions)
+  versiones/<Festival>/<year>/<name>.<YYYY-MM-DDTHHMM>.<ext>
+                  earlier transcriptions replaced by an import (see below)
   logs/YYYY-MM.log
   bin/            private yt-dlp, updated by every run
   tmp/            yt-dlp's temporary files (it unpacks itself on every call)
@@ -118,6 +120,11 @@ python3 scripts/backup/videos.py import-es /tmp/out-es
 ```
 
 Where a segment was found Spanish, the reconstruction takes Spanish Whisper's text (`whisper_es`) and leaves the Bangor line out.
+
+**Earlier versions are kept (2026-11-24).** `import-whisper`, `import-cy` and `import-es` never overwrite
+a different file: the one already there moves to `versiones/` (same folders as `videos/`), its name
+stamped with when it arrived (UTC), e.g. `…_utHSvsjwvwo.cy-techiaith.2026-11-24T0635.json`. An identical
+file is left alone. The reconstruction reads only `videos/`. `remove` deletes a video's kept versions too.
 
 Each run checks, cheaply, that every saved video is still on YouTube, so
 `gone_kept` shows up within a month of a video disappearing.

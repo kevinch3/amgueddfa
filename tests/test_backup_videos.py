@@ -152,3 +152,78 @@ def test_import_es_copies_the_spanish_pass_next_to_videos(tmp_path):
     (src / "AAAAAAAAAAA.json").write_text(json.dumps({"id": "AAAAAAAAAAA", "segments": [{"s": 1.0, "e": 3.0, "es": 0.99, "cy": 0.0, "text": "Muchas gracias"}]}), encoding="utf-8")
     assert main(["--root", str(root), "import-es", str(src)]) == 0
     assert json.loads((root / "videos/C/2021/a_AAAAAAAAAAA.whisper-es.json").read_text())["segments"][0]["text"] == "Muchas gracias"
+
+
+def _one_video(tmp_path, year="2025"):
+    root = tmp_path / "backup"
+    (root / f"videos/C/{year}").mkdir(parents=True)
+    (root / f"videos/C/{year}/a_AAAAAAAAAAA.mp4").write_bytes(b"")
+    from scripts.backup.videos import INDEX_COLS
+    row = {c: "" for c in INDEX_COLS} | {"id": "AAAAAAAAAAA", "festival": "C", "year": year, "file": f"C/{year}/a_AAAAAAAAAAA.mp4"}
+    (root / "INDEX.tsv").write_text("\t".join(INDEX_COLS) + "\n" + "\t".join(row[c] for c in INDEX_COLS) + "\n", encoding="utf-8")
+    src = tmp_path / "out"
+    src.mkdir()
+    return root, src
+
+
+def test_import_keeps_the_earlier_version_of_a_changed_file(tmp_path):
+    import os
+    from scripts.backup.videos import cmd_import_cy
+    root, src = _one_video(tmp_path)
+    dest = root / "videos/C/2025/a_AAAAAAAAAAA.cy-techiaith.json"
+    dest.write_text('{"segments": "old"}', encoding="utf-8")
+    os.utime(dest, (1795000000, 1795000000))  # 2026-11-19 ~ when the old run arrived
+    (src / "AAAAAAAAAAA.json").write_text('{"segments": "new"}', encoding="utf-8")
+    assert cmd_import_cy(root, src) == 0
+    assert dest.read_text() == '{"segments": "new"}'
+    kept = list((root / "versiones/C/2025").glob("a_AAAAAAAAAAA.cy-techiaith.*.json"))
+    assert len(kept) == 1 and kept[0].read_text() == '{"segments": "old"}'
+    assert "2026-11-" in kept[0].name
+
+
+def test_import_of_an_identical_file_keeps_no_extra_version(tmp_path):
+    from scripts.backup.videos import cmd_import_cy
+    root, src = _one_video(tmp_path)
+    (root / "videos/C/2025/a_AAAAAAAAAAA.cy-techiaith.json").write_text('{"segments": []}', encoding="utf-8")
+    (src / "AAAAAAAAAAA.json").write_text('{"segments": []}', encoding="utf-8")
+    assert cmd_import_cy(root, src) == 0
+    assert not (root / "versiones").exists()
+
+
+def test_two_reimports_keep_both_earlier_versions(tmp_path):
+    from scripts.backup.videos import cmd_import_es
+    root, src = _one_video(tmp_path)
+    for text in ("v1", "v2", "v3"):
+        (src / "AAAAAAAAAAA.json").write_text(f'{{"t": "{text}"}}', encoding="utf-8")
+        cmd_import_es(root, src)
+    kept = sorted(p.read_text() for p in (root / "versiones/C/2025").glob("a_AAAAAAAAAAA.whisper-es.*.json"))
+    assert kept == ['{"t": "v1"}', '{"t": "v2"}']
+    assert (root / "videos/C/2025/a_AAAAAAAAAAA.whisper-es.json").read_text() == '{"t": "v3"}'
+
+
+def test_import_whisper_keeps_earlier_json_and_vtt(tmp_path):
+    import json
+    from scripts.backup.videos import cmd_import_whisper
+    root, src = _one_video(tmp_path)
+    d = root / "videos/C/2025/a_AAAAAAAAAAA"
+    d.with_suffix(".whisper.json").write_text(json.dumps({"language": "es", "segments": ["old"]}), encoding="utf-8")
+    d.with_suffix(".es-whisper.vtt").write_text("WEBVTT old", encoding="utf-8")
+    (src / "AAAAAAAAAAA.json").write_text(json.dumps({"language": "es", "segments": ["new"]}), encoding="utf-8")
+    (src / "AAAAAAAAAAA.vtt").write_text("WEBVTT new", encoding="utf-8")
+    assert cmd_import_whisper(root, src) == 0
+    v = root / "versiones/C/2025"
+    assert [json.loads(p.read_text())["segments"] for p in v.glob("a_AAAAAAAAAAA.whisper.*.json")] == [["old"]]
+    assert [p.read_text() for p in v.glob("a_AAAAAAAAAAA.es-whisper.*.vtt")] == ["WEBVTT old"]
+    assert d.with_suffix(".es-whisper.vtt").read_text() == "WEBVTT new"
+
+
+def test_remove_deletes_the_kept_versions_too(tmp_path):
+    from scripts.backup.videos import cmd_import_cy, cmd_remove
+    root, src = _one_video(tmp_path)
+    (root / "videos/C/2025/a_AAAAAAAAAAA.cy-techiaith.json").write_text("old", encoding="utf-8")
+    (src / "AAAAAAAAAAA.json").write_text("new", encoding="utf-8")
+    cmd_import_cy(root, src)
+    (root / "versiones/C/2025/b_BBBBBBBBBBB.cy-techiaith.2026-11-01T0000.json").write_text("other video", encoding="utf-8")
+    assert cmd_remove(root, "AAAAAAAAAAA", "test") == 0
+    assert list((root / "versiones/C/2025").glob("a_AAAAAAAAAAA.*")) == []
+    assert (root / "versiones/C/2025/b_BBBBBBBBBBB.cy-techiaith.2026-11-01T0000.json").exists()

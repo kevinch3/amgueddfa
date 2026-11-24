@@ -60,3 +60,11 @@ def test_word_list_has_fact_values_not_field_labels(tmp_path):
     ctx = video_context(repo, video, 0, 60)
     assert {"gimnasio", "municipal"} <= ctx.words
     assert "venue" not in ctx.words and "ganador" not in ctx.words
+
+
+def test_share_of_words_counts_repeats():
+    from scripts.reconstruct.context import SAME_WORDS, share_of_words
+    assert SAME_WORDS == 0.6
+    assert share_of_words(["diolch", "yn", "fawr"], ["diolch", "en", "fawr", "iawn"]) == 2 / 3
+    assert share_of_words(["hola", "hola"], ["hola"]) == 0.5
+    assert share_of_words([], ["hola"]) == 0.0

@@ -41,9 +41,16 @@ def display_words(w: Window) -> list[str]:
     return sorted((v for k, v in seen.items() if k in w.context.words), key=fold)
 
 
+# Only in windows with an alternative (sources.Line.alt), so no other window's prompt changes.
+ALTERNATIVE_NOTE = ("\n\nA line marked \"alternative to T\" is another recogniser's hearing of the same Welsh speech as the"
+                    " Welsh line at T. Publish one of the two, the one that reads as real Welsh, never both.")
+
+
 def window_prompt(w: Window) -> str:
-    src = "\n".join(f"[{l.t:g}] ({l.src}, {l.lang}{f', conf {l.conf:.2f}' if l.conf is not None else ''}) {l.text}"
-                     for l in w.lines)
+    src = "\n".join(f"[{l.t:g}] ({l.src}, {l.lang}{f', conf {l.conf:.2f}' if l.conf is not None else ''}"
+                     f"{f', alternative to {l.alt:g}' if l.alt is not None else ''}) {l.text}" for l in w.lines)
+    if any(l.alt is not None for l in w.lines):
+        src += ALTERNATIVE_NOTE
     return (f"WINDOW: {w.t0:g} to {w.t1:g} seconds\n\nSOURCES:\n{src}\n\nCONTEXT:\n{w.context.text}\n\n"
             f"WORD LIST:\n{', '.join(display_words(w))}\n")
 

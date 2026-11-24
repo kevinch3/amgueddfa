@@ -100,3 +100,9 @@ def test_no_duplicate_without_fuentes_fails_loudly():
     rows = casos.lines_from_reconstruccion({"seg": [[1, "buenas tardes a todos"], [2, "buenas tardes a todos"]]})
     with pytest.raises(ValueError, match="fuentes"):
         casos.check([{"kind": "no_duplicate", "name": "n", "from": 0, "to": 20}], rows)
+
+
+def test_sources_mode_leaves_alternatives_out():
+    alt = Line(20.5, "Diolch yn fawr i bawb yna", "yt_es", "es", None, 22.0, 20.0)
+    rows = casos.lines_from_sources(LINES[:2] + [alt])
+    assert [r.t for r in rows] == [10.0, 20.0]

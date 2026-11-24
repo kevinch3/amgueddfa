@@ -64,3 +64,12 @@ def test_hash_ignores_line_ends_and_matches_the_five_field_form():
     with_ends = [l._replace(e=l.t + 2.0) for l in ls]
     assert [w.hash for w in make_windows(with_ends, 200, lambda x, y: CTX)] == \
         [w.hash for w in make_windows(ls, 200, lambda x, y: CTX)]
+
+
+def test_an_alternative_changes_only_its_own_window():
+    ls = lines_every(3, 200)
+    plain = make_windows(ls, 200, lambda x, y: CTX)
+    alt = make_windows(ls + [Line(100.5, "hola a todos 99", "whisper_es", "es", None, None, 99.0)], 200, lambda x, y: CTX)
+    changed = [a.t0 for a, b in zip(plain, alt) if a.hash != b.hash]
+    assert changed and all(w.t0 - 5 <= 100.5 < w.t1 + 5 for w in alt if w.t0 in changed)
+    assert len(changed) < len(plain)

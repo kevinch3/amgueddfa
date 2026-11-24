@@ -278,7 +278,8 @@ def test_duplicate_spanish_line_dropped_by_overlap(tmp_path):
     row = _row(465.0, "el número siete del programa", es="el número siete del programa", cy_p=0.3, es_p=0.9)  # 465-467.5
     stem, letras = _mezcla_fixture(tmp_path, [_seg(row)], [row])
     _vtt_cue(stem, 466.0, 468.5, "el número siete")                 # 1.5 of its 2.5 s overlap: 60 %
-    _vtt_cue(stem, 466.5, 469.0, "siete del programa")              # 1.0 of 2.5 s: 40 %
+    _vtt_cue(stem, 466.5, 469.0, "y bienvenidos todos")             # 1.0 of 2.5 s: 40 %, other words (a repeat of
+                                                                    # the decided words goes: test_stretched_line_...)
     got = [(l.t, l.src) for l in load_sources(stem, "vid", letras) if 400 < l.t < 500]
     assert got == [(465.0, "whisper_es"), (466.5, "yt_es")]
 
@@ -421,3 +422,30 @@ def test_same_start_lines_of_different_sources_reach_the_aligner_in_text_order(t
     load_sources(stem, "vid", letras)
     same = [x for t, x in seen[0] if t == 100.0]
     assert same == sorted(same) and len(same) == 2
+
+
+def test_stretched_line_repeating_decided_words_is_dropped(tmp_path):
+    # 8:28: a Spanish source's segment stretched over 11 s whose words are a decided line's, at its very end.
+    row = _row(517.9, "croeso i bawb heddiw")                       # 517.9-519.9, under half of the cue
+    stem, letras = _mezcla_fixture(tmp_path, [_seg(row)], [row])
+    _vtt_cue(stem, 508.3, 519.6, "croeso i bawb heddiw")            # same words: dropped, no alternative
+    _vtt_cue(stem, 530.0, 545.0, "y ahora el jurado va a leer el veredicto croeso")  # other words: kept
+    got = [(l.t, l.src, l.alt) for l in load_sources(stem, "vid", letras) if 500 < l.t < 600]
+    assert got == [(517.9, "cy", None), (530.0, "yt_es", None)]
+
+
+def test_welsh_reading_line_under_decided_welsh_is_an_alternative(tmp_path):
+    # 7:34: Bangor's line, and a Spanish source's different hearing of the same Welsh speech.
+    row = _row(454.0, "croeso cynnes i bawb yma heddiw")           # 454.0-457.0
+    stem, letras = _mezcla_fixture(tmp_path, [_seg(row)], [row])
+    _vtt_cue(stem, 454.2, 457.0, "croeso cynnes i bawb yna heddiw")
+    got = [(l.t, l.src, l.alt) for l in load_sources(stem, "vid", letras) if 400 < l.t < 500]
+    assert got == [(454.0, "cy", None), (454.2, "yt_es", 454.0)]
+
+
+def test_spanish_reading_line_under_decided_welsh_is_no_alternative(tmp_path):
+    row = _row(454.0, "croeso cynnes i bawb yma heddiw")
+    stem, letras = _mezcla_fixture(tmp_path, [_seg(row)], [row])
+    _vtt_cue(stem, 454.2, 457.0, "que se acerquen todos por favor")
+    got = [(l.t, l.src) for l in load_sources(stem, "vid", letras) if 400 < l.t < 500]
+    assert got == [(454.0, "cy")]

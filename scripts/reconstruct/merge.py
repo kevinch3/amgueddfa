@@ -30,7 +30,8 @@ def rules_lines(w: Window, mezcla: bool = False) -> list[OutLine]:
     replaced Bangor's, and sources already dropped the other sources' lines they cover, so a line of another
     Spanish source is kept too where the chosen source's lines do not cover half of it (sources._overlapped).
     Without it the rules are as before."""
-    own = [l for l in w.lines if w.t0 <= l.t < w.t1 and tokens(_strip_tags(l.text))]  # no bare [Música] tags
+    # No bare [Música] tags, and no alternative hearing (sources.Line.alt): only the model may choose one.
+    own = [l for l in w.lines if w.t0 <= l.t < w.t1 and tokens(_strip_tags(l.text)) and l.alt is None]
     lyrics = [l for l in own if l.src == "letra"]
     span = (min(l.t for l in lyrics), max(l.t for l in lyrics) + LYRIC_TAIL) if lyrics else None
     src = next((s for s in PREFERENCE if s != "cy" and any(l.src == s for l in own)), None)
@@ -40,7 +41,7 @@ def rules_lines(w: Window, mezcla: bool = False) -> list[OutLine]:
                 if l.src in (src, "cy") and not (span and span[0] <= l.t <= span[1])]
         return sorted(out, key=lambda l: l.t)  # by time only: same-second lines keep their source order
     # Chosen lines that start before t0 but reach into the window still count as covering it.
-    chosen = [l for l in w.lines if l.src == src and l.t < w.t1 and tokens(_strip_tags(l.text))]
+    chosen = [l for l in w.lines if l.src == src and l.t < w.t1 and tokens(_strip_tags(l.text)) and l.alt is None]
     kept = [l for l in own if l.src in (src, "cy")]
     covering = [l for l in chosen]
     for s in PREFERENCE:  # the other Spanish sources, most reliable first; each tested against what is already kept

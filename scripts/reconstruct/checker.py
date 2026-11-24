@@ -8,6 +8,7 @@ Rules, per line:
 3. The line sits inside the window, at the exact time of a source line, in time order.
 4. A lyric line ("letra") equals a lyric line of the window, at its time, used once.
 5. Its sources are named and real: each one has a line within ±5 s sharing a word with it.
+6. Mixed-language videos: a Welsh line and its alternative hearing (sources.Line.alt) are never both published.
 """
 from __future__ import annotations
 
@@ -127,4 +128,9 @@ def check_window(w: Window, reply: dict) -> list[str]:
         elif t < last:
             errors.append(f"rule 3: {where} goes back in time")
         last = max(last, t)
+    lines = reply.get("lines", [])
+    for a in (l for l in w.lines if l.alt is not None):  # rule 6: a Welsh line and its alternative hearing, not both
+        if (any(abs(float(x["t"]) - a.t) < SAME and a.src in x.get("src", []) for x in lines)
+                and any(abs(float(x["t"]) - a.alt) < SAME and "cy" in x.get("src", []) for x in lines)):
+            errors.append(f"rule 6: the lines at {a.alt:g}s and {a.t:g}s are one Welsh line heard twice; publish one")
     return errors

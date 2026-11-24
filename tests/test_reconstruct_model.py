@@ -65,3 +65,12 @@ def test_word_list_keeps_accents_and_capitals_of_the_context():
 def test_prompt_shows_welsh_confidence():
     w = WINDOW._replace(lines=(Line(404.0, "Yn yr ail dosbarth rhoddaf", "cy", "cy", 0.83),))
     assert "[404] (cy, cy, conf 0.83) Yn yr ail dosbarth rhoddaf" in window_prompt(w)
+
+
+def test_prompt_marks_an_alternative_and_says_to_publish_one():
+    w = WINDOW._replace(lines=(Line(404.0, "croeso cynnes i bawb", "cy", "cy", 0.88),
+                               Line(404.3, "croeso cynnes i bawb yna", "whisper_es", "es", None, 407.0, 404.0)))
+    p = window_prompt(w)
+    assert "[404.3] (whisper_es, es, alternative to 404) croeso cynnes i bawb yna" in p
+    assert "never both" in p
+    assert "never both" not in window_prompt(WINDOW)

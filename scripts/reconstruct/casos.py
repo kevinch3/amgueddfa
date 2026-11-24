@@ -23,11 +23,11 @@ import json
 import re
 import sys
 import unicodedata
-from collections import Counter
 from pathlib import Path
 from typing import NamedTuple
 
 from scripts.export_video_transcripts import DEFAULT_BACKUP, line_languages
+from scripts.reconstruct.context import SAME_WORDS, share_of_words
 from scripts.reconstruct.sources import Line, load_sources
 
 RECONSTRUCCION = Path(__file__).resolve().parents[2] / "data" / "reconstruccion"
@@ -48,7 +48,6 @@ def fold(s: str) -> str:
 
 
 OVERLAP_MIN = 0.5  # s
-SAME_WORDS = 0.6  # share of the shorter line's words found in the other one: a repeated line
 MIN_WORDS = 3
 
 
@@ -58,6 +57,7 @@ def _ends(ts: list[float], es: list[float | None]) -> list[float]:
 
 
 def lines_from_sources(lines: list[Line]) -> list[Row]:
+    lines = [l for l in lines if l.alt is None]  # an alternative is a candidate for the model, not a published line
     ends = _ends([l.t for l in lines], [l.e for l in lines])
     return [Row(l.t, fold(l.text), frozenset([l.src]), l.lang, e) for l, e in zip(lines, ends)]
 
@@ -88,9 +88,8 @@ def _duplicates(x: Row, y: Row) -> bool:
         return False
     if x.e is not None and y.e is not None:
         return min(x.e, y.e) - max(x.t, y.t) > OVERLAP_MIN
-    a, b = sorted((Counter(x.text.split()), Counter(y.text.split())), key=lambda c: sum(c.values()))
-    n = sum(a.values())
-    return n >= MIN_WORDS and sum((a & b).values()) >= SAME_WORDS * n
+    a, b = sorted((x.text.split(), y.text.split()), key=len)  # the shorter line's words, in the other
+    return len(a) >= MIN_WORDS and share_of_words(a, b) >= SAME_WORDS
 
 
 def check_case(case: dict, rows: list[Row]) -> bool:

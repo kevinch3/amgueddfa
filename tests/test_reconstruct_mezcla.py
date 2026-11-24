@@ -95,8 +95,9 @@ def test_empty_turbo_is_welsh():
 
 def test_es_run_without_turbo_words_is_welsh():
     cy = words("diolch yn fawr iawn", 0.0, 0.95) + words("bore da i bawb", 2.0, 0.4)
-    # one long turbo word over the whole second run, but starting just before it
-    es = words("dios jen four ian", 0.0, 0.4) + [[1.95, 4.0, "buenas", 0.95]]
+    # one long turbo word over the whole second run, but starting inside the Welsh run's window (before the
+    # midpoint 1.95 between the runs) and after Bangor's "iawn" ends, so it is the Welsh run's and the es run has none
+    es = words("dios jen four ian", 0.0, 0.4) + [[1.92, 4.0, "buenas", 0.95]]
     r = row(cy, es)
     r["cy_p"] = r["es_p"] = 0.6
     out = decide([r], {0.0: 0.9})
@@ -124,3 +125,39 @@ def test_sorted_by_t():
     a = row(words("diolch yn fawr", 9.0, 0.9), [])
     b = row(words("bore da", 1.0, 0.9), [])
     assert [ln.t for ln in decide([a, b], {})] == [1.0, 9.0]
+
+
+def test_turbo_word_past_bangors_last_word_stays_in_the_last_run():
+    cy = words("diolch yn fawr iawn", 0.0, 0.95) + words("bwenas tardes a todos", 2.0, 0.4)  # Bangor ends 3.9
+    es = words("dios jen four ian", 0.0, 0.4) + words("buenas tardes a", 2.05, 0.95) + [[3.95, 4.05, "todos", 0.95]]
+    r = row(cy, es)
+    r["cy_p"] = r["es_p"] = 0.6
+    out = decide([r], {0.0: 0.9})
+    assert [(ln.src, ln.text) for ln in out] == [("cy", "diolch yn fawr iawn"), ("whisper_es", "buenas tardes a todos")]
+
+
+def test_turbo_word_before_bangors_first_word_stays_in_the_first_run():
+    cy = words("bwenas tardes a todos", 1.0, 0.4) + words("diolch yn fawr iawn", 3.0, 0.95)
+    es = [[0.85, 0.98, "buenas", 0.95]] + words("tardes a todos", 1.5, 0.95) + words("dios jen four ian", 3.0, 0.4)
+    r = row(cy, es)
+    r["cy_p"] = r["es_p"] = 0.6
+    out = decide([r], {1.0: 0.9})
+    assert [(ln.src, ln.text) for ln in out] == [("whisper_es", "buenas tardes a todos"), ("cy", "diolch yn fawr iawn")]
+
+
+def test_turbo_words_in_a_gap_go_to_the_nearer_run():
+    # Welsh run ends 1.9, Spanish run starts 4.0: the midpoint 2.95 splits the gap's turbo words.
+    cy = words("diolch yn fawr iawn", 0.0, 0.95) + words("bwenas tardes a todos", 4.0, 0.4)
+    es = [[2.5, 2.8, "uno", 0.95], [3.1, 3.4, "dos", 0.95]] + words("buenas tardes a todos", 4.0, 0.95)
+    r = row(cy, es)
+    r["cy_p"] = r["es_p"] = 0.6
+    out = decide([r], {0.0: 0.9})
+    assert [(ln.src, ln.text) for ln in out] == [("cy", "diolch yn fawr iawn"), ("whisper_es", "dos buenas tardes a todos")]
+
+
+def test_a_gap_of_exactly_clear_is_clear():
+    r = labelled("cy cy cy es es es")
+    r["cy_p"], r["es_p"] = 0.912, 0.812  # 0.912 - 0.812 is 0.0999... in floats
+    assert [ln.src for ln in decide([r], {})] == ["cy"]
+    r["cy_p"], r["es_p"] = 0.812, 0.912
+    assert [(ln.src, ln.text) for ln in decide([r], {})] == [("whisper_es", " ".join(f"palabra{i}" for i in range(6)))]

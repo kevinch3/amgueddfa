@@ -187,7 +187,7 @@ def run(audio_dir, out, until=None, compute_type="int8", only=None):
 
 def side(r, clear=0.10):
     """Which model wins a line, as in the design's step 2: cy, es, or mixed (decided word by word)."""
-    gap = r["cy_p"] - r["es_p"]
+    gap = round(r["cy_p"] - r["es_p"], 3)  # 0.912 - 0.812 is 0.0999... in floats
     return "cy" if gap >= clear or not r["es_words"] else "es" if gap <= -clear else "mixed"
 
 

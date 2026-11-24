@@ -6,12 +6,15 @@ Input rows are the es-lines file of the mixed pass (scripts/colab/pase_mezcla.py
 """
 from __future__ import annotations
 
+import math
+
 from scripts.export_video_transcripts import LOOP, STOCK
 from scripts.reconstruct.sources import Line
 
 CLEAR = 0.10  # a model whose mean word confidence is this much above the other's gives the whole line
 MIN_RUN = 3  # a run of fewer words takes its neighbours' language
 JOIN_GAP = 1.0  # s: lines of one source closer than this that repeat a word at the cut are joined
+CLIP_PAD = 0.2  # s: turbo heard each Bangor line's clip with this much more on each side (pase_mezcla.PAD)
 
 
 def _text(ws: list) -> str:
@@ -73,21 +76,35 @@ def _merge(runs: list[list]) -> list[list]:
     return out
 
 
+def _bounds(r: dict, cy: list, runs: list[list]) -> list[tuple[float, float]]:
+    """Each run's share of the clip, [lo, hi): the first run's from the clip's start, the last one's to its end,
+    and between two runs the midpoint of the gap between their Bangor words. Every turbo word is in one run's."""
+    cuts = [(cy[a[2] - 1][1] + cy[b[1]][0]) / 2 for a, b in zip(runs, runs[1:])]
+    lo = r["s"] - CLIP_PAD if r.get("s") is not None else -math.inf
+    hi = r["e"] + CLIP_PAD if r.get("e") is not None else math.inf
+    return list(zip([lo] + cuts, cuts + [hi]))
+
+
 def _word_by_word(r: dict, conf: float | None) -> list[Line]:
-    """An es run publishes turbo's words starting within its time; one left with none usable is Welsh."""
+    """An es run publishes turbo's words starting within its share of the clip; one left with none usable is
+    Welsh."""
     cy, es = r["cy_words"], r["es_words"]
     runs = _runs(_labels(cy, es))
-    turbo = lambda run: [w for w in es if cy[run[1]][0] <= w[0] < cy[run[2] - 1][1]]
-    for run in runs:
-        if run[0] == "es" and not _usable(turbo(run)):
-            run[0] = "cy"
-    return [_es(turbo(run)) if run[0] == "es" else _cy(cy[run[1]:run[2]], conf) for run in _merge(runs)]
+    parts = []  # [label, first index, end index, turbo words]; an es run without usable words joins the Welsh
+    for run, (lo, hi) in zip(runs, _bounds(r, cy, runs)):
+        turbo = [w for w in es if lo <= w[0] < hi]
+        lab = "es" if run[0] == "es" and _usable(turbo) else "cy"
+        if lab == "cy" and parts and parts[-1][0] == "cy":
+            parts[-1][2] = run[2]
+        else:
+            parts.append([lab, run[1], run[2], turbo])
+    return [_es(p[3]) if p[0] == "es" else _cy(cy[p[1]:p[2]], conf) for p in parts]
 
 
 def _decide_row(r: dict, conf: float | None) -> list[Line]:
     if not r["cy_words"]:
         return []
-    gap = r["cy_p"] - r["es_p"]
+    gap = round(r["cy_p"] - r["es_p"], 3)  # 0.912 - 0.812 is 0.0999... in floats
     if gap >= CLEAR or not r["es_words"]:
         return [_cy(r["cy_words"], conf)]
     if gap <= -CLEAR:

@@ -100,18 +100,26 @@ utHSvsjwvwo, 0:00–30:00, on KPC's P4000. The scripts are in `scripts/kpc/pilot
 | Turbo in Spanish over the whole audio | 70 s | Skips stretches (8:29–8:58), so it is kept only for speech Bangor didn't write. |
 | Turbo in Spanish on each Bangor line | 244 s for 298 lines | Clear separation. Welsh lines: Bangor 0.87–0.96, turbo 0.38–0.66. Spanish lines: turbo 0.83–0.95, Bangor 0.76–0.80. |
 
-**The maintainer's cases, with the prototype merge (step 2 above, without the stock-phrase filter):**
+**The maintainer's cases.** Both language methods use the same Bangor word-time lines and the same checks. Slices: each line takes the language its audio slices favour, and overlapping Spanish lines that sound like it are dropped. Confidence: step 2 above, without the stock-phrase filter.
 
-| Case | Today | Pilot |
-|---|---|---|
-| 5:21 Welsh announcement present | missing | pass |
-| 7:34 and 7:38 recited lines present | missing | pass |
-| No duplicates 7:45–7:59 | duplicated | pass |
-| No duplicates 8:28–8:59 | duplicated | pass |
-| 8:01 end of the poem present | missing | pass |
-| 8:31: the Welsh introduction in Welsh, at 8:40 | one 30 s line at 8:31 | pass |
-| 8:31: the Spanish reminder as Spanish, at 8:47 | in Welsh spelling | pass |
-| 8:31: the closing question in Welsh, at 8:59 | inside the 30 s line | pass |
+| Case | Today | Slices 3 s | Slices 5 s | Confidence |
+|---|---|---|---|---|
+| 5:21 Welsh announcement present | missing | fail | fail | pass |
+| 7:34 recited line present | missing | pass | pass | pass |
+| 7:38 recited line present | missing | pass | pass | pass |
+| No duplicates 7:45–7:59 | duplicated | pass | pass | pass |
+| No duplicates 8:28–8:59 | duplicated | pass | pass | pass |
+| 8:01 end of the poem present | missing | pass | pass | pass |
+| 8:31: the Welsh introduction in Welsh, at 8:40 | one 30 s line at 8:31 | fail | fail | pass |
+| 8:31: the Spanish reminder as Spanish, at 8:47 | in Welsh spelling | pass | pass | pass |
+| 8:31: the closing question in Welsh, at 8:59 | inside the 30 s line | fail | pass | pass |
+| **Total** | | 6/9 | 7/9 | 9/9 |
+
+Most of the gain comes from Bangor's word times: span matching on its lines fixes the losses and duplicates with either language method. The slices fail exactly where the presenter speaks Welsh, because the detector calls it Spanish or English.
+
+**Two checks were corrected during the pilot**, and the table uses the corrected versions for every method:
+- 7:34 and 7:38 at first required a line *starting* at those times. Both recited lines are present inside one Bangor line at 7:35–7:41, so they are now checked by their words.
+- The 8:31 Spanish check at first rejected the correctly spelled Spanish "recitación" as if it were Bangor's Welsh spelling. It now rejects Welsh-spelled forms only in Bangor's lines.
 
 Of 298 Bangor lines, 120 are clearly Welsh, 124 clearly Spanish and 54 close or mixed (decided word by word).
 

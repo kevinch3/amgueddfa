@@ -106,6 +106,9 @@ def check_case(case: dict, rows: list[Row]) -> bool:
         pat = re.compile(case["pattern"])
         return not any(case["src"] in r.srcs and pat.search(r.text) for r in win)
     if kind == "no_duplicate":
+        if any(not r.srcs for r in win):
+            # every line would look like one source and nothing would be a duplicate: a silent pass
+            raise ValueError(f"{case['name']}: no_duplicate needs each line's sources (a reconstruction without fuentes)")
         return not any(_duplicates(x, y) for i, x in enumerate(win) for y in win[i + 1:])
     raise ValueError(f"unknown case kind: {kind}")
 

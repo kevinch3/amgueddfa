@@ -93,3 +93,10 @@ def test_no_duplicate_reconstruccion_compares_words():
     assert _recon_dup(["cy"], ["cy"]) is True
     assert _recon_dup(["cy"], ["whisper_es"], "buenas tardes", "buenas tardes") is True  # under 3 words
     assert _recon_dup(["cy"], ["whisper_es"], "buenas tardes a todos ustedes y diolch", "buenas tardes a todos") is False
+
+
+def test_no_duplicate_without_fuentes_fails_loudly():
+    import pytest
+    rows = casos.lines_from_reconstruccion({"seg": [[1, "buenas tardes a todos"], [2, "buenas tardes a todos"]]})
+    with pytest.raises(ValueError, match="fuentes"):
+        casos.check([{"kind": "no_duplicate", "name": "n", "from": 0, "to": 20}], rows)

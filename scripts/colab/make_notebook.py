@@ -24,13 +24,14 @@ The notebook is built from `scripts/colab/pase_mezcla.py`; don't edit it here.""
 SETUP = f"""!nvidia-smi --query-gpu=name,memory.total --format=csv
 !pip -q install {PINS}"""
 
-CONFIG = """from google.colab import drive
-drive.mount('/content/drive')
-
-BASE = '/content/drive/MyDrive/amgueddfa-colab'
+CONFIG = """BASE = '/content/drive/MyDrive/amgueddfa-colab'  # or a folder in the runtime, e.g. '/content/amgueddfa-colab'
 UNTIL = None      # seconds of each file to process; None = all of it (the KPC comparison test uses 1800)
 ONLY = None       # a set of video ids to process, or None for every file in audio/
-COMPUTE = 'int8'  # same as KPC"""
+COMPUTE = 'int8'  # same as KPC
+
+if BASE.startswith('/content/drive'):
+    from google.colab import drive
+    drive.mount('/content/drive')"""
 
 RUN = """import importlib, pase_mezcla
 importlib.reload(pase_mezcla)

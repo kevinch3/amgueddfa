@@ -24,36 +24,80 @@
    "Un barredor de tristezas,"
   ],
   [
-   71.84,
+   55.0,
    "un aguacero en venganza"
   ],
   [
-   91.6,
+   61.3,
    "que cuando escampe parezca"
   ],
   [
-   111.3,
+   67.6,
    "nuestra esperanza."
   ],
   [
-   124.5,
+   71.84,
+   "Un barredor de tristezas,"
+  ],
+  [
+   77.5,
+   "un aguacero en venganza"
+  ],
+  [
+   83.8,
+   "que cuando escampe parezca"
+  ],
+  [
+   90.1,
+   "nuestra esperanza."
+  ],
+  [
+   112.5,
    "Si me dijeran pide un deseo,"
   ],
   [
-   146.4,
+   121.9,
    "preferiría un rabo de nube,"
   ],
   [
-   168.4,
+   131.4,
    "que se llevara lo feo"
   ],
   [
+   138.0,
+   "y nos dejara el querube."
+  ],
+  [
+   146.5,
+   "Un barredor de tristezas,"
+  ],
+  [
+   151.2,
+   "un aguacero en venganza"
+  ],
+  [
+   156.5,
+   "que cuando escampe parezca"
+  ],
+  [
+   161.84,
+   "nuestra esperanza."
+  ],
+  [
+   168.7,
+   "Un barredor de tristezas,"
+  ],
+  [
    177.88,
-   "Un aguacero en venganza."
+   "un aguacero en venganza"
   ],
   [
    183.72,
-   "y nos dejara el querube."
+   "que cuando escampe parezca"
+  ],
+  [
+   192.3,
+   "nuestra esperanza."
   ]
  ],
  "fuentes": [
@@ -91,7 +135,40 @@
    "letra"
   ],
   [
-   "whisper_es"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ],
   [
    "letra"
@@ -99,8 +176,26 @@
  ],
  "letras": [
   {
-   "desde": 15,
-   "hasta": 200,
+   "desde": 9,
+   "hasta": 92,
+   "titulo": "Rabo de nube",
+   "autor": "Silvio Rodríguez, arr. César A. Carrillo",
+   "idioma": "es",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
+  },
+  {
+   "desde": 112.5,
+   "hasta": 146.5,
+   "titulo": "Rabo de nube",
+   "autor": "Silvio Rodríguez, arr. César A. Carrillo",
+   "idioma": "es",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
+  },
+  {
+   "desde": 146.5,
+   "hasta": 215.5,
    "titulo": "Rabo de nube",
    "autor": "Silvio Rodríguez, arr. César A. Carrillo",
    "idioma": "es",
@@ -109,9 +204,9 @@
   }
  ],
  "ventanas": {
-  "total": 5,
+  "total": 4,
   "modelo": 4,
   "reglas": 0,
-  "vacias": 1
+  "vacias": 0
  }
 }

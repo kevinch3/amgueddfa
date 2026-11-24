@@ -5385,18 +5385,18 @@
   ],
   [
    12409.8,
-   "Rabo de nube, música y letra de Silvio Rodríguez."
+   "rabo de nube, música y letra de Silvio Rodríguez."
   ],
   [
    12414.5,
    "Amén."
   ],
   [
-   12447.7,
+   12461.8,
    "Si me dijeran pide un deseo,"
   ],
   [
-   12461.1,
+   12468.2,
    "preferiría un rabo de nube,"
   ],
   [
@@ -5412,11 +5412,23 @@
    "Un barredor de tristezas,"
   ],
   [
+   12491.4,
+   "un aguacero en venganza"
+  ],
+  [
    12496.7,
-   "Que cuando el tiempo parezca nuestra esperanza."
+   "que cuando escampe parezca"
+  ],
+  [
+   12504.3,
+   "nuestra esperanza."
   ],
   [
    12509.4,
+   "Un barredor de tristezas,"
+  ],
+  [
+   12515.5,
    "un aguacero en venganza"
   ],
   [
@@ -5424,36 +5436,56 @@
    "que cuando escampe parezca"
   ],
   [
-   12540.2,
+   12529.6,
    "nuestra esperanza."
   ],
   [
-   12552.1,
+   12551.5,
    "Si me dijeran pide un deseo,"
   ],
   [
-   12572.0,
+   12560.9,
    "preferiría un rabo de nube,"
   ],
   [
-   12585.7,
-   "Un barretúr de tristeza, un amor cero en venganza, que en todo es el que parezca nuestra esperanza."
-  ],
-  [
-   12591.8,
+   12570.4,
    "que se llevara lo feo"
   ],
   [
-   12605.7,
+   12577.0,
    "y nos dejara el querube."
   ],
   [
-   12605.7,
-   "Un barredor de tristeza, una vocera en venganza, que cuando escape parezca nuestra esperanza."
+   12585.7,
+   "Un barredor de tristezas,"
   ],
   [
-   12622.9,
-   "Que cuando escape parezca nuestra esperanza."
+   12590.7,
+   "un aguacero en venganza"
+  ],
+  [
+   12596.3,
+   "que cuando escampe parezca"
+  ],
+  [
+   12602.0,
+   "nuestra esperanza."
+  ],
+  [
+   12605.7,
+   "Un barredor de tristezas,"
+  ],
+  [
+   12610.7,
+   "un aguacero en venganza"
+  ],
+  [
+   12616.3,
+   "que cuando escampe parezca"
+  ],
+  [
+   12622.0,
+   "nuestra esperanza."
   ],
   [
    12665.7,
@@ -11917,7 +11949,19 @@
    "letra"
   ],
   [
-   "whisper_es"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ],
   [
    "letra"
@@ -11935,7 +11979,10 @@
    "letra"
   ],
   [
-   "whisper_es"
+   "letra"
+  ],
+  [
+   "letra"
   ],
   [
    "letra"
@@ -11944,10 +11991,19 @@
    "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ],
   [
    "whisper_es"
@@ -13759,24 +13815,6 @@
    "fuente": "https://imslp.org/wiki/File:PMLP1198744-Stravinsky_-_Pater_Noster_(1949_version).pdf, aportado por Kevin Roberts"
   },
   {
-   "desde": 12447,
-   "hasta": 12655,
-   "titulo": "Rabo de nube",
-   "autor": "Silvio Rodríguez, arr. César A. Carrillo",
-   "idioma": "es",
-   "derechos": "Derechos confirmados por el mantenedor del archivo",
-   "fuente": "Aportado por Kevin Roberts"
-  },
-  {
-   "desde": 16070,
-   "hasta": 16300,
-   "titulo": "Allá lejos y hace tiempo",
-   "autor": "Ariel Ramírez; texto de Armando Tejada Gómez; arreglo de Néstor Zadoff",
-   "idioma": "es",
-   "derechos": "Derechos confirmados por el mantenedor del archivo",
-   "fuente": "https://www.folkloredelnorte.com.ar/cancionero/a/allalejosyhacetiempo.html, aportado por Kevin Roberts"
-  },
-  {
    "desde": 10448.6,
    "hasta": 10708.6,
    "titulo": "Pam Fod Eira yn Wyn?",
@@ -13793,6 +13831,42 @@
    "idioma": "cy",
    "derechos": "Derechos confirmados por el mantenedor del archivo",
    "fuente": "Aportado por Kevin Roberts"
+  },
+  {
+   "desde": 12448,
+   "hasta": 12531,
+   "titulo": "Rabo de nube",
+   "autor": "Silvio Rodríguez, arr. César A. Carrillo",
+   "idioma": "es",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
+  },
+  {
+   "desde": 12551.5,
+   "hasta": 12585.5,
+   "titulo": "Rabo de nube",
+   "autor": "Silvio Rodríguez, arr. César A. Carrillo",
+   "idioma": "es",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
+  },
+  {
+   "desde": 12585.5,
+   "hasta": 12654.5,
+   "titulo": "Rabo de nube",
+   "autor": "Silvio Rodríguez, arr. César A. Carrillo",
+   "idioma": "es",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
+  },
+  {
+   "desde": 16070,
+   "hasta": 16300,
+   "titulo": "Allá lejos y hace tiempo",
+   "autor": "Ariel Ramírez; texto de Armando Tejada Gómez; arreglo de Néstor Zadoff",
+   "idioma": "es",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "https://www.folkloredelnorte.com.ar/cancionero/a/allalejosyhacetiempo.html, aportado por Kevin Roberts"
   }
  ],
  "ventanas": {

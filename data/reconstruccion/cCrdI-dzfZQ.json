@@ -8,24 +8,48 @@
    "Diwmawr y ryfeddodd a'i ddau, ryfeddodd i'w honna'n oer."
   ],
   [
-   30.0,
-   "o'dd bai, ondwy o'r ras mwy ramaidd ryw, nad o's weithredoedd o, o ryw, nad o's weithredoedd."
+   20.8,
+   "Duw mawr y rhyfeddodau maith,"
   ],
   [
-   60.0,
-   "a'i ddod o ryw."
+   30.0,
+   "Rhyfeddol yw pob rhan o'th waith,"
+  ],
+  [
+   39.2,
+   "Ond dwyfol ras, mwy rhyfedd yw"
+  ],
+  [
+   48.5,
+   "Na'th holl weithredoedd o bob rhyw:"
+  ],
+  [
+   57.8,
+   "Na'th holl weithredoedd o bob rhyw:"
   ],
   [
    67.0,
-   "A ddim sy'n faddau fel tyfu, yn braf, yn holl, yn llodau byd."
+   "Pa dduw sy'n maddau fel tydi"
   ],
   [
-   79.0,
-   "Yn braf, yn holl, yn llodau byd."
+   76.2,
+   "Yn rhad ein holl bechodau ni?"
+  ],
+  [
+   81.0,
+   "Yn rhad ein holl bechodau ni?"
   ],
   [
    87.0,
-   "A ddewis i'n fath a'i fel tydi, yn fath a'i fodd rhag ofn a'i fi, yn fath a'i fodd rhag ofn a'i fi."
+   "Pa dduw sy'n maddau fel tydi"
+  ],
+  [
+   93.0,
+   "Yn rhad ein holl bechodau ni?"
+  ],
+  [
+   99.0,
+   "Yn rhad ein holl bechodau ni?"
   ],
   [
    117.0,
@@ -37,27 +61,65 @@
    "cy"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
   ],
   [
-   "cy"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ],
   [
    "cy"
   ]
  ],
+ "letras": [
+  {
+   "desde": 12,
+   "hasta": 79.5,
+   "titulo": "Duw mawr y rhyfeddodau maith",
+   "autor": "Samuel Davies (Great God of wonders); versión galesa de John R. Jones, Ramoth (1765-1822) y Joseph Harris, Gomer (1773-1825), 1805",
+   "idioma": "cy",
+   "derechos": "Texto de dominio público",
+   "fuente": "https://gobaith.cymru/angelfire/Duw%20mawr%20y%20rhyfeddodau.html, Emynau a Thonau (gobaith.cymru), estrofas 1-3 con el estribillo escrito como se canta, obtenido por el archivo"
+  },
+  {
+   "desde": 79.5,
+   "hasta": 106.5,
+   "titulo": "Duw mawr y rhyfeddodau maith",
+   "autor": "Samuel Davies (Great God of wonders); versión galesa de John R. Jones, Ramoth (1765-1822) y Joseph Harris, Gomer (1773-1825), 1805",
+   "idioma": "cy",
+   "derechos": "Texto de dominio público",
+   "fuente": "https://gobaith.cymru/angelfire/Duw%20mawr%20y%20rhyfeddodau.html, Emynau a Thonau (gobaith.cymru), estrofas 1-3 con el estribillo escrito como se canta, obtenido por el archivo"
+  }
+ ],
  "ventanas": {
-  "total": 2,
-  "modelo": 2,
+  "total": 3,
+  "modelo": 3,
   "reglas": 0,
   "vacias": 0
  }

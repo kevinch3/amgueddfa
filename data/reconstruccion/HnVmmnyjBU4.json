@@ -5,23 +5,51 @@
  "seg": [
   [
    0.0,
-   "De quien logró mi redención, podría siempre yo cantar,"
+   "De quien pagó mi redención,"
+  ],
+  [
+   11.8,
+   "Podría siempre yo cantar,"
   ],
   [
    22.1,
-   "y con mi voz y corazón su nombre siempre alabar."
+   "Y con mi voz y corazón"
+  ],
+  [
+   29.6,
+   "Su nombre siempre alabar."
   ],
   [
    37.1,
-   "Por el invierno se sufrió amargas penas y dolor y por la muerte demostró la plenitud de su amor."
+   "Por redimirnos él sufrió"
+  ],
+  [
+   44.6,
+   "Amargas penas y dolor,"
+  ],
+  [
+   52.1,
+   "Y por la muerte demostró"
+  ],
+  [
+   59.6,
+   "La plenitud de su amor."
   ],
   [
    67.1,
-   "Oh Salvador, a ti mi voz levantaré con gratitud."
+   "Oh Salvador, a ti mi voz"
+  ],
+  [
+   74.9,
+   "Levantaré con gratitud:"
   ],
   [
    82.7,
-   "A ti mi rey en tono y Dios, autor de vida y salud."
+   "A ti, mi Redentor y Dios,"
+  ],
+  [
+   90.3,
+   "Autor de vida y salud."
   ],
   [
    103.9,
@@ -30,23 +58,55 @@
  ],
  "fuentes": [
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
   ],
   [
-   "whisper_es"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ],
   [
    "whisper_es"
   ]
+ ],
+ "letras": [
+  {
+   "desde": 0,
+   "hasta": 101,
+   "titulo": "De quien pagó mi redención",
+   "autor": "Himno, anónimo",
+   "idioma": "es",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "Aportado por Kevin Roberts"
+  }
  ],
  "ventanas": {
   "total": 3,

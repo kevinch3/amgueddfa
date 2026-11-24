@@ -4,19 +4,121 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
-   27.0,
-   "O'n Iesu caru i gael, o'n hatau'n blimlo'n brach, nid yw gadel fflintel, nôl y swdd yr Almaen nac."
+   4.0,
+   "Es ist ein Ros entsprungen"
+  ],
+  [
+   12.7,
+   "aus einer Wurzel zart,"
+  ],
+  [
+   20.2,
+   "wie uns die Alten sungen,"
+  ],
+  [
+   28.9,
+   "von Jesse kam die Art"
+  ],
+  [
+   36.4,
+   "und hat ein Blümlein bracht"
+  ],
+  [
+   43.8,
+   "mitten im kalten Winter,"
+  ],
+  [
+   52.6,
+   "wohl zu der halben Nacht."
+  ],
+  [
+   60.0,
+   "Das Röslein, das ich meine,"
+  ],
+  [
+   68.7,
+   "davon Jesaia sagt,"
+  ],
+  [
+   75.0,
+   "hat uns gebracht alleine"
+  ],
+  [
+   83.7,
+   "Marie, die reine Magd."
+  ],
+  [
+   91.1,
+   "Aus Gottes ew'gem Rat"
+  ],
+  [
+   98.6,
+   "hat sie ein Kind geboren"
+  ],
+  [
+   107.3,
+   "wohl zu der halben Nacht."
   ]
  ],
  "fuentes": [
   [
-   "cy"
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "letra"
   ]
  ],
+ "letras": [
+  {
+   "desde": 4,
+   "hasta": 114.8,
+   "titulo": "Es ist ein Ros' entsprungen",
+   "autor": "Michael Praetorius",
+   "idioma": "de",
+   "derechos": "Derechos confirmados por el mantenedor del archivo",
+   "fuente": "https://archive.org/details/madrigalsandcarolesfromallover/mode/2up?q=%22megan+outten%22#1, aportado por Kevin Roberts"
+  }
+ ],
  "ventanas": {
-  "total": 3,
-  "modelo": 1,
+  "total": 2,
+  "modelo": 2,
   "reglas": 0,
-  "vacias": 2
+  "vacias": 0
  }
 }

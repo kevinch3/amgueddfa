@@ -55,31 +55,6 @@
  ],
  "hVtD63KLlsw": [
   {
-   "letra": "el-buen-remedio",
-   "desde": 35800,
-   "hasta": 35945
-  },
-  {
-   "letra": "el-buen-remedio",
-   "desde": 36340,
-   "hasta": 36490
-  },
-  {
-   "letra": "illuxit-nobis-hodie",
-   "desde": 37610,
-   "hasta": 37745
-  },
-  {
-   "letra": "oro-y-plata",
-   "desde": 37806,
-   "hasta": 37997
-  },
-  {
-   "letra": "oro-y-plata",
-   "desde": 38424,
-   "hasta": 38605
-  },
-  {
    "letra": "coplas-para-la-tejedora",
    "desde": 3706,
    "hasta": 3870
@@ -95,14 +70,83 @@
    "hasta": 4559
   },
   {
+   "letra": "desencuentro",
+   "desde": 24488.5,
+   "hasta": 24628
+  },
+  {
    "letra": "rie-chinito",
    "desde": 31495,
    "hasta": 31740
   },
   {
-   "letra": "desencuentro",
-   "desde": 24488.5,
-   "hasta": 24628
+   "letra": "in-stiller-nacht",
+   "desde": 35609.5,
+   "hasta": 35757.5,
+   "repartir": true
+  },
+  {
+   "letra": "el-buen-remedio",
+   "desde": 35800,
+   "hasta": 35945
+  },
+  {
+   "letra": "in-stiller-nacht",
+   "desde": 36144.8,
+   "hasta": 36289.2,
+   "repartir": true
+  },
+  {
+   "letra": "el-buen-remedio",
+   "desde": 36340,
+   "hasta": 36490
+  },
+  {
+   "letra": "illuxit-nobis-hodie",
+   "desde": 37610,
+   "hasta": 37745
+  },
+  {
+   "letra": "oro-y-plata",
+   "desde": 37806.5,
+   "hasta": 37956.5,
+   "estrofas": [
+    1,
+    2,
+    3,
+    5,
+    2,
+    3
+   ]
+  },
+  {
+   "letra": "oro-y-plata",
+   "desde": 37956.5,
+   "hasta": 37966,
+   "estrofas": [
+    4
+   ]
+  },
+  {
+   "letra": "oro-y-plata",
+   "desde": 38424.5,
+   "hasta": 38564.5,
+   "estrofas": [
+    1,
+    2,
+    3,
+    5,
+    2,
+    3
+   ]
+  },
+  {
+   "letra": "oro-y-plata",
+   "desde": 38564.5,
+   "hasta": 38575,
+   "estrofas": [
+    4
+   ]
   }
  ],
  "kHsF8eQ1L6Y": [
@@ -174,16 +218,6 @@
    "hasta": 5712
   },
   {
-   "letra": "rabo-de-nube",
-   "desde": 12447,
-   "hasta": 12655
-  },
-  {
-   "letra": "alla-lejos-y-hace-tiempo",
-   "desde": 16070,
-   "hasta": 16300
-  },
-  {
    "letra": "pam-fod-eira-yn-wyn",
    "desde": 10448.6,
    "hasta": 10708.6
@@ -192,6 +226,37 @@
    "letra": "pam-fod-eira-yn-wyn",
    "desde": 10850,
    "hasta": 11098
+  },
+  {
+   "letra": "rabo-de-nube",
+   "desde": 12448,
+   "hasta": 12531,
+   "estrofas": [
+    1,
+    "1:5-8"
+   ]
+  },
+  {
+   "letra": "rabo-de-nube",
+   "desde": 12551.5,
+   "hasta": 12585.5,
+   "estrofas": [
+    2
+   ]
+  },
+  {
+   "letra": "rabo-de-nube",
+   "desde": 12585.5,
+   "hasta": 12654.5,
+   "estrofas": [
+    "1:5-8",
+    "1:5-8"
+   ]
+  },
+  {
+   "letra": "alla-lejos-y-hace-tiempo",
+   "desde": 16070,
+   "hasta": 16300
   }
  ],
  "-t5r4pwKx50": [
@@ -290,6 +355,16 @@
    "hasta": 1860
   },
   {
+   "letra": "de-quien-pago-mi-redencion",
+   "desde": 19507.5,
+   "hasta": 19600.5,
+   "estrofas": [
+    1,
+    3,
+    4
+   ]
+  },
+  {
    "letra": "naranjo-en-flor",
    "desde": 20948,
    "hasta": 21161
@@ -361,25 +436,225 @@
  "7GeZCEDgcoc": [
   {
    "letra": "ubi-caritas",
-   "desde": 178,
-   "hasta": 355
+   "desde": 178.5,
+   "hasta": 202.5,
+   "estrofas": [
+    "1:1-2"
+   ],
+   "repartir": true
+  },
+  {
+   "letra": "ubi-caritas",
+   "desde": 202.5,
+   "hasta": 234,
+   "estrofas": [
+    "1:1-2"
+   ],
+   "repartir": true
+  },
+  {
+   "letra": "ubi-caritas",
+   "desde": 234,
+   "hasta": 279,
+   "estrofas": [
+    "1:3-4"
+   ],
+   "repartir": true
+  },
+  {
+   "letra": "ubi-caritas",
+   "desde": 279,
+   "hasta": 304.5,
+   "estrofas": [
+    "1:5-5",
+    "1:5-5"
+   ],
+   "repartir": true
+  },
+  {
+   "letra": "ubi-caritas",
+   "desde": 304.5,
+   "hasta": 339.5,
+   "estrofas": [
+    "1:1-2"
+   ],
+   "repartir": true
+  },
+  {
+   "letra": "ubi-caritas",
+   "desde": 339.5,
+   "hasta": 355,
+   "estrofas": [
+    "1:6-6"
+   ],
+   "repartir": true
   }
  ],
  "x0-pSbbCHIA": [
   {
    "letra": "ubi-caritas",
-   "desde": 399,
-   "hasta": 636
+   "desde": 400,
+   "hasta": 434.5,
+   "estrofas": [
+    "1:1-2"
+   ],
+   "repartir": true
   },
   {
    "letra": "ubi-caritas",
-   "desde": 857,
-   "hasta": 1034
+   "desde": 434.5,
+   "hasta": 478.5,
+   "estrofas": [
+    "1:1-2"
+   ],
+   "repartir": true
   },
   {
    "letra": "ubi-caritas",
-   "desde": 1294,
-   "hasta": 1475
+   "desde": 478.5,
+   "hasta": 539,
+   "estrofas": [
+    "1:3-4"
+   ],
+   "repartir": true
+  },
+  {
+   "letra": "ubi-caritas",
+   "desde": 539,
+   "hasta": 568.5,
+   "estrofas": [
+    "1:5-5",
+    "1:5-5"
+   ],
+   "repartir": true
+  },
+  {
+   "letra": "ubi-caritas",
+   "desde": 568.5,
+   "hasta": 615,
+   "estrofas": [
+    "1:1-2"
+   ],
+   "repartir": true
+  },
+  {
+   "letra": "ubi-caritas",
+   "desde": 615,
+   "hasta": 635,
+   "estrofas": [
+    "1:6-6"
+   ],
+   "repartir": true
+  },
+  {
+   "letra": "ubi-caritas",
+   "desde": 857.5,
+   "hasta": 881.5,
+   "estrofas": [
+    "1:1-2"
+   ],
+   "repartir": true
+  },
+  {
+   "letra": "ubi-caritas",
+   "desde": 881.5,
+   "hasta": 913.5,
+   "estrofas": [
+    "1:1-2"
+   ],
+   "repartir": true
+  },
+  {
+   "letra": "ubi-caritas",
+   "desde": 913.5,
+   "hasta": 958,
+   "estrofas": [
+    "1:3-4"
+   ],
+   "repartir": true
+  },
+  {
+   "letra": "ubi-caritas",
+   "desde": 958,
+   "hasta": 984,
+   "estrofas": [
+    "1:5-5",
+    "1:5-5"
+   ],
+   "repartir": true
+  },
+  {
+   "letra": "ubi-caritas",
+   "desde": 984,
+   "hasta": 1018.5,
+   "estrofas": [
+    "1:1-2"
+   ],
+   "repartir": true
+  },
+  {
+   "letra": "ubi-caritas",
+   "desde": 1018.5,
+   "hasta": 1034.5,
+   "estrofas": [
+    "1:6-6"
+   ],
+   "repartir": true
+  },
+  {
+   "letra": "ubi-caritas",
+   "desde": 1295,
+   "hasta": 1321,
+   "estrofas": [
+    "1:1-2"
+   ],
+   "repartir": true
+  },
+  {
+   "letra": "ubi-caritas",
+   "desde": 1321,
+   "hasta": 1353.5,
+   "estrofas": [
+    "1:1-2"
+   ],
+   "repartir": true
+  },
+  {
+   "letra": "ubi-caritas",
+   "desde": 1353.5,
+   "hasta": 1398,
+   "estrofas": [
+    "1:3-4"
+   ],
+   "repartir": true
+  },
+  {
+   "letra": "ubi-caritas",
+   "desde": 1398,
+   "hasta": 1422.5,
+   "estrofas": [
+    "1:5-5",
+    "1:5-5"
+   ],
+   "repartir": true
+  },
+  {
+   "letra": "ubi-caritas",
+   "desde": 1422.5,
+   "hasta": 1459.5,
+   "estrofas": [
+    "1:1-2"
+   ],
+   "repartir": true
+  },
+  {
+   "letra": "ubi-caritas",
+   "desde": 1459.5,
+   "hasta": 1474,
+   "estrofas": [
+    "1:6-6"
+   ],
+   "repartir": true
   }
  ],
  "LQ28BhyOZBQ": [
@@ -390,18 +665,168 @@
   },
   {
    "letra": "ubi-caritas",
-   "desde": 33658,
-   "hasta": 33893
+   "desde": 33658.5,
+   "hasta": 33693,
+   "estrofas": [
+    "1:1-2"
+   ],
+   "repartir": true
   },
   {
    "letra": "ubi-caritas",
-   "desde": 34362,
-   "hasta": 34540
+   "desde": 33693,
+   "hasta": 33737,
+   "estrofas": [
+    "1:1-2"
+   ],
+   "repartir": true
   },
   {
    "letra": "ubi-caritas",
-   "desde": 35132,
-   "hasta": 35313
+   "desde": 33737,
+   "hasta": 33797.5,
+   "estrofas": [
+    "1:3-4"
+   ],
+   "repartir": true
+  },
+  {
+   "letra": "ubi-caritas",
+   "desde": 33797.5,
+   "hasta": 33827,
+   "estrofas": [
+    "1:5-5",
+    "1:5-5"
+   ],
+   "repartir": true
+  },
+  {
+   "letra": "ubi-caritas",
+   "desde": 33827,
+   "hasta": 33873.5,
+   "estrofas": [
+    "1:1-2"
+   ],
+   "repartir": true
+  },
+  {
+   "letra": "ubi-caritas",
+   "desde": 33873.5,
+   "hasta": 33893,
+   "estrofas": [
+    "1:6-6"
+   ],
+   "repartir": true
+  },
+  {
+   "letra": "ubi-caritas",
+   "desde": 34363,
+   "hasta": 34387,
+   "estrofas": [
+    "1:1-2"
+   ],
+   "repartir": true
+  },
+  {
+   "letra": "ubi-caritas",
+   "desde": 34387,
+   "hasta": 34419,
+   "estrofas": [
+    "1:1-2"
+   ],
+   "repartir": true
+  },
+  {
+   "letra": "ubi-caritas",
+   "desde": 34419,
+   "hasta": 34463.5,
+   "estrofas": [
+    "1:3-4"
+   ],
+   "repartir": true
+  },
+  {
+   "letra": "ubi-caritas",
+   "desde": 34463.5,
+   "hasta": 34489.5,
+   "estrofas": [
+    "1:5-5",
+    "1:5-5"
+   ],
+   "repartir": true
+  },
+  {
+   "letra": "ubi-caritas",
+   "desde": 34489.5,
+   "hasta": 34524,
+   "estrofas": [
+    "1:1-2"
+   ],
+   "repartir": true
+  },
+  {
+   "letra": "ubi-caritas",
+   "desde": 34524,
+   "hasta": 34540,
+   "estrofas": [
+    "1:6-6"
+   ],
+   "repartir": true
+  },
+  {
+   "letra": "ubi-caritas",
+   "desde": 35133,
+   "hasta": 35159,
+   "estrofas": [
+    "1:1-2"
+   ],
+   "repartir": true
+  },
+  {
+   "letra": "ubi-caritas",
+   "desde": 35159,
+   "hasta": 35191.5,
+   "estrofas": [
+    "1:1-2"
+   ],
+   "repartir": true
+  },
+  {
+   "letra": "ubi-caritas",
+   "desde": 35191.5,
+   "hasta": 35236,
+   "estrofas": [
+    "1:3-4"
+   ],
+   "repartir": true
+  },
+  {
+   "letra": "ubi-caritas",
+   "desde": 35236,
+   "hasta": 35260.5,
+   "estrofas": [
+    "1:5-5",
+    "1:5-5"
+   ],
+   "repartir": true
+  },
+  {
+   "letra": "ubi-caritas",
+   "desde": 35260.5,
+   "hasta": 35297.5,
+   "estrofas": [
+    "1:1-2"
+   ],
+   "repartir": true
+  },
+  {
+   "letra": "ubi-caritas",
+   "desde": 35297.5,
+   "hasta": 35312,
+   "estrofas": [
+    "1:6-6"
+   ],
+   "repartir": true
   }
  ],
  "9HciLCqfIas": [
@@ -926,8 +1351,29 @@
  "x0LBSjAuT3Q": [
   {
    "letra": "rabo-de-nube",
-   "desde": 15,
-   "hasta": 200
+   "desde": 9,
+   "hasta": 92,
+   "estrofas": [
+    1,
+    "1:5-8"
+   ]
+  },
+  {
+   "letra": "rabo-de-nube",
+   "desde": 112.5,
+   "hasta": 146.5,
+   "estrofas": [
+    2
+   ]
+  },
+  {
+   "letra": "rabo-de-nube",
+   "desde": 146.5,
+   "hasta": 215.5,
+   "estrofas": [
+    "1:5-8",
+    "1:5-8"
+   ]
   }
  ],
  "98lnOw_NWg0": [
@@ -964,6 +1410,79 @@
     2,
     3
    ]
+  }
+ ],
+ "Z_QPMRk-ek0": [
+  {
+   "letra": "mawr-oedd-crist-yn-nhragwyddoldeb",
+   "desde": 9.5,
+   "hasta": 112.5,
+   "estrofas": [
+    1,
+    3,
+    "3:5-6"
+   ]
+  }
+ ],
+ "sV0n9xD1M_8": [
+  {
+   "letra": "molwn-enwr-arglwydd",
+   "desde": 24,
+   "hasta": 96.5,
+   "estrofas": [
+    1,
+    3
+   ]
+  }
+ ],
+ "cCrdI-dzfZQ": [
+  {
+   "letra": "duw-mawr-y-rhyfeddodau",
+   "desde": 12,
+   "hasta": 79.5,
+   "estrofas": [
+    "1:1-4",
+    "1:4-4",
+    "1:5-6"
+   ]
+  },
+  {
+   "letra": "duw-mawr-y-rhyfeddodau",
+   "desde": 79.5,
+   "hasta": 106.5,
+   "estrofas": [
+    "1:6-6",
+    "1:5-6",
+    "1:6-6"
+   ]
+  }
+ ],
+ "HnVmmnyjBU4": [
+  {
+   "letra": "de-quien-pago-mi-redencion",
+   "desde": 0,
+   "hasta": 101,
+   "estrofas": [
+    1,
+    3,
+    4
+   ]
+  }
+ ],
+ "s07a0VA2zus": [
+  {
+   "letra": "es-ist-ein-ros-entsprungen",
+   "desde": 4,
+   "hasta": 114.8,
+   "repartir": true
+  }
+ ],
+ "3jnNklLlxQ0": [
+  {
+   "letra": "es-ist-ein-ros-entsprungen",
+   "desde": 1798.7,
+   "hasta": 1909.5,
+   "repartir": true
   }
  ]
 }

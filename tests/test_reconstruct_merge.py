@@ -104,3 +104,9 @@ def test_rules_on_a_mixed_video_count_a_chosen_line_that_starts_before_the_windo
     ])
     out = rules_lines(w, mezcla=True)
     assert [(l.t, l.fuentes) for l in out] == [(30.0, ("subida",))]
+
+
+def test_rules_never_keep_an_alternative():
+    w = win(0, 60, [Line(10.0, "croeso cynnes i bawb", "cy", "cy", 0.9, 13.0),
+                    Line(10.2, "croeso cynnes i bawb yna", "yt_es", "es", None, 13.0, 10.0)])
+    assert [(l.t, l.fuentes) for l in rules_lines(w, mezcla=True)] == [(10.0, ("cy",))]

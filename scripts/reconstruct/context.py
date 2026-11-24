@@ -5,6 +5,7 @@ from __future__ import annotations
 import json
 import re
 import unicodedata
+from collections import Counter
 from pathlib import Path
 from typing import NamedTuple
 
@@ -44,6 +45,17 @@ def fold(s: str) -> str:
 def tokens(s: str) -> list[str]:
     """Folded words: letters and digits, apostrophes inside a word kept ("eisteddfod's")."""
     return re.findall(r"[^\W_]+(?:'[^\W_]+)*", fold(s.replace("’", "'")))
+
+
+SAME_WORDS = 0.6  # share of a line's words found in another line: the same speech written again
+
+
+def share_of_words(words: list[str], other: list[str]) -> float:
+    """The share of `words`, counted with repeats, that `other` also has."""
+    if not words:
+        return 0.0
+    a = Counter(words)
+    return sum((a & Counter(other)).values()) / sum(a.values())
 
 
 def programa_lines(repo: Path, festival: str, year: int) -> dict[int, str]:

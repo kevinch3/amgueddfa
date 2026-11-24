@@ -14,6 +14,7 @@ from typing import NamedTuple
 
 from scripts.align_lyrics import LETRAS, align, parse_letra, spans_for
 from scripts.backup.videos import MEZCLA_SUFFIXES
+from scripts.reconstruct.context import SAME_WORDS, share_of_words, tokens
 from scripts.export_video_transcripts import LOOP, MARKER, STOCK, clean_whisper_timed, glob_escape, is_english, line_language, parse_vtt_timed
 
 # The Welsh model, as the suffix of its file next to the video (<stem>.<WELSH_SOURCE>.json,
@@ -47,6 +48,9 @@ class Line(NamedTuple):
     lang: str
     conf: float | None = None  # the model's own confidence (0-1), Welsh lines only
     e: float | None = None  # end of the cue or segment (Spanish sources), when known
+    # Mixed-language videos: this line is another recogniser's hearing of the decided Welsh line starting at alt,
+    # kept for the window model to choose between (never both; checker rule 6). Rules never use it.
+    alt: float | None = None
 
 
 def _vtts(stem: Path) -> dict[str, Path]:
@@ -72,6 +76,35 @@ def _overlapped(ln: Line, decided: list[Line]) -> bool:
             covered += e - max(t, reach)
             reach = e
     return covered >= OVERLAP * (b - a)
+
+
+def _near(ln: Line, d: Line) -> bool:
+    """A decided line d overlaps this line's span; a line without an end is near within SAME_SPEECH s."""
+    if ln.e is None or ln.e <= ln.t:
+        return abs(d.t - ln.t) <= SAME_SPEECH
+    a, b = _span(ln)
+    da, db = _span(d)
+    return da < b and db > a
+
+
+def _repeats(ln: Line, decided: list[Line]) -> bool:
+    """At least SAME_WORDS of this line's words are in the decided lines near it: the same speech written again,
+    even where a stretched span (a segment without word times) is mostly outside them."""
+    near = [w for d in decided if _near(ln, d) for w in tokens(d.text)]
+    return bool(near) and share_of_words(tokens(ln.text), near) >= SAME_WORDS
+
+
+def _welsh_partner(ln: Line, decided: list[Line]) -> Line | None:
+    """For a line left out as the same speech: the decided Welsh line it is a different hearing of, when the line
+    itself reads as Welsh and its words are not that line's; else None."""
+    if line_language(ln.text, [ln.src]) != "cy":
+        return None
+    a, b = _span(ln)
+    near = [d for d in decided if d.lang == "cy" and _near(ln, d)]
+    if not near:
+        return None
+    best = max(near, key=lambda d: (min(b, _span(d)[1]) - max(a, d.t), -d.t))
+    return None if tokens(best.text) == tokens(ln.text) else best
 
 
 def _welsh_ok(conf: float | None, text: str) -> bool:
@@ -162,8 +195,15 @@ def load_sources(stem: Path, video_id: str, letras: Path = LETRAS) -> list[Line]
         # pass is superseded).
         out += longform
         decided = _decided(stem)
-        # The uploader's subtitles (subida) are never dropped: the most reliable source.
-        out = [l for l in out if l.src == "subida" or not _overlapped(l, decided)] + decided
+        # The uploader's subtitles (subida) are never dropped: the most reliable source. A line left out that is a
+        # different hearing of a decided Welsh line stays as its alternative, for the window model to choose.
+        kept = []
+        for l in out:
+            if l.src == "subida" or not (_overlapped(l, decided) or _repeats(l, decided)):
+                kept.append(l)
+            elif (p := _welsh_partner(l, decided)) is not None:
+                kept.append(l._replace(alt=p.t))
+        out = kept + decided
     elif es.exists():
         for seg in json.loads(es.read_text(encoding="utf-8"))["segments"]:
             if "text" in seg:
@@ -197,7 +237,7 @@ def load_sources(stem: Path, video_id: str, letras: Path = LETRAS) -> list[Line]
             out = [l for l in out if not (l.src in ("yt_es", "whisper_es") and line_language(l.text, [l.src]) == "cy"
                                           and any(abs(l.t - t) <= SAME_SPEECH for t in bangor))]
     by_time = sorted(out, key=lambda l: (l.t, l.text))  # main sorted whole tuples; heard_* keep only [t, text], and None never meets a float
-    heard_es = [[l.t, l.text] for l in by_time if l.src in ("subida", "yt_es", "whisper_es")]
+    heard_es = [[l.t, l.text] for l in by_time if l.src in ("subida", "yt_es", "whisper_es") and l.alt is None]
     heard_cy = [[l.t, l.text] for l in by_time if l.src == "cy"]
     for sp in spans_for(video_id, letras):
         meta, stanzas = parse_letra((letras / f"{sp['letra']}.md").read_text(encoding="utf-8"))

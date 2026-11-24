@@ -147,3 +147,16 @@ def test_numbers_never_change_even_if_they_sound_alike():
     reply = {"lines": [line(10.0, "llun o'r paith dylenneg ar gyfer tair cerdd", src=("cy",), lang="cy",
                             fixes=[{"from": "pedair", "to": "tair"}])]}
     assert any(e.startswith("rule 2") for e in check_window(WSA, reply))
+
+
+WALT = Window(0.0, 60.0, (Line(10.0, "croeso cynnes i bawb yma", "cy", "cy", 0.9),
+                          Line(10.2, "croeso cynnes i bawb yna", "yt_es", "es", None, 13.0, 10.0)),
+              Context("", frozenset()), "h")
+
+
+def test_a_line_and_its_alternative_are_not_both_published():
+    both = {"lines": [line(10.0, "croeso cynnes i bawb yma", ("cy",), lang="cy"),
+                      line(10.2, "croeso cynnes i bawb yna", ("yt_es",), lang="cy")]}
+    assert any(e.startswith("rule 6") for e in check_window(WALT, both))
+    for one in (both["lines"][:1], both["lines"][1:]):
+        assert check_window(WALT, {"lines": one}) == []

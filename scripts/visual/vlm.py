@@ -1,6 +1,6 @@
 """A vision model's reading of chosen frames: on-screen text and one sentence on what happens (cues are read from it).
 
-  python -m scripts.visual.vlm <frames dir> [model=Qwen/Qwen2.5-VL-7B-Instruct] [every=4] [bits=auto|4|8|16]
+  python -m scripts.visual.vlm <frames dir | list.txt> [model=Qwen/Qwen2.5-VL-7B-Instruct] [every=4] [bits=auto|4|8|16]
 
 Reads <dir>/frames.json and <dir>/ocr.json, picks the frames (`select`), and appends to <dir>/vlm.jsonl one row per
 frame: {"t", "reply", "s"} (raw reply, seconds taken); `parse_reply` reads a reply. Resumes where it stopped.
@@ -81,6 +81,15 @@ def select(kept: list[int], ocr_hits: set[int], cuts: set[int], every: int = EVE
     return sorted(chosen)
 
 
+def folders_from(arg: str) -> list[Path]:
+    """A frames folder, or a .txt listing folders (one per line, relative to the list's own folder): one model load
+    for many videos (reloading the 7B per video cost about a minute each)."""
+    p = Path(arg)
+    if p.suffix == ".txt":
+        return [p.parent / l.strip() for l in p.read_text(encoding="utf-8").splitlines() if l.strip()]
+    return [p]
+
+
 def main(argv: list[str]) -> int:  # pragma: no cover - needs a GPU
     import torch
     from PIL import Image
@@ -88,15 +97,10 @@ def main(argv: list[str]) -> int:  # pragma: no cover - needs a GPU
 
     from scripts.visual.ocr_frames import has_text
 
-    folder, model_id = Path(argv[0]), argv[1] if len(argv) > 1 else MODEL
+    folders, model_id = folders_from(argv[0]), argv[1] if len(argv) > 1 else MODEL
     every = int(argv[2]) if len(argv) > 2 else EVERY  # 1 reads every kept frame (tests)
     choice = argv[3] if len(argv) > 3 else "auto"  # 4, 8, 16 or auto
-    meta = json.loads((folder / "frames.json").read_text(encoding="utf-8"))
-    ocr_rows = json.loads((folder / "ocr.json").read_text(encoding="utf-8"))
-    times = select(meta["kept"], {r["t"] for r in ocr_rows if has_text(r["text"])}, set(meta["cuts"]), every)
     bits = bits_for(choice, torch.cuda.get_device_properties(0).total_memory < 20e9, model_id)
-    out = folder / out_name(bits, choice)
-    done = {json.loads(l)["t"] for l in out.read_text(encoding="utf-8").splitlines()} if out.exists() else set()
     q = {4: BitsAndBytesConfig(load_in_4bit=True, bnb_4bit_quant_type="nf4", bnb_4bit_compute_dtype=torch.float16),
          # 8-bit leaves the vision encoder (model.visual: transformers 5 matches skip names from the path start) in fp16;
          # quantised, its int8 matmuls failed on a T4 (cublasLt, 2026-11-25).
@@ -106,19 +110,25 @@ def main(argv: list[str]) -> int:  # pragma: no cover - needs a GPU
     proc = AutoProcessor.from_pretrained(model_id)
     msgs = [{"role": "user", "content": [{"type": "image"}, {"type": "text", "text": PROMPT}]}]
     chat = proc.apply_chat_template(msgs, add_generation_prompt=True)
-    with out.open("a", encoding="utf-8") as f:
-        for t in times:
-            if t in done:
-                continue
-            t0 = time.time()
-            with Image.open(folder / f"f{t:06d}.jpg") as im:
-                inputs = proc(text=[chat], images=[im.convert("RGB")], return_tensors="pt").to("cuda")
-            with torch.no_grad():
-                ids = model.generate(**inputs, max_new_tokens=120, do_sample=False)
-            reply = proc.batch_decode(ids[:, inputs["input_ids"].shape[1]:], skip_special_tokens=True)[0].strip()
-            f.write(json.dumps({"t": t, "reply": reply, "s": round(time.time() - t0, 2)}, ensure_ascii=False) + "\n")
-            f.flush()
-    print(f"{folder.name}: {len(times)} frames read by {model_id} ({bits}-bit)")
+    for folder in folders:
+        meta = json.loads((folder / "frames.json").read_text(encoding="utf-8"))
+        ocr_rows = json.loads((folder / "ocr.json").read_text(encoding="utf-8"))
+        times = select(meta["kept"], {r["t"] for r in ocr_rows if has_text(r["text"])}, set(meta["cuts"]), every)
+        out = folder / out_name(bits, choice)
+        done = {json.loads(l)["t"] for l in out.read_text(encoding="utf-8").splitlines()} if out.exists() else set()
+        with out.open("a", encoding="utf-8") as f:
+            for t in times:
+                if t in done:
+                    continue
+                t0 = time.time()
+                with Image.open(folder / f"f{t:06d}.jpg") as im:
+                    inputs = proc(text=[chat], images=[im.convert("RGB")], return_tensors="pt").to("cuda")
+                with torch.no_grad():
+                    ids = model.generate(**inputs, max_new_tokens=120, do_sample=False)
+                reply = proc.batch_decode(ids[:, inputs["input_ids"].shape[1]:], skip_special_tokens=True)[0].strip()
+                f.write(json.dumps({"t": t, "reply": reply, "s": round(time.time() - t0, 2)}, ensure_ascii=False) + "\n")
+                f.flush()
+        print(f"{folder.name}: {len(times)} frames read by {model_id} ({bits}-bit)", flush=True)
     return 0
 
 

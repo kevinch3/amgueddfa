@@ -123,3 +123,10 @@ def test_precision():
     assert vlm.bits_for("auto", small_card=True, model_id="Qwen/Qwen2.5-VL-3B-Instruct") == 16
     assert vlm.bits_for("8", small_card=True, model_id=vlm.MODEL) == 8
     assert vlm.out_name(16, "auto") == "vlm.jsonl" and vlm.out_name(8, "8") == "vlm.8bit.jsonl"
+
+
+def test_one_folder_or_a_list_of_folders(tmp_path):
+    lst = tmp_path / "chunk1.txt"
+    lst.write_text("vid_a\n\n  vid_b \n", encoding="utf-8")
+    assert vlm.folders_from(str(lst)) == [tmp_path / "vid_a", tmp_path / "vid_b"]  # relative to the list's folder
+    assert vlm.folders_from(str(tmp_path / "vid_c")) == [tmp_path / "vid_c"]

@@ -39,6 +39,9 @@ SAME_SPEECH = 10.0  # s: a Spanish recogniser's Welsh line this close to a Bango
 OVERLAP = 0.5
 UNKNOWN_SPAN = 1.0
 FRAGMENT_GAP = 2.0  # s: a Bangor fragment of Spanish speech this close to a Spanish line holding its words is that speech
+# A Bangor row shorter than this is a loop: the segment's words written again with no time (BC61L8txOaQ: 284 rows,
+# 4 in 5 repeating the rows before), and turbo's text on its 0.4 s clip is noise.
+MIN_ROW = 0.05
 EPS = 0.01  # s: float noise when a line's start is matched to its Bangor segment
 
 
@@ -144,6 +147,8 @@ def _decided(stem: Path) -> list[Line]:
     seg_conf = [(float(g["s"]), float(g["e"]), math.exp(g["lp"]) if "lp" in g else None) for g in segments]
     rows, unsure, conf, word_conf = [], [], {}, _word_conf(segments, seg_conf)
     for r in read(".es-lineas.json")["lines"]:
+        if r["e"] - r["s"] < MIN_ROW:
+            continue
         c = _row_conf(r, word_conf, seg_conf)
         if is_english(r["cy"]):
             continue
@@ -210,9 +215,13 @@ def load_sources(stem: Path, video_id: str, letras: Path = LETRAS) -> list[Line]
                 kept.append(l._replace(alt=p.t))
         # The other way round: a Bangor line that won on confidence but wrote Spanish speech, whose words a kept
         # Spanish line near it already has (with more), is that speech again, written worse (#164 follow-up).
-        spanish = [l for l in kept + decided if l.src in ("subida", "yt_es", "whisper_es") and l.alt is None]
-        out = kept + [d for d in decided if not (d.src == "cy" and line_language(d.text, ["cy"]) == "es"
-                                                 and _repeats(d, spanish, FRAGMENT_GAP))]
+        # Likewise a decided Spanish line (turbo on a Bangor row's clip) whose words a kept Spanish line around it
+        # already has: turbo heard that speech whole in its long form, and the clip again (2026-11-25, BC61L8txOaQ).
+        others = [l for l in kept if l.src in ("subida", "yt_es", "whisper_es") and l.alt is None]
+        spanish = others + [l for l in decided if l.src != "cy"]
+        out = kept + [d for d in decided
+                      if not (_repeats(d, spanish if d.src == "cy" else others, FRAGMENT_GAP)
+                              and (d.src != "cy" or line_language(d.text, ["cy"]) == "es"))]
     elif es.exists():
         for seg in json.loads(es.read_text(encoding="utf-8"))["segments"]:
             if "text" in seg:

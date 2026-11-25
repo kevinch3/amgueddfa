@@ -480,3 +480,23 @@ def test_bangor_fragment_gives_way_to_a_decided_spanish_line(tmp_path):
     stem, letras = _mezcla_fixture(tmp_path, [_seg(frag), _seg(es)], [frag, es])
     got = [(l.t, l.src) for l in load_sources(stem, "vid", letras) if 590 < l.t < 610]
     assert got == [(601.2, "whisper_es")]
+
+
+def test_zero_length_rows_are_bangor_loops(tmp_path):
+    # Bangor wrote a row, then the same words again as rows with no time; turbo's text on those 0.4 s clips is noise.
+    row = _row(700.0, "croeso i bawb yma heddiw")                                     # 700.0-702.5
+    loop = dict(row, s=702.5, e=702.5, es="Gracias.", es_p=0.35, es_words=[[702.3, 702.7, "Gracias.", 0.35]])
+    stem, letras = _mezcla_fixture(tmp_path, [_seg(row)], [row, loop, dict(loop)])
+    got = [(l.t, l.src, l.text) for l in load_sources(stem, "vid", letras) if 690 < l.t < 710]
+    assert got == [(700.0, "cy", "croeso i bawb yma heddiw")]
+    assert sources.MIN_ROW == 0.05
+
+
+def test_decided_spanish_line_inside_a_longform_line_gives_way(tmp_path):
+    # Turbo heard the sentence whole (long form) and its end again in a Bangor row's clip: one line, the whole one.
+    tail = _row(806.0, "de la ciudad de bwenos aires", es="de la ciudad de buenos aires", cy_p=0.3, es_p=0.9)
+    longform = {"s": 800.0, "e": 809.0, "text": "invitamos al piano a quien nos dirige de la ciudad de buenos aires",
+                "lp": -0.2, "words": []}
+    stem, letras = _mezcla_fixture(tmp_path, [_seg(tail, lp=-1.2)], [tail], turbo=[longform])
+    got = [(l.t, l.src) for l in load_sources(stem, "vid", letras) if 790 < l.t < 820]
+    assert got == [(800.0, "whisper_es")]

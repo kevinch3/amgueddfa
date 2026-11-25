@@ -9,6 +9,7 @@ Meant for KPC's CPU (6 workers); the laptop can run it with 1.
 from __future__ import annotations
 
 import json
+import os
 import re
 import subprocess
 import sys
@@ -43,7 +44,10 @@ def parse_tsv(tsv: str, min_conf: float = MIN_CONF) -> tuple[str, float | None]:
 
 
 def ocr(path: Path) -> tuple[str, float | None]:
-    out = subprocess.run(["tesseract", str(path), "-", "-l", LANGS, "--psm", "11", "tsv"], capture_output=True, text=True)
+    # One thread per Tesseract: its default OpenMP threads, times several workers, fought over KPC's 8 cores
+    # (2026-11-25: 3-4 s per frame instead of under 1 s).
+    out = subprocess.run(["tesseract", str(path), "-", "-l", LANGS, "--psm", "11", "tsv"], capture_output=True, text=True,
+                         env={**os.environ, "OMP_THREAD_LIMIT": "1"})
     return parse_tsv(out.stdout)
 
 

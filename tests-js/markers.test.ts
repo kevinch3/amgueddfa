@@ -15,3 +15,15 @@ describe('markers', () => {
     expect(playMap({ A: { markers: 'x' } as never, B: null as never }, ['A', 'B'])).toEqual({});
   });
 });
+
+describe('playMap with performance clips (scripts/visual/clip_comps.py)', () => {
+  it("keeps a session's chapter when a clip of the same competition comes later in the list", () => {
+    const files = { ses: { auto: true, markers: [[3600, '22', 'Solo', 'comp']] as [number, string, string, string][] },
+                    clip: { auto: true, markers: [[0, '22', 'Solo', 'comp']] as [number, string, string, string][] } };
+    expect(playMap(files, ['ses', 'clip'])['22']).toEqual({ v: 'ses', t: 3600 });
+  });
+  it('links a competition no session marks to its clip, from the start', () => {
+    const files = { clip: { auto: true, markers: [[0, '51', 'Coro', 'comp']] as [number, string, string, string][] } };
+    expect(playMap(files, ['ses', 'clip'])['51']).toEqual({ v: 'clip', t: 0 });
+  });
+});

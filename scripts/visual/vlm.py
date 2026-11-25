@@ -1,6 +1,6 @@
 """A vision model's reading of chosen frames: on-screen text and one sentence on what happens (cues are read from it).
 
-  python -m scripts.visual.vlm <frames dir> [model=Qwen/Qwen2.5-VL-7B-Instruct] [every=4]
+  python -m scripts.visual.vlm <frames dir> [model=Qwen/Qwen2.5-VL-7B-Instruct] [every=4] [bits=auto|4|8|16]
 
 Reads <dir>/frames.json and <dir>/ocr.json, picks the frames (`select`), and appends to <dir>/vlm.jsonl one row per
 frame: {"t", "reply", "s"} (raw reply, seconds taken); `parse_reply` reads a reply. Resumes where it stopped.
@@ -60,6 +60,18 @@ def parse_reply(reply: str) -> dict:
     return {"text": text, "cues": cues_in(what), "what": what}
 
 
+def bits_for(choice: str, small_card: bool, model_id: str) -> int:
+    """4, 8 or 16 (fp16). "auto": the 7B in 4 bits on a card under 20 GB (tested 2026-11-25), else whole."""
+    if choice != "auto":
+        return int(choice)
+    return 4 if small_card and "7B" in model_id else 16
+
+
+def out_name(bits: int, choice: str) -> str:
+    """vlm.jsonl for the automatic choice; vlm.<n>bit.jsonl when a precision is forced (comparisons share a folder)."""
+    return "vlm.jsonl" if choice == "auto" else f"vlm.{bits}bit.jsonl"
+
+
 def select(kept: list[int], ocr_hits: set[int], cuts: set[int], every: int = EVERY) -> list[int]:
     """The kept frames the model reads: every `every`-th one, each OCR hit with the kept frames either side, every cut."""
     chosen = set(kept[::every]) | cuts
@@ -78,14 +90,17 @@ def main(argv: list[str]) -> int:  # pragma: no cover - needs a GPU
 
     folder, model_id = Path(argv[0]), argv[1] if len(argv) > 1 else MODEL
     every = int(argv[2]) if len(argv) > 2 else EVERY  # 1 reads every kept frame (tests)
+    choice = argv[3] if len(argv) > 3 else "auto"  # 4, 8, 16 or auto
     meta = json.loads((folder / "frames.json").read_text(encoding="utf-8"))
     ocr_rows = json.loads((folder / "ocr.json").read_text(encoding="utf-8"))
     times = select(meta["kept"], {r["t"] for r in ocr_rows if has_text(r["text"])}, set(meta["cuts"]), every)
-    out = folder / "vlm.jsonl"
+    bits = bits_for(choice, torch.cuda.get_device_properties(0).total_memory < 20e9, model_id)
+    out = folder / out_name(bits, choice)
     done = {json.loads(l)["t"] for l in out.read_text(encoding="utf-8").splitlines()} if out.exists() else set()
-    small = torch.cuda.get_device_properties(0).total_memory < 20e9
-    q = BitsAndBytesConfig(load_in_4bit=True, bnb_4bit_quant_type="nf4", bnb_4bit_compute_dtype=torch.float16) \
-        if small and "7B" in model_id else None
+    q = {4: BitsAndBytesConfig(load_in_4bit=True, bnb_4bit_quant_type="nf4", bnb_4bit_compute_dtype=torch.float16),
+         # 8-bit leaves the vision encoder (model.visual: transformers 5 matches skip names from the path start) in fp16;
+         # quantised, its int8 matmuls failed on a T4 (cublasLt, 2026-11-25).
+         8: BitsAndBytesConfig(load_in_8bit=True, llm_int8_skip_modules=["model.visual", "lm_head"]), 16: None}[bits]
     model = Qwen2_5_VLForConditionalGeneration.from_pretrained(model_id, torch_dtype=torch.float16, device_map="cuda",
                                                                quantization_config=q)
     proc = AutoProcessor.from_pretrained(model_id)
@@ -103,7 +118,7 @@ def main(argv: list[str]) -> int:  # pragma: no cover - needs a GPU
             reply = proc.batch_decode(ids[:, inputs["input_ids"].shape[1]:], skip_special_tokens=True)[0].strip()
             f.write(json.dumps({"t": t, "reply": reply, "s": round(time.time() - t0, 2)}, ensure_ascii=False) + "\n")
             f.flush()
-    print(f"{folder.name}: {len(times)} frames read by {model_id} ({'4-bit' if q else 'fp16'})")
+    print(f"{folder.name}: {len(times)} frames read by {model_id} ({bits}-bit)")
     return 0
 
 

@@ -47,6 +47,18 @@ describe('static build', () => {
     execSync('npm run build', { cwd: join(__dirname, '..'), stdio: 'pipe', env: { ...env, NODE_ENV: 'production' } });
   }, 300_000);
 
+  it('the header carries the signed-out session link in its HTML, so filling it on load does not shift the page (#173)', () => {
+    // #sesion used to be empty until session.ts filled it after the first paint; on a desktop screen its width
+    // pushed the header menus to a second row and the whole page down 52 px (CLS 0.61, Web Analytics 2026-11-25).
+    for (const l of LOCALES) {
+      const html = read(l === DEFAULT_LOCALE ? 'index.html' : `${l}/index.html`);
+      setLocale(l);
+      const m = html.match(/<div id="sesion"[^>]*>([\s\S]*?)<\/div>/);
+      expect(m?.[1] ?? '', l).toMatch(new RegExp(`<a [^>]*class="sesion-link"[^>]*>${t('sesion.ingresar')}</a>`));
+    }
+    setLocale(DEFAULT_LOCALE);
+  });
+
   it('edition page lists its programa with media', () => {
     const html = read('chubut/2024/index.html');
     expect(html).toContain('Programa');

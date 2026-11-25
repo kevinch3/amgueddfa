@@ -5097,6 +5097,30 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "999a6fb5-8f62-4c57-9d24-f61c19c2dd46",
+    "type": "report",
+    "festival": "chubut",
+    "year": 2001,
+    "item_id": null,
+    "payload": {
+      "arreglo": {
+        "festival": "chubut",
+        "year": 2007
+      },
+      "objetivo": "video",
+      "problema": "otra_edicion",
+      "video": {
+        "channel": "Mónica Jones de Jones",
+        "id": "vlwe6KnhK7g",
+        "kind": "ceremonia",
+        "title": "Monica Jones de Jones. Bardd Cadeiriol Eisteddfod Y Wladfa 2001/2007 / Patagonia"
+      }
+    },
+    "created_at": "2026-11-25T18:52:15.936013+00:00",
+    "reviewed_at": "2026-11-25T18:52:15.936013+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "9a8805b6-9c4c-4879-9499-7ed2f289c442",
     "type": "fact",
     "festival": "chubut",

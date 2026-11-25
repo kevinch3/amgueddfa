@@ -7749,10 +7749,16 @@
       "base": "2026-11-24T07:46:26Z",
       "cambios": [
         {
-          "antes": "Muchas gracias, Teorfen Baur. Felicitaciones, Shonka Bergeatay y Daigroup.",
+          "antes": "Muchas gracias, Teorfo Baúl.",
           "idioma": "cy",
-          "t": 305.9,
-          "texto": "Muchas gracias, Diolch yn fawr. Felicitaciones, Llongyfarchiadau I'r ddau grŵp."
+          "t": 306.1,
+          "texto": "Muchas gracias, Diolch yn fawr."
+        },
+        {
+          "antes": "Felicitaciones, Shonka Vergeatay y Gai Group.",
+          "idioma": "cy",
+          "t": 308.8,
+          "texto": "Felicitaciones, Llongyfarchiadau I'r ddau grŵp."
         }
       ],
       "video": {

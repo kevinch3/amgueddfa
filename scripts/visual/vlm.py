@@ -1,6 +1,6 @@
 """A vision model's reading of chosen frames: on-screen text, a scene label, and one sentence on what happens.
 
-  python -m scripts.visual.vlm <frames dir> [model=Qwen/Qwen2.5-VL-7B-Instruct]
+  python -m scripts.visual.vlm <frames dir> [model=Qwen/Qwen2.5-VL-7B-Instruct] [every=4]
 
 Reads <dir>/frames.json and <dir>/ocr.json, picks the frames (`select`), and appends to <dir>/vlm.jsonl one row per
 frame: {"t", "reply", "s"} (raw reply, seconds taken); `parse_reply` reads a reply. Resumes where it stopped.
@@ -19,35 +19,36 @@ from pathlib import Path
 
 MODEL = "Qwen/Qwen2.5-VL-7B-Instruct"
 EVERY = 4  # every 4th kept frame, plus OCR hits with their neighbours, plus scene cuts
-SCENES = ("ceremony", "jury", "presenters", "performance", "audience", "sponsors", "slide", "other")
+# Things that can be seen, asked yes/no. A one-word scene label was too coarse (2026-11-25: anyone at a podium was
+# "ceremony"; the 2001 chairing was missed); the model's own sentences named these cues instead.
+CUES = {
+    "robes": "people wearing robes or gowns",
+    "dance": "someone dancing",
+    "flowers": "someone carrying flowers or a bouquet",
+    "kneel": "someone kneeling",
+    "judges": "people seated at a table facing the stage, judging or writing",
+    "slide": "a slide, caption or title filling much of the screen",
+}
 PROMPT = (
-    "This is a frame from a video of a music and poetry festival. "
-    "Look at it and answer in exactly three lines:\n"
+    "This is a frame from a video of a music and poetry festival. Answer in exactly these lines:\n"
     "TEXT: copy every word written in the image (slides, captions, banners, logos, signs), or NONE\n"
-    "SCENE: pick one word: " + ", ".join(SCENES) + "\n"
-    "WHAT: describe what is happening in one sentence of your own\n"
+    + "".join(f"{c.upper()}: yes or no: {q}?\n" for c, q in CUES.items())
+    + "WHAT: describe what is happening in one sentence of your own\n"
     "Never name or guess who a person is; describe roles only."
 )
-_ECHO = ("copy every word", "pick one word", "any text in the image")
+_ECHO = ("copy every word", "any text in the image")
 
 
 def parse_reply(reply: str) -> dict:
-    """{"text", "scene", "what"} from the full three-line form or the short "text | scene | what" one. An unknown
-    scene is None; text that repeats the instructions, or NONE, is ""."""
-    fields = {}
-    for key in ("TEXT", "SCENE", "WHAT"):
+    """{"text", "cues", "what"}: the screen text ("" for NONE or echoed instructions), the cues answered yes."""
+    def line(key: str) -> str:
         m = re.search(rf"^\s*{key}:\s*(.*)$", reply, re.M | re.I)
-        if m:
-            fields[key] = m.group(1).strip()
-    if not fields:
-        parts = [p.strip() for p in reply.replace("\n", " | ").split("|") if p.strip()]
-        if len(parts) >= 2:
-            fields = {"TEXT": parts[0], "SCENE": parts[1], "WHAT": " ".join(parts[2:])}
-    text = fields.get("TEXT", "")
+        return m.group(1).strip() if m else ""
+    text = line("TEXT")
     if text.upper() == "NONE" or any(e in text.lower() for e in _ECHO):
         text = ""
-    scene = fields.get("SCENE", "").strip().lower().rstrip(".")
-    return {"text": text, "scene": scene if scene in SCENES else None, "what": fields.get("WHAT", "")}
+    cues = {c for c in CUES if re.fullmatch(r"yes[.!]?", line(c.upper()), re.I)}
+    return {"text": text, "cues": cues, "what": line("WHAT")}
 
 
 def select(kept: list[int], ocr_hits: set[int], cuts: set[int], every: int = EVERY) -> list[int]:
@@ -67,9 +68,10 @@ def main(argv: list[str]) -> int:  # pragma: no cover - needs a GPU
     from scripts.visual.ocr_frames import has_text
 
     folder, model_id = Path(argv[0]), argv[1] if len(argv) > 1 else MODEL
+    every = int(argv[2]) if len(argv) > 2 else EVERY  # 1 reads every kept frame (tests)
     meta = json.loads((folder / "frames.json").read_text(encoding="utf-8"))
     ocr_rows = json.loads((folder / "ocr.json").read_text(encoding="utf-8"))
-    times = select(meta["kept"], {r["t"] for r in ocr_rows if has_text(r["text"])}, set(meta["cuts"]))
+    times = select(meta["kept"], {r["t"] for r in ocr_rows if has_text(r["text"])}, set(meta["cuts"]), every)
     out = folder / "vlm.jsonl"
     done = {json.loads(l)["t"] for l in out.read_text(encoding="utf-8").splitlines()} if out.exists() else set()
     small = torch.cuda.get_device_properties(0).total_memory < 20e9
@@ -88,7 +90,7 @@ def main(argv: list[str]) -> int:  # pragma: no cover - needs a GPU
             with Image.open(folder / f"f{t:06d}.jpg") as im:
                 inputs = proc(text=[chat], images=[im.convert("RGB")], return_tensors="pt").to("cuda")
             with torch.no_grad():
-                ids = model.generate(**inputs, max_new_tokens=200, do_sample=False)
+                ids = model.generate(**inputs, max_new_tokens=160, do_sample=False)
             reply = proc.batch_decode(ids[:, inputs["input_ids"].shape[1]:], skip_special_tokens=True)[0].strip()
             f.write(json.dumps({"t": t, "reply": reply, "s": round(time.time() - t0, 2)}, ensure_ascii=False) + "\n")
             f.flush()

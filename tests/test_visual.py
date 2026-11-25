@@ -50,26 +50,28 @@ def test_tsv_keeps_confident_words_only():
 
 
 # The vision model's reply
-def test_three_line_reply():
-    reply = "TEXT: BUENAS TARDES\nSCENE: Ceremony\nWHAT: People in robes walk across the stage."
-    assert vlm.parse_reply(reply) == {"text": "BUENAS TARDES", "scene": "ceremony",
+def test_full_reply_with_cues():
+    reply = ("TEXT: BUENAS TARDES\nROBES: yes\nDANCE: no\nFLOWERS: Yes.\nKNEEL: no\nJUDGES: no\nSLIDE: no\n"
+             "WHAT: People in robes walk across the stage.")
+    assert vlm.parse_reply(reply) == {"text": "BUENAS TARDES", "cues": {"robes", "flowers"},
                                       "what": "People in robes walk across the stage."}
 
 
-def test_short_reply_and_none():
-    assert vlm.parse_reply("NONE | performance | A choir sings on stage.") == {
-        "text": "", "scene": "performance", "what": "A choir sings on stage."}
+def test_none_text_and_missing_cues():
+    assert vlm.parse_reply("TEXT: NONE\nROBES: no\nWHAT: A choir sings.") == {"text": "", "cues": set(),
+                                                                             "what": "A choir sings."}
 
 
-def test_unknown_scene_and_echoed_instructions_are_dropped():
-    got = vlm.parse_reply("TEXT: copy every word written in the image\nSCENE: pick one word: ceremony, jury\nWHAT: x")
-    assert got["text"] == "" and got["scene"] is None
-    assert vlm.parse_reply("something else entirely")["scene"] is None
+def test_echoed_instructions_are_dropped():
+    got = vlm.parse_reply("TEXT: copy every word written in the image\nROBES: yes or no\nWHAT: x")
+    assert got["text"] == "" and got["cues"] == set()
+    assert vlm.parse_reply("something else entirely") == {"text": "", "cues": set(), "what": ""}
 
 
 def test_prompt_names_no_festival_and_forbids_identifying_people():
     assert "eisteddfod" not in vlm.PROMPT.lower()
     assert "never name or guess who a person is" in vlm.PROMPT.lower()
+    assert all(f"{c.upper()}:" in vlm.PROMPT for c in vlm.CUES)
 
 
 def test_frames_for_the_model():
@@ -96,3 +98,9 @@ def test_a_sustained_ceremony_is_a_run():
 
 def test_unlabelled_frames_are_skipped():
     assert runs.scene_runs([(0, None), (5, None)]) == []
+
+
+def test_cue_runs_follow_one_cue():
+    cues = [(t, {"robes"} if 20 <= t <= 60 else set()) for t in range(0, 100, 5)]
+    cues[8] = (40, set())  # one frame in the middle where the model missed the robes
+    assert runs.cue_runs(cues, "robes") == [(20, 60)]

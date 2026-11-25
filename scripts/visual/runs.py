@@ -37,3 +37,8 @@ def scene_runs(labels: list[tuple[int, str | None]]) -> list[tuple[str, int, int
         else:
             out.append([s, t, t, 1])
     return [(s, a, b) for s, a, b, n in out if n >= MIN_RUN]
+
+
+def cue_runs(cues: list[tuple[int, set[str]]], cue: str) -> list[tuple[int, int]]:
+    """[(first t, last t)] where `cue` holds, smoothed the same way: one missed frame does not break a run."""
+    return [(a, b) for s, a, b in scene_runs([(t, cue if cue in c else "-") for t, c in cues]) if s == cue]

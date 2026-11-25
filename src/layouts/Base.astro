@@ -104,7 +104,9 @@ const webmcpToken = (import.meta.env.PUBLIC_WEBMCP_OT_TOKEN ?? '').trim();
             <li><a href={url('ranking')} aria-current={current === 'ranking' ? 'page' : undefined}>{t('nav.ranking')}</a></li>
           </ul>
         </nav>
-        <Mount id="sesion" festival={festival} year={year} item={item} />
+        {/* The signed-out state is in the HTML, as session.ts renders it, so filling #sesion on load does not
+            change its width: empty until then, it pushed the menus to a second row (CLS 0.61, #173). */}
+        <Mount id="sesion" festival={festival} year={year} item={item}><a class="sesion-link" href={url('ingresar')}>{t('sesion.ingresar')}</a></Mount>
         <SessionBadge />
         <div class="cabecera-menus">
           <ReadingMenu />

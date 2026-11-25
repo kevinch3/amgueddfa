@@ -1778,6 +1778,29 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "355a63ca-5a0a-469e-97f5-bb2dcbeb1d81",
+    "type": "video_text",
+    "festival": "chubut",
+    "year": 2008,
+    "item_id": null,
+    "payload": {
+      "cambios": [
+        {
+          "antes": "Gofynnwyd i Elfys Macdonald ei gynrychioli yn y seremoni hon heddiw, ac yn eironig digon, gadeirwyd Elfys yn mil naw cant saith deg dau a mil naw cant saith deg tri, ond nid oedd o'n bresennol yn naill dro na'r llall. Bydd o'n cael y cyfle i gael y brofiad llwyr.",
+          "t": 460.88,
+          "texto": "Gofynnwyd i Elvey MacDonald ei gynrychioli yn y seremoni hon heddiw, ac yn eironig digon, gadeirwyd Elvey yn mil naw cant saith deg dau a mil naw cant saith deg tri, ond nid oedd o'n bresennol yn naill dro na'r llall. Bydd o'n cael y cyfle i gael y brofiad llwyr."
+        }
+      ],
+      "video": {
+        "id": "rAZgFw7iaqA",
+        "title": "[CH2008001] Ceremonia del Bardo - Graham Williams"
+      }
+    },
+    "created_at": "2026-11-25T16:59:12.36111+00:00",
+    "reviewed_at": "2026-11-25T16:59:12.36111+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "36078abb-17ce-40c5-8065-f548501b6ed4",
     "type": "fact",
     "festival": "chubut",
@@ -7284,6 +7307,22 @@
     },
     "created_at": "2026-11-17T13:32:44.148707+00:00",
     "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "d823a45d-255a-4678-a4a4-5c94cafb65b8",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2008,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Video de la Ceremonia del Bardo 2008 (rAZgFw7iaqA), 7:40",
+      "lote": "554bbc24-e6d3-4a49-a674-af394d0b519f",
+      "value": "En la ceremonia del Sillón lo representó Elvey MacDonald (ganador del Sillón en 1972 y 1973)."
+    },
+    "created_at": "2026-11-25T17:03:18.98335+00:00",
+    "reviewed_at": "2026-11-25T17:03:18.98335+00:00",
     "display_name": "Kevin Roberts"
   },
   {

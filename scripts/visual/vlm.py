@@ -1,4 +1,4 @@
-"""A vision model's reading of chosen frames: on-screen text, a scene label, and one sentence on what happens.
+"""A vision model's reading of chosen frames: on-screen text and one sentence on what happens (cues are read from it).
 
   python -m scripts.visual.vlm <frames dir> [model=Qwen/Qwen2.5-VL-7B-Instruct] [every=4]
 
@@ -19,36 +19,45 @@ from pathlib import Path
 
 MODEL = "Qwen/Qwen2.5-VL-7B-Instruct"
 EVERY = 4  # every 4th kept frame, plus OCR hits with their neighbours, plus scene cuts
-# Things that can be seen, asked yes/no. A one-word scene label was too coarse (2026-11-25: anyone at a podium was
-# "ceremony"; the 2001 chairing was missed); the model's own sentences named these cues instead.
+# Things that can be seen, read from the model's own sentence (2026-11-25, 2001 chairing ceremony):
+# - a one-word scene label was too coarse: anyone at a podium was "ceremony", and the chairing was missed;
+# - yes/no questions came back without their labels and one short (5 answers for 6), at 4.3 s per frame;
+# - the free sentence named them reliably ("kneel on the stage", "a bouquet", "blue robes"): dancing then kneeling
+#   at 34:45-36:00 is the chairing. The words are matched whole, so "robust" is not robes.
 CUES = {
-    "robes": "people wearing robes or gowns",
-    "dance": "someone dancing",
-    "flowers": "someone carrying flowers or a bouquet",
-    "kneel": "someone kneeling",
-    "judges": "people seated at a table facing the stage, judging or writing",
-    "slide": "a slide, caption or title filling much of the screen",
+    "robes": r"robes?|gowns?",
+    "dance": r"danc\w*",
+    "flowers": r"flowers?|bouquets?",
+    "kneel": r"kneel\w*|knelt",
+    "judges": r"judges?|panel",
 }
 PROMPT = (
-    "This is a frame from a video of a music and poetry festival. Answer in exactly these lines:\n"
+    "This is a frame from a video of a music and poetry festival. Answer in exactly two lines:\n"
     "TEXT: copy every word written in the image (slides, captions, banners, logos, signs), or NONE\n"
-    + "".join(f"{c.upper()}: yes or no: {q}?\n" for c, q in CUES.items())
-    + "WHAT: describe what is happening in one sentence of your own\n"
+    "WHAT: describe in one sentence what is happening and what the people wear and do\n"
     "Never name or guess who a person is; describe roles only."
 )
 _ECHO = ("copy every word", "any text in the image")
 
 
+def cues_in(sentence: str) -> set[str]:
+    return {c for c, words in CUES.items() if re.search(rf"\b(?:{words})\b", sentence, re.I)}
+
+
 def parse_reply(reply: str) -> dict:
-    """{"text", "cues", "what"}: the screen text ("" for NONE or echoed instructions), the cues answered yes."""
-    def line(key: str) -> str:
+    """{"text", "cues", "what"}: the screen text ("" for NONE or echoed instructions), the cues the sentence names,
+    and the sentence. A reply without labels counts its first line as the text and its last as the sentence."""
+    def line(key: str) -> str | None:
         m = re.search(rf"^\s*{key}:\s*(.*)$", reply, re.M | re.I)
-        return m.group(1).strip() if m else ""
-    text = line("TEXT")
+        return m.group(1).strip() if m else None
+    lines = [l.strip() for l in reply.strip().splitlines() if l.strip()]
+    text, what = line("TEXT"), line("WHAT")
+    if text is None and what is None and len(lines) >= 2:
+        text, what = lines[0], lines[-1]
+    text, what = text or "", what or ""
     if text.upper() == "NONE" or any(e in text.lower() for e in _ECHO):
         text = ""
-    cues = {c for c in CUES if re.fullmatch(r"yes[.!]?", line(c.upper()), re.I)}
-    return {"text": text, "cues": cues, "what": line("WHAT")}
+    return {"text": text, "cues": cues_in(what), "what": what}
 
 
 def select(kept: list[int], ocr_hits: set[int], cuts: set[int], every: int = EVERY) -> list[int]:
@@ -90,7 +99,7 @@ def main(argv: list[str]) -> int:  # pragma: no cover - needs a GPU
             with Image.open(folder / f"f{t:06d}.jpg") as im:
                 inputs = proc(text=[chat], images=[im.convert("RGB")], return_tensors="pt").to("cuda")
             with torch.no_grad():
-                ids = model.generate(**inputs, max_new_tokens=160, do_sample=False)
+                ids = model.generate(**inputs, max_new_tokens=120, do_sample=False)
             reply = proc.batch_decode(ids[:, inputs["input_ids"].shape[1]:], skip_special_tokens=True)[0].strip()
             f.write(json.dumps({"t": t, "reply": reply, "s": round(time.time() - t0, 2)}, ensure_ascii=False) + "\n")
             f.flush()

@@ -50,28 +50,39 @@ def test_tsv_keeps_confident_words_only():
 
 
 # The vision model's reply
-def test_full_reply_with_cues():
-    reply = ("TEXT: BUENAS TARDES\nROBES: yes\nDANCE: no\nFLOWERS: Yes.\nKNEEL: no\nJUDGES: no\nSLIDE: no\n"
-             "WHAT: People in robes walk across the stage.")
-    assert vlm.parse_reply(reply) == {"text": "BUENAS TARDES", "cues": {"robes", "flowers"},
-                                      "what": "People in robes walk across the stage."}
+def test_reply_text_and_sentence():
+    reply = "TEXT: BUENAS TARDES\nWHAT: People in blue robes kneel on the stage while a girl holds a bouquet."
+    assert vlm.parse_reply(reply) == {"text": "BUENAS TARDES", "cues": {"robes", "kneel", "flowers"},
+                                      "what": "People in blue robes kneel on the stage while a girl holds a bouquet."}
 
 
-def test_none_text_and_missing_cues():
-    assert vlm.parse_reply("TEXT: NONE\nROBES: no\nWHAT: A choir sings.") == {"text": "", "cues": set(),
-                                                                             "what": "A choir sings."}
+def test_cues_come_from_the_sentence_not_the_screen_text():
+    got = vlm.parse_reply("TEXT: DANCE FESTIVAL\nWHAT: A choir sings on stage.")
+    assert got["cues"] == set() and got["text"] == "DANCE FESTIVAL"
 
 
-def test_echoed_instructions_are_dropped():
-    got = vlm.parse_reply("TEXT: copy every word written in the image\nROBES: yes or no\nWHAT: x")
-    assert got["text"] == "" and got["cues"] == set()
-    assert vlm.parse_reply("something else entirely") == {"text": "", "cues": set(), "what": ""}
+def test_unlabelled_reply_uses_its_last_line_as_the_sentence():
+    # The 7B often drops the labels: "NONE\nyes\n...\nA group dances."
+    got = vlm.parse_reply("NONE\nyes\nno\nA group of performers is dancing in a circle.")
+    assert got == {"text": "", "cues": {"dance"}, "what": "A group of performers is dancing in a circle."}
+
+
+def test_none_and_echoed_instructions():
+    assert vlm.parse_reply("TEXT: NONE\nWHAT: A choir sings.")["text"] == ""
+    assert vlm.parse_reply("TEXT: copy every word written in the image\nWHAT: x")["text"] == ""
+    assert vlm.parse_reply("") == {"text": "", "cues": set(), "what": ""}
+
+
+def test_cue_words():
+    cues = lambda s: vlm.cues_in(s)
+    assert cues("men in gowns walk") == {"robes"} and cues("a panel of judges writes") == {"judges"}
+    assert cues("someone kneeling") == {"kneel"} and cues("the dancers bow") == {"dance"}
+    assert cues("a robust performance") == set()  # whole words only
 
 
 def test_prompt_names_no_festival_and_forbids_identifying_people():
     assert "eisteddfod" not in vlm.PROMPT.lower()
     assert "never name or guess who a person is" in vlm.PROMPT.lower()
-    assert all(f"{c.upper()}:" in vlm.PROMPT for c in vlm.CUES)
 
 
 def test_frames_for_the_model():

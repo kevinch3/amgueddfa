@@ -53,7 +53,7 @@
   ],
   [
    707.24,
-   "Y barch, lywydd a chyfieithion oll, diolch yn fawr iawn i chi am ych croeso a'ch geirie caredig, i ni yn gynta'u gref o Gymru yma eleni ag i ni yn ca'l croeso pobman. Dau enwi yn arbennig, aelodau'r Gorsedd sydd wedi ymgynnull gyda ni o Gymru, Celyn Ores Moelwyn,"
+   "Y barch, lywydd a chyfieithion oll, diolch yn fawr iawn i chi am ych croeso a'ch geirie caredig, i ni yn gynta'u gref o Gymru yma eleni ag i ni yn ca'l croeso pobman. Dau enwi yn arbennig, aelodau'r orsedd sydd wedi ymgynnull gyda ni o Gymru, Celyn Ores Moelwyn,"
   ],
   [
    737.24,
@@ -77,7 +77,7 @@
   ],
   [
    851.2,
-   "Diolch yn fawr. Nawr cawn groesawu côr merched Ysgol Gerddoriaeth y Gaiman i ganu Y Wladfa gan Mac Pactagonia a Dafydd Iâl Jones dan arweiniad Ebydd Brenadol."
+   "Diolch yn fawr. Nawr ca- cawn groesawu côr merched Ysgol Gerddoriaeth y Gaiman i ganu y Wladfa gan Mac Pactagonia a Dafydd Iâl Jones dan arweiniad Ebydd Brenadol."
   ],
   [
    1001.2,
@@ -97,7 +97,7 @@
   ],
   [
    1090.2,
-   "ystol y bod yn arwraig byfyr, caiff ei hadnabod yn yr orsedd fel eri brin amlwg."
+   "ystol y bod yn arwraig byfyr, caiff ei hadnabod yn yr Gorsedd fel eri brin amlwg."
   ],
   [
    1098.88,
@@ -113,7 +113,7 @@
   ],
   [
    1152.82,
-   "rwy gyfrol ryngyng y ffamiliars a'r swth mewn drysorau llenyddol, bu'n aelod o bwyllgor yr Eisteddfod am flynyddoedd ac yn aelod o gorau Edith MacDonald ar ddiweddar Clydwyn a Byron Jones, ac mae'n falch ac yn ddiolchgar o gael ei dderbyn yn aelod o Orsedd y Wladfa, caiff ei hadnabod yn yr Orsedd fel Albina Brynheulog."
+   "rwy gyfrol ryngyng y ffamiliars a'r swth mewn drysorau llenyddol, bu'n aelod o bwyllgor yr Eisteddfod am flynyddoedd ac yn aelod o gorau Edith MacDonald ar ddiweddar Clydwyn a Byron Jones, ac mae'n falch ac yn ddiolchgar o gael ei dderbyn yn aelod o orsedd y Wladfa, caiff ei hadnabod yn yr orsedd fel Albina Brynheulog."
   ],
   [
    1182.82,
@@ -136,24 +136,20 @@
    "Aelodau Gorsedd y Wladfa, a fynnwch chi'n awr rhwng y meini hyn ac yn wynebau'r llygad goleuni, gad arnau etholiad yr aelodau newydd hyn, os fynnwch, a tebyg pob un ohonoch, heddwch."
   ],
   [
-   1349.82,
-   "¡Feluz!"
-  ],
-  [
    1679.82,
    "cynnal yng nghelew ar dwy fil a deuddeg."
   ],
   [
    1691.22,
-   "Diolch i chi holl am ddod yma bore. Yn y bore godidog yma, ydan ni wedi ca'l y fraint o'i rhannu gyda chi."
+   "Diolch i chi holl am dod yma bore. Yn y bore godidog yma, ydan ni wedi ca'l y fraint o'i rhannu gyda chi."
   ],
   [
    1700.46,
-   "Rwy nawr am gloi y cyfarfod hwn tan brynhawn Sadwrn, pan fyddwn ni yn esgyn i lwyfan yr Eisteddfod gan obeithio cadeirio bardd buddugol."
+   "Rwy nawr am gloi y cyfarfod hwn tan brinawn Sadwrn, pan fyddwn ni yn esgyrn i lwyfan yr Eisteddfod gan obeithio cadeirio bardd fuddigol."
   ],
   [
    1716.08,
-   "Ar ôl y term yn ei hon, byddwn ni yn gorod deithio yn ôl i Gapel Fesur, ble fu na gyfarfod bach i ddathlu degfed blwydd oed y Wladfa."
+   "Ar ôl y term yn ei hon, byddwn ni yn gorod deithio yn ôl i Gapel Fesur, ble fu na gyfarfod bach i ddathlu degfed blwydd oed y wladfa."
   ],
   [
    1728.08,
@@ -265,9 +261,6 @@
    "cy"
   ],
   [
-   "whisper_es"
-  ],
-  [
    "cy"
   ],
   [
@@ -288,8 +281,8 @@
  ],
  "ventanas": {
   "total": 34,
-  "modelo": 18,
-  "reglas": 2,
+  "modelo": 17,
+  "reglas": 3,
   "vacias": 14
  }
 }

@@ -5,7 +5,7 @@
  "seg": [
   [
    0.0,
-   "Ynys Môn byddai'n ystod y cyfnod llyfr arbennig yng Nghaerfyrddin. Ynys Môn byddai'n ystod y cyfnod llyfr arbennig yng Nghaerfyrdin."
+   "Ynys Môn byddai'n ystod y cyfnod llyfr arbennig yng Nghaerfyrddin."
   ],
   [
    30.0,
@@ -17,7 +17,7 @@
   ],
   [
    55.0,
-   "I'r garwedd fod y ffin, i'r garwedd fod y ffin, i'r garwedd fod y ffin."
+   "I'r garwedd fod y ffin."
   ],
   [
    72.28,
@@ -57,8 +57,8 @@
  ],
  "ventanas": {
   "total": 3,
-  "modelo": 1,
-  "reglas": 1,
+  "modelo": 2,
+  "reglas": 0,
   "vacias": 1
  }
 }

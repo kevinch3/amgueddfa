@@ -96,6 +96,10 @@
    "encontrará que"
   ],
   [
+   135.5,
+   "n"
+  ],
+  [
    137.2,
    "nadie despierte al"
   ],
@@ -277,12 +281,15 @@
   ],
   [
    "yt_es"
+  ],
+  [
+   "yt_es"
   ]
  ],
  "ventanas": {
   "total": 4,
-  "modelo": 4,
-  "reglas": 0,
+  "modelo": 3,
+  "reglas": 1,
   "vacias": 0
  }
 }

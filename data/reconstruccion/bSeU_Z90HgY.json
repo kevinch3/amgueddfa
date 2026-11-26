@@ -9,7 +9,7 @@
   ],
   [
    27.0,
-   "Yna dycanfodithau, a grewyd i gyd môr hardd, yn campwaith pob campweithiau, yn gorwn dychymyg bardd."
+   "Yna dycanfodithau, a grewyd i gyd môr hardd, yn gampwaith pob campweithiau, yn gorwn dychymyg bardd."
   ],
   [
    43.0,
@@ -29,8 +29,8 @@
  ],
  "ventanas": {
   "total": 2,
-  "modelo": 0,
-  "reglas": 1,
+  "modelo": 1,
+  "reglas": 0,
   "vacias": 1
  }
 }

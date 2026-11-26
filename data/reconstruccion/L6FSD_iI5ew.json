@@ -4,8 +4,16 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   91.7,
+   "Parti"
+  ],
+  [
+   94.6,
+   "gôr merched Parti"
+  ],
+  [
    172.76,
-   "Yn amlin, dwy arfer sydd, wyth eich gormod yn hŷn, mae'n dyfu dros y dydd."
+   "Yn amlin, dwy arfer sydd, wyth eich gormod yn hŷn, mae'n dyfu dros y dydd. Wyth eich gormod yn hŷn, mae'n dyfu dros y dydd. Yn amlin, dwy arfer sydd, wyth eich gormod yn hŷn, mae'n dyfu dros y dydd."
   ],
   [
    200.76,
@@ -132,12 +140,16 @@
    "tierra los"
   ],
   [
+   465.4,
+   "Ros"
+  ],
+  [
    467.3,
    "quedarán limpios y rojos esta noche"
   ],
   [
    485.0,
-   "Elogio de la lluvia de Jorge"
+   "Elogio a la lluvia de Jorge"
   ],
   [
    489.9,
@@ -149,7 +161,7 @@
   ],
   [
    500.5,
-   "en los ojos mojar Sauces llorones"
+   "en los ojos mojar t Sauces llorones"
   ],
   [
    505.7,
@@ -412,10 +424,6 @@
    "niños que de eso se trata esta canción"
   ],
   [
-   812.0,
-   "i'r hagen y dydd, torrodd y fawr i'r ddodd y dydd, a'i chwardir i'r ddydd y dydd."
-  ],
-  [
    831.0,
    "A hwn yn y swydd gyda her enghraifft y carddor yn fyw iddi hi, mae Cymru yn gallu fathre ffwrdd o'r ffordd y maen nhw'n ei ddefnydd."
   ],
@@ -430,6 +438,12 @@
  ],
  "fuentes": [
   [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
    "cy"
   ],
   [
@@ -736,7 +750,7 @@
    "yt_es"
   ],
   [
-   "cy"
+   "yt_es"
   ],
   [
    "cy"

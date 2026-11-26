@@ -80,12 +80,20 @@
    "eterna y vieja juventud"
   ],
   [
+   132.6,
+   "de canción de esquina con un pedaso de vida, un aranjo en flor."
+  ],
+  [
    134.3,
    "que me ha dejado acobardado"
   ],
   [
    142.9,
    "como un pájaro sin luz."
+  ],
+  [
+   148.6,
+   "Primero hay que saber sufrir, después amar, después partir, y al final andar sin pensamientos."
   ],
   [
    149.2,
@@ -96,8 +104,16 @@
    "¿Qué le habrán hecho"
   ],
   [
+   158.6,
+   "Perffume d'aranjou en fflon, promesas fanas de un amor, que se escaparon con el viento."
+  ],
+  [
    160.9,
    "para dejarme en el pecho"
+  ],
+  [
+   166.6,
+   "Después, qué importará el después, toda mi vida es el ayer, que me detiene en el pasado."
   ],
   [
    168.0,
@@ -179,7 +195,7 @@
    "letra"
   ],
   [
-   "letra"
+   "cy"
   ],
   [
    "letra"
@@ -188,10 +204,22 @@
    "letra"
   ],
   [
+   "cy"
+  ],
+  [
    "letra"
   ],
   [
    "letra"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "letra"
+  ],
+  [
+   "cy"
   ],
   [
    "letra"
@@ -222,8 +250,8 @@
  ],
  "ventanas": {
   "total": 4,
-  "modelo": 3,
-  "reglas": 1,
+  "modelo": 4,
+  "reglas": 0,
   "vacias": 0
  }
 }

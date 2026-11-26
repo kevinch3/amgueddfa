@@ -1325,7 +1325,7 @@
   ],
   [
    1711.0,
-   "villagra a la profesora alen Green"
+   "villagra a la profesora Alwen Green"
   ],
   [
    1714.2,
@@ -1345,7 +1345,7 @@
   ],
   [
    1727.2,
-   "Gales al pianista hctor Ariel"
+   "gales al pianista hctor Ariel"
   ],
   [
    1730.1,
@@ -1369,7 +1369,7 @@
   ],
   [
    1745.6,
-   "a las escoltas y damas de las"
+   "almd a las escoltas y damas de las"
   ],
   [
    1748.5,
@@ -1393,7 +1393,7 @@
   ],
   [
    1761.6,
-   "Al conjunto"
+   "báo Al conjunto"
   ],
   [
    1764.2,
@@ -1421,11 +1421,11 @@
   ],
   [
    1780.5,
-   "el saludo en verso será expresado"
+   "bico el saludo en verso será expresado"
   ],
   [
    1783.6,
-   "por la profesora alen Green en"
+   "por la profesora Alwen Green en"
   ],
   [
    1786.0,
@@ -1433,7 +1433,7 @@
   ],
   [
    1789.0,
-   "la mayorí de las person nombradas"
+   "borda la mayorí de las person nombradas"
   ],
   [
    1792.7,
@@ -1637,11 +1637,11 @@
   ],
   [
    1971.6,
-   "cargo de la profesora alen Green"
+   "cargo de la profesora Alwen Green"
   ],
   [
    1974.0,
-   "presidente del círculo bico del chubut"
+   "presidente del círculo bico del Chubut"
   ],
   [
    1977.1,
@@ -1653,15 +1653,11 @@
   ],
   [
    1984.26,
-   "Pnawn da i chi. Mae'n fraint gen i yy croesawu unwaith eto yy i seremoni cadeirio Eisteddfod y Wladfa dwy fil a dau ddeg tri."
+   "Pnawn da i chi. Mae'n fraint gen i croesawu unwaith eto i seremoni cadeirio Eisteddfod y Wladfa dwy fil a dau ddeg tri."
   ],
   [
    2009.78,
    "Galwaf yn gyntaf ar William Gwyndi, un harwain drwy ganu gweddi'r orsedd."
-  ],
-  [
-   2013.6,
-   "William in har"
   ],
   [
    2039.78,
@@ -3212,9 +3208,6 @@
    "cy"
   ],
   [
-   "yt_es"
-  ],
-  [
    "cy"
   ],
   [
@@ -3447,8 +3440,8 @@
  ],
  "ventanas": {
   "total": 66,
-  "modelo": 54,
-  "reglas": 8,
+  "modelo": 55,
+  "reglas": 7,
   "vacias": 4
  }
 }

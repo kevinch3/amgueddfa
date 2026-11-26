@@ -49,7 +49,7 @@
   ],
   [
    434.2,
-   "Eisteddfod del día viernes vamos a llamar"
+   "stead del día viernes vamos a llamar"
   ],
   [
    438.8,
@@ -69,7 +69,7 @@
   ],
   [
    451.7,
-   "I dechra dan ni'n mynd i gwahod a Marilyn Ellis a Sylvia James y Rhyw Bendith i ni. Diolch."
+   "i dechra dan ni'n mynd i gwahod a Marilyn Ellis a Sylvia James y Rhyw Bendith i ni. Diolch."
   ],
   [
    456.9,
@@ -81,7 +81,7 @@
   ],
   [
    481.7,
-   "Gwledd un calon anhysbrid, yr adrodd cerddoriaeth, llenyddiaeth, crefft a chelf, yr holl weithgareddau, gofynnwn dy fendith a pob un fydd yn cystadlu ac i'r beirniaid fod yn deg yn wneud dyfarniad, diolch i'r pwyllgor sydd yn gweithio'n galed ar hyd y flwyddyn a rai sydd yn helpu yn ddienw, bendithia hefyd a rai sydd yn teithio o bell i fod yma heddiw."
+   "Gwledd un calon anhysbrid, yr adrodd cerddoriaeth, llenyddiaeth, crefft a chelf, yr holl weithgareddau, gofynnwn dy fendith a pob un fydd yn cystadlu ac i'r beirniaid fod yn deg yn wneud dyfarniad, diolch i'r pwyllgor sydd yn gweithio'n galed ar hyd y flwyddyn a rai sydd yn helpu yn ddienw, bendithia hefyd a rai sydd yn tei- yn teithio o bell i fod yma heddiw."
   ],
   [
    510.7,
@@ -164,6 +164,10 @@
    "igualdad a"
   ],
   [
+   682.5,
+   "suo y loses de tu"
+  ],
+  [
    686.9,
    "corresponden al"
   ],
@@ -229,7 +233,7 @@
   ],
   [
    898.1,
-   "Hen redid i bobol sy ddim yn gallu fod yn bresennol a dan ni wedi colli yn ystod de- diweddar. Dan ni'n mynd i ofyn i dawelwch os gwelwch yn dda."
+   "Hen redid i bobol sy ddim yn gallu fod yn bresennol a dan ni wedi golli yn ystod de- diweddar. Dan ni'n mynd i gofyn i tawelwch os gwelwch yn dda."
   ],
   [
    919.0,
@@ -277,7 +281,7 @@
   ],
   [
    1150.4,
-   "lectura a quién la comisión del Eisteddfod"
+   "lectura A quién la comisión del Eisteddfod"
   ],
   [
    1156.4,
@@ -293,7 +297,7 @@
   ],
   [
    1164.8,
-   "sesión nacida entre Trelew pero con raíces"
+   "sesión nacida entre leu pero con raíces"
   ],
   [
    1168.8,
@@ -317,7 +321,7 @@
   ],
   [
    1181.9,
-   "escuela número 100 en Gaiman y sus"
+   "escuela número 100 en gaiman y sus"
   ],
   [
    1184.3,
@@ -333,7 +337,7 @@
   ],
   [
    1192.3,
-   "Trelew en la carrera de profesorado de"
+   "treleu en la carrera de profesorado de"
   ],
   [
    1195.2,
@@ -353,7 +357,7 @@
   ],
   [
    1210.6,
-   "1987 en la escuela 100 de Gaiman el"
+   "1987 en la escuela 100 de gaiman el"
   ],
   [
    1213.8,
@@ -361,7 +365,7 @@
   ],
   [
    1216.2,
-   "Morris de Dolavon en"
+   "Morris de dolavon en"
   ],
   [
    1219.0,
@@ -369,7 +373,7 @@
   ],
   [
    1221.8,
-   "Madryn donde forma una familia junto a"
+   "madrin donde forma una familia junto a"
   ],
   [
    1224.4,
@@ -413,7 +417,7 @@
   ],
   [
    1253.3,
-   "iglesia metodista de cuarto madri donde"
+   "iglesia metodista de cuarto Madryn donde"
   ],
   [
    1255.4,
@@ -433,7 +437,7 @@
   ],
   [
    1265.3,
-   "docente de música miembro del Gorsedd"
+   "docente de música miembro del Gorsedd dula"
   ],
   [
    1269.2,
@@ -642,6 +646,9 @@
   ],
   [
    "cy"
+  ],
+  [
+   "yt_es"
   ],
   [
    "yt_es"
@@ -925,8 +932,8 @@
  ],
  "ventanas": {
   "total": 24,
-  "modelo": 22,
-  "reglas": 1,
+  "modelo": 20,
+  "reglas": 3,
   "vacias": 1
  }
 }

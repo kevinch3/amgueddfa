@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "Sueño Alfarero by Carlos Dante Ferrari"
+  ],
+  [
    11.8,
    "Sueño alfarero, de Carlos Dante Ferrari"
   ],
@@ -209,6 +213,9 @@
   ]
  ],
  "fuentes": [
+  [
+   "cy"
+  ],
   [
    "yt_es"
   ],

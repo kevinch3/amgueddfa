@@ -21,7 +21,7 @@
   ],
   [
    102.0,
-   "Ac mi welais yr offeiriad yn penlinio, cyn fy mhasho am nad wyf i neb o bwys, ond fe'n ganwyd yn nain fab i fy rhieni, ac mi glywais dweud fod pawb yn blant i Dduw, rwy'n frawd i Dduw."
+   "Ac mi welais yr offeiriad yn penilio, cyn fy mhasho am nad wyf i neb o bwys, ond fe'n ganwyd yn nain fab i fy rhieni, ac mi glywais dweud fod pawb yn blant i Dduw, rwy'n frawd i Dduw."
   ],
   [
    132.0,
@@ -57,11 +57,11 @@
   ],
   [
    1127.0,
-   "Nawr mae'n amser i'r Llywodraeth ei ennill Gorsedd y Wladfa Catholig, gwewn i'r Llywodraeth ei ennill a bob cynnar a chyflwynwyr Cymraeg y Catholig, ac i ddengu anodau o'r sefydlog iawn mewn ffordd."
+   "Nawr mae'n amser i'r Llywodraeth ei ennill Gorsedd y Lladinfa Catholig, gwewn i'r Llywodraeth ei ennill a bob cynnar a chyflwynwyr Cymraeg y Catholig, ac i ddengu anodau o'r sefydlog iawn mewn ffordd."
   ],
   [
    1187.0,
-   "Yn ystod yr uned teg ydy yy byd trefnogwyr gared ar y brifwr, fel rywun sydd wedi perfformio'r llyfyr yn addysg, greu perthynadu o amgylchedd a chynnau bywydau, a sy'n mynd i bleidle. Yn hynny, mae'n rhan o'r system o ddibennau a chynnau, a hyd yn oed bod yna adnoddau i'r eisteddfod yn yr ardal, felly mae'n rhan o'r sy'n bod i'r ardal i sylweddoli'r adnoddau drwy'r stori ystyr yn y nos, ac mae hynny'n rhan o'r ffordd maent yn cyd-destawu hyn, a hyd yn oed i'r llenydd-"
+   "Yn ystod yr uned teg ydy yy byd trefnogwyr gared ar y brifwr, fel rywun sydd wedi perfformio'r llyfyr yn addysg, greu perthynadu o amgylchedd a chynnau bywydau, a sy'n mynd i bleidle. Yn hynny, mae'n rhan o'r system o ddibennau a chynnau, a hyd yn oed bod yna adnoddau i'r Eisteddfod yn yr ardal, felly mae'n rhan o'r sy'n bod i'r ardal i sylweddoli'r adnoddau drwy'r stori ystyr yn y nos, ac mae hynny'n rhan o'r ffordd maent yn cyd-destawu hyn, a hyd yn oed i'r llenydd-"
   ],
   [
    1265.0,
@@ -85,7 +85,7 @@
   ],
   [
    1415.0,
-   "enghraifft efo'u teithiau yna gyda phobl ifanc ym Mhath, a dwi'n cael y bleser o'u tywys o gwmpas yr hen wlad, a dwi'n hanfodol o farchnodd y Mhath a'r eglwysi yng Nghaerfyrddin."
+   "enghraifft efo'u teithiau yna gyda phobl ifanc ym Mhath, a dwi'n cael y bleser o'u tywys o gwmpas yr hen wlad, a dwi'n hanfodol o farchnodd ym Mhath a'r eglwysi yng Nghaerfyrddin."
   ],
   [
    1456.0,
@@ -114,16 +114,9 @@
   [
    1980.36,
    "Nawr bydden nhw'n bwrdeisio o'r campa i targedu'r cylch neu nad yw yn cyfarfod blynyddoedd fel arfer, ond cyn hynny gofynna mawr i heddlu ysbryd sgôr i Harwan i ddenu'r hil-ladin pedair a'n perthyn lleol i fyny, a diolch yn fawr i'r swyddogion bob un yn mynd o'r yma. Diolch i chi."
-  ],
-  [
-   2010.36,
-   "Mae hi'n rhan o'r Rhyddfryd Rhyngwlad Cymru."
   ]
  ],
  "fuentes": [
-  [
-   "cy"
-  ],
   [
    "cy"
   ],
@@ -211,8 +204,8 @@
  ],
  "ventanas": {
   "total": 38,
-  "modelo": 19,
-  "reglas": 1,
+  "modelo": 20,
+  "reglas": 0,
   "vacias": 18
  }
 }

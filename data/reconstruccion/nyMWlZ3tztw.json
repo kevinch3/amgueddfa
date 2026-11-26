@@ -117,7 +117,7 @@
   ],
   [
    173.8,
-   "Y también a la Presidente del Gorsedd, Profesora Marlene Piu de Villoria"
+   "Y también a la Presidente del Gorsedd, Profesora Marli Pugh de Villoria"
   ],
   [
    180.5,
@@ -713,7 +713,7 @@
   ],
   [
    1188.8,
-   "Y dejo ahora la conducción a cargo de la profesora Marley Piu, presidente del Círculo Válico del Chubut, quien alcalde la competencia para el idioma galés."
+   "Y dejo ahora la conducción a cargo de la profesora Marli Pugh, presidente del Círculo Válico del Chubut, quien alcalde la competencia para el idioma galés."
   ],
   [
    1206.2,
@@ -721,11 +721,15 @@
   ],
   [
    1310.3,
-   "Pnawn da. Mae'n fraint i mi gael croesawu brif seremoni ym mhawn, sef y dyfodol y Caerio, a ganiadwyd gorn a wnaiff pawb yn y neuad sefyll, os gwelwch yn dda."
+   "Prynhawn da. Mae'n fraint i mi gael croesawu brif seremoni ym mhawn, sef y dyfodol y Caerio, a ganiadwyd gorn a wnaiff pawb yn y neuadd sefyll, os gwelwch yn dda."
   ],
   [
    1340.3,
-   "I arfer defod bydd John Ieuan Jones yn ein harwain i ganu Wedi'r Gorsedd a Gwent mag Bagonia."
+   "I arfer defod bydd John Ieuan Jones yn ein harwain i ganu Wedi'r Orsedd a Gwent mag Bagonia."
+  ],
+  [
+   1370.3,
+   "Ac yn nerth deall, ac yn neall gwybod, ac yn ngwybod, gwybod y cyfiawn."
   ],
   [
    1391.58,
@@ -812,6 +816,14 @@
    "Neith naw ymgeisir i awr. Awn ni ar ysbryddiad bach o bob un ohonyn nhw am arbeniadau llawn ar dâl o'r fwrdd trefnyddion yr Eisteddfod. Cynta, collen. Roedd hi'n ysgidiau ei gyn-dadau na collen, mynegiad arwiadol o wreiddio'r arbrydau, ond byddai'n dda gweld ychydig mwy o ddatblygiad i'r naratif tua'r diwedd, meddai Llŷr Gwyn. Un arall yw do. Na hwn yn seiliedig ar chwedd elfuo tua dwy cant o'r ar ysbryd diwedd elfuo fel be' wedd a'i"
   ],
   [
+   1541.2,
+   "dai gani el gweith ar amgyrchiadai."
+  ],
+  [
+   1543.4,
+   "Pidiasu'n wedi hoffi gweld a'r plagiad echech a'r hyn."
+  ],
+  [
    1600.7,
    "Geber byl hynny'n dewiadol, a goffenofrandes, mae'r hythenaia, llam a wer oir,"
   ],
@@ -830,6 +842,10 @@
   [
    1622.4,
    "yn sŵn y lleisiau cannesi'n codi o'r ysgol a'r cafel,"
+  ],
+  [
+   1626.2,
+   "En sún trae aránsio pali ar un alba chanithai,"
   ],
   [
    1633.24,
@@ -912,22 +928,6 @@
    "¡Esta de par en Eisteddfod!"
   ],
   [
-   2218.6,
-   "amén horrid a disc ac arlagur escolion en hamri"
-  ],
-  [
-   2223.0,
-   "me wedi en ix ni veru cateiriai en hamri en astotarica en melanat dueda"
-  ],
-  [
-   2229.5,
-   "acudito dirbrik daer guait en arrestat botkanet laizol"
-  ],
-  [
-   2234.0,
-   "inwaiz amgert cangna nedol inwaiz amdalenag aginuaiz eto eleni ara sonet"
-  ],
-  [
    2261.4,
    "gremi am que marido en el leo ar el lluvan hedió a terwin a iraig marquet dueti emuel de"
   ],
@@ -941,7 +941,11 @@
   ],
   [
    2319.28,
-   "Galwaf nawr ar Eluned Llancewn i ddarllen y gerdd fuddugol."
+   "Galwaf nawr ar eluned Llancewn i ddarllen y gerdd buddigol."
+  ],
+  [
+   2329.0,
+   "Agos, agos."
   ],
   [
    2332.28,
@@ -949,7 +953,7 @@
   ],
   [
    2359.0,
-   "Iwch y te a'r picau bach. Ddiwedd Gorffennaf,"
+   "y dathlu. Iwch y te a'r picau bach. Ddiwedd gorffennaf,"
   ],
   [
    2364.28,
@@ -1001,19 +1005,15 @@
   ],
   [
    2508.28,
-   "Hen fi'ch brifar, gweudwyd llafn y cludd, gloeddiodd ar y Eisteddfod yn un bridd o hedd."
+   "Hen fi'ch brifar, gweudwyd llafn y cludd, gloeddiodd ar y Eisteddfod yn un bridd o hedd. Hen fi'ch brifar, gweudwyd llafn y cludd, gloeddiodd ar y Eisteddfod yn un bridd o hedd."
   ],
   [
    2538.28,
-   "I ddilyn, cefairwch i'r brif ardd Eisteddfod y Wladfa dwy fil pedwar ar ugain, gan Sara troed yr orsedd, felly gofynnwn i Iesu nest darllen yr englyn."
+   "I ddilyn, cefairwch i'r brif ardd Eisteddfod y Wladfad dwy fil pedwar ar ugain, gan Sara troed yr orsedd, felly gofynnwn i Iesu nest darllen yr englyn."
   ],
   [
    2568.28,
-   "yr hen deifi, hyd at greigiau gwyn y bae newydd, daw llais cyfarwydd, cyfaill, i rannu cyffro'r ŵyl, a wnei Eisteddfod ei wledd yw."
-  ],
-  [
-   2594.4,
-   "Aplausos"
+   "Yr hen deifi, hyd at greigiau gwyn y bae newydd, daw llais cyfarwydd, cyfaill, i rannu cyffro'r ŵyl, a wnei Eisteddfod ei wledd yw."
   ],
   [
    2598.28,
@@ -1061,7 +1061,7 @@
   ],
   [
    3140.92,
-   "Diolch yn fawr diolch yn fawr i bawb nawr dan ni'n ca'l amser ymlacio a chroeso i bawb yn nacos chwech o'r gloch os gwelwch yn dda."
+   "Diolch yn fawr diolch yn fawr i bawb nawr dan ni'n ca'l amser ymlacio a groeso i bawb yn nacos chwech o'r gloch os gwelwch yn dda."
   ],
   [
    3162.92,
@@ -1666,6 +1666,9 @@
    "cy"
   ],
   [
+   "cy"
+  ],
+  [
    "whisper_es"
   ],
   [
@@ -1732,6 +1735,15 @@
    "whisper_es"
   ],
   [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
    "cy"
   ],
   [
@@ -1795,18 +1807,6 @@
    "whisper_es"
   ],
   [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
    "cy"
   ],
   [
@@ -1814,6 +1814,9 @@
   ],
   [
    "cy"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
@@ -1865,9 +1868,6 @@
   ],
   [
    "cy"
-  ],
-  [
-   "whisper_es"
   ],
   [
    "cy"
@@ -1941,8 +1941,8 @@
  ],
  "ventanas": {
   "total": 56,
-  "modelo": 42,
-  "reglas": 7,
+  "modelo": 40,
+  "reglas": 9,
   "vacias": 7
  }
 }

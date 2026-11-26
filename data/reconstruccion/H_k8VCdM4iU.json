@@ -53,7 +53,7 @@
   ],
   [
    325.58,
-   "Desde el canto al poeta, por la participación del público. Desde el saludo en verso, por Albert Green, miembro del círculo bárbico, en representación de su hermana Mary Green, quien ha sido distinguida en este certamen."
+   "Desde el canto al poeta, por la participación del público. Desde el saludo en verso, por Alwen Green, miembro del círculo bárbico, en representación de su hermana Mary Green, quien ha sido distinguida en este certamen."
   ],
   [
    342.62,
@@ -73,11 +73,11 @@
   ],
   [
    515.62,
-   "Wel, nid yn unig mae braint gen i gyhoeddi bod barn buddigol eleni, ond hefyd ma' enw y barn buddigol ydi Esyll Nest Roberts."
+   "Wel, nid yn unig mae braint gen i gyhoeddi bod bardd buddugol eleni, ond hefyd ma' enw y bardd buddugol ydi Esyllt Nest Roberts."
   ],
   [
    575.62,
-   "A oes heddwch? Heddwch. A oes heddwch? Heddwch. A oes heddwch? Heddwch. Eistedd i'r bardd yn hen ei hadau."
+   "A oes heddwch? Heddwch! A oes heddwch? Heddwch! A oes heddwch? Heddwch! Eistedd i'r bardd yn hen ei hadau."
   ],
   [
    605.62,
@@ -85,7 +85,7 @@
   ],
   [
    635.62,
-   "Croesir Bont, Iana, a ymfudodd o ddinas La Plata ger Buenos Aires i'r Wladfa, i redeg tŷ teg i bywyd ar nain a thaid, a chroesawu ymwelwyr o Gymru i allu hwnt i'w gwesty, dysgodd y Gymraeg cyn dod yn diwydor ei hun, yn ogystal â gweithio'n ddiflino i hyrwyddo'r diwylliant Cymreig"
+   "Croesir Bont, Iana, a ymfudodd o dinas La Plata ger Buenos Aires i'r Wladfa, i redeg tŷ teg i bywyd ar nain a thaid, a chroesawu ymwelwyr o Gymru i allu hwnt i'w gwesty, dysgodd y Gymraeg cyn dod yn diwydor ei hun, yn ogystal â gweithio'n ddiflino i hyrwyddo'r diwylliant Cymreig yn hyfryd yn hyfryd amal, ymysg wrthdegau, a chadwyd yn ystod y cyfnod dwy fil a dau ddeg un oed."
   ],
   [
    665.62,
@@ -309,8 +309,8 @@
  ],
  "ventanas": {
   "total": 32,
-  "modelo": 19,
-  "reglas": 0,
+  "modelo": 18,
+  "reglas": 1,
   "vacias": 13
  }
 }

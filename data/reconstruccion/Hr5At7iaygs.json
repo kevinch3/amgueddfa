@@ -89,7 +89,7 @@
   ],
   [
    139.8,
-   "Al trompetista del Eisteddfod David Almonacid, a María Fernanda Aguilera y Carlos Prieto,"
+   "Al trompetista del Estéduo David Almonacid, a María Fernanda Aguilera y Carlos Prieto,"
   ],
   [
    144.5,
@@ -101,7 +101,7 @@
   ],
   [
    152.5,
-   "A los escoltas, Violeta Parise, Ramiro Jones, Avi de Mayo Almeida, Alejo Schans León."
+   "A'los escoltas, Violeta Parise, Ramiro Jones, Avi de Mayo Almeida, Alejo Schans León."
   ],
   [
    160.5,
@@ -987,8 +987,7 @@
    "whisper_es"
   ],
   [
-   "cy",
-   "whisper_es"
+   "cy"
   ],
   [
    "whisper_es"
@@ -1587,8 +1586,8 @@
  ],
  "ventanas": {
   "total": 31,
-  "modelo": 27,
-  "reglas": 3,
+  "modelo": 26,
+  "reglas": 4,
   "vacias": 1
  }
 }

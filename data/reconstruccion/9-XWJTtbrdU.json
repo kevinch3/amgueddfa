@@ -5,7 +5,7 @@
  "seg": [
   [
    0.0,
-   "Retrato de señora que hace dulce de María Elena Walsh. Hago esto en memoria tuya,"
+   "retrato de señora QUE HACE DULCE de Maria Elena Walsh. Hago esto en memoria tuya,"
   ],
   [
    6.9,
@@ -17,7 +17,7 @@
   ],
   [
    11.3,
-   "Walsh hago esto en memoria"
+   "walsh hago esto en memoria"
   ],
   [
    15.8,
@@ -358,8 +358,8 @@
  ],
  "ventanas": {
   "total": 3,
-  "modelo": 3,
-  "reglas": 0,
+  "modelo": 2,
+  "reglas": 1,
   "vacias": 0
  }
 }

@@ -4,24 +4,12 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
-   20.0,
-   "O- o- o- I got days of a good life"
-  ],
-  [
-   25.0,
-   "O- o- o- I'll never let it go"
-  ],
-  [
-   30.0,
-   "Oh I, I, I, I, I got to use all my life"
-  ],
-  [
    297.48,
-   "Hyd yn oed rywun yn ymwneud o'r gwaelodau, mae'n ymwneud â'i gilydd galw, mae'n ymwneud â'i gilydd galw, hyd yn oed rywun yn ymwneud â'i gilydd galw."
+   "Hyd yn oed rywun yn ymwnd o'r gwaelodau, mae'n ymwneud â'i gilydd galw, mae'n ymwneud â'i gilydd galw, hyd yn oed rywun yn ymwneud â'i gilydd galw."
   ],
   [
    368.48,
-   "Ceir eang o'r goleu, ceir eang o'r goleu, ceir eang o'r goleu."
+   "Ceir eang o'r goleu."
   ],
   [
    534.48,
@@ -29,15 +17,11 @@
   ],
   [
    564.48,
-   "Duw na'n law, Ag yn law nerth, Ag yn nerth eang"
+   "Duw na'n law, Duw duw na'n law, Ag yn law nerth, Ag yn nerth eang"
   ],
   [
    594.48,
-   "Gwybod, ac yn gwybod y cyfiawn, ei godi."
-  ],
-  [
-   624.48,
-   "Wythnos dwyawd, neu ddau dydd, ag o gari, cari bob hanfod."
+   "gwybod, ac yn gwybod, gwybod y cyfiawn, ac yn gwybod y cyfiawn, ei godi."
   ],
   [
    668.32,
@@ -89,7 +73,7 @@
   ],
   [
    1266.28,
-   "a busnes. Gaiff ei hadnabod yn Gorsedd yng ngarddau Arthryg, Gwilym a Cofiwn. Hybargywir, dwi'n ennill chi nawr Euron Huws, Tywodiad Treulioedd."
+   "a busnes. Gaiff ei hadnabod yn orffedd yng ngarddau Arthryg, Gwilym a Cofiwn. Hybargywir, dwi'n ennill chi nawr Euron Huws, Tywodiad Treulioedd."
   ],
   [
    1284.28,
@@ -117,7 +101,7 @@
   ],
   [
    1762.28,
-   "Rwy nawr yn gloi cyfarfod go nôl i'r byddwn gwladd, achos tan fu'n haon mis Sadwrn, byddwn yn byddwn yn ysgyn y ddwyrain y Eisteddfod ac yn gobeithio i wisgo bar y cadair. Nawr byddwn yn mynd i Capel Gethin, yna fu'n wneud cyfarfod blynyddodd yn arfer, ond cyn hynny, gofynnaf y nawr i gladdu bythgo, os gwelwch yn dda, un haurawn i ganu hela fy nhadau,"
+   "Rwy nawr yn gloi cyfarfod go nôl i'r byddwn gwladd, achos tan fu'n haon mis Sadwrn, byddwn yn byddwn yn ysgyn y ddwyrain y Eisteddfod ac yn gobeithio i wisgo bar y cadair. Nawr byddwn yn mynd i Capel Gethin, yna fu'n wneud cyfarfod blynyddodd yn arfer, ond cyn hynny, gofynnaf y nawr i gladdu bythgo, os gwelwch yn dda, un haurawn i ganu hela fy nhadau, a- a- a- a- a- a- a- a- a- a- a- a- a- a- a- a- a- a- a- a- a- a- a- a- a- a- a- a- a- a- a- a- a- a- a"
   ],
   [
    1792.28,
@@ -223,24 +207,12 @@
   ],
   [
    "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "cy"
   ]
  ],
  "ventanas": {
   "total": 36,
-  "modelo": 21,
-  "reglas": 0,
-  "vacias": 15
+  "modelo": 19,
+  "reglas": 1,
+  "vacias": 16
  }
 }

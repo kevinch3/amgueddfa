@@ -37,7 +37,7 @@
   ],
   [
    220.0,
-   "Er gwaetha pawb a phopeth, er gwaetha pawb a phopeth, er gwaetha pawb a phopeth, ry'n ni yma o hyd, ry'n ni yma o hyd, er gwaetha pawb a phopeth, er gwaetha pawb a phopeth."
+   "Er gwaetha pawb a phopeth Er gwaetha pawb a phopeth Er gwaetha pawb a phopeth Ry'n ni yma o hyd Ry'n ni yma o hyd Er gwaetha pawb a phopeth Er gwaetha pawb a phopeth"
   ],
   [
    280.0,
@@ -113,7 +113,7 @@
   ],
   [
    625.72,
-   "El Cielito de la Patria Es el cielo más divino Cielo del azul y blanco Cielo de los argentinos"
+   "El Cielito de la Patria Es el cielo más divino Cielo del azul y blanco Cielo de los argentinos Cielo del azul y blanco Cielo de los argentinos"
   ]
  ],
  "fuentes": [
@@ -204,8 +204,8 @@
  ],
  "ventanas": {
   "total": 12,
-  "modelo": 11,
-  "reglas": 0,
+  "modelo": 9,
+  "reglas": 2,
   "vacias": 1
  }
 }

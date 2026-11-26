@@ -17,7 +17,7 @@
   ],
   [
    398.98,
-   "Cystadlaeth wyth deg wyth ddeg dau dawns llys hunan ddywysiad gyda chyfeillion a y y gerddoriaeth yn fyw."
+   "Cystadlaeth wyth deg wyth ddeg dau dawns llys hunan ddywysiad gyda chyfeillion a y gerddoriaeth yn fyw."
   ],
   [
    421.98,
@@ -32,12 +32,8 @@
    "La competencia nômero ochenta y dos, dan sa de corte a lec siôn ac ympaniada con mwsica yn vivo, los participantes Esgolcerdd y Gaiman, y dawnswyr Gwanwyn."
   ],
   [
-   661.98,
-   "Mae'n rhan o'r rhan fwyaf o'r ffordd mae'n cael ei dynnu."
-  ],
-  [
    767.98,
-   "Cystadleuaeth rhif wyth deg tri. Dawns y teuluoedd, dawns Dinbych. Cyntaf ar y llwyfan, dawnswyr Gwanwyn, a Gwanwyn ar y llwyfan, beirniaid yn barod? Disfrwdwch?"
+   "Casaleiaeth rhif wyth deg tri. Dawns y teuluoedd, dawns Dinbych. Cyntaf ar y llwyfan, dawnswyr Gwanwyn, a Gwanwyn ar y llwyfan, beirniaid yn barod? Disfrwdwch?"
   ],
   [
    943.98,
@@ -99,15 +95,12 @@
   ],
   [
    "cy"
-  ],
-  [
-   "cy"
   ]
  ],
  "ventanas": {
   "total": 21,
-  "modelo": 9,
-  "reglas": 2,
+  "modelo": 11,
+  "reglas": 0,
   "vacias": 10
  }
 }

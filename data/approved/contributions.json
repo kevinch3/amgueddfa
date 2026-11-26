@@ -434,6 +434,22 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "0b1aa6be-26f4-43a5-80fb-a64a57d98f94",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2019,
+    "item_id": null,
+    "payload": {
+      "field": "start_date",
+      "fuente": "Video del archivo, cartel de la transmisión (0:05): https://www.youtube.com/watch?v=3jnNklLlxQ0&t=5s",
+      "lote": "c312c907-3bd0-431d-8ff3-834f693ec6db",
+      "value": "2019-10-18"
+    },
+    "created_at": "2026-11-26T08:38:01.077+00:00",
+    "reviewed_at": "2026-11-26T08:38:01.077+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "0be33027-d7b8-47b5-8a9d-c992b31cfc0a",
     "type": "tag",
     "festival": "juventud",
@@ -1111,6 +1127,22 @@
     },
     "created_at": "2026-11-17T11:06:25.263276+00:00",
     "reviewed_at": "2026-11-17T11:06:25.263276+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "2190f0fc-bce3-4ab1-9a5a-64587b4ea28f",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2015,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Video del archivo, placa de la ceremonia (0:55): https://www.youtube.com/watch?v=lETRCHa5jAw&t=55s",
+      "lote": "0ad80536-5d4d-46cf-bebd-1410a4e8fd35",
+      "value": "Corona del Poeta (poema inédito, tema y métrica libres): premio de la Municipalidad de Trelew."
+    },
+    "created_at": "2026-11-26T08:38:04.412445+00:00",
+    "reviewed_at": "2026-11-26T08:38:04.412445+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -3413,6 +3445,22 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "6b339ad6-0c4d-45b5-95e9-3dbb96b76ad5",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2019,
+    "item_id": null,
+    "payload": {
+      "field": "end_date",
+      "fuente": "Video del archivo, cartel de la transmisión (0:05): https://www.youtube.com/watch?v=3jnNklLlxQ0&t=5s",
+      "lote": "c312c907-3bd0-431d-8ff3-834f693ec6db",
+      "value": "2019-10-19"
+    },
+    "created_at": "2026-11-26T08:38:01.077+00:00",
+    "reviewed_at": "2026-11-26T08:38:01.077+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "6b667efd-8454-4674-8c39-3d121c22ade6",
     "type": "fact",
     "festival": "chubut",
@@ -4507,6 +4555,38 @@
     "created_at": "2026-11-16T18:31:17.630618+00:00",
     "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
     "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "88a1dd41-2ac0-496f-b2a6-38842671e6a9",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2015,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Video del archivo, placa de la ceremonia (11:55): https://www.youtube.com/watch?v=bkQfQ6Rp3TM&t=715s",
+      "lote": "8df3f29c-ebc2-418a-940e-867ab8670594",
+      "value": "Medalla de Plata (Asociación San David, comp. 9): Nantlais Evans"
+    },
+    "created_at": "2026-11-26T08:38:02.827361+00:00",
+    "reviewed_at": "2026-11-26T08:38:02.827361+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "891c8faf-ac40-4c03-9de4-6bac839d7560",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2025,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Video del archivo, cartel de la transmisión (1:10): https://www.youtube.com/watch?v=W5V3LpNuzKo&t=70s",
+      "lote": "5b379dca-e1fa-417b-87fc-8e13b40d195e",
+      "value": "Semana del Eisteddfod: 13 al 19 de octubre de 2025, en el 160.º aniversario del Desembarco (Asociación San David, Trelew)."
+    },
+    "created_at": "2026-11-26T08:38:07.590363+00:00",
+    "reviewed_at": "2026-11-26T08:38:07.590363+00:00",
+    "display_name": "Kevin Roberts"
   },
   {
     "id": "8a1b417c-25bd-4042-ba91-67178687dc3b",
@@ -6591,6 +6671,22 @@
     },
     "created_at": "2026-11-17T13:32:44.148707+00:00",
     "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "c340dd40-a823-4d33-b558-ddef3c868709",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2014,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_corona",
+      "fuente": "Video del archivo, placa de la ceremonia (0:10): https://www.youtube.com/watch?v=avyQr_5XFYM&t=10s",
+      "lote": "301f5c07-0016-4196-85aa-a578b582a96f",
+      "value": "Viviana Yanina Ayilef"
+    },
+    "created_at": "2026-11-26T08:38:05.981912+00:00",
+    "reviewed_at": "2026-11-26T08:38:05.981912+00:00",
     "display_name": "Kevin Roberts"
   },
   {

@@ -4414,6 +4414,22 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "81a40d88-118a-4197-b572-f89cdd59fb87",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2014,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_silla",
+      "fuente": "Video del archivo, placa de la ceremonia del Sillón (0:01:45): https://www.youtube.com/watch?v=neZqwORspHg&t=105s",
+      "lote": "0068061c-9111-4db0-9041-dd2ab7a9d96a",
+      "value": "Esyllt Nest Roberts (testun «Pontydd»)"
+    },
+    "created_at": "2026-11-26T14:12:11.636074+00:00",
+    "reviewed_at": "2026-11-26T14:12:11.636074+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "825670c1-8a47-4abd-b88f-6d386a242e3d",
     "type": "tag",
     "festival": "chubut",
@@ -5826,6 +5842,22 @@
     },
     "created_at": "2026-11-14T14:09:20.944203+00:00",
     "reviewed_at": "2026-11-14T14:09:20.944203+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "a44dd77c-d1ab-437b-94c3-77f2213f6450",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2023,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Video del archivo, placa de la ceremonia de la Corona (0:08:55): https://www.youtube.com/watch?v=uVkDOQ7H1Hs&t=535s",
+      "lote": "0068061c-9111-4db0-9041-dd2ab7a9d96a",
+      "value": "Corona del Poeta: premios de la Municipalidad de Trelew y del Senado de la Nación."
+    },
+    "created_at": "2026-11-26T14:12:11.636074+00:00",
+    "reviewed_at": "2026-11-26T14:12:11.636074+00:00",
     "display_name": "Kevin Roberts"
   },
   {

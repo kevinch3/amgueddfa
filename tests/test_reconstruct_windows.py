@@ -73,3 +73,37 @@ def test_an_alternative_changes_only_its_own_window():
     changed = [a.t0 for a, b in zip(plain, alt) if a.hash != b.hash]
     assert changed and all(w.t0 - 5 <= 100.5 < w.t1 + 5 for w in alt if w.t0 in changed)
     assert len(changed) < len(plain)
+
+
+# Facts enter a window only when something heard there sounds like them (re-asks stay local).
+FULL = Context("Eisteddfod del Chubut 2024.\npresentadores: Gabriel Restucha\nvenue: Salón San David, Trelew",
+               frozenset({"eisteddfod", "chubut", "gabriel", "restucha", "salon", "san", "david", "trelew"}))
+
+
+def test_a_fact_enters_only_windows_that_hear_it():
+    ls = [Line(5.0, "buenas noches a todos", "yt_es", "es"), Line(70.0, "dejo la conducción a gabriel res tucha", "yt_es", "es")]
+    ws = make_windows(ls, 120, lambda a, b: FULL, glossary=[])
+    assert "Restucha" not in ws[0].context.text and "restucha" not in ws[0].context.words
+    assert "presentadores: Gabriel Restucha" in ws[1].context.text and "restucha" in ws[1].context.words
+    assert all("Eisteddfod del Chubut 2024." in w.context.text for w in ws)
+
+
+def test_a_new_fact_rehashes_only_the_windows_that_hear_it():
+    ls = [Line(5.0, "buenas noches a todos", "yt_es", "es"), Line(70.0, "la profesora marley piu del circulo", "yt_es", "es")]
+    before = make_windows(ls, 120, lambda a, b: FULL, glossary=[])
+    more = FULL._replace(text=FULL.text + "\nganador_corona: Marli Pugh")
+    after = make_windows(ls, 120, lambda a, b: more, glossary=[])
+    assert before[0].hash == after[0].hash
+    assert before[1].hash != after[1].hash
+
+
+def test_legacy_hash_is_the_old_whole_context_hash():
+    """Replies cached before facts were filtered stay usable: their key is the old formula."""
+    import hashlib, json
+    from scripts.reconstruct.windows import PROMPT_VERSION
+    ls = [Line(5.0, "buenas noches a todos", "yt_es", "es")]
+    (w,) = make_windows(ls, 60, lambda a, b: FULL, glossary=[])
+    seen = [[l.t, l.text, l.src, l.lang, l.conf] for l in w.lines]
+    old = hashlib.sha256(json.dumps([0.0, 60.0, seen, FULL.text, PROMPT_VERSION], ensure_ascii=False,
+                                    sort_keys=True).encode("utf-8")).hexdigest()[:16]
+    assert w.legacy == old and w.hash != old

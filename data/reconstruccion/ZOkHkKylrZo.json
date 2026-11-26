@@ -9,11 +9,11 @@
   ],
   [
    86.3,
-   "mor bell i ffwrdd â chylwydd a haint, mor bell a iâ yn derwythder, mor bell ag ennill a hollu'r gerdd."
+   "Mor bell i ffwrdd â chylwydd a haint, mor bell a iâ yn derwythder, mor bell ag ennill a hollu'r gerdd."
   ],
   [
    104.1,
-   "Wyth mil o filltiroedd rhwng fan draw a fan hyn, ar un iaith i'w glywed yn y gwledydd hyn, un galon i'w guro, yn teulu, un iaith, yn pob deffro i amhennydd, pob pant a pob pai."
+   "Wyth mil o filltirodd rhwng fan draw a fan hyn, ar un iaith i'w glywed yn y gwledydd hyn, un galon i'w guro, yn teulu, un iaith, yn pob deffro i amhennydd, pob pant a pob pai."
   ],
   [
    132.1,
@@ -25,7 +25,7 @@
   ],
   [
    215.1,
-   "Wyth mil o fethig oedd rhwng fan law a fan hyn, a un iaith ddim clwed yn y gwledydd hyn, un tad, un hir, un teulu, un iaith, mor gyffryn a menyw, pob pant a pob haic, mor agos i'w byd, mor agos o hyd, ac nid yw'r bwlch yn bell y dydd."
+   "Wyth mil o Filltiroedd oedd rhwng fan law a fan hyn, a un iaith ddim clwed yn y gwledydd hyn, un tad, un hir, un teulu, un iaith, mor gyffryn a menyw, pob pant a pob haic, mor agos i'w byd, mor agos o hyd, ac nid yw'r bwlch yn bell y dydd."
   ],
   [
    289.0,
@@ -220,6 +220,18 @@
    "necesito clarito cura"
   ],
   [
+   705.9,
+   "queca"
+  ],
+  [
+   707.5,
+   "boa el"
+  ],
+  [
+   711.0,
+   "on"
+  ],
+  [
    713.4,
    "bajada una gua repleta"
   ],
@@ -280,10 +292,6 @@
    "comprar no se comprar Alegría los se"
   ],
   [
-   776.5,
-   "compres"
-  ],
-  [
    779.3,
    "no puedes"
   ],
@@ -296,32 +304,12 @@
    "la vamos"
   ],
   [
-   792.6,
-   "cin vamos"
-  ],
-  [
-   797.7,
-   "cin vamos un en"
-  ],
-  [
    803.4,
    "camino Vamos caminando"
   ],
   [
-   816.8,
-   "ao y se derpa Solo que conyo tampo"
-  ],
-  [
-   822.1,
-   "cuando teido para evitar en"
-  ],
-  [
    835.7,
-   "per Vamos caminando"
-  ],
-  [
-   839.2,
-   "lo"
+   "Vamos caminando"
   ],
   [
    841.1,
@@ -632,21 +620,12 @@
   ],
   [
    "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
-   "yt_es"
   ]
  ],
  "ventanas": {
   "total": 17,
-  "modelo": 16,
-  "reglas": 0,
+  "modelo": 15,
+  "reglas": 1,
   "vacias": 1
  }
 }

@@ -1149,23 +1149,23 @@
   ],
   [
    3193.3,
-   "Que Viva el Eisteddfod!"
+   "¡Que viva el Eisteddfod!"
   ],
   [
    3194.84,
-   "Alwin Green, presidente de la Asociación Escuela Galesa ECUM de Trevelin."
+   "Alwen Green, presidente de la Asociación Escuela Galesa ECUM de Trevelin."
   ],
   [
    3201.58,
-   "Muchas gracias, Alwyn."
+   "Muchas gracias, Alwen."
   ],
   [
    3218.44,
-   "parti nesa y delyn aur yn mynd i ganu cor moria ar gyfer y"
+   "parti nesa y delyn aur yn mynd i ganu Cor Moria ar gyfer y"
   ],
   [
    3227.82,
-   "gystadleuaeth rhif chwe deg tri parti neu cor capel hunan ddewisiad."
+   "gystadleuaeth rhif chwe deg tri parti neu gor capel hunan ddewisiad."
   ],
   [
    3250.5,
@@ -1449,7 +1449,7 @@
   ],
   [
    3929.32,
-   "El Gorsedd Dulatva, Marley Pugh, que también está sentado aquí con nosotros."
+   "El Gorsedd Dulatva, Marli Pugh, que también está sentado aquí con nosotros."
   ],
   [
    3933.92,
@@ -4936,6 +4936,10 @@
    "¡Gracias!"
   ],
   [
+   9738.68,
+   "CC por Antarctica Films Argentina"
+  ],
+  [
    9740.42,
    "Para llevar a cabo la ceremonia, convocamos a las siguientes personas."
   ],
@@ -4945,7 +4949,7 @@
   ],
   [
    9751.44,
-   "A la profesora Marli Piu, presidente del Círculo Bárbico"
+   "A la profesora Marli Piu, presidente del Círculo Bárbico."
   ],
   [
    9756.76,
@@ -4965,7 +4969,7 @@
   ],
   [
    9768.28,
-   "a los solistas Steffan Prys"
+   "a' los solistas Steffan Prys"
   ],
   [
    9771.04,
@@ -4973,7 +4977,7 @@
   ],
   [
    9773.76,
-   "a la profesora Alwyn Green,"
+   "a' la profesora Alwyn Green,"
   ],
   [
    9775.9,
@@ -5209,7 +5213,7 @@
   ],
   [
    10037.2,
-   "Dejo ahora la conducción a cargo de la profesora Marley Piu, presidenta."
+   "Dejo ahora la conducción a cargo de la profesora Marli Pugh, presidenta."
   ],
   [
    10042.6,
@@ -11305,7 +11309,7 @@
   ],
   [
    22971.0,
-   "Se entregará Marley Piu, presidente del Círculo Várdico."
+   "Se entregará Marli Pugh, presidente del Círculo Várdico."
   ],
   [
    22974.7,
@@ -17729,7 +17733,7 @@
   ],
   [
    34273.9,
-   "Ciriol es Alwyn Green, de Trevelin."
+   "Ciriol es Alwen Green, de Trevelin."
   ],
   [
    34278.0,
@@ -17738,10 +17742,6 @@
   [
    34282.3,
    "Isabel Jones, también de Esquel."
-  ],
-  [
-   34285.4,
-   "Son cabergeatay."
   ],
   [
    34288.9,
@@ -19913,7 +19913,7 @@
   ],
   [
    39872.1,
-   "Marli Piu."
+   "Marli Pugh."
   ],
   [
    39875.3,
@@ -23857,6 +23857,9 @@
    "whisper_es"
   ],
   [
+   "whisper_es"
+  ],
+  [
    "cy"
   ],
   [
@@ -33398,9 +33401,6 @@
   ],
   [
    "cy"
-  ],
-  [
-   "whisper_es"
   ],
   [
    "whisper_es"
@@ -35293,8 +35293,8 @@
  ],
  "ventanas": {
   "total": 673,
-  "modelo": 603,
-  "reglas": 50,
+  "modelo": 602,
+  "reglas": 51,
   "vacias": 20
  }
 }

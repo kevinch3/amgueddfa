@@ -4,10 +4,6 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
-   0.0,
-   "Y botwm de la esquina de casa, cuando salgo a barrer la vereda, me se acerca el canalla y me dice"
-  ],
-  [
    18.0,
    "el botón de la esquina de casa cuando"
   ],
@@ -141,9 +137,6 @@
   ]
  ],
  "fuentes": [
-  [
-   "cy"
-  ],
   [
    "yt_es"
   ],

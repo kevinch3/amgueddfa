@@ -93,15 +93,15 @@
   ],
   [
    135.7,
-   "disculpa no la presente era para la"
+   "disculpa no la presenté era para la"
   ],
   [
    138.0,
-   "amigo de raúl carnota en homenaje a"
+   "amigo de Raúl Carnota en homenaje a"
   ],
   [
    141.1,
-   "pedro evaristo díaz que es un personaje"
+   "Pedro Evaristo Díaz que es un personaje"
   ],
   [
    144.5,
@@ -225,8 +225,8 @@
  ],
  "ventanas": {
   "total": 3,
-  "modelo": 2,
-  "reglas": 1,
+  "modelo": 3,
+  "reglas": 0,
   "vacias": 0
  }
 }

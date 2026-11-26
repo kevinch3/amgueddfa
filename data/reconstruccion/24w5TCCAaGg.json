@@ -5,7 +5,7 @@
  "seg": [
   [
    330.0,
-   "Dy ddaent wrth i mi byw, a wnaeth wely dim byw. Dy ddaent wrth i mi byw, a wnaeth wely dim byw. Er y carwed oedd y ffin, er y carwed oedd y ffin."
+   "Dy ddaent wrth i mi byw, a wnaeth wely dim byw. Er y carwed oedd y ffin."
   ],
   [
    360.0,
@@ -53,7 +53,7 @@
   ],
   [
    508.98,
-   "Rwy'n ei gorwedd efo'r ŵyr ac yn codi efo'r gwawr, rwy'n ei gorwedd efo'r ŵyr ac yn codi efo'r gwawr, heddiw yn arogach ar y gloch."
+   "Rwy'n ei gorwedd efo'r ŵyr ac yn codi efo'r gwawr, heddiw yn arogach ar y gloch."
   ],
   [
    522.98,
@@ -69,7 +69,7 @@
   ],
   [
    612.98,
-   "Mor falch nad Saeson oedd ennyn, ac yn ddwy falch byth o geraint o'r afon ganol gaeaf ddiwedd yr helyg neli'r meli, a thingo gwres y dwylo, a sgwrsio, hir ar fod pori mewn geiriadur."
+   "Mor falch nad Saeson oedd ennyn, ac yn ddwy falch byth o Geraint o'r afon ganol gaeaf ddiwedd yr helyg neli'r meli, a thingo gwres y dwylo, a sgwrsio, hir ar fod pori mewn geiriadur."
   ],
   [
    631.98,
@@ -81,7 +81,7 @@
   ],
   [
    691.98,
-   "Mae'n fwy blant ac yn fwy fawr na'r gloch, mae'n fwy brys ac yn fwy fawr na'r fflwch, mae'n fwy flawd na'r fflwch."
+   "Mae'n fwy blant ac yn fwy fawr na'r gloch, mae'n fwy brys ac yn fwy fawr na'r fflwch, mae'n fwy flawd na'r fflwch, mae'n fwy flawd na'r fflwch."
   ],
   [
    741.98,
@@ -129,7 +129,7 @@
   ],
   [
    1045.12,
-   "A os ti'n gweud dydd o'i lewt ti'n sefyll ar ei safon pan fo'n lwc i'n hoeddi'n dda"
+   "A os ti'n gweud dydd o'i lewt ti'n sefyll ar ei safon pan fo'n lwc i'n hoeddi'n dda."
   ],
   [
    1061.12,
@@ -141,7 +141,7 @@
   ],
   [
    1089.0,
-   "La luna es un bravo al campo, el grillo junto al camino. Grillo con sombra de la luz, como en la ausencia del bien querido. Grillo con sombra de la luz, como en la ausencia del bien querido."
+   "La luna es un bravo al campo, el grillo junto al camino. Grillo con sombra de la luz, como en la ausencia del bien querido."
   ],
   [
    1172.0,
@@ -154,10 +154,6 @@
   [
    1222.0,
    "La azúcar de luz, la oscureza y su amor, amor que me trajo el perdón, la esperanza que aliento la rego al Señor, que brilla en mi corazón."
-  ],
-  [
-   1243.0,
-   "Gemini, gemini, gora so, gora so."
   ],
   [
    1249.0,
@@ -249,7 +245,7 @@
   ],
   [
    1558.08,
-   "desde el canto al poeta, por la participación del público, desde el saludo en verso por Albert Green, miembro del Círculo Bárbico, en representación de su hermana Mary Green, quien ha sido distinguida en este certamen en ediciones anteriores del Eisteddfod del Chubut."
+   "desde el canto al poeta, por la participación del público, desde el saludo en verso por Alwen Green, miembro del Círculo Bárbico, en representación de su hermana Mary Green, quien ha sido distinguida en este certamen en ediciones anteriores del Eisteddfod del Chubut."
   ],
   [
    1581.06,
@@ -269,7 +265,7 @@
   ],
   [
    1750.1,
-   "Wel, nid yn unig mae braint yn ei gyhoeddi i fod bardd buddugol eleni, ond hefyd ma' enw y bardd buddugol ydy Esyll Nes Roberts."
+   "Wel, nid yn unig mae braint yn ei gyhoeddi i fod bardd buddigol eleni, ond hefyd ma' enw y bardd buddigol ydy Esyllt Nest Roberts."
   ],
   [
    1810.1,
@@ -281,11 +277,11 @@
   ],
   [
    1870.1,
-   "Croesi'r Bont, Iana, a ymddidodd o ddinas La Plata ger Buenos Aires i'r Wladfa, i redeg tŷ teg yn ddiweddarnau nath haid, a chroesawu ymwelwyr o Gymru a thu hwnt i'w gwesty, dysgodd y Gymraeg, cyn dod yn diwdor ei hun, yn ogystal â gweithio'n ddiflino i hyrwyddo'r diwylliant Cymreig yn Nyffryn Cam, ym mis Gorffennaf eleni."
+   "Croesi'r Bont, Iana, a ymddidodd o ddinas La Plata ger Buenos Aires i'r Wladfa, i redeg tŷ teg yn ddiweddarnau nath haid, a chroesawu ymwelwyr o Gymru a thu hwnt i'w gwesty, dysgodd y Gymraeg, cyn dod yn diwdor ei hun, yn ogystal â gweithio'n ddiflino i hyrwyddo'r diwylliant Cymreig yn Nyffryn Cam, ym mis Gorffennaf eleni,"
   ],
   [
    1900.1,
-   "derbyniodd radd anrhydedd yn y Gymraeg o Brifysgol Llanbedr Bon Steffan. Ma'r gerdd yn dweud, O ddinas arian, dychwelyst di gloddio am air, melynach nag aur perynn, daethost yn ôl i ddeffro rosys cochion dy daid, a gwarchod gwreiniau hŷn na hudadau."
+   "derbyn- derbyniodd radd anrhydedd yn y Gymraeg o Brifysgol Llanbedr Bon Steffan. Ma'r cerdd yn dweud, O ddinas arian, dychwelyst di gloddio am air, melynach nag aur perynn, daethost yn ôl i ddeffro rosys cochion dy daid, a gwarchod gwreiniau hŷn na hudadau."
   ],
   [
    1930.1,
@@ -325,7 +321,7 @@
   ],
   [
    2157.1,
-   "Dwi'n siŵr y bod ni yn edrych ymlaen i'r gerdd yma gael ei chyhoeddi yn y papura lleol i bori ynddi yn fanwl, gan ein bod ni bob un ohono ni sydd yma heddiw yn siŵr ar ryw fath o fôn ffont sydd wedi croesi rhwng Cymru a'r Wladfa."
+   "Dwi'n siŵr y bod ni yn edrych ymlaen i'r gerdd yma gael ei gyhoeddi yn y papura lleol i bori ynddi yn fanwl, gan ein bod ni bob un ohono ni sydd yma heddiw yn siŵr ar ryw fath o fôn ffont sydd wedi croesi rhwng Cymru a'r Wladfa."
   ],
   [
    2179.1,
@@ -349,11 +345,11 @@
   ],
   [
    2314.6,
-   "Cyflwynir Wobr Gorsedd y Wladfa gan Gadeirydd Ronsedd i fod yn Maes y Llaneg."
+   "Cyflwynir Wobr Gorsedd y Wladfa gan Gadeirydd Gorsedd i fod yn Maes y Llaneg."
   ],
   [
    2344.6,
-   "A mae hefyd anrheg i'r barn buddigol oddi wrth y Senedd yy Talaith, ts'bod. Ydw nawr am alw yr Aelod Seneddol, Liz Roman, i gyflwyno yr anrheg yma."
+   "A mae hefyd anrheg i'r barn buddigol oddi wrth y Senedd y Dalaith. Ydw nawr am alw yr Aelod Seneddol, Liz Roman, i gyflwyno yr anrheg yma."
   ],
   [
    2404.6,
@@ -365,7 +361,7 @@
   ],
   [
    2454.6,
-   "Ac fel arfer, y foment y dan ni gyd yn edrych ymlaen amdano, i wylio y plant bychan yn yy dawnsio eu cydnabyddiaeth i'r bardd."
+   "Ac fel arfer, y moment y dan ni gyd yn edrych ymlaen amdano, i wylio y plant bychan yn yy dawnsio eu cydnabyddiaeth i'r bardd."
   ]
  ],
  "fuentes": [
@@ -482,9 +478,6 @@
   ],
   [
    "whisper_es"
-  ],
-  [
-   "cy"
   ],
   [
    "whisper_es"
@@ -645,8 +638,8 @@
  ],
  "ventanas": {
   "total": 53,
-  "modelo": 33,
-  "reglas": 2,
+  "modelo": 34,
+  "reglas": 1,
   "vacias": 18
  }
 }

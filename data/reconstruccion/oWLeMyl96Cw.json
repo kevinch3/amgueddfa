@@ -4,6 +4,10 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
+   0.0,
+   "¡Hola, Flores!"
+  ],
+  [
    30.0,
    "Algunas de las heridas no van a cerrar jamás"
   ],
@@ -177,6 +181,9 @@
   ]
  ],
  "fuentes": [
+  [
+   "whisper_es"
+  ],
   [
    "whisper_es"
   ],

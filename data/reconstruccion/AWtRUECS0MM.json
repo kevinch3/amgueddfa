@@ -4,10 +4,6 @@
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
-   0.0,
-   "Muos."
-  ],
-  [
    11.8,
    "Oedd yr enw'n ddianc i ni'r Cymry? Empanadas? Hy? O'i weld ar bapur, roedd na banad ynddo, a fyddai panad yn dda, yn dda iawn ar ôl y daith hir o Gwenoedd."
   ],
@@ -21,7 +17,7 @@
   ],
   [
    85.0,
-   "Ac yn fwy falch byth o geraint o lagon ganol gaeaf i weld yr heli'n melyn melyn a teimlo bres y dwylo, a sgwrsio heb orfod pori mewn geiriadur, em pa be? Oedd yna wraig yn gosod mynydd o bastiod aur o'n blaenau, em pan adath yn ôl agon yn toddi ar dafod."
+   "Ac yn fwy falch byth o geraint o lagon ganol gaeaf i weld yr heli'n melyn melyn a teimlo bres y dwylo, a sgwrsio heb orfod pori mewn geiriadur, em pa be? Oedd yna wraig yn gosod mynydd o bastiod aur o'n blaenau, Empanadas yn ôl agon yn toddi ar dafod."
   ],
   [
    115.0,
@@ -29,9 +25,6 @@
   ]
  ],
  "fuentes": [
-  [
-   "cy"
-  ],
   [
    "cy"
   ],

@@ -669,15 +669,15 @@
   ],
   [
    1369.94,
-   "El senior intendente municipal de Trelew recibirá a continuación la corona y se la dará a la presidenta del círculo bardico, señora Alwyn Grint, para coronar al poeta."
+   "El senior intendente municipal de Trelew recibirá a continuación la corona y se la dará a la presidenta del círculo bardico, señora Alwen Green, para coronar al poeta."
   ],
   [
    1379.3,
-   "Releu recibirá a continuación la corona y se la dará a la Presidenta del Círculo Bárdico,"
+   "Trelew recibirá a continuación la corona y se la dará a la Presidenta del Círculo Bárdico,"
   ],
   [
    1386.9,
-   "señora Aluengrind, para coronar al poeta."
+   "señora Alwen Green, para coronar al poeta."
   ],
   [
    1409.3,
@@ -1660,8 +1660,8 @@
  ],
  "ventanas": {
   "total": 35,
-  "modelo": 29,
-  "reglas": 2,
+  "modelo": 30,
+  "reglas": 1,
   "vacias": 4
  }
 }

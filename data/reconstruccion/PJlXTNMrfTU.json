@@ -17,11 +17,11 @@
   ],
   [
    78.48,
-   "dejandolo t'oddo por sentirte mïa. I en el claro berfil de tu nombre,"
+   "dejandolo t'oddo por sentirte mïa. En el claro berfil de tu nombre,"
   ],
   [
    88.48,
-   "aprendio mi sangre a nombrar el amor. I te vi llorar, te oi gritar"
+   "aprendio mi sangre a nombrar el amor. Te vi llorar, te oi gritar"
   ],
   [
    98.48,
@@ -106,8 +106,8 @@
  ],
  "ventanas": {
   "total": 4,
-  "modelo": 3,
-  "reglas": 1,
+  "modelo": 4,
+  "reglas": 0,
   "vacias": 0
  }
 }

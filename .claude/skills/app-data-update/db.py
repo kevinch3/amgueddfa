@@ -12,6 +12,10 @@ in the admin panel. `facts` turns a batch file into admin_add_facts calls:
    "fuente": "Meirion Griffiths (sin confirmar)",          # optional, on every fact
    "years": {"1945": [["venue", "Galpón del ferrocarril, Dolavon"], ["other", "Ganador: …"]]}}
 
+A row may carry its own fuente as a third element, which wins over the batch one, so facts
+from several sources (a video moment each, a clipping) still share one lote:
+   ["start_date", "2019-10-18", "Video del archivo, cartel (0:05): https://www.youtube.com/watch?v=…&t=5s"]
+
 Run from the repo root (reads .env there). Never prints secrets.
 """
 from __future__ import annotations
@@ -72,8 +76,9 @@ def facts_sql(batch: dict) -> str:
                 f.update(value)  # {"numero": …, "descripcion": …, "categoria"?, "idioma"?}
             else:
                 f['value'] = value
-            if batch.get('fuente'):
-                f['fuente'] = batch['fuente']
+            fuente = row[2] if len(row) > 2 and row[2] else batch.get('fuente')
+            if fuente:
+                f['fuente'] = fuente
             facts.append(f)
         lines.append(f"perform public.admin_add_facts({lit(batch['contributor'])}, {lit(batch['festival'])}, "
                      f"{int(year)}, {lit(json.dumps(facts, ensure_ascii=False))}::jsonb);")

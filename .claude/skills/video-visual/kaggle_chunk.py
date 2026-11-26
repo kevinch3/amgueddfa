@@ -5,13 +5,14 @@
 Writes, under $VISUAL_STORE (default ../.visual beside the repo):
   chunks/<name>.txt, chunks/<name>.tar   - what go_chunk.sh (Colab) uploads
   kaggle/<name>/data/                    - a PRIVATE dataset: <name>.tar, <name>.txt, code.tar, dataset-metadata.json
-  kaggle/<name>/run/                     - the notebook: run.py + kernel-metadata.json (2x T4, one model per GPU)
+  kaggle/<name>/run/                     - the notebook: run.py + kernel-metadata.json (one model per GPU, any count)
 Only the frames the model will read go in (scripts.visual.vlm.select), with ./ before each name: video ids can
 start with "-", which tar reads as an option. One archive, not 30k files: per-file uploads were cut off (HTTP 499).
 
 Then (the maintainer's token is in ~/.kaggle/access_token; never print it):
   kaggle datasets create -p kaggle/<name>/data          # private by default
-  kaggle kernels push -p kaggle/<name>/run --accelerator NvidiaTeslaT4
+  kaggle kernels push -p kaggle/<name>/run --accelerator NvidiaTeslaT4   # GPU jobs can queue for hours
+                                         # (NvidiaL4 is not offered: it silently runs on CPU)
   kaggle kernels status / output ... -p <dir>           # results: out/<id>.jsonl
   kaggle datasets delete ... ; kaggle kernels delete ...   # when done
 """
@@ -27,7 +28,7 @@ from scripts.visual.vlm import select  # noqa: E402
 V = Path(os.environ.get("VISUAL_STORE", REPO.parent / ".visual"))
 USER = os.environ.get("KAGGLE_USER", "kevinch3")
 
-RUN = r'''# Vision chunk {name}: Qwen2.5-VL-7B 4-bit, one model per T4, frames read from the private dataset.
+RUN = r'''# Vision chunk {name}: Qwen2.5-VL-7B 4-bit, one model per GPU, frames read from the private dataset; stops at 11 h.
 import glob, os, shutil, subprocess, sys, time
 W = "/kaggle/working"
 found = lambda pat: (glob.glob(f"/kaggle/input/**/{{pat}}", recursive=True) or [None])[0]
@@ -45,14 +46,21 @@ else:
     shutil.copytree(os.path.dirname(os.path.dirname(found("scripts/visual/vlm.py"))), W + "/scripts", dirs_exist_ok=True)
 os.makedirs(W + "/code", exist_ok=True)
 shutil.move(W + "/scripts", W + "/code/scripts")
-halves = [ids[0::2], ids[1::2]]
-for g, h in enumerate(halves):
-    open(f"{{W}}/g{{g}}.txt", "w").write("\n".join(h) + "\n")
+if not shutil.which("nvidia-smi"):
+    sys.exit("no GPU attached: Kaggle gave a CPU session (an accelerator it does not offer falls back to CPU)")
+ngpu = max(1, subprocess.run(["nvidia-smi", "-L"], capture_output=True, text=True).stdout.count("GPU "))
+for g in range(ngpu):
+    open(f"{{W}}/g{{g}}.txt", "w").write("\n".join(ids[g::ngpu]) + "\n")
 subprocess.run([sys.executable, "-m", "pip", "-q", "install", "bitsandbytes"], check=True)
 t0 = time.time()
 procs = [subprocess.Popen([sys.executable, "-m", "scripts.visual.vlm", f"{{W}}/g{{g}}.txt", "Qwen/Qwen2.5-VL-7B-Instruct", "4", "4"],
                           env=dict(os.environ, CUDA_VISIBLE_DEVICES=str(g), PYTHONPATH=W + "/code"),
-                          stdout=open(f"{{W}}/g{{g}}.log", "w"), stderr=subprocess.STDOUT) for g in (0, 1)]
+                          stdout=open(f"{{W}}/g{{g}}.log", "w"), stderr=subprocess.STDOUT) for g in range(ngpu)]
+while any(p.poll() is None for p in procs) and time.time() - t0 < 11 * 3600:
+    time.sleep(60)
+for p in procs:  # Kaggle stops at 12 h and keeps nothing; stop at 11 h and keep the partial files (vlm.py resumes them)
+    if p.poll() is None:
+        p.kill()
 print("exit codes", [p.wait() for p in procs], "hours", round((time.time() - t0) / 3600, 2))
 os.makedirs(W + "/out", exist_ok=True)  # keep only the model's output; frames stay out of the saved results
 for f in glob.glob(W + "/*/vlm.4bit.jsonl"):
@@ -100,7 +108,7 @@ def prepare(name: str, ids_file: str) -> None:
         {"id": f"{USER}/amgueddfa-vis-{name}-run", "title": f"amgueddfa-vis-{name}-run", "code_file": "run.py",
          "language": "python", "kernel_type": "script", "is_private": True, "enable_gpu": True, "enable_internet": True,
          "dataset_sources": [f"{USER}/amgueddfa-vis-{name}"], "competition_sources": [], "kernel_sources": []}))
-    print(f"{name}: {len(ids)} videos, {frames} frames (~{frames * 2.55 / 3600:.1f} T4-h, half that on 2x T4); "
+    print(f"{name}: {len(ids)} videos, {frames} frames (~{frames * 3.5 / 3600:.1f} T4-h); "
           f"{tar.stat().st_size / 1e6:.0f} MB")
 
 

@@ -1073,6 +1073,22 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "1edfda79-4078-4e94-9934-78bd83284339",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2011,
+    "item_id": null,
+    "payload": {
+      "field": "presentadores",
+      "fuente": "Programa del día 2011 (archivo): https://amgueddfa.org/item/94ee7d46577c/",
+      "lote": "193a53c4-a73f-43a8-9d4b-c453f1093bad",
+      "value": "Juan Davies, Rebecca White, Diana Owen y Gabriel Restucha"
+    },
+    "created_at": "2026-11-26T13:29:05.773718+00:00",
+    "reviewed_at": "2026-11-26T13:29:05.773718+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "1f6c92ee-6fa7-40d7-b1d4-516651dd5bcb",
     "type": "tag",
     "festival": "chubut",
@@ -1794,6 +1810,22 @@
     },
     "created_at": "2026-11-20T07:03:13.676968+00:00",
     "reviewed_at": "2026-11-20T07:03:13.676968+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "33689ed0-4825-4d55-a983-72883f4d8232",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2011,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Programa del día de los locutores 2011 (archivo): https://amgueddfa.org/item/22f2a0f04e53/",
+      "lote": "193a53c4-a73f-43a8-9d4b-c453f1093bad",
+      "value": "Presidente de la primera sesión del sábado 29 de octubre, según el programa del día de los locutores: el doctor Robert Owen Jones, de Gales."
+    },
+    "created_at": "2026-11-26T13:29:05.773718+00:00",
+    "reviewed_at": "2026-11-26T13:29:05.773718+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -2747,6 +2779,22 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "569b2579-ceaf-4618-b597-1cde780cf791",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2024,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Video del archivo, placa de la ceremonia del Sillón (0:08:50): https://www.youtube.com/watch?v=COlC6CCtD3g&t=530s",
+      "lote": "193a53c4-a73f-43a8-9d4b-c453f1093bad",
+      "value": "Presidenta del Círculo Bárdico del Chubut (Gorsedd y Wladfa): Marli Pugh de Villoria."
+    },
+    "created_at": "2026-11-26T13:29:05.773718+00:00",
+    "reviewed_at": "2026-11-26T13:29:05.773718+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "5730bfd9-34a7-43bb-970b-3c383ab14133",
     "type": "fact",
     "festival": "chubut",
@@ -2890,6 +2938,22 @@
     "created_at": "2026-11-17T20:15:16.839149+00:00",
     "reviewed_at": "2026-11-17T20:15:16.839149+00:00",
     "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "5c3e54c7-6882-42bc-aca9-b73989f234da",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2007,
+    "item_id": null,
+    "payload": {
+      "field": "presentadores",
+      "fuente": "Programa del día 2007 (archivo): https://amgueddfa.org/item/25ef22afeb93/",
+      "lote": "193a53c4-a73f-43a8-9d4b-c453f1093bad",
+      "value": "Diana Owen, Gabriel Restucha, Juan Davies y Carolina Humphreys"
+    },
+    "created_at": "2026-11-26T13:29:05.773718+00:00",
+    "reviewed_at": "2026-11-26T13:29:05.773718+00:00",
+    "display_name": "Kevin Roberts"
   },
   {
     "id": "5c7b9d85-1c46-49fe-876f-6ba25aae06a6",
@@ -3937,6 +4001,22 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "757fe8d8-870c-4d6a-9079-76096fa7d911",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2011,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Programa del día de los locutores 2011 (archivo): https://amgueddfa.org/item/22f2a0f04e53/",
+      "lote": "193a53c4-a73f-43a8-9d4b-c453f1093bad",
+      "value": "Presidenta de la sesión del viernes 28 de octubre, según el programa del día de los locutores: Eulalia Lewis, vicepresidenta de la Asociación San David."
+    },
+    "created_at": "2026-11-26T13:29:05.773718+00:00",
+    "reviewed_at": "2026-11-26T13:29:05.773718+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "758d90b6-98f3-4218-81e4-abed6dd31966",
     "type": "tag",
     "festival": "chubut",
@@ -4056,6 +4136,22 @@
     },
     "created_at": "2026-11-14T14:09:50.695454+00:00",
     "reviewed_at": "2026-11-14T14:09:50.695454+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "7a1a6475-4f61-4fca-b625-e14a754aab85",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2011,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Programa del día de los locutores 2011 (archivo): https://amgueddfa.org/item/22f2a0f04e53/",
+      "lote": "193a53c4-a73f-43a8-9d4b-c453f1093bad",
+      "value": "Presidente de la segunda sesión del sábado 29 de octubre, según el programa del día de los locutores: José María Sáenz, en homenaje a José María Sáez, fundador del diario El Chubut."
+    },
+    "created_at": "2026-11-26T13:29:05.773718+00:00",
+    "reviewed_at": "2026-11-26T13:29:05.773718+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -4989,6 +5085,22 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "94e5de5a-4da4-48eb-b704-726403c634c0",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2021,
+    "item_id": null,
+    "payload": {
+      "field": "presentadores",
+      "fuente": "Video del archivo, homenaje a los presentadores (0:44:51): https://www.youtube.com/watch?v=E3IKngL7rRA&t=2691s; confirmado por el mantenedor",
+      "lote": "e2d7b072-5645-4618-866d-7949e94b8dd6",
+      "value": "Diana Beatriz Owen y Gabriel Restucha"
+    },
+    "created_at": "2026-11-26T11:25:52.546703+00:00",
+    "reviewed_at": "2026-11-26T11:25:52.546703+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "9537e777-c7e8-4d68-8628-3132865e7e89",
     "type": "tag",
     "festival": "chubut",
@@ -5030,6 +5142,22 @@
     },
     "created_at": "2026-11-14T14:09:01.351788+00:00",
     "reviewed_at": "2026-11-14T14:09:01.351788+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "95897ffa-2b39-438e-b921-6032b5c180fa",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2026,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "El Chubut, 22/10/2026: https://www.elchubut.com.ar/regionales/2026-10-22-20-25-0-se-realizo-el-gorsedd-en-gaiman-y-hoy-comienza-el-eisteddfod-del-chubut-2026",
+      "lote": "193a53c4-a73f-43a8-9d4b-c453f1093bad",
+      "value": "Presidenta del Círculo Bárdico del Chubut (Gorsedd y Wladfa): Marli Pugh de Villoria."
+    },
+    "created_at": "2026-11-26T13:29:05.773718+00:00",
+    "reviewed_at": "2026-11-26T13:29:05.773718+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -5331,6 +5459,22 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "9ccb0e85-c15d-4be5-9dbd-c675dc80cb8d",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2022,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Video del archivo, placa de la ceremonia del Sillón (0:11:35): https://www.youtube.com/watch?v=ic1PvNhkZTM&t=695s",
+      "lote": "193a53c4-a73f-43a8-9d4b-c453f1093bad",
+      "value": "Presidenta del Círculo Bárdico del Chubut (Gorsedd y Wladfa): Alwen Green, de Trevelin."
+    },
+    "created_at": "2026-11-26T13:29:05.773718+00:00",
+    "reviewed_at": "2026-11-26T13:29:05.773718+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "9ce27db2-9fcc-4555-b6e9-b89dd8012618",
     "type": "fact",
     "festival": "chubut",
@@ -5486,6 +5630,22 @@
     },
     "created_at": "2026-11-17T13:32:44.148707+00:00",
     "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "a116ad37-bece-43c5-b697-71c2d43c9518",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2007,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Programa del día de los locutores 2007 (archivo): https://amgueddfa.org/item/34d35cea1cf4/",
+      "lote": "193a53c4-a73f-43a8-9d4b-c453f1093bad",
+      "value": "Presidenta de la sesión del viernes 2 de noviembre, según el programa del día de los locutores: Lizzie Jane Jones de Lloyd."
+    },
+    "created_at": "2026-11-26T13:29:05.773718+00:00",
+    "reviewed_at": "2026-11-26T13:29:05.773718+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -6351,6 +6511,22 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "bc797681-6037-4593-8bdf-37e62ef22b5e",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2024,
+    "item_id": null,
+    "payload": {
+      "field": "presentadores",
+      "fuente": "Video del archivo, traspaso de la conducción (1:40:51): https://www.youtube.com/watch?v=VDCKHPXzibM&t=6051s",
+      "lote": "3f8ce7af-6d42-44d9-98b3-42d04cf10256",
+      "value": "Gabriel Restucha"
+    },
+    "created_at": "2026-11-26T11:25:54.217451+00:00",
+    "reviewed_at": "2026-11-26T11:25:54.217451+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "bc7dcc74-7424-4148-b4d5-43fcda1b4b6c",
     "type": "fact",
     "festival": "chubut",
@@ -6646,6 +6822,22 @@
     "created_at": "2026-11-16T18:31:17.630618+00:00",
     "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
     "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "c267ae0c-872e-4367-9db4-e2fa8382482d",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2025,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "El Valle Online, 15/10/2025: https://www.elvalleonline.com.ar/este-jueves-ingresaran-cuatro-nuevos-miembros-al-circulo-bardico-de-chubut/",
+      "lote": "193a53c4-a73f-43a8-9d4b-c453f1093bad",
+      "value": "Presidenta del Círculo Bárdico del Chubut (Gorsedd y Wladfa): Marli Pugh de Villoria."
+    },
+    "created_at": "2026-11-26T13:29:05.773718+00:00",
+    "reviewed_at": "2026-11-26T13:29:05.773718+00:00",
+    "display_name": "Kevin Roberts"
   },
   {
     "id": "c2f83dd2-5cb4-4ad8-ae30-624c29be7890",
@@ -7141,6 +7333,22 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "cdf3297f-e6ec-4e04-9053-5e0cd155543a",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2023,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Video del archivo, placa de la ceremonia del Gorsedd (0:03:30): https://www.youtube.com/watch?v=XfP2eY4sC38&t=210s",
+      "lote": "193a53c4-a73f-43a8-9d4b-c453f1093bad",
+      "value": "Presidenta del Círculo Bárdico del Chubut (Gorsedd y Wladfa): Alwen Green, de Trevelin, hasta octubre de 2023; la sucedió Marli Pugh de Villoria."
+    },
+    "created_at": "2026-11-26T13:29:05.773718+00:00",
+    "reviewed_at": "2026-11-26T13:29:05.773718+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "ce6e200f-52c9-428e-b99d-32a2adc2dcb3",
     "type": "tag",
     "festival": "juventud",
@@ -7169,6 +7377,22 @@
     },
     "created_at": "2026-11-14T14:09:32.072233+00:00",
     "reviewed_at": "2026-11-14T14:09:32.072233+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "cea85365-7f63-4648-a229-f45dddf1a71a",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2026,
+    "item_id": null,
+    "payload": {
+      "field": "presentadores",
+      "fuente": "Video del archivo, agradecimiento a los conductores (9:44:48): https://www.youtube.com/watch?v=hVtD63KLlsw&t=35088s; apellido de Diana confirmado por el mantenedor",
+      "lote": "b8f82bb6-4932-4213-b3ae-1e131b75f201",
+      "value": "Gabriel Restucha y Diana Beatriz Owen"
+    },
+    "created_at": "2026-11-26T11:25:55.873271+00:00",
+    "reviewed_at": "2026-11-26T11:25:55.873271+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -8358,6 +8582,22 @@
     "created_at": "2026-11-16T18:31:17.630618+00:00",
     "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
     "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "f35d1c03-f2ab-4e76-9234-b73c6b82c9a5",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2019,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "El Chubut, 17/10/2019: https://www.elchubut.com.ar/regionales/2019-10-17-23-54-0-se-realizo-en-gaiman-el-gorsedd-y-wladfa",
+      "lote": "193a53c4-a73f-43a8-9d4b-c453f1093bad",
+      "value": "En la asamblea anual del Gorsedd (octubre de 2019) se eligió a Alwen Green, de Trevelin, presidenta del Círculo Bárdico del Chubut; sucedió a Benito Jones."
+    },
+    "created_at": "2026-11-26T13:29:05.773718+00:00",
+    "reviewed_at": "2026-11-26T13:29:05.773718+00:00",
+    "display_name": "Kevin Roberts"
   },
   {
     "id": "f3843024-0d6f-4e1e-8c99-2b39bb008d98",

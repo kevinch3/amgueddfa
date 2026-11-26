@@ -32,7 +32,7 @@ Code: `scripts/visual/` (`frames.py`, `ocr_frames.py`, `vlm.py`, `runs.py`, `cli
 |---|---|---|
 | `frames.py` (ffmpeg, one at a time) | **Laptop** | The videos are on its backup disk. 277 h of video take about 1.5 h. |
 | `ocr_frames.py <dir> 6` | **KPC CPU** (8 cores, plenty of RAM), plus the laptop with 2 workers | ~19 frames/s together. `OMP_THREAD_LIMIT=1` per Tesseract is built in (without it 6 workers ran at 3–4 s/frame). |
-| `vlm.py`, the 7B in 4-bit | **Kaggle 2× T4** first, **Colab** T4/L4/A100 too | 2.5 s/frame on a T4. |
+| `vlm.py`, the 7B in 4-bit | **Colab** T4/L4/A100 (reliable), **Kaggle** T4 when its GPU queue moves | 2.5–3.7 s/frame on a T4. |
 | — | **Not KPC's GPU** | The P4000 (Pascal) took 27 s/frame in 4-bit: bitsandbytes has no fast path. |
 | `clip_comps.py` | **Laptop** | Reads `../.visual/*/ocr.json`, writes `public/marcadores-video/`. |
 
@@ -74,7 +74,7 @@ Ceremony runs become **candidate** chapters, reviewed against `scripts/video_mar
    - A single-competition clip starts at 0:00, even when its card comes late.
    - Check the 6–20 review rows by eye before merging.
 3. **Vision model:**
-   - **Kaggle:** `python3 kaggle_chunk.py prepare <list>`, upload, then push the notebook with `--accelerator NvidiaTeslaT4` (2× T4). Pull the output when the status is complete.
+   - **Kaggle:** `python3 kaggle_chunk.py prepare <list>`, upload, then push the notebook with `--accelerator NvidiaTeslaT4` and check it is RUNNING on a GPU (GPU jobs can queue for many hours). Pull the output when the status is complete.
    - **Colab:** `bash go_chunk.sh <chunk>` keeps the kernel busy, fetches results every 2 min, and resumes on a new runtime after a reclaim.
 4. **Clean up:** delete the Kaggle dataset and notebooks, and the Colab runtimes. `kaggle quota` and `list_runtimes` should show nothing left running.
 
@@ -87,7 +87,9 @@ Ceremony runs become **candidate** chapters, reviewed against `scripts/video_mar
 | Colab refuses every GPU (FAILED_PRECONDITION) | Capacity or cooldown | Retry every 2 min across L4, A100, G4, T4; use Kaggle meanwhile |
 | Kaggle dataset "ready" but files missing, upload ended `499` | Tens of thousands of single files cut off | Upload **a few `.tar` files**; Kaggle unpacks them into folders |
 | `tar: opción no reconocida` with `-T list`, or the results tar stops growing although the log shows more videos done | Ids starting with `-` (`-0VtD_5HIlA`) read as options, also from a shell glob `*/x` | Prefix names and globs with `./` (`./*/vlm.4bit.jsonl`); count the tar's files against the log's `frames read` lines before deleting a runtime |
-| Kaggle job QUEUED for hours | One GPU session per account; an open interactive notebook holds it | Keep one job; ask the maintainer to stop open sessions; `kaggle quota` |
+| Kaggle job QUEUED for hours (16 h seen with 0 quota used; a default-GPU probe queued too) | The account's GPU queue; CPU jobs start at once | Keep one GPU job queued and run the chunk on Colab meanwhile; delete the Kaggle job if Colab finishes first |
+| Kaggle job "starts at once" with an accelerator like `NvidiaL4`, then fails at `nvidia-smi` | A name Kaggle does not offer falls back to a **CPU** session | Use `NvidiaTeslaT4`; the notebook exits early when no GPU is attached |
+| Kaggle job "starts at once" with an accelerator like , then fails at  | A name Kaggle does not offer falls back to a **CPU** session | Use ; the notebook exits early when no GPU is attached |
 | Kaggle CLI login | New `KGAT_…` tokens live in `~/.kaggle/access_token` (the maintainer puts it there) | Never paste or print it |
 
 ## Common mistakes

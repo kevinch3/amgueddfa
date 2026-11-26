@@ -26,7 +26,7 @@ functions work. Find a contributor's uuid with
 
 | What arrived | Path | Credited to | Notes |
 |---|---|---|---|
-| Date, venue, winner, silla, corona, note, competencia of an edition | `facts` (→ `admin_add_facts`) | contributor | one batch = one `lote`; 10 pts each |
+| Date, venue, winner, silla, corona, note, competencia of an edition | `facts` (→ `admin_add_facts`) | contributor | one batch = one `lote`; 10 pts each; a row `[field, value, fuente]` carries its own source (video moment, clipping) |
 | Edition held / not held | fact `edicion_realizada` `si`/`no` | contributor | **the only thing that sets `editions.status`**; a "no" also gets an `other` note with the reason |
 | Item's year, festival, category, title, rights, caption, no_text, hidden | `admin_correct_item(item, festival, year, payload)` | admin, 0 pts | `festival`/`year` args = the item's **current** ones from `src/data/catalog.json`; latest approved tag wins |
 | Memory (recuerdo) | insert `memory` row `pending`, then `approve_contribution` | contributor | text 10–5000 chars; 5 pts |

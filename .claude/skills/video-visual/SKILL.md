@@ -86,7 +86,7 @@ Ceremony runs become **candidate** chapters, reviewed against `scripts/video_mar
 | `execute_code` times out on a short call | Calls to one session queue behind a long one | New session, or reattach with the same `executionId` |
 | Colab refuses every GPU (FAILED_PRECONDITION) | Capacity or cooldown | Retry every 2 min across L4, A100, G4, T4; use Kaggle meanwhile |
 | Kaggle dataset "ready" but files missing, upload ended `499` | Tens of thousands of single files cut off | Upload **a few `.tar` files**; Kaggle unpacks them into folders |
-| `tar: opción no reconocida` with `-T list` | Ids starting with `-` (`-0VtD_5HIlA`) read as options | Prefix names with `./` |
+| `tar: opción no reconocida` with `-T list`, or the results tar stops growing although the log shows more videos done | Ids starting with `-` (`-0VtD_5HIlA`) read as options, also from a shell glob `*/x` | Prefix names and globs with `./` (`./*/vlm.4bit.jsonl`); count the tar's files against the log's `frames read` lines before deleting a runtime |
 | Kaggle job QUEUED for hours | One GPU session per account; an open interactive notebook holds it | Keep one job; ask the maintainer to stop open sessions; `kaggle quota` |
 | Kaggle CLI login | New `KGAT_…` tokens live in `~/.kaggle/access_token` (the maintainer puts it there) | Never paste or print it |
 

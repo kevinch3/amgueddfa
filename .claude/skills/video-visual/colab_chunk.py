@@ -59,7 +59,7 @@ code = rf'''import subprocess, os
 subprocess.run("cd /content && tar -xf code.tar && tar -xf chunk{C}.tar && rm chunk{C}.tar && (test -f out.tar && tar -xf out.tar || true)", shell=True, check=True)
 subprocess.Popen("cd /content && pip -q install bitsandbytes > vis.log 2>&1 && "
   "python -m scripts.visual.vlm chunk{C}_all.txt Qwen/Qwen2.5-VL-7B-Instruct 4 4 >> vis.log 2>&1; echo ALLDONE >> vis.log", shell=True, start_new_session=True)
-subprocess.Popen("cd /content && while true; do ls */vlm.4bit.jsonl >/dev/null 2>&1 && tar -cf out.tmp */vlm.4bit.jsonl && mv out.tmp out.tar; sleep 120; done",
+subprocess.Popen("cd /content && while true; do ls ./*/vlm.4bit.jsonl >/dev/null 2>&1 && tar -cf out.tmp ./*/vlm.4bit.jsonl && mv out.tmp out.tar; sleep 120; done",
   shell=True, start_new_session=True)
 print("started", len(open("/content/chunk{C}_all.txt").read().split()), "videos")'''
 print(call("execute_code", {"runtime": rt, "code": code}).get("structuredContent", {}).get("stdout"), flush=True)

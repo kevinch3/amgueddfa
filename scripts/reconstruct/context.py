@@ -187,7 +187,8 @@ def _heard_like(value: str, raw: list[str], common: frozenset) -> bool:
     pairs = {a + b for a, b in zip(all_names, all_names[1:])}
     if single & {a + b for a, b in zip(heard, heard[1:])}:  # one name heard as two words
         return True
-    cands = {h for h in heard if len(h) >= NAME_MIN}
+    from scripts.reconstruct.checker import _radicals  # Welsh mutations: "fyfrio" may be Myfyrio
+    cands = {r for h in heard if len(h) >= NAME_MIN for r in _radicals(h)}
     if pairs & cands:  # two names heard as one word ("macburney")
         return True
     if any(_near(h, n, common) for n in single | pairs for h in cands):

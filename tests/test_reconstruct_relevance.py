@@ -63,3 +63,7 @@ def test_common_words_come_from_the_frozen_file_not_the_live_corpus(monkeypatch,
     real.load_common_words.cache_clear()
     assert real.load_common_words() == frozenset({"casa", "perro", "hafan", "wedi"})
     real.load_common_words.cache_clear()
+
+
+def test_a_mutated_welsh_hearing_brings_the_fact():
+    assert kept("ganador_silla: Myfanwy Rhys", "cerdd fyfanwy")

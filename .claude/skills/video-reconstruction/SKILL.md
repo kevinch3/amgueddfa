@@ -90,8 +90,9 @@ npm run build && npm test && python3 -m pytest -q tests
 Only windows whose inputs changed are asked again, because each window carries a hash of its inputs.
 A window's context holds the festival, the competition on stage, and **only the facts that something heard there may be a mishearing of**: a non-dictionary word with the name's first letter, spelled nearly alike or with the same sound, or the name split in two (`relevant()` in `context.py`).
 - Names heard right and real words need no fact.
-- Measured 2026-11-26: four presenter facts would have re-asked 35 of 2,711 windows instead of all of them.
-- Replies cached before that change are found by the window's `legacy` key. `--migrate-cache` copies them to the new keys once; run it before loading new facts.
+- Measured 2026-11-27 on 204 videos: presenter facts re-ask 127 of 2,711 windows (21x fewer than before); 76% of the name fixes the model had made keep their fact; 0 cached replies fail the checker (it still accepts every name of the edition, `Window.full_words`).
+- Real words never count as mishearings: the Spanish dictionary (`/usr/share/dict/spanish`, required) plus the frozen `data/palabras-comunes.txt`. Regenerate that file only on purpose (`python3 -m scripts.reconstruct.context --palabras-comunes`): it changes window keys, so dry-run after.
+- Replies cached before that change are found by the window's `legacy` key. `--migrate-cache` copies them to the new keys (also from the facts of the last 60 snapshot commits); run it after merging and before loading new facts.
 
 ## Reading the result
 

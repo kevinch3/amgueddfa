@@ -81,6 +81,31 @@ def in_scope(repo: Path, video: dict, stem: Path | None = None) -> bool:
     return bool(stem and WELSH_SOURCE and stem.with_name(f"{stem.name}.{WELSH_SOURCE}.json").exists())
 
 
+def cached_reply(cache: Path, w) -> Path | None:
+    """The cached reply for a window: under its key, or under the key used before facts were filtered
+    per window (copied to the new key on first use, so later fact changes never strand it)."""
+    path = cache / f"{w.hash}.json"
+    if path.exists():
+        return path
+    old = cache / f"{w.legacy}.json" if w.legacy else None
+    if old is not None and old.exists():
+        path.write_bytes(old.read_bytes())
+        return path
+    return None
+
+
+def migrate_cache(windows: list, cache: Path) -> int:
+    """Copy replies cached under the legacy key to the current one; the number copied (no model call).
+    Run once over the archive after the keys changed, before any new fact changes the legacy keys too."""
+    n = 0
+    for w in windows:
+        if needs_model(w) and w.legacy and w.legacy != w.hash and not (cache / f"{w.hash}.json").exists() \
+                and (cache / f"{w.legacy}.json").exists():
+            cached_reply(cache, w)
+            n += 1
+    return n
+
+
 def reconstruct_video(repo: Path, backup: Path, video: dict, ask=ask_claude, replies: Path = REPLIES,
                       state: dict | None = None, files: dict | None = None,
                       fix_text: Callable[[str], str] = lambda s: s, jobs: int = 1) -> dict | None:
@@ -112,7 +137,7 @@ def reconstruct_video(repo: Path, backup: Path, video: dict, ask=ask_claude, rep
         for x in windows[i:]:
             if len(batch) == jobs:
                 break
-            if needs_model(x) and x.hash not in seen and x.hash not in fresh and not (cache / f"{x.hash}.json").exists():
+            if needs_model(x) and x.hash not in seen and x.hash not in fresh and not cached_reply(cache, x):
                 seen.add(x.hash)
                 batch.append(x)
         for x, r in zip(batch, _ask_all(ask, batch, jobs)):
@@ -130,8 +155,8 @@ def reconstruct_video(repo: Path, backup: Path, video: dict, ask=ask_claude, rep
             continue
         reply = fresh.pop(w.hash, None)
         asked_now = reply is not None  # only a reply asked in this run ends a run of model errors
-        cached = cache / f"{w.hash}.json"
-        if reply is None and cached.exists():
+        cached = cached_reply(cache, w) if reply is None else None
+        if cached is not None:
             reply = json.loads(cached.read_text(encoding="utf-8"))
         if reply is None:
             ask_from(i)
@@ -184,6 +209,8 @@ def main() -> int:
     ap.add_argument("--limit", type=int)
     ap.add_argument("--jobs", type=int, default=1, help="windows asked at once (claude -p calls in parallel)")
     ap.add_argument("--dry-run", action="store_true", help="list the windows that would be asked, call nothing")
+    ap.add_argument("--migrate-cache", action="store_true",
+                    help="copy replies cached under the pre-2026-11-26 keys to the per-window keys, call nothing")
     ap.add_argument("--backup", default=str(DEFAULT_BACKUP))
     a = ap.parse_args()
     backup = Path(a.backup)
@@ -197,6 +224,18 @@ def main() -> int:
     if wanted:
         videos = [v for v in videos if v["id"] in wanted]
     videos = videos[: a.limit] if a.limit else videos
+    if a.migrate_cache:
+        copied = 0
+        for v in videos:
+            if v["id"] not in files:
+                continue
+            stem = (backup / "videos" / files[v["id"]]).with_suffix("")
+            lines = load_sources(stem, v["id"], REPO / "data" / "letras")
+            if lines:
+                copied += migrate_cache(make_windows(lines, _duration(stem, lines), lambda x, y: video_context(REPO, v, x, y)),
+                                        REPLIES / v["id"])
+        print(f"{len(videos)} video(s), {copied} cached repl(ies) copied to their per-window keys")
+        return 0
     if a.dry_run:
         total = 0
         for v in videos:
@@ -207,7 +246,8 @@ def main() -> int:
             if not lines:
                 continue
             ws = make_windows(lines, _duration(stem, lines), lambda x, y: video_context(REPO, v, x, y))
-            todo = [w for w in ws if needs_model(w) and not (REPLIES / v["id"] / f"{w.hash}.json").exists()]
+            todo = [w for w in ws if needs_model(w) and not any(
+                (REPLIES / v["id"] / f"{h}.json").exists() for h in (w.hash, w.legacy) if h)]
             total += len(todo)
             print(f"{v['id']}  {v['title'][:60]}  windows {len(ws)}, to ask {len(todo)}")
         print(f"{len(videos)} video(s), {total} window(s) to ask")

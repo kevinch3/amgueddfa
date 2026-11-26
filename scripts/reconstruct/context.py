@@ -6,6 +6,7 @@ import json
 import re
 import unicodedata
 from collections import Counter
+from functools import lru_cache
 from pathlib import Path
 from typing import NamedTuple
 
@@ -103,6 +104,70 @@ def video_context(repo: Path, video: dict, t0: float, t1: float) -> Context:
             parts.append(f"{p['field']}: {p['value']}")
             values.append(p["value"])
     return Context("\n".join(parts), frozenset(tokens(" ".join(values))) | BASE_WORDS)
+
+
+FACT_PREFIXES = tuple(f"{f}: " for f in FACT_FIELDS)
+NAME_MIN = 4  # letters: shorter words (de, la, san) say nothing about a name being heard
+SPELLED_ALIKE = 0.75
+COMMON_IN = 30  # videos: a word heard in this many published transcripts is a real word, not a mishearing
+SPANISH_DICT = Path("/usr/share/dict/spanish")
+
+
+@lru_cache(maxsize=1)
+def common_words() -> frozenset:
+    """Words that are no mishearing of a name: the Spanish dictionary, plus every word the published video
+    transcripts use in COMMON_IN videos or more (Welsh words, and names usually heard right)."""
+    words: set[str] = set()
+    if SPANISH_DICT.exists():
+        raw = SPANISH_DICT.read_bytes()
+        try:
+            text = raw.decode("utf-8")
+        except UnicodeDecodeError:
+            text = raw.decode("latin-1")
+        words |= {fold(w.strip()) for w in text.splitlines() if w.strip()}
+    seen: Counter = Counter()
+    for p in (Path(__file__).resolve().parents[2] / "public/transcripciones-video").glob("*.json"):
+        try:
+            segs = json.loads(p.read_text(encoding="utf-8")).get("seg") or []
+        except ValueError:
+            continue
+        seen.update({t for s in segs if isinstance(s, list) and len(s) > 1 for t in tokens(str(s[1]))})
+    return frozenset(words | {w for w, n in seen.items() if n >= COMMON_IN})
+
+
+def _heard_like(value: str, heard: list[str], common: frozenset) -> bool:
+    """Something heard is a likely mishearing of a name in the value: a non-word with the name's first letter,
+    spelled nearly alike or with the same sound ("marley" ~ Marli, "pugh" heard as "piu" is too short to tell),
+    or the name split in two ("res tucha" ~ Restucha). Real words ("tiene" ~ Diana, "escuchar" ~ Restucha) and
+    names heard right need no fact: facts are there to fix mishearings."""
+    from difflib import SequenceMatcher
+    from scripts.reconstruct.checker import sound_key  # the checker imports this module
+    names = {t for t in tokens(value) if len(t) >= NAME_MIN}
+    joined = {a + b for a, b in zip(heard, heard[1:])}
+    if names & joined:
+        return True
+    odd = {h for h in heard if len(h) >= NAME_MIN and h not in common}
+    return any(h != n and h[0] == n[0] and (SequenceMatcher(None, h, n).ratio() >= SPELLED_ALIKE or sound_key(h) == sound_key(n))
+               for n in names for h in odd)
+
+
+def relevant(ctx: Context, lines, common: frozenset | None = None) -> Context:
+    """The context with only the facts something in these lines may be a mishearing of. A new fact then
+    changes the windows that may say it, not every window of the edition (2026-11-26: four presenter facts
+    re-asked 2,585 windows). Festival, year and the competition on stage always stay."""
+    common = common_words() if common is None else common
+    heard = [t for l in lines for t in tokens(l.text)]
+    keep, values, dropped = [], [], False
+    for line in ctx.text.split("\n") if ctx.text else []:
+        is_fact = line.startswith(FACT_PREFIXES)
+        if is_fact and not _heard_like(line.split(": ", 1)[1], heard, common):
+            dropped = True
+            continue
+        keep.append(line)
+        values.append(line.split(": ", 1)[1] if is_fact or line.startswith("Competencia ") else line)
+    if not dropped:
+        return ctx
+    return Context("\n".join(keep), frozenset(tokens(" ".join(values))) | BASE_WORDS)
 
 
 def with_glossary(ctx: Context, lines, glossary: list[tuple[str, str]]) -> Context:

@@ -79,7 +79,7 @@ npm run build && npm test && python3 -m pytest -q tests
 | What changed | Rerun |
 |---|---|
 | New lyrics or span in `data/letras/` | that video |
-| New approved facts (venue, winners, presenters) for an edition | that edition's videos |
+| New approved facts (venue, winners, presenters) for an edition | that edition's videos (only the windows where something heard may be a mishearing of the new names are asked: ~1% for presenters) |
 | Programa transcription added or fixed | that edition's videos |
 | New Welsh files imported (`import-cy`) | those videos |
 | New Spanish-pass files imported (`import-es`) | those videos |
@@ -88,6 +88,10 @@ npm run build && npm test && python3 -m pytest -q tests
 | Before an export, and after any rebuild or export | before: merge main first (the export bakes `data/approved/contributions.json`, and an old copy puts corrections withdrawn since back into the files; it warns when `data/approved` is over 24 h old); after: open `/admin/` → Videos and look for approved corrections that lost their line (`sin anclar`): re-anchor or reject them |
 
 Only windows whose inputs changed are asked again, because each window carries a hash of its inputs.
+A window's context holds the festival, the competition on stage, and **only the facts that something heard there may be a mishearing of**: a non-dictionary word with the name's first letter, spelled nearly alike or with the same sound, or the name split in two (`relevant()` in `context.py`).
+- Names heard right and real words need no fact.
+- Measured 2026-11-26: four presenter facts would have re-asked 35 of 2,711 windows instead of all of them.
+- Replies cached before that change are found by the window's `legacy` key. `--migrate-cache` copies them to the new keys once; run it before loading new facts.
 
 ## Reading the result
 

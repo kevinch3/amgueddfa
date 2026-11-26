@@ -247,3 +247,31 @@ def test_migrate_cache_copies_legacy_replies_without_asking(tmp_path):
     assert migrate_cache(ws, cache) == 1
     assert (cache / f"{ws[0].hash}.json").read_text(encoding="utf-8") == '{"lines": []}'
     assert migrate_cache(ws, cache) == 0
+
+
+def test_migration_from_an_older_facts_revision(tmp_path):
+    """A reply cached under an older revision's whole-context key is reused when the filtered context is the same."""
+    from scripts.reconstruct.context import Context
+    from scripts.reconstruct.sources import Line
+    from scripts.reconstruct.windows import make_windows
+    from scripts.reconstruct_videos import migrate_from
+    ls = [Line(5.0, "buenas noches", "yt_es", "es")]
+    old = make_windows(ls, 60, lambda a, b: Context("Eisteddfod del Chubut 2030.\nvenue: Lugar Viejo", frozenset()), glossary=[])
+    new = make_windows(ls, 60, lambda a, b: Context("Eisteddfod del Chubut 2030.\nvenue: Lugar Nuevo", frozenset()), glossary=[])
+    assert old[0].hash == new[0].hash and old[0].legacy != new[0].legacy
+    cache = tmp_path / "c"
+    cache.mkdir()
+    (cache / f"{old[0].legacy}.json").write_text('{"lines": []}', encoding="utf-8")
+    assert migrate_from(old, new, cache) == 1
+    assert (cache / f"{new[0].hash}.json").exists()
+
+
+def test_an_unreadable_cache_file_is_asked_again(tmp_path):
+    repo, backup, video = _setup(tmp_path)
+    calls = []
+    reconstruct_video(repo, backup, video, ask=echo_model(calls), replies=tmp_path / "replies")
+    n = len(calls)
+    broken = sorted((tmp_path / "replies/vid").glob("*.json"))[0]
+    broken.write_text('{"lines": [', encoding="utf-8")
+    reconstruct_video(repo, backup, video, ask=echo_model(calls), replies=tmp_path / "replies")
+    assert len(calls) == n + 1 and json.loads(broken.read_text(encoding="utf-8"))["lines"] is not None

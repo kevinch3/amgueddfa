@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import re
+import sys
 import unicodedata
 from collections import Counter
 from functools import lru_cache
@@ -87,7 +88,8 @@ def _on_screen(repo: Path, video: dict, t0: float, t1: float) -> list[int]:
     return list(dict.fromkeys(comps))
 
 
-def video_context(repo: Path, video: dict, t0: float, t1: float) -> Context:
+def video_context(repo: Path, video: dict, t0: float, t1: float, facts: list | None = None) -> Context:
+    """facts: the approved contributions to use (default: data/approved/contributions.json)."""
     festival, year = video["festival"], int(video["year"])
     parts = [f"{FESTIVAL_NAMES.get(festival, festival)} {year}."]
     values = [parts[0]]  # the word list: names and values only, never field labels
@@ -96,7 +98,8 @@ def video_context(repo: Path, video: dict, t0: float, t1: float) -> Context:
         if n in lines:
             parts.append(f"Competencia {n}: {lines[n]}")
             values.append(lines[n])
-    facts = json.loads((repo / "data/approved/contributions.json").read_text(encoding="utf-8"))
+    if facts is None:
+        facts = json.loads((repo / "data/approved/contributions.json").read_text(encoding="utf-8"))
     for c in facts:
         p = c.get("payload") or {}
         if (c.get("type") == "fact" and c.get("status", "approved") == "approved" and c.get("festival") == festival
@@ -109,58 +112,101 @@ def video_context(repo: Path, video: dict, t0: float, t1: float) -> Context:
 FACT_PREFIXES = tuple(f"{f}: " for f in FACT_FIELDS)
 NAME_MIN = 4  # letters: shorter words (de, la, san) say nothing about a name being heard
 SPELLED_ALIKE = 0.75
-COMMON_IN = 30  # videos: a word heard in this many published transcripts is a real word, not a mishearing
+COMMON_SPELLED = 0.8  # a real word counts as a mishearing only when spelled this close to the name (nancy ~ Nanci)
+COMMON_IN = 30  # videos: a word in this many published transcripts is a real word (for --palabras-comunes)
 SPANISH_DICT = Path("/usr/share/dict/spanish")
+COMMON_FILE = Path(__file__).resolve().parents[2] / "data" / "palabras-comunes.txt"
+_INITIAL = {"k": "c", "q": "c", "z": "s", "j": "y", "i": "y", "v": "b"}
 
 
 @lru_cache(maxsize=1)
+def load_common_words() -> frozenset:
+    """Words that are no mishearing of a name: the Spanish dictionary plus the frozen list of words common in
+    the published transcripts (data/palabras-comunes.txt). Window keys depend on this set, so it never
+    follows the live transcripts, and a machine without the dictionary stops instead of making other keys."""
+    if not SPANISH_DICT.exists():
+        sys.exit(f"{SPANISH_DICT} missing (install the wspanish word list): window keys depend on it")
+    raw = SPANISH_DICT.read_bytes()
+    try:
+        text = raw.decode("utf-8")
+    except UnicodeDecodeError:
+        text = raw.decode("latin-1")
+    words = {fold(w.strip()) for w in text.splitlines() if w.strip()}
+    if COMMON_FILE.exists():
+        words |= {l.strip() for l in COMMON_FILE.read_text(encoding="utf-8").splitlines()
+                  if l.strip() and not l.startswith("#")}
+    return frozenset(words)
+
+
 def common_words() -> frozenset:
-    """Words that are no mishearing of a name: the Spanish dictionary, plus every word the published video
-    transcripts use in COMMON_IN videos or more (Welsh words, and names usually heard right)."""
-    words: set[str] = set()
-    if SPANISH_DICT.exists():
-        raw = SPANISH_DICT.read_bytes()
-        try:
-            text = raw.decode("utf-8")
-        except UnicodeDecodeError:
-            text = raw.decode("latin-1")
-        words |= {fold(w.strip()) for w in text.splitlines() if w.strip()}
+    return load_common_words()
+
+
+def write_common_words(repo: Path, path: Path = COMMON_FILE, min_videos: int = COMMON_IN) -> int:
+    """Freeze the words used in min_videos published transcripts or more. Rewriting it changes window keys:
+    do it on purpose, then dry-run."""
     seen: Counter = Counter()
-    for p in (Path(__file__).resolve().parents[2] / "public/transcripciones-video").glob("*.json"):
+    for f in sorted((repo / "public/transcripciones-video").glob("*.json")):
         try:
-            segs = json.loads(p.read_text(encoding="utf-8")).get("seg") or []
+            segs = json.loads(f.read_text(encoding="utf-8")).get("seg") or []
         except ValueError:
             continue
-        seen.update({t for s in segs if isinstance(s, list) and len(s) > 1 for t in tokens(str(s[1]))})
-    return frozenset(words | {w for w, n in seen.items() if n >= COMMON_IN})
+        seen.update({t for x in segs if isinstance(x, list) and len(x) > 1 for t in tokens(str(x[1]))})
+    words = sorted(w for w, n in seen.items() if n >= min_videos and len(w) >= NAME_MIN)
+    path.write_text(f"# Words in {min_videos}+ published video transcripts: not mishearings of a name.\n"
+                    "# Frozen on purpose (window keys depend on it): python3 -m scripts.reconstruct.context --palabras-comunes\n"
+                    + "\n".join(words) + "\n", encoding="utf-8")
+    return len(words)
 
 
-def _heard_like(value: str, heard: list[str], common: frozenset) -> bool:
-    """Something heard is a likely mishearing of a name in the value: a non-word with the name's first letter,
-    spelled nearly alike or with the same sound ("marley" ~ Marli, "pugh" heard as "piu" is too short to tell),
-    or the name split in two ("res tucha" ~ Restucha). Real words ("tiene" ~ Diana, "escuchar" ~ Restucha) and
-    names heard right need no fact: facts are there to fix mishearings."""
+def _initial(w: str) -> str:
+    w = w[1:] if w.startswith("h") and len(w) > 1 else w  # silent h
+    w = "y" + w[2:] if w.startswith("ll") else w
+    return _INITIAL.get(w[:1], w[:1])
+
+
+def _near(h: str, n: str, common: frozenset) -> bool:
     from difflib import SequenceMatcher
     from scripts.reconstruct.checker import sound_key  # the checker imports this module
-    names = {t for t in tokens(value) if len(t) >= NAME_MIN}
-    joined = {a + b for a, b in zip(heard, heard[1:])}
-    if names & joined:
+    if h == n or _initial(h) != _initial(n):
+        return False
+    r = SequenceMatcher(None, h, n).ratio()
+    if h in common:  # a real word: nearly the same spelling and the same start (nancy ~ Nanci, not danza ~ Diana)
+        return r >= COMMON_SPELLED and h[:3] == n[:3]
+    return r >= SPELLED_ALIKE or sound_key(h) == sound_key(n)
+
+
+def _heard_like(value: str, raw: list[str], common: frozenset) -> bool:
+    """Something heard may be a mishearing of a name in the value: spelled nearly alike or with the same sound
+    (initials s/z, c/k/q, j/y/i/ll, b/v, silent h alike), a name split in two ("borda grin"), a two-word name
+    heard as one ("borddagryn"), or the name without its accent ("saez" ~ Sáez). Real words need a closer
+    spelling ("nancy" ~ Nanci, never "tiene" ~ Diana). A name heard right needs no fact: facts fix mishearings."""
+    heard = [fold(w) for w in raw]
+    all_names = tokens(value)
+    single = {t for t in all_names if len(t) >= NAME_MIN}
+    pairs = {a + b for a, b in zip(all_names, all_names[1:])}
+    if single & {a + b for a, b in zip(heard, heard[1:])}:  # one name heard as two words
         return True
-    odd = {h for h in heard if len(h) >= NAME_MIN and h not in common}
-    return any(h != n and h[0] == n[0] and (SequenceMatcher(None, h, n).ratio() >= SPELLED_ALIKE or sound_key(h) == sound_key(n))
-               for n in names for h in odd)
+    cands = {h for h in heard if len(h) >= NAME_MIN}
+    if pairs & cands:  # two names heard as one word ("macburney")
+        return True
+    if any(_near(h, n, common) for n in single | pairs for h in cands):
+        return True
+    accented = {w for w in re.findall(r"[^\W_]+", value.lower()) if fold(w) != w and fold(w) not in common}
+    return any(r != a and fold(r) == fold(a) for a in accented for r in raw)
 
 
 def relevant(ctx: Context, lines, common: frozenset | None = None) -> Context:
-    """The context with only the facts something in these lines may be a mishearing of. A new fact then
-    changes the windows that may say it, not every window of the edition (2026-11-26: four presenter facts
-    re-asked 2,585 windows). Festival, year and the competition on stage always stay."""
+    """The context with only the facts a heard word may be a mishearing of. A new fact then changes the
+    windows that may say it, not every window of the edition (2026-11-26: four presenter facts re-asked
+    2,585 windows). Festival, year and the competition on stage always stay. The checker still accepts
+    every name of the edition (Window.full_words)."""
     common = common_words() if common is None else common
-    heard = [t for l in lines for t in tokens(l.text)]
+    raw = [w for l in lines for w in re.findall(r"[^\W_]+(?:'[^\W_]+)*", l.text.replace("’", "'").lower())]
     keep, values, dropped = [], [], False
     for line in ctx.text.split("\n") if ctx.text else []:
         is_fact = line.startswith(FACT_PREFIXES)
-        if is_fact and not _heard_like(line.split(": ", 1)[1], heard, common):
+        if is_fact and not _heard_like(line.split(": ", 1)[1], raw, common):
             dropped = True
             continue
         keep.append(line)
@@ -178,3 +224,10 @@ def with_glossary(ctx: Context, lines, glossary: list[tuple[str, str]]) -> Conte
         return ctx
     text = ctx.text + "\nPalabras mal oídas conocidas: " + "; ".join(f"{h} → {r}" for h, r in hits)
     return Context(text, ctx.words | {t for _, r in hits for t in tokens(r)})
+
+
+if __name__ == "__main__":
+    if sys.argv[1:] == ["--palabras-comunes"]:
+        print(write_common_words(Path(__file__).resolve().parents[2]), "words frozen in", COMMON_FILE)
+    else:
+        sys.exit("python3 -m scripts.reconstruct.context --palabras-comunes")

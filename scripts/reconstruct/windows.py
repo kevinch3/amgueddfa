@@ -22,6 +22,7 @@ class Window(NamedTuple):
     context: Context
     hash: str
     legacy: str = ""  # the key before facts were filtered per window: replies cached under it stay usable
+    full_words: frozenset = frozenset()  # every name of the edition: what the checker accepts (not shown, not hashed)
 
 
 def _cut(starts: list[float], nominal: float) -> float:
@@ -52,7 +53,8 @@ def make_windows(lines: list[Line], duration: float, context_for: Callable[[floa
         seen = [[l.t, l.text, l.src, l.lang, l.conf] + ([l.alt] if l.alt is not None else []) for l in inside]
         key = lambda text: hashlib.sha256(json.dumps([a, b, seen, text, PROMPT_VERSION], ensure_ascii=False,
                                                      sort_keys=True).encode("utf-8")).hexdigest()[:16]
-        out.append(Window(a, b, inside, ctx, key(ctx.text), key(with_glossary(base, inside, glossary).text)))
+        full = with_glossary(base, inside, glossary)
+        out.append(Window(a, b, inside, ctx, key(ctx.text), key(full.text), full.words))
     return out
 
 

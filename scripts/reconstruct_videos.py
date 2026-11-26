@@ -15,6 +15,9 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import os
+import subprocess
+import threading
 import sys
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
@@ -81,17 +84,47 @@ def in_scope(repo: Path, video: dict, stem: Path | None = None) -> bool:
     return bool(stem and WELSH_SOURCE and stem.with_name(f"{stem.name}.{WELSH_SOURCE}.json").exists())
 
 
+def _write(path: Path, data: bytes) -> None:
+    """Whole or nothing: another process (--jobs, a second run) never reads half a reply."""
+    tmp = path.with_name(f".{path.name}.{os.getpid()}.{threading.get_ident()}.tmp")
+    tmp.write_bytes(data)
+    os.replace(tmp, path)
+
+
+def _readable(path: Path) -> bool:
+    """A cache file that does not parse is removed, so the window is asked again instead of crashing the run."""
+    try:
+        json.loads(path.read_text(encoding="utf-8"))
+        return True
+    except ValueError:
+        path.unlink(missing_ok=True)
+        return False
+
+
 def cached_reply(cache: Path, w) -> Path | None:
     """The cached reply for a window: under its key, or under the key used before facts were filtered
     per window (copied to the new key on first use, so later fact changes never strand it)."""
     path = cache / f"{w.hash}.json"
-    if path.exists():
+    if path.exists() and _readable(path):
         return path
     old = cache / f"{w.legacy}.json" if w.legacy else None
-    if old is not None and old.exists():
-        path.write_bytes(old.read_bytes())
+    if old is not None and old.exists() and _readable(old):
+        _write(path, old.read_bytes())
         return path
     return None
+
+
+def migrate_from(old: list, new: list, cache: Path) -> int:
+    """Replies cached under an older facts revision's whole-context key, copied to the current key where the
+    window's filtered context (what the model sees) is the same. The number copied."""
+    n = 0
+    for o, w in zip(old, new):
+        if (o.t0, o.t1) == (w.t0, w.t1) and o.hash == w.hash and needs_model(w) and o.legacy \
+                and not (cache / f"{w.hash}.json").exists() and (cache / f"{o.legacy}.json").exists() \
+                and _readable(cache / f"{o.legacy}.json"):
+            _write(cache / f"{w.hash}.json", (cache / f"{o.legacy}.json").read_bytes())
+            n += 1
+    return n
 
 
 def migrate_cache(windows: list, cache: Path) -> int:
@@ -104,6 +137,41 @@ def migrate_cache(windows: list, cache: Path) -> int:
             cached_reply(cache, w)
             n += 1
     return n
+
+
+FACTS = "data/approved/contributions.json"
+
+
+def _facts_revisions(n: int = 60) -> list[list]:
+    """The approved facts as the last n commits of the snapshot had them (the export bot commits often)."""
+    out = []
+    shas = subprocess.run(["git", "-C", str(REPO), "log", f"-n{n}", "--format=%H", "--", FACTS],
+                          capture_output=True, text=True).stdout.split()
+    for sha in shas:
+        cp = subprocess.run(["git", "-C", str(REPO), "show", f"{sha}:{FACTS}"], capture_output=True, text=True)
+        if cp.returncode == 0:
+            try:
+                out.append(json.loads(cp.stdout))
+            except ValueError:
+                pass
+    return out
+
+
+def _edition_versions(revs: list[list], video: dict) -> list[list]:
+    """The distinct fact lists an edition had across revisions, other than today's."""
+    from scripts.reconstruct.context import FACT_FIELDS
+    sig = lambda facts: tuple(sorted((c["payload"]["field"], c["payload"]["value"]) for c in facts
+                                     if c.get("type") == "fact" and c.get("festival") == video["festival"]
+                                     and str(c.get("year")) == str(video["year"]) and (c.get("payload") or {}).get("field") in FACT_FIELDS
+                                     and c.get("status", "approved") == "approved"))
+    now = sig(json.loads((REPO / FACTS).read_text(encoding="utf-8")))
+    seen, out = {now}, []
+    for facts in revs:
+        k = sig(facts)
+        if k not in seen:
+            seen.add(k)
+            out.append(facts)
+    return out
 
 
 def reconstruct_video(repo: Path, backup: Path, video: dict, ask=ask_claude, replies: Path = REPLIES,
@@ -146,7 +214,7 @@ def reconstruct_video(repo: Path, backup: Path, video: dict, ask=ask_claude, rep
                 state["asked"] += 1
                 state["usd"] += float(r.get("_usd") or 0)
                 cache.mkdir(parents=True, exist_ok=True)
-                (cache / f"{x.hash}.json").write_text(json.dumps(r, ensure_ascii=False), encoding="utf-8")
+                _write(cache / f"{x.hash}.json", json.dumps(r, ensure_ascii=False).encode("utf-8"))
 
     for i, w in enumerate(windows):
         if not needs_model(w):
@@ -225,15 +293,21 @@ def main() -> int:
         videos = [v for v in videos if v["id"] in wanted]
     videos = videos[: a.limit] if a.limit else videos
     if a.migrate_cache:
+        revs = _facts_revisions()
         copied = 0
         for v in videos:
             if v["id"] not in files:
                 continue
             stem = (backup / "videos" / files[v["id"]]).with_suffix("")
             lines = load_sources(stem, v["id"], REPO / "data" / "letras")
-            if lines:
-                copied += migrate_cache(make_windows(lines, _duration(stem, lines), lambda x, y: video_context(REPO, v, x, y)),
-                                        REPLIES / v["id"])
+            if not lines:
+                continue
+            dur = _duration(stem, lines)
+            now = make_windows(lines, dur, lambda x, y: video_context(REPO, v, x, y))
+            copied += migrate_cache(now, REPLIES / v["id"])
+            for facts in _edition_versions(revs, v):  # replies cached while the edition had other facts
+                old = make_windows(lines, dur, lambda x, y, f=facts: video_context(REPO, v, x, y, facts=f))
+                copied += migrate_from(old, now, REPLIES / v["id"])
         print(f"{len(videos)} video(s), {copied} cached repl(ies) copied to their per-window keys")
         return 0
     if a.dry_run:

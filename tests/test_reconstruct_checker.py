@@ -160,3 +160,13 @@ def test_a_line_and_its_alternative_are_not_both_published():
     assert any(e.startswith("rule 6") for e in check_window(WALT, both))
     for one in (both["lines"][:1], both["lines"][1:]):
         assert check_window(WALT, {"lines": one}) == []
+
+
+def test_a_fix_into_a_name_outside_the_filtered_context_still_passes():
+    """The prompt shows only the facts the window may need; the checker accepts every name of the edition,
+    so replies cached before the filtering keep passing."""
+    w = Window(0.0, 60.0, (Line(10.0, "ganó samudio", "yt_es", "es"),), Context("", frozenset()), "h", "h",
+               frozenset({"zamudio"}))
+    reply = {"lines": [{"t": 10.0, "lang": "es", "text": "ganó Zamudio", "src": ["yt_es"],
+                        "fixes": [{"from": "samudio", "to": "Zamudio"}]}]}
+    assert check_window(w, reply) == []

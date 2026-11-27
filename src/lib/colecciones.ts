@@ -23,7 +23,8 @@ export interface Coleccion {
   ganadores_publicos: boolean;
   /** Video transcripts are published and can be corrected (#29). */
   texto_de_videos: boolean;
-  derechos_por_defecto: string | null;
+  /** Rights of its records that state none, and have no source statement (lib/derechos.ts). */
+  derechos_por_defecto: { licencia: string; titular: string } | null;
   visibilidad_por_defecto: Visibilidad;
   /** When the maintainer opened it to the public (required when the default is publico). */
   abierta?: string;

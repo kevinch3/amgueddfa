@@ -1,7 +1,7 @@
 // Size budget of the built site (docs/reglas.md, rule 6). Run after the build:
 //   node scripts/presupuesto.mjs          # prints size and file count per top-level folder
 // tests-js/build.test.ts fails the build when the totals pass LIMITS.
-import { readdirSync, statSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -51,4 +51,14 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
     console.log(`${mb(m.bytes)} MB ${String(m.files).padStart(7)} files  ${name}`);
   }
   console.log(`${mb(total.bytes)} MB ${String(total.files).padStart(7)} files  total (limits ${LIMITS.bytes / 1024 / 1024} MB, ${LIMITS.files} files)`);
+  // Rights codes of the public documents (lib/derechos.ts), and how many rely on their collection's default.
+  const docs = join(dist, 'eisteddfod', 'datos', 'documentos.json');
+  if (existsSync(docs)) {
+    const count = {};
+    for (const d of JSON.parse(readFileSync(docs, 'utf8')).documentos) {
+      const k = `${d.licencia}${d.licencia_origen === 'coleccion' ? ' (collection default)' : ''}`;
+      count[k] = (count[k] ?? 0) + 1;
+    }
+    console.log('rights: ' + Object.entries(count).sort((a, b) => b[1] - a[1]).map(([k, n]) => `${n} ${k}`).join(', '));
+  }
 }

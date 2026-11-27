@@ -1,3 +1,4 @@
+import { derechosDe } from '../../../lib/derechos';
 import { isPublic } from '../../../lib/visibilidad';
 import type { APIRoute } from 'astro';
 import { festivals, items, pageUrls } from '../../../lib/catalog';
@@ -21,7 +22,7 @@ export const GET: APIRoute = ({ props }) => {
     id: item.id, title: item.title, festivalName: fest.name, festival: item.festival, year: item.year,
     category: t(`categorias.${item.category}`), url: absUrl(url(`item/${item.id}/`)),
     editionUrl: item.year !== null ? absUrl(url(`${item.festival}/${item.year}/`)) : null,
-    rights: rightsText(item.rights), source: item.source_label || null, sourceUrl: item.source_url,
+    rights: rightsText(item.rights), license: derechosDe(item)?.licencia ?? 'sin-declarar', source: item.source_label || null, sourceUrl: item.source_url,
     note: item.note_public ?? '', images: pageUrls(item).map(absUrl),
     transcription: transcriptionDoc(item.id)?.text ?? null, transcriptionLicense: TRANSCRIPTION_LICENSE,
     ocr: item.text_excerpt ? null : ocrFor(item.id)?.pages ?? null,

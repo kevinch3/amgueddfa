@@ -14,7 +14,12 @@ Design and reasons: `docs/superpowers/specs/2026-11-27-reglas-de-datos-design.md
 2. **A record has the core fields**: collection, date, type, format, source,
    visibility, and a rights statement it can resolve (its own, its source's or its
    collection's).
-   Test: added with the visibility, rights and record-field steps of the design.
+   Rights: `derechosDe()` in `src/lib/derechos.ts` resolves the record's credit line,
+   else its source's statement in `src/data/fuentes.json`, else the collection's
+   `derechos_por_defecto`, to one licence code (`LICENCIAS`). A new credit-line
+   wording needs a rule there; the build prints the count per code.
+   Test: `tests-js/derechos.test.ts`; the other core fields come with the
+   record-field step of the design.
 
 3. **A type is added to the site-wide list (`tipos` in `colecciones.json`) with its
    name in all 7 languages (`categorias.<tipo>`) before any record uses it**, and a

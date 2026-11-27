@@ -1,7 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import { DEFAULT_LOCALE, LOCALES, locale, t } from '../lib/i18n';
-import { url } from '../lib/paths';
+import { EISTEDDFOD_SEGMENTS, url } from '../lib/paths';
 
 // GitHub Pages answers every missing address with the Spanish /404.html, /cy/… ones
 // included. That page hops to the 404 in the address's language (/cy/404/), which
@@ -9,14 +9,25 @@ import { url } from '../lib/paths';
 const isDefault = locale() === DEFAULT_LOCALE;
 const base = import.meta.env.BASE_URL ?? '/';
 const others = LOCALES.filter((l) => l !== DEFAULT_LOCALE);
+// First path segments that moved under /eisteddfod/ (#189); the home ('') is the hub now.
+const moved = [...EISTEDDFOD_SEGMENTS].filter(Boolean);
 ---
 <Base title={t('no_encontrada.titulo')} noindex>
   <Fragment slot="head">
     {isDefault ? (
-      <script is:inline define:vars={{ base, others }}>
+      <script is:inline define:vars={{ base, others, moved }}>
         (function () {
           var b = base.replace(/\/+$/, '') + '/';
           var path = location.pathname;
+          // An old Eisteddfod address the build has no forwarding page for (#189):
+          // insert the collection, keeping the language, query and hash.
+          var rest = path.indexOf(b) === 0 ? path.slice(b.length) : '';
+          var parts = rest.split('/');
+          var lead = others.indexOf(parts[0]) >= 0 ? parts.shift() + '/' : '';
+          if (moved.indexOf(parts[0]) >= 0) {
+            location.replace(b + lead + 'eisteddfod/' + parts.join('/') + location.search + location.hash);
+            return;
+          }
           var first = path.indexOf(b) === 0 ? path.slice(b.length).split('/')[0] : '';
           if (others.indexOf(first) >= 0 && path.slice(b.length).replace(/\/+$/, '') !== first + '/404') {
             location.replace(b + first + '/404/?desde=' + encodeURIComponent(path + location.search + location.hash));

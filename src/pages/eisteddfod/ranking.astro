@@ -1,7 +1,7 @@
 ---
-import Base from '../layouts/Base.astro';
-import { FESTIVALS } from '../lib/contrib';
-import { t } from '../lib/i18n';
+import Base from '../../layouts/Base.astro';
+import { FESTIVALS } from '../../lib/contrib';
+import { t } from '../../lib/i18n';
 ---
 <Base title={t('ranking.titulo')} current="ranking">
   <section class="ranking measure">
@@ -19,14 +19,14 @@ import { t } from '../lib/i18n';
 </Base>
 
 <script>
-  import { FESTIVALS } from '../lib/contrib';
-  import { rankBy, type LeaderRow } from '../lib/game';
-  import { formatNumber, t } from '../lib/i18n';
-  import { liveQuery, withOptionalCols } from '../lib/live';
-  import { countryName, flag } from '../lib/places';
-  import { url } from '../lib/paths';
-  import type { FestivalSlug } from '../lib/types';
-  import { el } from '../scripts/ui';
+  import { FESTIVALS } from '../../lib/contrib';
+  import { rankBy, type LeaderRow } from '../../lib/game';
+  import { formatNumber, t } from '../../lib/i18n';
+  import { liveQuery, withOptionalCols } from '../../lib/live';
+  import { countryName, flag } from '../../lib/places';
+  import { url } from '../../lib/paths';
+  import type { FestivalSlug } from '../../lib/types';
+  import { el } from '../../scripts/ui';
 
   const mount = document.getElementById('ranking')!;
   const sel = document.getElementById('r-filtro') as HTMLSelectElement;

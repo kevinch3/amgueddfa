@@ -1192,5 +1192,14 @@
     },
     "un_aporte": "1 contribution",
     "n_aportes": "{n} contributions"
+  },
+  "hub": {
+    "titulo": "Amgueddfa",
+    "lema": "Un musée numérique de l'histoire des Gallois hors du pays de Galles, à commencer par la Patagonie.",
+    "colecciones": "Collections",
+    "eisteddfod_titulo": "Eisteddfod",
+    "entrar": "Entrer dans la collection de l'Eisteddfod",
+    "pronto": "D'autres collections suivront : la presse galloise sur Y Wladfa, la Gorsedd, des personnes et des lieux.",
+    "pie": "Amgueddfa : toutes les collections"
   }
 }

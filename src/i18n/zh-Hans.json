@@ -1192,5 +1192,14 @@
     },
     "un_aporte": "1 条贡献",
     "n_aportes": "{n} 条贡献"
+  },
+  "hub": {
+    "titulo": "Amgueddfa",
+    "lema": "一座关于威尔士以外的威尔士人历史的数字博物馆，从巴塔哥尼亚开始。",
+    "colecciones": "收藏",
+    "eisteddfod_titulo": "Eisteddfod",
+    "entrar": "进入 Eisteddfod 收藏",
+    "pronto": "更多收藏即将推出：关于 Y Wladfa 的威尔士报刊、Gorsedd、人物和地点。",
+    "pie": "Amgueddfa：全部收藏"
   }
 }

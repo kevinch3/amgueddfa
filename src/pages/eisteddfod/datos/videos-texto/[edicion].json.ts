@@ -1,5 +1,5 @@
 import type { APIContext } from 'astro';
-import { searchEditions } from '../../../lib/video-search-data';
+import { searchEditions } from '../../../../lib/video-search-data';
 
 // What is said in the videos of one edition, for the search on its page and on /buscar/
 // (scripts/buscar-videos.ts): the transcriptions of public/transcripciones-video/ in one file.

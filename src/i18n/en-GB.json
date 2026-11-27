@@ -1192,5 +1192,14 @@
     },
     "un_aporte": "1 contribution",
     "n_aportes": "{n} contributions"
+  },
+  "hub": {
+    "titulo": "Amgueddfa",
+    "lema": "A digital museum of the history of the Welsh outside Wales, starting with Patagonia.",
+    "colecciones": "Collections",
+    "eisteddfod_titulo": "Eisteddfod",
+    "entrar": "Go to the Eisteddfod collection",
+    "pronto": "More collections will follow: the Welsh press about Y Wladfa, the Gorsedd, people and places.",
+    "pie": "Amgueddfa: all collections"
   }
 }

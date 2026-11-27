@@ -1,12 +1,12 @@
 ---
-import Base from '../layouts/Base.astro';
-import { festivals, items } from '../lib/catalog';
-import { jsonForScript } from '../lib/contrib';
-import { t } from '../lib/i18n';
-import { ocrFor } from '../lib/ocr';
-import { siteMedia, url } from '../lib/paths';
-import { isHistory, isTaskCandidate } from '../lib/tasks';
-import { transcriptionDoc } from '../lib/transcripciones';
+import Base from '../../layouts/Base.astro';
+import { festivals, items } from '../../lib/catalog';
+import { jsonForScript } from '../../lib/contrib';
+import { t } from '../../lib/i18n';
+import { ocrFor } from '../../lib/ocr';
+import { siteMedia, url } from '../../lib/paths';
+import { isHistory, isTaskCandidate } from '../../lib/tasks';
+import { transcriptionDoc } from '../../lib/transcripciones';
 
 // Only what a task card needs, so the page does not carry the whole catalog.
 // Quick tasks are for history: documents of the last 20 years are left out (#187).
@@ -59,13 +59,13 @@ const byFestival = festivals().map(({ slug: f }) => ({ f, docs: toTranscribe.fil
 </Base>
 
 <script>
-  import { submit, YEAR_MAX, YEAR_MIN, type Result } from '../lib/contrib';
-  import { t } from '../lib/i18n';
-  import { liveQuery } from '../lib/live';
-  import { url } from '../lib/paths';
-  import { taskQueue, type TaskCandidate } from '../lib/tasks';
-  import type { CategorySlug, FestivalSlug } from '../lib/types';
-  import { busy, categoryOptions, el, festivalOptions, field, gate, gateMessage, select } from '../scripts/ui';
+  import { submit, YEAR_MAX, YEAR_MIN, type Result } from '../../lib/contrib';
+  import { t } from '../../lib/i18n';
+  import { liveQuery } from '../../lib/live';
+  import { url } from '../../lib/paths';
+  import { taskQueue, type TaskCandidate } from '../../lib/tasks';
+  import type { CategorySlug, FestivalSlug } from '../../lib/types';
+  import { busy, categoryOptions, el, festivalOptions, field, gate, gateMessage, select } from '../../scripts/ui';
 
   type Card = TaskCandidate & { festival: FestivalSlug; year: number | null; category: CategorySlug; title: string; img: string };
 

@@ -1,4 +1,4 @@
-import { items, thumbUrl } from '../../lib/catalog';
+import { items, thumbUrl } from '../../../lib/catalog';
 
 /**
  * Compact catalog for live corrections (scripts/live-catalog.ts): where each

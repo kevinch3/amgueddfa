@@ -1192,5 +1192,14 @@
     },
     "un_aporte": "1 bidrag",
     "n_aportes": "{n} bidrag"
+  },
+  "hub": {
+    "titulo": "Amgueddfa",
+    "lema": "Ett digitalt museum över walesarnas historia utanför Wales, med början i Patagonien.",
+    "colecciones": "Samlingar",
+    "eisteddfod_titulo": "Eisteddfod",
+    "entrar": "Gå till Eisteddfod-samlingen",
+    "pronto": "Fler samlingar kommer: den walesiska pressen om Y Wladfa, Gorsedd, personer och platser.",
+    "pie": "Amgueddfa: alla samlingar"
   }
 }

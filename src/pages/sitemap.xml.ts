@@ -3,7 +3,7 @@ import { editionItems, festivals, items, yearRange } from '../lib/catalog';
 import { forEdition, type Contribution } from '../lib/contrib';
 import { siteSources } from '../lib/fuentes-site';
 import { LOCALES } from '../lib/i18n';
-import { url } from '../lib/paths';
+import { rootUrl, url } from '../lib/paths';
 import { absUrl, sitemapXml } from '../lib/seo';
 
 /**
@@ -26,6 +26,7 @@ export function GET(): Response {
   }
   for (const i of items()) if (!i.restricted) pages.push(`item/${i.id}/`);
   for (const slug of siteSources().keys()) pages.push(`fuente/${slug}/`);
-  const urls = LOCALES.flatMap((l) => pages.map((p) => absUrl(url(p, l))));
+  // The museum's front door (/) and every page of the Eisteddfod collection (/eisteddfod/…, #189).
+  const urls = LOCALES.flatMap((l) => [absUrl(rootUrl(l)), ...pages.map((p) => absUrl(url(p, l)))]);
   return new Response(sitemapXml(urls), { headers: { 'Content-Type': 'application/xml; charset=utf-8' } });
 }

@@ -154,9 +154,9 @@
     "year": 2024,
     "item_id": "0fa1b7b0d9ad",
     "payload": {
-      "year": 2024,
+      "coleccion": "chubut",
       "tipo": "bases",
-      "coleccion": "chubut"
+      "year": 2024
     },
     "created_at": "2026-11-22T19:39:31.245615+00:00",
     "reviewed_at": "2026-11-22T19:39:31.245615+00:00",
@@ -169,9 +169,9 @@
     "year": 2025,
     "item_id": "56789aa41764",
     "payload": {
-      "year": 2025,
+      "coleccion": "juventud",
       "tipo": "bases",
-      "coleccion": "juventud"
+      "year": 2025
     },
     "created_at": "2026-11-14T10:44:32.891388+00:00",
     "reviewed_at": "2026-11-14T11:02:47.824811+00:00",
@@ -214,9 +214,9 @@
     "year": 2025,
     "item_id": "f08b97c983cf",
     "payload": {
-      "year": 2025,
+      "coleccion": "chubut",
       "tipo": "bases",
-      "coleccion": "chubut"
+      "year": 2025
     },
     "created_at": "2026-11-14T13:19:03.427053+00:00",
     "reviewed_at": "2026-11-14T13:20:47.194865+00:00",
@@ -425,9 +425,9 @@
     "year": 2024,
     "item_id": "797fb3a8aa6d",
     "payload": {
-      "year": 2024,
+      "coleccion": "chubut",
       "tipo": "bases",
-      "coleccion": "chubut"
+      "year": 2024
     },
     "created_at": "2026-11-14T13:19:56.87413+00:00",
     "reviewed_at": "2026-11-14T13:20:53.581281+00:00",
@@ -504,9 +504,9 @@
     "year": 2023,
     "item_id": "b62537afb425",
     "payload": {
-      "year": 2023,
+      "coleccion": "juventud",
       "tipo": "preliminares",
-      "coleccion": "juventud"
+      "year": 2023
     },
     "created_at": "2026-11-15T09:43:19.776484+00:00",
     "reviewed_at": "2026-11-15T09:43:19.776484+00:00",
@@ -895,9 +895,9 @@
     "year": 2022,
     "item_id": "e49c26c600a8",
     "payload": {
-      "year": 2022,
+      "coleccion": "chubut",
       "tipo": "programa-del-dia",
-      "coleccion": "chubut"
+      "year": 2022
     },
     "created_at": "2026-11-17T13:04:12.273569+00:00",
     "reviewed_at": "2026-11-17T13:04:12.273569+00:00",
@@ -1001,9 +1001,9 @@
     "year": 2018,
     "item_id": "4e87bd74fa35",
     "payload": {
-      "year": 2018,
+      "coleccion": "chubut",
       "tipo": "bases",
-      "coleccion": "chubut"
+      "year": 2018
     },
     "created_at": "2026-11-14T10:44:16.333053+00:00",
     "reviewed_at": "2026-11-14T11:02:42.726967+00:00",
@@ -1188,9 +1188,9 @@
     "year": 2024,
     "item_id": "051d5cd88bad",
     "payload": {
-      "year": 2024,
+      "coleccion": "chubut",
       "tipo": "preliminares",
-      "coleccion": "chubut"
+      "year": 2024
     },
     "created_at": "2026-11-13T22:38:11.065475+00:00",
     "reviewed_at": "2026-11-13T22:52:10.61773+00:00",
@@ -1548,9 +1548,9 @@
     "year": 2025,
     "item_id": "fd63ba3c7bdf",
     "payload": {
-      "year": 2025,
+      "coleccion": "chubut",
       "tipo": "bases",
-      "coleccion": "chubut"
+      "year": 2025
     },
     "created_at": "2026-11-15T09:43:03.446029+00:00",
     "reviewed_at": "2026-11-15T09:43:03.446029+00:00",
@@ -1684,9 +1684,9 @@
     "year": 2021,
     "item_id": "c35ebcee921b",
     "payload": {
-      "year": 2021,
+      "coleccion": "chubut",
       "tipo": "bases",
-      "coleccion": "chubut"
+      "year": 2021
     },
     "created_at": "2026-11-14T13:19:17.589273+00:00",
     "reviewed_at": "2026-11-14T13:20:49.020409+00:00",
@@ -1814,9 +1814,9 @@
     "year": 2022,
     "item_id": "486c5fd51089",
     "payload": {
-      "year": 2022,
+      "coleccion": "chubut",
       "tipo": "bases",
-      "coleccion": "chubut"
+      "year": 2022
     },
     "created_at": "2026-11-14T10:44:30.618356+00:00",
     "reviewed_at": "2026-11-14T11:02:44.841222+00:00",
@@ -1855,9 +1855,9 @@
     "year": 2026,
     "item_id": "f0445c901f9f",
     "payload": {
-      "year": 2026,
+      "coleccion": "chubut",
       "tipo": "bases",
-      "coleccion": "chubut"
+      "year": 2026
     },
     "created_at": "2026-11-14T10:44:18.426281+00:00",
     "reviewed_at": "2026-11-14T11:02:46.77271+00:00",
@@ -2074,9 +2074,9 @@
     "year": 1939,
     "item_id": "c7405e26517a",
     "payload": {
-      "year": 1939,
+      "coleccion": "chubut",
       "tipo": "otros",
-      "coleccion": "chubut"
+      "year": 1939
     },
     "created_at": "2026-11-27T07:08:34.988835+00:00",
     "reviewed_at": "2026-11-27T07:08:34.988835+00:00",
@@ -2157,9 +2157,9 @@
     "year": 2021,
     "item_id": "8fc23391a7f3",
     "payload": {
-      "year": 2021,
+      "coleccion": "chubut",
       "tipo": "bases",
-      "coleccion": "chubut"
+      "year": 2021
     },
     "created_at": "2026-11-13T21:14:17.363453+00:00",
     "reviewed_at": "2026-11-13T21:14:42.096951+00:00",
@@ -2188,9 +2188,9 @@
     "year": 2019,
     "item_id": "8c9fdb63913c",
     "payload": {
-      "year": 2019,
+      "coleccion": "juventud",
       "tipo": "programa-del-dia",
-      "coleccion": "juventud"
+      "year": 2019
     },
     "created_at": "2026-11-14T13:19:54.436523+00:00",
     "reviewed_at": "2026-11-14T13:20:52.202165+00:00",
@@ -2216,9 +2216,9 @@
     "year": 2014,
     "item_id": "bce9ad6ff669",
     "payload": {
-      "year": 2014,
+      "coleccion": "chubut",
       "tipo": "bases",
-      "coleccion": "chubut"
+      "year": 2014
     },
     "created_at": "2026-11-14T13:19:59.852147+00:00",
     "reviewed_at": "2026-11-14T13:20:54.639722+00:00",
@@ -2695,9 +2695,9 @@
     "year": 2026,
     "item_id": "ebd83bf02fff",
     "payload": {
-      "year": 2026,
+      "coleccion": "chubut",
       "tipo": "bases",
-      "coleccion": "chubut"
+      "year": 2026
     },
     "created_at": "2026-11-15T09:44:08.106259+00:00",
     "reviewed_at": "2026-11-15T09:44:08.106259+00:00",
@@ -2710,9 +2710,9 @@
     "year": 2024,
     "item_id": "1449c71e050b",
     "payload": {
-      "year": 2024,
+      "coleccion": "chubut",
       "tipo": "preliminares",
-      "coleccion": "chubut"
+      "year": 2024
     },
     "created_at": "2026-11-14T11:01:58.536559+00:00",
     "reviewed_at": "2026-11-14T11:02:51.476225+00:00",
@@ -3025,9 +3025,9 @@
     "year": 2026,
     "item_id": "c631805d27af",
     "payload": {
-      "year": 2026,
+      "coleccion": "chubut",
       "tipo": "bases",
-      "coleccion": "chubut"
+      "year": 2026
     },
     "created_at": "2026-11-16T21:14:37.655156+00:00",
     "reviewed_at": "2026-11-16T21:14:37.655156+00:00",
@@ -3088,9 +3088,9 @@
     "year": 1942,
     "item_id": "6a85d2b780ab",
     "payload": {
-      "year": 1942,
+      "coleccion": "chubut",
       "tipo": "otros",
-      "coleccion": "chubut"
+      "year": 1942
     },
     "created_at": "2026-11-27T07:08:32.382605+00:00",
     "reviewed_at": "2026-11-27T07:08:32.382605+00:00",
@@ -3396,9 +3396,9 @@
     "year": 2025,
     "item_id": "2e9bb931548b",
     "payload": {
-      "year": 2025,
+      "coleccion": "chubut",
       "tipo": "bases",
-      "coleccion": "chubut"
+      "year": 2025
     },
     "created_at": "2026-11-14T13:19:23.605443+00:00",
     "reviewed_at": "2026-11-14T13:20:50.839324+00:00",
@@ -3973,9 +3973,9 @@
     "year": 2026,
     "item_id": "e3157bc5f05c",
     "payload": {
-      "year": 2026,
+      "coleccion": "juventud",
       "tipo": "programa-del-dia",
-      "coleccion": "juventud"
+      "year": 2026
     },
     "created_at": "2026-11-14T11:02:21.601077+00:00",
     "reviewed_at": "2026-11-14T11:02:53.380313+00:00",
@@ -4511,9 +4511,9 @@
     "year": 1912,
     "item_id": "2c2e1c862f8c",
     "payload": {
-      "year": 1912,
+      "coleccion": "chubut",
       "tipo": "otros",
-      "coleccion": "chubut"
+      "year": 1912
     },
     "created_at": "2026-11-27T10:27:24.236701+00:00",
     "reviewed_at": "2026-11-27T10:27:24.236701+00:00",
@@ -4945,9 +4945,9 @@
     "year": 1933,
     "item_id": "d42a8b05f213",
     "payload": {
-      "year": 1933,
+      "coleccion": "chubut",
       "tipo": "otros",
-      "coleccion": "chubut"
+      "year": 1933
     },
     "created_at": "2026-11-27T07:08:38.3287+00:00",
     "reviewed_at": "2026-11-27T07:08:38.3287+00:00",
@@ -5151,9 +5151,9 @@
     "year": 1954,
     "item_id": "36bbb549b129",
     "payload": {
-      "year": 1954,
+      "coleccion": "chubut",
       "tipo": "otros",
-      "coleccion": "chubut"
+      "year": 1954
     },
     "created_at": "2026-11-27T07:08:19.562447+00:00",
     "reviewed_at": "2026-11-27T07:08:19.562447+00:00",
@@ -5192,9 +5192,9 @@
     "year": 2024,
     "item_id": "fa7edc79fb2f",
     "payload": {
-      "year": 2024,
+      "coleccion": "chubut",
       "tipo": "bases",
-      "coleccion": "chubut"
+      "year": 2024
     },
     "created_at": "2026-11-14T10:44:13.797036+00:00",
     "reviewed_at": "2026-11-14T11:02:41.205923+00:00",
@@ -5249,9 +5249,9 @@
     "year": 1910,
     "item_id": "abc358fd3032",
     "payload": {
-      "year": 1910,
+      "coleccion": "chubut",
       "tipo": "otros",
-      "coleccion": "chubut"
+      "year": 1910
     },
     "created_at": "2026-11-27T07:08:23.125721+00:00",
     "reviewed_at": "2026-11-27T07:08:23.125721+00:00",
@@ -5610,9 +5610,9 @@
     "year": 2022,
     "item_id": "e49c26c600a8",
     "payload": {
-      "year": 2022,
+      "coleccion": "chubut",
       "tipo": "programa",
-      "coleccion": "chubut"
+      "year": 2022
     },
     "created_at": "2026-11-14T10:44:34.801678+00:00",
     "reviewed_at": "2026-11-14T11:02:48.584495+00:00",
@@ -5802,8 +5802,8 @@
     "item_id": null,
     "payload": {
       "arreglo": {
-        "year": 2007,
-        "coleccion": "chubut"
+        "coleccion": "chubut",
+        "year": 2007
       },
       "objetivo": "video",
       "problema": "otra_edicion",
@@ -5940,9 +5940,9 @@
     "year": 2025,
     "item_id": "dc37d75fa143",
     "payload": {
-      "year": 2025,
+      "coleccion": "chubut",
       "tipo": "bases",
-      "coleccion": "chubut"
+      "year": 2025
     },
     "created_at": "2026-11-14T10:44:49.007193+00:00",
     "reviewed_at": "2026-11-14T11:02:50.265326+00:00",
@@ -6101,9 +6101,9 @@
     "year": 2024,
     "item_id": "3514511ae939",
     "payload": {
-      "year": 2024,
+      "coleccion": "chubut",
       "tipo": "bases",
-      "coleccion": "chubut"
+      "year": 2024
     },
     "created_at": "2026-11-14T13:18:54.177979+00:00",
     "reviewed_at": "2026-11-14T13:20:45.767279+00:00",
@@ -6190,9 +6190,9 @@
     "year": 2024,
     "item_id": "5ac9767d9adf",
     "payload": {
-      "year": 2024,
+      "coleccion": "chubut",
       "tipo": "bases",
-      "coleccion": "chubut"
+      "year": 2024
     },
     "created_at": "2026-11-14T13:19:19.711476+00:00",
     "reviewed_at": "2026-11-14T13:20:59.028483+00:00",
@@ -6582,9 +6582,9 @@
     "year": 1982,
     "item_id": "7fcd935aaabb",
     "payload": {
-      "year": 1982,
+      "coleccion": "chubut",
       "tipo": "programa",
-      "coleccion": "chubut"
+      "year": 1982
     },
     "created_at": "2026-11-13T21:14:22.25477+00:00",
     "reviewed_at": "2026-11-13T21:14:43.617255+00:00",
@@ -6660,9 +6660,9 @@
     "year": 2025,
     "item_id": "ba9d13d8540e",
     "payload": {
-      "year": 2025,
+      "coleccion": "juventud",
       "tipo": "bases",
-      "coleccion": "juventud"
+      "year": 2025
     },
     "created_at": "2026-11-14T10:44:09.702798+00:00",
     "reviewed_at": "2026-11-14T11:02:39.612976+00:00",
@@ -6721,9 +6721,9 @@
     "year": 2026,
     "item_id": "8abd86b74618",
     "payload": {
-      "year": 2026,
+      "coleccion": "juventud",
       "tipo": "preliminares",
-      "coleccion": "juventud"
+      "year": 2026
     },
     "created_at": "2026-11-13T22:38:59.464454+00:00",
     "reviewed_at": "2026-11-13T22:52:06.391664+00:00",
@@ -7029,9 +7029,9 @@
     "year": 2023,
     "item_id": "99a72233b0e3",
     "payload": {
-      "year": 2023,
+      "coleccion": "chubut",
       "tipo": "bases",
-      "coleccion": "chubut"
+      "year": 2023
     },
     "created_at": "2026-11-13T21:14:13.827031+00:00",
     "reviewed_at": "2026-11-13T21:14:41.194531+00:00",
@@ -7877,9 +7877,9 @@
     "year": 2022,
     "item_id": "9de3f6886e51",
     "payload": {
-      "year": 2022,
+      "coleccion": "juventud",
       "tipo": "preliminares",
-      "coleccion": "juventud"
+      "year": 2022
     },
     "created_at": "2026-11-15T09:43:58.977038+00:00",
     "reviewed_at": "2026-11-15T09:43:58.977038+00:00",
@@ -7989,9 +7989,9 @@
     "year": 2022,
     "item_id": "c2d31a9fc9ab",
     "payload": {
-      "year": 2022,
+      "coleccion": "juventud",
       "tipo": "programa-del-dia",
-      "coleccion": "juventud"
+      "year": 2022
     },
     "created_at": "2026-11-13T22:38:51.72125+00:00",
     "reviewed_at": "2026-11-13T23:47:16.827352+00:00",
@@ -8269,9 +8269,9 @@
     "year": 1996,
     "item_id": "fcb0d30de6eb",
     "payload": {
-      "year": 1986,
+      "coleccion": "chubut",
       "tipo": "programa",
-      "coleccion": "chubut"
+      "year": 1986
     },
     "created_at": "2026-11-14T15:48:47.937769+00:00",
     "reviewed_at": "2026-11-14T15:48:54.761076+00:00",
@@ -8385,9 +8385,9 @@
     "year": 2017,
     "item_id": "cf4d6221c645",
     "payload": {
-      "year": 2017,
+      "coleccion": "chubut",
       "tipo": "bases",
-      "coleccion": "chubut"
+      "year": 2017
     },
     "created_at": "2026-11-14T10:44:21.153913+00:00",
     "reviewed_at": "2026-11-14T11:02:45.727162+00:00",
@@ -8476,9 +8476,9 @@
     "year": 1907,
     "item_id": "ed5ee85318fa",
     "payload": {
-      "year": 1907,
+      "coleccion": "chubut",
       "tipo": "otros",
-      "coleccion": "chubut"
+      "year": 1907
     },
     "created_at": "2026-11-27T07:08:30.817807+00:00",
     "reviewed_at": "2026-11-27T07:08:30.817807+00:00",
@@ -8796,9 +8796,9 @@
     "year": 2014,
     "item_id": "bcfeee05fbcb",
     "payload": {
-      "year": 2014,
+      "coleccion": "chubut",
       "tipo": "bases",
-      "coleccion": "chubut"
+      "year": 2014
     },
     "created_at": "2026-11-14T13:18:43.523944+00:00",
     "reviewed_at": "2026-11-14T13:20:44.791628+00:00",
@@ -8886,9 +8886,9 @@
     "year": null,
     "item_id": "73afebadf114",
     "payload": {
-      "year": 2008,
+      "coleccion": "chubut",
       "tipo": "programa",
-      "coleccion": "chubut"
+      "year": 2008
     },
     "created_at": "2026-11-27T10:27:45.052031+00:00",
     "reviewed_at": "2026-11-27T10:27:45.052031+00:00",
@@ -9496,9 +9496,9 @@
     "year": 2026,
     "item_id": "0e936fe3a05c",
     "payload": {
-      "year": 2026,
+      "coleccion": "chubut",
       "tipo": "bases",
-      "coleccion": "chubut"
+      "year": 2026
     },
     "created_at": "2026-11-13T22:38:47.792876+00:00",
     "reviewed_at": "2026-11-13T22:52:08.779053+00:00",
@@ -9542,9 +9542,9 @@
     "year": 2023,
     "item_id": "1eefa6da76b0",
     "payload": {
-      "year": 2023,
+      "coleccion": "chubut",
       "tipo": "bases",
-      "coleccion": "chubut"
+      "year": 2023
     },
     "created_at": "2026-11-15T09:43:29.574885+00:00",
     "reviewed_at": "2026-11-15T09:43:29.574885+00:00",

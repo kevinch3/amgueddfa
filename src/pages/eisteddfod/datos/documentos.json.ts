@@ -1,6 +1,7 @@
-import { festivals, items, pageUrls, thumbUrl } from '../../lib/catalog';
-import { absUrl, rightsText, TRANSCRIPTION_LICENSE } from '../../lib/seo';
-import { transcriptionDoc } from '../../lib/transcripciones';
+import { festivals, items, pageUrls, thumbUrl } from '../../../lib/catalog';
+import { url } from '../../../lib/paths';
+import { absUrl, rightsText, TRANSCRIPTION_LICENSE } from '../../../lib/seo';
+import { transcriptionDoc } from '../../../lib/transcripciones';
 
 /** Open data: every public document of the archive (restricted ones are never listed). */
 export function GET(): Response {
@@ -16,7 +17,7 @@ export function GET(): Response {
       ano: i.year,
       categoria: i.category,
       tipo: i.kind,
-      url: absUrl(`item/${i.id}/`),
+      url: absUrl(url(`item/${i.id}/`, 'es')),
       miniatura: thumb ? absUrl(thumb) : null,
       paginas: pageUrls(i).map(absUrl),
       fuente: i.source_label || null,

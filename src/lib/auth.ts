@@ -1,7 +1,7 @@
 import type { SupabaseClient } from '@supabase/supabase-js';
 import { liveQuery, withOptionalCols } from './live';
 import { DEFAULT_LOCALE, locale } from './i18n';
-import { url } from './paths';
+import { rootUrl, url } from './paths';
 import { isCountry, isTimeZone } from './places';
 import { getClient } from './supabase';
 
@@ -55,7 +55,7 @@ type Loc = { origin: string; search: string };
  * as `lang`, and that page forwards to its own /<lang>/ingresar/.
  */
 export function linkRedirect(loc: Loc): string {
-  const volver = returnPath(new URLSearchParams(loc.search).get('volver'), url('/', DEFAULT_LOCALE));
+  const volver = returnPath(new URLSearchParams(loc.search).get('volver'), rootUrl(DEFAULT_LOCALE));
   const to = `${loc.origin}${url('ingresar/', DEFAULT_LOCALE)}`;
   const q = [volver ? `volver=${encodeURIComponent(volver)}` : '', locale() !== DEFAULT_LOCALE ? `lang=${locale()}` : ''].filter(Boolean);
   return q.length ? `${to}?${q.join('&')}` : to;

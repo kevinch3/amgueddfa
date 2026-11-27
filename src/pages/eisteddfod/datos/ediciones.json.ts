@@ -1,9 +1,10 @@
-import approvedRaw from '../../../data/approved/contributions.json';
-import editionsRaw from '../../../data/approved/editions.json';
-import { editionCover, editionItems, editionState, editionYears, festivals } from '../../lib/catalog';
-import { forEdition, sortFacts, type Contribution } from '../../lib/contrib';
-import { absUrl, editionFacts, factRecord } from '../../lib/seo';
-import { transcriptionDoc } from '../../lib/transcripciones';
+import approvedRaw from '../../../../data/approved/contributions.json';
+import editionsRaw from '../../../../data/approved/editions.json';
+import { editionCover, editionItems, editionState, editionYears, festivals } from '../../../lib/catalog';
+import { forEdition, sortFacts, type Contribution } from '../../../lib/contrib';
+import { url } from '../../../lib/paths';
+import { absUrl, editionFacts, factRecord } from '../../../lib/seo';
+import { transcriptionDoc } from '../../../lib/transcripciones';
 
 /** Open data: every edition in range (and documented not-held years before it) with its state, cover and approved facts. */
 export function GET(): Response {
@@ -19,7 +20,7 @@ export function GET(): Response {
         eisteddfod: f.slug,
         nombre: f.name,
         ano: year,
-        url: absUrl(`${f.slug}/${year}/`),
+        url: absUrl(url(`${f.slug}/${year}/`, 'es')),
         estado: editionState(f.slug, year),
         // true / false when known; null when nobody has said (not a guess).
         realizada: facts.held ?? null,

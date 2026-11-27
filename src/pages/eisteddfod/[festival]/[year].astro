@@ -1,30 +1,30 @@
 ---
-import Bloque from '../../components/Bloque.astro';
-import Base from '../../layouts/Base.astro';
-import EmptySlot from '../../components/EmptySlot.astro';
-import ItemCard from '../../components/ItemCard.astro';
-import Mount from '../../components/Mount.astro';
-import VideoList from '../../components/VideoList.astro';
-import MediaGallery from '../../components/MediaGallery.astro';
-import { mediaItems } from '../../lib/media';
-import { playMap, type MarkerFile } from '../../lib/markers';
-import Transcripcion from '../../components/Transcripcion.astro';
-import { transcriptionDoc } from '../../lib/transcripciones';
-import { PUBLIC_WINNERS, winnersDoc } from '../../lib/ganadores';
-import type { DocText } from '../../lib/docmd';
-import { editionCatalogState, editionCover, editionItems, editionState, festivals, yearRange } from '../../lib/catalog';
-import { contentLang, formatList, intlLocales, t, tAround } from '../../lib/i18n';
-import { url } from '../../lib/paths';
-import { byTitle, CATEGORY_ORDER, docCount, stateLabel } from '../../lib/site';
-import type { FestivalSlug } from '../../lib/types';
-import approvedRaw from '../../../data/approved/contributions.json';
-import editionsStatic from '../../../data/approved/editions.json';
-import { factDisplay, factInOriginal, forEdition, jsonForScript, sortFacts, type Contribution } from '../../lib/contrib';
-import FuenteRef from '../../components/FuenteRef.astro';
-import { contributionSourceSlugs, sourceSlugs } from '../../lib/fuentes-site';
-import { mediaUrl, uploadMedia } from '../../lib/uploads';
-import { absUrl, breadcrumbJsonLd, editionDescription, editionFacts, editionJsonLd, ldGraph } from '../../lib/seo';
-import { editionVideos } from '../../lib/videos-data';
+import Bloque from '../../../components/Bloque.astro';
+import Base from '../../../layouts/Base.astro';
+import EmptySlot from '../../../components/EmptySlot.astro';
+import ItemCard from '../../../components/ItemCard.astro';
+import Mount from '../../../components/Mount.astro';
+import VideoList from '../../../components/VideoList.astro';
+import MediaGallery from '../../../components/MediaGallery.astro';
+import { mediaItems } from '../../../lib/media';
+import { playMap, type MarkerFile } from '../../../lib/markers';
+import Transcripcion from '../../../components/Transcripcion.astro';
+import { transcriptionDoc } from '../../../lib/transcripciones';
+import { PUBLIC_WINNERS, winnersDoc } from '../../../lib/ganadores';
+import type { DocText } from '../../../lib/docmd';
+import { editionCatalogState, editionCover, editionItems, editionState, festivals, yearRange } from '../../../lib/catalog';
+import { contentLang, formatList, intlLocales, t, tAround } from '../../../lib/i18n';
+import { url } from '../../../lib/paths';
+import { byTitle, CATEGORY_ORDER, docCount, stateLabel } from '../../../lib/site';
+import type { FestivalSlug } from '../../../lib/types';
+import approvedRaw from '../../../../data/approved/contributions.json';
+import editionsStatic from '../../../../data/approved/editions.json';
+import { factDisplay, factInOriginal, forEdition, jsonForScript, sortFacts, type Contribution } from '../../../lib/contrib';
+import FuenteRef from '../../../components/FuenteRef.astro';
+import { contributionSourceSlugs, sourceSlugs } from '../../../lib/fuentes-site';
+import { mediaUrl, uploadMedia } from '../../../lib/uploads';
+import { absUrl, breadcrumbJsonLd, editionDescription, editionFacts, editionJsonLd, ldGraph } from '../../../lib/seo';
+import { editionVideos } from '../../../lib/videos-data';
 
 export function getStaticPaths() {
   return festivals().flatMap((f) => {
@@ -251,10 +251,10 @@ const missingList = formatList(missing.map((m) => m.toLocaleLowerCase(intlLocale
 </Base>
 
 <script>
-  import '../../scripts/edicion.ts';
-  import '../../scripts/live-videos.ts';
-  import '../../scripts/informar.ts';
-  import '../../scripts/reproductor.ts';
-  import '../../scripts/buscar-videos.ts';
-  import '../../scripts/live-transcripciones.ts';
+  import '../../../scripts/edicion.ts';
+  import '../../../scripts/live-videos.ts';
+  import '../../../scripts/informar.ts';
+  import '../../../scripts/reproductor.ts';
+  import '../../../scripts/buscar-videos.ts';
+  import '../../../scripts/live-transcripciones.ts';
 </script>

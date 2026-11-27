@@ -4,7 +4,7 @@
  */
 import { factDisplay, forEdition, longDate, type Contribution } from './contrib';
 import { localeTag, t } from './i18n';
-import { url } from './paths';
+import { rootUrl, url } from './paths';
 import { docCount } from './site';
 import type { EditionState } from './types';
 
@@ -197,7 +197,7 @@ export function siteJsonLd(): Ld {
   return {
     '@context': 'https://schema.org',
     '@graph': [
-      { '@type': 'WebSite', name: t('sitio.nombre'), url: absUrl(url('/')), inLanguage: localeTag(), description: t('sitio.descripcion') },
+      { '@type': 'WebSite', name: t('sitio.nombre'), url: absUrl(rootUrl()), inLanguage: localeTag(), description: t('sitio.descripcion') },
       { '@type': 'ArchiveOrganization', name: t('sitio.nombre'), url: absUrl('/'), description: t('sitio.descripcion') },
     ],
   };

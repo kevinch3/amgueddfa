@@ -1192,5 +1192,14 @@
     },
     "un_aporte": "1 cyfraniad",
     "n_aportes": "{n} cyfraniad"
+  },
+  "hub": {
+    "titulo": "Amgueddfa",
+    "lema": "Amgueddfa ddigidol o hanes y Cymry y tu allan i Gymru, gan ddechrau ym Mhatagonia.",
+    "colecciones": "Casgliadau",
+    "eisteddfod_titulo": "Eisteddfod",
+    "entrar": "Mynd i gasgliad yr Eisteddfod",
+    "pronto": "Bydd rhagor o gasgliadau'n dilyn: y wasg Gymraeg am y Wladfa, yr Orsedd, pobl a lleoedd.",
+    "pie": "Amgueddfa: pob casgliad"
   }
 }

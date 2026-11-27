@@ -1,12 +1,12 @@
 ---
-import Base from '../../layouts/Base.astro';
-import TimelineRow from '../../components/TimelineRow.astro';
-import { editionCover, editionItems, editionState, festivals, firstMaterialYear, items, thumbUrl, undocumented, yearRange } from '../../lib/catalog';
-import { t } from '../../lib/i18n';
-import { url } from '../../lib/paths';
-import { CATEGORY_ORDER, docCount } from '../../lib/site';
-import { decades } from '../../lib/timeline';
-import type { FestivalSlug } from '../../lib/types';
+import Base from '../../../layouts/Base.astro';
+import TimelineRow from '../../../components/TimelineRow.astro';
+import { editionCover, editionItems, editionState, festivals, firstMaterialYear, items, thumbUrl, undocumented, yearRange } from '../../../lib/catalog';
+import { t } from '../../../lib/i18n';
+import { url } from '../../../lib/paths';
+import { CATEGORY_ORDER, docCount } from '../../../lib/site';
+import { decades } from '../../../lib/timeline';
+import type { FestivalSlug } from '../../../lib/types';
 
 export function getStaticPaths() {
   return festivals().map((f) => ({ params: { festival: f.slug } }));
@@ -67,5 +67,5 @@ const general = items().filter((i) => i.festival === slug && i.year === null).le
 </Base>
 
 <script>
-  import '../../scripts/edicion.ts';
+  import '../../../scripts/edicion.ts';
 </script>

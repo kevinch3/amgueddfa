@@ -1,10 +1,10 @@
 ---
-import Base from '../layouts/Base.astro';
-import FactEditor from '../components/FactEditor.astro';
-import { ALCANCES, CATEGORIES, FESTIVALS, MIME_EXT, TEXT_MAX } from '../lib/contrib';
-import { festivals, yearRange } from '../lib/catalog';
-import { t } from '../lib/i18n';
-import { url } from '../lib/paths';
+import Base from '../../layouts/Base.astro';
+import FactEditor from '../../components/FactEditor.astro';
+import { ALCANCES, CATEGORIES, FESTIVALS, MIME_EXT, TEXT_MAX } from '../../lib/contrib';
+import { festivals, yearRange } from '../../lib/catalog';
+import { t } from '../../lib/i18n';
+import { url } from '../../lib/paths';
 
 const TABS = ['subir', 'datos', 'recuerdo'] as const;
 const thisYear = new Date().getFullYear();
@@ -147,15 +147,15 @@ const firsts = Object.fromEntries(festivals().map((f) => [f.slug, yearRange(f.sl
 </Base>
 
 <script>
-  import { currentProfile } from '../lib/auth';
-  import { submit, submitFacts, type Kind } from '../lib/contrib';
-  import { t } from '../lib/i18n';
-  import { url } from '../lib/paths';
-  import { hasEditionPage } from '../lib/timeline';
-  import { mountFactEditor } from '../scripts/fact-editor';
-  import type { FestivalSlug } from '../lib/types';
-  import { gate, gateMessage } from '../scripts/ui';
-  import { agentReply } from '../lib/webmcp';
+  import { currentProfile } from '../../lib/auth';
+  import { submit, submitFacts, type Kind } from '../../lib/contrib';
+  import { t } from '../../lib/i18n';
+  import { url } from '../../lib/paths';
+  import { hasEditionPage } from '../../lib/timeline';
+  import { mountFactEditor } from '../../scripts/fact-editor';
+  import type { FestivalSlug } from '../../lib/types';
+  import { gate, gateMessage } from '../../scripts/ui';
+  import { agentReply } from '../../lib/webmcp';
 
   const TABS = ['subir', 'datos', 'recuerdo'];
   const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;

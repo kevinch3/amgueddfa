@@ -5,7 +5,7 @@ import { DEFAULT_LOCALE, LOCALES, LOCALE_INFO, _setCldr, formatDate, formatList,
 import { build as buildCldr, relativeKeys } from '../scripts/cldr_fallback.mjs';
 import cyCldr from '../src/i18n/cldr/cy.json';
 import { relativa } from '../src/lib/dates';
-import { alternates, localeFromPath, stripLocale, url } from '../src/lib/paths';
+import { alternates, isOldEisteddfodPath, localeFromPath, rootUrl, stripLocale, url } from '../src/lib/paths';
 import { countryName } from '../src/lib/places';
 import { fecha } from '../src/lib/dates';
 import { longDate } from '../src/lib/contrib';
@@ -147,15 +147,17 @@ describe('language helpers', () => {
   });
 
   it('url() prefixes pages with the language, never files', () => {
-    expect(url('/')).toBe('/');
-    expect(url('item/abc/')).toBe('/item/abc/');
-    expect(url('item/abc/', 'cy')).toBe('/cy/item/abc/');
-    expect(url('/', 'fr')).toBe('/fr/');
-    expect(url('contribuir?f=chubut&y=1937', 'sv')).toBe('/sv/contribuir?f=chubut&y=1937');
-    expect(url('/#buscados', 'zh')).toBe('/zh/#buscados');
-    for (const f of ['favicon.svg', 'contacto.png', 'datos/indice.json', 'media/abc/p01.webp']) expect(url(f, 'it')).toBe(`/${f}`);
+    expect(url('/')).toBe('/eisteddfod/');
+    expect(url('item/abc/')).toBe('/eisteddfod/item/abc/');
+    expect(url('item/abc/', 'cy')).toBe('/cy/eisteddfod/item/abc/');
+    expect(url('/', 'fr')).toBe('/fr/eisteddfod/');
+    expect(url('contribuir?f=chubut&y=1937', 'sv')).toBe('/sv/eisteddfod/contribuir?f=chubut&y=1937');
+    expect(url('/#buscados', 'zh')).toBe('/zh/eisteddfod/#buscados');
+    for (const f of ['favicon.svg', 'contacto.png', 'media/abc/p01.webp', 'llms.txt', 'pagefind/pagefind-ui.css']) expect(url(f, 'it')).toBe(`/${f}`);
+    // Open data belongs to the Eisteddfod collection: no language, but its collection (#189).
+    expect(url('datos/indice.json', 'it')).toBe('/eisteddfod/datos/indice.json');
     setLocale('en');
-    expect(url('ranking')).toBe('/en/ranking');
+    expect(url('ranking')).toBe('/en/eisteddfod/ranking');
   });
 
   it('reads and strips the language prefix of a path', () => {
@@ -167,6 +169,21 @@ describe('language helpers', () => {
     expect(stripLocale('/fr/')).toBe('/');
     expect(stripLocale('/zh')).toBe('/');
     expect(stripLocale('/item/x/')).toBe('/item/x/');
+  });
+
+  it('the Eisteddfod archive lives under /eisteddfod/; site-wide pages stay at the root (#189)', () => {
+    for (const p of ['ingresar', 'perfil?u=x', 'admin', 'objetivos#licencias', 'derechos', 'fuente/0123456789abcd/', 'privacidad']) expect(url(p, 'es'), p).toBe(`/${p}`);
+    for (const p of ['chubut/1937/', 'general/mimosa/', 'buscar', 'tareas', 'ranking', 'contribuir?f=x', 'item/abc/']) expect(url(p, 'es'), p).toBe(`/eisteddfod/${p}`);
+    expect(url('eisteddfod/chubut/', 'es')).toBe('/eisteddfod/chubut/'); // never twice
+    expect(rootUrl('es')).toBe('/');
+    expect(rootUrl('cy')).toBe('/cy/');
+    expect(isOldEisteddfodPath('chubut/1937/')).toBe(true);
+    expect(isOldEisteddfodPath('')).toBe(false);
+    expect(isOldEisteddfodPath('eisteddfod/chubut/')).toBe(false);
+    expect(isOldEisteddfodPath('fuente/x/')).toBe(false);
+    // The hub's language links stay on the hub.
+    expect(alternates('/cy/').find((x) => x.locale === 'es')!.href).toBe('/');
+    expect(alternates('/eisteddfod/').find((x) => x.locale === 'fr')!.href).toBe('/fr/eisteddfod/');
   });
 
   it('alternates() lists the same page in every language', () => {

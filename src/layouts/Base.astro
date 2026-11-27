@@ -9,7 +9,7 @@ import ReadingMenu from '../components/ReadingMenu.astro';
 import { CLAIM, WCAG } from '../lib/accesibilidad';
 import { LECTURA_KEY, OPCIONES } from '../lib/lectura';
 import { DEFAULT_LOCALE, LOCALE_INFO, locale, t } from '../lib/i18n';
-import { alternates, url } from '../lib/paths';
+import { alternates, rootUrl, url } from '../lib/paths';
 import { jsonForScript } from '../lib/contrib';
 import { absUrl } from '../lib/seo';
 import { TAGS_AT } from '../lib/catalog';
@@ -79,10 +79,10 @@ const webmcpToken = (import.meta.env.PUBLIC_WEBMCP_OT_TOKEN ?? '').trim();
     <meta name="amg-tags-at" content={TAGS_AT ?? ''} />
     <meta name="generator" content={Astro.generator} />
     <link rel="icon" href={url('favicon.svg')} type="image/svg+xml" />
-    <link rel="alternate" type="application/json" href={absUrl('datos/ediciones.json')} title={t('abiertos.ediciones')} />
-    <link rel="alternate" type="application/json" href={absUrl('datos/documentos.json')} title={t('abiertos.documentos')} />
+    <link rel="alternate" type="application/json" href={absUrl(url('datos/ediciones.json', 'es'))} title={t('abiertos.ediciones')} />
+    <link rel="alternate" type="application/json" href={absUrl(url('datos/documentos.json', 'es'))} title={t('abiertos.documentos')} />
     <link rel="help" type="text/plain" href={absUrl('llms.txt')} title="llms.txt" />
-    {markdown && <link rel="alternate" type="text/markdown" href={absUrl(markdown)} title="Markdown" />}
+    {markdown && <link rel="alternate" type="text/markdown" href={absUrl(url(markdown))} title="Markdown" />}
     {webmcpToken && <meta http-equiv="origin-trial" content={webmcpToken} />}
     <title>{fullTitle}</title>
     {analytics && analyticsToken && <Analytics token={analyticsToken} />}
@@ -123,6 +123,7 @@ const webmcpToken = (import.meta.env.PUBLIC_WEBMCP_OT_TOKEN ?? '').trim();
     </main>
     <footer class="site-foot">
       <div class="wrap">
+        <p><a href={rootUrl()}>{t('hub.pie')}</a></p>
         <nav class="pie-legal" aria-label={t('pie.legal')}>
           <ul>
             {(['objetivos', 'accesibilidad', 'derechos', 'privacidad', 'cookies', 'creditos'] as const).map((k) => (

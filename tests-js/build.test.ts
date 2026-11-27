@@ -15,7 +15,7 @@ import { transcribedIds, transcriptionDoc } from '../src/lib/transcripciones';
 import { PUBLIC_WINNERS, winnerIds, winnersDoc } from '../src/lib/ganadores';
 import { applyTags } from '../src/lib/tags';
 import type { FestivalSlug, Item } from '../src/lib/types';
-import { MEDIA_BASE } from '../src/lib/paths';
+import { MEDIA_BASE, collectionPrefix } from '../src/lib/paths';
 import { DEFAULT_LOCALE, LOCALES, LOCALE_INFO, setLocale, t } from '../src/lib/i18n';
 import { CLAIM, EVALUATED, WCAG } from '../src/lib/accesibilidad';
 import { AJUSTES, OPCIONES } from '../src/lib/lectura';
@@ -27,7 +27,22 @@ const catalog = (raw as { items: Item[] }).items;
 const placed = applyTags(catalog, approved as any[]);
 const FESTIVALS: FestivalSlug[] = ['chubut', 'juventud', 'mimosa', 'trevelin'];
 const festivalName: Record<FestivalSlug, string> = { chubut: 'Eisteddfod del Chubut', juventud: 'Eisteddfod de la Juventud', mimosa: 'Eisteddfod Mimosa Porth Madryn', trevelin: 'Eisteddfod de Trevelin' };
-const read = (p: string) => readFileSync(join(DIST, p), 'utf8');
+/**
+ * Where a page or file of the Eisteddfod archive is built since it moved under
+ * /eisteddfod/ (#189): "chubut/1937/index.html" → "eisteddfod/chubut/1937/index.html",
+ * "cy/item/x/index.html" → "cy/eisteddfod/item/x/index.html", "index.html" → the
+ * archive home. Site-wide paths stay as they are.
+ */
+const at = (p: string): string => {
+  const parts = p.replace(/^\/+/, '').split('/');
+  const lead = LOCALES.includes(parts[0] as never) && parts[0] !== DEFAULT_LOCALE ? [parts.shift()!] : [];
+  const first = parts[0] ?? '';
+  const moved = first === 'index.html' ? parts.length === 1 : first !== '' && collectionPrefix(first) !== '';
+  return [...lead, ...(moved ? ['eisteddfod'] : []), ...parts].join('/');
+};
+
+const distPath = (...parts: string[]) => join(DIST, at(join(...parts)));
+const read = (p: string) => readFileSync(distPath(p), 'utf8');
 /** Every built HTML page (media excluded). */
 const htmlFiles = (d = DIST): string[] =>
   readdirSync(d).flatMap((n) => {
@@ -60,6 +75,47 @@ describe('static build', () => {
     setLocale(DEFAULT_LOCALE);
   });
 
+  it('the Eisteddfod archive lives under /eisteddfod/, the root is the museum hub, old addresses forward (#189)', () => {
+    const raw = (p: string) => readFileSync(join(DIST, p), 'utf8');
+    // The hub links the collection; the archive home keeps the coverage grid.
+    expect(raw('index.html')).toContain('href="/eisteddfod/"');
+    expect(raw('index.html')).not.toContain('data-cell');
+    expect(raw('eisteddfod/index.html')).toContain('data-cell');
+    expect(raw('cy/index.html')).toContain('href="/cy/eisteddfod/"');
+    // Every built archive page has a forwarding page at its old address, in every language.
+    const walk = (d: string): string[] => readdirSync(d).flatMap((n) => {
+      const p = join(d, n);
+      return statSync(p).isDirectory() ? walk(p) : [p];
+    });
+    let checked = 0;
+    for (const l of LOCALES) {
+      const root = join(DIST, ...(l === DEFAULT_LOCALE ? [] : [l]), 'eisteddfod');
+      for (const file of walk(root)) {
+        const rel = file.slice(root.length + 1);
+        if (rel === 'index.html') continue; // the old home is the hub now
+        const old = join(DIST, ...(l === DEFAULT_LOCALE ? [] : [l]), rel);
+        expect(existsSync(old), old).toBe(true);
+        checked++;
+      }
+    }
+    expect(checked).toBeGreaterThan(8000);
+    const stub = raw('chubut/1937/index.html');
+    expect(stub).toContain('location.replace("/eisteddfod/chubut/1937/" + location.search + location.hash)');
+    expect(stub).toContain('<link rel="canonical" href="https://amgueddfa.org/eisteddfod/chubut/1937/">');
+    expect(stub).toContain('<meta name="robots" content="noindex">');
+    expect(raw('cy/item/' + catalog.find((i) => !i.restricted)!.id + '/index.html')).toContain('location.replace("/cy/eisteddfod/item/');
+    // Files cannot forward: open data and Markdown twins are copied, byte for byte.
+    expect(raw('datos/ediciones.json')).toBe(raw('eisteddfod/datos/ediciones.json'));
+    expect(raw('chubut/1937.md')).toBe(raw('eisteddfod/chubut/1937.md'));
+    // Pages link straight to the new addresses, never through a forwarding page.
+    const OLD = /href="\/(?:[a-z]{2}\/)?(?:chubut|juventud|mimosa|trevelin|item|general|buscar|tareas|ranking|contribuir|datos)[/"?#]/;
+    for (const p of ['eisteddfod/index.html', 'eisteddfod/chubut/1937/index.html', 'cy/eisteddfod/chubut/index.html', 'ingresar/index.html', 'objetivos/index.html', 'index.html']) {
+      expect(raw(p), p).not.toMatch(OLD);
+    }
+    // A missing old-shaped address still finds its way (404 fallback).
+    expect(raw('404.html')).toContain("'eisteddfod/'");
+  });
+
   it('edition page lists its programa with media', () => {
     const html = read('chubut/2024/index.html');
     expect(html).toContain('Programa');
@@ -81,11 +137,11 @@ describe('static build', () => {
   });
 
   it('trevelin 2011 edition exists', () => {
-    expect(existsSync(join(DIST, 'trevelin/2011/index.html'))).toBe(true);
+    expect(existsSync(distPath('trevelin/2011/index.html'))).toBe(true);
   });
 
   it('every catalog id has an item page', () => {
-    const missing = catalog.filter((i) => !existsSync(join(DIST, 'item', i.id, 'index.html')));
+    const missing = catalog.filter((i) => !existsSync(distPath('item', i.id, 'index.html')));
     expect(missing.map((i) => i.id)).toEqual([]);
   });
 
@@ -121,8 +177,8 @@ describe('static build', () => {
 
   it('every festival has a timeline and a general page; edition pages carry mount points', () => {
     for (const f of FESTIVALS) {
-      expect(existsSync(join(DIST, f, 'index.html')), f).toBe(true);
-      expect(existsSync(join(DIST, 'general', f, 'index.html')), f).toBe(true);
+      expect(existsSync(distPath(f, 'index.html')), f).toBe(true);
+      expect(existsSync(distPath('general', f, 'index.html')), f).toBe(true);
       const [a, b] = range(f);
       const page = read(`${f}/index.html`);
       const rows = page.match(/<li class="tl-[a-z_]+" data-festival=/g) ?? [];
@@ -213,15 +269,15 @@ describe('static build', () => {
     expect(admin).toContain('id="apanel-videos"');
     expect(read('chubut/2024/index.html')).toContain('data-rep-editar');
     for (const f of ['juventud', 'mimosa']) {
-      for (const y of readdirSync(join(DIST, f))) {
+      for (const y of readdirSync(distPath(f))) {
         const p = `${f}/${y}/index.html`;
-        if (existsSync(join(DIST, p))) expect(read(p), p).not.toContain('data-rep-editar');
+        if (existsSync(distPath(p))) expect(read(p), p).not.toContain('data-rep-editar');
       }
     }
   });
 
   it('perfil links video corrections to the moment', () => {
-    const dir = join(DIST, '_astro');
+    const dir = distPath('_astro');
     const js = readdirSync(dir).filter((n) => n.startsWith('perfil.astro') && n.endsWith('.js')).map((n) => readFileSync(join(dir, n), 'utf8')).join('');
     expect(js).toContain('video_text');
     expect(js).toMatch(/video-hash\.[\w-]+\.js/);
@@ -236,7 +292,7 @@ describe('static build', () => {
 
   it('pages carry canonical, social tags and structured data; private pages are noindex', () => {
     const year = read('chubut/1937/index.html');
-    expect(year).toContain('<link rel="canonical" href="https://amgueddfa.org/chubut/1937/"');
+    expect(year).toContain('<link rel="canonical" href="https://amgueddfa.org/eisteddfod/chubut/1937/"');
     expect(year).toContain('<meta property="og:title"');
     expect(year).toContain('"@type":"Event"');
     expect(year).toContain('"@type":"BreadcrumbList"');
@@ -247,8 +303,8 @@ describe('static build', () => {
     expect(year).toMatch(/<meta name="description" content="Eisteddfod del Chubut 1937\./);
     // An Event always has what Google requires: a date and a place (#16); and every edition with both is one.
     let events = 0;
-    for (const f of readdirSync(DIST).filter((d) => statSync(join(DIST, d)).isDirectory())) {
-      for (const y of readdirSync(join(DIST, f)).filter((d) => /^\d{4}$/.test(d) && existsSync(join(DIST, f, d, 'index.html')))) {
+    for (const f of readdirSync(DIST).filter((d) => statSync(distPath(d)).isDirectory())) {
+      for (const y of readdirSync(distPath(f)).filter((d) => /^\d{4}$/.test(d) && existsSync(distPath(f, d, 'index.html')))) {
         const html = read(`${f}/${y}/index.html`);
         if (!html.includes('"@type":"Event"')) continue;
         events++;
@@ -259,7 +315,7 @@ describe('static build', () => {
       }
     }
     expect(events).toBeGreaterThan(0);
-    expect(readdirSync(join(DIST, 'item')).filter((id) => existsSync(join(DIST, 'item', id, 'index.html'))).some((id) => read(`item/${id}/index.html`).includes('"@type":"Event"'))).toBe(false);
+    expect(readdirSync(distPath('item')).filter((id) => existsSync(distPath('item', id, 'index.html'))).some((id) => read(`item/${id}/index.html`).includes('"@type":"Event"'))).toBe(false);
     const facts = (approved as any[]).filter((x) => x.type === 'fact');
     for (const c of facts.filter((x) => x.payload?.field === 'start_date')) {
       const venue = facts.some((x) => x.festival === c.festival && x.year === c.year && x.payload?.field === 'venue');
@@ -305,8 +361,8 @@ describe('static build', () => {
   });
 
   it('site search: one Spanish Pagefind index over year and document pages, a /buscar/ page in every language', () => {
-    expect(existsSync(join(DIST, 'pagefind', 'pagefind-ui.js'))).toBe(true);
-    expect(existsSync(join(DIST, 'pagefind', 'pagefind-entry.json'))).toBe(true);
+    expect(existsSync(distPath('pagefind', 'pagefind-ui.js'))).toBe(true);
+    expect(existsSync(distPath('pagefind', 'pagefind-entry.json'))).toBe(true);
     const entry = JSON.parse(read('pagefind/pagefind-entry.json'));
     expect(Object.keys(entry.languages)).toEqual(['es']);
     // Spanish pages are indexed; the translations (same documents) are not, so results are not repeated 7 times.
@@ -315,12 +371,12 @@ describe('static build', () => {
     const pub = catalog.find((i) => !i.restricted && !i.hidden)!;
     expect(read(`item/${pub.id}/index.html`)).toContain('data-pagefind-body');
     for (const i of catalog.filter((x) => x.restricted || x.hidden)) {
-      if (existsSync(join(DIST, 'item', i.id, 'index.html'))) expect(read(`item/${i.id}/index.html`), i.id).not.toContain('data-pagefind-body');
+      if (existsSync(distPath('item', i.id, 'index.html'))) expect(read(`item/${i.id}/index.html`), i.id).not.toContain('data-pagefind-body');
     }
     for (const page of ['index.html', 'tareas/index.html', 'ranking/index.html']) expect(read(page), page).not.toContain('data-pagefind-body');
     expect(read('buscar/index.html')).toContain('id="buscador"');
     expect(read('cy/buscar/index.html')).toContain('data-prefix="/cy/"');
-    expect(read('index.html')).toContain('href="/buscar"');
+    expect(read('index.html')).toContain('href="/eisteddfod/buscar"');
   });
 
   it('Markdown twins: one per year page and public document, never a restricted one', () => {
@@ -328,21 +384,21 @@ describe('static build', () => {
     expect(yearMd).toMatch(/^---\n/);
     expect(yearMd).toContain('# Eisteddfod del Chubut 1937');
     expect(yearMd).toContain('realizada: true');
-    expect(read('chubut/1937/index.html')).toContain('<link rel="alternate" type="text/markdown" href="https://amgueddfa.org/chubut/1937.md"');
+    expect(read('chubut/1937/index.html')).toContain('<link rel="alternate" type="text/markdown" href="https://amgueddfa.org/eisteddfod/chubut/1937.md"');
     expect(read('chubut/1865.md')).toContain('realizada: null');
     for (const f of ['chubut', 'juventud', 'mimosa', 'trevelin']) {
-      for (const y of readdirSync(join(DIST, f)).filter((d) => /^\d{4}$/.test(d))) expect(existsSync(join(DIST, f, `${y}.md`)), `${f} ${y}`).toBe(true);
+      for (const y of readdirSync(distPath(f)).filter((d) => /^\d{4}$/.test(d))) expect(existsSync(distPath(f, `${y}.md`)), `${f} ${y}`).toBe(true);
     }
     const pub = catalog.find((i) => !i.restricted && !i.hidden && transcribedIds().includes(i.id))!;
     const itemMd = read(`item/${pub.id}.md`);
     expect(itemMd).toContain('## Transcripción');
     expect(itemMd).toContain('Derechos del documento:');
-    for (const i of catalog.filter((x) => x.restricted || x.hidden)) expect(existsSync(join(DIST, 'item', `${i.id}.md`)), i.id).toBe(false);
+    for (const i of catalog.filter((x) => x.restricted || x.hidden)) expect(existsSync(distPath('item', `${i.id}.md`)), i.id).toBe(false);
     // No restricted id leaks into any edition twin.
     const restricted = catalog.filter((x) => x.restricted).map((x) => x.id);
     for (const f of ['chubut', 'juventud', 'mimosa', 'trevelin']) {
-      for (const md of readdirSync(join(DIST, f)).filter((d) => d.endsWith('.md'))) {
-        const body = readFileSync(join(DIST, f, md), 'utf8');
+      for (const md of readdirSync(distPath(f)).filter((d) => d.endsWith('.md'))) {
+        const body = readFileSync(distPath(f, md), 'utf8');
         for (const id of restricted) expect(body, `${f}/${md}`).not.toContain(id);
       }
     }
@@ -362,13 +418,13 @@ describe('static build', () => {
     expect(robots).toContain('User-agent: Google-Extended');
 
     const sitemap = read('sitemap.xml');
-    expect(sitemap).toContain('<loc>https://amgueddfa.org/chubut/1937/</loc>');
+    expect(sitemap).toContain('<loc>https://amgueddfa.org/eisteddfod/chubut/1937/</loc>');
     const pub = catalog.find((i) => !i.restricted)!;
-    expect(sitemap).toContain(`<loc>https://amgueddfa.org/item/${pub.id}/</loc>`);
+    expect(sitemap).toContain(`<loc>https://amgueddfa.org/eisteddfod/item/${pub.id}/</loc>`);
     expect(sitemap).not.toContain('/admin/');
     expect(sitemap).not.toContain('/contribuir/');
     // Years with nothing in the archive (no documents, no approved facts) keep their page but stay out of the sitemap.
-    expect(sitemap).toContain('<loc>https://amgueddfa.org/chubut/1865/</loc>');
+    expect(sitemap).toContain('<loc>https://amgueddfa.org/eisteddfod/chubut/1865/</loc>');
     const emptyYear = (eds0: any) => eds0.ediciones.find((e: any) => e.documentos === 0 && e.datos.length === 0);
     const empty = emptyYear(JSON.parse(read('datos/ediciones.json')));
     expect(empty).toBeTruthy();
@@ -389,7 +445,7 @@ describe('static build', () => {
     expect(docs.documentos.some((d: any) => d.tiene_transcripcion)).toBe(true);
     expect(read('llms.txt')).toContain('realizada');
     expect(read('llms.txt')).toContain('.md');
-    expect(e1937.url).toBe('https://amgueddfa.org/chubut/1937/');
+    expect(e1937.url).toBe('https://amgueddfa.org/eisteddfod/chubut/1937/');
     // Documents count catalog items plus approved community uploads of that year.
     for (const e of eds.ediciones) {
       const ups = (approved as any[]).filter((c) => c.type === 'upload' && c.festival === e.eisteddfod && c.year === e.ano).length;
@@ -415,8 +471,8 @@ describe('static build', () => {
     }
 
     const llms = read('llms.txt');
-    expect(llms).toContain('https://amgueddfa.org/datos/ediciones.json');
-    expect(llms).toContain('https://amgueddfa.org/datos/documentos.json');
+    expect(llms).toContain('https://amgueddfa.org/eisteddfod/datos/ediciones.json');
+    expect(llms).toContain('https://amgueddfa.org/eisteddfod/datos/documentos.json');
   });
 
   it('upload form asks what part of the programa is uploaded', () => {
@@ -432,7 +488,7 @@ describe('static build', () => {
       const m = html.match(/href="\/fuente\/([0-9a-f]{14})\/"/);
       expect(m, i.id).not.toBeNull();
       const page = read(`fuente/${m![1]}/index.html`);
-      expect(page).toContain(`href="/item/${i.id}/"`);
+      expect(page).toContain(`href="/eisteddfod/item/${i.id}/"`);
       if (i.source_url) expect(page).toContain(`href="${i.source_url.replace(/&/g, '&amp;')}"`);
     }
     const names = [...new Set((approved as { display_name: string | null }[]).map((c) => c.display_name).filter((n): n is string => Boolean(n)))];
@@ -441,18 +497,18 @@ describe('static build', () => {
     for (const f of FESTIVALS) {
       const [a, b] = range(f);
       for (let y = a; y <= b; y++) {
-        const p = join(DIST, f, String(y), 'index.html');
+        const p = distPath(f, String(y), 'index.html');
         if (!existsSync(p)) continue;
         const html = readFileSync(p, 'utf8').replace(/<script[\s\S]*?<\/script>/g, '');
         for (const n of names) expect(html, `${f} ${y}`).not.toContain(`Aportó ${n}`);
       }
     }
-    const all = readdirSync(join(DIST, 'fuente')).map((d) => read(`fuente/${d}/index.html`)).join('\n');
+    const all = readdirSync(distPath('fuente')).map((d) => read(`fuente/${d}/index.html`)).join('\n');
     for (const n of names) expect(all).toContain(n);
   });
 
   it('game pages exist and the tasks feed carries only public year_inferred images', () => {
-    for (const p of ['perfil', 'ranking', 'tareas']) expect(existsSync(join(DIST, p, 'index.html')), p).toBe(true);
+    for (const p of ['perfil', 'ranking', 'tareas']) expect(existsSync(distPath(p, 'index.html')), p).toBe(true);
     const html = read('tareas/index.html');
     const m = html.match(/<script type="application\/json" id="tareas-data">([\s\S]*?)<\/script>/);
     expect(m).not.toBeNull();
@@ -497,7 +553,7 @@ describe('static build', () => {
     expect(files.length).toBeGreaterThan(100);
     const hits = files.filter((f) => /info@|info\s*(\(at\)|\[at\])/i.test(readFileSync(f, 'utf8')));
     expect(hits).toEqual([]);
-    expect(existsSync(join(DIST, 'contacto.png'))).toBe(true);
+    expect(existsSync(distPath('contacto.png'))).toBe(true);
     const home = read('index.html');
     expect(home).toMatch(/<img[^>]*contacto\.png[^>]*alt="Correo de contacto del archivo"/);
     expect(home).not.toContain('mailto:');
@@ -547,7 +603,7 @@ describe('static build', () => {
       }
     }
     // Every exported video lands on a page that exists.
-    for (const v of videos) expect(existsSync(join(DIST, v.festival, String(v.year), 'index.html')), `${v.festival} ${v.year}`).toBe(true);
+    for (const v of videos) expect(existsSync(distPath(v.festival, String(v.year), 'index.html')), `${v.festival} ${v.year}`).toBe(true);
   });
 
   it('a hidden document keeps its page, with a notice and noindex, and no edition page links it', () => {
@@ -555,7 +611,7 @@ describe('static build', () => {
       const page = read(`item/${i.id}/index.html`);
       expect(page, i.id).toContain('data-retirado');
       expect(page, i.id).toContain('name="robots" content="noindex"');
-      if (i.year) expect(read(`${i.festival}/${i.year}/index.html`), i.id).not.toContain(`href="/item/${i.id}/"`);
+      if (i.year) expect(read(`${i.festival}/${i.year}/index.html`), i.id).not.toContain(`href="/eisteddfod/item/${i.id}/"`);
     }
   });
 
@@ -579,9 +635,9 @@ describe('static build', () => {
 
   it('browser scripts never bundle the video list or the approved export', () => {
     const vids = (videosData as { videos: Video[] }).videos;
-    const chunks = readdirSync(join(DIST, '_astro')).filter((n) => n.endsWith('.js'));
+    const chunks = readdirSync(distPath('_astro')).filter((n) => n.endsWith('.js'));
     for (const n of chunks) {
-      const js = readFileSync(join(DIST, '_astro', n), 'utf8');
+      const js = readFileSync(distPath('_astro', n), 'utf8');
       expect(vids.slice(0, 50).filter((v) => js.includes(v.id)), n).toEqual([]);
       expect((approved as { id: string }[]).filter((c) => js.includes(c.id)).map((c) => c.id), n).toEqual([]);
     }
@@ -599,7 +655,7 @@ describe('static build', () => {
       expect(page).toContain('class="tr-lista"');
       // Every image of a multi-image document links the others.
       if (transcriptionDoc(id)!.items.length > 1) expect(page, id).toContain('Esta transcripción abarca');
-      if (item!.year) expect(read(`${item!.festival}/${item!.year}/index.html`)).toContain(`href="/item/${id}/"`);
+      if (item!.year) expect(read(`${item!.festival}/${item!.year}/index.html`)).toContain(`href="/eisteddfod/item/${id}/"`);
       if (item!.year) expect(read(`${item!.festival}/${item!.year}/index.html`)).toContain('class="tr-detalle"');
     }
     // A web programa with a transcription drops the 600-character excerpt for it.
@@ -764,7 +820,7 @@ describe('static build', () => {
 
   it('legal pages exist, are linked from every page footer and the sitemap, and state the licences', () => {
     const pages = ['objetivos', 'derechos', 'privacidad', 'cookies', 'creditos'];
-    for (const p of pages) expect(existsSync(join(DIST, p, 'index.html')), p).toBe(true);
+    for (const p of pages) expect(existsSync(distPath(p, 'index.html')), p).toBe(true);
     for (const f of ['index.html', 'chubut/2024/index.html']) {
       const html = read(f);
       for (const p of pages) expect(html, `${f} → ${p}`).toMatch(new RegExp(`href="[^"]*/${p}/?"`));
@@ -779,7 +835,7 @@ describe('static build', () => {
     expect(obj).toMatch(/<a href="https:\/\/kevinroberts\.ar\/" rel="sponsored noopener"><img src="\/patrocinio-kr\.svg" alt="Kevin Roberts \(kevinroberts\.ar\)"/);
     expect(read('cy/objetivos/index.html')).toContain('Gyda chefnogaeth');
     expect(read('cy/objetivos/index.html')).toContain('src="/patrocinio-kr.svg"');
-    expect(existsSync(join(DIST, 'patrocinio-kr.svg'))).toBe(true);
+    expect(existsSync(distPath('patrocinio-kr.svg'))).toBe(true);
     for (const f of ['index.html', 'chubut/2024/index.html']) expect(read(f)).not.toContain('patrocinio-kr.svg');
     expect(read('derechos/index.html')).toContain('11.723');
     expect(read('privacidad/index.html')).toContain('25.326');
@@ -817,7 +873,7 @@ describe('static build', () => {
       const pages = spanishPages();
       expect(pages.length).toBeGreaterThan(500);
       for (const l of OTHERS) {
-        const missing = pages.map((p) => (p === '404.html' ? '404/index.html' : p)).filter((p) => !existsSync(join(DIST, l, p)));
+        const missing = pages.map((p) => (p === '404.html' ? '404/index.html' : p)).filter((p) => !existsSync(distPath(l, p)));
         expect(missing, l).toEqual([]);
       }
     });
@@ -825,8 +881,8 @@ describe('static build', () => {
     it('pages say their language, canonical address and every alternate', () => {
       for (const l of LOCALES) {
         const prefix = l === DEFAULT_LOCALE ? '' : `${l}/`;
-        for (const page of ['', 'chubut/1937/', `item/${pub().id}/`, 'privacidad/']) {
-          const html = read(`${prefix}${page}index.html`);
+        for (const page of ['', 'eisteddfod/', 'eisteddfod/chubut/1937/', `eisteddfod/item/${pub().id}/`, 'privacidad/']) {
+          const html = readFileSync(join(DIST, `${prefix}${page}index.html`), 'utf8');
           expect(html, `${l} ${page}`).toContain(`<html lang="${LOCALE_INFO[l].tag}"`);
           expect(html, `${l} ${page}`).toContain(`<link rel="canonical" href="${SITE}/${prefix}${page}"`);
           for (const a of LOCALES) {
@@ -881,7 +937,7 @@ describe('static build', () => {
 
     it('structured data points at the page in its language', () => {
       const year = read('en/chubut/1937/index.html');
-      expect(year).toContain(`"url":"${SITE}/en/chubut/1937/"`);
+      expect(year).toContain(`"url":"${SITE}/en/eisteddfod/chubut/1937/"`);
       expect(read('fr/index.html')).toContain(`"inLanguage":"fr"`);
     });
 
@@ -919,8 +975,9 @@ describe('static build', () => {
       const sitemap = read('sitemap.xml');
       for (const l of OTHERS) {
         expect(sitemap, l).toContain(`<loc>${SITE}/${l}/</loc>`);
-        expect(sitemap, l).toContain(`<loc>${SITE}/${l}/item/${pub().id}/</loc>`);
-        expect(sitemap, l).toContain(`<loc>${SITE}/${l}/chubut/1937/</loc>`);
+        expect(sitemap, l).toContain(`<loc>${SITE}/${l}/eisteddfod/</loc>`);
+        expect(sitemap, l).toContain(`<loc>${SITE}/${l}/eisteddfod/item/${pub().id}/</loc>`);
+        expect(sitemap, l).toContain(`<loc>${SITE}/${l}/eisteddfod/chubut/1937/</loc>`);
       }
       for (const p of ['admin', 'perfil', 'ingresar', 'contribuir']) expect(sitemap).not.toContain(`/${p}/`);
       for (const i of catalog.filter((x) => x.restricted)) expect(sitemap, i.id).not.toContain(`/item/${i.id}/`);
@@ -988,7 +1045,7 @@ describe('static build', () => {
         // Spanish interface strings this language words differently, cut at their {placeholders}.
         const needles = [...new Set(es.filter(([k, v]) => own.get(k) !== v && !v.startsWith('http')).flatMap(([, v]) => v.split(/\{\w+\}/).map((x) => x.trim())).filter((x) => x.length >= 12))];
         const leaks: string[] = [];
-        for (const file of htmlFiles(join(DIST, l))) {
+        for (const file of htmlFiles(distPath(l))) {
           pages++;
           let text = pageText(readFileSync(file, 'utf8'), LOCALE_INFO[l].tag.split('-')[0]);
           for (const c of content) text = text.split(c).join(' ');
@@ -1001,10 +1058,10 @@ describe('static build', () => {
     });
 
     it('a browser loads only its page language: each language is its own chunk', () => {
-      const chunks = readdirSync(join(DIST, '_astro')).filter((n) => n.endsWith('.js'));
+      const chunks = readdirSync(distPath('_astro')).filter((n) => n.endsWith('.js'));
       for (const l of OTHERS) expect(chunks.some((n) => n.startsWith(`${LOCALE_INFO[l].tag}.`)), l).toBe(true);
       const english = tIn('en', 'legal.cookies.analitica_titulo');
-      const holders = chunks.filter((n) => readFileSync(join(DIST, '_astro', n), 'utf8').includes(english));
+      const holders = chunks.filter((n) => readFileSync(distPath('_astro', n), 'utf8').includes(english));
       expect(holders.length).toBe(1);
       expect(holders[0].startsWith('en-GB.')).toBe(true);
     });
@@ -1015,8 +1072,8 @@ describe('static build', () => {
     const pages = ['index.html', 'chubut/1937/index.html', 'contribuir/index.html', 'accesibilidad/index.html'];
 
     it('the accessibility statement exists in every language, is in the sitemap and linked from every footer', () => {
-      expect(existsSync(join(DIST, 'accesibilidad/index.html'))).toBe(true);
-      for (const l of OTHERS) expect(existsSync(join(DIST, l, 'accesibilidad/index.html')), l).toBe(true);
+      expect(existsSync(distPath('accesibilidad/index.html'))).toBe(true);
+      for (const l of OTHERS) expect(existsSync(distPath(l, 'accesibilidad/index.html')), l).toBe(true);
       expect(read('sitemap.xml')).toContain('/accesibilidad/</loc>');
       for (const f of ['index.html', 'chubut/1937/index.html', 'cy/index.html', 'zh/item/' + catalog.find((i) => !i.restricted)!.id + '/index.html']) {
         expect(read(f), f).toMatch(/<p class="pie-normas small">[\s\S]*?href="[^"]*\/accesibilidad"/);
@@ -1072,7 +1129,7 @@ describe('static build', () => {
     });
 
     it('WebMCP: tools are registered from every page, forms are agent-fillable but never auto-submitted', () => {
-      const chunks = readdirSync(join(DIST, '_astro')).filter((n) => n.endsWith('.js')).map((n) => readFileSync(join(DIST, '_astro', n), 'utf8'));
+      const chunks = readdirSync(distPath('_astro')).filter((n) => n.endsWith('.js')).map((n) => readFileSync(distPath('_astro', n), 'utf8'));
       for (const name of ['get_page_info', 'search_documents', 'list_editions', 'get_edition', 'open_page', 'set_language', 'set_reading_settings']) {
         expect(chunks.some((js) => js.includes(`"${name}"`) || js.includes(`'${name}'`) || js.includes('`' + name + '`')), name).toBe(true);
       }
@@ -1089,8 +1146,8 @@ describe('static build', () => {
 
     it('automation hints: open data, llms.txt and (only with a token) the WebMCP origin trial', () => {
       const html = read('index.html');
-      expect(html).toContain('<link rel="alternate" type="application/json" href="https://amgueddfa.org/datos/ediciones.json"');
-      expect(html).toContain('<link rel="alternate" type="application/json" href="https://amgueddfa.org/datos/documentos.json"');
+      expect(html).toContain('<link rel="alternate" type="application/json" href="https://amgueddfa.org/eisteddfod/datos/ediciones.json"');
+      expect(html).toContain('<link rel="alternate" type="application/json" href="https://amgueddfa.org/eisteddfod/datos/documentos.json"');
       expect(html).toContain('<link rel="help" type="text/plain" href="https://amgueddfa.org/llms.txt"');
       const root = join(__dirname, '..');
       const token = loadEnv('production', root, 'PUBLIC_').PUBLIC_WEBMCP_OT_TOKEN || process.env.PUBLIC_WEBMCP_OT_TOKEN;

@@ -1192,5 +1192,14 @@
     },
     "un_aporte": "1 aporte",
     "n_aportes": "{n} aportes"
+  },
+  "hub": {
+    "titulo": "Amgueddfa",
+    "lema": "Un museo digital de la historia de los galeses fuera de Gales, empezando por la Patagonia.",
+    "colecciones": "Colecciones",
+    "eisteddfod_titulo": "Eisteddfod",
+    "entrar": "Entrar a la colección del Eisteddfod",
+    "pronto": "Vendrán más colecciones: la prensa galesa sobre Y Wladfa, la Gorsedd, personas y lugares.",
+    "pie": "Amgueddfa: todas las colecciones"
   }
 }

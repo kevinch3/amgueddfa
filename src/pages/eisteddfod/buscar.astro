@@ -1,8 +1,8 @@
 ---
-import Base from '../layouts/Base.astro';
-import VideoSearch from '../components/VideoSearch.astro';
-import { t } from '../lib/i18n';
-import { url } from '../lib/paths';
+import Base from '../../layouts/Base.astro';
+import VideoSearch from '../../components/VideoSearch.astro';
+import { t } from '../../lib/i18n';
+import { rootUrl, url } from '../../lib/paths';
 
 // Pagefind builds one Spanish index at build time (package.json "build"); every
 // language's /buscar/ reads it and rewrites result links to its own pages.
@@ -19,7 +19,8 @@ const strings = {
   one_result: t('buscar.un_resultado'),
   searching: t('buscar.buscando'),
 };
-const prefix = url('/');
+// Pagefind indexes the Spanish pages; results get this page's language prefix.
+const prefix = rootUrl();
 ---
 <Base title={t('buscar.titulo')} description={t('buscar.ayuda')} current="buscar">
   <link slot="head" rel="stylesheet" href={url('pagefind/pagefind-ui.css')} />
@@ -103,7 +104,7 @@ const prefix = url('/');
     })();
   </script>
   <script>
-    import '../scripts/buscar-videos.ts';
+    import '../../scripts/buscar-videos.ts';
   </script>
 </Base>
 

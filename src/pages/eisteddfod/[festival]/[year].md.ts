@@ -1,14 +1,14 @@
 import type { APIRoute } from 'astro';
-import approvedRaw from '../../../data/approved/contributions.json';
-import { editionItems, editionState, editionStatus, festivals, yearRange } from '../../lib/catalog';
-import { factDisplay, forEdition, sortFacts, type Contribution } from '../../lib/contrib';
-import { t } from '../../lib/i18n';
-import { editionMarkdown } from '../../lib/markdown';
-import { url } from '../../lib/paths';
-import { absUrl } from '../../lib/seo';
-import { byTitle, stateLabel } from '../../lib/site';
-import { transcriptionDoc } from '../../lib/transcripciones';
-import type { FestivalSlug } from '../../lib/types';
+import approvedRaw from '../../../../data/approved/contributions.json';
+import { editionItems, editionState, editionStatus, festivals, yearRange } from '../../../lib/catalog';
+import { factDisplay, forEdition, sortFacts, type Contribution } from '../../../lib/contrib';
+import { t } from '../../../lib/i18n';
+import { editionMarkdown } from '../../../lib/markdown';
+import { url } from '../../../lib/paths';
+import { absUrl } from '../../../lib/seo';
+import { byTitle, stateLabel } from '../../../lib/site';
+import { transcriptionDoc } from '../../../lib/transcripciones';
+import type { FestivalSlug } from '../../../lib/types';
 
 /** Markdown twin of every year page (/chubut/1937.md): same years, same data. */
 export function getStaticPaths() {
@@ -35,7 +35,7 @@ export const GET: APIRoute = ({ params }) => {
   }));
   const body = editionMarkdown({
     name: fest.name, festival: slug, year, url: absUrl(url(`${slug}/${year}/`)), status, estado: state,
-    stateText: stateLabel(state, status), facts, docs, uploads: forEdition(approved, slug, year, 'upload').length, dataUrl: absUrl('datos/ediciones.json'),
+    stateText: stateLabel(state, status), facts, docs, uploads: forEdition(approved, slug, year, 'upload').length, dataUrl: absUrl(url('datos/ediciones.json', 'es')),
   });
   return new Response(body, { headers: { 'Content-Type': 'text/markdown; charset=utf-8' } });
 };

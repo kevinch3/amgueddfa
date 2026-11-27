@@ -1,11 +1,11 @@
 ---
-import Base from '../../layouts/Base.astro';
-import ItemCard from '../../components/ItemCard.astro';
-import { festivals, items } from '../../lib/catalog';
-import { t } from '../../lib/i18n';
-import { url } from '../../lib/paths';
-import { byTitle } from '../../lib/site';
-import type { FestivalSlug } from '../../lib/types';
+import Base from '../../../layouts/Base.astro';
+import ItemCard from '../../../components/ItemCard.astro';
+import { festivals, items } from '../../../lib/catalog';
+import { t } from '../../../lib/i18n';
+import { url } from '../../../lib/paths';
+import { byTitle } from '../../../lib/site';
+import type { FestivalSlug } from '../../../lib/types';
 
 export function getStaticPaths() {
   return festivals().map((f) => ({ params: { festival: f.slug } }));

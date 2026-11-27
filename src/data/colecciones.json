@@ -35,7 +35,10 @@
       ],
       "ganadores_publicos": true,
       "texto_de_videos": true,
-      "derechos_por_defecto": null,
+      "derechos_por_defecto": {
+        "licencia": "titulares-originales",
+        "titular": "La asociación organizadora u otros"
+      },
       "visibilidad_por_defecto": "publico",
       "abierta": "2026-11-13"
     },
@@ -55,7 +58,10 @@
       ],
       "ganadores_publicos": false,
       "texto_de_videos": false,
-      "derechos_por_defecto": null,
+      "derechos_por_defecto": {
+        "licencia": "titulares-originales",
+        "titular": "La asociación organizadora u otros"
+      },
       "visibilidad_por_defecto": "publico",
       "abierta": "2026-11-13"
     },
@@ -75,7 +81,10 @@
       ],
       "ganadores_publicos": false,
       "texto_de_videos": false,
-      "derechos_por_defecto": null,
+      "derechos_por_defecto": {
+        "licencia": "titulares-originales",
+        "titular": "La asociación organizadora u otros"
+      },
       "visibilidad_por_defecto": "publico",
       "abierta": "2026-11-13"
     },
@@ -95,7 +104,10 @@
       ],
       "ganadores_publicos": true,
       "texto_de_videos": true,
-      "derechos_por_defecto": null,
+      "derechos_por_defecto": {
+        "licencia": "titulares-originales",
+        "titular": "La asociación organizadora u otros"
+      },
       "visibilidad_por_defecto": "publico",
       "abierta": "2026-11-13"
     }

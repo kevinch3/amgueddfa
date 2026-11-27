@@ -1,4 +1,5 @@
 import { isPublic } from '../../../lib/visibilidad';
+import { derechosDe } from '../../../lib/derechos';
 import { festivals, items, pageUrls, thumbUrl } from '../../../lib/catalog';
 import { url } from '../../../lib/paths';
 import { absUrl, rightsText, TRANSCRIPTION_LICENSE } from '../../../lib/seo';
@@ -10,6 +11,7 @@ export function GET(): Response {
   const documentos = items().filter((i) => isPublic(i)).map((i) => {
     const thumb = thumbUrl(i);
     const transcrito = transcriptionDoc(i.id) !== null;
+    const d = derechosDe(i);
     return {
       id: i.id,
       titulo: i.title,
@@ -25,6 +27,10 @@ export function GET(): Response {
       fuente_url: i.source_url,
       // The document's own rights (never empty); its transcription is the site's, under CC BY-SA.
       derechos: rightsText(i.rights),
+      // Its licence code (lib/derechos.ts) and where it comes from: the document, its source or its collection.
+      licencia: d?.licencia ?? 'sin-declarar',
+      titular_derechos: d?.titular ?? null,
+      licencia_origen: d?.origen ?? null,
       sin_texto: Boolean(i.no_text),
       tiene_transcripcion: transcrito,
       ...(transcrito ? { licencia_transcripcion: TRANSCRIPTION_LICENSE } : {}),

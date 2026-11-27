@@ -77,6 +77,8 @@ export function itemMarkdown(o: {
   url: string;
   editionUrl: string | null;
   rights: string;
+  /** Licence code (lib/derechos.ts). */
+  license?: string;
   source: string | null;
   sourceUrl: string | null;
   note: string;
@@ -88,7 +90,7 @@ export function itemMarkdown(o: {
   ocr?: { n: number; text: string }[] | null;
 }): string {
   const out = [
-    frontMatter({ tipo: 'documento', id: o.id, eisteddfod: o.festival, ano: o.year, categoria: o.category, url: o.url, derechos: o.rights, transcrito: o.transcription !== null, texto_automatico: o.transcription === null && Boolean(o.ocr?.length) }),
+    frontMatter({ tipo: 'documento', id: o.id, eisteddfod: o.festival, ano: o.year, categoria: o.category, url: o.url, derechos: o.rights, ...(o.license ? { licencia: o.license } : {}), transcrito: o.transcription !== null, texto_automatico: o.transcription === null && Boolean(o.ocr?.length) }),
     `# ${o.title}`,
     '',
     `${o.festivalName}${o.year !== null ? ` ${o.year}` : ''} · ${o.category}`,

@@ -5,11 +5,12 @@ import { jsonForScript } from '../../lib/contrib';
 import { t } from '../../lib/i18n';
 import { ocrFor } from '../../lib/ocr';
 import { siteMedia, url } from '../../lib/paths';
-import { isHistory, isTaskCandidate } from '../../lib/tasks';
+import { isTaskCandidate } from '../../lib/tasks';
 import { transcriptionDoc } from '../../lib/transcripciones';
 
 // Only what a task card needs, so the page does not carry the whole catalog.
-// Quick tasks are for history: documents of the last 20 years are left out (#187).
+// The check cards are for history: documents of the last 20 years are left out (#187).
+// The transcription list below keeps every year (maintainer, 2026-11-27).
 const cards = items()
   .filter((i) => isTaskCandidate(i))
   .map((i) => ({
@@ -28,7 +29,7 @@ const cards = items()
 // every document gets one, programas first.
 const FIRST = ['programa', 'programa-del-dia'];
 const toTranscribe = items()
-  .filter((i) => !i.restricted && !i.hidden && isHistory(i.year) && ocrFor(i.id) !== null && transcriptionDoc(i.id) === null)
+  .filter((i) => !i.restricted && !i.hidden && ocrFor(i.id) !== null && transcriptionDoc(i.id) === null)
   .sort((a, b) => Number(!FIRST.includes(a.category)) - Number(!FIRST.includes(b.category)) || (a.year ?? 9999) - (b.year ?? 9999) || a.title.localeCompare(b.title, 'es', { numeric: true }));
 const byFestival = festivals().map(({ slug: f }) => ({ f, docs: toTranscribe.filter((i) => i.festival === f) })).filter((g) => g.docs.length);
 ---

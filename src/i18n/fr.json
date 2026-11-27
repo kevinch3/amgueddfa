@@ -9,9 +9,9 @@
     "sin_documentos": "Il n'y a pas encore de documents de cette année dans les archives : si vous avez le programme, des photos ou des informations, vous pouvez les ajouter."
   },
   "sitio": {
-    "nombre": "Amgueddfa Eisteddfod y Wladfa",
-    "descripcion": "Musée numérique des programmes et documents des Eisteddfodau de Patagonie.",
-    "subtitulo": "Musée des Eisteddfodau de Patagonie"
+    "nombre": "Amgueddfa",
+    "descripcion": "Musée numérique de l'histoire des Gallois hors du pays de Galles, à commencer par les Eisteddfodau de Patagonie.",
+    "subtitulo": "L'histoire galloise hors du pays de Galles"
   },
   "nav": {
     "inicio": "Accueil",
@@ -102,6 +102,7 @@
     "not_held": "N'a pas eu lieu"
   },
   "inicio": {
+    "titulo": "Amgueddfa Eisteddfod y Wladfa",
     "lema": "Programmes, règlements et documents des Eisteddfodau de Patagonie, conservés pour que chacun puisse les voir.",
     "contador": "À ce jour, nous avons réuni {docs} documents de {festivales} eisteddfodau, depuis {desde}.",
     "contador_completos": "Pour {n} éditions, nous avons déjà le programme complet.",

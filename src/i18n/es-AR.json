@@ -9,9 +9,9 @@
     "sin_documentos": "Todavía no hay documentos de este año en el archivo: si tenés el programa, fotos o datos, podés sumarlos."
   },
   "sitio": {
-    "nombre": "Amgueddfa Eisteddfod y Wladfa",
-    "descripcion": "Museo digital de programas y documentos de los Eisteddfodau de la Patagonia.",
-    "subtitulo": "Museo de los Eisteddfodau de la Patagonia"
+    "nombre": "Amgueddfa",
+    "descripcion": "Museo digital de la historia de los galeses fuera de Gales, empezando por los Eisteddfodau de la Patagonia.",
+    "subtitulo": "Historia galesa fuera de Gales"
   },
   "nav": {
     "inicio": "Inicio",
@@ -102,6 +102,7 @@
     "not_held": "No se realizó"
   },
   "inicio": {
+    "titulo": "Amgueddfa Eisteddfod y Wladfa",
     "lema": "Programas, bases y papeles de los Eisteddfodau de la Patagonia, guardados para que los vea cualquiera.",
     "contador": "Hasta hoy juntamos {docs} documentos de {festivales} eisteddfodau, desde {desde}.",
     "contador_completos": "De {n} ediciones ya tenemos el programa completo.",

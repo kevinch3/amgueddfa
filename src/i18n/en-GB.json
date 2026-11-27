@@ -9,9 +9,9 @@
     "sin_documentos": "There are no documents from this year in the archive yet: if you have the programme, photos or details, you can add them."
   },
   "sitio": {
-    "nombre": "Amgueddfa Eisteddfod y Wladfa",
-    "descripcion": "Digital museum of programmes and documents from the eisteddfodau of Patagonia.",
-    "subtitulo": "Museum of the Patagonian eisteddfodau"
+    "nombre": "Amgueddfa",
+    "descripcion": "Digital museum of the history of the Welsh outside Wales, starting with the eisteddfodau of Patagonia.",
+    "subtitulo": "Welsh history abroad"
   },
   "nav": {
     "inicio": "Home",
@@ -102,6 +102,7 @@
     "not_held": "Not held"
   },
   "inicio": {
+    "titulo": "Amgueddfa Eisteddfod y Wladfa",
     "lema": "Programmes, syllabuses and papers from the eisteddfodau of Patagonia, kept for anyone to see.",
     "contador": "So far we have gathered {docs} documents from {festivales} eisteddfodau, going back to {desde}.",
     "contador_completos": "We already have the complete programme for {n} eisteddfodau.",

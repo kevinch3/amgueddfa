@@ -9,9 +9,9 @@
     "sin_documentos": "Does dim dogfennau o'r flwyddyn hon yn yr archif eto: os oes gynnoch chi'r rhaglen, lluniau neu wybodaeth, mi fedrwch chi eu hychwanegu."
   },
   "sitio": {
-    "nombre": "Amgueddfa Eisteddfod y Wladfa",
-    "descripcion": "Amgueddfa ddigidol o raglenni a dogfennau eisteddfodau'r Wladfa.",
-    "subtitulo": "Amgueddfa Eisteddfodau'r Wladfa"
+    "nombre": "Amgueddfa",
+    "descripcion": "Amgueddfa ddigidol o hanes y Cymry y tu allan i Gymru, gan ddechrau gydag eisteddfodau'r Wladfa.",
+    "subtitulo": "Hanes y Cymry ar wasgar"
   },
   "nav": {
     "inicio": "Hafan",
@@ -102,6 +102,7 @@
     "not_held": "Ni chynhaliwyd"
   },
   "inicio": {
+    "titulo": "Amgueddfa Eisteddfod y Wladfa",
     "lema": "Rhaglenni, testunau a phapurau Eisteddfodau'r Wladfa, wedi'u cadw i bawb gael eu gweld.",
     "contador": "Hyd heddiw 'dan ni wedi casglu {docs} o ddogfennau o {festivales} eisteddfod, ers {desde}.",
     "contador_completos": "Mae gynnon ni'r rhaglen gyflawn yn barod ar gyfer {n} o eisteddfodau.",

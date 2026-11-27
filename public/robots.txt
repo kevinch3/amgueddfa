@@ -1,4 +1,4 @@
-# Amgueddfa Eisteddfod y Wladfa: everything here is open. Search engines, AI
+# Amgueddfa: everything here is open. Search engines, AI
 # assistants and AI crawlers are welcome to read, cite and reuse it.
 # Start with /llms.txt for a plain-text map of the site.
 #

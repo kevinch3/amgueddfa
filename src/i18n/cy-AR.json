@@ -222,9 +222,6 @@
   "pie": {
     "contacto_alt": "Cyfeiriad e-bost yr archif",
     "contacto_escribinos": "Sgwennwch aton ni",
-    "retiro_1": "Os ydych chi'n perthyn i un o'r cymdeithasau ac isio i ni gywiro neu dynnu dogfen, ",
-    "retiro_enlace": "rhowch wybod i ni",
-    "retiro_2": " ac mi drefnwn ni hynny.",
     "legal": "Gwybodaeth am yr archif",
     "normas": "Hygyrchedd: targed WCAG 2.2 AA",
     "ultimo_cambio": "Newid diwethaf: {cuando}",

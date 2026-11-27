@@ -222,9 +222,6 @@
   "pie": {
     "contacto_alt": "Correo de contacto del archivo",
     "contacto_escribinos": "Escribinos",
-    "retiro_1": "Si sos de una de las asociaciones y querés que corrijamos o retiremos algún documento, ",
-    "retiro_enlace": "avisanos",
-    "retiro_2": " y lo resolvemos.",
     "legal": "Información del archivo",
     "normas": "Accesibilidad: objetivo WCAG 2.2 AA",
     "ultimo_cambio": "Último cambio: {cuando}",

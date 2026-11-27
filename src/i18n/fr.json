@@ -222,9 +222,6 @@
   "pie": {
     "contacto_alt": "Adresse e-mail de contact des archives",
     "contacto_escribinos": "Écrivez-nous",
-    "retiro_1": "Si vous faites partie de l'une des associations et souhaitez que nous corrigions ou retirions un document, ",
-    "retiro_enlace": "prévenez-nous",
-    "retiro_2": " et nous nous en occuperons.",
     "legal": "Informations sur les archives",
     "normas": "Accessibilité : objectif WCAG 2.2 AA",
     "ultimo_cambio": "Dernière modification : {cuando}",

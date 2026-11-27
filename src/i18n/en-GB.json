@@ -222,9 +222,6 @@
   "pie": {
     "contacto_alt": "The archive's contact email address",
     "contacto_escribinos": "Write to us",
-    "retiro_1": "If you're from one of the associations and would like us to correct or remove a document, ",
-    "retiro_enlace": "let us know",
-    "retiro_2": " and we'll sort it out.",
     "legal": "About the archive",
     "normas": "Accessibility: WCAG 2.2 AA target",
     "ultimo_cambio": "Last change: {cuando}",

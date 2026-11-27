@@ -110,7 +110,12 @@ describe('static build', () => {
       expect(html).toContain(`¿Tenés material de antes de ${a}?`);
       expect(html).toContain(`aria-label="Contribuí al ${festivalName[f]}"`);
     }
-    expect(html).toContain('id="recientes"');
+    // Hidden for now (#183): "Programas que buscamos", its menu link, and "Últimos aportes".
+    expect(html).not.toContain('id="recientes"');
+    expect(html).not.toContain('id="buscados"');
+    expect(html).not.toContain('#buscados');
+    // The footer no longer carries the "correct or remove" line (#186).
+    expect(html).not.toContain('Si sos de una de las asociaciones');
   });
 
   it('every festival has a timeline and a general page; edition pages carry mount points', () => {
@@ -430,7 +435,6 @@ describe('static build', () => {
       expect(c.img.startsWith(`${MEDIA_BASE}/media/`)).toBe(true);
     }
     for (const i of catalog.filter((x) => x.restricted)) expect(html).not.toContain(i.id);
-    expect(read('index.html')).toContain('id="recientes-data"');
     // OCR-only documents are listed to transcribe; ones with a human transcription are not.
     const ocrIds = readdirSync('src/data/ocr').map((f) => f.replace(/\.json$/, ''));
     const listed = [...html.matchAll(/data-transcribir="([0-9a-f]{12})"/g)].map((x) => x[1]);

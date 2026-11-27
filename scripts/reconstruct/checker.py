@@ -101,7 +101,7 @@ def check_window(w: Window, reply: dict) -> list[str]:
             for fix in fixes:
                 to, frm = tokens(fix.get("to", "")), tokens(fix.get("from", ""))
                 welsh = line.get("lang") == "cy"
-                ok_to = [tok in w.context.words or tok in frm or (welsh and any(sounds_alike(f, tok) for f in frm)) for tok in to]
+                ok_to = [tok in w.context.words or tok in w.full_words or tok in frm or (welsh and any(sounds_alike(f, tok) for f in frm)) for tok in to]
                 if not to or not all(ok_to):
                     errors.append(f"rule 2: {where} fixes to words outside the word list: {fix.get('to')}")
                 elif not frm or any(tok not in heard for tok in frm):

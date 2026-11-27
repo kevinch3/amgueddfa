@@ -7,7 +7,7 @@ import json
 import re
 from typing import Callable, NamedTuple
 
-from scripts.reconstruct.context import Context, load_glossary, tokens, with_glossary
+from scripts.reconstruct.context import Context, load_glossary, relevant, tokens, with_glossary
 from scripts.reconstruct.sources import Line
 
 # Bump when prompt.md or schema.json change: every window is asked again.
@@ -21,6 +21,8 @@ class Window(NamedTuple):
     lines: tuple
     context: Context
     hash: str
+    legacy: str = ""  # the key before facts were filtered per window: replies cached under it stay usable
+    full_words: frozenset = frozenset()  # every name of the edition: what the checker accepts (not shown, not hashed)
 
 
 def _cut(starts: list[float], nominal: float) -> float:
@@ -44,12 +46,15 @@ def make_windows(lines: list[Line], duration: float, context_for: Callable[[floa
     out = []
     for a, b in zip(cuts, cuts[1:]):
         inside = tuple(l for l in lines if a - overlap <= l.t < b + overlap)
-        ctx = with_glossary(context_for(a, b), inside, glossary)
+        base = context_for(a, b)
+        ctx = with_glossary(relevant(base, inside), inside, glossary)
         # The fields the model sees, never a line's end (e): adding it to Line must not re-ask every window.
         # An alternative (sources.Line.alt) adds its partner's time, so windows without one keep their hash.
         seen = [[l.t, l.text, l.src, l.lang, l.conf] + ([l.alt] if l.alt is not None else []) for l in inside]
-        key = json.dumps([a, b, seen, ctx.text, PROMPT_VERSION], ensure_ascii=False, sort_keys=True)
-        out.append(Window(a, b, inside, ctx, hashlib.sha256(key.encode("utf-8")).hexdigest()[:16]))
+        key = lambda text: hashlib.sha256(json.dumps([a, b, seen, text, PROMPT_VERSION], ensure_ascii=False,
+                                                     sort_keys=True).encode("utf-8")).hexdigest()[:16]
+        full = with_glossary(base, inside, glossary)
+        out.append(Window(a, b, inside, ctx, key(ctx.text), key(full.text), full.words))
     return out
 
 

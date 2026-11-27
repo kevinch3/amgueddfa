@@ -202,3 +202,113 @@ def test_rules_lines_know_a_mixed_video(tmp_path, monkeypatch):
         seen.clear()
         reconstruct_video(repo, backup, video, ask=liar, replies=tmp_path / f"replies{flag}")
         assert seen and set(seen) == {flag}
+
+
+def test_replies_cached_under_the_legacy_key_are_reused(tmp_path):
+    """Cached before facts were filtered per window: found by the old key, never asked again."""
+    import hashlib
+    from scripts.reconstruct.windows import PROMPT_VERSION
+    repo, backup, video = _setup(tmp_path)
+    (repo / "data/approved/contributions.json").write_text(json.dumps([{
+        "type": "fact", "status": "approved", "festival": "chubut", "year": 2025,
+        "payload": {"field": "presentadores", "value": "Persona Inventada"}}]), encoding="utf-8")
+    calls = []
+    first = reconstruct_video(repo, backup, video, ask=echo_model(calls), replies=tmp_path / "replies")
+    cache = tmp_path / "replies/vid"
+    # Move every reply to the key the old code used (the whole context, the unheard fact included).
+    from scripts.reconstruct.sources import load_sources
+    from scripts.reconstruct.windows import make_windows
+    from scripts.reconstruct.context import video_context
+    from scripts.reconstruct_videos import _duration
+    stem = backup / "videos/x/clip_vid"
+    lines = load_sources(stem, "vid", repo / "data/letras")
+    ws = make_windows(lines, _duration(stem, lines), lambda a, b: video_context(repo, video, a, b))
+    assert all("Persona Inventada" not in w.context.text and w.legacy != w.hash for w in ws)
+    for w in ws:
+        p = cache / f"{w.hash}.json"
+        if p.exists():
+            p.rename(cache / f"{w.legacy}.json")
+    n = len(calls)
+    again = reconstruct_video(repo, backup, video, ask=echo_model(calls), replies=tmp_path / "replies")
+    assert len(calls) == n and again["seg"] == first["seg"]
+    assert all((cache / f"{w.hash}.json").exists() for w in ws if (cache / f"{w.legacy}.json").exists())
+
+
+def test_migrate_cache_copies_legacy_replies_without_asking(tmp_path):
+    from scripts.reconstruct.context import Context
+    from scripts.reconstruct.sources import Line
+    from scripts.reconstruct.windows import make_windows
+    from scripts.reconstruct_videos import migrate_cache
+    ctx = Context("Eisteddfod del Chubut 2025.\npresentadores: Persona Inventada", frozenset({"eisteddfod"}))
+    ws = make_windows([Line(5.0, "buenas noches", "yt_es", "es")], 60, lambda a, b: ctx, glossary=[])
+    cache = tmp_path / "c"
+    cache.mkdir()
+    (cache / f"{ws[0].legacy}.json").write_text('{"lines": []}', encoding="utf-8")
+    assert migrate_cache(ws, cache) == 1
+    assert (cache / f"{ws[0].hash}.json").read_text(encoding="utf-8") == '{"lines": []}'
+    assert migrate_cache(ws, cache) == 0
+
+
+def test_migration_from_an_older_facts_revision(tmp_path):
+    """A reply cached under an older revision's whole-context key is reused when the filtered context is the same."""
+    from scripts.reconstruct.context import Context
+    from scripts.reconstruct.sources import Line
+    from scripts.reconstruct.windows import make_windows
+    from scripts.reconstruct_videos import migrate_from
+    ls = [Line(5.0, "buenas noches", "yt_es", "es")]
+    old = make_windows(ls, 60, lambda a, b: Context("Eisteddfod del Chubut 2030.\nvenue: Lugar Viejo", frozenset()), glossary=[])
+    new = make_windows(ls, 60, lambda a, b: Context("Eisteddfod del Chubut 2030.\nvenue: Lugar Nuevo", frozenset()), glossary=[])
+    assert old[0].hash == new[0].hash and old[0].legacy != new[0].legacy
+    cache = tmp_path / "c"
+    cache.mkdir()
+    (cache / f"{old[0].legacy}.json").write_text('{"lines": []}', encoding="utf-8")
+    assert migrate_from(old, new, cache) == 1
+    assert (cache / f"{new[0].hash}.json").exists()
+
+
+def test_an_unreadable_cache_file_is_asked_again(tmp_path):
+    repo, backup, video = _setup(tmp_path)
+    calls = []
+    reconstruct_video(repo, backup, video, ask=echo_model(calls), replies=tmp_path / "replies")
+    n = len(calls)
+    broken = sorted((tmp_path / "replies/vid").glob("*.json"))[0]
+    broken.write_text('{"lines": [', encoding="utf-8")
+    reconstruct_video(repo, backup, video, ask=echo_model(calls), replies=tmp_path / "replies")
+    assert len(calls) == n + 1 and json.loads(broken.read_text(encoding="utf-8"))["lines"] is not None
+
+
+def test_a_legacy_reply_that_needs_a_dropped_name_is_not_copied(tmp_path):
+    """A reply fixing into a name the filtered context leaves out would break if that fact were corrected
+    later (its key ignores the fact): it is asked again instead of copied."""
+    from scripts.reconstruct.context import Context
+    from scripts.reconstruct.sources import Line
+    from scripts.reconstruct.windows import make_windows
+    from scripts.reconstruct_videos import cached_reply, migrate_cache
+    ctx = Context("Eisteddfod del Chubut 2030.\npresentadores: Antonio Pérez", frozenset({"antonio", "perez"}))
+    ws = make_windows([Line(5.0, "buenas noches con tonio", "yt_es", "es")], 60, lambda a, b: ctx, glossary=[])
+    w = ws[0]
+    assert "Antonio" not in w.context.text and w.hash != w.legacy
+    cache = tmp_path / "c"
+    cache.mkdir()
+    reply = {"lines": [{"t": 5.0, "lang": "es", "text": "buenas noches con Antonio", "src": ["yt_es"],
+                        "fixes": [{"from": "tonio", "to": "Antonio"}]}]}
+    (cache / f"{w.legacy}.json").write_text(json.dumps(reply), encoding="utf-8")
+    assert migrate_cache(ws, cache) == 0 and cached_reply(cache, w) is None
+    (cache / f"{w.hash}.json").write_text(json.dumps(reply), encoding="utf-8")  # copied by an earlier migration
+    assert migrate_cache(ws, cache) == 0 and not (cache / f"{w.hash}.json").exists()
+
+
+def test_dry_run_counts_unsafe_legacy_replies_as_to_ask(tmp_path):
+    from scripts.reconstruct.context import Context
+    from scripts.reconstruct.sources import Line
+    from scripts.reconstruct.windows import make_windows
+    from scripts.reconstruct_videos import would_reuse
+    ctx = Context("Eisteddfod del Chubut 2030.\npresentadores: Antonio Pérez", frozenset({"antonio", "perez"}))
+    (w,) = make_windows([Line(5.0, "buenas noches con tonio", "yt_es", "es")], 60, lambda a, b: ctx, glossary=[])
+    cache = tmp_path / "c"
+    cache.mkdir()
+    (cache / f"{w.legacy}.json").write_text(json.dumps({"lines": [{"t": 5.0, "lang": "es", "text": "con Antonio", "src": ["yt_es"],
+                                                                    "fixes": [{"from": "tonio", "to": "Antonio"}]}]}), encoding="utf-8")
+    assert not would_reuse(cache, w)
+    (cache / f"{w.legacy}.json").write_text('{"lines": []}', encoding="utf-8")
+    assert would_reuse(cache, w) and not (cache / f"{w.hash}.json").exists()

@@ -1,3 +1,4 @@
+import { isPublic } from '../../../lib/visibilidad';
 import approvedRaw from '../../../../data/approved/contributions.json';
 import editionsRaw from '../../../../data/approved/editions.json';
 import { editionCover, editionItems, editionState, editionYears, festivals } from '../../../lib/catalog';
@@ -26,8 +27,8 @@ export function GET(): Response {
         realizada: facts.held ?? null,
         tapa: cover ? absUrl(cover.page) : null,
         // Some public document of this edition has a transcription.
-        tiene_transcripcion: editionItems(f.slug, year).some((i) => !i.restricted && transcriptionDoc(i.id) !== null),
-        documentos: editionItems(f.slug, year).filter((i) => !i.restricted).length + forEdition(approved, f.slug, year, 'upload').length,
+        tiene_transcripcion: editionItems(f.slug, year).some((i) => isPublic(i) && transcriptionDoc(i.id) !== null),
+        documentos: editionItems(f.slug, year).filter((i) => isPublic(i)).length + forEdition(approved, f.slug, year, 'upload').length,
         datos: sortFacts(forEdition(approved, f.slug, year, 'fact')).map(factRecord),
       };
     });

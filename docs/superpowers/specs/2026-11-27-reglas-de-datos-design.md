@@ -140,8 +140,10 @@ One field replaces `restricted`:
 
 `publico_desde` (a date) makes a record behave as `solo_ficha` or `privado` until that
 day and as `publico` after it; the level it holds before that day is the stored
-`visibilidad`. The date is evaluated at build time, so a record opens on the first
-deploy on or after the date. This is the mechanism #29 needs for privacy periods; the
+`visibilidad`. The date is evaluated by the catalog builder, not the site build
+(builder's call, 2026-11-27): the same run moves the record's files from
+`.restricted/` to the public bucket, so a page never opens before its files. A
+record opens on the first catalog build on or after the date. This is the mechanism #29 needs for privacy periods; the
 periods themselves (how many years, for whom) remain #29's decision.
 
 Mapping of today's data:

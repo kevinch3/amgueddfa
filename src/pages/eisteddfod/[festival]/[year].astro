@@ -1,4 +1,5 @@
 ---
+import { isPublic } from '../../../lib/visibilidad';
 import Bloque from '../../../components/Bloque.astro';
 import Base from '../../../layouts/Base.astro';
 import EmptySlot from '../../../components/EmptySlot.astro';
@@ -91,7 +92,7 @@ const editionStatus = (editionsStatic as { festival: string; year: number; statu
   .find((e) => e.festival === slug && e.year === year)?.status ?? null;
 const known = editionFacts(approved as Contribution[], slug, year, editionStatus);
 // Restricted documents are not counted, like /datos/ediciones.json (#19).
-const seoDescription = editionDescription(fest.name, year, state, known, list.filter((i) => !i.restricted).length + uploads.length);
+const seoDescription = editionDescription(fest.name, year, state, known, list.filter((i) => isPublic(i)).length + uploads.length);
 const seoLd = ldGraph(
   editionJsonLd({ name: fest.name, year, url: absUrl(url(`${slug}/${year}/`)), image: cover ? absUrl(cover.page) : null, facts: known, description: seoDescription }),
   // The same crumbs as the visible <nav class="crumbs"> below.
@@ -109,10 +110,10 @@ const onePerDoc = (items: typeof list, docOf: (id: string) => DocText | null) =>
     return [{ item: i, text: d.text, images: d.items.length, doc: d.id }];
   });
 };
-const transcribedIn = (c: string) => onePerDoc(list.filter((i) => i.category === c && !i.restricted && !mediaIds.has(i.id)), transcriptionDoc);
+const transcribedIn = (c: string) => onePerDoc(list.filter((i) => i.category === c && isPublic(i) && !mediaIds.has(i.id)), transcriptionDoc);
 // Published winners (Chubut, Trevelin): folded under Resultados; the documents stay restricted.
 const winners = PUBLIC_WINNERS.includes(slug) ? onePerDoc(list.filter((i) => i.category === 'resultados'), winnersDoc) : [];
-const itemTitles = Object.fromEntries(list.filter((i) => !i.restricted).map((i) => [i.id, i.title]));
+const itemTitles = Object.fromEntries(list.filter((i) => isPublic(i)).map((i) => [i.id, i.title]));
 const contributedTr = forEdition(approved, slug, year, 'transcription').filter((c) => c.item_id && itemTitles[c.item_id]);
 const contribUrl = (tab: string) => url(`contribuir?f=${slug}&y=${year}&tab=${tab}`);
 const missingList = formatList(missing.map((m) => m.toLocaleLowerCase(intlLocales())));

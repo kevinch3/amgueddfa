@@ -1,51 +1,103 @@
 {
-  "tipos": ["programa", "programa-del-dia", "preliminares", "bases", "resultados", "prensa", "foto", "video", "audio", "otros"],
-  "grupos": ["eisteddfod"],
-  "formas": ["ediciones", "numeros"],
+  "tipos": [
+    "programa",
+    "programa-del-dia",
+    "preliminares",
+    "bases",
+    "resultados",
+    "prensa",
+    "foto",
+    "video",
+    "audio",
+    "otros"
+  ],
+  "grupos": [
+    "eisteddfod"
+  ],
+  "formas": [
+    "ediciones",
+    "numeros"
+  ],
   "colecciones": [
     {
       "id": "chubut",
       "grupo": "eisteddfod",
       "forma": "ediciones",
       "carpeta": "Eisteddfod_del_Chubut",
-      "tipos": ["programa", "programa-del-dia", "preliminares", "bases", "resultados", "otros", "video"],
+      "tipos": [
+        "programa",
+        "programa-del-dia",
+        "preliminares",
+        "bases",
+        "resultados",
+        "otros",
+        "video"
+      ],
       "ganadores_publicos": true,
       "texto_de_videos": true,
       "derechos_por_defecto": null,
-      "visibilidad_por_defecto": "publico"
+      "visibilidad_por_defecto": "publico",
+      "abierta": "2026-11-13"
     },
     {
       "id": "juventud",
       "grupo": "eisteddfod",
       "forma": "ediciones",
       "carpeta": "Eisteddfod_de_la_Juventud",
-      "tipos": ["programa", "programa-del-dia", "preliminares", "bases", "resultados", "otros", "video"],
+      "tipos": [
+        "programa",
+        "programa-del-dia",
+        "preliminares",
+        "bases",
+        "resultados",
+        "otros",
+        "video"
+      ],
       "ganadores_publicos": false,
       "texto_de_videos": false,
       "derechos_por_defecto": null,
-      "visibilidad_por_defecto": "publico"
+      "visibilidad_por_defecto": "publico",
+      "abierta": "2026-11-13"
     },
     {
       "id": "mimosa",
       "grupo": "eisteddfod",
       "forma": "ediciones",
       "carpeta": "Eisteddfod_Mimosa",
-      "tipos": ["programa", "programa-del-dia", "preliminares", "bases", "resultados", "otros", "video"],
+      "tipos": [
+        "programa",
+        "programa-del-dia",
+        "preliminares",
+        "bases",
+        "resultados",
+        "otros",
+        "video"
+      ],
       "ganadores_publicos": false,
       "texto_de_videos": false,
       "derechos_por_defecto": null,
-      "visibilidad_por_defecto": "publico"
+      "visibilidad_por_defecto": "publico",
+      "abierta": "2026-11-13"
     },
     {
       "id": "trevelin",
       "grupo": "eisteddfod",
       "forma": "ediciones",
       "carpeta": "Eisteddfod_de_Trevelin",
-      "tipos": ["programa", "programa-del-dia", "preliminares", "bases", "resultados", "otros", "video"],
+      "tipos": [
+        "programa",
+        "programa-del-dia",
+        "preliminares",
+        "bases",
+        "resultados",
+        "otros",
+        "video"
+      ],
       "ganadores_publicos": true,
       "texto_de_videos": true,
       "derechos_por_defecto": null,
-      "visibilidad_por_defecto": "publico"
+      "visibilidad_por_defecto": "publico",
+      "abierta": "2026-11-13"
     }
   ]
 }

@@ -26,9 +26,15 @@ Design and reasons: `docs/superpowers/specs/2026-11-27-reglas-de-datos-design.md
    page type says which it is.
    Test: added with the deep-pages step of the design.
 
-5. **Nothing is public unless its record says so.** A new collection starts with
-   `"visibilidad_por_defecto": "privado"`; children's material follows #29.
-   Test: added with the visibility step of the design.
+5. **Nothing is public unless its record says so.** Every record has one level:
+   `publico`, `solo_ficha` (page and notice, no files or text) or `privado` (left out of
+   `catalog.json`). The strictest of the collection's default, the old `restricted`
+   flag and `data/visibilidad.json` wins; `publico_desde` there opens a record on the
+   first catalog build on or after that date. The site asks `visibleAs()` /
+   `isPublic()` in `src/lib/visibilidad.ts`, never a flag directly. A new collection
+   starts with `"visibilidad_por_defecto": "privado"`; one that defaults to public
+   names the day it was opened (`abierta`). Children's material follows #29.
+   Test: `tests-js/visibilidad.test.ts`, `tests/test_visibilidad.py`.
 
 6. **The built site stays under the budget** in `scripts/presupuesto.mjs`
    (700 MB, 40,000 files; GitHub Pages serves at most 1 GB, and Cloudflare Pages takes at most 20,000 files). `npm run build` prints

@@ -1,3 +1,4 @@
+import { isListed, isPublic } from './visibilidad';
 import raw from '../data/catalog.json';
 import approvedRaw from '../../data/approved/contributions.json';
 import editionsRaw from '../../data/approved/editions.json';
@@ -27,12 +28,12 @@ export function setItems(list: Item[]): void {
 
 /** Items listed on the site: everything but documents an approved report hid. */
 export function items(): Item[] {
-  return current.filter((i) => !i.hidden);
+  return current.filter((i) => !i.hidden && isListed(i));
 }
 
 /** Every item, hidden ones included: each keeps its page (with a notice). */
 export function allItems(): Item[] {
-  return current;
+  return current.filter(isListed);
 }
 
 export function festivals(): { slug: FestivalSlug; name: string; nameCy: string }[] {
@@ -157,7 +158,7 @@ export function editionCover(
   }
   // Catalog: a programa item curated as the cover ("Tapa…", "Portada…") first, then page 1 of the programa PDF.
   // Only programa: e.g. the rules of a cover-design contest ("concurso-tapa-programa", bases) are not the cover.
-  const list = editionItems(f, year).filter((i) => !i.restricted && pageUrls(i).length > 0);
+  const list = editionItems(f, year).filter((i) => isPublic(i) && pageUrls(i).length > 0);
   const fromCatalog = list.find((i) => i.category === 'programa' && TAPA_TITLE.test(i.title))
     ?? list.find((i) => i.category === 'programa' && i.kind === 'pdf');
   if (fromCatalog) {
@@ -190,13 +191,13 @@ export function mostWanted(limit: number, uploads: UploadLike[] = APPROVED_UPLOA
 
 /** Public thumbnail URL; null for restricted items (their files are not published). */
 export function thumbUrl(item: Item): string | null {
-  if (item.restricted || !item.thumb) return null;
+  if (!isPublic(item) || !item.thumb) return null;
   return siteMedia(item.thumb);
 }
 
 /** Public page image URLs; empty for restricted items. */
 export function pageUrls(item: Item): string[] {
-  if (item.restricted) return [];
+  if (!isPublic(item)) return [];
   return item.page_paths.map((p) => siteMedia(p));
 }
 

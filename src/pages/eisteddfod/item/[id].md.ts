@@ -1,3 +1,4 @@
+import { isPublic } from '../../../lib/visibilidad';
 import type { APIRoute } from 'astro';
 import { festivals, items, pageUrls } from '../../../lib/catalog';
 import { t } from '../../../lib/i18n';
@@ -10,7 +11,7 @@ import type { Item } from '../../../lib/types';
 
 /** Markdown twin of every public document page (/item/<id>.md). Restricted and hidden documents get none. */
 export function getStaticPaths() {
-  return items().filter((i) => !i.restricted).map((item) => ({ params: { id: item.id }, props: { item } }));
+  return items().filter((i) => isPublic(i)).map((item) => ({ params: { id: item.id }, props: { item } }));
 }
 
 export const GET: APIRoute = ({ props }) => {

@@ -25,6 +25,8 @@ export interface Coleccion {
   texto_de_videos: boolean;
   derechos_por_defecto: string | null;
   visibilidad_por_defecto: Visibilidad;
+  /** When the maintainer opened it to the public (required when the default is publico). */
+  abierta?: string;
 }
 
 const data = raw as { tipos: string[]; grupos: string[]; formas: Forma[]; colecciones: Coleccion[] };

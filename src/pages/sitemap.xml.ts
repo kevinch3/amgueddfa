@@ -1,3 +1,4 @@
+import { isPublic } from '../lib/visibilidad';
 import approvedRaw from '../../data/approved/contributions.json';
 import { editionItems, festivals, items, yearRange } from '../lib/catalog';
 import { forEdition, type Contribution } from '../lib/contrib';
@@ -16,7 +17,7 @@ import { absUrl, sitemapXml } from '../lib/seo';
 export function GET(): Response {
   const approved = approvedRaw as Contribution[];
   const hasSomething = (f: string, y: number) =>
-    editionItems(f, y).some((i) => !i.restricted) || forEdition(approved, f, y, 'upload').length > 0 || forEdition(approved, f, y, 'fact').length > 0;
+    editionItems(f, y).some((i) => isPublic(i)) || forEdition(approved, f, y, 'upload').length > 0 || forEdition(approved, f, y, 'fact').length > 0;
   const pages = ['/', 'buscar/', 'ranking/', 'tareas/'];
   for (const p of ['objetivos', 'accesibilidad', 'derechos', 'privacidad', 'cookies', 'creditos']) pages.push(`${p}/`);
   for (const f of festivals()) {
@@ -24,7 +25,7 @@ export function GET(): Response {
     const [first, last] = yearRange(f.slug);
     for (let y = first; y <= last; y++) if (hasSomething(f.slug, y)) pages.push(`${f.slug}/${y}/`);
   }
-  for (const i of items()) if (!i.restricted) pages.push(`item/${i.id}/`);
+  for (const i of items()) if (isPublic(i)) pages.push(`item/${i.id}/`);
   for (const slug of siteSources().keys()) pages.push(`fuente/${slug}/`);
   // The museum's front door (/) and every page of the Eisteddfod collection (/eisteddfod/…, #189).
   const urls = LOCALES.flatMap((l) => [absUrl(rootUrl(l)), ...pages.map((p) => absUrl(url(p, l)))]);

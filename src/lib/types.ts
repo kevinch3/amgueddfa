@@ -1,3 +1,5 @@
+import type { Visibilidad } from './colecciones';
+
 /** A collection id from src/data/colecciones.json (checked by tests-js/colecciones.test.ts). */
 export type FestivalSlug = string;
 export type CategorySlug =
@@ -27,7 +29,12 @@ export interface Item {
   /** Credit and licence line of a third-party holder (e.g. a platform item); empty for most items. */
   rights?: string;
   year_inferred: boolean;
+  /** Old flag, kept in step with visibilidad by the catalog builder; read through lib/visibilidad.ts. */
   restricted: boolean;
+  /** publico | solo_ficha (catalog.json never holds privado): docs/reglas.md, rule 5. */
+  visibilidad?: Visibilidad;
+  /** The date the catalog builder opens it on, if set. */
+  publico_desde?: string | null;
   /** Set by an approved "no corresponde" report: off every list, page kept with a notice. */
   hidden?: boolean;
   /** Nothing to transcribe (a cover, poster, rules slide…): set by an admin correction. */

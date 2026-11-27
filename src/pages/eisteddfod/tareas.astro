@@ -1,4 +1,5 @@
 ---
+import { isPublic } from '../../lib/visibilidad';
 import Base from '../../layouts/Base.astro';
 import { festivals, items } from '../../lib/catalog';
 import { jsonForScript } from '../../lib/contrib';
@@ -16,7 +17,7 @@ const cards = items()
   .map((i) => ({
     id: i.id,
     kind: i.kind,
-    restricted: i.restricted,
+    restricted: !isPublic(i),
     year_inferred: i.year_inferred,
     festival: i.festival,
     year: i.year,
@@ -29,7 +30,7 @@ const cards = items()
 // every document gets one, programas first.
 const FIRST = ['programa', 'programa-del-dia'];
 const toTranscribe = items()
-  .filter((i) => !i.restricted && !i.hidden && ocrFor(i.id) !== null && transcriptionDoc(i.id) === null)
+  .filter((i) => isPublic(i) && !i.hidden && ocrFor(i.id) !== null && transcriptionDoc(i.id) === null)
   .sort((a, b) => Number(!FIRST.includes(a.category)) - Number(!FIRST.includes(b.category)) || (a.year ?? 9999) - (b.year ?? 9999) || a.title.localeCompare(b.title, 'es', { numeric: true }));
 const byFestival = festivals().map(({ slug: f }) => ({ f, docs: toTranscribe.filter((i) => i.festival === f) })).filter((g) => g.docs.length);
 ---

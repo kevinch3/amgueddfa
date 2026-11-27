@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-20T09:01:37+00:00",
+ "generated": "2026-11-27T09:32:56+00:00",
  "items": [
   {
    "id": "84b01d326cbc",
@@ -95,6 +95,564 @@
    "table": null
   },
   {
+   "id": "d0b6fde75e82",
+   "festival": "chubut",
+   "year": null,
+   "undated": true,
+   "category": "otros",
+   "title": "Eisteddfod del Chubut sin fecha 1",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/_sin_fecha/Fotos/Eisteddfod_del_Chubut_sin_fecha_1.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10204101285026694",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Raul Horacio Comes Cutillo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "d0b6fde75e82/thumb.webp",
+   "page_paths": [
+    "d0b6fde75e82/p01.webp"
+   ],
+   "page_size": [
+    1007,
+    610
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "ef5834c71e11",
+   "festival": "chubut",
+   "year": null,
+   "undated": true,
+   "category": "otros",
+   "title": "Eisteddfod del Chubut sin fecha 2",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/_sin_fecha/Fotos/Eisteddfod_del_Chubut_sin_fecha_2.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10210538854801915",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Raul Horacio Comes Cutillo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "ef5834c71e11/thumb.webp",
+   "page_paths": [
+    "ef5834c71e11/p01.webp"
+   ],
+   "page_size": [
+    960,
+    534
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "7808a6bab14b",
+   "festival": "chubut",
+   "year": null,
+   "undated": true,
+   "category": "otros",
+   "title": "Eisteddfod del Chubut sin fecha 3",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/_sin_fecha/Fotos/Eisteddfod_del_Chubut_sin_fecha_3.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10204005560753647",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Raul Horacio Comes Cutillo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "7808a6bab14b/thumb.webp",
+   "page_paths": [
+    "7808a6bab14b/p01.webp"
+   ],
+   "page_size": [
+    960,
+    540
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "f7b08955ab5c",
+   "festival": "chubut",
+   "year": null,
+   "undated": true,
+   "category": "otros",
+   "title": "Eisteddfod del Chubut sin fecha 4",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/_sin_fecha/Fotos/Eisteddfod_del_Chubut_sin_fecha_4.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10204005560353637",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Raul Horacio Comes Cutillo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "f7b08955ab5c/thumb.webp",
+   "page_paths": [
+    "f7b08955ab5c/p01.webp"
+   ],
+   "page_size": [
+    960,
+    540
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "1192f2b2fd4f",
+   "festival": "chubut",
+   "year": null,
+   "undated": true,
+   "category": "otros",
+   "title": "Eisteddfod del Chubut sin fecha 5",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/_sin_fecha/Fotos/Eisteddfod_del_Chubut_sin_fecha_5.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10204005733717971",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Raul Horacio Comes Cutillo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "1192f2b2fd4f/thumb.webp",
+   "page_paths": [
+    "1192f2b2fd4f/p01.webp"
+   ],
+   "page_size": [
+    804,
+    576
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "8b11a951f6a8",
+   "festival": "chubut",
+   "year": null,
+   "undated": true,
+   "category": "otros",
+   "title": "Eisteddfod del Chubut sin fecha 6",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/_sin_fecha/Fotos/Eisteddfod_del_Chubut_sin_fecha_6.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10204005775679020",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Raul Horacio Comes Cutillo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "8b11a951f6a8/thumb.webp",
+   "page_paths": [
+    "8b11a951f6a8/p01.webp"
+   ],
+   "page_size": [
+    804,
+    585
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "5ee3708ef4c1",
+   "festival": "chubut",
+   "year": null,
+   "undated": true,
+   "category": "otros",
+   "title": "Eisteddfod del Chubut sin fecha 7",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/_sin_fecha/Fotos/Eisteddfod_del_Chubut_sin_fecha_7.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10227693939628314",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Raul Horacio Comes Cutillo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "5ee3708ef4c1/thumb.webp",
+   "page_paths": [
+    "5ee3708ef4c1/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    919
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "51b0508afaeb",
+   "festival": "chubut",
+   "year": null,
+   "undated": true,
+   "category": "otros",
+   "title": "Eisteddfod del Chubut sin fecha 8",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/_sin_fecha/Fotos/Eisteddfod_del_Chubut_sin_fecha_8.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10227693922187878",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Raul Horacio Comes Cutillo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "51b0508afaeb/thumb.webp",
+   "page_paths": [
+    "51b0508afaeb/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    882
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "0a96e390efd4",
+   "festival": "chubut",
+   "year": null,
+   "undated": true,
+   "category": "otros",
+   "title": "Eisteddfod del Chubut sin fecha 9",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/_sin_fecha/Fotos/Eisteddfod_del_Chubut_sin_fecha_9.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10226496375129950",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Raul Horacio Comes Cutillo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "0a96e390efd4/thumb.webp",
+   "page_paths": [
+    "0a96e390efd4/p01.webp"
+   ],
+   "page_size": [
+    960,
+    530
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "0b364cdcb83c",
+   "festival": "chubut",
+   "year": null,
+   "undated": true,
+   "category": "otros",
+   "title": "Eisteddfod del Chubut sin fecha 10",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/_sin_fecha/Fotos/Eisteddfod_del_Chubut_sin_fecha_10.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10226496375569961",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Raul Horacio Comes Cutillo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "0b364cdcb83c/thumb.webp",
+   "page_paths": [
+    "0b364cdcb83c/p01.webp"
+   ],
+   "page_size": [
+    597,
+    960
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "f50b186b62b4",
+   "festival": "chubut",
+   "year": null,
+   "undated": true,
+   "category": "otros",
+   "title": "Eisteddfod del Chubut sin fecha 11",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/_sin_fecha/Fotos/Eisteddfod_del_Chubut_sin_fecha_11.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10225073756485373",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Raul Horacio Comes Cutillo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "f50b186b62b4/thumb.webp",
+   "page_paths": [
+    "f50b186b62b4/p01.webp"
+   ],
+   "page_size": [
+    919,
+    480
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "c34f1a6f69db",
+   "festival": "chubut",
+   "year": null,
+   "undated": true,
+   "category": "otros",
+   "title": "Eisteddfod del Chubut sin fecha 12",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/_sin_fecha/Fotos/Eisteddfod_del_Chubut_sin_fecha_12.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10206156970657550",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Raul Horacio Comes Cutillo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "c34f1a6f69db/thumb.webp",
+   "page_paths": [
+    "c34f1a6f69db/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    824
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "50f0523e3f52",
+   "festival": "chubut",
+   "year": null,
+   "undated": true,
+   "category": "otros",
+   "title": "Eisteddfod del Chubut sin fecha 13",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/_sin_fecha/Fotos/Eisteddfod_del_Chubut_sin_fecha_13.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10204107749868311",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Raul Horacio Comes Cutillo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "50f0523e3f52/thumb.webp",
+   "page_paths": [
+    "50f0523e3f52/p01.webp"
+   ],
+   "page_size": [
+    1040,
+    697
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "339b248f81d0",
+   "festival": "chubut",
+   "year": null,
+   "undated": true,
+   "category": "otros",
+   "title": "Eisteddfod del Chubut sin fecha 14",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/_sin_fecha/Fotos/Eisteddfod_del_Chubut_sin_fecha_14.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10210528989835297",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Raul Horacio Comes Cutillo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "339b248f81d0/thumb.webp",
+   "page_paths": [
+    "339b248f81d0/p01.webp"
+   ],
+   "page_size": [
+    960,
+    734
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "32857be9d37a",
+   "festival": "chubut",
+   "year": null,
+   "undated": true,
+   "category": "otros",
+   "title": "Eisteddfod del Chubut sin fecha 15",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/_sin_fecha/Fotos/Eisteddfod_del_Chubut_sin_fecha_15.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10222985074789636",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Raul Horacio Comes Cutillo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "32857be9d37a/thumb.webp",
+   "page_paths": [
+    "32857be9d37a/p01.webp"
+   ],
+   "page_size": [
+    1182,
+    779
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "7ae36abc0de5",
+   "festival": "chubut",
+   "year": null,
+   "undated": true,
+   "category": "otros",
+   "title": "Eisteddfod del Chubut sin fecha 16",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/_sin_fecha/Fotos/Eisteddfod_del_Chubut_sin_fecha_16.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=1962787497291617",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Raul Alberto Gonzalez en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "7ae36abc0de5/thumb.webp",
+   "page_paths": [
+    "7ae36abc0de5/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    1109
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "502c34e360ee",
+   "festival": "chubut",
+   "year": null,
+   "undated": true,
+   "category": "otros",
+   "title": "Eisteddfod del Chubut sin fecha 17",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/_sin_fecha/Fotos/Eisteddfod_del_Chubut_sin_fecha_17.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=128426163930095",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Liliana Arredondo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "502c34e360ee/thumb.webp",
+   "page_paths": [
+    "502c34e360ee/p01.webp"
+   ],
+   "page_size": [
+    846,
+    1200
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "6af402013a04",
+   "festival": "chubut",
+   "year": null,
+   "undated": true,
+   "category": "otros",
+   "title": "Eisteddfod del Chubut sin fecha 18",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/_sin_fecha/Fotos/Eisteddfod_del_Chubut_sin_fecha_18.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=1003512936400712",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Laura Margarita Williams en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "6af402013a04/thumb.webp",
+   "page_paths": [
+    "6af402013a04/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    729
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
    "id": "53e5826d4409",
    "festival": "chubut",
    "year": null,
@@ -123,6 +681,187 @@
     677
    ],
    "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "04cd9841e7d3",
+   "festival": "chubut",
+   "year": null,
+   "undated": false,
+   "category": "otros",
+   "title": "Libro Los poetas del Eisteddfod 1",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/_general/Fotos/Libro_Los_poetas_del_Eisteddfod_1.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=1466299903651332",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Teresa Gallo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "04cd9841e7d3/thumb.webp",
+   "page_paths": [
+    "04cd9841e7d3/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    876
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "a2778d47d00d",
+   "festival": "chubut",
+   "year": null,
+   "undated": false,
+   "category": "otros",
+   "title": "Libro Los poetas del Eisteddfod 2",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/_general/Fotos/Libro_Los_poetas_del_Eisteddfod_2.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=1466299906984665",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Teresa Gallo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "a2778d47d00d/thumb.webp",
+   "page_paths": [
+    "a2778d47d00d/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    814
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "ce1bc7794ecb",
+   "festival": "chubut",
+   "year": null,
+   "undated": false,
+   "category": "otros",
+   "title": "Libro Los poetas del Eisteddfod 3",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/_general/Fotos/Libro_Los_poetas_del_Eisteddfod_3.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=1466299933651329",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Teresa Gallo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "ce1bc7794ecb/thumb.webp",
+   "page_paths": [
+    "ce1bc7794ecb/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    763
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "3d7d8f0d4fd2",
+   "festival": "chubut",
+   "year": null,
+   "undated": false,
+   "category": "otros",
+   "title": "Libro Los poetas del Eisteddfod 4",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/_general/Fotos/Libro_Los_poetas_del_Eisteddfod_4.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=1466300176984638",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Teresa Gallo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "3d7d8f0d4fd2/thumb.webp",
+   "page_paths": [
+    "3d7d8f0d4fd2/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    890
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "c05e3eeb2d84",
+   "festival": "chubut",
+   "year": null,
+   "undated": false,
+   "category": "otros",
+   "title": "Licencia del Gorsedd para Gutyn Ebrill 1881",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/_general/Fotos/Licencia_del_Gorsedd_para_Gutyn_Ebrill_1881.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=191983880978367",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "Certificado de 1881 por el que el Gorsedd de los Bardos de Gran Bretaña autoriza a Griffith Griffiths (Gutyn Ebrill) a convocar un Gorsedd a orillas del Chubut; firmado por Owen Gethin Jones y Gwilym Cowlyd. Original en la Biblioteca Nacional de Gales (NLW MS 18219D).",
+   "rights": "Documento de 1881; original en la Biblioteca Nacional de Gales (NLW MS 18219D); copia publicada por Hyde Park Puerto Madryn en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»",
+   "year_inferred": false,
+   "restricted": false,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "c05e3eeb2d84/thumb.webp",
+   "page_paths": [
+    "c05e3eeb2d84/p01.webp"
+   ],
+   "page_size": [
+    467,
+    600
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "b97f30a2fe4c",
+   "festival": "chubut",
+   "year": null,
+   "undated": false,
+   "category": "otros",
+   "title": "Reglamento",
+   "kind": "web",
+   "src_path": "Eisteddfod_del_Chubut/_general/web_reglamento.html",
+   "alt_paths": [],
+   "source_url": "https://web.archive.org/web/2/http://www.eisteddfodpatagonia.com/institucional/reglamento/",
+   "source_label": "Wayback Machine",
+   "retrieved": "2026-11-13",
+   "note_public": "",
+   "rights": "",
+   "year_inferred": false,
+   "restricted": false,
+   "hidden": false,
+   "no_text": false,
+   "pages": 0,
+   "thumb": null,
+   "page_paths": [],
+   "page_size": null,
+   "text_excerpt": "Reglamentos Reglamento del Eisteddfod de la Juventud Reglamento del Eisteddfod del Chubut Reglas y condiciones para las competencias Rheolau ac amodau cystadlu Las competencias son de carácter internacional y están abiertas a todos los niños y jóvenes interesados en este festival. Los trabajos de la secciones Literatura, Artes Visuales, Fotografía e Historieta deberán ser inéditos y no haber sido premiados en ningún otro evento. Todos los participantes, excepto los directores de coros, deben ser vocacionales. En el caso de edad estipulada, se deben respetar los siguientes términos: - “Para ...",
    "table": null
   },
   {
@@ -185,32 +924,6 @@
     753
    ],
    "text_excerpt": null,
-   "table": null
-  },
-  {
-   "id": "b97f30a2fe4c",
-   "festival": "chubut",
-   "year": null,
-   "undated": false,
-   "category": "otros",
-   "title": "Reglamento",
-   "kind": "web",
-   "src_path": "Eisteddfod_del_Chubut/_general/web_reglamento.html",
-   "alt_paths": [],
-   "source_url": "https://web.archive.org/web/2/http://www.eisteddfodpatagonia.com/institucional/reglamento/",
-   "source_label": "Wayback Machine",
-   "retrieved": "2026-11-13",
-   "note_public": "",
-   "rights": "",
-   "year_inferred": false,
-   "restricted": false,
-   "hidden": false,
-   "no_text": false,
-   "pages": 0,
-   "thumb": null,
-   "page_paths": [],
-   "page_size": null,
-   "text_excerpt": "Reglamentos Reglamento del Eisteddfod de la Juventud Reglamento del Eisteddfod del Chubut Reglas y condiciones para las competencias Rheolau ac amodau cystadlu Las competencias son de carácter internacional y están abiertas a todos los niños y jóvenes interesados en este festival. Los trabajos de la secciones Literatura, Artes Visuales, Fotografía e Historieta deberán ser inéditos y no haber sido premiados en ningún otro evento. Todos los participantes, excepto los directores de coros, deben ser vocacionales. En el caso de edad estipulada, se deben respetar los siguientes términos: - “Para ...",
    "table": null
   },
   {
@@ -431,6 +1144,37 @@
    "table": null
   },
   {
+   "id": "2c2e1c862f8c",
+   "festival": "chubut",
+   "year": 1912,
+   "undated": false,
+   "category": "otros",
+   "title": "Coro femenino de Moriah hacia 1912",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1912/Fotos/Coro_femenino_de_Moriah_hacia_1912.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=1419435135055135",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "Grupo de la Capilla Moriah, hacia 1912, con John ap Hughes; nombres en los comentarios del grupo.",
+   "rights": "Fotografía de autor no identificado, anterior a 1946; copia publicada por Diego Seron en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»",
+   "year_inferred": true,
+   "restricted": false,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "2c2e1c862f8c/thumb.webp",
+   "page_paths": [
+    "2c2e1c862f8c/p01.webp"
+   ],
+   "page_size": [
+    879,
+    1200
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
    "id": "5e19fba9d7c8",
    "festival": "chubut",
    "year": 1913,
@@ -457,37 +1201,6 @@
    "page_size": [
     512,
     328
-   ],
-   "text_excerpt": null,
-   "table": null
-  },
-  {
-   "id": "3aa1a282168b",
-   "festival": "chubut",
-   "year": 1913,
-   "undated": false,
-   "category": "otros",
-   "title": "Gorsedd Trelew 1913 Glan Caeron en la piedra",
-   "kind": "image",
-   "src_path": "Eisteddfod_del_Chubut/1913/Fotos/Gorsedd_Trelew_1913_Glan_Caeron_en_la_piedra.jpg",
-   "alt_paths": [],
-   "source_url": "https://www.casgliadywerin.cymru/items/522464",
-   "source_label": "Casgliad y Werin Cymru",
-   "retrieved": "2026-11-17",
-   "note_public": "Eisteddfod Trelew, 1913, yr Orsedd: yr Archdderwydd William H. Hughes (Glan Caeron) mewn cot wen ar y maen llog, gyda'r Parch. John Caerenig Evans a Richard Jones Berwyn.",
-   "rights": "© Llyfrgell Genedlaethol Cymru / The National Library of Wales · Creative Archive Licence",
-   "year_inferred": false,
-   "restricted": false,
-   "hidden": false,
-   "no_text": false,
-   "pages": 1,
-   "thumb": "3aa1a282168b/thumb.webp",
-   "page_paths": [
-    "3aa1a282168b/p01.webp"
-   ],
-   "page_size": [
-    1000,
-    694
    ],
    "text_excerpt": null,
    "table": null
@@ -550,6 +1263,37 @@
    "page_size": [
     1000,
     669
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "3aa1a282168b",
+   "festival": "chubut",
+   "year": 1913,
+   "undated": false,
+   "category": "otros",
+   "title": "Gorsedd Trelew 1913 Glan Caeron en la piedra",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1913/Fotos/Gorsedd_Trelew_1913_Glan_Caeron_en_la_piedra.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.casgliadywerin.cymru/items/522464",
+   "source_label": "Casgliad y Werin Cymru",
+   "retrieved": "2026-11-17",
+   "note_public": "Eisteddfod Trelew, 1913, yr Orsedd: yr Archdderwydd William H. Hughes (Glan Caeron) mewn cot wen ar y maen llog, gyda'r Parch. John Caerenig Evans a Richard Jones Berwyn.",
+   "rights": "© Llyfrgell Genedlaethol Cymru / The National Library of Wales · Creative Archive Licence",
+   "year_inferred": false,
+   "restricted": false,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "3aa1a282168b/thumb.webp",
+   "page_paths": [
+    "3aa1a282168b/p01.webp"
+   ],
+   "page_size": [
+    1000,
+    694
    ],
    "text_excerpt": null,
    "table": null
@@ -1051,6 +1795,68 @@
    "table": null
   },
   {
+   "id": "83d7b65fd62c",
+   "festival": "chubut",
+   "year": 1922,
+   "undated": false,
+   "category": "otros",
+   "title": "Sillon de Bryn Williams 1922",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1922/Fotos/Sillon_de_Bryn_Williams_1922.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=306025969539976",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Fernanda Evans en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "83d7b65fd62c/thumb.webp",
+   "page_paths": [
+    "83d7b65fd62c/p01.webp"
+   ],
+   "page_size": [
+    480,
+    784
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "6b0531cb1d6a",
+   "festival": "chubut",
+   "year": 1931,
+   "undated": false,
+   "category": "otros",
+   "title": "Arwest 1931 carpa en el campo",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1931/Fotos/Arwest_1931_carpa_en_el_campo.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10151558423687562",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "Arwest de 1931, celebración parecida al Eisteddfod pero sin sillón bárdico: la carpa en el campo.",
+   "rights": "Fotografía de autor no identificado, anterior a 1946; copia publicada por Ricardo Jones en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»",
+   "year_inferred": false,
+   "restricted": false,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "6b0531cb1d6a/thumb.webp",
+   "page_paths": [
+    "6b0531cb1d6a/p01.webp"
+   ],
+   "page_size": [
+    960,
+    568
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
    "id": "f2242aa764e9",
    "festival": "chubut",
    "year": 1931,
@@ -1175,6 +1981,192 @@
    "table": null
   },
   {
+   "id": "dae081169f4d",
+   "festival": "chubut",
+   "year": 1933,
+   "undated": false,
+   "category": "otros",
+   "title": "Eisteddfod Gaiman 1933 en la carpa publico 1",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1933/Fotos/Eisteddfod_Gaiman_1933_en_la_carpa_publico_1.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=642140815885309",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "Eisteddfod en Gaiman, 1933 (así dice el reverso de la foto): el público en la carpa.",
+   "rights": "Fotografía de autor no identificado, anterior a 1946; copia publicada por Solange Turnaturi en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»",
+   "year_inferred": false,
+   "restricted": false,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "dae081169f4d/thumb.webp",
+   "page_paths": [
+    "dae081169f4d/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    821
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "6a367f01e4a0",
+   "festival": "chubut",
+   "year": 1933,
+   "undated": false,
+   "category": "otros",
+   "title": "Eisteddfod Gaiman 1933 en la carpa publico 2",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1933/Fotos/Eisteddfod_Gaiman_1933_en_la_carpa_publico_2.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=642140982551959",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "Eisteddfod en Gaiman, 1933 (así dice el reverso de la foto): el público en la carpa.",
+   "rights": "Fotografía de autor no identificado, anterior a 1946; copia publicada por Solange Turnaturi en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»",
+   "year_inferred": false,
+   "restricted": false,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "6a367f01e4a0/thumb.webp",
+   "page_paths": [
+    "6a367f01e4a0/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    787
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "bd257fc6431c",
+   "festival": "chubut",
+   "year": 1933,
+   "undated": false,
+   "category": "otros",
+   "title": "Eisteddfod Gaiman 1933 en la carpa publico 3",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1933/Fotos/Eisteddfod_Gaiman_1933_en_la_carpa_publico_3.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=642141149218609",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "Eisteddfod en Gaiman, 1933 (así dice el reverso de la foto): el público en la carpa.",
+   "rights": "Fotografía de autor no identificado, anterior a 1946; copia publicada por Solange Turnaturi en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»",
+   "year_inferred": false,
+   "restricted": false,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "bd257fc6431c/thumb.webp",
+   "page_paths": [
+    "bd257fc6431c/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    811
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "a1545e95ea31",
+   "festival": "chubut",
+   "year": 1933,
+   "undated": false,
+   "category": "otros",
+   "title": "Eisteddfod Gaiman 1933 panoramica de la carpa",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1933/Fotos/Eisteddfod_Gaiman_1933_panoramica_de_la_carpa.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10203828078315019",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "Panorámica armada con dos fotos del mismo día: el público dentro de la carpa, Eisteddfod de Gaiman de 1933.",
+   "rights": "Fotografía de autor no identificado, anterior a 1946; copia publicada por Claudio Williams en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»",
+   "year_inferred": false,
+   "restricted": false,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "a1545e95ea31/thumb.webp",
+   "page_paths": [
+    "a1545e95ea31/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    373
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "aae2b9bafc84",
+   "festival": "chubut",
+   "year": 1933,
+   "undated": false,
+   "category": "otros",
+   "title": "Eisteddfod Rhymni 1933 revista Argentina Austral 1",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1933/Fotos/Eisteddfod_Rhymni_1933_revista_Argentina_Austral_1.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10164739907740034",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "Eisteddfod del 11 de noviembre de 1933 en la chacra Rhymni, de Aeron Jones; fotos publicadas en la revista Argentina Austral, diciembre de 1933.",
+   "rights": "Fotografía de autor no identificado, anterior a 1946; copia publicada por Milton Junyent en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»",
+   "year_inferred": false,
+   "restricted": false,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "aae2b9bafc84/thumb.webp",
+   "page_paths": [
+    "aae2b9bafc84/p01.webp"
+   ],
+   "page_size": [
+    804,
+    416
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "0a6272c4805c",
+   "festival": "chubut",
+   "year": 1933,
+   "undated": false,
+   "category": "otros",
+   "title": "Eisteddfod Rhymni 1933 revista Argentina Austral 2",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1933/Fotos/Eisteddfod_Rhymni_1933_revista_Argentina_Austral_2.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10164739909175034",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "Eisteddfod del 11 de noviembre de 1933 en la chacra Rhymni, de Aeron Jones; fotos publicadas en la revista Argentina Austral, diciembre de 1933.",
+   "rights": "Fotografía de autor no identificado, anterior a 1946; copia publicada por Milton Junyent en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»",
+   "year_inferred": false,
+   "restricted": false,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "0a6272c4805c/thumb.webp",
+   "page_paths": [
+    "0a6272c4805c/p01.webp"
+   ],
+   "page_size": [
+    628,
+    345
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
    "id": "58d5ef55dc35",
    "festival": "chubut",
    "year": 1934,
@@ -1201,6 +2193,37 @@
    "page_size": [
     1000,
     672
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "b32e2203a248",
+   "festival": "chubut",
+   "year": 1939,
+   "undated": false,
+   "category": "otros",
+   "title": "Eisteddfod hacia 1939 publico en el salon",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1939/Fotos/Eisteddfod_hacia_1939_publico_en_el_salon.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=482025278497964",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "Público del Eisteddfod en el salón, hacia 1939 (algunos comentarios lo fechan en 1937).",
+   "rights": "Fotografía de autor no identificado, anterior a 1946; copia publicada por Pablo Lo Presti en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»",
+   "year_inferred": true,
+   "restricted": false,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "b32e2203a248/thumb.webp",
+   "page_paths": [
+    "b32e2203a248/p01.webp"
+   ],
+   "page_size": [
+    697,
+    357
    ],
    "text_excerpt": null,
    "table": null
@@ -1299,6 +2322,68 @@
    "table": null
   },
   {
+   "id": "758963948c12",
+   "festival": "chubut",
+   "year": 1942,
+   "undated": false,
+   "category": "otros",
+   "title": "Eisteddfod Gaiman 1942 publico en la carpa",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1942/Fotos/Eisteddfod_Gaiman_1942_publico_en_la_carpa.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=1968741827969",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "Eisteddfod de 1942 en Gaiman: el público en la carpa (otra copia la ubica frente a Plas y Coed).",
+   "rights": "Fotografía de autor no identificado, anterior a 1946; copia publicada por Delano Denholm en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»",
+   "year_inferred": false,
+   "restricted": false,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "758963948c12/thumb.webp",
+   "page_paths": [
+    "758963948c12/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    791
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "b1f8f78fcce4",
+   "festival": "chubut",
+   "year": 1942,
+   "undated": false,
+   "category": "otros",
+   "title": "Morris ap Hughes en el sillon 1942 con damas",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1942/Fotos/Morris_ap_Hughes_en_el_sillon_1942_con_damas.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=201013600010051",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "Eisteddfod de 1942 en Gaiman: Morris ap Hughes, ganador del sillón, con sus damas de compañía; de blanco, Gwyneth Jones (Plas y Coed), de 12 años, como Ceridwen.",
+   "rights": "Fotografía de autor no identificado, anterior a 1946; copia publicada por Alba Williams en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»",
+   "year_inferred": false,
+   "restricted": false,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "b1f8f78fcce4/thumb.webp",
+   "page_paths": [
+    "b1f8f78fcce4/p01.webp"
+   ],
+   "page_size": [
+    682,
+    1103
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
    "id": "05d365c46a2b",
    "festival": "chubut",
    "year": 1942,
@@ -1325,6 +2410,130 @@
    "page_size": [
     1000,
     666
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "d4a2d09f86a1",
+   "festival": "chubut",
+   "year": 1944,
+   "undated": false,
+   "category": "otros",
+   "title": "Bordado premiado en el Eisteddfod 1944 1",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1944/Fotos/Bordado_premiado_en_el_Eisteddfod_1944_1.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=501853616566649",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Laura Margarita Williams en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "d4a2d09f86a1/thumb.webp",
+   "page_paths": [
+    "d4a2d09f86a1/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    900
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "c6fc4af1a5bf",
+   "festival": "chubut",
+   "year": 1944,
+   "undated": false,
+   "category": "otros",
+   "title": "Bordado premiado en el Eisteddfod 1944 2",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1944/Fotos/Bordado_premiado_en_el_Eisteddfod_1944_2.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=501853859899958",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Laura Margarita Williams en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "c6fc4af1a5bf/thumb.webp",
+   "page_paths": [
+    "c6fc4af1a5bf/p01.webp"
+   ],
+   "page_size": [
+    900,
+    1200
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "6b5771be6c35",
+   "festival": "chubut",
+   "year": 1944,
+   "undated": false,
+   "category": "otros",
+   "title": "Bordado premiado en el Eisteddfod 1944 3",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1944/Fotos/Bordado_premiado_en_el_Eisteddfod_1944_3.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=501854176566593",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Laura Margarita Williams en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "6b5771be6c35/thumb.webp",
+   "page_paths": [
+    "6b5771be6c35/p01.webp"
+   ],
+   "page_size": [
+    900,
+    1200
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "992be564c7fe",
+   "festival": "chubut",
+   "year": 1944,
+   "undated": false,
+   "category": "otros",
+   "title": "Bordado premiado en el Eisteddfod 1944 4",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1944/Fotos/Bordado_premiado_en_el_Eisteddfod_1944_4.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=501854353233242",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Laura Margarita Williams en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "992be564c7fe/thumb.webp",
+   "page_paths": [
+    "992be564c7fe/p01.webp"
+   ],
+   "page_size": [
+    900,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -1423,6 +2632,161 @@
    "table": null
   },
   {
+   "id": "8e4279780e0d",
+   "festival": "chubut",
+   "year": 1965,
+   "undated": false,
+   "category": "otros",
+   "title": "Ceremonia del sillon 1965 San David",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1965/Fotos/Ceremonia_del_sillon_1965_San_David.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10150752701834788",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Adri Roberts Brookes en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "8e4279780e0d/thumb.webp",
+   "page_paths": [
+    "8e4279780e0d/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    718
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "a69c6b3c433f",
+   "festival": "chubut",
+   "year": 1968,
+   "undated": false,
+   "category": "otros",
+   "title": "Entronizacion de Morris ap Hughes 1968",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1968/Fotos/Entronizacion_de_Morris_ap_Hughes_1968.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=305997652876141",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Fernanda Evans en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "a69c6b3c433f/thumb.webp",
+   "page_paths": [
+    "a69c6b3c433f/p01.webp"
+   ],
+   "page_size": [
+    720,
+    560
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "10cadfb0a1bd",
+   "festival": "chubut",
+   "year": 1969,
+   "undated": false,
+   "category": "otros",
+   "title": "Recorte Coro Municipal Eisteddfod 1969",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1969/Prensa/Recorte_Coro_Municipal_Eisteddfod_1969.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=1655228152371634",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Minnie Figna Griffiths en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "10cadfb0a1bd/thumb.webp",
+   "page_paths": [
+    "10cadfb0a1bd/p01.webp"
+   ],
+   "page_size": [
+    900,
+    1200
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "53c6a3359242",
+   "festival": "chubut",
+   "year": 1969,
+   "undated": false,
+   "category": "otros",
+   "title": "Sillon de Morris ap Hughes 1969 San David",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1969/Fotos/Sillon_de_Morris_ap_Hughes_1969_San_David.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=415967095103783",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Pablo Lo Presti en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "53c6a3359242/thumb.webp",
+   "page_paths": [
+    "53c6a3359242/p01.webp"
+   ],
+   "page_size": [
+    1182,
+    779
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "0a21353a5271",
+   "festival": "chubut",
+   "year": 1972,
+   "undated": false,
+   "category": "otros",
+   "title": "Ceremonia del sillon 1972 San David",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1972/Fotos/Ceremonia_del_sillon_1972_San_David.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10200208635084735",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Graciela Colasante en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "0a21353a5271/thumb.webp",
+   "page_paths": [
+    "0a21353a5271/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    805
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
    "id": "217f4a984b42",
    "festival": "chubut",
    "year": 1975,
@@ -1449,6 +2813,68 @@
    "page_size": [
     720,
     960
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "1eff09fd1d6b",
+   "festival": "chubut",
+   "year": 1977,
+   "undated": false,
+   "category": "otros",
+   "title": "Cyd adrodd con musica 1977",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1977/Fotos/Cyd_adrodd_con_musica_1977.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10152655031154788",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Adri Roberts Brookes en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "1eff09fd1d6b/thumb.webp",
+   "page_paths": [
+    "1eff09fd1d6b/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    788
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "8deb0a82d175",
+   "festival": "chubut",
+   "year": 1979,
+   "undated": false,
+   "category": "otros",
+   "title": "Cyd adrodd 1979",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1979/Fotos/Cyd_adrodd_1979.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10152655031079788",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Adri Roberts Brookes en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "8deb0a82d175/thumb.webp",
+   "page_paths": [
+    "8deb0a82d175/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    838
    ],
    "text_excerpt": null,
    "table": null
@@ -1702,6 +3128,192 @@
    "table": null
   },
   {
+   "id": "dac85458493c",
+   "festival": "chubut",
+   "year": 1988,
+   "undated": false,
+   "category": "otros",
+   "title": "Eisteddfod 1988 sillon de Osian Hughes 1",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1988/Fotos/Eisteddfod_1988_sillon_de_Osian_Hughes_1.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10208488017732270",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Raul Horacio Comes Cutillo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": true,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "dac85458493c/thumb.webp",
+   "page_paths": [
+    "dac85458493c/p01.webp"
+   ],
+   "page_size": [
+    469,
+    697
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "c97098ff0ecd",
+   "festival": "chubut",
+   "year": 1988,
+   "undated": false,
+   "category": "otros",
+   "title": "Eisteddfod 1988 sillon de Osian Hughes 2",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1988/Fotos/Eisteddfod_1988_sillon_de_Osian_Hughes_2.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10208488060893349",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Raul Horacio Comes Cutillo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": true,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "c97098ff0ecd/thumb.webp",
+   "page_paths": [
+    "c97098ff0ecd/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    623
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "9e3b659112aa",
+   "festival": "chubut",
+   "year": 1988,
+   "undated": false,
+   "category": "otros",
+   "title": "Eisteddfod 1988 sillon de Osian Hughes 3",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1988/Fotos/Eisteddfod_1988_sillon_de_Osian_Hughes_3.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10208488080213832",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Raul Horacio Comes Cutillo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": true,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "9e3b659112aa/thumb.webp",
+   "page_paths": [
+    "9e3b659112aa/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    767
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "502230bdc8ec",
+   "festival": "chubut",
+   "year": 1988,
+   "undated": false,
+   "category": "otros",
+   "title": "Eisteddfod 1988 sillon de Osian Hughes 4",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1988/Fotos/Eisteddfod_1988_sillon_de_Osian_Hughes_4.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10208488065493464",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Raul Horacio Comes Cutillo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": true,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "502230bdc8ec/thumb.webp",
+   "page_paths": [
+    "502230bdc8ec/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    742
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "e9a16441ed44",
+   "festival": "chubut",
+   "year": 1988,
+   "undated": false,
+   "category": "otros",
+   "title": "Eisteddfod 1988 sillon de Osian Hughes 5",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1988/Fotos/Eisteddfod_1988_sillon_de_Osian_Hughes_5.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10208488057573266",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Raul Horacio Comes Cutillo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": true,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "e9a16441ed44/thumb.webp",
+   "page_paths": [
+    "e9a16441ed44/p01.webp"
+   ],
+   "page_size": [
+    692,
+    1073
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "63c4d801e6d0",
+   "festival": "chubut",
+   "year": 1988,
+   "undated": false,
+   "category": "otros",
+   "title": "Sillon de Osian Hughes 1988",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1988/Fotos/Sillon_de_Osian_Hughes_1988.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10205727795208432",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Raul Horacio Comes Cutillo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "63c4d801e6d0/thumb.webp",
+   "page_paths": [
+    "63c4d801e6d0/p01.webp"
+   ],
+   "page_size": [
+    668,
+    1080
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
    "id": "0a03ba28b534",
    "festival": "chubut",
    "year": 1988,
@@ -1882,6 +3494,440 @@
    ],
    "page_size": [
     720,
+    960
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "1f1461d946a8",
+   "festival": "chubut",
+   "year": 1997,
+   "undated": false,
+   "category": "otros",
+   "title": "Eisteddfod 1997 1",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1997/Fotos/Eisteddfod_1997_1.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10227694196314731",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Raul Horacio Comes Cutillo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "1f1461d946a8/thumb.webp",
+   "page_paths": [
+    "1f1461d946a8/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    747
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "3167f0f97afc",
+   "festival": "chubut",
+   "year": 1997,
+   "undated": false,
+   "category": "otros",
+   "title": "Eisteddfod 1997 2",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1997/Fotos/Eisteddfod_1997_2.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10227694196754742",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Raul Horacio Comes Cutillo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "3167f0f97afc/thumb.webp",
+   "page_paths": [
+    "3167f0f97afc/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    880
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "b7c26a6ee655",
+   "festival": "chubut",
+   "year": 1997,
+   "undated": false,
+   "category": "otros",
+   "title": "Eisteddfod 1997 3",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1997/Fotos/Eisteddfod_1997_3.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10227694197114751",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Raul Horacio Comes Cutillo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "b7c26a6ee655/thumb.webp",
+   "page_paths": [
+    "b7c26a6ee655/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    859
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "a93818a7a5ba",
+   "festival": "chubut",
+   "year": 1997,
+   "undated": false,
+   "category": "otros",
+   "title": "Eisteddfod 1997 4",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1997/Fotos/Eisteddfod_1997_4.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10227694186554487",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Raul Horacio Comes Cutillo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "a93818a7a5ba/thumb.webp",
+   "page_paths": [
+    "a93818a7a5ba/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    878
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "addb2560b885",
+   "festival": "chubut",
+   "year": 1997,
+   "undated": false,
+   "category": "otros",
+   "title": "Eisteddfod 1997 5",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1997/Fotos/Eisteddfod_1997_5.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10227694186954497",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Raul Horacio Comes Cutillo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "addb2560b885/thumb.webp",
+   "page_paths": [
+    "addb2560b885/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    873
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "6956d0aa6d45",
+   "festival": "chubut",
+   "year": 1997,
+   "undated": false,
+   "category": "otros",
+   "title": "Jurados galeses 1997 1",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1997/Fotos/Jurados_galeses_1997_1.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10219488279491939",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Raul Horacio Comes Cutillo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "6956d0aa6d45/thumb.webp",
+   "page_paths": [
+    "6956d0aa6d45/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    689
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "ecc22294041d",
+   "festival": "chubut",
+   "year": 1997,
+   "undated": false,
+   "category": "otros",
+   "title": "Jurados galeses 1997 2",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1997/Fotos/Jurados_galeses_1997_2.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10219488304932575",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Raul Horacio Comes Cutillo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "ecc22294041d/thumb.webp",
+   "page_paths": [
+    "ecc22294041d/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    816
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "e4b2dcaf470f",
+   "festival": "chubut",
+   "year": 1997,
+   "undated": false,
+   "category": "otros",
+   "title": "Jurados galeses 1997 3",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1997/Fotos/Jurados_galeses_1997_3.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10219488305252583",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Raul Horacio Comes Cutillo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "e4b2dcaf470f/thumb.webp",
+   "page_paths": [
+    "e4b2dcaf470f/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    880
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "11cf9687dda5",
+   "festival": "chubut",
+   "year": 1997,
+   "undated": false,
+   "category": "otros",
+   "title": "Sillon de Owen Tudur Jones 1997 1",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1997/Fotos/Sillon_de_Owen_Tudur_Jones_1997_1.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10211872538863183",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Raul Horacio Comes Cutillo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "11cf9687dda5/thumb.webp",
+   "page_paths": [
+    "11cf9687dda5/p01.webp"
+   ],
+   "page_size": [
+    960,
+    720
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "2e3ad62a6cfc",
+   "festival": "chubut",
+   "year": 1997,
+   "undated": false,
+   "category": "otros",
+   "title": "Sillon de Owen Tudur Jones 1997 2",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1997/Fotos/Sillon_de_Owen_Tudur_Jones_1997_2.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10211872539423197",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Raul Horacio Comes Cutillo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "2e3ad62a6cfc/thumb.webp",
+   "page_paths": [
+    "2e3ad62a6cfc/p01.webp"
+   ],
+   "page_size": [
+    696,
+    960
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "7d58da1a8114",
+   "festival": "chubut",
+   "year": 1997,
+   "undated": false,
+   "category": "otros",
+   "title": "Sillon de Owen Tudur Jones 1997 3",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1997/Fotos/Sillon_de_Owen_Tudur_Jones_1997_3.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10211872540183216",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Raul Horacio Comes Cutillo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "7d58da1a8114/thumb.webp",
+   "page_paths": [
+    "7d58da1a8114/p01.webp"
+   ],
+   "page_size": [
+    960,
+    720
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "556da85d6af8",
+   "festival": "chubut",
+   "year": 1997,
+   "undated": false,
+   "category": "otros",
+   "title": "Sillon de Owen Tudur Jones 1997 4",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1997/Fotos/Sillon_de_Owen_Tudur_Jones_1997_4.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10211872540783231",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Raul Horacio Comes Cutillo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "556da85d6af8/thumb.webp",
+   "page_paths": [
+    "556da85d6af8/p01.webp"
+   ],
+   "page_size": [
+    665,
+    960
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "c88942b15733",
+   "festival": "chubut",
+   "year": 1997,
+   "undated": false,
+   "category": "otros",
+   "title": "Sillon de Owen Tudur Jones 1997 5",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1997/Fotos/Sillon_de_Owen_Tudur_Jones_1997_5.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10211872541183241",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Raul Horacio Comes Cutillo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "c88942b15733/thumb.webp",
+   "page_paths": [
+    "c88942b15733/p01.webp"
+   ],
+   "page_size": [
+    695,
+    960
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "f5159994203b",
+   "festival": "chubut",
+   "year": 1997,
+   "undated": false,
+   "category": "otros",
+   "title": "Sillon de Owen Tudur Jones 1997 6",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1997/Fotos/Sillon_de_Owen_Tudur_Jones_1997_6.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10211872541583251",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Raul Horacio Comes Cutillo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "f5159994203b/thumb.webp",
+   "page_paths": [
+    "f5159994203b/p01.webp"
+   ],
+   "page_size": [
+    789,
     960
    ],
    "text_excerpt": null,
@@ -2513,6 +4559,37 @@
      "grupal_individual": "GRU"
     }
    ]
+  },
+  {
+   "id": "5766b5e5f8b0",
+   "festival": "chubut",
+   "year": 1998,
+   "undated": false,
+   "category": "otros",
+   "title": "Eisteddfod 1998 en el Racing",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/1998/Fotos/Eisteddfod_1998_en_el_Racing.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10219484559038930",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Raul Horacio Comes Cutillo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "5766b5e5f8b0/thumb.webp",
+   "page_paths": [
+    "5766b5e5f8b0/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    863
+   ],
+   "text_excerpt": null,
+   "table": null
   },
   {
    "id": "3be817d4332a",
@@ -4837,6 +6914,37 @@
    "table": null
   },
   {
+   "id": "1261ec8eb5c1",
+   "festival": "chubut",
+   "year": 2008,
+   "undated": false,
+   "category": "programa",
+   "title": "Banner Programa 2008",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/2008/Programa/web_banner_Programa_2008.jpg",
+   "alt_paths": [],
+   "source_url": "https://web.archive.org/web/20120403063124/http://www.eisteddfod.org.ar/Programa.jpg",
+   "source_label": "Wayback Machine",
+   "retrieved": "2026-11-13",
+   "note_public": "",
+   "rights": "",
+   "year_inferred": false,
+   "restricted": false,
+   "hidden": false,
+   "no_text": true,
+   "pages": 1,
+   "thumb": "1261ec8eb5c1/thumb.webp",
+   "page_paths": [
+    "1261ec8eb5c1/p01.webp"
+   ],
+   "page_size": [
+    300,
+    120
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
    "id": "97190803d88d",
    "festival": "chubut",
    "year": 2008,
@@ -5005,37 +7113,6 @@
    "page_size": [
     1200,
     848
-   ],
-   "text_excerpt": null,
-   "table": null
-  },
-  {
-   "id": "1261ec8eb5c1",
-   "festival": "chubut",
-   "year": 2008,
-   "undated": false,
-   "category": "programa",
-   "title": "Banner Programa 2008",
-   "kind": "image",
-   "src_path": "Eisteddfod_del_Chubut/2008/Programa/web_banner_Programa_2008.jpg",
-   "alt_paths": [],
-   "source_url": "https://web.archive.org/web/20120403063124/http://www.eisteddfod.org.ar/Programa.jpg",
-   "source_label": "Wayback Machine",
-   "retrieved": "2026-11-13",
-   "note_public": "",
-   "rights": "",
-   "year_inferred": false,
-   "restricted": false,
-   "hidden": false,
-   "no_text": true,
-   "pages": 1,
-   "thumb": "1261ec8eb5c1/thumb.webp",
-   "page_paths": [
-    "1261ec8eb5c1/p01.webp"
-   ],
-   "page_size": [
-    300,
-    120
    ],
    "text_excerpt": null,
    "table": null
@@ -5673,6 +7750,38 @@
    "table": null
   },
   {
+   "id": "9400fb787c2c",
+   "festival": "chubut",
+   "year": 2010,
+   "undated": false,
+   "category": "resultados",
+   "title": "Resultados 2010 poesiaprosaGales",
+   "kind": "pdf",
+   "src_path": "Eisteddfod_del_Chubut/2010/Resultados/Resultados_2010_poesiaprosaGales.pdf",
+   "alt_paths": [],
+   "source_url": null,
+   "source_label": "Archivo personal (kpc)",
+   "retrieved": "2026-11-13",
+   "note_public": "",
+   "rights": "",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 2,
+   "thumb": "9400fb787c2c/thumb.webp",
+   "page_paths": [
+    "9400fb787c2c/p01.webp",
+    "9400fb787c2c/p02.webp"
+   ],
+   "page_size": [
+    1200,
+    927
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
    "id": "e5dc8202dec8",
    "festival": "chubut",
    "year": 2010,
@@ -5727,38 +7836,6 @@
    "page_paths": [
     "ff1cac4771d6/p01.webp",
     "ff1cac4771d6/p02.webp"
-   ],
-   "page_size": [
-    1200,
-    927
-   ],
-   "text_excerpt": null,
-   "table": null
-  },
-  {
-   "id": "9400fb787c2c",
-   "festival": "chubut",
-   "year": 2010,
-   "undated": false,
-   "category": "resultados",
-   "title": "Resultados 2010 poesiaprosaGales",
-   "kind": "pdf",
-   "src_path": "Eisteddfod_del_Chubut/2010/Resultados/Resultados_2010_poesiaprosaGales.pdf",
-   "alt_paths": [],
-   "source_url": null,
-   "source_label": "Archivo personal (kpc)",
-   "retrieved": "2026-11-13",
-   "note_public": "",
-   "rights": "",
-   "year_inferred": false,
-   "restricted": true,
-   "hidden": false,
-   "no_text": false,
-   "pages": 2,
-   "thumb": "9400fb787c2c/thumb.webp",
-   "page_paths": [
-    "9400fb787c2c/p01.webp",
-    "9400fb787c2c/p02.webp"
    ],
    "page_size": [
     1200,
@@ -7011,14 +9088,14 @@
    "table": null
   },
   {
-   "id": "8f3a469ed595",
+   "id": "72a871d67afd",
    "festival": "chubut",
    "year": 2012,
    "undated": false,
    "category": "resultados",
-   "title": "Resumen Eisteddfod del Chubut 2012",
+   "title": "Resultados en vivo",
    "kind": "web",
-   "src_path": "Eisteddfod_del_Chubut/2012/Resultados/Resumen_Eisteddfod_del_Chubut_2012.htm",
+   "src_path": "Eisteddfod_del_Chubut/2012/Resultados/web_resultados_vivo_2012.html",
    "alt_paths": [],
    "source_url": null,
    "source_label": "Archivo personal (kpc)",
@@ -7037,14 +9114,14 @@
    "table": null
   },
   {
-   "id": "72a871d67afd",
+   "id": "8f3a469ed595",
    "festival": "chubut",
    "year": 2012,
    "undated": false,
    "category": "resultados",
-   "title": "Resultados en vivo",
+   "title": "Resumen Eisteddfod del Chubut 2012",
    "kind": "web",
-   "src_path": "Eisteddfod_del_Chubut/2012/Resultados/web_resultados_vivo_2012.html",
+   "src_path": "Eisteddfod_del_Chubut/2012/Resultados/Resumen_Eisteddfod_del_Chubut_2012.htm",
    "alt_paths": [],
    "source_url": null,
    "source_label": "Archivo personal (kpc)",
@@ -10128,16 +12205,16 @@
    "table": null
   },
   {
-   "id": "b6f264879a62",
+   "id": "609e8a1fa869",
    "festival": "chubut",
    "year": 2015,
    "undated": false,
    "category": "programa",
-   "title": "Programa Rhaglen 2015 Eisteddfod del Chubut",
-   "kind": "pdf",
-   "src_path": "Eisteddfod_del_Chubut/2015/Programa/Programa_Rhaglen_2015_Eisteddfod_del_Chubut.pdf",
+   "title": "Programa",
+   "kind": "web",
+   "src_path": "Eisteddfod_del_Chubut/2015/Programa/web_programa-2015.html",
    "alt_paths": [],
-   "source_url": "https://web.archive.org/web/20150520183456/http://www.eisteddfodpatagonia.com/wp-content/uploads/2014/09/programa-Eist-Ch2015xs.pdf",
+   "source_url": "https://web.archive.org/web/2/http://www.eisteddfodpatagonia.com/programa-2015/",
    "source_label": "Wayback Machine",
    "retrieved": "2026-11-13",
    "note_public": "",
@@ -10145,65 +12222,12 @@
    "year_inferred": false,
    "restricted": false,
    "hidden": false,
-   "no_text": false,
-   "pages": 49,
-   "thumb": "b6f264879a62/thumb.webp",
-   "page_paths": [
-    "b6f264879a62/p01.webp",
-    "b6f264879a62/p02.webp",
-    "b6f264879a62/p03.webp",
-    "b6f264879a62/p04.webp",
-    "b6f264879a62/p05.webp",
-    "b6f264879a62/p06.webp",
-    "b6f264879a62/p07.webp",
-    "b6f264879a62/p08.webp",
-    "b6f264879a62/p09.webp",
-    "b6f264879a62/p10.webp",
-    "b6f264879a62/p11.webp",
-    "b6f264879a62/p12.webp",
-    "b6f264879a62/p13.webp",
-    "b6f264879a62/p14.webp",
-    "b6f264879a62/p15.webp",
-    "b6f264879a62/p16.webp",
-    "b6f264879a62/p17.webp",
-    "b6f264879a62/p18.webp",
-    "b6f264879a62/p19.webp",
-    "b6f264879a62/p20.webp",
-    "b6f264879a62/p21.webp",
-    "b6f264879a62/p22.webp",
-    "b6f264879a62/p23.webp",
-    "b6f264879a62/p24.webp",
-    "b6f264879a62/p25.webp",
-    "b6f264879a62/p26.webp",
-    "b6f264879a62/p27.webp",
-    "b6f264879a62/p28.webp",
-    "b6f264879a62/p29.webp",
-    "b6f264879a62/p30.webp",
-    "b6f264879a62/p31.webp",
-    "b6f264879a62/p32.webp",
-    "b6f264879a62/p33.webp",
-    "b6f264879a62/p34.webp",
-    "b6f264879a62/p35.webp",
-    "b6f264879a62/p36.webp",
-    "b6f264879a62/p37.webp",
-    "b6f264879a62/p38.webp",
-    "b6f264879a62/p39.webp",
-    "b6f264879a62/p40.webp",
-    "b6f264879a62/p41.webp",
-    "b6f264879a62/p42.webp",
-    "b6f264879a62/p43.webp",
-    "b6f264879a62/p44.webp",
-    "b6f264879a62/p45.webp",
-    "b6f264879a62/p46.webp",
-    "b6f264879a62/p47.webp",
-    "b6f264879a62/p48.webp",
-    "b6f264879a62/p49.webp"
-   ],
-   "page_size": [
-    1173,
-    935
-   ],
-   "text_excerpt": null,
+   "no_text": true,
+   "pages": 0,
+   "thumb": null,
+   "page_paths": [],
+   "page_size": null,
+   "text_excerpt": "Descargar el programa del Eisteddfod 2015",
    "table": null
   },
   {
@@ -10351,16 +12375,16 @@
    "table": null
   },
   {
-   "id": "609e8a1fa869",
+   "id": "b6f264879a62",
    "festival": "chubut",
    "year": 2015,
    "undated": false,
    "category": "programa",
-   "title": "Programa",
-   "kind": "web",
-   "src_path": "Eisteddfod_del_Chubut/2015/Programa/web_programa-2015.html",
+   "title": "Programa Rhaglen 2015 Eisteddfod del Chubut",
+   "kind": "pdf",
+   "src_path": "Eisteddfod_del_Chubut/2015/Programa/Programa_Rhaglen_2015_Eisteddfod_del_Chubut.pdf",
    "alt_paths": [],
-   "source_url": "https://web.archive.org/web/2/http://www.eisteddfodpatagonia.com/programa-2015/",
+   "source_url": "https://web.archive.org/web/20150520183456/http://www.eisteddfodpatagonia.com/wp-content/uploads/2014/09/programa-Eist-Ch2015xs.pdf",
    "source_label": "Wayback Machine",
    "retrieved": "2026-11-13",
    "note_public": "",
@@ -10368,12 +12392,65 @@
    "year_inferred": false,
    "restricted": false,
    "hidden": false,
-   "no_text": true,
-   "pages": 0,
-   "thumb": null,
-   "page_paths": [],
-   "page_size": null,
-   "text_excerpt": "Descargar el programa del Eisteddfod 2015",
+   "no_text": false,
+   "pages": 49,
+   "thumb": "b6f264879a62/thumb.webp",
+   "page_paths": [
+    "b6f264879a62/p01.webp",
+    "b6f264879a62/p02.webp",
+    "b6f264879a62/p03.webp",
+    "b6f264879a62/p04.webp",
+    "b6f264879a62/p05.webp",
+    "b6f264879a62/p06.webp",
+    "b6f264879a62/p07.webp",
+    "b6f264879a62/p08.webp",
+    "b6f264879a62/p09.webp",
+    "b6f264879a62/p10.webp",
+    "b6f264879a62/p11.webp",
+    "b6f264879a62/p12.webp",
+    "b6f264879a62/p13.webp",
+    "b6f264879a62/p14.webp",
+    "b6f264879a62/p15.webp",
+    "b6f264879a62/p16.webp",
+    "b6f264879a62/p17.webp",
+    "b6f264879a62/p18.webp",
+    "b6f264879a62/p19.webp",
+    "b6f264879a62/p20.webp",
+    "b6f264879a62/p21.webp",
+    "b6f264879a62/p22.webp",
+    "b6f264879a62/p23.webp",
+    "b6f264879a62/p24.webp",
+    "b6f264879a62/p25.webp",
+    "b6f264879a62/p26.webp",
+    "b6f264879a62/p27.webp",
+    "b6f264879a62/p28.webp",
+    "b6f264879a62/p29.webp",
+    "b6f264879a62/p30.webp",
+    "b6f264879a62/p31.webp",
+    "b6f264879a62/p32.webp",
+    "b6f264879a62/p33.webp",
+    "b6f264879a62/p34.webp",
+    "b6f264879a62/p35.webp",
+    "b6f264879a62/p36.webp",
+    "b6f264879a62/p37.webp",
+    "b6f264879a62/p38.webp",
+    "b6f264879a62/p39.webp",
+    "b6f264879a62/p40.webp",
+    "b6f264879a62/p41.webp",
+    "b6f264879a62/p42.webp",
+    "b6f264879a62/p43.webp",
+    "b6f264879a62/p44.webp",
+    "b6f264879a62/p45.webp",
+    "b6f264879a62/p46.webp",
+    "b6f264879a62/p47.webp",
+    "b6f264879a62/p48.webp",
+    "b6f264879a62/p49.webp"
+   ],
+   "page_size": [
+    1173,
+    935
+   ],
+   "text_excerpt": null,
    "table": null
   },
   {
@@ -11034,6 +13111,37 @@
    "table": null
   },
   {
+   "id": "8c1d95347416",
+   "festival": "chubut",
+   "year": 2018,
+   "undated": false,
+   "category": "bases",
+   "title": "Anuncio del programa (rhaglen)",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/2018/Bases_y_avisos/fb_programa-rhaglen-anuncio_1978845868821795.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=1978845868821795",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-13",
+   "note_public": "¿Ya leíste el programa completo del Eisteddfod del Chubut 2018? Entrá aquí http://www.eisteddfodpatagonia.com/.../2018/programa-18.pdf",
+   "rights": "",
+   "year_inferred": true,
+   "restricted": false,
+   "hidden": false,
+   "no_text": true,
+   "pages": 1,
+   "thumb": "8c1d95347416/thumb.webp",
+   "page_paths": [
+    "8c1d95347416/p01.webp"
+   ],
+   "page_size": [
+    567,
+    315
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
    "id": "0cb6d0b5048e",
    "festival": "chubut",
    "year": 2018,
@@ -11282,6 +13390,89 @@
    "table": null
   },
   {
+   "id": "55947368fa20",
+   "festival": "chubut",
+   "year": 2018,
+   "undated": false,
+   "category": "bases",
+   "title": "Competencia de coros",
+   "kind": "web",
+   "src_path": "Eisteddfod_del_Chubut/2018/Bases_y_avisos/web_competencia-coros.html",
+   "alt_paths": [],
+   "source_url": "https://web.archive.org/web/2/http://www.eisteddfodpatagonia.com/competencia-coros/",
+   "source_label": "Wayback Machine",
+   "retrieved": "2026-11-13",
+   "note_public": "",
+   "rights": "",
+   "year_inferred": false,
+   "restricted": false,
+   "hidden": false,
+   "no_text": false,
+   "pages": 0,
+   "thumb": null,
+   "page_paths": [],
+   "page_size": null,
+   "text_excerpt": "0 Competencia Coros Presentamos las competencias de COROS – CORAU. La fecha límite de inscripción es hasta el viernes 5 de octubre a través de nuestro sitio web eisteddfodpatagonia.com/inscripcion ¡Sumáte al Eisteddfod del Chubut!",
+   "table": null
+  },
+  {
+   "id": "4f2b04eae8c6",
+   "festival": "chubut",
+   "year": 2018,
+   "undated": false,
+   "category": "bases",
+   "title": "Competencia de música: solos",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/2018/Bases_y_avisos/fb_villagra_competencia-musica-solos-2018.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10157846136257729",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-13",
+   "note_public": "",
+   "rights": "",
+   "year_inferred": true,
+   "restricted": false,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "4f2b04eae8c6/thumb.webp",
+   "page_paths": [
+    "4f2b04eae8c6/p01.webp"
+   ],
+   "page_size": [
+    540,
+    960
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "fb874da438e1",
+   "festival": "chubut",
+   "year": 2018,
+   "undated": false,
+   "category": "bases",
+   "title": "Competencias fotografía y diseño gráfico",
+   "kind": "web",
+   "src_path": "Eisteddfod_del_Chubut/2018/Bases_y_avisos/web_competencias-fotografia-y-diseno-grafico.html",
+   "alt_paths": [],
+   "source_url": "https://web.archive.org/web/2/http://www.eisteddfodpatagonia.com/competencias-fotografia-y-diseno-grafico/",
+   "source_label": "Wayback Machine",
+   "retrieved": "2026-11-13",
+   "note_public": "",
+   "rights": "",
+   "year_inferred": false,
+   "restricted": false,
+   "hidden": false,
+   "no_text": false,
+   "pages": 0,
+   "thumb": null,
+   "page_paths": [],
+   "page_size": null,
+   "text_excerpt": "2 Competencias Fotografía y Diseño Gráfico Eisteddfod del Chubut 2018 Competencias: fotografía y diseño gráfico. Los trabajos de diseño gráfico se reciben hasta el día 24 de Agosto y los de fotografía hasta el 28 de Septiembre del corriente año. Más información en el Programa, disponible para su venta en San Martin 90 de Trelew o en nuestro sitio web.",
+   "table": null
+  },
+  {
    "id": "935b50e36ef5",
    "festival": "chubut",
    "year": 2018,
@@ -11344,117 +13535,685 @@
    "table": null
   },
   {
-   "id": "8c1d95347416",
+   "id": "ed28c2376112",
    "festival": "chubut",
    "year": 2018,
    "undated": false,
-   "category": "bases",
-   "title": "Anuncio del programa (rhaglen)",
+   "category": "otros",
+   "title": "Gorsedd 2018 Plaza de los Colonos Gaiman 1",
    "kind": "image",
-   "src_path": "Eisteddfod_del_Chubut/2018/Bases_y_avisos/fb_programa-rhaglen-anuncio_1978845868821795.jpg",
+   "src_path": "Eisteddfod_del_Chubut/2018/Fotos/Gorsedd_2018_Plaza_de_los_Colonos_Gaiman_1.jpg",
    "alt_paths": [],
-   "source_url": "https://www.facebook.com/photo/?fbid=1978845868821795",
+   "source_url": "https://www.facebook.com/photo/?fbid=1954525511514044",
    "source_label": "Facebook",
-   "retrieved": "2026-11-13",
-   "note_public": "¿Ya leíste el programa completo del Eisteddfod del Chubut 2018? Entrá aquí http://www.eisteddfodpatagonia.com/.../2018/programa-18.pdf",
-   "rights": "",
-   "year_inferred": true,
-   "restricted": false,
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por El Valle Online en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
    "hidden": false,
-   "no_text": true,
+   "no_text": false,
    "pages": 1,
-   "thumb": "8c1d95347416/thumb.webp",
+   "thumb": "ed28c2376112/thumb.webp",
    "page_paths": [
-    "8c1d95347416/p01.webp"
+    "ed28c2376112/p01.webp"
    ],
    "page_size": [
-    567,
-    315
+    1200,
+    675
    ],
    "text_excerpt": null,
    "table": null
   },
   {
-   "id": "4f2b04eae8c6",
+   "id": "223bdb507530",
    "festival": "chubut",
    "year": 2018,
    "undated": false,
-   "category": "bases",
-   "title": "Competencia de música: solos",
+   "category": "otros",
+   "title": "Gorsedd 2018 Plaza de los Colonos Gaiman 2",
    "kind": "image",
-   "src_path": "Eisteddfod_del_Chubut/2018/Bases_y_avisos/fb_villagra_competencia-musica-solos-2018.jpg",
+   "src_path": "Eisteddfod_del_Chubut/2018/Fotos/Gorsedd_2018_Plaza_de_los_Colonos_Gaiman_2.jpg",
    "alt_paths": [],
-   "source_url": "https://www.facebook.com/photo/?fbid=10157846136257729",
+   "source_url": "https://www.facebook.com/photo/?fbid=1954554814844447",
    "source_label": "Facebook",
-   "retrieved": "2026-11-13",
+   "retrieved": "2026-11-27",
    "note_public": "",
-   "rights": "",
-   "year_inferred": true,
-   "restricted": false,
+   "rights": "© sus autores o propietarios; copia publicada por El Valle Online en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
    "hidden": false,
    "no_text": false,
    "pages": 1,
-   "thumb": "4f2b04eae8c6/thumb.webp",
+   "thumb": "223bdb507530/thumb.webp",
    "page_paths": [
-    "4f2b04eae8c6/p01.webp"
+    "223bdb507530/p01.webp"
    ],
    "page_size": [
-    540,
-    960
+    1172,
+    659
    ],
    "text_excerpt": null,
    "table": null
   },
   {
-   "id": "55947368fa20",
+   "id": "851a81665b0e",
    "festival": "chubut",
    "year": 2018,
    "undated": false,
-   "category": "bases",
-   "title": "Competencia de coros",
-   "kind": "web",
-   "src_path": "Eisteddfod_del_Chubut/2018/Bases_y_avisos/web_competencia-coros.html",
+   "category": "otros",
+   "title": "Gorsedd 2018 Plaza de los Colonos Gaiman 3",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/2018/Fotos/Gorsedd_2018_Plaza_de_los_Colonos_Gaiman_3.jpg",
    "alt_paths": [],
-   "source_url": "https://web.archive.org/web/2/http://www.eisteddfodpatagonia.com/competencia-coros/",
-   "source_label": "Wayback Machine",
-   "retrieved": "2026-11-13",
+   "source_url": "https://www.facebook.com/photo/?fbid=1954554861511109",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
    "note_public": "",
-   "rights": "",
+   "rights": "© sus autores o propietarios; copia publicada por El Valle Online en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
    "year_inferred": false,
-   "restricted": false,
+   "restricted": true,
    "hidden": false,
    "no_text": false,
-   "pages": 0,
-   "thumb": null,
-   "page_paths": [],
-   "page_size": null,
-   "text_excerpt": "0 Competencia Coros Presentamos las competencias de COROS – CORAU. La fecha límite de inscripción es hasta el viernes 5 de octubre a través de nuestro sitio web eisteddfodpatagonia.com/inscripcion ¡Sumáte al Eisteddfod del Chubut!",
+   "pages": 1,
+   "thumb": "851a81665b0e/thumb.webp",
+   "page_paths": [
+    "851a81665b0e/p01.webp"
+   ],
+   "page_size": [
+    1169,
+    681
+   ],
+   "text_excerpt": null,
    "table": null
   },
   {
-   "id": "fb874da438e1",
+   "id": "eafc9d293037",
    "festival": "chubut",
    "year": 2018,
    "undated": false,
-   "category": "bases",
-   "title": "Competencias fotografía y diseño gráfico",
-   "kind": "web",
-   "src_path": "Eisteddfod_del_Chubut/2018/Bases_y_avisos/web_competencias-fotografia-y-diseno-grafico.html",
+   "category": "otros",
+   "title": "Gorsedd 2018 Plaza de los Colonos Gaiman 4",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/2018/Fotos/Gorsedd_2018_Plaza_de_los_Colonos_Gaiman_4.jpg",
    "alt_paths": [],
-   "source_url": "https://web.archive.org/web/2/http://www.eisteddfodpatagonia.com/competencias-fotografia-y-diseno-grafico/",
-   "source_label": "Wayback Machine",
-   "retrieved": "2026-11-13",
+   "source_url": "https://www.facebook.com/photo/?fbid=1954554908177771",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
    "note_public": "",
-   "rights": "",
+   "rights": "© sus autores o propietarios; copia publicada por El Valle Online en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
    "year_inferred": false,
-   "restricted": false,
+   "restricted": true,
    "hidden": false,
    "no_text": false,
-   "pages": 0,
-   "thumb": null,
-   "page_paths": [],
-   "page_size": null,
-   "text_excerpt": "2 Competencias Fotografía y Diseño Gráfico Eisteddfod del Chubut 2018 Competencias: fotografía y diseño gráfico. Los trabajos de diseño gráfico se reciben hasta el día 24 de Agosto y los de fotografía hasta el 28 de Septiembre del corriente año. Más información en el Programa, disponible para su venta en San Martin 90 de Trelew o en nuestro sitio web.",
+   "pages": 1,
+   "thumb": "eafc9d293037/thumb.webp",
+   "page_paths": [
+    "eafc9d293037/p01.webp"
+   ],
+   "page_size": [
+    1177,
+    662
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "b98f05c21c71",
+   "festival": "chubut",
+   "year": 2018,
+   "undated": false,
+   "category": "otros",
+   "title": "Gorsedd 2018 Plaza de los Colonos Gaiman 5",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/2018/Fotos/Gorsedd_2018_Plaza_de_los_Colonos_Gaiman_5.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=1954555098177752",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por El Valle Online en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "b98f05c21c71/thumb.webp",
+   "page_paths": [
+    "b98f05c21c71/p01.webp"
+   ],
+   "page_size": [
+    1168,
+    657
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "8a62a5ac26e5",
+   "festival": "chubut",
+   "year": 2018,
+   "undated": false,
+   "category": "otros",
+   "title": "Gorsedd 2018 Plaza de los Colonos Gaiman 6",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/2018/Fotos/Gorsedd_2018_Plaza_de_los_Colonos_Gaiman_6.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=1954555218177740",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por El Valle Online en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "8a62a5ac26e5/thumb.webp",
+   "page_paths": [
+    "8a62a5ac26e5/p01.webp"
+   ],
+   "page_size": [
+    1170,
+    665
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "2cb002441e5a",
+   "festival": "chubut",
+   "year": 2018,
+   "undated": false,
+   "category": "otros",
+   "title": "Gorsedd 2018 Plaza de los Colonos Gaiman 7",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/2018/Fotos/Gorsedd_2018_Plaza_de_los_Colonos_Gaiman_7.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=1954555328177729",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por El Valle Online en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "2cb002441e5a/thumb.webp",
+   "page_paths": [
+    "2cb002441e5a/p01.webp"
+   ],
+   "page_size": [
+    1168,
+    657
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "1ce87bc988fb",
+   "festival": "chubut",
+   "year": 2018,
+   "undated": false,
+   "category": "otros",
+   "title": "Gorsedd 2018 Plaza de los Colonos Gaiman 8",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/2018/Fotos/Gorsedd_2018_Plaza_de_los_Colonos_Gaiman_8.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=1954556431510952",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por El Valle Online en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "1ce87bc988fb/thumb.webp",
+   "page_paths": [
+    "1ce87bc988fb/p01.webp"
+   ],
+   "page_size": [
+    1169,
+    658
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "0ebd1214aa5d",
+   "festival": "chubut",
+   "year": 2018,
+   "undated": false,
+   "category": "otros",
+   "title": "Gorsedd 2018 Plaza de los Colonos Gaiman 9",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/2018/Fotos/Gorsedd_2018_Plaza_de_los_Colonos_Gaiman_9.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=1954556651510930",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por El Valle Online en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "0ebd1214aa5d/thumb.webp",
+   "page_paths": [
+    "0ebd1214aa5d/p01.webp"
+   ],
+   "page_size": [
+    1173,
+    701
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "0709e8f7d9f4",
+   "festival": "chubut",
+   "year": 2018,
+   "undated": false,
+   "category": "otros",
+   "title": "Gorsedd 2018 Plaza de los Colonos Gaiman 10",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/2018/Fotos/Gorsedd_2018_Plaza_de_los_Colonos_Gaiman_10.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=1954556788177583",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por El Valle Online en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "0709e8f7d9f4/thumb.webp",
+   "page_paths": [
+    "0709e8f7d9f4/p01.webp"
+   ],
+   "page_size": [
+    1166,
+    656
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "28e6ec55355b",
+   "festival": "chubut",
+   "year": 2018,
+   "undated": false,
+   "category": "otros",
+   "title": "Gorsedd 2018 Plaza de los Colonos Gaiman 11",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/2018/Fotos/Gorsedd_2018_Plaza_de_los_Colonos_Gaiman_11.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=1954557058177556",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por El Valle Online en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "28e6ec55355b/thumb.webp",
+   "page_paths": [
+    "28e6ec55355b/p01.webp"
+   ],
+   "page_size": [
+    1169,
+    651
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "5dfad2bd7acd",
+   "festival": "chubut",
+   "year": 2018,
+   "undated": false,
+   "category": "otros",
+   "title": "Gorsedd 2018 Plaza de los Colonos Gaiman 12",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/2018/Fotos/Gorsedd_2018_Plaza_de_los_Colonos_Gaiman_12.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=1954557634844165",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por El Valle Online en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "5dfad2bd7acd/thumb.webp",
+   "page_paths": [
+    "5dfad2bd7acd/p01.webp"
+   ],
+   "page_size": [
+    1152,
+    648
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "5a01fb9908df",
+   "festival": "chubut",
+   "year": 2018,
+   "undated": false,
+   "category": "otros",
+   "title": "Gorsedd 2018 Plaza de los Colonos Gaiman 13",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/2018/Fotos/Gorsedd_2018_Plaza_de_los_Colonos_Gaiman_13.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=1954558258177436",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por El Valle Online en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "5a01fb9908df/thumb.webp",
+   "page_paths": [
+    "5a01fb9908df/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    681
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "c9355fb101da",
+   "festival": "chubut",
+   "year": 2018,
+   "undated": false,
+   "category": "otros",
+   "title": "Gorsedd 2018 Plaza de los Colonos Gaiman 14",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/2018/Fotos/Gorsedd_2018_Plaza_de_los_Colonos_Gaiman_14.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=1954558331510762",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por El Valle Online en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "c9355fb101da/thumb.webp",
+   "page_paths": [
+    "c9355fb101da/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    675
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "a79230083e0f",
+   "festival": "chubut",
+   "year": 2018,
+   "undated": false,
+   "category": "otros",
+   "title": "Gorsedd 2018 Plaza de los Colonos Gaiman 15",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/2018/Fotos/Gorsedd_2018_Plaza_de_los_Colonos_Gaiman_15.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=1954558488177413",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por El Valle Online en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "a79230083e0f/thumb.webp",
+   "page_paths": [
+    "a79230083e0f/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    675
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "65bcbeb5b578",
+   "festival": "chubut",
+   "year": 2018,
+   "undated": false,
+   "category": "otros",
+   "title": "Gorsedd 2018 Plaza de los Colonos Gaiman 16",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/2018/Fotos/Gorsedd_2018_Plaza_de_los_Colonos_Gaiman_16.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=1954558648177397",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por El Valle Online en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "65bcbeb5b578/thumb.webp",
+   "page_paths": [
+    "65bcbeb5b578/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    675
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "19e83806f5d2",
+   "festival": "chubut",
+   "year": 2018,
+   "undated": false,
+   "category": "otros",
+   "title": "Gorsedd 2018 Plaza de los Colonos Gaiman 17",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/2018/Fotos/Gorsedd_2018_Plaza_de_los_Colonos_Gaiman_17.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=1954558664844062",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por El Valle Online en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "19e83806f5d2/thumb.webp",
+   "page_paths": [
+    "19e83806f5d2/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    675
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "0717cc636a30",
+   "festival": "chubut",
+   "year": 2018,
+   "undated": false,
+   "category": "otros",
+   "title": "Gorsedd 2018 Plaza de los Colonos Gaiman 18",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/2018/Fotos/Gorsedd_2018_Plaza_de_los_Colonos_Gaiman_18.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=1954558768177385",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por El Valle Online en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "0717cc636a30/thumb.webp",
+   "page_paths": [
+    "0717cc636a30/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    675
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "082b66ee9cbb",
+   "festival": "chubut",
+   "year": 2018,
+   "undated": false,
+   "category": "otros",
+   "title": "Gorsedd 2018 Plaza de los Colonos Gaiman 19",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/2018/Fotos/Gorsedd_2018_Plaza_de_los_Colonos_Gaiman_19.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=1954558891510706",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por El Valle Online en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "082b66ee9cbb/thumb.webp",
+   "page_paths": [
+    "082b66ee9cbb/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    675
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "c2cbfc973fef",
+   "festival": "chubut",
+   "year": 2018,
+   "undated": false,
+   "category": "otros",
+   "title": "Gorsedd 2018 Plaza de los Colonos Gaiman 20",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/2018/Fotos/Gorsedd_2018_Plaza_de_los_Colonos_Gaiman_20.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=1954558954844033",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por El Valle Online en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "c2cbfc973fef/thumb.webp",
+   "page_paths": [
+    "c2cbfc973fef/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    675
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "490f64123cb8",
+   "festival": "chubut",
+   "year": 2018,
+   "undated": false,
+   "category": "otros",
+   "title": "Gorsedd 2018 Plaza de los Colonos Gaiman 21",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/2018/Fotos/Gorsedd_2018_Plaza_de_los_Colonos_Gaiman_21.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=1954559008177361",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por El Valle Online en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "490f64123cb8/thumb.webp",
+   "page_paths": [
+    "490f64123cb8/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    675
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "3191164e7646",
+   "festival": "chubut",
+   "year": 2018,
+   "undated": false,
+   "category": "otros",
+   "title": "Gorsedd 2018 Plaza de los Colonos Gaiman 22",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/2018/Fotos/Gorsedd_2018_Plaza_de_los_Colonos_Gaiman_22.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=1954559174844011",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por El Valle Online en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "3191164e7646/thumb.webp",
+   "page_paths": [
+    "3191164e7646/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    675
+   ],
+   "text_excerpt": null,
    "table": null
   },
   {
@@ -11546,6 +14305,32 @@
    "table": null
   },
   {
+   "id": "2cfafa66c271",
+   "festival": "chubut",
+   "year": 2018,
+   "undated": false,
+   "category": "programa",
+   "title": "Programa del Eisteddfod del Chubut",
+   "kind": "web",
+   "src_path": "Eisteddfod_del_Chubut/2018/Programa/web_programa-eisteddfod-del-chubut-2018.html",
+   "alt_paths": [],
+   "source_url": "https://web.archive.org/web/20181103205409/http://www.eisteddfodpatagonia.com/programa-eisteddfod-del-chubut-2018/",
+   "source_label": "Wayback Machine",
+   "retrieved": "2026-11-17",
+   "note_public": "",
+   "rights": "",
+   "year_inferred": false,
+   "restricted": false,
+   "hidden": false,
+   "no_text": false,
+   "pages": 0,
+   "thumb": null,
+   "page_paths": [],
+   "page_size": null,
+   "text_excerpt": "10 Programa Eisteddfod del Chubut 2018 Ver el Programa del Eisteddfod 2018",
+   "table": null
+  },
+  {
    "id": "1d933f777d08",
    "festival": "chubut",
    "year": 2018,
@@ -11632,32 +14417,6 @@
    "table": null
   },
   {
-   "id": "2cfafa66c271",
-   "festival": "chubut",
-   "year": 2018,
-   "undated": false,
-   "category": "programa",
-   "title": "Programa del Eisteddfod del Chubut",
-   "kind": "web",
-   "src_path": "Eisteddfod_del_Chubut/2018/Programa/web_programa-eisteddfod-del-chubut-2018.html",
-   "alt_paths": [],
-   "source_url": "https://web.archive.org/web/20181103205409/http://www.eisteddfodpatagonia.com/programa-eisteddfod-del-chubut-2018/",
-   "source_label": "Wayback Machine",
-   "retrieved": "2026-11-17",
-   "note_public": "",
-   "rights": "",
-   "year_inferred": false,
-   "restricted": false,
-   "hidden": false,
-   "no_text": false,
-   "pages": 0,
-   "thumb": null,
-   "page_paths": [],
-   "page_size": null,
-   "text_excerpt": "10 Programa Eisteddfod del Chubut 2018 Ver el Programa del Eisteddfod 2018",
-   "table": null
-  },
-  {
    "id": "0e54fc66f0dc",
    "festival": "chubut",
    "year": 2018,
@@ -11684,6 +14443,68 @@
    "page_size": [
     678,
     960
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "f5be2847899f",
+   "festival": "chubut",
+   "year": 2019,
+   "undated": false,
+   "category": "bases",
+   "title": "Danzas: inscripción",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/2019/Bases_y_avisos/fb_villagra_danzas-inscripcion-2019.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10158554520422729",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-13",
+   "note_public": "",
+   "rights": "",
+   "year_inferred": true,
+   "restricted": false,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "f5be2847899f/thumb.webp",
+   "page_paths": [
+    "f5be2847899f/p01.webp"
+   ],
+   "page_size": [
+    480,
+    480
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "2818cfcd21bb",
+   "festival": "chubut",
+   "year": 2019,
+   "undated": false,
+   "category": "bases",
+   "title": "Dónde inscribirte",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/2019/Bases_y_avisos/fb_villagra_donde-inscribirte-2019.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10158554520182729",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-13",
+   "note_public": "",
+   "rights": "",
+   "year_inferred": true,
+   "restricted": false,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "2818cfcd21bb/thumb.webp",
+   "page_paths": [
+    "2818cfcd21bb/p01.webp"
+   ],
+   "page_size": [
+    480,
+    480
    ],
    "text_excerpt": null,
    "table": null
@@ -11777,68 +14598,6 @@
    "page_size": [
     480,
     583
-   ],
-   "text_excerpt": null,
-   "table": null
-  },
-  {
-   "id": "f5be2847899f",
-   "festival": "chubut",
-   "year": 2019,
-   "undated": false,
-   "category": "bases",
-   "title": "Danzas: inscripción",
-   "kind": "image",
-   "src_path": "Eisteddfod_del_Chubut/2019/Bases_y_avisos/fb_villagra_danzas-inscripcion-2019.jpg",
-   "alt_paths": [],
-   "source_url": "https://www.facebook.com/photo/?fbid=10158554520422729",
-   "source_label": "Facebook",
-   "retrieved": "2026-11-13",
-   "note_public": "",
-   "rights": "",
-   "year_inferred": true,
-   "restricted": false,
-   "hidden": false,
-   "no_text": false,
-   "pages": 1,
-   "thumb": "f5be2847899f/thumb.webp",
-   "page_paths": [
-    "f5be2847899f/p01.webp"
-   ],
-   "page_size": [
-    480,
-    480
-   ],
-   "text_excerpt": null,
-   "table": null
-  },
-  {
-   "id": "2818cfcd21bb",
-   "festival": "chubut",
-   "year": 2019,
-   "undated": false,
-   "category": "bases",
-   "title": "Dónde inscribirte",
-   "kind": "image",
-   "src_path": "Eisteddfod_del_Chubut/2019/Bases_y_avisos/fb_villagra_donde-inscribirte-2019.jpg",
-   "alt_paths": [],
-   "source_url": "https://www.facebook.com/photo/?fbid=10158554520182729",
-   "source_label": "Facebook",
-   "retrieved": "2026-11-13",
-   "note_public": "",
-   "rights": "",
-   "year_inferred": true,
-   "restricted": false,
-   "hidden": false,
-   "no_text": false,
-   "pages": 1,
-   "thumb": "2818cfcd21bb/thumb.webp",
-   "page_paths": [
-    "2818cfcd21bb/p01.webp"
-   ],
-   "page_size": [
-    480,
-    480
    ],
    "text_excerpt": null,
    "table": null
@@ -18281,7 +21040,7 @@
    "retrieved": "2026-11-13",
    "note_public": "",
    "rights": "",
-   "year_inferred": true,
+   "year_inferred": false,
    "restricted": false,
    "hidden": false,
    "no_text": false,
@@ -18628,37 +21387,6 @@
    "table": null
   },
   {
-   "id": "ee3f14f29b10",
-   "festival": "chubut",
-   "year": 2024,
-   "undated": false,
-   "category": "programa",
-   "title": "Tapa programa 2024",
-   "kind": "image",
-   "src_path": "Eisteddfod_del_Chubut/2024/Programa/Tapa_programa_2024.jpg",
-   "alt_paths": [],
-   "source_url": "https://asociaciongalesamadryn.org/wp-content/uploads/2024/03/eisteddfod-del-chubut-programa-scaled.jpg",
-   "source_label": "asociaciongalesamadryn.org",
-   "retrieved": "2026-11-19",
-   "note_public": "",
-   "rights": "",
-   "year_inferred": false,
-   "restricted": false,
-   "hidden": true,
-   "no_text": true,
-   "pages": 1,
-   "thumb": "ee3f14f29b10/thumb.webp",
-   "page_paths": [
-    "ee3f14f29b10/p01.webp"
-   ],
-   "page_size": [
-    1200,
-    870
-   ],
-   "text_excerpt": null,
-   "table": null
-  },
-  {
    "id": "2a55246506fd",
    "festival": "chubut",
    "year": 2024,
@@ -18716,6 +21444,37 @@
    "page_size": [
     720,
     687
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "ee3f14f29b10",
+   "festival": "chubut",
+   "year": 2024,
+   "undated": false,
+   "category": "programa",
+   "title": "Tapa programa 2024",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/2024/Programa/Tapa_programa_2024.jpg",
+   "alt_paths": [],
+   "source_url": "https://asociaciongalesamadryn.org/wp-content/uploads/2024/03/eisteddfod-del-chubut-programa-scaled.jpg",
+   "source_label": "asociaciongalesamadryn.org",
+   "retrieved": "2026-11-19",
+   "note_public": "",
+   "rights": "",
+   "year_inferred": false,
+   "restricted": false,
+   "hidden": true,
+   "no_text": true,
+   "pages": 1,
+   "thumb": "ee3f14f29b10/thumb.webp",
+   "page_paths": [
+    "ee3f14f29b10/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    870
    ],
    "text_excerpt": null,
    "table": null
@@ -20158,130 +22917,6 @@
    "table": null
   },
   {
-   "id": "b3984d72d16f",
-   "festival": "chubut",
-   "year": 2026,
-   "undated": false,
-   "category": "bases",
-   "title": "Bases de artes visuales (1 de 4)",
-   "kind": "image",
-   "src_path": "Eisteddfod_del_Chubut/2026/Bases_y_avisos/fb_artes-visuales-bases_1483438820483120.jpg",
-   "alt_paths": [],
-   "source_url": "https://www.facebook.com/photo/?fbid=1483438820483120",
-   "source_label": "Facebook",
-   "retrieved": "2026-11-13",
-   "note_public": "",
-   "rights": "",
-   "year_inferred": true,
-   "restricted": false,
-   "hidden": false,
-   "no_text": false,
-   "pages": 1,
-   "thumb": "b3984d72d16f/thumb.webp",
-   "page_paths": [
-    "b3984d72d16f/p01.webp"
-   ],
-   "page_size": [
-    1200,
-    600
-   ],
-   "text_excerpt": null,
-   "table": null
-  },
-  {
-   "id": "7283979dec00",
-   "festival": "chubut",
-   "year": 2026,
-   "undated": false,
-   "category": "bases",
-   "title": "Bases de artes visuales (2 de 4)",
-   "kind": "image",
-   "src_path": "Eisteddfod_del_Chubut/2026/Bases_y_avisos/fb_artes-visuales-bases_1483438843816451.jpg",
-   "alt_paths": [],
-   "source_url": "https://www.facebook.com/photo/?fbid=1483438843816451",
-   "source_label": "Facebook",
-   "retrieved": "2026-11-13",
-   "note_public": "",
-   "rights": "",
-   "year_inferred": true,
-   "restricted": false,
-   "hidden": false,
-   "no_text": false,
-   "pages": 1,
-   "thumb": "7283979dec00/thumb.webp",
-   "page_paths": [
-    "7283979dec00/p01.webp"
-   ],
-   "page_size": [
-    1200,
-    600
-   ],
-   "text_excerpt": null,
-   "table": null
-  },
-  {
-   "id": "dae03dbdb021",
-   "festival": "chubut",
-   "year": 2026,
-   "undated": false,
-   "category": "bases",
-   "title": "Bases de artes visuales (3 de 4)",
-   "kind": "image",
-   "src_path": "Eisteddfod_del_Chubut/2026/Bases_y_avisos/fb_artes-visuales-bases_1483438853816450.jpg",
-   "alt_paths": [],
-   "source_url": "https://www.facebook.com/photo/?fbid=1483438853816450",
-   "source_label": "Facebook",
-   "retrieved": "2026-11-13",
-   "note_public": "",
-   "rights": "",
-   "year_inferred": true,
-   "restricted": false,
-   "hidden": false,
-   "no_text": false,
-   "pages": 1,
-   "thumb": "dae03dbdb021/thumb.webp",
-   "page_paths": [
-    "dae03dbdb021/p01.webp"
-   ],
-   "page_size": [
-    1200,
-    600
-   ],
-   "text_excerpt": null,
-   "table": null
-  },
-  {
-   "id": "e331b0509176",
-   "festival": "chubut",
-   "year": 2026,
-   "undated": false,
-   "category": "bases",
-   "title": "Bases de artes visuales (4 de 4)",
-   "kind": "image",
-   "src_path": "Eisteddfod_del_Chubut/2026/Bases_y_avisos/fb_artes-visuales-bases_1483438860483116.jpg",
-   "alt_paths": [],
-   "source_url": "https://www.facebook.com/photo/?fbid=1483438860483116",
-   "source_label": "Facebook",
-   "retrieved": "2026-11-13",
-   "note_public": "",
-   "rights": "",
-   "year_inferred": true,
-   "restricted": false,
-   "hidden": false,
-   "no_text": false,
-   "pages": 1,
-   "thumb": "e331b0509176/thumb.webp",
-   "page_paths": [
-    "e331b0509176/p01.webp"
-   ],
-   "page_size": [
-    1200,
-    600
-   ],
-   "text_excerpt": null,
-   "table": null
-  },
-  {
    "id": "14f2f38e3c98",
    "festival": "chubut",
    "year": 2026,
@@ -21151,6 +23786,130 @@
    "thumb": "db71e01875e4/thumb.webp",
    "page_paths": [
     "db71e01875e4/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    600
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "b3984d72d16f",
+   "festival": "chubut",
+   "year": 2026,
+   "undated": false,
+   "category": "bases",
+   "title": "Bases de artes visuales (1 de 4)",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/2026/Bases_y_avisos/fb_artes-visuales-bases_1483438820483120.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=1483438820483120",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-13",
+   "note_public": "",
+   "rights": "",
+   "year_inferred": true,
+   "restricted": false,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "b3984d72d16f/thumb.webp",
+   "page_paths": [
+    "b3984d72d16f/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    600
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "7283979dec00",
+   "festival": "chubut",
+   "year": 2026,
+   "undated": false,
+   "category": "bases",
+   "title": "Bases de artes visuales (2 de 4)",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/2026/Bases_y_avisos/fb_artes-visuales-bases_1483438843816451.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=1483438843816451",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-13",
+   "note_public": "",
+   "rights": "",
+   "year_inferred": true,
+   "restricted": false,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "7283979dec00/thumb.webp",
+   "page_paths": [
+    "7283979dec00/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    600
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "dae03dbdb021",
+   "festival": "chubut",
+   "year": 2026,
+   "undated": false,
+   "category": "bases",
+   "title": "Bases de artes visuales (3 de 4)",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/2026/Bases_y_avisos/fb_artes-visuales-bases_1483438853816450.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=1483438853816450",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-13",
+   "note_public": "",
+   "rights": "",
+   "year_inferred": true,
+   "restricted": false,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "dae03dbdb021/thumb.webp",
+   "page_paths": [
+    "dae03dbdb021/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    600
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "e331b0509176",
+   "festival": "chubut",
+   "year": 2026,
+   "undated": false,
+   "category": "bases",
+   "title": "Bases de artes visuales (4 de 4)",
+   "kind": "image",
+   "src_path": "Eisteddfod_del_Chubut/2026/Bases_y_avisos/fb_artes-visuales-bases_1483438860483116.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=1483438860483116",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-13",
+   "note_public": "",
+   "rights": "",
+   "year_inferred": true,
+   "restricted": false,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "e331b0509176/thumb.webp",
+   "page_paths": [
+    "e331b0509176/p01.webp"
    ],
    "page_size": [
     1200,
@@ -22114,42 +24873,6 @@
    "table": null
   },
   {
-   "id": "d23889ccdb4f",
-   "festival": "chubut",
-   "year": 2026,
-   "undated": false,
-   "category": "programa-del-dia",
-   "title": "Programa del dia 2026",
-   "kind": "pdf",
-   "src_path": "Eisteddfod_del_Chubut/2026/Programa_del_dia/Programa_del_dia_2026.pdf",
-   "alt_paths": [],
-   "source_url": "https://drive.google.com/file/d/1IdHqGPXVVPydVXzJgs6Boeq8mopOsggY/view",
-   "source_label": "Google Drive",
-   "retrieved": "2026-11-14",
-   "note_public": "",
-   "rights": "",
-   "year_inferred": false,
-   "restricted": false,
-   "hidden": false,
-   "no_text": false,
-   "pages": 6,
-   "thumb": "d23889ccdb4f/thumb.webp",
-   "page_paths": [
-    "d23889ccdb4f/p01.webp",
-    "d23889ccdb4f/p02.webp",
-    "d23889ccdb4f/p03.webp",
-    "d23889ccdb4f/p04.webp",
-    "d23889ccdb4f/p05.webp",
-    "d23889ccdb4f/p06.webp"
-   ],
-   "page_size": [
-    849,
-    1200
-   ],
-   "text_excerpt": null,
-   "table": null
-  },
-  {
    "id": "86ae75caba4b",
    "festival": "chubut",
    "year": 2026,
@@ -22274,6 +24997,290 @@
    "table": null
   },
   {
+   "id": "d23889ccdb4f",
+   "festival": "chubut",
+   "year": 2026,
+   "undated": false,
+   "category": "programa-del-dia",
+   "title": "Programa del dia 2026",
+   "kind": "pdf",
+   "src_path": "Eisteddfod_del_Chubut/2026/Programa_del_dia/Programa_del_dia_2026.pdf",
+   "alt_paths": [],
+   "source_url": "https://drive.google.com/file/d/1IdHqGPXVVPydVXzJgs6Boeq8mopOsggY/view",
+   "source_label": "Google Drive",
+   "retrieved": "2026-11-14",
+   "note_public": "",
+   "rights": "",
+   "year_inferred": false,
+   "restricted": false,
+   "hidden": false,
+   "no_text": false,
+   "pages": 6,
+   "thumb": "d23889ccdb4f/thumb.webp",
+   "page_paths": [
+    "d23889ccdb4f/p01.webp",
+    "d23889ccdb4f/p02.webp",
+    "d23889ccdb4f/p03.webp",
+    "d23889ccdb4f/p04.webp",
+    "d23889ccdb4f/p05.webp",
+    "d23889ccdb4f/p06.webp"
+   ],
+   "page_size": [
+    849,
+    1200
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "60d6bf3f568d",
+   "festival": "juventud",
+   "year": null,
+   "undated": true,
+   "category": "otros",
+   "title": "Eisteddfod de la Juventud sin fecha 1",
+   "kind": "image",
+   "src_path": "Eisteddfod_de_la_Juventud/_sin_fecha/Fotos/Eisteddfod_de_la_Juventud_sin_fecha_1.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=637146446316563",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Verónica Barragán en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "60d6bf3f568d/thumb.webp",
+   "page_paths": [
+    "60d6bf3f568d/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    873
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "0013dbb6c313",
+   "festival": "juventud",
+   "year": null,
+   "undated": true,
+   "category": "otros",
+   "title": "Eisteddfod de la Juventud sin fecha 2",
+   "kind": "image",
+   "src_path": "Eisteddfod_de_la_Juventud/_sin_fecha/Fotos/Eisteddfod_de_la_Juventud_sin_fecha_2.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10227693393734667",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Raul Horacio Comes Cutillo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "0013dbb6c313/thumb.webp",
+   "page_paths": [
+    "0013dbb6c313/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    1057
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "41377e76be16",
+   "festival": "juventud",
+   "year": 1982,
+   "undated": false,
+   "category": "otros",
+   "title": "Eisteddfod de la Juventud 1982 1",
+   "kind": "image",
+   "src_path": "Eisteddfod_de_la_Juventud/1982/Fotos/Eisteddfod_de_la_Juventud_1982_1.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=5761419063882127",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Julio Dimol en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "41377e76be16/thumb.webp",
+   "page_paths": [
+    "41377e76be16/p01.webp"
+   ],
+   "page_size": [
+    881,
+    1200
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "208cafd193f0",
+   "festival": "juventud",
+   "year": 1982,
+   "undated": false,
+   "category": "otros",
+   "title": "Eisteddfod de la Juventud 1982 2",
+   "kind": "image",
+   "src_path": "Eisteddfod_de_la_Juventud/1982/Fotos/Eisteddfod_de_la_Juventud_1982_2.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=5761419283882105",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Julio Dimol en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "208cafd193f0/thumb.webp",
+   "page_paths": [
+    "208cafd193f0/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    794
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "f61e7f9e7749",
+   "festival": "juventud",
+   "year": 1982,
+   "undated": false,
+   "category": "otros",
+   "title": "Eisteddfod de la Juventud 1982 3",
+   "kind": "image",
+   "src_path": "Eisteddfod_de_la_Juventud/1982/Fotos/Eisteddfod_de_la_Juventud_1982_3.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=5761419530548747",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Julio Dimol en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "f61e7f9e7749/thumb.webp",
+   "page_paths": [
+    "f61e7f9e7749/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    981
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "8863bdc8bd59",
+   "festival": "juventud",
+   "year": 1982,
+   "undated": false,
+   "category": "otros",
+   "title": "Eisteddfod de la Juventud 1982 4",
+   "kind": "image",
+   "src_path": "Eisteddfod_de_la_Juventud/1982/Fotos/Eisteddfod_de_la_Juventud_1982_4.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=5761420077215359",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Julio Dimol en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "8863bdc8bd59/thumb.webp",
+   "page_paths": [
+    "8863bdc8bd59/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    925
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "e169c0c24e02",
+   "festival": "juventud",
+   "year": 1982,
+   "undated": false,
+   "category": "otros",
+   "title": "Eisteddfod de la Juventud 1982 5",
+   "kind": "image",
+   "src_path": "Eisteddfod_de_la_Juventud/1982/Fotos/Eisteddfod_de_la_Juventud_1982_5.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=5761420410548659",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Julio Dimol en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "e169c0c24e02/thumb.webp",
+   "page_paths": [
+    "e169c0c24e02/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    793
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "6df058fd5985",
+   "festival": "juventud",
+   "year": 1985,
+   "undated": false,
+   "category": "otros",
+   "title": "Coro de ninas de Gaiman Juventud 1985",
+   "kind": "image",
+   "src_path": "Eisteddfod_de_la_Juventud/1985/Fotos/Coro_de_ninas_de_Gaiman_Juventud_1985.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=579580472077489",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Mario Jones en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "6df058fd5985/thumb.webp",
+   "page_paths": [
+    "6df058fd5985/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    780
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
    "id": "121a08444512",
    "festival": "juventud",
    "year": 1985,
@@ -22300,6 +25307,316 @@
    "page_size": [
     720,
     960
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "c314c5922f9a",
+   "festival": "juventud",
+   "year": 1997,
+   "undated": false,
+   "category": "otros",
+   "title": "Eisteddfod de la Juventud 1997 Gaiman 1",
+   "kind": "image",
+   "src_path": "Eisteddfod_de_la_Juventud/1997/Fotos/Eisteddfod_de_la_Juventud_1997_Gaiman_1.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10227694223515411",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Raul Horacio Comes Cutillo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "c314c5922f9a/thumb.webp",
+   "page_paths": [
+    "c314c5922f9a/p01.webp"
+   ],
+   "page_size": [
+    974,
+    1200
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "0cc65b36673c",
+   "festival": "juventud",
+   "year": 1997,
+   "undated": false,
+   "category": "otros",
+   "title": "Eisteddfod de la Juventud 1997 Gaiman 2",
+   "kind": "image",
+   "src_path": "Eisteddfod_de_la_Juventud/1997/Fotos/Eisteddfod_de_la_Juventud_1997_Gaiman_2.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10219488430935725",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Raul Horacio Comes Cutillo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "0cc65b36673c/thumb.webp",
+   "page_paths": [
+    "0cc65b36673c/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    803
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "a28354185d08",
+   "festival": "juventud",
+   "year": 1997,
+   "undated": false,
+   "category": "otros",
+   "title": "Eisteddfod de la Juventud 1997 Gaiman 3",
+   "kind": "image",
+   "src_path": "Eisteddfod_de_la_Juventud/1997/Fotos/Eisteddfod_de_la_Juventud_1997_Gaiman_3.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10219488432735770",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Raul Horacio Comes Cutillo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "a28354185d08/thumb.webp",
+   "page_paths": [
+    "a28354185d08/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    919
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "3459bd7417d0",
+   "festival": "juventud",
+   "year": 1997,
+   "undated": false,
+   "category": "otros",
+   "title": "Eisteddfod de la Juventud 1997 Gaiman 4",
+   "kind": "image",
+   "src_path": "Eisteddfod_de_la_Juventud/1997/Fotos/Eisteddfod_de_la_Juventud_1997_Gaiman_4.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10219488433895799",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Raul Horacio Comes Cutillo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "3459bd7417d0/thumb.webp",
+   "page_paths": [
+    "3459bd7417d0/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    769
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "acf5358bbe3f",
+   "festival": "juventud",
+   "year": 1997,
+   "undated": false,
+   "category": "otros",
+   "title": "Eisteddfod de la Juventud 1997 Gaiman 5",
+   "kind": "image",
+   "src_path": "Eisteddfod_de_la_Juventud/1997/Fotos/Eisteddfod_de_la_Juventud_1997_Gaiman_5.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10219488434655818",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Raul Horacio Comes Cutillo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "acf5358bbe3f/thumb.webp",
+   "page_paths": [
+    "acf5358bbe3f/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    689
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "ded5d9a682d3",
+   "festival": "juventud",
+   "year": 1997,
+   "undated": false,
+   "category": "otros",
+   "title": "Eisteddfod de la Juventud 1997 Gaiman 6",
+   "kind": "image",
+   "src_path": "Eisteddfod_de_la_Juventud/1997/Fotos/Eisteddfod_de_la_Juventud_1997_Gaiman_6.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10219488435895849",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Raul Horacio Comes Cutillo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "ded5d9a682d3/thumb.webp",
+   "page_paths": [
+    "ded5d9a682d3/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    749
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "b93078f53778",
+   "festival": "juventud",
+   "year": 1997,
+   "undated": false,
+   "category": "otros",
+   "title": "Eisteddfod de la Juventud 1997 Gaiman 7",
+   "kind": "image",
+   "src_path": "Eisteddfod_de_la_Juventud/1997/Fotos/Eisteddfod_de_la_Juventud_1997_Gaiman_7.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10219488437015877",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Raul Horacio Comes Cutillo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "b93078f53778/thumb.webp",
+   "page_paths": [
+    "b93078f53778/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    717
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "cbdd9d7a1f18",
+   "festival": "juventud",
+   "year": 1997,
+   "undated": false,
+   "category": "otros",
+   "title": "Eisteddfod de la Juventud 1997 Gaiman 8",
+   "kind": "image",
+   "src_path": "Eisteddfod_de_la_Juventud/1997/Fotos/Eisteddfod_de_la_Juventud_1997_Gaiman_8.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10219488439815947",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Raul Horacio Comes Cutillo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "cbdd9d7a1f18/thumb.webp",
+   "page_paths": [
+    "cbdd9d7a1f18/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    805
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "c819f51f086e",
+   "festival": "juventud",
+   "year": 1997,
+   "undated": false,
+   "category": "otros",
+   "title": "Eisteddfod de la Juventud 1997 Gaiman 9",
+   "kind": "image",
+   "src_path": "Eisteddfod_de_la_Juventud/1997/Fotos/Eisteddfod_de_la_Juventud_1997_Gaiman_9.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10219488440255958",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Raul Horacio Comes Cutillo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "c819f51f086e/thumb.webp",
+   "page_paths": [
+    "c819f51f086e/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    755
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "f283a3946e10",
+   "festival": "juventud",
+   "year": 1997,
+   "undated": false,
+   "category": "otros",
+   "title": "Eisteddfod de la Juventud 1997 Gaiman 10",
+   "kind": "image",
+   "src_path": "Eisteddfod_de_la_Juventud/1997/Fotos/Eisteddfod_de_la_Juventud_1997_Gaiman_10.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10219488441655993",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Raul Horacio Comes Cutillo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "f283a3946e10/thumb.webp",
+   "page_paths": [
+    "f283a3946e10/p01.webp"
+   ],
+   "page_size": [
+    893,
+    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -22378,6 +25695,37 @@
    "page_size": [
     867,
     735
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "3dd10fbb9451",
+   "festival": "juventud",
+   "year": 2008,
+   "undated": false,
+   "category": "programa",
+   "title": "Tapa 2008",
+   "kind": "image",
+   "src_path": "Eisteddfod_de_la_Juventud/2008/Programa/web_Tapa_2008.jpg",
+   "alt_paths": [],
+   "source_url": "https://web.archive.org/web/20120403063124/http://www.eisteddfod.org.ar/2008/juventud/Tapa.JPG",
+   "source_label": "Wayback Machine",
+   "retrieved": "2026-11-13",
+   "note_public": "",
+   "rights": "",
+   "year_inferred": false,
+   "restricted": false,
+   "hidden": false,
+   "no_text": true,
+   "pages": 1,
+   "thumb": "3dd10fbb9451/thumb.webp",
+   "page_paths": [
+    "3dd10fbb9451/p01.webp"
+   ],
+   "page_size": [
+    314,
+    168
    ],
    "text_excerpt": null,
    "table": null
@@ -22489,37 +25837,6 @@
    "page_size": [
     867,
     735
-   ],
-   "text_excerpt": null,
-   "table": null
-  },
-  {
-   "id": "3dd10fbb9451",
-   "festival": "juventud",
-   "year": 2008,
-   "undated": false,
-   "category": "programa",
-   "title": "Tapa 2008",
-   "kind": "image",
-   "src_path": "Eisteddfod_de_la_Juventud/2008/Programa/web_Tapa_2008.jpg",
-   "alt_paths": [],
-   "source_url": "https://web.archive.org/web/20120403063124/http://www.eisteddfod.org.ar/2008/juventud/Tapa.JPG",
-   "source_label": "Wayback Machine",
-   "retrieved": "2026-11-13",
-   "note_public": "",
-   "rights": "",
-   "year_inferred": false,
-   "restricted": false,
-   "hidden": false,
-   "no_text": true,
-   "pages": 1,
-   "thumb": "3dd10fbb9451/thumb.webp",
-   "page_paths": [
-    "3dd10fbb9451/p01.webp"
-   ],
-   "page_size": [
-    314,
-    168
    ],
    "text_excerpt": null,
    "table": null
@@ -25625,37 +28942,6 @@
    "table": null
   },
   {
-   "id": "9e4535f73f13",
-   "festival": "juventud",
-   "year": 2020,
-   "undated": false,
-   "category": "bases",
-   "title": "Desde casa",
-   "kind": "image",
-   "src_path": "Eisteddfod_de_la_Juventud/2020/Bases_y_avisos/fb_desde-casa_1304391296565975.jpg",
-   "alt_paths": [],
-   "source_url": "https://www.facebook.com/photo/?fbid=1304391296565975",
-   "source_label": "Facebook",
-   "retrieved": "2026-11-13",
-   "note_public": "ESTAMOS ARREGLANDO PARA LLEVAR BOLSITAS Y PREMIOS A TRELEW... Y TAMBIEN A LA CORDILLERA... EN CUANTO TENGAMOS NOVEDADES, COMUNICAMOS POR ESTE MEDIO... SUBÍ TU FOTO Y ETIQUETANOS!",
-   "rights": "",
-   "year_inferred": true,
-   "restricted": false,
-   "hidden": false,
-   "no_text": false,
-   "pages": 1,
-   "thumb": "9e4535f73f13/thumb.webp",
-   "page_paths": [
-    "9e4535f73f13/p01.webp"
-   ],
-   "page_size": [
-    1200,
-    1200
-   ],
-   "text_excerpt": null,
-   "table": null
-  },
-  {
    "id": "3c22136563b9",
    "festival": "juventud",
    "year": 2020,
@@ -26081,6 +29367,37 @@
    "thumb": "99d3f274d13a/thumb.webp",
    "page_paths": [
     "99d3f274d13a/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    1200
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "9e4535f73f13",
+   "festival": "juventud",
+   "year": 2020,
+   "undated": false,
+   "category": "bases",
+   "title": "Desde casa",
+   "kind": "image",
+   "src_path": "Eisteddfod_de_la_Juventud/2020/Bases_y_avisos/fb_desde-casa_1304391296565975.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=1304391296565975",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-13",
+   "note_public": "ESTAMOS ARREGLANDO PARA LLEVAR BOLSITAS Y PREMIOS A TRELEW... Y TAMBIEN A LA CORDILLERA... EN CUANTO TENGAMOS NOVEDADES, COMUNICAMOS POR ESTE MEDIO... SUBÍ TU FOTO Y ETIQUETANOS!",
+   "rights": "",
+   "year_inferred": true,
+   "restricted": false,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "9e4535f73f13/thumb.webp",
+   "page_paths": [
+    "9e4535f73f13/p01.webp"
    ],
    "page_size": [
     1200,
@@ -27310,6 +30627,37 @@
    "table": null
   },
   {
+   "id": "9de3f6886e51",
+   "festival": "juventud",
+   "year": 2022,
+   "undated": false,
+   "category": "preliminares",
+   "title": "Orden del día",
+   "kind": "image",
+   "src_path": "Eisteddfod_de_la_Juventud/2022/Programa_del_dia/fb_orden-del-dia_1787516248253475.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=1787516248253475",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-13",
+   "note_public": "Atención: Mañana MIÉRCOLES comienzan las preliminares! Los esperamos!",
+   "rights": "",
+   "year_inferred": false,
+   "restricted": false,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "9de3f6886e51/thumb.webp",
+   "page_paths": [
+    "9de3f6886e51/p01.webp"
+   ],
+   "page_size": [
+    851,
+    1200
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
    "id": "efbc7ed88777",
    "festival": "juventud",
    "year": 2022,
@@ -27339,37 +30687,6 @@
    ],
    "page_size": [
     848,
-    1200
-   ],
-   "text_excerpt": null,
-   "table": null
-  },
-  {
-   "id": "9de3f6886e51",
-   "festival": "juventud",
-   "year": 2022,
-   "undated": false,
-   "category": "preliminares",
-   "title": "Orden del día",
-   "kind": "image",
-   "src_path": "Eisteddfod_de_la_Juventud/2022/Programa_del_dia/fb_orden-del-dia_1787516248253475.jpg",
-   "alt_paths": [],
-   "source_url": "https://www.facebook.com/photo/?fbid=1787516248253475",
-   "source_label": "Facebook",
-   "retrieved": "2026-11-13",
-   "note_public": "Atención: Mañana MIÉRCOLES comienzan las preliminares! Los esperamos!",
-   "rights": "",
-   "year_inferred": false,
-   "restricted": false,
-   "hidden": false,
-   "no_text": false,
-   "pages": 1,
-   "thumb": "9de3f6886e51/thumb.webp",
-   "page_paths": [
-    "9de3f6886e51/p01.webp"
-   ],
-   "page_size": [
-    851,
     1200
    ],
    "text_excerpt": null,
@@ -28332,6 +31649,99 @@
    "table": null
   },
   {
+   "id": "fae5e1f50f75",
+   "festival": "juventud",
+   "year": 2025,
+   "undated": false,
+   "category": "bases",
+   "title": "Agenda de septiembre (Dirección de Cultura de Gaiman) (1 de 2)",
+   "kind": "image",
+   "src_path": "Eisteddfod_de_la_Juventud/2025/Bases_y_avisos/fb_culturagaiman_agenda-septiembre-DirCulturaGaiman_1128212856163468.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=1128212856163468",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-13",
+   "note_public": "",
+   "rights": "",
+   "year_inferred": true,
+   "restricted": false,
+   "hidden": false,
+   "no_text": true,
+   "pages": 1,
+   "thumb": "fae5e1f50f75/thumb.webp",
+   "page_paths": [
+    "fae5e1f50f75/p01.webp"
+   ],
+   "page_size": [
+    960,
+    1200
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "051c5bcb342f",
+   "festival": "juventud",
+   "year": 2025,
+   "undated": false,
+   "category": "bases",
+   "title": "Agenda de septiembre (Dirección de Cultura de Gaiman) (2 de 2)",
+   "kind": "image",
+   "src_path": "Eisteddfod_de_la_Juventud/2025/Bases_y_avisos/fb_culturagaiman_agenda-septiembre-DirCulturaGaiman_1128212889496798.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=1128212889496798",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-13",
+   "note_public": "",
+   "rights": "",
+   "year_inferred": true,
+   "restricted": false,
+   "hidden": false,
+   "no_text": true,
+   "pages": 1,
+   "thumb": "051c5bcb342f/thumb.webp",
+   "page_paths": [
+    "051c5bcb342f/p01.webp"
+   ],
+   "page_size": [
+    960,
+    1200
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "cac482e442cb",
+   "festival": "juventud",
+   "year": 2025,
+   "undated": false,
+   "category": "bases",
+   "title": "Anuncio del programa",
+   "kind": "image",
+   "src_path": "Eisteddfod_de_la_Juventud/2025/Bases_y_avisos/fb_programa-anuncio_1126693669490192.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=1126693669490192",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-13",
+   "note_public": "",
+   "rights": "",
+   "year_inferred": true,
+   "restricted": false,
+   "hidden": false,
+   "no_text": true,
+   "pages": 1,
+   "thumb": "cac482e442cb/thumb.webp",
+   "page_paths": [
+    "cac482e442cb/p01.webp"
+   ],
+   "page_size": [
+    848,
+    1200
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
    "id": "37f26b666d13",
    "festival": "juventud",
    "year": 2025,
@@ -28354,6 +31764,37 @@
    "thumb": "37f26b666d13/thumb.webp",
    "page_paths": [
     "37f26b666d13/p01.webp"
+   ],
+   "page_size": [
+    1080,
+    1080
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "c63554e531c7",
+   "festival": "juventud",
+   "year": 2025,
+   "undated": false,
+   "category": "bases",
+   "title": "Apertura (2 de 2)",
+   "kind": "image",
+   "src_path": "Eisteddfod_de_la_Juventud/2025/Bases_y_avisos/fb_culturagaiman_apertura_1131824805802273.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=1131824805802273",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-13",
+   "note_public": "",
+   "rights": "",
+   "year_inferred": true,
+   "restricted": false,
+   "hidden": false,
+   "no_text": true,
+   "pages": 1,
+   "thumb": "c63554e531c7/thumb.webp",
+   "page_paths": [
+    "c63554e531c7/p01.webp"
    ],
    "page_size": [
     1080,
@@ -28613,90 +32054,28 @@
    "table": null
   },
   {
-   "id": "fae5e1f50f75",
+   "id": "d733b794fbbd",
    "festival": "juventud",
    "year": 2025,
    "undated": false,
    "category": "bases",
-   "title": "Agenda de septiembre (Dirección de Cultura de Gaiman) (1 de 2)",
+   "title": "Cymanfa Ganu",
    "kind": "image",
-   "src_path": "Eisteddfod_de_la_Juventud/2025/Bases_y_avisos/fb_culturagaiman_agenda-septiembre-DirCulturaGaiman_1128212856163468.jpg",
+   "src_path": "Eisteddfod_de_la_Juventud/2025/Bases_y_avisos/fb_cymanfa-ganu_1214325197393705.jpg",
    "alt_paths": [],
-   "source_url": "https://www.facebook.com/photo/?fbid=1128212856163468",
+   "source_url": "https://www.facebook.com/photo/?fbid=1214325197393705",
    "source_label": "Facebook",
    "retrieved": "2026-11-13",
-   "note_public": "",
+   "note_public": "Los esperamos! Tenemos mucho para estar agradecidos!",
    "rights": "",
    "year_inferred": true,
    "restricted": false,
    "hidden": false,
    "no_text": true,
    "pages": 1,
-   "thumb": "fae5e1f50f75/thumb.webp",
+   "thumb": "d733b794fbbd/thumb.webp",
    "page_paths": [
-    "fae5e1f50f75/p01.webp"
-   ],
-   "page_size": [
-    960,
-    1200
-   ],
-   "text_excerpt": null,
-   "table": null
-  },
-  {
-   "id": "051c5bcb342f",
-   "festival": "juventud",
-   "year": 2025,
-   "undated": false,
-   "category": "bases",
-   "title": "Agenda de septiembre (Dirección de Cultura de Gaiman) (2 de 2)",
-   "kind": "image",
-   "src_path": "Eisteddfod_de_la_Juventud/2025/Bases_y_avisos/fb_culturagaiman_agenda-septiembre-DirCulturaGaiman_1128212889496798.jpg",
-   "alt_paths": [],
-   "source_url": "https://www.facebook.com/photo/?fbid=1128212889496798",
-   "source_label": "Facebook",
-   "retrieved": "2026-11-13",
-   "note_public": "",
-   "rights": "",
-   "year_inferred": true,
-   "restricted": false,
-   "hidden": false,
-   "no_text": true,
-   "pages": 1,
-   "thumb": "051c5bcb342f/thumb.webp",
-   "page_paths": [
-    "051c5bcb342f/p01.webp"
-   ],
-   "page_size": [
-    960,
-    1200
-   ],
-   "text_excerpt": null,
-   "table": null
-  },
-  {
-   "id": "c63554e531c7",
-   "festival": "juventud",
-   "year": 2025,
-   "undated": false,
-   "category": "bases",
-   "title": "Apertura (2 de 2)",
-   "kind": "image",
-   "src_path": "Eisteddfod_de_la_Juventud/2025/Bases_y_avisos/fb_culturagaiman_apertura_1131824805802273.jpg",
-   "alt_paths": [],
-   "source_url": "https://www.facebook.com/photo/?fbid=1131824805802273",
-   "source_label": "Facebook",
-   "retrieved": "2026-11-13",
-   "note_public": "",
-   "rights": "",
-   "year_inferred": true,
-   "restricted": false,
-   "hidden": false,
-   "no_text": true,
-   "pages": 1,
-   "thumb": "c63554e531c7/thumb.webp",
-   "page_paths": [
-    "c63554e531c7/p01.webp"
+    "d733b794fbbd/p01.webp"
    ],
    "page_size": [
     1080,
@@ -28763,68 +32142,6 @@
    "page_size": [
     1080,
     1080
-   ],
-   "text_excerpt": null,
-   "table": null
-  },
-  {
-   "id": "d733b794fbbd",
-   "festival": "juventud",
-   "year": 2025,
-   "undated": false,
-   "category": "bases",
-   "title": "Cymanfa Ganu",
-   "kind": "image",
-   "src_path": "Eisteddfod_de_la_Juventud/2025/Bases_y_avisos/fb_cymanfa-ganu_1214325197393705.jpg",
-   "alt_paths": [],
-   "source_url": "https://www.facebook.com/photo/?fbid=1214325197393705",
-   "source_label": "Facebook",
-   "retrieved": "2026-11-13",
-   "note_public": "Los esperamos! Tenemos mucho para estar agradecidos!",
-   "rights": "",
-   "year_inferred": true,
-   "restricted": false,
-   "hidden": false,
-   "no_text": true,
-   "pages": 1,
-   "thumb": "d733b794fbbd/thumb.webp",
-   "page_paths": [
-    "d733b794fbbd/p01.webp"
-   ],
-   "page_size": [
-    1080,
-    1080
-   ],
-   "text_excerpt": null,
-   "table": null
-  },
-  {
-   "id": "cac482e442cb",
-   "festival": "juventud",
-   "year": 2025,
-   "undated": false,
-   "category": "bases",
-   "title": "Anuncio del programa",
-   "kind": "image",
-   "src_path": "Eisteddfod_de_la_Juventud/2025/Bases_y_avisos/fb_programa-anuncio_1126693669490192.jpg",
-   "alt_paths": [],
-   "source_url": "https://www.facebook.com/photo/?fbid=1126693669490192",
-   "source_label": "Facebook",
-   "retrieved": "2026-11-13",
-   "note_public": "",
-   "rights": "",
-   "year_inferred": true,
-   "restricted": false,
-   "hidden": false,
-   "no_text": true,
-   "pages": 1,
-   "thumb": "cac482e442cb/thumb.webp",
-   "page_paths": [
-    "cac482e442cb/p01.webp"
-   ],
-   "page_size": [
-    848,
-    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -28949,69 +32266,6 @@
    "page_size": [
     1080,
     1080
-   ],
-   "text_excerpt": null,
-   "table": null
-  },
-  {
-   "id": "9514d3a65b74",
-   "festival": "juventud",
-   "year": 2025,
-   "undated": false,
-   "category": "programa",
-   "title": "Programa Rhaglen 2025",
-   "kind": "pdf",
-   "src_path": "Eisteddfod_de_la_Juventud/2025/Programa/Programa_Rhaglen_2025.pdf",
-   "alt_paths": [],
-   "source_url": "https://drive.google.com/file/d/1uwKyyB3DdOss5By1PgJTDtYDmGH_a7dU/view (FB post by Eisteddfod de la Juventud, found via FB post search)",
-   "source_label": "Google Drive",
-   "retrieved": "2026-11-13",
-   "note_public": "",
-   "rights": "",
-   "year_inferred": false,
-   "restricted": false,
-   "hidden": false,
-   "no_text": false,
-   "pages": 33,
-   "thumb": "9514d3a65b74/thumb.webp",
-   "page_paths": [
-    "9514d3a65b74/p01.webp",
-    "9514d3a65b74/p02.webp",
-    "9514d3a65b74/p03.webp",
-    "9514d3a65b74/p04.webp",
-    "9514d3a65b74/p05.webp",
-    "9514d3a65b74/p06.webp",
-    "9514d3a65b74/p07.webp",
-    "9514d3a65b74/p08.webp",
-    "9514d3a65b74/p09.webp",
-    "9514d3a65b74/p10.webp",
-    "9514d3a65b74/p11.webp",
-    "9514d3a65b74/p12.webp",
-    "9514d3a65b74/p13.webp",
-    "9514d3a65b74/p14.webp",
-    "9514d3a65b74/p15.webp",
-    "9514d3a65b74/p16.webp",
-    "9514d3a65b74/p17.webp",
-    "9514d3a65b74/p18.webp",
-    "9514d3a65b74/p19.webp",
-    "9514d3a65b74/p20.webp",
-    "9514d3a65b74/p21.webp",
-    "9514d3a65b74/p22.webp",
-    "9514d3a65b74/p23.webp",
-    "9514d3a65b74/p24.webp",
-    "9514d3a65b74/p25.webp",
-    "9514d3a65b74/p26.webp",
-    "9514d3a65b74/p27.webp",
-    "9514d3a65b74/p28.webp",
-    "9514d3a65b74/p29.webp",
-    "9514d3a65b74/p30.webp",
-    "9514d3a65b74/p31.webp",
-    "9514d3a65b74/p32.webp",
-    "9514d3a65b74/p33.webp"
-   ],
-   "page_size": [
-    848,
-    1200
    ],
    "text_excerpt": null,
    "table": null
@@ -29194,6 +32448,69 @@
    "thumb": "c6b1cfcaef8d/thumb.webp",
    "page_paths": [
     "c6b1cfcaef8d/p01.webp"
+   ],
+   "page_size": [
+    848,
+    1200
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "9514d3a65b74",
+   "festival": "juventud",
+   "year": 2025,
+   "undated": false,
+   "category": "programa",
+   "title": "Programa Rhaglen 2025",
+   "kind": "pdf",
+   "src_path": "Eisteddfod_de_la_Juventud/2025/Programa/Programa_Rhaglen_2025.pdf",
+   "alt_paths": [],
+   "source_url": "https://drive.google.com/file/d/1uwKyyB3DdOss5By1PgJTDtYDmGH_a7dU/view (FB post by Eisteddfod de la Juventud, found via FB post search)",
+   "source_label": "Google Drive",
+   "retrieved": "2026-11-13",
+   "note_public": "",
+   "rights": "",
+   "year_inferred": false,
+   "restricted": false,
+   "hidden": false,
+   "no_text": false,
+   "pages": 33,
+   "thumb": "9514d3a65b74/thumb.webp",
+   "page_paths": [
+    "9514d3a65b74/p01.webp",
+    "9514d3a65b74/p02.webp",
+    "9514d3a65b74/p03.webp",
+    "9514d3a65b74/p04.webp",
+    "9514d3a65b74/p05.webp",
+    "9514d3a65b74/p06.webp",
+    "9514d3a65b74/p07.webp",
+    "9514d3a65b74/p08.webp",
+    "9514d3a65b74/p09.webp",
+    "9514d3a65b74/p10.webp",
+    "9514d3a65b74/p11.webp",
+    "9514d3a65b74/p12.webp",
+    "9514d3a65b74/p13.webp",
+    "9514d3a65b74/p14.webp",
+    "9514d3a65b74/p15.webp",
+    "9514d3a65b74/p16.webp",
+    "9514d3a65b74/p17.webp",
+    "9514d3a65b74/p18.webp",
+    "9514d3a65b74/p19.webp",
+    "9514d3a65b74/p20.webp",
+    "9514d3a65b74/p21.webp",
+    "9514d3a65b74/p22.webp",
+    "9514d3a65b74/p23.webp",
+    "9514d3a65b74/p24.webp",
+    "9514d3a65b74/p25.webp",
+    "9514d3a65b74/p26.webp",
+    "9514d3a65b74/p27.webp",
+    "9514d3a65b74/p28.webp",
+    "9514d3a65b74/p29.webp",
+    "9514d3a65b74/p30.webp",
+    "9514d3a65b74/p31.webp",
+    "9514d3a65b74/p32.webp",
+    "9514d3a65b74/p33.webp"
    ],
    "page_size": [
     848,
@@ -30458,6 +33775,37 @@
    "table": null
   },
   {
+   "id": "6e9489f921d3",
+   "festival": "mimosa",
+   "year": 2019,
+   "undated": false,
+   "category": "resultados",
+   "title": "Nota",
+   "kind": "image",
+   "src_path": "Eisteddfod_Mimosa/2019/Resultados/fb_nota_455313658656481.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=455313658656481",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-13",
+   "note_public": "",
+   "rights": "",
+   "year_inferred": true,
+   "restricted": true,
+   "hidden": false,
+   "no_text": true,
+   "pages": 1,
+   "thumb": "6e9489f921d3/thumb.webp",
+   "page_paths": [
+    "6e9489f921d3/p01.webp"
+   ],
+   "page_size": [
+    720,
+    405
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
    "id": "e0578ea58f88",
    "festival": "mimosa",
    "year": 2019,
@@ -30524,37 +33872,6 @@
    "page_size": [
     848,
     1200
-   ],
-   "text_excerpt": null,
-   "table": null
-  },
-  {
-   "id": "6e9489f921d3",
-   "festival": "mimosa",
-   "year": 2019,
-   "undated": false,
-   "category": "resultados",
-   "title": "Nota",
-   "kind": "image",
-   "src_path": "Eisteddfod_Mimosa/2019/Resultados/fb_nota_455313658656481.jpg",
-   "alt_paths": [],
-   "source_url": "https://www.facebook.com/photo/?fbid=455313658656481",
-   "source_label": "Facebook",
-   "retrieved": "2026-11-13",
-   "note_public": "",
-   "rights": "",
-   "year_inferred": true,
-   "restricted": true,
-   "hidden": false,
-   "no_text": true,
-   "pages": 1,
-   "thumb": "6e9489f921d3/thumb.webp",
-   "page_paths": [
-    "6e9489f921d3/p01.webp"
-   ],
-   "page_size": [
-    720,
-    405
    ],
    "text_excerpt": null,
    "table": null
@@ -31162,6 +34479,63 @@
    "table": null
   },
   {
+   "id": "623efd0160ad",
+   "festival": "mimosa",
+   "year": 2024,
+   "undated": false,
+   "category": "bases",
+   "title": "Anuncio de preliminares",
+   "kind": "web",
+   "src_path": "Eisteddfod_Mimosa/2024/Bases_y_avisos/web_chubutcultural_anuncio-preliminares-2024.html",
+   "alt_paths": [],
+   "source_url": "https://chubutcultural.com.ar/2024/07/eisteddfod-mimosa-porth-madryn/",
+   "source_label": "chubutcultural.com.ar",
+   "retrieved": "2026-11-19",
+   "note_public": "",
+   "rights": "",
+   "year_inferred": false,
+   "restricted": false,
+   "hidden": false,
+   "no_text": false,
+   "pages": 0,
+   "thumb": null,
+   "page_paths": [],
+   "page_size": null,
+   "text_excerpt": "Saltar al contenido Chubut Cultural cultura EISTEDDFOD MIMOSA “PORTH MADRYN” 26/07/2024 Por Juan Jose De Focatiis La 18° edición del Eisteddfod Mimosa «Porth Madryn», se llevará a cabo, el día sábado 10 de agosto, en instalaciones de la Escuela N° 789, (Villarino 900), en dos sesiones: la primera comienza a las 13,30 hs y la segunda a las 18,30 hs. Invitamos a toda la comunidad a compartir una preciosa jornada de despliegue artístico en el marco de los Festejos por el aniversario de la ciudad. Este año el Eisteddfod Porth Madryn, cumple 20 años, ya que la primera edición se llevó a cabo en el ",
+   "table": null
+  },
+  {
+   "id": "d32dd8775cf7",
+   "festival": "mimosa",
+   "year": 2024,
+   "undated": false,
+   "category": "bases",
+   "title": "Anuncio del programa del día",
+   "kind": "image",
+   "src_path": "Eisteddfod_Mimosa/2024/Bases_y_avisos/fb_programa-del-dia-anuncio_801287218884334.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=801287218884334",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-13",
+   "note_public": "¡Agradecemos el aporte económico del comercio PREN METEL de Puerto Madryn que hace posible la realización del eistedfod año a año ! Diolch Yn Fawr!!",
+   "rights": "",
+   "year_inferred": true,
+   "restricted": false,
+   "hidden": false,
+   "no_text": true,
+   "pages": 1,
+   "thumb": "d32dd8775cf7/thumb.webp",
+   "page_paths": [
+    "d32dd8775cf7/p01.webp"
+   ],
+   "page_size": [
+    1200,
+    1200
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
    "id": "f4c1b871f71c",
    "festival": "mimosa",
    "year": 2024,
@@ -31376,63 +34750,6 @@
     1200
    ],
    "text_excerpt": null,
-   "table": null
-  },
-  {
-   "id": "d32dd8775cf7",
-   "festival": "mimosa",
-   "year": 2024,
-   "undated": false,
-   "category": "bases",
-   "title": "Anuncio del programa del día",
-   "kind": "image",
-   "src_path": "Eisteddfod_Mimosa/2024/Bases_y_avisos/fb_programa-del-dia-anuncio_801287218884334.jpg",
-   "alt_paths": [],
-   "source_url": "https://www.facebook.com/photo/?fbid=801287218884334",
-   "source_label": "Facebook",
-   "retrieved": "2026-11-13",
-   "note_public": "¡Agradecemos el aporte económico del comercio PREN METEL de Puerto Madryn que hace posible la realización del eistedfod año a año ! Diolch Yn Fawr!!",
-   "rights": "",
-   "year_inferred": true,
-   "restricted": false,
-   "hidden": false,
-   "no_text": true,
-   "pages": 1,
-   "thumb": "d32dd8775cf7/thumb.webp",
-   "page_paths": [
-    "d32dd8775cf7/p01.webp"
-   ],
-   "page_size": [
-    1200,
-    1200
-   ],
-   "text_excerpt": null,
-   "table": null
-  },
-  {
-   "id": "623efd0160ad",
-   "festival": "mimosa",
-   "year": 2024,
-   "undated": false,
-   "category": "bases",
-   "title": "Anuncio de preliminares",
-   "kind": "web",
-   "src_path": "Eisteddfod_Mimosa/2024/Bases_y_avisos/web_chubutcultural_anuncio-preliminares-2024.html",
-   "alt_paths": [],
-   "source_url": "https://chubutcultural.com.ar/2024/07/eisteddfod-mimosa-porth-madryn/",
-   "source_label": "chubutcultural.com.ar",
-   "retrieved": "2026-11-19",
-   "note_public": "",
-   "rights": "",
-   "year_inferred": false,
-   "restricted": false,
-   "hidden": false,
-   "no_text": false,
-   "pages": 0,
-   "thumb": null,
-   "page_paths": [],
-   "page_size": null,
-   "text_excerpt": "Saltar al contenido Chubut Cultural cultura EISTEDDFOD MIMOSA “PORTH MADRYN” 26/07/2024 Por Juan Jose De Focatiis La 18° edición del Eisteddfod Mimosa «Porth Madryn», se llevará a cabo, el día sábado 10 de agosto, en instalaciones de la Escuela N° 789, (Villarino 900), en dos sesiones: la primera comienza a las 13,30 hs y la segunda a las 18,30 hs. Invitamos a toda la comunidad a compartir una preciosa jornada de despliegue artístico en el marco de los Festejos por el aniversario de la ciudad. Este año el Eisteddfod Porth Madryn, cumple 20 años, ya que la primera edición se llevó a cabo en el ",
    "table": null
   },
   {
@@ -31675,6 +34992,68 @@
    "page_size": [
     854,
     1200
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "cc1171b6475f",
+   "festival": "mimosa",
+   "year": 2025,
+   "undated": false,
+   "category": "bases",
+   "title": "Anuncio del programa del día (1 de 2)",
+   "kind": "image",
+   "src_path": "Eisteddfod_Mimosa/2025/Bases_y_avisos/fb_programa-del-dia-anuncio_1027498372929883.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=1027498372929883",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-13",
+   "note_public": "19° Edición del Eisteddfod Mimosa Porth Madryn PROGRAMA del DIA enlace https://drive.google.com/.../1FLJlrFO8Kfo7XM6VPZz.../view...",
+   "rights": "",
+   "year_inferred": true,
+   "restricted": false,
+   "hidden": false,
+   "no_text": true,
+   "pages": 1,
+   "thumb": "cc1171b6475f/thumb.webp",
+   "page_paths": [
+    "cc1171b6475f/p01.webp"
+   ],
+   "page_size": [
+    1075,
+    1083
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "8e4ca1e80fb9",
+   "festival": "mimosa",
+   "year": 2025,
+   "undated": false,
+   "category": "bases",
+   "title": "Anuncio del programa del día (2 de 2)",
+   "kind": "image",
+   "src_path": "Eisteddfod_Mimosa/2025/Bases_y_avisos/fb_programa-del-dia-anuncio_1028141412865579.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=1028141412865579",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-13",
+   "note_public": "El sabado 28 de JUNIO del 2025 se desarrollará el Eisteddfod Mimosa Porth Madryn La primera sesión a las 10 hs, la segunda sesión desde las 13.30 hs y la tercera desde las 18.30 hs. Lugar: escuela 789, Villarino al 900. ¡TE ESPERAMOS!",
+   "rights": "",
+   "year_inferred": true,
+   "restricted": false,
+   "hidden": false,
+   "no_text": true,
+   "pages": 1,
+   "thumb": "8e4ca1e80fb9/thumb.webp",
+   "page_paths": [
+    "8e4ca1e80fb9/p01.webp"
+   ],
+   "page_size": [
+    1075,
+    1083
    ],
    "text_excerpt": null,
    "table": null
@@ -31990,68 +35369,6 @@
    "table": null
   },
   {
-   "id": "cc1171b6475f",
-   "festival": "mimosa",
-   "year": 2025,
-   "undated": false,
-   "category": "bases",
-   "title": "Anuncio del programa del día (1 de 2)",
-   "kind": "image",
-   "src_path": "Eisteddfod_Mimosa/2025/Bases_y_avisos/fb_programa-del-dia-anuncio_1027498372929883.jpg",
-   "alt_paths": [],
-   "source_url": "https://www.facebook.com/photo/?fbid=1027498372929883",
-   "source_label": "Facebook",
-   "retrieved": "2026-11-13",
-   "note_public": "19° Edición del Eisteddfod Mimosa Porth Madryn PROGRAMA del DIA enlace https://drive.google.com/.../1FLJlrFO8Kfo7XM6VPZz.../view...",
-   "rights": "",
-   "year_inferred": true,
-   "restricted": false,
-   "hidden": false,
-   "no_text": true,
-   "pages": 1,
-   "thumb": "cc1171b6475f/thumb.webp",
-   "page_paths": [
-    "cc1171b6475f/p01.webp"
-   ],
-   "page_size": [
-    1075,
-    1083
-   ],
-   "text_excerpt": null,
-   "table": null
-  },
-  {
-   "id": "8e4ca1e80fb9",
-   "festival": "mimosa",
-   "year": 2025,
-   "undated": false,
-   "category": "bases",
-   "title": "Anuncio del programa del día (2 de 2)",
-   "kind": "image",
-   "src_path": "Eisteddfod_Mimosa/2025/Bases_y_avisos/fb_programa-del-dia-anuncio_1028141412865579.jpg",
-   "alt_paths": [],
-   "source_url": "https://www.facebook.com/photo/?fbid=1028141412865579",
-   "source_label": "Facebook",
-   "retrieved": "2026-11-13",
-   "note_public": "El sabado 28 de JUNIO del 2025 se desarrollará el Eisteddfod Mimosa Porth Madryn La primera sesión a las 10 hs, la segunda sesión desde las 13.30 hs y la tercera desde las 18.30 hs. Lugar: escuela 789, Villarino al 900. ¡TE ESPERAMOS!",
-   "rights": "",
-   "year_inferred": true,
-   "restricted": false,
-   "hidden": false,
-   "no_text": true,
-   "pages": 1,
-   "thumb": "8e4ca1e80fb9/thumb.webp",
-   "page_paths": [
-    "8e4ca1e80fb9/p01.webp"
-   ],
-   "page_size": [
-    1075,
-    1083
-   ],
-   "text_excerpt": null,
-   "table": null
-  },
-  {
    "id": "d415c26aae09",
    "festival": "mimosa",
    "year": 2025,
@@ -32241,56 +35558,6 @@
    ],
    "page_size": [
     927,
-    1200
-   ],
-   "text_excerpt": null,
-   "table": null
-  },
-  {
-   "id": "0870a3d9c1f6",
-   "festival": "mimosa",
-   "year": 2025,
-   "undated": false,
-   "category": "resultados",
-   "title": "Resultados competencias principales 2025",
-   "kind": "pdf",
-   "src_path": "Eisteddfod_Mimosa/2025/Resultados/Resultados_competencias_principales_2025.pdf",
-   "alt_paths": [],
-   "source_url": "https://chubutcultural.com.ar/wp-content/uploads/2025/07/Resultados-2025-comp.-principales.pdf",
-   "source_label": "chubutcultural.com.ar",
-   "retrieved": "2026-11-19",
-   "note_public": "",
-   "rights": "",
-   "year_inferred": false,
-   "restricted": true,
-   "hidden": false,
-   "no_text": false,
-   "pages": 20,
-   "thumb": "0870a3d9c1f6/thumb.webp",
-   "page_paths": [
-    "0870a3d9c1f6/p01.webp",
-    "0870a3d9c1f6/p02.webp",
-    "0870a3d9c1f6/p03.webp",
-    "0870a3d9c1f6/p04.webp",
-    "0870a3d9c1f6/p05.webp",
-    "0870a3d9c1f6/p06.webp",
-    "0870a3d9c1f6/p07.webp",
-    "0870a3d9c1f6/p08.webp",
-    "0870a3d9c1f6/p09.webp",
-    "0870a3d9c1f6/p10.webp",
-    "0870a3d9c1f6/p11.webp",
-    "0870a3d9c1f6/p12.webp",
-    "0870a3d9c1f6/p13.webp",
-    "0870a3d9c1f6/p14.webp",
-    "0870a3d9c1f6/p15.webp",
-    "0870a3d9c1f6/p16.webp",
-    "0870a3d9c1f6/p17.webp",
-    "0870a3d9c1f6/p18.webp",
-    "0870a3d9c1f6/p19.webp",
-    "0870a3d9c1f6/p20.webp"
-   ],
-   "page_size": [
-    848,
     1200
    ],
    "text_excerpt": null,
@@ -32638,32 +35905,50 @@
    "table": null
   },
   {
-   "id": "94f173b7b5d9",
+   "id": "0870a3d9c1f6",
    "festival": "mimosa",
-   "year": 2026,
+   "year": 2025,
    "undated": false,
-   "category": "bases",
-   "title": "Anuncio 2026",
+   "category": "resultados",
+   "title": "Resultados competencias principales 2025",
    "kind": "pdf",
-   "src_path": "Eisteddfod_Mimosa/2026/Bases_y_avisos/Anuncio_2026.pdf",
+   "src_path": "Eisteddfod_Mimosa/2025/Resultados/Resultados_competencias_principales_2025.pdf",
    "alt_paths": [],
-   "source_url": "https://chubutcultural.com.ar/wp-content/uploads/2026/06/EISTEDDFOD-MIMOSA-PORTH-MADRYN-2026-.pdf",
+   "source_url": "https://chubutcultural.com.ar/wp-content/uploads/2025/07/Resultados-2025-comp.-principales.pdf",
    "source_label": "chubutcultural.com.ar",
    "retrieved": "2026-11-19",
    "note_public": "",
    "rights": "",
    "year_inferred": false,
-   "restricted": false,
+   "restricted": true,
    "hidden": false,
    "no_text": false,
-   "pages": 2,
-   "thumb": "94f173b7b5d9/thumb.webp",
+   "pages": 20,
+   "thumb": "0870a3d9c1f6/thumb.webp",
    "page_paths": [
-    "94f173b7b5d9/p01.webp",
-    "94f173b7b5d9/p02.webp"
+    "0870a3d9c1f6/p01.webp",
+    "0870a3d9c1f6/p02.webp",
+    "0870a3d9c1f6/p03.webp",
+    "0870a3d9c1f6/p04.webp",
+    "0870a3d9c1f6/p05.webp",
+    "0870a3d9c1f6/p06.webp",
+    "0870a3d9c1f6/p07.webp",
+    "0870a3d9c1f6/p08.webp",
+    "0870a3d9c1f6/p09.webp",
+    "0870a3d9c1f6/p10.webp",
+    "0870a3d9c1f6/p11.webp",
+    "0870a3d9c1f6/p12.webp",
+    "0870a3d9c1f6/p13.webp",
+    "0870a3d9c1f6/p14.webp",
+    "0870a3d9c1f6/p15.webp",
+    "0870a3d9c1f6/p16.webp",
+    "0870a3d9c1f6/p17.webp",
+    "0870a3d9c1f6/p18.webp",
+    "0870a3d9c1f6/p19.webp",
+    "0870a3d9c1f6/p20.webp"
    ],
    "page_size": [
-    927,
+    848,
     1200
    ],
    "text_excerpt": null,
@@ -32726,6 +36011,38 @@
    ],
    "page_size": [
     540,
+    1200
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "94f173b7b5d9",
+   "festival": "mimosa",
+   "year": 2026,
+   "undated": false,
+   "category": "bases",
+   "title": "Anuncio 2026",
+   "kind": "pdf",
+   "src_path": "Eisteddfod_Mimosa/2026/Bases_y_avisos/Anuncio_2026.pdf",
+   "alt_paths": [],
+   "source_url": "https://chubutcultural.com.ar/wp-content/uploads/2026/06/EISTEDDFOD-MIMOSA-PORTH-MADRYN-2026-.pdf",
+   "source_label": "chubutcultural.com.ar",
+   "retrieved": "2026-11-19",
+   "note_public": "",
+   "rights": "",
+   "year_inferred": false,
+   "restricted": false,
+   "hidden": false,
+   "no_text": false,
+   "pages": 2,
+   "thumb": "94f173b7b5d9/thumb.webp",
+   "page_paths": [
+    "94f173b7b5d9/p01.webp",
+    "94f173b7b5d9/p02.webp"
+   ],
+   "page_size": [
+    927,
     1200
    ],
    "text_excerpt": null,
@@ -32887,6 +36204,37 @@
    "table": null
   },
   {
+   "id": "c0192cfd95e8",
+   "festival": "mimosa",
+   "year": 2026,
+   "undated": false,
+   "category": "programa",
+   "title": "Anuncio del programa (rhaglen)",
+   "kind": "image",
+   "src_path": "Eisteddfod_Mimosa/2026/Programa/fb_programa-rhaglen-anuncio_1240595548286830.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=1240595548286830",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-13",
+   "note_public": "Compartimos el link para acceder a la página web y al PROGRAMA de la edición 2026 del Eisteddfod. Inicio | Eisteddfod Mimosa Porth Madryn http://www.eisteddfodmimosa.org.ar/...",
+   "rights": "",
+   "year_inferred": true,
+   "restricted": false,
+   "hidden": false,
+   "no_text": true,
+   "pages": 1,
+   "thumb": "c0192cfd95e8/thumb.webp",
+   "page_paths": [
+    "c0192cfd95e8/p01.webp"
+   ],
+   "page_size": [
+    928,
+    1200
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
    "id": "b89007946f25",
    "festival": "mimosa",
    "year": 2026,
@@ -32951,37 +36299,6 @@
    "table": null
   },
   {
-   "id": "c0192cfd95e8",
-   "festival": "mimosa",
-   "year": 2026,
-   "undated": false,
-   "category": "programa",
-   "title": "Anuncio del programa (rhaglen)",
-   "kind": "image",
-   "src_path": "Eisteddfod_Mimosa/2026/Programa/fb_programa-rhaglen-anuncio_1240595548286830.jpg",
-   "alt_paths": [],
-   "source_url": "https://www.facebook.com/photo/?fbid=1240595548286830",
-   "source_label": "Facebook",
-   "retrieved": "2026-11-13",
-   "note_public": "Compartimos el link para acceder a la página web y al PROGRAMA de la edición 2026 del Eisteddfod. Inicio | Eisteddfod Mimosa Porth Madryn http://www.eisteddfodmimosa.org.ar/...",
-   "rights": "",
-   "year_inferred": true,
-   "restricted": false,
-   "hidden": false,
-   "no_text": true,
-   "pages": 1,
-   "thumb": "c0192cfd95e8/thumb.webp",
-   "page_paths": [
-    "c0192cfd95e8/p01.webp"
-   ],
-   "page_size": [
-    928,
-    1200
-   ],
-   "text_excerpt": null,
-   "table": null
-  },
-  {
    "id": "8283220809d0",
    "festival": "mimosa",
    "year": 2026,
@@ -33019,6 +36336,37 @@
    "table": null
   },
   {
+   "id": "cbb6d76715a6",
+   "festival": "trevelin",
+   "year": null,
+   "undated": true,
+   "category": "otros",
+   "title": "Eisteddfod de Trevelin sin fecha",
+   "kind": "image",
+   "src_path": "Eisteddfod_de_Trevelin/_sin_fecha/Fotos/Eisteddfod_de_Trevelin_sin_fecha.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=10211994668356344",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "",
+   "rights": "© sus autores o propietarios; copia publicada por Raul Horacio Comes Cutillo en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»; uso restringido hasta obtener permiso",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "cbb6d76715a6/thumb.webp",
+   "page_paths": [
+    "cbb6d76715a6/p01.webp"
+   ],
+   "page_size": [
+    960,
+    502
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
    "id": "7787ba3d410d",
    "festival": "trevelin",
    "year": null,
@@ -33042,6 +36390,37 @@
    "page_paths": [],
    "page_size": null,
    "text_excerpt": "Eisteddfod Trevelin Una milenaria tradición Galesa permanece viva en la Patagonia. El Eisteddfod (pronúnciese Eistedvod) es un tradicional festival cultural galés cuyos primeros registros escritos datan del año 1.171 en Aberteifi, ciudad del centro-oeste de Gales que está hermanada con la localidad de Trevelin. El vocablo Eisteddfod significa “permanecer sentado” y hace referencia a una tradición de los antiguos celtas, los cuales se reunían y escuchaban con gran respeto a los druidas y poetas mientras éstos recitaban sus poesías. Esta milenaria tradición llegó a la provincia de Chubut con los",
+   "table": null
+  },
+  {
+   "id": "e98112717979",
+   "festival": "trevelin",
+   "year": 1922,
+   "undated": false,
+   "category": "otros",
+   "title": "Primer Eisteddfod de Trevelin 1922",
+   "kind": "image",
+   "src_path": "Eisteddfod_de_Trevelin/1922/Fotos/Primer_Eisteddfod_de_Trevelin_1922.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.facebook.com/photo/?fbid=4992588529391",
+   "source_label": "Facebook",
+   "retrieved": "2026-11-27",
+   "note_public": "Primer Eisteddfod realizado en Trevelin, noviembre de 1922: una fiesta frente a la capilla galesa (foto reproducida de una publicación).",
+   "rights": "Fotografía de autor no identificado, anterior a 1946; copia publicada por Juan Carlos Sanchez en el grupo de Facebook «Recuerdos del valle inferior del Río Chubut»",
+   "year_inferred": false,
+   "restricted": false,
+   "hidden": false,
+   "no_text": false,
+   "pages": 1,
+   "thumb": "e98112717979/thumb.webp",
+   "page_paths": [
+    "e98112717979/p01.webp"
+   ],
+   "page_size": [
+    1164,
+    583
+   ],
+   "text_excerpt": null,
    "table": null
   },
   {
@@ -33095,32 +36474,6 @@
    "table": null
   },
   {
-   "id": "d44edccef8bd",
-   "festival": "trevelin",
-   "year": 2011,
-   "undated": false,
-   "category": "resultados",
-   "title": "Resultados 2011",
-   "kind": "doc",
-   "src_path": "Eisteddfod_de_Trevelin/2011/Resultados/Resultados_2011.doc",
-   "alt_paths": [],
-   "source_url": "http://web.archive.org/web/20110902221907id_/http://www.trevelin.gob.ar/cultura/pdf/resultados_eisteddfod_trevelin%202011.doc",
-   "source_label": "Wayback Machine",
-   "retrieved": "2026-11-13",
-   "note_public": "",
-   "rights": "",
-   "year_inferred": false,
-   "restricted": true,
-   "hidden": false,
-   "no_text": false,
-   "pages": 0,
-   "thumb": null,
-   "page_paths": [],
-   "page_size": null,
-   "text_excerpt": null,
-   "table": null
-  },
-  {
    "id": "77145a982e8b",
    "festival": "trevelin",
    "year": 2011,
@@ -33148,6 +36501,32 @@
     500,
     300
    ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "d44edccef8bd",
+   "festival": "trevelin",
+   "year": 2011,
+   "undated": false,
+   "category": "resultados",
+   "title": "Resultados 2011",
+   "kind": "doc",
+   "src_path": "Eisteddfod_de_Trevelin/2011/Resultados/Resultados_2011.doc",
+   "alt_paths": [],
+   "source_url": "http://web.archive.org/web/20110902221907id_/http://www.trevelin.gob.ar/cultura/pdf/resultados_eisteddfod_trevelin%202011.doc",
+   "source_label": "Wayback Machine",
+   "retrieved": "2026-11-13",
+   "note_public": "",
+   "rights": "",
+   "year_inferred": false,
+   "restricted": true,
+   "hidden": false,
+   "no_text": false,
+   "pages": 0,
+   "thumb": null,
+   "page_paths": [],
+   "page_size": null,
    "text_excerpt": null,
    "table": null
   },
@@ -33840,6 +37219,68 @@
    "table": null
   },
   {
+   "id": "21fc0ceefa68",
+   "festival": "trevelin",
+   "year": 2025,
+   "undated": false,
+   "category": "programa",
+   "title": "Afiche 2 y 3 de mayo",
+   "kind": "image",
+   "src_path": "Eisteddfod_de_Trevelin/2025/Programa/ig_afiche-2-3-mayo-2025.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.instagram.com/eisteddfodtrevelin/p/DIYSxA8uM8r/",
+   "source_label": "www.instagram.com",
+   "retrieved": "2026-11-13",
+   "note_public": "",
+   "rights": "",
+   "year_inferred": false,
+   "restricted": false,
+   "hidden": false,
+   "no_text": true,
+   "pages": 1,
+   "thumb": "21fc0ceefa68/thumb.webp",
+   "page_paths": [
+    "21fc0ceefa68/p01.webp"
+   ],
+   "page_size": [
+    640,
+    640
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
+   "id": "cf43937ab65b",
+   "festival": "trevelin",
+   "year": 2025,
+   "undated": false,
+   "category": "programa",
+   "title": "Horarios 2 y 3 de mayo",
+   "kind": "image",
+   "src_path": "Eisteddfod_de_Trevelin/2025/Programa/ig_horarios-2-3-mayo-2025.jpg",
+   "alt_paths": [],
+   "source_url": "https://www.instagram.com/eisteddfodtrevelin/p/DI9wC6_JEN8/",
+   "source_label": "www.instagram.com",
+   "retrieved": "2026-11-13",
+   "note_public": "",
+   "rights": "",
+   "year_inferred": false,
+   "restricted": false,
+   "hidden": false,
+   "no_text": true,
+   "pages": 1,
+   "thumb": "cf43937ab65b/thumb.webp",
+   "page_paths": [
+    "cf43937ab65b/p01.webp"
+   ],
+   "page_size": [
+    640,
+    640
+   ],
+   "text_excerpt": null,
+   "table": null
+  },
+  {
    "id": "38381815de4e",
    "festival": "trevelin",
    "year": 2025,
@@ -33910,68 +37351,6 @@
    "page_size": [
     927,
     1200
-   ],
-   "text_excerpt": null,
-   "table": null
-  },
-  {
-   "id": "21fc0ceefa68",
-   "festival": "trevelin",
-   "year": 2025,
-   "undated": false,
-   "category": "programa",
-   "title": "Afiche 2 y 3 de mayo",
-   "kind": "image",
-   "src_path": "Eisteddfod_de_Trevelin/2025/Programa/ig_afiche-2-3-mayo-2025.jpg",
-   "alt_paths": [],
-   "source_url": "https://www.instagram.com/eisteddfodtrevelin/p/DIYSxA8uM8r/",
-   "source_label": "www.instagram.com",
-   "retrieved": "2026-11-13",
-   "note_public": "",
-   "rights": "",
-   "year_inferred": false,
-   "restricted": false,
-   "hidden": false,
-   "no_text": true,
-   "pages": 1,
-   "thumb": "21fc0ceefa68/thumb.webp",
-   "page_paths": [
-    "21fc0ceefa68/p01.webp"
-   ],
-   "page_size": [
-    640,
-    640
-   ],
-   "text_excerpt": null,
-   "table": null
-  },
-  {
-   "id": "cf43937ab65b",
-   "festival": "trevelin",
-   "year": 2025,
-   "undated": false,
-   "category": "programa",
-   "title": "Horarios 2 y 3 de mayo",
-   "kind": "image",
-   "src_path": "Eisteddfod_de_Trevelin/2025/Programa/ig_horarios-2-3-mayo-2025.jpg",
-   "alt_paths": [],
-   "source_url": "https://www.instagram.com/eisteddfodtrevelin/p/DI9wC6_JEN8/",
-   "source_label": "www.instagram.com",
-   "retrieved": "2026-11-13",
-   "note_public": "",
-   "rights": "",
-   "year_inferred": false,
-   "restricted": false,
-   "hidden": false,
-   "no_text": true,
-   "pages": 1,
-   "thumb": "cf43937ab65b/thumb.webp",
-   "page_paths": [
-    "cf43937ab65b/p01.webp"
-   ],
-   "page_size": [
-    640,
-    640
    ],
    "text_excerpt": null,
    "table": null

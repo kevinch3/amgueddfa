@@ -60,7 +60,7 @@ describe('static build', () => {
     const env = Object.fromEntries(
       Object.entries(process.env).filter(([k]) => !/^(BASE_URL|MODE|DEV|PROD|SSR|VITEST.*|TEST)$/.test(k)),
     );
-    execSync('npm run build', { cwd: join(__dirname, '..'), stdio: 'pipe', env: { ...env, NODE_ENV: 'production' } });
+    execSync('npm run build', { cwd: join(__dirname, '..'), stdio: 'pipe', maxBuffer: 256 * 1024 * 1024, env: { ...env, NODE_ENV: 'production' } });
   }, 300_000);
 
   it('the header carries the signed-out session link in its HTML, so filling it on load does not shift the page (#173)', () => {

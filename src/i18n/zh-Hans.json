@@ -9,9 +9,9 @@
     "sin_documentos": "档案中还没有这一年的文献：如果您有节目单、照片或相关资料，欢迎补充。"
   },
   "sitio": {
-    "nombre": "Amgueddfa Eisteddfod y Wladfa",
-    "descripcion": "巴塔哥尼亚威尔士艺术节（Eisteddfod）节目单与文献的数字博物馆。",
-    "subtitulo": "巴塔哥尼亚艺术节博物馆"
+    "nombre": "Amgueddfa",
+    "descripcion": "关于威尔士以外的威尔士人历史的数字博物馆，从巴塔哥尼亚的艺术节（Eisteddfod）开始。",
+    "subtitulo": "威尔士以外的威尔士历史"
   },
   "nav": {
     "inicio": "首页",
@@ -102,6 +102,7 @@
     "not_held": "未举办"
   },
   "inicio": {
+    "titulo": "Amgueddfa Eisteddfod y Wladfa",
     "lema": "巴塔哥尼亚艺术节的节目单、章程和各类文献，妥善保存，人人可看。",
     "contador": "截至目前，我们已收集了 {festivales} 个艺术节自 {desde} 年以来的 {docs} 份文献。",
     "contador_completos": "其中 {n} 届已有完整的节目单。",

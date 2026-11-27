@@ -11,7 +11,7 @@ import { modelContext, type Tool } from '../lib/webmcp';
 import { getAjustes, setAjustes } from './lectura';
 
 const STATUSES = ['full', 'some', 'none', 'not_held'];
-const SITE_NOTE = 'Amgueddfa Eisteddfod y Wladfa is a digital archive of programmes and papers from the Welsh eisteddfodau of Patagonia (Argentina). Document titles and text are in Spanish and Welsh.';
+const SITE_NOTE = 'Amgueddfa is a digital museum of the history of the Welsh outside Wales. Its first collection, Amgueddfa Eisteddfod y Wladfa (/eisteddfod/), archives programmes and papers from the Welsh eisteddfodau of Patagonia (Argentina). Document titles and text are in Spanish and Welsh.';
 
 let docs: Promise<Documento[]> | null = null;
 let eds: Promise<Edicion[]> | null = null;

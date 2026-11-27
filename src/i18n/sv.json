@@ -9,9 +9,9 @@
     "sin_documentos": "Arkivet har ännu inga dokument från det här året: om du har programmet, foton eller uppgifter kan du lägga till dem."
   },
   "sitio": {
-    "nombre": "Amgueddfa Eisteddfod y Wladfa",
-    "descripcion": "Digitalt museum över program och dokument från Patagoniens eisteddfodau.",
-    "subtitulo": "Museet över Patagoniens eisteddfodau"
+    "nombre": "Amgueddfa",
+    "descripcion": "Digitalt museum över walesarnas historia utanför Wales, med början i Patagoniens eisteddfodau.",
+    "subtitulo": "Walesisk historia utanför Wales"
   },
   "nav": {
     "inicio": "Start",
@@ -102,6 +102,7 @@
     "not_held": "Hölls inte"
   },
   "inicio": {
+    "titulo": "Amgueddfa Eisteddfod y Wladfa",
     "lema": "Program, regler och papper från Patagoniens eisteddfodau, bevarade så att alla kan se dem.",
     "contador": "Hittills har vi samlat {docs} dokument från {festivales} eisteddfodau, ända sedan {desde}.",
     "contador_completos": "För {n} upplagor har vi redan hela programmet.",

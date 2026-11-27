@@ -526,12 +526,10 @@ describe('static build', () => {
     // OCR-only documents are listed to transcribe; ones with a human transcription are not.
     const ocrIds = readdirSync('src/data/ocr').map((f) => f.replace(/\.json$/, ''));
     const listed = [...html.matchAll(/data-transcribir="([0-9a-f]{12})"/g)].map((x) => x[1]);
-    // Every OCR-only document waiting today is from 2008 on, so with the 20-year cut
-    // (#187) the list may be empty; whatever it lists must be history.
+    // The 20-year cut is for the check cards only: every year can be transcribed.
+    expect(listed.length).toBeGreaterThan(100);
     for (const id of listed) {
       expect(ocrIds, id).toContain(id);
-      const y = byId.get(id)!.year;
-      expect(y === null || y <= new Date().getFullYear() - 20, id).toBe(true);
       expect(existsSync(join('src/data/transcripciones', `${id}.md`)), id).toBe(false);
     }
   });

@@ -13,9 +13,9 @@ export function GET(): Response {
   const versions = LOCALES.filter((l) => l !== DEFAULT_LOCALE)
     .map((l) => `${LOCALE_INFO[l].name} (${LOCALE_INFO[l].tag}): ${absUrl(rootUrl(l))}`)
     .join('; ');
-  const text = `# Amgueddfa Eisteddfod y Wladfa
+  const text = `# Amgueddfa
 
-> Museo digital de los Eisteddfodau de la Patagonia (Argentina): programas, bases, resultados, fotos y datos de cada edición, aportados y revisados por la comunidad. Todo el contenido es abierto y se puede leer y reutilizar.
+> Museo digital de la historia de los galeses fuera de Gales. Su primera colección, Amgueddfa Eisteddfod y Wladfa (${absUrl(url('/', 'es'))}), reúne los Eisteddfodau de la Patagonia (Argentina): programas, bases, resultados, fotos y datos de cada edición, aportados y revisados por la comunidad. Todo el contenido es abierto y se puede leer y reutilizar.
 
 El sitio está en castellano (con títulos en galés), y cada página también está traducida en ${versions}. Los documentos, las transcripciones y los aportes se muestran siempre en su idioma original. Cada edición tiene una página por año, por ejemplo ${absUrl(url('chubut/1937/', 'es'))}, con sus documentos, los datos aprobados (fecha, lugar, ganadores de la silla y la corona, competencias) con su fuente, y recuerdos.
 

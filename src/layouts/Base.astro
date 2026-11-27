@@ -38,7 +38,8 @@ interface Props {
 }
 const { title, description = t('sitio.descripcion'), festival, year, item, current, image = null, noindex = false, jsonLd = null, markdown = null, searchable = false, analytics = true } = Astro.props;
 const analyticsToken = (import.meta.env.PUBLIC_CF_ANALYTICS_TOKEN ?? '').trim();
-const fullTitle = title ? `${title} | ${t('sitio.nombre')}` : t('sitio.nombre');
+// "Page | Amgueddfa"; a title that already names the site (the hub, the archive home) stands alone.
+const fullTitle = !title ? t('sitio.nombre') : title.includes(t('sitio.nombre')) ? title : `${title} | ${t('sitio.nombre')}`;
 // Astro.url is the Spanish page being rendered; the page's own address carries its language.
 const here = locale();
 const info = LOCALE_INFO[here];

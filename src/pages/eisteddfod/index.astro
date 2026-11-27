@@ -25,9 +25,9 @@ const wanted = HOME_EXTRAS ? mostWanted(12) : [];
 // The feed never shows payload text, so none is embedded.
 const recent = HOME_EXTRAS ? latestApproved(approvedStatic as Contribution[], [], 10).map((c) => ({ ...c, payload: {} })) : [];
 ---
-<Base current="inicio" jsonLd={siteJsonLd()}>
+<Base title={t('inicio.titulo')} description={t('inicio.lema')} current="inicio" jsonLd={siteJsonLd()}>
   <section class="intro measure">
-    <h1>{t('sitio.nombre')}</h1>
+    <h1>{t('inicio.titulo')}</h1>
     <p class="lead">{t('inicio.lema')}</p>
     <p><a href={url('objetivos')}>{t('inicio.objetivos')}</a></p>
     <p class="muted">

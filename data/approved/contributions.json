@@ -1146,6 +1146,22 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "20a96cf6-3cdc-4416-9989-8abd1fd0476c",
+    "type": "fact",
+    "festival": "trevelin",
+    "year": 2024,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "fuente": "Video del archivo, ceremonia del Sillón (0:28:35): https://www.youtube.com/watch?v=5I0k9Ud-MQ4&t=1715s",
+      "lote": "ce37d397-7732-42ba-8c66-442f51e43668",
+      "value": "si"
+    },
+    "created_at": "2026-11-27T06:53:04.890556+00:00",
+    "reviewed_at": "2026-11-27T06:53:04.890556+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "2190f0fc-bce3-4ab1-9a5a-64587b4ea28f",
     "type": "fact",
     "festival": "chubut",
@@ -1907,6 +1923,22 @@
     "created_at": "2026-11-16T18:31:17.630618+00:00",
     "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
     "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "379b49a3-1061-4d00-a8f6-645a49ed7ef8",
+    "type": "fact",
+    "festival": "trevelin",
+    "year": 2024,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_silla",
+      "fuente": "Video del archivo, placa de la ceremonia del Sillón (0:28:35): https://www.youtube.com/watch?v=5I0k9Ud-MQ4&t=1715s",
+      "lote": "ce37d397-7732-42ba-8c66-442f51e43668",
+      "value": "Ana Chiabrando Rees («Fy lle heddwch»)"
+    },
+    "created_at": "2026-11-27T06:53:04.890556+00:00",
+    "reviewed_at": "2026-11-27T06:53:04.890556+00:00",
+    "display_name": "Kevin Roberts"
   },
   {
     "id": "37b8e9e7-d121-43f0-8bac-87a474607eba",
@@ -3310,6 +3342,22 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "662983a8-3da4-4577-9eac-e4fc220a56cc",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2022,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Video del archivo, cartel de la transmisión (0:21:25): https://www.youtube.com/watch?v=SL7ISRRGn7s&t=1285s",
+      "lote": "d6eee6a0-7089-4880-98e8-a99f7a971cf6",
+      "value": "Sesiones en el Salón Cincuentenario de la Asociación San David, Trelew."
+    },
+    "created_at": "2026-11-27T06:53:02.990338+00:00",
+    "reviewed_at": "2026-11-27T06:53:02.990338+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "66451c92-e7e2-434c-9c09-5ed5d7436fae",
     "type": "fact",
     "festival": "chubut",
@@ -3370,6 +3418,22 @@
     },
     "created_at": "2026-11-20T10:11:33.301197+00:00",
     "reviewed_at": "2026-11-20T10:11:33.301197+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "67762e46-9e0d-434b-8767-2830384da832",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2022,
+    "item_id": null,
+    "payload": {
+      "field": "end_date",
+      "fuente": "Video del archivo, cartel de la transmisión (0:21:25): https://www.youtube.com/watch?v=SL7ISRRGn7s&t=1285s",
+      "lote": "d6eee6a0-7089-4880-98e8-a99f7a971cf6",
+      "value": "2022-10-22"
+    },
+    "created_at": "2026-11-27T06:53:02.990338+00:00",
+    "reviewed_at": "2026-11-27T06:53:02.990338+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -3691,6 +3755,22 @@
     },
     "created_at": "2026-11-20T07:03:13.676968+00:00",
     "reviewed_at": "2026-11-20T07:03:13.676968+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "6ee0a912-f84e-4096-b16c-50502b0331bb",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2022,
+    "item_id": null,
+    "payload": {
+      "field": "start_date",
+      "fuente": "Video del archivo, cartel de la transmisión (0:21:25): https://www.youtube.com/watch?v=SL7ISRRGn7s&t=1285s",
+      "lote": "d6eee6a0-7089-4880-98e8-a99f7a971cf6",
+      "value": "2022-10-20"
+    },
+    "created_at": "2026-11-27T06:53:02.990338+00:00",
+    "reviewed_at": "2026-11-27T06:53:02.990338+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -8865,6 +8945,22 @@
     },
     "created_at": "2026-11-19T22:50:29.170701+00:00",
     "reviewed_at": "2026-11-19T22:50:29.170701+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "f9f01355-d94f-4c8d-96c4-2b838a17d834",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 2021,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "fuente": "Video del archivo, cartel de la transmisión (0:00:05): https://www.youtube.com/watch?v=kYh84c2xDPw&t=5s",
+      "lote": "d6eee6a0-7089-4880-98e8-a99f7a971cf6",
+      "value": "Salón de la Asociación San David, Trelew"
+    },
+    "created_at": "2026-11-27T06:53:02.990338+00:00",
+    "reviewed_at": "2026-11-27T06:53:02.990338+00:00",
     "display_name": "Kevin Roberts"
   },
   {

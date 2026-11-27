@@ -7,7 +7,7 @@ import { url } from '../lib/paths';
 import { el } from './ui';
 
 const LIMIT = 10;
-const COLS = 'id, type, festival, year, item_id, created_at, reviewed_at, display_name'; // no payload: never shown here
+const COLS = 'id, type, coleccion, year, item_id, created_at, reviewed_at, display_name'; // no payload: never shown here
 
 function readStatic(): Contribution[] {
   const s = document.getElementById('recientes-data');
@@ -33,9 +33,9 @@ export function renderRecent(mount: HTMLElement, list: Contribution[], offline: 
       if (c.display_name) li.append(el('a', { href: url(`perfil?u=${encodeURIComponent(c.display_name)}`) }, c.display_name));
       else li.append(t('recientes.alguien'));
       li.append(' ', t(`recientes.acciones.${c.type}`));
-      if (c.festival && c.year) {
-        const ed = `${t(`festivales.${c.festival}`)} ${c.year}`;
-        const a = el('a', { href: url(`${c.festival}/${c.year}/`) }, ed);
+      if (c.coleccion && c.year) {
+        const ed = `${t(`festivales.${c.coleccion}`)} ${c.year}`;
+        const a = el('a', { href: url(`${c.coleccion}/${c.year}/`) }, ed);
         li.append(' ', t('recientes.del'), ' ', a);
       } else if (c.item_id && /^[0-9a-f]{12}$/.test(c.item_id)) {
         li.append(' (', el('a', { href: url(`item/${c.item_id}/`) }, t('perfil.documento')), ')');

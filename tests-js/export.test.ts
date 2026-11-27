@@ -26,7 +26,7 @@ const rows = [
   {
     id: 'c-b',
     type: 'fact',
-    festival: 'chubut',
+    coleccion: 'chubut',
     year: 1990,
     item_id: null,
     payload: { text: 'Jurado: X', email: 'leak@example.com' },
@@ -39,10 +39,10 @@ const rows = [
   {
     id: 'c-a',
     type: 'upload',
-    festival: 'mimosa',
+    coleccion: 'mimosa',
     year: 2001,
     item_id: null,
-    payload: { category: 'programa', storage_path: 'u-2/x.pdf', meta: { user_id: 'u-2' } },
+    payload: { tipo: 'programa', storage_path: 'u-2/x.pdf', meta: { user_id: 'u-2' } },
     created_at: '2026-11-03T00:00:00Z',
     reviewed_at: '2026-11-04T00:00:00Z',
     display_name: 'Beto',
@@ -62,9 +62,9 @@ describe('export_approved', () => {
     const client = mockClient({
       public_contributions: rows,
       editions: [
-        { festival: 'trevelin', year: 1999, status: 'not_held', note: null, updated_at: 'x' },
-        { festival: 'chubut', year: 2020, status: 'not_held', note: 'Pandemia', updated_at: 'y' },
-        { festival: 'chubut', year: 1965, status: 'held', note: null, updated_at: 'z' },
+        { coleccion: 'trevelin', year: 1999, status: 'not_held', note: null, updated_at: 'x' },
+        { coleccion: 'chubut', year: 2020, status: 'not_held', note: 'Pandemia', updated_at: 'y' },
+        { coleccion: 'chubut', year: 1965, status: 'held', note: null, updated_at: 'z' },
       ],
     });
     await exportApproved(client, dir);
@@ -77,7 +77,7 @@ describe('export_approved', () => {
     expect(contribs[1]).toEqual({
       id: 'c-b',
       type: 'fact',
-      festival: 'chubut',
+      coleccion: 'chubut',
       year: 1990,
       item_id: null,
       payload: { text: 'Jurado: X' },
@@ -87,9 +87,9 @@ describe('export_approved', () => {
     });
 
     expect(editions).toEqual([
-      { festival: 'chubut', year: 1965, status: 'held', note: null },
-      { festival: 'chubut', year: 2020, status: 'not_held', note: 'Pandemia' },
-      { festival: 'trevelin', year: 1999, status: 'not_held', note: null },
+      { coleccion: 'chubut', year: 1965, status: 'held', note: null },
+      { coleccion: 'chubut', year: 2020, status: 'not_held', note: 'Pandemia' },
+      { coleccion: 'trevelin', year: 1999, status: 'not_held', note: null },
     ]);
   });
 
@@ -122,9 +122,9 @@ describe('transcriptions snapshot', () => {
     const { rowsFrom } = await import('../scripts/seed_transcriptions.mjs');
     const { docFile, docFolder } = await import('../scripts/export_approved.mjs');
     const { readDoc } = await import('../src/lib/docmd');
-    for (const [folder, kind, festival] of [['transcripciones', 'programa', 'chubut'], ['ganadores', 'ganadores', 'chubut']] as const) {
+    for (const [folder, kind, coleccion] of [['transcripciones', 'programa', 'chubut'], ['ganadores', 'ganadores', 'chubut']] as const) {
       const dir = join('src', 'data', folder);
-      const rows = rowsFrom(dir, kind, true, () => festival);
+      const rows = rowsFrom(dir, kind, true, () => coleccion);
       expect(rows.length).toBe(readdirSync(dir).filter((f: string) => f.endsWith('.md')).length);
       for (const r of rows) {
         const raw = readFileSync(join(dir, `${r.id}.md`), 'utf8');
@@ -139,9 +139,9 @@ describe('transcriptions snapshot', () => {
     const { docFolder } = await import('../scripts/export_approved.mjs');
     const r = { id: 'aaaaaaaaaaaa', items: ['aaaaaaaaaaaa'], text: 'x' };
     expect(docFolder({ ...r, kind: 'programa', public: false })).toBeNull();
-    expect(docFolder({ ...r, kind: 'ganadores', festival: 'juventud', public: true })).toBeNull();
-    expect(docFolder({ ...r, kind: 'ganadores', festival: 'mimosa', public: true })).toBeNull();
-    expect(docFolder({ ...r, kind: 'ganadores', festival: 'trevelin', public: true })).toBe('ganadores');
+    expect(docFolder({ ...r, kind: 'ganadores', coleccion: 'juventud', public: true })).toBeNull();
+    expect(docFolder({ ...r, kind: 'ganadores', coleccion: 'mimosa', public: true })).toBeNull();
+    expect(docFolder({ ...r, kind: 'ganadores', coleccion: 'trevelin', public: true })).toBe('ganadores');
     expect(docFolder({ ...r, id: '../x', kind: 'programa', public: true })).toBeNull();
   });
 
@@ -154,8 +154,8 @@ describe('transcriptions snapshot', () => {
     expect(await exportTranscriptions(mockClient({ transcriptions: [] }), dir)).toBeNull();
     expect(existsSync(join(dir, 'transcripciones', 'bbbbbbbbbbbb.md'))).toBe(true);
     const n = await exportTranscriptions(mockClient({ transcriptions: [
-      { id: 'aaaaaaaaaaaa', items: ['aaaaaaaaaaaa', 'cccccccccccc'], kind: 'programa', festival: 'chubut', text: '## A\n', public: true },
-      { id: 'dddddddddddd', items: ['dddddddddddd'], kind: 'ganadores', festival: 'juventud', text: 'kids', public: false },
+      { id: 'aaaaaaaaaaaa', items: ['aaaaaaaaaaaa', 'cccccccccccc'], kind: 'programa', coleccion: 'chubut', text: '## A\n', public: true },
+      { id: 'dddddddddddd', items: ['dddddddddddd'], kind: 'ganadores', coleccion: 'juventud', text: 'kids', public: false },
     ] }), dir);
     expect(n).toMatchObject({ written: 1, removed: 1, transcripciones: 1, ganadores: 0 });
     expect(readFileSync(join(dir, 'transcripciones', 'aaaaaaaaaaaa.md'), 'utf8')).toBe('---\nitems: aaaaaaaaaaaa cccccccccccc\n---\n## A\n');

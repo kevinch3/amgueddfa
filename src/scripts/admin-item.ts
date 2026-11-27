@@ -33,7 +33,7 @@ function area(id: string, value: string, rows: number): HTMLTextAreaElement {
 }
 
 const valuesOf = (i: ItemOverlay): OverlayValues => ({
-  title: i.title, category: i.category, festival: i.festival, year: i.year,
+  title: i.title, tipo: i.tipo, coleccion: i.coleccion, year: i.fecha.year,
   rights: i.rights ?? '', caption: i.note_public ?? '', no_text: Boolean(i.no_text), hidden: Boolean(i.hidden),
 });
 
@@ -52,9 +52,9 @@ function correctionForm(base: ItemOverlay, start: ItemOverlay, tags: TagLike[]):
   const title = el('input', { id: 'ai-titulo', type: 'text', maxlength: '300' });
   title.value = now.title;
   const cat = select('ai-cat', categoryOptions(), null);
-  cat.value = now.category;
+  cat.value = now.tipo;
   const fest = select('ai-fest', festivalOptions(), null);
-  fest.value = now.festival;
+  fest.value = now.coleccion;
   const year = el('input', { id: 'ai-ano', type: 'number', inputmode: 'numeric', min: '1850', max: '2200', step: '1' });
   year.value = now.year ? String(now.year) : '';
   const rights = area('ai-derechos', now.rights, 2);
@@ -74,7 +74,7 @@ function correctionForm(base: ItemOverlay, start: ItemOverlay, tags: TagLike[]):
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const next: OverlayValues = {
-      title: title.value, category: cat.value, festival: fest.value, year: year.value ? Number(year.value) : null,
+      title: title.value, tipo: cat.value, coleccion: fest.value, year: year.value ? Number(year.value) : null,
       rights: rights.value, caption: caption.value, no_text: noText.checked, hidden: hidden.checked,
     };
     const payload = correctionPayload(now, next);
@@ -82,7 +82,7 @@ function correctionForm(base: ItemOverlay, start: ItemOverlay, tags: TagLike[]):
       out.textContent = t('admin_item.sin_cambios');
       return;
     }
-    const r = await busy(go, t('admin_item.guardar'), () => saveCorrection(id, now.festival, now.year, payload));
+    const r = await busy(go, t('admin_item.guardar'), () => saveCorrection(id, now.coleccion, now.year, payload));
     if (!r.ok) {
       out.textContent = t(r.key);
       return;
@@ -99,7 +99,7 @@ function correctionForm(base: ItemOverlay, start: ItemOverlay, tags: TagLike[]):
 function transcriptionForm(base: ItemOverlay, docs: DocRow[]): HTMLElement {
   const box = el('div', { class: 'tarea-form' });
   const kind = select('ai-tr-tipo', [['programa', t('admin_item.tipo_programa')], ['ganadores', t('admin_item.tipo_ganadores')]], null);
-  kind.value = base.category === 'resultados' ? 'ganadores' : 'programa';
+  kind.value = base.tipo === 'resultados' ? 'ganadores' : 'programa';
   const items = area('ai-tr-items', '', 2);
   const [pubBox, pub] = check('ai-tr-publica', t('admin_item.publica'), true);
   const text = area('ai-tr-texto', '', 18);
@@ -113,8 +113,8 @@ function transcriptionForm(base: ItemOverlay, docs: DocRow[]): HTMLElement {
   const hist = el('div', { class: 'small' });
   let doc: DocRow | null = null;
 
-  const festival = base.festival as FestivalSlug;
-  const privateOnly = () => kind.value === 'ganadores' && !PUBLIC_WINNERS.includes(festival);
+  const coleccion = base.coleccion as FestivalSlug;
+  const privateOnly = () => kind.value === 'ganadores' && !PUBLIC_WINNERS.includes(coleccion);
   const counter = () => (count.textContent = t('admin_item.caracteres', { n: text.value.length, max: TEXT_MAX }));
 
   async function loadHistory(): Promise<void> {
@@ -167,7 +167,7 @@ function transcriptionForm(base: ItemOverlay, docs: DocRow[]): HTMLElement {
     }
     // A new document is named after this item; an existing one keeps its id.
     const id = doc?.id ?? base.id;
-    const row = { id, items: [id, ...ids.filter((x) => x !== id)], kind: kind.value as DocRow['kind'], festival, text: text.value, public: pub.checked && !privateOnly() };
+    const row = { id, items: [id, ...ids.filter((x) => x !== id)], kind: kind.value as DocRow['kind'], coleccion, text: text.value, public: pub.checked && !privateOnly() };
     const r = await busy(go, t('admin_item.guardar'), () => saveTranscription(row));
     if (!r.ok) {
       out.textContent = t(r.key);

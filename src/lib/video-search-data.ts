@@ -28,8 +28,8 @@ export function searchEditions(): Map<string, SearchEdition> {
       /* a broken file: the video is not searchable */
     }
     if (!tr) continue;
-    const key = editionKey(v.festival, v.year);
-    const ed = cache.get(key) ?? { festival: v.festival, year: v.year, videos: [] };
+    const key = editionKey(v.coleccion, v.fecha.year as number);
+    const ed = cache.get(key) ?? { coleccion: v.coleccion, year: v.fecha.year as number, videos: [] };
     ed.videos.push({ id: v.id, title: v.title, kind: v.kind, lang: tr.lang, seg: tr.seg.map(([t, text]) => [Math.floor(t), text]) });
     cache.set(key, ed);
   }
@@ -40,6 +40,6 @@ export function searchEditions(): Map<string, SearchEdition> {
 export function searchIndex(): SearchIndexEntry[] {
   const names = new Map<string, string>(festivals().map((f) => [f.slug, f.name]));
   return [...searchEditions().values()]
-    .map((e) => ({ festival: e.festival, name: names.get(e.festival) ?? e.festival, year: e.year, n: e.videos.length }))
+    .map((e) => ({ coleccion: e.coleccion, name: names.get(e.coleccion) ?? e.coleccion, year: e.year, n: e.videos.length }))
     .sort((a, b) => b.year - a.year || a.name.localeCompare(b.name, 'es'));
 }

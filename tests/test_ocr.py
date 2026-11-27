@@ -7,7 +7,7 @@ from scripts.ocr import ocr_image, parse_tsv, select, transcribed_ids
 
 
 def it(id, **kw):
-    base = {"id": id, "kind": "image", "category": "bases", "festival": "chubut", "year": 1990, "title": "t",
+    base = {"id": id, "formato": "image", "tipo": "bases", "coleccion": "chubut", "fecha": {"year": 1990, "inferred": False, "undated": False}, "title": "t",
             "restricted": False, "hidden": False, "no_text": False, "text_excerpt": None}
     return {**base, **kw}
 
@@ -15,15 +15,15 @@ def it(id, **kw):
 def test_select_only_public_scans_without_text():
     items = [
         it("a"),                               # yes
-        it("b", kind="pdf"),                   # yes
+        it("b", formato="pdf"),                   # yes
         it("c", restricted=True),              # restricted
         it("d", hidden=True),                  # hidden
         it("e", no_text=True),                 # nothing to transcribe
         it("f", text_excerpt="Rhaglen ..."),   # has embedded text
-        it("g", kind="web"),                   # not a scan
+        it("g", formato="web"),                   # not a scan
         it("h"),                               # human transcription
         it("i"),                               # already done
-        it("j", category="otros"),             # mostly photos
+        it("j", tipo="otros"),             # mostly photos
     ]
     assert [i["id"] for i in select(items, transcribed={"h"}, done={"i"})] == ["a", "b"]
     assert [i["id"] for i in select(items, transcribed={"h"}, done={"i"}, skip_categories=set())] == ["a", "b", "j"]

@@ -12,7 +12,7 @@ describe('markdown twins', () => {
 
   it('editionMarkdown: unknown is not "not held"; facts carry fuente and contributor', () => {
     const md = editionMarkdown({
-      name: 'Eisteddfod del Chubut', festival: 'chubut', year: 1865, url: 'https://amgueddfa.org/chubut/1865/',
+      name: 'Eisteddfod del Chubut', coleccion: 'chubut', year: 1865, url: 'https://amgueddfa.org/chubut/1865/',
       status: 'unknown', estado: 'none', stateText: 'Sin material', dataUrl: 'https://amgueddfa.org/datos/ediciones.json',
       facts: [{ label: 'Lugar', value: 'Punta Cuevas', fuente: 'Fuente: libro', by: 'Aportó Meirion Griffiths' }], docs: [], uploads: 0,
     });
@@ -21,15 +21,15 @@ describe('markdown twins', () => {
     expect(md).toContain('no se sabe');
     expect(md).toContain('- Lugar: Punta Cuevas (Fuente: libro · Aportó Meirion Griffiths)');
     expect(md).toContain('Todavía no hay documentos públicos');
-    const held = editionMarkdown({ name: 'X', festival: 'chubut', year: 1937, url: 'u', status: 'held', estado: 'some', stateText: 's', dataUrl: 'd', facts: [], uploads: 2,
-      docs: [{ title: 'Programa', category: 'Programa', url: 'https://amgueddfa.org/item/abc/', transcribed: true }] });
+    const held = editionMarkdown({ name: 'X', coleccion: 'chubut', year: 1937, url: 'u', status: 'held', estado: 'some', stateText: 's', dataUrl: 'd', facts: [], uploads: 2,
+      docs: [{ title: 'Programa', tipo: 'Programa', url: 'https://amgueddfa.org/item/abc/', transcribed: true }] });
     expect(held).toContain('realizada: true');
     expect(held).toContain('- [Programa](https://amgueddfa.org/item/abc/) · Programa · transcrito');
     expect(held).toContain('- 2 imágenes aportadas por la comunidad');
   });
 
   it('itemMarkdown: rights always stated; transcription nested with its licence', () => {
-    const base = { id: 'abc', title: 'Rhaglen 2012', festivalName: 'Eisteddfod del Chubut', festival: 'chubut', year: 2012, category: 'Programa',
+    const base = { id: 'abc', title: 'Rhaglen 2012', festivalName: 'Eisteddfod del Chubut', coleccion: 'chubut', year: 2012, tipo: 'Programa',
       url: 'https://amgueddfa.org/item/abc/', editionUrl: 'https://amgueddfa.org/chubut/2012/', rights: 'Titulares originales', source: 'Asociación', sourceUrl: null,
       note: '', images: ['https://m/p1.webp'], transcriptionLicense: 'CC BY-SA 4.0' };
     const md = itemMarkdown({ ...base, transcription: '## Lunes\n1. Unawd' });

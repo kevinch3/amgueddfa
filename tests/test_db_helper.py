@@ -18,14 +18,14 @@ def _facts(sql: str) -> list[list[dict]]:
 
 
 def test_batch_fuente_on_every_fact():
-    sql = db.facts_sql({"contributor": ADMIN, "festival": "chubut", "fuente": "Libro de actas",
+    sql = db.facts_sql({"contributor": ADMIN, "coleccion": "chubut", "fuente": "Libro de actas",
                         "years": {"1950": [["venue", "Salón Ejemplo, Trelew"], ["other", "Nota de prueba."]]}})
     (facts,) = _facts(sql)
     assert [f["fuente"] for f in facts] == ["Libro de actas", "Libro de actas"]
 
 
 def test_row_fuente_overrides_batch_fuente_and_shares_one_lote():
-    sql = db.facts_sql({"contributor": ADMIN, "festival": "chubut", "fuente": "Fuente general",
+    sql = db.facts_sql({"contributor": ADMIN, "coleccion": "chubut", "fuente": "Fuente general",
                         "years": {"1950": [["start_date", "1950-10-20", "Cartel del video (0:05): https://example.org/v?t=5s"]],
                                   "1951": [["other", "Nota sin fuente propia."]]}})
     a, b = _facts(sql)
@@ -35,7 +35,7 @@ def test_row_fuente_overrides_batch_fuente_and_shares_one_lote():
 
 
 def test_row_fuente_without_batch_fuente():
-    sql = db.facts_sql({"contributor": ADMIN, "festival": "trevelin",
+    sql = db.facts_sql({"contributor": ADMIN, "coleccion": "trevelin",
                         "years": {"1990": [["other", "Nota uno.", "Placa de la ceremonia (1:00): https://example.org/a"],
                                            ["other", "Nota dos."]]}})
     (facts,) = _facts(sql)
@@ -44,7 +44,7 @@ def test_row_fuente_without_batch_fuente():
 
 
 def test_apostrophes_are_quoted():
-    sql = db.facts_sql({"contributor": ADMIN, "festival": "chubut",
+    sql = db.facts_sql({"contributor": ADMIN, "coleccion": "chubut",
                         "years": {"1960": [["other", "Ganador: Pat O'Brien.", "Diario d'ejemplo"]]}})
     (facts,) = _facts(sql)
     assert facts[0]["value"] == "Ganador: Pat O'Brien." and facts[0]["fuente"] == "Diario d'ejemplo"

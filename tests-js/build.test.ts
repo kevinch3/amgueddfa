@@ -189,11 +189,11 @@ describe('static build', () => {
     }
   });
 
-  it('home grid has one cell per festival-year in range', () => {
+  it('home grid has one cell per coleccion-year in range', () => {
     const html = read('index.html');
     for (const f of FESTIVALS) {
       const [a, b] = range(f);
-      const cells = html.match(new RegExp(`data-cell[^>]*data-festival="${f}"`, 'g')) ?? [];
+      const cells = html.match(new RegExp(`data-cell[^>]*data-coleccion="${f}"`, 'g')) ?? [];
       expect(cells.length, f).toBe(b - a + 1);
       expect(html).toContain(`contribuir?f=${f}"`);
       expect(html).toContain(`¿Tenés material de antes de ${a}?`);
@@ -207,13 +207,13 @@ describe('static build', () => {
     expect(html).not.toContain('Si sos de una de las asociaciones');
   });
 
-  it('every festival has a timeline and a general page; edition pages carry mount points', () => {
+  it('every coleccion has a timeline and a general page; edition pages carry mount points', () => {
     for (const f of FESTIVALS) {
       expect(existsSync(distPath(f, 'index.html')), f).toBe(true);
       expect(existsSync(distPath('general', f, 'index.html')), f).toBe(true);
       const [a, b] = range(f);
       const page = read(`${f}/index.html`);
-      const rows = page.match(/<li class="tl-[a-z_]+" data-festival=/g) ?? [];
+      const rows = page.match(/<li class="tl-[a-z_]+" data-coleccion=/g) ?? [];
       expect(rows.length, f).toBe(b - a + 1);
       expect(page).toContain(`contribuir?f=${f}"`);
     }
@@ -233,13 +233,13 @@ describe('static build', () => {
     expect(read('contribuir/index.html')).toContain('data-firsts=');
     const ed = read('chubut/2024/index.html');
     for (const id of ['hechos', 'recuerdos', 'aportes', 'sesion']) expect(ed).toContain(`id="${id}"`);
-    const item = catalog.find((i) => !i.restricted && i.kind === 'pdf')!;
+    const item = catalog.find((i) => !i.restricted && i.formato === 'pdf')!;
     expect(read(`item/${item.id}/index.html`)).toContain('id="tarea"');
   });
 
   it('the cover heads its year page and leads that year in the timeline', () => {
     // Every edition with a cover (per editionCover, tested in catalog.test.ts) shows it.
-    const editions = [...new Set(catalog.filter((i) => i.year !== null).map((i) => `${i.festival}/${i.year}`))];
+    const editions = [...new Set(catalog.filter((i) => i.fecha.year !== null).map((i) => `${i.coleccion}/${i.fecha.year}`))];
     let checked = 0;
     for (const e of editions) {
       const [f, y] = e.split('/') as [FestivalSlug, string];
@@ -350,12 +350,12 @@ describe('static build', () => {
     expect(readdirSync(distPath('item')).filter((id) => existsSync(distPath('item', id, 'index.html'))).some((id) => read(`item/${id}/index.html`).includes('"@type":"Event"'))).toBe(false);
     const facts = (approved as any[]).filter((x) => x.type === 'fact');
     for (const c of facts.filter((x) => x.payload?.field === 'start_date')) {
-      const venue = facts.some((x) => x.festival === c.festival && x.year === c.year && x.payload?.field === 'venue');
-      const html = read(`${c.festival}/${c.year}/index.html`);
-      if (venue) expect(html, `${c.festival} ${c.year}`).toContain(`"startDate":"${c.payload.value}"`);
-      else expect(html, `${c.festival} ${c.year}`).not.toContain('"@type":"Event"');
+      const venue = facts.some((x) => x.coleccion === c.coleccion && x.year === c.year && x.payload?.field === 'venue');
+      const html = read(`${c.coleccion}/${c.year}/index.html`);
+      if (venue) expect(html, `${c.coleccion} ${c.year}`).toContain(`"startDate":"${c.payload.value}"`);
+      else expect(html, `${c.coleccion} ${c.year}`).not.toContain('"@type":"Event"');
     }
-    const prog = catalog.find((i) => i.category === 'programa' && !i.restricted && i.year !== null && i.thumb)!;
+    const prog = catalog.find((i) => i.tipo === 'programa' && !i.restricted && i.fecha.year !== null && i.thumb)!;
     const itemPage = read(`item/${prog.id}/index.html`);
     expect(itemPage).toContain('"@type":"ArchiveComponent"');
     expect(itemPage).toContain(`<meta property="og:image" content="${MEDIA_BASE}/media/${prog.thumb}"`);
@@ -480,15 +480,15 @@ describe('static build', () => {
     expect(e1937.url).toBe('https://amgueddfa.org/eisteddfod/chubut/1937/');
     // Documents count catalog items plus approved community uploads of that year.
     for (const e of eds.ediciones) {
-      const ups = (approved as any[]).filter((c) => c.type === 'upload' && c.festival === e.eisteddfod && c.year === e.ano).length;
-      const cat = placed.filter((i) => !i.restricted && !i.hidden && i.festival === e.eisteddfod && i.year === e.ano).length;
+      const ups = (approved as any[]).filter((c) => c.type === 'upload' && c.coleccion === e.eisteddfod && c.year === e.ano).length;
+      const cat = placed.filter((i) => !i.restricted && !i.hidden && i.coleccion === e.eisteddfod && i.fecha.year === e.ano).length;
       expect(e.documentos, `${e.eisteddfod} ${e.ano}`).toBe(cat + ups);
     }
     // "realizada" is only true/false when known; unknown editions say null.
-    const status = new Map((editionsData as any[]).map((e) => [`${e.festival}:${e.year}`, e.status]));
+    const status = new Map((editionsData as any[]).map((e) => [`${e.coleccion}:${e.year}`, e.status]));
     for (const e of eds.ediciones) {
       const known = status.get(`${e.eisteddfod}:${e.ano}`);
-      const hasFact = (approved as any[]).some((c) => c.type === 'fact' && c.festival === e.eisteddfod && c.year === e.ano && c.payload?.field === 'edicion_realizada');
+      const hasFact = (approved as any[]).some((c) => c.type === 'fact' && c.coleccion === e.eisteddfod && c.year === e.ano && c.payload?.field === 'edicion_realizada');
       if (!known && !hasFact) expect(e.realizada, `${e.eisteddfod} ${e.ano}`).toBeNull();
       if (known === 'held') expect(e.realizada).toBe(true);
       if (known === 'not_held') expect(e.realizada).toBe(false);
@@ -549,10 +549,10 @@ describe('static build', () => {
     expect(cards.length).toBeGreaterThan(0);
     for (const c of cards) {
       const i = byId.get(c.id)!;
-      expect(i.restricted || !i.year_inferred || i.kind !== 'image', c.id).toBe(false);
+      expect(i.restricted || !i.fecha.inferred || i.formato !== 'image', c.id).toBe(false);
       expect(c.img.startsWith(`${MEDIA_BASE}/media/`)).toBe(true);
       // Quick tasks are for history: nothing from the last 20 years (#187).
-      expect(i.year === null || i.year <= new Date().getFullYear() - 20, c.id).toBe(true);
+      expect(i.fecha.year === null || i.fecha.year <= new Date().getFullYear() - 20, c.id).toBe(true);
     }
     for (const i of catalog.filter((x) => x.restricted)) expect(html).not.toContain(i.id);
     // OCR-only documents are listed to transcribe; ones with a human transcription are not.
@@ -591,8 +591,8 @@ describe('static build', () => {
   });
 
   it('a held edition with nothing archived says so, instead of asking whether it was held', () => {
-    const status = new Map((editionsData as { festival: string; year: number; status: string }[]).map((e) => [`${e.festival}:${e.year}`, e.status]));
-    const heldEmpty = [...status].filter(([k, s]) => s === 'held' && !catalog.some((i) => `${i.festival}:${i.year}` === k) && !(approved as any[]).some((c) => c.type === 'upload' && `${c.festival}:${c.year}` === k));
+    const status = new Map((editionsData as { coleccion: string; year: number; status: string }[]).map((e) => [`${e.coleccion}:${e.year}`, e.status]));
+    const heldEmpty = [...status].filter(([k, s]) => s === 'held' && !catalog.some((i) => `${i.coleccion}:${i.fecha.year}` === k) && !(approved as any[]).some((c) => c.type === 'upload' && `${c.coleccion}:${c.year}` === k));
     expect(heldEmpty.length).toBeGreaterThan(0);
     for (const [k] of heldEmpty) {
       const [f, y] = k.split(':');
@@ -603,7 +603,7 @@ describe('static build', () => {
     const [f0, y0] = heldEmpty[0][0].split(':');
     expect(read(`en/${f0}/${y0}/index.html`)).toContain('>Held, no documents yet<');
     // Unknown years still ask.
-    const unknown = Array.from({ length: 60 }, (_, i) => 1870 + i).find((y) => !status.has(`chubut:${y}`) && !catalog.some((i) => i.festival === 'chubut' && i.year === y));
+    const unknown = Array.from({ length: 60 }, (_, i) => 1870 + i).find((y) => !status.has(`chubut:${y}`) && !catalog.some((i) => i.coleccion === 'chubut' && i.fecha.year === y));
     expect(read(`chubut/${unknown}/index.html`)).toMatch(/class="badge-state st-none"[^>]*>¿Se realizó\?</);
   });
 
@@ -624,7 +624,7 @@ describe('static build', () => {
         const sec = html.match(/<section[^>]*data-videos[^>]*>/)?.[0];
         expect(sec, `${f} ${y}`).toBeDefined();
         expect(/\shidden(\s|>|=)/.test(sec!), `${f} ${y}`).toBe(own.length === 0);
-        expect(sec).toContain(`data-festival="${f}"`);
+        expect(sec).toContain(`data-coleccion="${f}"`);
         expect(sec).toContain(`data-year="${y}"`);
         for (const v of own) {
           expect(html).toContain(`watch?v=${v.id}`);
@@ -633,7 +633,7 @@ describe('static build', () => {
       }
     }
     // Every exported video lands on a page that exists.
-    for (const v of videos) expect(existsSync(distPath(v.festival, String(v.year), 'index.html')), `${v.festival} ${v.year}`).toBe(true);
+    for (const v of videos) expect(existsSync(distPath(v.coleccion, String(v.fecha.year), 'index.html')), `${v.coleccion} ${v.fecha.year}`).toBe(true);
   });
 
   it('a hidden document keeps its page, with a notice and noindex, and no edition page links it', () => {
@@ -641,7 +641,7 @@ describe('static build', () => {
       const page = read(`item/${i.id}/index.html`);
       expect(page, i.id).toContain('data-retirado');
       expect(page, i.id).toContain('name="robots" content="noindex"');
-      if (i.year) expect(read(`${i.festival}/${i.year}/index.html`), i.id).not.toContain(`href="/eisteddfod/item/${i.id}/"`);
+      if (i.fecha.year) expect(read(`${i.coleccion}/${i.fecha.year}/index.html`), i.id).not.toContain(`href="/eisteddfod/item/${i.id}/"`);
     }
   });
 
@@ -657,7 +657,7 @@ describe('static build', () => {
       }
     }
     const pub = placed.find((i) => !i.restricted && !i.hidden)!;
-    expect(read(`item/${pub.id}/index.html`)).toContain(`data-category="${pub.category}"`);
+    expect(read(`item/${pub.id}/index.html`)).toContain(`data-tipo="${pub.tipo}"`);
     for (const k of ['titulo', 'pregunta', 'no_corresponde', 'otra_edicion', 'otro', 'texto_label', 'nota', 'nota_label', 'ingresar']) {
       expect(t(`informar.${k}`), k).not.toBe(`informar.${k}`);
     }
@@ -685,8 +685,8 @@ describe('static build', () => {
       expect(page).toContain('class="tr-lista"');
       // Every image of a multi-image document links the others.
       if (transcriptionDoc(id)!.items.length > 1) expect(page, id).toContain('Esta transcripción abarca');
-      if (item!.year) expect(read(`${item!.festival}/${item!.year}/index.html`)).toContain(`href="/eisteddfod/item/${id}/"`);
-      if (item!.year) expect(read(`${item!.festival}/${item!.year}/index.html`)).toContain('class="tr-detalle"');
+      if (item!.fecha.year) expect(read(`${item!.coleccion}/${item!.fecha.year}/index.html`)).toContain(`href="/eisteddfod/item/${id}/"`);
+      if (item!.fecha.year) expect(read(`${item!.coleccion}/${item!.fecha.year}/index.html`)).toContain('class="tr-detalle"');
     }
     // A web programa with a transcription drops the 600-character excerpt for it.
     expect(read('item/b64a2b4db146/index.html')).not.toContain('id="texto-t"');
@@ -698,9 +698,9 @@ describe('static build', () => {
     for (const id of ids) {
       const item = catalog.find((i) => i.id === id);
       expect(item, id).toBeDefined();
-      expect(item!.category, id).toBe('resultados');
-      expect(PUBLIC_WINNERS, id).toContain(item!.festival);
-      const page = read(`${item!.festival}/${item!.year}/index.html`);
+      expect(item!.tipo, id).toBe('resultados');
+      expect(PUBLIC_WINNERS, id).toContain(item!.coleccion);
+      const page = read(`${item!.coleccion}/${item!.fecha.year}/index.html`);
       expect(page, id).toContain('class="transcripciones ganadores"');
       // One list per document, under one of its images' titles.
       const titles = winnersDoc(id)!.items.map((m) => catalog.find((i) => i.id === m)!.title);
@@ -723,14 +723,14 @@ describe('static build', () => {
   });
 
   it('approved contributor transcriptions are baked into item and edition pages', () => {
-    const rows = (approved as { type: string; item_id: string | null; festival: string; year: number | null; payload: { text?: string } }[])
+    const rows = (approved as { type: string; item_id: string | null; coleccion: string; year: number | null; payload: { text?: string } }[])
       .filter((c) => c.type === 'transcription' && c.item_id);
     for (const c of rows) {
       const item = catalog.find((i) => i.id === c.item_id);
       if (!item || item.restricted) continue;
       const snippet = String(c.payload.text ?? '').split('\n')[0].slice(0, 25);
       expect(read(`item/${c.item_id}/index.html`)).toContain(snippet);
-      if (c.year) expect(read(`${c.festival}/${c.year}/index.html`)).toContain(snippet);
+      if (c.year) expect(read(`${c.coleccion}/${c.year}/index.html`)).toContain(snippet);
     }
   });
 
@@ -803,7 +803,7 @@ describe('static build', () => {
     expect(html).toContain('data-pagefind-body');
   });
 
-  it('an item description does not repeat its category when the title already starts with it (#95)', () => {
+  it('an item description does not repeat its tipo when the title already starts with it (#95)', () => {
     const desc = (f: string) => /<meta name="description" content="([^"]*)"/.exec(read(f))?.[1] ?? '';
     const docs = JSON.parse(read('datos/documentos.json')).documentos as { id: string }[];
     const repeated = docs.map((d) => desc(`item/${d.id}/index.html`)).filter((d) => {

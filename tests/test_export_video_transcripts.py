@@ -58,8 +58,8 @@ def test_export_picks_source_and_skips_children_festivals(tmp_path):
     (b / "INDEX.tsv").write_text("id\tfile\n" + "".join(
         f"{c * 11}\t{p}\n" for c, p in [("A", "C/2018/a_AAAAAAAAAAA.mp4"), ("B", "C/2018/b_BBBBBBBBBBB.mp4"),
                                         ("C", "C/2018/c_CCCCCCCCCCC.mp4"), ("D", "J/2018/d_DDDDDDDDDDD.mp4")]), encoding="utf-8")
-    videos = [{"id": "A" * 11, "festival": "chubut"}, {"id": "B" * 11, "festival": "trevelin"},
-              {"id": "C" * 11, "festival": "chubut"}, {"id": "D" * 11, "festival": "juventud"}]
+    videos = [{"id": "A" * 11, "coleccion": "chubut"}, {"id": "B" * 11, "coleccion": "trevelin"},
+              {"id": "C" * 11, "coleccion": "chubut"}, {"id": "D" * 11, "coleccion": "juventud"}]
     out = tmp_path / "out"
     (out).mkdir()
     (out / "ZZZZZZZZZZZ.json").write_text("{}")  # a video that left the list
@@ -100,7 +100,7 @@ def test_welsh_whisper_is_held_until_checked(tmp_path):
     _video(b, "C/2018/e_EEEEEEEEEEE.mp4", whisper={"language": "cy", "segments": WHISPER_SEGS})
     _video(b, "C/2018/f_FFFFFFFFFFF.mp4", whisper={"language": "es", "segments": [[2.0 + 4 * i, 5.0 + 4 * i, "comienza la competencia número doce, solo de soprano"] for i in range(8)]})
     (b / "INDEX.tsv").write_text("id\tfile\nEEEEEEEEEEE\tC/2018/e_EEEEEEEEEEE.mp4\nFFFFFFFFFFF\tC/2018/f_FFFFFFFFFFF.mp4\n", encoding="utf-8")
-    r = export(b, [{"id": "E" * 11, "festival": "chubut"}, {"id": "F" * 11, "festival": "chubut"}], tmp_path / "out")
+    r = export(b, [{"id": "E" * 11, "coleccion": "chubut"}, {"id": "F" * 11, "coleccion": "chubut"}], tmp_path / "out")
     assert r["whisper"] == 1 and (tmp_path / "out" / ("F" * 11 + ".json")).exists()
 
 
@@ -192,7 +192,7 @@ def test_export_prefers_reconstruction(tmp_path):
     for vid in ("A" * 11, "D" * 11):
         (recon / f"{vid}.json").write_text(json.dumps(rec), encoding="utf-8")
     out = tmp_path / "out"
-    export(b, [{"id": "A" * 11, "festival": "chubut"}, {"id": "D" * 11, "festival": "juventud"}], out, recon=recon)
+    export(b, [{"id": "A" * 11, "coleccion": "chubut"}, {"id": "D" * 11, "coleccion": "juventud"}], out, recon=recon)
     a = json.loads((out / ("A" * 11 + ".json")).read_text())
     assert a["src"] == "reconstruida" and len(a["fuentes"]) == len(a["seg"]) == 1
     assert "ventanas" not in a and "modelo" not in a
@@ -214,7 +214,7 @@ def test_export_credits_each_lyric_with_its_rights_and_source(tmp_path):
            "letras": [{"desde": 0, "hasta": 9, "titulo": "Pieza", "autor": "X", "idioma": "es"}]}
     (recon / f"{'A' * 11}.json").write_text(json.dumps(rec), encoding="utf-8")
     out = tmp_path / "out"
-    export(b, [{"id": "A" * 11, "festival": "chubut"}], out, recon=recon, letras=letras)
+    export(b, [{"id": "A" * 11, "coleccion": "chubut"}], out, recon=recon, letras=letras)
     l = json.loads((out / ("A" * 11 + ".json")).read_text())["letras"][0]
     assert l["derechos"] == "Texto tradicional (dominio público)"
     assert l["fuente"] == "https://ejemplo.org/pieza, aportado por Alguien"
@@ -323,7 +323,7 @@ def test_export_drops_english_lines_the_welsh_model_heard(tmp_path):
     (recon / f"{'A' * 11}.json").write_text(json.dumps(mixed), encoding="utf-8")
     (recon / f"{'B' * 11}.json").write_text(json.dumps(song), encoding="utf-8")
     out = tmp_path / "out"
-    export(b, [{"id": "A" * 11, "festival": "chubut"}, {"id": "B" * 11, "festival": "chubut"}], out, recon=recon)
+    export(b, [{"id": "A" * 11, "coleccion": "chubut"}, {"id": "B" * 11, "coleccion": "chubut"}], out, recon=recon)
     a = json.loads((out / ("A" * 11 + ".json")).read_text())
     assert [x for _, x in a["seg"]] == ["Diolch yn fawr iawn i chi am ddod heddiw"] and len(a["fuentes"]) == 1
     assert not (out / ("B" * 11 + ".json")).exists()  # nothing left: the video has no text
@@ -378,7 +378,7 @@ def test_mezcla_flag_not_published(tmp_path):
          "seg": [[0, "Así que le vamos a dar el paso a ella para que lea el próximo veredicto."], [30, "Diolch yn fawr iawn i chi am ddod heddiw"]]}
     (recon / f"{'A' * 11}.json").write_text(json.dumps(t), encoding="utf-8")
     out = tmp_path / "out"
-    export(b, [{"id": "A" * 11, "festival": "chubut"}], out, recon=recon)
+    export(b, [{"id": "A" * 11, "coleccion": "chubut"}], out, recon=recon)
     a = json.loads((out / ("A" * 11 + ".json")).read_text())
     assert "mezcla" not in a and a["lang"] == "cy" and "idiomas" not in a
 
@@ -397,7 +397,7 @@ def test_export_writes_line_languages_only_where_the_source_would_mislead(tmp_pa
     (recon / f"{'A' * 11}.json").write_text(json.dumps(mixed), encoding="utf-8")
     (recon / f"{'B' * 11}.json").write_text(json.dumps(plain), encoding="utf-8")
     out = tmp_path / "out"
-    export(b, [{"id": "A" * 11, "festival": "chubut"}, {"id": "B" * 11, "festival": "chubut"}], out, recon=recon)
+    export(b, [{"id": "A" * 11, "coleccion": "chubut"}, {"id": "B" * 11, "coleccion": "chubut"}], out, recon=recon)
     a = json.loads((out / ("A" * 11 + ".json")).read_text())
     assert a["idiomas"] == ["es", "cy"] and a["lang"] == "es"
     assert "idiomas" not in json.loads((out / ("B" * 11 + ".json")).read_text())  # every line's source tells its language
@@ -436,7 +436,7 @@ def test_export_fixes_terms_in_spanish_lines_only(tmp_path):
                  [90, "Mae'r gerd hon yn hyfryd iawn, wrth gwrs."], [120, "Dyma gannu telenegol a swinol"]]}
     (recon / f"{'A' * 11}.json").write_text(json.dumps(t), encoding="utf-8")
     out = tmp_path / "out"
-    export(b, [{"id": "A" * 11, "festival": "chubut"}], out, recon=recon)
+    export(b, [{"id": "A" * 11, "coleccion": "chubut"}], out, recon=recon)
     seg = [x for _, x in json.loads((out / ("A" * 11 + ".json")).read_text())["seg"]]
     assert seg[0] == "Invitamos al presidente del Círculo Bárdico del Chubut."
     assert "Várdico" in seg[1] and seg[2] == "Várdico, canta el coro"  # Welsh-model line and lyric untouched
@@ -476,7 +476,7 @@ def _corrections_setup(tmp_path, rows, seg=None, fuentes=None, lang="es"):
         (recon / f"{v * 11}.json").write_text(json.dumps(t), encoding="utf-8")
     approved = tmp_path / "contributions.json"
     approved.write_text(json.dumps(rows), encoding="utf-8")
-    vids = [{"id": "A" * 11, "festival": "chubut"}, {"id": "B" * 11, "festival": "chubut"}]
+    vids = [{"id": "A" * 11, "coleccion": "chubut"}, {"id": "B" * 11, "coleccion": "chubut"}]
     return b, vids, recon, approved
 
 

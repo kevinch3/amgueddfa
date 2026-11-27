@@ -1,3 +1,4 @@
+import type { Fecha } from '../src/lib/types';
 import { beforeEach, describe, expect, it } from 'vitest';
 import {
   editionState, mostWanted, pageUrls, setItems, thumbUrl, yearRange, editionItems, festivals,
@@ -6,29 +7,30 @@ import {
 import type { Item } from '../src/lib/types';
 import { MEDIA_BASE, siteMedia } from '../src/lib/paths';
 
-function mk(over: Partial<Item>): Item {
+function mk(over: Omit<Partial<Item>, 'fecha'> & { fecha?: Partial<Fecha> }): Item {
   return {
-    id: 'aaaaaaaaaaaa', festival: 'chubut', year: 1990, undated: false, category: 'otros',
-    title: 't', kind: 'image', src_path: 'x', alt_paths: [], source_url: null,
-    source_label: 'l', retrieved: '2026-01-01', note_public: '', year_inferred: false,
+    id: 'aaaaaaaaaaaa', coleccion: 'chubut', tipo: 'otros',
+    title: 't', formato: 'image', src_path: 'x', alt_paths: [], source_url: null,
+    source_label: 'l', retrieved: '2026-01-01', note_public: '',
     restricted: false, pages: 1, thumb: 'aaaaaaaaaaaa/thumb.webp',
     page_paths: ['aaaaaaaaaaaa/p01.webp'], text_excerpt: null, table: null, ...over,
+    fecha: { year: 1990, inferred: false, undated: false, ...over.fecha },
   };
 }
 
 const fixture: Item[] = [
-  mk({ id: '000000000001', year: 1990, category: 'programa', kind: 'pdf' }),
-  mk({ id: '000000000002', year: 1991, category: 'programa', kind: 'image' }),
-  mk({ id: '000000000003', year: 1992, category: 'bases', kind: 'pdf' }),
-  mk({ id: '000000000004', year: 1980, festival: 'mimosa', category: 'otros' }),
-  mk({ id: '000000000005', year: null, undated: true, festival: 'chubut' }),
+  mk({ id: '000000000001', fecha: { year: 1990 }, tipo: 'programa', formato: 'pdf' }),
+  mk({ id: '000000000002', fecha: { year: 1991 }, tipo: 'programa', formato: 'image' }),
+  mk({ id: '000000000003', fecha: { year: 1992 }, tipo: 'bases', formato: 'pdf' }),
+  mk({ id: '000000000004', fecha: { year: 1980 }, coleccion: 'mimosa', tipo: 'otros' }),
+  mk({ id: '000000000005', fecha: { undated: true, year: null }, coleccion: 'chubut' }),
 ];
 
 beforeEach(() => setItems(fixture));
 
 describe('catalog', () => {
   it('hidden items are left out of listings but keep their page', () => {
-    setItems([mk({ id: '000000000001', year: 1990, category: 'programa', kind: 'pdf', hidden: true }), mk({ id: '000000000002', year: 1990 })]);
+    setItems([mk({ id: '000000000001', fecha: { year: 1990 }, tipo: 'programa', formato: 'pdf', hidden: true }), mk({ id: '000000000002', fecha: { year: 1990 } })]);
     expect(items().map((i) => i.id)).toEqual(['000000000002']);
     expect(allItems().map((i) => i.id)).toEqual(['000000000001', '000000000002']);
     expect(editionItems('chubut', 1990).map((i) => i.id)).toEqual(['000000000002']);
@@ -46,7 +48,7 @@ describe('catalog', () => {
 
   it('editionYears adds documented not-held years outside the range (#22)', () => {
     const now = new Date().getFullYear();
-    const ys = editionYears('chubut', [1890, 1995], [{ festival: 'chubut', year: 1990 }]);
+    const ys = editionYears('chubut', [1890, 1995], [{ coleccion: 'chubut', year: 1990 }]);
     expect(ys[0]).toBe(1890);
     expect(ys[1]).toBe(1990);
     expect(ys.filter((y) => y === 1995)).toHaveLength(1);
@@ -56,12 +58,12 @@ describe('catalog', () => {
   it('yearRange starts at earliest catalog or approved year', () => {
     const now = new Date().getFullYear();
     expect(yearRange('chubut', [])).toEqual([1990, now]);
-    expect(yearRange('chubut', [{ festival: 'chubut', year: 1930 }])).toEqual([1930, now]);
+    expect(yearRange('chubut', [{ coleccion: 'chubut', year: 1930 }])).toEqual([1930, now]);
     expect(yearRange('trevelin', [])).toEqual([now, now]);
   });
 
   it('firstMaterialYear ignores undated or unassigned contributions', () => {
-    const noise = [{ festival: 'chubut', year: null }, { festival: null, year: 1900 }, { festival: 'mimosa', year: 1950 }];
+    const noise = [{ coleccion: 'chubut', year: null }, { coleccion: null, year: 1900 }, { coleccion: 'mimosa', year: 1950 }];
     expect(firstMaterialYear('chubut', noise)).toBe(1990);
     expect(firstMaterialYear('mimosa', noise)).toBe(1950);
     expect(firstMaterialYear('trevelin', [])).toBeNull();
@@ -71,13 +73,13 @@ describe('catalog', () => {
   it('undocumented: no catalog item and no approved contribution of any type', () => {
     expect(undocumented('chubut', 1993, [])).toBe(true);
     expect(undocumented('chubut', 1990, [])).toBe(false);
-    expect(undocumented('chubut', 1993, [{ festival: 'chubut', year: 1993 }])).toBe(false);
-    expect(undocumented('chubut', 1993, [{ festival: 'mimosa', year: 1993 }])).toBe(true);
+    expect(undocumented('chubut', 1993, [{ coleccion: 'chubut', year: 1993 }])).toBe(false);
+    expect(undocumented('chubut', 1993, [{ coleccion: 'mimosa', year: 1993 }])).toBe(true);
   });
 
   it('a "no se realizó" fact is not material: no start year, decade stays empty', () => {
-    const notHeld = { type: 'fact', festival: 'chubut', year: 1930, payload: { field: 'edicion_realizada', value: 'no' } };
-    const held = { type: 'fact', festival: 'chubut', year: 1931, payload: { field: 'edicion_realizada', value: 'si' } };
+    const notHeld = { type: 'fact', coleccion: 'chubut', year: 1930, payload: { field: 'edicion_realizada', value: 'no' } };
+    const held = { type: 'fact', coleccion: 'chubut', year: 1931, payload: { field: 'edicion_realizada', value: 'si' } };
     expect(firstMaterialYear('chubut', [notHeld])).toBe(1990);
     expect(undocumented('chubut', 1930, [notHeld])).toBe(true);
     expect(firstMaterialYear('chubut', [notHeld, held])).toBe(1931);
@@ -87,15 +89,15 @@ describe('catalog', () => {
   it('mostWanted excludes full editions', () => {
     // Explicit data: the real export (data/approved) must never leak into unit tests.
     const w = mostWanted(10, []);
-    expect(w.map((e) => [e.festival, e.year])).toEqual([
+    expect(w.map((e) => [e.coleccion, e.year])).toEqual([
       ['chubut', 1992], ['chubut', 1991], ['mimosa', 1980],
     ]);
     expect(mostWanted(1, [])).toHaveLength(1);
   });
 
   it('mostWanted takes its year range from the uploads it is given', () => {
-    const early = { type: 'upload', festival: 'chubut', year: 1920, payload: { category: 'otros' } };
-    expect(mostWanted(10, [early]).map((e) => [e.festival, e.year])).toContainEqual(['chubut', 1920]);
+    const early = { type: 'upload', coleccion: 'chubut', year: 1920, payload: { tipo: 'otros' } };
+    expect(mostWanted(10, [early]).map((e) => [e.coleccion, e.year])).toContainEqual(['chubut', 1920]);
   });
 
   it('festivals are ordered', () => {
@@ -133,8 +135,8 @@ describe('catalog', () => {
     const U1 = '11111111-1111-1111-1111-111111111111';
     const U2 = '22222222-2222-2222-2222-222222222222';
     const upl = (id: string, payload: any, reviewed_at = '2026-01-01', year = 1990) => ({
-      id, type: 'upload', festival: 'chubut', year, reviewed_at,
-      payload: { category: 'programa', media: { thumb: `uploads/${id}/thumb.webp`, pages: [`uploads/${id}/p01.webp`] }, ...payload },
+      id, type: 'upload', coleccion: 'chubut', year, reviewed_at,
+      payload: { tipo: 'programa', media: { thumb: `uploads/${id}/thumb.webp`, pages: [`uploads/${id}/p01.webp`] }, ...payload },
     });
 
     it('the latest approved tapa wins over the catalog programa', () => {
@@ -155,9 +157,9 @@ describe('catalog', () => {
 
     it('a catalog item titled tapa or portada beats page 1 of the programa PDF', () => {
       setItems([
-        mk({ id: '000000000001', year: 1990, category: 'programa', kind: 'pdf', title: 'Listado competencias', page_paths: ['a/p01.webp'], thumb: 'a/thumb.webp' }),
-        mk({ id: '000000000002', year: 1990, category: 'programa', kind: 'image', title: 'Tapa programa 1990 foto 3', page_paths: ['b/p01.webp'], thumb: 'b/thumb.webp' }),
-        mk({ id: '000000000003', year: 1991, category: 'otros', kind: 'image', title: 'Portada', page_paths: ['c/p01.webp'], thumb: 'c/thumb.webp', restricted: true }),
+        mk({ id: '000000000001', fecha: { year: 1990 }, tipo: 'programa', formato: 'pdf', title: 'Listado competencias', page_paths: ['a/p01.webp'], thumb: 'a/thumb.webp' }),
+        mk({ id: '000000000002', fecha: { year: 1990 }, tipo: 'programa', formato: 'image', title: 'Tapa programa 1990 foto 3', page_paths: ['b/p01.webp'], thumb: 'b/thumb.webp' }),
+        mk({ id: '000000000003', fecha: { year: 1991 }, tipo: 'otros', formato: 'image', title: 'Portada', page_paths: ['c/p01.webp'], thumb: 'c/thumb.webp', restricted: true }),
       ]);
       expect(editionCover('chubut', 1990, [], B)?.page).toMatch(/\/media\/b\/p01\.webp$/);
       expect(editionCover('chubut', 1991, [], B)).toBeNull();
@@ -165,14 +167,14 @@ describe('catalog', () => {
 
     it('only programa items titled tapa count (not e.g. the cover-design contest rules)', () => {
       setItems([
-        mk({ id: '000000000004', year: 1990, category: 'bases', kind: 'image', title: 'concurso-tapa-programa', page_paths: ['d/p01.webp'], thumb: 'd/thumb.webp' }),
-        mk({ id: '000000000005', year: 1990, category: 'programa', kind: 'image', title: 'Tapa programa 1990 foto', page_paths: ['e/p01.webp'], thumb: 'e/thumb.webp' }),
+        mk({ id: '000000000004', fecha: { year: 1990 }, tipo: 'bases', formato: 'image', title: 'concurso-tapa-programa', page_paths: ['d/p01.webp'], thumb: 'd/thumb.webp' }),
+        mk({ id: '000000000005', fecha: { year: 1990 }, tipo: 'programa', formato: 'image', title: 'Tapa programa 1990 foto', page_paths: ['e/p01.webp'], thumb: 'e/thumb.webp' }),
       ]);
       expect(editionCover('chubut', 1990, [], B)?.page).toMatch(/\/media\/e\/p01\.webp$/);
     });
 
     it('a restricted catalog programa never supplies a cover', () => {
-      setItems([mk({ id: '000000000009', year: 1990, category: 'programa', kind: 'pdf', restricted: true })]);
+      setItems([mk({ id: '000000000009', fecha: { year: 1990 }, tipo: 'programa', formato: 'pdf', restricted: true })]);
       expect(editionCover('chubut', 1990, [], B)).toBeNull();
     });
   });

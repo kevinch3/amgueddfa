@@ -17,12 +17,12 @@ def _repo(tmp_path):
     (tmp_path / "src/data/transcripciones").mkdir(parents=True)
     (tmp_path / "data/approved").mkdir(parents=True)
     (tmp_path / "src/data/catalog.json").write_text(json.dumps({"items": [
-        {"id": "aaaaaaaaaaaa", "festival": "chubut", "year": 2025, "category": "programa"}]}), encoding="utf-8")
+        {"id": "aaaaaaaaaaaa", "coleccion": "chubut", "fecha": {"year": 2025, "inferred": False, "undated": False}, "tipo": "programa"}]}), encoding="utf-8")
     (tmp_path / "src/data/transcripciones/aaaaaaaaaaaa.md").write_text(PROGRAMA, encoding="utf-8")
     (tmp_path / "data/approved/contributions.json").write_text(json.dumps([
-        {"type": "fact", "status": "approved", "festival": "chubut", "year": 2025, "payload": {"field": "venue", "value": "Gimnasio Municipal N.º 1, Trelew"}},
-        {"type": "fact", "status": "approved", "festival": "chubut", "year": 2024, "payload": {"field": "venue", "value": "Otro lugar"}},
-        {"type": "memory", "status": "approved", "festival": "chubut", "year": 2025, "payload": {"text": "un recuerdo privado"}},
+        {"type": "fact", "status": "approved", "coleccion": "chubut", "year": 2025, "payload": {"field": "venue", "value": "Gimnasio Municipal N.º 1, Trelew"}},
+        {"type": "fact", "status": "approved", "coleccion": "chubut", "year": 2024, "payload": {"field": "venue", "value": "Otro lugar"}},
+        {"type": "memory", "status": "approved", "coleccion": "chubut", "year": 2025, "payload": {"text": "un recuerdo privado"}},
     ]), encoding="utf-8")
     return tmp_path
 
@@ -34,7 +34,7 @@ def test_programa_lines_keeps_every_numbered_competition(tmp_path):
 
 def test_context_names_the_competition_and_edition_facts(tmp_path):
     repo = _repo(tmp_path)
-    video = {"id": "vid", "festival": "chubut", "year": "2025", "title": "Eisteddfod del Chubut 2025, día sábado. Competencia Nº 75, segunda competencia"}
+    video = {"id": "vid", "coleccion": "chubut", "fecha": {"year": 2025, "inferred": False, "undated": False}, "title": "Eisteddfod del Chubut 2025, día sábado. Competencia Nº 75, segunda competencia"}
     ctx = video_context(repo, video, 0, 60)
     assert "Rosa Amarela" in ctx.text and "Gimnasio Municipal" in ctx.text
     assert "O bone Jesu" not in ctx.text and "Otro lugar" not in ctx.text and "recuerdo" not in ctx.text
@@ -45,7 +45,7 @@ def test_context_follows_session_chapters(tmp_path):
     repo = _repo(tmp_path)
     (repo / "public/marcadores-video").mkdir(parents=True)
     (repo / "public/marcadores-video/ses.json").write_text(json.dumps({"markers": [[100, "74", "x", "comp"], [900, "75", "y", "comp"]]}), encoding="utf-8")
-    video = {"id": "ses", "festival": "chubut", "year": "2025", "title": "Eisteddfod del chubut 2025"}
+    video = {"id": "ses", "coleccion": "chubut", "fecha": {"year": 2025, "inferred": False, "undated": False}, "title": "Eisteddfod del chubut 2025"}
     assert "O bone Jesu" in video_context(repo, video, 300, 360).text
     assert "Rosa Amarela" in video_context(repo, video, 880, 940).text
 
@@ -56,7 +56,7 @@ def test_tokens_fold_accents_case_and_punctuation():
 
 def test_word_list_has_fact_values_not_field_labels(tmp_path):
     repo = _repo(tmp_path)
-    video = {"id": "vid", "festival": "chubut", "year": "2025", "title": "Competencia Nº 75"}
+    video = {"id": "vid", "coleccion": "chubut", "fecha": {"year": 2025, "inferred": False, "undated": False}, "title": "Competencia Nº 75"}
     ctx = video_context(repo, video, 0, 60)
     assert {"gimnasio", "municipal"} <= ctx.words
     assert "venue" not in ctx.words and "ganador" not in ctx.words

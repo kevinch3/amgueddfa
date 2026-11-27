@@ -4,7 +4,7 @@ import type { FestivalSlug } from '../lib/types';
 import { noteForm, opener, reportForm } from './informar';
 import { busy, categoryOptions, el, festivalOptions, field, gate, gateMessage, select, thanks } from './ui';
 
-type Ctx = { festival: FestivalSlug; year: number | null; item: string; category: string };
+type Ctx = { coleccion: FestivalSlug; year: number | null; item: string; tipo: string };
 
 const status = (): HTMLParagraphElement => el('p', { class: 'contrib-msg', role: 'alert' });
 
@@ -18,7 +18,7 @@ function yearTask(ctx: Ctx): HTMLElement {
 
   const send = async (btn: HTMLButtonElement, idle: string, input: Record<string, unknown>) => {
     msg.textContent = '';
-    const r = await busy(btn, idle, () => submit('tag', ctx.festival, ctx.year, ctx.item, input));
+    const r = await busy(btn, idle, () => submit('tag', ctx.coleccion, ctx.year, ctx.item, input));
     if (r.ok) box.replaceChildren(await thanks());
     else msg.textContent = t(r.key);
   };
@@ -49,7 +49,7 @@ function yearTask(ctx: Ctx): HTMLElement {
     form.addEventListener('submit', (ev) => {
       ev.preventDefault();
       if (go.disabled) return;
-      void send(go, t('tarea.enviar'), { year: yr.value, category: cat.value, festival: fest.value });
+      void send(go, t('tarea.enviar'), { year: yr.value, tipo: cat.value, coleccion: fest.value });
     });
     actions.replaceWith(form);
     yr.focus();
@@ -84,7 +84,7 @@ function transcribeTask(ctx: Ctx): HTMLElement {
       ev.preventDefault();
       if (go.disabled) return;
       msg.textContent = '';
-      const r = await busy(go, t('tarea.enviar'), () => submit('transcription', ctx.festival, ctx.year, ctx.item, { text: ta.value }));
+      const r = await busy(go, t('tarea.enviar'), () => submit('transcription', ctx.coleccion, ctx.year, ctx.item, { text: ta.value }));
       if (r.ok) form.replaceWith(await thanks());
       else msg.textContent = t(r.key);
     });
@@ -98,10 +98,10 @@ async function hydrate(): Promise<void> {
   const root = document.getElementById('tarea');
   if (!root) return;
   const ctx: Ctx = {
-    festival: root.dataset.festival as FestivalSlug,
+    coleccion: root.dataset.coleccion as FestivalSlug,
     year: root.dataset.year ? Number(root.dataset.year) : null,
     item: root.dataset.item ?? '',
-    category: root.dataset.category ?? '',
+    tipo: root.dataset.tipo ?? '',
   };
   if (!ctx.item) return;
   const g = await gate();

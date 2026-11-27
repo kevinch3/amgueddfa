@@ -32,7 +32,7 @@ export function rowsFrom(dir, kind, isPublic, festivalOf) {
     .sort()
     .map((f) => {
       const d = readDoc(f.slice(0, -3), readFileSync(join(dir, f), 'utf8'));
-      return { ...d, kind, festival: festivalOf(d.id), public: isPublic };
+      return { ...d, kind, coleccion: festivalOf(d.id), public: isPublic };
     });
 }
 
@@ -41,7 +41,7 @@ async function main() {
   const dry = args.includes('--dry-run');
   const pi = args.indexOf('--private');
   const catalog = JSON.parse(readFileSync(join(REPO, 'src', 'data', 'catalog.json'), 'utf8')).items;
-  const fest = new Map(catalog.map((i) => [i.id, i.festival]));
+  const fest = new Map(catalog.map((i) => [i.id, i.coleccion]));
   const festivalOf = (id) => fest.get(id) ?? null;
   const rows = [
     ...rowsFrom(join(REPO, 'src', 'data', 'transcripciones'), 'programa', true, festivalOf),

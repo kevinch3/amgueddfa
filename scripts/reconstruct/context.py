@@ -68,7 +68,7 @@ def programa_lines(repo: Path, festival: str, year: int) -> dict[int, str]:
     for p in sorted((repo / "src/data/transcripciones").glob("*.md")):
         text = p.read_text(encoding="utf-8")
         item = next((cat[x] for x in front_items(text, p.stem) if x in cat), None)
-        if not item or item.get("category") != "programa" or item.get("festival") != festival or item.get("year") != year:
+        if not item or item.get("tipo") != "programa" or item.get("coleccion") != festival or (item.get("fecha") or {}).get("year") != year:
             continue
         for line in text.splitlines():
             m = re.match(r"^(\d{1,3})\.\s+(.*)", line)
@@ -91,7 +91,7 @@ def _on_screen(repo: Path, video: dict, t0: float, t1: float) -> list[int]:
 
 def video_context(repo: Path, video: dict, t0: float, t1: float, facts: list | None = None) -> Context:
     """facts: the approved contributions to use (default: data/approved/contributions.json)."""
-    festival, year = video["festival"], int(video["year"])
+    festival, year = video["coleccion"], int(video["fecha"]["year"])
     parts = [f"{FESTIVAL_NAMES.get(festival, festival)} {year}."]
     values = [parts[0]]  # the word list: names and values only, never field labels
     lines = programa_lines(repo, festival, year)
@@ -103,7 +103,7 @@ def video_context(repo: Path, video: dict, t0: float, t1: float, facts: list | N
         facts = json.loads((repo / "data/approved/contributions.json").read_text(encoding="utf-8"))
     for c in facts:
         p = c.get("payload") or {}
-        if (c.get("type") == "fact" and c.get("status", "approved") == "approved" and c.get("festival") == festival
+        if (c.get("type") == "fact" and c.get("status", "approved") == "approved" and c.get("coleccion") == festival
                 and c.get("year") == year and p.get("field") in FACT_FIELDS and p.get("value")):
             parts.append(f"{p['field']}: {p['value']}")
             values.append(p["value"])

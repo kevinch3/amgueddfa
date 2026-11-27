@@ -14,7 +14,7 @@ export type Validation = { ok: true; payload: Record<string, unknown> } | { ok: 
 export interface Contribution {
   id: string;
   type: Kind;
-  festival: FestivalSlug | null;
+  coleccion: FestivalSlug | null;
   year: number | null;
   item_id: string | null;
   payload: Record<string, any>;
@@ -116,15 +116,15 @@ function validateTag(input: Record<string, unknown>): Validation {
     if (!/^\d{4}$/.test(y) || n < YEAR_MIN || n > YEAR_MAX) return fail('ano');
     payload.year = n;
   }
-  const cat = str(input.category);
+  const cat = str(input.tipo);
   if (cat) {
     if (!CATEGORIES.includes(cat as CategorySlug)) return fail('etiqueta');
-    payload.category = cat;
+    payload.tipo = cat;
   }
-  const fest = str(input.festival);
+  const fest = str(input.coleccion);
   if (fest) {
     if (!FESTIVALS.includes(fest as FestivalSlug)) return fail('etiqueta');
-    payload.festival = fest;
+    payload.coleccion = fest;
   }
   return Object.keys(payload).length ? { ok: true, payload } : fail('etiqueta');
 }
@@ -220,7 +220,7 @@ function validateReport(input: Record<string, unknown>): Validation {
   if (video) payload.video = video;
   if (problema === 'otra_edicion') {
     const raw = { ...((input.arreglo ?? {}) as Record<string, unknown>) };
-    if (objetivo === 'video') delete raw.category;
+    if (objetivo === 'video') delete raw.tipo;
     const v = validateTag(raw);
     if (!v.ok) return fail('arreglo');
     const actual = (input.actual ?? {}) as Record<string, unknown>;
@@ -241,12 +241,12 @@ export function validate(kind: Kind, input: Record<string, unknown>): Validation
       if (!MIME_EXT[f.type ?? '']) return fail('tipo_archivo');
       if (f.size > MAX_UPLOAD) return fail('muy_grande');
       if (f.size <= 0) return fail('archivo');
-      const category = str(input.category);
-      if (!CATEGORIES.includes(category as CategorySlug)) return fail('categoria');
+      const tipo = str(input.tipo);
+      if (!CATEGORIES.includes(tipo as CategorySlug)) return fail('categoria');
       const description = str(input.description);
       if (len(description) > VALUE_MAX) return fail('valor');
-      const payload: Record<string, unknown> = { category };
-      if (category === 'programa') {
+      const payload: Record<string, unknown> = { tipo };
+      if (tipo === 'programa') {
         const alcance = str(input.alcance);
         if (!(ALCANCES as readonly string[]).includes(alcance)) return fail('alcance');
         payload.alcance = alcance;
@@ -321,7 +321,7 @@ export const MAX_FACTS = 15;
  * A failing fact is reported with its position (`index`).
  */
 export async function submitFacts(
-  festival: FestivalSlug,
+  coleccion: FestivalSlug,
   year: number,
   facts: Record<string, unknown>[],
   fuente: string,
@@ -342,7 +342,7 @@ export async function submitFacts(
   if (!uid) return { ok: false, key: 'contrib.error.sesion' };
   const lote = payloads.length > 1 ? uuid() : null;
   const rows = payloads.map((payload) => ({
-    user_id: uid, type: 'fact', festival, year, item_id: null, status: 'pending',
+    user_id: uid, type: 'fact', coleccion, year, item_id: null, status: 'pending',
     payload: lote ? { ...payload, lote } : payload,
   }));
   try {
@@ -359,7 +359,7 @@ export async function submitFacts(
  */
 export async function submit(
   kind: Kind,
-  festival: FestivalSlug | null,
+  coleccion: FestivalSlug | null,
   year: number | null,
   itemId: string | null,
   input: Record<string, unknown>,
@@ -368,7 +368,7 @@ export async function submit(
   const v = validate(kind, input);
   if (!v.ok) return v;
   // validate() does not see the edition: only Chubut and Trevelin videos can be corrected.
-  if (kind === 'video_text' && !VIDEO_FESTIVALS.includes(festival as FestivalSlug)) return fail('edicion');
+  if (kind === 'video_text' && !VIDEO_FESTIVALS.includes(coleccion as FestivalSlug)) return fail('edicion');
   if (!client) return OFFLINE;
   const s = await signedInUid(client);
   if (s.offline) return OFFLINE;
@@ -397,7 +397,7 @@ export async function submit(
     const { error } = await client.from('contributions').insert({
       user_id: uid,
       type: kind,
-      festival,
+      coleccion,
       year,
       item_id: itemId,
       payload,
@@ -426,8 +426,8 @@ export function mergeApproved(stat: Contribution[], live: Contribution[]): Contr
 }
 
 /** Approved rows of one edition and type. */
-export function forEdition(list: Contribution[], festival: string, year: number, type: Kind): Contribution[] {
-  return list.filter((c) => c.festival === festival && c.year === year && c.type === type);
+export function forEdition(list: Contribution[], coleccion: string, year: number, type: Kind): Contribution[] {
+  return list.filter((c) => c.coleccion === coleccion && c.year === year && c.type === type);
 }
 
 
@@ -493,7 +493,7 @@ export function jsonForScript(v: unknown): string {
  * The signed-in user's own pending contributions for one edition (also for an
  * admin, who could read everyone's). [] when signed out, offline or on error.
  */
-export async function ownPending(festival: string, year: number, client: SupabaseClient | null = getClient()): Promise<Contribution[]> {
+export async function ownPending(coleccion: string, year: number, client: SupabaseClient | null = getClient()): Promise<Contribution[]> {
   if (!client) return [];
   const session = await liveQuery(async (c) => {
     const { data, error } = await c.auth.getSession();
@@ -504,10 +504,10 @@ export async function ownPending(festival: string, year: number, client: Supabas
   const rows = await liveQuery<Contribution[]>(
     (c) =>
       c.from('contributions')
-        .select('id, type, festival, year, item_id, payload, created_at, reviewed_at')
+        .select('id, type, coleccion, year, item_id, payload, created_at, reviewed_at')
         .eq('user_id', uid)
         .eq('status', 'pending')
-        .eq('festival', festival)
+        .eq('coleccion', coleccion)
         .eq('year', year)
         .in('type', ['fact', 'memory', 'upload'])
         .order('created_at', { ascending: true })
@@ -528,7 +528,7 @@ export async function ownPendingVideo(videoId: string, client: SupabaseClient | 
   const rows = await liveQuery<Contribution[]>(
     (c) =>
       c.from('contributions')
-        .select('id, type, festival, year, item_id, payload, created_at, reviewed_at')
+        .select('id, type, coleccion, year, item_id, payload, created_at, reviewed_at')
         .eq('user_id', uid)
         .eq('status', 'pending')
         .eq('type', 'video_text')
@@ -555,18 +555,18 @@ export function pendingView(c: Contribution): PendingView {
   const path = typeof p.storage_path === 'string' ? p.storage_path : null;
   const ext = path?.split('.').pop()?.toLowerCase() ?? '';
   const preview = ['jpg', 'jpeg', 'png', 'webp'].includes(ext) ? 'image' : ext === 'pdf' ? 'pdf' : null;
-  const text = String(p.description ?? '') || (p.category ? t(`categorias.${p.category}`) : '');
+  const text = String(p.description ?? '') || (p.tipo ? t(`categorias.${p.tipo}`) : '');
   // The stored name is a random id, so a PDF gets a plain label instead.
   return { section: 'aportes', text, preview, path, label: preview === 'pdf' ? t('edicion.archivo_pdf') : null };
 }
 
 /** Approved facts, memories and uploads of one edition, live from the public view. */
-export function approvedForEdition(festival: string, year: number, client: SupabaseClient | null = getClient()) {
+export function approvedForEdition(coleccion: string, year: number, client: SupabaseClient | null = getClient()) {
   return liveQuery<Contribution[]>(
     (c) =>
       c.from('public_contributions')
-        .select('id, type, festival, year, item_id, payload, created_at, reviewed_at, display_name')
-        .eq('festival', festival)
+        .select('id, type, coleccion, year, item_id, payload, created_at, reviewed_at, display_name')
+        .eq('coleccion', coleccion)
         .eq('year', year)
         .in('type', ['fact', 'memory', 'upload', 'transcription'])
         .order('created_at', { ascending: true })
@@ -582,7 +582,7 @@ export function approvedTranscriptions(itemId: string, client: SupabaseClient | 
   return liveQuery<Contribution[]>(
     (c) =>
       c.from('public_contributions')
-        .select('id, type, festival, year, item_id, payload, created_at, reviewed_at, display_name')
+        .select('id, type, coleccion, year, item_id, payload, created_at, reviewed_at, display_name')
         .eq('type', 'transcription')
         .eq('item_id', itemId)
         .order('created_at', { ascending: true })
@@ -598,7 +598,7 @@ export function approvedNotes(itemId: string, client: SupabaseClient | null = ge
   return liveQuery<Contribution[]>(
     (c) =>
       c.from('public_contributions')
-        .select('id, type, festival, year, item_id, payload, created_at, reviewed_at, display_name')
+        .select('id, type, coleccion, year, item_id, payload, created_at, reviewed_at, display_name')
         .eq('type', 'note')
         .eq('item_id', itemId)
         .order('created_at', { ascending: true })

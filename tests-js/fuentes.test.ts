@@ -7,14 +7,14 @@ import approved from '../data/approved/contributions.json';
 
 function item(id: string, over: Partial<Item> = {}): Item {
   return {
-    id, festival: 'chubut', year: 1990, undated: false, category: 'programa', title: id, kind: 'image',
+    id, coleccion: 'chubut', year: 1990, undated: false, tipo: 'programa', title: id, kind: 'image',
     src_path: `x/${id}.jpg`, alt_paths: [], source_url: 'https://www.facebook.com/photo/?fbid=1', source_label: 'Facebook',
     retrieved: '2026-11-13', note_public: '', year_inferred: false, restricted: false, pages: 1, thumb: `${id}/thumb.webp`,
     page_paths: [`${id}/p01.webp`], text_excerpt: null, table: null, ...over,
   } as Item;
 }
 const contrib = (over: Partial<Contribution>): Contribution =>
-  ({ id: 'c', type: 'fact', festival: 'chubut', year: 1990, item_id: null, payload: {}, created_at: '', display_name: 'Ana', ...over }) as Contribution;
+  ({ id: 'c', type: 'fact', coleccion: 'chubut', year: 1990, item_id: null, payload: {}, created_at: '', display_name: 'Ana', ...over }) as Contribution;
 
 describe('source keys and slugs (#185)', () => {
   it('slugs are 14 hex characters, stable, and never collide on the real catalog', () => {

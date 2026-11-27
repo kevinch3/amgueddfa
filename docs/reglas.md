@@ -18,8 +18,11 @@ Design and reasons: `docs/superpowers/specs/2026-11-27-reglas-de-datos-design.md
    else its source's statement in `src/data/fuentes.json`, else the collection's
    `derechos_por_defecto`, to one licence code (`LICENCIAS`). A new credit-line
    wording needs a rule there; the build prints the count per code.
-   Test: `tests-js/derechos.test.ts`; the other core fields come with the
-   record-field step of the design.
+   Core fields: `coleccion`, `fecha {year, inferred, undated}`, `tipo`, `formato`
+   (`src/lib/types.ts`, `scripts/catalog/model.py` `as_record`); the database names
+   the collection `coleccion` too, checked against the `colecciones` table.
+   Test: `tests-js/derechos.test.ts`, `tests-js/colecciones.test.ts`,
+   `supabase/tests/colecciones.test.ts`.
 
 3. **A type is added to the site-wide list (`tipos` in `colecciones.json`) with its
    name in all 7 languages (`categorias.<tipo>`) before any record uses it**, and a

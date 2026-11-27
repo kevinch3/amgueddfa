@@ -23,7 +23,7 @@ import { t } from '../lib/i18n';
   import { el } from '../scripts/ui';
 
   type Row = {
-    id: string; type: Kind; festival: string | null; year: number | null; item_id: string | null;
+    id: string; type: Kind; coleccion: string | null; year: number | null; item_id: string | null;
     status: Status; payload?: Record<string, unknown>; points_awarded?: number; created_at: string; reviewed_at: string | null; review_note?: string | null;
   };
   type BadgeRow = { badge: string; awarded_at: string };
@@ -74,8 +74,8 @@ import { t } from '../lib/i18n';
       // A video correction names its video and how many changes it has, and opens the player at its first change.
       const vt = r.type === 'video_text' ? videoTextFila(r.payload) : null;
       li.append(vt?.resumen ? `${vt.resumen} · ` : ' ');
-      if (r.festival && r.year) {
-        li.append(el('a', { href: url(`${r.festival}/${r.year}/`) + (vt?.hash ?? '') }, `${t(`festivales.${r.festival}`)} ${r.year}`));
+      if (r.coleccion && r.year) {
+        li.append(el('a', { href: url(`${r.coleccion}/${r.year}/`) + (vt?.hash ?? '') }, `${t(`festivales.${r.coleccion}`)} ${r.year}`));
       } else li.append(el('span', { class: 'muted' }, t('perfil.sin_edicion')));
       if (r.item_id && /^[0-9a-f]{12}$/.test(r.item_id)) li.append(' · ', el('a', { href: url(`item/${r.item_id}/`) }, t('perfil.documento')));
       const when = r.reviewed_at ?? r.created_at;
@@ -183,7 +183,7 @@ import { t } from '../lib/i18n';
       own
         ? liveQuery<Row[]>(
             (c) => c.from('contributions')
-              .select('id, type, festival, year, item_id, status, payload, points_awarded, created_at, reviewed_at, review_note')
+              .select('id, type, coleccion, year, item_id, status, payload, points_awarded, created_at, reviewed_at, review_note')
               .eq('user_id', me!.id)
               .order('created_at', { ascending: false })
               .limit(500),
@@ -191,7 +191,7 @@ import { t } from '../lib/i18n';
           )
         : liveQuery<Row[]>(
             (c) => c.from('public_contributions')
-              .select('id, type, festival, year, item_id, created_at, reviewed_at')
+              .select('id, type, coleccion, year, item_id, created_at, reviewed_at')
               .eq('display_name', display)
               .order('reviewed_at', { ascending: false, nullsFirst: false })
               .limit(500),

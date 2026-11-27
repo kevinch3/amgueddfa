@@ -31,9 +31,9 @@ const shots = source.items
   .filter((s) => s.img || s.caption);
 const lookup = waybackLookup(source);
 const where = (c: Contribution) =>
-  c.item_id ? url(`item/${c.item_id}/`) : c.festival && c.year ? url(`${c.festival}/${c.year}/`) : null;
+  c.item_id ? url(`item/${c.item_id}/`) : c.coleccion && c.year ? url(`${c.coleccion}/${c.year}/`) : null;
 const whereLabel = (c: Contribution) =>
-  c.festival ? `${festivalName(c.festival as FestivalSlug)}${c.year ? ` ${c.year}` : ''}` : t('fuentes.ver');
+  c.coleccion ? `${festivalName(c.coleccion as FestivalSlug)}${c.year ? ` ${c.year}` : ''}` : t('fuentes.ver');
 const text = (c: Contribution): string => {
   if (c.type === 'fact') {
     const { label, value } = factDisplay(c);
@@ -48,7 +48,7 @@ const count = [
   nAportes ? (nAportes === 1 ? t('fuentes.un_aporte') : t('fuentes.n_aportes', { n: nAportes })) : '',
 ].filter(Boolean).join(' · ');
 const contributions = [...source.contributions].sort((a, b) =>
-  String(a.festival ?? '').localeCompare(String(b.festival ?? '')) || (a.year ?? 0) - (b.year ?? 0));
+  String(a.coleccion ?? '').localeCompare(String(b.coleccion ?? '')) || (a.year ?? 0) - (b.year ?? 0));
 ---
 <Base title={title} description={t('fuentes.descripcion', { fuente: t(`fuentes.tipos.${source.kind}`) })}>
   <nav class="crumbs" aria-label={t('comun.miga')}>

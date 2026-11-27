@@ -48,10 +48,10 @@ describe('rights', () => {
       expect(LICENCIAS, i.id).toContain(d!.licencia);
       expect(d!.licencia, i.id).not.toBe('sin-declarar');
     }
-    const bare = { rights: '', festival: 'chubut', source_url: 'https://example.org/a', source_label: 'A' };
+    const bare = { rights: '', coleccion: 'chubut', source_url: 'https://example.org/a', source_label: 'A' };
     expect(derechosDe(bare)?.origen).toBe('coleccion');
     expect(derechosDe(bare, { 'https://example.org/a': { licencia: 'con-permiso', titular: 'A' } })).toEqual({ licencia: 'con-permiso', titular: 'A', origen: 'fuente' });
-    expect(derechosDe({ ...bare, festival: 'ninguna' })).toBeNull();
+    expect(derechosDe({ ...bare, coleccion: 'ninguna' })).toBeNull();
   });
 
   it('source statements and collection defaults use known codes, and each source statement names a real source', () => {

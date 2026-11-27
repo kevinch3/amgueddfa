@@ -21,15 +21,15 @@ const thumb = thumbUrl(item);
               ? <path d="M7 11V8a5 5 0 0 1 10 0v3M5 11h14v10H5z" />
               : <path d="M6 3h9l4 4v14H6zM14 3v5h5M9 13h7M9 17h7" />}
           </svg>
-          {!isPublic(item) ? t('comun.restringido_corto') : t(`item.tipos.${item.kind}`)}
+          {!isPublic(item) ? t('comun.restringido_corto') : t(`item.tipos.${item.formato}`)}
         </span>
       )}
     </span>
-    <span class="t">{showYear && item.year ? `${item.year}: ` : ''}<span lang={contentLang()}>{item.title}</span></span>
+    <span class="t">{showYear && item.fecha.year ? `${item.fecha.year}: ` : ''}<span lang={contentLang()}>{item.title}</span></span>
   </a>
-  {(item.year_inferred || !isPublic(item)) && (
+  {(item.fecha.inferred || !isPublic(item)) && (
     <span class="badges">
-      {item.year_inferred && <span class="badge" title={t('comun.ano_estimado_ayuda')}>{t('comun.ano_estimado')}</span>}
+      {item.fecha.inferred && <span class="badge" title={t('comun.ano_estimado_ayuda')}>{t('comun.ano_estimado')}</span>}
       {!isPublic(item) && <span class="badge badge-restricted">{t('comun.restringido_corto')}</span>}
     </span>
   )}

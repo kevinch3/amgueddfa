@@ -57,7 +57,7 @@ import { getClient } from '../lib/supabase';
 import { videoThumb, videoUrl } from '../lib/videos';
 import { el, gate, loginHref } from './ui';
 
-type Restricted = { id: string; title: string; festival: string; year: number | null; category: string; thumb: string | null; page_paths: string[] };
+type Restricted = { id: string; title: string; coleccion: string; year: number | null; tipo: string; thumb: string | null; page_paths: string[] };
 type Data = { catalog: string[]; approved: ApprovedLike[]; restricted: Restricted[]; titles: Record<string, string> };
 
 const $ = (id: string) => document.getElementById(id) as HTMLElement;
@@ -244,8 +244,8 @@ function card(c: Pending, done: (key: string) => void): HTMLLIElement {
   const li = el('li', { class: 'admin-card' });
   const h = el('h2');
   h.append(el('span', { class: 'badge' }, t(`admin.tipos.${c.type}`)));
-  if (c.type === 'upload' && c.payload?.category) h.append(el('span', { class: 'badge' }, t(`categorias.${c.payload.category}`)));
-  h.append(c.festival && c.year ? t('admin.edicion', { festival: t(`festivales.${c.festival}`), year: c.year }) : t('admin.sin_edicion'));
+  if (c.type === 'upload' && c.payload?.tipo) h.append(el('span', { class: 'badge' }, t(`categorias.${c.payload.tipo}`)));
+  h.append(c.coleccion && c.year ? t('admin.edicion', { festival: t(`festivales.${c.coleccion}`), year: c.year }) : t('admin.sin_edicion'));
   li.append(h);
   li.append(el('p', { class: 'muted small' }, `${t('admin.de', { nombre: c.display_name || t('admin.sin_nombre') })} · ${t('admin.enviado', { fecha: fmtDate(c.created_at) })}`));
   if (c.item_id) {
@@ -524,7 +524,7 @@ function videoCard(g: VideoGroup): { li: HTMLLIElement; load: () => Promise<void
   const h = el('h2');
   h.append(el('a', { href: videoUrl(g.id), target: '_blank', rel: 'noopener noreferrer' }, g.title));
   li.append(h);
-  if (g.festival && g.year) li.append(el('p', { class: 'muted small' }, t('admin.edicion', { festival: t(`festivales.${g.festival}`), year: g.year })));
+  if (g.coleccion && g.year) li.append(el('p', { class: 'muted small' }, t('admin.edicion', { festival: t(`festivales.${g.coleccion}`), year: g.year })));
   const status = el('p', { class: 'contrib-ok', role: 'status', tabindex: '-1' });
   status.hidden = true;
   const sin = el('div', { class: 'admin-sin-anclar' });
@@ -728,9 +728,9 @@ async function renderRestricted(): Promise<void> {
   for (const it of data.restricted) {
     const li = el('li', { class: 'admin-card' });
     const h = el('h2');
-    h.append(el('span', { class: 'badge' }, t(`categorias.${it.category}`)));
+    h.append(el('span', { class: 'badge' }, t(`categorias.${it.tipo}`)));
     h.append(el('a', { href: url(`item/${it.id}/`) }, it.title));
-    li.append(h, el('p', { class: 'muted small' }, it.year ? `${t(`festivales.${it.festival}`)} ${it.year}` : t(`festivales.${it.festival}`)));
+    li.append(h, el('p', { class: 'muted small' }, it.year ? `${t(`festivales.${it.coleccion}`)} ${it.year}` : t(`festivales.${it.coleccion}`)));
     const m = el('p', { class: 'contrib-msg', role: 'alert' });
     m.hidden = true;
     if (released.has(it.id)) {
@@ -826,7 +826,7 @@ async function renderUsers(q: string): Promise<void> {
 async function setupCargar(): Promise<void> {
   const msg = $('a-cargar-msg');
   const who = $('a-acreditar') as HTMLSelectElement;
-  const fest = $('a-festival') as HTMLSelectElement;
+  const fest = $('a-coleccion') as HTMLSelectElement;
   const year = $('a-year') as HTMLInputElement;
   const say = (key: string | null) => show(msg, key ? t(key) : '');
   const editor = mountFactEditor($('apanel-cargar'), { prefix: 'a', yearInput: year, say, max: ADMIN_MAX_FACTS });

@@ -12,8 +12,8 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const PAGE = 1000; // supabase max_rows
-const CONTRIB_KEYS = ['id', 'type', 'festival', 'year', 'item_id', 'payload', 'created_at', 'reviewed_at', 'display_name'];
-const EDITION_KEYS = ['festival', 'year', 'status', 'note'];
+const CONTRIB_KEYS = ['id', 'type', 'coleccion', 'year', 'item_id', 'payload', 'created_at', 'reviewed_at', 'display_name'];
+const EDITION_KEYS = ['coleccion', 'year', 'status', 'note'];
 // Never published, at any depth, even if a view or payload ever carried them.
 const PRIVATE_KEYS = new Set(['user_id', 'email', 'storage_path', 'reviewed_by']);
 
@@ -40,7 +40,7 @@ export function shapeContributions(rows) {
 
 /** Rows of editions -> {festival, year, status, note}, sorted by festival then year. */
 export function shapeEditions(rows) {
-  return rows.map((r) => pick(r, EDITION_KEYS)).sort((a, b) => cmp(a.festival, b.festival) || a.year - b.year);
+  return rows.map((r) => pick(r, EDITION_KEYS)).sort((a, b) => cmp(a.coleccion, b.coleccion) || a.year - b.year);
 }
 
 async function fetchAll(client, table, columns, orderBy) {
@@ -62,7 +62,7 @@ export async function exportApproved(client, outDir) {
   const contributions = shapeContributions(
     await fetchAll(client, 'public_contributions', CONTRIB_KEYS.join(', '), ['id']),
   );
-  const editions = shapeEditions(await fetchAll(client, 'editions', EDITION_KEYS.join(', '), ['festival', 'year']));
+  const editions = shapeEditions(await fetchAll(client, 'editions', EDITION_KEYS.join(', '), ['coleccion', 'year']));
   mkdirSync(outDir, { recursive: true });
   writeFileSync(join(outDir, 'contributions.json'), json(contributions));
   writeFileSync(join(outDir, 'editions.json'), json(editions));
@@ -84,7 +84,7 @@ export function docFile(row) {
 export function docFolder(row) {
   if (!row.public || !DOC_ID.test(row.id ?? '')) return null;
   if (row.kind === 'programa') return 'transcripciones';
-  if (row.kind === 'ganadores' && PUBLIC_WINNERS.includes(row.festival)) return 'ganadores';
+  if (row.kind === 'ganadores' && PUBLIC_WINNERS.includes(row.coleccion)) return 'ganadores';
   return null;
 }
 
@@ -98,7 +98,7 @@ export function docFolder(row) {
 export async function exportTranscriptions(client, dataDir) {
   const rows = [];
   for (let from = 0; ; from += PAGE) {
-    const { data, error } = await client.from('transcriptions').select('id, items, kind, festival, text, public').order('id', { ascending: true }).range(from, from + PAGE - 1);
+    const { data, error } = await client.from('transcriptions').select('id, items, kind, coleccion, text, public').order('id', { ascending: true }).range(from, from + PAGE - 1);
     if (error) {
       if (error.code === '42P01' || error.code === 'PGRST205') return null; // not migrated yet
       throw new Error(`export: transcriptions: ${error.message ?? error}`);

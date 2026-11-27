@@ -26,29 +26,29 @@ def test_ids_are_content_hash(items):
 
 def test_slugs_and_years(items):
     s = by_title(items, "Suelto")
-    assert (s.festival, s.year, s.category, s.kind) == ("chubut", 1990, "otros", "image")
+    assert (s.coleccion, s.year, s.tipo, s.formato) == ("chubut", 1990, "otros", "image")
     g = by_title(items, "Reglas web wayback 20060430")
-    assert (g.festival, g.year, g.undated, g.category, g.kind) == ("mimosa", None, False, "otros", "web")
+    assert (g.coleccion, g.year, g.undated, g.tipo, g.formato) == ("mimosa", None, False, "otros", "web")
     assert g.year_inferred is True
     assert g.note_public == ""  # internal note "year inferred" is not published
     fb = by_title(items, "Fechas importantes")
-    assert fb.category == "bases" and fb.year_inferred is True
+    assert fb.tipo == "bases" and fb.year_inferred is True
     assert fb.note_public == "Atención FECHAS IMPORTANTES"
     assert fb.source_label == "Facebook"
-    assert by_title(items, "Programa 1990").category == "programa"
-    assert [i.festival for i in items] == sorted(i.festival for i in items)
+    assert by_title(items, "Programa 1990").tipo == "programa"
+    assert [i.coleccion for i in items] == sorted(i.coleccion for i in items)
 
 
 def test_resultados_restricted_and_extra_list(items):
     r = by_title(items, "Resultados 2016")
-    assert r.category == "resultados" and r.restricted is True
+    assert r.tipo == "resultados" and r.restricted is True
     assert by_title(items, "Suelto").restricted is False
     extra = scan(FIX, {by_title(items, "Suelto").id})
     assert by_title(extra, "Suelto").restricted is True
 
 
 def test_duplicate_bytes_one_item_with_alt_paths(items):
-    pdfs = [i for i in items if i.kind == "pdf"]
+    pdfs = [i for i in items if i.formato == "pdf"]
     assert len(pdfs) == 1
     assert len(pdfs[0].alt_paths) == 1
     assert {pdfs[0].src_path, *pdfs[0].alt_paths} == {
@@ -97,7 +97,7 @@ def test_restricted_if_any_duplicate_path_is_resultados(tmp_path):
     )
     items = scan(a, set())
     assert len(items) == 1
-    assert items[0].category == "bases"
+    assert items[0].tipo == "bases"
     assert items[0].restricted is True
 
 
@@ -174,7 +174,7 @@ def test_readable_title_keeps_titles_written_by_people(human):
 
 def test_same_title_in_one_edition_is_numbered_in_file_order():
     from scripts.catalog.model import Item
-    mk = lambda path, title: Item(id=path, festival="chubut", year=2022, undated=False, category="bases", title=title, kind="image",
+    mk = lambda path, title: Item(id=path, coleccion="chubut", year=2022, undated=False, tipo="bases", title=title, formato="image",
                                   src_path=path, source_url=None, source_label="Facebook", retrieved="", note_public="", rights="",
                                   year_inferred=False, restricted=False)
     its = [mk("b/fb_bases_2.jpg", "Bases"), mk("b/fb_bases_1.jpg", "Bases"), mk("b/fb_fechas_3.jpg", "Fechas")]
@@ -189,8 +189,8 @@ def test_numbered_titles_sort_in_number_order():
 
 def test_numbering_counts_only_public_documents_of_the_same_category():
     from scripts.catalog.model import Item
-    mk = lambda path, cat="programa", **kw: Item(id=path, festival="chubut", year=2024, undated=False, category=cat, title="Tapa del programa",
-                                                 kind="image", src_path=path, **kw)
+    mk = lambda path, cat="programa", **kw: Item(id=path, coleccion="chubut", year=2024, undated=False, tipo=cat, title="Tapa del programa",
+                                                 formato="image", src_path=path, **kw)
     its = [mk("a.jpg", hidden=True), mk("b.jpg"), mk("c.jpg", cat="bases"), mk("d.jpg", restricted=True)]
     number_repeats(its)
     assert [i.title for i in its] == ["Tapa del programa"] * 4  # each public one is alone in its category
@@ -223,8 +223,8 @@ def test_caption_title_ignores_generic_captions(caption):
 def test_caption_titles_replace_only_numbered_slug_titles():
     from scripts.catalog.model import Item
     from scripts.catalog.scan import caption_titles
-    mk = lambda path, title, note: Item(id=path, festival="chubut", year=2014, undated=False, category="bases", title=title,
-                                        kind="image", src_path=path, note_public=note)
+    mk = lambda path, title, note: Item(id=path, coleccion="chubut", year=2014, undated=False, tipo="bases", title=title,
+                                        formato="image", src_path=path, note_public=note)
     its = [mk("a.jpg", "Bases", "Competencias de Fotografía."), mk("b.jpg", "Bases", "Para tener en cuenta!"),
            mk("c.jpg", "Bases", "Competencias de Artesanías."), mk("d.jpg", "Programa 1990", "Competencias de música.")]
     caption_titles(its)

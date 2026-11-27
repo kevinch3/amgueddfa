@@ -220,7 +220,7 @@ def derive(item: Item, archive: Path, out_root: Path) -> Item:
     if item.restricted:  # captions of restricted items may name participants
         item.note_public = ""
 
-    if item.kind == "image":
+    if item.formato == "image":
         thumb, page = out / "thumb.webp", out / "p01.webp"
         if not _fresh([thumb, page], src):
             tmp = out_root / f".tmp-{item.id}"
@@ -235,7 +235,7 @@ def derive(item: Item, archive: Path, out_root: Path) -> Item:
             finally:
                 shutil.rmtree(tmp, ignore_errors=True)
         pages = [page]
-    elif item.kind == "pdf":
+    elif item.formato == "pdf":
         thumb = out / "thumb.webp"
         pages = _pages_on_disk(out)
         if not _fresh([thumb, *pages], src):
@@ -269,15 +269,15 @@ def derive(item: Item, archive: Path, out_root: Path) -> Item:
             item.text_excerpt, item.table = None, None
             return item
         full = ""
-        if item.kind == "doc":
+        if item.formato == "doc":
             raw = _office_text(src)
             item.text_excerpt = _excerpt(raw) or None
             full = _long_text(raw)
-        elif item.kind == "web":
+        elif item.formato == "web":
             item.text_excerpt = _excerpt(_html_text(src)) or None
             if item.restricted:
                 full = _long_text(_html_text(src, keep_breaks=True))
-        elif item.kind == "table":
+        elif item.formato == "table":
             with open(src, newline="", encoding="utf-8-sig", errors="replace") as f:
                 item.table = [{clean_cell(k): clean_cell(v) for k, v in row.items()}
                               for row in csv.DictReader(f)]

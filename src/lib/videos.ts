@@ -1,18 +1,20 @@
 // Pure helpers only: browser scripts import this module, so it must not import the video list
 // or the approved export (those live in videos-data.ts, build time only).
 import { when, type TagLike } from './tags';
-import type { FestivalSlug } from './types';
+import type { Fecha, FestivalSlug } from './types';
 
 /** A YouTube video of an edition (exported from the archive's VIDEOS.tsv). */
 export type Video = {
   id: string;
-  festival: FestivalSlug;
-  year: number;
+  coleccion: FestivalSlug;
+  fecha: Fecha;
+  /** Its own kind of video, beside the core fields (tipo and formato are always 'video'). */
   kind: 'ceremonia' | 'sesion' | 'noticia' | 'actuacion';
   title: string;
   channel: string;
   date: string;
-  year_inferred: boolean;
+  tipo: 'video';
+  formato: 'video';
 };
 
 
@@ -21,7 +23,7 @@ export const KIND_ORDER: Video['kind'][] = ['ceremonia', 'sesion', 'noticia', 'a
 
 export function editionVideos(f: FestivalSlug, year: number, list: Video[]): Video[] {
   return list
-    .filter((v) => v.festival === f && v.year === year)
+    .filter((v) => v.coleccion === f && v.fecha.year === year)
     .sort((a, b) => KIND_ORDER.indexOf(a.kind) - KIND_ORDER.indexOf(b.kind) || a.title.localeCompare(b.title, 'es'));
 }
 
@@ -45,9 +47,8 @@ function moved(v: Video, arreglo: Record<string, any> | undefined): Video {
   const a = arreglo ?? {};
   return {
     ...v,
-    festival: a.festival ? (a.festival as FestivalSlug) : v.festival,
-    year: a.year !== undefined && a.year !== null && a.year !== '' ? Number(a.year) : v.year,
-    year_inferred: false,
+    coleccion: a.coleccion ? (a.coleccion as FestivalSlug) : v.coleccion,
+    fecha: { ...v.fecha, year: a.year !== undefined && a.year !== null && a.year !== '' ? Number(a.year) : v.fecha.year, inferred: false },
   };
 }
 
@@ -80,12 +81,12 @@ export function videoFromReport(r: TagLike): Video | null {
   if (!isVideoReport(r) || r.payload!.problema !== 'otra_edicion') return null;
   const c = r.payload!.video;
   const base: Video = {
-    id: String(c.id), festival: (r.festival ?? '') as FestivalSlug, year: Number(r.year ?? NaN),
+    id: String(c.id), coleccion: (r.coleccion ?? '') as FestivalSlug, fecha: { year: Number(r.year ?? NaN), inferred: false, undated: false },
     kind: KINDS.includes(c.kind) ? c.kind : 'actuacion', title: String(c.title ?? ''), channel: String(c.channel ?? ''),
-    date: '', year_inferred: false,
+    date: '', tipo: 'video', formato: 'video',
   };
   const v = moved(base, r.payload!.arreglo);
-  return v.festival && Number.isInteger(v.year) ? v : null;
+  return v.coleccion && Number.isInteger(v.fecha.year) ? v : null;
 }
 
 /**
@@ -94,11 +95,11 @@ export function videoFromReport(r: TagLike): Video | null {
  * here (rebuilt from the report's copy, once each). Same rule as the build:
  * oldest approval first, and nothing un-hides.
  */
-export function videoDiff(festival: string, year: number, shownIds: string[], rows: TagLike[]): { remove: string[]; add: Video[] } {
+export function videoDiff(coleccion: string, year: number, shownIds: string[], rows: TagLike[]): { remove: string[]; add: Video[] } {
   const mine = rows.filter(isVideoReport).sort((a, b) => when(a).localeCompare(when(b)));
   if (!mine.length) return { remove: [], add: [] };
-  const here = (v: { festival: string; year: number }) => v.festival === festival && v.year === year;
-  const shown = shownIds.map((id): Video => ({ id, festival: festival as FestivalSlug, year, kind: 'actuacion', title: '', channel: '', date: '', year_inferred: false }));
+  const here = (v: Video) => v.coleccion === coleccion && v.fecha.year === year;
+  const shown = shownIds.map((id): Video => ({ id, coleccion: coleccion as FestivalSlug, fecha: { year, inferred: false, undated: false }, kind: 'actuacion', title: '', channel: '', date: '', tipo: 'video', formato: 'video' }));
   const stay = new Set(applyVideoReports(shown, mine).filter(here).map((v) => v.id));
   const remove = shownIds.filter((id) => !stay.has(id));
   const hidden = new Set<string>();

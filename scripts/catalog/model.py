@@ -4,12 +4,12 @@ from dataclasses import dataclass, field
 @dataclass
 class Item:
     id: str
-    festival: str
+    coleccion: str  # an id from src/data/colecciones.json
     year: int | None
     undated: bool
-    category: str
+    tipo: str
     title: str
-    kind: str  # image | pdf | doc | web | table
+    formato: str  # image | pdf | doc | web | table
     src_path: str
     alt_paths: list[str] = field(default_factory=list)
     source_url: str | None = None
@@ -29,3 +29,19 @@ class Item:
     page_size: list[int] | None = None  # [width, height] of page 1, for the cover's width/height attributes
     text_excerpt: str | None = None
     table: list[dict] | None = None
+
+
+def as_record(it: "Item") -> dict:
+    """The item as catalog.json writes it (docs/reglas.md, rule 2): year, undated and
+    year_inferred become one `fecha` in place of the year."""
+    from dataclasses import asdict
+
+    out = {}
+    for k, v in asdict(it).items():
+        if k == "year":
+            out["fecha"] = {"year": v, "inferred": it.year_inferred, "undated": it.undated}
+        elif k in ("year_inferred", "undated", "notes"):
+            continue
+        else:
+            out[k] = v
+    return out

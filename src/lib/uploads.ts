@@ -4,7 +4,7 @@ import type { EditionState } from './types';
 export type UploadLike = {
   id?: string;
   type: string;
-  festival: string | null;
+  coleccion: string | null;
   year: number | null;
   payload: Record<string, any> | null;
   reviewed_at?: string | null;
@@ -50,14 +50,14 @@ export function maxState(a: EditionState, b: EditionState): EditionState {
 function stateOf(c: UploadLike): EditionState {
   if (c.type !== 'upload') return 'none';
   // Full only when an admin confirmed the programa is complete (a cover alone is not).
-  if (c.payload?.category === 'programa' && c.payload?.complete === true && (uploadMedia(c)?.pages.length ?? 0) > 0) return 'full';
+  if (c.payload?.tipo === 'programa' && c.payload?.complete === true && (uploadMedia(c)?.pages.length ?? 0) > 0) return 'full';
   return 'some';
 }
 
 /** What approved uploads say about one edition: a confirmed-complete programa with pages is full, anything else some. */
-export function uploadState(list: UploadLike[], festival: string, year: number): EditionState {
+export function uploadState(list: UploadLike[], coleccion: string, year: number): EditionState {
   let s: EditionState = 'none';
-  for (const c of list ?? []) if (c.festival === festival && c.year === year) s = maxState(s, stateOf(c));
+  for (const c of list ?? []) if (c.coleccion === coleccion && c.year === year) s = maxState(s, stateOf(c));
   return s;
 }
 
@@ -65,8 +65,8 @@ export function uploadState(list: UploadLike[], festival: string, year: number):
 export function uploadStates(list: UploadLike[]): Map<string, EditionState> {
   const out = new Map<string, EditionState>();
   for (const c of list ?? []) {
-    if (c.type !== 'upload' || !c.festival || c.year === null) continue;
-    const k = `${c.festival}:${c.year}`;
+    if (c.type !== 'upload' || !c.coleccion || c.year === null) continue;
+    const k = `${c.coleccion}:${c.year}`;
     out.set(k, maxState(out.get(k) ?? 'none', stateOf(c)));
   }
   return out;

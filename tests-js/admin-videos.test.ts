@@ -10,7 +10,7 @@ import { asTranscript, type Transcript } from '../src/lib/video-transcript';
 
 const at = (hhmm: string) => `2026-11-22T${hhmm}:00+00:00`;
 const row = (id: string, video: string, reviewed: string, nombre: string | null, cambios: Cambio[], title?: string): ApprovedVideoText => ({
-  id, user_id: `u-${id}`, festival: 'chubut', year: 2025, created_at: at('09:00'), reviewed_at: at(reviewed), display_name: nombre,
+  id, user_id: `u-${id}`, coleccion: 'chubut', year: 2025, created_at: at('09:00'), reviewed_at: at(reviewed), display_name: nombre,
   payload: { video: { id: video, ...(title ? { title } : {}) }, cambios },
 });
 
@@ -60,7 +60,7 @@ describe('groupByVideo', () => {
     expect(groups[1].rows.map((r) => r.id)).toEqual(['r4', 'r2']);
     expect(groups[0].title).toBe('Sesión de la tarde');
     expect(groups[1].title).toBe('VID_B');
-    expect(groups[0]).toMatchObject({ festival: 'chubut', year: 2025 });
+    expect(groups[0]).toMatchObject({ coleccion: 'chubut', year: 2025 });
   });
 });
 

@@ -8,7 +8,7 @@
 the JWT claims to the admin, so is_admin(), auth.uid() and reviewer_id work as
 in the admin panel. `facts` turns a batch file into admin_add_facts calls:
 
-  {"contributor": "<profile uuid>", "festival": "chubut",
+  {"contributor": "<profile uuid>", "coleccion": "chubut",
    "fuente": "Meirion Griffiths (sin confirmar)",          # optional, on every fact
    "years": {"1945": [["venue", "Galpón del ferrocarril, Dolavon"], ["other", "Ganador: …"]]}}
 
@@ -80,7 +80,7 @@ def facts_sql(batch: dict) -> str:
             if fuente:
                 f['fuente'] = fuente
             facts.append(f)
-        lines.append(f"perform public.admin_add_facts({lit(batch['contributor'])}, {lit(batch['festival'])}, "
+        lines.append(f"perform public.admin_add_facts({lit(batch['contributor'])}, {lit(batch['coleccion'])}, "
                      f"{int(year)}, {lit(json.dumps(facts, ensure_ascii=False))}::jsonb);")
     return as_admin('\n'.join(lines))
 

@@ -24,9 +24,10 @@ def test_exports_core_festivals_with_year(tmp_path):
     assert n == 3
     assert [v["id"] for v in data["videos"]] == ["AAAAAAAAAAA", "BBBBBBBBBBB", "EEEEEEEEEEE"]
     first = data["videos"][0]
-    assert first == {"id": "AAAAAAAAAAA", "festival": "chubut", "year": 2015, "kind": "ceremonia",
-                     "title": "Silla", "channel": "Canal", "date": "2015-01-01", "year_inferred": False}
-    assert data["videos"][2]["year_inferred"] is True
+    assert first == {"id": "AAAAAAAAAAA", "coleccion": "chubut",
+                     "fecha": {"year": 2015, "inferred": False, "undated": False}, "kind": "ceremonia",
+                     "title": "Silla", "channel": "Canal", "date": "2015-01-01", "tipo": "video", "formato": "video"}
+    assert data["videos"][2]["fecha"]["inferred"] is True
     # Nothing from the local archive leaks: no paths, no retrieval bookkeeping.
     assert "Videos/" not in out.read_text(encoding="utf-8")
 

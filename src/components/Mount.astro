@@ -6,7 +6,7 @@
  */
 interface Props {
   id: 'recientes' | 'hechos' | 'recuerdos' | 'aportes' | 'tarea' | 'liberado' | 'sesion' | 'transcripciones' | 'notas' | 'admin-item';
-  festival?: string;
+  coleccion?: string;
   year?: number | null;
   item?: string;
   /** Space-separated file names (e.g. "p01.webp p02.webp"); never a media path. */
@@ -14,9 +14,9 @@ interface Props {
   /** JSON map of item id → title, for islands that link items. */
   titles?: string;
   /** The document's section, for forms that propose moving it. */
-  category?: string;
+  tipo?: string;
   class?: string;
 }
-const { id, festival = '', year = null, item = '', pages, titles, category, class: cls } = Astro.props;
+const { id, coleccion = '', year = null, item = '', pages, titles, tipo, class: cls } = Astro.props;
 ---
-<div id={id} class={cls} data-island={id} data-festival={festival} data-year={year ?? ''} data-item={item} data-pages={pages} data-titles={titles} data-category={category}><slot /></div>
+<div id={id} class={cls} data-island={id} data-coleccion={coleccion} data-year={year ?? ''} data-item={item} data-pages={pages} data-titles={titles} data-tipo={tipo}><slot /></div>

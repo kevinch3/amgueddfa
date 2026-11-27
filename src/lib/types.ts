@@ -12,14 +12,24 @@ export type CategorySlug =
 export type ItemKind = 'image' | 'pdf' | 'doc' | 'web' | 'table';
 export type EditionState = 'full' | 'some' | 'none';
 
+/** When a record is from (docs/reglas.md, rule 2): its year, whether we guessed it, or that it has none. */
+export interface Fecha {
+  year: number | null;
+  /** The year is our estimate (from the file, the upload date…), not the document's own. */
+  inferred: boolean;
+  /** No year at all: kept with the collection's undated records. */
+  undated: boolean;
+  month?: number | null;
+  day?: number | null;
+}
+
 export interface Item {
   id: string;
-  festival: FestivalSlug;
-  year: number | null;
-  undated: boolean;
-  category: CategorySlug;
+  coleccion: FestivalSlug;
+  fecha: Fecha;
+  tipo: CategorySlug;
   title: string;
-  kind: ItemKind;
+  formato: ItemKind;
   src_path: string;
   alt_paths: string[];
   source_url: string | null;
@@ -28,7 +38,6 @@ export interface Item {
   note_public: string;
   /** Credit and licence line of a third-party holder (e.g. a platform item); empty for most items. */
   rights?: string;
-  year_inferred: boolean;
   /** Old flag, kept in step with visibilidad by the catalog builder; read through lib/visibilidad.ts. */
   restricted: boolean;
   /** publico | solo_ficha (catalog.json never holds privado): docs/reglas.md, rule 5. */

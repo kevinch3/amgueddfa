@@ -501,7 +501,7 @@ def export(backup: Path, videos: list[dict], out: Path = OUT, words: set[str] | 
         print(warning)
     corrections = approved_corrections(approved)
     sin_anclar_total = 0
-    wanted = {v["id"] for v in videos if v["festival"] in FESTIVALS}
+    wanted = {v["id"] for v in videos if v["coleccion"] in FESTIVALS}
     with (backup / "INDEX.tsv").open(newline="", encoding="utf-8") as f:
         files = {r["id"]: r["file"] for r in csv.DictReader(f, delimiter="\t") if r.get("file")}
     out.mkdir(parents=True, exist_ok=True)

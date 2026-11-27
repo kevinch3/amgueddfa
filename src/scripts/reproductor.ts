@@ -477,7 +477,7 @@ if (dialog) {
     const li = list[index];
     if (!li) return null;
     const sec = li.closest<HTMLElement>('[data-videos]');
-    return { id: li.dataset.video ?? '', title: li.dataset.title ?? '', festival: sec?.dataset.festival ?? '', year: Number(sec?.dataset.year) || 0 };
+    return { id: li.dataset.video ?? '', title: li.dataset.title ?? '', coleccion: sec?.dataset.coleccion ?? '', year: Number(sec?.dataset.year) || 0 };
   }
   /** A number the player gives, or null: no player, not ready yet, or a video that cannot play here (failed). */
   const fromPlayer = (read: (p: YTPlayer) => number): number | null => {

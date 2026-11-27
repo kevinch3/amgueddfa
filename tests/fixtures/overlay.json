@@ -1,91 +1,335 @@
 {
   "_doc": "Shared cases of the item overlay. Run by tests-js/overlay.test.ts (src/lib/tags.ts) and tests/test_overlay.py (scripts/catalog/overlay.py): both must give `expect` (a subset of each item's fields).",
-  "base": {"id": "a", "festival": "chubut", "year": 1996, "undated": false, "category": "programa", "title": "Tapa", "year_inferred": true, "restricted": false, "hidden": false, "rights": "", "note_public": "", "no_text": false},
+  "base": {
+    "id": "a",
+    "coleccion": "chubut",
+    "fecha": {
+      "year": 1996,
+      "inferred": true,
+      "undated": false
+    },
+    "tipo": "programa",
+    "title": "Tapa",
+    "restricted": false,
+    "hidden": false,
+    "rights": "",
+    "note_public": "",
+    "no_text": false
+  },
   "cases": [
     {
       "name": "moves year, festival and category and clears the estimate",
-      "tags": [{"type": "tag", "item_id": "a", "payload": {"year": 1986, "category": "bases", "festival": "mimosa"}, "reviewed_at": "2026-11-14T15:48:54Z"}],
-      "expect": {"year": 1986, "category": "bases", "festival": "mimosa", "year_inferred": false, "undated": false}
+      "tags": [
+        {
+          "type": "tag",
+          "item_id": "a",
+          "payload": {
+            "year": 1986,
+            "tipo": "bases",
+            "coleccion": "mimosa"
+          },
+          "reviewed_at": "2026-11-14T15:48:54Z"
+        }
+      ],
+      "expect": {
+        "fecha.year": 1986,
+        "tipo": "bases",
+        "coleccion": "mimosa",
+        "fecha.inferred": false,
+        "fecha.undated": false
+      }
     },
     {
       "name": "the latest approval wins, whatever the row order",
       "tags": [
-        {"type": "tag", "item_id": "a", "payload": {"category": "programa-del-dia"}, "reviewed_at": "2026-11-17T10:00:00Z"},
-        {"type": "tag", "item_id": "a", "payload": {"category": "programa"}, "reviewed_at": "2026-11-14T10:00:00Z"}
+        {
+          "type": "tag",
+          "item_id": "a",
+          "payload": {
+            "tipo": "programa-del-dia"
+          },
+          "reviewed_at": "2026-11-17T10:00:00Z"
+        },
+        {
+          "type": "tag",
+          "item_id": "a",
+          "payload": {
+            "tipo": "programa"
+          },
+          "reviewed_at": "2026-11-14T10:00:00Z"
+        }
       ],
-      "expect": {"category": "programa-del-dia"}
+      "expect": {
+        "tipo": "programa-del-dia"
+      }
     },
     {
       "name": "a row without reviewed_at sorts by created_at",
       "tags": [
-        {"type": "tag", "item_id": "a", "payload": {"title": "Second"}, "created_at": "2026-11-15T00:00:00Z"},
-        {"type": "tag", "item_id": "a", "payload": {"title": "First"}, "created_at": "2026-11-14T00:00:00Z"}
+        {
+          "type": "tag",
+          "item_id": "a",
+          "payload": {
+            "title": "Second"
+          },
+          "created_at": "2026-11-15T00:00:00Z"
+        },
+        {
+          "type": "tag",
+          "item_id": "a",
+          "payload": {
+            "title": "First"
+          },
+          "created_at": "2026-11-14T00:00:00Z"
+        }
       ],
-      "expect": {"title": "Second"}
+      "expect": {
+        "title": "Second"
+      }
     },
     {
       "name": "title, rights, caption and no_text",
-      "tags": [{"type": "tag", "item_id": "a", "payload": {"title": "Programa 1996", "rights": "© Museo", "caption": "Tapa del programa.", "no_text": true}, "reviewed_at": "2026-11-17T10:00:00Z"}],
-      "expect": {"title": "Programa 1996", "rights": "© Museo", "note_public": "Tapa del programa.", "no_text": true, "year": 1996, "year_inferred": true}
+      "tags": [
+        {
+          "type": "tag",
+          "item_id": "a",
+          "payload": {
+            "title": "Programa 1996",
+            "rights": "© Museo",
+            "caption": "Tapa del programa.",
+            "no_text": true
+          },
+          "reviewed_at": "2026-11-17T10:00:00Z"
+        }
+      ],
+      "expect": {
+        "title": "Programa 1996",
+        "rights": "© Museo",
+        "note_public": "Tapa del programa.",
+        "no_text": true,
+        "fecha.year": 1996,
+        "fecha.inferred": true
+      }
     },
     {
       "name": "empty or null values change nothing, except that rights and caption may be cleared",
-      "base": {"rights": "© Old", "note_public": "Old caption"},
-      "tags": [{"type": "tag", "item_id": "a", "payload": {"year": "", "category": null, "title": "", "rights": "", "caption": ""}, "reviewed_at": "2026-11-17T10:00:00Z"}],
-      "expect": {"year": 1996, "category": "programa", "title": "Tapa", "rights": "", "note_public": "", "year_inferred": true}
+      "base": {
+        "rights": "© Old",
+        "note_public": "Old caption"
+      },
+      "tags": [
+        {
+          "type": "tag",
+          "item_id": "a",
+          "payload": {
+            "year": "",
+            "title": "",
+            "rights": "",
+            "caption": "",
+            "tipo": null
+          },
+          "reviewed_at": "2026-11-17T10:00:00Z"
+        }
+      ],
+      "expect": {
+        "fecha.year": 1996,
+        "tipo": "programa",
+        "title": "Tapa",
+        "rights": "",
+        "note_public": "",
+        "fecha.inferred": true
+      }
     },
     {
       "name": "flags take booleans only",
-      "tags": [{"type": "tag", "item_id": "a", "payload": {"no_text": "yes", "hidden": 1}, "reviewed_at": "2026-11-17T10:00:00Z"}],
-      "expect": {"no_text": false, "hidden": false}
+      "tags": [
+        {
+          "type": "tag",
+          "item_id": "a",
+          "payload": {
+            "no_text": "yes",
+            "hidden": 1
+          },
+          "reviewed_at": "2026-11-17T10:00:00Z"
+        }
+      ],
+      "expect": {
+        "no_text": false,
+        "hidden": false
+      }
     },
     {
       "name": "a year given as text becomes a number",
-      "tags": [{"type": "tag", "item_id": "a", "payload": {"year": "1987"}, "reviewed_at": "2026-11-17T10:00:00Z"}],
-      "expect": {"year": 1987, "year_inferred": false}
+      "tags": [
+        {
+          "type": "tag",
+          "item_id": "a",
+          "payload": {
+            "year": "1987"
+          },
+          "reviewed_at": "2026-11-17T10:00:00Z"
+        }
+      ],
+      "expect": {
+        "fecha.year": 1987,
+        "fecha.inferred": false
+      }
     },
     {
       "name": "other types and other items are ignored",
       "tags": [
-        {"type": "fact", "item_id": "a", "payload": {"year": 2000}, "reviewed_at": "2026-11-17T10:00:00Z"},
-        {"type": "tag", "item_id": "zzz", "payload": {"year": 2000}, "reviewed_at": "2026-11-17T10:00:00Z"},
-        {"type": "tag", "item_id": null, "payload": {"year": 2000}, "reviewed_at": "2026-11-17T10:00:00Z"}
+        {
+          "type": "fact",
+          "item_id": "a",
+          "payload": {
+            "year": 2000
+          },
+          "reviewed_at": "2026-11-17T10:00:00Z"
+        },
+        {
+          "type": "tag",
+          "item_id": "zzz",
+          "payload": {
+            "year": 2000
+          },
+          "reviewed_at": "2026-11-17T10:00:00Z"
+        },
+        {
+          "type": "tag",
+          "item_id": null,
+          "payload": {
+            "year": 2000
+          },
+          "reviewed_at": "2026-11-17T10:00:00Z"
+        }
       ],
-      "expect": {"year": 1996}
+      "expect": {
+        "fecha.year": 1996
+      }
     },
     {
       "name": "a report 'no corresponde' hides; a later admin tag un-hides",
       "tags": [
-        {"type": "report", "item_id": "a", "payload": {"objetivo": "documento", "problema": "no_corresponde"}, "reviewed_at": "2026-11-15T00:00:00Z"},
-        {"type": "tag", "item_id": "a", "payload": {"hidden": false}, "reviewed_at": "2026-11-16T00:00:00Z"}
+        {
+          "type": "report",
+          "item_id": "a",
+          "payload": {
+            "objetivo": "documento",
+            "problema": "no_corresponde"
+          },
+          "reviewed_at": "2026-11-15T00:00:00Z"
+        },
+        {
+          "type": "tag",
+          "item_id": "a",
+          "payload": {
+            "hidden": false
+          },
+          "reviewed_at": "2026-11-16T00:00:00Z"
+        }
       ],
-      "expect": {"hidden": false}
+      "expect": {
+        "hidden": false
+      }
     },
     {
       "name": "a report 'no corresponde' after the un-hide hides again",
       "tags": [
-        {"type": "tag", "item_id": "a", "payload": {"hidden": false}, "reviewed_at": "2026-11-15T00:00:00Z"},
-        {"type": "report", "item_id": "a", "payload": {"objetivo": "documento", "problema": "no_corresponde"}, "reviewed_at": "2026-11-16T00:00:00Z"}
+        {
+          "type": "tag",
+          "item_id": "a",
+          "payload": {
+            "hidden": false
+          },
+          "reviewed_at": "2026-11-15T00:00:00Z"
+        },
+        {
+          "type": "report",
+          "item_id": "a",
+          "payload": {
+            "objetivo": "documento",
+            "problema": "no_corresponde"
+          },
+          "reviewed_at": "2026-11-16T00:00:00Z"
+        }
       ],
-      "expect": {"hidden": true}
+      "expect": {
+        "hidden": true
+      }
     },
     {
       "name": "a report 'otra edicion' moves by its fix; 'otro' and video reports change nothing",
       "tags": [
-        {"type": "report", "item_id": "a", "payload": {"objetivo": "documento", "problema": "otra_edicion", "arreglo": {"year": 2001, "festival": "trevelin"}}, "reviewed_at": "2026-11-15T00:00:00Z"},
-        {"type": "report", "item_id": "a", "payload": {"objetivo": "documento", "problema": "otro", "arreglo": {"year": 1900}}, "reviewed_at": "2026-11-16T00:00:00Z"},
-        {"type": "report", "item_id": "a", "payload": {"objetivo": "video", "problema": "no_corresponde"}, "reviewed_at": "2026-11-16T00:00:00Z"}
+        {
+          "type": "report",
+          "item_id": "a",
+          "payload": {
+            "objetivo": "documento",
+            "problema": "otra_edicion",
+            "arreglo": {
+              "year": 2001,
+              "coleccion": "trevelin"
+            }
+          },
+          "reviewed_at": "2026-11-15T00:00:00Z"
+        },
+        {
+          "type": "report",
+          "item_id": "a",
+          "payload": {
+            "objetivo": "documento",
+            "problema": "otro",
+            "arreglo": {
+              "year": 1900
+            }
+          },
+          "reviewed_at": "2026-11-16T00:00:00Z"
+        },
+        {
+          "type": "report",
+          "item_id": "a",
+          "payload": {
+            "objetivo": "video",
+            "problema": "no_corresponde"
+          },
+          "reviewed_at": "2026-11-16T00:00:00Z"
+        }
       ],
-      "expect": {"year": 2001, "festival": "trevelin", "hidden": false}
+      "expect": {
+        "fecha.year": 2001,
+        "coleccion": "trevelin",
+        "hidden": false
+      }
     },
     {
       "name": "resultados restricts, nothing un-restricts, and a restricted item shows no caption",
-      "base": {"note_public": "Lista de ganadores"},
+      "base": {
+        "note_public": "Lista de ganadores"
+      },
       "tags": [
-        {"type": "tag", "item_id": "a", "payload": {"category": "resultados"}, "reviewed_at": "2026-11-15T00:00:00Z"},
-        {"type": "tag", "item_id": "a", "payload": {"category": "programa", "caption": "Again"}, "reviewed_at": "2026-11-16T00:00:00Z"}
+        {
+          "type": "tag",
+          "item_id": "a",
+          "payload": {
+            "tipo": "resultados"
+          },
+          "reviewed_at": "2026-11-15T00:00:00Z"
+        },
+        {
+          "type": "tag",
+          "item_id": "a",
+          "payload": {
+            "caption": "Again",
+            "tipo": "programa"
+          },
+          "reviewed_at": "2026-11-16T00:00:00Z"
+        }
       ],
-      "expect": {"category": "programa", "restricted": true, "note_public": ""}
+      "expect": {
+        "tipo": "programa",
+        "restricted": true,
+        "note_public": ""
+      }
     }
   ]
 }

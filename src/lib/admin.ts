@@ -16,7 +16,7 @@ export interface Pending {
   id: string;
   user_id: string;
   type: Kind;
-  festival: string | null;
+  coleccion: string | null;
   year: number | null;
   item_id: string | null;
   payload: Record<string, any>;
@@ -36,16 +36,16 @@ export function reportAction(c: Pending): ReportAction {
   if (p.problema === 'no_corresponde') return { accion: 'ocultar', texto: t('admin.informe.ocultar'), aprobar: t('admin.informe.aprobar_ocultar') };
   if (p.problema === 'otra_edicion' && p.arreglo) {
     const a = p.arreglo as Record<string, any>;
-    const fest = a.festival || c.festival;
+    const fest = a.coleccion || c.coleccion;
     const destino = [fest ? t(`festivales.${fest}`) : '', a.year ?? c.year ?? ''].filter((x) => x !== '').join(' ');
-    const seccion = a.category ? `, ${t(`categorias.${a.category}`)}` : '';
+    const seccion = a.tipo ? `, ${t(`categorias.${a.tipo}`)}` : '';
     return { accion: 'mover', texto: t('admin.informe.mover', { destino: destino + seccion }), aprobar: t('admin.informe.aprobar_mover') };
   }
   return { accion: 'ninguna', texto: t('admin.informe.ninguna'), aprobar: t('admin.aprobar') };
 }
 
 /** Approved rows (static export or live) as far as fillsGap needs them. */
-export type ApprovedLike = { type: string; festival: string | null; year: number | null; payload: Record<string, any> | null };
+export type ApprovedLike = { type: string; coleccion: string | null; year: number | null; payload: Record<string, any> | null };
 /** What fillsGap checks: "festival|year|category" keys of the static catalog, plus approved uploads. */
 export type GapCtx = { catalog: Iterable<string> | Set<string>; approved: ApprovedLike[] };
 
@@ -54,12 +54,12 @@ const OK: Result = { ok: true };
 const SIGNED_TTL = 600;
 const MIME_BY_EXT: Record<string, string> = { jpg: 'image/jpeg', jpeg: 'image/jpeg', png: 'image/png', webp: 'image/webp', pdf: 'application/pdf' };
 
-const key = (festival: string, year: number, category: string) => `${festival}|${year}|${category}`;
+const key = (coleccion: string, year: number, tipo: string) => `${coleccion}|${year}|${tipo}`;
 
 /** Precompute the edition/category keys of the static catalog (build time, see admin.astro). */
-export function editionKeys(list: { festival: string; year: number | null; category: string }[]): string[] {
+export function editionKeys(list: { coleccion: string; year: number | null; tipo: string }[]): string[] {
   const out = new Set<string>();
-  for (const i of list) if (i.year !== null) out.add(key(i.festival, i.year, i.category));
+  for (const i of list) if (i.year !== null) out.add(key(i.coleccion, i.year, i.tipo));
   return [...out].sort();
 }
 
@@ -67,15 +67,15 @@ export function editionKeys(list: { festival: string; year: number | null; categ
  * True when the edition has nothing in that category, neither in the static
  * catalog nor among approved uploads (live or exported). No edition, no gap.
  */
-export function fillsGap(festival: string | null, year: number | null, category: string, ctx: GapCtx): boolean {
-  if (!festival || year === null || !category) return false;
-  const k = key(festival, year, category);
+export function fillsGap(coleccion: string | null, year: number | null, tipo: string, ctx: GapCtx): boolean {
+  if (!coleccion || year === null || !tipo) return false;
+  const k = key(coleccion, year, tipo);
   const cat = ctx.catalog instanceof Set ? ctx.catalog : new Set(ctx.catalog);
   if (cat.has(k)) return false;
   return !ctx.approved.some(
-    (c) => c.type === 'upload' && c.festival === festival && c.year === year && c.payload?.category === category
+    (c) => c.type === 'upload' && c.coleccion === coleccion && c.year === year && c.payload?.tipo === tipo
       // A programa gap closes only with a confirmed-complete programa, not a cover or a few pages.
-      && (category !== 'programa' || c.payload?.complete === true),
+      && (tipo !== 'programa' || c.payload?.complete === true),
   );
 }
 
@@ -84,11 +84,11 @@ export function fillsGap(festival: string | null, year: number | null, category:
  * the admin changes the checkbox; until then the value follows fillsGap and
  * is recomputed whenever another upload is approved.
  */
-export type GapChoice = { festival: string | null; year: number | null; category: string; checked: boolean; touched: boolean };
+export type GapChoice = { coleccion: string | null; year: number | null; tipo: string; checked: boolean; touched: boolean };
 
 export function gapChoice(c: Pending, ctx: GapCtx): GapChoice {
-  const category = String(c.payload?.category ?? '');
-  return { festival: c.festival, year: c.year, category, checked: fillsGap(c.festival, c.year, category, ctx), touched: false };
+  const tipo = String(c.payload?.tipo ?? '');
+  return { coleccion: c.coleccion, year: c.year, tipo, checked: fillsGap(c.coleccion, c.year, tipo, ctx), touched: false };
 }
 
 /** The override to pass to approveUpload: only an explicit admin choice. */
@@ -98,8 +98,8 @@ export function gapOverride(g: GapChoice): boolean | undefined {
 
 /** After an upload is approved: count it (with the admin's flags), then recompute every untouched choice. */
 export function recordApprovedUpload(c: Pending, ctx: GapCtx, choices: GapChoice[], flags?: ReviewFlags): void {
-  ctx.approved.push({ type: 'upload', festival: c.festival, year: c.year, payload: { ...c.payload, ...(flags ?? {}) } });
-  for (const g of choices) if (!g.touched) g.checked = fillsGap(g.festival, g.year, g.category, ctx);
+  ctx.approved.push({ type: 'upload', coleccion: c.coleccion, year: c.year, payload: { ...c.payload, ...(flags ?? {}) } });
+  for (const g of choices) if (!g.touched) g.checked = fillsGap(g.coleccion, g.year, g.tipo, ctx);
 }
 
 /** rpc error → es-AR message key. */
@@ -192,7 +192,7 @@ export type ReviewFlags = { complete: boolean; tapa: boolean };
 
 /** Checkbox defaults for a programa upload, from what the contributor said; null for other categories. */
 export function reviewFlags(c: Pending): ReviewFlags | null {
-  if (c.payload?.category !== 'programa') return null;
+  if (c.payload?.tipo !== 'programa') return null;
   const alcance = c.payload?.alcance;
   return { complete: alcance === 'completo', tapa: alcance === 'tapa' };
 }
@@ -266,7 +266,7 @@ export async function approveUpload(c: Pending, opts: UploadOpts): Promise<Resul
     }
   }
 
-  const gap = opts.fillsGap ?? fillsGap(c.festival, c.year, String(c.payload?.category ?? ''), opts.gap);
+  const gap = opts.fillsGap ?? fillsGap(c.coleccion, c.year, String(c.payload?.tipo ?? ''), opts.gap);
   const res = await rpc(client, 'approve_contribution', {
     cid: c.id,
     fills_gap: gap,
@@ -506,7 +506,7 @@ export async function loadQueue(type: Kind | '' = '', client: SupabaseClient | n
   return liveQuery<Pending[]>(async (c) => {
     let q = c
       .from('contributions')
-      .select('id, user_id, type, festival, year, item_id, payload, created_at, author:profiles!contributions_user_id_fkey(display_name)')
+      .select('id, user_id, type, coleccion, year, item_id, payload, created_at, author:profiles!contributions_user_id_fkey(display_name)')
       .eq('status', 'pending');
     if (type) q = q.eq('type', type);
     const { data, error } = await q.order('created_at', { ascending: true }).limit(200);
@@ -520,7 +520,7 @@ export async function loadApprovedVideoText(client: SupabaseClient | null = getC
   return liveQuery<ApprovedVideoText[]>(async (c) => {
     const { data, error } = await c
       .from('contributions')
-      .select('id, user_id, festival, year, payload, created_at, reviewed_at, author:profiles!contributions_user_id_fkey(display_name)')
+      .select('id, user_id, coleccion, year, payload, created_at, reviewed_at, author:profiles!contributions_user_id_fkey(display_name)')
       .eq('status', 'approved')
       .eq('type', 'video_text')
       .order('reviewed_at', { ascending: false })
@@ -534,7 +534,7 @@ export async function loadApprovedVideoText(client: SupabaseClient | null = getC
 /** Approved uploads, for fillsGap. */
 export async function loadApprovedUploads(client: SupabaseClient | null = getClient()) {
   return liveQuery<ApprovedLike[]>(
-    (c) => c.from('contributions').select('type, festival, year, payload').eq('status', 'approved').eq('type', 'upload').limit(5000),
+    (c) => c.from('contributions').select('type, coleccion, year, payload').eq('status', 'approved').eq('type', 'upload').limit(5000),
     [],
     8000,
     client,
@@ -576,7 +576,7 @@ export const ADMIN_MAX_FACTS = 50;
  */
 export async function adminAddFacts(
   target: string,
-  festival: FestivalSlug,
+  coleccion: FestivalSlug,
   year: number,
   facts: Record<string, unknown>[],
   fuente: string,
@@ -595,7 +595,7 @@ export async function adminAddFacts(
   if (!client) return OFFLINE;
   try {
     const { data, error } = await client.rpc('admin_add_facts', {
-      target, p_festival: festival, p_year: year,
+      target, p_coleccion: coleccion, p_year: year,
       facts: lote ? payloads.map((p) => ({ ...p, lote })) : payloads,
     });
     if (error) return mapRpcError(error as any);

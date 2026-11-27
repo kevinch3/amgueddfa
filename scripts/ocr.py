@@ -50,7 +50,7 @@ def select(items: list[dict], transcribed: set[str], done: set[str], skip_catego
     """Items that need machine text, in catalog order."""
     return [
         i for i in items
-        if i.get("kind") in KINDS and i.get("category") not in skip_categories
+        if i.get("formato") in KINDS and i.get("tipo") not in skip_categories
         and not i.get("restricted") and not i.get("hidden") and not i.get("no_text")
         and not (i.get("text_excerpt") or "").strip()
         and i["id"] not in transcribed and i["id"] not in done
@@ -123,7 +123,7 @@ def ocr_item(item: dict, archive: Path, langs: str, version: str) -> dict:
     src = archive / item["src_path"]
     pages = []
     with tempfile.TemporaryDirectory() as t:
-        for n, img in enumerate(page_images(src, item["kind"], Path(t)), start=1):
+        for n, img in enumerate(page_images(src, item["formato"], Path(t)), start=1):
             text, conf = ocr_image(img, langs)
             pages.append({"n": n, "text": text, "conf": conf})
     return {"tool": "tesseract", "version": version, "langs": langs, "date": date.today().isoformat(), "pages": pages}
@@ -147,7 +147,7 @@ def main() -> int:
     done = set() if a.force else {p.stem for p in out_dir.glob("*.json")}
     todo = select(items, transcribed_ids(repo), done, set() if a.include_otros else SKIP_CATEGORIES)
     if a.festival:
-        todo = [i for i in todo if i["festival"] == a.festival]
+        todo = [i for i in todo if i["coleccion"] == a.festival]
     if a.ids:
         todo = [i for i in todo if i["id"] in set(a.ids)]
     if a.limit:
@@ -155,7 +155,7 @@ def main() -> int:
     print(f"{len(todo)} item(s) to OCR", file=sys.stderr)
     if a.dry_run:
         for i in todo:
-            print(i["id"], i["festival"], i.get("year"), i["title"])
+            print(i["id"], i["coleccion"], i["fecha"]["year"], i["title"])
         return 0
     have = subprocess.run(["tesseract", "--list-langs"], capture_output=True, text=True).stdout.split()
     missing = [x for x in a.langs.split("+") if x not in have]

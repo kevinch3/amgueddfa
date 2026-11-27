@@ -276,11 +276,11 @@ export function clearDraft(video: string, store?: Store | null): void {
 /** What the edit mode offers on the video open now: the edit button (a signed-in profile with a display name, a
  * Chubut or Trevelin video, a transcript), the sign-in link instead (signed out, or no name yet), or nothing. */
 export function editorAccess(
-  festival: string | null | undefined,
+  coleccion: string | null | undefined,
   tr: Transcript | null,
   g: { profile: unknown; reason?: 'offline' | 'signed_out' | 'no_name' } | null,
 ): { boton: boolean; ingresar: 'signed_out' | 'no_name' | null } {
-  if (!tr || !(EDITABLE_FESTIVALS as readonly string[]).includes(festival ?? '') || !g) return { boton: false, ingresar: null };
+  if (!tr || !(EDITABLE_FESTIVALS as readonly string[]).includes(coleccion ?? '') || !g) return { boton: false, ingresar: null };
   if (g.profile) return { boton: true, ingresar: null };
   return { boton: false, ingresar: g.reason === 'signed_out' || g.reason === 'no_name' ? g.reason : null };
 }
@@ -383,14 +383,14 @@ export function pendingMarks(
 export async function sendDraft(
   tr: Transcript,
   d: Draft,
-  video: { id: string; title: string; festival: string; year: number },
-  send: (kind: 'video_text', festival: FestivalSlug, year: number, itemId: null, input: Record<string, unknown>) => Promise<Result>,
+  video: { id: string; title: string; coleccion: string; year: number },
+  send: (kind: 'video_text', coleccion: FestivalSlug, year: number, itemId: null, input: Record<string, unknown>) => Promise<Result>,
   store?: Store | null,
 ): Promise<Result> {
   const cambios = cambiosFrom(tr, d);
   if (!cambios.length) return { ok: false, key: 'contrib.error.video_cambios' };
   const base = d.base ?? tr.exportado;
-  const r = await send('video_text', video.festival as FestivalSlug, video.year, null, {
+  const r = await send('video_text', video.coleccion as FestivalSlug, video.year, null, {
     video: { id: video.id, title: video.title }, ...(base ? { base } : {}), cambios,
   });
   if (r.ok) clearDraft(video.id, store);

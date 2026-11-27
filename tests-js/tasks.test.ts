@@ -1,14 +1,16 @@
+import type { Fecha } from '../src/lib/types';
 import { describe, expect, it } from 'vitest';
 import { isHistory, taskQueue } from '../src/lib/tasks';
 import { latestApproved, pendingPoints, pointsFor, rankBy, statusOf, type LeaderRow } from '../src/lib/game';
 import type { Item } from '../src/lib/types';
 
-function item(id: string, over: Partial<Item> = {}): Item {
+function item(id: string, over: Omit<Partial<Item>, 'fecha'> & { fecha?: Partial<Fecha> } = {}): Item {
   return {
-    id, festival: 'chubut', year: 1990, undated: false, category: 'programa', title: id, kind: 'image',
+    id, coleccion: 'chubut', tipo: 'programa', title: id, formato: 'image',
     src_path: `x/${id}.jpg`, alt_paths: [], source_url: null, source_label: 'x', retrieved: '2026-11-13',
-    note_public: '', year_inferred: true, restricted: false, pages: 1, thumb: `${id}/thumb.webp`,
+    note_public: '', restricted: false, pages: 1, thumb: `${id}/thumb.webp`,
     page_paths: [`${id}/p01.webp`], text_excerpt: null, table: null, ...over,
+    fecha: { year: 1990, inferred: true, undated: false, ...over.fecha },
   };
 }
 
@@ -29,7 +31,7 @@ describe('isHistory (Quick tasks leave out the last 20 years, #187)', () => {
 
 describe('taskQueue', () => {
   it('leaves out documents from the last 20 years', () => {
-    const list = [item('old', { year: 1990 }), item('edge', { year: 2006 }), item('new', { year: 2015 }), item('none', { year: null })];
+    const list = [item('old', { fecha: { year: 1990 } }), item('edge', { fecha: { year: 2006 } }), item('new', { fecha: { year: 2015 } }), item('none', { fecha: { year: null } })];
     expect(ids(taskQueue(list, new Set(), 'u', 2026)).sort()).toEqual(['edge', 'none', 'old']);
   });
 
@@ -52,9 +54,9 @@ describe('taskQueue', () => {
   it('only year_inferred images', () => {
     const list = [
       item('img'),
-      item('known', { year_inferred: false }),
-      item('pdf', { kind: 'pdf' }),
-      item('doc', { kind: 'doc' }),
+      item('known', { fecha: { inferred: false } }),
+      item('pdf', { formato: 'pdf' }),
+      item('doc', { formato: 'doc' }),
     ];
     expect(ids(taskQueue(list, new Set(), 's'))).toEqual(['img']);
   });
@@ -68,9 +70,9 @@ describe('taskQueue', () => {
 
 describe('game helpers', () => {
   const rows: LeaderRow[] = [
-    { display_name: 'Ana', points: 120, festival_points: { chubut: 100, trevelin: 20 } },
-    { display_name: 'Beto', points: 90, festival_points: { trevelin: 90 } },
-    { display_name: 'Ceci', points: 90, festival_points: { chubut: 5 } },
+    { display_name: 'Ana', points: 120, coleccion_points: { chubut: 100, trevelin: 20 } },
+    { display_name: 'Beto', points: 90, coleccion_points: { trevelin: 90 } },
+    { display_name: 'Ceci', points: 90, coleccion_points: { chubut: 5 } },
   ];
 
   it('rankBy overall shares ranks on ties', () => {
@@ -79,7 +81,7 @@ describe('game helpers', () => {
     ]);
   });
 
-  it('rankBy festival uses festival points and drops zero', () => {
+  it('rankBy coleccion uses coleccion points and drops zero', () => {
     expect(rankBy(rows, 'trevelin').map((r) => [r.rank, r.display_name, r.points])).toEqual([
       [1, 'Beto', 90], [2, 'Ana', 20],
     ]);
@@ -123,7 +125,7 @@ describe('game helpers', () => {
 
 describe('latestApproved', () => {
   const row = (id: string, reviewed: string | null, created = '2026-01-01T00:00:00Z') => ({
-    id, type: 'fact' as const, festival: 'chubut' as const, year: 1990, item_id: null, payload: {},
+    id, type: 'fact' as const, coleccion: 'chubut' as const, year: 1990, item_id: null, payload: {},
     created_at: created, reviewed_at: reviewed, display_name: 'Ana',
   });
 

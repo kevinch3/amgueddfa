@@ -10,7 +10,7 @@ import { getClient } from '../lib/supabase';
 import type { EditionState } from '../lib/types';
 import { maxState, mediaUrl, uploadMedia, uploadStates, type UploadLike } from '../lib/uploads';
 
-type EditionRow = { festival: string; year: number; status: 'unknown' | 'held' | 'not_held'; note?: string | null };
+type EditionRow = { coleccion: string; year: number; status: 'unknown' | 'held' | 'not_held'; note?: string | null };
 
 /** Mark archive or community text as Spanish on pages in another language (WCAG 3.1.2). */
 function original<E extends HTMLElement>(e: E): E {
@@ -106,7 +106,7 @@ function publicMedia(path: string): string | null {
 /** One approved upload: thumbnail (linking to page 1), page links, category, description, byline. */
 function uploadRow(c: Contribution): HTMLLIElement {
   const li = el('li', 'aporte');
-  const cat = String(c.payload?.category ?? '');
+  const cat = String(c.payload?.tipo ?? '');
   const desc = String(c.payload?.description ?? '') || t('edicion.aporte_sin_descripcion');
   const media = uploadMedia(c);
   const pages = (media?.pages ?? []).map(publicMedia).filter((u): u is string => Boolean(u));
@@ -197,8 +197,8 @@ function draftCard(c: Contribution): HTMLDivElement {
 }
 
 /** The signed-in contributor's own pending rows, each in its section, after the published ones. */
-async function renderDrafts(festival: string, year: number, mounts: Record<'hechos' | 'recuerdos' | 'aportes', HTMLElement | null>): Promise<void> {
-  const rows = await ownPending(festival, year);
+async function renderDrafts(coleccion: string, year: number, mounts: Record<'hechos' | 'recuerdos' | 'aportes', HTMLElement | null>): Promise<void> {
+  const rows = await ownPending(coleccion, year);
   for (const m of Object.values(mounts)) m?.querySelector('.borradores')?.remove();
   if (!rows.length) return;
   for (const section of ['hechos', 'recuerdos', 'aportes'] as const) {
@@ -229,25 +229,25 @@ async function hydrateEdition(): Promise<void> {
   const aportes = document.getElementById('aportes');
   const ref = hechos ?? recuerdos ?? aportes;
   if (!ref) return;
-  const festival = ref.dataset.festival ?? '';
+  const coleccion = ref.dataset.coleccion ?? '';
   const year = Number(ref.dataset.year);
-  if (!festival || !Number.isInteger(year)) return;
+  if (!coleccion || !Number.isInteger(year)) return;
 
-  const live = await approvedForEdition(festival, year);
+  const live = await approvedForEdition(coleccion, year);
   if (live.offline) {
     // Keep what the static build rendered; only say we could not check for news.
-    if (aportes) renderUploads(aportes, forEdition(readStatic(), festival, year, 'upload'), true);
-    await renderDrafts(festival, year, { hechos, recuerdos, aportes });
+    if (aportes) renderUploads(aportes, forEdition(readStatic(), coleccion, year, 'upload'), true);
+    await renderDrafts(coleccion, year, { hechos, recuerdos, aportes });
     return;
   }
   const all = mergeApproved(readStatic(), live.data);
-  if (hechos) renderFacts(hechos, forEdition(all, festival, year, 'fact'));
-  if (recuerdos) renderMemories(recuerdos, forEdition(all, festival, year, 'memory'));
-  if (aportes) renderUploads(aportes, forEdition(all, festival, year, 'upload'), false);
+  if (hechos) renderFacts(hechos, forEdition(all, coleccion, year, 'fact'));
+  if (recuerdos) renderMemories(recuerdos, forEdition(all, coleccion, year, 'memory'));
+  if (aportes) renderUploads(aportes, forEdition(all, coleccion, year, 'upload'), false);
   const trMount = document.getElementById('transcripciones');
-  if (trMount) renderEditionTranscriptions(trMount, forEdition(all, festival, year, 'transcription'), readTitles(trMount));
-  applyUploadStates(document, uploadStates(forEdition(all, festival, year, 'upload')));
-  await renderDrafts(festival, year, { hechos, recuerdos, aportes });
+  if (trMount) renderEditionTranscriptions(trMount, forEdition(all, coleccion, year, 'transcription'), readTitles(trMount));
+  applyUploadStates(document, uploadStates(forEdition(all, coleccion, year, 'upload')));
+  await renderDrafts(coleccion, year, { hechos, recuerdos, aportes });
 }
 
 /** Raise grid cells, timeline rows and the edition badge to what approved uploads say (never lowers). */
@@ -260,20 +260,20 @@ export const applyUploadStates = raiseStates;
  */
 export function applyEditionStatus(root: ParentNode, rows: EditionRow[]): void {
   const status = new Map<string, EditionRow['status']>();
-  for (const r of rows) status.set(`${r.festival}:${r.year}`, r.status);
+  for (const r of rows) status.set(`${r.coleccion}:${r.year}`, r.status);
   const label = t('edicion.no_realizada');
-  for (const node of root.querySelectorAll<HTMLElement>('[data-festival][data-year][data-state]')) {
-    const { festival = '', year = '' } = node.dataset;
-    const s = status.get(`${festival}:${year}`);
+  for (const node of root.querySelectorAll<HTMLElement>('[data-coleccion][data-year][data-state]')) {
+    const { coleccion = '', year = '' } = node.dataset;
+    const s = status.get(`${coleccion}:${year}`);
     if (s === 'held' && node.dataset.status !== 'held' && node.dataset.status !== 'not_held') {
       node.dataset.status = 'held';
-      if (node.dataset.state === 'none') setHeldLabel(node, festival, year);
+      if (node.dataset.state === 'none') setHeldLabel(node, coleccion, year);
       continue;
     }
     if (s !== 'not_held' || node.dataset.status === 'not_held') continue;
     node.dataset.status = 'not_held';
     if (node.matches('[data-cell]')) {
-      node.setAttribute('aria-label', t('inicio.celda', { festival: t(`festivales.${festival}`), year, estado: label }));
+      node.setAttribute('aria-label', t('inicio.celda', { festival: t(`festivales.${coleccion}`), year, estado: label }));
       node.title = label;
     } else if (node.classList.contains('badge-state')) {
       node.classList.add('st-not_held');
@@ -287,10 +287,10 @@ export function applyEditionStatus(root: ParentNode, rows: EditionRow[]): void {
 }
 
 /** "Se realizó, sin documentos" on a cell, timeline row or badge. */
-function setHeldLabel(node: HTMLElement, festival: string, year: string): void {
+function setHeldLabel(node: HTMLElement, coleccion: string, year: string): void {
   const label = stateLabel('none', 'held');
   if (node.matches('[data-cell]')) {
-    node.setAttribute('aria-label', t('inicio.celda', { festival: t(`festivales.${festival}`), year, estado: label }));
+    node.setAttribute('aria-label', t('inicio.celda', { festival: t(`festivales.${coleccion}`), year, estado: label }));
     node.title = label;
   } else if (node.classList.contains('badge-state')) node.textContent = label;
   else {
@@ -305,11 +305,11 @@ async function overlayUploads(): Promise<void> {
 }
 
 async function overlayEditions(): Promise<void> {
-  if (!document.querySelector('[data-festival][data-year][data-state]')) return;
-  const live = await liveQuery<EditionRow[]>((c) => c.from('editions').select('festival, year, status'), []);
+  if (!document.querySelector('[data-coleccion][data-year][data-state]')) return;
+  const live = await liveQuery<EditionRow[]>((c) => c.from('editions').select('coleccion, year, status'), []);
   // Live rows win over the last export for the same edition; offline, the export alone.
   const merged = new Map<string, EditionRow>();
-  for (const r of [...(staticEditions as EditionRow[]), ...live.data]) merged.set(`${r.festival}:${r.year}`, r);
+  for (const r of [...(staticEditions as EditionRow[]), ...live.data]) merged.set(`${r.coleccion}:${r.year}`, r);
   applyEditionStatus(document, [...merged.values()]);
 }
 

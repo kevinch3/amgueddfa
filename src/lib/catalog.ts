@@ -46,7 +46,7 @@ export function festivals(): { slug: FestivalSlug; name: string; nameCy: string 
 
 /** Items of one edition. Undated items (year null) never belong to an edition. */
 export function editionItems(f: FestivalSlug, year: number): Item[] {
-  return items().filter((i) => i.festival === f && i.year === year);
+  return items().filter((i) => i.coleccion === f && i.fecha.year === year);
 }
 
 /**
@@ -66,7 +66,7 @@ export function editionCatalogState(f: FestivalSlug, year: number): EditionState
 export const YEAR_FLOOR = 1865;
 
 /** Anything with an edition, as far as the start of a timeline needs it. */
-export type DatedLike = { festival: string | null; year: number | null; type?: string; payload?: Record<string, any> | null };
+export type DatedLike = { coleccion: string | null; year: number | null; type?: string; payload?: Record<string, any> | null };
 
 /** Every approved contribution from the last export, any type. */
 const APPROVED_DATED: DatedLike[] = approvedRaw as DatedLike[];
@@ -78,8 +78,8 @@ function isMaterial(c: DatedLike): boolean {
 
 /** Earliest year with a dated catalog item or an approved contribution; null when none. */
 export function firstMaterialYear(f: FestivalSlug, approved: DatedLike[] = APPROVED_DATED): number | null {
-  const years = [...items(), ...approved.filter(isMaterial)]
-    .filter((i) => i.festival === f && i.year !== null)
+  const years = [...items().map((i) => ({ coleccion: i.coleccion, year: i.fecha.year })), ...approved.filter(isMaterial)]
+    .filter((i) => i.coleccion === f && i.year !== null)
     .map((i) => i.year as number);
   return years.length ? Math.min(...years) : null;
 }
@@ -107,7 +107,7 @@ export function editionYears(f: FestivalSlug, notHeld: number[] = [], approved: 
  * editionState, so a decade with only a memory stays open.
  */
 export function undocumented(f: FestivalSlug, year: number, approved: DatedLike[] = APPROVED_DATED): boolean {
-  return editionState(f, year) === 'none' && !approved.some((c) => c.festival === f && c.year === year && isMaterial(c));
+  return editionState(f, year) === 'none' && !approved.some((c) => c.coleccion === f && c.year === year && isMaterial(c));
 }
 
 /** Catalog titles that name the cover of a programa. */
@@ -148,7 +148,7 @@ export function editionCover(
   uploads: UploadLike[] = APPROVED_UPLOADS,
   mediaBase: string | undefined = import.meta.env.PUBLIC_SUPABASE_URL,
 ): Cover | null {
-  const mine = uploads.filter((c) => c.type === 'upload' && c.festival === f && c.year === year && c.payload?.category === 'programa');
+  const mine = uploads.filter((c) => c.type === 'upload' && c.coleccion === f && c.year === year && c.payload?.tipo === 'programa');
   const tapas = mine
     .filter((c) => c.payload?.tapa === true)
     .sort((a, b) => String(b.reviewed_at ?? '').localeCompare(String(a.reviewed_at ?? '')));
@@ -159,8 +159,8 @@ export function editionCover(
   // Catalog: a programa item curated as the cover ("Tapa…", "Portada…") first, then page 1 of the programa PDF.
   // Only programa: e.g. the rules of a cover-design contest ("concurso-tapa-programa", bases) are not the cover.
   const list = editionItems(f, year).filter((i) => isPublic(i) && pageUrls(i).length > 0);
-  const fromCatalog = list.find((i) => i.category === 'programa' && TAPA_TITLE.test(i.title))
-    ?? list.find((i) => i.category === 'programa' && i.kind === 'pdf');
+  const fromCatalog = list.find((i) => i.tipo === 'programa' && TAPA_TITLE.test(i.title))
+    ?? list.find((i) => i.tipo === 'programa' && i.formato === 'pdf');
   if (fromCatalog) {
     const page = pageUrls(fromCatalog)[0];
     return { page, thumb: thumbUrl(fromCatalog) ?? page, ...coverBox(fromCatalog.page_size) };
@@ -173,18 +173,18 @@ export function editionCover(
 }
 
 /** Editions with some material but no programa PDF, newest first. */
-export function mostWanted(limit: number, uploads: UploadLike[] = APPROVED_UPLOADS): { festival: FestivalSlug; year: number }[] {
-  const out: { festival: FestivalSlug; year: number }[] = [];
-  for (const festival of FESTIVAL_SLUGS) {
+export function mostWanted(limit: number, uploads: UploadLike[] = APPROVED_UPLOADS): { coleccion: FestivalSlug; year: number }[] {
+  const out: { coleccion: FestivalSlug; year: number }[] = [];
+  for (const coleccion of FESTIVAL_SLUGS) {
     // Same uploads for the range as for the state: only uploads (or catalog items) can make an edition "some".
-    const [first, last] = yearRange(festival, uploads);
+    const [first, last] = yearRange(coleccion, uploads);
     for (let year = first; year <= last; year++) {
-      if (editionState(festival, year, uploads) === 'some') out.push({ festival, year });
+      if (editionState(coleccion, year, uploads) === 'some') out.push({ coleccion, year });
     }
   }
   out.sort(
     (a, b) =>
-      b.year - a.year || FESTIVAL_SLUGS.indexOf(a.festival) - FESTIVAL_SLUGS.indexOf(b.festival),
+      b.year - a.year || FESTIVAL_SLUGS.indexOf(a.coleccion) - FESTIVAL_SLUGS.indexOf(b.coleccion),
   );
   return out.slice(0, limit);
 }
@@ -201,7 +201,7 @@ export function pageUrls(item: Item): string[] {
   return item.page_paths.map((p) => siteMedia(p));
 }
 
-const EDITION_STATUS = new Map((editionsRaw as { festival: string; year: number; status: string }[]).map((e) => [`${e.festival}:${e.year}`, e.status]));
+const EDITION_STATUS = new Map((editionsRaw as { coleccion: string; year: number; status: string }[]).map((e) => [`${e.coleccion}:${e.year}`, e.status]));
 
 /** Whether an edition took place, from the last export (live pages refresh it in edicion.ts). */
 export function editionStatus(f: FestivalSlug, year: number): 'held' | 'not_held' | 'unknown' {

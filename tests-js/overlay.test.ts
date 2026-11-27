@@ -8,7 +8,9 @@ describe('overlay (shared cases)', () => {
     it(c.name, () => {
       const base = { ...cases.base, ...c.base } as Taggable;
       const [out] = applyTags([base], c.tags);
-      expect(out).toMatchObject(c.expect);
+      // `expect` names nested fields with dots ("fecha.year"), so the Python port reads it the same way.
+      const at = (o: any, k: string) => k.split('.').reduce((x, p) => x?.[p], o);
+      expect(Object.fromEntries(Object.keys(c.expect).map((k) => [k, at(out, k)]))).toEqual(c.expect);
       expect(base).toEqual({ ...cases.base, ...c.base }); // never mutates its input
     });
   }

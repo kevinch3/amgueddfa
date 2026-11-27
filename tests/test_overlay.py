@@ -13,5 +13,8 @@ FIX = json.loads((Path(__file__).parent / "fixtures" / "overlay.json").read_text
 def test_shared_case(case):
     item = {**FIX["base"], **case.get("base", {})}
     apply_overlay([item], case["tags"])
-    for k, v in case["expect"].items():
-        assert item[k] == v, k
+    for k, v in case["expect"].items():  # "fecha.year" names a nested field
+        got = item
+        for part in k.split("."):
+            got = got[part]
+        assert got == v, k

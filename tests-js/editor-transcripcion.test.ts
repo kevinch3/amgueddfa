@@ -10,7 +10,7 @@ import {
 } from '../src/lib/transcript-draft';
 import { asTranscript, type Transcript } from '../src/lib/video-transcript';
 
-const video = { id: 'hVtD63KLlsw', title: 'Eisteddfod del Chubut - Sesión día sábado', festival: 'chubut', year: 2024 };
+const video = { id: 'hVtD63KLlsw', title: 'Eisteddfod del Chubut - Sesión día sábado', coleccion: 'chubut', year: 2024 };
 
 /** The largest session on the site has 2,956 lines. */
 const long = (n = 2956): Transcript => asTranscript({
@@ -91,7 +91,7 @@ describe('a signed-out visitor never gets into edit mode (B1)', () => {
   const ready = { tr: small(), video, editando: false, asentada: true, puede: true };
   it('edit mode starts only for a visitor who may edit, once the text is final, and not twice', () => {
     expect(puedeEntrar(ready)).toBe(true);
-    expect(puedeEntrar({ ...ready, puede: false })).toBe(false); // signed out, no name, offline, another festival
+    expect(puedeEntrar({ ...ready, puede: false })).toBe(false); // signed out, no name, offline, another coleccion
     expect(puedeEntrar({ ...ready, asentada: false })).toBe(false);
     expect(puedeEntrar({ ...ready, editando: true })).toBe(false);
     expect(puedeEntrar({ ...ready, tr: null })).toBe(false);

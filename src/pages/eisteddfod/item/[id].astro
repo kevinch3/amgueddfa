@@ -29,35 +29,35 @@ const { item } = Astro.props as { item: Item };
 const known = sourceSlugs();
 const sourceKey = sourceSlug(itemSourceKey(item));
 const sourcePage = !item.hidden && known.has(sourceKey) ? url(`fuente/${sourceKey}/`) : null;
-const fest = festivalName(item.festival);
+const fest = festivalName(item.coleccion);
 const hasPages = pageUrls(item).length > 0;
 const TABLE_COLS = ['numero', 'categoria', 'idioma', 'descripcion'];
-const yearLabel = item.year ?? (item.undated ? t('item.sin_fecha') : t('item.general'));
-const yearHref = item.year ? url(`${item.festival}/${item.year}/`) : url(`general/${item.festival}/`);
+const yearLabel = item.fecha.year ?? (item.fecha.undated ? t('item.sin_fecha') : t('item.general'));
+const yearHref = item.fecha.year ? url(`${item.coleccion}/${item.fecha.year}/`) : url(`general/${item.coleccion}/`);
 // For search engines: restricted items never expose an image (thumbUrl is null for them).
 const image = thumbUrl(item);
 // "Title · Festival Year · Category." — the category is left out when the title already starts with it
 // («Programa del día (1 de 3) · … · Programa del día.», #95).
 const titleText = item.title.replace(/[.\s]+$/, '');
-const categoryText = t(`categorias.${item.category}`);
-const description = `${[titleText, `${fest}${item.year ? ` ${item.year}` : ''}`, ...(titleText.toLowerCase().startsWith(categoryText.toLowerCase()) ? [] : [categoryText])].join(' · ')}.`;
+const categoryText = t(`categorias.${item.tipo}`);
+const description = `${[titleText, `${fest}${item.fecha.year ? ` ${item.fecha.year}` : ''}`, ...(titleText.toLowerCase().startsWith(categoryText.toLowerCase()) ? [] : [categoryText])].join(' · ')}.`;
 // Restricted documents get no structured data (they are not freely available here).
 // "About" the edition's Event only when the archive knows whether it took place (see seo.ts).
-const editionStatus = item.year === null ? null : (editionsStatic as { festival: string; year: number; status: 'held' | 'not_held' | 'unknown' }[])
-  .find((e) => e.festival === item.festival && e.year === item.year)?.status ?? null;
-const editionEvent = item.year !== null && isEventEdition(editionFacts(approvedRaw as Contribution[], item.festival, item.year, editionStatus));
+const editionStatus = item.fecha.year === null ? null : (editionsStatic as { coleccion: string; year: number; status: 'held' | 'not_held' | 'unknown' }[])
+  .find((e) => e.coleccion === item.coleccion && e.year === item.fecha.year)?.status ?? null;
+const editionEvent = item.fecha.year !== null && isEventEdition(editionFacts(approvedRaw as Contribution[], item.coleccion, item.fecha.year, editionStatus));
 const jsonLd = !isPublic(item) ? null : ldGraph(
   itemJsonLd({
     name: item.title, url: absUrl(url(`item/${item.id}/`)), image: image ? absUrl(image) : null,
-    editionUrl: item.year ? absUrl(url(`${item.festival}/${item.year}/`)) : null,
-    editionName: item.year ? `${fest} ${item.year}` : null, year: item.year, editionEvent, rights: item.rights,
+    editionUrl: item.fecha.year ? absUrl(url(`${item.coleccion}/${item.fecha.year}/`)) : null,
+    editionName: item.fecha.year ? `${fest} ${item.fecha.year}` : null, year: item.fecha.year, editionEvent, rights: item.rights,
   }),
   // The same crumbs as the visible <nav class="crumbs"> below.
   breadcrumbJsonLd([
     { name: t('nav.inicio'), url: absUrl(url('/')) },
-    { name: fest, url: absUrl(url(`${item.festival}/`)) },
+    { name: fest, url: absUrl(url(`${item.coleccion}/`)) },
     { name: String(yearLabel), url: absUrl(yearHref) },
-    { name: t(`categorias.${item.category}`) },
+    { name: t(`categorias.${item.tipo}`) },
   ]),
 );
 // Standardized transcription (committed) and approved contributor transcriptions (last export; transcripciones.ts merges live rows).
@@ -73,34 +73,34 @@ const contributed = !isPublic(item) ? [] : (approvedRaw as Contribution[]).filte
 const notes = !isPublic(item) ? [] : (approvedRaw as Contribution[]).filter((c) => c.type === 'note' && c.item_id === item.id);
 // What an admin correction can change (src/lib/tags.ts): live-catalog.ts and admin-item.ts start from it.
 const overlayBase = {
-  id: item.id, festival: item.festival, year: item.year, undated: item.undated, category: item.category, title: item.title,
+  id: item.id, coleccion: item.coleccion, year: item.fecha.year, undated: item.fecha.undated, tipo: item.tipo, title: item.title,
   rights: item.rights ?? '', note_public: item.note_public ?? '', no_text: Boolean(item.no_text), hidden: Boolean(item.hidden),
-  restricted: !isPublic(item), year_inferred: item.year_inferred,
+  restricted: !isPublic(item), year_inferred: item.fecha.inferred,
 };
 const retrieved = item.retrieved
   ? new Date(`${item.retrieved}T12:00:00`).toLocaleDateString(intlLocales(), { day: 'numeric', month: 'long', year: 'numeric' })
   : '';
 ---
-<Base title={item.title} festival={item.festival} year={item.year} item={item.id} description={description} image={image} jsonLd={item.hidden ? null : jsonLd} markdown={item.hidden || !isPublic(item) ? null : `item/${item.id}.md`} searchable={!item.hidden && isPublic(item)} noindex={Boolean(item.hidden)}>
+<Base title={item.title} coleccion={item.coleccion} year={item.fecha.year} item={item.id} description={description} image={image} jsonLd={item.hidden ? null : jsonLd} markdown={item.hidden || !isPublic(item) ? null : `item/${item.id}.md`} searchable={!item.hidden && isPublic(item)} noindex={Boolean(item.hidden)}>
   <meta data-pagefind-filter="eisteddfod[content]" content={fest} />
-  {item.year !== null && <meta data-pagefind-filter="decada[content]" content={`${Math.floor(item.year / 10) * 10}`} />}
-  <meta data-pagefind-filter="categoria[content]" content={t(`categorias.${item.category}`)} />
+  {item.fecha.year !== null && <meta data-pagefind-filter="decada[content]" content={`${Math.floor(item.fecha.year / 10) * 10}`} />}
+  <meta data-pagefind-filter="categoria[content]" content={t(`categorias.${item.tipo}`)} />
   <nav class="crumbs" aria-label={t('comun.miga')} data-pagefind-ignore="all">
     <ol>
       <li><a href={url('/')}>{t('nav.inicio')}</a></li>
-      <li><a href={url(`${item.festival}/`)} data-live="festival">{fest}</a></li>
+      <li><a href={url(`${item.coleccion}/`)} data-live="coleccion">{fest}</a></li>
       <li><a href={yearHref} data-live="year">{yearLabel}</a></li>
-      <li data-live="category">{t(`categorias.${item.category}`)}</li>
+      <li data-live="tipo">{t(`categorias.${item.tipo}`)}</li>
     </ol>
   </nav>
 
   <header class="item-head" data-item-page={item.id}>
     <h1 lang={contentLang()}>{item.title}</h1>
     <p class="badges">
-      <span class="badge" data-live="category">{t(`categorias.${item.category}`)}</span>
-      <span class="badge">{t(`item.tipos.${item.kind}`)}</span>
+      <span class="badge" data-live="tipo">{t(`categorias.${item.tipo}`)}</span>
+      <span class="badge">{t(`item.tipos.${item.formato}`)}</span>
       {item.pages > 1 && isPublic(item) && <span class="badge">{t('item.paginas', { n: item.pages })}</span>}
-      {item.year_inferred && <span class="badge" data-live="inferred" title={t('comun.ano_estimado_ayuda')}>{t('comun.ano_estimado')}</span>}
+      {item.fecha.inferred && <span class="badge" data-live="inferred" title={t('comun.ano_estimado_ayuda')}>{t('comun.ano_estimado')}</span>}
     </p>
   </header>
 
@@ -116,11 +116,11 @@ const retrieved = item.retrieved
             {t('item.restringido')}
           </h2>
           <p>{t('item.restringido_ayuda')}</p>
-          <Mount id="liberado" festival={item.festival} year={item.year} item={item.id} pages={item.page_paths.map((p) => p.split('/').pop()).join(' ')} />
+          <Mount id="liberado" coleccion={item.coleccion} year={item.fecha.year} item={item.id} pages={item.page_paths.map((p) => p.split('/').pop()).join(' ')} />
         </div>
       ) : hasPages ? (
         <Viewer item={item} />
-      ) : item.kind === 'table' && item.table ? (
+      ) : item.formato === 'table' && item.table ? (
         <section aria-labelledby="tabla-t">
           <h2 id="tabla-t">{t('item.tabla_titulo')}</h2>
           <p class="muted">{t('item.tabla_ayuda', { n: item.table.length })}</p>
@@ -170,7 +170,7 @@ const retrieved = item.retrieved
       {isPublic(item) && (
         <section class="section island-section" aria-labelledby="transcripciones-t" data-transcripciones hidden={contributed.length === 0}>
           <h2 id="transcripciones-t">{t('item.transcripciones_aportes')}</h2>
-          <Mount id="transcripciones" festival={item.festival} year={item.year} item={item.id}>{contributed.length > 0 && (
+          <Mount id="transcripciones" coleccion={item.coleccion} year={item.fecha.year} item={item.id}>{contributed.length > 0 && (
             <ul class="recuerdos">
               {contributed.map((c) => <li><blockquote lang={contentLang()}>{String(c.payload?.text ?? '')}</blockquote><FuenteRef c={c} known={known} tag="p" /></li>)}
             </ul>
@@ -197,7 +197,7 @@ const retrieved = item.retrieved
         {isPublic(item) && (
           <div class="island-section notas">
             <h3 class="small">{t('item.notas_titulo')}</h3>
-            <Mount id="notas" festival={item.festival} year={item.year} item={item.id}>{notes.length > 0 && (
+            <Mount id="notas" coleccion={item.coleccion} year={item.fecha.year} item={item.id}>{notes.length > 0 && (
               <ul class="recuerdos">
                 {notes.map((c) => <li><blockquote lang={contentLang()}>{String(c.payload?.text ?? '')}</blockquote><FuenteRef c={c} known={known} tag="p" /></li>)}
               </ul>
@@ -209,10 +209,10 @@ const retrieved = item.retrieved
       {isPublic(item) && (
         <section class="island-section" aria-labelledby="tarea-t" data-pagefind-ignore="all">
           <h2 id="tarea-t" class="small">{t('item.tarea_titulo')}</h2>
-          <Mount id="tarea" festival={item.festival} year={item.year} item={item.id} category={item.category} />
+          <Mount id="tarea" coleccion={item.coleccion} year={item.fecha.year} item={item.id} tipo={item.tipo} />
         </section>
       )}
-      <Mount id="admin-item" festival={item.festival} year={item.year} item={item.id} category={item.category} class="admin-item" />
+      <Mount id="admin-item" coleccion={item.coleccion} year={item.fecha.year} item={item.id} tipo={item.tipo} class="admin-item" />
     </aside>
   </div>
   <script type="application/json" id="fuentes-data" set:html={jsonForScript(contributionSourceSlugs())}></script>

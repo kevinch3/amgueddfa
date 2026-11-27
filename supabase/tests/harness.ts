@@ -19,19 +19,27 @@ export interface TestDb {
   createUser(email?: string): Promise<string>;
   /** Create a user and promote them to admin. */
   createAdmin(email?: string): Promise<string>;
+  /** Apply the migrations left out by makeDb({ before }), in order. */
+  migrateRest(): Promise<void>;
 }
 
 let counter = 0;
 
-export async function makeDb(): Promise<TestDb> {
+/** A database with every migration, or only those named before `before` (to test a migration on existing rows). */
+export async function makeDb(opts: { before?: string } = {}): Promise<TestDb> {
   const db = new PGlite();
   await db.exec(readFileSync(join(here, 'stub.sql'), 'utf8'));
   const files = readdirSync(migrationsDir)
     .filter((f) => f.endsWith('.sql'))
     .sort();
   if (files.length === 0) throw new Error('no migrations found');
-  for (const f of files) {
+  const now = opts.before ? files.filter((f) => f < opts.before!) : files;
+  const rest = files.slice(now.length);
+  for (const f of now) {
     await db.exec(readFileSync(join(migrationsDir, f), 'utf8'));
+  }
+  async function migrateRest(): Promise<void> {
+    for (const f of rest.splice(0)) await db.exec(readFileSync(join(migrationsDir, f), 'utf8'));
   }
 
   async function q<T>(who: Who, sql: string, params: unknown[] = []): Promise<T[]> {
@@ -64,5 +72,5 @@ export async function makeDb(): Promise<TestDb> {
     return id;
   }
 
-  return { db, q, createUser, createAdmin };
+  return { db, q, createUser, createAdmin, migrateRest };
 }

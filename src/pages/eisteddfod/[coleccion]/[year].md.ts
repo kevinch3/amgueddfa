@@ -15,12 +15,12 @@ import type { FestivalSlug } from '../../../lib/types';
 export function getStaticPaths() {
   return festivals().flatMap((f) => {
     const [a, b] = yearRange(f.slug);
-    return Array.from({ length: b - a + 1 }, (_, k) => ({ params: { festival: f.slug, year: String(a + k) } }));
+    return Array.from({ length: b - a + 1 }, (_, k) => ({ params: { coleccion: f.slug, year: String(a + k) } }));
   });
 }
 
 export const GET: APIRoute = ({ params }) => {
-  const slug = params.festival as FestivalSlug;
+  const slug = params.coleccion as FestivalSlug;
   const year = Number(params.year);
   const fest = festivals().find((f) => f.slug === slug)!;
   const approved = approvedRaw as Contribution[];
@@ -32,10 +32,10 @@ export const GET: APIRoute = ({ params }) => {
     return { label, value, fuente: fuente ? `fuente: ${fuente}` : null, by: c.display_name ? `aportó ${c.display_name}` : '' };
   });
   const docs = editionItems(slug, year).filter((i) => isPublic(i)).sort(byTitle).map((i) => ({
-    title: i.title, category: t(`categorias.${i.category}`), url: absUrl(url(`item/${i.id}/`)), transcribed: transcriptionDoc(i.id) !== null,
+    title: i.title, tipo: t(`categorias.${i.tipo}`), url: absUrl(url(`item/${i.id}/`)), transcribed: transcriptionDoc(i.id) !== null,
   }));
   const body = editionMarkdown({
-    name: fest.name, festival: slug, year, url: absUrl(url(`${slug}/${year}/`)), status, estado: state,
+    name: fest.name, coleccion: slug, year, url: absUrl(url(`${slug}/${year}/`)), status, estado: state,
     stateText: stateLabel(state, status), facts, docs, uploads: forEdition(approved, slug, year, 'upload').length, dataUrl: absUrl(url('datos/ediciones.json', 'es')),
   });
   return new Response(body, { headers: { 'Content-Type': 'text/markdown; charset=utf-8' } });

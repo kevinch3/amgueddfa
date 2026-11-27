@@ -5,16 +5,16 @@ import { fold } from './video-transcript';
 
 /** A transcribed video as its edition's search file carries it. */
 export type SearchVideo = { id: string; title: string; kind: string; lang: string; seg: [number, string][] };
-export type SearchEdition = { festival: string; year: number; videos: SearchVideo[] };
+export type SearchEdition = { coleccion: string; year: number; videos: SearchVideo[] };
 /** One edition in datos/videos-texto/indice.json. */
-export type SearchIndexEntry = { festival: string; name: string; year: number; n: number };
+export type SearchIndexEntry = { coleccion: string; name: string; year: number; n: number };
 
 /** A moment that matches: its second, the words shown and the [from, to) ranges to highlight in them. */
 export type Hit = { t: number; text: string; marks: [number, number][] };
 export type VideoHits = { video: SearchVideo; total: number; hits: Hit[] };
 
 /** The name of an edition's search file: "chubut-2025". */
-export const editionKey = (festival: string, year: number) => `${festival}-${year}`;
+export const editionKey = (coleccion: string, year: number) => `${coleccion}-${year}`;
 
 /** The words of a query, folded; one-letter words say nothing and are dropped. */
 export function queryTerms(query: string): string[] {

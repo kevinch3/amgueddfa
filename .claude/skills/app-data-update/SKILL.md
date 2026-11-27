@@ -28,7 +28,7 @@ functions work. Find a contributor's uuid with
 |---|---|---|---|
 | Date, venue, winner, silla, corona, note, competencia of an edition | `facts` (→ `admin_add_facts`) | contributor | one batch = one `lote`; 10 pts each; a row `[field, value, fuente]` carries its own source (video moment, clipping) |
 | Edition held / not held | fact `edicion_realizada` `si`/`no` | contributor | **the only thing that sets `editions.status`**; a "no" also gets an `other` note with the reason |
-| Item's year, festival, category, title, rights, caption, no_text, hidden | `admin_correct_item(item, festival, year, payload)` | admin, 0 pts | `festival`/`year` args = the item's **current** ones from `src/data/catalog.json`; latest approved tag wins |
+| Item's year, coleccion, tipo, title, rights, caption, no_text, hidden | `admin_correct_item(item, coleccion, year, payload)` | admin, 0 pts | `coleccion`/`year` args = the item's **current** ones from `src/data/catalog.json`; latest approved tag wins |
 | Memory (recuerdo) | insert `memory` row `pending`, then `approve_contribution` | contributor | text 10–5000 chars; 5 pts |
 | Scan / photo / PDF | upload original, insert `upload` row `pending`, **approve in the browser** (/admin) | contributor | the browser makes the webp pages + thumb; then `python3 -m scripts.sync_uploads`, `build_catalog` |
 | Fix or remove a fact already loaded | `update`/`delete` on `contributions` by id | — | see below; nothing un-approves, so edit the row |
@@ -54,7 +54,7 @@ Before loading, see what the editions already hold, so you add only what's new:
 
 ```bash
 python3 -I $H query "select year, payload->>'field' f, payload->>'value' v, payload->>'fuente' src
-  from contributions where festival='chubut' and year between 1937 and 1950
+  from contributions where coleccion='chubut' and year between 1937 and 1950
   and status='approved' and type='fact' order by year"
 python3 -I $H query "select payload->>'value' v, count(*) from contributions
   where payload->>'field'='venue' and status='approved' group by 1 order by 2 desc"
@@ -65,12 +65,12 @@ python3 -I $H query "select payload->>'value' v, count(*) from contributions
 ```sql
 -- memory credited to a contributor (RLS is bypassed: the API runs as postgres).
 -- Pick the row id yourself (python3 -c 'import uuid;print(uuid.uuid4())'): exec has no variables.
-insert into public.contributions (id, user_id, created_by, type, festival, year, payload, status)
+insert into public.contributions (id, user_id, created_by, type, coleccion, year, payload, status)
   values ('<new uuid>', '<contributor uuid>', '347c144e-6c6e-4d6a-9bf9-14505a624a9d',
           'memory', 'chubut', 1958, '{"text":"…"}', 'pending');
 perform public.approve_contribution('<new uuid>', false, null);
 
--- item correction (catalog id from src/data/catalog.json → items[].id; its CURRENT festival and year,
+-- item correction (catalog id from src/data/catalog.json → items[].id; its CURRENT coleccion and fecha.year,
 -- null when the item has no year)
 perform public.admin_correct_item('3fa9c2d1e0b7', 'trevelin', 1962, '{"year": 1963}'::jsonb);
 ```
@@ -80,7 +80,7 @@ line before it ran, and the whole block is rolled back.
 
 Upload: put the original in the private `uploads` bucket at `uploads/<contributor uuid>/<new uuid>.<ext>`
 (Storage API with `SUPABASE_SERVICE_ROLE_KEY`; jpg/png/webp/pdf ≤ 20 MB), insert the `upload` row with
-`payload {"category", "alcance" (programa only: completo|tapa|parcial), "description"?, "storage_path"}`
+`payload {"tipo", "alcance" (programa only: completo|tapa|parcial), "description"?, "storage_path"}`
 and `status 'pending'`, then tell the user to approve it from /admin. Don't approve uploads from SQL:
 the page images would be missing.
 

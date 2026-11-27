@@ -8,6 +8,7 @@ import { jsonForScript, type Contribution } from '../lib/contrib';
 import { latestApproved } from '../lib/game';
 import { t } from '../lib/i18n';
 import { url } from '../lib/paths';
+import { HOME_EXTRAS } from '../lib/features';
 import { siteJsonLd } from '../lib/seo';
 import { festivalName } from '../lib/site';
 
@@ -19,10 +20,10 @@ for (const f of fests) {
   const [a, b] = yearRange(f.slug);
   for (let y = a; y <= b; y++) if (editionState(f.slug, y) === 'full') complete++;
 }
-const wanted = mostWanted(12);
+const wanted = HOME_EXTRAS ? mostWanted(12) : [];
 // Last export, so the island still has something to show when Supabase is unreachable.
 // The feed never shows payload text, so none is embedded.
-const recent = latestApproved(approvedStatic as Contribution[], [], 10).map((c) => ({ ...c, payload: {} }));
+const recent = HOME_EXTRAS ? latestApproved(approvedStatic as Contribution[], [], 10).map((c) => ({ ...c, payload: {} })) : [];
 ---
 <Base current="inicio" jsonLd={siteJsonLd()}>
   <section class="intro measure">
@@ -41,7 +42,7 @@ const recent = latestApproved(approvedStatic as Contribution[], [], 10).map((c) 
     <CoverageGrid />
   </section>
 
-  <section class="section" id="buscados" aria-labelledby="buscados-t">
+  {HOME_EXTRAS && <section class="section" id="buscados" aria-labelledby="buscados-t">
     <h2 id="buscados-t">{t('inicio.buscados_titulo')}</h2>
     <p class="measure">{t('inicio.buscados_ayuda')}</p>
     <ul class="wanted">
@@ -54,16 +55,17 @@ const recent = latestApproved(approvedStatic as Contribution[], [], 10).map((c) 
         </li>
       ))}
     </ul>
-  </section>
+  </section>}
 
-  <section class="section island-section" aria-labelledby="recientes-t">
+  {HOME_EXTRAS && <section class="section island-section" aria-labelledby="recientes-t">
     <h2 id="recientes-t">{t('inicio.recientes_titulo')}</h2>
     <Mount id="recientes" />
     <script type="application/json" id="recientes-data" set:html={jsonForScript(recent)} />
-  </section>
+  </section>}
 </Base>
 
 <script>
   import '../scripts/edicion.ts';
-  import '../scripts/recientes.ts';
+  // "Últimos aportes" is hidden (HOME_EXTRAS in src/lib/features.ts); its script
+  // (../scripts/recientes.ts) comes back with it, so nothing is fetched meanwhile.
 </script>

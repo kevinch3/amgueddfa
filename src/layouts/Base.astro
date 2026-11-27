@@ -14,6 +14,7 @@ import { jsonForScript } from '../lib/contrib';
 import { absUrl } from '../lib/seo';
 import { TAGS_AT } from '../lib/catalog';
 import { BUILD_CHANGED_AT } from '../lib/actividad';
+import { HOME_EXTRAS } from '../lib/features';
 
 interface Props {
   title?: string;
@@ -98,7 +99,7 @@ const webmcpToken = (import.meta.env.PUBLIC_WEBMCP_OT_TOKEN ?? '').trim();
         <nav class="site-nav" aria-label={t('nav.principal')}>
           <ul>
             <li><a href={url('/')} aria-current={current === 'inicio' ? 'page' : undefined}>{t('nav.inicio')}</a></li>
-            <li><a href={url('/#buscados')}>{t('nav.faltantes')}</a></li>
+            {HOME_EXTRAS && <li><a href={url('/#buscados')}>{t('nav.faltantes')}</a></li>}
             <li><a href={url('buscar')} aria-current={current === 'buscar' ? 'page' : undefined}>{t('nav.buscar')}</a></li>
             <li><a href={url('tareas')} aria-current={current === 'tareas' ? 'page' : undefined}>{t('nav.tareas')}</a></li>
             <li><a href={url('ranking')} aria-current={current === 'ranking' ? 'page' : undefined}>{t('nav.ranking')}</a></li>
@@ -122,7 +123,6 @@ const webmcpToken = (import.meta.env.PUBLIC_WEBMCP_OT_TOKEN ?? '').trim();
     </main>
     <footer class="site-foot">
       <div class="wrap">
-        <p>{t('pie.retiro_1')}<a href={url('derechos')}>{t('pie.retiro_enlace')}</a>{t('pie.retiro_2')}</p>
         <nav class="pie-legal" aria-label={t('pie.legal')}>
           <ul>
             {(['objetivos', 'accesibilidad', 'derechos', 'privacidad', 'cookies', 'creditos'] as const).map((k) => (

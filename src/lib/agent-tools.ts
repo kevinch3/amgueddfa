@@ -2,6 +2,8 @@
 // the open data the site already publishes (/datos/ediciones.json, documentos.json).
 // Pure functions: no DOM, no fetch, so tests-js/agent-tools.test.ts can check them.
 
+import { HOME_EXTRAS } from './features';
+
 export type Dato = { campo: string; etiqueta: string; valor: string; fuente?: string; aporto?: string; [k: string]: unknown };
 export type Edicion = {
   eisteddfod: string;
@@ -122,4 +124,4 @@ export function pagePath(r: PageRequest, festivals: readonly string[]): { path: 
 }
 
 /** Page kinds open_page accepts, for its input schema. */
-export const PAGES = ['home', 'missing_programmes', 'festival', 'edition', 'undated', 'document', 'contribute', 'tasks', 'leaderboard', 'accessibility', 'about', 'privacy', 'sign_in'] as const;
+export const PAGES = ['home', ...(HOME_EXTRAS ? ['missing_programmes' as const] : []), 'festival', 'edition', 'undated', 'document', 'contribute', 'tasks', 'leaderboard', 'accessibility', 'about', 'privacy', 'sign_in'] as const;

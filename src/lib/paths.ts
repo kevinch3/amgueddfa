@@ -1,4 +1,5 @@
 import { DEFAULT_LOCALE, LOCALES, isLocale, locale, type Locale } from './i18n';
+import { idsDe } from './colecciones';
 
 function siteBase(): string {
   return (import.meta.env.BASE_URL ?? '/').replace(/\/+$/, '');
@@ -18,7 +19,9 @@ function isFile(path: string): boolean {
  * paths ("chubut/1937/"); url() adds the collection.
  */
 export const EISTEDDFOD = 'eisteddfod';
-export const EISTEDDFOD_SEGMENTS: ReadonlySet<string> = new Set(['', 'chubut', 'juventud', 'mimosa', 'trevelin', 'item', 'general', 'buscar', 'tareas', 'ranking', 'contribuir', 'datos']);
+/** The archive's own pages besides its festivals. */
+const EISTEDDFOD_PAGES = ['', 'item', 'general', 'buscar', 'tareas', 'ranking', 'contribuir', 'datos'];
+export const EISTEDDFOD_SEGMENTS: ReadonlySet<string> = new Set([...EISTEDDFOD_PAGES, ...idsDe(EISTEDDFOD)]);
 
 /** The collection prefix a path needs ("chubut/1937/" → "eisteddfod/"), or '' for a site-wide path. */
 export function collectionPrefix(path: string): string {

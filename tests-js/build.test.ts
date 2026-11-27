@@ -16,6 +16,7 @@ import { PUBLIC_WINNERS, winnerIds, winnersDoc } from '../src/lib/ganadores';
 import { applyTags } from '../src/lib/tags';
 import type { FestivalSlug, Item } from '../src/lib/types';
 import { MEDIA_BASE, collectionPrefix } from '../src/lib/paths';
+import { FESTIVAL_IDS } from '../src/lib/colecciones';
 import { DEFAULT_LOCALE, LOCALES, LOCALE_INFO, setLocale, t } from '../src/lib/i18n';
 import { CLAIM, EVALUATED, WCAG } from '../src/lib/accesibilidad';
 import { AJUSTES, OPCIONES } from '../src/lib/lectura';
@@ -25,7 +26,7 @@ const DIST = join(__dirname, '..', 'dist');
 const catalog = (raw as { items: Item[] }).items;
 // Where items sit once approved corrections (tags) apply, as the pages see them.
 const placed = applyTags(catalog, approved as any[]);
-const FESTIVALS: FestivalSlug[] = ['chubut', 'juventud', 'mimosa', 'trevelin'];
+const FESTIVALS: FestivalSlug[] = [...FESTIVAL_IDS];
 const festivalName: Record<FestivalSlug, string> = { chubut: 'Eisteddfod del Chubut', juventud: 'Eisteddfod de la Juventud', mimosa: 'Eisteddfod Mimosa Porth Madryn', trevelin: 'Eisteddfod de Trevelin' };
 /**
  * Where a page or file of the Eisteddfod archive is built since it moved under
@@ -62,6 +63,13 @@ describe('static build', () => {
     );
     execSync('npm run build', { cwd: join(__dirname, '..'), stdio: 'pipe', maxBuffer: 256 * 1024 * 1024, env: { ...env, NODE_ENV: 'production' } });
   }, 300_000);
+
+  it('the built site stays under the size budget (docs/reglas.md, rule 6)', async () => {
+    const { LIMITS, measure } = await import('../scripts/presupuesto.mjs');
+    const { total } = measure(DIST);
+    expect(total.bytes, 'bytes').toBeLessThan(LIMITS.bytes);
+    expect(total.files, 'files').toBeLessThan(LIMITS.files);
+  });
 
   it('the header carries the signed-out session link in its HTML, so filling it on load does not shift the page (#173)', () => {
     // #sesion used to be empty until session.ts filled it after the first paint; on a desktop screen its width

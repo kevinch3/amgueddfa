@@ -4,15 +4,13 @@ import re
 from pathlib import Path
 from urllib.parse import urlparse
 
+from scripts.colecciones import BY_FOLDER
+
 from .model import Item
 from .notes import clean_note
 
-FESTIVALS = {
-    "Eisteddfod_del_Chubut": "chubut",
-    "Eisteddfod_de_la_Juventud": "juventud",
-    "Eisteddfod_Mimosa": "mimosa",
-    "Eisteddfod_de_Trevelin": "trevelin",
-}
+# Archive folder → collection id, from src/data/colecciones.json.
+FESTIVALS = BY_FOLDER
 CATEGORIES = {
     "Programa": "programa",
     "Programa_del_dia": "programa-del-dia",

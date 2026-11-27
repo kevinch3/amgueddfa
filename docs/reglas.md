@@ -1,0 +1,46 @@
+# Rules for adding to the museum
+
+amgueddfa.org grows by collections (the four Eisteddfod festivals today; the press,
+the Gorsedd and others later) and by records (documents, videos, articles, photos).
+These rules keep that growth to data changes. Each names the test that enforces it.
+Design and reasons: `docs/superpowers/specs/2026-11-27-reglas-de-datos-design.md`.
+
+1. **A collection exists only as an entry in `src/data/colecciones.json`.**
+   Pages, addresses (`url()` in `src/lib/paths.ts`), contribution forms, the catalog
+   builder (`scripts/colecciones.py`) and the video exports read it. Never write a
+   list of collection ids in code.
+   Test: `tests-js/colecciones.test.ts`, `tests/test_colecciones.py`.
+
+2. **A record has the core fields**: collection, date, type, format, source,
+   visibility, and a rights statement it can resolve (its own, its source's or its
+   collection's).
+   Test: added with the visibility, rights and record-field steps of the design.
+
+3. **A type is added to the site-wide list (`tipos` in `colecciones.json`) with its
+   name in all 7 languages (`categorias.<tipo>`) before any record uses it**, and a
+   collection lists the types it uses.
+   Test: `tests-js/colecciones.test.ts`.
+
+4. **A deep page (one document, one source, one press issue) is built once; browse
+   pages (hub, collection, year, search, tasks) are built in every language.** A new
+   page type says which it is.
+   Test: added with the deep-pages step of the design.
+
+5. **Nothing is public unless its record says so.** A new collection starts with
+   `"visibilidad_por_defecto": "privado"`; children's material follows #29.
+   Test: added with the visibility step of the design.
+
+6. **The built site stays under the budget** in `scripts/presupuesto.mjs`
+   (700 MB, 40,000 files; GitHub Pages serves at most 1 GB, and Cloudflare Pages takes at most 20,000 files). `npm run build` prints
+   the size per folder.
+   Test: `tests-js/build.test.ts` ("size budget").
+
+## Adding a collection
+
+1. Add its entry to `src/data/colecciones.json` (id, group, form, archive folder,
+   types, flags, `privado`).
+2. Add its name to `festivales` and `festivales_cy` in all 7 files of `src/i18n/`.
+3. Run `npm test` and `python3 -m pytest tests`.
+
+A new browsing form (other than `ediciones` and `numeros`) or a new group is the only
+part that needs new pages.

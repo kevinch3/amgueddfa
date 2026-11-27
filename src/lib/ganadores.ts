@@ -6,10 +6,10 @@
  * folded under Resultados on the edition page. Same format as the programa
  * transcriptions (.claude/skills/programa-transcription/SKILL.md).
  */
-import type { FestivalSlug } from './types';
+import { PUBLIC_WINNERS } from './colecciones';
 
 /** Festivals whose winners are public. */
-export const PUBLIC_WINNERS: readonly FestivalSlug[] = ['chubut', 'trevelin'];
+export { PUBLIC_WINNERS };
 
 import { indexDocs, type DocText } from './docmd';
 

@@ -217,7 +217,7 @@ forwarding pages for moved item addresses shrink the same way.
 ### 7. Budget test
 
 A build test fails when the built site passes a set size or file count. Starting
-values: 700 MB and 30,000 files. The build prints both numbers, per top-level folder.
+values: 700 MB and 40,000 files (30,470 files on 2026-11-27; Cloudflare Pages takes at most 20,000, which step 6 should bring the site under). The build prints both numbers, per top-level folder.
 
 ### 8. Rules file
 

@@ -9,6 +9,7 @@ import { t } from './i18n';
 import type { FestivalSlug } from './types';
 import { foldLine, type Cambio } from './video-corrections';
 import { fmtTime, letraAt, lineAt, lineLang, type Transcript } from './video-transcript';
+import { VIDEO_TEXT_FESTIVALS } from './colecciones';
 
 export type Idioma = 'es' | 'cy';
 /** A change to line i. `t` and `antes` are that line as the editor saw it, so a draft reopened on a transcript that
@@ -21,7 +22,7 @@ export type Draft = { video: string; base?: string; lines: Record<number, LineaB
 /** localStorage key prefix: one draft per video, `amg:borrador-video:<id>` (listed on /cookies/). */
 export const DRAFT_KEY = 'amg:borrador-video:';
 /** Only these festivals' videos can be corrected (#29: no children's festival). */
-export const EDITABLE_FESTIVALS = ['chubut', 'trevelin'] as const;
+export const EDITABLE_FESTIVALS: readonly string[] = VIDEO_TEXT_FESTIVALS;
 /** An exact match: the same line within this many seconds (lib/video-corrections.ts uses the same window). */
 const EXACTA = 2;
 

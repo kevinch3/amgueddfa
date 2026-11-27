@@ -1,0 +1,54 @@
+// Size budget of the built site (docs/reglas.md, rule 6). Run after the build:
+//   node scripts/presupuesto.mjs          # prints size and file count per top-level folder
+// tests-js/build.test.ts fails the build when the totals pass LIMITS.
+import { readdirSync, statSync } from 'node:fs';
+import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+/** GitHub Pages serves at most 1 GB; these leave room to see a problem coming. */
+// 2026-11-27: 345 MB and 30,470 files, about 25,000 of them the 7 language copies and forwarding
+// pages; step 6 of the design (deep pages built once) is expected to cut most of those.
+export const LIMITS = { bytes: 700 * 1024 * 1024, files: 40000 };
+
+function walk(dir) {
+  let bytes = 0;
+  let files = 0;
+  for (const name of readdirSync(dir)) {
+    const p = join(dir, name);
+    const st = statSync(p);
+    if (st.isDirectory()) {
+      const sub = walk(p);
+      bytes += sub.bytes;
+      files += sub.files;
+    } else {
+      bytes += st.size;
+      files += 1;
+    }
+  }
+  return { bytes, files };
+}
+
+/** Totals and per top-level folder (files at the root grouped as "."). */
+export function measure(dist) {
+  const parts = new Map();
+  for (const name of readdirSync(dist)) {
+    const p = join(dist, name);
+    const m = statSync(p).isDirectory() ? walk(p) : { bytes: statSync(p).size, files: 1 };
+    const key = statSync(p).isDirectory() ? name : '.';
+    const prev = parts.get(key) ?? { bytes: 0, files: 0 };
+    parts.set(key, { bytes: prev.bytes + m.bytes, files: prev.files + m.files });
+  }
+  const total = [...parts.values()].reduce((a, b) => ({ bytes: a.bytes + b.bytes, files: a.files + b.files }), { bytes: 0, files: 0 });
+  return { total, parts };
+}
+
+const mb = (b) => (b / 1024 / 1024).toFixed(1).padStart(7);
+
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  const dist = fileURLToPath(new URL('../dist', import.meta.url));
+  const { total, parts } = measure(dist);
+  for (const [name, m] of [...parts].sort((a, b) => b[1].bytes - a[1].bytes)) {
+    console.log(`${mb(m.bytes)} MB ${String(m.files).padStart(7)} files  ${name}`);
+  }
+  console.log(`${mb(total.bytes)} MB ${String(total.files).padStart(7)} files  total (limits ${LIMITS.bytes / 1024 / 1024} MB, ${LIMITS.files} files)`);
+}

@@ -79,7 +79,7 @@ npm run build && npm test && python3 -m pytest -q tests
 | What changed | Rerun |
 |---|---|
 | New lyrics or span in `data/letras/` | that video |
-| New approved facts (venue, winners, presenters) for an edition | that edition's videos (only the windows where something heard may be a mishearing of the new names are asked: ~1% for presenters) |
+| New approved facts (venue, winners, presenters) for an edition | that edition's videos (only the windows that may mishear the new names are asked: 3–7%) |
 | Programa transcription added or fixed | that edition's videos |
 | New Welsh files imported (`import-cy`) | those videos |
 | New Spanish-pass files imported (`import-es`) | those videos |
@@ -90,8 +90,8 @@ npm run build && npm test && python3 -m pytest -q tests
 Only windows whose inputs changed are asked again, because each window carries a hash of its inputs.
 A window's context holds the festival, the competition on stage, and **only the facts that something heard there may be a mishearing of**: a non-dictionary word with the name's first letter, spelled nearly alike or with the same sound, or the name split in two (`relevant()` in `context.py`).
 - Names heard right and real words need no fact.
-- Measured 2026-11-27 on 204 videos: presenter facts re-ask 127 of 2,711 windows (21x fewer than before); 76% of the name fixes the model had made keep their fact; 0 cached replies fail the checker (it still accepts every name of the edition, `Window.full_words`).
-- Real words never count as mishearings: the Spanish dictionary (`/usr/share/dict/spanish`, required) plus the frozen `data/palabras-comunes.txt`. Regenerate that file only on purpose (`python3 -m scripts.reconstruct.context --palabras-comunes`): it changes window keys, so dry-run after.
+- Measured 2026-11-27 on 204 videos (share of an edition's windows a new fact re-asks): presentadores 3.9% (26x fewer than before), venue 2.8% (36x), ganador_silla 6.5% (15x), ganador_corona 6.3% (16x). No cached reply fails the checker: it still accepts every name of the edition (`Window.full_words`).
+- A real word counts as a mishearing only when spelled very close to a name with the same start ("nancy" ~ Nanci): the Spanish dictionary (`/usr/share/dict/spanish`, required, pinned by checksum) plus the frozen `data/palabras-comunes.txt`. A name heard exactly brings no fact. Regenerate the list only on purpose (`python3 -m scripts.reconstruct.context --palabras-comunes`): it re-keys windows, so dry-run after. `sound_key` and `_radicals` in `checker.py` are pinned by a test for the same reason.
 - Replies cached before that change are found by the window's `legacy` key. `--migrate-cache` copies them to the new keys (also from the facts of the last 60 snapshot commits); run it after merging and before loading new facts.
 
 ## Reading the result

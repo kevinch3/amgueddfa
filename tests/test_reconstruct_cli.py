@@ -296,3 +296,19 @@ def test_a_legacy_reply_that_needs_a_dropped_name_is_not_copied(tmp_path):
     assert migrate_cache(ws, cache) == 0 and cached_reply(cache, w) is None
     (cache / f"{w.hash}.json").write_text(json.dumps(reply), encoding="utf-8")  # copied by an earlier migration
     assert migrate_cache(ws, cache) == 0 and not (cache / f"{w.hash}.json").exists()
+
+
+def test_dry_run_counts_unsafe_legacy_replies_as_to_ask(tmp_path):
+    from scripts.reconstruct.context import Context
+    from scripts.reconstruct.sources import Line
+    from scripts.reconstruct.windows import make_windows
+    from scripts.reconstruct_videos import would_reuse
+    ctx = Context("Eisteddfod del Chubut 2030.\npresentadores: Antonio Pérez", frozenset({"antonio", "perez"}))
+    (w,) = make_windows([Line(5.0, "buenas noches con tonio", "yt_es", "es")], 60, lambda a, b: ctx, glossary=[])
+    cache = tmp_path / "c"
+    cache.mkdir()
+    (cache / f"{w.legacy}.json").write_text(json.dumps({"lines": [{"t": 5.0, "lang": "es", "text": "con Antonio", "src": ["yt_es"],
+                                                                    "fixes": [{"from": "tonio", "to": "Antonio"}]}]}), encoding="utf-8")
+    assert not would_reuse(cache, w)
+    (cache / f"{w.legacy}.json").write_text('{"lines": []}', encoding="utf-8")
+    assert would_reuse(cache, w) and not (cache / f"{w.hash}.json").exists()

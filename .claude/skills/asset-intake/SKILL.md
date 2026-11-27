@@ -140,7 +140,7 @@ Read **sibling items** of the same edition too: a locutores script points to the
 ## 4. Then the paid and public steps
 
 - **Reconstruction last, per edition.**
-  - A new `venue`/`ganador_*`/`presentadores` fact re-asks only the windows where something heard may be a mishearing of its names: about 1% of an edition.
+  - A new `venue`/`ganador_*`/`presentadores` fact re-asks only the windows where something heard may be a mishearing of its names: 3–7% of an edition (measured 2026-11-27), not all of it.
   - A new **programa** still re-asks the windows of the competitions it names.
   - `start_date`, `end_date` and `other` re-ask nothing.
   1. Land the programa and all facts together.
@@ -160,7 +160,7 @@ Read **sibling items** of the same edition too: a locutores script points to the
 | `build_catalog --only <id>` as a "check" | It uploads to R2: always `--no-upload` until the OK |
 | `ocr.py` on a list of people | It's public; use private tesseract |
 | Vision-model text loaded alone | Needs Tesseract or a second source |
-| Loading facts after the reconstruction | Facts first, then one re-ask per edition (now small: only windows that may mishear the new names) |
+| Loading facts after the reconstruction | Facts first, then one re-ask per edition (3–7% of its windows) |
 | A Kaggle job that "starts at once" | Check it has a GPU: `NvidiaL4` is not offered and runs on CPU. GPU jobs here can queue for hours, so Colab goes first |
 | Trusting an on-screen year | Stage banners misread 2022 as 2002/2922; year changes go to review |
 | `pkill -f <pattern>` on a remote runtime | It kills its own shell; use a `[b]racket` pattern |

@@ -134,6 +134,14 @@ def cached_reply(cache: Path, w) -> Path | None:
     return None
 
 
+def would_reuse(cache: Path, w) -> bool:
+    """What a run would find cached for this window (the dry-run count), without copying anything."""
+    path, old = cache / f"{w.hash}.json", cache / f"{w.legacy}.json" if w.legacy else None
+    if path.exists():
+        return True
+    return old is not None and old.exists() and _safe_copy(w, old)
+
+
 def migrate_from(old: list, new: list, cache: Path) -> int:
     """Replies cached under an older facts revision's whole-context key, copied to the current key where the
     window's filtered context (what the model sees) is the same. The number copied."""
@@ -343,8 +351,7 @@ def main() -> int:
             if not lines:
                 continue
             ws = make_windows(lines, _duration(stem, lines), lambda x, y: video_context(REPO, v, x, y))
-            todo = [w for w in ws if needs_model(w) and not any(
-                (REPLIES / v["id"] / f"{h}.json").exists() for h in (w.hash, w.legacy) if h)]
+            todo = [w for w in ws if needs_model(w) and not would_reuse(REPLIES / v["id"], w)]
             total += len(todo)
             print(f"{v['id']}  {v['title'][:60]}  windows {len(ws)}, to ask {len(todo)}")
         print(f"{len(videos)} video(s), {total} window(s) to ask")

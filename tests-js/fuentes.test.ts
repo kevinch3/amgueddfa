@@ -77,11 +77,12 @@ describe('sourceRef: the "Fuente: …" a block shows instead of a name (#184)', 
   const known = new Set([sourceSlug('https://diariojornada.com.ar/1'), sourceSlug('persona:Ana')]);
   it('links what a contribution cites to its source page', () => {
     const r = sourceRef(contrib({ payload: { fuente: 'Diario Jornada: https://diariojornada.com.ar/1' } }), known)!;
-    expect(r).toEqual({ label: 'Diario Jornada', href: `/fuente/${sourceSlug('https://diariojornada.com.ar/1')}/`, own: true });
+    expect(r).toEqual({ label: 'Diario Jornada', href: `/fuente/${sourceSlug('https://diariojornada.com.ar/1')}/`, own: true, original: 'https://diariojornada.com.ar/1' });
   });
   it('falls back to the cited URL, or plain text, when no page was built', () => {
     expect(sourceRef(contrib({ payload: { fuente: 'X: https://new.example/1' } }), known)!.href).toBe('https://new.example/1');
     expect(sourceRef(contrib({ payload: { fuente: 'Un libro' } }), known)!.href).toBeNull();
+    expect(sourceRef(contrib({ payload: { fuente: 'Un libro' } }), known)!.original).toBeNull();
   });
   it('names the community, never the person, for a contribution that cites nothing', () => {
     const r = sourceRef(contrib({}), known)!;

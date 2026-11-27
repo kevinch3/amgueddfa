@@ -262,6 +262,10 @@ Each is one pull request, merged before the next starts.
 | 3 | Rights on sources, inherited; list of sources needing a decision | — |
 | 4 | Core record fields in the catalog and on videos (`coleccion`, `fecha`, `tipo`, `formato`); old names removed from the site code | part of #26 |
 | 5 | Database: `colecciones` table and foreign keys (maintainer's OK needed) | part of #30 |
+
+Maintainer, 2026-11-27: steps 4 and 5 go together: the database columns and the
+code are renamed in one change (one vocabulary everywhere), applied only with the
+maintainer's OK.
 | 6 | Deep pages built once | size |
 
 Then, separately: a roadmap issue listing these steps with #26, #29, #30 and #31 linked
@@ -272,9 +276,13 @@ listing for the maintainer which are already fixed or no longer apply before clo
 
 - File and function names beyond those given here.
 - How the catalog builder (Python) and the site (TypeScript) share the list file.
-- Forwarding pages or the 404 forwarder for old language-prefixed deep addresses.
+- Forwarding pages or the 404 forwarder for old language-prefixed deep addresses. Done (step 6): the 404 forwarder, to stay under
+  Cloudflare Pages' 20,000 files.
 - How labels are marked and swapped on deep pages, as long as it works without a
   framework and passes the existing accessibility checks.
+  Done (step 6): no marking; the build learns each language's labels from the
+  translated renders it already makes, checks that the swap reproduces every one
+  exactly, then deletes them (`scripts/paginas_unicas.mjs`).
 
 ## Open, for later
 

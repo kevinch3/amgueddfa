@@ -849,6 +849,8 @@
       "dura_sesion": "Hasta que cierre la sesión.",
       "dura_verificador": "Se elimina al terminar el ingreso.",
       "dura_tz": "Hasta que cierre la sesión.",
+      "idioma_para": "Mostrar cada documento en el idioma de la última página que leyó.",
+      "dura_idioma": "Hasta que borre los datos del sitio en su navegador.",
       "dura_nocontar": "Hasta que vuelva a activar el conteo.",
       "dura_lectura": "Hasta que los restablezca.",
       "dura_borrador": "Hasta que envíe o descarte esas correcciones.",

@@ -6,7 +6,7 @@
   "license": "AGPL-3.0-only",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && node scripts/redirect_stubs.mjs && pagefind --site dist --force-language es && node scripts/presupuesto.mjs",
+    "build": "astro build && node scripts/paginas_unicas.mjs && node scripts/redirect_stubs.mjs && pagefind --site dist --force-language es && node scripts/presupuesto.mjs",
     "preview": "astro preview",
     "astro": "astro",
     "test": "vitest run"

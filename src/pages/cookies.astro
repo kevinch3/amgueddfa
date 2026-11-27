@@ -4,6 +4,7 @@ import TranslationNote from '../components/TranslationNote.astro';
 import { OPT_OUT_KEY } from '../lib/consent';
 import { LECTURA_KEY } from '../lib/lectura';
 import { DRAFT_KEY } from '../lib/transcript-draft';
+import { IDIOMA_KEY } from '../lib/pagina-unica';
 import { t } from '../lib/i18n';
 import { url } from '../lib/paths';
 
@@ -13,6 +14,7 @@ const rows = [
   { key: 'sb-<proyecto>-auth-token', para: 'sesion_para', tipo: 'tipo_necesaria', dura: 'dura_sesion' },
   { key: 'sb-<proyecto>-auth-token-code-verifier', para: 'verificador_para', tipo: 'tipo_necesaria', dura: 'dura_verificador' },
   { key: 'amg:tz', para: 'tz_para', tipo: 'tipo_preferencia', dura: 'dura_tz' },
+  { key: IDIOMA_KEY, para: 'idioma_para', tipo: 'tipo_preferencia', dura: 'dura_idioma' },
   { key: OPT_OUT_KEY, para: 'nocontar_para', tipo: 'tipo_preferencia', dura: 'dura_nocontar' },
   { key: LECTURA_KEY, para: 'lectura_para', tipo: 'tipo_preferencia', dura: 'dura_lectura' },
   { key: `${DRAFT_KEY}<video>`, para: 'borrador_para', tipo: 'tipo_necesaria', dura: 'dura_borrador' },

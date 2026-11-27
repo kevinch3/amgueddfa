@@ -26,10 +26,17 @@ Design and reasons: `docs/superpowers/specs/2026-11-27-reglas-de-datos-design.md
    collection lists the types it uses.
    Test: `tests-js/colecciones.test.ts`.
 
-4. **A deep page (one document, one source, one press issue) is built once; browse
-   pages (hub, collection, year, search, tasks) are built in every language.** A new
-   page type says which it is.
-   Test: added with the deep-pages step of the design.
+4. **A deep page (one document, one source, one press issue) is built once, at its
+   Spanish address; browse pages (hub, collection, year, search, tasks) are built in
+   every language.** A visitor in another language gets the deep page with its labels
+   swapped in the browser (`?l=xx`, else the language of the last page they read),
+   from a dictionary `scripts/paginas_unicas.mjs` learns at each build; the build fails
+   unless the swap reproduces every translated render exactly, then deletes them.
+   Mark archive and community text with `lang={contentLang()}` so it is never
+   swapped. A new deep page type is added to `DEEP_PREFIXES` in
+   `src/lib/pagina-unica.ts`.
+   Test: the build itself (`scripts/paginas_unicas.mjs`), `tests-js/pagina-unica.test.ts`,
+   `tests-js/build.test.ts`.
 
 5. **Nothing is public unless its record says so.** Every record has one level:
    `publico`, `solo_ficha` (page and notice, no files or text) or `privado` (left out of
@@ -42,7 +49,7 @@ Design and reasons: `docs/superpowers/specs/2026-11-27-reglas-de-datos-design.md
    Test: `tests-js/visibilidad.test.ts`, `tests/test_visibilidad.py`.
 
 6. **The built site stays under the budget** in `scripts/presupuesto.mjs`
-   (700 MB, 40,000 files; GitHub Pages serves at most 1 GB, and Cloudflare Pages takes at most 20,000 files). `npm run build` prints
+   (700 MB, 20,000 files: GitHub Pages serves at most 1 GB, Cloudflare Pages takes at most 20,000 files). `npm run build` prints
    the size per folder.
    Test: `tests-js/build.test.ts` ("size budget").
 

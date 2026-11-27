@@ -23,6 +23,8 @@
 *, *::before, *::after { box-sizing: border-box; }
 
 html { -webkit-text-size-adjust: 100%; }
+/* A deep page swapping its labels into the visitor's language (scripts/pagina-unica.ts): never a flash of Spanish. */
+html.traduciendo body { visibility: hidden; }
 
 body {
   margin: 0;

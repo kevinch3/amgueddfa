@@ -6,9 +6,9 @@ import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 /** GitHub Pages serves at most 1 GB; these leave room to see a problem coming. */
-// 2026-11-27: 345 MB and 30,470 files, about 25,000 of them the 7 language copies and forwarding
-// pages; step 6 of the design (deep pages built once) is expected to cut most of those.
-export const LIMITS = { bytes: 700 * 1024 * 1024, files: 40000 };
+// Cloudflare Pages takes at most 20,000 files, so staying under it keeps that host open.
+// 2026-11-27: 149 MB and 13,321 files once deep pages were built once (345 MB and 30,470 before).
+export const LIMITS = { bytes: 700 * 1024 * 1024, files: 20000 };
 
 function walk(dir) {
   let bytes = 0;

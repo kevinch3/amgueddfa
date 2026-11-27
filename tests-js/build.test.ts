@@ -16,6 +16,8 @@ import { PUBLIC_WINNERS, winnerIds, winnersDoc } from '../src/lib/ganadores';
 import { applyTags } from '../src/lib/tags';
 import type { FestivalSlug, Item } from '../src/lib/types';
 import { MEDIA_BASE, collectionPrefix } from '../src/lib/paths';
+import { isDeep } from '../src/lib/pagina-unica';
+import { deepPages, readDict, translateHtml } from '../scripts/paginas_unicas.mjs';
 import { FESTIVAL_IDS } from '../src/lib/colecciones';
 import { DEFAULT_LOCALE, LOCALES, LOCALE_INFO, setLocale, t } from '../src/lib/i18n';
 import { CLAIM, EVALUATED, WCAG } from '../src/lib/accesibilidad';
@@ -43,7 +45,25 @@ const at = (p: string): string => {
 };
 
 const distPath = (...parts: string[]) => join(DIST, at(join(...parts)));
-const read = (p: string) => readFileSync(distPath(p), 'utf8');
+const OTHER_LANGS = LOCALES.filter((l) => l !== DEFAULT_LOCALE) as string[];
+const dicts = new Map<string, Record<string, string | string[]>>();
+/**
+ * A translated deep page (docs/reglas.md, rule 4) is not a file: the visitor's browser
+ * builds it from the Spanish page with the build's dictionary, by the rules the build
+ * checked against every translated render (scripts/paginas_unicas.mjs).
+ */
+function deepIn(rel: string): string | null {
+  const parts = rel.split('/');
+  if (!OTHER_LANGS.includes(parts[0])) return null;
+  const rest = parts.slice(1).join('/');
+  if (!isDeep(rest.replace(/index\.html$/, ''))) return null;
+  if (!dicts.has(parts[0])) dicts.set(parts[0], readDict(DIST, parts[0]));
+  return translateHtml(readFileSync(join(DIST, rest), 'utf8'), dicts.get(parts[0])!, parts[0]);
+}
+const read = (p: string) => {
+  const rel = at(p);
+  return deepIn(rel) ?? readFileSync(join(DIST, rel), 'utf8');
+};
 /** Every built HTML page (media excluded). */
 const htmlFiles = (d = DIST): string[] =>
   readdirSync(d).flatMap((n) => {
@@ -106,12 +126,16 @@ describe('static build', () => {
         checked++;
       }
     }
-    expect(checked).toBeGreaterThan(8000);
+    // Translated deep pages are not built (rule 4): the 404 page forwards their old addresses.
+    expect(checked).toBeGreaterThan(4000);
     const stub = raw('chubut/1937/index.html');
     expect(stub).toContain('location.replace("/eisteddfod/chubut/1937/" + location.search + location.hash)');
     expect(stub).toContain('<link rel="canonical" href="https://amgueddfa.org/eisteddfod/chubut/1937/">');
     expect(stub).toContain('<meta name="robots" content="noindex">');
-    expect(raw('cy/item/' + catalog.find((i) => !i.restricted)!.id + '/index.html')).toContain('location.replace("/cy/eisteddfod/item/');
+    expect(raw('item/' + catalog.find((i) => !i.restricted)!.id + '/index.html')).toContain('location.replace("/eisteddfod/item/');
+    // A translated deep page is not built (rule 4): the 404 page sends its old and new addresses to the Spanish page with ?l=.
+    expect(existsSync(join(DIST, 'cy', 'item', catalog.find((i) => !i.restricted)!.id))).toBe(false);
+    expect(raw('404.html')).toContain('q.set(param, lead)');
     // Files cannot forward: open data and Markdown twins are copied, byte for byte.
     expect(raw('datos/ediciones.json')).toBe(raw('eisteddfod/datos/ediciones.json'));
     expect(raw('chubut/1937.md')).toBe(raw('eisteddfod/chubut/1937.md'));
@@ -875,19 +899,23 @@ describe('static build', () => {
     };
     const pub = () => placed.find((i) => !i.restricted && !i.hidden)!;
 
-    it('each language has a copy of every Spanish page', () => {
+    it('each language has a copy of every Spanish page but deep pages, which are built once (rule 4)', () => {
       const pages = spanishPages();
       expect(pages.length).toBeGreaterThan(500);
+      const deep = (p: string) => isDeep(at(p).replace(/index\.html$/, '')); // old Spanish addresses (#189) included
+      expect(pages.filter(deep).length).toBeGreaterThan(1500);
       for (const l of OTHERS) {
-        const missing = pages.map((p) => (p === '404.html' ? '404/index.html' : p)).filter((p) => !existsSync(distPath(l, p)));
+        const missing = pages.filter((p) => !deep(p)).map((p) => (p === '404.html' ? '404/index.html' : p)).filter((p) => !existsSync(distPath(l, p)));
         expect(missing, l).toEqual([]);
+        expect(pages.filter(deep).filter((p) => existsSync(join(DIST, l, p))), l).toEqual([]);
+        expect(Object.keys(readDict(DIST, l)).length, l).toBeGreaterThan(500);
       }
     });
 
     it('pages say their language, canonical address and every alternate', () => {
       for (const l of LOCALES) {
         const prefix = l === DEFAULT_LOCALE ? '' : `${l}/`;
-        for (const page of ['', 'eisteddfod/', 'eisteddfod/chubut/1937/', `eisteddfod/item/${pub().id}/`, 'privacidad/']) {
+        for (const page of ['', 'eisteddfod/', 'eisteddfod/chubut/1937/', 'privacidad/']) {
           const html = readFileSync(join(DIST, `${prefix}${page}index.html`), 'utf8');
           expect(html, `${l} ${page}`).toContain(`<html lang="${LOCALE_INFO[l].tag}"`);
           expect(html, `${l} ${page}`).toContain(`<link rel="canonical" href="${SITE}/${prefix}${page}"`);
@@ -898,6 +926,12 @@ describe('static build', () => {
           expect(html).toContain(`<link rel="alternate" hreflang="x-default" href="${SITE}/${page}"`);
           expect(html).toContain(`<meta property="og:locale" content="${LOCALE_INFO[l].og}"`);
         }
+        // A deep page: one address for every language, no alternates; the browser sets the language.
+        const page = `eisteddfod/item/${pub().id}/`;
+        const html = l === DEFAULT_LOCALE ? read(`${page}index.html`) : deepIn(`${l}/${page}index.html`)!;
+        expect(html, l).toContain(`<html lang="${LOCALE_INFO[l].tag}"`);
+        expect(html, l).toContain(`<link rel="canonical" href="${SITE}/${page}"`);
+        expect(html, l).not.toContain('<link rel="alternate" hreflang=');
       }
     });
 
@@ -925,7 +959,7 @@ describe('static build', () => {
           const bad = tags
             .filter((a) => !/\shreflang=/.test(a)) // the language menu links to the others on purpose
             .map((a) => a.match(/href="(\/[^"]*)"/)?.[1])
-            .filter((h): h is string => !!h && !h.startsWith(`/${l}/`) && !/\.[a-z0-9]+(?:[?#].*)?$/i.test(h.split('?')[0]));
+            .filter((h): h is string => !!h && !h.startsWith(`/${l}/`) && !(isDeep(h) && new URL(h, SITE).searchParams.get('l') === l) && !/\.[a-z0-9]+(?:[?#].*)?$/i.test(h.split('?')[0]));
           expect(bad, `${l} ${page}`).toEqual([]);
         }
         expect(read(`${l}/index.html`)).toContain('src="/contacto.png"');
@@ -982,9 +1016,10 @@ describe('static build', () => {
       for (const l of OTHERS) {
         expect(sitemap, l).toContain(`<loc>${SITE}/${l}/</loc>`);
         expect(sitemap, l).toContain(`<loc>${SITE}/${l}/eisteddfod/</loc>`);
-        expect(sitemap, l).toContain(`<loc>${SITE}/${l}/eisteddfod/item/${pub().id}/</loc>`);
+        expect(sitemap, l).not.toContain(`<loc>${SITE}/${l}/eisteddfod/item/`);
         expect(sitemap, l).toContain(`<loc>${SITE}/${l}/eisteddfod/chubut/1937/</loc>`);
       }
+      expect(sitemap).toContain(`<loc>${SITE}/eisteddfod/item/${pub().id}/</loc>`);
       for (const p of ['admin', 'perfil', 'ingresar', 'contribuir']) expect(sitemap).not.toContain(`/${p}/`);
       for (const i of catalog.filter((x) => x.restricted)) expect(sitemap, i.id).not.toContain(`/item/${i.id}/`);
       const robots = read('robots.txt');
@@ -1051,9 +1086,12 @@ describe('static build', () => {
         // Spanish interface strings this language words differently, cut at their {placeholders}.
         const needles = [...new Set(es.filter(([k, v]) => own.get(k) !== v && !v.startsWith('http')).flatMap(([, v]) => v.split(/\{\w+\}/).map((x) => x.trim())).filter((x) => x.length >= 12))];
         const leaks: string[] = [];
-        for (const file of htmlFiles(distPath(l))) {
+        for (const file of [...htmlFiles(distPath(l)), ...deepPages(DIST).map((p: string) => join(DIST, l, p, 'index.html'))]) {
           pages++;
-          let text = pageText(readFileSync(file, 'utf8'), LOCALE_INFO[l].tag.split('-')[0]);
+          const swapped = deepIn(file.slice(DIST.length + 1));
+          // A deep page has one address, described in Spanish for search engines: what a visitor reads is its title and body.
+          const html = swapped === null ? readFileSync(file, 'utf8') : swapped.replace(/<head>[\s\S]*<\/head>/, (h) => h.match(/<title>[\s\S]*?<\/title>/)?.[0] ?? '');
+          let text = pageText(html, LOCALE_INFO[l].tag.split('-')[0]);
           for (const c of content) text = text.split(c).join(' ');
           const hit = needles.find((n) => text.includes(n));
           if (hit) leaks.push(`${file.slice(DIST.length + 1)}: ${hit}`);
@@ -1129,9 +1167,10 @@ describe('static build', () => {
     it('archive and community text is marked as Spanish on translated pages only (WCAG 3.1.2)', () => {
       const item = catalog.find((i) => !i.restricted && !i.hidden)!;
       expect(read(`en/item/${item.id}/index.html`)).toMatch(/<h1 lang="es">/);
-      expect(read(`item/${item.id}/index.html`)).toMatch(/<h1>/);
+      // A deep page is read in any language from its Spanish page, so it marks content there too (rule 4).
+      expect(read(`item/${item.id}/index.html`)).toMatch(/<h1 lang="es">/);
       expect(read('fr/general/chubut/index.html')).toMatch(/<span lang="es">/);
-      for (const f of ['index.html', 'chubut/1937/index.html', `item/${item.id}/index.html`]) expect(read(f), f).not.toContain('lang="es"');
+      for (const f of ['index.html', 'chubut/1937/index.html']) expect(read(f), f).not.toContain('lang="es"');
     });
 
     it('WebMCP: tools are registered from every page, forms are agent-fillable but never auto-submitted', () => {

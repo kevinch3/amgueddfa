@@ -209,7 +209,7 @@
   ],
   [
    399.7,
-   "Se invita a al poeta o a la poeta, ganador o ganadora, que responde al seudónimo de Tehuel a ponerse de pie al toque de la trompeta."
+   "Se invita a- a'l poeta o a' la poeta, ganador o ganadora, que responde a'l pseudonimo de juel a ponerse de pie al toque de la trompeta."
   ],
   [
    406.1,
@@ -225,7 +225,7 @@
   ],
   [
    429.7,
-   "Vuelvo a preguntar, se encuentre en este salón el o la poeta cuyo seudónimo es Tehuel, lo invitamos a que se ponga de pie."
+   "Vuelvo a preguntar, se encuentre en este salón el o la poeta cuyo pseudonimo es de Vuel, lo invitamos a que se ponga de pie."
   ],
   [
    439.9,
@@ -428,8 +428,8 @@
  ],
  "ventanas": {
   "total": 10,
-  "modelo": 10,
-  "reglas": 0,
+  "modelo": 9,
+  "reglas": 1,
   "vacias": 0
  }
 }

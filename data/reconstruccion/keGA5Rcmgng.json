@@ -157,7 +157,7 @@
   ],
   [
    189.92,
-   "Bydd Karen Evans ac Arturo Lownes yn anrhydeddu 'r beirdd gyda emyn, y senior"
+   "Bydd Karen Evans ac Arturo Lownes yn anrhydenu 'r beirdd gyda emyn, y senior"
   ],
   [
    196.08,
@@ -973,11 +973,11 @@
   ],
   [
    1397.4,
-   "bárbico del Eisteddfod de Chubut Central Health, así como del premio Terren del Eisteddfod Mimosa"
+   "bárbico del Eisteddfod de Chubut Central Health, así como del premio Trevelin del Eisteddfod Mimosa"
   ],
   [
-   1401.24,
-   "como el premio TEDEN del"
+   1398.4,
+   "Eisteddfod,"
   ],
   [
    1404.18,
@@ -1005,7 +1005,7 @@
   ],
   [
    1441.6,
-   "Y ahora es momento de dar inicio a la ceremonia Premio Corona de Plata de Cervo Trevelin."
+   "Y ahora es momento de dar inicio a la ceremonia Premio Corona de Plata de Eisteddfod Trevelin."
   ],
   [
    1448.86,
@@ -1188,10 +1188,6 @@
    "Es un placer revelar que el suelo me..."
   ],
   [
-   1759.6,
-   "Gracias."
-  ],
-  [
    1761.26,
    "corresponde a Alejandra Vilela."
   ],
@@ -1208,16 +1204,12 @@
    "y artesanías en madera, dibujo y pintura."
   ],
   [
-   1798.88,
-   "Vecina ora de los Ipresos"
-  ],
-  [
    1801.28,
    "desde hace seis años."
   ],
   [
    1803.54,
-   "Este es nuestro poeta Alejandra Vilela."
+   "Este es nuestro poeta Alejandra Ileva."
   ],
   [
    1820.8,
@@ -2364,7 +2356,7 @@
    "whisper_es"
   ],
   [
-   "whisper_es"
+   "yt_es"
   ],
   [
    "whisper_es"
@@ -2534,12 +2526,6 @@
   ],
   [
    "whisper_es"
-  ],
-  [
-   "whisper_es"
-  ],
-  [
-   "cy"
   ],
   [
    "whisper_es"
@@ -2862,8 +2848,8 @@
  "mezcla": true,
  "ventanas": {
   "total": 47,
-  "modelo": 39,
-  "reglas": 8,
+  "modelo": 38,
+  "reglas": 9,
   "vacias": 0
  }
 }

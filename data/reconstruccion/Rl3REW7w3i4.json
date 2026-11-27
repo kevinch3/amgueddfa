@@ -21,19 +21,23 @@
   ],
   [
    10.7,
-   "dispone Hola buenas noches bueno"
+   "dispone. Hola, buenas noches, bueno"
   ],
   [
    13.6,
    "esperamos acá que nos coloquen muchas"
   ],
   [
+   16.2,
+   "otro"
+  ],
+  [
    17.4,
-   "micrófono Vengo a pedir este limosna"
+   "micrófono. Vengo a pedir este limosna"
   ],
   [
    20.4,
-   "este Así que si alguien cuando yo me"
+   "este. Así que si alguien cuando yo me"
   ],
   [
    22.4,
@@ -41,7 +45,7 @@
   ],
   [
    27.0,
-   "buenísimo Bueno este instrumento se"
+   "buenísimo. Bueno, este instrumento se"
   ],
   [
    29.3,
@@ -73,7 +77,15 @@
   ],
   [
    49.2,
-   "de la Mar Cuándo quiera maestro un por"
+   "de la Mar. Cuándo quiera, maestro, un por"
+  ],
+  [
+   58.9,
+   "favor"
+  ],
+  [
+   66.8,
+   "de la"
   ],
   [
    71.5,
@@ -86,6 +98,10 @@
   [
    80.6,
    "niña de la"
+  ],
+  [
+   87.2,
+   "am de la"
   ],
   [
    93.6,
@@ -101,11 +117,11 @@
   ],
   [
    109.5,
-   "Dicen Los"
+   "Dicen los"
   ],
   [
    113.8,
-   "Pescadores que habrá"
+   "pescadores que habrá"
   ],
   [
    117.9,
@@ -120,8 +136,16 @@
    "dicen tus ojos"
   ],
   [
+   130.3,
+   "paros que estás"
+  ],
+  [
    135.6,
    "creciendo como la"
+  ],
+  [
+   144.0,
+   "am de la"
   ],
   [
    150.6,
@@ -130,6 +154,14 @@
   [
    155.4,
    "nana que ahora"
+  ],
+  [
+   159.3,
+   "teme de la"
+  ],
+  [
+   164.9,
+   "am de"
   ],
   [
    170.2,
@@ -177,10 +209,41 @@
   ],
   [
    226.8,
-   "Gracias"
+   "am Gracias"
+  ],
+  [
+   229.9,
+   "tito"
   ]
  ],
  "fuentes": [
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
+  [
+   "yt_es"
+  ],
   [
    "yt_es"
   ],

@@ -1,8 +1,9 @@
 ---
 // "Fuente: …" under a contribution (fact, memory, note, transcription, upload):
 // links to the source page, where the contributor is named (#184, #185).
-// `compact` (edition facts): only a small muted "fuente" link after the value.
-// Without a source page it falls back to the long form.
+// `compact` (edition facts): a small muted "fuente" link after the value, to the cited original when
+// there is one (else the source page), with the full "Fuente: …" as its tooltip.
+// With nothing to link it falls back to the long form.
 // The same markup src/scripts/fuente-ref.ts builds for live rows.
 import { sourceRef } from '../lib/fuentes';
 import type { Contribution } from '../lib/contrib';
@@ -14,9 +15,11 @@ const ref = sourceRef(c, known);
 const [before, after] = tAround('edicion.fuente', 'fuente');
 const lang = ref?.own ? contentLang() : undefined;
 const Tag = tag;
+const full = ref ? t('edicion.fuente', { fuente: ref.label }) : '';
+const target = ref ? ref.original ?? ref.href : null;
 ---
-{ref && (compact && ref.href ? (
-  <Tag class="muted fuente fuente-corta"> <a href={ref.href}>{t('edicion.fuente_corta')}</a></Tag>
+{ref && (compact && target ? (
+  <Tag class="muted fuente fuente-corta"> <a href={target} title={full} aria-label={full} rel={ref.original ? 'noopener noreferrer nofollow' : undefined}>{t('edicion.fuente_corta')}</a></Tag>
 ) : (
   <Tag class="muted small fuente">{before}<span lang={lang}>{ref.href ? <a href={ref.href}>{ref.label}</a> : ref.label}</span>{after}</Tag>
 ))}

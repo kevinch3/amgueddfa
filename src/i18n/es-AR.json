@@ -133,6 +133,7 @@
   "edicion": {
     "tapa_alt": "Tapa del programa de {festival} {year}",
     "fuente": "Fuente: {fuente}",
+    "fuente_corta": "fuente",
     "pendiente": "Pendiente de revisión",
     "pendientes_titulo": "Tus aportes en revisión",
     "archivo_pdf": "Archivo PDF",

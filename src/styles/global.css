@@ -492,7 +492,10 @@ fieldset.campo { border: 0; padding: 0; }
 
 /* Where a fact comes from, on its own line under it. */
 /* The fact's source: present but secondary to the fact (issue #78); long URLs wrap. */
-.hechos .fuente { display: block; margin-top: 0.1rem; font-size: 0.85rem; line-height: 1.35; font-style: italic; color: var(--ink-soft); overflow-wrap: anywhere; }
+.hechos .fuente-corta { display: inline; margin: 0 0 0 0.35em; font-size: 0.75rem; font-style: normal; white-space: nowrap; }
+.hechos .fuente-corta a { color: inherit; text-decoration-color: var(--rule); }
+.hechos .fuente-corta a:hover, .hechos .fuente-corta a:focus-visible { color: var(--ink); }
+.hechos .fuente:not(.fuente-corta) { display: block; margin-top: 0.1rem; font-size: 0.85rem; line-height: 1.35; font-style: italic; color: var(--ink-soft); overflow-wrap: anywhere; }
 
 /* Edition blocks that open and close (components/Bloque.astro, issue #78) */
 .bloque > summary { list-style: none; cursor: pointer; display: flex; align-items: baseline; gap: 0.5rem; border-radius: 4px; }

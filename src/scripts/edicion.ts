@@ -36,8 +36,8 @@ export function renderFacts(mount: HTMLElement, facts: Contribution[]): void {
     const row = el('div');
     const dd = el('dd');
     dd.append(factInOriginal(c) ? original(el('span', undefined, value)) : value);
-    // "Fuente: …" links to the source page, where the contributor is named (#184, #185).
-    const src = sourceNode(c);
+    // A small "fuente" link to the source page, where the contributor is named (#184, #185).
+    const src = sourceNode(c, 'span', true);
     if (src) dd.append(src);
     row.append(el('dt', undefined, label), dd);
     dl.append(row);

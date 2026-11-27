@@ -133,6 +133,7 @@
   "edicion": {
     "tapa_alt": "Clawr rhaglen {festival} {year}",
     "fuente": "Ffynhonnell: {fuente}",
+    "fuente_corta": "ffynhonnell",
     "pendiente": "Yn aros am adolygiad",
     "pendientes_titulo": "Eich cyfraniadau sy'n aros am adolygiad",
     "archivo_pdf": "Ffeil PDF",

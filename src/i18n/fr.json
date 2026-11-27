@@ -133,6 +133,7 @@
   "edicion": {
     "tapa_alt": "Couverture du programme de l'{festival} {year}",
     "fuente": "Source : {fuente}",
+    "fuente_corta": "source",
     "pendiente": "En attente d'examen",
     "pendientes_titulo": "Vos contributions en cours d'examen",
     "archivo_pdf": "Fichier PDF",

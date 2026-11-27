@@ -133,6 +133,7 @@
   "edicion": {
     "tapa_alt": "Omslaget till programmet för {festival} {year}",
     "fuente": "Källa: {fuente}",
+    "fuente_corta": "källa",
     "pendiente": "Väntar på granskning",
     "pendientes_titulo": "Dina bidrag som granskas",
     "archivo_pdf": "PDF-fil",

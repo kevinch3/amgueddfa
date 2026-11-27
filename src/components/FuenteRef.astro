@@ -1,18 +1,22 @@
 ---
 // "Fuente: …" under a contribution (fact, memory, note, transcription, upload):
 // links to the source page, where the contributor is named (#184, #185).
+// `compact` (edition facts): only a small muted "fuente" link after the value.
+// Without a source page it falls back to the long form.
 // The same markup src/scripts/fuente-ref.ts builds for live rows.
 import { sourceRef } from '../lib/fuentes';
 import type { Contribution } from '../lib/contrib';
-import { contentLang, tAround } from '../lib/i18n';
+import { contentLang, t, tAround } from '../lib/i18n';
 
-interface Props { c: Contribution; known: ReadonlySet<string>; tag?: 'span' | 'p' }
-const { c, known, tag = 'span' } = Astro.props;
+interface Props { c: Contribution; known: ReadonlySet<string>; tag?: 'span' | 'p'; compact?: boolean }
+const { c, known, tag = 'span', compact = false } = Astro.props;
 const ref = sourceRef(c, known);
 const [before, after] = tAround('edicion.fuente', 'fuente');
 const lang = ref?.own ? contentLang() : undefined;
 const Tag = tag;
 ---
-{ref && (
+{ref && (compact && ref.href ? (
+  <Tag class="muted fuente fuente-corta"> <a href={ref.href}>{t('edicion.fuente_corta')}</a></Tag>
+) : (
   <Tag class="muted small fuente">{before}<span lang={lang}>{ref.href ? <a href={ref.href}>{ref.label}</a> : ref.label}</span>{after}</Tag>
-)}
+))}

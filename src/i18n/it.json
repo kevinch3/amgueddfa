@@ -143,7 +143,6 @@
     "faltan_secciones": "Di quest'anno non abbiamo ancora: {lista}. Hai qualcosa?",
     "otras_secciones": "Altre sezioni",
     "no_realizada": "Non si è svolta",
-    "aportado_por": "Contributo di {nombre}",
     "subir": "Carica un documento",
     "datos": "Aggiungi un dato",
     "recuerdo": "Racconta un ricordo",
@@ -1148,5 +1147,50 @@
     "con_transcripcion": "con trascrizione",
     "ficha": "Vedi la scheda",
     "leer_transcripcion": "Trascrizione"
+  },
+  "fuentes": {
+    "miga": "Fonte",
+    "titulo_persona": "Contributi di {nombre}",
+    "descripcion": "{fuente}: da dove viene parte dell'archivio. Com'era, i suoi dati e chi l'ha fornita.",
+    "tipos": {
+      "facebook": "Post di Facebook",
+      "instagram": "Post di Instagram",
+      "wayback": "Copia della Wayback Machine",
+      "drive": "File su Google Drive",
+      "papurau": "Giornali gallesi (Biblioteca nazionale del Galles)",
+      "casgliad": "Casgliad y Werin Cymru",
+      "commons": "Wikimedia Commons",
+      "web": "Sito web",
+      "personal": "Archivio personale",
+      "publicacion": "Pubblicazione o citazione",
+      "comunidad": "Contributo della comunità"
+    },
+    "captura_titulo": "Com'era",
+    "captura_ayuda": "Ciò che abbiamo conservato di questa fonte quando l'abbiamo consultata: le immagini e il testo, così com'erano.",
+    "sin_captura": "Di questa fonte non abbiamo conservato immagini: qui sotto ci sono i suoi dati e ciò che l'archivio ne ha preso.",
+    "datos_titulo": "Dati della fonte",
+    "tipo": "Tipo",
+    "original": "Indirizzo originale",
+    "ver_original": "Apri l'originale",
+    "copias": "Copie archiviate",
+    "copias_ver": "Cerca nella Wayback Machine",
+    "consultado": "Consultata",
+    "derechos": "Diritti",
+    "aportado_por": "Fornito da",
+    "cuenta": "Nell'archivio",
+    "documentos_titulo": "Documenti di questa fonte",
+    "aportes_titulo": "Dati e contributi che la citano",
+    "aportes_persona_titulo": "Ciò che ha fornito",
+    "ver": "Vedi",
+    "comunidad": "contributo della comunità",
+    "aporte_tipos": {
+      "fact": "Dato",
+      "memory": "Ricordo",
+      "note": "Nota",
+      "transcription": "Trascrizione",
+      "upload": "Documento"
+    },
+    "un_aporte": "1 contributo",
+    "n_aportes": "{n} contributi"
   }
 }

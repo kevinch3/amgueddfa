@@ -4,7 +4,10 @@ import Mount from '../../components/Mount.astro';
 import Viewer from '../../components/Viewer.astro';
 import Transcripcion from '../../components/Transcripcion.astro';
 import approvedRaw from '../../../data/approved/contributions.json';
-import { byLine, jsonForScript, type Contribution } from '../../lib/contrib';
+import { jsonForScript, type Contribution } from '../../lib/contrib';
+import FuenteRef from '../../components/FuenteRef.astro';
+import { itemSourceKey, sourceSlug } from '../../lib/fuentes';
+import { contributionSourceSlugs, sourceSlugs } from '../../lib/fuentes-site';
 import { transcriptionDoc } from '../../lib/transcripciones';
 import { ocrFor } from '../../lib/ocr';
 import { allItems, pageUrls, thumbUrl } from '../../lib/catalog';
@@ -21,6 +24,10 @@ export function getStaticPaths() {
 }
 
 const { item } = Astro.props as { item: Item };
+// The source card links to the source page (#185); contributions name their source the same way (#184).
+const known = sourceSlugs();
+const sourceKey = sourceSlug(itemSourceKey(item));
+const sourcePage = !item.hidden && known.has(sourceKey) ? url(`fuente/${sourceKey}/`) : null;
 const fest = festivalName(item.festival);
 const hasPages = pageUrls(item).length > 0;
 const TABLE_COLS = ['numero', 'categoria', 'idioma', 'descripcion'];
@@ -164,7 +171,7 @@ const retrieved = item.retrieved
           <h2 id="transcripciones-t">{t('item.transcripciones_aportes')}</h2>
           <Mount id="transcripciones" festival={item.festival} year={item.year} item={item.id}>{contributed.length > 0 && (
             <ul class="recuerdos">
-              {contributed.map((c) => <li><blockquote lang={contentLang()}>{String(c.payload?.text ?? '')}</blockquote>{byLine(c) && <p class="muted small">{byLine(c)}</p>}</li>)}
+              {contributed.map((c) => <li><blockquote lang={contentLang()}>{String(c.payload?.text ?? '')}</blockquote><FuenteRef c={c} known={known} tag="p" /></li>)}
             </ul>
           )}</Mount>
           <script type="application/json" id="transcripciones-data" set:html={jsonForScript(contributed)}></script>
@@ -175,11 +182,8 @@ const retrieved = item.retrieved
     <aside class="side">
       <section class="sourcecard" aria-labelledby="fuente-t">
         <h2 id="fuente-t">{t('item.fuente')}</h2>
-        <p>
-          {item.source_url
-            ? <a href={item.source_url} rel="noopener noreferrer nofollow">{item.source_label}</a>
-            : item.source_label}
-        </p>
+        <p lang={contentLang()}>{sourcePage ? <a href={sourcePage}>{item.source_label}</a> : item.source_label}</p>
+        {item.source_url && <p class="small"><a href={item.source_url} rel="noopener noreferrer nofollow">{t('item.fuente_ver')}</a></p>}
         {retrieved && <p class="muted small">{t('item.consultado', { fecha: retrieved })}</p>}
         <div data-live="rights" hidden={!item.rights}>
           <h3 class="small">{t('item.derechos')}</h3>
@@ -194,7 +198,7 @@ const retrieved = item.retrieved
             <h3 class="small">{t('item.notas_titulo')}</h3>
             <Mount id="notas" festival={item.festival} year={item.year} item={item.id}>{notes.length > 0 && (
               <ul class="recuerdos">
-                {notes.map((c) => <li><blockquote lang={contentLang()}>{String(c.payload?.text ?? '')}</blockquote>{byLine(c) && <p class="muted small">{byLine(c)}</p>}</li>)}
+                {notes.map((c) => <li><blockquote lang={contentLang()}>{String(c.payload?.text ?? '')}</blockquote><FuenteRef c={c} known={known} tag="p" /></li>)}
               </ul>
             )}</Mount>
             <script type="application/json" id="notas-data" set:html={jsonForScript(notes)}></script>
@@ -210,6 +214,7 @@ const retrieved = item.retrieved
       <Mount id="admin-item" festival={item.festival} year={item.year} item={item.id} category={item.category} class="admin-item" />
     </aside>
   </div>
+  <script type="application/json" id="fuentes-data" set:html={jsonForScript(contributionSourceSlugs())}></script>
 </Base>
 
 <script>

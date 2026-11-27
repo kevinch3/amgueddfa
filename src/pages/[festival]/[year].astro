@@ -19,7 +19,9 @@ import { byTitle, CATEGORY_ORDER, docCount, stateLabel } from '../../lib/site';
 import type { FestivalSlug } from '../../lib/types';
 import approvedRaw from '../../../data/approved/contributions.json';
 import editionsStatic from '../../../data/approved/editions.json';
-import { byLine, factDisplay, factInOriginal, forEdition, jsonForScript, sortFacts, sourceLine, splitFuente, type Contribution } from '../../lib/contrib';
+import { factDisplay, factInOriginal, forEdition, jsonForScript, sortFacts, type Contribution } from '../../lib/contrib';
+import FuenteRef from '../../components/FuenteRef.astro';
+import { contributionSourceSlugs, sourceSlugs } from '../../lib/fuentes-site';
 import { mediaUrl, uploadMedia } from '../../lib/uploads';
 import { absUrl, breadcrumbJsonLd, editionDescription, editionFacts, editionJsonLd, ldGraph } from '../../lib/seo';
 import { editionVideos } from '../../lib/videos-data';
@@ -62,9 +64,10 @@ const lang = contentLang();
 const trVer = tAround('edicion.transcripcion_ver', 'titulo');
 const ganVer = tAround('edicion.ganadores_ver', 'titulo');
 const trAporte = tAround('edicion.transcripcion_aporte', 'titulo');
-const fuenteAround = tAround('edicion.fuente', 'fuente');
-const facts = sortFacts(forEdition(approved, slug, year, 'fact')).map((c) => ({ ...factDisplay(c), lang: factInOriginal(c) ? contentLang() : undefined, by: byLine(c), fuente: sourceLine(c), src: splitFuente(String(c.payload?.fuente ?? '')) }));
-const memories = forEdition(approved, slug, year, 'memory').map((c) => ({ text: String(c.payload?.text ?? ''), by: byLine(c) }));
+// Each block names its source (linking to the source page, where contributors are named: #184, #185).
+const sourcePages = sourceSlugs();
+const facts = sortFacts(forEdition(approved, slug, year, 'fact')).map((c) => ({ ...factDisplay(c), lang: factInOriginal(c) ? contentLang() : undefined, c }));
+const memories = forEdition(approved, slug, year, 'memory').map((c) => ({ text: String(c.payload?.text ?? ''), c }));
 // Approved uploads with their low-res derivatives (media bucket); same markup edicion.ts renders live.
 const mediaBase = import.meta.env.PUBLIC_SUPABASE_URL;
 const uploads = forEdition(approved, slug, year, 'upload').map((c) => {
@@ -76,7 +79,7 @@ const uploads = forEdition(approved, slug, year, 'upload').map((c) => {
     category,
     desc: String(c.payload?.description ?? '') || t('edicion.aporte_sin_descripcion'),
     own: Boolean(c.payload?.description),
-    by: byLine(c),
+    c,
     thumb: thumb ?? pages[0] ?? null,
     href: pages[0] ?? thumb,
     pages,
@@ -145,7 +148,7 @@ const missingList = formatList(missing.map((m) => m.toLocaleLowerCase(intlLocale
     <h2 id="hechos-t">{t('edicion.hechos_titulo')}</h2>
     <Mount id="hechos" festival={slug} year={year}>{facts.length > 0 && (
       <dl class="hechos">
-        {facts.map((f) => <div><dt>{f.label}</dt><dd><span lang={f.lang}>{f.value}</span>{f.by && <> <span class="muted small">{f.by}</span></>}{f.fuente && <span class="muted small fuente">{fuenteAround[0]}<span lang={lang}>{f.src.href ? <a href={f.src.href} rel="noopener">{f.src.label}</a> : f.src.label}</span>{fuenteAround[1]}</span>}</dd></div>)}
+        {facts.map((f) => <div><dt>{f.label}</dt><dd><span lang={f.lang}>{f.value}</span><FuenteRef c={f.c} known={sourcePages} /></dd></div>)}
       </dl>
     )}</Mount>
   </section>
@@ -181,7 +184,7 @@ const missingList = formatList(missing.map((m) => m.toLocaleLowerCase(intlLocale
       {c === 'programa' && (
         <Mount id="transcripciones" festival={slug} year={year} class="transcripciones" titles={JSON.stringify(itemTitles)}>{contributedTr.map((tr) => (
           <details class="tr-detalle">
-            <summary>{trAporte[0]}{lang ? <span lang={lang}>{itemTitles[tr.item_id!]}</span> : itemTitles[tr.item_id!]}{trAporte[1]}{byLine(tr) && <> <span class="muted small">{byLine(tr)}</span></>}</summary>
+            <summary>{trAporte[0]}{lang ? <span lang={lang}>{itemTitles[tr.item_id!]}</span> : itemTitles[tr.item_id!]}{trAporte[1]}{' '}<FuenteRef c={tr} known={sourcePages} /></summary>
             <p class="small"><a href={url(`item/${tr.item_id}/`)}>{t('edicion.transcripcion_documento')}</a></p>
             <blockquote class="tr-aporte" lang={contentLang()}>{String(tr.payload?.text ?? '')}</blockquote>
           </details>
@@ -205,7 +208,7 @@ const missingList = formatList(missing.map((m) => m.toLocaleLowerCase(intlLocale
     <h2 id="recuerdos-t">{t('edicion.recuerdos_titulo')}</h2>
     <Mount id="recuerdos" festival={slug} year={year}>{memories.length > 0 && (
       <ul class="recuerdos">
-        {memories.map((m) => <li><blockquote lang={contentLang()}>{m.text}</blockquote>{m.by && <p class="muted small">{m.by}</p>}</li>)}
+        {memories.map((m) => <li><blockquote lang={contentLang()}>{m.text}</blockquote><FuenteRef c={m.c} known={sourcePages} tag="p" /></li>)}
       </ul>
     )}</Mount>
   </section>
@@ -226,7 +229,7 @@ const missingList = formatList(missing.map((m) => m.toLocaleLowerCase(intlLocale
             <li class="aporte">
               {u.thumb && <a class="aporte-thumb" href={u.href} data-lb={u.group}><img src={u.thumb} alt={t('item.miniatura_alt', { titulo: u.desc })} loading="lazy" decoding="async" /></a>}
               <div class="aporte-texto">
-                {u.category && <><span class="badge">{t(`categorias.${u.category}`)}</span> </>}<span lang={u.own ? contentLang() : undefined}>{u.desc}</span>{u.by && <> <span class="muted small">{u.by}</span></>}
+                {u.category && <><span class="badge">{t(`categorias.${u.category}`)}</span> </>}<span lang={u.own ? contentLang() : undefined}>{u.desc}</span>{' '}<FuenteRef c={u.c} known={sourcePages} />
                 {u.pages.length > 1 && (
                   <p class="aporte-paginas small">{t('item.paginas', { n: u.pages.length })}:{u.pages.map((p, i) => <> <a href={p} data-lb={u.group} aria-label={t('item.ampliar', { n: i + 1 })}>{i + 1}</a></>)}</p>
                 )}
@@ -237,6 +240,7 @@ const missingList = formatList(missing.map((m) => m.toLocaleLowerCase(intlLocale
       </div>
     )}</Mount>
     <script type="application/json" id="aprobados-data" set:html={jsonForScript(approved)}></script>
+    <script type="application/json" id="fuentes-data" set:html={jsonForScript(contributionSourceSlugs())}></script>
   </section>
 
   <nav class="pager" aria-label={t('edicion.todas')}>

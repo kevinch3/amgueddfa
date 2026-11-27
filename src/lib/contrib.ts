@@ -473,10 +473,6 @@ export function factInOriginal(c: Contribution): boolean {
   return !['start_date', 'end_date', 'edicion_realizada'].includes(field);
 }
 
-/** "Aportó <nombre>", or '' when the contributor has no public name. */
-export function byLine(c: Contribution): string {
-  return c.display_name ? t('edicion.aportado_por', { nombre: c.display_name }) : '';
-}
 
 /** Facts ordered by field (fact list order), then oldest first. */
 export function sortFacts(list: Contribution[]): Contribution[] {

@@ -6,6 +6,7 @@ import raw from '../src/data/catalog.json';
 import approved from '../data/approved/contributions.json';
 import editionsData from '../data/approved/editions.json';
 import { editionCover, undocumented, yearRange } from '../src/lib/catalog';
+import { splitFuente, type Contribution } from '../src/lib/contrib';
 import { decades } from '../src/lib/timeline';
 import { applyVideoReports, type Video } from '../src/lib/videos';
 import { editionVideos } from '../src/lib/videos-data';
@@ -421,6 +422,33 @@ describe('static build', () => {
   it('upload form asks what part of the programa is uploaded', () => {
     const html = read('contribuir/index.html');
     for (const v of ['completo', 'tapa', 'parcial']) expect(html).toContain(`name="alcance" value="${v}"`);
+  });
+
+  it('source pages: every document links to one; contributor names show only there (#184, #185)', () => {
+    const pub = catalog.filter((i) => !i.restricted && !i.hidden);
+    const sample = [pub[0], pub[Math.floor(pub.length / 2)], pub[pub.length - 1]];
+    for (const i of sample) {
+      const html = read(`item/${i.id}/index.html`);
+      const m = html.match(/href="\/fuente\/([0-9a-f]{14})\/"/);
+      expect(m, i.id).not.toBeNull();
+      const page = read(`fuente/${m![1]}/index.html`);
+      expect(page).toContain(`href="/item/${i.id}/"`);
+      if (i.source_url) expect(page).toContain(`href="${i.source_url.replace(/&/g, '&amp;')}"`);
+    }
+    const names = [...new Set((approved as { display_name: string | null }[]).map((c) => c.display_name).filter((n): n is string => Boolean(n)))];
+    expect(names.length).toBeGreaterThan(0);
+    // No edition page carries a "Aportó <nombre>" by-line any more; the source pages name contributors.
+    for (const f of FESTIVALS) {
+      const [a, b] = range(f);
+      for (let y = a; y <= b; y++) {
+        const p = join(DIST, f, String(y), 'index.html');
+        if (!existsSync(p)) continue;
+        const html = readFileSync(p, 'utf8').replace(/<script[\s\S]*?<\/script>/g, '');
+        for (const n of names) expect(html, `${f} ${y}`).not.toContain(`Aportó ${n}`);
+      }
+    }
+    const all = readdirSync(join(DIST, 'fuente')).map((d) => read(`fuente/${d}/index.html`)).join('\n');
+    for (const n of names) expect(all).toContain(n);
   });
 
   it('game pages exist and the tasks feed carries only public year_inferred images', () => {
@@ -948,7 +976,9 @@ describe('static build', () => {
       };
       // Archive content in its original words: document titles, YouTube titles and channels.
       const vids = (videosData as { videos: Video[] }).videos;
-      const content = [...new Set([...catalog.map((i) => i.title), ...vids.map((v) => v.title), ...vids.map((v) => v.channel)])].sort((a, b) => b.length - a.length);
+      // Source names (catalog labels, what contributions cite) are archive content too: they title source pages.
+      const cited = (approved as Contribution[]).map((c) => splitFuente(String(c.payload?.fuente ?? '')).label).filter(Boolean);
+      const content = [...new Set([...catalog.map((i) => i.title), ...catalog.map((i) => i.source_label), ...cited, ...vids.map((v) => v.title), ...vids.map((v) => v.channel)])].sort((a, b) => b.length - a.length);
       const flat = (o: Record<string, unknown>, p = ''): [string, string][] =>
         Object.entries(o).flatMap(([k, v]) => (typeof v === 'string' ? [[p + k, v] as [string, string]] : flat(v as Record<string, unknown>, `${p}${k}.`)));
       const es = flat(JSON.parse(readFileSync(join(__dirname, '..', 'src', 'i18n', 'es-AR.json'), 'utf8')));

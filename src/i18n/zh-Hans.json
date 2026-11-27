@@ -143,7 +143,6 @@
     "faltan_secciones": "这一年我们还缺{lista}。您有相关资料吗？",
     "otras_secciones": "其他栏目",
     "no_realizada": "未举办",
-    "aportado_por": "贡献者：{nombre}",
     "subir": "上传文献",
     "datos": "添加资料",
     "recuerdo": "分享回忆",
@@ -1148,5 +1147,50 @@
     "con_transcripcion": "附文字稿",
     "ficha": "查看条目",
     "leer_transcripcion": "文字稿"
+  },
+  "fuentes": {
+    "miga": "来源",
+    "titulo_persona": "{nombre} 的贡献",
+    "descripcion": "{fuente}：档案部分内容的来源。它当时的样子、相关信息以及贡献者。",
+    "tipos": {
+      "facebook": "Facebook 帖子",
+      "instagram": "Instagram 帖子",
+      "wayback": "Wayback Machine 存档",
+      "drive": "Google Drive 文件",
+      "papurau": "威尔士报纸（威尔士国家图书馆）",
+      "casgliad": "Casgliad y Werin Cymru（威尔士人民收藏）",
+      "commons": "维基共享资源",
+      "web": "网站",
+      "personal": "个人档案",
+      "publicacion": "出版物或引文",
+      "comunidad": "社区贡献"
+    },
+    "captura_titulo": "当时的样子",
+    "captura_ayuda": "我们查阅这个来源时保存下来的内容：图片和文字，保持原样。",
+    "sin_captura": "我们没有保存这个来源的图片：下面是它的信息，以及档案从中采用的内容。",
+    "datos_titulo": "来源信息",
+    "tipo": "类型",
+    "original": "原始地址",
+    "ver_original": "打开原始页面",
+    "copias": "存档副本",
+    "copias_ver": "在 Wayback Machine 中搜索",
+    "consultado": "查阅日期",
+    "derechos": "权利",
+    "aportado_por": "贡献者",
+    "cuenta": "档案中",
+    "documentos_titulo": "来自这个来源的文档",
+    "aportes_titulo": "引用它的资料和贡献",
+    "aportes_persona_titulo": "其贡献",
+    "ver": "查看",
+    "comunidad": "社区贡献",
+    "aporte_tipos": {
+      "fact": "资料",
+      "memory": "回忆",
+      "note": "注释",
+      "transcription": "转录",
+      "upload": "文档"
+    },
+    "un_aporte": "1 条贡献",
+    "n_aportes": "{n} 条贡献"
   }
 }

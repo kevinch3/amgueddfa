@@ -143,7 +143,6 @@
     "faltan_secciones": "O'r flwyddyn hon does gynnon ni ddim {lista} eto. Oes gynnoch chi rywbeth?",
     "otras_secciones": "Adrannau eraill",
     "no_realizada": "Ni chynhaliwyd",
-    "aportado_por": "Cyfraniad gan {nombre}",
     "subir": "Uwchlwythwch ddogfen",
     "datos": "Ychwanegwch ffaith",
     "recuerdo": "Rhannwch atgof",
@@ -1148,5 +1147,50 @@
     "con_transcripcion": "gyda thrawsgrifiad",
     "ficha": "Gweld y cofnod",
     "leer_transcripcion": "Trawsgrifiad"
+  },
+  "fuentes": {
+    "miga": "Ffynhonnell",
+    "titulo_persona": "Cyfraniadau {nombre}",
+    "descripcion": "{fuente}: o ble daw rhan o'r archif. Sut olwg oedd arni, ei manylion a phwy a'i cyfrannodd.",
+    "tipos": {
+      "facebook": "Neges Facebook",
+      "instagram": "Neges Instagram",
+      "wayback": "Copi o'r Wayback Machine",
+      "drive": "Ffeil Google Drive",
+      "papurau": "Papurau Newydd Cymru (Llyfrgell Genedlaethol Cymru)",
+      "casgliad": "Casgliad y Werin Cymru",
+      "commons": "Wikimedia Commons",
+      "web": "Gwefan",
+      "personal": "Archif bersonol",
+      "publicacion": "Cyhoeddiad neu ddyfyniad",
+      "comunidad": "Cyfraniad gan y gymuned"
+    },
+    "captura_titulo": "Sut olwg oedd arni",
+    "captura_ayuda": "Yr hyn a gadwon ni o'r ffynhonnell hon pan edrychon ni arni: y lluniau a'r testun, fel yr oeddent.",
+    "sin_captura": "Ni chadwon ni luniau o'r ffynhonnell hon: mae ei manylion, a'r hyn a gymerodd yr archif ohoni, isod.",
+    "datos_titulo": "Am y ffynhonnell",
+    "tipo": "Math",
+    "original": "Cyfeiriad gwreiddiol",
+    "ver_original": "Agor y gwreiddiol",
+    "copias": "Copïau wedi'u harchifo",
+    "copias_ver": "Chwilio yn y Wayback Machine",
+    "consultado": "Edrychwyd arni",
+    "derechos": "Hawliau",
+    "aportado_por": "Cyfrannwyd gan",
+    "cuenta": "Yn yr archif",
+    "documentos_titulo": "Dogfennau o'r ffynhonnell hon",
+    "aportes_titulo": "Ffeithiau a chyfraniadau sy'n ei dyfynnu",
+    "aportes_persona_titulo": "Yr hyn a gyfrannodd",
+    "ver": "Gweld",
+    "comunidad": "cyfraniad gan y gymuned",
+    "aporte_tipos": {
+      "fact": "Ffaith",
+      "memory": "Atgof",
+      "note": "Nodyn",
+      "transcription": "Trawsgrifiad",
+      "upload": "Dogfen"
+    },
+    "un_aporte": "1 cyfraniad",
+    "n_aportes": "{n} cyfraniad"
   }
 }

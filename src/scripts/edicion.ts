@@ -1,6 +1,7 @@
 import staticEditions from '../../data/approved/editions.json';
-import { approvedForEdition, byLine, factDisplay, factInOriginal, forEdition, mergeApproved, ownPending, pendingView, sortFacts, sourceLine, splitFuente, type Contribution } from '../lib/contrib';
+import { approvedForEdition, factDisplay, factInOriginal, forEdition, mergeApproved, ownPending, pendingView, sortFacts, type Contribution } from '../lib/contrib';
 import { contentLang, t, tAround } from '../lib/i18n';
+import { sourceNode } from './fuente-ref';
 import { stateLabel } from '../lib/site';
 import { liveQuery } from '../lib/live';
 import { raiseStates, refreshStates } from './states';
@@ -35,23 +36,9 @@ export function renderFacts(mount: HTMLElement, facts: Contribution[]): void {
     const row = el('div');
     const dd = el('dd');
     dd.append(factInOriginal(c) ? original(el('span', undefined, value)) : value);
-    const by = byLine(c);
-    if (by) dd.append(' ', el('span', 'muted small', by));
-    if (sourceLine(c)) {
-      // "Fuente: …" in the page's language; what the contributor wrote, in theirs; a trailing URL links the label.
-      const [before, after] = tAround('edicion.fuente', 'fuente');
-      const { label, href } = splitFuente(String(c.payload?.fuente ?? ''));
-      const inner = el('span');
-      if (href) {
-        const a = el('a', undefined, label) as HTMLAnchorElement;
-        a.href = href;
-        a.rel = 'noopener';
-        inner.append(a);
-      } else inner.append(label);
-      const s = el('span', 'muted small fuente');
-      s.append(before, contentLang() ? original(inner) : inner, after);
-      dd.append(s);
-    }
+    // "Fuente: …" links to the source page, where the contributor is named (#184, #185).
+    const src = sourceNode(c);
+    if (src) dd.append(src);
     row.append(el('dt', undefined, label), dd);
     dl.append(row);
   }
@@ -66,8 +53,8 @@ export function renderMemories(mount: HTMLElement, memories: Contribution[]): vo
   for (const c of memories) {
     const li = el('li');
     li.append(original(el('blockquote', undefined, String(c.payload?.text ?? ''))));
-    const by = byLine(c);
-    if (by) li.append(el('p', 'muted small', by));
+    const src = sourceNode(c, 'p');
+    if (src) li.append(src);
     ul.append(li);
   }
   mount.append(ul);
@@ -83,8 +70,8 @@ export function renderEditionTranscriptions(mount: HTMLElement, list: Contributi
     const [before, after] = tAround('edicion.transcripcion_aporte', 'titulo');
     const s = el('summary');
     s.append(before, contentLang() ? original(el('span', undefined, title)) : title, after);
-    const by = byLine(c);
-    if (by) s.append(' ', el('span', 'muted small', by));
+    const src = sourceNode(c);
+    if (src) s.append(' ', src);
     const p = el('p', 'small');
     const a = el('a', undefined, t('edicion.transcripcion_documento'));
     a.href = url(`item/${c.item_id}/`);
@@ -139,8 +126,8 @@ function uploadRow(c: Contribution): HTMLLIElement {
   const text = el('div', 'aporte-texto');
   if (cat) text.append(el('span', 'badge', t(`categorias.${cat}`)), ' ');
   text.append(c.payload?.description ? original(el('span', undefined, desc)) : desc);
-  const by = byLine(c);
-  if (by) text.append(' ', el('span', 'muted small', by));
+  const src = sourceNode(c);
+  if (src) text.append(' ', src);
   if (pages.length > 1) {
     const p = el('p', 'aporte-paginas small');
     p.append(t('item.paginas', { n: pages.length }), ':');

@@ -143,7 +143,6 @@
     "faltan_secciones": "De este año todavía no tenemos {lista}. ¿Tenés algo?",
     "otras_secciones": "Otras secciones",
     "no_realizada": "No se realizó",
-    "aportado_por": "Aportó {nombre}",
     "subir": "Subí un documento",
     "datos": "Cargá un dato",
     "recuerdo": "Contá un recuerdo",
@@ -1148,5 +1147,50 @@
     "con_transcripcion": "con transcripción",
     "ficha": "Ver la ficha",
     "leer_transcripcion": "Transcripción"
+  },
+  "fuentes": {
+    "miga": "Fuente",
+    "titulo_persona": "Aportes de {nombre}",
+    "descripcion": "{fuente}: de dónde viene parte del archivo. Cómo se veía, sus datos y quién lo aportó.",
+    "tipos": {
+      "facebook": "Publicación de Facebook",
+      "instagram": "Publicación de Instagram",
+      "wayback": "Captura de Wayback Machine",
+      "drive": "Archivo en Google Drive",
+      "papurau": "Papurau Newydd Cymru (Biblioteca Nacional de Gales)",
+      "casgliad": "Casgliad y Werin Cymru",
+      "commons": "Wikimedia Commons",
+      "web": "Sitio web",
+      "personal": "Archivo personal",
+      "publicacion": "Publicación o cita",
+      "comunidad": "Aporte de la comunidad"
+    },
+    "captura_titulo": "Cómo se veía",
+    "captura_ayuda": "Lo que guardamos de esta fuente cuando la consultamos: las imágenes y el texto, tal como estaban.",
+    "sin_captura": "De esta fuente no guardamos imágenes: abajo están sus datos y lo que el archivo tomó de ella.",
+    "datos_titulo": "Datos de la fuente",
+    "tipo": "Tipo",
+    "original": "Dirección original",
+    "ver_original": "Abrir el original",
+    "copias": "Copias archivadas",
+    "copias_ver": "Buscar en Wayback Machine",
+    "consultado": "Consultada",
+    "derechos": "Derechos",
+    "aportado_por": "Aportado por",
+    "cuenta": "En el archivo",
+    "documentos_titulo": "Documentos de esta fuente",
+    "aportes_titulo": "Datos y aportes que la citan",
+    "aportes_persona_titulo": "Lo que aportó",
+    "ver": "Ver",
+    "comunidad": "aporte de la comunidad",
+    "aporte_tipos": {
+      "fact": "Dato",
+      "memory": "Recuerdo",
+      "note": "Nota",
+      "transcription": "Transcripción",
+      "upload": "Documento"
+    },
+    "un_aporte": "1 aporte",
+    "n_aportes": "{n} aportes"
   }
 }

@@ -104,16 +104,8 @@
    "O, ac eiddio gwell na hyn, dwi'n amadu."
   ],
   [
-   178.8,
-   "for"
-  ],
-  [
    179.02,
    "O- o- o- o- o- dwi'n ama dim, dwi'n ama dim. O- o- o- o- o- dwi'n ama dim, yr ffordd dwi'n teimlo nawr, dwi'n ama dim."
-  ],
-  [
-   189.7,
-   "ohim tuama"
   ],
   [
    202.24,
@@ -122,22 +114,6 @@
   [
    209.74,
    "A'r ffordd a dwi'n teimlo nawr, dwi'n amadu."
-  ],
-  [
-   210.3,
-   "for"
-  ],
-  [
-   216.8,
-   "the"
-  ],
-  [
-   217.24,
-   "A'r ffordd a dwi'n teimlo nawr, dwi'n amadu."
-  ],
-  [
-   219.6,
-   "for Now"
   ],
   [
    232.24,
@@ -2041,31 +2017,13 @@
    "cy"
   ],
   [
-   "yt_es"
-  ],
-  [
-   "cy"
-  ],
-  [
-   "yt_es"
-  ],
-  [
    "cy"
   ],
   [
    "cy"
   ],
   [
-   "yt_es"
-  ],
-  [
-   "yt_es"
-  ],
-  [
    "cy"
-  ],
-  [
-   "yt_es"
   ],
   [
    "cy"
@@ -3440,8 +3398,8 @@
  ],
  "ventanas": {
   "total": 66,
-  "modelo": 55,
-  "reglas": 7,
+  "modelo": 56,
+  "reglas": 6,
   "vacias": 4
  }
 }

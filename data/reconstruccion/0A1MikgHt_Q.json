@@ -261,11 +261,11 @@
   ],
   [
    472.9,
-   "Ciflwínir y cadar eleni yw Felipe Fernandez."
+   "Ciflwínir y Cadair eleni yw Felipe Fernandez."
   ],
   [
    476.9,
-   "Fue una vez felipe Cynllin a chreftwa y cadar bachan honno."
+   "Fue una vez felipe Cynllin a chreftwa y Cadair bachan honno."
   ],
   [
    481.9,
@@ -273,7 +273,7 @@
   ],
   [
    487.9,
-   "mae cadar eleni en cadar bach,"
+   "mae Cadair eleni en Cadair bach,"
   ],
   [
    490.9,
@@ -975,8 +975,8 @@
  ],
  "ventanas": {
   "total": 32,
-  "modelo": 22,
-  "reglas": 6,
+  "modelo": 23,
+  "reglas": 5,
   "vacias": 4
  }
 }

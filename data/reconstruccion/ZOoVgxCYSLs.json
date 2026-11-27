@@ -1,6 +1,6 @@
 {
  "src": "reconstruida",
- "lang": "cy",
+ "lang": "es",
  "modelo": "claude-sonnet-5-5",
  "seg": [
   [
@@ -8,8 +8,48 @@
    "Yr Arglwydd yw fy mugail, ni bydd eisiau arnaf."
   ],
   [
+   55.0,
+   "Quiero cantarte con tus ojos Deja mi longa que te lleve Mayo y su cielo la traerán En cada copo encendida Para ganar el suelo a valor Su novia de largo vestida Ande los caminos de invierno"
+  ],
+  [
+   85.0,
+   "Ajenos este el cañador, cubiertos de un sonido y quizá, y al mundo."
+  ],
+  [
+   98.0,
+   "Andremos cariño de invierno, con miedo que duende y de luz, caricia, castigo y pasión, amor."
+  ],
+  [
+   127.0,
+   "Mi loca vamos a cantar, a Dios sería vencidos, a vueltas que dejamos de entrar, a ser fácil es cantar."
+  ],
+  [
    143.0,
-   "Pulsemos su sueño futal, se dice silencio enterral, un verso que espera su cantal, guitarra pan se tembla."
+   "Pulsemos un sueño total Se dice en silencio enterrar Un verso que espera su canta Guitarra para ser templada"
+  ],
+  [
+   160.0,
+   "Subamos alto y llenar, bajemos hasta el cañón, cubiertos de un suave cristal de alto."
+  ],
+  [
+   178.0,
+   "Tarde en buscar el invierno, con nieve que me prende y luz, cáricia, trástico y pasión, amor de Jesús."
+  ],
+  [
+   195.0,
+   "Y nunca nos vamos al sur A la luz y a la nieve Quiero cantarte con tu sol"
+  ],
+  [
+   214.0,
+   "Déjame en un lugar que te lleve"
+  ],
+  [
+   965.0,
+   "Un tierno corazón para que pueda expresar bondad."
+  ],
+  [
+   978.0,
+   "Con lazos del amor y la verdad, se va a sanar la pena y el dolor."
   ],
   [
    1008.0,
@@ -17,11 +57,11 @@
   ],
   [
    1122.5,
-   "Mae gen i fy hun a'i synnwyr yn yr afi fy ffarm i, yn yr holl senedd sydd efo'i hun, yn fy nhroi o'r iawn i fi, yn fy nhroi o'r iawn i fi."
+   "Mae gen i fy hun a'i synnwyr yn yr afi fy ffarm i, yn yr holl senedd sydd efo'i hun, yn fy troi o'r iawn i fi, yn fy droi o'r iawn i fi."
   ],
   [
    1197.48,
-   "Glas gan Ryan Martin Davies. Pan oedd syrnynau'n las, a'r môr yn nabod cawer ffowlio chwerthin ar y traeth, roedd y cachod a chestyll a chop o blodau yn llawn yn y diwrnod, ar ei helyg."
+   "Glas gan Ryan Martin Davies. Pan oedd syrnynau'n las, a'r môr yn nabod cawer ffowlio chwerthin ar y traeth, roedd y cachod a chestyll a chop o flodau yn llawn yn y diwrnod, ar ei helyg."
   ],
   [
    1227.48,
@@ -72,16 +112,40 @@
    "Ar ôl ryw sero ma'r ôl erosion, bo' stumdolion ni'n dod o'r deilad i chi."
   ],
   [
+   1544.76,
+   "por oír otra vez de tu alma y de tu amor."
+  ],
+  [
+   1554.76,
+   "Niña de los ojos, color de olivo, mira, y detrás amarro, melo de amor. Niña de los ojos, color de olivo, y detrás amarro, melo de amor."
+  ],
+  [
    1575.76,
-   "Mae yna sang a diwyddiad, a dwi isie gostau eich gadael eich hunen a dy fod, pan dwi'n dy sgwrs, dwi'n credu os dwi'n meddwl, dwi'n gwybod be dwi'n feddwl, pan dwi'n sgwrs, dwi'n meddwl, dwi'n gwybod be dwi'n meddwl."
+   "Esta sonora de usted, la dice cuando está de pie, de pie y de voz, cuando te la escucha, crece y danzó, me muere un poco, no tan lejos que estoy. Cuando te la escucha, crece y danzó, me muere un poco, no tan lejos que estoy."
+  ],
+  [
+   1625.76,
+   "A su pueblo yo iré, llegaré cuando muere el sol."
   ],
   [
    1635.76,
-   "Mae'n mhensa'n geiria' a thebwn i'n swnio, arall yn fy miniatur o'n i'n olbido."
+   "Mensajerías de lunas y sueños para terminar si no me olvido."
   ],
   [
    1645.76,
    "Mae'n mensa'n geiria' a thebwn i'n swnio, arall yn fy miniatur o'n i'n olbido."
+  ],
+  [
+   1655.76,
+   "Es aquel que se fue a su abuela, también yo."
+  ],
+  [
+   1665.76,
+   "Me gusta sus manos, sol y mañanos, rayando manita su pobre canción."
+  ],
+  [
+   1675.76,
+   "Valverte a sus manos, soy marero, trayendo perdida su pobre canción."
   ],
   [
    1700.76,
@@ -90,6 +154,14 @@
   [
    1790.76,
    "Ceidwad mawr ydy'n bolledig, caru ryddwyd ŵan gor-cyn, ti'n byw amsar annwyd Iesu, gad i maros gyda fi."
+  ],
+  [
+   1816.76,
+   "Gledath hi gledath hi gadid mawr os gledath hi."
+  ],
+  [
+   1829.76,
+   "Gledath hi gledath hi gadid mawr os gledath hi."
   ],
   [
    1843.76,
@@ -104,12 +176,44 @@
    "Gydath fi, gydath fi, a dim ar ôl os gydath fi."
   ],
   [
+   2008.56,
+   "¡Gracias!"
+  ],
+  [
+   2038.56,
+   "¡Gracias!"
+  ],
+  [
    2171.56,
    "Yna mae'r gloch yn ta, yna mae'r ffiant yn ddi, o'r gloch a'r fwygan yn frenhau a bob drefydd neu ddydd."
   ],
   [
+   2284.56,
+   "Mujer sinceramente, vivir la inmensidad sin conocer jamás fronteras, mujer sin descansar a mi manera."
+  ],
+  [
+   2314.56,
+   "Más vivir un gran amor que para ti fuera importante."
+  ],
+  [
+   2347.56,
+   "Quizás también dudé cuando yo más me liberdía."
+  ],
+  [
    2394.56,
    "Cadw i'n sioe, cadw i'n sreif, cadw i'n sganu, cadw i'n sgwennu."
+  ],
+  [
+   2404.76,
+   "Y ahora sé que fui feliz, que si lloré, también a creer."
+  ],
+  [
+   2414.68,
+   "Puedo seguir hasta el final a mi cadera, porque sabrás de dónde en ti conocerás, pues tú vivirás."
+  ],
+  [
+   2436.28,
+   "No hay por qué hablar, ni qué decir, ni reconocer que fingir. Puedo llegar hasta el final a mi manera."
   ]
  ],
  "fuentes": [
@@ -117,7 +221,37 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
@@ -165,7 +299,31 @@
    "cy"
   ],
   [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
    "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
@@ -189,16 +347,40 @@
    "cy"
   ],
   [
-   "cy"
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ],
   [
    "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "cy"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
+  ],
+  [
+   "whisper_es"
   ]
  ],
  "ventanas": {
   "total": 45,
-  "modelo": 26,
+  "modelo": 30,
   "reglas": 0,
-  "vacias": 19
+  "vacias": 15
  }
 }

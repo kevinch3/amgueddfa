@@ -129,6 +129,7 @@
   "edicion": {
     "tapa_alt": "{festival} {year} 年节目单封面",
     "fuente": "来源：{fuente}",
+    "fuente_corta": "来源",
     "pendiente": "待审核",
     "pendientes_titulo": "您待审核的贡献",
     "archivo_pdf": "PDF 文件",

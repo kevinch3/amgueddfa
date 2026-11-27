@@ -148,7 +148,7 @@ const missingList = formatList(missing.map((m) => m.toLocaleLowerCase(intlLocale
     <h2 id="hechos-t">{t('edicion.hechos_titulo')}</h2>
     <Mount id="hechos" festival={slug} year={year}>{facts.length > 0 && (
       <dl class="hechos">
-        {facts.map((f) => <div><dt>{f.label}</dt><dd><span lang={f.lang}>{f.value}</span><FuenteRef c={f.c} known={sourcePages} /></dd></div>)}
+        {facts.map((f) => <div><dt>{f.label}</dt><dd><span lang={f.lang}>{f.value}</span><FuenteRef c={f.c} known={sourcePages} compact /></dd></div>)}
       </dl>
     )}</Mount>
   </section>

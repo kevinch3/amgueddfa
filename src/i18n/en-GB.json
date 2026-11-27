@@ -129,6 +129,7 @@
   "edicion": {
     "tapa_alt": "Cover of the {festival} {year} programme",
     "fuente": "Source: {fuente}",
+    "fuente_corta": "source",
     "pendiente": "Awaiting review",
     "pendientes_titulo": "Your contributions under review",
     "archivo_pdf": "PDF file",

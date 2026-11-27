@@ -1,3 +1,4 @@
+import { isPublic, visibleAs } from '../../../lib/visibilidad';
 import { items, thumbUrl } from '../../../lib/catalog';
 
 /**
@@ -8,7 +9,7 @@ import { items, thumbUrl } from '../../../lib/catalog';
 export function GET(): Response {
   const list = items().map((i) => ({
     id: i.id, title: i.title, festival: i.festival, year: i.year, undated: i.undated, category: i.category,
-    kind: i.kind, restricted: i.restricted, year_inferred: i.year_inferred, thumb: i.restricted ? null : thumbUrl(i),
+    kind: i.kind, restricted: !isPublic(i), visibilidad: visibleAs(i), year_inferred: i.year_inferred, thumb: !isPublic(i) ? null : thumbUrl(i),
   }));
   return new Response(JSON.stringify(list), { headers: { 'Content-Type': 'application/json; charset=utf-8' } });
 }

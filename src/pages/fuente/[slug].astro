@@ -1,4 +1,5 @@
 ---
+import { isPublic } from '../../lib/visibilidad';
 import Base from '../../layouts/Base.astro';
 import ItemCard from '../../components/ItemCard.astro';
 import { pageUrls } from '../../lib/catalog';
@@ -25,7 +26,7 @@ const fmt = (d: string) => {
 };
 // The captured view: each public document's first image with the text it carried.
 const shots = source.items
-  .filter((i) => !i.restricted)
+  .filter((i) => isPublic(i))
   .map((i) => ({ item: i, img: pageUrls(i)[0] ?? null, caption: i.note_public }))
   .filter((s) => s.img || s.caption);
 const lookup = waybackLookup(source);

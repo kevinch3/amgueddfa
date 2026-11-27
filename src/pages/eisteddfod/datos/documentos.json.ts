@@ -1,3 +1,4 @@
+import { isPublic } from '../../../lib/visibilidad';
 import { festivals, items, pageUrls, thumbUrl } from '../../../lib/catalog';
 import { url } from '../../../lib/paths';
 import { absUrl, rightsText, TRANSCRIPTION_LICENSE } from '../../../lib/seo';
@@ -6,7 +7,7 @@ import { transcriptionDoc } from '../../../lib/transcripciones';
 /** Open data: every public document of the archive (restricted ones are never listed). */
 export function GET(): Response {
   const names = Object.fromEntries(festivals().map((f) => [f.slug, f.name]));
-  const documentos = items().filter((i) => !i.restricted).map((i) => {
+  const documentos = items().filter((i) => isPublic(i)).map((i) => {
     const thumb = thumbUrl(i);
     const transcrito = transcriptionDoc(i.id) !== null;
     return {

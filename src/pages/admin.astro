@@ -1,4 +1,5 @@
 ---
+import { isPublic } from '../lib/visibilidad';
 import Base from '../layouts/Base.astro';
 import FactEditor from '../components/FactEditor.astro';
 import approvedStatic from '../../data/approved/contributions.json';
@@ -17,7 +18,7 @@ const data = {
     .filter((c) => c.type === 'upload')
     .map((c) => ({ type: c.type, festival: c.festival, year: c.year, payload: { category: c.payload?.category ?? null } })),
   restricted: items()
-    .filter((i) => i.restricted)
+    .filter((i) => !isPublic(i))
     .map((i) => ({ id: i.id, title: i.title, festival: i.festival, year: i.year, category: i.category, thumb: i.thumb, page_paths: i.page_paths })),
   titles: Object.fromEntries(allItems().map((i) => [i.id, i.title])),
 };

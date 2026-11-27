@@ -1,3 +1,4 @@
+import { isPublic } from '../../../lib/visibilidad';
 import type { APIRoute } from 'astro';
 import approvedRaw from '../../../../data/approved/contributions.json';
 import { editionItems, editionState, editionStatus, festivals, yearRange } from '../../../lib/catalog';
@@ -30,7 +31,7 @@ export const GET: APIRoute = ({ params }) => {
     const fuente = String(c.payload?.fuente ?? '').trim();
     return { label, value, fuente: fuente ? `fuente: ${fuente}` : null, by: c.display_name ? `aportó ${c.display_name}` : '' };
   });
-  const docs = editionItems(slug, year).filter((i) => !i.restricted).sort(byTitle).map((i) => ({
+  const docs = editionItems(slug, year).filter((i) => isPublic(i)).sort(byTitle).map((i) => ({
     title: i.title, category: t(`categorias.${i.category}`), url: absUrl(url(`item/${i.id}/`)), transcribed: transcriptionDoc(i.id) !== null,
   }));
   const body = editionMarkdown({

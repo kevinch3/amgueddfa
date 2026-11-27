@@ -1,3 +1,4 @@
+import { isPublic } from './visibilidad';
 import type { Item } from './types';
 
 /** The fields taskQueue looks at; the /tareas page passes slimmed catalog rows. */
@@ -17,7 +18,7 @@ export function isHistory(year: number | null, now = new Date().getFullYear()): 
 
 /** An item can be a quick task: a public image of history whose year or category we guessed. */
 export function isTaskCandidate(i: TaskCandidate, now?: number): boolean {
-  return i.year_inferred && !i.restricted && i.kind === 'image' && isHistory(i.year, now);
+  return i.year_inferred && isPublic(i) && i.kind === 'image' && isHistory(i.year, now);
 }
 
 /** 32-bit FNV-1a of a string. */

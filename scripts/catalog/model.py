@@ -18,7 +18,9 @@ class Item:
     note_public: str = ""
     rights: str = ""  # public credit and licence line of a third-party holder
     year_inferred: bool = False
-    restricted: bool = False
+    restricted: bool = False  # kept in step with visibilidad (scripts/catalog/visibilidad.py)
+    visibilidad: str = "publico"  # publico | solo_ficha | privado
+    publico_desde: str | None = None  # ISO date it opens on, if set
     hidden: bool = False  # an approved "no corresponde" report or admin correction
     no_text: bool = False  # nothing to transcribe (cover, poster, rules slide…)
     pages: int = 0

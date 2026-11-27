@@ -70,7 +70,8 @@ export async function exportApproved(client, outDir) {
 }
 
 /** Festivals whose winners are public (src/lib/ganadores.ts PUBLIC_WINNERS). */
-export const PUBLIC_WINNERS = ['chubut', 'trevelin'];
+export const PUBLIC_WINNERS = JSON.parse(readFileSync(new URL('../src/data/colecciones.json', import.meta.url), 'utf8'))
+  .colecciones.filter((c) => c.ganadores_publicos).map((c) => c.id);
 const DOC_ID = /^[0-9a-f]{12}$/;
 
 /** A transcription row as its snapshot file (the format lib/docmd.ts reads). */

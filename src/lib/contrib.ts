@@ -4,6 +4,7 @@ import { liveQuery } from './live';
 import { getClient } from './supabase';
 import type { CategorySlug, FestivalSlug } from './types';
 import type { Cambio } from './video-corrections';
+import { FESTIVAL_IDS, VIDEO_TEXT_FESTIVALS } from './colecciones';
 
 export type Kind = 'upload' | 'fact' | 'tag' | 'transcription' | 'memory' | 'report' | 'note' | 'video_text';
 export type Result = { ok: true } | { ok: false; key: string };
@@ -37,7 +38,7 @@ export const CATEGORIES: CategorySlug[] = ['programa', 'programa-del-dia', 'prel
 /** What part of a programa an upload is, as the contributor says (an admin confirms on approval). */
 export const ALCANCES = ['completo', 'tapa', 'parcial'] as const;
 export type Alcance = (typeof ALCANCES)[number];
-export const FESTIVALS: FestivalSlug[] = ['chubut', 'juventud', 'mimosa', 'trevelin'];
+export const FESTIVALS: FestivalSlug[] = [...FESTIVAL_IDS];
 export const YEAR_MIN = 1865;
 export const YEAR_MAX = 2026;
 export const TEXT_MIN = 10;
@@ -148,7 +149,7 @@ export const MAX_CAMBIOS = 200;
 /** Longest original line (`antes`) a change may target. */
 export const ANTES_MAX = 2000;
 /** The festivals whose videos can be corrected. */
-const VIDEO_FESTIVALS: FestivalSlug[] = ['chubut', 'trevelin'];
+const VIDEO_FESTIVALS: readonly FestivalSlug[] = VIDEO_TEXT_FESTIVALS;
 
 /**
  * A transcript correction: changes to the lines of one video. A change to a line (`antes`) sets its words, its

@@ -26,12 +26,13 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from scripts.align_lyrics import LETRAS, apply as apply_lyrics, credit, spans_for
+from scripts.colecciones import VIDEO_TEXT
 from scripts.video_corrections import apply_corrections
 
 REPO = Path(__file__).resolve().parent.parent
 OUT = REPO / "public" / "transcripciones-video"
 DEFAULT_BACKUP = Path("/run/media/kevinch3/4eff8b2b-61f1-4df2-bb61-5f9ba0faa94d/amgueddfa-backup")
-FESTIVALS = {"chubut", "trevelin"}
+FESTIVALS = VIDEO_TEXT
 
 # Whisper over music without words: a whole 30 s window with a word or two, stock phrases
 # from its training subtitles, loops. Real speech comes in lines of a few seconds.

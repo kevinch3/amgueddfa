@@ -1,4 +1,5 @@
-export type FestivalSlug = 'chubut' | 'juventud' | 'mimosa' | 'trevelin';
+/** A collection id from src/data/colecciones.json (checked by tests-js/colecciones.test.ts). */
+export type FestivalSlug = string;
 export type CategorySlug =
   | 'programa'
   | 'programa-del-dia'

@@ -3,6 +3,7 @@ import approvedRaw from '../../data/approved/contributions.json';
 import editionsRaw from '../../data/approved/editions.json';
 import { t } from './i18n';
 import { siteMedia } from './paths';
+import { FESTIVAL_IDS } from './colecciones';
 import type { EditionState, FestivalSlug, Item } from './types';
 import { maxState, mediaUrl, uploadMedia, uploadState, type UploadLike } from './uploads';
 import { applyTags, catalogState, latestTagAt, type TagLike } from './tags';
@@ -10,7 +11,7 @@ import { applyTags, catalogState, latestTagAt, type TagLike } from './tags';
 /** Approved uploads from the last export (data/approved/contributions.json). */
 const APPROVED_UPLOADS: UploadLike[] = (approvedRaw as UploadLike[]).filter((c) => c?.type === 'upload');
 
-const FESTIVAL_SLUGS: FestivalSlug[] = ['chubut', 'juventud', 'mimosa', 'trevelin'];
+const FESTIVAL_SLUGS: readonly FestivalSlug[] = FESTIVAL_IDS;
 
 /** Approved tags and reports from the last export: applied here so every build places (or hides) items as corrected. */
 const APPROVED_TAGS: TagLike[] = (approvedRaw as TagLike[]).filter((c) => c?.type === 'tag' || c?.type === 'report');

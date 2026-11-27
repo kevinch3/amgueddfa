@@ -11,13 +11,11 @@ import re
 import sys
 from pathlib import Path
 
+from scripts.colecciones import BY_FOLDER
+
 REPO = Path(__file__).resolve().parent.parent
-SLUGS = {
-    "Eisteddfod_del_Chubut": "chubut",
-    "Eisteddfod_de_la_Juventud": "juventud",
-    "Eisteddfod_Mimosa": "mimosa",
-    "Eisteddfod_de_Trevelin": "trevelin",
-}
+# Archive folder → collection id, from src/data/colecciones.json.
+SLUGS = BY_FOLDER
 # Upload date alone is a weak guess for the edition year; the others come from the video itself.
 INFERRED = {"subida"}
 # Trevelin's Infantil/Juvenil sessions: children, kept off the site until the privacy

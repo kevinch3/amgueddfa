@@ -400,9 +400,7 @@ html[data-contraste='alto'] .st-some, html[data-contraste='alto'] .swatch.st-som
   .cells > li:first-child { grid-column-start: var(--start, 1); }
 }
 
-/* An empty decade takes one full row and opens to its ten cells (always a whole decade). */
-.decada-li { grid-column: 1 / -1; }
-.decada-vacia .cells { --start: 1; margin-top: 4px; }
+/* An empty decade of the festival timeline, folded into one line that opens. */
 .decada-vacia > summary { cursor: pointer; min-height: 44px; display: flex; align-items: center; gap: 0.4rem; padding: 0.35rem 0.6rem; font: 0.95rem/1.3 var(--sans); color: var(--ink-soft); border: 1px dashed #a39a85; border-radius: 3px; }
 .decada-vacia > summary::-webkit-details-marker { display: none; }
 .decada-vacia > summary::before { content: '▸'; display: inline-block; transition: transform 0.15s; }

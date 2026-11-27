@@ -136,7 +136,9 @@ describe('static build', () => {
       total += want;
       expect((read(`${f}/index.html`).match(/data-decada-vacia/g) ?? []).length, f).toBe(want);
     }
-    expect((read('index.html').match(/data-decada-vacia/g) ?? []).length).toBe(total);
+    expect(total).toBeGreaterThanOrEqual(0);
+    // The home grid shows every year, empty decades included (#188).
+    expect(read('index.html')).not.toContain('data-decada-vacia');
     // Early years without a built page land on a 404 that explains why.
     expect(read('404.html')).toContain('id="no-encontrada"');
     expect(read('contribuir/index.html')).toContain('data-firsts=');

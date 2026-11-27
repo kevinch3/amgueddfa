@@ -1,17 +1,16 @@
 ---
-import { editionItems, editionState, festivals, undocumented, yearRange } from '../lib/catalog';
+import { editionItems, editionState, festivals, yearRange } from '../lib/catalog';
 import { t } from '../lib/i18n';
 import { url } from '../lib/paths';
-import { decades } from '../lib/timeline';
 import GridCell from './GridCell.astro';
 
 const list = festivals();
 const blocks = list.map((f) => {
   const [first, last] = yearRange(f.slug);
-  const cell = (y: number) => ({ y, state: editionState(f.slug, y), n: editionItems(f.slug, y).length });
-  const groups = decades(first, last, (y) => undocumented(f.slug, y))
-    .map((d) => ({ ...d, cells: d.years.map(cell) }));
-  return { ...f, first, groups };
+  // Every year shows, empty ones too, so gaps read at their real length (#188).
+  const cells = Array.from({ length: last - first + 1 }, (_, k) => first + k)
+    .map((y) => ({ y, state: editionState(f.slug, y), n: editionItems(f.slug, y).length }));
+  return { ...f, first, cells };
 });
 ---
 <ul class="legend" aria-label={t('inicio.mapa_leyenda')}>
@@ -24,16 +23,7 @@ const blocks = list.map((f) => {
     <h3 id={`fest-${f.slug}`}><a href={url(`${f.slug}/`)}>{f.name}</a></h3>
     {f.nameCy !== f.name && <p class="cy" lang="cy">{f.nameCy}</p>}
     <ul class="cells" style={`--start:${(f.first % 10) + 1}`}>
-      {f.groups.map((g) => g.empty ? (
-        <li class="decada-li">
-          <details class="decada-vacia" data-decada-vacia>
-            <summary>{t('festival.decada_vacia', { from: g.from, to: g.to })}</summary>
-            <ul class="cells">
-              {g.cells.map((c) => <GridCell slug={f.slug} name={f.name} {...c} />)}
-            </ul>
-          </details>
-        </li>
-      ) : g.cells.map((c) => <GridCell slug={f.slug} name={f.name} {...c} />))}
+      {f.cells.map((c) => <GridCell slug={f.slug} name={f.name} {...c} />)}
     </ul>
     <p class="antes small">{t('festival.antes', { year: f.first })} <a href={url(`contribuir?f=${f.slug}`)} aria-label={t('festival.antes_link_aria', { festival: f.name })}>{t('festival.antes_link')}</a></p>
   </section>

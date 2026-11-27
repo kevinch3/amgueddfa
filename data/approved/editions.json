@@ -277,6 +277,54 @@
   },
   {
     "festival": "chubut",
+    "year": 1965,
+    "status": "held",
+    "note": null
+  },
+  {
+    "festival": "chubut",
+    "year": 1968,
+    "status": "held",
+    "note": null
+  },
+  {
+    "festival": "chubut",
+    "year": 1969,
+    "status": "held",
+    "note": null
+  },
+  {
+    "festival": "chubut",
+    "year": 1972,
+    "status": "held",
+    "note": null
+  },
+  {
+    "festival": "chubut",
+    "year": 1975,
+    "status": "held",
+    "note": null
+  },
+  {
+    "festival": "chubut",
+    "year": 1988,
+    "status": "held",
+    "note": null
+  },
+  {
+    "festival": "chubut",
+    "year": 1997,
+    "status": "held",
+    "note": null
+  },
+  {
+    "festival": "chubut",
+    "year": 1998,
+    "status": "held",
+    "note": null
+  },
+  {
+    "festival": "chubut",
     "year": 2006,
     "status": "held",
     "note": null
@@ -392,6 +440,12 @@
   {
     "festival": "chubut",
     "year": 2026,
+    "status": "held",
+    "note": null
+  },
+  {
+    "festival": "juventud",
+    "year": 1997,
     "status": "held",
     "note": null
   },
@@ -518,6 +572,12 @@
   {
     "festival": "trevelin",
     "year": 2012,
+    "status": "held",
+    "note": null
+  },
+  {
+    "festival": "trevelin",
+    "year": 2013,
     "status": "held",
     "note": null
   },

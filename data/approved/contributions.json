@@ -13,6 +13,22 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "00b1ee3f-1c26-40b7-9c19-2e80cf92ffae",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1968,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_silla",
+      "fuente": "Osian Hughes, «Los poetas del Eisteddfod», p. 50, vía https://www.facebook.com/groups/recuerdosdelvalleinferior/posts/10151906592999920/",
+      "lote": "a7b413e3-e71a-4c8e-9701-8dc1c0221021",
+      "value": "Morris ap Hughes"
+    },
+    "created_at": "2026-11-27T09:28:59.042749+00:00",
+    "reviewed_at": "2026-11-27T09:28:59.042749+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "00d538c0-e9b8-433a-a4dd-8e79810ceb6e",
     "type": "tag",
     "festival": "juventud",
@@ -82,6 +98,22 @@
     },
     "created_at": "2026-11-20T07:03:13.676968+00:00",
     "reviewed_at": "2026-11-20T07:03:13.676968+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "021ae049-5b53-4690-bf23-85bb6b06efca",
+    "type": "fact",
+    "festival": "trevelin",
+    "year": 2013,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_silla",
+      "fuente": "Tilda Evelyn Roberts, grupo de Facebook «Recuerdos del valle inferior del Río Chubut»: https://www.facebook.com/groups/recuerdosdelvalleinferior/posts/10152041520344920/",
+      "lote": "dc4e6290-c7e9-4a0a-a351-a3bcee54d07e",
+      "value": "Owen Tudur Jones"
+    },
+    "created_at": "2026-11-27T09:29:00.930073+00:00",
+    "reviewed_at": "2026-11-27T09:29:00.930073+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -369,6 +401,22 @@
     "created_at": "2026-11-16T18:31:17.630618+00:00",
     "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
     "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "08d612ee-4b90-4641-9b6c-6ad7b6ff7213",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1988,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "fuente": "Comentario de Diana May Hughes, grupo de Facebook «Recuerdos del valle inferior del Río Chubut»: https://www.facebook.com/groups/recuerdosdelvalleinferior/posts/10154371444774920/",
+      "lote": "a7b413e3-e71a-4c8e-9701-8dc1c0221021",
+      "value": "si"
+    },
+    "created_at": "2026-11-27T09:28:59.042749+00:00",
+    "reviewed_at": "2026-11-27T09:28:59.042749+00:00",
+    "display_name": "Kevin Roberts"
   },
   {
     "id": "0980cab0-5128-48c1-91b2-91309f9da6af",
@@ -886,6 +934,22 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "19734209-b561-4eff-90bc-1b33c95ac3af",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1965,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "fuente": "Adri Roberts Brookes, grupo de Facebook «Recuerdos del valle inferior del Río Chubut»: https://www.facebook.com/groups/recuerdosdelvalleinferior/posts/10150747033354920/",
+      "lote": "a7b413e3-e71a-4c8e-9701-8dc1c0221021",
+      "value": "si"
+    },
+    "created_at": "2026-11-27T09:28:59.042749+00:00",
+    "reviewed_at": "2026-11-27T09:28:59.042749+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "198c9db9-2821-46b5-adf1-10d767b6aba1",
     "type": "fact",
     "festival": "trevelin",
@@ -971,6 +1035,22 @@
     },
     "created_at": "2026-11-14T14:09:28.653632+00:00",
     "reviewed_at": "2026-11-14T14:09:28.653632+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "1be2c9fd-919d-4026-ae4d-a3c4b02a782a",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1972,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "fuente": "Graciela Colasante, grupo de Facebook «Recuerdos del valle inferior del Río Chubut»: https://www.facebook.com/groups/recuerdosdelvalleinferior/posts/10151260932894920/",
+      "lote": "a7b413e3-e71a-4c8e-9701-8dc1c0221021",
+      "value": "Salón San David, Trelew"
+    },
+    "created_at": "2026-11-27T09:28:59.042749+00:00",
+    "reviewed_at": "2026-11-27T09:28:59.042749+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -1236,6 +1316,22 @@
     },
     "created_at": "2026-11-17T13:32:44.148707+00:00",
     "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "230256ac-9879-4cbb-884c-ac2a4251b2e9",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1997,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_silla",
+      "fuente": "Raul Horacio Comes Cutillo, grupo de Facebook «Recuerdos del valle inferior del Río Chubut»: https://www.facebook.com/groups/recuerdosdelvalleinferior/posts/10155570647274920/",
+      "lote": "a7b413e3-e71a-4c8e-9701-8dc1c0221021",
+      "value": "Owen Tudur Jones"
+    },
+    "created_at": "2026-11-27T09:28:59.042749+00:00",
+    "reviewed_at": "2026-11-27T09:28:59.042749+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -1547,6 +1643,22 @@
     },
     "created_at": "2026-11-20T07:03:13.676968+00:00",
     "reviewed_at": "2026-11-20T07:03:13.676968+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "2b26de3c-63e9-4ca9-af07-bbc8b5bcabad",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1965,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_silla",
+      "fuente": "Comentarios de Claudio D. Manzolillo y un sobrino de K. Evans, grupo de Facebook «Recuerdos del valle inferior del Río Chubut»: https://www.facebook.com/groups/recuerdosdelvalleinferior/posts/10159228",
+      "lote": "a7b413e3-e71a-4c8e-9701-8dc1c0221021",
+      "value": "Dic Jones, de Gales (lo representó Kenneth Evans)"
+    },
+    "created_at": "2026-11-27T09:28:59.042749+00:00",
+    "reviewed_at": "2026-11-27T09:28:59.042749+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -1956,6 +2068,21 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "37f37613-6525-4a87-b34e-3d701220f248",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 1939,
+    "item_id": "c7405e26517a",
+    "payload": {
+      "category": "otros",
+      "festival": "chubut",
+      "year": 1939
+    },
+    "created_at": "2026-11-27T07:08:34.988835+00:00",
+    "reviewed_at": "2026-11-27T07:08:34.988835+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "38885718-c558-4c25-a108-99f41e022c32",
     "type": "tag",
     "festival": "chubut",
@@ -2139,6 +2266,22 @@
     },
     "created_at": "2026-11-17T13:32:44.148707+00:00",
     "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "3d7bbb85-71da-4673-b4de-edd0e4e1d52c",
+    "type": "fact",
+    "festival": "trevelin",
+    "year": 2013,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "fuente": "Tilda Evelyn Roberts, grupo de Facebook «Recuerdos del valle inferior del Río Chubut»: https://www.facebook.com/groups/recuerdosdelvalleinferior/posts/10152041520344920/",
+      "lote": "dc4e6290-c7e9-4a0a-a351-a3bcee54d07e",
+      "value": "si"
+    },
+    "created_at": "2026-11-27T09:29:00.930073+00:00",
+    "reviewed_at": "2026-11-27T09:29:00.930073+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -2466,6 +2609,22 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "49343558-94cd-4166-8a79-1a10a21b722f",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1988,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_silla",
+      "fuente": "Comentario de Diana May Hughes, grupo de Facebook «Recuerdos del valle inferior del Río Chubut»: https://www.facebook.com/groups/recuerdosdelvalleinferior/posts/10154371444774920/",
+      "lote": "a7b413e3-e71a-4c8e-9701-8dc1c0221021",
+      "value": "Osian Hughes"
+    },
+    "created_at": "2026-11-27T09:28:59.042749+00:00",
+    "reviewed_at": "2026-11-27T09:28:59.042749+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "498281ce-4662-488c-ae28-df3db41d2e8b",
     "type": "fact",
     "festival": "chubut",
@@ -2511,6 +2670,22 @@
     },
     "created_at": "2026-11-20T07:03:13.676968+00:00",
     "reviewed_at": "2026-11-20T07:03:13.676968+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "4aee2e40-58d2-4d23-b8cc-fd03c2cb99e7",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1988,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "fuente": "Comentario de Diana May Hughes, grupo de Facebook «Recuerdos del valle inferior del Río Chubut»: https://www.facebook.com/groups/recuerdosdelvalleinferior/posts/10154371444774920/",
+      "lote": "a7b413e3-e71a-4c8e-9701-8dc1c0221021",
+      "value": "Trelew"
+    },
+    "created_at": "2026-11-27T09:28:59.042749+00:00",
+    "reviewed_at": "2026-11-27T09:28:59.042749+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -2595,6 +2770,22 @@
     },
     "created_at": "2026-11-17T13:32:44.148707+00:00",
     "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "4fb7b47f-2683-4d47-a820-c2b80c24bd06",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1972,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_silla",
+      "fuente": "Graciela Colasante, grupo de Facebook «Recuerdos del valle inferior del Río Chubut»: https://www.facebook.com/groups/recuerdosdelvalleinferior/posts/10151260932894920/",
+      "lote": "a7b413e3-e71a-4c8e-9701-8dc1c0221021",
+      "value": "Elvey MacDonald (lo representó su padre, Héctor MacDonald)"
+    },
+    "created_at": "2026-11-27T09:28:59.042749+00:00",
+    "reviewed_at": "2026-11-27T09:28:59.042749+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -2706,6 +2897,38 @@
     },
     "created_at": "2026-11-17T13:32:44.148707+00:00",
     "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "52d65ffb-1d65-464b-b075-68e55d7da051",
+    "type": "fact",
+    "festival": "trevelin",
+    "year": 2013,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_corona",
+      "fuente": "Tilda Evelyn Roberts, grupo de Facebook «Recuerdos del valle inferior del Río Chubut»: https://www.facebook.com/groups/recuerdosdelvalleinferior/posts/10152041520344920/",
+      "lote": "dc4e6290-c7e9-4a0a-a351-a3bcee54d07e",
+      "value": "Griselda Jones de Redondo"
+    },
+    "created_at": "2026-11-27T09:29:00.930073+00:00",
+    "reviewed_at": "2026-11-27T09:29:00.930073+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "5304b6a2-b9fd-445a-a60d-fcdc0cd3910f",
+    "type": "fact",
+    "festival": "juventud",
+    "year": 1997,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "fuente": "Raul Horacio Comes Cutillo, grupo de Facebook «Recuerdos del valle inferior del Río Chubut»: https://www.facebook.com/groups/recuerdosdelvalleinferior/posts/10158074078174920/",
+      "lote": "52aefbab-00ab-4650-b47c-b2e97956e2ee",
+      "value": "si"
+    },
+    "created_at": "2026-11-27T09:29:02.520789+00:00",
+    "reviewed_at": "2026-11-27T09:29:02.520789+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -2856,6 +3079,21 @@
     },
     "created_at": "2026-11-20T07:03:13.676968+00:00",
     "reviewed_at": "2026-11-20T07:03:13.676968+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "57906778-92f3-45d9-a9c2-d1c2d69d294a",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 1942,
+    "item_id": "6a85d2b780ab",
+    "payload": {
+      "category": "otros",
+      "festival": "chubut",
+      "year": 1942
+    },
+    "created_at": "2026-11-27T07:08:32.382605+00:00",
+    "reviewed_at": "2026-11-27T07:08:32.382605+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -3228,6 +3466,22 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "621d683f-cffc-430a-b463-13e27f5fe12f",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1969,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Ariel Grant Hughes, grupo de Facebook «Recuerdos del valle inferior del Río Chubut»: https://www.facebook.com/groups/recuerdosdelvalleinferior/posts/10150914446934920/",
+      "lote": "a7b413e3-e71a-4c8e-9701-8dc1c0221021",
+      "value": "Fue la última participación de Morris ap Hughes en el Sillón."
+    },
+    "created_at": "2026-11-27T09:28:59.042749+00:00",
+    "reviewed_at": "2026-11-27T09:28:59.042749+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "6249c220-a53b-492d-af25-c1ca4b663702",
     "type": "tag",
     "festival": "mimosa",
@@ -3387,6 +3641,22 @@
     "created_at": "2026-11-16T18:31:17.630618+00:00",
     "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
     "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "66c28026-c3a5-4675-9df3-6f9e0805aec2",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1972,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "fuente": "Graciela Colasante, grupo de Facebook «Recuerdos del valle inferior del Río Chubut»: https://www.facebook.com/groups/recuerdosdelvalleinferior/posts/10151260932894920/",
+      "lote": "a7b413e3-e71a-4c8e-9701-8dc1c0221021",
+      "value": "si"
+    },
+    "created_at": "2026-11-27T09:28:59.042749+00:00",
+    "reviewed_at": "2026-11-27T09:28:59.042749+00:00",
+    "display_name": "Kevin Roberts"
   },
   {
     "id": "67182d88-be9d-43e9-b879-7c2afd466c52",
@@ -3755,6 +4025,22 @@
     },
     "created_at": "2026-11-20T07:03:13.676968+00:00",
     "reviewed_at": "2026-11-20T07:03:13.676968+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "6eaa1d22-fd9e-46c1-bfe0-4088529e6fc7",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1969,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "fuente": "Ariel Grant Hughes, grupo de Facebook «Recuerdos del valle inferior del Río Chubut»: https://www.facebook.com/groups/recuerdosdelvalleinferior/posts/10150914446934920/",
+      "lote": "a7b413e3-e71a-4c8e-9701-8dc1c0221021",
+      "value": "Salón San David, Trelew"
+    },
+    "created_at": "2026-11-27T09:28:59.042749+00:00",
+    "reviewed_at": "2026-11-27T09:28:59.042749+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -4279,6 +4565,22 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "7a95730c-b4c9-48ad-8820-7cecb9d5cc77",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1965,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Adri Roberts Brookes, grupo de Facebook «Recuerdos del valle inferior del Río Chubut»: https://www.facebook.com/groups/recuerdosdelvalleinferior/posts/10150747033354920/",
+      "lote": "a7b413e3-e71a-4c8e-9701-8dc1c0221021",
+      "value": "Conducción de la ceremonia del sillón: Morris ap Hughes."
+    },
+    "created_at": "2026-11-27T09:28:59.042749+00:00",
+    "reviewed_at": "2026-11-27T09:28:59.042749+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "7b7d5715-2468-491c-80af-02b50795ff9b",
     "type": "fact",
     "festival": "chubut",
@@ -4400,6 +4702,22 @@
     "created_at": "2026-11-16T18:39:27.894079+00:00",
     "reviewed_at": "2026-11-16T18:39:27.894079+00:00",
     "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "7eb84928-f22e-48da-86d2-49088832c167",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1998,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "fuente": "Raul Horacio Comes Cutillo, grupo de Facebook «Recuerdos del valle inferior del Río Chubut»: https://www.facebook.com/groups/recuerdosdelvalleinferior/posts/10158072570464920/",
+      "lote": "a7b413e3-e71a-4c8e-9701-8dc1c0221021",
+      "value": "Gimnasio del Racing Club, Trelew"
+    },
+    "created_at": "2026-11-27T09:28:59.042749+00:00",
+    "reviewed_at": "2026-11-27T09:28:59.042749+00:00",
+    "display_name": "Kevin Roberts"
   },
   {
     "id": "7ec27c77-746d-4b53-a971-2d15f49ccb89",
@@ -4606,6 +4924,21 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "860da906-32b1-430f-95ca-2ae50e759df2",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 1933,
+    "item_id": "d42a8b05f213",
+    "payload": {
+      "category": "otros",
+      "festival": "chubut",
+      "year": 1933
+    },
+    "created_at": "2026-11-27T07:08:38.3287+00:00",
+    "reviewed_at": "2026-11-27T07:08:38.3287+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "8618b77f-216c-4c83-931d-03740a3d562e",
     "type": "fact",
     "festival": "trevelin",
@@ -4678,6 +5011,22 @@
     "created_at": "2026-11-14T10:40:11.081166+00:00",
     "reviewed_at": "2026-11-14T10:41:30.524374+00:00",
     "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "86e87058-d822-42d3-b00d-725ed0f2ae23",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1975,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "fuente": "E. F. Davies de Johnson, «Un sillón para el bardo en la Patagonia», p. 47, vía https://www.facebook.com/groups/recuerdosdelvalleinferior/posts/10153485927474920/",
+      "lote": "a7b413e3-e71a-4c8e-9701-8dc1c0221021",
+      "value": "si"
+    },
+    "created_at": "2026-11-27T09:28:59.042749+00:00",
+    "reviewed_at": "2026-11-27T09:28:59.042749+00:00",
+    "display_name": "Kevin Roberts"
   },
   {
     "id": "87457c84-6d68-4fe5-9c77-1c730b1778ee",
@@ -4781,6 +5130,21 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "898e236c-25c5-47c8-8a3b-f93f4542633e",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 1954,
+    "item_id": "36bbb549b129",
+    "payload": {
+      "category": "otros",
+      "festival": "chubut",
+      "year": 1954
+    },
+    "created_at": "2026-11-27T07:08:19.562447+00:00",
+    "reviewed_at": "2026-11-27T07:08:19.562447+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "8a1b417c-25bd-4042-ba91-67178687dc3b",
     "type": "tag",
     "festival": "juventud",
@@ -4861,6 +5225,21 @@
     },
     "created_at": "2026-11-20T10:11:33.301197+00:00",
     "reviewed_at": "2026-11-20T10:11:33.301197+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "8da318e3-40f5-4d06-b7ca-03f7ea642114",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 1910,
+    "item_id": "abc358fd3032",
+    "payload": {
+      "category": "otros",
+      "festival": "chubut",
+      "year": 1910
+    },
+    "created_at": "2026-11-27T07:08:23.125721+00:00",
+    "reviewed_at": "2026-11-27T07:08:23.125721+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -5836,6 +6215,22 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "a2157eec-667e-4411-b283-2e31f56c7093",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1977,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Adri Roberts Brookes, grupo de Facebook «Recuerdos del valle inferior del Río Chubut»: https://www.facebook.com/photo/?fbid=10152655031154788",
+      "lote": "a7b413e3-e71a-4c8e-9701-8dc1c0221021",
+      "value": "Primer cyd-adrodd (recitación coral en galés) con música: Eryl Williams de Ramírez, Marlin Ellis de Mellado, Elena Davies de Arnold, Neved Williams de Jones y May Williams de Hughes."
+    },
+    "created_at": "2026-11-27T09:28:59.042749+00:00",
+    "reviewed_at": "2026-11-27T09:28:59.042749+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "a243dc4f-59f3-4582-a2b8-9946d245b5e4",
     "type": "fact",
     "festival": "chubut",
@@ -6045,6 +6440,22 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "a74cbf69-c3b3-4aa6-baec-03708fa17bcf",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1969,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_silla",
+      "fuente": "Pablo Lo Presti y Ariel Grant Hughes, grupo de Facebook «Recuerdos del valle inferior del Río Chubut»: https://www.facebook.com/groups/recuerdosdelvalleinferior/posts/10150914446934920/",
+      "lote": "a7b413e3-e71a-4c8e-9701-8dc1c0221021",
+      "value": "Morris ap Hughes"
+    },
+    "created_at": "2026-11-27T09:28:59.042749+00:00",
+    "reviewed_at": "2026-11-27T09:28:59.042749+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "a857cccc-b85a-410a-a815-e036fcad5fce",
     "type": "fact",
     "festival": "chubut",
@@ -6084,6 +6495,38 @@
     },
     "created_at": "2026-11-17T13:32:44.148707+00:00",
     "reviewed_at": "2026-11-17T13:32:44.148707+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "a969e20e-9638-402d-a632-fdc6f461d53b",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1968,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "fuente": "Osian Hughes, «Los poetas del Eisteddfod», p. 50, vía https://www.facebook.com/groups/recuerdosdelvalleinferior/posts/10151906592999920/",
+      "lote": "a7b413e3-e71a-4c8e-9701-8dc1c0221021",
+      "value": "si"
+    },
+    "created_at": "2026-11-27T09:28:59.042749+00:00",
+    "reviewed_at": "2026-11-27T09:28:59.042749+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "a9be40d2-ea02-4a9d-8bc6-e5964e58e6dd",
+    "type": "fact",
+    "festival": "trevelin",
+    "year": 1922,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Juan Carlos Sanchez, grupo de Facebook «Recuerdos del valle inferior del Río Chubut»: https://www.facebook.com/groups/recuerdosdelvalleinferior/posts/10151673182129920/",
+      "lote": "dc4e6290-c7e9-4a0a-a351-a3bcee54d07e",
+      "value": "Primer Eisteddfod realizado en Trevelin, en noviembre de 1922."
+    },
+    "created_at": "2026-11-27T09:29:00.930073+00:00",
+    "reviewed_at": "2026-11-27T09:29:00.930073+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -6342,6 +6785,22 @@
     },
     "created_at": "2026-11-14T14:13:10.350596+00:00",
     "reviewed_at": "2026-11-14T14:13:10.350596+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "b4e4b437-68d9-4efd-b58b-24b56ecf020b",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1909,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Celso Rey García, grupo de Facebook «Recuerdos del valle inferior del Río Chubut»: https://www.facebook.com/groups/recuerdosdelvalleinferior/posts/10157333269054920/",
+      "lote": "a7b413e3-e71a-4c8e-9701-8dc1c0221021",
+      "value": "El poema ganador de la corona fue «Arwyr y Wladfa»; la corona de plata la donó la comunidad galesa de Liverpool y se conserva en el Museo Histórico Regional de Gaiman."
+    },
+    "created_at": "2026-11-27T09:28:59.042749+00:00",
+    "reviewed_at": "2026-11-27T09:28:59.042749+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -6724,6 +7183,22 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "bd9059a2-6014-4789-80f3-3eeccb41b081",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1969,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "fuente": "Pablo Lo Presti, grupo de Facebook «Recuerdos del valle inferior del Río Chubut»: https://www.facebook.com/groups/recuerdosdelvalleinferior/posts/10150914446934920/",
+      "lote": "a7b413e3-e71a-4c8e-9701-8dc1c0221021",
+      "value": "si"
+    },
+    "created_at": "2026-11-27T09:28:59.042749+00:00",
+    "reviewed_at": "2026-11-27T09:28:59.042749+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "bd95e227-3315-4300-b723-6486d395e164",
     "type": "fact",
     "festival": "trevelin",
@@ -6799,6 +7274,22 @@
     },
     "created_at": "2026-11-14T14:13:11.449352+00:00",
     "reviewed_at": "2026-11-14T14:13:11.449352+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "bfcbb112-be8a-47fa-b96e-348425d4fbd9",
+    "type": "fact",
+    "festival": "juventud",
+    "year": 1997,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "fuente": "Raul Horacio Comes Cutillo, grupo de Facebook «Recuerdos del valle inferior del Río Chubut»: https://www.facebook.com/groups/recuerdosdelvalleinferior/posts/10158074078174920/",
+      "lote": "52aefbab-00ab-4650-b47c-b2e97956e2ee",
+      "value": "Gaiman"
+    },
+    "created_at": "2026-11-27T09:29:02.520789+00:00",
+    "reviewed_at": "2026-11-27T09:29:02.520789+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -6991,6 +7482,22 @@
     },
     "created_at": "2026-11-26T08:38:05.981912+00:00",
     "reviewed_at": "2026-11-26T08:38:05.981912+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "c34f3dc8-5f99-42fb-9307-9c877cad2c93",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1965,
+    "item_id": null,
+    "payload": {
+      "field": "venue",
+      "fuente": "Adri Roberts Brookes, grupo de Facebook «Recuerdos del valle inferior del Río Chubut»: https://www.facebook.com/groups/recuerdosdelvalleinferior/posts/10150747033354920/",
+      "lote": "a7b413e3-e71a-4c8e-9701-8dc1c0221021",
+      "value": "Salón San David, Trelew"
+    },
+    "created_at": "2026-11-27T09:28:59.042749+00:00",
+    "reviewed_at": "2026-11-27T09:28:59.042749+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -7594,6 +8101,22 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "d2edf4af-783b-434e-b390-5fdc87f341ce",
+    "type": "fact",
+    "festival": "juventud",
+    "year": 1982,
+    "item_id": null,
+    "payload": {
+      "field": "other",
+      "fuente": "Julio Dimol (Rawson Olvidado), grupo de Facebook «Recuerdos del valle inferior del Río Chubut»: https://www.facebook.com/groups/recuerdosdelvalleinferior/posts/10159928477414920/",
+      "lote": "52aefbab-00ab-4650-b47c-b2e97956e2ee",
+      "value": "Se realizó en septiembre de 1982."
+    },
+    "created_at": "2026-11-27T09:29:02.520789+00:00",
+    "reviewed_at": "2026-11-27T09:29:02.520789+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "d42e552e-5c60-4ec0-a9fb-f974a4d6783f",
     "type": "fact",
     "festival": "chubut",
@@ -7812,6 +8335,22 @@
     "display_name": "Kevin Roberts"
   },
   {
+    "id": "d93e8360-ecba-4ae0-b32f-8831848c297d",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1998,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "fuente": "Raul Horacio Comes Cutillo, grupo de Facebook «Recuerdos del valle inferior del Río Chubut»: https://www.facebook.com/groups/recuerdosdelvalleinferior/posts/10158072570464920/",
+      "lote": "a7b413e3-e71a-4c8e-9701-8dc1c0221021",
+      "value": "si"
+    },
+    "created_at": "2026-11-27T09:28:59.042749+00:00",
+    "reviewed_at": "2026-11-27T09:28:59.042749+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "d9797828-2a76-4e03-adb5-e5298c5b2129",
     "type": "tag",
     "festival": "chubut",
@@ -7916,6 +8455,21 @@
     "display_name": "Meirion Griffiths"
   },
   {
+    "id": "dad8e6ac-a71c-480f-8949-11dad03a44cf",
+    "type": "tag",
+    "festival": "chubut",
+    "year": 1907,
+    "item_id": "ed5ee85318fa",
+    "payload": {
+      "category": "otros",
+      "festival": "chubut",
+      "year": 1907
+    },
+    "created_at": "2026-11-27T07:08:30.817807+00:00",
+    "reviewed_at": "2026-11-27T07:08:30.817807+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
     "id": "db6751ef-04b6-4c59-b639-bc533856b2b9",
     "type": "fact",
     "festival": "trevelin",
@@ -7961,6 +8515,22 @@
     },
     "created_at": "2026-11-14T14:09:57.283747+00:00",
     "reviewed_at": "2026-11-14T14:09:57.283747+00:00",
+    "display_name": "Kevin Roberts"
+  },
+  {
+    "id": "dce7c90e-be2d-4475-ba77-787643b4fe2e",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1997,
+    "item_id": null,
+    "payload": {
+      "field": "edicion_realizada",
+      "fuente": "Raul Horacio Comes Cutillo, grupo de Facebook «Recuerdos del valle inferior del Río Chubut»: https://www.facebook.com/groups/recuerdosdelvalleinferior/posts/10155570647274920/",
+      "lote": "a7b413e3-e71a-4c8e-9701-8dc1c0221021",
+      "value": "si"
+    },
+    "created_at": "2026-11-27T09:28:59.042749+00:00",
+    "reviewed_at": "2026-11-27T09:28:59.042749+00:00",
     "display_name": "Kevin Roberts"
   },
   {
@@ -8650,6 +9220,22 @@
     "created_at": "2026-11-16T18:31:17.630618+00:00",
     "reviewed_at": "2026-11-16T18:31:17.630618+00:00",
     "display_name": "Meirion Griffiths"
+  },
+  {
+    "id": "f1624aa2-292c-48df-a87f-09649e67f6b8",
+    "type": "fact",
+    "festival": "chubut",
+    "year": 1975,
+    "item_id": null,
+    "payload": {
+      "field": "ganador_silla",
+      "fuente": "E. F. Davies de Johnson, «Un sillón para el bardo en la Patagonia», p. 47, vía https://www.facebook.com/groups/recuerdosdelvalleinferior/posts/10153485927474920/",
+      "lote": "a7b413e3-e71a-4c8e-9701-8dc1c0221021",
+      "value": "Desierto (falta de méritos)"
+    },
+    "created_at": "2026-11-27T09:28:59.042749+00:00",
+    "reviewed_at": "2026-11-27T09:28:59.042749+00:00",
+    "display_name": "Kevin Roberts"
   },
   {
     "id": "f1ad5eae-852c-4148-8202-8cf344f549de",

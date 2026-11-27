@@ -2,12 +2,17 @@
 // the path, so carry the query (perfil?u=…, contribuir?f=…&y=…) and the hash over,
 // and use the address bar's path: on a 404 it is the page that was asked for.
 import { alternates } from '../lib/paths';
+import { LANG_PARAM } from '../lib/pagina-unica';
 
-const extra = `${location.search}${location.hash}`;
+// A deep page's alternates carry ?l=xx (lib/pagina-unica.ts): keep the page's other parameters, not its own l.
 const hrefs = new Map(alternates(location.pathname).map((a) => [a.locale as string, a.href]));
 for (const a of document.querySelectorAll<HTMLAnchorElement>('a[data-idioma]')) {
   const href = hrefs.get(a.dataset.idioma ?? '');
-  if (href) a.href = `${href}${extra}`;
+  if (!href) continue;
+  const u = new URL(href, location.origin);
+  for (const [k, v] of new URLSearchParams(location.search)) if (k !== LANG_PARAM && !u.searchParams.has(k)) u.searchParams.append(k, v);
+  u.hash = location.hash;
+  a.href = `${u.pathname}${u.search}${u.hash}`;
 }
 
 // Header fold-outs (language, reading settings): one open at a time; they fold back

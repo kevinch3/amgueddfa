@@ -149,7 +149,7 @@ describe('language helpers', () => {
   it('url() prefixes pages with the language, never files', () => {
     expect(url('/')).toBe('/eisteddfod/');
     expect(url('item/abc/')).toBe('/eisteddfod/item/abc/');
-    expect(url('item/abc/', 'cy')).toBe('/cy/eisteddfod/item/abc/');
+    expect(url('item/abc/', 'cy')).toBe('/eisteddfod/item/abc/?l=cy'); // a deep page is built once (docs/reglas.md, rule 4)
     expect(url('/', 'fr')).toBe('/fr/eisteddfod/');
     expect(url('contribuir?f=chubut&y=1937', 'sv')).toBe('/sv/eisteddfod/contribuir?f=chubut&y=1937');
     expect(url('/#buscados', 'zh')).toBe('/zh/eisteddfod/#buscados');

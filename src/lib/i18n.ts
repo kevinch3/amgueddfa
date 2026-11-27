@@ -143,7 +143,15 @@ function lookup(tree: Tree | undefined, key: string): string | undefined {
  * language. Undefined on Spanish pages, where it already matches (WCAG 3.1.2).
  */
 export function contentLang(): string | undefined {
-  return current === DEFAULT_LOCALE ? undefined : 'es';
+  // A deep page is built once and read in any language: its Spanish page marks content too,
+  // since the label swap (lib/pagina-unica.ts) leaves everything inside a [lang] element alone.
+  return current === DEFAULT_LOCALE && !deepPage ? undefined : 'es';
+}
+
+let deepPage = false;
+/** Set per page by the build middleware: whether it is a deep page built once (lib/pagina-unica.ts). */
+export function setDeepPage(on: boolean): void {
+  deepPage = on;
 }
 
 /** The text for `key` in the current language (Spanish if that language lacks it), with {vars} filled in. */

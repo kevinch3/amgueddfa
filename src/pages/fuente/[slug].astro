@@ -3,7 +3,7 @@ import { isPublic } from '../../lib/visibilidad';
 import Base from '../../layouts/Base.astro';
 import ItemCard from '../../components/ItemCard.astro';
 import { pageUrls } from '../../lib/catalog';
-import { factDisplay, type Contribution } from '../../lib/contrib';
+import { factDisplay, factInOriginal, type Contribution } from '../../lib/contrib';
 import { waybackLookup, type Source } from '../../lib/fuentes';
 import { siteSources } from '../../lib/fuentes-site';
 import { contentLang, intlLocales, t } from '../../lib/i18n';
@@ -117,7 +117,12 @@ const contributions = [...source.contributions].sort((a, b) =>
           return (
             <li>
               <span class="badge">{t(`fuentes.aporte_tipos.${c.type}`)}</span>{' '}
-              <span lang={contentLang()}>{text(c)}</span>
+              {c.type === 'fact' ? (
+                // The field's name is interface text; only a value the contributor wrote is in its original language.
+                <>{factDisplay(c).label}: {factInOriginal(c) ? <span lang={contentLang()}>{factDisplay(c).value}</span> : factDisplay(c).value}</>
+              ) : (
+                <span lang={contentLang()}>{text(c)}</span>
+              )}
               {href && <> · <a href={href}>{whereLabel(c)}</a></>}
               {!persona && c.display_name && <span class="muted small"> · {c.display_name}</span>}
             </li>

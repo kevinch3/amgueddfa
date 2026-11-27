@@ -1,5 +1,6 @@
 import { DEFAULT_LOCALE, LOCALES, isLocale, locale, type Locale } from './i18n';
 import { idsDe } from './colecciones';
+import { isDeep, withLang } from './pagina-unica';
 
 function siteBase(): string {
   return (import.meta.env.BASE_URL ?? '/').replace(/\/+$/, '');
@@ -43,8 +44,16 @@ export function isOldEisteddfodPath(path: string): boolean {
  */
 export function url(path: string, loc: Locale = locale()): string {
   const p = path.replace(/^\/+/, '');
+  const full = `${collectionPrefix(p)}${p}`;
+  // A deep page (one document, one source) is built once: its Spanish address, carrying the language (rule 4).
+  if (!isFile(p) && isDeep(full)) return withLang(`${siteBase()}/${full}`, loc, DEFAULT_LOCALE);
   const prefix = loc === DEFAULT_LOCALE || isFile(p) ? '' : `${loc}/`;
-  return `${siteBase()}/${prefix}${collectionPrefix(p)}${p}`;
+  return `${siteBase()}/${prefix}${full}`;
+}
+
+/** Whether a built page's path (with or without base and language) is a deep page, built once in Spanish. */
+export function isDeepPage(pathname: string): boolean {
+  return isDeep(stripLocale(pathname).slice(siteBase().length));
 }
 
 /** The site root (the museum's hub page), in a language. */
@@ -73,6 +82,7 @@ export function alternates(pathname: string): { locale: Locale; href: string }[]
   const base = siteBase();
   // A built page's path is already final (collection included): only the language changes.
   const page = stripLocale(pathname).slice(base.length).replace(/^\/+/, '');
+  if (isDeep(page)) return LOCALES.map((l) => ({ locale: l, href: withLang(`${base}/${page}`, l, DEFAULT_LOCALE) }));
   return LOCALES.map((l) => ({ locale: l, href: `${base}/${l === DEFAULT_LOCALE ? '' : `${l}/`}${page}` }));
 }
 

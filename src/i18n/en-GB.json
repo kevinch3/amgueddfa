@@ -849,6 +849,8 @@
       "dura_sesion": "Until you sign out.",
       "dura_verificador": "Deleted once you finish signing in.",
       "dura_tz": "Until you sign out.",
+      "idioma_para": "Showing each document in the language of the last page you read.",
+      "dura_idioma": "Until you clear the site data in your browser.",
       "dura_nocontar": "Until you turn counting back on.",
       "dura_lectura": "Until you reset them.",
       "dura_borrador": "Until you send or discard those corrections.",

@@ -9,7 +9,8 @@ import ReadingMenu from '../components/ReadingMenu.astro';
 import { CLAIM, WCAG } from '../lib/accesibilidad';
 import { LECTURA_KEY, OPCIONES } from '../lib/lectura';
 import { DEFAULT_LOCALE, LOCALE_INFO, locale, t } from '../lib/i18n';
-import { alternates, rootUrl, url } from '../lib/paths';
+import { alternates, isDeepPage, rootUrl, url } from '../lib/paths';
+import { IDIOMA_KEY, LANG_PARAM } from '../lib/pagina-unica';
 import { jsonForScript } from '../lib/contrib';
 import { absUrl } from '../lib/seo';
 import { TAGS_AT } from '../lib/catalog';
@@ -44,7 +45,10 @@ const fullTitle = !title ? t('sitio.nombre') : title.includes(t('sitio.nombre'))
 const here = locale();
 const info = LOCALE_INFO[here];
 const versions = alternates(Astro.url.pathname);
-const canonical = absUrl(versions.find((v) => v.locale === here)!.href);
+// A deep page (one document, one source) is built once, at its Spanish address (docs/reglas.md, rule 4).
+const deep = isDeepPage(Astro.url.pathname);
+const canonical = absUrl(versions.find((v) => v.locale === (deep ? DEFAULT_LOCALE : here))!.href);
+const tags = Object.fromEntries(Object.entries(LOCALE_INFO).map(([l, i]) => [l, i.tag]));
 const ogImage = image ? absUrl(image) : null;
 // WebMCP is in a Chrome origin trial: its token (per site) turns the API on for visitors.
 const webmcpToken = (import.meta.env.PUBLIC_WEBMCP_OT_TOKEN ?? '').trim();
@@ -54,6 +58,27 @@ const webmcpToken = (import.meta.env.PUBLIC_WEBMCP_OT_TOKEN ?? '').trim();
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {deep ? (
+      <script is:inline define:vars={{ key: IDIOMA_KEY, param: LANG_PARAM, tags, def: DEFAULT_LOCALE }}>
+        // A deep page is Spanish in the HTML: read the visitor's language (?l=, else the last page they
+        // read) before anything renders, so scripts/pagina-unica.ts and every script's t() use it.
+        (function () {
+          var q = new URLSearchParams(location.search).get(param), s = null;
+          try { s = localStorage.getItem(key); if (tags[q]) localStorage.setItem(key, q); } catch (e) { /* storage blocked */ }
+          var l = tags[q] ? q : tags[s] ? s : def;
+          if (l === def) return;
+          var h = document.documentElement;
+          h.lang = tags[l];
+          h.setAttribute('data-idioma', l);
+          h.classList.add('traduciendo');
+          setTimeout(function () { h.classList.remove('traduciendo'); }, 2500);
+        })();
+      </script>
+    ) : (
+      <script is:inline define:vars={{ key: IDIOMA_KEY, here }}>
+        try { localStorage.setItem(key, here); } catch (e) { /* storage blocked */ }
+      </script>
+    )}
     <script is:inline define:vars={{ key: LECTURA_KEY, opciones: OPCIONES }}>
       // Reading settings before the first paint (lib/lectura.ts: first value = default, no attribute).
       try {
@@ -63,8 +88,8 @@ const webmcpToken = (import.meta.env.PUBLIC_WEBMCP_OT_TOKEN ?? '').trim();
     </script>
     <meta name="description" content={description} />
     {!noindex && <link rel="canonical" href={canonical} />}
-    {versions.map((v) => <link rel="alternate" hreflang={LOCALE_INFO[v.locale].tag} href={absUrl(v.href)} />)}
-    <link rel="alternate" hreflang="x-default" href={absUrl(versions.find((v) => v.locale === DEFAULT_LOCALE)!.href)} />
+    {!deep && versions.map((v) => <link rel="alternate" hreflang={LOCALE_INFO[v.locale].tag} href={absUrl(v.href)} />)}
+    {!deep && <link rel="alternate" hreflang="x-default" href={absUrl(versions.find((v) => v.locale === DEFAULT_LOCALE)!.href)} />}
     {noindex && <meta name="robots" content="noindex" />}
     <meta property="og:site_name" content={t('sitio.nombre')} />
     <meta property="og:title" content={fullTitle} />
@@ -72,7 +97,7 @@ const webmcpToken = (import.meta.env.PUBLIC_WEBMCP_OT_TOKEN ?? '').trim();
     {!noindex && <meta property="og:url" content={canonical} />}
     <meta property="og:type" content="website" />
     <meta property="og:locale" content={info.og} />
-    {versions.filter((v) => v.locale !== here).map((v) => <meta property="og:locale:alternate" content={LOCALE_INFO[v.locale].og} />)}
+    {!deep && versions.filter((v) => v.locale !== here).map((v) => <meta property="og:locale:alternate" content={LOCALE_INFO[v.locale].og} />)}
     {ogImage && <meta property="og:image" content={ogImage} />}
     <meta name="twitter:card" content={ogImage ? 'summary_large_image' : 'summary'} />
     {jsonLd && <script type="application/ld+json" set:html={jsonForScript(jsonLd)} />}
@@ -142,7 +167,11 @@ const webmcpToken = (import.meta.env.PUBLIC_WEBMCP_OT_TOKEN ?? '').trim();
         </p>
         <p id="ultimo-cambio" class="small muted" data-at={BUILD_CHANGED_AT} aria-live="off" hidden></p>
         <LanguageMenu variant="list" />
-        {here !== DEFAULT_LOCALE && <p class="small muted">{t('idiomas.original')}</p>}
+        {deep ? (
+          <p class="small muted" data-solo-traducida hidden={here === DEFAULT_LOCALE}>{t('idiomas.original')}</p>
+        ) : (
+          here !== DEFAULT_LOCALE && <p class="small muted">{t('idiomas.original')}</p>
+        )}
         <p class="contacto">
           <img src={url('contacto.png')} alt={t('pie.contacto_alt')} width="181" height="24" decoding="async" />
           <span id="contacto-mail"></span>
@@ -156,6 +185,7 @@ const webmcpToken = (import.meta.env.PUBLIC_WEBMCP_OT_TOKEN ?? '').trim();
       import '../scripts/lectura.ts';
       import '../scripts/webmcp.ts';
       import '../scripts/ultimo-cambio.ts';
+      import '../scripts/pagina-unica.ts';
     </script>
   </body>
 </html>

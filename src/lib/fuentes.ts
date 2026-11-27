@@ -144,7 +144,8 @@ export function contributionSourceSlug(c: Pick<Contribution, 'payload' | 'displa
 }
 
 /** How a block names where a contribution comes from: a label and, when there is one, a link. */
-export type SourceRef = { label: string; href: string | null; own: boolean };
+/** `original`: the URL the fuente cites, if any (the compact fact link opens it). */
+export type SourceRef = { label: string; href: string | null; own: boolean; original?: string | null };
 
 /**
  * The "Fuente: …" of a contribution shown on an edition or item page. What it cites
@@ -159,7 +160,7 @@ export function sourceRef(c: Pick<Contribution, 'payload' | 'display_name'>, kno
   const f = String(c.payload?.fuente ?? '').trim();
   if (f) {
     const { label, href } = splitFuente(f);
-    return { label, href: page ?? href ?? null, own: true };
+    return { label, href: page ?? href ?? null, own: true, original: href ?? null };
   }
   return page ? { label: t('fuentes.comunidad'), href: page, own: false } : null;
 }

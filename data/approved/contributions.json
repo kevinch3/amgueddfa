@@ -4507,13 +4507,13 @@
   {
     "id": "78f018f6-93c6-4780-9e28-b7a847f853f4",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1912,
     "item_id": "2c2e1c862f8c",
     "payload": {
-      "category": "otros",
-      "festival": "chubut",
-      "year": 1912
+      "year": 1912,
+      "tipo": "otros",
+      "coleccion": "chubut"
     },
     "created_at": "2026-11-27T10:27:24.236701+00:00",
     "reviewed_at": "2026-11-27T10:27:24.236701+00:00",
@@ -8882,13 +8882,13 @@
   {
     "id": "e4c4833c-698b-49fc-b5a7-3acae38f7f36",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": null,
     "item_id": "73afebadf114",
     "payload": {
-      "category": "programa",
-      "festival": "chubut",
-      "year": 2008
+      "year": 2008,
+      "tipo": "programa",
+      "coleccion": "chubut"
     },
     "created_at": "2026-11-27T10:27:45.052031+00:00",
     "reviewed_at": "2026-11-27T10:27:45.052031+00:00",

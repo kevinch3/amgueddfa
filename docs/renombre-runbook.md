@@ -21,7 +21,10 @@ minutes in which signing in, contributing and live updates fail; records get `co
 
 1. **Dry run** against production: `supabase db push --dry-run --db-url …` must list exactly one
    migration, `20261127000001_colecciones.sql`. Anything else: stop.
-2. **Merge** the pull request. The deploy starts (about 90 s). From now until step 3 is done the
+2. **Bring the branch up to date**: merge `main` into it, run
+   `python3 -m scripts.migrar.registros_2026_11` (it converts rows the 15-minute export added
+   since, and changes nothing else), commit, and check that the tests pass.
+   **Merge** the pull request. The deploy starts (about 90 s). From now until step 3 is done the
    live site asks for `coleccion`, which the database does not have yet.
 3. **Apply** at once: `supabase db push --yes --db-url …`.
 4. **Check** (read-only):

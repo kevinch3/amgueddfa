@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { taskQueue } from '../src/lib/tasks';
+import { isHistory, taskQueue } from '../src/lib/tasks';
 import { latestApproved, pendingPoints, pointsFor, rankBy, statusOf, type LeaderRow } from '../src/lib/game';
 import type { Item } from '../src/lib/types';
 
@@ -15,7 +15,24 @@ function item(id: string, over: Partial<Item> = {}): Item {
 const ids = (list: Item[]) => list.map((i) => i.id);
 const many = Array.from({ length: 30 }, (_, n) => item(`a${String(n).padStart(11, '0')}`));
 
+describe('isHistory (Quick tasks leave out the last 20 years, #187)', () => {
+  it('cuts at 20 years back and moves with the year', () => {
+    expect(isHistory(2006, 2026)).toBe(true);
+    expect(isHistory(2007, 2026)).toBe(false);
+    expect(isHistory(2026, 2026)).toBe(false);
+    expect(isHistory(2007, 2027)).toBe(true);
+  });
+  it('keeps documents with no year', () => {
+    expect(isHistory(null, 2026)).toBe(true);
+  });
+});
+
 describe('taskQueue', () => {
+  it('leaves out documents from the last 20 years', () => {
+    const list = [item('old', { year: 1990 }), item('edge', { year: 2006 }), item('new', { year: 2015 }), item('none', { year: null })];
+    expect(ids(taskQueue(list, new Set(), 'u', 2026)).sort()).toEqual(['edge', 'none', 'old']);
+  });
+
   it('queue excludes restricted and done', () => {
     const list = [item('aaa'), item('bbb', { restricted: true }), item('ccc'), item('ddd')];
     const q = taskQueue(list, new Set(['ccc']), 'user-1');

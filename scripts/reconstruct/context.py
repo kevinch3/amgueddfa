@@ -2,6 +2,7 @@
 approved facts, and the words those give (the word list the checker accepts)."""
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 import sys
@@ -126,7 +127,13 @@ def load_common_words() -> frozenset:
     follows the live transcripts, and a machine without the dictionary stops instead of making other keys."""
     if not SPANISH_DICT.exists():
         sys.exit(f"{SPANISH_DICT} missing (install the wspanish word list): window keys depend on it")
+    if not COMMON_FILE.exists():
+        sys.exit(f"{COMMON_FILE} missing: python3 -m scripts.reconstruct.context --palabras-comunes")
     raw = SPANISH_DICT.read_bytes()
+    pinned = re.search(r"^# spanish-dict-sha256: ([0-9a-f]{64})$", COMMON_FILE.read_text(encoding="utf-8"), re.M)
+    if pinned and pinned.group(1) != hashlib.sha256(raw).hexdigest():
+        sys.exit(f"{SPANISH_DICT} changed since {COMMON_FILE.name} was written: window keys would change. "
+                 "Regenerate it on purpose (--palabras-comunes), then dry-run before asking anything.")
     try:
         text = raw.decode("utf-8")
     except UnicodeDecodeError:
@@ -153,48 +160,73 @@ def write_common_words(repo: Path, path: Path = COMMON_FILE, min_videos: int = C
             continue
         seen.update({t for x in segs if isinstance(x, list) and len(x) > 1 for t in tokens(str(x[1]))})
     words = sorted(w for w, n in seen.items() if n >= min_videos and len(w) >= NAME_MIN)
+    sha = hashlib.sha256(SPANISH_DICT.read_bytes()).hexdigest() if SPANISH_DICT.exists() else ""
     path.write_text(f"# Words in {min_videos}+ published video transcripts: not mishearings of a name.\n"
-                    "# Frozen on purpose (window keys depend on it): python3 -m scripts.reconstruct.context --palabras-comunes\n"
+                    + (f"# spanish-dict-sha256: {sha}\n" if sha else "")
+                    + "# Frozen on purpose (window keys depend on it): python3 -m scripts.reconstruct.context --palabras-comunes\n"
                     + "\n".join(words) + "\n", encoding="utf-8")
     return len(words)
 
 
+FUNCTION_WORDS = frozenset("de del la las los el y e por con en a ap van von".split())
+_PUNCT = re.compile(r"[,;:()«»\"“”]")
+
+
+def _name_parts(value: str) -> tuple[set, set]:
+    """The value's name words (no function words, no always-known places) and the joins of adjacent name
+    words inside one stretch between punctuation ("Mac Burney" -> macburney, never "jones"+"de")."""
+    single, pairs = set(), set()
+    for run in _PUNCT.split(value):
+        toks = tokens(run)
+        single |= {t for t in toks if len(t) >= NAME_MIN and t not in FUNCTION_WORDS and t not in BASE_WORDS}
+        pairs |= {x + y for x, y in zip(toks, toks[1:]) if x not in FUNCTION_WORDS and y not in FUNCTION_WORDS}
+    return single, pairs
+
+
 def _initial(w: str) -> str:
-    w = w[1:] if w.startswith("h") and len(w) > 1 else w  # silent h
-    w = "y" + w[2:] if w.startswith("ll") else w
+    """The first sound, in the classes the recognisers confuse: silent h, vowels, ll/y/j/i, ge/gi, ce/ci, gu/w."""
+    w = w[1:] if w.startswith("h") and len(w) > 1 else w
+    if w.startswith("ll") or w[:2] in ("ge", "gi"):
+        return "y"
+    if w[:2] in ("ce", "ci"):
+        return "s"
+    if w[:2] in ("gu", "hu") and w[2:3] in tuple("aeiou"):
+        return "w"
+    if w[:1] in tuple("aeiouy"):
+        return "a"
     return _INITIAL.get(w[:1], w[:1])
 
 
-def _near(h: str, n: str, common: frozenset) -> bool:
+def _near(h: str, n: str, strict: bool) -> bool:
     from difflib import SequenceMatcher
     from scripts.reconstruct.checker import sound_key  # the checker imports this module
     if h == n or _initial(h) != _initial(n):
         return False
     r = SequenceMatcher(None, h, n).ratio()
-    if h in common:  # a real word: nearly the same spelling and the same start (nancy ~ Nanci, not danza ~ Diana)
+    if strict:  # the heard word is a real word: nearly the same spelling and start (nancy ~ Nanci, not danza ~ Diana)
         return r >= COMMON_SPELLED and h[:3] == n[:3]
     return r >= SPELLED_ALIKE or sound_key(h) == sound_key(n)
 
 
 def _heard_like(value: str, raw: list[str], common: frozenset) -> bool:
-    """Something heard may be a mishearing of a name in the value: spelled nearly alike or with the same sound
-    (initials s/z, c/k/q, j/y/i/ll, b/v, silent h alike), a name split in two ("borda grin"), a two-word name
-    heard as one ("borddagryn"), or the name without its accent ("saez" ~ Sáez). Real words need a closer
-    spelling ("nancy" ~ Nanci, never "tiene" ~ Diana). A name heard right needs no fact: facts fix mishearings."""
+    """A heard word may be a mishearing of a name in the value: spelled nearly alike or with the same sound
+    (initial classes alike), an exact Welsh mutation of it ("fyfyrwyr" ~ Myfyrwyr), a name split in two
+    ("borda grin"), two names heard as one ("macburney"), or the name without its accent ("saez" ~ Sáez).
+    A word heard exactly as a name brings nothing (facts fix mishearings), and a real word needs a very close
+    spelling, its Welsh variants included ("romana" never brings Ramona)."""
+    from scripts.reconstruct.checker import _radicals
     heard = [fold(w) for w in raw]
-    all_names = tokens(value)
-    single = {t for t in all_names if len(t) >= NAME_MIN}
-    pairs = {a + b for a, b in zip(all_names, all_names[1:])}
-    if single & {a + b for a, b in zip(heard, heard[1:])}:  # one name heard as two words
+    single, pairs = _name_parts(value)
+    names = single | pairs
+    if single & {x + y for x, y in zip(heard, heard[1:])} or pairs & set(heard):
         return True
-    from scripts.reconstruct.checker import _radicals  # Welsh mutations: "fyfrio" may be Myfyrio
-    cands = {r for h in heard if len(h) >= NAME_MIN for r in _radicals(h)}
-    if pairs & cands:  # two names heard as one word ("macburney")
-        return True
-    if any(_near(h, n, common) for n in single | pairs for h in cands):
-        return True
+    for h in {h for h in heard if len(h) >= NAME_MIN and h not in names}:
+        strict = h in common
+        for r in _radicals(h):
+            if (r != h and r in names) or any(_near(r, n, strict) for n in names):
+                return True
     accented = {w for w in re.findall(r"[^\W_]+", value.lower()) if fold(w) != w and fold(w) not in common}
-    return any(r != a and fold(r) == fold(a) for a in accented for r in raw)
+    return any(r != x and fold(r) == fold(x) for x in accented for r in raw)
 
 
 def relevant(ctx: Context, lines, common: frozenset | None = None) -> Context:

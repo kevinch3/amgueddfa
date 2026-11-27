@@ -1,4 +1,5 @@
 # Words in 30+ published video transcripts: not mishearings of a name.
+# spanish-dict-sha256: 6b26adc955ec682e41e98d626d0ed1f778511065ee1f7f19c28e8b3cb574b9b6
 # Frozen on purpose (window keys depend on it): python3 -m scripts.reconstruct.context --palabras-comunes
 acerca
 achos
@@ -17,6 +18,7 @@ ahora
 aire
 aires
 alas
+alba
 alegre
 alegria
 alejandro
@@ -31,7 +33,7 @@ allan
 alli
 alma
 alto
-alwyn
+alwen
 amar
 ambell
 amen
@@ -408,6 +410,7 @@ felly
 femenino
 fernandez
 ferrari
+ffon
 ffordd
 ffrindiau
 ffwrdd
@@ -466,6 +469,7 @@ gloria
 gobaith
 gobeithio
 goch
+godi
 gofyn
 golau
 gonzalez

@@ -18,6 +18,7 @@ import json
 import os
 import subprocess
 import threading
+import time
 import sys
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
@@ -27,7 +28,7 @@ from typing import Callable
 from scripts.align_lyrics import lyric_info, parse_letra, spans_for
 from scripts.export_video_transcripts import DEFAULT_BACKUP, FESTIVALS, fix_eisteddfod, spanish_words
 from scripts.reconstruct.checker import check_window
-from scripts.reconstruct.context import video_context
+from scripts.reconstruct.context import tokens, video_context
 from scripts.reconstruct.merge import merge, reply_lines, rules_lines
 from scripts.reconstruct.model import MODEL, ModelError, ask as ask_claude
 from scripts.reconstruct.sources import WELSH_SOURCE, has_mezcla, load_sources
@@ -92,13 +93,32 @@ def _write(path: Path, data: bytes) -> None:
 
 
 def _readable(path: Path) -> bool:
-    """A cache file that does not parse is removed, so the window is asked again instead of crashing the run."""
+    """Whether a cache file holds a reply. One that does not parse (and is not being written right now) is
+    removed, so the window is asked again instead of crashing the run."""
     try:
         json.loads(path.read_text(encoding="utf-8"))
         return True
-    except ValueError:
-        path.unlink(missing_ok=True)
+    except OSError:
         return False
+    except ValueError:
+        try:
+            if time.time() - path.stat().st_mtime > 10:
+                path.unlink(missing_ok=True)
+        except OSError:
+            pass
+        return False
+
+
+def _safe_copy(w, path: Path) -> bool:
+    """A reply cached under another key may be reused under w.hash only if its fixes need no name the window's
+    context leaves out: w.hash ignores those facts, so correcting one later would strand the reply on rules."""
+    try:
+        reply = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return False
+    dropped = w.full_words - w.context.words
+    return not any(t in dropped for line in reply.get("lines", []) for fx in line.get("fixes", [])
+                   for t in tokens(fx.get("to", "")))
 
 
 def cached_reply(cache: Path, w) -> Path | None:
@@ -108,7 +128,7 @@ def cached_reply(cache: Path, w) -> Path | None:
     if path.exists() and _readable(path):
         return path
     old = cache / f"{w.legacy}.json" if w.legacy else None
-    if old is not None and old.exists() and _readable(old):
+    if old is not None and old != path and old.exists() and _readable(old) and _safe_copy(w, old):
         _write(path, old.read_bytes())
         return path
     return None
@@ -121,7 +141,7 @@ def migrate_from(old: list, new: list, cache: Path) -> int:
     for o, w in zip(old, new):
         if (o.t0, o.t1) == (w.t0, w.t1) and o.hash == w.hash and needs_model(w) and o.legacy \
                 and not (cache / f"{w.hash}.json").exists() and (cache / f"{o.legacy}.json").exists() \
-                and _readable(cache / f"{o.legacy}.json"):
+                and _readable(cache / f"{o.legacy}.json") and _safe_copy(w, cache / f"{o.legacy}.json"):
             _write(cache / f"{w.hash}.json", (cache / f"{o.legacy}.json").read_bytes())
             n += 1
     return n
@@ -132,9 +152,12 @@ def migrate_cache(windows: list, cache: Path) -> int:
     Run once over the archive after the keys changed, before any new fact changes the legacy keys too."""
     n = 0
     for w in windows:
-        if needs_model(w) and w.legacy and w.legacy != w.hash and not (cache / f"{w.hash}.json").exists() \
-                and (cache / f"{w.legacy}.json").exists():
-            cached_reply(cache, w)
+        if not (needs_model(w) and w.legacy and w.legacy != w.hash):
+            continue
+        new = cache / f"{w.hash}.json"
+        if new.exists() and not _safe_copy(w, new):
+            new.unlink()  # copied by an earlier migration before copies were checked: ask it again
+        elif not new.exists() and (cache / f"{w.legacy}.json").exists() and cached_reply(cache, w):
             n += 1
     return n
 

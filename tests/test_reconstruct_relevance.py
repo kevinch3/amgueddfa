@@ -6,7 +6,7 @@ import pytest
 from scripts.reconstruct.context import Context, relevant
 from scripts.reconstruct.sources import Line
 
-COMMON = frozenset({"tiene", "danza", "nancy", "buenas", "noches"})
+COMMON = frozenset({"tiene", "danza", "nancy", "buenas", "noches", "romana", "amen", "dijo"})
 
 
 def ctx(*facts):
@@ -67,3 +67,29 @@ def test_common_words_come_from_the_frozen_file_not_the_live_corpus(monkeypatch,
 
 def test_a_mutated_welsh_hearing_brings_the_fact():
     assert kept("ganador_silla: Myfanwy Rhys", "cerdd fyfanwy")
+
+
+@pytest.mark.parametrize("fact,heard", [
+    ("ganador_silla: Esyllt Nest Roberts", "ganó roberts"),                        # radicals of a name heard right
+    ("ganador_corona: Nanci Jones, de Rawson", "la señora jones de"),              # join across "de"
+    ("venue: Salón de la Asociación San David, Trelew", "en la asociación"),       # heard right, long venue
+    ("ganador_corona: Ramona Díaz", "la romana"),                                   # a real word via its variant
+    ("venue: Teatro de Gaiman", "dijo amen"),                                       # always-known place word
+])
+def test_words_heard_right_bring_no_fact(fact, heard):
+    assert not kept(fact, heard)
+
+
+@pytest.mark.parametrize("fact,heard", [
+    ("ganador_silla: Myfyrwyr Tegwen", "yr enillydd fyfyrwyr"),   # exact soft mutation of a long single name
+    ("ganador_silla: Hydref Nos", "cerdd hedref"),                 # vowel confusion after a silent h
+])
+def test_mutations_and_vowel_confusions_bring_the_fact(fact, heard):
+    assert kept(fact, heard)
+
+
+def test_sound_keys_and_radicals_are_pinned():
+    """Window keys depend on these (relevance): changing them re-keys every window that carries a fact."""
+    from scripts.reconstruct.checker import _radicals, sound_key
+    assert [sound_key(w) for w in ("restucha", "marley", "thomas", "dafydd")] == ["rasdaca", "marla", "damas", "dabad"]
+    assert _radicals("fyfrio") == {"fyfrio", "byfrio", "myfrio"}

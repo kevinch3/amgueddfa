@@ -275,3 +275,24 @@ def test_an_unreadable_cache_file_is_asked_again(tmp_path):
     broken.write_text('{"lines": [', encoding="utf-8")
     reconstruct_video(repo, backup, video, ask=echo_model(calls), replies=tmp_path / "replies")
     assert len(calls) == n + 1 and json.loads(broken.read_text(encoding="utf-8"))["lines"] is not None
+
+
+def test_a_legacy_reply_that_needs_a_dropped_name_is_not_copied(tmp_path):
+    """A reply fixing into a name the filtered context leaves out would break if that fact were corrected
+    later (its key ignores the fact): it is asked again instead of copied."""
+    from scripts.reconstruct.context import Context
+    from scripts.reconstruct.sources import Line
+    from scripts.reconstruct.windows import make_windows
+    from scripts.reconstruct_videos import cached_reply, migrate_cache
+    ctx = Context("Eisteddfod del Chubut 2030.\npresentadores: Antonio Pérez", frozenset({"antonio", "perez"}))
+    ws = make_windows([Line(5.0, "buenas noches con tonio", "yt_es", "es")], 60, lambda a, b: ctx, glossary=[])
+    w = ws[0]
+    assert "Antonio" not in w.context.text and w.hash != w.legacy
+    cache = tmp_path / "c"
+    cache.mkdir()
+    reply = {"lines": [{"t": 5.0, "lang": "es", "text": "buenas noches con Antonio", "src": ["yt_es"],
+                        "fixes": [{"from": "tonio", "to": "Antonio"}]}]}
+    (cache / f"{w.legacy}.json").write_text(json.dumps(reply), encoding="utf-8")
+    assert migrate_cache(ws, cache) == 0 and cached_reply(cache, w) is None
+    (cache / f"{w.hash}.json").write_text(json.dumps(reply), encoding="utf-8")  # copied by an earlier migration
+    assert migrate_cache(ws, cache) == 0 and not (cache / f"{w.hash}.json").exists()

@@ -1,8 +1,9 @@
 import { contentLang } from '../lib/i18n';
-import { approvedNotes, approvedTranscriptions, byLine, mergeApproved, type Contribution, type Kind } from '../lib/contrib';
+import { approvedNotes, approvedTranscriptions, mergeApproved, type Contribution, type Kind } from '../lib/contrib';
+import { sourceNode } from './fuente-ref';
 import type { LiveResult } from '../lib/live';
 
-/** Quote + byline per row (transcriptions, notes), the markup the static build renders. */
+/** Quote + source line per row (transcriptions, notes), the markup the static build renders. */
 export function renderQuotes(mount: HTMLElement, list: Contribution[]): void {
   mount.replaceChildren();
   if (!list.length) return;
@@ -15,13 +16,8 @@ export function renderQuotes(mount: HTMLElement, list: Contribution[]): void {
     const l = contentLang();
     if (l) q.lang = l;
     li.append(q);
-    const by = byLine(c);
-    if (by) {
-      const p = document.createElement('p');
-      p.className = 'muted small';
-      p.textContent = by;
-      li.append(p);
-    }
+    const src = sourceNode(c, 'p');
+    if (src) li.append(src);
     ul.append(li);
   }
   mount.append(ul);

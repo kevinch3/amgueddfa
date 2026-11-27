@@ -1,0 +1,18 @@
+---
+// "Fuente: …" under a contribution (fact, memory, note, transcription, upload):
+// links to the source page, where the contributor is named (#184, #185).
+// The same markup src/scripts/fuente-ref.ts builds for live rows.
+import { sourceRef } from '../lib/fuentes';
+import type { Contribution } from '../lib/contrib';
+import { contentLang, tAround } from '../lib/i18n';
+
+interface Props { c: Contribution; known: ReadonlySet<string>; tag?: 'span' | 'p' }
+const { c, known, tag = 'span' } = Astro.props;
+const ref = sourceRef(c, known);
+const [before, after] = tAround('edicion.fuente', 'fuente');
+const lang = ref?.own ? contentLang() : undefined;
+const Tag = tag;
+---
+{ref && (
+  <Tag class="muted small fuente">{before}<span lang={lang}>{ref.href ? <a href={ref.href}>{ref.label}</a> : ref.label}</span>{after}</Tag>
+)}

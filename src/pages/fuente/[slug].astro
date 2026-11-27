@@ -1,0 +1,128 @@
+---
+import Base from '../../layouts/Base.astro';
+import ItemCard from '../../components/ItemCard.astro';
+import { pageUrls } from '../../lib/catalog';
+import { factDisplay, type Contribution } from '../../lib/contrib';
+import { waybackLookup, type Source } from '../../lib/fuentes';
+import { siteSources } from '../../lib/fuentes-site';
+import { contentLang, intlLocales, t } from '../../lib/i18n';
+import { url } from '../../lib/paths';
+import { docCount, festivalName } from '../../lib/site';
+import type { FestivalSlug } from '../../lib/types';
+
+// One page per source (#185): how it looked when we kept it, its metadata, and
+// who contributed through it — the only place contributor names show (#184).
+export function getStaticPaths() {
+  return [...siteSources().values()].map((source) => ({ params: { slug: source.slug }, props: { source } }));
+}
+
+const { source } = Astro.props as { source: Source };
+const persona = source.kind === 'comunidad';
+const title = persona ? t('fuentes.titulo_persona', { nombre: source.label }) : source.label;
+const fmt = (d: string) => {
+  const date = new Date(`${d}T12:00:00Z`);
+  return Number.isNaN(date.getTime()) ? d : new Intl.DateTimeFormat(intlLocales(), { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(date);
+};
+// The captured view: each public document's first image with the text it carried.
+const shots = source.items
+  .filter((i) => !i.restricted)
+  .map((i) => ({ item: i, img: pageUrls(i)[0] ?? null, caption: i.note_public }))
+  .filter((s) => s.img || s.caption);
+const lookup = waybackLookup(source);
+const where = (c: Contribution) =>
+  c.item_id ? url(`item/${c.item_id}/`) : c.festival && c.year ? url(`${c.festival}/${c.year}/`) : null;
+const whereLabel = (c: Contribution) =>
+  c.festival ? `${festivalName(c.festival as FestivalSlug)}${c.year ? ` ${c.year}` : ''}` : t('fuentes.ver');
+const text = (c: Contribution): string => {
+  if (c.type === 'fact') {
+    const { label, value } = factDisplay(c);
+    return `${label}: ${value}`;
+  }
+  const raw = String(c.payload?.text ?? c.payload?.description ?? '').trim();
+  return raw.length > 240 ? `${raw.slice(0, 240).trimEnd()}…` : raw;
+};
+const nAportes = source.contributions.length;
+const count = [
+  source.items.length ? docCount(source.items.length) : '',
+  nAportes ? (nAportes === 1 ? t('fuentes.un_aporte') : t('fuentes.n_aportes', { n: nAportes })) : '',
+].filter(Boolean).join(' · ');
+const contributions = [...source.contributions].sort((a, b) =>
+  String(a.festival ?? '').localeCompare(String(b.festival ?? '')) || (a.year ?? 0) - (b.year ?? 0));
+---
+<Base title={title} description={t('fuentes.descripcion', { fuente: t(`fuentes.tipos.${source.kind}`) })}>
+  <nav class="crumbs" aria-label={t('comun.miga')}>
+    <ol>
+      <li><a href={url('/')}>{t('nav.inicio')}</a></li>
+      <li aria-current="page">{t('fuentes.miga')}</li>
+    </ol>
+  </nav>
+  <header class="fuente-head measure">
+    <p class="badge">{t(`fuentes.tipos.${source.kind}`)}</p>
+    <h1 lang={persona ? undefined : contentLang()}>{title}</h1>
+  </header>
+
+  <div class="fuente-cuerpo">
+    {!persona && <section class="fuente-captura" aria-labelledby="captura-t">
+      <h2 id="captura-t">{t('fuentes.captura_titulo')}</h2>
+      {shots.length > 0 ? (
+        <>
+          <p class="muted">{t('fuentes.captura_ayuda')}</p>
+          <ul class="capturas">
+            {shots.map((s) => (
+              <li class="captura">
+                <p class="captura-cab small"><span>{t(`fuentes.tipos.${source.kind}`)}</span>{s.item.retrieved && <span class="muted">{fmt(s.item.retrieved)}</span>}</p>
+                {s.caption && <p class="captura-texto" lang={contentLang()}>{s.caption}</p>}
+                {s.img && (
+                  <a href={url(`item/${s.item.id}/`)} class="captura-img">
+                    <img src={s.img} alt={t('item.miniatura_alt', { titulo: s.item.title })} loading="lazy" decoding="async" />
+                  </a>
+                )}
+              </li>
+            ))}
+          </ul>
+        </>
+      ) : (
+        <p class="muted">{t('fuentes.sin_captura')}</p>
+      )}
+    </section>}
+
+    <aside class="sourcecard fuente-datos" aria-labelledby="datos-t">
+      <h2 id="datos-t">{t('fuentes.datos_titulo')}</h2>
+      <dl class="fuente-dl">
+        <div><dt>{t('fuentes.tipo')}</dt><dd>{t(`fuentes.tipos.${source.kind}`)}</dd></div>
+        {source.url && <div><dt>{t('fuentes.original')}</dt><dd><a href={source.url} rel="noopener noreferrer nofollow">{t('fuentes.ver_original')}</a></dd></div>}
+        {lookup && <div><dt>{t('fuentes.copias')}</dt><dd><a href={lookup} rel="noopener noreferrer nofollow">{t('fuentes.copias_ver')}</a></dd></div>}
+        {source.retrieved.length > 0 && <div><dt>{t('fuentes.consultado')}</dt><dd>{source.retrieved.map(fmt).join(' · ')}</dd></div>}
+        {source.rights.length > 0 && <div><dt>{t('fuentes.derechos')}</dt><dd>{source.rights.map((r) => <p class="small">{r}</p>)}</dd></div>}
+        {source.contributors.length > 0 && <div><dt>{t('fuentes.aportado_por')}</dt><dd>{source.contributors.join(', ')}</dd></div>}
+        <div><dt>{t('fuentes.cuenta')}</dt><dd>{count}</dd></div>
+      </dl>
+    </aside>
+  </div>
+
+  {source.items.length > 0 && (
+    <section class="section" aria-labelledby="docs-t">
+      <h2 id="docs-t">{t('fuentes.documentos_titulo')}</h2>
+      <ul class="cards">{source.items.map((item) => <ItemCard item={item} showYear />)}</ul>
+    </section>
+  )}
+
+  {contributions.length > 0 && (
+    <section class="section measure" aria-labelledby="aportes-t">
+      <h2 id="aportes-t">{persona ? t('fuentes.aportes_persona_titulo') : t('fuentes.aportes_titulo')}</h2>
+      <ul class="fuente-aportes">
+        {contributions.map((c) => {
+          const href = where(c);
+          return (
+            <li>
+              <span class="badge">{t(`fuentes.aporte_tipos.${c.type}`)}</span>{' '}
+              <span lang={contentLang()}>{text(c)}</span>
+              {href && <> · <a href={href}>{whereLabel(c)}</a></>}
+              {!persona && c.display_name && <span class="muted small"> · {c.display_name}</span>}
+            </li>
+          );
+        })}
+      </ul>
+    </section>
+  )}
+</Base>

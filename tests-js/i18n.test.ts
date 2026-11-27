@@ -84,7 +84,7 @@ describe('translations', () => {
         // names: "Eisteddfod del Chubut" is Italian too), and so may templates that are only
         // {placeholders} and short labels ("documento", "PDF", "No"). Anything longer than a
         // couple of words that equals the Spanish is an untranslated string.
-        const NAMES = /^(sitio\.nombre|festivales_cy\.|festivales\.|insignias\.archivista-[a-z]+\.nombre$)/;
+        const NAMES = /^(sitio\.nombre|festivales_cy\.|festivales\.|insignias\.archivista-[a-z]+\.nombre$|fuentes\.tipos\.(casgliad|commons)$)/;
         const words = (s: string) => s.replace(/\{\w+\}/g, '').replace(/[^\p{L}]/gu, '');
         const same = [...spanish].filter(([k, es]) => own.get(k) === es && !NAMES.test(k) && !/^https?:/.test(es)).map(([k, es]) => ({ k, n: words(es).length }));
         expect(same.filter((x) => x.n > 12).map((x) => x.k), 'untranslated sentences').toEqual([]);

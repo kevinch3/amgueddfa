@@ -769,3 +769,20 @@ dialog, .lb-stage, .rep-cuerpo, .informar { overscroll-behavior: contain; }
 .rep-acciones { justify-content: flex-start; gap: 0 1rem; }
 .rep-acciones a, .rep-acciones .btn-link { color: var(--ink-soft); font: 0.85rem/1.2 var(--sans); text-decoration: none; min-height: 36px; display: inline-flex; align-items: center; padding: 0 0.15rem; }
 .rep-acciones a:hover, .rep-acciones .btn-link:hover, .rep-acciones a:focus-visible, .rep-acciones .btn-link:focus-visible { color: var(--red-deep); text-decoration: underline; }
+
+/* Source page (/fuente/<slug>/, #185): the captured view next to the source's data. */
+.fuente-head .badge { margin: 0 0 0.4rem; display: inline-block; }
+.fuente-cuerpo { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.5rem; align-items: start; }
+@media (min-width: 56rem) { .fuente-cuerpo { grid-template-columns: minmax(0, 1fr) minmax(16rem, 22rem); } }
+.capturas { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; }
+.captura { background: var(--paper-hi); border: 1px solid var(--rule); border-radius: 4px; padding: 0.75rem 0.9rem; max-width: 34rem; }
+.captura-cab { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.25rem 1rem; margin: 0 0 0.5rem; font-family: var(--sans); }
+.captura-texto { margin: 0 0 0.6rem; white-space: pre-line; overflow-wrap: anywhere; }
+.captura-img { display: block; }
+.captura-img img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); }
+.fuente-dl { margin: 0; display: grid; gap: 0.5rem; }
+.fuente-dl dt { font: 600 0.95rem/1.4 var(--sans); }
+.fuente-dl dd { margin: 0; overflow-wrap: anywhere; }
+.fuente-dl dd p { margin: 0 0 0.25rem; }
+.fuente-aportes { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.5rem; }
+.fuente-aportes li { padding: 0.4rem 0; border-bottom: 1px solid var(--rule); overflow-wrap: anywhere; }

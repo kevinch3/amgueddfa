@@ -143,7 +143,6 @@
     "faltan_secciones": "From this year we don't have the {lista} yet. Do you have anything?",
     "otras_secciones": "Other sections",
     "no_realizada": "Not held",
-    "aportado_por": "Contributed by {nombre}",
     "subir": "Upload a document",
     "datos": "Add a fact",
     "recuerdo": "Share a memory",
@@ -1148,5 +1147,50 @@
     "con_transcripcion": "with transcript",
     "ficha": "See the record",
     "leer_transcripcion": "Transcript"
+  },
+  "fuentes": {
+    "miga": "Source",
+    "titulo_persona": "Contributions by {nombre}",
+    "descripcion": "{fuente}: where part of the archive comes from. How it looked, its details and who contributed it.",
+    "tipos": {
+      "facebook": "Facebook post",
+      "instagram": "Instagram post",
+      "wayback": "Wayback Machine capture",
+      "drive": "Google Drive file",
+      "papurau": "Welsh Newspapers (National Library of Wales)",
+      "casgliad": "People's Collection Wales",
+      "commons": "Wikimedia Commons",
+      "web": "Website",
+      "personal": "Personal archive",
+      "publicacion": "Publication or citation",
+      "comunidad": "Community contribution"
+    },
+    "captura_titulo": "How it looked",
+    "captura_ayuda": "What we kept from this source when we consulted it: the images and the text, as they were.",
+    "sin_captura": "We kept no images from this source: its details, and what the archive took from it, are below.",
+    "datos_titulo": "About the source",
+    "tipo": "Type",
+    "original": "Original address",
+    "ver_original": "Open the original",
+    "copias": "Archived copies",
+    "copias_ver": "Search the Wayback Machine",
+    "consultado": "Consulted",
+    "derechos": "Rights",
+    "aportado_por": "Contributed by",
+    "cuenta": "In the archive",
+    "documentos_titulo": "Documents from this source",
+    "aportes_titulo": "Facts and contributions that cite it",
+    "aportes_persona_titulo": "What they contributed",
+    "ver": "See",
+    "comunidad": "community contribution",
+    "aporte_tipos": {
+      "fact": "Fact",
+      "memory": "Memory",
+      "note": "Note",
+      "transcription": "Transcription",
+      "upload": "Document"
+    },
+    "un_aporte": "1 contribution",
+    "n_aportes": "{n} contributions"
   }
 }

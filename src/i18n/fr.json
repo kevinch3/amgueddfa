@@ -143,7 +143,6 @@
     "faltan_secciones": "Pour cette année, il nous manque encore : {lista}. Vous avez quelque chose ?",
     "otras_secciones": "Autres rubriques",
     "no_realizada": "N'a pas eu lieu",
-    "aportado_por": "Contribution de {nombre}",
     "subir": "Déposer un document",
     "datos": "Ajouter une information",
     "recuerdo": "Raconter un souvenir",
@@ -1148,5 +1147,50 @@
     "con_transcripcion": "avec transcription",
     "ficha": "Voir la fiche",
     "leer_transcripcion": "Transcription"
+  },
+  "fuentes": {
+    "miga": "Source",
+    "titulo_persona": "Contributions de {nombre}",
+    "descripcion": "{fuente} : d'où vient une partie de l'archive. Son aspect, ses données et qui l'a apportée.",
+    "tipos": {
+      "facebook": "Publication Facebook",
+      "instagram": "Publication Instagram",
+      "wayback": "Capture de la Wayback Machine",
+      "drive": "Fichier Google Drive",
+      "papurau": "Journaux gallois (Bibliothèque nationale du pays de Galles)",
+      "casgliad": "Casgliad y Werin Cymru",
+      "commons": "Wikimedia Commons",
+      "web": "Site web",
+      "personal": "Archive personnelle",
+      "publicacion": "Publication ou citation",
+      "comunidad": "Contribution de la communauté"
+    },
+    "captura_titulo": "Son aspect",
+    "captura_ayuda": "Ce que nous avons gardé de cette source quand nous l'avons consultée : les images et le texte, tels qu'ils étaient.",
+    "sin_captura": "Nous n'avons gardé aucune image de cette source : ses données, et ce que l'archive en a tiré, sont ci-dessous.",
+    "datos_titulo": "Données de la source",
+    "tipo": "Type",
+    "original": "Adresse d'origine",
+    "ver_original": "Ouvrir l'original",
+    "copias": "Copies archivées",
+    "copias_ver": "Chercher dans la Wayback Machine",
+    "consultado": "Consultée",
+    "derechos": "Droits",
+    "aportado_por": "Apporté par",
+    "cuenta": "Dans l'archive",
+    "documentos_titulo": "Documents de cette source",
+    "aportes_titulo": "Données et contributions qui la citent",
+    "aportes_persona_titulo": "Ce qu'elle a apporté",
+    "ver": "Voir",
+    "comunidad": "contribution de la communauté",
+    "aporte_tipos": {
+      "fact": "Donnée",
+      "memory": "Souvenir",
+      "note": "Note",
+      "transcription": "Transcription",
+      "upload": "Document"
+    },
+    "un_aporte": "1 contribution",
+    "n_aportes": "{n} contributions"
   }
 }

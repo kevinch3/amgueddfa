@@ -433,14 +433,19 @@ describe('static build', () => {
       const i = byId.get(c.id)!;
       expect(i.restricted || !i.year_inferred || i.kind !== 'image', c.id).toBe(false);
       expect(c.img.startsWith(`${MEDIA_BASE}/media/`)).toBe(true);
+      // Quick tasks are for history: nothing from the last 20 years (#187).
+      expect(i.year === null || i.year <= new Date().getFullYear() - 20, c.id).toBe(true);
     }
     for (const i of catalog.filter((x) => x.restricted)) expect(html).not.toContain(i.id);
     // OCR-only documents are listed to transcribe; ones with a human transcription are not.
     const ocrIds = readdirSync('src/data/ocr').map((f) => f.replace(/\.json$/, ''));
     const listed = [...html.matchAll(/data-transcribir="([0-9a-f]{12})"/g)].map((x) => x[1]);
-    expect(listed.length).toBeGreaterThan(100);
+    // Every OCR-only document waiting today is from 2008 on, so with the 20-year cut
+    // (#187) the list may be empty; whatever it lists must be history.
     for (const id of listed) {
       expect(ocrIds, id).toContain(id);
+      const y = byId.get(id)!.year;
+      expect(y === null || y <= new Date().getFullYear() - 20, id).toBe(true);
       expect(existsSync(join('src/data/transcripciones', `${id}.md`)), id).toBe(false);
     }
   });

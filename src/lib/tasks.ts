@@ -1,11 +1,23 @@
 import type { Item } from './types';
 
 /** The fields taskQueue looks at; the /tareas page passes slimmed catalog rows. */
-export type TaskCandidate = Pick<Item, 'id' | 'kind' | 'restricted' | 'year_inferred'>;
+export type TaskCandidate = Pick<Item, 'id' | 'kind' | 'restricted' | 'year_inferred' | 'year'>;
 
-/** An item can be a quick task: a public image whose year or category we guessed. */
-export function isTaskCandidate(i: TaskCandidate): boolean {
-  return i.year_inferred && !i.restricted && i.kind === 'image';
+/** How far back the present reaches: Quick tasks leave out these last years (#187). */
+export const PRESENT_YEARS = 20;
+
+/**
+ * Whether a document is history, the part Quick tasks ask people to fill in: its
+ * year (guessed or not) is more than PRESENT_YEARS back, or unknown (dating it is
+ * history work too). The cutoff moves on by itself each year.
+ */
+export function isHistory(year: number | null, now = new Date().getFullYear()): boolean {
+  return year === null || year <= now - PRESENT_YEARS;
+}
+
+/** An item can be a quick task: a public image of history whose year or category we guessed. */
+export function isTaskCandidate(i: TaskCandidate, now?: number): boolean {
+  return i.year_inferred && !i.restricted && i.kind === 'image' && isHistory(i.year, now);
 }
 
 /** 32-bit FNV-1a of a string. */
@@ -35,9 +47,9 @@ function rng(seed: number): () => number {
  * user has not submitted yet, shuffled deterministically by `seed` (the user id),
  * so each person sees a different but stable order. Input order does not matter.
  */
-export function taskQueue<T extends TaskCandidate>(items: T[], doneIds: Set<string>, seed: string): T[] {
+export function taskQueue<T extends TaskCandidate>(items: T[], doneIds: Set<string>, seed: string, now?: number): T[] {
   const out = items
-    .filter((i) => isTaskCandidate(i) && !doneIds.has(i.id))
+    .filter((i) => isTaskCandidate(i, now) && !doneIds.has(i.id))
     .sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
   const next = rng(hash(seed));
   for (let i = out.length - 1; i > 0; i--) {

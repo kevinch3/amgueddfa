@@ -11,7 +11,7 @@ beforeEach(async () => {
 interface NewContribution {
   user_id: string;
   type?: string;
-  festival?: string;
+  coleccion?: string;
   year?: number | null;
   item_id?: string | null;
   payload?: Record<string, unknown>;
@@ -21,12 +21,12 @@ interface NewContribution {
 async function contribute(who: Who, c: NewContribution): Promise<string> {
   const rows = await t.q<{ id: string }>(
     who,
-    `insert into public.contributions (user_id, type, festival, year, item_id, payload, status)
+    `insert into public.contributions (user_id, type, coleccion, year, item_id, payload, status)
      values ($1, $2, $3, $4, $5, $6, $7) returning id`,
     [
       c.user_id,
       c.type ?? 'memory',
-      c.festival ?? 'chubut',
+      c.coleccion ?? 'chubut',
       c.year === undefined ? 2024 : c.year,
       c.item_id ?? null,
       JSON.stringify(c.payload ?? { text: 'Me acuerdo' }),
@@ -133,7 +133,7 @@ describe('approval and scoring', () => {
     const id = await contribute(u, {
       user_id: u,
       type: 'upload',
-      payload: { storage_path: `${u}/prog.pdf`, category: 'programa', description: 'Programa' },
+      payload: { storage_path: `${u}/prog.pdf`, tipo: 'programa', description: 'Programa' },
     });
     const pts = await approve(admin, id, true);
     expect(pts).toBe(50);
@@ -202,27 +202,27 @@ describe('approval and scoring', () => {
     const admin = await t.createAdmin();
     const u = await t.createUser();
     const yes = await contribute(u, {
-      user_id: u, type: 'fact', festival: 'mimosa', year: 1999,
+      user_id: u, type: 'fact', coleccion: 'mimosa', year: 1999,
       payload: { field: 'edicion_realizada', value: 'si' },
     });
     const no = await contribute(u, {
-      user_id: u, type: 'fact', festival: 'trevelin', year: 1985,
+      user_id: u, type: 'fact', coleccion: 'trevelin', year: 1985,
       payload: { field: 'edicion_realizada', value: 'no' },
     });
     await approve(admin, yes);
     await approve(admin, no);
-    const rows = await t.q('anon', 'select festival, year, status from public.editions order by festival');
+    const rows = await t.q('anon', 'select coleccion, year, status from public.editions order by coleccion');
     expect(rows).toEqual([
-      { festival: 'mimosa', year: 1999, status: 'held' },
-      { festival: 'trevelin', year: 1985, status: 'not_held' },
+      { coleccion: 'mimosa', year: 1999, status: 'held' },
+      { coleccion: 'trevelin', year: 1985, status: 'not_held' },
     ]);
     // a later correction updates the same row
     const fix = await contribute(u, {
-      user_id: u, type: 'fact', festival: 'trevelin', year: 1985,
+      user_id: u, type: 'fact', coleccion: 'trevelin', year: 1985,
       payload: { field: 'edicion_realizada', value: true },
     });
     await approve(admin, fix);
-    const after = await t.q('postgres', `select status from public.editions where festival = 'trevelin' and year = 1985`);
+    const after = await t.q('postgres', `select status from public.editions where coleccion = 'trevelin' and year = 1985`);
     expect(after).toEqual([{ status: 'held' }]);
   });
 
@@ -230,18 +230,18 @@ describe('approval and scoring', () => {
     const admin = await t.createAdmin();
     const u = await t.createUser();
     for (let i = 0; i < 9; i++) {
-      await approve(admin, await contribute(u, { user_id: u, festival: 'chubut', year: 2000 + i }));
+      await approve(admin, await contribute(u, { user_id: u, coleccion: 'chubut', year: 2000 + i }));
     }
-    await approve(admin, await contribute(u, { user_id: u, festival: 'juventud' }));
+    await approve(admin, await contribute(u, { user_id: u, coleccion: 'juventud' }));
     expect(await badges(u)).not.toContain('archivista-chubut');
-    await approve(admin, await contribute(u, { user_id: u, festival: 'chubut' }));
+    await approve(admin, await contribute(u, { user_id: u, coleccion: 'chubut' }));
     expect(await badges(u)).toContain('archivista-chubut');
     expect(await badges(u)).toContain('bardo');
     expect(await badges(u)).not.toContain('archivista-juventud');
 
     await t.q(u, `select public.set_display_name('Archivera')`);
-    const lb = await t.q('anon', 'select display_name, points, festival_points from public.leaderboard');
-    expect(lb).toEqual([{ display_name: 'Archivera', points: 55, festival_points: { chubut: 50, juventud: 5 } }]);
+    const lb = await t.q('anon', 'select display_name, points, coleccion_points from public.leaderboard');
+    expect(lb).toEqual([{ display_name: 'Archivera', points: 55, coleccion_points: { chubut: 50, juventud: 5 } }]);
   });
 });
 
@@ -312,7 +312,7 @@ describe('limits and profiles', () => {
     const pub = await t.q('anon', `select * from public.public_profiles where display_name = 'Iolo'`);
     expect(pub).toEqual([{ display_name: 'Iolo', points: 5, country: 'AR' }]);
     const lb = await t.q('anon', `select * from public.leaderboard where display_name = 'Iolo'`);
-    expect(lb).toEqual([{ display_name: 'Iolo', points: 5, festival_points: {}, country: 'AR' }]);
+    expect(lb).toEqual([{ display_name: 'Iolo', points: 5, coleccion_points: {}, country: 'AR' }]);
   });
 
   it('only admins set roles and release items', async () => {
@@ -428,12 +428,12 @@ describe('admin_add_facts and the admin exemption', () => {
       ])]);
     expect(rows[0].pts).toBe(30);
     const mine = await t.q<{ status: string; user_id: string; fuente: string }>('postgres',
-      `select status, user_id, payload->>'fuente' as fuente from public.contributions where festival = 'chubut' and year = 1937`);
+      `select status, user_id, payload->>'fuente' as fuente from public.contributions where coleccion = 'chubut' and year = 1937`);
     expect(mine).toHaveLength(3);
     expect(mine.every((r) => r.status === 'approved' && r.user_id === u && r.fuente === 'Libro')).toBe(true);
     expect(await points(u)).toBe(30);
     expect(await badges(u)).toContain('primer-aporte');
-    const ed = await t.q<{ status: string }>('postgres', `select status from public.editions where festival = 'chubut' and year = 1937`);
+    const ed = await t.q<{ status: string }>('postgres', `select status from public.editions where coleccion = 'chubut' and year = 1937`);
     expect(ed[0].status).toBe('not_held');
   });
 
@@ -458,7 +458,7 @@ describe('admin_add_facts and the admin exemption', () => {
     const u = await t.createUser();
     for (let i = 0; i < 25; i++) await contribute(u, { user_id: u });
     const values = Array.from({ length: 10 }, (_, i) => `($1, 'fact', 'chubut', 1937, null, '{"field":"other","value":"v${i}"}', 'pending')`).join(', ');
-    await expect(t.q(u, `insert into public.contributions (user_id, type, festival, year, item_id, payload, status) values ${values}`, [u])).rejects.toThrow(/daily_limit/);
+    await expect(t.q(u, `insert into public.contributions (user_id, type, coleccion, year, item_id, payload, status) values ${values}`, [u])).rejects.toThrow(/daily_limit/);
     const left = await t.q<{ n: number }>('postgres', 'select count(*)::int as n from public.contributions where user_id = $1', [u]);
     expect(left[0].n).toBe(25);
   });
@@ -476,7 +476,7 @@ describe('credited facts and the credited person\'s daily limit', () => {
   it('contributors cannot set who created a row', async () => {
     const u = await t.createUser();
     const other = await t.createUser();
-    await expect(t.q(u, `insert into public.contributions (user_id, type, festival, year, payload, status, created_by)
+    await expect(t.q(u, `insert into public.contributions (user_id, type, coleccion, year, payload, status, created_by)
       values ($1, 'memory', 'chubut', 2024, '{"text":"x"}', 'pending', $2)`, [u, other])).rejects.toThrow();
   });
 });
@@ -497,8 +497,8 @@ describe('admin contributions are approved on submit', () => {
 
   it("an admin's 'no se realizó' fact updates the edition at once", async () => {
     const admin = await t.createAdmin();
-    await contribute(admin, { user_id: admin, type: 'fact', festival: 'mimosa', year: 2020, payload: { field: 'edicion_realizada', value: 'no' } });
-    const ed = await t.q('postgres', "select status from public.editions where festival = 'mimosa' and year = 2020");
+    await contribute(admin, { user_id: admin, type: 'fact', coleccion: 'mimosa', year: 2020, payload: { field: 'edicion_realizada', value: 'no' } });
+    const ed = await t.q('postgres', "select status from public.editions where coleccion = 'mimosa' and year = 2020");
     expect(ed).toEqual([{ status: 'not_held' }]);
   });
 
@@ -583,7 +583,7 @@ describe('reports and notes', () => {
   it('accepts report and note rows, scoring 10 and 5', async () => {
     const admin = await t.createAdmin();
     const u = await t.createUser();
-    const r = await contribute(u, { user_id: u, type: 'report', festival: 'chubut', year: 2015, payload: report });
+    const r = await contribute(u, { user_id: u, type: 'report', coleccion: 'chubut', year: 2015, payload: report });
     const n = await contribute(u, { user_id: u, type: 'note', item_id: 'fcb0d30de6eb', payload: { text: 'Faltan las páginas 3 y 4.' } });
     expect(await approve(admin, r)).toBe(10);
     expect(await approve(admin, n)).toBe(5);
@@ -593,7 +593,7 @@ describe('reports and notes', () => {
   it("the public view and so the export drop a report's explanation", async () => {
     const admin = await t.createAdmin();
     const u = await t.createUser();
-    const r = await contribute(u, { user_id: u, type: 'report', festival: 'chubut', year: 2015, payload: report });
+    const r = await contribute(u, { user_id: u, type: 'report', coleccion: 'chubut', year: 2015, payload: report });
     await approve(admin, r);
     const [row] = await t.q<{ payload: Record<string, unknown> }>('anon', 'select payload from public.public_contributions where id = $1', [r]);
     expect(row.payload).not.toHaveProperty('texto');
@@ -607,10 +607,10 @@ describe('reports and notes', () => {
     const admin = await t.createAdmin();
     const u = await t.createUser();
     // 49 approved rows from earlier days (the daily limit only counts the last 24 h)
-    await t.q('postgres', `insert into public.contributions (user_id, type, festival, year, item_id, payload, status, created_at)
+    await t.q('postgres', `insert into public.contributions (user_id, type, coleccion, year, item_id, payload, status, created_at)
       select $1, case when g <= 30 then 'tag' else 'report' end, 'chubut', 2015, 'x', '{}'::jsonb, 'approved', now() - interval '3 days'
       from generate_series(1, 49) g`, [u]);
-    const last = await contribute(u, { user_id: u, type: 'report', festival: 'chubut', year: 2015, payload: report });
+    const last = await contribute(u, { user_id: u, type: 'report', coleccion: 'chubut', year: 2015, payload: report });
     expect(await badges(u)).not.toContain('ojo-de-lince');
     await approve(admin, last);
     expect(await badges(u)).toContain('ojo-de-lince');
@@ -618,7 +618,7 @@ describe('reports and notes', () => {
 
   it("an admin's own report is approved on insert", async () => {
     const admin = await t.createAdmin();
-    const id = await contribute(admin, { user_id: admin, type: 'report', festival: 'chubut', year: 2015, payload: report });
+    const id = await contribute(admin, { user_id: admin, type: 'report', coleccion: 'chubut', year: 2015, payload: report });
     const row = await t.q('postgres', 'select status, points_awarded from public.contributions where id = $1', [id]);
     expect(row).toEqual([{ status: 'approved', points_awarded: 10 }]);
   });
@@ -628,7 +628,7 @@ describe('video_text corrections', () => {
   const changes = (n: number) =>
     Array.from({ length: n }, (_, i) => ({ t: i, antes: 'a', texto: 'b' }));
   const vt = (u: string, n = 3) =>
-    contribute(u, { user_id: u, type: 'video_text', festival: 'chubut', payload: { video: { id: 'abcdef12' }, cambios: changes(n) } });
+    contribute(u, { user_id: u, type: 'video_text', coleccion: 'chubut', payload: { video: { id: 'abcdef12' }, cambios: changes(n) } });
   const withdraw = (who: string, id: string, note = 'mal') =>
     t.q(who, 'select public.admin_withdraw_contribution($1, $2)', [id, note]);
   const setChanges = (who: string, id: string, cambios: unknown) =>
@@ -750,8 +750,8 @@ describe('video_text corrections', () => {
       { t: 3500, antes: 'Hola', texto: 'Hola a todos', idioma: 'es' },
     ],
   };
-  const insert = (u: string, payload: unknown, festival = 'chubut') =>
-    contribute(u, { user_id: u, type: 'video_text', festival, payload: payload as Record<string, unknown> });
+  const insert = (u: string, payload: unknown, coleccion = 'chubut') =>
+    contribute(u, { user_id: u, type: 'video_text', coleccion, payload: payload as Record<string, unknown> });
 
   it('accepts a well-formed row with every kind of change, for Chubut and Trevelin', async () => {
     const u = await t.createUser();
@@ -787,8 +787,8 @@ describe('video_text corrections', () => {
       ['a video with a channel', { ...valid, video: { ...valid.video, channel: 'x' } }],
       ...junkCambios.map(([name, cambios]): [string, unknown] => [name, { ...valid, cambios }]),
     ];
-    for (const [name, payload, festival] of bad) {
-      await expect(insert(u, payload, festival), name).rejects.toThrow(/invalid/);
+    for (const [name, payload, coleccion] of bad) {
+      await expect(insert(u, payload, coleccion), name).rejects.toThrow(/invalid/);
     }
     expect(await t.q('postgres', "select id from public.contributions where type = 'video_text'")).toHaveLength(0);
   });

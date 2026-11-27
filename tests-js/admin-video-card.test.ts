@@ -63,7 +63,7 @@ describe('keptCambios', () => {
 });
 
 describe('approveVideoText', () => {
-  const c = { id: 'cid-1', user_id: 'u', type: 'video_text', festival: 'chubut', year: 1990, item_id: null, payload: {}, created_at: '' } as const;
+  const c = { id: 'cid-1', user_id: 'u', type: 'video_text', coleccion: 'chubut', year: 1990, item_id: null, payload: {}, created_at: '' } as const;
   it('sends only the kept changes as the override', async () => {
     const calls: unknown[][] = [];
     const client = { rpc: async (...a: unknown[]) => (calls.push(a), { error: null }) } as any;

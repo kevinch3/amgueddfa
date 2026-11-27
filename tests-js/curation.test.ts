@@ -1,12 +1,12 @@
 import { describe, expect, it } from 'vitest';
 import { correctionPayload, curationError, parseItems, type OverlayValues } from '../src/lib/curation';
 
-const now: OverlayValues = { title: 'Tapa', category: 'programa', festival: 'chubut', year: 2022, rights: '', caption: 'Old', no_text: false, hidden: false };
+const now: OverlayValues = { title: 'Tapa', tipo: 'programa', coleccion: 'chubut', year: 2022, rights: '', caption: 'Old', no_text: false, hidden: false };
 
 describe('correctionPayload', () => {
   it('sends only what changed', () => {
     expect(correctionPayload(now, { ...now })).toEqual({});
-    expect(correctionPayload(now, { ...now, category: 'programa-del-dia', no_text: true })).toEqual({ category: 'programa-del-dia', no_text: true });
+    expect(correctionPayload(now, { ...now, tipo: 'programa-del-dia', no_text: true })).toEqual({ tipo: 'programa-del-dia', no_text: true });
   });
   it('trims, never sends an empty title or a missing year, and may clear rights and caption', () => {
     expect(correctionPayload(now, { ...now, title: '  ', year: null })).toEqual({});

@@ -42,7 +42,7 @@ def apply_visibility(items, overrides: dict[str, dict], today: date) -> None:
     """Set visibilidad and publico_desde on every item, and keep `restricted` in step (in place)."""
     for it in items:
         o = overrides.get(it.id, {})
-        v = DEFAULTS.get(it.festival, "privado")  # an unknown collection shows nothing
+        v = DEFAULTS.get(it.coleccion, "privado")  # an unknown collection shows nothing
         v = stricter(v, "solo_ficha" if it.restricted else "publico")
         v = stricter(v, o.get("visibilidad", "publico"))
         desde = o.get("publico_desde") or None

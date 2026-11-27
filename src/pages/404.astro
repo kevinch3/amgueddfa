@@ -76,28 +76,28 @@ const param = LANG_PARAM;
   const box = document.getElementById('no-encontrada')!;
   const ed = editionFromPath(stripLocale(location.pathname), box.dataset.base ?? '/');
   if (ed) {
-    const festival = t(`festivales.${ed.festival}`);
+    const coleccion = t(`festivales.${ed.coleccion}`);
     const h = document.createElement('h1');
-    h.textContent = t('no_encontrada.edicion_titulo', { festival, year: ed.year });
+    h.textContent = t('no_encontrada.edicion_titulo', { festival: coleccion, year: ed.year });
     const p = document.createElement('p');
     p.textContent = t('no_encontrada.edicion_texto');
     const links = document.createElement('p');
-    const a1 = Object.assign(document.createElement('a'), { href: url(`${ed.festival}/`), textContent: t('no_encontrada.ver_festival', { festival }) });
-    const a2 = Object.assign(document.createElement('a'), { href: url(`contribuir?f=${ed.festival}&y=${ed.year}`), textContent: t('no_encontrada.contribuir', { year: ed.year }), className: 'btn' });
+    const a1 = Object.assign(document.createElement('a'), { href: url(`${ed.coleccion}/`), textContent: t('no_encontrada.ver_festival', { festival: coleccion }) });
+    const a2 = Object.assign(document.createElement('a'), { href: url(`contribuir?f=${ed.coleccion}&y=${ed.year}`), textContent: t('no_encontrada.contribuir', { year: ed.year }), className: 'btn' });
     links.append(a2, ' ', a1);
     box.replaceChildren(h, p, links);
 
     // Already approved but not yet built into a page (that waits for the next
     // export): show what is approved now, straight from the public view.
-    void approvedForEdition(ed.festival, ed.year).then(({ data }) => {
+    void approvedForEdition(ed.coleccion, ed.year).then(({ data }) => {
       if (!data.length) return;
-      h.textContent = t('no_encontrada.aprobado_titulo', { festival, year: ed.year });
+      h.textContent = t('no_encontrada.aprobado_titulo', { festival: coleccion, year: ed.year });
       p.textContent = t('no_encontrada.aprobado_texto');
       const sections: [string, (m: HTMLElement) => void][] = [
-        ['edicion.hechos_titulo', (m) => renderFacts(m, forEdition(data, ed.festival, ed.year, 'fact'))],
-        ['edicion.recuerdos_titulo', (m) => renderMemories(m, forEdition(data, ed.festival, ed.year, 'memory'))],
+        ['edicion.hechos_titulo', (m) => renderFacts(m, forEdition(data, ed.coleccion, ed.year, 'fact'))],
+        ['edicion.recuerdos_titulo', (m) => renderMemories(m, forEdition(data, ed.coleccion, ed.year, 'memory'))],
         ['edicion.aportes_aprobados', (m) => {
-          renderUploads(m, forEdition(data, ed.festival, ed.year, 'upload'), false);
+          renderUploads(m, forEdition(data, ed.coleccion, ed.year, 'upload'), false);
           m.querySelector('h3')?.remove(); // the section's h2 already says it
         }],
       ];

@@ -27,7 +27,7 @@ describe('visibility', () => {
   });
 
   it('results lists are never public without a release date', () => {
-    for (const i of catalog.filter((x) => x.category === 'resultados' && !x.publico_desde)) expect(isPublic(i), i.id).toBe(false);
+    for (const i of catalog.filter((x) => x.tipo === 'resultados' && !x.publico_desde)) expect(isPublic(i), i.id).toBe(false);
   });
 
   it('a record that is not public publishes no files', () => {

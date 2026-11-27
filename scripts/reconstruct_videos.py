@@ -76,7 +76,7 @@ def _ask_all(ask, ws: list, jobs: int) -> list:
 def in_scope(repo: Path, video: dict, stem: Path | None = None) -> bool:
     """Chubut and Trevelin only (#29), with a published transcript, a Welsh one to build from, or a lyric
     the maintainer placed in it (a choir clip with no automatic text still shows its lyrics, #129)."""
-    if video["festival"] not in FESTIVALS:
+    if video["coleccion"] not in FESTIVALS:
         return False
     if (repo / "public/transcripciones-video" / f"{video['id']}.json").exists():
         return True
@@ -192,8 +192,8 @@ def _edition_versions(revs: list[list], video: dict) -> list[list]:
     """The distinct fact lists an edition had across revisions, other than today's."""
     from scripts.reconstruct.context import FACT_FIELDS
     sig = lambda facts: tuple(sorted((c["payload"]["field"], c["payload"]["value"]) for c in facts
-                                     if c.get("type") == "fact" and c.get("festival") == video["festival"]
-                                     and str(c.get("year")) == str(video["year"]) and (c.get("payload") or {}).get("field") in FACT_FIELDS
+                                     if c.get("type") == "fact" and c.get("coleccion") == video["coleccion"]
+                                     and str(c.get("year")) == str(video["fecha"]["year"]) and (c.get("payload") or {}).get("field") in FACT_FIELDS
                                      and c.get("status", "approved") == "approved"))
     now = sig(json.loads((REPO / FACTS).read_text(encoding="utf-8")))
     seen, out = {now}, []
@@ -210,7 +210,7 @@ def reconstruct_video(repo: Path, backup: Path, video: dict, ask=ask_claude, rep
                       fix_text: Callable[[str], str] = lambda s: s, jobs: int = 1) -> dict | None:
     """Write data/reconstruccion/<id>.json for one video and return it; None when out of scope.
     jobs > 1 asks that many uncached windows at once (the replies are the same; only the wait is shorter)."""
-    if video["festival"] not in FESTIVALS:
+    if video["coleccion"] not in FESTIVALS:
         return None
     state = state if state is not None else {"streak": 0, "usd": 0.0, "asked": 0}
     files = files if files is not None else _backup_files(backup)

@@ -177,7 +177,7 @@ def caption_titles(items: list[Item]) -> None:
     one, so «Bases (12 de 67)» reads «Competencias de Fotografía». Run before number_repeats."""
     groups: dict[tuple, list[Item]] = {}
     for it in items:
-        groups.setdefault((it.festival, it.year, it.undated, it.category, it.title), []).append(it)
+        groups.setdefault((it.coleccion, it.year, it.undated, it.tipo, it.title), []).append(it)
     for same in groups.values():
         if len(same) < 2:
             continue
@@ -193,7 +193,7 @@ def number_repeats(items: list[Item]) -> None:
     for it in items:
         if it.hidden or it.restricted:
             continue
-        groups.setdefault((it.festival, it.year, it.undated, it.category, it.title), []).append(it)
+        groups.setdefault((it.coleccion, it.year, it.undated, it.tipo, it.title), []).append(it)
     for same in groups.values():
         if len(same) < 2:
             continue
@@ -269,8 +269,8 @@ def scan(archive: Path, restricted_extra: set[str]) -> list[Item]:
         url, label = _source(row["source_url"])
         raw = row.get("notes") or ""
         by_id[iid] = Item(
-            id=iid, festival=festival, year=year, undated=undated,
-            category=category, title=readable_title(_title(p.name), year), kind=KINDS[ext],
+            id=iid, coleccion=festival, year=year, undated=undated,
+            tipo=category, title=readable_title(_title(p.name), year), formato=KINDS[ext],
             src_path=relstr, source_url=url, source_label=label,
             retrieved=row.get("retrieved") or "",
             note_public=clean_note(raw, relstr, row.get("caption") or ""),
@@ -282,6 +282,6 @@ def scan(archive: Path, restricted_extra: set[str]) -> list[Item]:
     items = list(by_id.values())
     for it in items:
         it.alt_paths.sort()
-    items.sort(key=lambda i: (i.festival, i.year if i.year is not None else -1,
-                              i.category, title_key(i.title)))
+    items.sort(key=lambda i: (i.coleccion, i.year if i.year is not None else -1,
+                              i.tipo, title_key(i.title)))
     return items

@@ -51,13 +51,13 @@ export type EditionFacts = { startDate?: string; endDate?: string; venue?: strin
 
 export function editionFacts(
   approved: Contribution[],
-  festival: string,
+  coleccion: string,
   year: number,
   status: 'held' | 'not_held' | 'unknown' | null = null,
 ): EditionFacts {
   const out: EditionFacts = { notHeld: false, held: null };
   const when = (c: Contribution) => String(c.reviewed_at ?? c.created_at ?? '');
-  const facts = [...forEdition(approved, festival, year, 'fact')].sort((a, b) => when(a).localeCompare(when(b)));
+  const facts = [...forEdition(approved, coleccion, year, 'fact')].sort((a, b) => when(a).localeCompare(when(b)));
   for (const c of facts) {
     const p = c.payload ?? {};
     const v = String(p.value ?? '').trim();

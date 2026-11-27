@@ -2,7 +2,7 @@
   {
     "id": "003a83f0-f462-46fa-bb06-d340be64a39d",
     "type": "tag",
-    "festival": "mimosa",
+    "coleccion": "mimosa",
     "year": 2025,
     "item_id": "cc1171b6475f",
     "payload": {
@@ -15,7 +15,7 @@
   {
     "id": "00b1ee3f-1c26-40b7-9c19-2e80cf92ffae",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1968,
     "item_id": null,
     "payload": {
@@ -31,7 +31,7 @@
   {
     "id": "00d538c0-e9b8-433a-a4dd-8e79810ceb6e",
     "type": "tag",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2025,
     "item_id": "fae5e1f50f75",
     "payload": {
@@ -44,7 +44,7 @@
   {
     "id": "00f2fe0b-b417-4461-b5c0-c1d48e67c05a",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1937,
     "item_id": null,
     "payload": {
@@ -58,7 +58,7 @@
   {
     "id": "0142af7c-1019-4c80-828d-e5c26cd46642",
     "type": "fact",
-    "festival": "mimosa",
+    "coleccion": "mimosa",
     "year": 2011,
     "item_id": null,
     "payload": {
@@ -74,7 +74,7 @@
   {
     "id": "01605339-3842-4190-9751-0518b3f8db72",
     "type": "tag",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2023,
     "item_id": "4e783b9716f5",
     "payload": {
@@ -87,7 +87,7 @@
   {
     "id": "019ef08f-f153-4b29-ac30-07ddec6e87db",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2010,
     "item_id": null,
     "payload": {
@@ -103,7 +103,7 @@
   {
     "id": "021ae049-5b53-4690-bf23-85bb6b06efca",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2013,
     "item_id": null,
     "payload": {
@@ -119,7 +119,7 @@
   {
     "id": "024c50c1-ca1c-4b3e-aae7-d3ed3503fce9",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 1928,
     "item_id": null,
     "payload": {
@@ -134,7 +134,7 @@
   {
     "id": "02578b56-14fe-450e-8fbd-ce8b3006cb3c",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2018,
     "item_id": null,
     "payload": {
@@ -150,13 +150,13 @@
   {
     "id": "026e9508-59e7-4f2e-a0c8-e1a9c776926d",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2024,
     "item_id": "0fa1b7b0d9ad",
     "payload": {
-      "category": "bases",
-      "festival": "chubut",
-      "year": 2024
+      "year": 2024,
+      "tipo": "bases",
+      "coleccion": "chubut"
     },
     "created_at": "2026-11-22T19:39:31.245615+00:00",
     "reviewed_at": "2026-11-22T19:39:31.245615+00:00",
@@ -165,13 +165,13 @@
   {
     "id": "0313d7ae-7937-4abc-bd95-fb6fcaea1c50",
     "type": "tag",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2025,
     "item_id": "56789aa41764",
     "payload": {
-      "category": "bases",
-      "festival": "juventud",
-      "year": 2025
+      "year": 2025,
+      "tipo": "bases",
+      "coleccion": "juventud"
     },
     "created_at": "2026-11-14T10:44:32.891388+00:00",
     "reviewed_at": "2026-11-14T11:02:47.824811+00:00",
@@ -180,7 +180,7 @@
   {
     "id": "0344d259-4903-4b0c-a483-dda857fd255c",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1891,
     "item_id": null,
     "payload": {
@@ -195,7 +195,7 @@
   {
     "id": "03696648-964b-48ba-8410-865cee384ff4",
     "type": "fact",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2017,
     "item_id": null,
     "payload": {
@@ -210,13 +210,13 @@
   {
     "id": "042ee3c5-9213-4941-921b-29a8be5261bc",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2025,
     "item_id": "f08b97c983cf",
     "payload": {
-      "category": "bases",
-      "festival": "chubut",
-      "year": 2025
+      "year": 2025,
+      "tipo": "bases",
+      "coleccion": "chubut"
     },
     "created_at": "2026-11-14T13:19:03.427053+00:00",
     "reviewed_at": "2026-11-14T13:20:47.194865+00:00",
@@ -225,7 +225,7 @@
   {
     "id": "048af0b6-c37d-4c13-b6f7-33a1e030dc43",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2022,
     "item_id": "03b01342a6c3",
     "payload": {
@@ -238,7 +238,7 @@
   {
     "id": "04d6f4c5-7115-484a-808b-4524d6327c75",
     "type": "fact",
-    "festival": "mimosa",
+    "coleccion": "mimosa",
     "year": 2014,
     "item_id": null,
     "payload": {
@@ -254,7 +254,7 @@
   {
     "id": "05147349-3e43-46bd-9b12-e82b752fb432",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2025,
     "item_id": "030e18cbadd5",
     "payload": {
@@ -267,7 +267,7 @@
   {
     "id": "05a9f007-ccc6-43f6-bb4f-333fd15e631b",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2016,
     "item_id": "d99c51e60604",
     "payload": {
@@ -280,7 +280,7 @@
   {
     "id": "05f963fc-27b5-4ef7-b16d-40ddc843f1e5",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1939,
     "item_id": null,
     "payload": {
@@ -296,7 +296,7 @@
   {
     "id": "06a2805b-8460-4d72-80ea-bbce921dffde",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1937,
     "item_id": null,
     "payload": {
@@ -312,7 +312,7 @@
   {
     "id": "073a2f84-fbb6-4300-9eaf-8b66b5389508",
     "type": "fact",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2012,
     "item_id": null,
     "payload": {
@@ -328,7 +328,7 @@
   {
     "id": "0750f49f-7401-431d-8a0b-4d966ce435da",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1891,
     "item_id": null,
     "payload": {
@@ -344,7 +344,7 @@
   {
     "id": "080c4fc7-c680-4903-9e4f-b6f2b95be375",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1919,
     "item_id": null,
     "payload": {
@@ -359,7 +359,7 @@
   {
     "id": "080c9e88-b1f3-4a48-8d99-115656b987fd",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1925,
     "item_id": null,
     "payload": {
@@ -374,7 +374,7 @@
   {
     "id": "08450363-b828-4fea-8962-c0c7f7704271",
     "type": "fact",
-    "festival": "mimosa",
+    "coleccion": "mimosa",
     "year": 2025,
     "item_id": null,
     "payload": {
@@ -390,7 +390,7 @@
   {
     "id": "08b912f6-2d20-4b8c-901d-4345233807b4",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1904,
     "item_id": null,
     "payload": {
@@ -405,7 +405,7 @@
   {
     "id": "08d612ee-4b90-4641-9b6c-6ad7b6ff7213",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1988,
     "item_id": null,
     "payload": {
@@ -421,13 +421,13 @@
   {
     "id": "0980cab0-5128-48c1-91b2-91309f9da6af",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2024,
     "item_id": "797fb3a8aa6d",
     "payload": {
-      "category": "bases",
-      "festival": "chubut",
-      "year": 2024
+      "year": 2024,
+      "tipo": "bases",
+      "coleccion": "chubut"
     },
     "created_at": "2026-11-14T13:19:56.87413+00:00",
     "reviewed_at": "2026-11-14T13:20:53.581281+00:00",
@@ -436,7 +436,7 @@
   {
     "id": "0a68d85f-c65f-4cf8-87e5-d8a04cefcf90",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2022,
     "item_id": null,
     "payload": {
@@ -452,7 +452,7 @@
   {
     "id": "0a828b8f-3fb6-45ed-ac67-6c3d488d667d",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1880,
     "item_id": null,
     "payload": {
@@ -468,7 +468,7 @@
   {
     "id": "0af32e4f-9b15-4eaa-ba0f-0e19f440e27a",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2017,
     "item_id": null,
     "payload": {
@@ -484,7 +484,7 @@
   {
     "id": "0b1aa6be-26f4-43a5-80fb-a64a57d98f94",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2019,
     "item_id": null,
     "payload": {
@@ -500,13 +500,13 @@
   {
     "id": "0be33027-d7b8-47b5-8a9d-c992b31cfc0a",
     "type": "tag",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2023,
     "item_id": "b62537afb425",
     "payload": {
-      "category": "preliminares",
-      "festival": "juventud",
-      "year": 2023
+      "year": 2023,
+      "tipo": "preliminares",
+      "coleccion": "juventud"
     },
     "created_at": "2026-11-15T09:43:19.776484+00:00",
     "reviewed_at": "2026-11-15T09:43:19.776484+00:00",
@@ -515,7 +515,7 @@
   {
     "id": "0c4b2644-507a-476c-ba24-7ca3d5b1d712",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2008,
     "item_id": null,
     "payload": {
@@ -531,7 +531,7 @@
   {
     "id": "0c7b7663-4e91-45e6-97f9-d7a7a511ba60",
     "type": "tag",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2024,
     "item_id": "c916ece7444a",
     "payload": {
@@ -544,7 +544,7 @@
   {
     "id": "0f83a34c-384b-4a89-b97b-5dbf24c6c747",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2026,
     "item_id": null,
     "payload": {
@@ -560,7 +560,7 @@
   {
     "id": "104336ce-951f-46de-be3d-646c2472bd9a",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1918,
     "item_id": null,
     "payload": {
@@ -575,7 +575,7 @@
   {
     "id": "10a271d9-f99e-4c9c-8a33-c04393bdb7a6",
     "type": "tag",
-    "festival": "mimosa",
+    "coleccion": "mimosa",
     "year": 2025,
     "item_id": "7c4819bda0f9",
     "payload": {
@@ -588,7 +588,7 @@
   {
     "id": "10c8944b-3ee7-4db0-a1fd-467c55837feb",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2021,
     "item_id": "5023d218e655",
     "payload": {
@@ -601,7 +601,7 @@
   {
     "id": "110f83a1-c934-4999-9405-e15a205c1341",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2022,
     "item_id": "89634a8605db",
     "payload": {
@@ -614,7 +614,7 @@
   {
     "id": "118a4bd9-7117-4078-ba08-0462c3c9d821",
     "type": "tag",
-    "festival": "mimosa",
+    "coleccion": "mimosa",
     "year": 2025,
     "item_id": "4af46a7a9ebf",
     "payload": {
@@ -627,7 +627,7 @@
   {
     "id": "12702237-4fcc-49a7-909c-2ddb044db38e",
     "type": "fact",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2019,
     "item_id": null,
     "payload": {
@@ -643,7 +643,7 @@
   {
     "id": "1298fb82-e6f2-4e89-8879-3590cf8f56fb",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1912,
     "item_id": null,
     "payload": {
@@ -659,7 +659,7 @@
   {
     "id": "13699e72-cb40-40b8-a487-4cba14af3159",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1880,
     "item_id": null,
     "payload": {
@@ -674,7 +674,7 @@
   {
     "id": "13798c4a-ce5c-4bb4-bfdf-24a8e84507fc",
     "type": "fact",
-    "festival": "mimosa",
+    "coleccion": "mimosa",
     "year": 2025,
     "item_id": null,
     "payload": {
@@ -690,7 +690,7 @@
   {
     "id": "13f6bdcc-cf3c-4598-84e0-aa2f1cd29ad8",
     "type": "fact",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2024,
     "item_id": null,
     "payload": {
@@ -706,7 +706,7 @@
   {
     "id": "1419ebcd-66b9-4041-9cb6-efdc645f2f01",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2011,
     "item_id": null,
     "payload": {
@@ -722,7 +722,7 @@
   {
     "id": "1464b31c-df9a-44ce-986d-715fc44a4883",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1881,
     "item_id": null,
     "payload": {
@@ -738,7 +738,7 @@
   {
     "id": "14b7172e-5f71-4509-bc32-5f96ab7caf29",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1923,
     "item_id": null,
     "payload": {
@@ -753,7 +753,7 @@
   {
     "id": "151eb538-1ae4-4449-adf6-dea08190d9e8",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1891,
     "item_id": null,
     "payload": {
@@ -769,7 +769,7 @@
   {
     "id": "1521ee0f-342f-4930-9f40-d3c58f087036",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1918,
     "item_id": null,
     "payload": {
@@ -784,7 +784,7 @@
   {
     "id": "156ab5c7-002e-4251-be59-a7551690b8bb",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1884,
     "item_id": null,
     "payload": {
@@ -800,7 +800,7 @@
   {
     "id": "15efb223-c11a-4a43-86b1-4129506eb527",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1942,
     "item_id": null,
     "payload": {
@@ -816,7 +816,7 @@
   {
     "id": "16eaf3d2-2780-4627-927c-d543dcc8db68",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2026,
     "item_id": null,
     "payload": {
@@ -831,7 +831,7 @@
   {
     "id": "16eb5288-05be-41d2-8186-a2529bf3811b",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1925,
     "item_id": null,
     "payload": {
@@ -846,7 +846,7 @@
   {
     "id": "176352dd-bf91-48e3-b8ab-87f49d2aa1f7",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2024,
     "item_id": "5fbed1e62c7a",
     "payload": {
@@ -859,7 +859,7 @@
   {
     "id": "17e86bef-0ffe-4bff-b17b-b7d1e7e0adbc",
     "type": "fact",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2024,
     "item_id": null,
     "payload": {
@@ -875,7 +875,7 @@
   {
     "id": "18960fdc-5f27-446e-ae6f-6427dcab4780",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1931,
     "item_id": null,
     "payload": {
@@ -891,13 +891,13 @@
   {
     "id": "18f6bf01-3873-4bed-aed8-3ac711195b04",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2022,
     "item_id": "e49c26c600a8",
     "payload": {
-      "category": "programa-del-dia",
-      "festival": "chubut",
-      "year": 2022
+      "year": 2022,
+      "tipo": "programa-del-dia",
+      "coleccion": "chubut"
     },
     "created_at": "2026-11-17T13:04:12.273569+00:00",
     "reviewed_at": "2026-11-17T13:04:12.273569+00:00",
@@ -906,7 +906,7 @@
   {
     "id": "19205166-0a7c-4294-a1cf-10f41e890ead",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1910,
     "item_id": null,
     "payload": {
@@ -921,7 +921,7 @@
   {
     "id": "196fd88a-1710-4f3b-a5b4-f38ee14e7ec2",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2022,
     "item_id": null,
     "payload": {
@@ -936,7 +936,7 @@
   {
     "id": "19734209-b561-4eff-90bc-1b33c95ac3af",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1965,
     "item_id": null,
     "payload": {
@@ -952,7 +952,7 @@
   {
     "id": "198c9db9-2821-46b5-adf1-10d767b6aba1",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2025,
     "item_id": null,
     "payload": {
@@ -968,7 +968,7 @@
   {
     "id": "1a5fc5bc-5720-4972-8d49-34dc47008753",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2021,
     "item_id": "05fc75d8dd23",
     "payload": {
@@ -981,7 +981,7 @@
   {
     "id": "1a728b83-74bb-4118-b756-6b43b0aef940",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1891,
     "item_id": null,
     "payload": {
@@ -997,13 +997,13 @@
   {
     "id": "1a79bebd-5926-4ab9-92bf-7103e08dc6a1",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2018,
     "item_id": "4e87bd74fa35",
     "payload": {
-      "category": "bases",
-      "festival": "chubut",
-      "year": 2018
+      "year": 2018,
+      "tipo": "bases",
+      "coleccion": "chubut"
     },
     "created_at": "2026-11-14T10:44:16.333053+00:00",
     "reviewed_at": "2026-11-14T11:02:42.726967+00:00",
@@ -1012,11 +1012,11 @@
   {
     "id": "1ab7a11a-1789-4034-9ae4-dfdd02856c96",
     "type": "tag",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2025,
     "item_id": "2561beee4d48",
     "payload": {
-      "category": "programa"
+      "tipo": "programa"
     },
     "created_at": "2026-11-14T16:38:37.91413+00:00",
     "reviewed_at": "2026-11-14T16:38:37.91413+00:00",
@@ -1025,7 +1025,7 @@
   {
     "id": "1b89a114-8ab4-44aa-b823-5ecb38e8eaf2",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2026,
     "item_id": null,
     "payload": {
@@ -1040,7 +1040,7 @@
   {
     "id": "1be2c9fd-919d-4026-ae4d-a3c4b02a782a",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1972,
     "item_id": null,
     "payload": {
@@ -1056,7 +1056,7 @@
   {
     "id": "1c02321e-f784-4e00-b956-7648c62b13bb",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2013,
     "item_id": "dbdc07f64644",
     "payload": {
@@ -1069,7 +1069,7 @@
   {
     "id": "1cea96d4-d55f-4d82-a11f-f12253049b1b",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1927,
     "item_id": null,
     "payload": {
@@ -1084,7 +1084,7 @@
   {
     "id": "1d8ad5b0-4832-407e-b731-36b2b73f6c5b",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1899,
     "item_id": null,
     "payload": {
@@ -1099,7 +1099,7 @@
   {
     "id": "1de28dd1-7794-4b3a-847c-d3179cd681c9",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2022,
     "item_id": "addf6e12f785",
     "payload": {
@@ -1112,7 +1112,7 @@
   {
     "id": "1e223309-54b7-4d0b-a9d1-53e228a9f996",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2012,
     "item_id": null,
     "payload": {
@@ -1128,7 +1128,7 @@
   {
     "id": "1e6305d9-b260-40bc-a2ef-26aeeb74338f",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1937,
     "item_id": null,
     "payload": {
@@ -1142,7 +1142,7 @@
   {
     "id": "1eca02dd-2d8b-4503-b9a7-062746b19851",
     "type": "tag",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2021,
     "item_id": "9cba683a0840",
     "payload": {
@@ -1155,7 +1155,7 @@
   {
     "id": "1edfda79-4078-4e94-9934-78bd83284339",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2011,
     "item_id": null,
     "payload": {
@@ -1171,7 +1171,7 @@
   {
     "id": "1f6c92ee-6fa7-40d7-b1d4-516651dd5bcb",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1989,
     "item_id": "c30ef6382761",
     "payload": {
@@ -1184,13 +1184,13 @@
   {
     "id": "1fe5b30a-0334-4de6-8a8e-09189917cc0f",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2024,
     "item_id": "051d5cd88bad",
     "payload": {
-      "category": "preliminares",
-      "festival": "chubut",
-      "year": 2024
+      "year": 2024,
+      "tipo": "preliminares",
+      "coleccion": "chubut"
     },
     "created_at": "2026-11-13T22:38:11.065475+00:00",
     "reviewed_at": "2026-11-13T22:52:10.61773+00:00",
@@ -1199,7 +1199,7 @@
   {
     "id": "202ab74f-d60e-425f-b698-7640cbfbdb22",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2022,
     "item_id": "0002b499da6d",
     "payload": {
@@ -1212,7 +1212,7 @@
   {
     "id": "206f1d59-e71c-442c-8044-8104fb6327fd",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1913,
     "item_id": null,
     "payload": {
@@ -1228,7 +1228,7 @@
   {
     "id": "20a96cf6-3cdc-4416-9989-8abd1fd0476c",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2024,
     "item_id": null,
     "payload": {
@@ -1244,7 +1244,7 @@
   {
     "id": "2190f0fc-bce3-4ab1-9a5a-64587b4ea28f",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2015,
     "item_id": null,
     "payload": {
@@ -1260,7 +1260,7 @@
   {
     "id": "22082a4c-7701-4522-a8c1-c86dbc541f7f",
     "type": "fact",
-    "festival": "mimosa",
+    "coleccion": "mimosa",
     "year": 2024,
     "item_id": null,
     "payload": {
@@ -1276,7 +1276,7 @@
   {
     "id": "22d8c1ff-d1f1-4267-b5a8-4060cb0272fc",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1945,
     "item_id": null,
     "payload": {
@@ -1292,7 +1292,7 @@
   {
     "id": "22da4bcd-af34-4b26-b1b4-884fae976e69",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2008,
     "item_id": null,
     "payload": {
@@ -1308,7 +1308,7 @@
   {
     "id": "22db6af6-f3fe-432b-bf51-70b47d89cac8",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2022,
     "item_id": "051dcca2abd4",
     "payload": {
@@ -1321,7 +1321,7 @@
   {
     "id": "230256ac-9879-4cbb-884c-ac2a4251b2e9",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1997,
     "item_id": null,
     "payload": {
@@ -1337,7 +1337,7 @@
   {
     "id": "2320eafa-03aa-4593-a7ab-6fbce6e8d48b",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2007,
     "item_id": "c25e647e3048",
     "payload": {
@@ -1350,7 +1350,7 @@
   {
     "id": "24048579-baa3-4a7e-b591-c5f6738a7553",
     "type": "fact",
-    "festival": "mimosa",
+    "coleccion": "mimosa",
     "year": 2017,
     "item_id": null,
     "payload": {
@@ -1366,7 +1366,7 @@
   {
     "id": "241b4735-a17b-4a8f-a55a-d78eed71ab1b",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1912,
     "item_id": null,
     "payload": {
@@ -1382,7 +1382,7 @@
   {
     "id": "243622a9-6f6f-4b5c-a504-323990543ece",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2017,
     "item_id": null,
     "payload": {
@@ -1398,7 +1398,7 @@
   {
     "id": "2498156a-ff36-4378-a3e9-b179be8e486d",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2008,
     "item_id": "d659a6f206e9",
     "payload": {
@@ -1411,7 +1411,7 @@
   {
     "id": "24db9f1a-e8df-4ec9-ade5-c7d0a8f520f1",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2005,
     "item_id": "b6d56505956e",
     "payload": {
@@ -1424,7 +1424,7 @@
   {
     "id": "25cd72cd-5b6a-4b91-a06e-74d9d2ba2c07",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2022,
     "item_id": null,
     "payload": {
@@ -1440,7 +1440,7 @@
   {
     "id": "2674150d-5fd8-4500-86e2-f5fd027bb8d4",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1937,
     "item_id": null,
     "payload": {
@@ -1454,7 +1454,7 @@
   {
     "id": "26dcf1d7-25fe-4c51-8866-ca5f86735f85",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2026,
     "item_id": "4d6256f94dce",
     "payload": {
@@ -1467,7 +1467,7 @@
   {
     "id": "27753acf-94ed-4854-9bfd-5625bb2c2225",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2009,
     "item_id": null,
     "payload": {
@@ -1483,7 +1483,7 @@
   {
     "id": "27943f89-666a-4e19-b1d1-91bcb0f699a9",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1949,
     "item_id": null,
     "payload": {
@@ -1499,7 +1499,7 @@
   {
     "id": "27ec683a-6210-495c-9af8-291ffaea70b7",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1950,
     "item_id": null,
     "payload": {
@@ -1515,7 +1515,7 @@
   {
     "id": "2834c1ce-4d3c-416d-aae2-6a2ee62363a8",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1944,
     "item_id": null,
     "payload": {
@@ -1531,7 +1531,7 @@
   {
     "id": "2934b4e8-d722-4d86-b1d6-0fb6ccf7dda2",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2018,
     "item_id": "8c1d95347416",
     "payload": {
@@ -1544,13 +1544,13 @@
   {
     "id": "29464ea1-767f-4623-9245-b4a2ef1124e9",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2025,
     "item_id": "fd63ba3c7bdf",
     "payload": {
-      "category": "bases",
-      "festival": "chubut",
-      "year": 2025
+      "year": 2025,
+      "tipo": "bases",
+      "coleccion": "chubut"
     },
     "created_at": "2026-11-15T09:43:03.446029+00:00",
     "reviewed_at": "2026-11-15T09:43:03.446029+00:00",
@@ -1559,7 +1559,7 @@
   {
     "id": "299d16f5-497d-4fd0-95e1-b92082954771",
     "type": "fact",
-    "festival": "mimosa",
+    "coleccion": "mimosa",
     "year": 2024,
     "item_id": null,
     "payload": {
@@ -1575,7 +1575,7 @@
   {
     "id": "29ba9d63-787c-4285-acbc-77bf9ce381d0",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1922,
     "item_id": null,
     "payload": {
@@ -1590,7 +1590,7 @@
   {
     "id": "29f3870c-0352-4038-a255-b8e55b25d664",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2022,
     "item_id": null,
     "payload": {
@@ -1606,7 +1606,7 @@
   {
     "id": "2a663e57-afb0-4485-aec0-2624a1628f26",
     "type": "tag",
-    "festival": "mimosa",
+    "coleccion": "mimosa",
     "year": 2024,
     "item_id": "4a3355537d6e",
     "payload": {
@@ -1619,7 +1619,7 @@
   {
     "id": "2ae98cae-8437-4653-b080-e110e9d4882a",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2024,
     "item_id": "ee3f14f29b10",
     "payload": {
@@ -1632,7 +1632,7 @@
   {
     "id": "2b237b95-b17d-4e0b-88fa-b48190594cc5",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2026,
     "item_id": null,
     "payload": {
@@ -1648,7 +1648,7 @@
   {
     "id": "2b26de3c-63e9-4ca9-af07-bbc8b5bcabad",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1965,
     "item_id": null,
     "payload": {
@@ -1664,7 +1664,7 @@
   {
     "id": "2b838044-99b1-4e42-9543-638278d75ef8",
     "type": "fact",
-    "festival": "mimosa",
+    "coleccion": "mimosa",
     "year": 2023,
     "item_id": null,
     "payload": {
@@ -1680,13 +1680,13 @@
   {
     "id": "2c15ab21-8015-4ea8-ab0c-4dee855cdd5c",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2021,
     "item_id": "c35ebcee921b",
     "payload": {
-      "category": "bases",
-      "festival": "chubut",
-      "year": 2021
+      "year": 2021,
+      "tipo": "bases",
+      "coleccion": "chubut"
     },
     "created_at": "2026-11-14T13:19:17.589273+00:00",
     "reviewed_at": "2026-11-14T13:20:49.020409+00:00",
@@ -1695,7 +1695,7 @@
   {
     "id": "2c2c1c5e-9637-41c0-a050-257db2a59dd3",
     "type": "tag",
-    "festival": "mimosa",
+    "coleccion": "mimosa",
     "year": 2023,
     "item_id": "d09a46925282",
     "payload": {
@@ -1708,7 +1708,7 @@
   {
     "id": "2c6fc4b5-b066-470f-a213-77c21cca4e36",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1923,
     "item_id": null,
     "payload": {
@@ -1723,7 +1723,7 @@
   {
     "id": "2ca38dd5-9c06-4125-9feb-e79f54972f8b",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2024,
     "item_id": null,
     "payload": {
@@ -1739,7 +1739,7 @@
   {
     "id": "2cbfd294-ad8a-4196-8bb1-67ce0b0c0122",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1898,
     "item_id": null,
     "payload": {
@@ -1754,7 +1754,7 @@
   {
     "id": "2cc57c0b-6813-46be-ab58-f4073703d447",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2023,
     "item_id": null,
     "payload": {
@@ -1769,7 +1769,7 @@
   {
     "id": "2da78641-13ba-47ed-8a54-80d2d5aac83b",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2022,
     "item_id": "d4f6dae10e91",
     "payload": {
@@ -1782,7 +1782,7 @@
   {
     "id": "2de03bda-2045-40a5-812f-bc579f50f567",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1923,
     "item_id": null,
     "payload": {
@@ -1797,7 +1797,7 @@
   {
     "id": "2dffa700-2e68-4272-998a-808210e12365",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2020,
     "item_id": "fa24bbb6b678",
     "payload": {
@@ -1810,13 +1810,13 @@
   {
     "id": "2e3d2fca-81bd-4e4c-8ba2-b026f236a91b",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2022,
     "item_id": "486c5fd51089",
     "payload": {
-      "category": "bases",
-      "festival": "chubut",
-      "year": 2022
+      "year": 2022,
+      "tipo": "bases",
+      "coleccion": "chubut"
     },
     "created_at": "2026-11-14T10:44:30.618356+00:00",
     "reviewed_at": "2026-11-14T11:02:44.841222+00:00",
@@ -1825,7 +1825,7 @@
   {
     "id": "2f3508c3-bb05-4b57-9769-7d1668785265",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2022,
     "item_id": "0173dc740a4b",
     "payload": {
@@ -1838,7 +1838,7 @@
   {
     "id": "2f51574e-c5ea-4c13-a3f8-fe454d0e155e",
     "type": "tag",
-    "festival": "mimosa",
+    "coleccion": "mimosa",
     "year": 2025,
     "item_id": "8e4ca1e80fb9",
     "payload": {
@@ -1851,13 +1851,13 @@
   {
     "id": "2fb67df9-6d2e-4404-8104-2fa9d38d9806",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2026,
     "item_id": "f0445c901f9f",
     "payload": {
-      "category": "bases",
-      "festival": "chubut",
-      "year": 2026
+      "year": 2026,
+      "tipo": "bases",
+      "coleccion": "chubut"
     },
     "created_at": "2026-11-14T10:44:18.426281+00:00",
     "reviewed_at": "2026-11-14T11:02:46.77271+00:00",
@@ -1866,7 +1866,7 @@
   {
     "id": "2ff3c722-3394-4532-80c8-fd104652da9f",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1923,
     "item_id": null,
     "payload": {
@@ -1881,7 +1881,7 @@
   {
     "id": "3191fa24-3473-46a5-96de-0718def92743",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2025,
     "item_id": null,
     "payload": {
@@ -1897,7 +1897,7 @@
   {
     "id": "31b94612-7aa2-45b8-813b-0469e1994650",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 1928,
     "item_id": null,
     "payload": {
@@ -1912,7 +1912,7 @@
   {
     "id": "32cdaaec-6693-4022-8cd1-842cda0aa15c",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1921,
     "item_id": null,
     "payload": {
@@ -1927,7 +1927,7 @@
   {
     "id": "32eef707-aa16-429c-aea5-6a1a2126d55f",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2007,
     "item_id": null,
     "payload": {
@@ -1943,7 +1943,7 @@
   {
     "id": "33689ed0-4825-4d55-a983-72883f4d8232",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2011,
     "item_id": null,
     "payload": {
@@ -1959,7 +1959,7 @@
   {
     "id": "34a6a4e0-7b4c-4f8f-a9c1-93573eb692aa",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2017,
     "item_id": "31b2ea8bbff4",
     "payload": {
@@ -1972,7 +1972,7 @@
   {
     "id": "355a63ca-5a0a-469e-97f5-bb2dcbeb1d81",
     "type": "video_text",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2008,
     "item_id": null,
     "payload": {
@@ -1995,7 +1995,7 @@
   {
     "id": "36078abb-17ce-40c5-8065-f548501b6ed4",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2007,
     "item_id": null,
     "payload": {
@@ -2011,11 +2011,11 @@
   {
     "id": "37227883-6e02-4919-8dc1-4591a7139b7d",
     "type": "tag",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2025,
     "item_id": "c6b1cfcaef8d",
     "payload": {
-      "category": "programa"
+      "tipo": "programa"
     },
     "created_at": "2026-11-14T16:38:37.91413+00:00",
     "reviewed_at": "2026-11-14T16:38:37.91413+00:00",
@@ -2024,7 +2024,7 @@
   {
     "id": "379499de-8ecf-4ae9-bd66-bcbc687d9429",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1896,
     "item_id": null,
     "payload": {
@@ -2039,7 +2039,7 @@
   {
     "id": "379b49a3-1061-4d00-a8f6-645a49ed7ef8",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2024,
     "item_id": null,
     "payload": {
@@ -2055,7 +2055,7 @@
   {
     "id": "37b8e9e7-d121-43f0-8bac-87a474607eba",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1928,
     "item_id": null,
     "payload": {
@@ -2070,13 +2070,13 @@
   {
     "id": "37f37613-6525-4a87-b34e-3d701220f248",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1939,
     "item_id": "c7405e26517a",
     "payload": {
-      "category": "otros",
-      "festival": "chubut",
-      "year": 1939
+      "year": 1939,
+      "tipo": "otros",
+      "coleccion": "chubut"
     },
     "created_at": "2026-11-27T07:08:34.988835+00:00",
     "reviewed_at": "2026-11-27T07:08:34.988835+00:00",
@@ -2085,7 +2085,7 @@
   {
     "id": "38885718-c558-4c25-a108-99f41e022c32",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2012,
     "item_id": "f6aad1cabf29",
     "payload": {
@@ -2098,7 +2098,7 @@
   {
     "id": "39324fe1-cc2f-4495-b02a-eba76ace8279",
     "type": "tag",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2025,
     "item_id": "adaf33976d2a",
     "payload": {
@@ -2111,7 +2111,7 @@
   {
     "id": "3966a5ea-9b87-4b0e-b517-c9000618e0db",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1884,
     "item_id": null,
     "payload": {
@@ -2127,7 +2127,7 @@
   {
     "id": "396dda2b-9dd6-4b87-893d-02ec93e0e349",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2017,
     "item_id": "a39a1d6b247b",
     "payload": {
@@ -2140,7 +2140,7 @@
   {
     "id": "39cb327b-3e12-4ae5-af31-e864fa734277",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1987,
     "item_id": "f5715cded7bc",
     "payload": {
@@ -2153,13 +2153,13 @@
   {
     "id": "39e01401-68ef-4061-9b24-dc48afa07f14",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2021,
     "item_id": "8fc23391a7f3",
     "payload": {
-      "category": "bases",
-      "festival": "chubut",
-      "year": 2021
+      "year": 2021,
+      "tipo": "bases",
+      "coleccion": "chubut"
     },
     "created_at": "2026-11-13T21:14:17.363453+00:00",
     "reviewed_at": "2026-11-13T21:14:42.096951+00:00",
@@ -2168,7 +2168,7 @@
   {
     "id": "3a7c1dfb-3cc1-4309-ab5a-410e582433d2",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2014,
     "item_id": null,
     "payload": {
@@ -2184,13 +2184,13 @@
   {
     "id": "3b9c4b3c-09a1-4a4e-b193-45fbe29b127a",
     "type": "tag",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2019,
     "item_id": "8c9fdb63913c",
     "payload": {
-      "category": "programa-del-dia",
-      "festival": "juventud",
-      "year": 2019
+      "year": 2019,
+      "tipo": "programa-del-dia",
+      "coleccion": "juventud"
     },
     "created_at": "2026-11-14T13:19:54.436523+00:00",
     "reviewed_at": "2026-11-14T13:20:52.202165+00:00",
@@ -2199,7 +2199,7 @@
   {
     "id": "3bbbf7a9-1e66-4fb7-9a59-94ca49197a59",
     "type": "tag",
-    "festival": "mimosa",
+    "coleccion": "mimosa",
     "year": 2024,
     "item_id": "b7d08ef39676",
     "payload": {
@@ -2212,13 +2212,13 @@
   {
     "id": "3bbc9a88-5581-40dd-ae1c-0d283347cc03",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2014,
     "item_id": "bce9ad6ff669",
     "payload": {
-      "category": "bases",
-      "festival": "chubut",
-      "year": 2014
+      "year": 2014,
+      "tipo": "bases",
+      "coleccion": "chubut"
     },
     "created_at": "2026-11-14T13:19:59.852147+00:00",
     "reviewed_at": "2026-11-14T13:20:54.639722+00:00",
@@ -2227,7 +2227,7 @@
   {
     "id": "3c666438-c9c0-421f-b1a2-b7680d0ad717",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1954,
     "item_id": null,
     "payload": {
@@ -2243,7 +2243,7 @@
   {
     "id": "3ca94463-be45-4be3-8dcf-b195951509a9",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1920,
     "item_id": null,
     "payload": {
@@ -2258,7 +2258,7 @@
   {
     "id": "3d2dbf85-f7d6-4512-ae94-c6922ae6489c",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2024,
     "item_id": "2a55246506fd",
     "payload": {
@@ -2271,7 +2271,7 @@
   {
     "id": "3d7bbb85-71da-4673-b4de-edd0e4e1d52c",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2013,
     "item_id": null,
     "payload": {
@@ -2287,7 +2287,7 @@
   {
     "id": "3da7c535-7852-4095-9135-712236cd9352",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1918,
     "item_id": null,
     "payload": {
@@ -2302,7 +2302,7 @@
   {
     "id": "3dc697ce-2df9-4f08-ab49-3f55ac4ff728",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1886,
     "item_id": "74ba4c04b85f",
     "payload": {
@@ -2315,7 +2315,7 @@
   {
     "id": "3f952f17-e5e0-4290-a3e0-8e0947f120ec",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2015,
     "item_id": null,
     "payload": {
@@ -2330,7 +2330,7 @@
   {
     "id": "3fc6c189-9486-4fae-bbcf-3363c70ecbd6",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2025,
     "item_id": "4ec5bbaf35bc",
     "payload": {
@@ -2343,7 +2343,7 @@
   {
     "id": "40495b4b-4eaf-4d55-b0d9-f5f4cff47842",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1922,
     "item_id": null,
     "payload": {
@@ -2358,7 +2358,7 @@
   {
     "id": "40e1a052-54fe-4ee6-99a4-84e3a4174ccd",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2004,
     "item_id": "a9983a758730",
     "payload": {
@@ -2371,7 +2371,7 @@
   {
     "id": "413cfe0b-a710-4ab2-8f36-f695bb9c59ef",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2013,
     "item_id": null,
     "payload": {
@@ -2386,7 +2386,7 @@
   {
     "id": "41542c16-4f4a-4727-a200-d2ce7850f384",
     "type": "tag",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2025,
     "item_id": "cac482e442cb",
     "payload": {
@@ -2399,7 +2399,7 @@
   {
     "id": "417352eb-cf19-4f1c-b6a7-ef82538e375c",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1921,
     "item_id": null,
     "payload": {
@@ -2414,11 +2414,11 @@
   {
     "id": "4204d6d6-3d08-4592-a348-13b1002ffc20",
     "type": "tag",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2025,
     "item_id": "4a2f7c44e854",
     "payload": {
-      "category": "programa"
+      "tipo": "programa"
     },
     "created_at": "2026-11-14T16:38:37.91413+00:00",
     "reviewed_at": "2026-11-14T16:38:37.91413+00:00",
@@ -2427,7 +2427,7 @@
   {
     "id": "4242cef3-0a2f-4432-9344-e1610654ff0f",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2015,
     "item_id": "609e8a1fa869",
     "payload": {
@@ -2440,7 +2440,7 @@
   {
     "id": "425ef7d7-897a-4cb9-9f22-8eeb81fe7e66",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2006,
     "item_id": null,
     "payload": {
@@ -2456,7 +2456,7 @@
   {
     "id": "42f2ae0a-3ae4-48a2-88d1-1f4145e778a4",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2015,
     "item_id": null,
     "payload": {
@@ -2472,7 +2472,7 @@
   {
     "id": "4384b5a5-d58a-40ce-8eed-9dbbd2f310c2",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1865,
     "item_id": null,
     "payload": {
@@ -2487,7 +2487,7 @@
   {
     "id": "44abc5b8-d6a5-4c95-a5b4-47f9a09d2888",
     "type": "tag",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2008,
     "item_id": "c621c9cf343b",
     "payload": {
@@ -2500,7 +2500,7 @@
   {
     "id": "44dca8bb-3d75-4e29-9dc9-1dc7fba29701",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1985,
     "item_id": "450c6b48e2e6",
     "payload": {
@@ -2513,7 +2513,7 @@
   {
     "id": "46770b9a-f2b1-44f7-9bc4-b02b72aa7079",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1928,
     "item_id": null,
     "payload": {
@@ -2528,7 +2528,7 @@
   {
     "id": "46e767d7-950f-4dbf-8b0a-d71a35ee3417",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2021,
     "item_id": "d39c5cd8db8b",
     "payload": {
@@ -2541,7 +2541,7 @@
   {
     "id": "46f366da-895d-40d6-88d7-753be922424c",
     "type": "tag",
-    "festival": "mimosa",
+    "coleccion": "mimosa",
     "year": 2023,
     "item_id": "83e2043ae3a1",
     "payload": {
@@ -2554,7 +2554,7 @@
   {
     "id": "4709d0fb-2598-4a4e-aa09-fb1cd800ac71",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2023,
     "item_id": null,
     "payload": {
@@ -2570,7 +2570,7 @@
   {
     "id": "47d9f8a4-29cb-4140-8f48-a046dd233ac1",
     "type": "tag",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2021,
     "item_id": "d28522b3d88e",
     "payload": {
@@ -2583,7 +2583,7 @@
   {
     "id": "485ef019-537b-4de4-a3e1-08972a7f48e0",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2021,
     "item_id": "b8241835b77f",
     "payload": {
@@ -2596,7 +2596,7 @@
   {
     "id": "486c0635-48d0-4dc6-a181-6e3d769addae",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1925,
     "item_id": null,
     "payload": {
@@ -2611,7 +2611,7 @@
   {
     "id": "49343558-94cd-4166-8a79-1a10a21b722f",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1988,
     "item_id": null,
     "payload": {
@@ -2627,7 +2627,7 @@
   {
     "id": "498281ce-4662-488c-ae28-df3db41d2e8b",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1934,
     "item_id": null,
     "payload": {
@@ -2643,7 +2643,7 @@
   {
     "id": "4aade99f-40c2-4ca4-b2af-9c6ab66255ce",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1954,
     "item_id": null,
     "payload": {
@@ -2659,7 +2659,7 @@
   {
     "id": "4aea3094-f07d-4b7b-b243-e6026feb20b4",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1914,
     "item_id": null,
     "payload": {
@@ -2675,7 +2675,7 @@
   {
     "id": "4aee2e40-58d2-4d23-b8cc-fd03c2cb99e7",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1988,
     "item_id": null,
     "payload": {
@@ -2691,13 +2691,13 @@
   {
     "id": "4b2c66a0-d2e3-458f-962e-1681bfe31677",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2026,
     "item_id": "ebd83bf02fff",
     "payload": {
-      "category": "bases",
-      "festival": "chubut",
-      "year": 2026
+      "year": 2026,
+      "tipo": "bases",
+      "coleccion": "chubut"
     },
     "created_at": "2026-11-15T09:44:08.106259+00:00",
     "reviewed_at": "2026-11-15T09:44:08.106259+00:00",
@@ -2706,13 +2706,13 @@
   {
     "id": "4be2befb-3b7b-4a06-8e4f-9634f3c82499",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2024,
     "item_id": "1449c71e050b",
     "payload": {
-      "category": "preliminares",
-      "festival": "chubut",
-      "year": 2024
+      "year": 2024,
+      "tipo": "preliminares",
+      "coleccion": "chubut"
     },
     "created_at": "2026-11-14T11:01:58.536559+00:00",
     "reviewed_at": "2026-11-14T11:02:51.476225+00:00",
@@ -2721,7 +2721,7 @@
   {
     "id": "4ca51404-64f3-4d62-b5eb-1c0a6e0a0abd",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2022,
     "item_id": "b3f1a5cbaa0f",
     "payload": {
@@ -2734,7 +2734,7 @@
   {
     "id": "4dafca63-3598-4d21-b5d0-03ed987d1262",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1909,
     "item_id": null,
     "payload": {
@@ -2749,7 +2749,7 @@
   {
     "id": "4e7aaf5c-aefa-480e-be57-982465867c10",
     "type": "tag",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2019,
     "item_id": "4e2d6dd512cf",
     "payload": {
@@ -2762,7 +2762,7 @@
   {
     "id": "4ea09c3f-b57d-497e-ac5b-e7b5aee11cc2",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2018,
     "item_id": "0e54fc66f0dc",
     "payload": {
@@ -2775,7 +2775,7 @@
   {
     "id": "4fb7b47f-2683-4d47-a820-c2b80c24bd06",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1972,
     "item_id": null,
     "payload": {
@@ -2791,7 +2791,7 @@
   {
     "id": "503feb04-eb19-432b-a93b-696d5bea4521",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2008,
     "item_id": "ab70debc7989",
     "payload": {
@@ -2804,7 +2804,7 @@
   {
     "id": "50991ab5-ee9e-4abc-9087-15b908b8e762",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2022,
     "item_id": "43f0b2ca5c47",
     "payload": {
@@ -2817,7 +2817,7 @@
   {
     "id": "50a4cc57-a54d-4493-b42e-caa0261cab8f",
     "type": "tag",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2016,
     "item_id": "28b7d2906038",
     "payload": {
@@ -2830,7 +2830,7 @@
   {
     "id": "50f07615-2667-4b50-bb60-9b6bfafe51af",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2019,
     "item_id": null,
     "payload": {
@@ -2846,7 +2846,7 @@
   {
     "id": "51800afb-100c-4014-b4d4-22c6aba2aff3",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 1929,
     "item_id": null,
     "payload": {
@@ -2861,7 +2861,7 @@
   {
     "id": "522c8178-b7a5-403f-861e-eb862c349881",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2011,
     "item_id": "22f2a0f04e53",
     "payload": {
@@ -2874,7 +2874,7 @@
   {
     "id": "52543603-c0db-4606-af21-6ee3f2a990fb",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1889,
     "item_id": null,
     "payload": {
@@ -2889,7 +2889,7 @@
   {
     "id": "526b4ce1-6a08-4e97-8c23-a7236e84009e",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1990,
     "item_id": "f0bf76bbdf5b",
     "payload": {
@@ -2902,7 +2902,7 @@
   {
     "id": "52d65ffb-1d65-464b-b075-68e55d7da051",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2013,
     "item_id": null,
     "payload": {
@@ -2918,7 +2918,7 @@
   {
     "id": "5304b6a2-b9fd-445a-a60d-fcdc0cd3910f",
     "type": "fact",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 1997,
     "item_id": null,
     "payload": {
@@ -2934,7 +2934,7 @@
   {
     "id": "53416c8f-92cc-424a-b3f7-fe902f573214",
     "type": "fact",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2023,
     "item_id": null,
     "payload": {
@@ -2950,7 +2950,7 @@
   {
     "id": "5434558e-64ac-4443-82c0-57280a2cbfd6",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2006,
     "item_id": null,
     "payload": {
@@ -2966,7 +2966,7 @@
   {
     "id": "54abdfae-cb61-4fec-99c5-4aa6ffec72b0",
     "type": "tag",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2022,
     "item_id": "24fd44914331",
     "payload": {
@@ -2979,7 +2979,7 @@
   {
     "id": "54c553b4-cacb-4e07-b02c-22f9966a73cc",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1942,
     "item_id": "1ed746f08126",
     "payload": {
@@ -2992,7 +2992,7 @@
   {
     "id": "5509b1bc-5ebc-4650-b2ce-8be146f7d0f6",
     "type": "tag",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2025,
     "item_id": "cf43937ab65b",
     "payload": {
@@ -3005,7 +3005,7 @@
   {
     "id": "55bf2f2f-b78d-4214-b5a4-c2fe2a43ea89",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2011,
     "item_id": null,
     "payload": {
@@ -3021,13 +3021,13 @@
   {
     "id": "562ca38f-f12a-4332-b355-5f98359f8eb6",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2026,
     "item_id": "c631805d27af",
     "payload": {
-      "category": "bases",
-      "festival": "chubut",
-      "year": 2026
+      "year": 2026,
+      "tipo": "bases",
+      "coleccion": "chubut"
     },
     "created_at": "2026-11-16T21:14:37.655156+00:00",
     "reviewed_at": "2026-11-16T21:14:37.655156+00:00",
@@ -3036,7 +3036,7 @@
   {
     "id": "569b2579-ceaf-4618-b597-1cde780cf791",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2024,
     "item_id": null,
     "payload": {
@@ -3052,7 +3052,7 @@
   {
     "id": "5730bfd9-34a7-43bb-970b-3c383ab14133",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2025,
     "item_id": null,
     "payload": {
@@ -3068,7 +3068,7 @@
   {
     "id": "576ba786-0145-4252-b74f-c835165aba05",
     "type": "fact",
-    "festival": "mimosa",
+    "coleccion": "mimosa",
     "year": 2017,
     "item_id": null,
     "payload": {
@@ -3084,13 +3084,13 @@
   {
     "id": "57906778-92f3-45d9-a9c2-d1c2d69d294a",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1942,
     "item_id": "6a85d2b780ab",
     "payload": {
-      "category": "otros",
-      "festival": "chubut",
-      "year": 1942
+      "year": 1942,
+      "tipo": "otros",
+      "coleccion": "chubut"
     },
     "created_at": "2026-11-27T07:08:32.382605+00:00",
     "reviewed_at": "2026-11-27T07:08:32.382605+00:00",
@@ -3099,7 +3099,7 @@
   {
     "id": "5884bff8-e148-4847-8639-c64cbb26ef72",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1937,
     "item_id": null,
     "payload": {
@@ -3113,7 +3113,7 @@
   {
     "id": "5944d3e8-d7c8-4e7c-9c3b-47e8aaced6b2",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1946,
     "item_id": null,
     "payload": {
@@ -3129,7 +3129,7 @@
   {
     "id": "59827852-0137-49cb-b642-f125bdbb3e24",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2022,
     "item_id": "7308ac58a0c7",
     "payload": {
@@ -3142,7 +3142,7 @@
   {
     "id": "59ec12c2-061c-4b38-b4c0-7aaf2b31860a",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2025,
     "item_id": "ae99af07bc76",
     "payload": {
@@ -3155,7 +3155,7 @@
   {
     "id": "59f5cba0-2bfb-4422-85af-e0a26b49f75e",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2022,
     "item_id": "037d55b283ac",
     "payload": {
@@ -3168,7 +3168,7 @@
   {
     "id": "5a825a6e-c7c5-4fe3-985e-4b932695b94d",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1987,
     "item_id": "db92c2ebbe55",
     "payload": {
@@ -3181,7 +3181,7 @@
   {
     "id": "5b1b98d5-8cd8-498b-a82f-51bc2c620ca2",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2024,
     "item_id": null,
     "payload": {
@@ -3196,7 +3196,7 @@
   {
     "id": "5bf5cc1c-72f0-4609-9ead-d979e0123221",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1945,
     "item_id": null,
     "payload": {
@@ -3212,7 +3212,7 @@
   {
     "id": "5c3e54c7-6882-42bc-aca9-b73989f234da",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2007,
     "item_id": null,
     "payload": {
@@ -3228,7 +3228,7 @@
   {
     "id": "5c7b9d85-1c46-49fe-876f-6ba25aae06a6",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2017,
     "item_id": null,
     "payload": {
@@ -3244,7 +3244,7 @@
   {
     "id": "5cdbc7b1-c402-4fd6-a1e2-e1dff5ddfb05",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2022,
     "item_id": "a0ffc3ab800c",
     "payload": {
@@ -3257,7 +3257,7 @@
   {
     "id": "5ce42601-f9f4-4293-bfdc-5a0817c72a80",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1919,
     "item_id": null,
     "payload": {
@@ -3272,7 +3272,7 @@
   {
     "id": "5d3ca87e-00fa-44c6-b471-2ede96f1f8c2",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2023,
     "item_id": null,
     "payload": {
@@ -3287,7 +3287,7 @@
   {
     "id": "5e869d2c-197a-4238-ae28-fd69c04b9029",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2011,
     "item_id": null,
     "payload": {
@@ -3303,7 +3303,7 @@
   {
     "id": "5ed7e811-a6be-469f-aea8-495b964409e0",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2017,
     "item_id": null,
     "payload": {
@@ -3319,7 +3319,7 @@
   {
     "id": "5f4ae6f0-8308-487c-9c04-128ef25d37b5",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2015,
     "item_id": "a799cf8685ca",
     "payload": {
@@ -3332,7 +3332,7 @@
   {
     "id": "5fde90ba-b85e-4dfe-8ac5-97dbd83d7406",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1876,
     "item_id": null,
     "payload": {
@@ -3347,7 +3347,7 @@
   {
     "id": "5fecc5d4-d332-4803-a8e3-8f565ecd0b29",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2023,
     "item_id": "43a33a7837a9",
     "payload": {
@@ -3360,7 +3360,7 @@
   {
     "id": "6069e73b-b7df-4340-8e14-7c92500803e9",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2018,
     "item_id": null,
     "payload": {
@@ -3376,7 +3376,7 @@
   {
     "id": "60a0ea81-9f9f-437c-bb8c-9df1c7e005bd",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2023,
     "item_id": null,
     "payload": {
@@ -3392,13 +3392,13 @@
   {
     "id": "61269352-b231-4e59-8909-86fc7df32753",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2025,
     "item_id": "2e9bb931548b",
     "payload": {
-      "category": "bases",
-      "festival": "chubut",
-      "year": 2025
+      "year": 2025,
+      "tipo": "bases",
+      "coleccion": "chubut"
     },
     "created_at": "2026-11-14T13:19:23.605443+00:00",
     "reviewed_at": "2026-11-14T13:20:50.839324+00:00",
@@ -3407,7 +3407,7 @@
   {
     "id": "612b1fcb-2170-48d0-9c99-c9b957810ba8",
     "type": "fact",
-    "festival": "mimosa",
+    "coleccion": "mimosa",
     "year": 2025,
     "item_id": null,
     "payload": {
@@ -3423,11 +3423,11 @@
   {
     "id": "6184635b-59c0-40f1-ad6d-15d4ad5126b4",
     "type": "tag",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2025,
     "item_id": "9e529560d128",
     "payload": {
-      "category": "programa"
+      "tipo": "programa"
     },
     "created_at": "2026-11-14T16:38:37.91413+00:00",
     "reviewed_at": "2026-11-14T16:38:37.91413+00:00",
@@ -3436,7 +3436,7 @@
   {
     "id": "61b5709e-7625-4336-bf02-8b886f0e1da0",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1950,
     "item_id": null,
     "payload": {
@@ -3452,7 +3452,7 @@
   {
     "id": "61f59778-d501-4eb2-aaf0-2e56711b3286",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1947,
     "item_id": null,
     "payload": {
@@ -3468,7 +3468,7 @@
   {
     "id": "621d683f-cffc-430a-b463-13e27f5fe12f",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1969,
     "item_id": null,
     "payload": {
@@ -3484,7 +3484,7 @@
   {
     "id": "6249c220-a53b-492d-af25-c1ca4b663702",
     "type": "tag",
-    "festival": "mimosa",
+    "coleccion": "mimosa",
     "year": 2026,
     "item_id": "58aca902ec52",
     "payload": {
@@ -3497,7 +3497,7 @@
   {
     "id": "63b67200-d14f-48cf-9634-b6d0a9d57c1d",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1917,
     "item_id": null,
     "payload": {
@@ -3512,7 +3512,7 @@
   {
     "id": "642f5b3b-6737-4f20-a79f-a8c05517597a",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1883,
     "item_id": null,
     "payload": {
@@ -3528,7 +3528,7 @@
   {
     "id": "64595aab-04cd-457a-a724-c40b4d91311e",
     "type": "tag",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2025,
     "item_id": "21fc0ceefa68",
     "payload": {
@@ -3541,7 +3541,7 @@
   {
     "id": "64b79c5e-613a-4e3a-9999-83d503657291",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2008,
     "item_id": null,
     "payload": {
@@ -3557,7 +3557,7 @@
   {
     "id": "64de7385-0dea-4f91-85ca-eff4638baa97",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2024,
     "item_id": "ef6841d3417e",
     "payload": {
@@ -3570,7 +3570,7 @@
   {
     "id": "654a2d2e-b1a3-4cd3-80e6-380222f6a54a",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2022,
     "item_id": "fff7da80d1d8",
     "payload": {
@@ -3583,7 +3583,7 @@
   {
     "id": "6609d0bb-3962-410c-815f-1e5280c4b760",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2015,
     "item_id": null,
     "payload": {
@@ -3598,7 +3598,7 @@
   {
     "id": "662983a8-3da4-4577-9eac-e4fc220a56cc",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2022,
     "item_id": null,
     "payload": {
@@ -3614,7 +3614,7 @@
   {
     "id": "66451c92-e7e2-434c-9c09-5ed5d7436fae",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2025,
     "item_id": null,
     "payload": {
@@ -3630,7 +3630,7 @@
   {
     "id": "66612b10-e6c5-4426-ade0-ea56cf2498ac",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1924,
     "item_id": null,
     "payload": {
@@ -3645,7 +3645,7 @@
   {
     "id": "66c28026-c3a5-4675-9df3-6f9e0805aec2",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1972,
     "item_id": null,
     "payload": {
@@ -3661,7 +3661,7 @@
   {
     "id": "67182d88-be9d-43e9-b879-7c2afd466c52",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2018,
     "item_id": null,
     "payload": {
@@ -3677,7 +3677,7 @@
   {
     "id": "67238f89-8719-4947-a92f-facd897a27bf",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2014,
     "item_id": null,
     "payload": {
@@ -3693,7 +3693,7 @@
   {
     "id": "67762e46-9e0d-434b-8767-2830384da832",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2022,
     "item_id": null,
     "payload": {
@@ -3709,7 +3709,7 @@
   {
     "id": "67e65c7a-5c37-4a82-86bc-836eb858be44",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2021,
     "item_id": null,
     "payload": {
@@ -3724,7 +3724,7 @@
   {
     "id": "6828ef5e-95fb-45c1-b65b-e69ae6df641a",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1891,
     "item_id": null,
     "payload": {
@@ -3739,7 +3739,7 @@
   {
     "id": "6897b649-175a-43aa-93d2-45e68d0f60ef",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2019,
     "item_id": "ffa0c98c9f94",
     "payload": {
@@ -3752,7 +3752,7 @@
   {
     "id": "68a9bfdc-8fa8-4b00-8c4d-7123e959fb37",
     "type": "fact",
-    "festival": "mimosa",
+    "coleccion": "mimosa",
     "year": 2014,
     "item_id": null,
     "payload": {
@@ -3768,7 +3768,7 @@
   {
     "id": "68aff454-20c9-4666-a87e-3ef6d2899b5c",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2026,
     "item_id": null,
     "payload": {
@@ -3784,7 +3784,7 @@
   {
     "id": "68f7b358-333c-4023-a2cc-52378174f291",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2024,
     "item_id": "6fd18f7c40b1",
     "payload": {
@@ -3797,7 +3797,7 @@
   {
     "id": "69103825-eeee-4acd-9ea3-5edaad20069c",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2014,
     "item_id": null,
     "payload": {
@@ -3813,7 +3813,7 @@
   {
     "id": "698f27a2-ef0d-4518-9832-80989b85b1b0",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1880,
     "item_id": null,
     "payload": {
@@ -3829,7 +3829,7 @@
   {
     "id": "6ab83bf6-2e49-4a39-b616-e3c35743a5e5",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1880,
     "item_id": null,
     "payload": {
@@ -3845,7 +3845,7 @@
   {
     "id": "6b339ad6-0c4d-45b5-95e9-3dbb96b76ad5",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2019,
     "item_id": null,
     "payload": {
@@ -3861,7 +3861,7 @@
   {
     "id": "6b667efd-8454-4674-8c39-3d121c22ade6",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2014,
     "item_id": null,
     "payload": {
@@ -3877,7 +3877,7 @@
   {
     "id": "6b753d62-10bb-43a5-9247-a89842ed4601",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2013,
     "item_id": null,
     "payload": {
@@ -3893,7 +3893,7 @@
   {
     "id": "6c5a9672-c50d-484a-9f68-d6a1b06bbd7b",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1954,
     "item_id": null,
     "payload": {
@@ -3909,7 +3909,7 @@
   {
     "id": "6c7ad982-cc4d-41e3-a928-1bedb07df663",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1881,
     "item_id": null,
     "payload": {
@@ -3925,7 +3925,7 @@
   {
     "id": "6d26e557-dd70-4265-8d37-003ddad812cd",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2014,
     "item_id": null,
     "payload": {
@@ -3941,7 +3941,7 @@
   {
     "id": "6d71fb2c-1d30-45b8-a220-045866a67994",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1895,
     "item_id": null,
     "payload": {
@@ -3956,7 +3956,7 @@
   {
     "id": "6de1a5eb-6c2e-4566-a6b1-dcf4fc1a9604",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2009,
     "item_id": "c83d074b6770",
     "payload": {
@@ -3969,13 +3969,13 @@
   {
     "id": "6e43a8d5-0ac1-4b36-843a-e8ca15b26388",
     "type": "tag",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2026,
     "item_id": "e3157bc5f05c",
     "payload": {
-      "category": "programa-del-dia",
-      "festival": "juventud",
-      "year": 2026
+      "year": 2026,
+      "tipo": "programa-del-dia",
+      "coleccion": "juventud"
     },
     "created_at": "2026-11-14T11:02:21.601077+00:00",
     "reviewed_at": "2026-11-14T11:02:53.380313+00:00",
@@ -3984,7 +3984,7 @@
   {
     "id": "6e4c76db-3055-4167-b8b1-74c509460320",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1883,
     "item_id": null,
     "payload": {
@@ -3999,7 +3999,7 @@
   {
     "id": "6e6279f7-ab44-409e-a449-58b1ef52929e",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2013,
     "item_id": null,
     "payload": {
@@ -4014,7 +4014,7 @@
   {
     "id": "6e749f61-f56e-4a00-bb2f-bd5855a083f8",
     "type": "fact",
-    "festival": "mimosa",
+    "coleccion": "mimosa",
     "year": 2024,
     "item_id": null,
     "payload": {
@@ -4030,7 +4030,7 @@
   {
     "id": "6eaa1d22-fd9e-46c1-bfe0-4088529e6fc7",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1969,
     "item_id": null,
     "payload": {
@@ -4046,7 +4046,7 @@
   {
     "id": "6ee0a912-f84e-4096-b16c-50502b0331bb",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2022,
     "item_id": null,
     "payload": {
@@ -4062,7 +4062,7 @@
   {
     "id": "6fb09bf5-3b54-41d6-90cd-0bc03c45d257",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2018,
     "item_id": null,
     "payload": {
@@ -4077,7 +4077,7 @@
   {
     "id": "6fb23455-cfd0-40df-b50a-dce338727a83",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2016,
     "item_id": null,
     "payload": {
@@ -4093,7 +4093,7 @@
   {
     "id": "6fcbcbdf-6820-4b7c-adc4-b874b81a6347",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1999,
     "item_id": "4224e265cba8",
     "payload": {
@@ -4106,7 +4106,7 @@
   {
     "id": "70d456df-74d2-4e23-aceb-7790c5305c3c",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1986,
     "item_id": "ec13aef9e9c9",
     "payload": {
@@ -4119,7 +4119,7 @@
   {
     "id": "7140e058-5a06-4de7-b41c-d95d813b6be0",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1893,
     "item_id": null,
     "payload": {
@@ -4134,7 +4134,7 @@
   {
     "id": "71583373-224e-4f5b-b24f-14a0f1da6579",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2025,
     "item_id": null,
     "payload": {
@@ -4150,7 +4150,7 @@
   {
     "id": "71b40a30-e929-41f6-ab09-686b7d67ab89",
     "type": "tag",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2016,
     "item_id": "8b5ed0f99136",
     "payload": {
@@ -4163,7 +4163,7 @@
   {
     "id": "720144fc-a771-44ba-a9de-a42dbbe96eb3",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2022,
     "item_id": "3f3b4a6b1b64",
     "payload": {
@@ -4176,7 +4176,7 @@
   {
     "id": "723d95d2-bc63-4bae-8928-b111fc39b420",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2014,
     "item_id": null,
     "payload": {
@@ -4192,7 +4192,7 @@
   {
     "id": "725d58e4-9144-4136-b48a-8a0decc53d97",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2022,
     "item_id": "5b5249ee9236",
     "payload": {
@@ -4205,7 +4205,7 @@
   {
     "id": "72634647-9249-460f-acc9-d32b96a88d80",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1908,
     "item_id": null,
     "payload": {
@@ -4220,7 +4220,7 @@
   {
     "id": "7273da4a-e4a3-4994-ad31-d2ad173c3dd4",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2025,
     "item_id": null,
     "payload": {
@@ -4236,7 +4236,7 @@
   {
     "id": "727b1f0a-9ce4-40a2-8053-645d11ee084c",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2021,
     "item_id": "8fc23391a7f3",
     "payload": {
@@ -4249,7 +4249,7 @@
   {
     "id": "72a0baca-7d08-4f57-be90-deea2b32ff0e",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2024,
     "item_id": null,
     "payload": {
@@ -4265,7 +4265,7 @@
   {
     "id": "7304b5fd-7c1c-484c-9603-8241a020e021",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1892,
     "item_id": null,
     "payload": {
@@ -4280,7 +4280,7 @@
   {
     "id": "7306e5b0-c7f5-4114-80f9-07a32e1967de",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1883,
     "item_id": null,
     "payload": {
@@ -4296,7 +4296,7 @@
   {
     "id": "7387ee09-3532-42ca-8398-97c7653d26ce",
     "type": "transcription",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2019,
     "item_id": "5f3f43a489cb",
     "payload": {
@@ -4309,7 +4309,7 @@
   {
     "id": "743af07e-da43-4686-86ec-3aaa40d39059",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1954,
     "item_id": null,
     "payload": {
@@ -4325,7 +4325,7 @@
   {
     "id": "74954d98-c537-49d0-8f69-05b980fe8f09",
     "type": "fact",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2023,
     "item_id": null,
     "payload": {
@@ -4341,7 +4341,7 @@
   {
     "id": "7544406c-a5b8-4265-8ddf-2ed8fe1bba56",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1924,
     "item_id": null,
     "payload": {
@@ -4356,7 +4356,7 @@
   {
     "id": "7555c589-5be7-42ce-9764-b7c507cfbb27",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1981,
     "item_id": "88833f04f52d",
     "payload": {
@@ -4369,7 +4369,7 @@
   {
     "id": "757fe8d8-870c-4d6a-9079-76096fa7d911",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2011,
     "item_id": null,
     "payload": {
@@ -4385,7 +4385,7 @@
   {
     "id": "758d90b6-98f3-4218-81e4-abed6dd31966",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2026,
     "item_id": "86ae75caba4b",
     "payload": {
@@ -4398,7 +4398,7 @@
   {
     "id": "75f6f5b8-a5a0-4bf2-9a8d-d71ada945caa",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1947,
     "item_id": null,
     "payload": {
@@ -4414,7 +4414,7 @@
   {
     "id": "76bb59ca-9275-4d6e-8d37-05c0c6f86562",
     "type": "tag",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2021,
     "item_id": "649a788c55fd",
     "payload": {
@@ -4427,7 +4427,7 @@
   {
     "id": "774f7e16-a996-4ce8-8ad7-ff2ccef9e054",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2009,
     "item_id": null,
     "payload": {
@@ -4443,7 +4443,7 @@
   {
     "id": "77c5bb87-4480-4f52-809f-ac2650723a7f",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2021,
     "item_id": null,
     "payload": {
@@ -4459,7 +4459,7 @@
   {
     "id": "77ddd338-bb33-4578-99c0-06ca257ae24e",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1942,
     "item_id": null,
     "payload": {
@@ -4475,7 +4475,7 @@
   {
     "id": "7897013c-3da4-4f3a-a8c7-c925d7a4f4ef",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2007,
     "item_id": null,
     "payload": {
@@ -4491,7 +4491,7 @@
   {
     "id": "78c76151-49a1-482f-bcec-b38dd573645d",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2026,
     "item_id": null,
     "payload": {
@@ -4507,13 +4507,13 @@
   {
     "id": "78f018f6-93c6-4780-9e28-b7a847f853f4",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1912,
     "item_id": "2c2e1c862f8c",
     "payload": {
-      "category": "otros",
-      "festival": "chubut",
-      "year": 1912
+      "year": 1912,
+      "tipo": "otros",
+      "coleccion": "chubut"
     },
     "created_at": "2026-11-27T10:27:24.236701+00:00",
     "reviewed_at": "2026-11-27T10:27:24.236701+00:00",
@@ -4522,7 +4522,7 @@
   {
     "id": "7a1a6475-4f61-4fca-b625-e14a754aab85",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2011,
     "item_id": null,
     "payload": {
@@ -4538,7 +4538,7 @@
   {
     "id": "7a52193f-999a-49fb-9fae-a4539389589c",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1880,
     "item_id": null,
     "payload": {
@@ -4554,7 +4554,7 @@
   {
     "id": "7a58d37a-397b-47fc-8a72-df04a649a300",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2022,
     "item_id": "1a3ec7ff439f",
     "payload": {
@@ -4567,7 +4567,7 @@
   {
     "id": "7a85e964-f027-402d-ac80-02ec8c78abad",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2024,
     "item_id": null,
     "payload": {
@@ -4582,7 +4582,7 @@
   {
     "id": "7a95730c-b4c9-48ad-8820-7cecb9d5cc77",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1965,
     "item_id": null,
     "payload": {
@@ -4598,7 +4598,7 @@
   {
     "id": "7b7d5715-2468-491c-80af-02b50795ff9b",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1904,
     "item_id": null,
     "payload": {
@@ -4613,7 +4613,7 @@
   {
     "id": "7b89897f-76be-42d7-8b94-d2327f950523",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1876,
     "item_id": null,
     "payload": {
@@ -4628,7 +4628,7 @@
   {
     "id": "7c11bb15-6334-4be6-abf2-848453572d84",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2011,
     "item_id": "5ccb3acfc092",
     "payload": {
@@ -4641,7 +4641,7 @@
   {
     "id": "7c1d5ce4-6e9b-461d-a512-002235b1605b",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2008,
     "item_id": null,
     "payload": {
@@ -4657,7 +4657,7 @@
   {
     "id": "7c897a65-fa68-4832-9504-bac3a1b649cb",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2019,
     "item_id": null,
     "payload": {
@@ -4673,7 +4673,7 @@
   {
     "id": "7cb01afb-f725-4011-b746-4805788408af",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1933,
     "item_id": null,
     "payload": {
@@ -4689,7 +4689,7 @@
   {
     "id": "7cf329c6-2275-4ff8-9fe9-ec9fcef52d15",
     "type": "fact",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2019,
     "item_id": null,
     "payload": {
@@ -4705,7 +4705,7 @@
   {
     "id": "7cf703da-57de-4159-be17-3ae2aa681853",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1880,
     "item_id": null,
     "payload": {
@@ -4721,7 +4721,7 @@
   {
     "id": "7eb84928-f22e-48da-86d2-49088832c167",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1998,
     "item_id": null,
     "payload": {
@@ -4737,7 +4737,7 @@
   {
     "id": "7ec27c77-746d-4b53-a971-2d15f49ccb89",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2024,
     "item_id": "48034b666bd1",
     "payload": {
@@ -4750,7 +4750,7 @@
   {
     "id": "7efd8130-d7cf-4c94-869f-4202f6c29e9f",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1944,
     "item_id": null,
     "payload": {
@@ -4766,7 +4766,7 @@
   {
     "id": "7f706274-643f-45ac-83ec-e7189832fcdb",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2018,
     "item_id": null,
     "payload": {
@@ -4781,7 +4781,7 @@
   {
     "id": "7fa53663-b298-4cae-8c59-0a0193cd649d",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1891,
     "item_id": null,
     "payload": {
@@ -4797,7 +4797,7 @@
   {
     "id": "8044fa9b-cef1-4543-ae2d-47e3969376f8",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2019,
     "item_id": null,
     "payload": {
@@ -4813,7 +4813,7 @@
   {
     "id": "809609f8-11a9-4c1a-9b21-c5b72808335d",
     "type": "fact",
-    "festival": "mimosa",
+    "coleccion": "mimosa",
     "year": 2010,
     "item_id": null,
     "payload": {
@@ -4829,7 +4829,7 @@
   {
     "id": "81a40d88-118a-4197-b572-f89cdd59fb87",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2014,
     "item_id": null,
     "payload": {
@@ -4845,7 +4845,7 @@
   {
     "id": "825670c1-8a47-4abd-b88f-6d386a242e3d",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2026,
     "item_id": "7c98725ade18",
     "payload": {
@@ -4858,7 +4858,7 @@
   {
     "id": "82b0480e-0ad8-4687-9d4d-60a89d07fc83",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2026,
     "item_id": "7c02116f1bda",
     "payload": {
@@ -4871,7 +4871,7 @@
   {
     "id": "82fce5c7-767a-42f2-95d3-281836814526",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1990,
     "item_id": "7c7c684ff0ec",
     "payload": {
@@ -4884,7 +4884,7 @@
   {
     "id": "83148a40-a65a-4238-a3ad-b67fdbf4cc67",
     "type": "tag",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2025,
     "item_id": "ac0c159d7e13",
     "payload": {
@@ -4897,7 +4897,7 @@
   {
     "id": "8470453c-a9f4-498a-8ea6-8f1c35f692e6",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1918,
     "item_id": null,
     "payload": {
@@ -4913,7 +4913,7 @@
   {
     "id": "851e83c5-1d25-4af2-b53d-0fc2d741b5b2",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1917,
     "item_id": null,
     "payload": {
@@ -4928,7 +4928,7 @@
   {
     "id": "8520f8cf-12c1-4d38-b03e-3c4d10ee4d55",
     "type": "tag",
-    "festival": "mimosa",
+    "coleccion": "mimosa",
     "year": 2026,
     "item_id": "31b995e60646",
     "payload": {
@@ -4941,13 +4941,13 @@
   {
     "id": "860da906-32b1-430f-95ca-2ae50e759df2",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1933,
     "item_id": "d42a8b05f213",
     "payload": {
-      "category": "otros",
-      "festival": "chubut",
-      "year": 1933
+      "year": 1933,
+      "tipo": "otros",
+      "coleccion": "chubut"
     },
     "created_at": "2026-11-27T07:08:38.3287+00:00",
     "reviewed_at": "2026-11-27T07:08:38.3287+00:00",
@@ -4956,7 +4956,7 @@
   {
     "id": "8618b77f-216c-4c83-931d-03740a3d562e",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2014,
     "item_id": null,
     "payload": {
@@ -4972,7 +4972,7 @@
   {
     "id": "862d9405-ae0c-44eb-91df-c6f5e45a7e91",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2021,
     "item_id": "feeddf29d484",
     "payload": {
@@ -4985,7 +4985,7 @@
   {
     "id": "86840ea4-11d4-4d56-9ce2-50f230cf378e",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1893,
     "item_id": null,
     "payload": {
@@ -5000,7 +5000,7 @@
   {
     "id": "869535f0-76f3-4d94-b731-91e7e2ae8c7a",
     "type": "fact",
-    "festival": "mimosa",
+    "coleccion": "mimosa",
     "year": 2011,
     "item_id": null,
     "payload": {
@@ -5016,7 +5016,7 @@
   {
     "id": "86a44e26-2c37-41d1-8702-9595d3aef80d",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1937,
     "item_id": null,
     "payload": {
@@ -5030,7 +5030,7 @@
   {
     "id": "86e87058-d822-42d3-b00d-725ed0f2ae23",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1975,
     "item_id": null,
     "payload": {
@@ -5046,7 +5046,7 @@
   {
     "id": "87457c84-6d68-4fe5-9c77-1c730b1778ee",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2022,
     "item_id": "0f98dad28228",
     "payload": {
@@ -5059,11 +5059,11 @@
   {
     "id": "874e0c68-1963-4fc1-8191-7d86d48e31bf",
     "type": "tag",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2025,
     "item_id": "5a3c85886fba",
     "payload": {
-      "category": "programa"
+      "tipo": "programa"
     },
     "created_at": "2026-11-14T16:38:37.91413+00:00",
     "reviewed_at": "2026-11-14T16:38:37.91413+00:00",
@@ -5072,7 +5072,7 @@
   {
     "id": "88123e6a-eb3b-426b-be8d-6cbca91241a4",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1886,
     "item_id": "58897881813d",
     "payload": {
@@ -5085,7 +5085,7 @@
   {
     "id": "887794be-d060-4820-b1cd-4ecd317e79d2",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1884,
     "item_id": null,
     "payload": {
@@ -5100,7 +5100,7 @@
   {
     "id": "888c511f-4b50-4f95-803c-f10f5c4aa787",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1917,
     "item_id": null,
     "payload": {
@@ -5115,7 +5115,7 @@
   {
     "id": "88a1dd41-2ac0-496f-b2a6-38842671e6a9",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2015,
     "item_id": null,
     "payload": {
@@ -5131,7 +5131,7 @@
   {
     "id": "891c8faf-ac40-4c03-9de4-6bac839d7560",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2025,
     "item_id": null,
     "payload": {
@@ -5147,13 +5147,13 @@
   {
     "id": "898e236c-25c5-47c8-8a3b-f93f4542633e",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1954,
     "item_id": "36bbb549b129",
     "payload": {
-      "category": "otros",
-      "festival": "chubut",
-      "year": 1954
+      "year": 1954,
+      "tipo": "otros",
+      "coleccion": "chubut"
     },
     "created_at": "2026-11-27T07:08:19.562447+00:00",
     "reviewed_at": "2026-11-27T07:08:19.562447+00:00",
@@ -5162,7 +5162,7 @@
   {
     "id": "8a1b417c-25bd-4042-ba91-67178687dc3b",
     "type": "tag",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2025,
     "item_id": "051c5bcb342f",
     "payload": {
@@ -5175,7 +5175,7 @@
   {
     "id": "8acb0819-e906-44d0-a67e-06ddb66c7d77",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1993,
     "item_id": "f3fe4a6a82a6",
     "payload": {
@@ -5188,13 +5188,13 @@
   {
     "id": "8be26600-6012-48c9-8a26-222fbfd4905c",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2024,
     "item_id": "fa7edc79fb2f",
     "payload": {
-      "category": "bases",
-      "festival": "chubut",
-      "year": 2024
+      "year": 2024,
+      "tipo": "bases",
+      "coleccion": "chubut"
     },
     "created_at": "2026-11-14T10:44:13.797036+00:00",
     "reviewed_at": "2026-11-14T11:02:41.205923+00:00",
@@ -5203,11 +5203,11 @@
   {
     "id": "8cade748-07c7-42a0-b1ff-414798ba812e",
     "type": "tag",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2025,
     "item_id": "44cd085c77fc",
     "payload": {
-      "category": "programa"
+      "tipo": "programa"
     },
     "created_at": "2026-11-14T16:38:37.91413+00:00",
     "reviewed_at": "2026-11-14T16:38:37.91413+00:00",
@@ -5216,7 +5216,7 @@
   {
     "id": "8cc72f91-ae82-4f74-a884-3c9c13a182a6",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2007,
     "item_id": "962781ef2586",
     "payload": {
@@ -5229,7 +5229,7 @@
   {
     "id": "8d9f77ff-4918-42c1-830e-f499d4ac566e",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2012,
     "item_id": null,
     "payload": {
@@ -5245,13 +5245,13 @@
   {
     "id": "8da318e3-40f5-4d06-b7ca-03f7ea642114",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1910,
     "item_id": "abc358fd3032",
     "payload": {
-      "category": "otros",
-      "festival": "chubut",
-      "year": 1910
+      "year": 1910,
+      "tipo": "otros",
+      "coleccion": "chubut"
     },
     "created_at": "2026-11-27T07:08:23.125721+00:00",
     "reviewed_at": "2026-11-27T07:08:23.125721+00:00",
@@ -5260,7 +5260,7 @@
   {
     "id": "8e1d45b0-c3b1-4e86-bddc-74ed8a6eaea7",
     "type": "tag",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2025,
     "item_id": "5a1f5618e2fe",
     "payload": {
@@ -5273,7 +5273,7 @@
   {
     "id": "8e5eb8d0-980f-4a55-9797-fd7e13ded071",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2022,
     "item_id": "20ef02c7a581",
     "payload": {
@@ -5286,7 +5286,7 @@
   {
     "id": "8f1484ff-75dd-4a7b-a262-9e0d3b6ce9ca",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1990,
     "item_id": "7c7c684ff0ec",
     "payload": {
@@ -5299,7 +5299,7 @@
   {
     "id": "8f23458e-ed8e-42c2-b748-e62d5f6a3b88",
     "type": "tag",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2008,
     "item_id": "3dd10fbb9451",
     "payload": {
@@ -5312,7 +5312,7 @@
   {
     "id": "8f27f204-b0a1-488f-b3f0-8810c5756207",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2017,
     "item_id": null,
     "payload": {
@@ -5328,7 +5328,7 @@
   {
     "id": "8f6c4156-413a-4328-867b-a2d9136c3295",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2022,
     "item_id": "e49c26c600a8",
     "payload": {
@@ -5341,7 +5341,7 @@
   {
     "id": "8fb27ff2-69fd-49b8-9d2c-fb1e94a4a11d",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1920,
     "item_id": null,
     "payload": {
@@ -5356,7 +5356,7 @@
   {
     "id": "8fd11535-68c3-4f82-bc63-aca46e78f349",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2023,
     "item_id": "88266fdf6227",
     "payload": {
@@ -5369,7 +5369,7 @@
   {
     "id": "900327ed-dc7b-4f59-b982-7f9eae6d6c52",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2014,
     "item_id": null,
     "payload": {
@@ -5385,7 +5385,7 @@
   {
     "id": "90151f46-2788-436a-b697-a713c7cde6f2",
     "type": "tag",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2021,
     "item_id": "4682009e7a35",
     "payload": {
@@ -5398,7 +5398,7 @@
   {
     "id": "90576100-dae8-4808-bca3-9f958b296df1",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1898,
     "item_id": null,
     "payload": {
@@ -5413,7 +5413,7 @@
   {
     "id": "90bf83ca-a18a-4dee-b5d0-a1e7eeff1d9a",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1933,
     "item_id": null,
     "payload": {
@@ -5429,7 +5429,7 @@
   {
     "id": "90ff7c7f-fdb1-4505-a1df-83ff36fa49ed",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2016,
     "item_id": null,
     "payload": {
@@ -5445,7 +5445,7 @@
   {
     "id": "921f48a3-ad11-4c6e-96b8-15c5f863bf8d",
     "type": "fact",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2023,
     "item_id": null,
     "payload": {
@@ -5460,7 +5460,7 @@
   {
     "id": "92574ea4-23cc-4286-8e67-56b88c08d8f7",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2021,
     "item_id": "703ca09286de",
     "payload": {
@@ -5473,7 +5473,7 @@
   {
     "id": "9287201c-8e98-4438-8855-379ce5b9e29b",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2008,
     "item_id": null,
     "payload": {
@@ -5489,7 +5489,7 @@
   {
     "id": "929229d9-0c41-4b02-9134-cfe549cdf83c",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1954,
     "item_id": null,
     "payload": {
@@ -5505,7 +5505,7 @@
   {
     "id": "9308ef8d-69bd-4b55-9be1-348f16c5e3c4",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1898,
     "item_id": null,
     "payload": {
@@ -5520,7 +5520,7 @@
   {
     "id": "93172658-9177-4290-9ce9-aa56f5b66d04",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2008,
     "item_id": "04983e6660f9",
     "payload": {
@@ -5533,7 +5533,7 @@
   {
     "id": "934a64da-08fc-476f-a1ca-7228a739cca4",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2021,
     "item_id": null,
     "payload": {
@@ -5549,7 +5549,7 @@
   {
     "id": "9381b5f8-0e7f-4ab3-9c3f-14c5c35098bb",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1926,
     "item_id": null,
     "payload": {
@@ -5564,7 +5564,7 @@
   {
     "id": "944dffa7-5894-4c7a-a2ae-adb17ed2ae79",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2020,
     "item_id": "721a64b39277",
     "payload": {
@@ -5577,7 +5577,7 @@
   {
     "id": "94e5de5a-4da4-48eb-b704-726403c634c0",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2021,
     "item_id": null,
     "payload": {
@@ -5593,7 +5593,7 @@
   {
     "id": "9537e777-c7e8-4d68-8628-3132865e7e89",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2026,
     "item_id": "0198ef7a4043",
     "payload": {
@@ -5606,13 +5606,13 @@
   {
     "id": "953fc9eb-194d-4986-87a6-1bb4cc694945",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2022,
     "item_id": "e49c26c600a8",
     "payload": {
-      "category": "programa",
-      "festival": "chubut",
-      "year": 2022
+      "year": 2022,
+      "tipo": "programa",
+      "coleccion": "chubut"
     },
     "created_at": "2026-11-14T10:44:34.801678+00:00",
     "reviewed_at": "2026-11-14T11:02:48.584495+00:00",
@@ -5621,7 +5621,7 @@
   {
     "id": "955722a4-d23e-4b3d-b0e7-be6e26c557e7",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2007,
     "item_id": null,
     "payload": {
@@ -5637,7 +5637,7 @@
   {
     "id": "95897ffa-2b39-438e-b921-6032b5c180fa",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2026,
     "item_id": null,
     "payload": {
@@ -5653,7 +5653,7 @@
   {
     "id": "9618e2c9-0c29-447c-baec-8c0b398fdb35",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2024,
     "item_id": "bba248ede02a",
     "payload": {
@@ -5666,7 +5666,7 @@
   {
     "id": "96797fa1-6583-407f-bd8b-cb1c39874ed8",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2018,
     "item_id": null,
     "payload": {
@@ -5682,7 +5682,7 @@
   {
     "id": "967a97fe-6a46-475c-b17e-51561d87f00e",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2010,
     "item_id": null,
     "payload": {
@@ -5697,7 +5697,7 @@
   {
     "id": "969b42e7-c81e-4b07-8529-fcbd33f8fbdb",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2011,
     "item_id": null,
     "payload": {
@@ -5712,7 +5712,7 @@
   {
     "id": "98011ac5-18f0-4276-a35d-012aa8d4cdc2",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2017,
     "item_id": null,
     "payload": {
@@ -5728,7 +5728,7 @@
   {
     "id": "9878d723-155c-4dd5-a4e5-741aa05c7d3e",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2021,
     "item_id": "7aebd295db52",
     "payload": {
@@ -5741,7 +5741,7 @@
   {
     "id": "98c3ecad-0def-4213-bb04-8a6a61e049f9",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2022,
     "item_id": "ddff653c3d6a",
     "payload": {
@@ -5754,7 +5754,7 @@
   {
     "id": "98d0b99f-dc9a-4ad3-8244-8072fe0e792e",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1881,
     "item_id": null,
     "payload": {
@@ -5769,7 +5769,7 @@
   {
     "id": "99473a40-baa6-4594-b725-d1f59b08c6dd",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2020,
     "item_id": "6e4e9eeff5b0",
     "payload": {
@@ -5782,7 +5782,7 @@
   {
     "id": "9998bf72-0fe6-4061-90de-dbffaf346239",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1897,
     "item_id": null,
     "payload": {
@@ -5797,13 +5797,13 @@
   {
     "id": "999a6fb5-8f62-4c57-9d24-f61c19c2dd46",
     "type": "report",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2001,
     "item_id": null,
     "payload": {
       "arreglo": {
-        "festival": "chubut",
-        "year": 2007
+        "year": 2007,
+        "coleccion": "chubut"
       },
       "objetivo": "video",
       "problema": "otra_edicion",
@@ -5821,7 +5821,7 @@
   {
     "id": "9a8805b6-9c4c-4879-9499-7ed2f289c442",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2006,
     "item_id": null,
     "payload": {
@@ -5837,7 +5837,7 @@
   {
     "id": "9ad5e62b-f7b0-48ab-a67f-7c9a253d2a1d",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2021,
     "item_id": "01fa2ffcb9ab",
     "payload": {
@@ -5850,7 +5850,7 @@
   {
     "id": "9aeb3dbc-82c3-49bb-a700-8647443c21fb",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2025,
     "item_id": "ab429766e278",
     "payload": {
@@ -5863,7 +5863,7 @@
   {
     "id": "9b023cbe-4127-4f60-b316-57ccfaca2256",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1889,
     "item_id": null,
     "payload": {
@@ -5878,7 +5878,7 @@
   {
     "id": "9bbfaf19-b854-44d7-ab7d-2d31788998b4",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2022,
     "item_id": "381bf21a3b01",
     "payload": {
@@ -5891,7 +5891,7 @@
   {
     "id": "9c7d673a-a5b4-44dd-9e65-c0c3e7e682ff",
     "type": "tag",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2021,
     "item_id": "781736fad120",
     "payload": {
@@ -5904,7 +5904,7 @@
   {
     "id": "9c8ff5ce-ae8f-4cff-85fd-e96d0b60d55c",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1938,
     "item_id": null,
     "payload": {
@@ -5920,7 +5920,7 @@
   {
     "id": "9cbc9307-4cc3-425e-a253-819133b369d9",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2017,
     "item_id": null,
     "payload": {
@@ -5936,13 +5936,13 @@
   {
     "id": "9cc6a745-fb4a-4839-acfc-a9f42a8208f4",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2025,
     "item_id": "dc37d75fa143",
     "payload": {
-      "category": "bases",
-      "festival": "chubut",
-      "year": 2025
+      "year": 2025,
+      "tipo": "bases",
+      "coleccion": "chubut"
     },
     "created_at": "2026-11-14T10:44:49.007193+00:00",
     "reviewed_at": "2026-11-14T11:02:50.265326+00:00",
@@ -5951,7 +5951,7 @@
   {
     "id": "9ccb0e85-c15d-4be5-9dbd-c675dc80cb8d",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2022,
     "item_id": null,
     "payload": {
@@ -5967,7 +5967,7 @@
   {
     "id": "9ce27db2-9fcc-4555-b6e9-b89dd8012618",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2020,
     "item_id": null,
     "payload": {
@@ -5982,7 +5982,7 @@
   {
     "id": "9d09f740-e949-491e-a7ec-969444069a09",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1886,
     "item_id": "74ba4c04b85f",
     "payload": {
@@ -5995,7 +5995,7 @@
   {
     "id": "9d196d22-8c99-438a-9d1a-1d4321a2cec6",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1996,
     "item_id": "fcb0d30de6eb",
     "payload": {
@@ -6008,7 +6008,7 @@
   {
     "id": "9e27044b-ea15-4a5e-99e1-714e308f319f",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2024,
     "item_id": null,
     "payload": {
@@ -6024,7 +6024,7 @@
   {
     "id": "9e6243a5-2340-493d-b852-51db903b4577",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2019,
     "item_id": "5f3f43a489cb",
     "payload": {
@@ -6037,7 +6037,7 @@
   {
     "id": "9ebb3a1f-c0f6-40b3-b1dd-e16341bdb76a",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2006,
     "item_id": null,
     "payload": {
@@ -6053,7 +6053,7 @@
   {
     "id": "9ee06714-a316-4917-8328-6dce46a08cd8",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1995,
     "item_id": "cff50bb5d037",
     "payload": {
@@ -6066,7 +6066,7 @@
   {
     "id": "9f09b2c5-93f4-4499-bc23-6d1707dc32d1",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2025,
     "item_id": null,
     "payload": {
@@ -6082,7 +6082,7 @@
   {
     "id": "9f479715-74d5-4af9-a173-ed21979e5c56",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2016,
     "item_id": null,
     "payload": {
@@ -6097,13 +6097,13 @@
   {
     "id": "a068cd30-d7bb-4a93-8386-e521f912380d",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2024,
     "item_id": "3514511ae939",
     "payload": {
-      "category": "bases",
-      "festival": "chubut",
-      "year": 2024
+      "year": 2024,
+      "tipo": "bases",
+      "coleccion": "chubut"
     },
     "created_at": "2026-11-14T13:18:54.177979+00:00",
     "reviewed_at": "2026-11-14T13:20:45.767279+00:00",
@@ -6112,7 +6112,7 @@
   {
     "id": "a09548eb-335f-4ae7-bd07-e87818db742d",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2022,
     "item_id": "7af01248b701",
     "payload": {
@@ -6125,7 +6125,7 @@
   {
     "id": "a116ad37-bece-43c5-b697-71c2d43c9518",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2007,
     "item_id": null,
     "payload": {
@@ -6141,7 +6141,7 @@
   {
     "id": "a11bd96e-8051-4e27-bf78-70c4f74ade84",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1986,
     "item_id": "ec13aef9e9c9",
     "payload": {
@@ -6154,7 +6154,7 @@
   {
     "id": "a171dd14-a0e8-4408-b168-5e086f4508ef",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1945,
     "item_id": null,
     "payload": {
@@ -6170,7 +6170,7 @@
   {
     "id": "a1910f32-8a35-4054-a261-92a507385497",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2018,
     "item_id": null,
     "payload": {
@@ -6186,13 +6186,13 @@
   {
     "id": "a1d22c15-d39f-401e-b3cf-77bfaeddb074",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2024,
     "item_id": "5ac9767d9adf",
     "payload": {
-      "category": "bases",
-      "festival": "chubut",
-      "year": 2024
+      "year": 2024,
+      "tipo": "bases",
+      "coleccion": "chubut"
     },
     "created_at": "2026-11-14T13:19:19.711476+00:00",
     "reviewed_at": "2026-11-14T13:20:59.028483+00:00",
@@ -6201,7 +6201,7 @@
   {
     "id": "a1e0de39-587d-446a-b3fe-65409f4dc68e",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1876,
     "item_id": null,
     "payload": {
@@ -6216,7 +6216,7 @@
   {
     "id": "a1f873b1-c92b-4015-9858-d3c7b1422db4",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1889,
     "item_id": null,
     "payload": {
@@ -6232,7 +6232,7 @@
   {
     "id": "a2157eec-667e-4411-b283-2e31f56c7093",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1977,
     "item_id": null,
     "payload": {
@@ -6248,7 +6248,7 @@
   {
     "id": "a243dc4f-59f3-4582-a2b8-9946d245b5e4",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1889,
     "item_id": null,
     "payload": {
@@ -6264,7 +6264,7 @@
   {
     "id": "a2c2def9-08db-4f7c-b99b-0e6344334015",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1982,
     "item_id": "7fcd935aaabb",
     "payload": {
@@ -6277,7 +6277,7 @@
   {
     "id": "a382a6db-917c-41fc-bace-958b1bc225ef",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2021,
     "item_id": "c35ebcee921b",
     "payload": {
@@ -6290,7 +6290,7 @@
   {
     "id": "a3b893d0-ff7f-4667-a50b-1a9b8c8d1823",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1893,
     "item_id": null,
     "payload": {
@@ -6305,7 +6305,7 @@
   {
     "id": "a41fd481-eef0-48bd-b96a-787f1a7938bc",
     "type": "fact",
-    "festival": "mimosa",
+    "coleccion": "mimosa",
     "year": 2018,
     "item_id": null,
     "payload": {
@@ -6321,7 +6321,7 @@
   {
     "id": "a4470a1e-e25f-41d3-84ef-0c76fd397a46",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2023,
     "item_id": null,
     "payload": {
@@ -6337,7 +6337,7 @@
   {
     "id": "a44dd77c-d1ab-437b-94c3-77f2213f6450",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2023,
     "item_id": null,
     "payload": {
@@ -6353,7 +6353,7 @@
   {
     "id": "a54c0ed5-aaaf-4140-8884-1fe2d7299c63",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2019,
     "item_id": null,
     "payload": {
@@ -6369,7 +6369,7 @@
   {
     "id": "a5e1cbad-44c4-4c9b-888d-239dad83f9ea",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2012,
     "item_id": "14addb76bebc",
     "payload": {
@@ -6382,7 +6382,7 @@
   {
     "id": "a61d86ad-e662-432e-bca9-5b4f1a1806a5",
     "type": "fact",
-    "festival": "mimosa",
+    "coleccion": "mimosa",
     "year": 2023,
     "item_id": null,
     "payload": {
@@ -6398,7 +6398,7 @@
   {
     "id": "a67f77bb-1580-4965-a49d-2449802f2906",
     "type": "fact",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2019,
     "item_id": null,
     "payload": {
@@ -6413,7 +6413,7 @@
   {
     "id": "a6a6adff-54ab-4b6e-9978-9cb7e6cfeb86",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1909,
     "item_id": null,
     "payload": {
@@ -6428,7 +6428,7 @@
   {
     "id": "a6c09bdc-36af-41d0-aa02-6dfc0d04f4ea",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2021,
     "item_id": "8bfccf9d3659",
     "payload": {
@@ -6441,7 +6441,7 @@
   {
     "id": "a728abc3-1beb-4199-8eb0-1355e8d060a6",
     "type": "fact",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2024,
     "item_id": null,
     "payload": {
@@ -6457,7 +6457,7 @@
   {
     "id": "a74cbf69-c3b3-4aa6-baec-03708fa17bcf",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1969,
     "item_id": null,
     "payload": {
@@ -6473,7 +6473,7 @@
   {
     "id": "a857cccc-b85a-410a-a815-e036fcad5fce",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2025,
     "item_id": null,
     "payload": {
@@ -6489,7 +6489,7 @@
   {
     "id": "a926c6a7-b50d-4dad-a1f3-6a5f29e29d5b",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2022,
     "item_id": "f633469e0a50",
     "payload": {
@@ -6502,7 +6502,7 @@
   {
     "id": "a95a66c2-32ef-41f2-813b-ac2128d11fee",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2022,
     "item_id": "94ef5fc89c1c",
     "payload": {
@@ -6515,7 +6515,7 @@
   {
     "id": "a969e20e-9638-402d-a632-fdc6f461d53b",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1968,
     "item_id": null,
     "payload": {
@@ -6531,7 +6531,7 @@
   {
     "id": "a9be40d2-ea02-4a9d-8bc6-e5964e58e6dd",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 1922,
     "item_id": null,
     "payload": {
@@ -6547,7 +6547,7 @@
   {
     "id": "a9f1cb8f-ddb7-4342-b1c8-ed8dbe6e34b4",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1954,
     "item_id": null,
     "payload": {
@@ -6563,7 +6563,7 @@
   {
     "id": "aa6b2971-7c6a-4d00-9141-9261b168a4d5",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 1928,
     "item_id": null,
     "payload": {
@@ -6578,13 +6578,13 @@
   {
     "id": "ab0a53b7-1a64-4687-b1da-2761191c02ac",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1982,
     "item_id": "7fcd935aaabb",
     "payload": {
-      "category": "programa",
-      "festival": "chubut",
-      "year": 1982
+      "year": 1982,
+      "tipo": "programa",
+      "coleccion": "chubut"
     },
     "created_at": "2026-11-13T21:14:22.25477+00:00",
     "reviewed_at": "2026-11-13T21:14:43.617255+00:00",
@@ -6593,7 +6593,7 @@
   {
     "id": "ab63080f-ef99-4c6e-b1b9-b74d4100ce8e",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1880,
     "item_id": null,
     "payload": {
@@ -6609,7 +6609,7 @@
   {
     "id": "ac0dec37-9e55-43b4-9925-fb069e35a990",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1880,
     "item_id": null,
     "payload": {
@@ -6624,7 +6624,7 @@
   {
     "id": "ac47f6ec-70fe-4813-a6aa-06942759b3eb",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1954,
     "item_id": null,
     "payload": {
@@ -6640,7 +6640,7 @@
   {
     "id": "ac94e1a0-22c2-4a2b-b321-4021f8407957",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2024,
     "item_id": null,
     "payload": {
@@ -6656,13 +6656,13 @@
   {
     "id": "acfb47a2-bea1-43c8-8ce1-8eb9b008a8d7",
     "type": "tag",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2025,
     "item_id": "ba9d13d8540e",
     "payload": {
-      "category": "bases",
-      "festival": "juventud",
-      "year": 2025
+      "year": 2025,
+      "tipo": "bases",
+      "coleccion": "juventud"
     },
     "created_at": "2026-11-14T10:44:09.702798+00:00",
     "reviewed_at": "2026-11-14T11:02:39.612976+00:00",
@@ -6671,7 +6671,7 @@
   {
     "id": "ad406197-7801-4104-bd89-d8918ca39d50",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1922,
     "item_id": null,
     "payload": {
@@ -6686,7 +6686,7 @@
   {
     "id": "add6e33c-7789-40a2-9763-73510b0ba299",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1911,
     "item_id": null,
     "payload": {
@@ -6701,7 +6701,7 @@
   {
     "id": "ae5b18ff-e20b-43ea-8a15-24fdd986c783",
     "type": "fact",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2023,
     "item_id": null,
     "payload": {
@@ -6717,13 +6717,13 @@
   {
     "id": "af45abd5-a9b0-407d-8452-6017a00168a4",
     "type": "tag",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2026,
     "item_id": "8abd86b74618",
     "payload": {
-      "category": "preliminares",
-      "festival": "juventud",
-      "year": 2026
+      "year": 2026,
+      "tipo": "preliminares",
+      "coleccion": "juventud"
     },
     "created_at": "2026-11-13T22:38:59.464454+00:00",
     "reviewed_at": "2026-11-13T22:52:06.391664+00:00",
@@ -6732,7 +6732,7 @@
   {
     "id": "b04c9243-10e1-47a8-927b-8fc409ecef57",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1975,
     "item_id": "217f4a984b42",
     "payload": {
@@ -6745,7 +6745,7 @@
   {
     "id": "b1d313fc-b309-4c6f-b1c4-f8242aa67371",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1896,
     "item_id": null,
     "payload": {
@@ -6760,7 +6760,7 @@
   {
     "id": "b22e49e2-ee96-4a0a-a209-6ad0b5f567d1",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2008,
     "item_id": "1261ec8eb5c1",
     "payload": {
@@ -6773,7 +6773,7 @@
   {
     "id": "b3819247-2197-4422-aeac-0a75ae1b5a4f",
     "type": "fact",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2017,
     "item_id": null,
     "payload": {
@@ -6789,7 +6789,7 @@
   {
     "id": "b49c6b8b-7fa5-4408-ac71-1abe9e128eb4",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2025,
     "item_id": null,
     "payload": {
@@ -6805,7 +6805,7 @@
   {
     "id": "b4e4b437-68d9-4efd-b58b-24b56ecf020b",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1909,
     "item_id": null,
     "payload": {
@@ -6821,7 +6821,7 @@
   {
     "id": "b4eef227-7520-488f-8899-53651d4aabc7",
     "type": "fact",
-    "festival": "mimosa",
+    "coleccion": "mimosa",
     "year": 2018,
     "item_id": null,
     "payload": {
@@ -6837,7 +6837,7 @@
   {
     "id": "b6de5de0-40a8-497f-abe2-33d20b8d9a88",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 1927,
     "item_id": null,
     "payload": {
@@ -6851,7 +6851,7 @@
   {
     "id": "b8180fb2-c8f0-4418-aba7-b494e66a2f60",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1919,
     "item_id": null,
     "payload": {
@@ -6866,7 +6866,7 @@
   {
     "id": "b84fbb61-d0a0-4bfd-b69b-fdbd8b361ba3",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2011,
     "item_id": null,
     "payload": {
@@ -6882,7 +6882,7 @@
   {
     "id": "b8603fb5-5cf6-48e4-a0ed-43f62a051316",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1908,
     "item_id": null,
     "payload": {
@@ -6897,7 +6897,7 @@
   {
     "id": "b89305b3-eadf-4a73-8ff5-2033432595d0",
     "type": "fact",
-    "festival": "mimosa",
+    "coleccion": "mimosa",
     "year": 2024,
     "item_id": null,
     "payload": {
@@ -6913,7 +6913,7 @@
   {
     "id": "b8a66142-aa69-4254-b25c-30985eff960e",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2011,
     "item_id": null,
     "payload": {
@@ -6928,7 +6928,7 @@
   {
     "id": "b8ad70a0-2ec5-4405-9f4f-1169a8a8f92c",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2021,
     "item_id": "02e889601b55",
     "payload": {
@@ -6941,7 +6941,7 @@
   {
     "id": "b8b767b4-955d-4106-bc73-24cb667a96b3",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1984,
     "item_id": "e8f47bb7e17e",
     "payload": {
@@ -6954,7 +6954,7 @@
   {
     "id": "b8f87a0f-f229-477d-8a57-903ffc7a8ac3",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2023,
     "item_id": "4729e23fb541",
     "payload": {
@@ -6967,7 +6967,7 @@
   {
     "id": "b95955a4-1743-4560-aee3-b4c6da95ec90",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2020,
     "item_id": "83f22dfbd65f",
     "payload": {
@@ -6980,7 +6980,7 @@
   {
     "id": "b9a68f7b-1216-42ec-99e6-dd6a4763b102",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1886,
     "item_id": null,
     "payload": {
@@ -6996,7 +6996,7 @@
   {
     "id": "b9dc38a0-784c-4dd8-b7dc-152395503d87",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2021,
     "item_id": "2f2da6ec4d69",
     "payload": {
@@ -7009,7 +7009,7 @@
   {
     "id": "ba478501-8348-42d2-8d83-8040b5495554",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2008,
     "item_id": null,
     "payload": {
@@ -7025,13 +7025,13 @@
   {
     "id": "ba664727-4e63-4b45-a60b-efb9316a9076",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2023,
     "item_id": "99a72233b0e3",
     "payload": {
-      "category": "bases",
-      "festival": "chubut",
-      "year": 2023
+      "year": 2023,
+      "tipo": "bases",
+      "coleccion": "chubut"
     },
     "created_at": "2026-11-13T21:14:13.827031+00:00",
     "reviewed_at": "2026-11-13T21:14:41.194531+00:00",
@@ -7040,7 +7040,7 @@
   {
     "id": "badb751a-22c0-4ff4-b8ee-360876be0794",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2021,
     "item_id": "71cee44374a2",
     "payload": {
@@ -7053,7 +7053,7 @@
   {
     "id": "bb35a772-ddc4-4315-bcea-27f5d9ec36a9",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2021,
     "item_id": null,
     "payload": {
@@ -7068,7 +7068,7 @@
   {
     "id": "bb54d1b3-0236-49f6-843a-984861adc5ca",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1946,
     "item_id": null,
     "payload": {
@@ -7084,7 +7084,7 @@
   {
     "id": "bb8b0d8e-c5f7-4b83-99cc-c947e2a9732e",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1922,
     "item_id": null,
     "payload": {
@@ -7099,7 +7099,7 @@
   {
     "id": "bc797681-6037-4593-8bdf-37e62ef22b5e",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2024,
     "item_id": null,
     "payload": {
@@ -7115,7 +7115,7 @@
   {
     "id": "bc7dcc74-7424-4148-b4d5-43fcda1b4b6c",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2024,
     "item_id": null,
     "payload": {
@@ -7131,7 +7131,7 @@
   {
     "id": "bcaf4152-32f8-4979-ab53-276d1db63c57",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1937,
     "item_id": null,
     "payload": {
@@ -7145,7 +7145,7 @@
   {
     "id": "bcfa18cb-8d9c-4890-9da7-f914c050fe9c",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2003,
     "item_id": "70f6aba9613f",
     "payload": {
@@ -7158,7 +7158,7 @@
   {
     "id": "bd02d419-d74e-4a53-82f1-b0a6014a982f",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2022,
     "item_id": null,
     "payload": {
@@ -7174,7 +7174,7 @@
   {
     "id": "bd202cfd-e326-4a35-87a0-a9e9b19fe5cb",
     "type": "tag",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2008,
     "item_id": "2bfff38ba18f",
     "payload": {
@@ -7187,7 +7187,7 @@
   {
     "id": "bd2f769e-e6d9-48d7-af8b-9960bf102445",
     "type": "tag",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 1985,
     "item_id": "121a08444512",
     "payload": {
@@ -7200,7 +7200,7 @@
   {
     "id": "bd9059a2-6014-4789-80f3-3eeccb41b081",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1969,
     "item_id": null,
     "payload": {
@@ -7216,7 +7216,7 @@
   {
     "id": "bd95e227-3315-4300-b723-6486d395e164",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2018,
     "item_id": null,
     "payload": {
@@ -7232,7 +7232,7 @@
   {
     "id": "be10e1e6-f5e2-4cc5-a624-e71eaa9be82f",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1924,
     "item_id": null,
     "payload": {
@@ -7247,7 +7247,7 @@
   {
     "id": "befa21f0-f5e4-413b-b53c-e11255b409ce",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2026,
     "item_id": null,
     "payload": {
@@ -7263,7 +7263,7 @@
   {
     "id": "bf7dc30b-74d1-41bf-9303-df8cbe117b30",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1913,
     "item_id": null,
     "payload": {
@@ -7278,7 +7278,7 @@
   {
     "id": "bfc7f382-ac16-4e16-8121-53162e81a9c3",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2026,
     "item_id": null,
     "payload": {
@@ -7294,7 +7294,7 @@
   {
     "id": "bfcbb112-be8a-47fa-b96e-348425d4fbd9",
     "type": "fact",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 1997,
     "item_id": null,
     "payload": {
@@ -7310,7 +7310,7 @@
   {
     "id": "c028b0dc-7dc5-4998-ad8d-3ed89b80c019",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2002,
     "item_id": "95d1e8fa3a9a",
     "payload": {
@@ -7323,7 +7323,7 @@
   {
     "id": "c0444a66-54bb-4cfc-9907-1855539c257b",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1926,
     "item_id": null,
     "payload": {
@@ -7338,7 +7338,7 @@
   {
     "id": "c08f2a3e-0782-4ef5-8983-d6f5ae5959b9",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2017,
     "item_id": "9a5febaab4a6",
     "payload": {
@@ -7351,7 +7351,7 @@
   {
     "id": "c0dde317-a0cb-4fc1-8871-40c7ed1454e6",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2026,
     "item_id": null,
     "payload": {
@@ -7367,18 +7367,18 @@
   {
     "id": "c112d353-5aa2-40fb-82b6-977e476f4ed1",
     "type": "upload",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1937,
     "item_id": null,
     "payload": {
-      "category": "otros",
       "description": "Cita \"Libro de Mathew Henry Jones\".",
       "media": {
         "pages": [
           "uploads/c112d353-5aa2-40fb-82b6-977e476f4ed1/p01.webp"
         ],
         "thumb": "uploads/c112d353-5aa2-40fb-82b6-977e476f4ed1/thumb.webp"
-      }
+      },
+      "tipo": "otros"
     },
     "created_at": "2026-11-14T10:39:06.571388+00:00",
     "reviewed_at": "2026-11-14T10:41:24.74184+00:00",
@@ -7387,7 +7387,7 @@
   {
     "id": "c15c8236-57b9-42ee-9a0d-2bb1ebe0769a",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1881,
     "item_id": null,
     "payload": {
@@ -7403,7 +7403,7 @@
   {
     "id": "c15ee2cd-19da-4a0d-a8cf-ac1814ab3d78",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2022,
     "item_id": "b05a444e1030",
     "payload": {
@@ -7416,7 +7416,7 @@
   {
     "id": "c16257b2-9e72-45a0-aec5-a0770f97933c",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1913,
     "item_id": "44e973cdd339",
     "payload": {
@@ -7429,7 +7429,7 @@
   {
     "id": "c1da30e5-1cbd-48dc-aed3-7934bf9eb763",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1891,
     "item_id": null,
     "payload": {
@@ -7444,7 +7444,7 @@
   {
     "id": "c267ae0c-872e-4367-9db4-e2fa8382482d",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2025,
     "item_id": null,
     "payload": {
@@ -7460,7 +7460,7 @@
   {
     "id": "c2f83dd2-5cb4-4ad8-ae30-624c29be7890",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2014,
     "item_id": "b1c3b8e7f420",
     "payload": {
@@ -7473,7 +7473,7 @@
   {
     "id": "c30e9626-0b5e-4111-bc71-dda9de4ff5fb",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2021,
     "item_id": "42212c9aa649",
     "payload": {
@@ -7486,7 +7486,7 @@
   {
     "id": "c340dd40-a823-4d33-b558-ddef3c868709",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2014,
     "item_id": null,
     "payload": {
@@ -7502,7 +7502,7 @@
   {
     "id": "c34f3dc8-5f99-42fb-9307-9c877cad2c93",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1965,
     "item_id": null,
     "payload": {
@@ -7518,7 +7518,7 @@
   {
     "id": "c3777338-d3d3-41b3-a940-af252904b60c",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1927,
     "item_id": null,
     "payload": {
@@ -7533,7 +7533,7 @@
   {
     "id": "c3a4a35a-9d3f-4e74-9986-b24c44f9f310",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2026,
     "item_id": null,
     "payload": {
@@ -7548,7 +7548,7 @@
   {
     "id": "c3e37f41-a9a6-4b41-9794-5a569dffd62c",
     "type": "tag",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2024,
     "item_id": "4ec7c3d4a1f1",
     "payload": {
@@ -7561,7 +7561,7 @@
   {
     "id": "c41a432b-4430-4ed8-a579-4bd100614c97",
     "type": "fact",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2010,
     "item_id": null,
     "payload": {
@@ -7577,7 +7577,7 @@
   {
     "id": "c440429f-642f-4947-855d-8db31b45f776",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1897,
     "item_id": null,
     "payload": {
@@ -7592,7 +7592,7 @@
   {
     "id": "c4456d48-da30-4258-b94f-d9bbd6b49dfd",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2022,
     "item_id": null,
     "payload": {
@@ -7608,7 +7608,7 @@
   {
     "id": "c47c2160-2084-4f2e-82f2-c5cd3ed01ed3",
     "type": "tag",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2015,
     "item_id": "dcb2e247b966",
     "payload": {
@@ -7621,7 +7621,7 @@
   {
     "id": "c4ab0d79-ccc8-4ba5-8d09-d687247aa21c",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1910,
     "item_id": null,
     "payload": {
@@ -7636,7 +7636,7 @@
   {
     "id": "c4d878dc-d021-4162-90a5-7defc27d88d9",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2019,
     "item_id": null,
     "payload": {
@@ -7652,7 +7652,7 @@
   {
     "id": "c507a663-3fbf-40bf-889d-fd3faa0eefd3",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1926,
     "item_id": null,
     "payload": {
@@ -7667,7 +7667,7 @@
   {
     "id": "c541d59d-f522-494c-8310-fbaf70dcea64",
     "type": "tag",
-    "festival": "mimosa",
+    "coleccion": "mimosa",
     "year": 2026,
     "item_id": "c0192cfd95e8",
     "payload": {
@@ -7680,7 +7680,7 @@
   {
     "id": "c545ff30-1584-4b7a-8f04-53b084834eb6",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1948,
     "item_id": null,
     "payload": {
@@ -7696,18 +7696,18 @@
   {
     "id": "c57e230f-10b5-4b87-a5b7-e228dc23cb84",
     "type": "upload",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1992,
     "item_id": null,
     "payload": {
-      "category": "programa",
       "description": "Tapa programa",
       "media": {
         "pages": [
           "uploads/c57e230f-10b5-4b87-a5b7-e228dc23cb84/p01.webp"
         ],
         "thumb": "uploads/c57e230f-10b5-4b87-a5b7-e228dc23cb84/thumb.webp"
-      }
+      },
+      "tipo": "programa"
     },
     "created_at": "2026-11-13T21:07:12.608972+00:00",
     "reviewed_at": "2026-11-13T21:08:02.04215+00:00",
@@ -7716,7 +7716,7 @@
   {
     "id": "c5c37fc8-bfe7-4293-b550-830bfcb5f3a6",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2022,
     "item_id": null,
     "payload": {
@@ -7732,7 +7732,7 @@
   {
     "id": "c612ac81-a9d0-41e7-b26f-cee95b6e0e70",
     "type": "tag",
-    "festival": "mimosa",
+    "coleccion": "mimosa",
     "year": 2019,
     "item_id": "6e9489f921d3",
     "payload": {
@@ -7745,7 +7745,7 @@
   {
     "id": "c65a44fe-ea78-4d35-8248-b08ffe471874",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2021,
     "item_id": "97301819c768",
     "payload": {
@@ -7758,7 +7758,7 @@
   {
     "id": "c71f2021-d909-4c4a-8426-d4c902434bbc",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2022,
     "item_id": "bd890a5a74ed",
     "payload": {
@@ -7771,7 +7771,7 @@
   {
     "id": "c77c859d-9950-45f3-8305-82d7a0a3e078",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2021,
     "item_id": "ef8f852d282a",
     "payload": {
@@ -7784,7 +7784,7 @@
   {
     "id": "c820553e-76cf-49c2-9dfa-f7c234ce9571",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1886,
     "item_id": "74ba4c04b85f",
     "payload": {
@@ -7797,7 +7797,7 @@
   {
     "id": "c8716cb5-27da-41aa-994d-d3b3258722ca",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1931,
     "item_id": null,
     "payload": {
@@ -7813,7 +7813,7 @@
   {
     "id": "c8d4e923-fa45-45c8-9825-bb31595509ce",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 1929,
     "item_id": null,
     "payload": {
@@ -7828,7 +7828,7 @@
   {
     "id": "c91112b7-c685-442f-a3e6-f8345a60fd61",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2022,
     "item_id": "df8352bd3262",
     "payload": {
@@ -7841,7 +7841,7 @@
   {
     "id": "c967d253-c895-4ee4-8ed9-b3263e610c56",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2014,
     "item_id": null,
     "payload": {
@@ -7857,7 +7857,7 @@
   {
     "id": "c96f3633-20be-4616-8231-cb841728312f",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1933,
     "item_id": null,
     "payload": {
@@ -7873,13 +7873,13 @@
   {
     "id": "ca00aa21-f652-4a6e-88cc-dcdfef0fc9e6",
     "type": "tag",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2022,
     "item_id": "9de3f6886e51",
     "payload": {
-      "category": "preliminares",
-      "festival": "juventud",
-      "year": 2022
+      "year": 2022,
+      "tipo": "preliminares",
+      "coleccion": "juventud"
     },
     "created_at": "2026-11-15T09:43:58.977038+00:00",
     "reviewed_at": "2026-11-15T09:43:58.977038+00:00",
@@ -7888,7 +7888,7 @@
   {
     "id": "cadf1fda-2458-4d2a-bf62-776e4ee98a0d",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2016,
     "item_id": "4ee8024042c1",
     "payload": {
@@ -7901,7 +7901,7 @@
   {
     "id": "cb4b90b9-6a38-4fb8-8904-b57e75fcc8d9",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1986,
     "item_id": "fcb0d30de6eb",
     "payload": {
@@ -7914,7 +7914,7 @@
   {
     "id": "cb67ee58-46ca-42d7-8fee-577b59c8b7ed",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2021,
     "item_id": "d754ef91e4b9",
     "payload": {
@@ -7927,7 +7927,7 @@
   {
     "id": "cc030887-90c7-4b16-adba-60e9a87e34df",
     "type": "tag",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2025,
     "item_id": "c63554e531c7",
     "payload": {
@@ -7940,7 +7940,7 @@
   {
     "id": "cce610a1-d1ce-4469-8362-0976cbd7254c",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2024,
     "item_id": "6fd18f7c40b1",
     "payload": {
@@ -7953,7 +7953,7 @@
   {
     "id": "ccf128db-c17c-4fe4-a3bd-9a6809ea5923",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2009,
     "item_id": null,
     "payload": {
@@ -7969,7 +7969,7 @@
   {
     "id": "cdf3297f-e6ec-4e04-9053-5e0cd155543a",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2023,
     "item_id": null,
     "payload": {
@@ -7985,13 +7985,13 @@
   {
     "id": "ce6e200f-52c9-428e-b99d-32a2adc2dcb3",
     "type": "tag",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2022,
     "item_id": "c2d31a9fc9ab",
     "payload": {
-      "category": "programa-del-dia",
-      "festival": "juventud",
-      "year": 2022
+      "year": 2022,
+      "tipo": "programa-del-dia",
+      "coleccion": "juventud"
     },
     "created_at": "2026-11-13T22:38:51.72125+00:00",
     "reviewed_at": "2026-11-13T23:47:16.827352+00:00",
@@ -8000,7 +8000,7 @@
   {
     "id": "ce868293-64d1-472a-89d2-fc20bf73c515",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2025,
     "item_id": null,
     "payload": {
@@ -8016,7 +8016,7 @@
   {
     "id": "cea85365-7f63-4648-a229-f45dddf1a71a",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2026,
     "item_id": null,
     "payload": {
@@ -8032,7 +8032,7 @@
   {
     "id": "cf7b16cc-53c3-4c62-a572-9b5ba42bbb6c",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1942,
     "item_id": null,
     "payload": {
@@ -8048,7 +8048,7 @@
   {
     "id": "d0c99ce9-88e0-4aba-b379-9716a48d8806",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1910,
     "item_id": null,
     "payload": {
@@ -8063,7 +8063,7 @@
   {
     "id": "d16a52e7-143c-4de3-81cc-93ab672c3369",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2001,
     "item_id": "ee3a9114febe",
     "payload": {
@@ -8076,7 +8076,7 @@
   {
     "id": "d2021d77-73a4-461e-9cb3-b1bc16498e35",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2019,
     "item_id": null,
     "payload": {
@@ -8092,7 +8092,7 @@
   {
     "id": "d27d372b-94e9-47ab-a262-3553350f40ee",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2022,
     "item_id": "bd0e6bb57eaa",
     "payload": {
@@ -8105,7 +8105,7 @@
   {
     "id": "d2d4eff4-2fa6-48b3-a481-c74ad00d6765",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2013,
     "item_id": "fcaf70fb9bf4",
     "payload": {
@@ -8118,7 +8118,7 @@
   {
     "id": "d2edf4af-783b-434e-b390-5fdc87f341ce",
     "type": "fact",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 1982,
     "item_id": null,
     "payload": {
@@ -8134,7 +8134,7 @@
   {
     "id": "d42e552e-5c60-4ec0-a9fb-f974a4d6783f",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1884,
     "item_id": null,
     "payload": {
@@ -8149,7 +8149,7 @@
   {
     "id": "d42e99f1-c781-4e2c-80d3-9c3c45c45283",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1949,
     "item_id": null,
     "payload": {
@@ -8165,7 +8165,7 @@
   {
     "id": "d46a685b-3300-42e6-87f2-5e17cbfe46e0",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2022,
     "item_id": "a2226717b4bd",
     "payload": {
@@ -8178,7 +8178,7 @@
   {
     "id": "d493f0c6-555b-4e0f-b54c-e7cb176baed2",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2026,
     "item_id": "7c02116f1bda",
     "payload": {
@@ -8191,7 +8191,7 @@
   {
     "id": "d57d4c3e-8346-410e-9fbb-1b1128ad64d2",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2022,
     "item_id": null,
     "payload": {
@@ -8207,7 +8207,7 @@
   {
     "id": "d595abab-5287-4e7a-9f35-f7c2656181f2",
     "type": "fact",
-    "festival": "mimosa",
+    "coleccion": "mimosa",
     "year": 2025,
     "item_id": null,
     "payload": {
@@ -8223,7 +8223,7 @@
   {
     "id": "d64ea2e0-4d2b-4ae0-9471-a22f9536b71e",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2019,
     "item_id": "1779161a4b2f",
     "payload": {
@@ -8236,7 +8236,7 @@
   {
     "id": "d6bf63a2-d571-4dc9-aecd-8d189f1ce3bc",
     "type": "transcription",
-    "festival": "mimosa",
+    "coleccion": "mimosa",
     "year": 2006,
     "item_id": "b64a2b4db146",
     "payload": {
@@ -8249,7 +8249,7 @@
   {
     "id": "d72ce4e3-e543-4f51-99a1-83157c33fb06",
     "type": "fact",
-    "festival": "mimosa",
+    "coleccion": "mimosa",
     "year": 2019,
     "item_id": null,
     "payload": {
@@ -8265,13 +8265,13 @@
   {
     "id": "d762c3a0-966f-407b-a9af-0998177f8e57",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1996,
     "item_id": "fcb0d30de6eb",
     "payload": {
-      "category": "programa",
-      "festival": "chubut",
-      "year": 1986
+      "year": 1986,
+      "tipo": "programa",
+      "coleccion": "chubut"
     },
     "created_at": "2026-11-14T15:48:47.937769+00:00",
     "reviewed_at": "2026-11-14T15:48:54.761076+00:00",
@@ -8280,7 +8280,7 @@
   {
     "id": "d7b6a062-ae88-46e0-85f0-be0cb6b1432d",
     "type": "tag",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2008,
     "item_id": "4897d8190b9e",
     "payload": {
@@ -8293,7 +8293,7 @@
   {
     "id": "d802ec9f-8a23-45e8-b19a-3f06ce5913cc",
     "type": "tag",
-    "festival": "mimosa",
+    "coleccion": "mimosa",
     "year": 2024,
     "item_id": "d32dd8775cf7",
     "payload": {
@@ -8306,7 +8306,7 @@
   {
     "id": "d823a45d-255a-4678-a4a4-5c94cafb65b8",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2008,
     "item_id": null,
     "payload": {
@@ -8322,7 +8322,7 @@
   {
     "id": "d82eeeff-59c2-452f-b16b-dc008fb011f5",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1886,
     "item_id": null,
     "payload": {
@@ -8338,7 +8338,7 @@
   {
     "id": "d84fd57c-1ab1-4b88-877c-41d7da8ccd98",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2024,
     "item_id": "ee3f14f29b10",
     "payload": {
@@ -8352,7 +8352,7 @@
   {
     "id": "d93e8360-ecba-4ae0-b32f-8831848c297d",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1998,
     "item_id": null,
     "payload": {
@@ -8368,7 +8368,7 @@
   {
     "id": "d9797828-2a76-4e03-adb5-e5298c5b2129",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2022,
     "item_id": "8e149d3edf31",
     "payload": {
@@ -8381,13 +8381,13 @@
   {
     "id": "d990fbde-6bd2-4dc2-81a1-d7910ec92052",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2017,
     "item_id": "cf4d6221c645",
     "payload": {
-      "category": "bases",
-      "festival": "chubut",
-      "year": 2017
+      "year": 2017,
+      "tipo": "bases",
+      "coleccion": "chubut"
     },
     "created_at": "2026-11-14T10:44:21.153913+00:00",
     "reviewed_at": "2026-11-14T11:02:45.727162+00:00",
@@ -8396,7 +8396,7 @@
   {
     "id": "d9a86e0d-0aaa-4101-93b1-5318758a3c4c",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1899,
     "item_id": null,
     "payload": {
@@ -8411,7 +8411,7 @@
   {
     "id": "da03774d-967a-4178-bc10-e5b1985b116f",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1934,
     "item_id": null,
     "payload": {
@@ -8427,7 +8427,7 @@
   {
     "id": "da1dd0c4-018c-4ae9-a674-18c759361df5",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2025,
     "item_id": null,
     "payload": {
@@ -8443,7 +8443,7 @@
   {
     "id": "da2f9deb-4583-44c4-9140-0c8b5d5250a8",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2000,
     "item_id": "5bebd88dc00a",
     "payload": {
@@ -8456,7 +8456,7 @@
   {
     "id": "da2fb231-a155-4926-b9e3-66392c409dae",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1880,
     "item_id": null,
     "payload": {
@@ -8472,13 +8472,13 @@
   {
     "id": "dad8e6ac-a71c-480f-8949-11dad03a44cf",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1907,
     "item_id": "ed5ee85318fa",
     "payload": {
-      "category": "otros",
-      "festival": "chubut",
-      "year": 1907
+      "year": 1907,
+      "tipo": "otros",
+      "coleccion": "chubut"
     },
     "created_at": "2026-11-27T07:08:30.817807+00:00",
     "reviewed_at": "2026-11-27T07:08:30.817807+00:00",
@@ -8487,7 +8487,7 @@
   {
     "id": "db6751ef-04b6-4c59-b639-bc533856b2b9",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2026,
     "item_id": null,
     "payload": {
@@ -8503,7 +8503,7 @@
   {
     "id": "dc892ed3-1982-482f-9f84-95b9c53e7496",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2024,
     "item_id": null,
     "payload": {
@@ -8519,7 +8519,7 @@
   {
     "id": "dc983f1c-265b-404c-9762-e26165f7a823",
     "type": "fact",
-    "festival": "mimosa",
+    "coleccion": "mimosa",
     "year": 2025,
     "item_id": null,
     "payload": {
@@ -8535,7 +8535,7 @@
   {
     "id": "dce7c90e-be2d-4475-ba77-787643b4fe2e",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1997,
     "item_id": null,
     "payload": {
@@ -8551,7 +8551,7 @@
   {
     "id": "dd5c1012-be9a-4815-a8ec-de274908602e",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2016,
     "item_id": null,
     "payload": {
@@ -8567,7 +8567,7 @@
   {
     "id": "ddb62d51-69aa-467f-a505-7842ae0cb14d",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2022,
     "item_id": "c15423e9208c",
     "payload": {
@@ -8580,7 +8580,7 @@
   {
     "id": "ddb91d12-8136-4daa-9535-6639bb9ff0ca",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1911,
     "item_id": null,
     "payload": {
@@ -8595,7 +8595,7 @@
   {
     "id": "ddbf8ab5-6b74-4af3-b2af-1d36c692522e",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2017,
     "item_id": "a384f530397b",
     "payload": {
@@ -8608,7 +8608,7 @@
   {
     "id": "de3cd928-f4da-4caf-a0c7-f81b442fb53d",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2019,
     "item_id": null,
     "payload": {
@@ -8624,7 +8624,7 @@
   {
     "id": "de68fd65-4f9e-426f-b603-779334b64432",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2025,
     "item_id": "410b27f407b4",
     "payload": {
@@ -8637,7 +8637,7 @@
   {
     "id": "de726159-f10d-445e-8d38-432a81b189a8",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2002,
     "item_id": "95d1e8fa3a9a",
     "payload": {
@@ -8650,7 +8650,7 @@
   {
     "id": "de8c183c-7faa-4305-aa9f-e63d81c6d426",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2014,
     "item_id": "a9039380cb2b",
     "payload": {
@@ -8663,7 +8663,7 @@
   {
     "id": "dee9c9da-b089-43ea-bf32-99a8ce173791",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1884,
     "item_id": null,
     "payload": {
@@ -8678,7 +8678,7 @@
   {
     "id": "df01b452-b2be-4fa3-a148-084a9cbd6a48",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1937,
     "item_id": null,
     "payload": {
@@ -8692,7 +8692,7 @@
   {
     "id": "df665aa5-7c5b-48f3-af89-fe594597fd03",
     "type": "tag",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2011,
     "item_id": "77145a982e8b",
     "payload": {
@@ -8705,7 +8705,7 @@
   {
     "id": "df88592f-fc58-4819-a594-81b9b67ec69f",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1942,
     "item_id": "05d365c46a2b",
     "payload": {
@@ -8718,7 +8718,7 @@
   {
     "id": "df98f3f0-38a8-4898-8d7e-b1c376493943",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2021,
     "item_id": null,
     "payload": {
@@ -8734,7 +8734,7 @@
   {
     "id": "e0018614-302a-48a9-9a3a-6be5b1fbffec",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2018,
     "item_id": null,
     "payload": {
@@ -8750,7 +8750,7 @@
   {
     "id": "e07c8c9d-8a46-4a53-aa36-f5c3d48b47ce",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1884,
     "item_id": null,
     "payload": {
@@ -8766,7 +8766,7 @@
   {
     "id": "e12e2fa9-3667-4712-b964-66b0cd084e59",
     "type": "tag",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2024,
     "item_id": "01f5b21c4596",
     "payload": {
@@ -8779,7 +8779,7 @@
   {
     "id": "e15e99f4-604d-407a-b82b-27fc941756c2",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1998,
     "item_id": "3be817d4332a",
     "payload": {
@@ -8792,13 +8792,13 @@
   {
     "id": "e1841e1e-c35c-489f-b49c-bf387cc9a338",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2014,
     "item_id": "bcfeee05fbcb",
     "payload": {
-      "category": "bases",
-      "festival": "chubut",
-      "year": 2014
+      "year": 2014,
+      "tipo": "bases",
+      "coleccion": "chubut"
     },
     "created_at": "2026-11-14T13:18:43.523944+00:00",
     "reviewed_at": "2026-11-14T13:20:44.791628+00:00",
@@ -8807,7 +8807,7 @@
   {
     "id": "e3559114-bfe0-4571-87cb-6485cd1e2b6d",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1909,
     "item_id": null,
     "payload": {
@@ -8822,7 +8822,7 @@
   {
     "id": "e3777f3f-f6fc-48ac-a87b-1bb85d71396d",
     "type": "video_text",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2018,
     "item_id": null,
     "payload": {
@@ -8853,7 +8853,7 @@
   {
     "id": "e3bc7b97-b30a-40c5-84f0-6cabefe2206a",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1988,
     "item_id": "0a03ba28b534",
     "payload": {
@@ -8866,7 +8866,7 @@
   {
     "id": "e419ab2a-99a4-4119-b075-3b88d8b7a313",
     "type": "fact",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2023,
     "item_id": null,
     "payload": {
@@ -8882,13 +8882,13 @@
   {
     "id": "e4c4833c-698b-49fc-b5a7-3acae38f7f36",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": null,
     "item_id": "73afebadf114",
     "payload": {
-      "category": "programa",
-      "festival": "chubut",
-      "year": 2008
+      "year": 2008,
+      "tipo": "programa",
+      "coleccion": "chubut"
     },
     "created_at": "2026-11-27T10:27:45.052031+00:00",
     "reviewed_at": "2026-11-27T10:27:45.052031+00:00",
@@ -8897,7 +8897,7 @@
   {
     "id": "e4d9f0d3-42dd-4f25-ab37-80f477e146f9",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1865,
     "item_id": null,
     "payload": {
@@ -8912,7 +8912,7 @@
   {
     "id": "e4ed3eb9-662b-4647-9d43-2a4a0f547e4a",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1927,
     "item_id": null,
     "payload": {
@@ -8927,7 +8927,7 @@
   {
     "id": "e5c430a7-0d0c-416a-b3d6-e150486d855c",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2007,
     "item_id": "34d35cea1cf4",
     "payload": {
@@ -8940,7 +8940,7 @@
   {
     "id": "e66e4589-9313-4918-8e93-bc0ea219342a",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2018,
     "item_id": null,
     "payload": {
@@ -8956,7 +8956,7 @@
   {
     "id": "e6ba91df-68fb-4047-8d47-6abe9d430720",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2017,
     "item_id": null,
     "payload": {
@@ -8972,7 +8972,7 @@
   {
     "id": "e709193c-6b66-4ec0-bda3-9050f226d5f1",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1946,
     "item_id": null,
     "payload": {
@@ -8988,7 +8988,7 @@
   {
     "id": "e7b2a145-edce-4894-83cd-6f0ad848344c",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1950,
     "item_id": null,
     "payload": {
@@ -9004,7 +9004,7 @@
   {
     "id": "e831e09b-545e-49c4-b60c-da5863feedd7",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1999,
     "item_id": "4224e265cba8",
     "payload": {
@@ -9017,7 +9017,7 @@
   {
     "id": "e85f222b-3d9e-490b-b944-cca2c4dc3871",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2021,
     "item_id": null,
     "payload": {
@@ -9033,7 +9033,7 @@
   {
     "id": "e8cc8d57-901c-45b5-9bfb-b7a1bbdb2f8a",
     "type": "fact",
-    "festival": "mimosa",
+    "coleccion": "mimosa",
     "year": 2019,
     "item_id": null,
     "payload": {
@@ -9049,7 +9049,7 @@
   {
     "id": "e9d49fd6-7016-468d-a535-20445503f196",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2020,
     "item_id": "4f9af816d8e9",
     "payload": {
@@ -9062,7 +9062,7 @@
   {
     "id": "ea0be3d0-2011-44b7-b51f-a1c255e5e7f1",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1895,
     "item_id": null,
     "payload": {
@@ -9077,7 +9077,7 @@
   {
     "id": "ea185b99-ab2c-4e16-afe1-4a55c349c68b",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1892,
     "item_id": null,
     "payload": {
@@ -9092,7 +9092,7 @@
   {
     "id": "eaad1058-7857-4ce6-965c-07fe44010acc",
     "type": "tag",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2026,
     "item_id": "23c4ed51c27c",
     "payload": {
@@ -9105,7 +9105,7 @@
   {
     "id": "ebfbf25e-9f16-4f3c-9565-069d61b45f28",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2023,
     "item_id": null,
     "payload": {
@@ -9120,7 +9120,7 @@
   {
     "id": "ec7b9b4f-17a9-4d48-8d7a-2579ef120f6e",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1945,
     "item_id": null,
     "payload": {
@@ -9136,7 +9136,7 @@
   {
     "id": "ee3dd30e-a33a-429b-adf2-c3eaa5c7d406",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2025,
     "item_id": null,
     "payload": {
@@ -9152,7 +9152,7 @@
   {
     "id": "ee7adaec-cae3-459d-8dd8-51f937642739",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2012,
     "item_id": null,
     "payload": {
@@ -9166,7 +9166,7 @@
   {
     "id": "ee994ad2-7f38-41c3-b73e-1705822edb36",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1881,
     "item_id": null,
     "payload": {
@@ -9182,7 +9182,7 @@
   {
     "id": "ef047eeb-7a49-4ac3-a0c2-1127a32c6fa4",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1934,
     "item_id": "58d5ef55dc35",
     "payload": {
@@ -9195,7 +9195,7 @@
   {
     "id": "efb733f1-758d-48cd-a21d-90983dff15b9",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2022,
     "item_id": "ffff27806339",
     "payload": {
@@ -9208,7 +9208,7 @@
   {
     "id": "efcada95-fe4b-461e-9b5e-51db8b8a8498",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2012,
     "item_id": null,
     "payload": {
@@ -9224,7 +9224,7 @@
   {
     "id": "f0f42f02-2014-4b71-990f-d8e1f26c6d90",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1895,
     "item_id": null,
     "payload": {
@@ -9239,7 +9239,7 @@
   {
     "id": "f160cdf4-0bcd-4756-ab28-836ea12a5e71",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1909,
     "item_id": null,
     "payload": {
@@ -9254,7 +9254,7 @@
   {
     "id": "f1624aa2-292c-48df-a87f-09649e67f6b8",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1975,
     "item_id": null,
     "payload": {
@@ -9270,7 +9270,7 @@
   {
     "id": "f1ad5eae-852c-4148-8202-8cf344f549de",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2023,
     "item_id": null,
     "payload": {
@@ -9286,7 +9286,7 @@
   {
     "id": "f1c9ba45-8f6e-40b5-81c9-a95370b9a4ab",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2006,
     "item_id": "6f874755712d",
     "payload": {
@@ -9299,7 +9299,7 @@
   {
     "id": "f2f18bab-29bf-4193-add8-3f821eb5deda",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 1928,
     "item_id": null,
     "payload": {
@@ -9314,7 +9314,7 @@
   {
     "id": "f35d1c03-f2ab-4e76-9234-b73c6b82c9a5",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2019,
     "item_id": null,
     "payload": {
@@ -9330,7 +9330,7 @@
   {
     "id": "f3843024-0d6f-4e1e-8c99-2b39bb008d98",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2010,
     "item_id": null,
     "payload": {
@@ -9345,7 +9345,7 @@
   {
     "id": "f4424f63-34f3-4c3e-8bf9-833e7fbdddce",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1950,
     "item_id": null,
     "payload": {
@@ -9361,7 +9361,7 @@
   {
     "id": "f44fb2e1-25e6-44f6-b5a1-893ff9928091",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2013,
     "item_id": null,
     "payload": {
@@ -9377,7 +9377,7 @@
   {
     "id": "f5830ad8-a5bc-4541-8a94-47b1e8944dfd",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1913,
     "item_id": null,
     "payload": {
@@ -9392,7 +9392,7 @@
   {
     "id": "f5a454c1-7f1e-4ba1-ad36-c7fbdaa57c68",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2002,
     "item_id": "96aedd46f47d",
     "payload": {
@@ -9405,7 +9405,7 @@
   {
     "id": "f5b67d7b-14b4-4ae9-8f16-fc4552c09483",
     "type": "fact",
-    "festival": "trevelin",
+    "coleccion": "trevelin",
     "year": 2014,
     "item_id": null,
     "payload": {
@@ -9421,7 +9421,7 @@
   {
     "id": "f5c21a56-1828-46f2-a8df-4764912f1b5c",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2010,
     "item_id": "d98c3c6684a6",
     "payload": {
@@ -9434,7 +9434,7 @@
   {
     "id": "f5ecea41-9661-405d-872f-68478c71ac33",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2007,
     "item_id": null,
     "payload": {
@@ -9450,7 +9450,7 @@
   {
     "id": "f604fedd-308e-45eb-b6d2-19b5537fb907",
     "type": "tag",
-    "festival": "mimosa",
+    "coleccion": "mimosa",
     "year": 2024,
     "item_id": "3d7ed023d2a6",
     "payload": {
@@ -9463,7 +9463,7 @@
   {
     "id": "f66d8d63-ad31-489e-a0b6-3593bf1942e6",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2022,
     "item_id": "d290881d8812",
     "payload": {
@@ -9476,7 +9476,7 @@
   {
     "id": "f6c32899-1bdb-42cf-9c0c-ba1dc0df2622",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2009,
     "item_id": null,
     "payload": {
@@ -9492,13 +9492,13 @@
   {
     "id": "f7307608-8fc2-4626-8a0b-89d886c039c7",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2026,
     "item_id": "0e936fe3a05c",
     "payload": {
-      "category": "bases",
-      "festival": "chubut",
-      "year": 2026
+      "year": 2026,
+      "tipo": "bases",
+      "coleccion": "chubut"
     },
     "created_at": "2026-11-13T22:38:47.792876+00:00",
     "reviewed_at": "2026-11-13T22:52:08.779053+00:00",
@@ -9507,7 +9507,7 @@
   {
     "id": "f75c9d23-17bb-40be-80be-ea899342184b",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1921,
     "item_id": null,
     "payload": {
@@ -9522,7 +9522,7 @@
   {
     "id": "f7d55eec-f6a3-453f-82c1-516eec44ac97",
     "type": "fact",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2024,
     "item_id": null,
     "payload": {
@@ -9538,13 +9538,13 @@
   {
     "id": "f96da71a-a766-4520-b028-91f444539c1f",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2023,
     "item_id": "1eefa6da76b0",
     "payload": {
-      "category": "bases",
-      "festival": "chubut",
-      "year": 2023
+      "year": 2023,
+      "tipo": "bases",
+      "coleccion": "chubut"
     },
     "created_at": "2026-11-15T09:43:29.574885+00:00",
     "reviewed_at": "2026-11-15T09:43:29.574885+00:00",
@@ -9553,7 +9553,7 @@
   {
     "id": "f98f5821-98f7-48c1-bdb2-e6ec6b98c6d1",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2024,
     "item_id": "2a55246506fd",
     "payload": {
@@ -9566,7 +9566,7 @@
   {
     "id": "f9f01355-d94f-4c8d-96c4-2b838a17d834",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2021,
     "item_id": null,
     "payload": {
@@ -9582,18 +9582,18 @@
   {
     "id": "fa04573d-dae5-472b-9a9f-06b2baebac67",
     "type": "upload",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1991,
     "item_id": null,
     "payload": {
-      "category": "programa",
       "description": "Tapa programa",
       "media": {
         "pages": [
           "uploads/fa04573d-dae5-472b-9a9f-06b2baebac67/p01.webp"
         ],
         "thumb": "uploads/fa04573d-dae5-472b-9a9f-06b2baebac67/thumb.webp"
-      }
+      },
+      "tipo": "programa"
     },
     "created_at": "2026-11-13T21:06:04.044518+00:00",
     "reviewed_at": "2026-11-13T21:07:57.690846+00:00",
@@ -9602,7 +9602,7 @@
   {
     "id": "fa9b6031-9d71-479d-bb51-da806376de29",
     "type": "tag",
-    "festival": "mimosa",
+    "coleccion": "mimosa",
     "year": 2024,
     "item_id": "9159f469215d",
     "payload": {
@@ -9615,7 +9615,7 @@
   {
     "id": "faaaa545-f156-4bd8-976a-db853ee81f00",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1892,
     "item_id": null,
     "payload": {
@@ -9630,7 +9630,7 @@
   {
     "id": "fada1e4a-82e1-4269-a82c-23ae6b29c08f",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1886,
     "item_id": null,
     "payload": {
@@ -9646,7 +9646,7 @@
   {
     "id": "fc1f8f57-aeee-4df0-8234-c9c7d5c9601b",
     "type": "fact",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2014,
     "item_id": null,
     "payload": {
@@ -9662,7 +9662,7 @@
   {
     "id": "fc476824-d26a-4b84-8461-1763a0f94e7f",
     "type": "tag",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2025,
     "item_id": "d733b794fbbd",
     "payload": {
@@ -9675,7 +9675,7 @@
   {
     "id": "fc695fa3-6188-4c82-a0c8-f7b401b12efb",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1918,
     "item_id": null,
     "payload": {
@@ -9690,7 +9690,7 @@
   {
     "id": "fc7d6933-b7f7-4dda-ba5d-25c9ae733dd6",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2014,
     "item_id": null,
     "payload": {
@@ -9706,7 +9706,7 @@
   {
     "id": "fcb55806-c9b4-4303-812d-9bc70b9cb0ff",
     "type": "fact",
-    "festival": "mimosa",
+    "coleccion": "mimosa",
     "year": 2011,
     "item_id": null,
     "payload": {
@@ -9722,7 +9722,7 @@
   {
     "id": "fcf2302b-c357-41ce-8fd7-219e0fca8586",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2013,
     "item_id": null,
     "payload": {
@@ -9738,7 +9738,7 @@
   {
     "id": "fd36e12e-c6d5-4050-9f20-7136a28c0e37",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1881,
     "item_id": null,
     "payload": {
@@ -9753,7 +9753,7 @@
   {
     "id": "fead21dc-8b18-4533-abfb-cda71847ba6c",
     "type": "fact",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2024,
     "item_id": null,
     "payload": {
@@ -9769,7 +9769,7 @@
   {
     "id": "febc72a8-f55f-440e-ba14-9f735b6609df",
     "type": "tag",
-    "festival": "mimosa",
+    "coleccion": "mimosa",
     "year": 2019,
     "item_id": "5ba8a8bb8bbf",
     "payload": {
@@ -9782,7 +9782,7 @@
   {
     "id": "feefeba0-3e21-41cb-8852-8cd3dfb6cbc4",
     "type": "fact",
-    "festival": "juventud",
+    "coleccion": "juventud",
     "year": 2019,
     "item_id": null,
     "payload": {
@@ -9798,7 +9798,7 @@
   {
     "id": "ff1e63b4-d131-4d68-9e70-5efa8a8a229a",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1947,
     "item_id": null,
     "payload": {
@@ -9814,7 +9814,7 @@
   {
     "id": "ff505ed3-73d2-49be-bf64-9c083aeefb22",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2022,
     "item_id": "ec5f41cae903",
     "payload": {
@@ -9827,7 +9827,7 @@
   {
     "id": "ff82222f-bf63-465e-a6f8-d65360997d41",
     "type": "fact",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2019,
     "item_id": null,
     "payload": {
@@ -9843,7 +9843,7 @@
   {
     "id": "fff291de-bddb-4b9e-b1ca-d0aa866a1945",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 1931,
     "item_id": "f2242aa764e9",
     "payload": {
@@ -9856,7 +9856,7 @@
   {
     "id": "fffc5a8c-c3d4-4eb6-92b5-bc96630878d2",
     "type": "tag",
-    "festival": "chubut",
+    "coleccion": "chubut",
     "year": 2014,
     "item_id": "f295abc76ff5",
     "payload": {

@@ -20,7 +20,7 @@ import { parseVideoHash } from '../lib/video-hash';
 import { fmtTime, lineAt, type Transcript } from '../lib/video-transcript';
 import { busy, el, gate, gateMessage, thanks, type Gate } from './ui';
 
-export type EditorVideo = { id: string; title: string; festival: string; year: number };
+export type EditorVideo = { id: string; title: string; coleccion: string; year: number };
 /** `currentTime` and `duration` are null when the player has none: not ready yet, or a video that cannot play in the
  * site (embedding disabled). */
 export type EditorState = {
@@ -470,10 +470,10 @@ export function wireEditor(dialog: HTMLDialogElement, getState: () => EditorStat
 
   /** The edit button, the sign-in link, or nothing, for the video just drawn; its own pending changes; its draft. */
   async function offer(tr: Transcript, video: EditorVideo): Promise<void> {
-    if (!editorAccess(video.festival, tr, { profile: true }).boton) return; // not a Chubut or Trevelin video
+    if (!editorAccess(video.coleccion, tr, { profile: true }).boton) return; // not a Chubut or Trevelin video
     const g = await who();
     if (shown !== video.id) return;
-    const a = editorAccess(video.festival, tr, g);
+    const a = editorAccess(video.coleccion, tr, g);
     if (a.ingresar) {
       // Signing in comes back to this video (the address names it: #v=<id>&t=…).
       gateBox.replaceChildren(gateMessage(a.ingresar, 'editor.ingresar', location.pathname + location.search + location.hash));

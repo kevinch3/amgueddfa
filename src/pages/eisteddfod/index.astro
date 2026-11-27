@@ -48,8 +48,8 @@ const recent = HOME_EXTRAS ? latestApproved(approvedStatic as Contribution[], []
     <ul class="wanted">
       {wanted.map((w) => (
         <li>
-          <a href={url(`${w.festival}/${w.year}/`)}>
-            <span>{festivalName(w.festival)}</span>
+          <a href={url(`${w.coleccion}/${w.year}/`)}>
+            <span>{festivalName(w.coleccion)}</span>
             <span class="yr">{w.year}</span>
           </a>
         </li>

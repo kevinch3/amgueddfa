@@ -10,17 +10,17 @@
  * - in the browser (scripts/live-catalog.ts, approvals made after the build).
  * tests/fixtures/overlay.json holds the cases both test suites run.
  */
-import type { EditionState } from './types';
+import type { EditionState, Fecha } from './types';
 
 /** What a tag can change: catalog items and the compact index (lib/placement.ts) both fit. */
 export type Taggable = {
-  id: string; year: number | null; category: string; festival: string; undated: boolean; year_inferred: boolean; restricted: boolean;
+  id: string; fecha: Fecha; tipo: string; coleccion: string; restricted: boolean;
   hidden?: boolean; title?: string; rights?: string; note_public?: string; no_text?: boolean;
 };
 
 export type TagLike = {
   type?: string;
-  festival?: string | null;
+  coleccion?: string | null;
   year?: number | null;
   item_id?: string | null;
   payload?: Record<string, any> | null;
@@ -28,9 +28,9 @@ export type TagLike = {
   created_at?: string | null;
 };
 
-/** Payload keys a tag may carry, and the item field each one sets. */
+/** Payload keys a tag may carry, and the item field each one sets (a year sets fecha.year). */
 export const OVERLAY_FIELDS = {
-  year: 'year', category: 'category', festival: 'festival',
+  year: 'fecha.year', tipo: 'tipo', coleccion: 'coleccion',
   title: 'title', rights: 'rights', caption: 'note_public', no_text: 'no_text', hidden: 'hidden',
 } as const;
 export type OverlayKey = keyof typeof OVERLAY_FIELDS;
@@ -70,15 +70,14 @@ export function applyTags<T extends Taggable>(items: T[], tags: TagLike[]): T[] 
       const v = p[k];
       if (FLAGS.has(k)) {
         if (typeof v === 'boolean') it[f] = v;
+      } else if (k === 'year' && given(v)) {
+        // A year someone gave is the document's own: no longer guessed, no longer undated.
+        it.fecha = { ...it.fecha, year: Number(v), inferred: false, undated: false };
       } else if (given(v) || (CLEARABLE.has(k) && v === '')) {
-        it[f] = k === 'year' ? Number(v) : String(v);
+        it[f] = String(v);
       }
     }
-    if (given(p.year)) {
-      it.undated = false;
-      it.year_inferred = false;
-    }
-    if (it.category === 'resultados') it.restricted = true; // only ever restrict
+    if (it.tipo === 'resultados') it.restricted = true; // only ever restrict
     if (it.restricted && 'note_public' in it) it.note_public = '';
     changed.set(it.id, it as T);
   }
@@ -86,8 +85,8 @@ export function applyTags<T extends Taggable>(items: T[], tags: TagLike[]): T[] 
 }
 
 /** Coverage from catalog items alone: a programa PDF is full, anything else some. */
-export function catalogState(list: { category: string; kind: string }[]): EditionState {
-  if (list.some((i) => i.category === 'programa' && i.kind === 'pdf')) return 'full';
+export function catalogState(list: { tipo: string; formato: string }[]): EditionState {
+  if (list.some((i) => i.tipo === 'programa' && i.formato === 'pdf')) return 'full';
   return list.length ? 'some' : 'none';
 }
 

@@ -10,8 +10,8 @@ import { busy, categoryOptions, el, festivalOptions, field, gate, gateMessage, s
 
 export type VideoRef = { id: string; title: string; channel: string; kind: string };
 export type ReportTarget =
-  | { objetivo: 'documento'; item: string; festival: FestivalSlug; year: number | null; category: string }
-  | { objetivo: 'video'; video: VideoRef; festival: FestivalSlug; year: number };
+  | { objetivo: 'documento'; item: string; coleccion: FestivalSlug; year: number | null; tipo: string }
+  | { objetivo: 'video'; video: VideoRef; coleccion: FestivalSlug; year: number };
 
 let seq = 0;
 
@@ -47,7 +47,7 @@ export function reportForm(target: ReportTarget, onDone: (msg: HTMLElement) => v
   // The fix, only for "otra edición": what changes, nothing else.
   const fix = el('div', { class: 'informar-arreglo' });
   fix.hidden = true;
-  const fest = select(`informar-${n}-festival`, festivalOptions(), t('informar.sin_cambio'));
+  const fest = select(`informar-${n}-coleccion`, festivalOptions(), t('informar.sin_cambio'));
   const yr = el('input', { id: `informar-${n}-ano`, name: `informar-${n}-ano`, type: 'number', inputmode: 'numeric', min: String(YEAR_MIN), max: String(YEAR_MAX), step: '1' });
   const cat = doc ? select(`informar-${n}-seccion`, categoryOptions(), t('informar.sin_cambio')) : null;
   fix.append(el('p', { class: 'muted small' }, t('informar.arreglo_ayuda')), field(t('informar.eisteddfod_label'), fest), field(t('informar.ano_label'), yr));
@@ -75,12 +75,12 @@ export function reportForm(target: ReportTarget, onDone: (msg: HTMLElement) => v
     const problema = [...radios].find(([, r]) => r.checked)?.[0] ?? '';
     const input: Record<string, unknown> = {
       objetivo: target.objetivo, problema, texto: ta.value,
-      arreglo: { festival: fest.value, year: yr.value, ...(cat ? { category: cat.value } : {}) },
-      actual: { festival: target.festival, year: target.year, ...(doc ? { category: target.category } : {}) },
+      arreglo: { coleccion: fest.value, year: yr.value, ...(cat ? { tipo: cat.value } : {}) },
+      actual: { coleccion: target.coleccion, year: target.year, ...(doc ? { tipo: target.tipo } : {}) },
     };
     if (target.objetivo === 'video') input.video = target.video;
     const r = await busy(go, t('informar.enviar'), () =>
-      submit('report', target.festival, target.year, doc ? target.item : null, input));
+      submit('report', target.coleccion, target.year, doc ? target.item : null, input));
     if (r.ok) onDone(await thanks());
     else msg.textContent = t(r.key);
   });
@@ -88,7 +88,7 @@ export function reportForm(target: ReportTarget, onDone: (msg: HTMLElement) => v
 }
 
 /** "Agregar información": a note on a document, public once approved. */
-export function noteForm(ctx: { item: string; festival: FestivalSlug; year: number | null }, onDone: (msg: HTMLElement) => void, onCancel?: () => void): HTMLFormElement {
+export function noteForm(ctx: { item: string; coleccion: FestivalSlug; year: number | null }, onDone: (msg: HTMLElement) => void, onCancel?: () => void): HTMLFormElement {
   const n = ++seq;
   const form = el('form', { class: 'tarea-form', novalidate: '' });
   const taId = `nota-${n}-texto`;
@@ -106,7 +106,7 @@ export function noteForm(ctx: { item: string; festival: FestivalSlug; year: numb
     ev.preventDefault();
     if (go.disabled) return;
     msg.textContent = '';
-    const r = await busy(go, t('informar.enviar'), () => submit('note', ctx.festival, ctx.year, ctx.item, { text: ta.value }));
+    const r = await busy(go, t('informar.enviar'), () => submit('note', ctx.coleccion, ctx.year, ctx.item, { text: ta.value }));
     if (r.ok) onDone(await thanks());
     else msg.textContent = t(r.key);
   });
@@ -155,7 +155,7 @@ function wireDialog(): void {
       body.replaceChildren(gateMessage(g.reason, 'informar.ingresar'));
       return;
     }
-    const target: ReportTarget = { objetivo: 'video', video, festival: sec.dataset.festival as FestivalSlug, year: Number(sec.dataset.year) };
+    const target: ReportTarget = { objetivo: 'video', video, coleccion: sec.dataset.coleccion as FestivalSlug, year: Number(sec.dataset.year) };
     const form = reportForm(target, (m) => body.replaceChildren(m), () => dialog.close());
     body.replaceChildren(el('p', { class: 'muted small' }, t('informar.ayuda')), form);
     form.querySelector<HTMLElement>('input')?.focus();

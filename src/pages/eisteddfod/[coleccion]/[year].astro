@@ -30,11 +30,11 @@ import { editionVideos } from '../../../lib/videos-data';
 export function getStaticPaths() {
   return festivals().flatMap((f) => {
     const [a, b] = yearRange(f.slug);
-    return Array.from({ length: b - a + 1 }, (_, k) => ({ params: { festival: f.slug, year: String(a + k) } }));
+    return Array.from({ length: b - a + 1 }, (_, k) => ({ params: { coleccion: f.slug, year: String(a + k) } }));
   });
 }
 
-const slug = Astro.params.festival as FestivalSlug;
+const slug = Astro.params.coleccion as FestivalSlug;
 const year = Number(Astro.params.year);
 const fest = festivals().find((f) => f.slug === slug)!;
 const [first, last] = yearRange(slug);
@@ -51,11 +51,11 @@ const play = playMap(markerFiles, videos.map((v) => v.id));
 // Photos and press go to the Multimedia section (MediaGallery), not to Otros.
 const media = mediaItems(list);
 const mediaIds = new Set(media.map((m) => m.item.id));
-const sections = CATEGORY_ORDER.map((c) => ({ c, items: list.filter((i) => i.category === c && !mediaIds.has(i.id)).sort(byTitle) }));
+const sections = CATEGORY_ORDER.map((c) => ({ c, items: list.filter((i) => i.tipo === c && !mediaIds.has(i.id)).sort(byTitle) }));
 // Programa always shows (with its slot when incomplete); other empty sections are hidden (live corrections may fill them) and named in one slot.
 const missing = sections.filter((s) => s.c !== 'programa' && s.items.length === 0 && !(s.c === 'otros' && media.length > 0)).map((s) => t(`categorias.${s.c}`));
 // Approved facts and memories from the last export, baked in for search engines; edicion.ts merges live rows.
-const approved = (approvedRaw as Contribution[]).filter((c) => c.festival === slug && c.year === year && ['fact', 'memory', 'upload', 'transcription'].includes(c.type))
+const approved = (approvedRaw as Contribution[]).filter((c) => c.coleccion === slug && c.year === year && ['fact', 'memory', 'upload', 'transcription'].includes(c.type))
   .map((c) => {
     const { storage_path: _private, ...payload } = c.payload ?? {}; // never publish upload paths
     return { ...c, payload };
@@ -75,9 +75,9 @@ const uploads = forEdition(approved, slug, year, 'upload').map((c) => {
   const m = uploadMedia(c);
   const pages = (m?.pages ?? []).map((p) => mediaUrl(mediaBase, p)).filter((u): u is string => Boolean(u));
   const thumb = m?.thumb ? mediaUrl(mediaBase, m.thumb) : null;
-  const category = String(c.payload?.category ?? '');
+  const tipo = String(c.payload?.tipo ?? '');
   return {
-    category,
+    tipo,
     desc: String(c.payload?.description ?? '') || t('edicion.aporte_sin_descripcion'),
     own: Boolean(c.payload?.description),
     c,
@@ -88,8 +88,8 @@ const uploads = forEdition(approved, slug, year, 'upload').map((c) => {
   };
 });
 // For search engines and bots: what this edition is, from the catalog and approved facts.
-const editionStatus = (editionsStatic as { festival: string; year: number; status: 'held' | 'not_held' | 'unknown' }[])
-  .find((e) => e.festival === slug && e.year === year)?.status ?? null;
+const editionStatus = (editionsStatic as { coleccion: string; year: number; status: 'held' | 'not_held' | 'unknown' }[])
+  .find((e) => e.coleccion === slug && e.year === year)?.status ?? null;
 const known = editionFacts(approved as Contribution[], slug, year, editionStatus);
 // Restricted documents are not counted, like /datos/ediciones.json (#19).
 const seoDescription = editionDescription(fest.name, year, state, known, list.filter((i) => isPublic(i)).length + uploads.length);
@@ -110,15 +110,15 @@ const onePerDoc = (items: typeof list, docOf: (id: string) => DocText | null) =>
     return [{ item: i, text: d.text, images: d.items.length, doc: d.id }];
   });
 };
-const transcribedIn = (c: string) => onePerDoc(list.filter((i) => i.category === c && isPublic(i) && !mediaIds.has(i.id)), transcriptionDoc);
+const transcribedIn = (c: string) => onePerDoc(list.filter((i) => i.tipo === c && isPublic(i) && !mediaIds.has(i.id)), transcriptionDoc);
 // Published winners (Chubut, Trevelin): folded under Resultados; the documents stay restricted.
-const winners = PUBLIC_WINNERS.includes(slug) ? onePerDoc(list.filter((i) => i.category === 'resultados'), winnersDoc) : [];
+const winners = PUBLIC_WINNERS.includes(slug) ? onePerDoc(list.filter((i) => i.tipo === 'resultados'), winnersDoc) : [];
 const itemTitles = Object.fromEntries(list.filter((i) => isPublic(i)).map((i) => [i.id, i.title]));
 const contributedTr = forEdition(approved, slug, year, 'transcription').filter((c) => c.item_id && itemTitles[c.item_id]);
 const contribUrl = (tab: string) => url(`contribuir?f=${slug}&y=${year}&tab=${tab}`);
 const missingList = formatList(missing.map((m) => m.toLocaleLowerCase(intlLocales())));
 ---
-<Base title={`${fest.name} ${year}`} festival={slug} year={year} description={seoDescription} image={cover?.page ?? null} jsonLd={seoLd} markdown={`${slug}/${year}.md`} searchable>
+<Base title={`${fest.name} ${year}`} coleccion={slug} year={year} description={seoDescription} image={cover?.page ?? null} jsonLd={seoLd} markdown={`${slug}/${year}.md`} searchable>
   <meta data-pagefind-filter="eisteddfod[content]" content={fest.name} />
   <meta data-pagefind-filter="decada[content]" content={`${Math.floor(year / 10) * 10}`} />
   <nav class="crumbs" aria-label={t('comun.miga')} data-pagefind-ignore="all">
@@ -137,17 +137,17 @@ const missingList = formatList(missing.map((m) => m.toLocaleLowerCase(intlLocale
     )}
     <h1><span class="fest">{fest.name}</span> <span class="year">{year}</span></h1>
     <p class="state">
-      <span class={`badge-state st-${state}`} data-festival={slug} data-year={year} data-state={state} data-cat-state={editionCatalogState(slug, year)} data-status={editionStatus === 'held' ? 'held' : undefined}>{stateLabel(state, editionStatus)}</span>
+      <span class={`badge-state st-${state}`} data-coleccion={slug} data-year={year} data-state={state} data-cat-state={editionCatalogState(slug, year)} data-status={editionStatus === 'held' ? 'held' : undefined}>{stateLabel(state, editionStatus)}</span>
       {list.length > 0 && <span class="muted"> {docCount(list.length)}</span>}
     </p>
     <div class="cover-actions">
-      <a class="btn" href="#aportar" data-contribuir data-festival={slug} data-year={year}>{t('edicion.contribuir')}</a>
+      <a class="btn" href="#aportar" data-contribuir data-coleccion={slug} data-year={year}>{t('edicion.contribuir')}</a>
     </div>
   </header>
 
   <section class="section island-section" aria-labelledby="hechos-t">
     <h2 id="hechos-t">{t('edicion.hechos_titulo')}</h2>
-    <Mount id="hechos" festival={slug} year={year}>{facts.length > 0 && (
+    <Mount id="hechos" coleccion={slug} year={year}>{facts.length > 0 && (
       <dl class="hechos">
         {facts.map((f) => <div><dt>{f.label}</dt><dd><span lang={f.lang}>{f.value}</span><FuenteRef c={f.c} known={sourcePages} compact /></dd></div>)}
       </dl>
@@ -157,7 +157,7 @@ const missingList = formatList(missing.map((m) => m.toLocaleLowerCase(intlLocale
   {sections.map(({ c, items }) => (
     <section class="section" aria-labelledby={`cat-${c}`} data-cat-section={c} hidden={c !== 'programa' && items.length === 0}>
       <Bloque id={`cat-${c}`} titulo={t(`categorias.${c}`)} n={items.length || undefined}>
-      <ul class="cards" data-scope-festival={slug} data-scope-year={year} data-scope-category={c} hidden={items.length === 0}>
+      <ul class="cards" data-scope-coleccion={slug} data-scope-year={year} data-scope-tipo={c} hidden={items.length === 0}>
         {items.map((item) => <ItemCard item={item} />)}
       </ul>
       {transcribedIn(c).length > 0 && (
@@ -183,7 +183,7 @@ const missingList = formatList(missing.map((m) => m.toLocaleLowerCase(intlLocale
         </div>
       )}
       {c === 'programa' && (
-        <Mount id="transcripciones" festival={slug} year={year} class="transcripciones" titles={JSON.stringify(itemTitles)}>{contributedTr.map((tr) => (
+        <Mount id="transcripciones" coleccion={slug} year={year} class="transcripciones" titles={JSON.stringify(itemTitles)}>{contributedTr.map((tr) => (
           <details class="tr-detalle">
             <summary>{trAporte[0]}{lang ? <span lang={lang}>{itemTitles[tr.item_id!]}</span> : itemTitles[tr.item_id!]}{trAporte[1]}{' '}<FuenteRef c={tr} known={sourcePages} /></summary>
             <p class="small"><a href={url(`item/${tr.item_id}/`)}>{t('edicion.transcripcion_documento')}</a></p>
@@ -191,7 +191,7 @@ const missingList = formatList(missing.map((m) => m.toLocaleLowerCase(intlLocale
           </details>
         ))}</Mount>
       )}
-      {c === 'programa' && state !== 'full' && <div data-falta-programa data-festival={slug} data-year={year}><EmptySlot message={t('edicion.falta_programa')} /></div>}
+      {c === 'programa' && state !== 'full' && <div data-falta-programa data-coleccion={slug} data-year={year}><EmptySlot message={t('edicion.falta_programa')} /></div>}
       </Bloque>
     </section>
   ))}
@@ -203,11 +203,11 @@ const missingList = formatList(missing.map((m) => m.toLocaleLowerCase(intlLocale
   )}
 
   {media.length > 0 && <MediaGallery media={media} videos={videos.length} />}
-  <VideoList videos={videos} festival={slug} year={year} />
+  <VideoList videos={videos} coleccion={slug} year={year} />
 
   <section class="section island-section" aria-labelledby="recuerdos-t">
     <h2 id="recuerdos-t">{t('edicion.recuerdos_titulo')}</h2>
-    <Mount id="recuerdos" festival={slug} year={year}>{memories.length > 0 && (
+    <Mount id="recuerdos" coleccion={slug} year={year}>{memories.length > 0 && (
       <ul class="recuerdos">
         {memories.map((m) => <li><blockquote lang={contentLang()}>{m.text}</blockquote><FuenteRef c={m.c} known={sourcePages} tag="p" /></li>)}
       </ul>
@@ -222,7 +222,7 @@ const missingList = formatList(missing.map((m) => m.toLocaleLowerCase(intlLocale
       <a class="btn btn-quiet" href={contribUrl('datos')}>{t('edicion.datos')}</a>
       <a class="btn btn-quiet" href={contribUrl('recuerdo')}>{t('edicion.recuerdo')}</a>
     </p>
-    <Mount id="aportes" festival={slug} year={year}>{uploads.length > 0 && (
+    <Mount id="aportes" coleccion={slug} year={year}>{uploads.length > 0 && (
       <div class="aportes-live">
         <h3 class="small">{t('edicion.aportes_aprobados')}</h3>
         <ul class="aportes-lista">
@@ -230,7 +230,7 @@ const missingList = formatList(missing.map((m) => m.toLocaleLowerCase(intlLocale
             <li class="aporte">
               {u.thumb && <a class="aporte-thumb" href={u.href} data-lb={u.group}><img src={u.thumb} alt={t('item.miniatura_alt', { titulo: u.desc })} loading="lazy" decoding="async" /></a>}
               <div class="aporte-texto">
-                {u.category && <><span class="badge">{t(`categorias.${u.category}`)}</span> </>}<span lang={u.own ? contentLang() : undefined}>{u.desc}</span>{' '}<FuenteRef c={u.c} known={sourcePages} />
+                {u.tipo && <><span class="badge">{t(`categorias.${u.tipo}`)}</span> </>}<span lang={u.own ? contentLang() : undefined}>{u.desc}</span>{' '}<FuenteRef c={u.c} known={sourcePages} />
                 {u.pages.length > 1 && (
                   <p class="aporte-paginas small">{t('item.paginas', { n: u.pages.length })}:{u.pages.map((p, i) => <> <a href={p} data-lb={u.group} aria-label={t('item.ampliar', { n: i + 1 })}>{i + 1}</a></>)}</p>
                 )}

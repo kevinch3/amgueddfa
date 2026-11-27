@@ -52,16 +52,16 @@ describe('collection list', () => {
 
   it('every catalog item and video belongs to a listed collection, with a type that collection uses', () => {
     for (const i of (raw as { items: Item[] }).items) {
-      const c = coleccion(i.festival);
+      const c = coleccion(i.coleccion);
       expect(c, i.id).toBeDefined();
-      expect(c!.tipos, `${i.id} ${i.category}`).toContain(i.category);
+      expect(c!.tipos, `${i.id} ${i.tipo}`).toContain(i.tipo);
     }
-    for (const v of (videosData as { videos: { id: string; festival: string }[] }).videos) {
-      expect(coleccion(v.festival)?.tipos, v.id).toContain('video');
+    for (const v of (videosData as { videos: { id: string; coleccion: string }[] }).videos) {
+      expect(coleccion(v.coleccion)?.tipos, v.id).toContain('video');
     }
   });
 
-  it('the festival lists of the site and the scripts all come from it', () => {
+  it('the coleccion lists of the site and the scripts all come from it', () => {
     expect(FESTIVALS).toEqual(FESTIVAL_IDS);
     expect(FESTIVAL_IDS).toEqual(['chubut', 'juventud', 'mimosa', 'trevelin']);
     expect([...PUBLIC_WINNERS]).toEqual(['chubut', 'trevelin']);
@@ -71,7 +71,7 @@ describe('collection list', () => {
     expect(url('chubut/1937/', 'es')).toBe('/eisteddfod/chubut/1937/');
   });
 
-  it("the contribution form's categories are the document types every festival uses", () => {
+  it("the contribution form's categories are the document types every coleccion uses", () => {
     for (const c of COLECCIONES) for (const cat of CATEGORIES) expect(c.tipos, `${c.id} ${cat}`).toContain(cat);
   });
 });

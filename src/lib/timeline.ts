@@ -29,16 +29,16 @@ export function revealDecade(node: { closest(sel: string): { open: boolean } | n
 }
 
 /** Whether the build made a page for this edition: years from the festival's start to now. */
-export function hasEditionPage(festival: string, year: number, firsts: Record<string, number>, now = new Date().getFullYear()): boolean {
-  const first = firsts[festival];
+export function hasEditionPage(coleccion: string, year: number, firsts: Record<string, number>, now = new Date().getFullYear()): boolean {
+  const first = firsts[coleccion];
   return first !== undefined && year >= first && year <= now;
 }
 
 /** The edition a "/<base>/eisteddfod/<festival>/<year>/" path points to (or the pre-#189 "/<base>/<festival>/<year>/"), or null. */
-export function editionFromPath(path: string, base: string): { festival: FestivalSlug; year: number } | null {
+export function editionFromPath(path: string, base: string): { coleccion: FestivalSlug; year: number } | null {
   const b = base.replace(/\/+$/, '');
   if (!path.startsWith(`${b}/`)) return null;
   const m = /^(?:eisteddfod\/)?([a-z]+)\/(\d{4})\/?$/.exec(path.slice(b.length + 1));
   if (!m || !(FESTIVALS as readonly string[]).includes(m[1])) return null;
-  return { festival: m[1] as FestivalSlug, year: Number(m[2]) };
+  return { coleccion: m[1] as FestivalSlug, year: Number(m[2]) };
 }

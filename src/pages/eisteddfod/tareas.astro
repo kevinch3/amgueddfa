@@ -16,12 +16,11 @@ const cards = items()
   .filter((i) => isTaskCandidate(i))
   .map((i) => ({
     id: i.id,
-    kind: i.kind,
+    formato: i.formato,
     restricted: !isPublic(i),
-    year_inferred: i.year_inferred,
-    festival: i.festival,
-    year: i.year,
-    category: i.category,
+    coleccion: i.coleccion,
+    fecha: i.fecha,
+    tipo: i.tipo,
     title: i.title,
     img: siteMedia(i.page_paths[0] ?? i.thumb),
   }));
@@ -31,8 +30,8 @@ const cards = items()
 const FIRST = ['programa', 'programa-del-dia'];
 const toTranscribe = items()
   .filter((i) => isPublic(i) && !i.hidden && ocrFor(i.id) !== null && transcriptionDoc(i.id) === null)
-  .sort((a, b) => Number(!FIRST.includes(a.category)) - Number(!FIRST.includes(b.category)) || (a.year ?? 9999) - (b.year ?? 9999) || a.title.localeCompare(b.title, 'es', { numeric: true }));
-const byFestival = festivals().map(({ slug: f }) => ({ f, docs: toTranscribe.filter((i) => i.festival === f) })).filter((g) => g.docs.length);
+  .sort((a, b) => Number(!FIRST.includes(a.tipo)) - Number(!FIRST.includes(b.tipo)) || (a.fecha.year ?? 9999) - (b.fecha.year ?? 9999) || a.title.localeCompare(b.title, 'es', { numeric: true }));
+const byFestival = festivals().map(({ slug: f }) => ({ f, docs: toTranscribe.filter((i) => i.coleccion === f) })).filter((g) => g.docs.length);
 ---
 <Base title={t('tareas.titulo')} current="tareas">
   <section class="tareas measure">
@@ -50,7 +49,7 @@ const byFestival = festivals().map(({ slug: f }) => ({ f, docs: toTranscribe.fil
           <summary>{t(`festivales.${f}`)} · {docs.length === 1 ? t('tareas.transcribir_uno') : t('tareas.transcribir_n', { n: docs.length })}</summary>
           <ul>
             {docs.map((i) => (
-              <li data-transcribir={i.id}><a href={url(`item/${i.id}/#tarea-t`)}>{i.year ?? '—'} · {t(`categorias.${i.category}`)} · {i.title}</a></li>
+              <li data-transcribir={i.id}><a href={url(`item/${i.id}/#tarea-t`)}>{i.fecha.year ?? '—'} · {t(`categorias.${i.tipo}`)} · {i.title}</a></li>
             ))}
           </ul>
         </details>
@@ -69,7 +68,7 @@ const byFestival = festivals().map(({ slug: f }) => ({ f, docs: toTranscribe.fil
   import type { CategorySlug, FestivalSlug } from '../../lib/types';
   import { busy, categoryOptions, el, festivalOptions, field, gate, gateMessage, select } from '../../scripts/ui';
 
-  type Card = TaskCandidate & { festival: FestivalSlug; year: number | null; category: CategorySlug; title: string; img: string };
+  type Card = TaskCandidate & { coleccion: FestivalSlug; tipo: CategorySlug; title: string; img: string };
 
   const mount = document.getElementById('tareas')!;
   let queue: Card[] = [];
@@ -93,7 +92,7 @@ const byFestival = festivals().map(({ slug: f }) => ({ f, docs: toTranscribe.fil
     msg.textContent = '';
     let r: Result;
     try {
-      r = await busy(btn, idle, () => submit('tag', card.festival, card.year, card.id, input));
+      r = await busy(btn, idle, () => submit('tag', card.coleccion, card.fecha.year, card.id, input));
     } finally {
       sending = false;
     }
@@ -130,7 +129,7 @@ const byFestival = festivals().map(({ slug: f }) => ({ f, docs: toTranscribe.fil
     form.addEventListener('submit', (ev) => {
       ev.preventDefault();
       if (go.disabled) return;
-      void send(go, t('tareas.enviar'), msg, card, { year: yr.value, category: cat.value, festival: fest.value });
+      void send(go, t('tareas.enviar'), msg, card, { year: yr.value, tipo: cat.value, coleccion: fest.value });
     });
     cancel.addEventListener('click', () => show());
     actions.replaceWith(form);
@@ -160,21 +159,21 @@ const byFestival = festivals().map(({ slug: f }) => ({ f, docs: toTranscribe.fil
     cap.append(el('a', { href: url(`item/${card.id}/`), target: '_blank', rel: 'noopener' }, t('tareas.ver_ficha')));
     fig.append(cap);
 
-    const festival = t(`festivales.${card.festival}`);
+    const coleccion = t(`festivales.${card.coleccion}`);
     const q = el('h2', { class: 'tarea-q', tabindex: '-1' },
-      card.year
-        ? t('tareas.pregunta', { categoria: t(`categorias.${card.category}`), festival, year: card.year })
-        : t('tareas.pregunta_sin', { festival }));
+      card.fecha.year
+        ? t('tareas.pregunta', { categoria: t(`categorias.${card.tipo}`), festival: coleccion, year: card.fecha.year })
+        : t('tareas.pregunta_sin', { festival: coleccion }));
     const msg = el('p', { class: 'contrib-msg', role: 'alert' });
     const actions = el('p', { class: 'tarea-acciones' });
 
-    const no = el('button', { type: 'button', class: card.year ? 'btn btn-quiet' : 'btn' }, t('tareas.no'));
+    const no = el('button', { type: 'button', class: card.fecha.year ? 'btn btn-quiet' : 'btn' }, t('tareas.no'));
     no.addEventListener('click', () => correction(card, actions, msg));
-    if (card.year) {
+    if (card.fecha.year) {
       const yes = el('button', { type: 'button', class: 'btn' }, t('tareas.si'));
       yes.addEventListener('click', () => {
         if (yes.disabled) return;
-        void send(yes, t('tareas.si'), msg, card, { year: card.year, category: card.category, festival: card.festival });
+        void send(yes, t('tareas.si'), msg, card, { year: card.fecha.year, tipo: card.tipo, coleccion: card.coleccion });
       });
       actions.append(yes, ' ');
       keys.yes = () => yes.click();

@@ -10,8 +10,8 @@ import { transcriptionDoc } from '../../../lib/transcripciones';
 /** Open data: every edition in range (and documented not-held years before it) with its state, cover and approved facts. */
 export function GET(): Response {
   const approved = approvedRaw as Contribution[];
-  const status = new Map((editionsRaw as { festival: string; year: number; status: 'held' | 'not_held' | 'unknown' }[])
-    .map((e) => [`${e.festival}:${e.year}`, e.status]));
+  const status = new Map((editionsRaw as { coleccion: string; year: number; status: 'held' | 'not_held' | 'unknown' }[])
+    .map((e) => [`${e.coleccion}:${e.year}`, e.status]));
   const ediciones = festivals().flatMap((f) => {
     const notHeld = [...status].filter(([k, v]) => v === 'not_held' && k.startsWith(`${f.slug}:`)).map(([k]) => Number(k.split(':')[1]));
     return editionYears(f.slug, notHeld).map((year) => {

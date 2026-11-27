@@ -23,9 +23,9 @@ import {
 } from '../src/lib/admin';
 
 const catalog = editionKeys([
-  { festival: 'chubut', year: 1990, category: 'programa' },
-  { festival: 'chubut', year: 1991, category: 'resultados' },
-  { festival: 'chubut', year: null, category: 'programa' },
+  { coleccion: 'chubut', year: 1990, tipo: 'programa' },
+  { coleccion: 'chubut', year: 1991, tipo: 'resultados' },
+  { coleccion: 'chubut', year: null, tipo: 'programa' },
 ]);
 
 function fakeClient(opts: { rpcError?: unknown; uploadError?: unknown; downloadError?: unknown; status?: string } = {}) {
@@ -80,31 +80,31 @@ const upload: Pending = {
   id: 'c1',
   user_id: 'u1',
   type: 'upload',
-  festival: 'chubut',
+  coleccion: 'chubut',
   year: 1992,
   item_id: null,
-  payload: { category: 'programa', storage_path: 'u1/abc.pdf' },
+  payload: { tipo: 'programa', storage_path: 'u1/abc.pdf' },
   created_at: '2026-11-13T10:00:00Z',
 };
 
 describe('fillsGap', () => {
-  it('fillsGap true for empty category, false when static has item, false when live approved upload exists', () => {
+  it('fillsGap true for empty tipo, false when static has item, false when live approved upload exists', () => {
     expect(fillsGap('chubut', 1992, 'programa', { catalog, approved: [] })).toBe(true);
     expect(fillsGap('chubut', 1991, 'programa', { catalog, approved: [] })).toBe(true);
     expect(fillsGap('chubut', 1990, 'programa', { catalog, approved: [] })).toBe(false);
-    const live = [{ type: 'upload', festival: 'chubut', year: 1992, payload: { category: 'programa', complete: true } }];
+    const live = [{ type: 'upload', coleccion: 'chubut', year: 1992, payload: { tipo: 'programa', complete: true } }];
     expect(fillsGap('chubut', 1992, 'programa', { catalog, approved: live })).toBe(false);
     expect(fillsGap('chubut', 1992, 'bases', { catalog, approved: live })).toBe(true);
     // a fact for the edition is not an upload in that category
-    const fact = [{ type: 'fact', festival: 'chubut', year: 1992, payload: { category: 'programa' } }];
+    const fact = [{ type: 'fact', coleccion: 'chubut', year: 1992, payload: { tipo: 'programa' } }];
     expect(fillsGap('chubut', 1992, 'programa', { catalog, approved: fact })).toBe(true);
   });
 
   it('a programa gap stays open until a confirmed-complete programa is approved', () => {
-    const tapa = [{ type: 'upload', festival: 'chubut', year: 1992, payload: { category: 'programa', tapa: true, complete: false } }];
+    const tapa = [{ type: 'upload', coleccion: 'chubut', year: 1992, payload: { tipo: 'programa', tapa: true, complete: false } }];
     expect(fillsGap('chubut', 1992, 'programa', { catalog, approved: tapa })).toBe(true);
     const ctx = { catalog, approved: [] as any[] };
-    const pending = (payload: any): Pending => ({ ...upload, year: 1992, payload: { storage_path: 'u1/x.jpg', category: 'programa', ...payload } });
+    const pending = (payload: any): Pending => ({ ...upload, year: 1992, payload: { storage_path: 'u1/x.jpg', tipo: 'programa', ...payload } });
     recordApprovedUpload(pending({ alcance: 'tapa' }), ctx, [], { complete: false, tapa: true });
     expect(fillsGap('chubut', 1992, 'programa', ctx)).toBe(true);
     recordApprovedUpload(pending({ alcance: 'completo' }), ctx, [], { complete: true, tapa: false });
@@ -119,11 +119,11 @@ describe('fillsGap', () => {
 describe('reviewFlags', () => {
   const p = (payload: any): Pending => ({ ...upload, payload: { storage_path: 'u1/x.jpg', ...payload } });
   it('defaults from what the contributor said', () => {
-    expect(reviewFlags(p({ category: 'programa', alcance: 'completo' }))).toEqual({ complete: true, tapa: false });
-    expect(reviewFlags(p({ category: 'programa', alcance: 'tapa' }))).toEqual({ complete: false, tapa: true });
-    expect(reviewFlags(p({ category: 'programa', alcance: 'parcial' }))).toEqual({ complete: false, tapa: false });
-    expect(reviewFlags(p({ category: 'programa' }))).toEqual({ complete: false, tapa: false });
-    expect(reviewFlags(p({ category: 'bases' }))).toBeNull();
+    expect(reviewFlags(p({ tipo: 'programa', alcance: 'completo' }))).toEqual({ complete: true, tapa: false });
+    expect(reviewFlags(p({ tipo: 'programa', alcance: 'tapa' }))).toEqual({ complete: false, tapa: true });
+    expect(reviewFlags(p({ tipo: 'programa', alcance: 'parcial' }))).toEqual({ complete: false, tapa: false });
+    expect(reviewFlags(p({ tipo: 'programa' }))).toEqual({ complete: false, tapa: false });
+    expect(reviewFlags(p({ tipo: 'bases' }))).toBeNull();
   });
 });
 
@@ -186,8 +186,8 @@ describe('approveUpload', () => {
     const fetchFn = async () => ({ ok: true, blob: async () => new Blob(['x'], { type: 'image/jpeg' }) }) as any;
     const make = async () => ({ pages: [new Blob(['p'])], thumb: new Blob(['t']) });
     const gap = { catalog, approved: [] as any[] };
-    const second: Pending = { ...upload, id: 'c2', user_id: 'u2', payload: { category: 'programa', storage_path: 'u2/x.jpg' } };
-    const other: Pending = { ...upload, id: 'c3', payload: { category: 'bases', storage_path: 'u1/b.jpg' } };
+    const second: Pending = { ...upload, id: 'c2', user_id: 'u2', payload: { tipo: 'programa', storage_path: 'u2/x.jpg' } };
+    const other: Pending = { ...upload, id: 'c3', payload: { tipo: 'bases', storage_path: 'u1/b.jpg' } };
     const a = gapChoice(upload, gap);
     const b = gapChoice(second, gap);
     const o = gapChoice(other, gap);
@@ -434,7 +434,7 @@ describe('searchUsers', () => {
 
 describe('fact groups in the queue', () => {
   const fact = (id: string, lote?: string): Pending => ({
-    id, user_id: 'u1', type: 'fact', festival: 'chubut', year: 1937, item_id: null, created_at: '',
+    id, user_id: 'u1', type: 'fact', coleccion: 'chubut', year: 1937, item_id: null, created_at: '',
     payload: { field: 'venue', value: id, ...(lote ? { lote } : {}) },
   } as Pending);
 
@@ -449,7 +449,7 @@ describe('fact groups in the queue', () => {
 
   it('never groups transcript corrections: each gets its own card with its ticks, even sharing a lote', () => {
     const vt = (id: string, lote: string): Pending => ({
-      id, user_id: 'u1', type: 'video_text', festival: 'chubut', year: 2014, item_id: null, created_at: '',
+      id, user_id: 'u1', type: 'video_text', coleccion: 'chubut', year: 2014, item_id: null, created_at: '',
       payload: { lote, video: { id: 'abcdef12' }, cambios: [{ t: 1, antes: 'a', texto: 'b' }] },
     } as Pending);
     const [a, b, c, d] = [vt('a', 'L'), vt('b', 'L'), fact('c', 'L'), fact('d', 'L')];
@@ -467,7 +467,7 @@ describe('fact groups in the queue', () => {
     const client: any = { rpc: async (fn: string, args: any) => (calls.push([fn, args]), { data: 2, error: null }) };
     const good = { t: 665, antes: 'x', texto: 'visible' };
     const crafted = {
-      id: 'v1', user_id: 'u1', type: 'video_text', festival: 'chubut', year: 2014, item_id: null, created_at: '',
+      id: 'v1', user_id: 'u1', type: 'video_text', coleccion: 'chubut', year: 2014, item_id: null, created_at: '',
       payload: { lote: 'L1', video: { id: 'abcdef12' }, cambios: [good, null, { t: -3, texto: 'HIDDEN negative add' }, { t: 30, texto: 5 }] },
     } as Pending;
     const unreadableOnly = { ...crafted, id: 'v2', payload: { ...crafted.payload, cambios: [null, { t: -1, texto: 'x' }] } } as Pending;
@@ -518,7 +518,7 @@ describe('adminAddFacts', () => {
     expect(calls).toHaveLength(1);
     expect(calls[0].fn).toBe('admin_add_facts');
     const a = calls[0].args;
-    expect([a.target, a.p_festival, a.p_year]).toEqual([U, 'chubut', 1937]);
+    expect([a.target, a.p_coleccion, a.p_year]).toEqual([U, 'chubut', 1937]);
     expect(a.facts).toHaveLength(2);
     expect(a.facts[0].lote).toMatch(/^[0-9a-f-]{36}$/);
     expect(a.facts[1].lote).toBe(a.facts[0].lote);
@@ -540,7 +540,7 @@ describe('adminAddFacts', () => {
 
 describe('review fixes', () => {
   const fact = (id: string, payload: any = {}): Pending => ({
-    id, user_id: 'u1', type: 'fact', festival: 'chubut', year: 1937, item_id: null, created_at: '',
+    id, user_id: 'u1', type: 'fact', coleccion: 'chubut', year: 1937, item_id: null, created_at: '',
     payload: { field: 'venue', value: id, lote: 'L', ...payload },
   } as Pending);
 
@@ -576,19 +576,19 @@ describe('review fixes', () => {
 
 describe('reportAction', () => {
   const rep = (payload: Record<string, unknown>, over: Partial<Pending> = {}): Pending => ({
-    id: 'r1', user_id: 'u', type: 'report', festival: 'chubut', year: 2015, item_id: null, created_at: '2026-11-15T10:00:00Z', payload, ...over,
+    id: 'r1', user_id: 'u', type: 'report', coleccion: 'chubut', year: 2015, item_id: null, created_at: '2026-11-15T10:00:00Z', payload, ...over,
   });
 
   it('describes what approving will do', () => {
     expect(reportAction(rep({ objetivo: 'video', problema: 'no_corresponde' }))).toEqual({ accion: 'ocultar', texto: 'Ocultar del sitio', aprobar: 'Aprobar y ocultar' });
     expect(reportAction(rep({ objetivo: 'video', problema: 'otro' }))).toEqual({ accion: 'ninguna', texto: 'Sin cambio automático', aprobar: 'Aprobar' });
-    expect(reportAction(rep({ objetivo: 'video', problema: 'otra_edicion', arreglo: { festival: 'juventud', year: 2014 } })))
+    expect(reportAction(rep({ objetivo: 'video', problema: 'otra_edicion', arreglo: { coleccion: 'juventud', year: 2014 } })))
       .toEqual({ accion: 'mover', texto: 'Mover a Eisteddfod de la Juventud 2014', aprobar: 'Aprobar y mover' });
   });
 
   it('a move with only a year keeps the reported eisteddfod; a document move names its section', () => {
     expect(reportAction(rep({ objetivo: 'video', problema: 'otra_edicion', arreglo: { year: 2014 } })).texto).toBe('Mover a Eisteddfod del Chubut 2014');
-    expect(reportAction(rep({ objetivo: 'documento', problema: 'otra_edicion', arreglo: { category: 'bases' } }, { item_id: 'abc' })).texto)
+    expect(reportAction(rep({ objetivo: 'documento', problema: 'otra_edicion', arreglo: { tipo: 'bases' } }, { item_id: 'abc' })).texto)
       .toBe('Mover a Eisteddfod del Chubut 2015, Bases y avisos');
   });
 });

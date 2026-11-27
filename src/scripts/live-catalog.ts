@@ -37,13 +37,13 @@ export function cardFor(i: IndexItem): HTMLLIElement {
     img.height = 320;
     frame.append(img);
   } else {
-    frame.append(el('span', 'ph', i.restricted ? t('comun.restringido_corto') : t(`item.tipos.${i.kind}`)));
+    frame.append(el('span', 'ph', i.restricted ? t('comun.restringido_corto') : t(`item.tipos.${i.formato}`)));
   }
   a.append(frame, el('span', 't', i.title));
   li.append(a);
-  if (i.year_inferred || i.restricted) {
+  if (i.fecha.inferred || i.restricted) {
     const b = el('span', 'badges');
-    if (i.year_inferred) b.append(el('span', 'badge', t('comun.ano_estimado')));
+    if (i.fecha.inferred) b.append(el('span', 'badge', t('comun.ano_estimado')));
     if (i.restricted) b.append(el('span', 'badge badge-restricted', t('comun.restringido_corto')));
     li.append(b);
   }
@@ -53,16 +53,16 @@ export function cardFor(i: IndexItem): HTMLLIElement {
 function scopeOf(ul: HTMLElement): Scope {
   const d = ul.dataset;
   return {
-    festival: d.scopeFestival ?? '',
+    coleccion: d.scopeFestival ?? '',
     year: d.scopeYear === 'none' ? 'none' : Number(d.scopeYear),
-    category: d.scopeCategory,
+    tipo: d.scopeCategory,
     undated: d.scopeUndated === undefined ? undefined : d.scopeUndated === 'true',
   };
 }
 
 /** Move cards in and out of every scoped list; show or hide lists and their sections. */
 export function updateLists(root: ParentNode, changes: { before: IndexItem; after: IndexItem }[]): void {
-  for (const ul of root.querySelectorAll<HTMLElement>('ul.cards[data-scope-festival]')) {
+  for (const ul of root.querySelectorAll<HTMLElement>('ul.cards[data-scope-coleccion]')) {
     const scope = scopeOf(ul);
     for (const { after } of changes) {
       const card = ul.querySelector<HTMLElement>(`li[data-item="${after.id}"]`);
@@ -86,18 +86,18 @@ export function updateItemPage(root: ParentNode, changes: { before: IndexItem; a
   const ch = head && changes.find((c) => c.after.id === head.dataset.itemPage);
   if (!ch) return;
   const i = ch.after;
-  for (const n of root.querySelectorAll<HTMLElement>('[data-live="category"]')) n.textContent = t(`categorias.${i.category}`);
-  const fest = root.querySelector<HTMLAnchorElement>('a[data-live="festival"]');
+  for (const n of root.querySelectorAll<HTMLElement>('[data-live="tipo"]')) n.textContent = t(`categorias.${i.tipo}`);
+  const fest = root.querySelector<HTMLAnchorElement>('a[data-live="coleccion"]');
   if (fest) {
-    fest.href = url(`${i.festival}/`);
-    fest.textContent = t(`festivales.${i.festival}`);
+    fest.href = url(`${i.coleccion}/`);
+    fest.textContent = t(`festivales.${i.coleccion}`);
   }
   const yr = root.querySelector<HTMLAnchorElement>('a[data-live="year"]');
   if (yr) {
-    yr.href = i.year ? url(`${i.festival}/${i.year}/`) : url(`general/${i.festival}/`);
-    yr.textContent = i.year ? String(i.year) : i.undated ? t('item.sin_fecha') : t('item.general');
+    yr.href = i.fecha.year ? url(`${i.coleccion}/${i.fecha.year}/`) : url(`general/${i.coleccion}/`);
+    yr.textContent = i.fecha.year ? String(i.fecha.year) : i.fecha.undated ? t('item.sin_fecha') : t('item.general');
   }
-  if (!i.year_inferred) root.querySelector('[data-live="inferred"]')?.remove();
+  if (!i.fecha.inferred) root.querySelector('[data-live="inferred"]')?.remove();
   const gone = root.querySelector<HTMLElement>('[data-retirado]');
   if (gone && i.hidden) gone.hidden = false;
 }
@@ -143,7 +143,7 @@ export function applyChanges(root: ParentNode, before: IndexItem[], after: Index
   updateItemPage(root, changes);
   for (const [key, state] of affectedStates(changes, after)) {
     const [f, y] = key.split(':');
-    for (const n of root.querySelectorAll<HTMLElement>(`[data-festival="${f}"][data-year="${y}"][data-cat-state]`)) n.dataset.catState = state;
+    for (const n of root.querySelectorAll<HTMLElement>(`[data-coleccion="${f}"][data-year="${y}"][data-cat-state]`)) n.dataset.catState = state;
   }
   return changes.length;
 }

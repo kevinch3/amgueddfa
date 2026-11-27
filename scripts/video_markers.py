@@ -161,7 +161,7 @@ def programa_for(year: int, catalog: list[dict]) -> tuple[dict[str, str], set[st
         out = []
         for cat in ("programa", "programa-del-dia"):
             for i in catalog:
-                if i["festival"] == "chubut" and i.get("year") == y and i["category"] == cat:
+                if i["coleccion"] == "chubut" and i["fecha"]["year"] == y and i["tipo"] == cat:
                     p = REPO / "src" / "data" / "transcripciones" / f"{i['id']}.md"
                     if p.exists() and (t := p.read_text(encoding="utf-8")) not in out:
                         out.append(t)
@@ -181,12 +181,12 @@ def main(backup: Path) -> None:
     PRIVATE.mkdir(parents=True, exist_ok=True)
     for vid, v in sorted(site.items()):
         r = rows.get(vid)
-        if v["festival"] != "chubut" or not r or not r["duration"] or int(r["duration"]) <= MIN_SECONDS or vid not in idx:
+        if v["coleccion"] != "chubut" or not r or not r["duration"] or int(r["duration"]) <= MIN_SECONDS or vid not in idx:
             continue
-        titles, stage = programa_for(v["year"], catalog)
+        titles, stage = programa_for(v["fecha"]["year"], catalog)
         cues = cues_for((backup / "videos" / idx[vid]["file"]).with_suffix(""))
         marks = detect(cues, titles, stage) if cues else []
-        (PRIVATE / f"{vid}.json").write_text(json.dumps({"id": vid, "year": v["year"], "markers": marks}, ensure_ascii=False, indent=1), encoding="utf-8")
+        (PRIVATE / f"{vid}.json").write_text(json.dumps({"id": vid, "year": v["fecha"]["year"], "markers": marks}, ensure_ascii=False, indent=1), encoding="utf-8")
         pub = [[round(m["t"]), m["n"], m["label"], m["kind"]] for m in marks if m["high"]]
         p = OUT / f"{vid}.json"
         if pub:

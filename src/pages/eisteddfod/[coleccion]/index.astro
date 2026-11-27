@@ -9,16 +9,16 @@ import { decades } from '../../../lib/timeline';
 import type { FestivalSlug } from '../../../lib/types';
 
 export function getStaticPaths() {
-  return festivals().map((f) => ({ params: { festival: f.slug } }));
+  return festivals().map((f) => ({ params: { coleccion: f.slug } }));
 }
 
-const slug = Astro.params.festival as FestivalSlug;
+const slug = Astro.params.coleccion as FestivalSlug;
 const fest = festivals().find((f) => f.slug === slug)!;
 const [first, last] = yearRange(slug);
 function row(y: number) {
   const list = editionItems(slug, y);
   const thumbs = [...list]
-    .sort((a, b) => CATEGORY_ORDER.indexOf(a.category) - CATEGORY_ORDER.indexOf(b.category))
+    .sort((a, b) => CATEGORY_ORDER.indexOf(a.tipo) - CATEGORY_ORDER.indexOf(b.tipo))
     .map((i) => ({ src: thumbUrl(i), title: i.title }))
     .filter((x) => x.src);
   // The cover identifies the edition, so it leads (once) the year's thumbnails.
@@ -35,9 +35,9 @@ const groups = decades(first, last, (y) => undocumented(slug, y))
   .reverse()
   .map((d) => ({ ...d, rows: [...d.years].reverse().map(row) }));
 const since = firstMaterialYear(slug);
-const general = items().filter((i) => i.festival === slug && i.year === null).length;
+const general = items().filter((i) => i.coleccion === slug && i.fecha.year === null).length;
 ---
-<Base title={fest.name} festival={slug} description={since !== null ? `${fest.name}. ${t('festival.desde', { year: since })} ${t('inicio.lema')}` : t('inicio.lema')}>
+<Base title={fest.name} coleccion={slug} description={since !== null ? `${fest.name}. ${t('festival.desde', { year: since })} ${t('inicio.lema')}` : t('inicio.lema')}>
   <header class="cover">
     <h1>{fest.name}</h1>
     {fest.nameCy !== fest.name && <p class="cy" lang="cy"><em>{fest.nameCy}</em></p>}

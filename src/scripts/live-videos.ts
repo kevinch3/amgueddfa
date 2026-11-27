@@ -73,12 +73,12 @@ export function applyVideoDiff(sec: HTMLElement, diff: { remove: string[]; add: 
 async function run(): Promise<void> {
   const sec = document.querySelector<HTMLElement>('[data-videos]');
   if (!sec) return;
-  const festival = sec.dataset.festival ?? '';
+  const coleccion = sec.dataset.coleccion ?? '';
   const year = Number(sec.dataset.year);
   const since = document.querySelector<HTMLMetaElement>('meta[name="amg-tags-at"]')?.content || '';
   const live = await liveQuery<TagLike[]>(
     (c) => {
-      let q = c.from('public_contributions').select('type, festival, year, item_id, payload, reviewed_at, created_at')
+      let q = c.from('public_contributions').select('type, coleccion, year, item_id, payload, reviewed_at, created_at')
         .eq('type', 'report').eq('payload->>objetivo', 'video');
       if (since) q = q.gt('reviewed_at', since);
       return q.order('reviewed_at', { ascending: true }).limit(2000);
@@ -87,7 +87,7 @@ async function run(): Promise<void> {
   );
   if (live.offline || !live.data.length) return;
   const shown = [...sec.querySelectorAll<HTMLElement>('li[data-video]')].map((li) => li.dataset.video ?? '');
-  const diff = videoDiff(festival, year, shown, live.data);
+  const diff = videoDiff(coleccion, year, shown, live.data);
   if (diff.remove.length || diff.add.length) applyVideoDiff(sec, diff);
 }
 

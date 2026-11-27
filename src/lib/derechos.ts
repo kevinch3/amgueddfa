@@ -59,11 +59,11 @@ export function titularDe(texto: string): string {
   return holder.replace(/^(©|Original:)\s*/, '').trim();
 }
 
-export function derechosDe(item: Pick<Item, 'rights' | 'festival' | 'source_url' | 'source_label'>, fuentes: Record<string, Declaracion> = FUENTES): Derechos | null {
+export function derechosDe(item: Pick<Item, 'rights' | 'coleccion' | 'source_url' | 'source_label'>, fuentes: Record<string, Declaracion> = FUENTES): Derechos | null {
   const own = (item.rights ?? '').trim();
   if (own) return { licencia: licenciaDe(own), titular: titularDe(own), texto: own, origen: 'documento' };
   const src = fuentes[itemSourceKey(item)];
   if (src) return { ...src, origen: 'fuente' };
-  const def = coleccion(item.festival)?.derechos_por_defecto;
+  const def = coleccion(item.coleccion)?.derechos_por_defecto;
   return def ? { licencia: def.licencia as Licencia, titular: def.titular, origen: 'coleccion' } : null;
 }

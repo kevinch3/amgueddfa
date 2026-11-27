@@ -23,7 +23,7 @@ def _setup(tmp_path, festival="chubut"):
     (backup / "INDEX.tsv").write_text("id\tfile\nvid\tx/clip_vid.mp4\n", encoding="utf-8")
     (backup / "videos/x/clip_vid.es-orig.vtt").write_text(VTT, encoding="utf-8")
     (backup / "videos/x/clip_vid.info.json").write_text('{"duration": 180}', encoding="utf-8")
-    video = {"id": "vid", "festival": festival, "year": "2025", "title": "Competencia Nº 5"}
+    video = {"id": "vid", "coleccion": festival, "fecha": {"year": 2025, "inferred": False, "undated": False}, "title": "Competencia Nº 5"}
     return repo, backup, video
 
 
@@ -210,7 +210,7 @@ def test_replies_cached_under_the_legacy_key_are_reused(tmp_path):
     from scripts.reconstruct.windows import PROMPT_VERSION
     repo, backup, video = _setup(tmp_path)
     (repo / "data/approved/contributions.json").write_text(json.dumps([{
-        "type": "fact", "status": "approved", "festival": "chubut", "year": 2025,
+        "type": "fact", "status": "approved", "coleccion": "chubut", "year": 2025,
         "payload": {"field": "presentadores", "value": "Persona Inventada"}}]), encoding="utf-8")
     calls = []
     first = reconstruct_video(repo, backup, video, ask=echo_model(calls), replies=tmp_path / "replies")

@@ -41,12 +41,14 @@ def export(tsv: Path, out: Path) -> int:
             continue
         d = r.get("upload_date") or ""
         videos.append({
-            "id": r["video_id"], "festival": slug, "year": int(r["year"]), "kind": r["kind"],
-            "title": r["title"], "channel": r["channel"],
+            # The core record fields (docs/reglas.md, rule 2); `kind` is the video's own subtype.
+            "id": r["video_id"], "coleccion": slug,
+            "fecha": {"year": int(r["year"]), "inferred": r["year_source"] in INFERRED, "undated": False},
+            "kind": r["kind"], "title": r["title"], "channel": r["channel"],
             "date": f"{d[:4]}-{d[4:6]}-{d[6:8]}" if len(d) == 8 else "",
-            "year_inferred": r["year_source"] in INFERRED,
+            "tipo": "video", "formato": "video",
         })
-    videos.sort(key=lambda v: (v["festival"], v["year"], v["id"]))
+    videos.sort(key=lambda v: (v["coleccion"], v["fecha"]["year"], v["id"]))
     out.write_text(json.dumps({"videos": videos}, ensure_ascii=False, indent=0) + "\n", encoding="utf-8")
     return len(videos)
 

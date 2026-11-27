@@ -67,8 +67,8 @@ const firsts = Object.fromEntries(festivals().map((f) => [f.slug, yearRange(f.sl
       <fieldset class="contrib-edicion">
         <legend>{t('contrib.elegir_edicion')}</legend>
         <div class="campo">
-          <label for="c-festival">{t('contrib.festival_label')}</label>
-          <select id="c-festival" name="festival" required>
+          <label for="c-coleccion">{t('contrib.festival_label')}</label>
+          <select id="c-coleccion" name="coleccion" required>
             <option value="">{t('contrib.elegir')}</option>
             {FESTIVALS.map((f) => <option value={f}>{t(`festivales.${f}`)}</option>)}
           </select>
@@ -101,8 +101,8 @@ const firsts = Object.fromEntries(festivals().map((f) => [f.slug, yearRange(f.sl
           <input id="c-file" name="file" type="file" accept={Object.keys(MIME_EXT).join(',')} required />
         </div>
         <div class="campo">
-          <label for="c-category">{t('contrib.categoria_label')}</label>
-          <select id="c-category" name="category" required>
+          <label for="c-tipo">{t('contrib.categoria_label')}</label>
+          <select id="c-tipo" name="tipo" required>
             <option value="">{t('contrib.elegir')}</option>
             {CATEGORIES.map((c) => <option value={c}>{t(`categorias.${c}`)}</option>)}
           </select>
@@ -161,7 +161,7 @@ const firsts = Object.fromEntries(festivals().map((f) => [f.slug, yearRange(f.sl
   const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
   const params = new URLSearchParams(location.search);
   const itemId = /^[0-9a-f]{12}$/.test(params.get('item') ?? '') ? params.get('item') : null;
-  const fest = $<HTMLSelectElement>('c-festival');
+  const fest = $<HTMLSelectElement>('c-coleccion');
   const year = $<HTMLInputElement>('c-year');
   const msg = $<HTMLParagraphElement>('c-msg');
   const ok = $<HTMLDivElement>('c-ok');
@@ -213,7 +213,7 @@ const firsts = Object.fromEntries(festivals().map((f) => [f.slug, yearRange(f.sl
   }
 
   // Subir: a programa needs "¿Qué estás subiendo?" answered; other categories hide it.
-  const catSel = $<HTMLSelectElement>('c-category');
+  const catSel = $<HTMLSelectElement>('c-tipo');
   function syncAlcance() {
     const on = catSel.value === 'programa';
     $('c-alcance').hidden = !on;
@@ -230,7 +230,7 @@ const firsts = Object.fromEntries(festivals().map((f) => [f.slug, yearRange(f.sl
     const s = (k: string) => String(fd.get(k) ?? '');
     if (kind === 'upload') {
       const f = $<HTMLInputElement>('c-file').files?.[0];
-      return { file: f, category: s('category'), alcance: s('alcance'), description: s('description') };
+      return { file: f, tipo: s('tipo'), alcance: s('alcance'), description: s('description') };
     }
     return { text: s('text') };
   }

@@ -55,13 +55,13 @@ function fakeClient(opts: { uid?: string | null; insertError?: unknown; uploadEr
 
 describe('validate', () => {
   it('upload: accepts images and PDF up to 20 MB, rejects other types and larger files', () => {
-    const ok = validate('upload', { file: file('application/pdf', 20 * MB), category: 'programa', alcance: 'completo', description: 'Programa 1975' });
-    expect(ok).toEqual({ ok: true, payload: { category: 'programa', alcance: 'completo', description: 'Programa 1975' } });
-    expect(validate('upload', { file: file('image/webp', 1000), category: 'otros' }).ok).toBe(true);
-    expect(validate('upload', { file: file('image/gif', 1000), category: 'programa' })).toEqual({ ok: false, key: 'contrib.error.tipo_archivo' });
-    expect(validate('upload', { file: file('image/jpeg', 20 * MB + 1), category: 'programa' })).toEqual({ ok: false, key: 'contrib.error.muy_grande' });
-    expect(validate('upload', { category: 'programa' })).toEqual({ ok: false, key: 'contrib.error.archivo' });
-    expect(validate('upload', { file: file('image/png', 10), category: 'nada' })).toEqual({ ok: false, key: 'contrib.error.categoria' });
+    const ok = validate('upload', { file: file('application/pdf', 20 * MB), tipo: 'programa', alcance: 'completo', description: 'Programa 1975' });
+    expect(ok).toEqual({ ok: true, payload: { tipo: 'programa', alcance: 'completo', description: 'Programa 1975' } });
+    expect(validate('upload', { file: file('image/webp', 1000), tipo: 'otros' }).ok).toBe(true);
+    expect(validate('upload', { file: file('image/gif', 1000), tipo: 'programa' })).toEqual({ ok: false, key: 'contrib.error.tipo_archivo' });
+    expect(validate('upload', { file: file('image/jpeg', 20 * MB + 1), tipo: 'programa' })).toEqual({ ok: false, key: 'contrib.error.muy_grande' });
+    expect(validate('upload', { tipo: 'programa' })).toEqual({ ok: false, key: 'contrib.error.archivo' });
+    expect(validate('upload', { file: file('image/png', 10), tipo: 'nada' })).toEqual({ ok: false, key: 'contrib.error.categoria' });
   });
 
   it('fact: known fields only, ISO dates, competencia needs numero and descripcion', () => {
@@ -82,21 +82,21 @@ describe('validate', () => {
 
   it('upload: programa needs alcance; other categories drop it', () => {
     const f = file('image/jpeg', 10);
-    expect(validate('upload', { file: f, category: 'programa' })).toEqual({ ok: false, key: 'contrib.error.alcance' });
-    expect(validate('upload', { file: f, category: 'programa', alcance: 'quizás' })).toEqual({ ok: false, key: 'contrib.error.alcance' });
-    expect(validate('upload', { file: f, category: 'programa', alcance: 'tapa' })).toEqual({ ok: true, payload: { category: 'programa', alcance: 'tapa' } });
-    expect(validate('upload', { file: f, category: 'programa', alcance: 'completo', description: 'Tapa y 12 páginas' }))
-      .toEqual({ ok: true, payload: { category: 'programa', alcance: 'completo', description: 'Tapa y 12 páginas' } });
-    expect(validate('upload', { file: f, category: 'bases', alcance: 'tapa' })).toEqual({ ok: true, payload: { category: 'bases' } });
+    expect(validate('upload', { file: f, tipo: 'programa' })).toEqual({ ok: false, key: 'contrib.error.alcance' });
+    expect(validate('upload', { file: f, tipo: 'programa', alcance: 'quizás' })).toEqual({ ok: false, key: 'contrib.error.alcance' });
+    expect(validate('upload', { file: f, tipo: 'programa', alcance: 'tapa' })).toEqual({ ok: true, payload: { tipo: 'programa', alcance: 'tapa' } });
+    expect(validate('upload', { file: f, tipo: 'programa', alcance: 'completo', description: 'Tapa y 12 páginas' }))
+      .toEqual({ ok: true, payload: { tipo: 'programa', alcance: 'completo', description: 'Tapa y 12 páginas' } });
+    expect(validate('upload', { file: f, tipo: 'bases', alcance: 'tapa' })).toEqual({ ok: true, payload: { tipo: 'bases' } });
   });
 
-  it('tag: needs at least one of year (1865-2026), category or festival', () => {
+  it('tag: needs at least one of year (1865-2026), tipo or coleccion', () => {
     expect(validate('tag', {})).toEqual({ ok: false, key: 'contrib.error.etiqueta' });
     expect(validate('tag', { year: 1864 })).toEqual({ ok: false, key: 'contrib.error.ano' });
     expect(validate('tag', { year: 2027 })).toEqual({ ok: false, key: 'contrib.error.ano' });
     expect(validate('tag', { year: '1975' })).toEqual({ ok: true, payload: { year: 1975 } });
-    expect(validate('tag', { category: 'bases', festival: 'mimosa' })).toEqual({ ok: true, payload: { category: 'bases', festival: 'mimosa' } });
-    expect(validate('tag', { festival: 'gorsedd' })).toEqual({ ok: false, key: 'contrib.error.etiqueta' });
+    expect(validate('tag', { tipo: 'bases', coleccion: 'mimosa' })).toEqual({ ok: true, payload: { tipo: 'bases', coleccion: 'mimosa' } });
+    expect(validate('tag', { coleccion: 'gorsedd' })).toEqual({ ok: false, key: 'contrib.error.etiqueta' });
   });
 
   it('transcription: 10 to 15000 characters', () => {
@@ -116,26 +116,26 @@ describe('validate', () => {
   const texto = 'Es del Eisteddfod Genedlaethol de Gales';
 
   it('report: a video that is not from an eisteddfod of the Patagonia keeps a copy of the video, no fix', () => {
-    expect(validate('report', { objetivo: 'video', problema: 'no_corresponde', texto: `  ${texto} `, video, actual: { festival: 'chubut', year: 2015 } }))
+    expect(validate('report', { objetivo: 'video', problema: 'no_corresponde', texto: `  ${texto} `, video, actual: { coleccion: 'chubut', year: 2015 } }))
       .toEqual({ ok: true, payload: { objetivo: 'video', problema: 'no_corresponde', texto, video } });
   });
 
   it('report: otra_edicion needs a fix that changes something; years become numbers', () => {
-    const base = { objetivo: 'video', problema: 'otra_edicion', texto, video, actual: { festival: 'chubut', year: 2015 } };
+    const base = { objetivo: 'video', problema: 'otra_edicion', texto, video, actual: { coleccion: 'chubut', year: 2015 } };
     expect(validate('report', base)).toEqual({ ok: false, key: 'contrib.error.arreglo' });
-    expect(validate('report', { ...base, arreglo: { festival: 'chubut', year: 2015 } })).toEqual({ ok: false, key: 'contrib.error.arreglo' });
+    expect(validate('report', { ...base, arreglo: { coleccion: 'chubut', year: 2015 } })).toEqual({ ok: false, key: 'contrib.error.arreglo' });
     expect(validate('report', { ...base, arreglo: { year: '15' } })).toEqual({ ok: false, key: 'contrib.error.arreglo' });
-    expect(validate('report', { ...base, arreglo: { festival: 'nada' } })).toEqual({ ok: false, key: 'contrib.error.arreglo' });
+    expect(validate('report', { ...base, arreglo: { coleccion: 'nada' } })).toEqual({ ok: false, key: 'contrib.error.arreglo' });
     expect(validate('report', { ...base, arreglo: { year: '2014' } })).toEqual({ ok: true, payload: { objetivo: 'video', problema: 'otra_edicion', texto, video, arreglo: { year: 2014 } } });
     // a video has no section: a category is dropped
-    expect(validate('report', { ...base, arreglo: { year: 2014, category: 'bases' } })).toMatchObject({ ok: true, payload: { arreglo: { year: 2014 } } });
+    expect(validate('report', { ...base, arreglo: { year: 2014, tipo: 'bases' } })).toMatchObject({ ok: true, payload: { arreglo: { year: 2014 } } });
   });
 
   it('report: a document fix may change its section; otro needs no fix', () => {
-    const doc = { objetivo: 'documento', texto, actual: { festival: 'chubut', year: 1996, category: 'programa' } };
-    expect(validate('report', { ...doc, problema: 'otra_edicion', arreglo: { category: 'bases', festival: '' } }))
-      .toEqual({ ok: true, payload: { objetivo: 'documento', problema: 'otra_edicion', texto, arreglo: { category: 'bases' } } });
-    expect(validate('report', { ...doc, problema: 'otra_edicion', arreglo: { category: 'programa' } })).toEqual({ ok: false, key: 'contrib.error.arreglo' });
+    const doc = { objetivo: 'documento', texto, actual: { coleccion: 'chubut', year: 1996, tipo: 'programa' } };
+    expect(validate('report', { ...doc, problema: 'otra_edicion', arreglo: { tipo: 'bases', coleccion: '' } }))
+      .toEqual({ ok: true, payload: { objetivo: 'documento', problema: 'otra_edicion', texto, arreglo: { tipo: 'bases' } } });
+    expect(validate('report', { ...doc, problema: 'otra_edicion', arreglo: { tipo: 'programa' } })).toEqual({ ok: false, key: 'contrib.error.arreglo' });
     expect(validate('report', { ...doc, problema: 'otro', arreglo: { year: 2000 } })).toEqual({ ok: true, payload: { objetivo: 'documento', problema: 'otro', texto } });
   });
 
@@ -164,7 +164,7 @@ describe('submit', () => {
   it('submit upload stores then inserts', async () => {
     const { client, log, uploads, inserts } = fakeClient();
     const f = file('image/jpeg', 2 * MB);
-    const r = await submit('upload', 'chubut', 1975, null, { file: f, category: 'programa', alcance: 'tapa', description: 'Tapa' }, client);
+    const r = await submit('upload', 'chubut', 1975, null, { file: f, tipo: 'programa', alcance: 'tapa', description: 'Tapa' }, client);
     expect(r).toEqual({ ok: true });
     expect(log).toEqual(['upload', 'insert']);
     expect(uploads[0].bucket).toBe('uploads');
@@ -173,8 +173,8 @@ describe('submit', () => {
     expect(inserts[0]).toEqual({
       table: 'contributions',
       row: {
-        user_id: 'user-1', type: 'upload', festival: 'chubut', year: 1975, item_id: null, status: 'pending',
-        payload: { category: 'programa', alcance: 'tapa', description: 'Tapa', storage_path: uploads[0].path },
+        user_id: 'user-1', type: 'upload', coleccion: 'chubut', year: 1975, item_id: null, status: 'pending',
+        payload: { tipo: 'programa', alcance: 'tapa', description: 'Tapa', storage_path: uploads[0].path },
       },
     });
   });
@@ -182,7 +182,7 @@ describe('submit', () => {
   it('daily_limit maps to i18n key', async () => {
     const { client, removed, uploads } = fakeClient({ insertError: { code: 'P0001', message: 'daily_limit' } });
     expect(await submit('memory', 'mimosa', 2001, null, { text: 'Un recuerdo lindo' }, client)).toEqual({ ok: false, key: 'contrib.error.limite' });
-    const up = await submit('upload', 'mimosa', 2001, null, { file: file('application/pdf', 10), category: 'bases' }, client);
+    const up = await submit('upload', 'mimosa', 2001, null, { file: file('application/pdf', 10), tipo: 'bases' }, client);
     expect(up).toEqual({ ok: false, key: 'contrib.error.limite' });
     expect(removed).toEqual([{ bucket: 'uploads', paths: [uploads[0].path] }]); // no orphaned original
   });
@@ -194,20 +194,20 @@ describe('submit', () => {
     expect(await submit('memory', 'chubut', 1975, null, { text: 'Un recuerdo lindo' }, fakeClient({ uid: null }).client)).toEqual({ ok: false, key: 'contrib.error.sesion' });
     expect(await submit('memory', 'chubut', 1975, null, { text: 'Un recuerdo lindo' }, null)).toEqual({ ok: false, key: 'estado.sin_conexion' });
     const b = fakeClient({ uploadError: { message: 'Failed to fetch' } });
-    expect(await submit('upload', 'chubut', 1975, null, { file: file('image/png', 10), category: 'otros' }, b.client)).toEqual({ ok: false, key: 'estado.sin_conexion' });
+    expect(await submit('upload', 'chubut', 1975, null, { file: file('image/png', 10), tipo: 'otros' }, b.client)).toEqual({ ok: false, key: 'estado.sin_conexion' });
     expect(b.log).toEqual(['upload']);
   });
 
   it('a tag on an item carries the item id', async () => {
     const { client, inserts } = fakeClient();
     expect(await submit('tag', 'trevelin', 2011, 'abc123def456', { year: 2012 }, client)).toEqual({ ok: true });
-    expect(inserts[0].row).toMatchObject({ type: 'tag', item_id: 'abc123def456', festival: 'trevelin', year: 2011, payload: { year: 2012 } });
+    expect(inserts[0].row).toMatchObject({ type: 'tag', item_id: 'abc123def456', coleccion: 'trevelin', year: 2011, payload: { year: 2012 } });
   });
 });
 
 describe('mergeApproved', () => {
   const c = (id: string, value: string, created_at = '2026-01-01T00:00:00Z'): Contribution => ({
-    id, type: 'fact', festival: 'chubut', year: 1975, item_id: null, payload: { field: 'venue', value },
+    id, type: 'fact', coleccion: 'chubut', year: 1975, item_id: null, payload: { field: 'venue', value },
     created_at, reviewed_at: created_at, display_name: 'Ana',
   });
 
@@ -234,7 +234,7 @@ describe('returnPath (/ingresar?volver=…)', () => {
 describe('display helpers', () => {
   it('factDisplay formats dates, yes/no and competition rows', async () => {
     const { factDisplay, jsonForScript } = await import('../src/lib/contrib');
-    const mk = (payload: any): Contribution => ({ id: 'x', type: 'fact', festival: 'chubut', year: 1975, item_id: null, payload, created_at: '', reviewed_at: null, display_name: null });
+    const mk = (payload: any): Contribution => ({ id: 'x', type: 'fact', coleccion: 'chubut', year: 1975, item_id: null, payload, created_at: '', reviewed_at: null, display_name: null });
     expect(factDisplay(mk({ field: 'start_date', value: '1975-10-28' }))).toEqual({ label: 'Fecha de inicio', value: '28 de octubre de 1975' });
     expect(factDisplay(mk({ field: 'edicion_realizada', value: 'no' })).value).toBe('No');
     expect(factDisplay(mk({ field: 'competencia', numero: '3', descripcion: 'Coro', idioma: 'galés' })).value).toBe('N.º 3: Coro (galés)');
@@ -245,9 +245,9 @@ describe('display helpers', () => {
 
 describe('pending drafts', () => {
   it('ownPending filters on the signed-in user, pending, and the edition', async () => {
-    const a = fakeClient({ uid: 'user-1', rows: [{ id: 'p1', type: 'memory', festival: 'chubut', year: 1930, payload: { text: 'x' } }] });
+    const a = fakeClient({ uid: 'user-1', rows: [{ id: 'p1', type: 'memory', coleccion: 'chubut', year: 1930, payload: { text: 'x' } }] });
     expect(await ownPending('chubut', 1930, a.client)).toHaveLength(1);
-    expect(a.eqs).toEqual(expect.arrayContaining([['user_id', 'user-1'], ['status', 'pending'], ['festival', 'chubut'], ['year', 1930]]));
+    expect(a.eqs).toEqual(expect.arrayContaining([['user_id', 'user-1'], ['status', 'pending'], ['coleccion', 'chubut'], ['year', 1930]]));
   });
 
   it('ownPending is empty signed out, offline, or on a query error', async () => {
@@ -260,10 +260,10 @@ describe('pending drafts', () => {
 
   it('pendingView sorts each kind into its section and previews only images', () => {
     const mk = (type: string, payload: any) =>
-      ({ id: 'x', type, festival: 'chubut', year: 1930, item_id: null, payload, created_at: '', reviewed_at: null, display_name: null }) as Contribution;
-    expect(pendingView(mk('upload', { category: 'programa', storage_path: 'u/a.JPG' })))
+      ({ id: 'x', type, coleccion: 'chubut', year: 1930, item_id: null, payload, created_at: '', reviewed_at: null, display_name: null }) as Contribution;
+    expect(pendingView(mk('upload', { tipo: 'programa', storage_path: 'u/a.JPG' })))
       .toEqual({ section: 'aportes', text: 'Programa', preview: 'image', path: 'u/a.JPG', label: null });
-    expect(pendingView(mk('upload', { category: 'bases', storage_path: 'u/a.pdf', description: 'Bases' })))
+    expect(pendingView(mk('upload', { tipo: 'bases', storage_path: 'u/a.pdf', description: 'Bases' })))
       .toEqual({ section: 'aportes', text: 'Bases', preview: 'pdf', path: 'u/a.pdf', label: 'Archivo PDF' });
     expect(pendingView(mk('memory', { text: 'Un recuerdo' }))).toEqual({ section: 'recuerdos', text: 'Un recuerdo', preview: null, path: null, label: null });
     expect(pendingView(mk('fact', { field: 'venue', value: 'Trelew' }))).toMatchObject({ section: 'hechos', preview: null });
@@ -273,11 +273,11 @@ describe('pending drafts', () => {
 
 describe('approvedForEdition', () => {
   it('reads the public view for one edition', async () => {
-    const a = fakeClient({ rows: [{ id: 'f1', type: 'fact', festival: 'chubut', year: 1937, payload: { field: 'venue', value: 'Salón San David' } }] });
+    const a = fakeClient({ rows: [{ id: 'f1', type: 'fact', coleccion: 'chubut', year: 1937, payload: { field: 'venue', value: 'Salón San David' } }] });
     const r = await approvedForEdition('chubut', 1937, a.client);
     expect(r).toEqual({ offline: false, data: [expect.objectContaining({ id: 'f1' })] });
     expect(a.log).toContain('select:public_contributions');
-    expect(a.eqs).toEqual(expect.arrayContaining([['festival', 'chubut'], ['year', 1937]]));
+    expect(a.eqs).toEqual(expect.arrayContaining([['coleccion', 'chubut'], ['year', 1937]]));
   });
 
   it('is offline without a client or on error', async () => {
@@ -322,7 +322,7 @@ describe('fuente', () => {
   });
 
   it('sourceLine shows the fuente of a fact', () => {
-    const mk = (payload: any) => ({ id: 'x', type: 'fact', festival: 'chubut', year: 1937, item_id: null, payload, created_at: '', reviewed_at: null, display_name: null }) as Contribution;
+    const mk = (payload: any) => ({ id: 'x', type: 'fact', coleccion: 'chubut', year: 1937, item_id: null, payload, created_at: '', reviewed_at: null, display_name: null }) as Contribution;
     expect(sourceLine(mk({ field: 'venue', value: 'X', fuente: 'Libro' }))).toBe('Fuente: Libro');
     expect(sourceLine(mk({ field: 'venue', value: 'X' }))).toBeNull();
     expect(sourceLine(mk({ field: 'venue', value: 'X', fuente: '  ' }))).toBeNull();
@@ -340,7 +340,7 @@ describe('submitFacts', () => {
     expect(rows[0].payload.lote).toMatch(/^[0-9a-f-]{36}$/);
     expect(rows[1].payload.lote).toBe(rows[0].payload.lote);
     expect(rows.every((x) => x.payload.fuente === 'Libro' && x.status === 'pending' && x.type === 'fact' && x.user_id === 'user-1')).toBe(true);
-    expect(rows.map((x) => [x.festival, x.year])).toEqual([['chubut', 1937], ['chubut', 1937]]);
+    expect(rows.map((x) => [x.coleccion, x.year])).toEqual([['chubut', 1937], ['chubut', 1937]]);
   });
 
   it('a single fact has no lote; errors carry the index', async () => {

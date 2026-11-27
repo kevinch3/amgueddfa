@@ -8,7 +8,7 @@ tests/fixtures/overlay.json holds the cases both implementations must pass.
 from __future__ import annotations
 
 # payload key -> item field
-OVERLAY_FIELDS = {"year": "year", "category": "category", "festival": "festival",
+OVERLAY_FIELDS = {"year": "year", "tipo": "tipo", "coleccion": "coleccion",
                   "title": "title", "rights": "rights", "caption": "note_public",
                   "no_text": "no_text", "hidden": "hidden"}
 CLEARABLE = {"rights", "caption"}
@@ -31,6 +31,17 @@ def _places(t: dict) -> bool:
 
 def _get(it, f):
     return it.get(f) if isinstance(it, dict) else getattr(it, f, None)
+
+
+def _set_year(it, year: int) -> None:
+    """A year someone gave is the document's own: no longer guessed, no longer undated.
+    Builder items keep year/undated/year_inferred; a catalog record has them in `fecha`."""
+    if isinstance(it, dict) and isinstance(it.get("fecha"), dict):
+        it["fecha"] = {**it["fecha"], "year": year, "inferred": False, "undated": False}
+    else:
+        _set(it, "year", year)
+        _set(it, "undated", False)
+        _set(it, "year_inferred", False)
 
 
 def _set(it, f, v) -> None:
@@ -59,12 +70,11 @@ def apply_overlay(items, rows) -> None:
             if k in FLAGS:
                 if isinstance(v, bool):
                     _set(it, f, v)
+            elif k == "year" and _given(v):
+                _set_year(it, int(v))
             elif _given(v) or (k in CLEARABLE and v == ""):
-                _set(it, f, int(v) if k == "year" else str(v))
-        if _given(p.get("year")):
-            _set(it, "undated", False)
-            _set(it, "year_inferred", False)
-        if _get(it, "category") == "resultados":  # only ever restrict
+                _set(it, f, str(v))
+        if _get(it, "tipo") == "resultados":  # only ever restrict
             _set(it, "restricted", True)
         if _get(it, "restricted") and _has(it, "note_public"):
             _set(it, "note_public", "")

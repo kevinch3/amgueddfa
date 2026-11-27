@@ -2,7 +2,7 @@ import { isPublic } from './visibilidad';
 import type { Item } from './types';
 
 /** The fields taskQueue looks at; the /tareas page passes slimmed catalog rows. */
-export type TaskCandidate = Pick<Item, 'id' | 'kind' | 'restricted' | 'year_inferred' | 'year'>;
+export type TaskCandidate = Pick<Item, 'id' | 'formato' | 'restricted' | 'fecha'>;
 
 /** How far back the present reaches: Quick tasks leave out these last years (#187). */
 export const PRESENT_YEARS = 20;
@@ -18,7 +18,7 @@ export function isHistory(year: number | null, now = new Date().getFullYear()): 
 
 /** An item can be a quick task: a public image of history whose year or category we guessed. */
 export function isTaskCandidate(i: TaskCandidate, now?: number): boolean {
-  return i.year_inferred && isPublic(i) && i.kind === 'image' && isHistory(i.year, now);
+  return i.fecha.inferred && isPublic(i) && i.formato === 'image' && isHistory(i.fecha.year, now);
 }
 
 /** 32-bit FNV-1a of a string. */

@@ -405,8 +405,8 @@ def collect(repo: Path = REPO) -> dict:
     for p in sorted((repo / "src/data/transcripciones").glob("*.md")):
         text = p.read_text(encoding="utf-8")
         item = next((cat[x] for x in front_items(text, p.stem) if x in cat), None)
-        if item and item["category"] == "programa" and item.get("year"):
-            key = (item["festival"], int(item["year"]))
+        if item and item["tipo"] == "programa" and item["fecha"]["year"]:
+            key = (item["coleccion"], int(item["fecha"]["year"]))
             numbers[key].update(int(m.group(1)) for m in re.finditer(r"^(\d{1,3})\.\s", text, re.M))
             for n, line in sung_competitions(text).items():
                 programa[key].setdefault(n, line)
@@ -449,10 +449,10 @@ def collect(repo: Path = REPO) -> dict:
     fuera: list[dict] = []  # Chubut / Trevelin performances that reach no sung competition
     otros: list[str] = []  # Juventud / Mimosa videos that reach one: those are not transcribed (#29)
     for v in all_videos:
-        key = (v["festival"], int(v["year"]))
+        key = (v["coleccion"], int(v["fecha"]["year"]))
         comps, marks = competitions(v)
         texto = v["id"] in have
-        alcance = v["festival"] in FESTIVALS
+        alcance = v["coleccion"] in FESTIVALS
         titulos.append({"video": v["id"], "title": v["title"], "festival": key[0], "year": key[1],
                         "comp": next(iter(title_competitions(v["title"])), None), "texto": texto, "alcance": alcance})
         sung = [(n, sec, programa[key][n]) for n, sec in comps if n in programa.get(key, {})]

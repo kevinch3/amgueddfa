@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { absUrl, breadcrumbJsonLd, editionDescription, editionFacts, editionJsonLd, factRecord, isConfirmedEdition, itemJsonLd, ldGraph, siteJsonLd, sitemapXml, xmlEscape, isEventEdition } from '../src/lib/seo';
 
 const fact = (field: string, value: string, extra: Record<string, unknown> = {}) =>
-  ({ id: field, type: 'fact', festival: 'chubut', year: 1937, item_id: null, payload: { field, value, ...extra }, created_at: '', reviewed_at: null, display_name: null }) as any;
+  ({ id: field, type: 'fact', coleccion: 'chubut', year: 1937, item_id: null, payload: { field, value, ...extra }, created_at: '', reviewed_at: null, display_name: null }) as any;
 
 describe('seo builders', () => {
   it('absUrl makes site-absolute URLs', () => {

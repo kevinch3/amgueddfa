@@ -20,8 +20,8 @@ const loadEds = () => (eds ??= fetch(url('datos/ediciones.json')).then((r) => r.
 
 /** Data URLs are the Spanish pages; hand back the page in the language the person reads. */
 const here = (abs: string) => location.origin + inLanguage(abs, (p) => url(p));
-const docOut = (d: Documento) => ({ id: d.id, title: d.titulo, festival: d.eisteddfod, festival_name: d.nombre_eisteddfod, year: d.ano, category: d.categoria, type: d.tipo, url: here(d.url), thumbnail: d.miniatura });
-const edOut = (e: Edicion) => ({ festival: e.eisteddfod, festival_name: e.nombre, year: e.ano, status: e.estado, held: e.realizada, documents: e.documentos, url: here(e.url), cover: e.tapa, facts: e.datos });
+const docOut = (d: Documento) => ({ id: d.id, title: d.titulo, coleccion: d.eisteddfod, festival_name: d.nombre_eisteddfod, year: d.ano, tipo: d.categoria, type: d.tipo, url: here(d.url), thumbnail: d.miniatura });
+const edOut = (e: Edicion) => ({ coleccion: e.eisteddfod, festival_name: e.nombre, year: e.ano, status: e.estado, held: e.realizada, documents: e.documentos, url: here(e.url), cover: e.tapa, facts: e.datos });
 
 function go(path: string): { url: string } {
   const to = new URL(path, location.origin).href;
@@ -30,7 +30,7 @@ function go(path: string): { url: string } {
 }
 
 const year = { type: 'integer', minimum: 1865, maximum: 2100 };
-const festival = { type: 'string', enum: [...FESTIVALS], description: 'chubut = Eisteddfod del Chubut (Eisteddfod y Wladfa), juventud = Eisteddfod de la Juventud, mimosa = Eisteddfod Mimosa (Porth Madryn), trevelin = Eisteddfod de Trevelin.' };
+const coleccion = { type: 'string', enum: [...FESTIVALS], description: 'chubut = Eisteddfod del Chubut (Eisteddfod y Wladfa), juventud = Eisteddfod de la Juventud, mimosa = Eisteddfod Mimosa (Porth Madryn), trevelin = Eisteddfod de Trevelin.' };
 
 const TOOLS: Tool[] = [
   {
@@ -46,7 +46,7 @@ const TOOLS: Tool[] = [
         heading: document.querySelector('h1')?.textContent?.trim() ?? '',
         language: localeTag(),
         url: location.href,
-        festival: mount?.dataset.festival || null,
+        coleccion: mount?.dataset.coleccion || null,
         year: mount?.dataset.year ? Number(mount.dataset.year) : null,
         document_id: mount?.dataset.item || null,
         languages: alternates(location.pathname).map((a) => ({ language: LOCALE_INFO[a.locale].tag, name: LOCALE_INFO[a.locale].name, url: location.origin + a.href })),
@@ -56,14 +56,14 @@ const TOOLS: Tool[] = [
   {
     name: 'search_documents',
     title: 'Search documents',
-    description: `${SITE_NOTE} Finds public documents (programmes, syllabuses, preliminary rounds, results, other papers) by words in their title and by eisteddfod, year and category. Every word must match; accents do not matter.`,
+    description: `${SITE_NOTE} Finds public documents (programmes, syllabuses, preliminary rounds, results, other papers) by words in their title and by eisteddfod, year and tipo. Every word must match; accents do not matter.`,
     inputSchema: {
       type: 'object',
       properties: {
         query: { type: 'string', description: 'Words to look for, e.g. "tapa programa" or "1975".' },
-        festival,
+        coleccion,
         year,
-        category: { type: 'string', enum: [...CATEGORIES] },
+        tipo: { type: 'string', enum: [...CATEGORIES] },
         limit: { type: 'integer', minimum: 1, maximum: 100, default: 20 },
       },
     },
@@ -77,7 +77,7 @@ const TOOLS: Tool[] = [
     name: 'list_editions',
     title: 'List editions',
     description: `${SITE_NOTE} Lists editions (one per eisteddfod and year) with what the archive holds: status full (complete programme), some (some material), none (nothing yet) or not_held, number of documents and approved facts.`,
-    inputSchema: { type: 'object', properties: { festival, from_year: year, to_year: year, status: { type: 'string', enum: STATUSES } } },
+    inputSchema: { type: 'object', properties: { coleccion, from_year: year, to_year: year, status: { type: 'string', enum: STATUSES } } },
     annotations: { readOnlyHint: true },
     async execute(input) {
       const list = listEditions(await loadEds(), input as Parameters<typeof listEditions>[1]);
@@ -88,10 +88,10 @@ const TOOLS: Tool[] = [
     name: 'get_edition',
     title: 'One edition',
     description: `${SITE_NOTE} Returns one edition: its approved facts (date, venue, presenters, Chair and Crown winners, competitions) with their sources, and its documents.`,
-    inputSchema: { type: 'object', properties: { festival, year }, required: ['festival', 'year'] },
+    inputSchema: { type: 'object', properties: { coleccion, year }, required: ['coleccion', 'year'] },
     annotations: { readOnlyHint: true },
     async execute(input) {
-      const r = getEdition(await loadEds(), await loadDocs(), String(input.festival), Number(input.year));
+      const r = getEdition(await loadEds(), await loadDocs(), String(input.coleccion), Number(input.year));
       return r ? { ...edOut(r.edicion), documents: r.documentos.map(docOut) } : { error: 'The archive has no page for that eisteddfod and year yet.' };
     },
   },
@@ -101,7 +101,7 @@ const TOOLS: Tool[] = [
     description: `${SITE_NOTE} Opens a page of the site in the current language. "contribute" opens the contribution form for an edition (tab: subir = upload a file, datos = facts, recuerdo = a memory); the person must be signed in, and only they can send it.`,
     inputSchema: {
       type: 'object',
-      properties: { page: { type: 'string', enum: [...PAGES] }, festival, year, document_id: { type: 'string', pattern: '^[0-9a-f]{12}$' }, tab: { type: 'string', enum: ['subir', 'datos', 'recuerdo'] } },
+      properties: { page: { type: 'string', enum: [...PAGES] }, coleccion, year, document_id: { type: 'string', pattern: '^[0-9a-f]{12}$' }, tab: { type: 'string', enum: ['subir', 'datos', 'recuerdo'] } },
       required: ['page'],
     },
     async execute(input) {

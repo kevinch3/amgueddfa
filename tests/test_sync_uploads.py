@@ -13,9 +13,9 @@ CID = "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"
 
 def row(**over):
     r = {
-        "id": CID, "festival": "chubut", "year": 1995, "created_at": "2026-11-10T10:00:00Z",
+        "id": CID, "coleccion": "chubut", "year": 1995, "created_at": "2026-11-10T10:00:00Z",
         "reviewed_at": "2026-11-12T09:00:00Z", "display_name": "Ana\tGriffiths",
-        "payload": {"category": "programa", "storage_path": f"{UID}/{CID}.pdf", "description": "Programa\ncompleto"},
+        "payload": {"tipo": "programa", "storage_path": f"{UID}/{CID}.pdf", "description": "Programa\ncompleto"},
     }
     r.update(over)
     return r
@@ -24,11 +24,11 @@ def row(**over):
 def test_target_and_source_row():
     rel = target(row())
     assert rel == Path("Eisteddfod_del_Chubut/1995/Programa/Aporte_aaaaaaaa.pdf")
-    assert target(row(year=None, payload={"category": "otros", "storage_path": f"{UID}/{CID}.jpg"})) == Path(
+    assert target(row(year=None, payload={"tipo": "otros", "storage_path": f"{UID}/{CID}.jpg"})) == Path(
         "Eisteddfod_del_Chubut/_general/Varios/Aporte_aaaaaaaa.jpg"
     )
     assert target(row(payload={"storage_path": "../../etc/passwd"})) is None
-    assert target(row(festival="nope")) is None
+    assert target(row(coleccion="nope")) is None
     assert source_row(rel, row(), "2026-11-13") == {
         "path": "Eisteddfod_del_Chubut/1995/Programa/Aporte_aaaaaaaa.pdf",
         "source_url": "Aporte de Ana Griffiths, 2026-11-12",
@@ -48,7 +48,7 @@ def test_sync_adds_once_and_scan_accepts_it(tmp_path):
         return b"%PDF-1.4 new programa " + p.encode()
 
     existing = (arch / "Eisteddfod_del_Chubut/1990/Suelto.png").read_bytes()
-    dup = row(id="bbbbbbbb-bbbb-cccc-dddd-eeeeeeeeeeee", payload={"category": "otros", "storage_path": f"{UID}/{CID}.png"})
+    dup = row(id="bbbbbbbb-bbbb-cccc-dddd-eeeeeeeeeeee", payload={"tipo": "otros", "storage_path": f"{UID}/{CID}.png"})
     added, skipped = sync(arch, [row(), dup], lambda p: existing if p.endswith(".png") else download(p), "2026-11-13")
     assert added == ["Eisteddfod_del_Chubut/1995/Programa/Aporte_aaaaaaaa.pdf"]
     assert skipped == 1  # same bytes as Suelto.png

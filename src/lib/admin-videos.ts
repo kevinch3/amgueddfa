@@ -18,7 +18,7 @@ import { wordDiff, type DiffPart } from './word-diff';
 export type ApprovedVideoText = {
   id: string;
   user_id: string;
-  festival: string | null;
+  coleccion: string | null;
   year: number | null;
   payload: { video?: { id?: string; title?: string }; cambios?: Cambio[] } & Record<string, unknown>;
   created_at: string;
@@ -26,7 +26,7 @@ export type ApprovedVideoText = {
   display_name?: string | null;
 };
 
-export type VideoGroup = { id: string; title: string; festival: string | null; year: number | null; rows: ApprovedVideoText[] };
+export type VideoGroup = { id: string; title: string; coleccion: string | null; year: number | null; rows: ApprovedVideoText[] };
 
 export type Motivo = 'sin_linea' | 'idioma_en_linea_unida';
 /** A change the player does not show: the export or the browser found no line for it (or its language fell inside a
@@ -55,7 +55,7 @@ export function groupByVideo(rows: ApprovedVideoText[]): VideoGroup[] {
     if (!id) continue;
     let g = byId.get(id);
     if (!g) {
-      g = { id, title: '', festival: r.festival, year: r.year, rows: [] };
+      g = { id, title: '', coleccion: r.coleccion, year: r.year, rows: [] };
       byId.set(id, g);
       out.push(g);
     }

@@ -79,7 +79,7 @@ import { t } from '../../lib/i18n';
 
   async function load() {
     const live = await liveQuery<LeaderRow[]>(
-      (c) => withOptionalCols((cols) => c.from('leaderboard').select(cols).limit(1000), 'display_name, points, festival_points', 'country'),
+      (c) => withOptionalCols((cols) => c.from('leaderboard').select(cols).limit(1000), 'display_name, points, coleccion_points', 'country'),
       [],
     );
     rows = live.data;

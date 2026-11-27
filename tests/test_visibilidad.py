@@ -11,9 +11,9 @@ from scripts.catalog.visibilidad import apply_visibility, load_overrides, publis
 REPO = Path(__file__).resolve().parent.parent
 
 
-def item(iid="a", festival="chubut", restricted=False, category="programa"):
-    return Item(id=iid, festival=festival, year=1990, undated=False, category=category,
-                title="t", kind="image", src_path="x.jpg", restricted=restricted)
+def item(iid="a", coleccion="chubut", restricted=False, tipo="programa"):
+    return Item(id=iid, coleccion=coleccion, year=1990, undated=False, tipo=tipo,
+                title="t", formato="image", src_path="x.jpg", restricted=restricted)
 
 
 def test_stricter_wins():
@@ -23,7 +23,7 @@ def test_stricter_wins():
 
 
 def test_restricted_items_become_listed_only_and_stay_restricted():
-    a, b = item("a"), item("b", restricted=True, category="resultados")
+    a, b = item("a"), item("b", restricted=True, tipo="resultados")
     apply_visibility([a, b], {}, date(2026, 11, 27))
     assert (a.visibilidad, a.restricted) == ("publico", False)
     assert (b.visibilidad, b.restricted) == ("solo_ficha", True)
@@ -41,7 +41,7 @@ def test_an_override_can_only_restrict_until_its_date():
 
 
 def test_an_unknown_collection_shows_nothing():
-    a = item("a", festival="nueva")
+    a = item("a", coleccion="nueva")
     apply_visibility([a], {}, date(2026, 11, 27))
     assert a.visibilidad == "privado" and published([a]) == []
 
@@ -59,5 +59,5 @@ def test_committed_catalog_matches_the_rules():
     for r in rows:
         assert r["visibilidad"] in ("publico", "solo_ficha"), r["id"]  # privado never reaches the public repo
         assert r["restricted"] == (r["visibilidad"] != "publico"), r["id"]
-        if r["category"] == "resultados":
+        if r["tipo"] == "resultados":
             assert r["visibilidad"] != "publico" or r.get("publico_desde"), r["id"]

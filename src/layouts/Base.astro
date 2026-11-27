@@ -20,7 +20,7 @@ import { HOME_EXTRAS } from '../lib/features';
 interface Props {
   title?: string;
   description?: string;
-  festival?: string;
+  coleccion?: string;
   year?: number | null;
   item?: string;
   current?: 'inicio' | 'faltantes' | 'tareas' | 'ranking' | 'buscar';
@@ -37,7 +37,7 @@ interface Props {
   /** Count visits with Cloudflare Web Analytics (off on /admin). */
   analytics?: boolean;
 }
-const { title, description = t('sitio.descripcion'), festival, year, item, current, image = null, noindex = false, jsonLd = null, markdown = null, searchable = false, analytics = true } = Astro.props;
+const { title, description = t('sitio.descripcion'), coleccion, year, item, current, image = null, noindex = false, jsonLd = null, markdown = null, searchable = false, analytics = true } = Astro.props;
 const analyticsToken = (import.meta.env.PUBLIC_CF_ANALYTICS_TOKEN ?? '').trim();
 // "Page | Amgueddfa"; a title that already names the site (the hub, the archive home) stands alone.
 const fullTitle = !title ? t('sitio.nombre') : title.includes(t('sitio.nombre')) ? title : `${title} | ${t('sitio.nombre')}`;
@@ -133,7 +133,7 @@ const webmcpToken = (import.meta.env.PUBLIC_WEBMCP_OT_TOKEN ?? '').trim();
         </nav>
         {/* The signed-out state is in the HTML, as session.ts renders it, so filling #sesion on load does not
             change its width: empty until then, it pushed the menus to a second row (CLS 0.61, #173). */}
-        <Mount id="sesion" festival={festival} year={year} item={item}><a class="sesion-link" href={url('ingresar')}>{t('sesion.ingresar')}</a></Mount>
+        <Mount id="sesion" coleccion={coleccion} year={year} item={item}><a class="sesion-link" href={url('ingresar')}>{t('sesion.ingresar')}</a></Mount>
         <SessionBadge />
         <div class="cabecera-menus">
           <ReadingMenu />

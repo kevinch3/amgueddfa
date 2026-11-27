@@ -23,11 +23,11 @@ export function nestHeadings(text: string): string {
 }
 
 export type MdFact = { label: string; value: string; fuente: string | null; by: string };
-export type MdDoc = { title: string; category: string; url: string; transcribed: boolean };
+export type MdDoc = { title: string; tipo: string; url: string; transcribed: boolean };
 
 export function editionMarkdown(o: {
   name: string;
-  festival: string;
+  coleccion: string;
   year: number;
   url: string;
   /** held / not_held / unknown: whether it took place. */
@@ -42,7 +42,7 @@ export function editionMarkdown(o: {
   dataUrl: string;
 }): string {
   const out = [
-    frontMatter({ tipo: 'edicion', eisteddfod: o.festival, ano: o.year, url: o.url, realizada: o.status === 'unknown' ? null : o.status === 'held', estado: o.estado }),
+    frontMatter({ tipo: 'edicion', eisteddfod: o.coleccion, ano: o.year, url: o.url, realizada: o.status === 'unknown' ? null : o.status === 'held', estado: o.estado }),
     `# ${o.name} ${o.year}`,
     '',
     `Página: ${o.url}`,
@@ -60,7 +60,7 @@ export function editionMarkdown(o: {
   if (o.facts.length) out.push('');
   out.push('## Documentos', '');
   if (o.docs.length === 0 && o.uploads === 0) out.push('Todavía no hay documentos públicos de esta edición.', '');
-  for (const d of o.docs) out.push(`- [${d.title}](${d.url}) · ${d.category}${d.transcribed ? ' · transcrito' : ''}`);
+  for (const d of o.docs) out.push(`- [${d.title}](${d.url}) · ${d.tipo}${d.transcribed ? ' · transcrito' : ''}`);
   if (o.uploads) out.push(`- ${o.uploads === 1 ? '1 imagen aportada' : `${o.uploads} imágenes aportadas`} por la comunidad, en la página: ${o.url}`);
   if (o.docs.length || o.uploads) out.push('');
   out.push(`Datos abiertos de todas las ediciones: ${o.dataUrl}`, '');
@@ -71,9 +71,9 @@ export function itemMarkdown(o: {
   id: string;
   title: string;
   festivalName: string;
-  festival: string;
+  coleccion: string;
   year: number | null;
-  category: string;
+  tipo: string;
   url: string;
   editionUrl: string | null;
   rights: string;
@@ -90,10 +90,10 @@ export function itemMarkdown(o: {
   ocr?: { n: number; text: string }[] | null;
 }): string {
   const out = [
-    frontMatter({ tipo: 'documento', id: o.id, eisteddfod: o.festival, ano: o.year, categoria: o.category, url: o.url, derechos: o.rights, ...(o.license ? { licencia: o.license } : {}), transcrito: o.transcription !== null, texto_automatico: o.transcription === null && Boolean(o.ocr?.length) }),
+    frontMatter({ tipo: 'documento', id: o.id, eisteddfod: o.coleccion, ano: o.year, categoria: o.tipo, url: o.url, derechos: o.rights, ...(o.license ? { licencia: o.license } : {}), transcrito: o.transcription !== null, texto_automatico: o.transcription === null && Boolean(o.ocr?.length) }),
     `# ${o.title}`,
     '',
-    `${o.festivalName}${o.year !== null ? ` ${o.year}` : ''} · ${o.category}`,
+    `${o.festivalName}${o.year !== null ? ` ${o.year}` : ''} · ${o.tipo}`,
     '',
     `Página: ${o.url}`,
   ];

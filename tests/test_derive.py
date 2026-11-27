@@ -9,8 +9,8 @@ from scripts.catalog.model import Item
 
 
 def mk(src_path, kind, **kw):
-    return Item(id="abc123def456", festival="chubut", year=1990, undated=False,
-                category="otros", title="t", kind=kind, src_path=src_path, **kw)
+    return Item(id="abc123def456", coleccion="chubut", year=1990, undated=False,
+                tipo="otros", title="t", formato=kind, src_path=src_path, **kw)
 
 
 def test_image_long_side_1200_and_thumb_320(tmp_path):

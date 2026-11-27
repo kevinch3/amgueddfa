@@ -54,7 +54,7 @@ describe('revealDecade', () => {
 describe('edition pages outside the built range', () => {
   const firsts = { chubut: 1975, juventud: 1985 };
 
-  it('hasEditionPage: only years from the festival start to now', () => {
+  it('hasEditionPage: only years from the coleccion start to now', () => {
     expect(hasEditionPage('chubut', 1975, firsts, 2026)).toBe(true);
     expect(hasEditionPage('chubut', 2026, firsts, 2026)).toBe(true);
     expect(hasEditionPage('chubut', 1930, firsts, 2026)).toBe(false);
@@ -62,9 +62,9 @@ describe('edition pages outside the built range', () => {
     expect(hasEditionPage('trevelin', 2020, firsts, 2026)).toBe(false);
   });
 
-  it('editionFromPath reads /<festival>/<year>/ under the site base', () => {
-    expect(editionFromPath('/chubut/1930/', '/')).toEqual({ festival: 'chubut', year: 1930 });
-    expect(editionFromPath('/museo/mimosa/1950', '/museo/')).toEqual({ festival: 'mimosa', year: 1950 });
+  it('editionFromPath reads /<coleccion>/<year>/ under the site base', () => {
+    expect(editionFromPath('/chubut/1930/', '/')).toEqual({ coleccion: 'chubut', year: 1930 });
+    expect(editionFromPath('/museo/mimosa/1950', '/museo/')).toEqual({ coleccion: 'mimosa', year: 1950 });
     expect(editionFromPath('/nada/1930/', '/')).toBeNull();
     expect(editionFromPath('/chubut/', '/')).toBeNull();
     expect(editionFromPath('/item/abc/', '/')).toBeNull();

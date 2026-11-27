@@ -58,7 +58,7 @@ COMMENT_MARKERS = ("comentarios", "deja un comentario", "dejar un comentario",
 
 def test_web_excerpts_have_no_comment_sections(items):
     for i in items:
-        if i["kind"] == "web" and i["text_excerpt"]:
+        if i["formato"] == "web" and i["text_excerpt"]:
             low = i["text_excerpt"].lower()
             for m in COMMENT_MARKERS:
                 assert m not in low, (i["id"], m)

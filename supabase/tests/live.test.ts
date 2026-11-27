@@ -10,8 +10,8 @@ beforeEach(async () => {
 const ITEM = 'e49c26c600a8';
 const correct = (who: string, payload: unknown, item = ITEM) =>
   t.q<{ id: string }>(who, 'select public.admin_correct_item($1, $2, $3, $4) as id', [item, 'chubut', 2022, JSON.stringify(payload)]);
-const save = (who: string, id: string, items: string[], kind: string, festival: string | null, text: string, pub = true) =>
-  t.q<{ at: string }>(who, 'select public.admin_save_transcription($1, $2, $3, $4, $5, $6) as at', [id, items, kind, festival, text, pub]);
+const save = (who: string, id: string, items: string[], kind: string, coleccion: string | null, text: string, pub = true) =>
+  t.q<{ at: string }>(who, 'select public.admin_save_transcription($1, $2, $3, $4, $5, $6) as at', [id, items, kind, coleccion, text, pub]);
 const err = async (p: Promise<unknown>) => {
   try {
     await p;
@@ -24,11 +24,11 @@ const err = async (p: Promise<unknown>) => {
 describe('admin_correct_item', () => {
   it('stores an approved, pointless tag that the public view shows at once', async () => {
     const admin = await t.createAdmin();
-    await correct(admin, { title: 'Horarios 2022', category: 'programa-del-dia', no_text: true, caption: '' });
+    await correct(admin, { title: 'Horarios 2022', tipo: 'programa-del-dia', no_text: true, caption: '' });
     const pub = await t.q<{ type: string; item_id: string; payload: Record<string, unknown>; reviewed_at: string | null }>(
       'anon', `select type, item_id, payload, reviewed_at from public.public_contributions`);
     expect(pub).toHaveLength(1);
-    expect(pub[0]).toMatchObject({ type: 'tag', item_id: ITEM, payload: { title: 'Horarios 2022', category: 'programa-del-dia', no_text: true, caption: '' } });
+    expect(pub[0]).toMatchObject({ type: 'tag', item_id: ITEM, payload: { title: 'Horarios 2022', tipo: 'programa-del-dia', no_text: true, caption: '' } });
     expect(pub[0].reviewed_at).not.toBeNull();
     const [p] = await t.q<{ points: number }>('postgres', 'select points from public.profiles where id = $1', [admin]);
     expect(p.points).toBe(0);
@@ -40,7 +40,7 @@ describe('admin_correct_item', () => {
     expect(await err(correct(user, { title: 'x' }))).toMatch(/not_admin/);
     expect(await err(correct(admin, { colour: 'red' }))).toMatch(/invalid_value/);
     expect(await err(correct(admin, {}))).toMatch(/invalid_value/);
-    expect(await err(correct(admin, { category: 'poster' }))).toMatch(/invalid_value/);
+    expect(await err(correct(admin, { tipo: 'poster' }))).toMatch(/invalid_value/);
     expect(await err(correct(admin, { year: 1700 }))).toMatch(/invalid_value/);
     expect(await err(correct(admin, { year: 1990.5 }))).toMatch(/invalid_value/);
     expect(await err(correct(admin, { no_text: 'yes' }))).toMatch(/invalid_value/);

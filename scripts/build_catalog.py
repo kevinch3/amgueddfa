@@ -11,7 +11,6 @@ import os
 import shutil
 import subprocess
 import sys
-from dataclasses import asdict
 from datetime import date, datetime, timezone
 from pathlib import Path
 
@@ -19,6 +18,7 @@ REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO))
 
 from scripts.catalog.derive import derive  # noqa: E402
+from scripts.catalog.model import as_record  # noqa: E402
 from scripts.catalog.overlay import apply_overlay  # noqa: E402
 from scripts.catalog.scan import caption_titles, number_repeats, scan  # noqa: E402
 from scripts.catalog.visibilidad import apply_visibility, load_overrides, published  # noqa: E402
@@ -118,9 +118,7 @@ def main(argv=None) -> int:
         out.parent.mkdir(parents=True, exist_ok=True)
         rows = []
         for it in published(items):  # a private record is not even named in the public repo
-            d = asdict(it)
-            d.pop("notes", None)
-            rows.append(d)
+            rows.append(as_record(it))
         out.write_text(json.dumps(
             {"generated": datetime.now(timezone.utc).isoformat(timespec="seconds"),
              "items": rows}, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")

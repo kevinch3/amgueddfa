@@ -43,12 +43,12 @@ def target(row: dict) -> Path | None:
     """Archive-relative path for an approved upload row, or None if it cannot be placed."""
     path = str((row.get("payload") or {}).get("storage_path") or "")
     m = PATH_RE.match(path)
-    fest = FESTIVAL_DIR.get(row.get("festival") or "")
+    fest = FESTIVAL_DIR.get(row.get("coleccion") or "")
     if not m or not fest:
         return None
     year = row.get("year")
     ydir = str(int(year)) if isinstance(year, int) else "_general"
-    cat = CATEGORY_DIR.get((row.get("payload") or {}).get("category") or "otros", "Varios")
+    cat = CATEGORY_DIR.get((row.get("payload") or {}).get("tipo") or "otros", "Varios")
     return Path(fest) / ydir / cat / f"Aporte_{str(row['id'])[:8]}.{m.group(1)}"
 
 
@@ -124,7 +124,7 @@ def _get(url: str, key: str) -> bytes:
 
 def fetch_rows(base: str, key: str) -> list[dict]:
     q = urllib.parse.urlencode({
-        "select": "id,festival,year,payload,created_at,reviewed_at,author:profiles!contributions_user_id_fkey(display_name)",
+        "select": "id,coleccion,year,payload,created_at,reviewed_at,author:profiles!contributions_user_id_fkey(display_name)",
         "status": "eq.approved",
         "type": "eq.upload",
         "order": "id.asc",

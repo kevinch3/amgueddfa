@@ -8,8 +8,8 @@ import { EDITABLE_FESTIVALS } from '../lib/transcript-draft';
 // YouTube's no-cookie player is created only when a visitor opens a video.
 // Chubut and Trevelin pages also carry the edit mode (scripts/editor-transcripcion.ts): collaborators correct the
 // transcript line by line and send it as one contribution. No other festival's page has it (#29).
-interface Props { festival?: string }
-const editable = (EDITABLE_FESTIVALS as readonly string[]).includes(Astro.props.festival ?? '');
+interface Props { coleccion?: string }
+const editable = (EDITABLE_FESTIVALS as readonly string[]).includes(Astro.props.coleccion ?? '');
 ---
 <dialog id="reproductor" class="reproductor" aria-labelledby="rep-titulo">
   <div class="rep-head">

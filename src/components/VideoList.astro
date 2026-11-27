@@ -12,15 +12,15 @@ import VideoSearch from './VideoSearch.astro';
 
 // Always rendered (hidden when empty) so live corrections (scripts/live-videos.ts) can move videos in.
 // Each card carries its data so the live script and "Informar un error" can read it; live-videos.ts builds the same markup.
-interface Props { videos: Video[]; festival: string; year: number }
-const { festival, year } = Astro.props;
+interface Props { videos: Video[]; coleccion: string; year: number }
+const { coleccion, year } = Astro.props;
 const { highlights, performances } = splitVideos(Astro.props.videos);
 const total = highlights.length + performances.length;
 // The search box only where there is something to search: some video of this edition is transcribed.
-const edicion = editionKey(festival, year);
+const edicion = editionKey(coleccion, year);
 const searchable = searchEditions().has(edicion);
 ---
-<section class="section" aria-labelledby="videos-t" data-videos data-festival={festival} data-year={year} hidden={total === 0}>
+<section class="section" aria-labelledby="videos-t" data-videos data-coleccion={coleccion} data-year={year} hidden={total === 0}>
   <Bloque id="videos-t" titulo={t('videos.titulo')}>
     <Fragment slot="titulo"> <span class="muted small">(<span data-videos-n>{total}</span>)</span></Fragment>
   <p class="measure muted small">{t('videos.ayuda')}</p>
@@ -32,7 +32,7 @@ const searchable = searchEditions().has(edicion);
           <span class="vframe"><img src={videoThumb(v.id)} alt="" loading="lazy" decoding="async" width="320" height="180" /></span>
           <span class="badge">{t(`videos.tipos.${v.kind}`)}</span>
           <span class="t" lang={lang}>{v.title}</span>
-          <span class="muted small"><span lang={lang}>{v.channel}</span>{v.year_inferred && <> · {t('comun.ano_estimado')}</>}</span>
+          <span class="muted small"><span lang={lang}>{v.channel}</span>{v.fecha.inferred && <> · {t('comun.ano_estimado')}</>}</span>
         </a>
         <button type="button" class="btn-link small informar-btn" data-informar-video={v.id}>{t('informar.titulo')}</button>
       </li>
@@ -46,7 +46,7 @@ const searchable = searchEditions().has(edicion);
           <a href={videoUrl(v.id)} rel="noopener" target="_blank">
             <span class="vframe"><img src={videoThumb(v.id)} alt="" loading="lazy" decoding="async" width="320" height="180" /></span>
             <span class="t" lang={lang}>{v.title}</span>
-            <span class="muted small"><span lang={lang}>{v.channel}</span>{v.year_inferred && <> · {t('comun.ano_estimado')}</>}</span>
+            <span class="muted small"><span lang={lang}>{v.channel}</span>{v.fecha.inferred && <> · {t('comun.ano_estimado')}</>}</span>
           </a>
           <button type="button" class="btn-link small informar-btn" data-informar-video={v.id}>{t('informar.titulo')}</button>
         </li>
@@ -55,7 +55,7 @@ const searchable = searchEditions().has(edicion);
   </details>
   </Bloque>
 </section>
-<VideoPlayer festival={festival} />
+<VideoPlayer coleccion={coleccion} />
 {/* One "Informar un error" dialog per page (outside the section, which may be hidden); scripts/informar.ts fills it. */}
 <dialog id="informar-dialogo" class="informar" aria-labelledby="informar-t">
   <div class="informar-head">

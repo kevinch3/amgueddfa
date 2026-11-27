@@ -45,7 +45,7 @@ export function inLanguage(abs: string, toPath: (path: string) => string): strin
   }
 }
 
-export type DocQuery = { query?: string; festival?: string; year?: number; category?: string; limit?: number };
+export type DocQuery = { query?: string; coleccion?: string; year?: number; tipo?: string; limit?: number };
 
 /**
  * Documents matching every word of `query` (in the title, the eisteddfod's name, the
@@ -54,9 +54,9 @@ export type DocQuery = { query?: string; festival?: string; year?: number; categ
 export function searchDocuments(docs: Documento[], q: DocQuery): { total: number; results: Documento[] } {
   const words = fold(q.query ?? '').split(/[^\p{L}\p{N}]+/u).filter(Boolean);
   const hits = docs.filter((d) => {
-    if (q.festival && d.eisteddfod !== q.festival) return false;
+    if (q.coleccion && d.eisteddfod !== q.coleccion) return false;
     if (q.year !== undefined && d.ano !== q.year) return false;
-    if (q.category && d.categoria !== q.category) return false;
+    if (q.tipo && d.categoria !== q.tipo) return false;
     if (!words.length) return true;
     const hay = fold(`${d.titulo} ${d.nombre_eisteddfod} ${d.categoria} ${d.ano ?? ''}`);
     return words.every((w) => hay.includes(w));
@@ -66,13 +66,13 @@ export function searchDocuments(docs: Documento[], q: DocQuery): { total: number
   return { total: hits.length, results: hits.slice(0, limit) };
 }
 
-export type EdQuery = { festival?: string; from_year?: number; to_year?: number; status?: string };
+export type EdQuery = { coleccion?: string; from_year?: number; to_year?: number; status?: string };
 
 /** Editions, oldest first, narrowed by festival, year range and archive status. */
 export function listEditions(eds: Edicion[], q: EdQuery): Edicion[] {
   return eds
     .filter((e) =>
-      (!q.festival || e.eisteddfod === q.festival) &&
+      (!q.coleccion || e.eisteddfod === q.coleccion) &&
       (q.from_year === undefined || e.ano >= q.from_year) &&
       (q.to_year === undefined || e.ano <= q.to_year) &&
       (!q.status || e.estado === q.status))
@@ -80,13 +80,13 @@ export function listEditions(eds: Edicion[], q: EdQuery): Edicion[] {
 }
 
 /** One edition and its documents, or null when the archive has no page for it. */
-export function getEdition(eds: Edicion[], docs: Documento[], festival: string, year: number): { edicion: Edicion; documentos: Documento[] } | null {
-  const edicion = eds.find((e) => e.eisteddfod === festival && e.ano === year);
+export function getEdition(eds: Edicion[], docs: Documento[], coleccion: string, year: number): { edicion: Edicion; documentos: Documento[] } | null {
+  const edicion = eds.find((e) => e.eisteddfod === coleccion && e.ano === year);
   if (!edicion) return null;
-  return { edicion, documentos: docs.filter((d) => d.eisteddfod === festival && d.ano === year) };
+  return { edicion, documentos: docs.filter((d) => d.eisteddfod === coleccion && d.ano === year) };
 }
 
-export type PageRequest = { page: string; festival?: string; year?: number; document_id?: string; tab?: string };
+export type PageRequest = { page: string; coleccion?: string; year?: number; document_id?: string; tab?: string };
 
 const TABS = new Set(['subir', 'datos', 'recuerdo']);
 
@@ -95,14 +95,14 @@ const TABS = new Set(['subir', 'datos', 'recuerdo']);
  * agent asks to open, or an error naming what is missing.
  */
 export function pagePath(r: PageRequest, festivals: readonly string[]): { path: string } | { error: string } {
-  const fest = r.festival && festivals.includes(r.festival) ? r.festival : null;
+  const fest = r.coleccion && festivals.includes(r.coleccion) ? r.coleccion : null;
   const year = Number.isInteger(r.year) ? r.year : null;
   switch (r.page) {
     case 'home': return { path: '/' };
     case 'missing_programmes': return { path: '/#buscados' };
-    case 'festival': return fest ? { path: `${fest}/` } : { error: 'festival is required' };
-    case 'edition': return fest && year ? { path: `${fest}/${year}/` } : { error: 'festival and year are required' };
-    case 'undated': return fest ? { path: `general/${fest}/` } : { error: 'festival is required' };
+    case 'coleccion': return fest ? { path: `${fest}/` } : { error: 'coleccion is required' };
+    case 'edition': return fest && year ? { path: `${fest}/${year}/` } : { error: 'coleccion and year are required' };
+    case 'undated': return fest ? { path: `general/${fest}/` } : { error: 'coleccion is required' };
     case 'document':
       return r.document_id && /^[0-9a-f]{12}$/.test(r.document_id) ? { path: `item/${r.document_id}/` } : { error: 'document_id (12 hex characters) is required' };
     case 'contribute': {
@@ -124,4 +124,4 @@ export function pagePath(r: PageRequest, festivals: readonly string[]): { path: 
 }
 
 /** Page kinds open_page accepts, for its input schema. */
-export const PAGES = ['home', ...(HOME_EXTRAS ? ['missing_programmes' as const] : []), 'festival', 'edition', 'undated', 'document', 'contribute', 'tasks', 'leaderboard', 'accessibility', 'about', 'privacy', 'sign_in'] as const;
+export const PAGES = ['home', ...(HOME_EXTRAS ? ['missing_programmes' as const] : []), 'coleccion', 'edition', 'undated', 'document', 'contribute', 'tasks', 'leaderboard', 'accessibility', 'about', 'privacy', 'sign_in'] as const;

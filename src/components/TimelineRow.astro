@@ -9,7 +9,7 @@ interface Props { slug: FestivalSlug; y: number; state: EditionState; n: number;
 const { slug, y, state, n, thumbs } = Astro.props;
 const status = editionStatus(slug, y);
 ---
-<li class={`tl-${state}`} data-festival={slug} data-year={y} data-state={state} data-cat-state={editionCatalogState(slug, y)} data-status={status === 'held' ? 'held' : undefined}>
+<li class={`tl-${state}`} data-coleccion={slug} data-year={y} data-state={state} data-cat-state={editionCatalogState(slug, y)} data-status={status === 'held' ? 'held' : undefined}>
   <a href={url(`${slug}/${y}/`)}>
     <span class="yr">{y}</span>
     <span class="st">{stateLabel(state, status)}{n > 0 && <span class="muted">{` (${docCount(n)})`}</span>}</span>

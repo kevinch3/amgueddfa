@@ -14,12 +14,12 @@ const KINDS = ['upload', 'fact', 'tag', 'transcription', 'memory', 'report', 'no
 // Precomputed at build time so the admin bundle does not carry the whole catalog.
 const data = {
   catalog: editionKeys(items()),
-  approved: (approvedStatic as { type: string; festival: string | null; year: number | null; payload: Record<string, unknown> }[])
+  approved: (approvedStatic as { type: string; coleccion: string | null; year: number | null; payload: Record<string, unknown> }[])
     .filter((c) => c.type === 'upload')
-    .map((c) => ({ type: c.type, festival: c.festival, year: c.year, payload: { category: c.payload?.category ?? null } })),
+    .map((c) => ({ type: c.type, coleccion: c.coleccion, year: c.year, payload: { tipo: c.payload?.tipo ?? null } })),
   restricted: items()
     .filter((i) => !isPublic(i))
-    .map((i) => ({ id: i.id, title: i.title, festival: i.festival, year: i.year, category: i.category, thumb: i.thumb, page_paths: i.page_paths })),
+    .map((i) => ({ id: i.id, title: i.title, coleccion: i.coleccion, year: i.fecha.year, tipo: i.tipo, thumb: i.thumb, page_paths: i.page_paths })),
   titles: Object.fromEntries(allItems().map((i) => [i.id, i.title])),
 };
 ---
@@ -60,8 +60,8 @@ const data = {
         <form id="a-cargar" class="contrib-form" novalidate>
           <div class="cargar-edicion">
             <div class="campo">
-              <label for="a-festival">{t('contrib.festival_label')}</label>
-              <select id="a-festival">
+              <label for="a-coleccion">{t('contrib.festival_label')}</label>
+              <select id="a-coleccion">
                 <option value="">{t('contrib.elegir')}</option>
                 {FESTIVALS.map((f) => <option value={f}>{t(`festivales.${f}`)}</option>)}
               </select>

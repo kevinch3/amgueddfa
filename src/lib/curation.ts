@@ -13,7 +13,7 @@ const OFFLINE: Result = { ok: false, key: 'estado.sin_conexion' };
 
 /** The fields an admin edits; `caption` is the item's public note (note_public). */
 export type OverlayValues = {
-  title: string; category: string; festival: string; year: number | null;
+  title: string; tipo: string; coleccion: string; year: number | null;
   rights: string; caption: string; no_text: boolean; hidden: boolean;
 };
 
@@ -22,8 +22,8 @@ export function correctionPayload(now: OverlayValues, next: OverlayValues): Reco
   const out: Record<string, unknown> = {};
   const title = next.title.trim();
   if (title && title !== now.title) out.title = title;
-  if (next.category !== now.category) out.category = next.category;
-  if (next.festival !== now.festival) out.festival = next.festival;
+  if (next.tipo !== now.tipo) out.tipo = next.tipo;
+  if (next.coleccion !== now.coleccion) out.coleccion = next.coleccion;
   if (next.year !== null && next.year !== now.year) out.year = next.year;
   for (const k of ['rights', 'caption'] as const) if (next[k].trim() !== now[k].trim()) out[k] = next[k].trim();
   for (const k of ['no_text', 'hidden'] as const) if (next[k] !== now[k]) out[k] = next[k];
@@ -57,17 +57,17 @@ async function call(client: SupabaseClient | null, fn: string, args: Record<stri
   }
 }
 
-export function saveCorrection(item: string, festival: string, year: number | null, payload: Record<string, unknown>, client = getClient()): Promise<Result> {
-  return call(client, 'admin_correct_item', { p_item: item, p_festival: festival, p_year: year, p_payload: payload });
+export function saveCorrection(item: string, coleccion: string, year: number | null, payload: Record<string, unknown>, client = getClient()): Promise<Result> {
+  return call(client, 'admin_correct_item', { p_item: item, p_coleccion: coleccion, p_year: year, p_payload: payload });
 }
 
-export type DocRow = { id: string; items: string[]; kind: 'programa' | 'ganadores'; festival: string | null; text: string; public: boolean; updated_at: string };
+export type DocRow = { id: string; items: string[]; kind: 'programa' | 'ganadores'; coleccion: string | null; text: string; public: boolean; updated_at: string };
 
 /** Every document (any kind, private ones too: admins only) that covers this item. */
 export async function docsFor(item: string, client = getClient()): Promise<DocRow[] | null> {
   if (!client) return null;
   try {
-    const { data, error } = await client.from('transcriptions').select('id, items, kind, festival, text, public, updated_at').contains('items', [item]);
+    const { data, error } = await client.from('transcriptions').select('id, items, kind, coleccion, text, public, updated_at').contains('items', [item]);
     return error ? null : ((data ?? []) as DocRow[]);
   } catch {
     return null;
@@ -76,7 +76,7 @@ export async function docsFor(item: string, client = getClient()): Promise<DocRo
 
 export function saveTranscription(d: Omit<DocRow, 'updated_at'>, client = getClient()): Promise<Result> {
   return call(client, 'admin_save_transcription', {
-    p_id: d.id, p_items: d.items, p_kind: d.kind, p_festival: d.festival, p_text: d.text, p_public: d.public,
+    p_id: d.id, p_items: d.items, p_kind: d.kind, p_coleccion: d.coleccion, p_text: d.text, p_public: d.public,
   });
 }
 

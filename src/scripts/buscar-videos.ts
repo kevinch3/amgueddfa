@@ -108,7 +108,7 @@ function setup(root: HTMLElement): void {
   const all = !own;
 
   /** The editions to search, in order, and the ones that have arrived. */
-  let wanted: { key: string; festival: string; year: number }[] | null = null;
+  let wanted: { key: string; coleccion: string; year: number }[] | null = null;
   const loaded = new Map<string, SearchEdition>();
   let failed = 0;
   let loading: Promise<void> | null = null;
@@ -119,10 +119,10 @@ function setup(root: HTMLElement): void {
     loading ??= (async () => {
       if (all) {
         const index = (await getJson<SearchIndexEntry[]>('datos/videos-texto/indice.json')) ?? [];
-        wanted = index.map((e) => ({ key: editionKey(e.festival, e.year), festival: e.festival, year: e.year }));
+        wanted = index.map((e) => ({ key: editionKey(e.coleccion, e.year), coleccion: e.coleccion, year: e.year }));
       } else {
-        const [, festival, year] = /^(.*)-(\d+)$/.exec(own) ?? [];
-        wanted = [{ key: own, festival, year: Number(year) }];
+        const [, coleccion, year] = /^(.*)-(\d+)$/.exec(own) ?? [];
+        wanted = [{ key: own, coleccion, year: Number(year) }];
       }
       const queue = [...wanted];
       const worker = async () => {
@@ -168,14 +168,14 @@ function setup(root: HTMLElement): void {
       if (!found.length) continue;
       videos += found.length;
       moments += found.reduce((n, r) => n + r.total, 0);
-      const page = url(`${e.festival}/${e.year}/`);
+      const page = url(`${e.coleccion}/${e.year}/`);
       const list = el('ul', 'vb-videos');
       const row = (r: VideoHits) => videoRow(page, r);
       list.append(...found.slice(0, VIDEOS).map(row));
       if (all) {
         const group = el('section', 'vb-edicion');
         const h = el('h2');
-        const a = el('a', undefined, `${t(`festivales.${e.festival}`)} ${e.year}`);
+        const a = el('a', undefined, `${t(`festivales.${e.coleccion}`)} ${e.year}`);
         a.href = page;
         h.append(a);
         group.append(h, list);
